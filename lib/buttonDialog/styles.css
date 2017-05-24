@@ -1,0 +1,24 @@
+:local {
+	.button {
+		display: inline-block;
+		background-color: inherit;
+	}
+
+	.buttonDialog {
+		display: block;
+		position: fixed;
+		z-index: 999;
+	}
+
+	.buttonDialogDisabled {
+	}
+
+	.buttonDialogInvisible {
+		display: none;
+		width: 0;
+	}
+
+	.buttonDialogHide {
+		display: none;
+	}
+}

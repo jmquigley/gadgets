@@ -1,0 +1,59 @@
+:local {
+	.list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		cursor: pointer;
+	}
+
+	.list .listItem:hover {
+		background-color: lime;
+	}
+
+	.list li:nth-child(2n) {
+		background: #e6e6e6;
+	}
+
+	.listDisabled {
+	}
+
+	.listInvisible {
+		display: none;
+		width: 0;
+	}
+
+	.listItem {
+		height: 32px;
+		display: flex;
+		font-size: 0.9em;
+		/* padding: 5px 0 5px 0; */
+	}
+
+	.title {
+		padding: 8px 10px 0 10px;
+		flex-grow: 1;
+		display: inline-flex;
+	}
+
+	.leftTitle {
+		text-align: left;
+		flex: 3;
+	}
+
+	.rightTitle {
+		text-align: right;
+		flex: 1;
+	}
+
+	.listItemDisabled {
+	}
+
+	.listItemInvisible {
+		display: none;
+		width: 0;
+	}
+
+	.leftIconHide, .rightIconHide {
+		display: none;
+	}
+}
