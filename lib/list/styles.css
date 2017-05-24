@@ -56,4 +56,18 @@
 	.leftIconHide, .rightIconHide {
 		display: none;
 	}
+
+	.hiddenButton {
+		transition: 0.25s linear;
+		width: 0px;
+		opacity: 0.0;
+	}
+
+	.itemButton {
+	}
+
+	.listItem:hover .itemButton {
+		width: 32px;
+		opacity: 1.0;
+	}
 }

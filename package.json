@@ -53,6 +53,7 @@
     "babili-webpack-plugin": "0.1.1",
     "coveralls": "^2.13.1",
     "css-loader": "^0.28.2",
+    "css-ripple-effect": "^1.0.5",
     "enzyme": "^2.8.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
@@ -86,9 +87,9 @@
       "react"
     ]
   },
-	"pkgwrap": {
-		"cleanup": [
-			"docs"
-		]
-	}
+  "pkgwrap": {
+    "cleanup": [
+      "docs"
+    ]
+  }
 }

@@ -1,14 +1,10 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const BabiliPlugin = require("babili-webpack-plugin");
 const path = require('path');
-
-let plugins = [
-	new BabiliPlugin()
-];
 
 module.exports = {
 	entry: [
 		path.resolve(__dirname, 'node_modules', 'font-awesome', 'css', 'font-awesome.min.css'),
+		path.resolve(__dirname, 'node_modules', 'css-ripple-effect', 'dist', 'ripple.min.css'),
 		path.resolve(__dirname, 'index.ts')
 	],
 	target: 'node',

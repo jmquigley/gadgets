@@ -16,36 +16,59 @@ export interface ListItemProps extends BaseProps {
 	rightTitle?: string;
 	leftButton?: any;
 	rightButton?: any;
+	hiddenLeftButton?: boolean;
+	hiddenRightButton?: boolean;
 }
 
 export interface ListItemState {
 }
 
-export const ListItemComponent = (props: ListItemProps) => (
-	<li className={`ui ui-listitem ${props.classes.join(' ')}`}>
+export const ListItemComponent = (props: ListItemProps) => {
 
-		{props.leftButton != null ? props.leftButton : null}
+	let leftButton = null;
+	if (props.leftButton != null) {
+		leftButton = (
+			<div className={`${styles.itemButton} ${(props.hiddenLeftButton) ? styles.hiddenButton : ''}`}>
+				{props.leftButton != null ? props.leftButton : null}
+			</div>
+		);
+	}
 
-		<div className={`ui-title ${styles.title}`} onClick={props.onClick}>
-			<span className={`ui-leftTitle ${styles.leftTitle}`}>{props.leftTitle}</span>
-			<span className={`ui-rightTitle ${styles.rightTitle}`}>{props.rightTitle}</span>
-		</div>
+	let rightButton = null;
+	if (props.rightButton != null) {
+		rightButton = (
+			<div className={`${styles.itemButton} ${(props.hiddenRightButton) ? styles.hiddenButton : ''}`}>
+				{props.rightButton != null ? props.rightButton : null}
+			</div>
+		);
+	}
 
-		{props.rightButton != null ? props.rightButton : null}
+	return (
+		<li className={`ui ui-listitem ${props.classes.join(' ')}`}>
+			{leftButton}
 
-	</li>
-);
+			<div className={`ui-title ripple ${styles.title}`} onClick={props.onClick}>
+				<span className={`ui-leftTitle ${styles.leftTitle}`}>{props.leftTitle}</span>
+				<span className={`ui-rightTitle ${styles.rightTitle}`}>{props.rightTitle}</span>
+			</div>
+
+			{rightButton}
+		</li>
+	);
+};
 
 export class ListItem extends React.Component<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = {
 		classes: [],
 		enabled: true,
-		leftTitle: '',
-		rightTitle: '',
-		onClick: nil,
+		hiddenLeftButton: false,
+		hiddenRightButton: false,
 		leftButton: null,
+		leftTitle: '',
+		onClick: nil,
 		rightButton: null,
+		rightTitle: '',
 		visible: true
 	}
 

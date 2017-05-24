@@ -10,7 +10,7 @@ export interface ButtonProps extends BaseProps {
 
 export const ButtonComponent = (props: ButtonProps) => (
     <button
-        className={`fa fa-${props.iconName} ui ui-button ${props.classes.join(' ')}`}
+        className={`fa fa-${props.iconName} ui ui-button ripple ${props.classes.join(' ')}`}
         onClick={props.onClick}
 		aria-hidden="true"
 		disabled={props.enabled ? false : true}
@@ -18,6 +18,9 @@ export const ButtonComponent = (props: ButtonProps) => (
     </button>
 );
 
+/**
+ * Creates a Button control
+ */
 export class Button extends React.Component<ButtonProps, undefined> {
 
     public static defaultProps: ButtonProps = {
@@ -49,11 +52,18 @@ export class Button extends React.Component<ButtonProps, undefined> {
 		return l;
 	}
 
+	private handleClick = (e: any) => {
+		if (this.props.enabled && this.props.visible && this.props.onClick != null) {
+			this.props.onClick();
+		}
+		e.stopPropagation();
+	}
+
 	render() {
 		return (
 			<ButtonComponent
 				{...this.props}
-				onClick={(this.props.enabled && this.props.visible) ? this.props.onClick : nil}
+				onClick={this.handleClick}
 				classes={this.buildClasses()}
 			/>
 		);
