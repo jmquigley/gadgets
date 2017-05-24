@@ -18,10 +18,11 @@
   "main": "./dist/bundle.js",
   "types": "./index.d.ts",
   "scripts": {
-    "all": "npm install && npm run clean && npm run lint && npm run build && npm test && npm run report",
+    "all": "npm install && npm run clean && npm run lint && npm run build && npm run docs && npm test && npm run report",
     "build": "pkgwrap --build --jsx --webpack",
     "clean": "pkgwrap --clean",
     "coverage": "pkgwrap --coverage",
+    "docs": "pkgwrap --docs --site",
     "lint": "pkgwrap --lint",
     "postinstall": "pkgwrap --postinstall",
     "report": "pkgwrap --reporting",
@@ -31,13 +32,13 @@
   },
   "dependencies": {
     "util.log": "0.0.16",
-    "util.pkgwrap": "0.0.43"
+    "util.pkgwrap": "0.0.47"
   },
   "devDependencies": {
     "@types/enzyme": "^2.8.0",
     "@types/fs-extra": "^3.0.2",
     "@types/node": "^7.0.22",
-    "@types/react": "^15.0.24",
+    "@types/react": "^15.0.25",
     "@types/react-dom": "^15.5.0",
     "@types/sinon": "^2.2.2",
     "ava": "^0.19.1",
@@ -84,5 +85,10 @@
       "es2016",
       "react"
     ]
-  }
+  },
+	"pkgwrap": {
+		"cleanup": [
+			"docs"
+		]
+	}
 }
