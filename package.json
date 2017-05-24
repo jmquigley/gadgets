@@ -27,13 +27,12 @@
     "postinstall": "pkgwrap --postinstall",
     "report": "pkgwrap --reporting",
     "test": "pkgwrap --testing --ava",
-    "tree": "ls -R lib && find . -type d -print | sed -e 's;[^/]*/;|____;g;s;____|;    |;g'",
     "watch": "webpack --watch --progress",
     "webpack": "webpack"
   },
   "dependencies": {
     "util.log": "0.0.16",
-    "util.pkgwrap": "0.0.49"
+    "util.pkgwrap": "0.0.50"
   },
   "devDependencies": {
     "@types/enzyme": "^2.8.0",
