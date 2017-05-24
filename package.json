@@ -27,7 +27,7 @@
     "postinstall": "pkgwrap --postinstall",
     "report": "pkgwrap --reporting",
     "test": "pkgwrap --testing --ava",
-    "tree": "find . -type d -print | sed -e 's;[^/]*/;|____;g;s;____|;    |;g'",
+    "tree": "ls -R lib && find . -type d -print | sed -e 's;[^/]*/;|____;g;s;____|;    |;g'",
     "watch": "webpack --watch --progress",
     "webpack": "webpack"
   },
