@@ -19,6 +19,10 @@ $ npm run all
 
 To run the demo application in electron use:
 ```
+$ npm run demo
+
+OR
+
 $ npm start
 ```
 
