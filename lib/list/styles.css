@@ -7,7 +7,7 @@
 	}
 
 	.list .listItem:hover {
-		background-color: lime;
+		background-color: #bedb39;
 	}
 
 	.listAlternating li:nth-child(2n) {
@@ -67,5 +67,13 @@
 		font-size: 1.0em;
 		width: 32px;
 		opacity: 1.0;
+	}
+
+	.selected {
+		background-color: #1f8a70 !important;
+	}
+
+	.selected .title {
+		color: white !important;
 	}
 }

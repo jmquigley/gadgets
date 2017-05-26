@@ -7,6 +7,7 @@ export interface BaseProps {
 	color?: string;
 	enabled?: boolean;
 	id?: string;
+	key?: string;
 	onClick?: any;
 	style?: any;
 	visible?: boolean;

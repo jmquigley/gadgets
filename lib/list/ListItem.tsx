@@ -12,12 +12,14 @@ import {BaseProps} from '../../lib/props';
 const styles = require('./styles.css');
 
 export interface ListItemProps extends BaseProps {
-	leftTitle: string;
-	rightTitle?: string;
-	leftButton?: any;
-	rightButton?: any;
 	hiddenLeftButton?: boolean;
 	hiddenRightButton?: boolean;
+	leftButton?: any;
+	leftTitle: string;
+	rightButton?: any;
+	rightTitle?: string;
+	selected?: boolean;
+	selectHandler?: any;
 }
 
 export interface ListItemState {
@@ -69,6 +71,8 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 		onClick: nil,
 		rightButton: null,
 		rightTitle: '',
+		selected: false,
+		selectHandler: nil,
 		visible: true
 	}
 
@@ -80,16 +84,25 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 		let l: string[] = Array.from(this.props.classes);
 		l.push(styles.listItem);
 
+		if (!this.props.enabled) {
+			l.push(styles.listItemDisabled);
+		}
+
+		if (this.props.selected) {
+			l.push(styles.selected);
+		}
+
 		if (!this.props.visible) {
 			l.push(styles.listItemInvisible);
 			l.push(styles.listItemDisabled);
 		}
 
-		if (!this.props.enabled) {
-			l.push(styles.listItemDisabled);
-		}
-
 		return l;
+	}
+
+	private handleClick = () => {
+		this.props.selectHandler(this);
+		this.props.onClick();
 	}
 
 	render() {
@@ -97,6 +110,7 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 			<ListItemComponent
 				{...this.props}
 				classes={this.buildClasses()}
+				onClick={this.handleClick}
 			/>
 		);
 	}
