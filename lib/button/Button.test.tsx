@@ -64,7 +64,7 @@ test('Test Button click event', t => {
 	t.true(ctl.prop('enabled'));
 	t.true(ctl.prop('visible'));
 
-	ctl.find('button').simulate('click');
+	ctl.find('i').simulate('click');
 	t.true(click.calledOnce);
 });
 
@@ -80,7 +80,7 @@ test('Test disabling of a Button', t => {
 	t.true(ctl.prop('visible'));
 	t.is(ctl.find('.buttonDisabled').length, 1);
 
-	ctl.find('button').simulate('click');
+	ctl.find('i').simulate('click');
 	t.true(click.neverCalledWith());
 });
 
@@ -98,6 +98,6 @@ test('Test making a Button invisible', t => {
 	t.is(ctl.find('.buttonDisabled').length, 1);
 	t.is(ctl.find('.buttonInvisible').length, 1);
 
-	ctl.find('button').simulate('click');
+	ctl.find('i').simulate('click');
 	t.true(click.neverCalledWith());
 });

@@ -22,19 +22,19 @@
     "build": "pkgwrap --build --jsx --webpack",
     "clean": "pkgwrap --clean",
     "coverage": "pkgwrap --coverage",
-		"demo": "npm start",
-		"docs": "pkgwrap --docs --site",
+    "demo": "npm start",
+    "docs": "pkgwrap --docs --site",
     "lint": "pkgwrap --lint",
     "postinstall": "pkgwrap --postinstall",
-		"report": "pkgwrap --reporting",
-		"start": "electron demo/.",
+    "report": "pkgwrap --reporting",
+    "start": "electron demo/.",
     "test": "pkgwrap --testing --ava",
     "watch": "webpack --watch --progress",
     "webpack": "webpack"
   },
   "dependencies": {
     "util.log": "0.0.16",
-    "util.pkgwrap": "0.0.51"
+    "util.pkgwrap": "0.0.53"
   },
   "devDependencies": {
     "@types/enzyme": "^2.8.0",
@@ -82,7 +82,7 @@
     "url-loader": "^0.5.8",
     "util.fixture": "0.0.53",
     "util.toolbox": "0.0.30",
-    "webpack": "^2.6.0"
+    "webpack": "^2.6.1"
   },
   "babel": {
     "presets": [

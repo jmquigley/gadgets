@@ -49,7 +49,7 @@ test('Test the click event on a ButtonDialog control', t => {
 	t.true(ctl.prop('visible'));
 	t.is(ctl.prop('id'), undefined);
 
-	ctl.find('button').simulate('click');
+	ctl.find('i').simulate('click');
 	t.true(ctl.state('visible'));
 });
 
@@ -69,7 +69,7 @@ test('Test the disabling of the ButtonDialog control', t => {
 	t.is(ctl.prop('id'), undefined);
 	t.is(ctl.find('.buttonDialogDisabled').length, 1);
 
-	ctl.find('button').simulate('click');
+	ctl.find('i').simulate('click');
 	t.false(ctl.state('visible'));
 });
 
@@ -90,6 +90,6 @@ test('Test the making the ButtonDialog invisible', t => {
 	t.is(ctl.find('.buttonDialogDisabled').length, 1);
 	t.is(ctl.find('.buttonDialogInvisible').length, 1);
 
-	ctl.find('button').simulate('click');
+	ctl.find('i').simulate('click');
 	t.false(ctl.state('visible'));
 });

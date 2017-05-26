@@ -10,6 +10,7 @@ import {getUUID} from 'util.toolbox';
 import {BaseProps} from '../../lib/props';
 
 export interface ListProps extends BaseProps {
+	alternating?: boolean;
 }
 
 const styles = require('./styles.css');
@@ -26,9 +27,10 @@ export const ListComponent = (props: ListProps) => (
 export class List extends React.Component<ListProps, undefined> {
 
 	public static defaultProps: ListProps = {
-		id: getUUID(true),
+		alternating: false,
 		classes: [],
 		enabled: true,
+		id: getUUID(true),
 		visible: true
 	}
 
@@ -39,6 +41,10 @@ export class List extends React.Component<ListProps, undefined> {
 	private buildClasses = () => {
 		let l: string[] = Array.from(this.props.classes);
 		l.push(styles.list);
+
+		if (this.props.alternating) {
+			l.push(styles.listAlternating);
+		}
 
 		if (!this.props.visible) {
 			l.push(styles.listInvisible);

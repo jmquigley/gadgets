@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {nil} from 'util.toolbox';
-import {ButtonProps} from '../button';
+import {Button, ButtonProps} from '../button';
 
 const styles = require('./styles.css');
 
@@ -20,14 +20,15 @@ export interface ButtonToggleState {
 }
 
 export const ButtonToggleComponent = (props: ButtonToggleProps) => (
-    <button
-        className={`fa fa-${props.iconName} ui ui-buttonToggle ${props.classes.join(' ')}`}
+    <Button
+		classes={props.classes}
+		enabled={props.enabled}
+		iconName={props.iconName}
         onClick={props.onClick}
-		aria-hidden="true"
-		disabled={props.enabled ? false : true}
 		style={props.style}
-	>
-    </button>
+		visible={props.visible}
+		noripple
+	/>
 );
 
 export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggleState> {
@@ -67,6 +68,7 @@ export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggl
 	private buildClasses = () => {
 		let l: string[] = Array.from(this.props.classes);
 		l.push(styles.button);
+		l.push('ui-buttonToggle');
 
 		if (!this.props.visible) {
 			l.push(styles.buttonInvisible);

@@ -1,13 +1,16 @@
 :local {
-	.button {
-		display: inline-block;
-		background-color: inherit;
-	}
-
 	.buttonDialog {
 		display: block;
 		position: fixed;
+	}
+
+	.buttonDialogPopup {
+		background-color: white;
+		opacity: 1.0;
 		z-index: 999;
+		width: 300px;
+		height: 300px;
+		border: 1px solid blue;
 	}
 
 	.buttonDialogDisabled {

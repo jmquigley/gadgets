@@ -112,7 +112,7 @@ test('Test clicking of the left button on the ListItem control', t => {
  	t.true(ctl.find('.ui').length == 2);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
- 	let btn = ctl.find('button').first();
+ 	let btn = ctl.find('i').first();
  	btn.simulate('click');
  	t.true(click.calledOnce);
  	t.is(ctl.find('.fa').length, 1);
@@ -138,7 +138,7 @@ test('Test clicking of the right button on the ListItem control', t => {
  	t.true(ctl.find('.ui').length == 2);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
- 	let btn = ctl.find('button').last();
+ 	let btn = ctl.find('i').last();
  	btn.simulate('click');
  	t.true(click.calledOnce);
  	t.is(ctl.find('.fa').length, 1);

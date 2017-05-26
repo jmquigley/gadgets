@@ -17,9 +17,10 @@ export const ButtonDialogComponent = (props: ButtonDialogProps) => (
 		disabled={props.enabled ? false : true}>
 
 		<Button
+			enabled={props.enabled}
 			iconName={props.iconName}
 			onClick={props.onClick}
-			enabled={props.enabled}
+			style={props.style}
 			visible={props.visible}
 		/>
 		<div className={`ui ui-dialog-popup ${props.dialogClasses.join(' ')}`} >
@@ -37,6 +38,7 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		dialogClasses: [],
 		enabled: true,
         iconName: 'bomb',
+		style: {},
 		visible: true
     };
 
@@ -55,7 +57,6 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 
 	private buildClasses = () => {
 		let l: string[] = Array.from(this.props.classes);
-		l.push(styles.button);
 
 		if (!this.props.visible) {
 			l.push(styles.buttonDialogInvisible);
@@ -72,6 +73,7 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 	private buildDialogClasses = () => {
 		let l: string[] = Array.from(this.props.dialogClasses);
 		l.push(styles.buttonDialog);
+		l.push(styles.buttonDialogPopup);
 
 		if (!this.state.visible) {
 			l.push(styles.buttonDialogHide);

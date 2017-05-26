@@ -5,17 +5,19 @@ import {BaseProps} from '../props';
 const styles = require('./styles.css');
 
 export interface ButtonProps extends BaseProps {
+	noripple?: boolean;     // turn off the button ripple effect
 	iconName?: string;      // font awesome string
 }
 
 export const ButtonComponent = (props: ButtonProps) => (
-    <button
-        className={`fa fa-${props.iconName} ui ui-button ripple ${props.classes.join(' ')}`}
+    <i
+        className={`fa fa-${props.iconName} ui ui-button ${props.classes.join(' ')}`}
         onClick={props.onClick}
 		aria-hidden="true"
-		disabled={props.enabled ? false : true}
+	    disabled={props.enabled ? false : true}
+	    style={props.style}
 	>
-    </button>
+    </i>
 );
 
 /**
@@ -24,10 +26,12 @@ export const ButtonComponent = (props: ButtonProps) => (
 export class Button extends React.Component<ButtonProps, undefined> {
 
     public static defaultProps: ButtonProps = {
-        iconName: 'bomb',
-		enabled: true,
 		classes: [],
+		enabled: true,
+        iconName: 'bomb',
+		noripple: false,
         onClick: nil,
+		style: {},
 		visible: true
     };
 
@@ -38,6 +42,10 @@ export class Button extends React.Component<ButtonProps, undefined> {
 	private buildClasses = () => {
 		let l: string[] = Array.from(this.props.classes);
 		l.push(styles.button);
+
+		if (!this.props.noripple) {
+			l.push('ripple');
+		}
 
 		if (!this.props.visible) {
 			l.push(styles.buttonInvisible);

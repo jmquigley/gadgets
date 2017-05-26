@@ -10,7 +10,7 @@
 		background-color: lime;
 	}
 
-	.list li:nth-child(2n) {
+	.listAlternating li:nth-child(2n) {
 		background: #e6e6e6;
 	}
 
@@ -23,16 +23,14 @@
 	}
 
 	.listItem {
-		height: 32px;
+		line-height: 32px;
 		display: flex;
-		font-size: 0.9em;
-		/* padding: 5px 0 5px 0; */
 	}
 
 	.title {
-		padding: 8px 10px 0 10px;
 		flex-grow: 1;
 		display: inline-flex;
+		padding: 0 5px 0 5px;
 	}
 
 	.leftTitle {
@@ -53,20 +51,20 @@
 		width: 0;
 	}
 
-	.leftIconHide, .rightIconHide {
-		display: none;
-	}
-
-	.hiddenButton {
-		transition: 0.25s linear;
+	.hiddenButton, .hiddenButton i {
+		transition: width 0.25s, font-size 0.25s, opacity 0.5s ease;
+		font-size: 0;
 		width: 0px;
 		opacity: 0.0;
+		flex: none;
 	}
 
 	.itemButton {
+		text-align: center;
 	}
 
-	.listItem:hover .itemButton {
+	.listItem:hover .itemButton, .listItem:hover .itemButton i {
+		font-size: 1.0em;
 		width: 32px;
 		opacity: 1.0;
 	}

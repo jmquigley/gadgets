@@ -1,33 +1,19 @@
-@define-extend baseButton {
-	outline: none;
-	display: inline-block;
-}
-
 :local {
-	button {
-		border: 0;
-		padding: 0;
-		margin: 0;
-		color: black;
-		font-size: 1.2em;
-	}
-
 	.button {
-		@extend baseButton;
+		text-align: center;
+		vertical-align: bottom;
+		outline: none;
 		width: 32px;
-		height: 32px;
 		background-color: inherit;
+		line-height: inherit;
 	}
 
 	.button:not(.nohover):hover {
 		background-color: lightgray;
 	}
 
-	.button:active {
-		background-color: magenta;
-	}
-
 	.buttonDisabled {
+		opacity: 0.5;
 	}
 
 	.buttonInvisible {
