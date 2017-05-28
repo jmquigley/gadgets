@@ -2,7 +2,7 @@ import * as React from 'react';
 import {nil} from 'util.toolbox';
 import {Button, ButtonProps} from '../button';
 
-const styles = require('./styles.css');
+const sharedStyles = require('../shared/styles.css');
 
 export interface ButtonToggleProps extends ButtonProps {
 	bgColorOff?: string;
@@ -22,7 +22,7 @@ export interface ButtonToggleState {
 export const ButtonToggleComponent = (props: ButtonToggleProps) => (
     <Button
 		classes={props.classes}
-		enabled={props.enabled}
+		disabled={props.disabled}
 		iconName={props.iconName}
         onClick={props.onClick}
 		style={props.style}
@@ -39,7 +39,8 @@ export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggl
 		fgColorOff: "white",
 		fgColorOn: "black",
 		classes: [],
-		enabled: true,
+		className: '',
+		disabled: false,
 		initialToggle: false,
 		iconName: 'bomb',
         iconNameOff: 'bomb',
@@ -63,21 +64,25 @@ export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggl
 		this.setState({
 			toggle: !this.state.toggle
 		});
+
+		this.props.onClick(this.state.toggle);
 	}
 
 	private buildClasses = () => {
 		let l: string[] = Array.from(this.props.classes);
-		l.push(styles.button);
+
+		if (this.props.className !== '') {
+			l.push(this.props.className);
+		}
 		l.push('ui-buttonToggle');
 
 		if (!this.props.visible) {
-			l.push(styles.buttonInvisible);
-			l.push(styles.buttonDisabled);
+			l.push(sharedStyles.invisible);
+			l.push(sharedStyles.disabled);
 		}
 
-		if (!this.props.enabled) {
-			l.push(styles.buttonDisabled);
-			l.push(styles.nohover);
+		if (this.props.disabled) {
+			l.push(sharedStyles.disabled);
 		}
 
 		return l;
@@ -88,7 +93,7 @@ export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggl
 			<ButtonToggleComponent
 				{...this.props}
 				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
-				onClick={(this.props.enabled && this.props.visible) ? this.handleClick : nil}
+				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
 				classes={this.buildClasses()}
 				style={{
 					color: (this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff,

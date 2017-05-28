@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, header, log, mockupEnv} from '../../test/helpers';
+import {cleanup, log, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -10,10 +10,6 @@ import * as React from 'react';
 import * as sinon from 'sinon';
 import {ListItem} from './index';
 import {Button} from '../button';
-
-test.before(t => {
-	header(path.basename(__filename), t);
-});
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
@@ -28,10 +24,9 @@ test('Test the creation of a ListItem control with simple title', t => {
 	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('leftTitle'), 'test title');
-	t.true(ctl.prop('enabled'));
+	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
-	t.is(ctl.find('.ui').length, 1);
 	t.is(ctl.find('.ui-listitem').length, 1);
 	t.is(ctl.find('.listItem').length, 1);
 });
@@ -49,28 +44,26 @@ test('Test the creation of a ListItem control with left & right title', t => {
 
  	t.is(ctl.prop('leftTitle'), 'test title left');
  	t.is(ctl.prop('rightTitle'), 'test title right');
- 	t.true(ctl.prop('enabled'));
+ 	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
- 	t.true(ctl.find('.ui').length >= 1);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
 });
 
 test('Test disabling of a ListItem control', t => {
  	const ctl = mount(
- 		<ListItem leftTitle="test title" enabled={false} />
+ 		<ListItem leftTitle="test title" disabled={true} />
  	);
 
  	t.truthy(ctl);
  	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('leftTitle'), 'test title');
- 	t.false(ctl.prop('enabled'));
+ 	t.true(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
- 	t.is(ctl.find('.listItemDisabled').length, 1);
- 	t.is(ctl.find('.ui').length, 1);
+ 	t.is(ctl.find('.disabled').length, 1);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
 });
@@ -84,11 +77,9 @@ test('Test making ListItem control invisible', t => {
  	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('leftTitle'), 'test title');
- 	t.true(ctl.prop('enabled'));
+ 	t.false(ctl.prop('disabled'));
  	t.false(ctl.prop('visible'));
-
- 	t.is(ctl.find('.listItemInvisible').length, 1);
- 	t.is(ctl.find('.ui').length, 1);
+ 	t.is(ctl.find('.invisible').length, 1);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
 });
@@ -106,14 +97,12 @@ test('Test clicking of the left button on the ListItem control', t => {
  	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('leftTitle'), 'test title');
- 	t.true(ctl.prop('enabled'));
+ 	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
- 	t.true(ctl.find('.ui').length == 2);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
- 	let btn = ctl.find('i').first();
- 	btn.simulate('click');
+ 	ctl.find('i').first().simulate('click');
  	t.true(click.calledOnce);
  	t.is(ctl.find('.fa').length, 1);
  	t.is(ctl.find('.fa-bath').length, 1);
@@ -132,14 +121,12 @@ test('Test clicking of the right button on the ListItem control', t => {
  	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('leftTitle'), 'test title');
- 	t.true(ctl.prop('enabled'));
+ 	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
- 	t.true(ctl.find('.ui').length == 2);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
- 	let btn = ctl.find('i').last();
- 	btn.simulate('click');
+ 	ctl.find('i').last().simulate('click');
  	t.true(click.calledOnce);
  	t.is(ctl.find('.fa').length, 1);
  	t.is(ctl.find('.fa-bath').length, 1);
@@ -158,14 +145,12 @@ test('Test clicking of the title bar area of the ListItem', t => {
  	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('leftTitle'), 'test title');
- 	t.true(ctl.prop('enabled'));
+ 	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
- 	t.is(ctl.find('.ui').length, 1);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
 
- 	let btn = ctl.find('.title');
- 	btn.simulate('click');
+ 	ctl.find('.title').simulate('click');
  	t.true(click.calledOnce);
 });

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Button, ButtonProps} from '../button';
 
+const sharedStyles = require('../shared/styles.css');
 const styles = require('./styles.css');
 
 export interface ButtonDialogProps extends ButtonProps {
@@ -13,17 +14,17 @@ export interface ButtonDialogState {
 
 export const ButtonDialogComponent = (props: ButtonDialogProps) => (
 	<div
-		className={`ui ui-button-dialog ${props.classes.join(' ')}`}
-		disabled={props.enabled ? false : true}>
+		className={props.classes.join(' ')}
+		disabled={props.disabled}>
 
 		<Button
-			enabled={props.enabled}
+			disabled={props.disabled}
 			iconName={props.iconName}
 			onClick={props.onClick}
 			style={props.style}
 			visible={props.visible}
 		/>
-		<div className={`ui ui-dialog-popup ${props.dialogClasses.join(' ')}`} >
+		<div className={props.dialogClasses.join(' ')}>
 			<span>
 			{props.children}
 			</span>
@@ -35,8 +36,9 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 
     public static defaultProps: ButtonDialogProps = {
 		classes: [],
+		className: '',
 		dialogClasses: [],
-		enabled: true,
+		disabled: false,
         iconName: 'bomb',
 		style: {},
 		visible: true
@@ -52,19 +54,23 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 	handleClick = () => {
 		this.setState({
 			visible: !this.state.visible
-		})
+		});
 	}
 
 	private buildClasses = () => {
 		let l: string[] = Array.from(this.props.classes);
 
+		if (this.props.className !== '') {
+			l.push(this.props.className);
+		}
+		l.push('ui-button-dialog');
+
 		if (!this.props.visible) {
-			l.push(styles.buttonDialogInvisible);
-			l.push(styles.buttonDialogDisabled);
+			l.push(sharedStyles.invisible);
 		}
 
-		if (!this.props.enabled) {
-			l.push(styles.buttonDialogDisabled);
+		if (this.props.disabled) {
+			l.push(sharedStyles.disabled);
 		}
 
 		return l;
@@ -74,6 +80,7 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		let l: string[] = Array.from(this.props.dialogClasses);
 		l.push(styles.buttonDialog);
 		l.push(styles.buttonDialogPopup);
+		l.push('ui-dialog-popup');
 
 		if (!this.state.visible) {
 			l.push(styles.buttonDialogHide);

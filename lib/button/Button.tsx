@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {nil} from 'util.toolbox';
-import {BaseProps} from '../props';
+import {BaseProps} from '../shared/props';
 
+const sharedStyles = require('../shared/styles.css');
 const styles = require('./styles.css');
 
 export interface ButtonProps extends BaseProps {
@@ -11,10 +12,10 @@ export interface ButtonProps extends BaseProps {
 
 export const ButtonComponent = (props: ButtonProps) => (
     <i
-        className={`fa fa-${props.iconName} ui ui-button ${props.classes.join(' ')}`}
+        className={props.classes.join(' ')}
         onClick={props.onClick}
 		aria-hidden="true"
-	    disabled={props.enabled ? false : true}
+	    disabled={props.disabled}
 	    style={props.style}
 	>
     </i>
@@ -27,7 +28,7 @@ export class Button extends React.Component<ButtonProps, undefined> {
 
     public static defaultProps: ButtonProps = {
 		classes: [],
-		enabled: true,
+		disabled: false,
         iconName: 'bomb',
 		noripple: false,
         onClick: nil,
@@ -41,19 +42,26 @@ export class Button extends React.Component<ButtonProps, undefined> {
 
 	private buildClasses = () => {
 		let l: string[] = Array.from(this.props.classes);
-		l.push(styles.button);
 
-		if (!this.props.noripple) {
+		if (this.props.className !== '') {
+			l.push(this.props.className);
+		}
+		l.push(styles.button);
+		l.push('fa');
+		l.push(`fa-${this.props.iconName}`);
+		l.push('ui-button');
+
+		if (!this.props.noripple && !this.props.disabled) {
 			l.push('ripple');
 		}
 
 		if (!this.props.visible) {
-			l.push(styles.buttonInvisible);
-			l.push(styles.buttonDisabled);
+			l.push(sharedStyles.invisible);
+			l.push(sharedStyles.disabled);
 		}
 
-		if (!this.props.enabled) {
-			l.push(styles.buttonDisabled);
+		if (this.props.disabled) {
+			l.push(sharedStyles.disabled);
 			l.push(styles.nohover);
 		}
 
@@ -61,7 +69,7 @@ export class Button extends React.Component<ButtonProps, undefined> {
 	}
 
 	private handleClick = (e: any) => {
-		if (this.props.enabled && this.props.visible && this.props.onClick != null) {
+		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
 			this.props.onClick();
 		}
 		e.stopPropagation();

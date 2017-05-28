@@ -4,7 +4,7 @@
 
 'use strict';
 
-import {CallbackTestContext, TestContext} from 'ava';
+import {CallbackTestContext} from 'ava';
 import * as fs from 'fs-extra';
 import {Fixture} from 'util.fixture';
 import logger from 'util.log';
@@ -37,11 +37,6 @@ export function cleanup(msg: string, t: CallbackTestContext): void {
 	if (jsdomCleanup != null) {
 		jsdomCleanup();
 	}
-}
-
-export function header(msg: string, t: TestContext): void {
-	console.log(`Testing: ${msg}`);
-	t.pass(msg);
 }
 
 /**

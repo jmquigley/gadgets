@@ -7,9 +7,10 @@
 
 import * as React from 'react';
 import {getUUID} from 'util.toolbox';
-import {BaseProps} from '../../lib/props';
+import {BaseProps} from '../shared/props';
 import {ListItem} from './index';
 
+const sharedStyles = require('../shared/styles.css');
 const styles = require('./styles.css');
 
 export interface ListProps extends BaseProps {
@@ -23,8 +24,8 @@ export interface ListState {
 
 export const ListComponent = (props: ListProps) => (
     <ul
-		disabled={props.enabled ? false : true}
-		className={`ui ui-list ${props.classes.join(' ')}`}
+		disabled={props.disabled}
+		className={props.classes.join(' ')}
 		id={props.id}>
 		{props.children}
 	</ul>
@@ -35,7 +36,8 @@ export class List extends React.Component<ListProps, ListState> {
 	public static defaultProps: ListProps = {
 		alternating: false,
 		classes: [],
-		enabled: true,
+		className: '',
+		disabled: false,
 		id: getUUID(true),
 		unselect: false,
 		visible: true
@@ -50,19 +52,23 @@ export class List extends React.Component<ListProps, ListState> {
 
 	private buildClasses = () => {
 		let l: string[] = Array.from(this.props.classes);
+
+		if (this.props.className !== '') {
+			l.push(this.props.className);
+		}
 		l.push(styles.list);
+		l.push('ui-list');
 
 		if (this.props.alternating) {
 			l.push(styles.listAlternating);
 		}
 
 		if (!this.props.visible) {
-			l.push(styles.listInvisible);
-			l.push(styles.listDisabled);
+			l.push(sharedStyles.invisible);
 		}
 
-		if (!this.props.enabled) {
-			l.push(styles.listDisabled);
+		if (this.props.disabled) {
+			l.push(sharedStyles.disabled);
 		}
 
 		return l;
@@ -84,7 +90,7 @@ export class List extends React.Component<ListProps, ListState> {
 		let children = React.Children.map(this.props.children, child => {
 			let selected = child['props'].id === selectedKey;
 			return React.cloneElement(child as any, {
-				selectHandler: this.selectHandler,
+				href: this.selectHandler,
 				selected: (this.props.unselect) ? false : selected
 			});
 		});

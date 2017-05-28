@@ -3,9 +3,10 @@ import * as React from 'react';
 export interface BaseProps {
 	backgroundColor?: string;
 	children?: React.ReactNode;
+	className?: string;
 	classes?: string[];
 	color?: string;
-	enabled?: boolean;
+	disabled?: boolean;
 	id?: string;
 	key?: string;
 	onClick?: any;

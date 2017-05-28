@@ -12,8 +12,36 @@ const ListItem = bundle.ListItem;
 
 render(
 	<div id="app">
-		<div id="listExample">
-			<h3>List/ListItem Example</h3>
+
+		<h3>Button Examples</h3>
+		<section id="buttonExample">
+			<div id="simple-buttons">
+				<div className="box">
+					Simple Button<br/>
+					<Button iconName="cab"/>
+				</div>
+
+				<div className="box">
+					Disabled Button<br/>
+					<Button iconName="cab" disabled={true} />
+				</div>
+
+				<div className="box">
+					Dialog Button<br/>
+					<ButtonDialog iconName="bath">Test Dialog Button</ButtonDialog>
+				</div>
+
+				<div className="box">
+					Toggle Button<br/>
+					<ButtonToggle iconNameOn="check-square-o" iconNameOff="square-o" fgColorOff="black" />
+				</div>
+
+			</div>
+		</section>
+
+		<h3>List/ListItem Example</h3>
+		<section id="listExample">
+
 			<List alternating id="simple-list">
 				<ListItem
 					id={getUUID()}
@@ -46,11 +74,12 @@ render(
 					id={getUUID()}
 					leftTitle="List Item 6 (Toggle)" rightTitle="15"
 					rightButton={
-						<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="yellow" fgColorOff="#004358" />
+						<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358" />
 					}
-				/>
+/>
+				<ListItem id={getUUID()} leftTitle="List Item 7 (disabled)" disabled />
 			</List>
-		</div>
+		</section>
 	</div>,
 	document.getElementById('root')
 );

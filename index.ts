@@ -1,12 +1,10 @@
-require('font-awesome/css/font-awesome.min.css');
-require('css-ripple-effect/dist/ripple.min.css');
-
 import {Button} from './lib/button';
 import {ButtonDialog} from './lib/buttonDialog';
 import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
+import {Label} from './lib/label';
 import {List, ListItem} from './lib/list';
-import {BaseProps} from './lib/props';
+import {BaseProps} from './lib/shared/props';
 
 export {
 	BaseProps,
@@ -14,6 +12,7 @@ export {
 	ButtonDialog,
 	ButtonToggle,
 	Container,
+	Label,
 	List,
 	ListItem
 };

@@ -1,5 +1,14 @@
 h3 {
-	margin: 5px;
+	margin: 0;
+	padding: 5px;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+#app {
+	padding: 10px;
 }
 
 #listExample {
@@ -9,4 +18,24 @@ h3 {
 
 #simple-list {
 	border: solid 1px #004358;
+}
+
+#simple-buttons {
+	display: flex;
+	justify-content: space-evenly;
+	line-height: 32px;
+	text-align: center;
+}
+
+.box {
+	padding: 5px;
+	border-right: solid 1px #004358;
+}
+
+.box:last-child {
+	border: 0;
+}
+
+.box i {
+	border: solid 2px lightgray;
 }

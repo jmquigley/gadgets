@@ -78,15 +78,28 @@ The module contains the following widgets:
 
 ### Accordion
 
+### Badge
+- A button with a text label for info.
+
 ### Button
 
 ### ButtonDialog
 
 ### ButtonToggle
 
+### Card
+
+### Checkbox
+
 ### Container
 
+### DateChooser
+
 ### Dialog
+
+### Dropdown
+
+### Editor
 
 ### Icon
 
@@ -96,4 +109,29 @@ The module contains the following widgets:
 
 ### ListItem
 
+### Menu
+
+### ProgressBar
+
+### RadioButton
+
+### Slider
+
 ### Switch
+
+### Table
+
+### Tabs
+
+### TextField
+
+### TimeChooser
+
+### Toast
+A popup (center of screen) with a message that disappers after N seconds.  Contains an X button to remove sooner.
+
+### Toolbar
+
+### Tooltip
+
+### Treeview
