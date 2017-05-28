@@ -81,7 +81,7 @@ This will give a webpack module an **entry** point to copy in the gadgets CSS fi
 
 
 ## Widgets
-The module contains the following widgets:
+The module contains the following widgets (click on each header to attribute/event details for each):
 
 ### Accordion
 
@@ -99,6 +99,8 @@ import {Button} from 'gadgets';
 
 
 ### ButtonDialog
+A button control that when pushed displays a local dialog box.  The contents of the control make up the dialog window.
+
 
 ### ButtonToggle
 
@@ -120,9 +122,7 @@ import {Button} from 'gadgets';
 
 ### Label
 
-### List
-
-### ListItem
+### List/ListItem
 
 ### Menu
 

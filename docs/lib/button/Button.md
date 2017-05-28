@@ -1,6 +1,31 @@
 <a name="Button"></a>
 
 ## Button
-Creates a Button control
+A typical button control widget.  This control only uses an icon and no text to represent the button.
+The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module,
+so any font available in the current release of that library is available.
+
+#### Examples:
+
+```javascript
+import {Button} from 'gadgets';
+<Button iconName="cab" onClick={someFunction} />
+```
+
+#### Events
+- `onClick`` - when the button control is clicked by the user
+
+#### Styles
+- `ui-button` - top level style placed on `<i>` control that constructs the button.
+
+#### Properties
+- `classes: string[]` - an array of strings that represent custom CSS class names that will be applied
+to the component.
+- `disabled: boolean` - if true then then the control is disabled.  Defaults to false.
+- iconName: string` - the name of the font awesome icon used with this button
+- `noripple: boolean` - turns off the ripple effect for a button.  On by default.
+- `style: object` - an object of key value/pairs that represent CSS style settings
+- `visible: boolean` - turns the display of this control on or off.  If true, then the component can
+be seen.  The default is true.
 
 **Kind**: global class  

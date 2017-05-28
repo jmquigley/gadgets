@@ -23,7 +23,7 @@
     "clean": "pkgwrap --clean",
     "coverage": "pkgwrap --coverage",
     "demo": "npm run all && npm start",
-    "docs": "pkgwrap --docs --site",
+    "docs": "pkgwrap --docs",
     "lint": "pkgwrap --lint",
     "postinstall": "pkgwrap --postinstall",
     "report": "pkgwrap --reporting",
