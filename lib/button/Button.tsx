@@ -1,12 +1,10 @@
 import * as React from 'react';
-import {nil} from 'util.toolbox';
 import {BaseProps} from '../shared/props';
 
 const sharedStyles = require('../shared/styles.css');
 const styles = require('./styles.css');
 
 export interface ButtonProps extends BaseProps {
-	noripple?: boolean;     // turn off the button ripple effect
 	iconName?: string;      // font awesome string
 }
 
@@ -31,7 +29,7 @@ export class Button extends React.Component<ButtonProps, undefined> {
 		disabled: false,
         iconName: 'bomb',
 		noripple: false,
-        onClick: nil,
+        onClick: null,
 		style: {},
 		visible: true
     };
@@ -57,7 +55,6 @@ export class Button extends React.Component<ButtonProps, undefined> {
 
 		if (!this.props.visible) {
 			l.push(sharedStyles.invisible);
-			l.push(sharedStyles.disabled);
 		}
 
 		if (this.props.disabled) {
@@ -68,7 +65,7 @@ export class Button extends React.Component<ButtonProps, undefined> {
 		return l;
 	}
 
-	private handleClick = (e: any) => {
+	private handleClick = (e: Event) => {
 		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
 			this.props.onClick();
 		}

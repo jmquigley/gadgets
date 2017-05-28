@@ -17,7 +17,10 @@ test.after.always.cb(t => {
 
 test('Test the creation of a ListItem control with simple title', t => {
 	const ctl = mount(
-		<ListItem leftTitle="test title" />
+		<ListItem
+			leftTitle="test title"
+			selected
+		/>
 	);
 
 	t.truthy(ctl);
@@ -29,6 +32,7 @@ test('Test the creation of a ListItem control with simple title', t => {
 
 	t.is(ctl.find('.ui-listitem').length, 1);
 	t.is(ctl.find('.listItem').length, 1);
+	t.is(ctl.find('.selected').length, 1);
 });
 
 test('Test the creation of a ListItem control with left & right title', t => {

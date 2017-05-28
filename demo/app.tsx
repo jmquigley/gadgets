@@ -2,11 +2,20 @@ import * as React from 'react';
 import {render} from 'react-dom';
 import {getUUID} from 'util.toolbox';
 
+//
+// This is not how the components would typically be included within an
+// electron app.  This is kind of a "hack" to allow the demo app and the
+// library code to coexist.  Typically they would be imported using
+// CommonJS import.
+//
+
 const bundle = require('../dist/bundle');
 
 const Button = bundle.Button;
 const ButtonDialog = bundle.ButtonDialog;
 const ButtonToggle = bundle.ButtonToggle;
+const Container = bundle.Container;
+const Label = bundle.Label;
 const List = bundle.List;
 const ListItem = bundle.ListItem;
 
@@ -14,7 +23,7 @@ render(
 	<div id="app">
 
 		<h3>Button Examples</h3>
-		<section id="buttonExample">
+		<Container id="buttonExample">
 			<div id="simple-buttons">
 				<div className="box">
 					Simple Button<br/>
@@ -37,10 +46,19 @@ render(
 				</div>
 
 			</div>
-		</section>
+		</Container>
+
+		<h3>Label Examples</h3>
+		<Container id="labelExample">
+			<div id="simple-labels">
+				<p><Label>Test Label #1</Label></p>
+				<p><Label disabled>Test Label #2 (diabled)</Label></p>
+				<p><Label className="demoLabel">Test Label #3 Styled</Label></p>
+			</div>
+		</Container>
 
 		<h3>List/ListItem Example</h3>
-		<section id="listExample">
+		<Container id="listExample">
 
 			<List alternating id="simple-list">
 				<ListItem
@@ -78,8 +96,15 @@ render(
 					}
 />
 				<ListItem id={getUUID()} leftTitle="List Item 7 (disabled)" disabled />
+				<ListItem
+					id={getUUID()} leftTitle="List Item 8 (disabled w/ buttons)"
+					disabled
+					rightButton={
+						<Button />
+					}
+				/>
 			</List>
-		</section>
+		</Container>
 	</div>,
 	document.getElementById('root')
 );

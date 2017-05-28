@@ -30,7 +30,7 @@ export interface ListItemState {
 export const ListItemComponent = (props: ListItemProps) => {
 
 	let leftButton = null;
-	if (props.leftButton != null) {
+	if (props.leftButton != null && !props.disabled) {
 		leftButton = (
 			<div className={`${styles.itemButton} ${(props.hiddenLeftButton) ? styles.hiddenButton : ''}`}>
 				{props.leftButton != null ? props.leftButton : null}
@@ -39,7 +39,7 @@ export const ListItemComponent = (props: ListItemProps) => {
 	}
 
 	let rightButton = null;
-	if (props.rightButton != null) {
+	if (props.rightButton != null && !props.disabled) {
 		rightButton = (
 			<div className={`${styles.itemButton} ${(props.hiddenRightButton) ? styles.hiddenButton : ''}`}>
 				{props.rightButton != null ? props.rightButton : null}
@@ -51,7 +51,8 @@ export const ListItemComponent = (props: ListItemProps) => {
 		<li className={props.classes.join(' ')}>
 			{leftButton}
 
-			<div className={`ui-title ripple ${styles.title}`} onClick={props.onClick}>
+			<div className={`ui-title ${styles.title} ${(!props.noripple && !props.disabled) ? 'ripple' : ''}`}
+				 onClick={props.onClick}>
 				<Label className={`ui-leftTitle ${styles.leftTitle}`}>{props.leftTitle}</Label>
 				<Label className={`ui-rightTitle ${styles.rightTitle}`}>{props.rightTitle}</Label>
 			</div>
@@ -72,6 +73,7 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 		href: nil,
 		leftButton: null,
 		leftTitle: '',
+		noripple: false,
 		onClick: nil,
 		rightButton: null,
 		rightTitle: '',
@@ -102,6 +104,7 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 
 		if (this.props.disabled) {
 			l.push(sharedStyles.disabled);
+			l.push(styles.nohover);
 		}
 
 		return l;
@@ -117,7 +120,7 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 			<ListItemComponent
 				{...this.props}
 				classes={this.buildClasses()}
-				onClick={this.handleClick}
+				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
 			/>
 		);
 	}

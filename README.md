@@ -16,20 +16,27 @@ To build the app and run all tests:
 ```
 $ npm run all
 ```
+**Note** this application uses [yarn](https://yarnpkg.com/en/) to install initial dependencies.
 
-To run the demo application in electron use:
+
+To build and run the demo application in electron use:
 ```
 $ npm run demo
+```
+This will check out all dependencies, build the code, test, and then try to run it within electron.  This will take some time.
 
-OR
 
+To just attempt to run the application without building use:
+```
 $ npm start
 ```
+
 
 To change the code while electron is running and use `CMD + R` to refresh electron:
 ```
 # npm run watch
 ```
+
 
 This library was created for use in the [Electron UI](https://electron.atom.io/).  It has only be tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets used in an internal project.  It uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the module.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`).  The library makes use of [css modules](https://github.com/css-modules/css-modules).
 
@@ -81,7 +88,15 @@ The module contains the following widgets:
 ### Badge
 - A button with a text label for info.
 
-### Button
+### [Button](docs/lib/button/Button.md)
+A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.  To customize the style use the `ui-button` selector.
+
+```javascript
+import {Button} from 'gadgets';
+
+<Button iconName="cab" onClick={someFunction} />
+```
+
 
 ### ButtonDialog
 

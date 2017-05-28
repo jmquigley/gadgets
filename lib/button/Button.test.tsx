@@ -15,7 +15,7 @@ test.after.always.cb(t => {
 });
 
 test('Test creation of a Button control', t => {
-	const ctl = mount(<Button />);
+	const ctl = mount(<Button className="test-class"/>);
 
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
@@ -28,6 +28,7 @@ test('Test creation of a Button control', t => {
 	t.is(ctl.find('.ui-button').length, 1);
 	t.is(ctl.find('.fa').length, 1);
 	t.is(ctl.find('.fa-bomb').length, 1);
+	t.is(ctl.find('.test-class').length, 1);
 });
 
 test('Test creation of a Button control with custom icon', t => {

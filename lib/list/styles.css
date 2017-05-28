@@ -6,7 +6,7 @@
 		cursor: pointer;
 	}
 
-	.list .listItem:hover {
+	.list .listItem:not(.nohover):hover {
 		background-color: #bedb39;
 	}
 

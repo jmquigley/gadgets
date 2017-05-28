@@ -14,7 +14,8 @@ test.after.always.cb(t => {
 });
 
 test('Test creation of a Label control', t => {
-	const ctl = mount(<Label>Test label text</Label>);
+	let s: string = 'Test label text';
+	const ctl = mount(<Label className="test-class">{s}</Label>);
 
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
@@ -22,9 +23,37 @@ test('Test creation of a Label control', t => {
 	t.is(ctl.prop('id'), undefined);
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
-
 	t.is(ctl.find('.ui-label').length, 1);
+	t.is(ctl.find('.test-class').length, 1);
+	t.is(ctl.text(), s);
 });
 
-// :TODO: test disable of Label
-// :TODO: test invisible Label
+test('Test the disabling of the Label control', t => {
+	let s: string = 'Test label text';
+	const ctl = mount(<Label disabled>{s}</Label>);
+
+	t.truthy(ctl);
+	log.debug(ctl.html(), __filename);
+
+	t.is(ctl.prop('id'), undefined);
+	t.true(ctl.prop('disabled'));
+	t.true(ctl.prop('visible'));
+	t.is(ctl.find('.ui-label').length, 1);
+	t.is(ctl.find('.disabled').length, 1);
+	t.is(ctl.text(), s);
+});
+
+test('Test making the Label control invisible', t => {
+	let s: string = 'Test label text';
+	const ctl = mount(<Label visible={false}>{s}</Label>);
+
+	t.truthy(ctl);
+	log.debug(ctl.html(), __filename);
+
+	t.is(ctl.prop('id'), undefined);
+	t.false(ctl.prop('disabled'));
+	t.false(ctl.prop('visible'));
+	t.is(ctl.find('.ui-label').length, 1);
+	t.is(ctl.find('.invisible').length, 1);
+	t.is(ctl.text(), s);
+});

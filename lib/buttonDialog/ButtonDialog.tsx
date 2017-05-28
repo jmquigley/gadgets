@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {nil} from 'util.toolbox';
 import {Button, ButtonProps} from '../button';
 
 const sharedStyles = require('../shared/styles.css');
@@ -40,6 +41,7 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		dialogClasses: [],
 		disabled: false,
         iconName: 'bomb',
+		onClick: nil,
 		style: {},
 		visible: true
     };
@@ -55,6 +57,8 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		this.setState({
 			visible: !this.state.visible
 		});
+
+		this.props.onClick();
 	}
 
 	private buildClasses = () => {
@@ -92,7 +96,7 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		return (
 			<ButtonDialogComponent
 				{...this.props}
-				onClick={this.handleClick}
+				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
 				classes={this.buildClasses()}
 				dialogClasses={this.buildDialogClasses()}
 			/>

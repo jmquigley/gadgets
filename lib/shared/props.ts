@@ -9,6 +9,7 @@ export interface BaseProps {
 	disabled?: boolean;
 	id?: string;
 	key?: string;
+	noripple?: boolean;
 	onClick?: any;
 	style?: any;
 	visible?: boolean;

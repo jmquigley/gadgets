@@ -15,7 +15,7 @@ test.after.always.cb(t => {
 
 test('Test creation of a ButtonDialog control', t => {
 	const ctl = mount(
-		<ButtonDialog>
+		<ButtonDialog className="test-class">
 			<p>Dialog test</p>
 		</ButtonDialog>
 	);
@@ -28,6 +28,7 @@ test('Test creation of a ButtonDialog control', t => {
 	t.true(ctl.prop('visible'));
 	t.is(ctl.prop('id'), undefined);
 	t.true(ctl.contains(<p>Dialog test</p>));
+	t.is(ctl.find('.test-class').length, 1);
 });
 
 test('Test the click event on a ButtonDialog control', t => {
@@ -44,6 +45,7 @@ test('Test the click event on a ButtonDialog control', t => {
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 	t.is(ctl.prop('id'), undefined);
+	t.true(ctl.contains(<p>Dialog test</p>));
 
 	ctl.find('i').simulate('click');
 	t.true(ctl.state('visible'));
@@ -84,6 +86,7 @@ test('Test the making the ButtonDialog invisible', t => {
 	t.false(ctl.prop('visible'));
 	t.is(ctl.prop('id'), undefined);
 	t.is(ctl.find('.invisible').length, 2);
+	t.true(ctl.contains(<p>Dialog test</p>));
 
 	ctl.find('i').simulate('click');
 	t.false(ctl.state('visible'));
