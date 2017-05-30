@@ -31,8 +31,8 @@ test('Test the creation of a ListItem control with simple title', t => {
 	t.true(ctl.prop('visible'));
 
 	t.is(ctl.find('.ui-listitem').length, 1);
+	t.is(ctl.find('.ui-selected').length, 1);
 	t.is(ctl.find('.listItem').length, 1);
-	t.is(ctl.find('.selected').length, 1);
 });
 
 test('Test the creation of a ListItem control with left & right title', t => {

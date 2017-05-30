@@ -1,11 +1,21 @@
-import * as React from 'react';
-import {BaseProps} from '../shared/props';
+'use strict';
 
-const sharedStyles = require('../shared/styles.css');
+import {cloneDeep} from 'lodash';
+import * as React from 'react';
+import {BaseProps, getDefaultBaseProps} from '../shared/props';
+
 const styles = require('./styles.css');
 
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
+	style?: any;
+}
+
+export function getDefaultButtonProps(): ButtonProps {
+	return cloneDeep(Object.assign(getDefaultBaseProps(), {
+		iconName: 'bomb',
+		style: {}
+	}));
 }
 
 export const ButtonComponent = (props: ButtonProps) => (
@@ -14,7 +24,7 @@ export const ButtonComponent = (props: ButtonProps) => (
         onClick={props.onClick}
 		aria-hidden="true"
 	    disabled={props.disabled}
-	    style={props.style}
+		style={props.style}
 	>
     </i>
 );
@@ -50,15 +60,7 @@ export const ButtonComponent = (props: ButtonProps) => (
  */
 export class Button extends React.Component<ButtonProps, undefined> {
 
-    public static defaultProps: ButtonProps = {
-		classes: [],
-		disabled: false,
-        iconName: 'bomb',
-		noripple: false,
-        onClick: null,
-		style: {},
-		visible: true
-    };
+    public static defaultProps: ButtonProps = getDefaultButtonProps();
 
     constructor(props: ButtonProps) {
 		super(props);
@@ -80,12 +82,12 @@ export class Button extends React.Component<ButtonProps, undefined> {
 		}
 
 		if (!this.props.visible) {
-			l.push(sharedStyles.invisible);
+			l.push(styles.invisible);
 		}
 
 		if (this.props.disabled) {
-			l.push(sharedStyles.disabled);
-			l.push(styles.nohover);
+			l.push(styles.disabled);
+			l.push('nohover');
 		}
 
 		return l;

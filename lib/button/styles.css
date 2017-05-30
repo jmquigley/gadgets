@@ -1,3 +1,5 @@
+@import '../shared/styles.css';
+
 :local {
 	.button {
 		text-align: center;
@@ -6,9 +8,5 @@
 		width: 32px;
 		background-color: inherit;
 		line-height: inherit;
-	}
-
-	.button:not(.nohover):hover {
-		background-color: lightgray;
 	}
 }

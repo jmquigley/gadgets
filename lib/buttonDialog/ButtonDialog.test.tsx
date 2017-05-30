@@ -26,7 +26,7 @@ test('Test creation of a ButtonDialog control', t => {
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.true(ctl.contains(<p>Dialog test</p>));
 	t.is(ctl.find('.test-class').length, 1);
 });
@@ -44,7 +44,7 @@ test('Test the click event on a ButtonDialog control', t => {
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.true(ctl.contains(<p>Dialog test</p>));
 
 	ctl.find('i').simulate('click');
@@ -64,7 +64,7 @@ test('Test the disabling of the ButtonDialog control', t => {
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.true(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.is(ctl.find('.disabled').length, 2); // on control and button
 
 	ctl.find('i').simulate('click');
@@ -84,7 +84,7 @@ test('Test the making the ButtonDialog invisible', t => {
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));
 	t.false(ctl.prop('visible'));
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.is(ctl.find('.invisible').length, 2);
 	t.true(ctl.contains(<p>Dialog test</p>));
 

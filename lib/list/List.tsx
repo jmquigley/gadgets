@@ -7,10 +7,9 @@
 
 import * as React from 'react';
 import {getUUID} from 'util.toolbox';
-import {BaseProps} from '../shared/props';
+import {BaseProps, getDefaultBaseProps} from '../shared/props';
 import {ListItem} from './index';
 
-const sharedStyles = require('../shared/styles.css');
 const styles = require('./styles.css');
 
 export interface ListProps extends BaseProps {
@@ -33,15 +32,12 @@ export const ListComponent = (props: ListProps) => (
 
 export class List extends React.Component<ListProps, ListState> {
 
-	public static defaultProps: ListProps = {
-		alternating: false,
-		classes: [],
-		className: '',
-		disabled: false,
-		id: getUUID(true),
-		unselect: false,
-		visible: true
-	}
+	public static defaultProps: ListProps = Object.assign(
+		getDefaultBaseProps(), {
+			alternating: false,
+			id: getUUID(true),
+			unselect: false
+		});
 
 	constructor(props: ListProps) {
 		super(props);
@@ -64,11 +60,11 @@ export class List extends React.Component<ListProps, ListState> {
 		}
 
 		if (!this.props.visible) {
-			l.push(sharedStyles.invisible);
+			l.push(styles.invisible);
 		}
 
 		if (this.props.disabled) {
-			l.push(sharedStyles.disabled);
+			l.push(styles.disabled);
 		}
 
 		return l;

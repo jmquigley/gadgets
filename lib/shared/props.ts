@@ -1,4 +1,8 @@
+'use strict';
+
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {nil} from 'util.toolbox';
 
 export interface BaseProps {
 	backgroundColor?: string;
@@ -11,6 +15,25 @@ export interface BaseProps {
 	key?: string;
 	noripple?: boolean;
 	onClick?: any;
+	selected?: boolean;
 	style?: any;
 	visible?: boolean;
+}
+
+export function getDefaultBaseProps(): BaseProps {
+	return cloneDeep({
+		backgroundColor: '',
+		children: null,
+		className: '',
+		classes: [],
+		color: '',
+		disabled: false,
+		id: '',
+		key: '',
+		noripple: false,
+		onClick: nil,
+		selected: false,
+		style: {},
+		visible: true
+	});
 }

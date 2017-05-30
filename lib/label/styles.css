@@ -1,3 +1,7 @@
-.label {
-	background-color: inherit;
+@import '../shared/styles.css';
+
+:local {
+	.label {
+		background-color: inherit;
+	}
 }

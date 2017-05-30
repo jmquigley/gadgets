@@ -1,8 +1,9 @@
+'use strict';
+
 import * as React from 'react';
 import {nil} from 'util.toolbox';
-import {Button, ButtonProps} from '../button';
+import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 
-const sharedStyles = require('../shared/styles.css');
 const styles = require('./styles.css');
 
 export interface ButtonDialogProps extends ButtonProps {
@@ -22,12 +23,11 @@ export const ButtonDialogComponent = (props: ButtonDialogProps) => (
 			disabled={props.disabled}
 			iconName={props.iconName}
 			onClick={props.onClick}
-			style={props.style}
 			visible={props.visible}
 		/>
 		<div className={props.dialogClasses.join(' ')}>
 			<span>
-			{props.children}
+				{props.children}
 			</span>
 		</div>
 	</div>
@@ -35,16 +35,10 @@ export const ButtonDialogComponent = (props: ButtonDialogProps) => (
 
 export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialogState> {
 
-    public static defaultProps: ButtonDialogProps = {
-		classes: [],
-		className: '',
-		dialogClasses: [],
-		disabled: false,
-        iconName: 'bomb',
-		onClick: nil,
-		style: {},
-		visible: true
-    };
+    public static defaultProps: ButtonDialogProps = Object.assign(
+		getDefaultButtonProps(), {
+			dialogClasses: []
+     });
 
 	constructor(props: ButtonDialogProps) {
 		super(props);
@@ -67,14 +61,15 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		if (this.props.className !== '') {
 			l.push(this.props.className);
 		}
+		l.push(styles.buttonDialog);
 		l.push('ui-button-dialog');
 
 		if (!this.props.visible) {
-			l.push(sharedStyles.invisible);
+			l.push(styles.invisible);
 		}
 
 		if (this.props.disabled) {
-			l.push(sharedStyles.disabled);
+			l.push(styles.disabled);
 		}
 
 		return l;
@@ -82,7 +77,6 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 
 	private buildDialogClasses = () => {
 		let l: string[] = Array.from(this.props.dialogClasses);
-		l.push(styles.buttonDialog);
 		l.push(styles.buttonDialogPopup);
 		l.push('ui-dialog-popup');
 

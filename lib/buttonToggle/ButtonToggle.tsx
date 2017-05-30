@@ -1,15 +1,16 @@
+'use strict';
+
 import * as React from 'react';
 import {nil} from 'util.toolbox';
-import {Button, ButtonProps} from '../button';
+import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 
-const sharedStyles = require('../shared/styles.css');
+const styles = require('./styles.css');
 
 export interface ButtonToggleProps extends ButtonProps {
 	bgColorOff?: string;
 	bgColorOn?: string;
 	fgColorOff?: string;
 	fgColorOn?: string;
-	iconName?: string;
 	initialToggle?: boolean;
 	iconNameOff?: string;      // font awesome string
 	iconNameOn?: string;       // font awesome string
@@ -33,25 +34,20 @@ export const ButtonToggleComponent = (props: ButtonToggleProps) => (
 
 export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggleState> {
 
-    public static defaultProps: ButtonToggleProps = {
-		bgColorOff: "inherit",
-		bgColorOn: "inherit",
-		fgColorOff: "white",
-		fgColorOn: "black",
-		classes: [],
-		className: '',
-		disabled: false,
-		initialToggle: false,
-		iconName: 'bomb',
-        iconNameOff: 'bomb',
-        iconNameOn: 'bomb',
-        onClick: nil,
-		style: {
-			color: "black",
-			backgroundColor: "white"
-		},
-		visible: true
-    };
+    public static defaultProps: ButtonToggleProps = Object.assign(
+		getDefaultButtonProps(), {
+			bgColorOff: "inherit",
+			bgColorOn: "inherit",
+			fgColorOff: "white",
+			fgColorOn: "black",
+			initialToggle: false,
+			iconNameOff: 'bomb',
+			iconNameOn: 'bomb',
+			style: {
+				color: "black",
+				backgroundColor: "white"
+			}
+		});
 
     constructor(props: ButtonToggleProps) {
 		super(props);
@@ -77,12 +73,11 @@ export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggl
 		l.push('ui-buttonToggle');
 
 		if (!this.props.visible) {
-			l.push(sharedStyles.invisible);
-			l.push(sharedStyles.disabled);
+			l.push(styles.invisible);
 		}
 
 		if (this.props.disabled) {
-			l.push(sharedStyles.disabled);
+			l.push(styles.disabled);
 		}
 
 		return l;

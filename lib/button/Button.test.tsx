@@ -21,7 +21,7 @@ test('Test creation of a Button control', t => {
 	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
@@ -38,7 +38,7 @@ test('Test creation of a Button control with custom icon', t => {
 	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'superpowers');
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
@@ -55,7 +55,7 @@ test('Test Button click event', t => {
 	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
@@ -87,7 +87,7 @@ test('Test making a Button invisible', t => {
 	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
 	t.false(ctl.prop('visible'));
 	t.is(ctl.find('.invisible').length, 1);

@@ -1,8 +1,8 @@
-import * as React from 'react';
-import {nil} from 'util.toolbox';
-import {BaseProps} from '../shared/props';
+'use strict';
 
-const sharedStyles = require('../shared/styles.css');
+import * as React from 'react';
+import {BaseProps, getDefaultBaseProps} from '../shared/props';
+
 const styles = require('./styles.css');
 
 export interface LabelProps extends BaseProps {
@@ -12,22 +12,14 @@ export const LabelComponent = (props: LabelProps) => (
 	<span
 		className={props.classes.join(' ')}
 		onClick={props.onClick}
-		disabled={props.disabled}
-		style={props.style}>
+		disabled={props.disabled}>
 		{props.children}
 	</span>
 );
 
 export class Label extends React.Component<LabelProps, undefined> {
 
-	public static defaultProps: LabelProps = {
-		classes: [],
-		className: '',
-		disabled: false,
-        onClick: nil,
-		style: {},
-		visible: true
-	}
+	public static defaultProps: LabelProps = getDefaultBaseProps();
 
 	constructor(props: LabelProps) {
 		super(props);
@@ -44,12 +36,12 @@ export class Label extends React.Component<LabelProps, undefined> {
 		l.push('ui-label');
 
 		if (!this.props.visible) {
-			l.push(sharedStyles.invisible);
+			l.push(styles.invisible);
 		}
 
 		if (this.props.disabled) {
-			l.push(sharedStyles.disabled);
-			l.push(styles.nohover);
+			l.push(styles.disabled);
+			l.push('nohover');
 		}
 
 		return l;

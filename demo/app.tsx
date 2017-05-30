@@ -11,6 +11,8 @@ import {getUUID} from 'util.toolbox';
 
 const bundle = require('../dist/bundle');
 
+const Accordion = bundle.Accordion;
+const AccordionItem = bundle.AccordionItem;
 const Button = bundle.Button;
 const ButtonDialog = bundle.ButtonDialog;
 const ButtonToggle = bundle.ButtonToggle;
@@ -21,6 +23,46 @@ const ListItem = bundle.ListItem;
 
 render(
 	<div id="app">
+
+		<h3>Accordion Example</h3>
+		<Container id="accordionExample">
+			<Accordion>
+				<AccordionItem
+					leftTitle="Accordion #1"
+					rightButton={<Button iconName="plus" />}>
+					<List alternating>
+						<ListItem id={getUUID()}
+							leftTitle="Accordion List Item 1" rightTitle="12"
+							rightButton={<Button iconName="paper-plane-o"/>}
+						/>
+						<ListItem id={getUUID()}
+							leftTitle="Accordion List Item 2" rightTitle="12"
+							rightButton={<Button iconName="paper-plane-o"/>}
+						/>
+						<ListItem id={getUUID()}
+							leftTitle="Accordion List Item 3" rightTitle="12"
+							rightButton={<Button iconName="paper-plane-o"/>}
+						/>
+						<ListItem id={getUUID()}
+							leftTitle="Accordion List Item 4" rightTitle="12"
+							rightButton={<Button iconName="paper-plane-o"/>}
+						/>
+					</List>
+				</AccordionItem>
+
+				<AccordionItem
+					leftTitle="Accordion #2"
+					rightButton={<Button iconName="plus" />}>
+					Accordion Items #2
+				</AccordionItem>
+
+				<AccordionItem
+					leftTitle="Accordion #3"
+					rightButton={<Button iconName="plus" />}>
+					Accordion Items #3
+				</AccordionItem>
+			</Accordion>
+		</Container>
 
 		<h3>Button Examples</h3>
 		<Container id="buttonExample">
@@ -60,7 +102,7 @@ render(
 		<h3>List/ListItem Example</h3>
 		<Container id="listExample">
 
-			<List alternating id="simple-list">
+			<List alternating>
 				<ListItem
 					id={getUUID()}
 					leftTitle="List Item 1" rightTitle="12"

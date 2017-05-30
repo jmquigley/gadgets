@@ -21,7 +21,7 @@ test('Test creation of a Button control', t => {
 	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
@@ -42,7 +42,7 @@ test('Test creation of a ButtonToggle control with on/off icons', t => {
  	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('iconName'), 'bomb');
- 	t.is(ctl.prop('id'), undefined);
+ 	t.is(ctl.prop('id'), '');
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.is(ctl.prop('iconNameOn'), 'star');
 	t.is(ctl.prop('iconNameOff'), 'star-o');
@@ -66,7 +66,7 @@ test('Test ButtonToggle click event', t => {
  	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('iconName'), 'bomb');
- 	t.is(ctl.prop('id'), undefined);
+ 	t.is(ctl.prop('id'), '');
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.is(ctl.prop('iconNameOn'), 'star');
 	t.is(ctl.prop('iconNameOff'), 'star-o');
@@ -102,7 +102,7 @@ test('Test making a ButtonToggle invisible', t => {
  	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('iconName'), 'bomb');
- 	t.is(ctl.prop('id'), undefined);
+ 	t.is(ctl.prop('id'), '');
  	t.false(ctl.prop('disabled'));
  	t.false(ctl.prop('visible'));
  	t.is(ctl.find('.invisible').length, 1);
@@ -122,7 +122,7 @@ test('Test the icon switch in a ButtonToggle click', t => {
  	t.truthy(ctl);
  	log.debug(ctl.html(), __filename);
 
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
  	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
  	t.is(ctl.prop('iconName'), 'bomb');

@@ -1,0 +1,17 @@
+:local {
+	.accordion {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		cursor: pointer;
+	}
+
+	.accordionItem {
+		line-height: 32px;
+		border-bottom: solid 1px black;
+	}
+
+	.accordionItem:last-child {
+		border-bottom: 0;
+	}
+}

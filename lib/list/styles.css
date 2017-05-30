@@ -1,3 +1,5 @@
+@import '../shared/styles.css';
+
 :local {
 	.list {
 		margin: 0;
@@ -6,58 +8,11 @@
 		cursor: pointer;
 	}
 
-	.list .listItem:not(.nohover):hover {
-		background-color: #bedb39;
-	}
-
 	.listAlternating li:nth-child(2n) {
 		background: #e6e6e6;
 	}
 
 	.listItem {
 		line-height: 32px;
-		display: flex;
-	}
-
-	.title {
-		flex-grow: 1;
-		display: inline-flex;
-		padding: 0 5px 0 5px;
-	}
-
-	.leftTitle {
-		text-align: left;
-		flex: 3;
-	}
-
-	.rightTitle {
-		text-align: right;
-		flex: 1;
-	}
-
-	.hiddenButton, .hiddenButton i {
-		transition: width 0.25s, font-size 0.25s, opacity 0.5s ease;
-		font-size: 0;
-		width: 0px;
-		opacity: 0.0;
-		flex: none;
-	}
-
-	.itemButton {
-		text-align: center;
-	}
-
-	.listItem:hover .itemButton, .listItem:hover .itemButton i {
-		font-size: 1.0em;
-		width: 32px;
-		opacity: 1.0;
-	}
-
-	.selected {
-		background-color: #1f8a70 !important;
-	}
-
-	.selected .title {
-		color: white !important;
 	}
 }

@@ -20,7 +20,7 @@ test('Test creation of a Label control', t => {
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
 
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 	t.is(ctl.find('.ui-label').length, 1);
@@ -35,7 +35,7 @@ test('Test the disabling of the Label control', t => {
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
 
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.true(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 	t.is(ctl.find('.ui-label').length, 1);
@@ -50,7 +50,7 @@ test('Test making the Label control invisible', t => {
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
 
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
 	t.false(ctl.prop('visible'));
 	t.is(ctl.find('.ui-label').length, 1);

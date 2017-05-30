@@ -1,7 +1,12 @@
 h3 {
 	margin: 0;
-	padding: 10px 0 5px 0;
+	padding: 20px 0 5px 0;
 }
+
+h3:first-child {
+	padding: 5px 0 5px 0;
+}
+
 
 section {
 	margin-bottom: 20px;
@@ -11,12 +16,12 @@ section {
 	padding: 10px;
 }
 
-#listExample {
+#listExample, #accordionExample {
 	margin: 0 auto;
 	width: 70%;
 }
 
-#simple-list {
+#listExample .ui-list, #accordionExample .ui-accordion {
 	border: solid 1px #004358;
 }
 
@@ -43,4 +48,48 @@ section {
 .demoLabel {
 	background-color: #004358;
 	color: #ffe11a;
+}
+
+/*
+
+General UI color settings for components
+
+*/
+
+/* .ui-accordion .ui-item .ui-item-bar { */
+/* 	background-color: #004358; */
+/* 	color: white; */
+/* } */
+
+.ui-accordion > .ui-item > .ui-item-bar {
+	color: white;
+	background-color: #004358;
+}
+
+.ui-list {
+}
+
+.ui-selected {
+	background-color: #1f8a70 !important;
+}
+
+.ui-selected .ui-title {
+	color: white !important;
+}
+
+.ui-listitem:not(.nohover):hover {
+	background-color: #bedb39;
+}
+
+.ui-accordionitem > .ui-item-bar > .ui-title:not(.nohover):hover {
+	color: #ffe11a;
+}
+
+.ui-button:not(.nohover):hover {
+	background-color: #fd7400;
+}
+
+.ui-dialog-popup {
+	background-color: white;
+	border: solid 1px #004358;
 }
