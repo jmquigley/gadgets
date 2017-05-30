@@ -22,7 +22,9 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = Object.assign(
 		getDefaultItemProps(), {
-			href: nil
+			href: {
+				selectHandler: nil
+			}
 		});
 
 	constructor(props: ListItemProps) {
@@ -51,7 +53,7 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 	}
 
 	private handleClick = () => {
-		this.props.href(this);
+		this.props.href.selectHandler(this);
 		this.props.onClick();
 	}
 

@@ -6,7 +6,9 @@
 'use strict';
 
 import * as React from 'react';
-import {getUUID} from 'util.toolbox';
+import {nil} from 'util.toolbox';
+import {Button} from '../button';
+import {TitleComponent} from '../shared/title';
 import {BaseProps, getDefaultBaseProps} from '../shared/props';
 import {ListItem} from './index';
 
@@ -14,6 +16,8 @@ const styles = require('./styles.css');
 
 export interface ListProps extends BaseProps {
 	alternating?: boolean;
+	header?: string;
+	onAdd?: any;
 	unselect?: boolean;
 }
 
@@ -21,21 +25,39 @@ export interface ListState {
 	selectedItem: ListItem;
 }
 
-export const ListComponent = (props: ListProps) => (
-    <ul
-		disabled={props.disabled}
-		className={props.classes.join(' ')}
-		id={props.id}>
-		{props.children}
-	</ul>
-);
+export const ListComponent = (props: ListProps) => {
+
+	let header = null;
+	if (props.header !== '') {
+		header = (
+			<div className={`ui-list-header ${styles.listHeader}`}>
+			<TitleComponent
+				{...props}
+				leftTitle={props.header}
+				noripple
+			/>
+			<Button iconName="plus" onClick={props.onAdd}/>
+			</div>
+		);
+	}
+
+	return (
+		<div disabled={props.disabled} className={props.classes.join(' ')} id={props.id}>
+		{header}
+		<ul>
+			{props.children}
+		</ul>
+		</div>
+	);
+};
 
 export class List extends React.Component<ListProps, ListState> {
 
 	public static defaultProps: ListProps = Object.assign(
 		getDefaultBaseProps(), {
 			alternating: false,
-			id: getUUID(true),
+			header: '',
+			onAdd: nil,
 			unselect: false
 		});
 
@@ -86,7 +108,9 @@ export class List extends React.Component<ListProps, ListState> {
 		let children = React.Children.map(this.props.children, child => {
 			let selected = child['props'].id === selectedKey;
 			return React.cloneElement(child as any, {
-				href: this.selectHandler,
+				href: {
+					selectHandler: this.selectHandler
+				},
 				selected: (this.props.unselect) ? false : selected
 			});
 		});

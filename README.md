@@ -150,3 +150,7 @@ A popup (center of screen) with a message that disappers after N seconds.  Conta
 ### Tooltip
 
 ### Treeview
+
+
+## Styles
+All of the color and font size CSS values are controlled through global selectors.  The CSS modules within the code are only used to control layout.  By default these are not set with colors to allow for customization.  The demo application contains `[styles.css](https://github.com/jmquigley/gadgets/blob/master/demo/styles.css)` that show each of the global styles and how they are used.  They are also documented within each of components above.

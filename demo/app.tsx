@@ -21,32 +21,38 @@ const Label = bundle.Label;
 const List = bundle.List;
 const ListItem = bundle.ListItem;
 
+let listItems = [
+ 	"Accordion List Item 1",
+ 	"Accordion List Item 2",
+ 	"Accordion List Item 3",
+ 	"Accordion List Item 4",
+ 	"Accordion List Item 5",
+];
+
+function createItems() {
+ 	return listItems.map(item => {
+ 		return (
+ 			<ListItem
+				id={getUUID(true)}
+				leftTitle={item}
+				rightTitle={getUUID(true).substring(0,5)}
+				leftButton={<Button />}
+				rightButton={<Button iconName="paper-plane-o" />}
+			/>
+ 		);
+ 	});
+}
+
 render(
 	<div id="app">
 
-		<h3>Accordion Example</h3>
+		<h1>Accordion Example</h1>
 		<Container id="accordionExample">
 			<Accordion>
 				<AccordionItem
-					leftTitle="Accordion #1"
-					rightButton={<Button iconName="plus" />}>
+					leftTitle="Accordion #1" rightButton={<Button iconName="plus" />}>
 					<List alternating>
-						<ListItem id={getUUID()}
-							leftTitle="Accordion List Item 1" rightTitle="12"
-							rightButton={<Button iconName="paper-plane-o"/>}
-						/>
-						<ListItem id={getUUID()}
-							leftTitle="Accordion List Item 2" rightTitle="12"
-							rightButton={<Button iconName="paper-plane-o"/>}
-						/>
-						<ListItem id={getUUID()}
-							leftTitle="Accordion List Item 3" rightTitle="12"
-							rightButton={<Button iconName="paper-plane-o"/>}
-						/>
-						<ListItem id={getUUID()}
-							leftTitle="Accordion List Item 4" rightTitle="12"
-							rightButton={<Button iconName="paper-plane-o"/>}
-						/>
+						{createItems()}
 					</List>
 				</AccordionItem>
 
@@ -64,7 +70,7 @@ render(
 			</Accordion>
 		</Container>
 
-		<h3>Button Examples</h3>
+		<h1>Button Examples</h1>
 		<Container id="buttonExample">
 			<div id="simple-buttons">
 				<div className="box">
@@ -90,7 +96,7 @@ render(
 			</div>
 		</Container>
 
-		<h3>Label Examples</h3>
+		<h1>Label Examples</h1>
 		<Container id="labelExample">
 			<div id="simple-labels">
 				<p><Label>Test Label #1</Label></p>
@@ -99,10 +105,10 @@ render(
 			</div>
 		</Container>
 
-		<h3>List/ListItem Example</h3>
-		<Container id="listExample">
+		<h1>List/ListItem Example (with header)</h1>
+		<Container id="listExample1">
 
-			<List alternating>
+			<List alternating header="Demo List Header">
 				<ListItem
 					id={getUUID()}
 					leftTitle="List Item 1" rightTitle="12"
@@ -136,7 +142,7 @@ render(
 					rightButton={
 						<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358" />
 					}
-/>
+				/>
 				<ListItem id={getUUID()} leftTitle="List Item 7 (disabled)" disabled />
 				<ListItem
 					id={getUUID()} leftTitle="List Item 8 (disabled w/ buttons)"
@@ -145,6 +151,14 @@ render(
 						<Button />
 					}
 				/>
+			</List>
+		</Container>
+
+		<h1>List/ListItem Example (without header)</h1>
+		<Container id="listExample2">
+
+			<List alternating>
+				{createItems()}
 			</List>
 		</Container>
 	</div>,

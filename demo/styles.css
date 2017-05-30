@@ -1,9 +1,10 @@
-h3 {
+h1 {
+	font-size: 1.5em;
 	margin: 0;
 	padding: 20px 0 5px 0;
 }
 
-h3:first-child {
+h1:first-child {
 	padding: 5px 0 5px 0;
 }
 
@@ -16,12 +17,12 @@ section {
 	padding: 10px;
 }
 
-#listExample, #accordionExample {
+#listExample1, #listExample2, #accordionExample {
 	margin: 0 auto;
 	width: 70%;
 }
 
-#listExample .ui-list, #accordionExample .ui-accordion {
+#listExample1 .ui-list, #listExample2 .ui-list, #accordionExample .ui-accordion {
 	border: solid 1px #004358;
 }
 
@@ -52,14 +53,9 @@ section {
 
 /*
 
-General UI color settings for components
+Global UI color settings for components
 
 */
-
-/* .ui-accordion .ui-item .ui-item-bar { */
-/* 	background-color: #004358; */
-/* 	color: white; */
-/* } */
 
 .ui-accordion > .ui-item > .ui-item-bar {
 	color: white;
@@ -67,6 +63,11 @@ General UI color settings for components
 }
 
 .ui-list {
+}
+
+.ui-list-header {
+	background-color: #004358;
+	color: white;
 }
 
 .ui-selected {

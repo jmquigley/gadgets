@@ -2,16 +2,16 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {Label} from '../label';
 import {BaseProps, getDefaultBaseProps} from './props';
+import {TitleComponent, TitleProps} from './title';
 
 const styles = require('./styles.css');
 
-export interface ItemProps extends BaseProps {
+export interface ItemProps extends BaseProps, TitleProps {
 	hiddenLeftButton?: boolean;
 	hiddenRightButton?: boolean;
 	leftButton?: any;
-	leftTitle: string;
+	leftTitle?: string;
 	rightButton?: any;
 	rightTitle?: string;
 	selected?: boolean;
@@ -65,13 +65,7 @@ export const ItemComponent = (props: ItemProps) => {
 		<li className={`ui-item ${styles.item} ${props.classes.join(' ')}`}>
 			<div className={`ui-item-bar ${props.selected ? 'ui-selected' : ''} ${styles.itemBar}`}>
 				{leftButton}
-
-				<div className={`ui-title ${styles.title} ${(!props.noripple && !props.disabled) ? 'ripple' : ''}`}
-					 onClick={props.onClick}>
-					<Label className={`ui-leftTitle ${styles.leftTitle}`}>{props.leftTitle}</Label>
-					<Label className={`ui-rightTitle ${styles.rightTitle}`}>{props.rightTitle}</Label>
-				</div>
-
+				<TitleComponent {...props} />
 				{rightButton}
 			</div>
 			{content}

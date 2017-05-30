@@ -1,9 +1,23 @@
 @import '../shared/styles.css';
 
+@define-extend baseList {
+	margin: 0;
+	padding: 0;
+}
+
 :local {
+
 	.list {
-		margin: 0;
-		padding: 0;
+		@extend baseList;
+	}
+
+	.listHeader {
+		line-height: 32px;
+		display: flex;
+	}
+
+	.list > ul, .list > .listHeader {
+		@extend baseList;
 		list-style: none;
 		cursor: pointer;
 	}

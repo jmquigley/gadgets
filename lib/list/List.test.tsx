@@ -23,7 +23,6 @@ test('Test the creation of a List control container', t => {
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
 
-	t.regex(ctl.prop('id'), /[0-9a-zA-Z]{32}/);
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 	t.is(ctl.find('.ui-list').length, 1);
@@ -42,7 +41,6 @@ test('Test disabling of a List control', t => {
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
 
-	t.regex(ctl.prop('id'), /[0-9a-zA-Z]{32}/);
 	t.true(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
@@ -61,7 +59,6 @@ test('Test making List control invisible', t => {
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
 
-	t.regex(ctl.prop('id'), /[0-9a-zA-Z]{32}/);
 	t.false(ctl.prop('disabled'));
 	t.false(ctl.prop('visible'));
 	t.is(ctl.find('.invisible').length, 1);
@@ -79,7 +76,6 @@ test('Test a list with ListItem and selection', t => {
 
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
-	t.regex(ctl.prop('id'), /[0-9a-zA-Z]{32}/);
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 	t.is(ctl.find('.ui-list').length, 1);
