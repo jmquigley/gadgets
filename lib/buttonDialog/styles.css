@@ -6,9 +6,9 @@
 	}
 
 	.buttonDialogPopup {
-		position: absolute;
+		position: fixed;
 		opacity: 1.0;
-		z-index: 999;
+		z-index: 999999;
 		width: 300px;
 		height: 300px;
 	}
