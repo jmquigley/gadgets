@@ -15,7 +15,7 @@ test.after.always.cb(t => {
 
 test('Test the creation of a AccordionItem control', t => {
 	const ctl = mount(
-		<AccordionItem className="test-class" leftTitle="Test Title" />
+		<AccordionItem className="test-class" title="Test Title" />
 	);
 
 	t.truthy(ctl);

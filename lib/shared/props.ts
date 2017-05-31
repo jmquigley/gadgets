@@ -12,7 +12,6 @@ export interface BaseProps {
 	color?: string;
 	disabled?: boolean;
 	id?: string;
-	key?: string;
 	noripple?: boolean;
 	onClick?: any;
 	selected?: boolean;
@@ -29,7 +28,6 @@ export function getDefaultBaseProps(): BaseProps {
 		color: '',
 		disabled: false,
 		id: '',
-		key: '',
 		noripple: false,
 		onClick: nil,
 		selected: false,

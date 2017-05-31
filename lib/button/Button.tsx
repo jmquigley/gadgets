@@ -2,7 +2,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseProps, getDefaultBaseProps} from '../shared/props';
+import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -26,7 +26,7 @@ export const ButtonComponent = (props: ButtonProps) => (
 	    disabled={props.disabled}
 		style={props.style}
 	>
-    </i>
+	</i>
 );
 
 /**
@@ -67,11 +67,8 @@ export class Button extends React.Component<ButtonProps, undefined> {
 	}
 
 	private buildClasses = () => {
-		let l: string[] = Array.from(this.props.classes);
+		let l: string[] = baseClasses(this.props);
 
-		if (this.props.className !== '') {
-			l.push(this.props.className);
-		}
 		l.push(styles.button);
 		l.push('fa');
 		l.push(`fa-${this.props.iconName}`);
@@ -79,15 +76,6 @@ export class Button extends React.Component<ButtonProps, undefined> {
 
 		if (!this.props.noripple && !this.props.disabled) {
 			l.push('ripple');
-		}
-
-		if (!this.props.visible) {
-			l.push(styles.invisible);
-		}
-
-		if (this.props.disabled) {
-			l.push(styles.disabled);
-			l.push('nohover');
 		}
 
 		return l;

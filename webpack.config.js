@@ -1,5 +1,7 @@
+const BabiliPlugin = require("babili-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
 	entry: [
@@ -60,6 +62,10 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin({filename: "styles.css"})
+		new ExtractTextPlugin({filename: "styles.css"}),
+		new webpack.DefinePlugin({
+			NODE_ENV: JSON.stringify("production")
+		}),
+		new BabiliPlugin()
 	]
 };

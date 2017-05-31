@@ -1,0 +1,19 @@
+@import '../shared/styles.css';
+
+:local {
+	.titleBar {
+		flex-grow: 1;
+		display: inline-flex;
+		padding: 0 5px 0 5px;
+	}
+
+	.title {
+		text-align: left;
+		flex: 3;
+	}
+
+	.widget {
+		text-align: right;
+		flex: 1;
+	}
+}

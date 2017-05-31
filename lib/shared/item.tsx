@@ -3,7 +3,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {BaseProps, getDefaultBaseProps} from './props';
-import {TitleComponent, TitleProps} from './title';
+import {Title, TitleProps} from '../title';
 
 const styles = require('./styles.css');
 
@@ -11,11 +11,10 @@ export interface ItemProps extends BaseProps, TitleProps {
 	hiddenLeftButton?: boolean;
 	hiddenRightButton?: boolean;
 	leftButton?: any;
-	leftTitle?: string;
 	rightButton?: any;
-	rightTitle?: string;
 	selected?: boolean;
 	showContent?: boolean;
+	title?: string;
 }
 
 export function getDefaultItemProps(): ItemProps {
@@ -24,11 +23,12 @@ export function getDefaultItemProps(): ItemProps {
 			hiddenLeftButton: false,
 			hiddenRightButton: false,
 			leftButton: null,
-			leftTitle: '',
 			rightButton: null,
-			rightTitle: '',
 			selected: false,
-			showContent: false
+			showContent: false,
+			stacked: false,
+			title: '',
+			widget: null
 		}));
 }
 
@@ -62,10 +62,10 @@ export const ItemComponent = (props: ItemProps) => {
 	}
 
 	return (
-		<li className={`ui-item ${styles.item} ${props.classes.join(' ')}`}>
+		<li id={props.id} className={`ui-item ${styles.item} ${props.classes.join(' ')}`}>
 			<div className={`ui-item-bar ${props.selected ? 'ui-selected' : ''} ${styles.itemBar}`}>
 				{leftButton}
-				<TitleComponent {...props} />
+				<Title {...props} className="" classes={[]}>{props.title}</Title>
 				{rightButton}
 			</div>
 			{content}

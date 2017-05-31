@@ -5,9 +5,10 @@
 
 'use strict';
 
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nil} from 'util.toolbox';
-import {getDefaultItemProps, ItemComponent, ItemProps} from '../shared/item';
+import {baseClasses, getDefaultItemProps, ItemComponent, ItemProps} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -15,39 +16,31 @@ export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
 }
 
+export function getDefaultListItemProps(): ListItemProps {
+	return cloneDeep(Object.assign(
+		getDefaultItemProps(), {
+			href: {
+				selectHandler: nil
+			}
+		}));
+}
+
 export interface ListItemState {
 }
 
 export class ListItem extends React.Component<ListItemProps, ListItemState> {
 
-	public static defaultProps: ListItemProps = Object.assign(
-		getDefaultItemProps(), {
-			href: {
-				selectHandler: nil
-			}
-		});
+	public static defaultProps: ListItemProps = getDefaultListItemProps();
 
 	constructor(props: ListItemProps) {
 		super(props);
 	}
 
 	private buildClasses = () => {
-		let l: string[] = Array.from(this.props.classes);
+		let l: string[] = baseClasses(this.props);
 
-		if (this.props.className !== '') {
-			l.push(this.props.className);
-		}
 		l.push(styles.listItem);
 		l.push('ui-listitem');
-
-		if (!this.props.visible) {
-			l.push(styles.invisible);
-		}
-
-		if (this.props.disabled) {
-			l.push(styles.disabled);
-			l.push('nohover');
-		}
 
 		return l;
 	}

@@ -5,14 +5,26 @@
 
 'use strict';
 
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nil} from 'util.toolbox';
-import {getDefaultItemProps, ItemComponent, ItemProps} from '../shared/item';
+import {Button} from '../button';
+import {baseClasses, getDefaultItemProps, ItemComponent, ItemProps} from '../shared';
 
 const styles = require('./styles.css');
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
+	onNew?: any;
+}
+
+export function getDefaultAccordionItemProps(): AccordionItemProps {
+	return cloneDeep(Object.assign(
+		getDefaultItemProps(), {
+			initialToggle: false,
+			onNew: nil
+		})
+	);
 }
 
 export interface AccordionItemState {
@@ -21,10 +33,7 @@ export interface AccordionItemState {
 
 export class AccordionItem extends React.Component<AccordionItemProps, AccordionItemState> {
 
-	public static defaultProps: AccordionItemProps = Object.assign(
-		getDefaultItemProps(), {
-			initialToggle: false
-		});
+	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
 	constructor(props: AccordionItemProps) {
 		super(props);
@@ -41,12 +50,19 @@ export class AccordionItem extends React.Component<AccordionItemProps, Accordion
 		this.props.onClick(this.state.toggle);
 	}
 
-	private buildClasses = () => {
-		let l: string[] = Array.from(this.props.classes);
-
-		if (this.props.className !== '') {
-			l.push(this.props.className);
+	private handleNew = () => {
+		if (!this.state.toggle) {
+			this.setState({
+				toggle: true
+			});
 		}
+
+		this.props.onNew();
+	}
+
+	private buildClasses = () => {
+		let l: string[] = baseClasses(this.props);
+
 		l.push(styles.accordionItem);
 		l.push('ui-accordionitem');
 
@@ -59,6 +75,7 @@ export class AccordionItem extends React.Component<AccordionItemProps, Accordion
 				{...this.props}
 				classes={this.buildClasses()}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
+				rightButton={<Button iconName="plus" onClick={this.handleNew} />}
 				showContent={this.state.toggle}
 			/>
 		);

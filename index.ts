@@ -6,6 +6,7 @@ import {Container} from './lib/container';
 import {Label} from './lib/label';
 import {List, ListItem} from './lib/list';
 import {BaseProps} from './lib/shared/props';
+import {Title} from './lib/title';
 
 export {
 	Accordion,
@@ -17,5 +18,6 @@ export {
 	Container,
 	Label,
 	List,
-	ListItem
+	ListItem,
+	Title
 };

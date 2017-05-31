@@ -5,10 +5,11 @@
 
 'use strict';
 
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nil} from 'util.toolbox';
 import {Button} from '../button';
-import {TitleComponent} from '../shared/title';
+import {Title} from '../title';
 import {BaseProps, getDefaultBaseProps} from '../shared/props';
 import {ListItem} from './index';
 
@@ -21,6 +22,17 @@ export interface ListProps extends BaseProps {
 	unselect?: boolean;
 }
 
+export function getDefaultListProps(): ListProps {
+	return cloneDeep(Object.assign(
+		getDefaultBaseProps(), {
+			alternating: false,
+			header: '',
+			onAdd: nil,
+			unselect: false
+		})
+	);
+}
+
 export interface ListState {
 	selectedItem: ListItem;
 }
@@ -31,11 +43,7 @@ export const ListComponent = (props: ListProps) => {
 	if (props.header !== '') {
 		header = (
 			<div className={`ui-list-header ${styles.listHeader}`}>
-			<TitleComponent
-				{...props}
-				leftTitle={props.header}
-				noripple
-			/>
+			<Title {...props} noripple>{props.header}</Title>
 			<Button iconName="plus" onClick={props.onAdd}/>
 			</div>
 		);
@@ -53,13 +61,7 @@ export const ListComponent = (props: ListProps) => {
 
 export class List extends React.Component<ListProps, ListState> {
 
-	public static defaultProps: ListProps = Object.assign(
-		getDefaultBaseProps(), {
-			alternating: false,
-			header: '',
-			onAdd: nil,
-			unselect: false
-		});
+	public static defaultProps: ListProps = getDefaultListProps();
 
 	constructor(props: ListProps) {
 		super(props);

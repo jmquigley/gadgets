@@ -6,15 +6,20 @@
 
 'use strict';
 
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {getUUID} from 'util.toolbox';
-import {BaseProps} from '../shared/props';
+import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
 import {AccordionItem} from './index';
 
-// const sharedStyles = require('../shared/styles.css');
 const styles = require('./styles.css');
 
 export interface AccordionProps extends BaseProps {
+}
+
+export function getDefaultAccordionProps(): AccordionProps {
+	return cloneDeep(Object.assign(
+		getDefaultBaseProps(), {
+		}));
 }
 
 export interface AccordionState {
@@ -30,20 +35,15 @@ export const AccordionComponent = (props: AccordionProps) => (
 
 export class Accordion extends React.Component<AccordionProps, AccordionState> {
 
-	public static defaultProps: AccordionProps = {
-		classes: [],
-		className: '',
-		disabled: false,
-		id: getUUID(true),
-		visible: true
+	public static defaultProps: AccordionProps = getDefaultAccordionProps();
+
+	constructor(props: AccordionProps) {
+		super(props);
 	}
 
 	private buildClasses = () => {
-		let l: string[] = Array.from(this.props.classes);
+		let l: string[] = baseClasses(this.props);
 
-		if (this.props.className !== '') {
-			l.push(this.props.className);
-		}
 		l.push(styles.accordion);
 		l.push('ui-accordion');
 

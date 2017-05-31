@@ -7,10 +7,26 @@ import test from 'ava';
 import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
-import {List, ListItem} from './index';
+import {getDefaultListProps, List, ListItem} from './index';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
+});
+
+test('Test retrieval of List props object', t => {
+	const props = getDefaultListProps();
+
+	t.true('alternating' in props);
+	t.false(props.alternating);
+
+	t.true('header' in props);
+	t.is(props.header, '');
+
+	t.true('onAdd' in props);
+	t.true(props.onAdd != null);
+
+	t.true('unselect' in props);
+	t.false(props.unselect);
 });
 
 test('Test the creation of a List control container', t => {
@@ -69,8 +85,8 @@ test('Test making List control invisible', t => {
 test('Test a list with ListItem and selection', t => {
 	const ctl = mount(
 		<List>
-			<ListItem leftTitle="Item #1" />
-			<ListItem leftTitle="Item #2" />
+			<ListItem title="Item #1" />
+			<ListItem title="Item #2" />
 		</List>
 	);
 
@@ -83,6 +99,6 @@ test('Test a list with ListItem and selection', t => {
 
 	let li1 = ctl.find(ListItem).first();
 	let li2 = ctl.find(ListItem).last();
-	t.is(li1.text(), "Item #1");
-	t.is(li2.text(), "Item #2");
+   t.is(li1.text(), "Item #1");
+   t.is(li2.text(), "Item #2");
 });

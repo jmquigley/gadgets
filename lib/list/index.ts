@@ -1,7 +1,11 @@
-import {List} from './List';
-import {ListItem} from './ListItem';
+import {getDefaultListProps, List, ListProps} from './List';
+import {getDefaultListItemProps, ListItem, ListItemProps} from './ListItem';
 
 export {
+	getDefaultListItemProps,
+	getDefaultListProps,
 	List,
-	ListItem
+	ListItem,
+	ListItemProps,
+	ListProps
 };

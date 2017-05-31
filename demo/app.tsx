@@ -31,11 +31,13 @@ let listItems = [
 
 function createItems() {
  	return listItems.map(item => {
+		let uuid = getUUID();
  		return (
  			<ListItem
-				id={getUUID(true)}
-				leftTitle={item}
-				rightTitle={getUUID(true).substring(0,5)}
+				id={uuid}
+				key={uuid}
+				title={item}
+				widget={getUUID(true).substring(0,5)}
 				leftButton={<Button />}
 				rightButton={<Button iconName="paper-plane-o" />}
 			/>
@@ -49,23 +51,23 @@ render(
 		<h1>Accordion Example</h1>
 		<Container id="accordionExample">
 			<Accordion>
-				<AccordionItem
-					leftTitle="Accordion #1" rightButton={<Button iconName="plus" />}>
+				<AccordionItem title="Accordion #1">
 					<List alternating>
 						{createItems()}
 					</List>
 				</AccordionItem>
 
-				<AccordionItem
-					leftTitle="Accordion #2"
-					rightButton={<Button iconName="plus" />}>
+				<AccordionItem title="Accordion #2">
 					Accordion Items #2
 				</AccordionItem>
 
 				<AccordionItem
-					leftTitle="Accordion #3"
-					rightButton={<Button iconName="plus" />}>
+					title="Accordion #3">
 					Accordion Items #3
+				</AccordionItem>
+
+				<AccordionItem title="Accordion #4 (disabled)" disabled>
+					Accordion Items #4 (disabled)
 				</AccordionItem>
 			</Accordion>
 		</Container>
@@ -111,15 +113,15 @@ render(
 			<List alternating header="Demo List Header">
 				<ListItem
 					id={getUUID()}
-					leftTitle="List Item 1" rightTitle="12"
+					title="List Item 1" widget="12"
 					leftButton={<Button iconName="podcast"/>}
 					rightButton={<Button iconName="paper-plane-o"/>}
 				/>
-				<ListItem id={getUUID()} leftTitle="List Item 2" rightTitle="13" rightButton={<Button />}/>
-				<ListItem id={getUUID()} leftTitle="List Item 3" rightTitle="14" />
+				<ListItem id={getUUID()} title="List Item 2" widget="13" rightButton={<Button />}/>
+				<ListItem id={getUUID()} title="List Item 3" widget="14" />
 				<ListItem
 					id={getUUID()}
-					leftTitle="List Item 4a (hide/show)" rightTitle="15"
+					title="List Item 4a (hide/show)" widget="15"
 					leftButton={<Button />}
 					hiddenLeftButton
 					rightButton={
@@ -129,23 +131,23 @@ render(
 				/>
 				<ListItem
 					id={getUUID()}
-					leftTitle="List Item 4b (hide/show)" rightTitle="15"
+					title="List Item 4b (hide/show)" widget="15"
 					hiddenLeftButton
 					leftButton={
 						<ButtonDialog iconName="wrench">Test Dialog Button</ButtonDialog>
 					}
 				/>
-				<ListItem id={getUUID()} leftTitle="List Item 5" />
+				<ListItem id={getUUID()} title="List Item 5" />
 				<ListItem
 					id={getUUID()}
-					leftTitle="List Item 6 (Toggle)" rightTitle="15"
+					title="List Item 6 (Toggle)" widget="15"
 					rightButton={
 						<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358" />
 					}
 				/>
-				<ListItem id={getUUID()} leftTitle="List Item 7 (disabled)" disabled />
+				<ListItem id={getUUID()} title="List Item 7 (disabled)" disabled />
 				<ListItem
-					id={getUUID()} leftTitle="List Item 8 (disabled w/ buttons)"
+					id={getUUID()} title="List Item 8 (disabled w/ buttons)"
 					disabled
 					rightButton={
 						<Button />

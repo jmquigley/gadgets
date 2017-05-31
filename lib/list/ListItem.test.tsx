@@ -5,20 +5,28 @@ mockupEnv();
 
 import test from 'ava';
 import {mount} from 'enzyme';
+import * as _ from 'lodash';
 import * as path from 'path';
 import * as React from 'react';
 import * as sinon from 'sinon';
-import {ListItem} from './index';
+import {getDefaultListItemProps, ListItem} from './index';
 import {Button} from '../button';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
 });
 
+test('Test retrieval of ListItem props object', t => {
+	const props = getDefaultListItemProps();
+
+	t.true('href' in props);
+	t.false(_.isEmpty(props.href));
+});
+
 test('Test the creation of a ListItem control with simple title', t => {
 	const ctl = mount(
 		<ListItem
-			leftTitle="test title"
+			title="test title"
 			selected
 		/>
 	);
@@ -26,7 +34,7 @@ test('Test the creation of a ListItem control with simple title', t => {
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
 
-	t.is(ctl.prop('leftTitle'), 'test title');
+	t.is(ctl.prop('title'), 'test title');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
@@ -38,16 +46,16 @@ test('Test the creation of a ListItem control with simple title', t => {
 test('Test the creation of a ListItem control with left & right title', t => {
  	const ctl = mount(
  		<ListItem
-			leftTitle="test title left"
-			rightTitle="test title right"
+			title="test title left"
+			widget="test title right"
 		/>
  	);
 
  	t.truthy(ctl);
  	log.debug(ctl.html(), __filename);
 
- 	t.is(ctl.prop('leftTitle'), 'test title left');
- 	t.is(ctl.prop('rightTitle'), 'test title right');
+ 	t.is(ctl.prop('title'), 'test title left');
+ 	t.is(ctl.prop('widget'), 'test title right');
  	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
@@ -57,33 +65,33 @@ test('Test the creation of a ListItem control with left & right title', t => {
 
 test('Test disabling of a ListItem control', t => {
  	const ctl = mount(
- 		<ListItem leftTitle="test title" disabled={true} />
+ 		<ListItem title="test title" disabled={true} />
  	);
 
  	t.truthy(ctl);
  	log.debug(ctl.html(), __filename);
 
- 	t.is(ctl.prop('leftTitle'), 'test title');
+ 	t.is(ctl.prop('title'), 'test title');
  	t.true(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
- 	t.is(ctl.find('.disabled').length, 1);
+ 	t.is(ctl.find('.disabled').length, 2);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
 });
 
 test('Test making ListItem control invisible', t => {
  	const ctl = mount(
- 		<ListItem leftTitle="test title" visible={false} />
+ 		<ListItem title="test title" visible={false} />
  	);
 
  	t.truthy(ctl);
  	log.debug(ctl.html(), __filename);
 
- 	t.is(ctl.prop('leftTitle'), 'test title');
+ 	t.is(ctl.prop('title'), 'test title');
  	t.false(ctl.prop('disabled'));
  	t.false(ctl.prop('visible'));
- 	t.is(ctl.find('.invisible').length, 1);
+ 	t.is(ctl.find('.invisible').length, 2);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
 });
@@ -92,7 +100,7 @@ test('Test clicking of the left button on the ListItem control', t => {
  	const click = sinon.spy();
  	const ctl = mount(
  		<ListItem
-			leftTitle="test title"
+			title="test title"
 			leftButton={<Button iconName="bath" onClick={click} />}
 		/>
  	);
@@ -100,7 +108,7 @@ test('Test clicking of the left button on the ListItem control', t => {
  	t.truthy(ctl);
  	log.debug(ctl.html(), __filename);
 
- 	t.is(ctl.prop('leftTitle'), 'test title');
+ 	t.is(ctl.prop('title'), 'test title');
  	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
@@ -116,7 +124,7 @@ test('Test clicking of the right button on the ListItem control', t => {
  	const click = sinon.spy();
  	const ctl = mount(
  		<ListItem
-			leftTitle="test title"
+			title="test title"
 			rightButton={<Button iconName="bath" onClick={click} />}
 		/>
  	);
@@ -124,7 +132,7 @@ test('Test clicking of the right button on the ListItem control', t => {
  	t.truthy(ctl);
  	log.debug(ctl.html(), __filename);
 
- 	t.is(ctl.prop('leftTitle'), 'test title');
+ 	t.is(ctl.prop('title'), 'test title');
  	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
@@ -140,7 +148,7 @@ test('Test clicking of the title bar area of the ListItem', t => {
  	const click = sinon.spy();
  	const ctl = mount(
  		<ListItem
-			leftTitle="test title"
+			title="test title"
 			onClick={click}
 		/>
  	);
@@ -148,7 +156,7 @@ test('Test clicking of the title bar area of the ListItem', t => {
  	t.truthy(ctl);
  	log.debug(ctl.html(), __filename);
 
- 	t.is(ctl.prop('leftTitle'), 'test title');
+ 	t.is(ctl.prop('title'), 'test title');
  	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
