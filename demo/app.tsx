@@ -153,6 +153,13 @@ render(
 						<Button />
 					}
 				/>
+				<ListItem
+					id={getUUID()}
+					title="List Item 9 (stacked)"
+					widget="stacked bottom title item"
+					stacked
+					rightButton={<Button />}
+				/>
 			</List>
 		</Container>
 

@@ -22,10 +22,14 @@ export function getDefaultTitleProps(): TitleProps {
 
 export const TitleComponent = (props: TitleProps) => {
 	return (
-		<div className={`ui-title-bar ${styles.titleBar} ${props.classes.join(' ')} ${(!props.noripple && !props.disabled) ? 'ripple' : ''}`}
+		<div className={`ui-title-bar ${props.stacked ? styles.titleBarStacked : styles.titleBar} ${props.classes.join(' ')} ${(!props.noripple && !props.disabled) ? 'ripple' : ''}`}
 			onClick={props.onClick}>
-			<Label className={`ui-title ${styles.title}`}>{props.children}</Label>
-			<Label className={`ui-widget ${styles.widget}`}>{props.widget}</Label>
+			<Label className={`ui-title ${props.stacked ? styles.titleStacked : styles.title}`}>
+				{props.children}
+			</Label>
+			<Label className={`ui-widget ${props.stacked ? styles.widgetStacked : styles.widget}`}>
+				{props.widget}
+			</Label>
 		</div>
 	);
 };

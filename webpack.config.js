@@ -33,11 +33,16 @@ module.exports = {
 				test: /\.css$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: [
-						'css-loader?importLoaders=1',
-						'postcss-loader'
-					]
-				})
+					use: [{
+						loader: "css-loader",
+						options: {
+							importLoaders: 1,
+							localIdentName: '[folder]_[local]-[hash:base64:8]'
+						}
+					},
+					'postcss-loader'
+					]}
+				)
 			},
 			{
 				test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,

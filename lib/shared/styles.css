@@ -9,6 +9,7 @@
 	}
 
 	.item .itemBar {
+		line-height: 36px;
 		display: flex;
 	}
 
@@ -28,21 +29,5 @@
 		width: 0px;
 		opacity: 0.0;
 		flex: none;
-	}
-
-	.title {
-		flex-grow: 1;
-		display: inline-flex;
-		padding: 0 5px 0 5px;
-	}
-
-	.leftTitle {
-		text-align: left;
-		flex: 3;
-	}
-
-	.rightTitle {
-		text-align: right;
-		flex: 1;
 	}
 }
