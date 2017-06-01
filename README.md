@@ -16,7 +16,7 @@ To build the app and run all tests:
 ```
 $ npm run all
 ```
-**Note** this application uses [yarn](https://yarnpkg.com/en/) to install initial dependencies.
+**Note** this application uses [yarn](https://yarnpkg.com/en/) v0.23.x or greater to install and manage dependencies.  It should be installed globally in the environment.
 
 
 To build and run the demo application in electron use:
