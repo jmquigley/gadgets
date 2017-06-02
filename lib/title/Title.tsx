@@ -21,15 +21,18 @@ export function getDefaultTitleProps(): TitleProps {
 }
 
 export const TitleComponent = (props: TitleProps) => {
+	let title: string = '';
+	React.Children.forEach(props.children, child => {
+		title += String(child);
+	});
+
 	return (
 		<div className={`ui-title-bar ${props.stacked ? styles.titleBarStacked : styles.titleBar} ${props.classes.join(' ')} ${(!props.noripple && !props.disabled) ? 'ripple' : ''}`}
-			onClick={props.onClick}>
-			<Label className={`ui-title ${props.stacked ? styles.titleStacked : styles.title}`}>
-				{props.children}
-			</Label>
-			<Label className={`ui-widget ${props.stacked ? styles.widgetStacked : styles.widget}`}>
+			onClick={props.onClick} onDoubleClick={props.onDoubleClick}>
+			<Label className={`ui-title ${props.stacked ? styles.titleStacked : styles.title}`} text={title} />
+			<div className={`ui-widget ${props.stacked ? styles.widgetStacked : styles.widget}`}>
 				{props.widget}
-			</Label>
+			</div>
 		</div>
 	);
 };

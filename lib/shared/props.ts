@@ -10,10 +10,15 @@ export interface BaseProps {
 	className?: string;
 	classes?: string[];
 	color?: string;
+	contentEditable?: boolean;
 	disabled?: boolean;
 	id?: string;
 	noripple?: boolean;
+	onBlur?: any;
 	onClick?: any;
+	onChange?: any;
+	onDoubleClick?: any;
+	onKeyPress?: any;
 	selected?: boolean;
 	style?: any;
 	visible?: boolean;
@@ -26,10 +31,15 @@ export function getDefaultBaseProps(): BaseProps {
 		className: '',
 		classes: [],
 		color: '',
+		contentEditable: false,
 		disabled: false,
 		id: '',
 		noripple: false,
+		onBlur: nil,
 		onClick: nil,
+		onChange: nil,
+		onDoubleClick: nil,
+		onKeyPress: nil,
 		selected: false,
 		style: {},
 		visible: true

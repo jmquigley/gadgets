@@ -31,6 +31,9 @@ export interface ListItemState {
 export class ListItem extends React.Component<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
+	private _delay = 200;
+	private _prevent: boolean = false;
+	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
 		super(props);
@@ -46,8 +49,23 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 	}
 
 	private handleClick = () => {
-		this.props.href.selectHandler(this);
-		this.props.onClick();
+		// This timer will wait N seconds before respecting the single click
+		// It is a way to differentiate between single and double click events
+		// A double click is handled differently from the single
+		this._timer = setTimeout(() => {
+			if (!this._prevent) {
+				this.props.href.selectHandler(this);
+				this.props.onClick();
+			}
+			this._prevent = false;
+		}, this._delay);
+	}
+
+	private handleDoubleClick = () => {
+		// If a double click occurs, then sent a flag preventing the single click
+		// from firing after its timer expires
+		clearTimeout(this._timer);
+		this._prevent = true;
 	}
 
 	render() {
@@ -56,6 +74,7 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 				{...this.props}
 				classes={this.buildClasses()}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
+				onDoubleClick={this.handleDoubleClick}
 			/>
 		);
 	}
