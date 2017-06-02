@@ -101,7 +101,7 @@ render(
 		<h1>Label Examples</h1>
 		<Container id="labelExample">
 			<div id="simple-labels">
-				<p><Label text="Test Label #1" /></p>
+				<p><Label text="Test Label #1 (double click to edit)" /></p>
 				<p><Label disabled text="Test Label #2 (diabled)" /></p>
 				<p><Label className="demoLabel" text="Test Label #3 Styled" /></p>
 			</div>

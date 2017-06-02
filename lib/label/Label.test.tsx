@@ -7,15 +7,22 @@ import test from 'ava';
 import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
-import {Label} from './index';
+import {getDefaultLabelProps, Label} from './index';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
 });
 
+test('Test retrieval of defalt Label props object', t => {
+	const props = getDefaultLabelProps();
+
+	t.true('text' in props);
+	t.is(props.text, ' ');
+});
+
 test('Test creation of a Label control', t => {
 	let s: string = 'Test label text';
-	const ctl = mount(<Label className="test-class">{s}</Label>);
+	const ctl = mount(<Label className="test-class" text={s} />);
 
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
@@ -30,7 +37,7 @@ test('Test creation of a Label control', t => {
 
 test('Test the disabling of the Label control', t => {
 	let s: string = 'Test label text';
-	const ctl = mount(<Label disabled>{s}</Label>);
+	const ctl = mount(<Label disabled text={s} />);
 
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
@@ -45,7 +52,7 @@ test('Test the disabling of the Label control', t => {
 
 test('Test making the Label control invisible', t => {
 	let s: string = 'Test label text';
-	const ctl = mount(<Label visible={false}>{s}</Label>);
+	const ctl = mount(<Label visible={false} text={s} />);
 
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);

@@ -9,6 +9,7 @@ import * as _ from 'lodash';
 import * as path from 'path';
 import * as React from 'react';
 import * as sinon from 'sinon';
+import {waitPromise} from 'util.wait';
 import {getDefaultListItemProps, ListItem} from './index';
 import {Button} from '../button';
 
@@ -144,7 +145,7 @@ test('Test clicking of the right button on the ListItem control', t => {
  	t.is(ctl.find('.fa-bath').length, 1);
 });
 
-test('Test clicking of the title bar area of the ListItem', t => {
+test('Test clicking of the title bar area of the ListItem', async t => {
  	const click = sinon.spy();
  	const ctl = mount(
  		<ListItem
@@ -164,5 +165,14 @@ test('Test clicking of the title bar area of the ListItem', t => {
  	t.is(ctl.find('.listItem').length, 1);
 
  	ctl.find('.title').simulate('click');
- 	t.true(click.calledOnce);
+
+	// This wait must occur during the test because there is a built in click
+	// delay where the component checks if a double click is occurring.
+	await waitPromise(1)
+		.then(() => {
+			t.true(click.calledOnce);
+		})
+		.catch((err: string) => {
+			t.fail(err);
+		});
 });
