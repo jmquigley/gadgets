@@ -29,7 +29,11 @@ export const TitleComponent = (props: TitleProps) => {
 	return (
 		<div className={`ui-title-bar ${props.stacked ? styles.titleBarStacked : styles.titleBar} ${props.classes.join(' ')} ${(!props.noripple && !props.disabled) ? 'ripple' : ''}`}
 			onClick={props.onClick} onDoubleClick={props.onDoubleClick}>
-			<Label className={`ui-title ${props.stacked ? styles.titleStacked : styles.title}`} text={title} />
+			<Label
+				className={`ui-title ${props.stacked ? styles.titleStacked : styles.title}`}
+				noedit={props.noedit}
+				text={title}
+			/>
 			<div className={`ui-widget ${props.stacked ? styles.widgetStacked : styles.widget}`}>
 				{props.widget}
 			</div>

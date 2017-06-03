@@ -13,6 +13,7 @@ export interface BaseProps {
 	contentEditable?: boolean;
 	disabled?: boolean;
 	id?: string;
+	noedit?: boolean;
 	noripple?: boolean;
 	onBlur?: any;
 	onClick?: any;
@@ -36,6 +37,7 @@ export function getDefaultBaseProps(): BaseProps {
 		contentEditable: false,
 		disabled: false,
 		id: '',
+		noedit: false,
 		noripple: false,
 		onBlur: nil,
 		onClick: nil,

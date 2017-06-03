@@ -3,6 +3,7 @@
 import * as React from 'react';
 import {nil} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
+import {baseClasses} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -13,25 +14,6 @@ export interface ButtonDialogProps extends ButtonProps {
 export interface ButtonDialogState {
 	visible: boolean;
 }
-
-export const ButtonDialogComponent = (props: ButtonDialogProps) => (
-	<div
-		className={props.classes.join(' ')}
-		disabled={props.disabled}>
-
-		<Button
-			disabled={props.disabled}
-			iconName={props.iconName}
-			onClick={props.onClick}
-			visible={props.visible}
-		/>
-		<div className={props.dialogClasses.join(' ')}>
-			<span>
-				{props.children}
-			</span>
-		</div>
-	</div>
-);
 
 export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialogState> {
 
@@ -47,30 +29,10 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		};
 	}
 
-	handleClick = () => {
-		this.setState({
-			visible: !this.state.visible
-		});
-
-		this.props.onClick();
-	}
-
 	private buildClasses = () => {
-		let l: string[] = Array.from(this.props.classes);
-
-		if (this.props.className !== '') {
-			l.push(this.props.className);
-		}
+		let l: string[] = baseClasses(this.props);
 		l.push(styles.buttonDialog);
 		l.push('ui-button-dialog');
-
-		if (!this.props.visible) {
-			l.push(styles.invisible);
-		}
-
-		if (this.props.disabled) {
-			l.push(styles.disabled);
-		}
 
 		return l;
 	}
@@ -86,14 +48,40 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		return l;
 	}
 
+	private handleClick = () => {
+		this.setState({
+			visible: !this.state.visible
+		});
+
+		this.props.onClick();
+	}
+
+	private handleDialogClick = () => {
+		this.setState({
+			visible: false
+		});
+	}
+
 	render() {
 		return (
-			<ButtonDialogComponent
-				{...this.props}
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
-				classes={this.buildClasses()}
-				dialogClasses={this.buildDialogClasses()}
-			/>
+			<div
+				className={this.buildClasses().join(' ')}
+				disabled={this.props.disabled}>
+
+				<Button
+					disabled={this.props.disabled}
+					iconName={this.props.iconName}
+					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
+					visible={this.props.visible}
+				/>
+				<div
+					onClick={this.handleDialogClick}
+					className={this.buildDialogClasses().join(' ')}>
+					<span>
+						{this.props.children}
+					</span>
+				</div>
+			</div>
 		);
 	}
 }

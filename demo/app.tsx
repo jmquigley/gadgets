@@ -19,15 +19,13 @@ const ButtonToggle = bundle.ButtonToggle;
 const Container = bundle.Container;
 const Label = bundle.Label;
 const List = bundle.List;
+const ListHeader = bundle.ListHeader;
 const ListItem = bundle.ListItem;
 
-let listItems = [
- 	"Accordion List Item 1",
- 	"Accordion List Item 2",
- 	"Accordion List Item 3",
- 	"Accordion List Item 4",
- 	"Accordion List Item 5",
-];
+let listItems: string[] = [];
+for (let i=0; i<5; i++) {
+	listItems.push(`Accordion List Item ${i}`);
+}
 
 function createItems() {
  	return listItems.map(item => {
@@ -51,7 +49,7 @@ render(
 		<h1>Accordion Example</h1>
 		<Container id="accordionExample">
 			<Accordion>
-				<AccordionItem title="Accordion #1">
+				<AccordionItem title="Accordion #1 (click to expand)">
 					<List alternating>
 						{createItems()}
 					</List>
@@ -104,13 +102,20 @@ render(
 				<p><Label text="Test Label #1 (double click to edit)" /></p>
 				<p><Label disabled text="Test Label #2 (diabled)" /></p>
 				<p><Label className="demoLabel" text="Test Label #3 Styled" /></p>
+				<p><Label text="Text Label #4 (no edit)" noedit /></p>
 			</div>
 		</Container>
 
 		<h1>List/ListItem Example (with header)</h1>
 		<Container id="listExample1">
 
-			<List alternating header="Demo List Header">
+			<List alternating>
+				<ListHeader
+					leftButton={<ButtonDialog iconName="bars" />}
+					noedit
+					rightButton={<Button iconName="plus" />}
+					title="Demo List Header"
+				/>
 				<ListItem
 					id={getUUID()}
 					title="List Item 1" widget="12"
@@ -164,6 +169,12 @@ render(
 					id={getUUID()}
 					noripple
 					title="List Item 10 (noripple edit)"
+				/>
+				<ListItem
+					id={getUUID()}
+					noripple
+					noedit
+					title="List Item 11 (noedit)"
 				/>
 			</List>
 		</Container>

@@ -82,7 +82,7 @@ The module contains the following widgets (click on each header to attribute/eve
 ### Accordion
 
 ### Badge
-- A button with a text label for info.
+- A widget that annotates another widget (like a counter)
 
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.  To customize the style use the `ui-button` selector.
@@ -111,6 +111,8 @@ A button control that when pushed displays a local dialog box.  The contents of 
 ### Dialog
 
 ### Dropdown
+
+### DynamicList
 
 ### Editor
 

@@ -4,7 +4,7 @@ import {ButtonDialog} from './lib/buttonDialog';
 import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
 import {Label} from './lib/label';
-import {List, ListItem} from './lib/list';
+import {List, ListHeader, ListItem} from './lib/list';
 import {BaseProps} from './lib/shared/props';
 import {Title} from './lib/title';
 
@@ -18,6 +18,7 @@ export {
 	Container,
 	Label,
 	List,
+	ListHeader,
 	ListItem,
 	Title
 };

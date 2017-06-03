@@ -9,6 +9,7 @@ import {BaseProps, getDefaultBaseProps} from '../shared/props';
 const styles = require('./styles.css');
 
 export interface LabelProps extends BaseProps {
+	noedit?: boolean;
 	text?: string;
 }
 
@@ -17,6 +18,7 @@ export function getDefaultLabelProps(): LabelProps {
 
 	return cloneDeep(Object.assign(
 		baseProps, {
+			noedit: false,
 			text: ' '
 		}));
 }
@@ -74,17 +76,19 @@ export class Label extends React.Component<LabelProps, LabelState> {
 	}
 
 	private handleDoubleClick = (e: MouseEvent) => {
-		let range = document.caretRangeFromPoint(e.clientX, e.clientY);
-		let sel = window.getSelection();
+		if (!this.props.noedit) {
+			let range = document.caretRangeFromPoint(e.clientX, e.clientY);
+			let sel = window.getSelection();
 
-		this.setState({
-			editable: true
-		});
+			this.setState({
+				editable: true
+			});
 
-		window.setTimeout(() => {
-			sel.removeAllRanges();
-			sel.addRange(range);
-		}, 20);
+			window.setTimeout(() => {
+				sel.removeAllRanges();
+				sel.addRange(range);
+			}, 20);
+		}
 	}
 
 	private handleKeyDown = (e: KeyboardEvent) => {

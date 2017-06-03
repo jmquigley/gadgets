@@ -19,9 +19,6 @@ test('Test retrieval of List props object', t => {
 	t.true('alternating' in props);
 	t.false(props.alternating);
 
-	t.true('header' in props);
-	t.is(props.header, '');
-
 	t.true('onAdd' in props);
 	t.true(props.onAdd != null);
 

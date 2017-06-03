@@ -8,16 +8,13 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nil} from 'util.toolbox';
-import {Button} from '../button';
-import {Title} from '../title';
-import {BaseProps, getDefaultBaseProps} from '../shared/props';
+import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
 import {ListItem} from './index';
 
 const styles = require('./styles.css');
 
 export interface ListProps extends BaseProps {
 	alternating?: boolean;
-	header?: string;
 	onAdd?: any;
 	unselect?: boolean;
 }
@@ -26,7 +23,6 @@ export function getDefaultListProps(): ListProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			alternating: false,
-			header: '',
 			onAdd: nil,
 			unselect: false
 		})
@@ -36,28 +32,6 @@ export function getDefaultListProps(): ListProps {
 export interface ListState {
 	selectedItem: ListItem;
 }
-
-export const ListComponent = (props: ListProps) => {
-
-	let header = null;
-	if (props.header !== '') {
-		header = (
-			<div className={`ui-list-header ${styles.listHeader}`}>
-			<Title {...props} noripple>{props.header}</Title>
-			<Button iconName="plus" onClick={props.onAdd}/>
-			</div>
-		);
-	}
-
-	return (
-		<div disabled={props.disabled} className={props.classes.join(' ')} id={props.id}>
-		{header}
-		<ul>
-			{props.children}
-		</ul>
-		</div>
-	);
-};
 
 export class List extends React.Component<ListProps, ListState> {
 
@@ -71,24 +45,13 @@ export class List extends React.Component<ListProps, ListState> {
 	}
 
 	private buildClasses = () => {
-		let l: string[] = Array.from(this.props.classes);
+		let l: string[] = baseClasses(this.props);
 
-		if (this.props.className !== '') {
-			l.push(this.props.className);
-		}
 		l.push(styles.list);
 		l.push('ui-list');
 
 		if (this.props.alternating) {
 			l.push(styles.listAlternating);
-		}
-
-		if (!this.props.visible) {
-			l.push(styles.invisible);
-		}
-
-		if (this.props.disabled) {
-			l.push(styles.disabled);
 		}
 
 		return l;
@@ -118,11 +81,14 @@ export class List extends React.Component<ListProps, ListState> {
 		});
 
 		return (
-			<ListComponent
-				{...this.props}
-				children={children}
-				classes={this.buildClasses()}
-			/>
+			<div
+				disabled={this.props.disabled}
+				className={this.buildClasses().join(' ')}
+				id={this.props.id}>
+				<ul>
+					{children}
+				</ul>
+			</div>
 		);
 	}
 }
