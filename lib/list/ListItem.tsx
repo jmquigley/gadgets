@@ -26,7 +26,7 @@ export function getDefaultListItemProps(): ListItemProps {
 }
 
 export interface ListItemState {
-	toggleRipple: boolean;
+	toggleRipple: boolean;  // use this to turn ripple on/off during editing
 }
 
 export class ListItem extends React.Component<ListItemProps, ListItemState> {
@@ -102,7 +102,7 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 			<ItemComponent
 				{...this.props}
 				classes={this.buildClasses()}
-				noripple={this.state.toggleRipple}
+				noripple={this.state.toggleRipple || this.props.noripple}
 				onBlur={this.handleBlur}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
 				onDoubleClick={this.handleDoubleClick}

@@ -156,9 +156,14 @@ render(
 				<ListItem
 					id={getUUID()}
 					title="List Item 9 (stacked)"
-					widget="stacked bottom title item"
+					widget="stacked bottom widget"
 					stacked
 					rightButton={<Button />}
+				/>
+				<ListItem
+					id={getUUID()}
+					noripple
+					title="List Item 10 (noripple edit)"
 				/>
 			</List>
 		</Container>

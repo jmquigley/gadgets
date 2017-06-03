@@ -1,10 +1,14 @@
 @import '../shared/styles.css';
 
+@define-extend baseTitleBar {
+	flex-grow: 1;
+	padding: 0 5px 0 5px;
+}
+
 :local {
 	.titleBar {
-		flex-grow: 1;
+		@extend baseTitleBar;
 		display: inline-flex;
-		padding: 0 5px 0 5px;
 	}
 
 	.title {
@@ -20,17 +24,17 @@
 	}
 
 	.titleBarStacked {
-		flex-grow: 1
+		@extend baseTitleBar;
 	}
 
 	.titleStacked {
-		line-height: 24px;
 		display: block;
+		line-height: 24px;
 	}
 
 	.widgetStacked {
 		display: block;
-		font-size: 0.8em;
 		line-height: 8px;
+		font-size: 0.8em;
 	}
 }
