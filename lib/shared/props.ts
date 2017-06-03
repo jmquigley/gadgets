@@ -18,7 +18,9 @@ export interface BaseProps {
 	onClick?: any;
 	onChange?: any;
 	onDoubleClick?: any;
+	onKeyDown?: any;
 	onKeyPress?: any;
+	onMouseOut?: any;
 	selected?: boolean;
 	style?: any;
 	visible?: boolean;
@@ -40,6 +42,8 @@ export function getDefaultBaseProps(): BaseProps {
 		onChange: nil,
 		onDoubleClick: nil,
 		onKeyPress: nil,
+		onKeyDown: nil,
+		onMouseOut: nil,
 		selected: false,
 		style: {},
 		visible: true

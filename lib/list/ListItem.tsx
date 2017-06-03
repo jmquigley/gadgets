@@ -26,26 +26,30 @@ export function getDefaultListItemProps(): ListItemProps {
 }
 
 export interface ListItemState {
+	toggleRipple: boolean;
 }
 
 export class ListItem extends React.Component<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
-	private _delay = 200;
+	private _delay = 300;
 	private _prevent: boolean = false;
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
 		super(props);
+		this.state = {
+			toggleRipple: false
+		}
 	}
 
-	private buildClasses = () => {
-		let l: string[] = baseClasses(this.props);
+	private deactivateEdit = () => {
+		this._prevent = false;
+		this.setState({toggleRipple: false});
+	}
 
-		l.push(styles.listItem);
-		l.push('ui-listitem');
-
-		return l;
+	private handleBlur = () => {
+		this.deactivateEdit();
 	}
 
 	private handleClick = () => {
@@ -57,7 +61,6 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 				this.props.href.selectHandler(this);
 				this.props.onClick();
 			}
-			this._prevent = false;
 		}, this._delay);
 	}
 
@@ -66,6 +69,32 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 		// from firing after its timer expires
 		clearTimeout(this._timer);
 		this._prevent = true;
+		this.setState({toggleRipple: true});
+	}
+
+	private handleKeyDown = (e: KeyboardEvent) => {
+		if (e.key === 'Escape') {
+			this.deactivateEdit();
+		}
+	}
+
+	private handleKeyPress = (e: KeyboardEvent) => {
+		if (e.key === 'Enter') {
+			this.deactivateEdit();
+		}
+	}
+
+	private handleMouseOut = () => {
+		this.deactivateEdit();
+	}
+
+	private buildClasses = () => {
+		let l: string[] = baseClasses(this.props);
+
+		l.push(styles.listItem);
+		l.push('ui-listitem');
+
+		return l;
 	}
 
 	render() {
@@ -73,8 +102,13 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 			<ItemComponent
 				{...this.props}
 				classes={this.buildClasses()}
+				noripple={this.state.toggleRipple}
+				onBlur={this.handleBlur}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
 				onDoubleClick={this.handleDoubleClick}
+				onKeyDown={this.handleKeyDown}
+				onKeyPress={this.handleKeyPress}
+				onMouseOut={this.handleMouseOut}
 			/>
 		);
 	}

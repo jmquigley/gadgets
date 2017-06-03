@@ -23,6 +23,7 @@ export function getDefaultLabelProps(): LabelProps {
 
 export interface LabelState {
 	editable: boolean;
+	previousText: string;
 	text: string;
 }
 
@@ -34,6 +35,7 @@ export const LabelComponent = (props: LabelProps) => (
 	   onBlur={props.onBlur}
 	   onClick={props.onClick}
 	   onDoubleClick={props.onDoubleClick}
+	   onKeyDown={props.onKeyDown}
 	   onKeyPress={props.onKeyPress}
 	   suppressContentEditableWarning>
 	   {props.text}
@@ -48,6 +50,7 @@ export class Label extends React.Component<LabelProps, LabelState> {
 		super(props);
 		this.state = {
 			editable: false,
+			previousText: props.text,
 			text: props.text
 		};
 	}
@@ -57,14 +60,17 @@ export class Label extends React.Component<LabelProps, LabelState> {
 	}
 
 	private handleChange = (node: Node) => {
-		let val = node.textContent;
-		this.setState({
-			editable: false,
-			text: val
-		});
+		if (this.state.editable) {
+			let val = node.textContent;
+			this.setState({
+				editable: false,
+				previousText: val,
+				text: val
+			});
 
-		console.log(`Changed to: ${val}`);
-		this.props.onChange(node);
+			console.log(`Changed to: ${val}`);
+			this.props.onChange(node);
+		}
 	}
 
 	private handleDoubleClick = (e: MouseEvent) => {
@@ -81,9 +87,20 @@ export class Label extends React.Component<LabelProps, LabelState> {
 		}, 20);
 	}
 
-	private handleKeyPress = (key: KeyboardEvent) => {
-		if (key.which === 13) { // enter key
-			this.handleChange(key.target as Node);
+	private handleKeyDown = (e: KeyboardEvent) => {
+		if (e.key === 'Escape') {
+			this.setState({
+				editable: false,
+				text: this.state.previousText
+			});
+
+			(e.target as Node).textContent = this.state.previousText;
+		}
+	}
+
+	private handleKeyPress = (e: KeyboardEvent) => {
+		if (e.key === 'Enter') {
+			this.handleChange(e.target as Node);
 		}
 	}
 
@@ -104,6 +121,7 @@ export class Label extends React.Component<LabelProps, LabelState> {
 				contentEditable={this.state.editable}
 				onBlur={(!this.props.disabled) ? this.handleBlur : nil}
 				onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nil}
+				onKeyDown={this.handleKeyDown}
 				onKeyPress={this.handleKeyPress}
 				text={this.state.text}
 			/>

@@ -62,7 +62,12 @@ export const ItemComponent = (props: ItemProps) => {
 	}
 
 	return (
-		<li id={props.id} className={`ui-item ${styles.item} ${props.classes.join(' ')}`}>
+		<li
+			id={props.id}
+			onMouseOut={props.onMouseOut}
+			onKeyDown={props.onKeyDown}
+			onKeyPress={props.onKeyPress}
+			className={`ui-item ${styles.item} ${props.classes.join(' ')}`}>
 			<div className={`ui-item-bar ${props.selected ? 'ui-selected' : ''} ${styles.itemBar}`}>
 				{leftButton}
 				<Title {...props} className="" classes={[]}>{props.title}</Title>
