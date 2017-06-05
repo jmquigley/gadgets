@@ -28,7 +28,6 @@ section {
 #simple-buttons {
 	display: flex;
 	justify-content: space-evenly;
-	line-height: 32px;
 	text-align: center;
 }
 
@@ -42,6 +41,7 @@ section {
 }
 
 .box i {
+	line-height: 36px;
 	border: solid 2px lightgray;
 }
 

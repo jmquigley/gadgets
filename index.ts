@@ -1,4 +1,5 @@
 import {Accordion, AccordionItem} from './lib/accordion';
+import {Badge, BadgePosition} from './lib/badge';
 import {Button} from './lib/button';
 import {ButtonDialog} from './lib/buttonDialog';
 import {ButtonToggle} from './lib/buttonToggle';
@@ -11,6 +12,8 @@ import {Title} from './lib/title';
 export {
 	Accordion,
 	AccordionItem,
+	Badge,
+	BadgePosition,
 	BaseProps,
 	Button,
 	ButtonDialog,
