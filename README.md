@@ -7,30 +7,32 @@
 
 ## Installation
 
+This module uses [yarn](https://yarnpkg.com/en/) to manage dependencies and run scripts for development.
+
 To install as an application dependency:
 ```
-$ npm install --save gadgets
+$ yarn install --save gadgets
 ```
 
 To build the app and run all tests:
 ```
-$ npm run all
+$ yarn run all
 ```
 
 To build and run the demo application in electron use:
 ```
-$ npm run demo
+$ yarn run demo
 ```
 This will check out all dependencies, build the code, test, and then try to run it within electron.  This will take some time.
 
 To just attempt to run the application without building use:
 ```
-$ npm start
+$ yarn start
 ```
 
 To change the code while electron is running and use `CMD + R` to refresh electron:
 ```
-# npm run watch
+# yarn run watch
 ```
 
 
