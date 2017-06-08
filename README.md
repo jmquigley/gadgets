@@ -79,7 +79,7 @@ This will give a webpack module an **entry** point to copy in the gadgets CSS fi
 
 
 ## Widgets
-The module contains the following widgets (click on each header to attribute/event details for each):
+The module contains the following widgets (click on each header to see attribute/event details for each):
 
 ### Accordion
 
@@ -87,14 +87,7 @@ The module contains the following widgets (click on each header to attribute/eve
 - A widget that annotates another widget (like a counter)
 
 ### [Button](docs/lib/button/Button.md)
-A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.  To customize the style use the `ui-button` selector.
-
-```javascript
-import {Button} from 'gadgets';
-
-<Button iconName="cab" onClick={someFunction} />
-```
-
+A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.
 
 ### ButtonDialog
 A button control that when pushed displays a local dialog box.  The contents of the control make up the dialog window.
@@ -147,17 +140,7 @@ A text control with an up/down arrow that will increment a counter.
 ### TimeChooser
 
 ### [Toast](docs/lib/toast/Toast.md)
-A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.  To customize the style use the `ui-toast` selector.
-
-```javascript
-import {Toast, ToastLevel, ToastType} from 'gadgets';
-
-<Toast
-	level={ToastLevel.info}
-	type={ToastType.persistent}>
-	This is a sample info message
-</Toast>
-```
+A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.
 
 ### Toolbar
 
