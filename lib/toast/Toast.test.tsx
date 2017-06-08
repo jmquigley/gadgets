@@ -16,8 +16,11 @@ test.after.always.cb(t => {
 test('Test retrieval of Toast props object', t => {
 	const props = getDefaultToastProps();
 
+	t.true('bottom' in props);
+	t.is(props.bottom, false);
+
 	t.true('duration' in props);
-	t.is(props.duration, 5);
+	t.is(props.duration, 3);
 
 	t.true('level' in props);
 	t.is(props.level, ToastLevel.info);

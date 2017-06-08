@@ -20,6 +20,7 @@ export enum ToastType {
 }
 
 export interface ToastProps extends BaseProps {
+	bottom?: boolean;
 	duration?: number;
 	level?: ToastLevel;
 	type?: ToastType;
@@ -28,10 +29,11 @@ export interface ToastProps extends BaseProps {
 export function getDefaultToastProps(): ToastProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
+			bottom: false,
 			duration: 3,
 			level: ToastLevel.info,
 			type: ToastType.decay,
-			visible: false
+			visible: true
 		}));
 }
 
@@ -73,6 +75,9 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 	private buildClasses = () => {
 		let l: string[] = baseClasses(this.props, {visible: false})
 
+		l.push(styles.toast);
+		l.push('ui-toast');
+
 		let level = 'ui-toast-custom';
 		switch (this.props.level) {
 			case ToastLevel.info:
@@ -88,6 +93,12 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 				break;
 		}
 		l.push(level);
+
+		if (this.props.bottom) {
+			l.push(styles.bottom);
+		} else {
+			l.push(styles.top);
+		}
 
 		return l;
 	}
@@ -118,7 +129,7 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 
 	render() {
 		return (
-			<div className={`ui-toast ${styles.toast} ${!this.state.visible ? styles.hide : ''} ${this.buildClasses().join(' ')}`}>
+			<div className={`${this.buildClasses().join(' ')} ${!this.state.visible ? styles.hide : ''}`}>
 				<div className={styles.content}>
 					{this.props.children}
 				</div>

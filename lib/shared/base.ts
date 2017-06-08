@@ -12,7 +12,7 @@ const defaultBaseOptions: BaseOptions = {
 	className: true,
 	disabled: true,
 	visible: true
-}
+};
 
 /**
  * All of the components share a similar way of creating the initial CSS class list

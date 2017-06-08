@@ -64,6 +64,7 @@ interface AppState {
 	toastVisible2: boolean;
 	toastVisible3: boolean;
 	toastVisible4: boolean;
+	toastVisible5: boolean;
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -78,7 +79,8 @@ class App extends React.Component<AppProps, AppState> {
 			toastVisible1: true,
 			toastVisible2: true,
 			toastVisible3: true,
-			toastVisible4: true
+			toastVisible4: true,
+			toastVisible5: true
 		};
 
 		(window as any).state = this.state;
@@ -356,7 +358,24 @@ class App extends React.Component<AppProps, AppState> {
 						</Toast>
 					</div>
 
+				<h3>Error message with Persistence on the bottom</h3>
+					<div className="toastInfo">
+						<p>
+						{randomText}
+						</p>
 
+						<Button iconName="power-off" onClick={() => this.setState({toastVisible5: true})} />
+						Reset the Toast widget (show)
+
+						<Toast
+							bottom
+							level={ToastLevel.error}
+							type={ToastType.persistent}
+							visible={this.state.toastVisible5}
+							onClose={() => this.setState({toastVisible5: false})}>
+							This is a sample error message on the bottom
+						</Toast>
+					</div>
 				</Container>
 			</div>
 		);
