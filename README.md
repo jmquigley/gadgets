@@ -146,7 +146,7 @@ A text control with an up/down arrow that will increment a counter.
 
 ### TimeChooser
 
-### [Toast](docs/lib/button/Toast.md)
+### [Toast](docs/lib/toast/Toast.md)
 A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.  To customize the style use the `ui-toast` selector.
 
 ```javascript
