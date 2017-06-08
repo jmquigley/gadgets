@@ -50,7 +50,7 @@ function createItems() {
 }
 
 const items = createItems();
-const randomText = loremIpsum({units: 'paragraphs', random: null});
+const randomText = loremIpsum({units: 'sentences', count: 2, random: null});
 
 interface AppProps {
 }
@@ -65,6 +65,7 @@ interface AppState {
 	toastVisible3: boolean;
 	toastVisible4: boolean;
 	toastVisible5: boolean;
+	toastVisible6: boolean;
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -80,7 +81,8 @@ class App extends React.Component<AppProps, AppState> {
 			toastVisible2: true,
 			toastVisible3: true,
 			toastVisible4: true,
-			toastVisible5: true
+			toastVisible5: true,
+			toastVisible6: true
 		};
 
 		(window as any).state = this.state;
@@ -289,7 +291,7 @@ class App extends React.Component<AppProps, AppState> {
 				</Container>
 
 				<h1>Toast</h1>
-				<h3>Info message with Decay</h3>
+				<h3>Info message with decay</h3>
 				<Container id="toastExample">
 					<div className="toastInfo">
 						<p>
@@ -297,7 +299,7 @@ class App extends React.Component<AppProps, AppState> {
 						</p>
 
 						<Button iconName="power-off" onClick={() => this.setState({toastVisible1: true})} />
-						Reset the Toast widget (show)
+						<span>Reset the Toast widget (show)</span>
 						<Toast
 							level={ToastLevel.info}
 							visible={this.state.toastVisible1}
@@ -306,14 +308,14 @@ class App extends React.Component<AppProps, AppState> {
 						</Toast>
 					</div>
 
-					<h3>Warning message with Decay</h3>
+					<h3>Warning message with decay</h3>
 					<div className="toastInfo">
 						<p>
 						{randomText}
 						</p>
 
 						<Button iconName="power-off" onClick={() => this.setState({toastVisible2: true})} />
-						Reset the Toast widget (show)
+						<span>Reset the Toast widget (show)</span>
 
 						<Toast
 							level={ToastLevel.warning}
@@ -323,14 +325,14 @@ class App extends React.Component<AppProps, AppState> {
 						</Toast>
 					</div>
 
-					<h3>Error message with Decay</h3>
+					<h3>Error message with decay</h3>
 					<div className="toastInfo">
 						<p>
 						{randomText}
 						</p>
 
 						<Button iconName="power-off" onClick={() => this.setState({toastVisible3: true})} />
-						Reset the Toast widget (show)
+						<span>Reset the Toast widget (show)</span>
 
 						<Toast
 							level={ToastLevel.error}
@@ -340,14 +342,14 @@ class App extends React.Component<AppProps, AppState> {
 						</Toast>
 					</div>
 
-					<h3>Info message with Persistence</h3>
+					<h3>Info message with persistence</h3>
 					<div className="toastInfo">
 						<p>
 						{randomText}
 						</p>
 
 						<Button iconName="power-off" onClick={() => this.setState({toastVisible4: true})} />
-						Reset the Toast widget (show)
+						<span>Reset the Toast widget (show)</span>
 
 						<Toast
 							level={ToastLevel.info}
@@ -358,14 +360,14 @@ class App extends React.Component<AppProps, AppState> {
 						</Toast>
 					</div>
 
-				<h3>Error message with Persistence on the bottom</h3>
+					<h3>Error message with persistence on the bottom</h3>
 					<div className="toastInfo">
 						<p>
 						{randomText}
 						</p>
 
 						<Button iconName="power-off" onClick={() => this.setState({toastVisible5: true})} />
-						Reset the Toast widget (show)
+						<span>Reset the Toast widget (show)</span>
 
 						<Toast
 							bottom
@@ -374,6 +376,27 @@ class App extends React.Component<AppProps, AppState> {
 							visible={this.state.toastVisible5}
 							onClose={() => this.setState({toastVisible5: false})}>
 							This is a sample error message on the bottom
+						</Toast>
+					</div>
+
+					<h3>Custom message with persistence</h3>
+					<div className="toastInfo">
+						<p>
+						{randomText}
+						</p>
+
+						<Button iconName="power-off" onClick={() => this.setState({toastVisible6: true})} />
+						<span>Reset the Toast widget (show)</span>
+
+						<Toast
+							level={ToastLevel.custom}
+							backgroundColor="#7fbf3f"
+							color="magenta"
+							borderColor="#3fbfbf"
+							type={ToastType.persistent}
+							visible={this.state.toastVisible6}
+							onClose={() => this.setState({toastVisible6: false})}>
+							This is a sample custom message
 						</Toast>
 					</div>
 				</Container>

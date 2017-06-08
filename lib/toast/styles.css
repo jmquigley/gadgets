@@ -1,5 +1,7 @@
 @import '../shared/styles.css';
 
+$br: 5px;
+
 :local {
 
 	.toast {
@@ -8,20 +10,23 @@
 		opacity: 1.0;
 		width: 70%;
 		margin: 0 auto;
-		transition: opacity 0.5s ease;
-		border-radius: 5px;
+		transition: opacity 0.75s ease;
 	}
 
 	.top {
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
+		border-bottom-left-radius: $br;
+		border-bottom-right-radius: $br;
 	}
 
 	.bottom {
 		bottom: 0;
 		left: 50%;
 		transform: translateX(-50%);
+		border-top-left-radius: $br;
+		border-top-right-radius: $br;
 	}
 
 	.content {
@@ -33,23 +38,32 @@
 		flex: 1;
 		line-height: 36px;
 		color: black;
-		border-top-right-radius: 5px;
-		border-bottom-right-radius: 5px;
+	}
+
+	.buttonTop {
+		border-bottom-right-radius: $br;
+	}
+
+	.buttonBottom {
+		border-top-right-radius: $br;
 	}
 
 	.info {
-		border: solid 1px black;
-		background-color: white;
+		color: white;
+		border-color: #5bc0de;
+		background-color: #5bc0de;
 	}
 
 	.warning {
-		border: solid 1px orange;
-		background-color: yellow;
+		color: white;
+		border-color: #f0ad4e;
+		background-color: #f0ad4e;
 	}
 
 	.error {
-		border: solid 1px red;
-		background-color: pink;
+		color: white;
+		border-color: #d9534f;
+		background-color: #d9534f;
 	}
 
 	.hide {

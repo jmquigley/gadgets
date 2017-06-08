@@ -133,6 +133,9 @@ A button control that when pushed displays a local dialog box.  The contents of 
 
 ### Slider
 
+### Spinner
+A text control with an up/down arrow that will increment a counter.
+
 ### Switch
 
 ### Table
@@ -143,8 +146,18 @@ A button control that when pushed displays a local dialog box.  The contents of 
 
 ### TimeChooser
 
-### Toast
-A popup (center of screen) with a message that disappers after N seconds.  Contains an X button to remove sooner.
+### [Toast](docs/lib/button/Toast.md)
+A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.  To customize the style use the `ui-toast` selector.
+
+```javascript
+import {Toast, ToastLevel, ToastType} from 'gadgets';
+
+<Toast
+	level={ToastLevel.info}
+	type={ToastType.persistent}>
+	This is a sample info message
+</Toast>
+```
 
 ### Toolbar
 

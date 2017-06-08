@@ -44,7 +44,7 @@ section {
 	border: 0;
 }
 
-.box i {
+.box i, .toastInfo > i {
 	line-height: 36px;
 	border: solid 2px lightgray;
 }
@@ -60,9 +60,10 @@ section {
 	margin-bottom: 20px;
 }
 
-.toastInfo > i {
+.toastInfo > span {
+	color: red;
+	padding-left: 5px;
 	line-height: 36px;
-	border: solid 2px lightgray;
 }
 
 /*
@@ -101,7 +102,7 @@ Global UI color settings for components
 }
 
 .ui-button:not(.nohover):hover {
-	background-color: #fd7400;
+	background-color: silver;
 }
 
 .ui-dialog-popup {

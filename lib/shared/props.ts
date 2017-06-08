@@ -6,6 +6,7 @@ import {nil} from 'util.toolbox';
 
 export interface BaseProps {
 	backgroundColor?: string;
+	borderColor?: string;
 	children?: React.ReactNode;
 	className?: string;
 	classes?: string[];
@@ -31,6 +32,7 @@ export interface BaseProps {
 export function getDefaultBaseProps(): BaseProps {
 	return cloneDeep({
 		backgroundColor: '',
+		borderColor: '',
 		children: null,
 		className: '',
 		classes: [],
