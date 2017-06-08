@@ -8,6 +8,10 @@ h1:first-child {
 	padding: 5px 0 5px 0;
 }
 
+h3 {
+	font-size: 1.1em;
+	margin: 0;
+}
 
 section {
 	margin-bottom: 20px;
@@ -17,8 +21,8 @@ section {
 	padding: 10px;
 }
 
-#listExample1, #listExample2, #accordionExample {
-	width: 70%;
+#listExample1, #listExample2, #accordionExample, #toastExample {
+	width: 80%;
 }
 
 #listExample1 .ui-list, #listExample2 .ui-list, #accordionExample .ui-accordion {
@@ -48,6 +52,17 @@ section {
 .demoLabel {
 	background-color: #004358;
 	color: #ffe11a;
+}
+
+.toastInfo {
+	border: solid 1px #004358;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.toastInfo > i {
+	line-height: 36px;
+	border: solid 2px lightgray;
 }
 
 /*

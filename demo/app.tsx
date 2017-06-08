@@ -1,3 +1,4 @@
+import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 import {render} from 'react-dom';
 import {getUUID} from 'util.toolbox';
@@ -23,6 +24,9 @@ const Label = bundle.Label;
 const List = bundle.List;
 const ListHeader = bundle.ListHeader;
 const ListItem = bundle.ListItem;
+const Toast = bundle.Toast
+const ToastLevel = bundle.ToastLevel;
+const ToastType = bundle.ToastType;
 
 let listItems: string[] = [];
 for (let i=0; i<5; i++) {
@@ -45,6 +49,9 @@ function createItems() {
  	});
 }
 
+const items = createItems();
+const randomText = loremIpsum({units: 'paragraphs', random: null});
+
 interface AppProps {
 }
 
@@ -53,6 +60,10 @@ interface AppState {
 	counter2?: number;
 	counter3?: number;
 	counter4?: number;
+	toastVisible1: boolean;
+	toastVisible2: boolean;
+	toastVisible3: boolean;
+	toastVisible4: boolean;
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -63,8 +74,14 @@ class App extends React.Component<AppProps, AppState> {
 			counter1: 0,
 			counter2: 1,
 			counter3: 99,
-			counter4: 1
+			counter4: 1,
+			toastVisible1: true,
+			toastVisible2: true,
+			toastVisible3: true,
+			toastVisible4: true
 		};
+
+		(window as any).state = this.state;
 	}
 
 	render() {
@@ -75,7 +92,7 @@ class App extends React.Component<AppProps, AppState> {
 					<Accordion>
 						<AccordionItem title="Accordion #1 (click to expand)">
 							<List alternating>
-								{createItems()}
+								{items}
 							</List>
 						</AccordionItem>
 
@@ -264,10 +281,82 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>List/ListItem (without header)</h1>
 				<Container id="listExample2">
-
 					<List alternating>
-						{createItems()}
+						{items}
 					</List>
+				</Container>
+
+				<h1>Toast</h1>
+				<h3>Info message with Decay</h3>
+				<Container id="toastExample">
+					<div className="toastInfo">
+						<p>
+						{randomText}
+						</p>
+
+						<Button iconName="power-off" onClick={() => this.setState({toastVisible1: true})} />
+						Reset the Toast widget (show)
+						<Toast
+							level={ToastLevel.info}
+							visible={this.state.toastVisible1}
+							onClose={() => this.setState({toastVisible1: false})}>
+							This is a sample info message
+						</Toast>
+					</div>
+
+					<h3>Warning message with Decay</h3>
+					<div className="toastInfo">
+						<p>
+						{randomText}
+						</p>
+
+						<Button iconName="power-off" onClick={() => this.setState({toastVisible2: true})} />
+						Reset the Toast widget (show)
+
+						<Toast
+							level={ToastLevel.warning}
+							visible={this.state.toastVisible2}
+							onClose={() => this.setState({toastVisible2: false})}>
+							This is a sample warning message
+						</Toast>
+					</div>
+
+					<h3>Error message with Decay</h3>
+					<div className="toastInfo">
+						<p>
+						{randomText}
+						</p>
+
+						<Button iconName="power-off" onClick={() => this.setState({toastVisible3: true})} />
+						Reset the Toast widget (show)
+
+						<Toast
+							level={ToastLevel.error}
+							visible={this.state.toastVisible3}
+							onClose={() => this.setState({toastVisible3: false})}>
+							This is a sample error message
+						</Toast>
+					</div>
+
+					<h3>Info message with Persistence</h3>
+					<div className="toastInfo">
+						<p>
+						{randomText}
+						</p>
+
+						<Button iconName="power-off" onClick={() => this.setState({toastVisible4: true})} />
+						Reset the Toast widget (show)
+
+						<Toast
+							level={ToastLevel.info}
+							type={ToastType.persistent}
+							visible={this.state.toastVisible4}
+							onClose={() => this.setState({toastVisible4: false})}>
+							This is a sample info message
+						</Toast>
+					</div>
+
+
 				</Container>
 			</div>
 		);

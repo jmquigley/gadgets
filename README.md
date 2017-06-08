@@ -99,6 +99,7 @@ import {Button} from 'gadgets';
 ### ButtonDialog
 A button control that when pushed displays a local dialog box.  The contents of the control make up the dialog window.
 
+### ButtonText
 
 ### ButtonToggle
 

@@ -16,8 +16,9 @@ export interface BaseProps {
 	noedit?: boolean;
 	noripple?: boolean;
 	onBlur?: any;
-	onClick?: any;
 	onChange?: any;
+	onClick?: any;
+	onClose?: any;
 	onDoubleClick?: any;
 	onKeyDown?: any;
 	onKeyPress?: any;
@@ -40,8 +41,9 @@ export function getDefaultBaseProps(): BaseProps {
 		noedit: false,
 		noripple: false,
 		onBlur: nil,
-		onClick: nil,
 		onChange: nil,
+		onClick: nil,
+		onClose: nil,
 		onDoubleClick: nil,
 		onKeyPress: nil,
 		onKeyDown: nil,

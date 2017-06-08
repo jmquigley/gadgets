@@ -2,4 +2,45 @@
 
 :local {
 
+	.toast {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 1.0;
+		width: 70%;
+		margin: 0 auto;
+		transition: opacity 0.5s ease;
+	}
+
+	.content {
+		flex: 6;
+		margin: 8px 5px 5px 5px;
+	}
+
+	.button {
+		flex: 1;
+		line-height: 36px;
+		color: black;
+	}
+
+	.info {
+		border: solid 1px black;
+		background-color: white;
+	}
+
+	.warning {
+		border: solid 1px orange;
+		background-color: yellow;
+	}
+
+	.error {
+		border: solid 1px red;
+		background-color: pink;
+	}
+
+	.hide {
+		opacity: 0;
+	}
 }

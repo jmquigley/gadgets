@@ -7,7 +7,7 @@ import test from 'ava';
 import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
-import {Toast, getDefaultToastProps} from './index';
+import {Toast, ToastLevel, ToastType, getDefaultToastProps} from './index';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
@@ -16,8 +16,14 @@ test.after.always.cb(t => {
 test('Test retrieval of Toast props object', t => {
 	const props = getDefaultToastProps();
 
-	t.true('width' in props);
-	t.is(props.width, 0);
+	t.true('duration' in props);
+	t.is(props.duration, 5);
+
+	t.true('level' in props);
+	t.is(props.level, ToastLevel.info);
+
+	t.true('type' in props);
+	t.is(props.type, ToastType.decay);
 });
 
 test('Test creation of a Toast control', t => {

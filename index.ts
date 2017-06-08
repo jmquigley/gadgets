@@ -8,7 +8,7 @@ import {Label} from './lib/label';
 import {List, ListHeader, ListItem} from './lib/list';
 import {BaseProps} from './lib/shared/props';
 import {Title} from './lib/title';
-import {Toast} from './lib/toast';
+import {Toast, ToastLevel, ToastType} from './lib/toast';
 
 export {
 	Accordion,
@@ -25,5 +25,7 @@ export {
 	ListHeader,
 	ListItem,
 	Title,
-	Toast
+	Toast,
+	ToastLevel,
+	ToastType
 };
