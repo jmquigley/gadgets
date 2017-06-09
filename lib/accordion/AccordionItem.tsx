@@ -80,14 +80,14 @@ export class AccordionItem extends React.Component<AccordionItemProps, Accordion
 		}
 
 		return (
-			<li className={this.buildClasses().join(' ')}>
+			<div className={this.buildClasses().join(' ')}>
 				<ItemComponent
 					{...this.props}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
 					rightButton={<Button iconName="plus" onClick={this.handleNew} />}
 				/>
 				{content}
-			</li>
+			</div>
 		);
 	}
 }

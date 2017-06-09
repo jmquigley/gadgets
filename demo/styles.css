@@ -61,11 +61,6 @@ section {
 	border: solid 1px lightgray;
 }
 
-.toastInfo .ui-button {
-	/* border: solid 1px lightgray; */
-	width: 50px;
-}
-
 .demoLabel {
 	background-color: #004358;
 	color: #ffe11a;
@@ -87,6 +82,11 @@ section {
 	display: inline-block;
 	line-height: 32px;
 	margin: 0;
+}
+
+.toastBox .ui-button {
+	border: solid 1px lightgray;
+	width: 50px;
 }
 
 /*
