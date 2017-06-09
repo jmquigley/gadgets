@@ -9,16 +9,15 @@
 	.titleBar {
 		@extend baseTitleBar;
 		display: inline-flex;
+		box-sizing: border-box;
 	}
 
 	.title {
-		line-height: inherit;
 		text-align: left;
 		flex: 3;
 	}
 
 	.widget {
-		line-height: inherit;
 		text-align: right;
 		flex: 1;
 	}

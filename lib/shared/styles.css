@@ -8,18 +8,26 @@
 		width: 0;
 	}
 
+	.item {
+		display: block;
+	}
+
 	.item .itemBar {
-		line-height: 36px;
 		display: flex;
+		height: 36px;
+	}
+
+	.itemTitle {
+		line-height: 36px;
 	}
 
 	.itemButton {
-		text-align: center;
+		display: block;
 	}
 
 	.item:hover .itemButton, .item:hover .itemButton i {
 		font-size: 1.0em;
-		width: 32px;
+		width: 36px;
 		opacity: 1.0;
 	}
 

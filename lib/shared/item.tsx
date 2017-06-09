@@ -70,7 +70,7 @@ export const ItemComponent = (props: ItemProps) => {
 			className={`ui-item ${styles.item} ${props.classes.join(' ')}`}>
 			<div className={`ui-item-bar ${props.selected ? 'ui-selected' : ''} ${styles.itemBar}`}>
 				{leftButton}
-				<Title {...props} className="" classes={[]}>{props.title}</Title>
+				<Title {...props} className={styles.itemTitle} classes={[]}>{props.title}</Title>
 				{rightButton}
 			</div>
 			{content}

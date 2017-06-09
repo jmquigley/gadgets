@@ -84,8 +84,9 @@ export class Button extends React.Component<ButtonProps, undefined> {
 		return (
 			<div
 				className={`${this._classes} ${styles.button}`}
+				disabled={this.props.disabled}
 				onClick={this.handleClick}
-				disabled={this.props.disabled}>
+				>
 				<Icon iconName={this.props.iconName} className={styles.icon}/>
 			</div>
 		);
