@@ -1,8 +1,7 @@
-import {Button, ButtonComponent, ButtonProps, getDefaultButtonProps} from './Button';
+import {Button, ButtonProps, getDefaultButtonProps} from './Button';
 
 export {
 	Button,
-	ButtonComponent,
 	ButtonProps,
 	getDefaultButtonProps
 };

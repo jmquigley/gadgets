@@ -2,12 +2,17 @@
 
 :local {
 	.button {
-		text-align: center;
-		vertical-align: bottom;
-		outline: none;
-		width: 32px;
+		display: inline-block;
 		background-color: inherit;
 		line-height: inherit;
 		font-size: inherit;
+		width: inherit;
+		height: inherit;
+		outline: none;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	.icon {
 	}
 }

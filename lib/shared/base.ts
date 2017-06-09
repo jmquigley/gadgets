@@ -24,7 +24,7 @@ const defaultBaseOptions: BaseOptions = {
  * component.
  */
 export function baseClasses(props: BaseProps, opts?: BaseOptions): string[] {
-	const l: string[] = Array.from(props.classes);
+	const l: string[] = props.classes.slice();
 
 	opts = Object.assign(
 		defaultBaseOptions,

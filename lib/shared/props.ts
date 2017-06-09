@@ -31,12 +31,12 @@ export interface BaseProps {
 
 export function getDefaultBaseProps(): BaseProps {
 	return cloneDeep({
-		backgroundColor: '',
-		borderColor: '',
+		backgroundColor: 'inherit',
+		borderColor: 'inherit',
 		children: null,
 		className: '',
 		classes: [],
-		color: '',
+		color: 'inherit',
 		contentEditable: false,
 		disabled: false,
 		id: '',

@@ -217,7 +217,7 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 					{this.props.children}
 				</div>
 
-				<Button className={`${styles.button} ${this.props.bottom ? styles.buttonBottom : styles.buttonTop}`}
+				<Button className={`${styles.button}`}
 						iconName="times"
 						onClick={this.handleClose} />
 			</div>

@@ -2,32 +2,20 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {Icon} from '../icon';
 import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
 
 const styles = require('./styles.css');
 
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
-	style?: any;
 }
 
 export function getDefaultButtonProps(): ButtonProps {
 	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		iconName: 'bomb',
-		style: {}
+		iconName: 'bomb'
 	}));
 }
-
-export const ButtonComponent = (props: ButtonProps) => (
-    <i
-        className={props.classes.join(' ')}
-        onClick={props.onClick}
-		aria-hidden="true"
-	    disabled={props.disabled}
-		style={props.style}
-	>
-	</i>
-);
 
 /**
  * A typical button control widget.  This control only uses an icon and no text
@@ -67,39 +55,39 @@ export class Button extends React.Component<ButtonProps, undefined> {
 
     public static defaultProps: ButtonProps = getDefaultButtonProps();
 
+	private _classes: string = '';
+
     constructor(props: ButtonProps) {
 		super(props);
 	}
 
-	private buildClasses = () => {
+	componentWillMount() {
 		let l: string[] = baseClasses(this.props);
 
-		l.push(styles.button);
-		l.push('fa');
-		l.push(`fa-${this.props.iconName}`);
 		l.push('ui-button');
 
 		if (!this.props.noripple && !this.props.disabled) {
 			l.push('ripple');
 		}
 
-		return l;
+		this._classes = l.join(' ');
 	}
 
-	private handleClick = (e: Event) => {
+	private handleClick = (e: any) => {
 		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
 			this.props.onClick();
 		}
-		e.stopPropagation();
+		(e as Event).stopPropagation();
 	}
 
 	render() {
 		return (
-			<ButtonComponent
-				{...this.props}
+			<div
+				className={`${this._classes} ${styles.button}`}
 				onClick={this.handleClick}
-				classes={this.buildClasses()}
-			/>
+				disabled={this.props.disabled}>
+				<Icon iconName={this.props.iconName} className={styles.icon}/>
+			</div>
 		);
 	}
 }

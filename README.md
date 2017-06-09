@@ -112,7 +112,8 @@ A button control that when pushed displays a local dialog box.  The contents of 
 
 ### Editor
 
-### Icon
+### [Icon](docs/lib/icon/Icon.md)
+Displays a graphical icon within the current container.
 
 ### Label
 

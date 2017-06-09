@@ -17,16 +17,12 @@ $br: 5px;
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		border-bottom-left-radius: $br;
-		border-bottom-right-radius: $br;
 	}
 
 	.bottom {
 		bottom: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		border-top-left-radius: $br;
-		border-top-right-radius: $br;
 	}
 
 	.content {
@@ -38,14 +34,6 @@ $br: 5px;
 		flex: 1;
 		line-height: 36px;
 		color: black;
-	}
-
-	.buttonTop {
-		border-bottom-right-radius: $br;
-	}
-
-	.buttonBottom {
-		border-top-right-radius: $br;
 	}
 
 	.info {

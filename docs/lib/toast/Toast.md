@@ -31,10 +31,10 @@ import {Toast, ToastLevel, ToastType} from 'gadgets';
 
 <Toast
 	level={ToastLevel.custom}
- backgroundColor="#7fbf3f"
- color="magenta"
- borderColor="#3fbfbf"
- type={ToastType.persistent}>
+	backgroundColor="#7fbf3f"
+	color="magenta"
+	borderColor="#3fbfbf"
+	type={ToastType.persistent}>
 	This is a sample custom message
 </Toast>
 ```

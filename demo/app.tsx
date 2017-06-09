@@ -17,9 +17,12 @@ const AccordionItem = bundle.AccordionItem;
 const Badge = bundle.Badge;
 const BadgePosition = bundle.BadgePosition;
 const Button = bundle.Button;
+const ButtonCircle = bundle.ButtonCircle;
 const ButtonDialog = bundle.ButtonDialog;
 const ButtonToggle = bundle.ButtonToggle;
 const Container = bundle.Container;
+const Icon = bundle.Icon;
+const IconSize = bundle.IconSize;
 const Label = bundle.Label;
 const List = bundle.List;
 const ListHeader = bundle.ListHeader;
@@ -121,7 +124,7 @@ class App extends React.Component<AppProps, AppState> {
 
 					<div id="simple-buttons">
 						<div className="box">
-							top right<br/>
+							<p>top right<br/>&nbsp;</p>
 							<Badge counter={this.state.counter1}>
 								<Button onClick={() => {
 									this.setState({
@@ -132,7 +135,7 @@ class App extends React.Component<AppProps, AppState> {
 						</div>
 
 						<div className="box">
-							top left<br/>
+							<p>top left<br/>&nbsp;</p>
 							<Badge counter={this.state.counter2} position={BadgePosition.topLeft}>
 								<Button onClick={() => {
 									this.setState({
@@ -143,7 +146,7 @@ class App extends React.Component<AppProps, AppState> {
 						</div>
 
 						<div className="box">
-							bottom right<br/>
+							<p>bottom right</p>
 							<Badge
 								counter={this.state.counter3}
 								position={BadgePosition.bottomRight}
@@ -157,7 +160,7 @@ class App extends React.Component<AppProps, AppState> {
 						</div>
 
 						<div className="box">
-							bottom left<br/>
+							<p>bottom left<br/>&nbsp;</p>
 							<Badge
 								counter={this.state.counter4}
 								position={BadgePosition.bottomLeft}
@@ -178,23 +181,80 @@ class App extends React.Component<AppProps, AppState> {
 				<Container id="buttonExample">
 					<div id="simple-buttons">
 						<div className="box">
-							Simple Button<br/>
+							<p>Simple Button</p>
 							<Button iconName="cab"/>
 						</div>
 
 						<div className="box">
-							Disabled Button<br/>
+							<p>Disabled Button</p>
 							<Button iconName="cab" disabled={true} />
 						</div>
 
 						<div className="box">
-							Dialog Button<br/>
+							<p>Dialog Button</p>
 							<ButtonDialog iconName="bath">Test Dialog Button</ButtonDialog>
 						</div>
 
 						<div className="box">
-							Toggle Button<br/>
+							<p>Toggle Button</p>
 							<ButtonToggle iconNameOn="check-square-o" iconNameOff="square-o" fgColorOff="black" />
+						</div>
+
+						<div className="box">
+							<p>Circle Button</p>
+							<ButtonCircle iconName="times" />
+						</div>
+					</div>
+				</Container>
+
+				<h1>Icons</h1>
+				<Container id="iconExample">
+					<div id="simple-icons">
+
+						<div className="box">
+							<p>Small<br/>&nbsp;</p>
+							<Icon size={IconSize.small} iconName="handshake-o" />
+						</div>
+
+						<div className="box">
+							<p>Medium & Normal</p>
+							<Icon size={IconSize.medium} iconName="handshake-o" />
+						</div>
+
+						<div className="box">
+							<p>Large<br/>&nbsp;</p>
+							<Icon size={IconSize.large} iconName="handshake-o" />
+						</div>
+
+						<div className="box">
+							<p>XLarge<br/>&nbsp;</p>
+							<Icon size={IconSize.xlarge} iconName="handshake-o" />
+						</div>
+
+						<div className="box">
+							<p>Normal, Custom</p>
+							<Icon
+								size={IconSize.normal}
+								iconName="handshake-o"
+								color="red"
+								backgroundColor="blue"
+							/>
+						</div>
+
+						<div className="box">
+							<p>Normal, Image</p>
+							<Icon
+								size={IconSize.normal}
+								imageFile="./test-icon-image.png"
+							/>
+						</div>
+
+						<div className="box">
+							<p>Small, Image</p>
+							<Icon
+								size={IconSize.small}
+								imageFile="./test-icon-image.png"
+							/>
 						</div>
 
 					</div>

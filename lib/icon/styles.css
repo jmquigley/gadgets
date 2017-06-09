@@ -1,0 +1,42 @@
+@import '../shared/styles.css';
+
+$small: 16px;
+$medium: 36px;
+$large: 48px;
+$xlarge: 64px;
+
+:local {
+
+	.icon {
+		display: inline-block;
+	}
+
+	.small {
+		font-size: 0.5em;
+		width: $small;
+		height: $small;
+		line-height: $small;
+	}
+
+	.medium {
+		font-size: 1.0em;
+		width: $medium;
+		height: $medium;
+		line-height: $medium;
+	}
+
+	.large {
+		font-size: 1.75em;
+		width: $large;
+		height: $large;
+		line-height: $large;
+	}
+
+	.xlarge {
+		font-size: 3.0em;
+		width: $xlarge;
+		height: $xlarge;
+		line-height: $xlarge;
+	}
+
+}
