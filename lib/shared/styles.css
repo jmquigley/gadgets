@@ -9,10 +9,6 @@
 	}
 
 	.item {
-		display: block;
-	}
-
-	.item .itemBar {
 		display: flex;
 		height: 36px;
 	}
@@ -22,7 +18,7 @@
 	}
 
 	.itemButton {
-		display: block;
+		display: inline-flex;
 	}
 
 	.item:hover .itemButton, .item:hover .itemButton i {

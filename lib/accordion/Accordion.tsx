@@ -26,13 +26,6 @@ export interface AccordionState {
 	selectedItem?: AccordionItem;
 }
 
-export const AccordionComponent = (props: AccordionProps) => (
-	<ul
-		className={props.classes.join(' ')}>
-		{props.children}
-	</ul>
-);
-
 export class Accordion extends React.Component<AccordionProps, AccordionState> {
 
 	public static defaultProps: AccordionProps = getDefaultAccordionProps();
@@ -52,10 +45,9 @@ export class Accordion extends React.Component<AccordionProps, AccordionState> {
 
 	render() {
 		return (
-			<AccordionComponent
-				{...this.props}
-				classes={this.buildClasses()}
-			/>
+			<ul className={this.buildClasses().join(' ')}>
+				{this.props.children}
+			</ul>
 		);
 	}
 }

@@ -70,14 +70,24 @@ export class AccordionItem extends React.Component<AccordionItemProps, Accordion
 	}
 
 	render() {
+		let content = null;
+		if ((this.props.children != null) && (this.state.toggle)) {
+			content = (
+				<div className={`ui-accordion-content ${styles.content}`}>
+					{this.props.children}
+				</div>
+			);
+		}
+
 		return (
-			<ItemComponent
-				{...this.props}
-				classes={this.buildClasses()}
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
-				rightButton={<Button iconName="plus" onClick={this.handleNew} />}
-				showContent={this.state.toggle}
-			/>
+			<li className={this.buildClasses().join(' ')}>
+				<ItemComponent
+					{...this.props}
+					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
+					rightButton={<Button iconName="plus" onClick={this.handleNew} />}
+				/>
+				{content}
+			</li>
 		);
 	}
 }
