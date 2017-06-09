@@ -358,8 +358,11 @@ class App extends React.Component<AppProps, AppState> {
 						{randomText}
 						</p>
 
-						<Button iconName="power-off" onClick={() => this.setState({toastVisible1: true})} />
-						<span>Reset the Toast widget (show)</span>
+						<div className="toastBox">
+							<Button iconName="power-off" onClick={() => this.setState({toastVisible1: true})} />
+							<p>Reset the Toast widget (show)</p>
+						</div>
+
 						<Toast
 							level={ToastLevel.info}
 							visible={this.state.toastVisible1}
@@ -374,8 +377,10 @@ class App extends React.Component<AppProps, AppState> {
 						{randomText}
 						</p>
 
-						<Button iconName="power-off" onClick={() => this.setState({toastVisible2: true})} />
-						<span>Reset the Toast widget (show)</span>
+						<div className="toastBox">
+							<Button iconName="power-off" onClick={() => this.setState({toastVisible2: true})} />
+							<p>Reset the Toast widget (show)</p>
+						</div>
 
 						<Toast
 							level={ToastLevel.warning}
@@ -391,8 +396,10 @@ class App extends React.Component<AppProps, AppState> {
 						{randomText}
 						</p>
 
-						<Button iconName="power-off" onClick={() => this.setState({toastVisible3: true})} />
-						<span>Reset the Toast widget (show)</span>
+						<div className="toastBox">
+							<Button iconName="power-off" onClick={() => this.setState({toastVisible3: true})} />
+							<p>Reset the Toast widget (show)</p>
+						</div>
 
 						<Toast
 							level={ToastLevel.error}
@@ -408,8 +415,10 @@ class App extends React.Component<AppProps, AppState> {
 						{randomText}
 						</p>
 
-						<Button iconName="power-off" onClick={() => this.setState({toastVisible4: true})} />
-						<span>Reset the Toast widget (show)</span>
+						<div className="toastBox">
+							<Button iconName="power-off" onClick={() => this.setState({toastVisible4: true})} />
+							<p>Reset the Toast widget (show)</p>
+						</div>
 
 						<Toast
 							level={ToastLevel.info}
@@ -426,8 +435,10 @@ class App extends React.Component<AppProps, AppState> {
 						{randomText}
 						</p>
 
-						<Button iconName="power-off" onClick={() => this.setState({toastVisible5: true})} />
-						<span>Reset the Toast widget (show)</span>
+						<div className="toastBox">
+							<Button iconName="power-off" onClick={() => this.setState({toastVisible5: true})} />
+							<p>Reset the Toast widget (show)</p>
+						</div>
 
 						<Toast
 							bottom
@@ -445,8 +456,10 @@ class App extends React.Component<AppProps, AppState> {
 						{randomText}
 						</p>
 
-						<Button iconName="power-off" onClick={() => this.setState({toastVisible6: true})} />
-						<span>Reset the Toast widget (show)</span>
+						<div className="toastBox">
+ 							<Button iconName="power-off" onClick={() => this.setState({toastVisible6: true})} />
+							<p>Reset the Toast widget (show)</p>
+						</div>
 
 						<Toast
 							level={ToastLevel.custom}
