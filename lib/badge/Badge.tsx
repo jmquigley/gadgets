@@ -38,48 +38,52 @@ export class Badge extends React.Component<BadgeProps, undefined> {
 
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
+	private _classes: string = '';
+	private _style: any = null;
+	private _positionStyle: string = '';
+
 	constructor(props: BadgeProps) {
 		super(props);
 	}
 
-	private buildClasses = () => {
-		let l: string[] = baseClasses(this.props)
-		return l;
+	private buildStyles = () => {
+		this._style = Object.assign({
+			color: (this.props.color || 'black'),
+			backgroundColor: (this.props.backgroundColor || 'white'),
+			border: `solid 3px ${this.props.color}`
+		}, this.props.style);
+
+		this._classes = baseClasses(this.props);
+
+		switch (this.props.position) {
+			case BadgePosition.topLeft: this._positionStyle = styles.topLeft; break;
+			case BadgePosition.top: this._positionStyle = styles.top; break;
+			case BadgePosition.topRight: this._positionStyle = styles.topRight; break;
+			case BadgePosition.middleLeft: this._positionStyle = styles.middleLeft; break;
+			case BadgePosition.middle: this._positionStyle = styles.middle; break;
+			case BadgePosition.middleRight: this._positionStyle = styles.middleRight; break;
+			case BadgePosition.bottomLeft: this._positionStyle = styles.bottomLeft; break;
+			case BadgePosition.bottom: this._positionStyle = styles.bottom; break;
+			case BadgePosition.bottomRight: this._positionStyle = styles.bottomRight; break;
+		}
 	}
 
 	render() {
-		let style = {
-			backgroundColor: this.props.backgroundColor,
-			color: this.props.color,
-			border: `solid 3px ${this.props.color}`
-		}
-
-		let positionStyle: string = '';
-		switch (this.props.position) {
-			case BadgePosition.topLeft: positionStyle = styles.topLeft; break;
-			case BadgePosition.top: positionStyle = styles.top; break;
-			case BadgePosition.topRight: positionStyle = styles.topRight; break;
-			case BadgePosition.middleLeft: positionStyle = styles.middleLeft; break;
-			case BadgePosition.middle: positionStyle = styles.middle; break;
-			case BadgePosition.middleRight: positionStyle = styles.middleRight; break;
-			case BadgePosition.bottomLeft: positionStyle = styles.bottomLeft; break;
-			case BadgePosition.bottom: positionStyle = styles.bottom; break;
-			case BadgePosition.bottomRight: positionStyle = styles.bottomRight; break;
-		}
+		this.buildStyles();
 
 		let badge = null;
 		if (this.props.counter !== 0) {
 			badge = (
 				<div
-					className={`${styles.badge} ${positionStyle}`}
-					style={style}>
+					className={`${styles.badge} ${this._positionStyle}`}
+					style={this._style}>
 					{this.props.counter}
 				</div>
 			);
 		}
 
 		return (
-			<div className={`${styles.container} ${this.buildClasses().join(' ')}`}>
+			<div className={`${styles.container} ${this._classes}`}>
 				{this.props.children}
 				{badge}
 			</div>

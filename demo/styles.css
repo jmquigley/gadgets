@@ -62,8 +62,8 @@ section {
 }
 
 .demoLabel {
-	background-color: #004358;
-	color: #ffe11a;
+	background-color: #004358 !important;
+	color: #ffe11a !important;
 }
 
 .toastInfo {
@@ -125,7 +125,7 @@ Global UI color settings for components
 }
 
 .ui-button:not(.nohover):hover {
-	background-color: silver;
+	background-color: silver !important;
 }
 
 .ui-dialog-popup {

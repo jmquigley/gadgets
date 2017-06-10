@@ -1,8 +1,9 @@
 'use strict';
 
 import * as React from 'react';
-import {nil} from 'util.toolbox';
+import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
+import {baseClasses} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -20,18 +21,6 @@ export interface ButtonToggleState {
 	toggle: boolean;
 }
 
-export const ButtonToggleComponent = (props: ButtonToggleProps) => (
-    <Button
-		classes={props.classes}
-		disabled={props.disabled}
-		iconName={props.iconName}
-        onClick={props.onClick}
-		style={props.style}
-		visible={props.visible}
-		noripple
-	/>
-);
-
 export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggleState> {
 
     public static defaultProps: ButtonToggleProps = Object.assign(
@@ -42,18 +31,34 @@ export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggl
 			fgColorOn: "black",
 			initialToggle: false,
 			iconNameOff: 'bomb',
-			iconNameOn: 'bomb',
-			style: {
-				color: "black",
-				backgroundColor: "white"
-			}
+			iconNameOn: 'bomb'
 		});
+
+	private _classes: string = '';
+	private _style: any = null;
 
     constructor(props: ButtonToggleProps) {
 		super(props);
 		this.state = {
 			toggle: props.initialToggle
 		};
+	}
+
+	private buildStyles = () => {
+		this._style = Object.assign(
+			{
+				color: "black",
+				backgroundColor: "white"
+			},
+			{
+				color: (this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff,
+				backgroundColor: (this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff
+			},
+			this.props.style);
+
+		this._classes = baseClasses(this.props);
+		this._classes += " ui-buttontoggle";
+		this._classes += ` ${styles.buttonToggle}`;
 	}
 
 	private handleClick = () => {
@@ -64,36 +69,17 @@ export class ButtonToggle extends React.Component<ButtonToggleProps, ButtonToggl
 		this.props.onClick(this.state.toggle);
 	}
 
-	private buildClasses = () => {
-		let l: string[] = Array.from(this.props.classes);
-
-		if (this.props.className !== '') {
-			l.push(this.props.className);
-		}
-		l.push('ui-buttonToggle');
-
-		if (!this.props.visible) {
-			l.push(styles.invisible);
-		}
-
-		if (this.props.disabled) {
-			l.push(styles.disabled);
-		}
-
-		return l;
-	}
-
 	render() {
+		this.buildStyles();
+
 		return (
-			<ButtonToggleComponent
-				{...this.props}
+			<Button
+				className={this._classes}
+				style={this._style}
+				disabled={this.props.disabled}
 				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
-				classes={this.buildClasses()}
-				style={{
-					color: (this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff,
-					backgroundColor: (this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff
-				}}
+				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+				noripple
 			/>
 		);
 	}

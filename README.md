@@ -81,10 +81,13 @@ This will give a webpack module an **entry** point to copy in the gadgets CSS fi
 ## Widgets
 The module contains the following widgets (click on each header to see attribute/event details for each):
 
-### Accordion
+### [Accordion](docs/lib/accordion/Accordion.md)/[AccordionItem](docs/lib/accordion/AccordionItem.md)
 
-### Badge
+### [Badge](docs/lib/accordion/Badge.md)
 - A widget that annotates another widget (like a counter)
+
+### [BaseProps](docs/lib/shared/props.md)
+This module represents the properties that are shared by every class in the project.  This includes properties such as color, id, disabled, etc.
 
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.

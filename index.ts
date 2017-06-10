@@ -6,6 +6,7 @@ import {ButtonDialog} from './lib/buttonDialog';
 import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
 import {Icon, IconSize} from './lib/icon';
+import {Item} from './lib/item';
 import {Label} from './lib/label';
 import {List, ListHeader, ListItem} from './lib/list';
 import {BaseProps} from './lib/shared/props';
@@ -25,6 +26,7 @@ export {
 	Container,
 	Icon,
 	IconSize,
+	Item,
 	Label,
 	List,
 	ListHeader,

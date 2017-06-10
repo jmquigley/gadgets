@@ -121,19 +121,13 @@ export interface ToastState {
 export class Toast extends React.Component<ToastProps, ToastState> {
 
 	public static defaultProps: ToastProps = getDefaultToastProps();
-	private _timer: any = null;
+
+	private _classes: string = '';
 	private _style: any = {};  // style object for custom type
+	private _timer: any = null;
 
 	constructor(props: ToastProps) {
 		super(props);
-
-		if (props.level === ToastLevel.custom) {
-			this._style = {
-				color: props.color,
-				backgroundColor: props.backgroundColor,
-				borderColor: props.borderColor
-			}
-		}
 
 		this.state = {
 			visible: props.visible
@@ -154,34 +148,43 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 		this.handleDecay();
 	}
 
-	private buildClasses = () => {
-		let l: string[] = baseClasses(this.props, {visible: false})
+	private buildStyles = () => {
 
-		l.push(styles.toast);
+		if (this.props.level === ToastLevel.custom) {
+			this._style = {
+				color: this.props.color,
+				backgroundColor: this.props.backgroundColor,
+				borderColor: this.props.borderColor
+			}
+		}
 
-		let level = '';
+		this._classes = baseClasses(this.props, {visible: false});
+		this._classes += " ui-toast";
+		this._classes += ` ${styles.toast}`;
+
 		switch (this.props.level) {
 			case ToastLevel.info:
-				level = styles.info;
+				this._classes += ` ${styles.info}`;
 				break;
 
 			case ToastLevel.warning:
-				level = styles.warning;
+				this._classes += ` ${styles.warning}`;
 				break;
 
 			case ToastLevel.error:
-				level = styles.error;
+				this._classes += ` ${styles.error}`;
 				break;
 		}
-		l.push(level);
 
 		if (this.props.bottom) {
-			l.push(styles.bottom);
+			this._classes += ` ${styles.bottom}`;
 		} else {
-			l.push(styles.top);
+			this._classes += ` ${styles.top}`;
 		}
 
-		return l;
+		if (!this.state.visible) {
+			this._classes += ` ${styles.hide}`;
+		}
 	}
 
 	private handleClose = () => {
@@ -209,11 +212,13 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 	}
 
 	render() {
+		this.buildStyles();
+
 		return (
 			<div
-				className={`${this.buildClasses().join(' ')} ${!this.state.visible ? styles.hide : ''}`}
+				className={this._classes}
 				style={this._style}>
-				<div className={`ui-toast ${styles.content}`}>
+				<div className={`ui-toast-content ${styles.content}`}>
 					{this.props.children}
 				</div>
 

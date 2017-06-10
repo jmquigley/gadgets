@@ -9,7 +9,9 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nil} from 'util.toolbox';
 import {Button} from '../button';
-import {baseClasses, getDefaultItemProps, ItemComponent, ItemProps} from '../shared';
+import {getDefaultItemProps, Item, ItemProps} from '../item';
+import {baseClasses} from '../shared';
+
 
 const styles = require('./styles.css');
 
@@ -35,11 +37,22 @@ export class AccordionItem extends React.Component<AccordionItemProps, Accordion
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
+	private _classes: string = '';
+	private _style: any = null;
+
 	constructor(props: AccordionItemProps) {
 		super(props);
 		this.state = {
 			toggle: props.initialToggle
 		}
+	}
+
+	private buildStyles = () => {
+		this._style = Object.assign({}, this.props.style);
+
+		this._classes = baseClasses(this.props);
+		this._classes += ` ${styles.accordionItem}`;
+		this._classes += " ui-accordionitem";
 	}
 
 	private handleClick = () => {
@@ -60,16 +73,9 @@ export class AccordionItem extends React.Component<AccordionItemProps, Accordion
 		this.props.onNew();
 	}
 
-	private buildClasses = () => {
-		let l: string[] = baseClasses(this.props);
-
-		l.push(styles.accordionItem);
-		l.push('ui-accordionitem');
-
-		return l;
-	}
-
 	render() {
+		this.buildStyles();
+
 		let content = null;
 		if ((this.props.children != null) && (this.state.toggle)) {
 			content = (
@@ -80,9 +86,9 @@ export class AccordionItem extends React.Component<AccordionItemProps, Accordion
 		}
 
 		return (
-			<div className={this.buildClasses().join(' ')}>
-				<ItemComponent
-					{...this.props}
+			<div className={this._classes} style={this._style}>
+				<Item
+					title={this.props.title}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
 					rightButton={<Button iconName="plus" onClick={this.handleNew} />}
 				/>

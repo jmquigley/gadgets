@@ -2,7 +2,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nil} from 'util.toolbox';
+import {nilEvent} from 'util.toolbox';
 import {baseClasses} from '../shared/base';
 import {BaseProps, getDefaultBaseProps} from '../shared/props';
 
@@ -29,24 +29,12 @@ export interface LabelState {
 	text: string;
 }
 
-export const LabelComponent = (props: LabelProps) => (
-   <span
-	   className={props.classes.join(' ')}
-	   contentEditable={props.contentEditable}
-	   disabled={props.disabled}
-	   onBlur={props.onBlur}
-	   onClick={props.onClick}
-	   onDoubleClick={props.onDoubleClick}
-	   onKeyDown={props.onKeyDown}
-	   onKeyPress={props.onKeyPress}
-	   suppressContentEditableWarning>
-	   {props.text}
-   </span>
-);
-
 export class Label extends React.Component<LabelProps, LabelState> {
 
 	public static defaultProps: LabelProps = getDefaultLabelProps();
+
+	private _classes: string = '';
+	private _style: any = null;
 
 	constructor(props: LabelProps) {
 		super(props);
@@ -57,7 +45,18 @@ export class Label extends React.Component<LabelProps, LabelState> {
 		};
 	}
 
-	private handleBlur = (e: Event) => {
+	private buildStyles = () => {
+		this._style = Object.assign({
+			color: (this.props.color || 'black'),
+			backgroundColor: (this.props.backgroundColor || 'white')
+		}, this.props.style);
+
+		this._classes = baseClasses(this.props);
+		this._classes += ` ${styles.label}`;
+		this._classes += " ui-label";
+	}
+
+	private handleBlur = (e: React.FocusEvent<HTMLSpanElement>) => {
 		this.handleChange(e.target as Node);
 	}
 
@@ -71,11 +70,11 @@ export class Label extends React.Component<LabelProps, LabelState> {
 			});
 
 			console.log(`Changed to: ${val}`);
-			this.props.onChange(node);
+			this.props.onChange(val);
 		}
 	}
 
-	private handleDoubleClick = (e: MouseEvent) => {
+	private handleDoubleClick = (e: React.MouseEvent<HTMLSpanElement>) => {
 		if (!this.props.noedit) {
 			let range = document.caretRangeFromPoint(e.clientX, e.clientY);
 			let sel = window.getSelection();
@@ -91,7 +90,7 @@ export class Label extends React.Component<LabelProps, LabelState> {
 		}
 	}
 
-	private handleKeyDown = (e: KeyboardEvent) => {
+	private handleKeyDown = (e: React.KeyboardEvent<HTMLSpanElement>) => {
 		if (e.key === 'Escape') {
 			this.setState({
 				editable: false,
@@ -102,33 +101,29 @@ export class Label extends React.Component<LabelProps, LabelState> {
 		}
 	}
 
-	private handleKeyPress = (e: KeyboardEvent) => {
+	private handleKeyPress = (e: React.KeyboardEvent<HTMLSpanElement>) => {
 		if (e.key === 'Enter') {
 			this.handleChange(e.target as Node);
 		}
 	}
 
-	private buildClasses = () => {
-		let l: string[] = baseClasses(this.props);
-
-		l.push(styles.label);
-		l.push('ui-label');
-
-		return l;
-	}
-
 	render() {
+		this.buildStyles();
+
 		return (
-			<LabelComponent
-				{...this.props}
-				classes={this.buildClasses()}
+			<span
+				className={this._classes}
+				style={this._style}
 				contentEditable={this.state.editable}
-				onBlur={(!this.props.disabled) ? this.handleBlur : nil}
-				onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nil}
+				disabled={this.props.disabled}
+				onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
+				onClick={this.props.onClick}
+				onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
 				onKeyDown={this.handleKeyDown}
 				onKeyPress={this.handleKeyPress}
-				text={this.state.text}
-			/>
+				suppressContentEditableWarning>
+				{this.state.text}
+			</span>
 		);
 	}
 }

@@ -1,4 +1,4 @@
-<a name="ButtonCircle"></a>
+<a name="module_ButtonCircle"></a>
 
 ## ButtonCircle
 {description}
@@ -19,4 +19,3 @@ import {Button} from 'gadgets';
 #### Properties
 - `{name}: {datatype}` - {description}
 
-**Kind**: global class  

@@ -1,4 +1,4 @@
-<a name="Button"></a>
+<a name="module_Button"></a>
 
 ## Button
 A typical button control widget.  This control only uses an icon and no text
@@ -21,16 +21,5 @@ import {Button} from 'gadgets';
 button.
 
 #### Properties
-- `classes: string[]` - an array of strings that represent custom CSS class
-names that will be applied to the component.
-- `disabled: boolean` - if true then then the control is disabled.  Defaults
-to false.
 - iconName: string` - the name of the font awesome icon used with this button
-- `noripple: boolean` - turns off the ripple effect for a button.  On by
-default.
-- `style: object` - an object of key value/pairs that represent CSS style
-settings
-- `visible: boolean` - turns the display of this control on or off.  If true,
-then the component can be seen.  The default is true.
 
-**Kind**: global class  

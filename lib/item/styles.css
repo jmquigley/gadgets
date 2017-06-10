@@ -1,0 +1,31 @@
+@import '../shared/styles.css';
+
+:local {
+
+	.item {
+		display: flex;
+		height: 36px;
+	}
+
+	.itemTitle {
+		line-height: 36px;
+	}
+
+	.itemButton {
+		display: inline-flex;
+	}
+
+	.item:hover .itemButton, .item:hover .itemButton i {
+		font-size: 1.0em;
+		width: 36px;
+		opacity: 1.0;
+	}
+
+	.hiddenButton, .hiddenButton i {
+		transition: width 0.25s, font-size 0.25s, opacity 0.5s ease;
+		font-size: 0;
+		width: 0px;
+		opacity: 0.0;
+		flex: none;
+	}
+}

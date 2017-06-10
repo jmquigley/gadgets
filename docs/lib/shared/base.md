@@ -1,12 +1,12 @@
 <a name="baseClasses"></a>
 
-## baseClasses(props, opts) ⇒ <code>Array.&lt;string&gt;</code>
+## baseClasses(props, opts) ⇒ <code>string</code>
 All of the components share a similar way of creating the initial CSS class list
 for that module.  This function initializes that common behavior.
 
 **Kind**: global function  
-**Returns**: <code>Array.&lt;string&gt;</code> - an array of initial CSS classes that are common for every
-component.  
+**Returns**: <code>string</code> - a string containing the initial CSS classes that are common
+for every component.  
 
 | Param | Type | Description |
 | --- | --- | --- |

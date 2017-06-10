@@ -1,4 +1,4 @@
-<a name="Icon"></a>
+<a name="module_Icon"></a>
 
 ## Icon
 Displays a graphical icon within the current container.  The control uses
@@ -36,4 +36,3 @@ this icon.  This option is mutually excludive to iconName.
 IconSize.small (16px), IconSize.medium (36px), IconSize.large (48px),
 IconSize.xlarge (64px).
 
-**Kind**: global class  

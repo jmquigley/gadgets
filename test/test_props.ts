@@ -22,9 +22,6 @@ test('Test retrieval of default prop object', t => {
 	t.true('className' in props);
 	t.is(props.className, '');
 
-	t.true('classes' in props);
-	t.is(props.classes.length, 0);
-
 	t.true('color' in props);
 	t.is(props.color, 'inherit');
 

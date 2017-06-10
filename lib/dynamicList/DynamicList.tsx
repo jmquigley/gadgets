@@ -24,18 +24,23 @@ export class DynamicList extends React.Component<DynamicListProps, undefined> {
 
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
 
+	private _classes: string = '';
+	// private _style: any = null;
+
 	constructor(props: DynamicListProps) {
 		super(props);
 	}
 
-	private buildClasses = () => {
-		let l: string[] = baseClasses(this.props)
-		return l;
+	private buildStyles = () => {
+		this._classes = baseClasses(this.props)
+		this._classes += " ui-dynamiclist";
 	}
 
 	render() {
+		this.buildStyles();
+
 		return (
-			<div className={`ui-dynamiclist ${this.buildClasses().join(' ')}`}>
+			<div className={this._classes}>
 			</div>
 		);
 	}

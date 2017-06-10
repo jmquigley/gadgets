@@ -37,6 +37,9 @@ export class List extends React.Component<ListProps, ListState> {
 
 	public static defaultProps: ListProps = getDefaultListProps();
 
+	private _classes: string = '';
+	private _style: any = null;
+
 	constructor(props: ListProps) {
 		super(props);
 		this.state = {
@@ -44,17 +47,16 @@ export class List extends React.Component<ListProps, ListState> {
 		}
 	}
 
-	private buildClasses = () => {
-		let l: string[] = baseClasses(this.props);
+	private buildStyles = () => {
+		this._style = Object.assign({}, this.props.style);
 
-		l.push(styles.list);
-		l.push('ui-list');
+		this._classes = baseClasses(this.props);
+		this._classes += " ui-list";
+		this._classes += ` ${styles.list}`;
 
 		if (this.props.alternating) {
-			l.push(styles.listAlternating);
+			this._classes += ` ${styles.listAlternating}`;
 		}
-
-		return l;
 	}
 
 	private selectHandler = (item: ListItem) => {
@@ -69,6 +71,8 @@ export class List extends React.Component<ListProps, ListState> {
 	}
 
 	render() {
+		this.buildStyles();
+
 		let selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
 		let children = React.Children.map(this.props.children, child => {
 			let selected = child['props'].id === selectedKey;
@@ -83,7 +87,8 @@ export class List extends React.Component<ListProps, ListState> {
 		return (
 			<div
 				disabled={this.props.disabled}
-				className={this.buildClasses().join(' ')}
+				className={this._classes}
+				style={this._style}
 				id={this.props.id}>
 				<ul>
 					{children}

@@ -20,11 +20,11 @@ const defaultBaseOptions: BaseOptions = {
  * @param props {BaseProps} the base properties for the component
  * @param opts {BaseOptions} these options allow the user to turn off setting of
  * defaults within this function.  By default they are all on.
- * @returns {string[]} an array of initial CSS classes that are common for every
- * component.
+ * @returns {string} a string containing the initial CSS classes that are common
+ * for every component.
  */
-export function baseClasses(props: BaseProps, opts?: BaseOptions): string[] {
-	const l: string[] = props.classes.slice();
+export function baseClasses(props: BaseProps, opts?: BaseOptions): string {
+	let classes: string = '';
 
 	opts = Object.assign(
 		defaultBaseOptions,
@@ -32,17 +32,16 @@ export function baseClasses(props: BaseProps, opts?: BaseOptions): string[] {
 	);
 
 	if (props.className !== '' && opts.className) {
-		l.push(props.className);
+		classes += ` ${props.className}`;
 	}
 
 	if (!props.visible && opts.visible) {
-		l.push(styles.invisible);
+		classes += ` ${styles.invisible}`;
 	}
 
 	if (props.disabled && opts.disabled) {
-		l.push(styles.disabled);
-		l.push('nohover');
+		classes += ` ${styles.disabled} nohover`;
 	}
 
-	return l;
+	return classes.trim();
 }

@@ -30,22 +30,26 @@ export class Accordion extends React.Component<AccordionProps, AccordionState> {
 
 	public static defaultProps: AccordionProps = getDefaultAccordionProps();
 
+	private _classes: string = '';
+	private _style: any = null;
+
 	constructor(props: AccordionProps) {
 		super(props);
 	}
 
-	private buildClasses = () => {
-		let l: string[] = baseClasses(this.props);
+	private buildStyles = () => {
+		this._style = Object.assign({}, this.props.style);
 
-		l.push(styles.accordion);
-		l.push('ui-accordion');
-
-		return l;
+		this._classes = baseClasses(this.props);
+		this._classes += ' ui-accordion';
+		this._classes += ` ${styles.accordion}`;
 	}
 
 	render() {
+		this.buildStyles();
+
 		return (
-			<ul className={this.buildClasses().join(' ')}>
+			<ul className={this._classes} style={this._style}>
 				{this.props.children}
 			</ul>
 		);

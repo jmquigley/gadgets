@@ -1,36 +1,3 @@
-'use strict';
-
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {baseClasses, getDefaultBaseProps, BaseProps} from '../shared';
-
-const styles = require('./styles.css');
-
-export enum IconSize {
-	small,
-	medium,
-	normal,
-	large,
-	xlarge,
-}
-
-export interface IconProps extends BaseProps {
-	iconName?: string;
-	imageFile?: string;
-	size?: IconSize
-}
-
-export function getDefaultIconProps(): IconProps {
-	return cloneDeep(Object.assign(
-		getDefaultBaseProps(), {
-			backgroundColor: "inherit",
-			color: "inherit",
-			iconName: "bomb",
-			imageFile: '',
-			size: IconSize.normal
-	}));
-}
-
 /**
  * Displays a graphical icon within the current container.  The control uses
  * [Font Awesome](http://fontawesome.io/) for the icons.  It can also
@@ -67,59 +34,93 @@ export function getDefaultIconProps(): IconProps {
  * IconSize.small (16px), IconSize.medium (36px), IconSize.large (48px),
  * IconSize.xlarge (64px).
  *
+ * @module Icon
  */
+
+'use strict';
+
+import {cloneDeep} from 'lodash';
+import * as React from 'react';
+import {baseClasses, getDefaultBaseProps, BaseProps} from '../shared';
+
+const styles = require('./styles.css');
+
+export enum IconSize {
+	small,
+	medium,
+	normal,
+	large,
+	xlarge,
+}
+
+export interface IconProps extends BaseProps {
+	iconName?: string;
+	imageFile?: string;
+	size?: IconSize
+}
+
+export function getDefaultIconProps(): IconProps {
+	return cloneDeep(Object.assign(
+		getDefaultBaseProps(), {
+			backgroundColor: "inherit",
+			color: "inherit",
+			iconName: "bomb",
+			imageFile: '',
+			size: IconSize.normal
+	}));
+}
+
 export class Icon extends React.Component<IconProps, undefined> {
 
     public static defaultProps: IconProps = getDefaultIconProps();
 
 	private _classes: string = '';
-	private _size: string = styles.normal;
-	private _style: any = {};
+	private _style: any = null;
 
     constructor(props: IconProps) {
 		super(props);
+	}
 
-		this._style = {
-			color: (props.color || 'black'),
-			backgroundColor: (props.backgroundColor || 'white')
-		}
+	private buildStyles = () => {
+		this._style = Object.assign({
+			color: (this.props.color || 'black'),
+			backgroundColor: (this.props.backgroundColor || 'white')
+		}, this.props.style);
 
-		switch (props.size) {
+		this._classes = baseClasses(this.props);
+		this._classes += ' ui-icon';
+		this._classes += ` ${styles.icon}`;
+
+		switch (this.props.size) {
 			case IconSize.small:
-				this._size = styles.small;
+				this._classes += ` ${styles.small}`;
 				break;
 
 			case IconSize.large:
-				this._size = styles.large;
+				this._classes += ` ${styles.large}`;
 				break;
 
 			case IconSize.xlarge:
-				this._size = styles.xlarge;
+				this._classes += ` ${styles.xlarge}`;
 				break;
 
 			case IconSize.normal:
 			case IconSize.medium:
 			default:
-				this._size = styles.medium;
+				this._classes += ` ${styles.medium}`;
 		}
 	}
 
-	componentWillMount() {
-		let l: string[] = baseClasses(this.props);
-
-		l.push('ui-icon');
-		this._classes = l.join(' ');
-	}
-
 	render() {
-		let s: string = `${styles.icon} ${this._size} ${this._classes}`;
+		this.buildStyles();
+
 		if (this.props.imageFile !== '') {
 			return (
-				<img src={this.props.imageFile} className={s} />
+				<img src={this.props.imageFile} className={this._classes} style={this._style} />
 			);
 		} else {
 			return (
-				<i className={`fa fa-${this.props.iconName} ${s}`} style={this._style} />
+				<i className={`fa fa-${this.props.iconName} ${this._classes}`} style={this._style} />
 			);
 		}
 	}

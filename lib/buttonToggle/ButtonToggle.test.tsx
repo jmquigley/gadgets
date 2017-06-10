@@ -25,7 +25,7 @@ test('Test creation of a Button control', t => {
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
-	t.is(ctl.find('.ui-buttonToggle').length, 1);
+	t.is(ctl.find('.ui-buttontoggle').length, 1);
 	t.is(ctl.find('.fa').length, 1);
 	t.is(ctl.find('.fa-bomb').length, 1);
 	t.is(ctl.find('.test-class').length, 1);

@@ -1,9 +1,8 @@
-import {getDefaultLabelProps, Label, LabelComponent, LabelProps, LabelState} from './Label';
+import {getDefaultLabelProps, Label, LabelProps, LabelState} from './Label';
 
 export {
 	getDefaultLabelProps,
 	Label,
-	LabelComponent,
 	LabelProps,
 	LabelState
 };

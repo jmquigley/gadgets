@@ -191,6 +191,11 @@ class App extends React.Component<AppProps, AppState> {
 						</div>
 
 						<div className="box">
+							<p>Colored Button</p>
+							<Button iconName="cab" color="blue" backgroundColor="red" />
+						</div>
+
+						<div className="box">
 							<p>Dialog Button</p>
 							<ButtonDialog iconName="bath">Test Dialog Button</ButtonDialog>
 						</div>
@@ -264,7 +269,7 @@ class App extends React.Component<AppProps, AppState> {
 				<Container id="labelExample">
 					<div id="simple-labels">
 						<p><Label text="Test Label #1 (double click to edit)" /></p>
-						<p><Label disabled text="Test Label #2 (diabled)" /></p>
+						<p><Label disabled text="Test Label #2 (disabled)" /></p>
 						<p><Label className="demoLabel" text="Test Label #3 Styled" /></p>
 						<p><Label text="Text Label #4 (no edit)" noedit /></p>
 					</div>

@@ -22,6 +22,10 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 			dialogClasses: []
      });
 
+	private _classes: string = '';
+	private _dialogClasses: string = '';
+	private _style: any = null;
+
 	constructor(props: ButtonDialogProps) {
 		super(props);
 		this.state = {
@@ -29,23 +33,23 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		};
 	}
 
-	private buildClasses = () => {
-		let l: string[] = baseClasses(this.props);
-		l.push(styles.buttonDialog);
-		l.push('ui-button-dialog');
+	private buildStyles = () => {
+		this._style = Object.assign({
+			color: (this.props.color || 'black'),
+			backgroundColor: (this.props.backgroundColor || 'white')
+		}, this.props.style);
 
-		return l;
-	}
+		this._classes = baseClasses(this.props);
+		this._classes += ` ${styles.buttonDialog}`;
+		this._classes += ' ui-button-dialog';
 
-	private buildDialogClasses = () => {
-		let l: string[] = Array.from(this.props.dialogClasses);
-		l.push(styles.buttonDialogPopup);
-		l.push('ui-dialog-popup');
+		this._dialogClasses = this.props.dialogClasses.join(' ');
+		this._dialogClasses += ` ${styles.buttonDialogPopup}`;
+		this._dialogClasses += ` ui-dialog-popup`;
 
 		if (!this.state.visible) {
-			l.push(styles.buttonDialogHide);
+			this._dialogClasses += ` ${styles.buttonDialogHide}`;
 		}
-		return l;
 	}
 
 	private handleClick = () => {
@@ -63,9 +67,11 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 	}
 
 	render() {
+		this.buildStyles();
+
 		return (
 			<div
-				className={this.buildClasses().join(' ')}
+				className={this._classes}
 				disabled={this.props.disabled}>
 
 				<Button
@@ -73,10 +79,11 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 					iconName={this.props.iconName}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
 					visible={this.props.visible}
+					style={this._style}
 				/>
 				<div
 					onClick={this.handleDialogClick}
-					className={this.buildDialogClasses().join(' ')}>
+					className={this._dialogClasses}>
 					<span>
 						{this.props.children}
 					</span>
