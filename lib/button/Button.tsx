@@ -19,7 +19,9 @@
  * button.
  *
  * #### Properties
- * - iconName: string` - the name of the font awesome icon used with this button
+ * - `iconName: string` - the name of the font awesome icon used with this button
+ * - `iconSize: number` - Allows one to change the size of the icon within the button.
+ * the sizes are: IconSize.small, IconSize.medium, IconSize.large, IconSize.xlarge
  *
  * @module Button
  */
@@ -28,18 +30,20 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {Icon} from '../icon';
+import {Icon, IconSize} from '../icon';
 import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
 
 const styles = require('./styles.css');
 
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
+	iconSize?: IconSize;
 }
 
 export function getDefaultButtonProps(): ButtonProps {
 	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		iconName: 'bomb'
+		iconName: 'bomb',
+		iconSize: IconSize.normal
 	}));
 }
 
@@ -84,11 +88,11 @@ export class Button extends React.Component<ButtonProps, undefined> {
 				className={this._classes}
 				disabled={this.props.disabled}
 				onClick={this.handleClick}
-				style={this._style}
-				>
+				style={this._style}>
 				<Icon
 					className={styles.icon}
 					iconName={this.props.iconName}
+					size={this.props.iconSize}
 				/>
 			</div>
 		);

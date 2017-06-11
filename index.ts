@@ -1,7 +1,7 @@
 import {Accordion, AccordionItem} from './lib/accordion';
 import {Badge, BadgePosition} from './lib/badge';
 import {Button} from './lib/button';
-import {ButtonCircle} from './lib/buttonCircle';
+import {ButtonCircle, CircleSize} from './lib/buttonCircle';
 import {ButtonDialog} from './lib/buttonDialog';
 import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
@@ -23,6 +23,7 @@ export {
 	ButtonCircle,
 	ButtonDialog,
 	ButtonToggle,
+	CircleSize,
 	Container,
 	Icon,
 	IconSize,

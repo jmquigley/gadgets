@@ -1,49 +1,3 @@
-'use strict';
-
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {Button} from '../button';
-import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
-
-const styles = require('./styles.css');
-
-export enum ToastLevel {
-	info,
-	warning,
-	error,
-	custom
-}
-
-export enum ToastType {
-	persistent,
-	decay
-}
-
-export interface ToastProps extends BaseProps {
-	bottom?: boolean;
-	duration?: number;
-	level?: ToastLevel;
-	type?: ToastType;
-}
-
-export function getDefaultToastProps(): ToastProps {
-	return cloneDeep(Object.assign(
-		getDefaultBaseProps(), {
-			backgroundColor: 'white',
-			borderColor: 'black',
-			color: 'black',
-			bottom: false,
-			duration: 3,
-			level: ToastLevel.info,
-			type: ToastType.decay,
-			visible: true
-		}));
-}
-
-export interface ToastState {
-	visible: boolean;
-}
-
 /**
  * A popup that contains a message on the top or bottom of that container.
  * The message will disapper after N seconds.  Contains an X button to remove
@@ -114,10 +68,56 @@ export interface ToastState {
  * presses the close button (X).  The default type is *decay*.  An enumeration
  * named `ToastType` holds the value for each type (ToastType.decay,
  * ToastType.persistent).
- * - `visible: boolean` - if this is false, then the control is not displayed.
- * It is true by default.
  *
+ * @module Toast
  */
+
+'use strict';
+
+import {cloneDeep} from 'lodash';
+import * as React from 'react';
+import {ButtonCircle} from '../buttonCircle';
+import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
+
+const styles = require('./styles.css');
+
+export enum ToastLevel {
+	info,
+	warning,
+	error,
+	custom
+}
+
+export enum ToastType {
+	persistent,
+	decay
+}
+
+export interface ToastProps extends BaseProps {
+	bottom?: boolean;
+	duration?: number;
+	level?: ToastLevel;
+	type?: ToastType;
+}
+
+export function getDefaultToastProps(): ToastProps {
+	return cloneDeep(Object.assign(
+		getDefaultBaseProps(), {
+			backgroundColor: 'white',
+			borderColor: 'black',
+			color: 'black',
+			bottom: false,
+			duration: 3,
+			level: ToastLevel.info,
+			type: ToastType.decay,
+			visible: true
+		}));
+}
+
+export interface ToastState {
+	visible: boolean;
+}
+
 export class Toast extends React.Component<ToastProps, ToastState> {
 
 	public static defaultProps: ToastProps = getDefaultToastProps();
@@ -222,9 +222,11 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 					{this.props.children}
 				</div>
 
-				<Button className={`${styles.button}`}
-						iconName="times"
-						onClick={this.handleClose} />
+				<ButtonCircle
+					className={`${styles.button}`}
+					color="white"
+					iconName="times"
+					onClick={this.handleClose} />
 			</div>
 		);
 	}

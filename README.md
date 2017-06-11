@@ -36,7 +36,8 @@ To change the code while electron is running and use `CMD + R` to refresh electr
 ```
 
 
-This library was created for use in the [Electron UI](https://electron.atom.io/).  It has only be tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets used in an internal project.  It uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the module.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`).  The library makes use of [css modules](https://github.com/css-modules/css-modules).
+This library was created for use in the [Electron UI](
+https://electron.atom.io/) and has only be tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets used in an internal project.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the module.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`).  The library makes use of [css modules](https://github.com/css-modules/css-modules).
 
 
 ## Usage
@@ -155,4 +156,4 @@ A popup that contains a message on the top or bottom of that container.  The mes
 
 
 ## Styles
-All of the color and font size CSS values are controlled through global selectors.  The CSS modules within the code are only used to control layout.  By default these are not set with colors to allow for customization.  The demo application contains `[styles.css](https://github.com/jmquigley/gadgets/blob/master/demo/styles.css)` that show each of the global styles and how they are used.  They are also documented within each of components above.
+All of the color and font size CSS values are controlled through global selectors.  The CSS modules within the code are only used to control layout.  By default these are not set with colors to allow for customization.  The demo application contains [styles.css](https://github.com/jmquigley/gadgets/blob/master/demo/styles.css) that show each of the global styles and how they are used.  They are also documented within each of components above.

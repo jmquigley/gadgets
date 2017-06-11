@@ -1,4 +1,4 @@
-<a name="Toast"></a>
+<a name="module_Toast"></a>
 
 ## Toast
 A popup that contains a message on the top or bottom of that container.
@@ -70,7 +70,4 @@ seconds.  The persistent type will stay within the container until the user
 presses the close button (X).  The default type is *decay*.  An enumeration
 named `ToastType` holds the value for each type (ToastType.decay,
 ToastType.persistent).
-- `visible: boolean` - if this is false, then the control is not displayed.
-It is true by default.
 
-**Kind**: global class  

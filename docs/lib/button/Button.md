@@ -21,5 +21,7 @@ import {Button} from 'gadgets';
 button.
 
 #### Properties
-- iconName: string` - the name of the font awesome icon used with this button
+- `iconName: string` - the name of the font awesome icon used with this button
+- `iconSize: number` - Allows one to change the size of the icon within the button.
+the sizes are: IconSize.small, IconSize.medium, IconSize.large, IconSize.xlarge
 

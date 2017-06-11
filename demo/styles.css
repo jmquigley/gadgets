@@ -51,13 +51,9 @@ section {
 }
 
 .box .boxButtons {
+	border: solid 1px lightgray;
 	height: 42px;
 }
-
-/* #simple-icons .box .ui-icon { */
-/* 	width: 50px; */
-/* 	height: 50px; */
-/* } */
 
 #simple-icons .box .ui-icon, .box .ui-button {
 	border: solid 1px lightgray;
@@ -84,11 +80,6 @@ section {
 	display: inline-block;
 	line-height: 32px;
 	margin: 0;
-}
-
-.toastBox .ui-button {
-	border: solid 1px lightgray;
-	width: 50px;
 }
 
 /*
@@ -122,7 +113,7 @@ Global UI color settings for components
 	background-color: #bedb39;
 }
 
-.ui-accordionitem > .ui-item-bar > .ui-title-bar:not(.nohover):hover {
+.ui-accordionitem > .ui-item > .ui-title-bar:not(.nohover):hover {
 	color: #ffe11a;
 }
 
