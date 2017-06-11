@@ -38,8 +38,6 @@ section {
 
 #simple-buttons, #simple-icons {
 	display: flex;
-	justify-content: space-evenly;
-	text-align: center;
 }
 
 .box {
@@ -50,6 +48,10 @@ section {
 
 .box:last-child {
 	border: 0;
+}
+
+.box .boxButtons {
+	height: 42px;
 }
 
 /* #simple-icons .box .ui-icon { */

@@ -1,11 +1,11 @@
 @import '../shared/styles.css';
 
 :local {
-	.container {
-		display: inline-block;
-		margin: 10px;
-		padding: 10px;
+	.badgeContainer {
+		display: block;
 		position: relative;
+		padding: 10px;
+		box-sizing: border-box;
 	}
 
 	.badge {

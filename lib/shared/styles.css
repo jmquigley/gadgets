@@ -1,3 +1,15 @@
+$baseZIndex: 99999;
+
+@define-extend baseButton {
+	background-color: inherit;
+	line-height: inherit;
+	font-size: inherit;
+	width: inherit;
+	height: inherit;
+	outline: none;
+	box-sizing: border-box;
+}
+
 :local {
 	.disabled {
 		opacity: 0.33;

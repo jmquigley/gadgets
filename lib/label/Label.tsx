@@ -57,12 +57,12 @@ export class Label extends React.Component<LabelProps, LabelState> {
 	}
 
 	private handleBlur = (e: React.FocusEvent<HTMLSpanElement>) => {
-		this.handleChange(e.target as Node);
+		this.handleChange(e.target as Element);
 	}
 
-	private handleChange = (node: Node) => {
+	private handleChange = (element: Element) => {
 		if (this.state.editable) {
-			let val = node.textContent;
+			let val = element.innerHTML;
 			this.setState({
 				editable: false,
 				previousText: val,
@@ -103,7 +103,7 @@ export class Label extends React.Component<LabelProps, LabelState> {
 
 	private handleKeyPress = (e: React.KeyboardEvent<HTMLSpanElement>) => {
 		if (e.key === 'Enter') {
-			this.handleChange(e.target as Node);
+			this.handleChange(e.target as Element);
 		}
 	}
 

@@ -54,6 +54,8 @@ export class Badge extends React.Component<BadgeProps, undefined> {
 		}, this.props.style);
 
 		this._classes = baseClasses(this.props);
+		this._classes += " ui-badge";
+		this._classes += ` ${styles.badgeContainer}`;
 
 		switch (this.props.position) {
 			case BadgePosition.topLeft: this._positionStyle = styles.topLeft; break;
@@ -83,7 +85,7 @@ export class Badge extends React.Component<BadgeProps, undefined> {
 		}
 
 		return (
-			<div className={`${styles.container} ${this._classes}`}>
+			<div className={this._classes}>
 				{this.props.children}
 				{badge}
 			</div>

@@ -27,7 +27,7 @@ import * as React from 'react';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {baseClasses} from '../shared';
 
-// const styles = require('./styles.css');
+const styles = require('./styles.css');
 
 export interface ButtonCircleProps extends ButtonProps {
 }
@@ -54,6 +54,7 @@ export class ButtonCircle extends React.Component<ButtonCircleProps, undefined> 
 
 		this._classes = baseClasses(this.props);
 		this._classes += " ui-button-circle";
+		this._classes += ` ${styles.buttonCircle}`;
 	}
 
 	render() {

@@ -82,6 +82,7 @@ This will give a webpack module an **entry** point to copy in the gadgets CSS fi
 The module contains the following widgets (click on each header to see attribute/event details for each):
 
 ### [Accordion](docs/lib/accordion/Accordion.md)/[AccordionItem](docs/lib/accordion/AccordionItem.md)
+An accordion control contains N number of AccordionItems.  These items will display/hide the contents of that item when the header of that item is clicked.  The content of an AccordionItem can be any set of HTML tags.  The demo application shows a List embedded within the accordion.
 
 ### [Badge](docs/lib/accordion/Badge.md)
 - A widget that annotates another widget (like a counter)

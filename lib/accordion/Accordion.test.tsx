@@ -15,9 +15,11 @@ test.after.always.cb(t => {
 });
 
 test('Test the creation of a Accordion control container', t => {
+	let li = <li>some list item</li>;
+
 	const ctl = mount(
 		<Accordion id={getUUID()} className="test-class">
-			<li>some list item</li>
+			{li}
 		</Accordion>
 	);
 
@@ -27,7 +29,10 @@ test('Test the creation of a Accordion control container', t => {
 	t.regex(ctl.prop('id'), regexUUID);
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
+
 	t.is(ctl.find('.ui-accordion').length, 1);
 	t.is(ctl.find('.accordion').length, 1);
 	t.is(ctl.find('.test-class').length, 1);
+
+	t.true(ctl.contains(li));
 });

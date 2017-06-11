@@ -31,18 +31,21 @@ const Toast = bundle.Toast
 const ToastLevel = bundle.ToastLevel;
 const ToastType = bundle.ToastType;
 
+let maxItems: number = 5;
+
 let listItems: string[] = [];
-for (let i=0; i<5; i++) {
+let uuids: string[] = [];
+for (let i=0; i<maxItems; i++) {
 	listItems.push(`Accordion List Item ${i}`);
+	uuids.push(getUUID());
 }
 
 function createItems() {
- 	return listItems.map(item => {
-		let uuid = getUUID();
+ 	return listItems.map((item, idx) => {
  		return (
  			<ListItem
-				id={uuid}
-				key={uuid}
+				id={uuids[idx]}
+				key={uuids[idx]}
 				title={item}
 				widget={getUUID(true).substring(0,5)}
 				leftButton={<Button />}
@@ -126,22 +129,26 @@ class App extends React.Component<AppProps, AppState> {
 						<div className="box">
 							<p>top right<br/>&nbsp;</p>
 							<Badge counter={this.state.counter1}>
+								<div className="boxButtons">
 								<Button onClick={() => {
 									this.setState({
 										counter1: this.state.counter1 + 1
 									});
 								}}/>
+								</div>
 							</Badge>
 						</div>
 
 						<div className="box">
 							<p>top left<br/>&nbsp;</p>
 							<Badge counter={this.state.counter2} position={BadgePosition.topLeft}>
+								<div className="boxButtons">
 								<Button onClick={() => {
 									this.setState({
 										counter2: this.state.counter2 + 1
 									});
 								}}/>
+								</div>
 							</Badge>
 						</div>
 
@@ -151,11 +158,13 @@ class App extends React.Component<AppProps, AppState> {
 								counter={this.state.counter3}
 								position={BadgePosition.bottomRight}
 								color="green">
+								<div className="boxButtons">
 								<Button onClick={() => {
 									this.setState({
 										counter3: this.state.counter3 + 1
 									});
 								}}/>
+								</div>
 							</Badge>
 						</div>
 
@@ -165,11 +174,13 @@ class App extends React.Component<AppProps, AppState> {
 								counter={this.state.counter4}
 								position={BadgePosition.bottomLeft}
 								color="magenta">
+								<div className="boxButtons">
 								<Button onClick={() => {
 									this.setState({
 										counter4: this.state.counter4 + 1
 									});
 								}}/>
+								</div>
 							</Badge>
 						</div>
 
@@ -182,32 +193,44 @@ class App extends React.Component<AppProps, AppState> {
 					<div id="simple-buttons">
 						<div className="box">
 							<p>Simple Button</p>
-							<Button iconName="cab"/>
+							<div className="boxButtons">
+								<Button iconName="cab"/>
+							</div>
 						</div>
 
 						<div className="box">
 							<p>Disabled Button</p>
-							<Button iconName="cab" disabled={true} />
+							<div className="boxButtons">
+								<Button iconName="cab" disabled={true} />
+							</div>
 						</div>
 
 						<div className="box">
 							<p>Colored Button</p>
-							<Button iconName="cab" color="blue" backgroundColor="red" />
+							<div className="boxButtons">
+								<Button iconName="cab" color="blue" backgroundColor="red" />
+							</div>
 						</div>
 
 						<div className="box">
 							<p>Dialog Button</p>
-							<ButtonDialog iconName="bath">Test Dialog Button</ButtonDialog>
+							<div className="boxButtons">
+								<ButtonDialog iconName="bath">Test Dialog Button</ButtonDialog>
+							</div>
 						</div>
 
 						<div className="box">
 							<p>Toggle Button</p>
-							<ButtonToggle iconNameOn="check-square-o" iconNameOff="square-o" fgColorOff="black" />
+							<div className="boxButtons">
+								<ButtonToggle iconNameOn="check-square-o" iconNameOff="square-o" fgColorOff="black" />
+							</div>
 						</div>
 
 						<div className="box">
 							<p>Circle Button</p>
-							<ButtonCircle iconName="times" />
+							<div className="boxButtons">
+								<ButtonCircle iconName="times" />
+							</div>
 						</div>
 					</div>
 				</Container>

@@ -84,9 +84,7 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 				<div
 					onClick={this.handleDialogClick}
 					className={this._dialogClasses}>
-					<span>
-						{this.props.children}
-					</span>
+					{this.props.children}
 				</div>
 			</div>
 		);

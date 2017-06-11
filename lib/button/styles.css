@@ -2,17 +2,13 @@
 
 :local {
 	.button {
-		display: inline-block;
-		background-color: inherit;
-		line-height: inherit;
-		font-size: inherit;
-		width: inherit;
-		height: inherit;
-		outline: none;
-		box-sizing: border-box;
-		text-align: center;
+		@extend baseButton;
 	}
 
 	.icon {
+		position: relative;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
 	}
 }

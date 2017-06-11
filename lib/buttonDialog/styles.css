@@ -2,13 +2,13 @@
 
 :local {
 	.buttonDialog {
-		display: inline-block;
+		@extend baseButton;
 	}
 
 	.buttonDialogPopup {
 		position: absolute;
 		opacity: 1.0;
-		z-index: 999999;
+		z-index: $baseZIndex;
 		width: 300px;
 		height: 300px;
 	}

@@ -13,6 +13,8 @@
 
 	.itemButton {
 		display: inline-flex;
+		width: inherit;
+		height: inherit;
 	}
 
 	.item:hover .itemButton, .item:hover .itemButton i {
