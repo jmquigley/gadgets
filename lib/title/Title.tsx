@@ -57,17 +57,19 @@ export class Title extends React.Component<TitleProps, undefined> {
 		});
 
 		return (
-		<div className={this._classes} style={this._style}
-			onClick={this.props.onClick} onDoubleClick={this.props.onDoubleClick}>
-			<Label
+			<div
+				className={this._classes}
+				style={this._style}
+				onClick={this.props.onClick} onDoubleClick={this.props.onDoubleClick}>
+				<Label
 				className={`ui-title ${this.props.stacked ? styles.titleStacked : styles.title}`}
 				noedit={this.props.noedit}
 				text={title}
-			/>
-			<div className={`ui-widget ${this.props.stacked ? styles.widgetStacked : styles.widget}`}>
-				{this.props.widget}
+				/>
+				<div className={`ui-widget ${this.props.stacked ? styles.widgetStacked : styles.widget}`}>
+					{this.props.widget}
+				</div>
 			</div>
-		</div>
 		);
 	}
 }

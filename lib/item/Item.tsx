@@ -62,7 +62,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
 		let leftButton = null;
 		if (this.props.leftButton != null && !this.props.disabled) {
 			leftButton = (
-				<div className={`${styles.itemButton} ${(this.props.hiddenLeftButton) ? styles.hiddenButton : ''}`}>
+				<div className={`${styles.itemButton} ${styles.leftButton} ${(this.props.hiddenLeftButton) ? styles.hiddenButton : ''}`}>
 					{this.props.leftButton != null ? this.props.leftButton : null}
 				</div>
 			);
@@ -71,7 +71,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
 		let rightButton = null;
 		if (this.props.rightButton != null && !this.props.disabled) {
 			rightButton = (
-				<div className={`${styles.itemButton} ${(this.props.hiddenRightButton) ? styles.hiddenButton : ''}`}>
+				<div className={`${styles.itemButton} ${styles.rightButton} ${(this.props.hiddenRightButton) ? styles.hiddenButton : ''}`}>
 					{this.props.rightButton != null ? this.props.rightButton : null}
 				</div>
 			);

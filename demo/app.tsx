@@ -118,6 +118,12 @@ class App extends React.Component<AppProps, AppState> {
 						<AccordionItem title="Accordion #4 (disabled)" disabled>
 							Accordion Items #4 (disabled)
 						</AccordionItem>
+
+						<AccordionItem
+							title="Accordion #5 (no button)"
+							showButton={false}>
+							Accordion Items #5 (no button)
+						</AccordionItem>
 					</Accordion>
 				</Container>
 

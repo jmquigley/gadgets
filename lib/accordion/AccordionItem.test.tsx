@@ -7,6 +7,7 @@ import test from 'ava';
 import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
+import * as sinon from 'sinon';
 import {AccordionItem} from './index';
 
 test.after.always.cb(t => {
@@ -23,7 +24,38 @@ test('Test the creation of a AccordionItem control', t => {
 
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
+	t.is(ctl.prop('title'), 'Test Title');
+
 	t.is(ctl.find('.ui-accordionitem').length, 1);
 	t.is(ctl.find('.accordionItem').length, 1);
 	t.is(ctl.find('.test-class').length, 1);
+});
+
+test('Test clicking of the AccordionItem header', t => {
+	const click = sinon.spy();
+	const ctl = mount(
+		<AccordionItem title="Test Title" onClick={click} />
+	);
+
+	t.truthy(ctl);
+	log.debug(ctl.html(), __filename);
+
+	ctl.find('.ui-title-bar').simulate('click');
+	t.true(click.calledOnce);
+});
+
+test('Test clicking the AccordionItem new button', t => {
+	const click = sinon.spy();
+	const ctl = mount(
+		<AccordionItem title="Test Title" onNew={click} />
+	);
+
+	t.truthy(ctl);
+	log.debug(ctl.html(), __filename);
+
+	let btn = ctl.find('.ui-button');
+	t.is(btn.length, 1);
+
+	btn.simulate('click');
+	t.true(click.calledOnce);
 });
