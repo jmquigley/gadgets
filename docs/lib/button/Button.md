@@ -4,7 +4,8 @@
 A typical button control widget.  This control only uses an icon and no text
 to represent the button.  The icons are [Font Awesome](http://fontawesome.io/)
 strings.  That library is built into this module, so any font available in
-the current release of that library is available.
+the current release of that library is available.  The buttons fill the size
+of their parent container.
 
 #### Examples:
 
@@ -14,10 +15,10 @@ import {Button} from 'gadgets';
 ```
 
 #### Events
-- `onClick()` - when the button control is clicked by the user
+- `onClick()` - This callback is invoked when the control is clicked by the user
 
 #### Styles
-- `ui-button` - top level style placed on `<i>` control that constructs the
+- `ui-button` - A top level style placed on `<i>` control that constructs the
 button.
 
 #### Properties

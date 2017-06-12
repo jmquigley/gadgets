@@ -2,7 +2,8 @@
  * A typical button control widget.  This control only uses an icon and no text
  * to represent the button.  The icons are [Font Awesome](http://fontawesome.io/)
  * strings.  That library is built into this module, so any font available in
- * the current release of that library is available.
+ * the current release of that library is available.  The buttons fill the size
+ * of their parent container.
  *
  * #### Examples:
  *
@@ -12,10 +13,10 @@
  * ```
  *
  * #### Events
- * - `onClick()` - when the button control is clicked by the user
+ * - `onClick()` - This callback is invoked when the control is clicked by the user
  *
  * #### Styles
- * - `ui-button` - top level style placed on `<i>` control that constructs the
+ * - `ui-button` - A top level style placed on `<i>` control that constructs the
  * button.
  *
  * #### Properties
@@ -55,11 +56,11 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		super(props);
 	}
 
-	private handleClick = (e: any) => {
+	private handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
 		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
 			this.props.onClick();
 		}
-		(e as Event).stopPropagation();
+		e.stopPropagation();
 	}
 
 	protected buildStyles() {
@@ -92,9 +93,9 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		return (
 			<div
 				className={this._classes}
+				style={{...this._style}}
 				disabled={this.props.disabled}
-				onClick={this.handleClick}
-				style={{...this._style}}>
+				onClick={this.handleClick}>
 				<Icon
 					className={styles.icon}
 					iconName={this.props.iconName}

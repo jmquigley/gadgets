@@ -1,14 +1,28 @@
 @import '../shared/styles.css';
 
 :local {
-	.button {
+	.buttonText {
 		@extend baseButton;
+		display: flex;
+	}
+
+	.content {
+		flex: 3;
+		padding: 0 4px;
+	}
+
+	.content span {
+		display: inline-block;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		user-select: none;
+		cursor: default;
 	}
 
 	.icon {
-		position: relative;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
+		flex: 1;
+		padding: 1px 5px;
 	}
 }

@@ -94,10 +94,11 @@ This module represents the properties that are shared by every class in the proj
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.
 
-### ButtonDialog
+### [ButtonDialog](docs/lib/buttonDialog/ButtonDialog.md)
 A button control that when pushed displays a local dialog box.  The contents of the control make up the dialog window.
 
-### ButtonText
+### [ButtonText](docs/lib/buttonText/ButtonText.md)
+A button control that contains an icon and a text string.  The text string can be to the left or right of the icon.
 
 ### ButtonToggle
 

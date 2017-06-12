@@ -134,7 +134,7 @@ class App extends React.Component<AppProps, AppState> {
 
 					<div id="simple-buttons">
 						<div className="box">
-							<p>top right<br/>&nbsp;</p>
+							<p>top right</p>
 							<Badge counter={this.state.counter1}>
 								<div className="boxButtons">
 								<Button onClick={() => {
@@ -147,7 +147,7 @@ class App extends React.Component<AppProps, AppState> {
 						</div>
 
 						<div className="box">
-							<p>top left<br/>&nbsp;</p>
+							<p>top left</p>
 							<Badge counter={this.state.counter2} position={BadgePosition.topLeft}>
 								<div className="boxButtons">
 								<Button onClick={() => {
@@ -176,7 +176,7 @@ class App extends React.Component<AppProps, AppState> {
 						</div>
 
 						<div className="box">
-							<p>bottom left<br/>&nbsp;</p>
+							<p>bottom left</p>
 							<Badge
 								counter={this.state.counter4}
 								position={BadgePosition.bottomLeft}
@@ -246,11 +246,19 @@ class App extends React.Component<AppProps, AppState> {
 						</div>
 
 						<div className="box">
-							<p>Text Button</p>
+							<p>Text Button Left</p>
 							<div className="boxButtons">
-								<ButtonText text="Test Text" />
+								<ButtonText iconName="arrow-left" text="Left" justify={ButtonText.LEFT} />
 							</div>
 						</div>
+
+						<div className="box">
+							<p>Text Button Right</p>
+							<div className="boxButtons">
+								<ButtonText iconName="arrow-right" text="Right" justify={ButtonText.RIGHT} color="white" backgroundColor="brown" />
+							</div>
+						</div>
+
 
 					</div>
 				</Container>

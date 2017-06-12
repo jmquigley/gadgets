@@ -1,3 +1,25 @@
+/**
+ * {description}
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {Button} from 'gadgets';
+ * <Button iconName="cab" onClick={someFunction} />
+ * ```
+ *
+ * #### Events
+ * - `{name}` - {description}
+ *
+ * #### Styles
+ * - `` - {description}
+ *
+ * #### Properties
+ * - `{name}: {datatype}` - {description}
+ *
+ * @module ButtonDialog
+ */
+
 'use strict';
 
 import * as React from 'react';
@@ -37,13 +59,13 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		});
 
 		this.props.onClick();
-	}
+	};
 
 	private handleDialogClick = () => {
 		this.setState({
 			visible: false
 		});
-	}
+	};
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
