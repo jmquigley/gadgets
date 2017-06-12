@@ -19,6 +19,7 @@ const BadgePosition = bundle.BadgePosition;
 const Button = bundle.Button;
 const ButtonCircle = bundle.ButtonCircle;
 const ButtonDialog = bundle.ButtonDialog;
+const ButtonText = bundle.ButtonText;
 const ButtonToggle = bundle.ButtonToggle;
 const Container = bundle.Container;
 const Icon = bundle.Icon;
@@ -221,7 +222,12 @@ class App extends React.Component<AppProps, AppState> {
 						<div className="box">
 							<p>Dialog Button</p>
 							<div className="boxButtons">
-								<ButtonDialog iconName="bath">Test Dialog Button</ButtonDialog>
+								<ButtonDialog
+									backgroundColor="orange"
+									color="yellow"
+									iconName="bath">
+									Test Dialog Button
+								</ButtonDialog>
 							</div>
 						</div>
 
@@ -238,6 +244,14 @@ class App extends React.Component<AppProps, AppState> {
 								<ButtonCircle iconName="times" />
 							</div>
 						</div>
+
+						<div className="box">
+							<p>Text Button</p>
+							<div className="boxButtons">
+								<ButtonText text="Test Text" />
+							</div>
+						</div>
+
 					</div>
 				</Container>
 
@@ -301,6 +315,11 @@ class App extends React.Component<AppProps, AppState> {
 						<p><Label disabled text="Test Label #2 (disabled)" /></p>
 						<p><Label className="demoLabel" text="Test Label #3 Styled" /></p>
 						<p><Label text="Text Label #4 (no edit)" noedit /></p>
+						<p><Label
+							   text="Text Label #5 (inline style)"
+							   color="blue"
+							   backgroundColor="white" />
+						</p>
 					</div>
 				</Container>
 

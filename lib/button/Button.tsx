@@ -31,7 +31,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Icon, IconSize} from '../icon';
-import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -47,30 +47,12 @@ export function getDefaultButtonProps(): ButtonProps {
 	}));
 }
 
-export class Button extends React.Component<ButtonProps, undefined> {
+export class Button extends BaseComponent<ButtonProps, undefined> {
 
     public static defaultProps: ButtonProps = getDefaultButtonProps();
 
-	private _classes: string = '';
-	private _style: any = null;
-
     constructor(props: ButtonProps) {
 		super(props);
-	}
-
-	private buildStyles = () => {
-		this._style = Object.assign({
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white')
-		}, this.props.style);
-
-		this._classes = baseClasses(this.props);
-		this._classes += ' ui-button';
-		this._classes += ` ${styles.button}`;
-
-		if (!this.props.noripple && !this.props.disabled) {
-			this._classes += " ripple";
-		}
 	}
 
 	private handleClick = (e: any) => {
@@ -78,6 +60,30 @@ export class Button extends React.Component<ButtonProps, undefined> {
 			this.props.onClick();
 		}
 		(e as Event).stopPropagation();
+	}
+
+	protected buildStyles() {
+
+		if (this.props.color !== 'inherit') {
+			this._style['color'] = this.props.color;
+		}
+
+		if (this.props.backgroundColor !== 'inherit') {
+			this._style['backgroundColor'] = this.props.backgroundColor;
+		}
+
+		if (this.props.borderColor !== 'inherit') {
+			this._style['borderColor'] = this.props.borderColor;
+		}
+
+		super.buildStyles(this.props);
+
+		this._classes += ' ui-button';
+		this._classes += ` ${styles.button}`;
+
+		if (!this.props.noripple && !this.props.disabled) {
+			this._classes += " ripple";
+		}
 	}
 
 	render() {
@@ -88,7 +94,7 @@ export class Button extends React.Component<ButtonProps, undefined> {
 				className={this._classes}
 				disabled={this.props.disabled}
 				onClick={this.handleClick}
-				style={this._style}>
+				style={{...this._style}}>
 				<Icon
 					className={styles.icon}
 					iconName={this.props.iconName}

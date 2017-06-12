@@ -7,8 +7,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nil} from 'util.toolbox';
-import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
+import {nilEvent} from 'util.toolbox';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 import {ListItem} from './index';
 
 const styles = require('./styles.css');
@@ -23,7 +23,7 @@ export function getDefaultListProps(): ListProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			alternating: false,
-			onAdd: nil,
+			onAdd: nilEvent,
 			unselect: false
 		})
 	);
@@ -33,12 +33,9 @@ export interface ListState {
 	selectedItem: ListItem;
 }
 
-export class List extends React.Component<ListProps, ListState> {
+export class List extends BaseComponent<ListProps, ListState> {
 
 	public static defaultProps: ListProps = getDefaultListProps();
-
-	private _classes: string = '';
-	private _style: any = null;
 
 	constructor(props: ListProps) {
 		super(props);
@@ -47,10 +44,9 @@ export class List extends React.Component<ListProps, ListState> {
 		}
 	}
 
-	private buildStyles = () => {
-		this._style = Object.assign({}, this.props.style);
+	protected buildStyles() {
+		super.buildStyles(this.props);
 
-		this._classes = baseClasses(this.props);
 		this._classes += " ui-list";
 		this._classes += ` ${styles.list}`;
 

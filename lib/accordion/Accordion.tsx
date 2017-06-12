@@ -34,7 +34,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -50,21 +50,16 @@ export function getDefaultAccordionProps(): AccordionProps {
 export interface AccordionState {
 }
 
-export class Accordion extends React.Component<AccordionProps, AccordionState> {
+export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 
 	public static defaultProps: AccordionProps = getDefaultAccordionProps();
-
-	private _classes: string = '';
-	private _style: any = null;
 
 	constructor(props: AccordionProps) {
 		super(props);
 	}
 
-	private buildStyles = () => {
-		this._style = Object.assign({}, this.props.style);
-
-		this._classes = baseClasses(this.props);
+	protected buildStyles() {
+		super.buildStyles(this.props);
 		this._classes += ' ui-accordion';
 		this._classes += ` ${styles.accordion}`;
 	}

@@ -77,7 +77,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ButtonCircle} from '../buttonCircle';
-import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -118,12 +118,10 @@ export interface ToastState {
 	visible: boolean;
 }
 
-export class Toast extends React.Component<ToastProps, ToastState> {
+export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public static defaultProps: ToastProps = getDefaultToastProps();
 
-	private _classes: string = '';
-	private _style: any = {};  // style object for custom type
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
@@ -148,7 +146,31 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 		this.handleDecay();
 	}
 
-	private buildStyles = () => {
+	private handleClose = () => {
+		if (this._timer) {
+            clearTimeout(this._timer);
+            this._timer = null;
+        }
+
+		this.setState({
+			visible: false
+		})
+
+		this.props.onClose();
+	}
+
+	private handleDecay = () => {
+		if (this.props.type === ToastType.decay && this.state.visible) {
+			this._timer = setTimeout(() => {
+				if (this.state.visible) {
+					this.setState({visible: false});
+					this.props.onClose();
+				}
+			}, this.props.duration * 1000);
+		}
+	}
+
+	protected buildStyles() {
 
 		if (this.props.level === ToastLevel.custom) {
 			this._style = {
@@ -158,7 +180,8 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 			}
 		}
 
-		this._classes = baseClasses(this.props, {visible: false});
+		super.buildStyles(this.props);
+
 		this._classes += " ui-toast";
 		this._classes += ` ${styles.toast}`;
 
@@ -184,30 +207,6 @@ export class Toast extends React.Component<ToastProps, ToastState> {
 
 		if (!this.state.visible) {
 			this._classes += ` ${styles.hide}`;
-		}
-	}
-
-	private handleClose = () => {
-		if (this._timer) {
-            clearTimeout(this._timer);
-            this._timer = null;
-        }
-
-		this.setState({
-			visible: false
-		})
-
-		this.props.onClose();
-	}
-
-	private handleDecay = () => {
-		if (this.props.type === ToastType.decay && this.state.visible) {
-			this._timer = setTimeout(() => {
-				if (this.state.visible) {
-					this.setState({visible: false});
-					this.props.onClose();
-				}
-			}, this.props.duration * 1000);
 		}
 	}
 

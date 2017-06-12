@@ -1,8 +1,8 @@
-import {baseClasses} from './base';
+import {BaseComponent} from './base';
 import {BaseProps, getDefaultBaseProps} from './props';
 
 export {
-	baseClasses,
+	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps
 };

@@ -25,7 +25,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Button, ButtonProps, getDefaultButtonProps, IconSize} from '../button';
-import {baseClasses} from '../shared';
+import {BaseComponent} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -44,31 +44,26 @@ export interface ButtonCircleProps extends ButtonProps {
 export function getDefaultButtonCircleProps(): ButtonProps {
 	return cloneDeep(Object.assign(
 		getDefaultButtonProps(), {
+			borderColor: "black",
 			circleSize: CircleSize.normal,
 			color: "black"
 	}));
 }
 
-export class ButtonCircle extends React.Component<ButtonCircleProps, undefined> {
+export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 
     public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 
 	private _circleSize: string = styles.medium;
-	private _classes: string = '';
 	private _iconSize: IconSize = IconSize.normal;
-	private _style: any = null;
 
     constructor(props: ButtonCircleProps) {
 		super(props);
 	}
 
-	private buildStyles = () => {
-		this._style = Object.assign({
-			color: this.props.color,
-			borderColor: this.props.color
-		}, this.props.style);
+	protected buildStyles() {
+		super.buildStyles(this.props);
 
-		this._classes = baseClasses(this.props);
 		this._classes += " ui-button-circle";
 		this._classes += ` ${styles.buttonCircle}`;
 
@@ -104,10 +99,13 @@ export class ButtonCircle extends React.Component<ButtonCircleProps, undefined> 
 				<div className={`${styles.buttonCircleContainer} ${this._circleSize}`}>
 					<Button
 					className={styles.buttonCircleIcon}
+					style={this._style}
+					color={this.props.color}
+					backgroundColor={this.props.backgroundColor}
+					borderColor={this.props.color}
 					iconName={this.props.iconName}
 					iconSize={this._iconSize}
 					onClick={this.props.onClick}
-					style={this._style}
 				/>
 				</div>
 			</div>

@@ -9,7 +9,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {baseClasses} from '../shared';
+import {BaseComponent} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -25,21 +25,16 @@ export function getDefaultListHeaderProps(): ListHeaderProps {
 export interface ListHeaderState {
 }
 
-export class ListHeader extends React.Component<ListHeaderProps, ListHeaderState> {
+export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> {
 
 	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
-
-	private _classes: string = '';
-	private _style: any = null;
 
 	constructor(props: ListHeaderProps) {
 		super(props);
 	}
 
-	private buildStyles = () => {
-		this._style = Object.assign({}, this.props.style);
-
-		this._classes = baseClasses(this.props);
+	protected buildStyles() {
+		super.buildStyles(this.props);
 		this._classes += " ui-list-header";
 		this._classes += ` ${styles.listHeader}`;
 	}

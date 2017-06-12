@@ -3,7 +3,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
-import {baseClasses} from '../shared/base';
+import {BaseComponent} from '../shared/base';
 import {BaseProps, getDefaultBaseProps} from '../shared/props';
 
 const styles = require('./styles.css');
@@ -29,12 +29,9 @@ export interface LabelState {
 	text: string;
 }
 
-export class Label extends React.Component<LabelProps, LabelState> {
+export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	public static defaultProps: LabelProps = getDefaultLabelProps();
-
-	private _classes: string = '';
-	private _style: any = null;
 
 	constructor(props: LabelProps) {
 		super(props);
@@ -43,17 +40,6 @@ export class Label extends React.Component<LabelProps, LabelState> {
 			previousText: props.text,
 			text: props.text
 		};
-	}
-
-	private buildStyles = () => {
-		this._style = Object.assign({
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white')
-		}, this.props.style);
-
-		this._classes = baseClasses(this.props);
-		this._classes += ` ${styles.label}`;
-		this._classes += " ui-label";
 	}
 
 	private handleBlur = (e: React.FocusEvent<HTMLSpanElement>) => {
@@ -105,6 +91,16 @@ export class Label extends React.Component<LabelProps, LabelState> {
 		if (e.key === 'Enter') {
 			this.handleChange(e.target as Element);
 		}
+	}
+
+	protected buildStyles() {
+		super.buildStyles(this.props, {
+			color: (this.props.color || 'black'),
+			backgroundColor: (this.props.backgroundColor || 'white')
+		});
+
+		this._classes += ` ${styles.label}`;
+		this._classes += " ui-label";
 	}
 
 	render() {

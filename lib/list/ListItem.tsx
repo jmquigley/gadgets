@@ -7,9 +7,9 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nil} from 'util.toolbox';
+import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {baseClasses} from '../shared';
+import {BaseComponent} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -21,7 +21,7 @@ export function getDefaultListItemProps(): ListItemProps {
 	return cloneDeep(Object.assign(
 		getDefaultItemProps(), {
 			href: {
-				selectHandler: nil
+				selectHandler: nilEvent
 			}
 		}));
 }
@@ -30,13 +30,11 @@ export interface ListItemState {
 	toggleRipple: boolean;  // use this to turn ripple on/off during editing
 }
 
-export class ListItem extends React.Component<ListItemProps, ListItemState> {
+export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
-	private _classes: string = '';
 	private _delay = 300;
 	private _prevent: boolean = false;
-	private _style: any = null;
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
@@ -44,14 +42,6 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 		this.state = {
 			toggleRipple: false
 		}
-	}
-
-	private buildStyles = () => {
-		this._style = Object.assign({}, this.props.style);
-
-		this._classes = baseClasses(this.props);
-		this._classes += " ui-listitem";
-		this._classes += ` ${styles.listItem}`;
 	}
 
 	private deactivateEdit = () => {
@@ -99,6 +89,12 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 		this.deactivateEdit();
 	}
 
+	protected buildStyles() {
+		super.buildStyles(this.props);
+		this._classes += " ui-listitem";
+		this._classes += ` ${styles.listItem}`;
+	}
+
 	render() {
 		this.buildStyles();
 
@@ -108,7 +104,7 @@ export class ListItem extends React.Component<ListItemProps, ListItemState> {
 				className={this._classes}
 				noripple={this.state.toggleRipple || this.props.noripple}
 				onBlur={this.handleBlur}
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
+				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 				onDoubleClick={this.handleDoubleClick}
 				onKeyDown={this.handleKeyDown}
 				onKeyPress={this.handleKeyPress}

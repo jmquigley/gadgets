@@ -2,7 +2,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {baseClasses, BaseProps} from '../shared';
+import {BaseComponent, BaseProps} from '../shared';
 import {getDefaultBaseProps} from '../shared/props';
 
 const styles = require('./styles.css');
@@ -34,26 +34,23 @@ export function getDefaultBadgeProps(): BadgeProps {
 	}));
 }
 
-export class Badge extends React.Component<BadgeProps, undefined> {
+export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
-	private _classes: string = '';
-	private _style: any = null;
 	private _positionStyle: string = '';
 
 	constructor(props: BadgeProps) {
 		super(props);
 	}
 
-	private buildStyles = () => {
-		this._style = Object.assign({
+	protected buildStyles() {
+		super.buildStyles(this.props,{
 			color: (this.props.color || 'black'),
 			backgroundColor: (this.props.backgroundColor || 'white'),
 			border: `solid 3px ${this.props.color}`
-		}, this.props.style);
+		});
 
-		this._classes = baseClasses(this.props);
 		this._classes += " ui-badge";
 		this._classes += ` ${styles.badgeContainer}`;
 

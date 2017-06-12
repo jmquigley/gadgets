@@ -3,6 +3,7 @@ import {Badge, BadgePosition} from './lib/badge';
 import {Button} from './lib/button';
 import {ButtonCircle, CircleSize} from './lib/buttonCircle';
 import {ButtonDialog} from './lib/buttonDialog';
+import {ButtonText} from './lib/buttonText';
 import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
 import {Icon, IconSize} from './lib/icon';
@@ -23,6 +24,7 @@ export {
 	ButtonCircle,
 	ButtonDialog,
 	ButtonToggle,
+	ButtonText,
 	CircleSize,
 	Container,
 	Icon,

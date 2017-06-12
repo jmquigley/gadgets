@@ -45,7 +45,7 @@ import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {baseClasses} from '../shared';
+import {BaseComponent} from '../shared';
 
 
 const styles = require('./styles.css');
@@ -70,26 +70,15 @@ export interface AccordionItemState {
 	toggle: boolean;
 }
 
-export class AccordionItem extends React.Component<AccordionItemProps, AccordionItemState> {
+export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionItemState> {
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
-
-	private _classes: string = '';
-	private _style: any = null;
 
 	constructor(props: AccordionItemProps) {
 		super(props);
 		this.state = {
 			toggle: props.initialToggle
 		}
-	}
-
-	private buildStyles = () => {
-		this._style = Object.assign({}, this.props.style);
-
-		this._classes = baseClasses(this.props);
-		this._classes += ` ${styles.accordionItem}`;
-		this._classes += " ui-accordionitem";
 	}
 
 	private handleClick = () => {
@@ -108,6 +97,12 @@ export class AccordionItem extends React.Component<AccordionItemProps, Accordion
 		}
 
 		this.props.onNew();
+	}
+
+	protected buildStyles() {
+		super.buildStyles(this.props);
+		this._classes += ` ${styles.accordionItem}`;
+		this._classes += " ui-accordionitem";
 	}
 
 	render() {

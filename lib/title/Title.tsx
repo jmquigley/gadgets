@@ -3,8 +3,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Label} from '../label';
-import {baseClasses, BaseProps} from '../shared';
-import {getDefaultBaseProps} from '../shared/props';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -20,21 +19,17 @@ export function getDefaultTitleProps(): TitleProps {
 	}));
 }
 
-export class Title extends React.Component<TitleProps, undefined> {
+export class Title extends BaseComponent<TitleProps, undefined> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
-
-	private _classes: string = '';
-	private _style: any = null;
 
 	constructor(props: TitleProps) {
 		super(props);
 	}
 
-	private buildStyles = () => {
-		this._style = Object.assign({}, this.props.style);
+	protected buildStyles() {
+		super.buildStyles(this.props);
 
-		this._classes = baseClasses(this.props)
 		this._classes += " ui-title-bar";
 
 		if (this.props.stacked) {

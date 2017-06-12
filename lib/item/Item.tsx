@@ -2,7 +2,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 import {Title, TitleProps} from '../title';
 
 const styles = require('./styles.css');
@@ -33,21 +33,17 @@ export function getDefaultItemProps(): ItemProps {
 export interface ItemState {
 }
 
-export class Item extends React.Component<ItemProps, ItemState> {
+export class Item extends BaseComponent<ItemProps, ItemState> {
 
 	public static defaultProps: ItemProps = getDefaultItemProps();
-
-	private _classes: string = '';
-	private _style: any = null;
 
 	constructor(props: ItemProps) {
 		super(props);
 	}
 
-	private buildStyles = () => {
-		this._style = Object.assign({}, this.props.style);
+	protected buildStyles() {
+		super.buildStyles(this.props);
 
-		this._classes = baseClasses(this.props);
 		this._classes += " ui-item";
 		this._classes += ` ${styles.item}`;
 

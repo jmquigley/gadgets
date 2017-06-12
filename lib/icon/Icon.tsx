@@ -41,7 +41,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {baseClasses, getDefaultBaseProps, BaseProps} from '../shared';
+import {BaseComponent, getDefaultBaseProps, BaseProps} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -70,24 +70,20 @@ export function getDefaultIconProps(): IconProps {
 	}));
 }
 
-export class Icon extends React.Component<IconProps, undefined> {
+export class Icon extends BaseComponent<IconProps, undefined> {
 
     public static defaultProps: IconProps = getDefaultIconProps();
-
-	private _classes: string = '';
-	private _style: any = null;
 
     constructor(props: IconProps) {
 		super(props);
 	}
 
-	private buildStyles = () => {
-		this._style = Object.assign({
+	protected buildStyles() {
+		super.buildStyles(this.props, {
 			color: (this.props.color || 'black'),
 			backgroundColor: (this.props.backgroundColor || 'white')
-		}, this.props.style);
+		});
 
-		this._classes = baseClasses(this.props);
 		this._classes += ' ui-icon';
 		this._classes += ` ${styles.icon}`;
 

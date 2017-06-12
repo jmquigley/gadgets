@@ -2,7 +2,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {baseClasses, BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 // const styles = require('./styles.css');
 
@@ -20,19 +20,16 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 export interface DynamicListState {
 }
 
-export class DynamicList extends React.Component<DynamicListProps, undefined> {
+export class DynamicList extends BaseComponent<DynamicListProps, undefined> {
 
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
-
-	private _classes: string = '';
-	// private _style: any = null;
 
 	constructor(props: DynamicListProps) {
 		super(props);
 	}
 
-	private buildStyles = () => {
-		this._classes = baseClasses(this.props)
+	protected buildStyles() {
+		super.buildStyles(this.props);
 		this._classes += " ui-dynamiclist";
 	}
 

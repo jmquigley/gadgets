@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {nil} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {baseClasses} from '../shared';
+import {BaseComponent} from '../shared';
 
 const styles = require('./styles.css');
 
@@ -15,41 +15,20 @@ export interface ButtonDialogState {
 	visible: boolean;
 }
 
-export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialogState> {
+export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogState> {
 
     public static defaultProps: ButtonDialogProps = Object.assign(
 		getDefaultButtonProps(), {
 			dialogClasses: []
      });
 
-	private _classes: string = '';
 	private _dialogClasses: string = '';
-	private _style: any = null;
 
 	constructor(props: ButtonDialogProps) {
 		super(props);
 		this.state = {
 			visible: false
 		};
-	}
-
-	private buildStyles = () => {
-		this._style = Object.assign({
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white')
-		}, this.props.style);
-
-		this._classes = baseClasses(this.props);
-		this._classes += ` ${styles.buttonDialog}`;
-		this._classes += ' ui-button-dialog';
-
-		this._dialogClasses = this.props.dialogClasses.join(' ');
-		this._dialogClasses += ` ${styles.buttonDialogPopup}`;
-		this._dialogClasses += ` ui-dialog-popup`;
-
-		if (!this.state.visible) {
-			this._dialogClasses += ` ${styles.buttonDialogHide}`;
-		}
 	}
 
 	private handleClick = () => {
@@ -66,6 +45,21 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 		});
 	}
 
+	protected buildStyles() {
+		super.buildStyles(this.props);
+
+		this._classes += ` ${styles.buttonDialog}`;
+		this._classes += ' ui-button-dialog';
+
+		this._dialogClasses = this.props.dialogClasses.join(' ');
+		this._dialogClasses += ` ${styles.buttonDialogPopup}`;
+		this._dialogClasses += ` ui-dialog-popup`;
+
+		if (!this.state.visible) {
+			this._dialogClasses += ` ${styles.buttonDialogHide}`;
+		}
+	}
+
 	render() {
 		this.buildStyles();
 
@@ -75,11 +69,13 @@ export class ButtonDialog extends React.Component<ButtonDialogProps, ButtonDialo
 				disabled={this.props.disabled}>
 
 				<Button
+					style={this._style}
+					color={this.props.color}
+					backgroundColor={this.props.backgroundColor}
 					disabled={this.props.disabled}
 					iconName={this.props.iconName}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
 					visible={this.props.visible}
-					style={this._style}
 				/>
 				<div
 					onClick={this.handleDialogClick}
