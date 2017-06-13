@@ -60,7 +60,7 @@ export function getDefaultIconProps(): IconProps {
 			backgroundColor: "inherit",
 			color: "inherit",
 			iconName: "bomb",
-			imageFile: '',
+			imageFile: "",
 			size: Size.normal
 	}));
 }
@@ -70,18 +70,20 @@ export class Icon extends BaseComponent<IconProps, undefined> {
     public static defaultProps: IconProps = getDefaultIconProps();
 
     constructor(props: IconProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props, {
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white')
+			color: (this.props.color || "black"),
+			backgroundColor: (this.props.backgroundColor || "white")
 		});
 
-		this.classes += ' ui-icon';
-		this.classes += ` ${this.styles.icon}`;
-		this.classes += ` ${super.getSizeStyle()}`;
+		this.classes.push("ui-icon");
+		this.classes.push(this.styles.icon);
+		this.classes.push(super.getSizeStyle());
+		this.classes.push("fa");
+		this.classes.push(`fa-${this.props.iconName}`);
 	}
 
 	render() {
@@ -89,11 +91,18 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 
 		if (this.props.imageFile !== '') {
 			return (
-				<img src={this.props.imageFile} className={this.classes} style={this.inlineStyle} />
+				<img
+					className={this.classes.join(" ")}
+					src={this.props.imageFile}
+					style={this.inlineStyle}
+					/>
 			);
 		} else {
 			return (
-				<i className={`fa fa-${this.props.iconName} ${this.classes}`} style={this.inlineStyle} />
+				<i
+					className={this.classes.join(" ")}
+					style={this.inlineStyle}
+					/>
 			);
 		}
 	}

@@ -22,8 +22,8 @@
 
 'use strict';
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
+import {cloneDeep} from "lodash";
+import * as React from "react";
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {BaseComponent, Size} from '../shared';
 
@@ -44,7 +44,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
     public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 
     constructor(props: ButtonCircleProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 	}
 
 	protected buildStyles() {
@@ -52,15 +52,15 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 
 		super.buildStyles(this.props);
 
-		this.classes += " ui-button-circle";
-		this.classes += ` ${this.styles.buttonCircle}`;
+		this.classes.push("ui-button-circle");
+		this.classes.push(this.styles.buttonCircle);
 	}
 
 	render() {
 		this.buildStyles();
 
 		return (
-			<div className={this.classes}>
+			<div className={this.classes.join(" ")}>
 				<div className={`${this.styles.buttonCircleContainer} ${super.getSizeStyle()}`}>
 					<Button
 					className={this.styles.buttonCircleIcon}

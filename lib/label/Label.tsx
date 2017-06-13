@@ -17,7 +17,7 @@ export function getDefaultLabelProps(): LabelProps {
 	return cloneDeep(Object.assign(
 		baseProps, {
 			noedit: false,
-			text: ' '
+			text: " "
 		}));
 }
 
@@ -32,7 +32,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	public static defaultProps: LabelProps = getDefaultLabelProps();
 
 	constructor(props: LabelProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 		this.state = {
 			editable: false,
 			previousText: props.text,
@@ -75,7 +75,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	private handleKeyDown = (e: React.KeyboardEvent<HTMLSpanElement>) => {
-		if (e.key === 'Escape') {
+		if (e.key === "Escape") {
 			this.setState({
 				editable: false,
 				text: this.state.previousText
@@ -86,19 +86,19 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	private handleKeyPress = (e: React.KeyboardEvent<HTMLSpanElement>) => {
-		if (e.key === 'Enter') {
+		if (e.key === "Enter") {
 			this.handleChange(e.target as Element);
 		}
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props, {
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white')
+			color: (this.props.color || "black"),
+			backgroundColor: (this.props.backgroundColor || "white")
 		});
 
-		this.classes += " ui-label";
-		this.classes += ` ${this.styles.label}`;
+		this.classes.push("ui-label");
+		this.classes.push(this.styles.label);
 	}
 
 	render() {
@@ -106,8 +106,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 		return (
 			<span
-				className={this.classes}
-				style={this.inlineStyle}
+				className={this.classes.join(" ")}
 				contentEditable={this.state.editable}
 				disabled={this.props.disabled}
 				onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
@@ -115,7 +114,9 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
 				onKeyDown={this.handleKeyDown}
 				onKeyPress={this.handleKeyPress}
-				suppressContentEditableWarning>
+				style={this.inlineStyle}
+				suppressContentEditableWarning
+				>
 				{this.state.text}
 			</span>
 		);

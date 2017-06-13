@@ -20,7 +20,7 @@ const defaultBaseOptions: BaseOptions = {
  */
 export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 
-	protected _classes: string = '';
+	protected _classes: string[] = [];
 	protected _inlineStyle: any = {};    // inline style overrides
 	protected _styles: any = {};         // css modules styles
 
@@ -29,11 +29,11 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		this._styles = pstyles;
 	}
 
-	get classes(): string {
+	get classes(): string[] {
 		return this._classes;
 	}
 
-	set classes(str: string) {
+	set classes(str: string[]) {
 		this._classes = str;
 	}
 
@@ -54,7 +54,7 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	}
 
 	protected buildStyles(props: P, style: any = {}, opts?: BaseOptions): void {
-		this._classes = '';
+		this._classes = [];
 		this._inlineStyle = Object.assign(this._inlineStyle, props['style'], style);
 
 		opts = Object.assign(
@@ -63,15 +63,16 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		);
 
 		if (props['className'] !== '' && opts.className) {
-			this._classes += ` ${props['className']}`;
+			this._classes.push(props['className']);
 		}
 
 		if (!props['visible'] && opts.visible) {
-			this._classes += ` ${styles.invisible}`;
+			this._classes.push(this.styles.invisible);
 		}
 
 		if (props['disabled'] && opts.disabled) {
-			this._classes += ` ${styles.disabled} nohover`;
+			this._classes.push(styles.disabled);
+			this._classes.push('nohover');
 		}
 	}
 

@@ -26,44 +26,52 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 	public static defaultProps: TitleProps = getDefaultTitleProps();
 
 	constructor(props: TitleProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
 
-		this.classes += " ui-title-bar";
+		this.classes.push("ui-title-bar");
 
 		if (this.props.stacked) {
-			this.classes += ` ${this.styles.titleBarStacked}`;
+			this.classes.push(this.styles.titleBarStacked);
 		} else {
-			this.classes += ` ${this.styles.titleBar}`;
+			this.classes.push(this.styles.titleBar);
 		}
 
 		if (!this.props.noripple && !this.props.disabled) {
-			this.classes += " ripple";
+			this.classes.push("ripple");
 		}
 	}
 
 	render() {
 		this.buildStyles();
 
-		let title: string = '';
+		let title: string = "";
 		React.Children.forEach(this.props.children, child => {
 			title += String(child);
 		});
 
 		return (
 			<div
-				className={this.classes}
+				className={this.classes.join(" ")}
 				style={this.inlineStyle}
-				onClick={this.props.onClick} onDoubleClick={this.props.onDoubleClick}>
+				onClick={this.props.onClick} onDoubleClick={this.props.onDoubleClick}
+				>
 				<Label
-				className={`ui-title ${this.props.stacked ? this.styles.titleStacked : this.styles.title}`}
-				noedit={this.props.noedit}
-				text={title}
-				/>
-				<div className={`ui-widget ${this.props.stacked ? this.styles.widgetStacked : this.styles.widget}`}>
+					className={
+						"ui-title " +
+						(this.props.stacked ? this.styles.titleStacked : this.styles.title)
+					}
+					noedit={this.props.noedit}
+					text={title}
+					/>
+				<div
+					className={
+						"ui-widget " +
+						(this.props.stacked ? this.styles.widgetStacked : this.styles.widget)
+					}>
 					{this.props.widget}
 				</div>
 			</div>

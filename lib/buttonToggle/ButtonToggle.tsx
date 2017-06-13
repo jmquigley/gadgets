@@ -28,12 +28,12 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 			fgColorOff: "gray",
 			fgColorOn: "black",
 			initialToggle: false,
-			iconNameOff: 'bomb',
-			iconNameOn: 'bomb'
+			iconNameOff: "bomb",
+			iconNameOn: "bomb"
 		});
 
     constructor(props: ButtonToggleProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 		this.state = {
 			toggle: props.initialToggle
 		};
@@ -49,8 +49,8 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this.classes += " ui-buttontoggle";
-		this.classes += ` ${this.styles.buttonToggle}`;
+		this.classes.push("ui-buttontoggle");
+		this.classes.push(this.styles.buttonToggle);
 	}
 
 	render() {
@@ -58,16 +58,16 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 		return (
 			<Button
-				className={this.classes}
-				style={this.inlineStyle}
-				color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
 				backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
+				className={this.classes.join(" ")}
+				color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
 				disabled={this.props.disabled}
-				size={this.props.size}
 				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 				noripple
-			/>
+				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+				size={this.props.size}
+				style={this.inlineStyle}
+				/>
 		);
 	}
 }

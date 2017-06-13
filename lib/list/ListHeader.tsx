@@ -28,13 +28,13 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
 
 	constructor(props: ListHeaderProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this.classes += " ui-list-header";
-		this.classes += ` ${this.styles.listHeader}`;
+		this.classes.push("ui-list-header");
+		this.classes.push(this.styles.listHeader);
 	}
 
 	render() {
@@ -43,9 +43,9 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 		return (
 			<Item
 				{...this.props}
-				className={this.classes}
+				className={this.classes.join(" ")}
 				style={this.inlineStyle}
-			/>
+				/>
 		);
 	}
 }

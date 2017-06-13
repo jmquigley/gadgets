@@ -58,15 +58,15 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this._classes += ' ui-accordion';
-		this._classes += ` ${this.styles.accordion}`;
+		this.classes.push('ui-accordion');
+		this.classes.push(this.styles.accordion);
 	}
 
 	render() {
 		this.buildStyles();
 
 		return (
-			<ul className={this.classes} style={this.inlineStyle}>
+			<ul className={this.classes.join(' ')} style={this.inlineStyle}>
 				{this.props.children}
 			</ul>
 		);

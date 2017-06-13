@@ -50,7 +50,7 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 	return cloneDeep(Object.assign(
 		getDefaultIconProps(), {
 			justify: ButtonText.RIGHT,
-			text: ''
+			text: ""
 		}));
 }
 
@@ -62,7 +62,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	public static RIGHT: number = 1;
 
     constructor(props: ButtonTextProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 	}
 
 	private handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -73,26 +73,26 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	}
 
 	protected buildStyles() {
-		if (this.props.color !== 'inherit') {
-			this.inlineStyle['color'] = this.props.color;
+		if (this.props.color !== "inherit") {
+			this.inlineStyle["color"] = this.props.color;
 		}
 
-		if (this.props.backgroundColor !== 'inherit') {
-			this.inlineStyle['backgroundColor'] = this.props.backgroundColor;
+		if (this.props.backgroundColor !== "inherit") {
+			this.inlineStyle["backgroundColor"] = this.props.backgroundColor;
 		}
 
-		if (this.props.borderColor !== 'inherit') {
-			this.inlineStyle['borderColor'] = this.props.borderColor;
+		if (this.props.borderColor !== "inherit") {
+			this.inlineStyle["borderColor"] = this.props.borderColor;
 		}
 
 		super.buildStyles(this.props);
 
-		this.classes += ' ui-button';
-		this.classes += ' ui-buttontext';
-		this.classes += ` ${this.styles.buttonText}`;
+		this.classes.push("ui-button");
+		this.classes.push("ui-buttontext");
+		this.classes.push(this.styles.buttonText);
 
 		if (!this.props.noripple && !this.props.disabled) {
-			this.classes += " ripple";
+			this.classes.push("ripple");
 		}
 	}
 
@@ -102,8 +102,8 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		let content = (justify: number) => (
 			<div
 				className={
-					this.styles.content + ' ' +
-					super.getSizeStyle() + ' ' +
+					this.styles.content + " " +
+					super.getSizeStyle() + " " +
 					((justify === ButtonText.LEFT) ? this.styles.left : this.styles.right)
 				}>
 				{this.props.text}
@@ -121,7 +121,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 		return (
 			<div
-			  className={this.classes}
+			  className={this.classes.join(" ")}
 			  style={this.inlineStyle}
 			  disabled={this.props.disabled}
 			  onClick={this.handleClick}>

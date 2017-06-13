@@ -23,7 +23,7 @@ export function getDefaultItemProps(): ItemProps {
 			rightButton: null,
 			selected: false,
 			stacked: false,
-			title: '',
+			title: "",
 			widget: null
 		}));
 }
@@ -36,17 +36,17 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 	public static defaultProps: ItemProps = getDefaultItemProps();
 
 	constructor(props: ItemProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
 
-		this.classes += " ui-item";
-		this.classes += ` ${this.styles.item}`;
+		this.classes.push("ui-item");
+		this.classes.push(this.styles.item);;
 
 		if (this.props.selected) {
-			this.classes += " ui-selected";
+			this.classes.push("ui-selected");
 		}
 	}
 
@@ -56,7 +56,11 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		let leftButton = null;
 		if (this.props.leftButton != null && !this.props.disabled) {
 			leftButton = (
-				<div className={`${this.styles.itemButton} ${this.styles.leftButton} ${(this.props.hiddenLeftButton) ? this.styles.hiddenButton : ''}`}>
+				<div className={
+					this.styles.itemButton + " " +
+					this.styles.leftButton + " " +
+					((this.props.hiddenLeftButton) ? this.styles.hiddenButton : "")
+					}>
 					{this.props.leftButton != null ? this.props.leftButton : null}
 				</div>
 			);
@@ -65,7 +69,11 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		let rightButton = null;
 		if (this.props.rightButton != null && !this.props.disabled) {
 			rightButton = (
-				<div className={`${this.styles.itemButton} ${this.styles.rightButton} ${(this.props.hiddenRightButton) ? this.styles.hiddenButton : ''}`}>
+				<div className={
+					this.styles.itemButton + " " +
+					this.styles.rightButton + " " +
+					((this.props.hiddenRightButton) ? this.styles.hiddenButton : "")
+					}>
 					{this.props.rightButton != null ? this.props.rightButton : null}
 				</div>
 			);
@@ -77,7 +85,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 				onMouseOut={this.props.onMouseOut}
 				onKeyDown={this.props.onKeyDown}
 				onKeyPress={this.props.onKeyPress}
-				className={this.classes}
+				className={this.classes.join(" ")}
 				style={this.inlineStyle}>
 				{leftButton}
 				<Title {...this.props} className={this.styles.itemTitle}>{this.props.title}</Title>

@@ -101,9 +101,9 @@ export interface ToastProps extends BaseProps {
 export function getDefaultToastProps(): ToastProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
-			backgroundColor: 'white',
-			borderColor: 'black',
-			color: 'black',
+			backgroundColor: "white",
+			borderColor: "black",
+			color: "black",
 			bottom: false,
 			duration: 3,
 			level: ToastLevel.info,
@@ -123,7 +123,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 
 		this.state = {
 			visible: props.visible
@@ -180,31 +180,31 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 		super.buildStyles(this.props);
 
-		this.classes += " ui-toast";
-		this.classes += ` ${this.styles.toast}`;
+		this.classes.push("ui-toast");
+		this.classes.push(this.styles.toast);
 
 		switch (this.props.level) {
 			case ToastLevel.info:
-				this.classes += ` ${this.styles.info}`;
+				this.classes.push(this.styles.info);
 				break;
 
 			case ToastLevel.warning:
-				this.classes += ` ${this.styles.warning}`;
+				this.classes.push(this.styles.warning);
 				break;
 
 			case ToastLevel.error:
-				this.classes += ` ${this.styles.error}`;
+				this.classes.push(this.styles.error);
 				break;
 		}
 
 		if (this.props.bottom) {
-			this.classes += ` ${this.styles.bottom}`;
+			this.classes.push(this.styles.bottom);
 		} else {
-			this.classes += ` ${this.styles.top}`;
+			this.classes.push(this.styles.top);
 		}
 
 		if (!this.state.visible) {
-			this.classes += ` ${this.styles.hide}`;
+			this.classes.push(this.styles.hide);
 		}
 	}
 
@@ -213,7 +213,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 		return (
 			<div
-				className={this.classes}
+				className={this.classes.join(" ")}
 				style={this.inlineStyle}>
 				<div className={`ui-toast-content ${this.styles.content}`}>
 					{this.props.children}

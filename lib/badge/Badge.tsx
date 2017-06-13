@@ -58,21 +58,21 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
-	private _positionStyle: string = '';
+	private _positionStyle: string = "";
 
 	constructor(props: BadgeProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props,{
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white'),
+			color: (this.props.color || "black"),
+			backgroundColor: (this.props.backgroundColor || "white"),
 			border: `solid 3px ${this.props.color}`
 		});
 
-		this.classes += " ui-badge";
-		this.classes += ` ${this.styles.badgeContainer}`;
+		this.classes.push("ui-badge");
+		this.classes.push(this.styles.badgeContainer);
 
 		switch (this.props.position) {
 			case BadgePosition.topLeft: this._positionStyle = this.styles.topLeft; break;
@@ -102,7 +102,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		}
 
 		return (
-			<div className={this.classes}>
+			<div className={this.classes.join(" ")}>
 				{this.props.children}
 				{badge}
 			</div>

@@ -40,7 +40,7 @@ export interface ButtonProps extends BaseProps {
 
 export function getDefaultButtonProps(): ButtonProps {
 	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		iconName: 'bomb',
+		iconName: "bomb",
 		size: Size.normal
 	}));
 }
@@ -50,7 +50,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
     public static defaultProps: ButtonProps = getDefaultButtonProps();
 
     constructor(props: ButtonProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 	}
 
 	private handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -62,25 +62,25 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	protected buildStyles() {
 
-		if (this.props.color !== 'inherit') {
-			this.inlineStyle['color'] = this.props.color;
+		if (this.props.color !== "inherit") {
+			this.inlineStyle["color"] = this.props.color;
 		}
 
-		if (this.props.backgroundColor !== 'inherit') {
-			this.inlineStyle['backgroundColor'] = this.props.backgroundColor;
+		if (this.props.backgroundColor !== "inherit") {
+			this.inlineStyle["backgroundColor"] = this.props.backgroundColor;
 		}
 
-		if (this.props.borderColor !== 'inherit') {
-			this.inlineStyle['borderColor'] = this.props.borderColor;
+		if (this.props.borderColor !== "inherit") {
+			this.inlineStyle["borderColor"] = this.props.borderColor;
 		}
 
 		super.buildStyles(this.props);
 
-		this.classes += ' ui-button';
-		this.classes += ` ${this.styles.button}`;
+		this.classes.push("ui-button");
+		this.classes.push(this.styles.button);
 
 		if (!this.props.noripple && !this.props.disabled) {
-			this.classes += " ripple";
+			this.classes.push("ripple");
 		}
 	}
 
@@ -89,7 +89,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 		return (
 			<div
-				className={this.classes}
+				className={this.classes.join(' ')}
 				style={{...this.inlineStyle}}
 				disabled={this.props.disabled}
 				onClick={this.handleClick}>

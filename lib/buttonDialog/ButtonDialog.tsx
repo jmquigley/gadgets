@@ -42,10 +42,10 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			dialogClasses: []
      });
 
-	private _dialogClasses: string = '';
+	private _dialogClasses: string[] = [];
 
 	constructor(props: ButtonDialogProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 		this.state = {
 			visible: false
 		};
@@ -68,15 +68,15 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	protected buildStyles() {
 		super.buildStyles(this.props);
 
-		this.classes += ` ${this.styles.buttonDialog}`;
-		this.classes += ' ui-button-dialog';
+		this.classes.push("ui-button-dialog");
+		this.classes.push(this.styles.buttonDialog);
 
-		this._dialogClasses = this.props.dialogClasses.join(' ');
-		this._dialogClasses += ` ${this.styles.buttonDialogPopup}`;
-		this._dialogClasses += ` ui-dialog-popup`;
+		this._dialogClasses = this.props.dialogClasses.slice();
+		this._dialogClasses.push(this.styles.buttonDialogPopup);
+		this._dialogClasses.push("ui-dialog-popup");
 
 		if (!this.state.visible) {
-			this._dialogClasses += ` ${this.styles.buttonDialogHide}`;
+			this._dialogClasses.push(this.styles.buttonDialogHide);
 		}
 	}
 
@@ -85,8 +85,9 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 		return (
 			<div
-				className={this.classes}
-				disabled={this.props.disabled}>
+				className={this.classes.join(" ")}
+				disabled={this.props.disabled}
+				>
 
 				<Button
 					style={this.inlineStyle}
@@ -97,10 +98,10 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 					size={this.props.size}
 					visible={this.props.visible}
-				/>
+					/>
 				<div
 					onClick={this.handleDialogClick}
-					className={this._dialogClasses}>
+					className={this._dialogClasses.join(" ")}>
 					{this.props.children}
 				</div>
 			</div>

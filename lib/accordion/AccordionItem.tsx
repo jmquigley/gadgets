@@ -72,7 +72,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
 	constructor(props: AccordionItemProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 		this.state = {
 			toggle: props.initialToggle
 		}
@@ -98,8 +98,8 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this.classes += ` ${this.styles.accordionItem}`;
-		this.classes += " ui-accordionitem";
+		this.classes.push("ui-accordionitem");
+		this.classes.push(this.styles.accordionItem);
 	}
 
 	render() {
@@ -120,7 +120,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 
 		return (
-			<div className={this.classes} style={this.inlineStyle}>
+			<div className={this.classes.join(" ")} style={this.inlineStyle}>
 				<Item
 					title={this.props.title}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}

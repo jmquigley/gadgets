@@ -36,7 +36,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 		this.state = {
 			toggleRipple: false
 		}
@@ -72,13 +72,13 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	}
 
 	private handleKeyDown = (e: KeyboardEvent) => {
-		if (e.key === 'Escape') {
+		if (e.key === "Escape") {
 			this.deactivateEdit();
 		}
 	}
 
 	private handleKeyPress = (e: KeyboardEvent) => {
-		if (e.key === 'Enter') {
+		if (e.key === "Enter") {
 			this.deactivateEdit();
 		}
 	}
@@ -89,8 +89,8 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this.classes += " ui-listitem";
-		this.classes += ` ${this.styles.listItem}`;
+		this.classes.push("ui-listitem");
+		this.classes.push(this.styles.listItem);
 	}
 
 	render() {
@@ -99,7 +99,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		return (
 			<Item
 				{...this.props}
-				className={this.classes}
+				className={this.classes.join(" ")}
 				noripple={this.state.toggleRipple || this.props.noripple}
 				onBlur={this.handleBlur}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
@@ -108,7 +108,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 				onKeyPress={this.handleKeyPress}
 				onMouseOut={this.handleMouseOut}
 				style={this.inlineStyle}
-			/>
+				/>
 		);
 	}
 }

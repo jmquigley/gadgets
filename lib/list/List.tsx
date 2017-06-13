@@ -36,7 +36,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 	public static defaultProps: ListProps = getDefaultListProps();
 
 	constructor(props: ListProps) {
-		super(props, require('./styles.css'));
+		super(props, require("./styles.css"));
 		this.state = {
 			selectedItem: null
 		}
@@ -45,17 +45,18 @@ export class List extends BaseComponent<ListProps, ListState> {
 	protected buildStyles() {
 		super.buildStyles(this.props);
 
-		this.classes += " ui-list";
-		this.classes += ` ${this.styles.list}`;
+		this.classes.push("ui-list");
+		this.classes.push(this.styles.list);
 
 		if (this.props.alternating) {
-			this.classes += ` ${this.styles.listAlternating}`;
+			this.classes.push(this.styles.listAlternating);
 		}
 	}
 
 	private selectHandler = (item: ListItem) => {
 		console.log(`Selected: ${item.props.id}`);
-		if (this.state.selectedItem != null && item.props.id === this.state.selectedItem.props.id) {
+		if (this.state.selectedItem != null
+			&& item.props.id === this.state.selectedItem.props.id) {
 			item = null;
 		}
 
@@ -69,7 +70,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 		let selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
 		let children = React.Children.map(this.props.children, child => {
-			let selected = child['props'].id === selectedKey;
+			let selected = child["props"].id === selectedKey;
 			return React.cloneElement(child as any, {
 				href: {
 					selectHandler: this.selectHandler
@@ -80,10 +81,11 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 		return (
 			<div
+				className={this.classes.join(" ")}
 				disabled={this.props.disabled}
-				className={this.classes}
+				id={this.props.id}
 				style={this.inlineStyle}
-				id={this.props.id}>
+				>
 				<ul>
 					{children}
 				</ul>

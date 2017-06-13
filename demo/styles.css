@@ -1,7 +1,7 @@
 h1 {
-	font-size: 1.5em;
+	font-size: 1.75em;
 	margin: 0;
-	padding: 20px 0 5px 0;
+	padding: 30px 0 8px 0;
 }
 
 h1:first-child {
@@ -85,8 +85,11 @@ section {
 }
 
 .box .boxButtons {
-	border: solid 1px lightgray;
 	height: 42px;
+}
+
+.box .boxButtons, .toastBox i {
+	border: solid 1px lightgray;
 }
 
 #simple-icons .box .ui-icon, .box .ui-button {
