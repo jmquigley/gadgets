@@ -40,6 +40,32 @@ section {
 	display: flex;
 }
 
+#buttonTable {
+	border: solid 1px #004358;
+	border-spacing: 5px 10px;
+}
+
+#buttonTable th {
+	font-size: 0.8em;
+	font-weight: normal;
+}
+
+#buttonTable thead th {
+}
+
+#buttonTable tbody th {
+	text-align: right;
+}
+
+#buttonTable th, #buttonTable td {
+	width: 60px;
+	height: 42px;
+}
+
+#buttonTable td {
+	border: solid 1px lightgray;
+}
+
 .box {
 	padding: 5px;
 	border-right: solid 1px #004358;

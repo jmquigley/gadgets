@@ -1,10 +1,5 @@
 @import '../shared/styles.css';
 
-$small: 16px;
-$medium: 32px;
-$large: 48px;
-$xlarge: 64px;
-
 :local {
 	.buttonCircle {
 		@extend baseButton;
@@ -19,8 +14,7 @@ $xlarge: 64px;
 	}
 
 	.buttonCircleIcon {
-		border: solid 2px !important;
-		border-radius: 30px;
+		border-radius: 42px;
 	}
 
 	.small {

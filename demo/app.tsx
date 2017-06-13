@@ -195,6 +195,104 @@ class App extends React.Component<AppProps, AppState> {
 
 				</Container>
 
+				<h1>Buttons & Icons</h1>
+				<table id="buttonTable">
+					<thead>
+						<tr>
+							<th></th>
+							<th>xx-small</th>
+							<th>x-small</th>
+							<th>small</th>
+							<th>normal<br/>medium</th>
+							<th>xx-large</th>
+							<th>x-large</th>
+							<th>xx-large</th>
+							<th>disabled</th>
+							<th>colored</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Icon</th>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+						</tr><tr>
+							<th>Icon Image</th>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+							<td><Icon /></td>
+						</tr><tr>
+							<th>Button</th>
+							<td><Button /></td>
+							<td><Button /></td>
+							<td><Button /></td>
+							<td><Button /></td>
+							<td><Button /></td>
+							<td><Button /></td>
+							<td><Button /></td>
+							<td><Button /></td>
+							<td><Button /></td>
+						</tr><tr>
+							<th>ButtonCircle</th>
+							<td><ButtonCircle /></td>
+							<td><ButtonCircle /></td>
+							<td><ButtonCircle /></td>
+							<td><ButtonCircle /></td>
+							<td><ButtonCircle /></td>
+							<td><ButtonCircle /></td>
+							<td><ButtonCircle /></td>
+							<td><ButtonCircle /></td>
+							<td><ButtonCircle /></td>
+						</tr><tr>
+							<th>ButtonDialog</th>
+							<td><ButtonDialog>dialog</ButtonDialog></td>
+							<td><ButtonDialog>dialog</ButtonDialog></td>
+							<td><ButtonDialog>dialog</ButtonDialog></td>
+							<td><ButtonDialog>dialog</ButtonDialog></td>
+							<td><ButtonDialog>dialog</ButtonDialog></td>
+							<td><ButtonDialog>dialog</ButtonDialog></td>
+							<td><ButtonDialog>dialog</ButtonDialog></td>
+							<td><ButtonDialog>dialog</ButtonDialog></td>
+							<td><ButtonDialog>dialog</ButtonDialog></td>
+						</tr><tr>
+							<th>ButtonToggle</th>
+							<td><ButtonToggle /></td>
+							<td><ButtonToggle /></td>
+							<td><ButtonToggle /></td>
+							<td><ButtonToggle /></td>
+							<td><ButtonToggle /></td>
+							<td><ButtonToggle /></td>
+							<td><ButtonToggle /></td>
+							<td><ButtonToggle /></td>
+							<td><ButtonToggle /></td>
+						</tr><tr>
+							<th>ButtonText</th>
+							<td><ButtonText /></td>
+							<td><ButtonText /></td>
+							<td><ButtonText /></td>
+							<td><ButtonText /></td>
+							<td><ButtonText /></td>
+							<td><ButtonText /></td>
+							<td><ButtonText /></td>
+							<td><ButtonText /></td>
+							<td><ButtonText /></td>
+						</tr>
+					</tbody>
+				</table>
+
 				<h1>Buttons</h1>
 				<Container id="buttonExample">
 					<div id="simple-buttons">
@@ -325,8 +423,8 @@ class App extends React.Component<AppProps, AppState> {
 						<p><Label text="Text Label #4 (no edit)" noedit /></p>
 						<p><Label
 							   text="Text Label #5 (inline style)"
-							   color="blue"
-							   backgroundColor="white" />
+							   color="white"
+							   backgroundColor="blue" />
 						</p>
 					</div>
 				</Container>
@@ -355,7 +453,7 @@ class App extends React.Component<AppProps, AppState> {
 							leftButton={<Button />}
 							hiddenLeftButton
 							rightButton={
-								<ButtonDialog iconName="times">Test Dialog Button</ButtonDialog>
+								<ButtonCircle iconName="times" color="red" />
 							}
 							hiddenRightButton
 						/>
@@ -365,6 +463,10 @@ class App extends React.Component<AppProps, AppState> {
 							hiddenLeftButton
 							leftButton={
 								<ButtonDialog iconName="wrench">Test Dialog Button</ButtonDialog>
+							}
+							hiddenRightButton
+							rightButton={
+								<Button iconName="times" color="red" />
 							}
 						/>
 						<ListItem id={getUUID()} title="List Item 5" />

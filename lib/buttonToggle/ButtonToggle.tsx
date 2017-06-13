@@ -27,7 +27,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		getDefaultButtonProps(), {
 			bgColorOff: "inherit",
 			bgColorOn: "inherit",
-			fgColorOff: "white",
+			fgColorOff: "gray",
 			fgColorOn: "black",
 			initialToggle: false,
 			iconNameOff: 'bomb',

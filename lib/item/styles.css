@@ -5,6 +5,7 @@
 	.item {
 		display: flex;
 		height: 36px;
+		cursor: default;
 	}
 
 	.itemTitle {
@@ -23,17 +24,26 @@
 	.rightButton {
 	}
 
-	.item:hover .itemButton, .item:hover .itemButton i {
-		font-size: 1.0em;
+	.item:hover .itemButton div {
 		width: 36px;
+		border-width: 2px !important;
 		opacity: 1.0;
 	}
 
-	.hiddenButton, .hiddenButton i {
-		transition: width 0.25s, font-size 0.25s, opacity 0.5s ease;
-		font-size: 0;
+	.hiddenButton div {
+		transition: width 0.33s, opacity 0.5s ease;
 		width: 0px;
+		border-width: 0 !important;
 		opacity: 0.0;
+	}
+
+	.item:hover .itemButton i {
+		font-size: 1.0em;
+	}
+
+	.hiddenButton i {
+		transition: font-size 0.25s ease;
+		font-size: 0;
 		flex: none;
 	}
 }
