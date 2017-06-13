@@ -61,10 +61,11 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		return (
 			<Button
 				className={this._classes}
-			style={this._style}
-			color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
-			backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
+				style={this._style}
+				color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
+				backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
 				disabled={this.props.disabled}
+				size={this.props.size}
 				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 				noripple

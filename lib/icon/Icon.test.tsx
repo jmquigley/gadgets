@@ -7,7 +7,8 @@ import test from 'ava';
 import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
-import {getDefaultIconProps, Icon, IconSize} from './index';
+import {getDefaultIconProps, Icon} from './index';
+import {Size} from '../shared';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
@@ -23,7 +24,7 @@ test('Test retrieval of Icon props object', t => {
 	t.is(props.imageFile, '');
 
 	t.true('size' in props);
-	t.is(props.size, IconSize.normal);
+	t.is(props.size, Size.normal);
 });
 
 test('Test creation of a Icon control with icon', t => {

@@ -23,7 +23,7 @@
 'use strict';
 
 import * as React from 'react';
-import {nil} from 'util.toolbox';
+import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {BaseComponent} from '../shared';
 
@@ -96,7 +96,8 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					backgroundColor={this.props.backgroundColor}
 					disabled={this.props.disabled}
 					iconName={this.props.iconName}
-					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nil}
+					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+					size={this.props.size}
 					visible={this.props.visible}
 				/>
 				<div

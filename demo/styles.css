@@ -42,7 +42,7 @@ section {
 
 #buttonTable {
 	border: solid 1px #004358;
-	border-spacing: 5px 10px;
+	border-spacing: 2px 5px;
 }
 
 #buttonTable th {
@@ -58,12 +58,20 @@ section {
 }
 
 #buttonTable th, #buttonTable td {
-	width: 60px;
-	height: 42px;
+	width: 80px;
+	height: 80px;
 }
 
 #buttonTable td {
 	border: solid 1px lightgray;
+}
+
+#buttonTable .tblIcons td i, #buttonTable .tblIcons td img {
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .box {

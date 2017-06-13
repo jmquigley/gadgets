@@ -24,28 +24,19 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {Button, ButtonProps, getDefaultButtonProps, IconSize} from '../button';
-import {BaseComponent} from '../shared';
+import {Button, ButtonProps, getDefaultButtonProps} from '../button';
+import {BaseComponent, Size} from '../shared';
 
 const styles = require('./styles.css');
 
-export enum CircleSize {
-	small,
-	medium,
-	normal,
-	large,
-	xlarge,
-}
-
 export interface ButtonCircleProps extends ButtonProps {
-	circleSize?: CircleSize;
 }
 
 export function getDefaultButtonCircleProps(): ButtonProps {
 	return cloneDeep(Object.assign(
 		getDefaultButtonProps(), {
 			borderColor: "black",
-			circleSize: CircleSize.normal,
+			size: Size.normal,
 			color: "black"
 	}));
 }
@@ -55,7 +46,6 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
     public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 
 	private _circleSize: string = styles.medium;
-	private _iconSize: IconSize = IconSize.normal;
 
     constructor(props: ButtonCircleProps) {
 		super(props);
@@ -70,27 +60,35 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 		this._classes += " ui-button-circle";
 		this._classes += ` ${styles.buttonCircle}`;
 
-		switch (this.props.circleSize) {
-			case CircleSize.small:
+		switch (this.props.size) {
+			case Size.xxsmall:
+				this._circleSize = ` ${styles.xxsmall}`;
+				break;
+
+			case Size.xsmall:
+				this._circleSize = ` ${styles.xsmall}`;
+				break;
+
+			case Size.small:
 				this._circleSize = ` ${styles.small}`;
-				this._iconSize = IconSize.small;
 				break;
 
-			case CircleSize.large:
+			case Size.large:
 				this._circleSize = ` ${styles.large}`;
-				this._iconSize = IconSize.large;
 				break;
 
-			case CircleSize.xlarge:
+			case Size.xlarge:
 				this._circleSize = ` ${styles.xlarge}`;
-				this._iconSize = IconSize.xlarge;
 				break;
 
-			case CircleSize.normal:
-			case CircleSize.medium:
+			case Size.xxlarge:
+				this._circleSize = ` ${styles.xxlarge}`;
+				break;
+
+			case Size.normal:
+			case Size.medium:
 			default:
 				this._circleSize = ` ${styles.medium}`;
-				this._iconSize = IconSize.medium;
 		}
 	}
 
@@ -103,12 +101,13 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 					<Button
 					className={styles.buttonCircleIcon}
 					style={this._style}
+					disabled={this.props.disabled}
 					color={this.props.color}
 					backgroundColor={this.props.backgroundColor}
 					borderColor={this.props.color}
 					iconName={this.props.iconName}
-					iconSize={this._iconSize}
 					onClick={this.props.onClick}
+					size={this.props.size}
 					/>
 				</div>
 			</div>

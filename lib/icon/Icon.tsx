@@ -1,16 +1,17 @@
 /**
- * Displays a graphical icon within the current container.  The control uses
- * [Font Awesome](http://fontawesome.io/) for the icons.  It can also
- * accept an image file.  It uses four sizings for the icons: small
- * medium/normal, large, and xlarge.  These are exposed through an
- * enumeration named `IconSize`.
+ * Displays a graphical icon within the current container.  The control
+ * uses [Font Awesome](http://fontawesome.io/) for the icons.  It can
+ * also accept an image file.  It uses seve sizings for the icons: xxsmall,
+ * xsmall, small, medium/normal, large, xlarge, and xxlarge.  These are
+ * exposed through an enumeration named `Size` defined in the global
+ * shared props..
  *
  * #### Examples:
  *
  * ```javascript
- * import {Icon, IconSize} from 'gadgets';
- * <Icon size={IconSize.small} iconName="cab" />
- * <Icon size={IconSize.normal} iconName="paper-plane-o" />
+ * import {Icon, Size} from 'gadgets';
+ * <Icon size={Size.small} iconName="cab" />
+ * <Icon size={Size.normal} iconName="paper-plane-o" />
  * <Icon imageFile="./image.png" />
  * <Icon iconName="cab" color="red" backgroundColor="gray" />
  * ```
@@ -30,9 +31,8 @@
  * used in this icon.  This option is mutually exclusive to imageFile
  * - `imageFile: string` - The path to an image file that will be used in
  * this icon.  This option is mutually excludive to iconName.
- * - `size: IconSize` - There are four icon sizes that can be used:
- * IconSize.small (16px), IconSize.medium (36px), IconSize.large (48px),
- * IconSize.xlarge (64px).
+ * - `size: Size` - There are seven icon sizes that can be used.  See the
+ * shared props documentation for the enumerations used for each size.
  *
  * @module Icon
  */
@@ -41,22 +41,14 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent, getDefaultBaseProps, BaseProps} from '../shared';
+import {BaseComponent, getDefaultBaseProps, BaseProps, Size} from '../shared';
 
 const styles = require('./styles.css');
-
-export enum IconSize {
-	small,
-	medium,
-	normal,
-	large,
-	xlarge,
-}
 
 export interface IconProps extends BaseProps {
 	iconName?: string;
 	imageFile?: string;
-	size?: IconSize
+	size?: Size
 }
 
 export function getDefaultIconProps(): IconProps {
@@ -66,7 +58,7 @@ export function getDefaultIconProps(): IconProps {
 			color: "inherit",
 			iconName: "bomb",
 			imageFile: '',
-			size: IconSize.normal
+			size: Size.normal
 	}));
 }
 
@@ -88,20 +80,33 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		this._classes += ` ${styles.icon}`;
 
 		switch (this.props.size) {
-			case IconSize.small:
+
+			case Size.xxsmall:
+				this._classes += ` ${styles.xxsmall}`;
+				break;
+
+			case Size.xsmall:
+				this._classes += ` ${styles.xsmall}`;
+				break;
+
+			case Size.small:
 				this._classes += ` ${styles.small}`;
 				break;
 
-			case IconSize.large:
+			case Size.large:
 				this._classes += ` ${styles.large}`;
 				break;
 
-			case IconSize.xlarge:
+			case Size.xlarge:
 				this._classes += ` ${styles.xlarge}`;
 				break;
 
-			case IconSize.normal:
-			case IconSize.medium:
+			case Size.xxlarge:
+				this._classes += ` ${styles.xxlarge}`;
+				break;
+
+			case Size.normal:
+			case Size.medium:
 			default:
 				this._classes += ` ${styles.medium}`;
 		}

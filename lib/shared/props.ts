@@ -26,6 +26,17 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 
+export enum Size {
+	xxsmall,
+	xsmall,
+	small,
+	normal,
+	medium,
+	large,
+	xlarge,
+	xxlarge
+}
+
 export interface BaseProps {
 	backgroundColor?: string;
 	borderColor?: string;
@@ -46,6 +57,7 @@ export interface BaseProps {
 	onKeyPress?: any;
 	onMouseOut?: any;
 	selected?: boolean;
+	size?: Size;
 	style?: any;
 	visible?: boolean;
 }
@@ -71,6 +83,7 @@ export function getDefaultBaseProps(): BaseProps {
 		onKeyDown: nilEvent,
 		onMouseOut: nilEvent,
 		selected: false,
+		size: Size.normal,
 		style: {},
 		visible: true
 	});

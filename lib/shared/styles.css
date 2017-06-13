@@ -1,9 +1,25 @@
 $baseZIndex: 99999;
 
-$small: 16px;
-$medium: 32px;
+$xxsmall: 16px;
+$xxsmall-fs: 0.5em;
+
+$xsmall: 24px;
+$xsmall-fs: 0.75em;
+
+$small: 32px;
+$small-fs: 0.9em;
+
+$medium: 40px;
+$medium-fs: 1.0em;
+
 $large: 48px;
+$large-fs: 1.25em;
+
 $xlarge: 64px;
+$xlarge-fs: 1.5em;
+
+$xxlarge: 80px;
+$xxlarge-fs: 2.0em;
 
 @define-extend baseButton {
 	background-color: inherit;
@@ -24,4 +40,54 @@ $xlarge: 64px;
 		display: none;
 		width: 0;
 	}
+
+	.xxsmall {
+		font-size: $xxsmall-fs;
+		width: $xxsmall;
+		height: $xxsmall;
+		line-height: $xxsmall;
+	}
+
+	.xsmall {
+		font-size: $xsmall-fs;
+		width: $xsmall;
+		height: $xsmall;
+		line-height: $xsmall;
+	}
+
+	.small {
+		font-size: $small-fs;
+		width: $small;
+		height: $small;
+		line-height: $small;
+	}
+
+	.medium {
+		font-size: $medium-fs;
+		width: $medium;
+		height: $medium;
+		line-height: $medium;
+	}
+
+	.large {
+		font-size: $large-fs;
+		width: $large;
+		height: $large;
+		line-height: $large;
+	}
+
+	.xlarge {
+		font-size: $xlarge-fs;
+		width: $xlarge;
+		height: $xlarge;
+		line-height: $xlarge;
+	}
+
+	.xxlarge {
+		font-size: $xxlarge-fs;
+		width: $xxlarge;
+		height: $xxlarge;
+		line-height: $xxlarge;
+	}
+
 }

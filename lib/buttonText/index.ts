@@ -1,4 +1,3 @@
-import {IconSize} from '../icon';
 import {
 	ButtonText,
 	ButtonTextProps,
@@ -8,6 +7,5 @@ import {
 export {
 	ButtonText,
 	ButtonTextProps,
-	getDefaultButtonTextProps,
-	IconSize
+	getDefaultButtonTextProps
 };

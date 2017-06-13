@@ -124,8 +124,9 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			  onClick={this.handleClick}>
 			  {leftButton}
 			  <Icon
-				iconName={this.props.iconName}
-				className={styles.icon}
+				  className={styles.icon}
+				  iconName={this.props.iconName}
+				  size={this.props.size}
 				/>
 			  {rightButton}
 			</div>

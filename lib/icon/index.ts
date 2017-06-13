@@ -1,8 +1,7 @@
-import {getDefaultIconProps, Icon, IconProps, IconSize} from './Icon';
+import {getDefaultIconProps, Icon, IconProps} from './Icon';
 
 export {
 	getDefaultIconProps,
 	Icon,
-	IconProps,
-	IconSize
+	IconProps
 };

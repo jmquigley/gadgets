@@ -1,8 +1,9 @@
 import {BaseComponent} from './base';
-import {BaseProps, getDefaultBaseProps} from './props';
+import {BaseProps, getDefaultBaseProps, Size} from './props';
 
 export {
 	BaseComponent,
 	BaseProps,
-	getDefaultBaseProps
+	getDefaultBaseProps,
+	Size
 };
