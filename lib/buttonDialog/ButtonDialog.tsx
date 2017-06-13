@@ -27,8 +27,6 @@ import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {BaseComponent} from '../shared';
 
-const styles = require('./styles.css');
-
 export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
 }
@@ -47,7 +45,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	private _dialogClasses: string = '';
 
 	constructor(props: ButtonDialogProps) {
-		super(props);
+		super(props, require('./styles.css'));
 		this.state = {
 			visible: false
 		};
@@ -70,15 +68,15 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	protected buildStyles() {
 		super.buildStyles(this.props);
 
-		this._classes += ` ${styles.buttonDialog}`;
-		this._classes += ' ui-button-dialog';
+		this.classes += ` ${this.styles.buttonDialog}`;
+		this.classes += ' ui-button-dialog';
 
 		this._dialogClasses = this.props.dialogClasses.join(' ');
-		this._dialogClasses += ` ${styles.buttonDialogPopup}`;
+		this._dialogClasses += ` ${this.styles.buttonDialogPopup}`;
 		this._dialogClasses += ` ui-dialog-popup`;
 
 		if (!this.state.visible) {
-			this._dialogClasses += ` ${styles.buttonDialogHide}`;
+			this._dialogClasses += ` ${this.styles.buttonDialogHide}`;
 		}
 	}
 
@@ -87,11 +85,11 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 		return (
 			<div
-				className={this._classes}
+				className={this.classes}
 				disabled={this.props.disabled}>
 
 				<Button
-					style={this._style}
+					style={this.inlineStyle}
 					color={this.props.color}
 					backgroundColor={this.props.backgroundColor}
 					disabled={this.props.disabled}

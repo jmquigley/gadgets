@@ -47,9 +47,6 @@ import {Button} from '../button';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent} from '../shared';
 
-
-const styles = require('./styles.css');
-
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
 	onNew?: any;
@@ -75,7 +72,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
 	constructor(props: AccordionItemProps) {
-		super(props);
+		super(props, require('./styles.css'));
 		this.state = {
 			toggle: props.initialToggle
 		}
@@ -101,8 +98,8 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this._classes += ` ${styles.accordionItem}`;
-		this._classes += " ui-accordionitem";
+		this.classes += ` ${this.styles.accordionItem}`;
+		this.classes += " ui-accordionitem";
 	}
 
 	render() {
@@ -111,7 +108,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		let content = null;
 		if ((this.props.children != null) && (this.state.toggle)) {
 			content = (
-				<div className={`ui-accordion-content ${styles.content}`}>
+				<div className={`ui-accordion-content ${this.styles.content}`}>
 					{this.props.children}
 				</div>
 			);
@@ -123,7 +120,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 
 		return (
-			<div className={this._classes} style={this._style}>
+			<div className={this.classes} style={this.inlineStyle}>
 				<Item
 					title={this.props.title}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}

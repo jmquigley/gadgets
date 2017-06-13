@@ -3,9 +3,8 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Label} from '../label';
-import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
-
-const styles = require('./styles.css');
+import {BaseComponent} from '../shared/base';
+import {BaseProps, getDefaultBaseProps} from '../shared';
 
 export interface TitleProps extends BaseProps {
 	stacked?: boolean;
@@ -19,27 +18,30 @@ export function getDefaultTitleProps(): TitleProps {
 	}));
 }
 
-export class Title extends BaseComponent<TitleProps, undefined> {
+export interface TitleState {
+}
+
+export class Title extends BaseComponent<TitleProps, TitleState> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
 
 	constructor(props: TitleProps) {
-		super(props);
+		super(props, require('./styles.css'));
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
 
-		this._classes += " ui-title-bar";
+		this.classes += " ui-title-bar";
 
 		if (this.props.stacked) {
-			this._classes += ` ${styles.titleBarStacked}`;
+			this.classes += ` ${this.styles.titleBarStacked}`;
 		} else {
-			this._classes += ` ${styles.titleBar}`;
+			this.classes += ` ${this.styles.titleBar}`;
 		}
 
 		if (!this.props.noripple && !this.props.disabled) {
-			this._classes += " ripple";
+			this.classes += " ripple";
 		}
 	}
 
@@ -53,15 +55,15 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 
 		return (
 			<div
-				className={this._classes}
-				style={this._style}
+				className={this.classes}
+				style={this.inlineStyle}
 				onClick={this.props.onClick} onDoubleClick={this.props.onDoubleClick}>
 				<Label
-				className={`ui-title ${this.props.stacked ? styles.titleStacked : styles.title}`}
+				className={`ui-title ${this.props.stacked ? this.styles.titleStacked : this.styles.title}`}
 				noedit={this.props.noedit}
 				text={title}
 				/>
-				<div className={`ui-widget ${this.props.stacked ? styles.widgetStacked : styles.widget}`}>
+				<div className={`ui-widget ${this.props.stacked ? this.styles.widgetStacked : this.styles.widget}`}>
 					{this.props.widget}
 				</div>
 			</div>

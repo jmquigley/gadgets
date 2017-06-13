@@ -6,8 +6,6 @@ import {nilEvent} from 'util.toolbox';
 import {BaseComponent} from '../shared/base';
 import {BaseProps, getDefaultBaseProps} from '../shared/props';
 
-const styles = require('./styles.css');
-
 export interface LabelProps extends BaseProps {
 	noedit?: boolean;
 	text?: string;
@@ -34,7 +32,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	public static defaultProps: LabelProps = getDefaultLabelProps();
 
 	constructor(props: LabelProps) {
-		super(props);
+		super(props, require('./styles.css'));
 		this.state = {
 			editable: false,
 			previousText: props.text,
@@ -99,8 +97,8 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			backgroundColor: (this.props.backgroundColor || 'white')
 		});
 
-		this._classes += ` ${styles.label}`;
-		this._classes += " ui-label";
+		this.classes += " ui-label";
+		this.classes += ` ${this.styles.label}`;
 	}
 
 	render() {
@@ -108,8 +106,8 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 		return (
 			<span
-				className={this._classes}
-				style={this._style}
+				className={this.classes}
+				style={this.inlineStyle}
 				contentEditable={this.state.editable}
 				disabled={this.props.disabled}
 				onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}

@@ -41,9 +41,12 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent, getDefaultBaseProps, BaseProps, Size} from '../shared';
-
-const styles = require('./styles.css');
+import {
+	BaseComponent,
+	BaseProps,
+	getDefaultBaseProps,
+	Size
+} from '../shared';
 
 export interface IconProps extends BaseProps {
 	iconName?: string;
@@ -67,7 +70,7 @@ export class Icon extends BaseComponent<IconProps, undefined> {
     public static defaultProps: IconProps = getDefaultIconProps();
 
     constructor(props: IconProps) {
-		super(props);
+		super(props, require('./styles.css'));
 	}
 
 	protected buildStyles() {
@@ -76,40 +79,9 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 			backgroundColor: (this.props.backgroundColor || 'white')
 		});
 
-		this._classes += ' ui-icon';
-		this._classes += ` ${styles.icon}`;
-
-		switch (this.props.size) {
-
-			case Size.xxsmall:
-				this._classes += ` ${styles.xxsmall}`;
-				break;
-
-			case Size.xsmall:
-				this._classes += ` ${styles.xsmall}`;
-				break;
-
-			case Size.small:
-				this._classes += ` ${styles.small}`;
-				break;
-
-			case Size.large:
-				this._classes += ` ${styles.large}`;
-				break;
-
-			case Size.xlarge:
-				this._classes += ` ${styles.xlarge}`;
-				break;
-
-			case Size.xxlarge:
-				this._classes += ` ${styles.xxlarge}`;
-				break;
-
-			case Size.normal:
-			case Size.medium:
-			default:
-				this._classes += ` ${styles.medium}`;
-		}
+		this.classes += ' ui-icon';
+		this.classes += ` ${this.styles.icon}`;
+		this.classes += ` ${super.getSizeStyle()}`;
 	}
 
 	render() {
@@ -117,11 +89,11 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 
 		if (this.props.imageFile !== '') {
 			return (
-				<img src={this.props.imageFile} className={this._classes} style={this._style} />
+				<img src={this.props.imageFile} className={this.classes} style={this.inlineStyle} />
 			);
 		} else {
 			return (
-				<i className={`fa fa-${this.props.iconName} ${this._classes}`} style={this._style} />
+				<i className={`fa fa-${this.props.iconName} ${this.classes}`} style={this.inlineStyle} />
 			);
 		}
 	}

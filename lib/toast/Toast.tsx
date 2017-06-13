@@ -79,8 +79,6 @@ import * as React from 'react';
 import {ButtonCircle} from '../buttonCircle';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
-const styles = require('./styles.css');
-
 export enum ToastLevel {
 	info,
 	warning,
@@ -125,7 +123,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
-		super(props);
+		super(props, require('./styles.css'));
 
 		this.state = {
 			visible: props.visible
@@ -173,7 +171,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	protected buildStyles() {
 
 		if (this.props.level === ToastLevel.custom) {
-			this._style = {
+			this.inlineStyle = {
 				color: this.props.color,
 				backgroundColor: this.props.backgroundColor,
 				borderColor: this.props.borderColor
@@ -182,31 +180,31 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 		super.buildStyles(this.props);
 
-		this._classes += " ui-toast";
-		this._classes += ` ${styles.toast}`;
+		this.classes += " ui-toast";
+		this.classes += ` ${this.styles.toast}`;
 
 		switch (this.props.level) {
 			case ToastLevel.info:
-				this._classes += ` ${styles.info}`;
+				this.classes += ` ${this.styles.info}`;
 				break;
 
 			case ToastLevel.warning:
-				this._classes += ` ${styles.warning}`;
+				this.classes += ` ${this.styles.warning}`;
 				break;
 
 			case ToastLevel.error:
-				this._classes += ` ${styles.error}`;
+				this.classes += ` ${this.styles.error}`;
 				break;
 		}
 
 		if (this.props.bottom) {
-			this._classes += ` ${styles.bottom}`;
+			this.classes += ` ${this.styles.bottom}`;
 		} else {
-			this._classes += ` ${styles.top}`;
+			this.classes += ` ${this.styles.top}`;
 		}
 
 		if (!this.state.visible) {
-			this._classes += ` ${styles.hide}`;
+			this.classes += ` ${this.styles.hide}`;
 		}
 	}
 
@@ -215,17 +213,18 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 		return (
 			<div
-				className={this._classes}
-				style={this._style}>
-				<div className={`ui-toast-content ${styles.content}`}>
+				className={this.classes}
+				style={this.inlineStyle}>
+				<div className={`ui-toast-content ${this.styles.content}`}>
 					{this.props.children}
 				</div>
 
 				<ButtonCircle
-					className={`${styles.button}`}
+					className={this.styles.button}
 					color="white"
 					iconName="times"
-					onClick={this.handleClose} />
+					onClick={this.handleClose}
+					/>
 			</div>
 		);
 	}

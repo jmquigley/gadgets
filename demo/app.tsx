@@ -137,11 +137,11 @@ class App extends React.Component<AppProps, AppState> {
 							<p>top right</p>
 							<Badge counter={this.state.counter1}>
 								<div className="boxButtons">
-								<Button onClick={() => {
-									this.setState({
-										counter1: this.state.counter1 + 1
-									});
-								}}/>
+									<Button onClick={() => {
+											this.setState({
+												counter1: this.state.counter1 + 1
+											});
+									}}/>
 								</div>
 							</Badge>
 						</div>
@@ -150,11 +150,11 @@ class App extends React.Component<AppProps, AppState> {
 							<p>top left</p>
 							<Badge counter={this.state.counter2} position={BadgePosition.topLeft}>
 								<div className="boxButtons">
-								<Button onClick={() => {
-									this.setState({
-										counter2: this.state.counter2 + 1
-									});
-								}}/>
+									<Button onClick={() => {
+											this.setState({
+												counter2: this.state.counter2 + 1
+											});
+									}}/>
 								</div>
 							</Badge>
 						</div>
@@ -166,11 +166,11 @@ class App extends React.Component<AppProps, AppState> {
 								position={BadgePosition.bottomRight}
 								color="green">
 								<div className="boxButtons">
-								<Button onClick={() => {
-									this.setState({
-										counter3: this.state.counter3 + 1
-									});
-								}}/>
+									<Button onClick={() => {
+											this.setState({
+												counter3: this.state.counter3 + 1
+											});
+									}}/>
 								</div>
 							</Badge>
 						</div>
@@ -182,11 +182,11 @@ class App extends React.Component<AppProps, AppState> {
 								position={BadgePosition.bottomLeft}
 								color="magenta">
 								<div className="boxButtons">
-								<Button onClick={() => {
-									this.setState({
-										counter4: this.state.counter4 + 1
-									});
-								}}/>
+									<Button onClick={() => {
+											this.setState({
+												counter4: this.state.counter4 + 1
+											});
+									}}/>
 								</div>
 							</Badge>
 						</div>
@@ -270,55 +270,55 @@ class App extends React.Component<AppProps, AppState> {
 						</tr><tr>
 							<th>ButtonToggle</th>
 							<td><ButtonToggle
-									iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-									size={Size.xxsmall}
-									/>
+								iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
+								size={Size.xxsmall}
+								/>
 							</td>
 							<td><ButtonToggle
-									iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-									size={Size.xsmall}
-									/>
+								iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
+								size={Size.xsmall}
+								/>
 							</td>
 							<td><ButtonToggle
-									iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-									size={Size.small}
-									/>
+								iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
+								size={Size.small}
+								/>
 							</td>
 							<td><ButtonToggle
-									iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-									size={Size.normal}
-									/>
+								iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
+								size={Size.normal}
+								/>
 							</td>
 							<td><ButtonToggle
-									iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-									size={Size.large}
-									/>
+								iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
+								size={Size.large}
+								/>
 							</td>
 							<td><ButtonToggle
-									iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-									size={Size.xlarge}
-									/>
+								iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
+								size={Size.xlarge}
+								/>
 							</td>
 							<td><ButtonToggle
-									iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-									size={Size.xxlarge}
-									/>
+								iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
+								size={Size.xxlarge}
+								/>
 							</td>
 							<td><ButtonToggle
-									iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-									size={Size.normal}
-									disabled={true}
-									/>
+								iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
+								size={Size.normal}
+								disabled={true}
+								/>
 							</td>
 							<td><ButtonToggle
-									iconNameOn="star" iconNameOff="star-o"
-									fgColorOn="red" fgColorOff="black"
-									bgColorOn="black" bgColorOff="red"
-									size={Size.normal}
-									/>
+								iconNameOn="star" iconNameOff="star-o"
+								fgColorOn="red" fgColorOff="black"
+								bgColorOn="black" bgColorOff="red"
+								size={Size.normal}
+								/>
 							</td>
 						</tr><tr>
-							<th>ButtonText</th>
+							<th>ButtonText<br/>(Right)</th>
 							<td><ButtonText text="Text" iconName="paper-plane" size={Size.xxsmall}/></td>
 							<td><ButtonText text="Text" iconName="paper-plane" size={Size.xsmall}/></td>
 							<td><ButtonText text="Text" iconName="paper-plane" size={Size.small}/></td>
@@ -328,6 +328,17 @@ class App extends React.Component<AppProps, AppState> {
 							<td><ButtonText text="Text" iconName="paper-plane" size={Size.xxlarge}/></td>
 							<td><ButtonText text="Text" iconName="paper-plane" size={Size.normal} disabled={true}/></td>
 							<td><ButtonText text="Text" iconName="paper-plane" size={Size.normal} color="white" backgroundColor="blue"/></td>
+						</tr><tr>
+							<th>ButtonText<br/>(Left)</th>
+							<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.xxsmall}/></td>
+							<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.xsmall}/></td>
+							<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.small}/></td>
+							<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.normal}/></td>
+							<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.large}/></td>
+							<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.xlarge}/></td>
+							<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.xxlarge}/></td>
+							<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.normal} disabled={true}/></td>
+							<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.normal} color="white" backgroundColor="red"/></td>
 						</tr>
 					</tbody>
 				</table>
@@ -352,74 +363,74 @@ class App extends React.Component<AppProps, AppState> {
 
 					<List alternating>
 						<ListHeader
-							leftButton={<ButtonDialog iconName="bars" />}
-							noedit
-							rightButton={<Button iconName="plus" />}
-							title="Demo List Header"
+						leftButton={<ButtonDialog iconName="bars" />}
+						noedit
+						rightButton={<Button iconName="plus" />}
+						title="Demo List Header"
 						/>
 						<ListItem
-							id={getUUID()}
-							title="List Item 1" widget="12"
-							leftButton={<Button iconName="podcast"/>}
-							rightButton={<Button iconName="paper-plane-o"/>}
+						id={getUUID()}
+						title="List Item 1" widget="12"
+						leftButton={<Button iconName="podcast"/>}
+						rightButton={<Button iconName="paper-plane-o"/>}
 						/>
 						<ListItem id={getUUID()} title="List Item 2" widget="13" rightButton={<Button />}/>
 						<ListItem id={getUUID()} title="List Item 3" widget="14" />
 						<ListItem
-							id={getUUID()}
-							title="List Item 4a (hide/show)" widget="15"
-							leftButton={<Button />}
-							hiddenLeftButton
-							rightButton={
-								<ButtonCircle iconName="times" color="red" />
-							}
-							hiddenRightButton
+						id={getUUID()}
+						title="List Item 4a (hide/show)" widget="15"
+						leftButton={<Button />}
+						hiddenLeftButton
+						rightButton={
+							<ButtonCircle iconName="times" color="red" />
+						}
+						hiddenRightButton
 						/>
 						<ListItem
-							id={getUUID()}
-							title="List Item 4b (hide/show)" widget="15"
-							hiddenLeftButton
-							leftButton={
-								<ButtonDialog iconName="wrench">Test Dialog Button</ButtonDialog>
-							}
-							hiddenRightButton
-							rightButton={
-								<Button iconName="times" color="red" />
-							}
+						id={getUUID()}
+						title="List Item 4b (hide/show)" widget="15"
+						hiddenLeftButton
+						leftButton={
+							<ButtonDialog iconName="wrench">Test Dialog Button</ButtonDialog>
+						}
+						hiddenRightButton
+						rightButton={
+							<Button iconName="times" color="red" />
+						}
 						/>
 						<ListItem id={getUUID()} title="List Item 5" />
 						<ListItem
-							id={getUUID()}
-							title="List Item 6 (Toggle)" widget="15"
-							rightButton={
-								<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358" />
-							}
+						id={getUUID()}
+						title="List Item 6 (Toggle)" widget="15"
+						rightButton={
+							<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358" />
+						}
 						/>
 						<ListItem id={getUUID()} title="List Item 7 (disabled)" disabled />
 						<ListItem
-							id={getUUID()} title="List Item 8 (disabled w/ buttons)"
-							disabled
-							rightButton={
-								<Button />
-							}
+						id={getUUID()} title="List Item 8 (disabled w/ buttons)"
+						disabled
+						rightButton={
+							<Button />
+						}
 						/>
 						<ListItem
-							id={getUUID()}
-							title="List Item 9 (stacked)"
-							widget="stacked bottom widget"
-							stacked
-							rightButton={<Button />}
+						id={getUUID()}
+						title="List Item 9 (stacked)"
+						widget="stacked bottom widget"
+						stacked
+						rightButton={<Button />}
 						/>
 						<ListItem
-							id={getUUID()}
-							noripple
-							title="List Item 10 (noripple edit)"
+						id={getUUID()}
+						noripple
+						title="List Item 10 (noripple edit)"
 						/>
 						<ListItem
-							id={getUUID()}
-							noripple
-							noedit
-							title="List Item 11 (noedit)"
+						id={getUUID()}
+						noripple
+						noedit
+						title="List Item 11 (noedit)"
 						/>
 					</List>
 				</Container>
@@ -436,7 +447,7 @@ class App extends React.Component<AppProps, AppState> {
 				<Container id="toastExample">
 					<div className="toastInfo">
 						<p>
-						{randomText}
+							{randomText}
 						</p>
 
 						<div className="toastBox">
@@ -455,7 +466,7 @@ class App extends React.Component<AppProps, AppState> {
 					<h3>Warning message with decay</h3>
 					<div className="toastInfo">
 						<p>
-						{randomText}
+							{randomText}
 						</p>
 
 						<div className="toastBox">
@@ -474,7 +485,7 @@ class App extends React.Component<AppProps, AppState> {
 					<h3>Error message with decay</h3>
 					<div className="toastInfo">
 						<p>
-						{randomText}
+							{randomText}
 						</p>
 
 						<div className="toastBox">
@@ -493,7 +504,7 @@ class App extends React.Component<AppProps, AppState> {
 					<h3>Info message with persistence</h3>
 					<div className="toastInfo">
 						<p>
-						{randomText}
+							{randomText}
 						</p>
 
 						<div className="toastBox">
@@ -513,7 +524,7 @@ class App extends React.Component<AppProps, AppState> {
 					<h3>Error message with persistence on the bottom</h3>
 					<div className="toastInfo">
 						<p>
-						{randomText}
+							{randomText}
 						</p>
 
 						<div className="toastBox">
@@ -534,7 +545,7 @@ class App extends React.Component<AppProps, AppState> {
 					<h3>Custom message with persistence</h3>
 					<div className="toastInfo">
 						<p>
-						{randomText}
+							{randomText}
 						</p>
 
 						<div className="toastBox">

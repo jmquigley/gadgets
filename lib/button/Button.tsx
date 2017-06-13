@@ -34,8 +34,6 @@ import * as React from 'react';
 import {Icon} from '../icon';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Size} from '../shared';
 
-const styles = require('./styles.css');
-
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
 }
@@ -52,7 +50,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
     public static defaultProps: ButtonProps = getDefaultButtonProps();
 
     constructor(props: ButtonProps) {
-		super(props);
+		super(props, require('./styles.css'));
 	}
 
 	private handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -65,24 +63,24 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	protected buildStyles() {
 
 		if (this.props.color !== 'inherit') {
-			this._style['color'] = this.props.color;
+			this.inlineStyle['color'] = this.props.color;
 		}
 
 		if (this.props.backgroundColor !== 'inherit') {
-			this._style['backgroundColor'] = this.props.backgroundColor;
+			this.inlineStyle['backgroundColor'] = this.props.backgroundColor;
 		}
 
 		if (this.props.borderColor !== 'inherit') {
-			this._style['borderColor'] = this.props.borderColor;
+			this.inlineStyle['borderColor'] = this.props.borderColor;
 		}
 
 		super.buildStyles(this.props);
 
-		this._classes += ' ui-button';
-		this._classes += ` ${styles.button}`;
+		this.classes += ' ui-button';
+		this.classes += ` ${this.styles.button}`;
 
 		if (!this.props.noripple && !this.props.disabled) {
-			this._classes += " ripple";
+			this.classes += " ripple";
 		}
 	}
 
@@ -91,12 +89,12 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 		return (
 			<div
-				className={this._classes}
-				style={{...this._style}}
+				className={this.classes}
+				style={{...this.inlineStyle}}
 				disabled={this.props.disabled}
 				onClick={this.handleClick}>
 				<Icon
-					className={styles.icon}
+					className={this.styles.icon}
 					iconName={this.props.iconName}
 					size={this.props.size}
 				/>

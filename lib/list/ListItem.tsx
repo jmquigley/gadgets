@@ -11,8 +11,6 @@ import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent} from '../shared';
 
-const styles = require('./styles.css');
-
 export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
 }
@@ -38,7 +36,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
-		super(props);
+		super(props, require('./styles.css'));
 		this.state = {
 			toggleRipple: false
 		}
@@ -91,8 +89,8 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this._classes += " ui-listitem";
-		this._classes += ` ${styles.listItem}`;
+		this.classes += " ui-listitem";
+		this.classes += ` ${this.styles.listItem}`;
 	}
 
 	render() {
@@ -101,7 +99,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		return (
 			<Item
 				{...this.props}
-				className={this._classes}
+				className={this.classes}
 				noripple={this.state.toggleRipple || this.props.noripple}
 				onBlur={this.handleBlur}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
@@ -109,7 +107,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 				onKeyDown={this.handleKeyDown}
 				onKeyPress={this.handleKeyPress}
 				onMouseOut={this.handleMouseOut}
-				style={this._style}
+				style={this.inlineStyle}
 			/>
 		);
 	}

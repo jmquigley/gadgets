@@ -11,8 +11,6 @@ import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 import {ListItem} from './index';
 
-const styles = require('./styles.css');
-
 export interface ListProps extends BaseProps {
 	alternating?: boolean;
 	onAdd?: any;
@@ -38,7 +36,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 	public static defaultProps: ListProps = getDefaultListProps();
 
 	constructor(props: ListProps) {
-		super(props);
+		super(props, require('./styles.css'));
 		this.state = {
 			selectedItem: null
 		}
@@ -47,11 +45,11 @@ export class List extends BaseComponent<ListProps, ListState> {
 	protected buildStyles() {
 		super.buildStyles(this.props);
 
-		this._classes += " ui-list";
-		this._classes += ` ${styles.list}`;
+		this.classes += " ui-list";
+		this.classes += ` ${this.styles.list}`;
 
 		if (this.props.alternating) {
-			this._classes += ` ${styles.listAlternating}`;
+			this.classes += ` ${this.styles.listAlternating}`;
 		}
 	}
 
@@ -83,8 +81,8 @@ export class List extends BaseComponent<ListProps, ListState> {
 		return (
 			<div
 				disabled={this.props.disabled}
-				className={this._classes}
-				style={this._style}
+				className={this.classes}
+				style={this.inlineStyle}
 				id={this.props.id}>
 				<ul>
 					{children}

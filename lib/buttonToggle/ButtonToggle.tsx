@@ -5,8 +5,6 @@ import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {BaseComponent} from '../shared';
 
-const styles = require('./styles.css');
-
 export interface ButtonToggleProps extends ButtonProps {
 	bgColorOff?: string;
 	bgColorOn?: string;
@@ -35,7 +33,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		});
 
     constructor(props: ButtonToggleProps) {
-		super(props);
+		super(props, require('./styles.css'));
 		this.state = {
 			toggle: props.initialToggle
 		};
@@ -51,8 +49,8 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this._classes += " ui-buttontoggle";
-		this._classes += ` ${styles.buttonToggle}`;
+		this.classes += " ui-buttontoggle";
+		this.classes += ` ${this.styles.buttonToggle}`;
 	}
 
 	render() {
@@ -60,8 +58,8 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 		return (
 			<Button
-				className={this._classes}
-				style={this._style}
+				className={this.classes}
+				style={this.inlineStyle}
 				color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
 				backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
 				disabled={this.props.disabled}

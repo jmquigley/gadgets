@@ -27,8 +27,6 @@ import * as React from 'react';
 import {BaseComponent, BaseProps} from '../shared';
 import {getDefaultBaseProps} from '../shared/props';
 
-const styles = require('./styles.css');
-
 export enum BadgePosition {
 	topLeft,
 	top,
@@ -63,7 +61,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	private _positionStyle: string = '';
 
 	constructor(props: BadgeProps) {
-		super(props);
+		super(props, require('./styles.css'));
 	}
 
 	protected buildStyles() {
@@ -73,19 +71,19 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 			border: `solid 3px ${this.props.color}`
 		});
 
-		this._classes += " ui-badge";
-		this._classes += ` ${styles.badgeContainer}`;
+		this.classes += " ui-badge";
+		this.classes += ` ${this.styles.badgeContainer}`;
 
 		switch (this.props.position) {
-			case BadgePosition.topLeft: this._positionStyle = styles.topLeft; break;
-			case BadgePosition.top: this._positionStyle = styles.top; break;
-			case BadgePosition.topRight: this._positionStyle = styles.topRight; break;
-			case BadgePosition.middleLeft: this._positionStyle = styles.middleLeft; break;
-			case BadgePosition.middle: this._positionStyle = styles.middle; break;
-			case BadgePosition.middleRight: this._positionStyle = styles.middleRight; break;
-			case BadgePosition.bottomLeft: this._positionStyle = styles.bottomLeft; break;
-			case BadgePosition.bottom: this._positionStyle = styles.bottom; break;
-			case BadgePosition.bottomRight: this._positionStyle = styles.bottomRight; break;
+			case BadgePosition.topLeft: this._positionStyle = this.styles.topLeft; break;
+			case BadgePosition.top: this._positionStyle = this.styles.top; break;
+			case BadgePosition.topRight: this._positionStyle = this.styles.topRight; break;
+			case BadgePosition.middleLeft: this._positionStyle = this.styles.middleLeft; break;
+			case BadgePosition.middle: this._positionStyle = this.styles.middle; break;
+			case BadgePosition.middleRight: this._positionStyle = this.styles.middleRight; break;
+			case BadgePosition.bottomLeft: this._positionStyle = this.styles.bottomLeft; break;
+			case BadgePosition.bottom: this._positionStyle = this.styles.bottom; break;
+			case BadgePosition.bottomRight: this._positionStyle = this.styles.bottomRight; break;
 		}
 	}
 
@@ -96,15 +94,15 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		if (this.props.counter !== 0) {
 			badge = (
 				<div
-					className={`${styles.badge} ${this._positionStyle}`}
-					style={this._style}>
+					className={`${this.styles.badge} ${this._positionStyle}`}
+					style={this.inlineStyle}>
 					{this.props.counter}
 				</div>
 			);
 		}
 
 		return (
-			<div className={this._classes}>
+			<div className={this.classes}>
 				{this.props.children}
 				{badge}
 			</div>

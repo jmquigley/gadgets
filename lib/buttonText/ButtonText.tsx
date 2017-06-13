@@ -41,8 +41,6 @@ import * as React from 'react';
 import {Icon, IconProps, getDefaultIconProps} from '../icon';
 import {BaseComponent} from '../shared';
 
-const styles = require('./styles.css');
-
 export interface ButtonTextProps extends IconProps {
 	justify?: number;
 	text?: string;
@@ -64,7 +62,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	public static RIGHT: number = 1;
 
     constructor(props: ButtonTextProps) {
-		super(props);
+		super(props, require('./styles.css'));
 	}
 
 	private handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -76,34 +74,39 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 	protected buildStyles() {
 		if (this.props.color !== 'inherit') {
-			this._style['color'] = this.props.color;
+			this.inlineStyle['color'] = this.props.color;
 		}
 
 		if (this.props.backgroundColor !== 'inherit') {
-			this._style['backgroundColor'] = this.props.backgroundColor;
+			this.inlineStyle['backgroundColor'] = this.props.backgroundColor;
 		}
 
 		if (this.props.borderColor !== 'inherit') {
-			this._style['borderColor'] = this.props.borderColor;
+			this.inlineStyle['borderColor'] = this.props.borderColor;
 		}
 
 		super.buildStyles(this.props);
 
-		this._classes += ' ui-button';
-		this._classes += ' ui-buttontext';
-		this._classes += ` ${styles.buttonText}`;
+		this.classes += ' ui-button';
+		this.classes += ' ui-buttontext';
+		this.classes += ` ${this.styles.buttonText}`;
 
 		if (!this.props.noripple && !this.props.disabled) {
-			this._classes += " ripple";
+			this.classes += " ripple";
 		}
 	}
 
 	render() {
 		this.buildStyles();
 
-		let content = (
-			<div className={styles.content}>
-			  <span>{this.props.text}</span>
+		let content = (justify: number) => (
+			<div
+				className={
+					this.styles.content + ' ' +
+					super.getSizeStyle() + ' ' +
+					((justify === ButtonText.LEFT) ? this.styles.left : this.styles.right)
+				}>
+				{this.props.text}
 			</div>
 		);
 
@@ -111,20 +114,20 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		let rightButton = null;
 
 		if (this.props.justify === ButtonText.LEFT) {
-			leftButton = content;
+			leftButton = content(ButtonText.LEFT);
 		} else {
-			rightButton = content;
+			rightButton = content(ButtonText.RIGHT);
 		}
 
 		return (
 			<div
-			  className={this._classes}
-			  style={this._style}
+			  className={this.classes}
+			  style={this.inlineStyle}
 			  disabled={this.props.disabled}
 			  onClick={this.handleClick}>
 			  {leftButton}
 			  <Icon
-				  className={styles.icon}
+				  className={this.styles.icon}
 				  iconName={this.props.iconName}
 				  size={this.props.size}
 				/>

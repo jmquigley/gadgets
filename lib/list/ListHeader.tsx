@@ -11,8 +11,6 @@ import * as React from 'react';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent} from '../shared';
 
-const styles = require('./styles.css');
-
 export interface ListHeaderProps extends ItemProps {
 }
 
@@ -30,13 +28,13 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
 
 	constructor(props: ListHeaderProps) {
-		super(props);
+		super(props, require('./styles.css'));
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this._classes += " ui-list-header";
-		this._classes += ` ${styles.listHeader}`;
+		this.classes += " ui-list-header";
+		this.classes += ` ${this.styles.listHeader}`;
 	}
 
 	render() {
@@ -45,8 +43,8 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 		return (
 			<Item
 				{...this.props}
-				className={this._classes}
-				style={this._style}
+				className={this.classes}
+				style={this.inlineStyle}
 			/>
 		);
 	}
