@@ -40,6 +40,13 @@ This library was created for use in the [Electron UI](
 https://electron.atom.io/) and has only be tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets used in an internal project.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the module.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`).  The library makes use of [css modules](https://github.com/css-modules/css-modules).
 
 
+### Requirements
+
+- [Electron](https://electron.atom.io/) v1.6.10+
+- [Node](https://nodejs.org/en/) v7.4+
+- [React](https://facebook.github.io/react/) v15.6.0+
+
+
 ## Usage
 
 The CSS styles must be included within code using CSS modules or via webpack configuration:
@@ -78,6 +85,8 @@ module.exports = {
 
 This will give a webpack module an **entry** point to copy in the gadgets CSS file into this distribution.  Without this the built in styles for each control will be missing.
 
+Note that React is NOT packaged with the app.  The app that uses this library must supply the React library.  The demo application shows an example of this.
+
 
 ## Widgets
 The module contains the following widgets (click on each header to see attribute/event details for each):
@@ -91,8 +100,13 @@ A counter widget that annotates (overlays) another widget.
 ### [BaseProps](docs/lib/shared/props.md)
 This module represents the properties that are shared by every class in the project.  This includes properties such as color, id, disabled, etc.
 
+### Breadcrumbs
+
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.
+
+### [ButtonCircle](docs/lib/buttonCircle/ButtonCircle.md)
+A circular button control.  Works like a typical button... except it's a circle.
 
 ### [ButtonDialog](docs/lib/buttonDialog/ButtonDialog.md)
 A button control that when pushed displays a local dialog box.  The contents of the control make up the dialog window.
@@ -126,6 +140,8 @@ Displays a graphical icon within the current container.
 ### List/ListItem
 
 ### Menu
+
+### Pager
 
 ### ProgressBar
 
