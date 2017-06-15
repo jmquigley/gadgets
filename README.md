@@ -133,7 +133,7 @@ Displays a graphical icon within the current container.
 
 ### Rating
 
-### [Select](docs/lib/icon/Select.md)
+### [Select](docs/lib/select/Select.md)
 A dropdown combo box control.  This uses the [react-select](https://www.npmjs.com/package/react-select) library from NPM maintained by Jed Watson. See the [README](https://github.com/JedWatson/react-select/blob/master/README.md) of this project for events and properties used.
 
 ### Slider
