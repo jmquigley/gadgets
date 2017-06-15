@@ -16,7 +16,6 @@ const {
 	Accordion,
 	AccordionItem,
 	Badge,
-	BadgePosition,
 	Button,
 	ButtonCircle,
 	ButtonDialog,
@@ -28,6 +27,7 @@ const {
 	List,
 	ListHeader,
 	ListItem,
+	Location,
 	Select,
 	Size,
 	Toast,
@@ -159,7 +159,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<div className="box">
 					<p>top left</p>
-					<Badge counter={this.state.counter2} position={BadgePosition.topLeft}>
+					<Badge
+						counter={this.state.counter2}
+						location={Location.topLeft}>
 						<div className="boxButtons">
 							<Button onClick={() => {
 									this.setState({
@@ -174,7 +176,7 @@ class App extends React.Component<AppProps, AppState> {
 					<p>bottom right</p>
 					<Badge
 						counter={this.state.counter3}
-						position={BadgePosition.bottomRight}
+						location={Location.bottomRight}
 						color="green">
 						<div className="boxButtons">
 							<Button onClick={() => {
@@ -190,7 +192,7 @@ class App extends React.Component<AppProps, AppState> {
 					<p>bottom left</p>
 					<Badge
 						counter={this.state.counter4}
-						position={BadgePosition.bottomLeft}
+						location={Location.bottomLeft}
 						color="magenta">
 						<div className="boxButtons">
 							<Button onClick={() => {

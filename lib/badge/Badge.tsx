@@ -1,11 +1,15 @@
 /**
- * {description}
+ * The Badge widget is used to annotate/overlay another widget with a
+ * counter.  This widget surrounds the component it will annotate.
  *
  * #### Examples:
  *
  * ```javascript
- * import {Button} from 'gadgets';
- * <Button iconName="cab" onClick={someFunction} />
+ * import {Badge} from 'gadgets';
+ * <Badge
+ *     counter={this.state.count}
+ *     location={Location.topRight} >
+ *     <div>...</div>
  * ```
  *
  * #### Events
@@ -25,23 +29,10 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {BaseComponent, BaseProps} from '../shared';
-import {getDefaultBaseProps} from '../shared/props';
-
-export enum BadgePosition {
-	topLeft,
-	top,
-	topRight,
-	middleLeft,
-	middle,
-	middleRight,
-	bottomLeft,
-	bottom,
-	bottomRight
-}
+import {getDefaultBaseProps, Location} from '../shared/props';
 
 export interface BadgeProps extends BaseProps {
 	counter?: number;
-	position?: number;
 }
 
 export function getDefaultBadgeProps(): BadgeProps {
@@ -50,7 +41,7 @@ export function getDefaultBadgeProps(): BadgeProps {
 			backgroundColor: "white",
 			color: "red",
 			counter: 0,
-			position: BadgePosition.topRight
+			location: Location.topRight
 	}));
 }
 
@@ -73,18 +64,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 		this.classes.push("ui-badge");
 		this.classes.push(this.styles.badgeContainer);
-
-		switch (this.props.position) {
-			case BadgePosition.topLeft: this._positionStyle = this.styles.topLeft; break;
-			case BadgePosition.top: this._positionStyle = this.styles.top; break;
-			case BadgePosition.topRight: this._positionStyle = this.styles.topRight; break;
-			case BadgePosition.middleLeft: this._positionStyle = this.styles.middleLeft; break;
-			case BadgePosition.middle: this._positionStyle = this.styles.middle; break;
-			case BadgePosition.middleRight: this._positionStyle = this.styles.middleRight; break;
-			case BadgePosition.bottomLeft: this._positionStyle = this.styles.bottomLeft; break;
-			case BadgePosition.bottom: this._positionStyle = this.styles.bottom; break;
-			case BadgePosition.bottomRight: this._positionStyle = this.styles.bottomRight; break;
-		}
+		this._positionStyle = super.getLocationStyle();
 	}
 
 	render() {

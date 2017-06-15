@@ -90,4 +90,53 @@ $xxlarge-fs: 2.0em;
 		line-height: $xxlarge;
 	}
 
+	.topLeft {
+		top: 0;
+		left: 0;
+	}
+
+	.top {
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.topRight {
+		top: 0;
+		right: 0;
+	}
+
+	.middleLeft {
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+
+	.middle {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.middleRight {
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	.bottomLeft {
+		bottom: 0;
+		left: 0;
+	}
+
+	.bottom {
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.bottomRight {
+		bottom: 0;
+		right: 0;
+	}
 }

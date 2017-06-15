@@ -86,7 +86,7 @@ The module contains the following widgets (click on each header to see attribute
 An accordion control contains N number of AccordionItems.  These items will display/hide the contents of that item when the header of that item is clicked.  The content of an AccordionItem can be any set of HTML tags.  The demo application shows a List embedded within the accordion.
 
 ### [Badge](docs/lib/accordion/Badge.md)
-- A widget that annotates another widget (like a counter)
+A counter widget that annotates (overlays) another widget.
 
 ### [BaseProps](docs/lib/shared/props.md)
 This module represents the properties that are shared by every class in the project.  This includes properties such as color, id, disabled, etc.

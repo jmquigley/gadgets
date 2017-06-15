@@ -1,16 +1,23 @@
-<a name="BaseComponent"></a>
+<a name="module_BaseComponent"></a>
 
 ## BaseComponent
-A base class between React and all components in the module.
+The base class for all components in the library.  This enables each module
+to guarantee certain variable will be present through inheritance.  These
+variables include:
 
-**Kind**: global class  
-<a name="BaseComponent+getSizeStyle"></a>
+- classes - an array of CSS classnames that will be used on the root element
+of the control
+- inlineStyles - an object that holds user defined style overrides
+- styles - an object that represent the styles in the CSS module associated
+to this control.
 
-### baseComponent.getSizeStyle() ⇒ <code>string</code>
-Takes a sizing parameter and a styles object and searches for the
-corresponding style class CSS.  If it is found, then it returns the local
-style for that size.
+#### Examples:
 
-**Kind**: instance method of [<code>BaseComponent</code>](#BaseComponent)  
-**Returns**: <code>string</code> - the name of the local style for that size.  If
-it is not found, then an empty string is returned.  
+```javascript
+import {BaseComponent} from '../shared';
+...
+export class XYZ extends BaseComponent<Props, State> {
+   ...
+}
+```
+

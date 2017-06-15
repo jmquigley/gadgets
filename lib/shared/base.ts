@@ -1,8 +1,38 @@
+/**
+ * The base class for all components in the library.  This enables each module
+ * to guarantee certain variable will be present through inheritance.  These
+ * variables include:
+ *
+ * - classes - an array of CSS classnames that will be used on the root element
+ * of the control
+ * - inlineStyles - an object that holds user defined style overrides
+ * - styles - an object that represent the styles in the CSS module associated
+ * to this control.
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {BaseComponent} from '../shared';
+ * ...
+ * export class XYZ extends BaseComponent<Props, State> {
+ *    ...
+ * }
+ * ```
+ *
+ * @module BaseComponent
+ */
+
+'use strict';
+
 import * as React from 'react';
-import {Size} from './index';
+import {Location, Size} from './index';
 
 const styles = require('./styles.css');
 
+//
+// When using buildStyles in the base class these options are used to
+// suppress the use of these variables
+//
 export interface BaseOptions {
 	className?: boolean;
 	disabled?: boolean;
@@ -15,9 +45,6 @@ const defaultBaseOptions: BaseOptions = {
 	visible: true
 };
 
-/**
- * A base class between React and all components in the module.
- */
 export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 
 	protected _classes: string[] = [];
@@ -53,6 +80,11 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		return this._styles;
 	}
 
+	/**
+	 * Every component has a general set of CSS styles that may be applied each time
+	 * the component is rendered (like a style to enable/disable).  This function
+	 * is used to generate those basic, shared styles in all components.
+	 */
 	protected buildStyles(props: P, style: any = {}, opts?: BaseOptions): void {
 		this._classes = [];
 		this._inlineStyle = Object.assign(this._inlineStyle, props['style'], style);
@@ -77,9 +109,78 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	}
 
 	/**
+	 * Takes a location parameter from the current props and searchs for the
+	 * corresponding style class CSS.  If it is found, then it returns the
+	 * location style for that lcoation.  This maps CSS module generated strings
+	 * to their enumerations.
+	 * @returns {string} the name of the local style for that size.  If it
+	 * is not found, then and empty string is returned.
+	 */
+	protected getLocationStyle() {
+		switch (this.props['location']) {
+		case Location.topLeft:
+			if (Location.topLeft in this.styles) {
+				return this.styles.topLeft;
+			}
+			break;
+
+		case Location.top:
+			if (Location.top in this.styles) {
+				return this.styles.top;
+			}
+			break;
+
+		case Location.topRight:
+			if (Location.topRight in this.styles) {
+				return this.styles.topRight;
+			}
+			break;
+
+		case Location.middleLeft:
+			if (Location.middleLeft in this.styles) {
+				return this.styles.middleLeft;
+			}
+			break;
+
+		case Location.middle:
+			if (Location.middle in this.styles) {
+				return this.styles.middle;
+			}
+			break;
+
+		case Location.middleRight:
+			if (Location.middleRight in this.styles) {
+				return this.styles.middleRight;
+			}
+			break;
+
+		case Location.bottomLeft:
+			if (Location.bottomLeft in this.styles) {
+				return this.styles.bottomLeft;
+			}
+			break;
+
+		case Location.bottom:
+			if (Location.bottom in this.styles) {
+				return this.styles.bottom;
+			}
+			break;
+
+		case Location.bottomRight:
+			if (Location.bottomRight in this.styles) {
+				return this.styles.bottomRight;
+			}
+			break;
+		}
+
+		return '';
+	}
+
+	/**
 	 * Takes a sizing parameter and a styles object and searches for the
 	 * corresponding style class CSS.  If it is found, then it returns the local
-	 * style for that size.
+	 * style for that size.  This maps CSS module generated strings to their
+	 * enumerations.
 	 * @returns {string} the name of the local style for that size.  If
 	 * it is not found, then an empty string is returned.
 	 */
@@ -87,37 +188,37 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 
 		switch (this.props['size']) {
 		case Size.xxsmall:
-			if ('xxsmall' in this.styles) {
+			if (Size.xxsmall in this.styles) {
 				return this.styles.xxsmall;
 			}
 			break;
 
 		case Size.xsmall:
-			if ('xsmall' in this.styles) {
+			if (Size.xsmall in this.styles) {
 				return this.styles.xsmall;
 			}
 			break;
 
 		case Size.small:
-			if ('small' in this.styles) {
+			if (Size.small in this.styles) {
 				return this.styles.small;
 			}
 			break;
 
 		case Size.large:
-			if ('large' in this.styles) {
+			if (Size.large in this.styles) {
 				return this.styles.large;
 			}
 			break;
 
 		case Size.xlarge:
-			if ('xlarge' in this.styles) {
+			if (Size.xlarge in this.styles) {
 				return this.styles.xlarge;
 			}
 			break;
 
 		case Size.xxlarge:
-			if ('xxlarge' in this.styles) {
+			if (Size.xxlarge in this.styles) {
 				return this.styles.xxlarge;
 			}
 			break;
@@ -125,7 +226,7 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		case Size.normal:
 		case Size.medium:
 		default:
-			if ('medium' in this.styles) {
+			if (Size.medium in this.styles) {
 				return this.styles.medium;
 			}
 		}

@@ -7,7 +7,8 @@ import test from 'ava';
 import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
-import {Badge, BadgePosition, getDefaultBadgeProps} from './index';
+import {Badge, getDefaultBadgeProps} from './index';
+import {Location} from '../shared';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
@@ -19,8 +20,8 @@ test('Test retrieval of Badge props object', t => {
 	t.true('counter' in props);
 	t.is(props.counter, 0);
 
-	t.true('position' in props);
-	t.is(props.position, BadgePosition.topRight);
+	t.true('location' in props);
+	t.is(props.location, Location.topRight);
 });
 
 test('Test creation of a Badge control', t => {

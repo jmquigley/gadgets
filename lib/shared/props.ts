@@ -27,14 +27,27 @@ import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 
 export enum Size {
-	xxsmall,
-	xsmall,
-	small,
-	normal,
-	medium,
-	large,
-	xlarge,
-	xxlarge
+	xxsmall = 'xxsmall',
+	xsmall = 'xsmall',
+	small = 'small',
+	normal = 'normal',
+	medium = 'medium',
+	large = 'large',
+	xlarge = 'xlarge',
+	xxlarge = 'xxlarge'
+}
+
+export enum Location {
+	none = 'none',
+	topLeft = 'topLeft',
+	top = 'top',
+	topRight = 'topRight',
+	middleLeft = 'middleLeft',
+	middle = 'middle',
+	middleRight = 'middleRight',
+	bottomLeft = 'bottomLeft',
+	bottom = 'bottom',
+	bottomRight = 'bottomRight'
 }
 
 export interface BaseProps {
@@ -46,6 +59,7 @@ export interface BaseProps {
 	contentEditable?: boolean;
 	disabled?: boolean;
 	id?: string;
+	location?: Location;
 	noedit?: boolean;
 	noripple?: boolean;
 	onBlur?: any;
@@ -72,6 +86,7 @@ export function getDefaultBaseProps(): BaseProps {
 		contentEditable: false,
 		disabled: false,
 		id: '',
+		location: Location.none,
 		noedit: false,
 		noripple: false,
 		onBlur: nilEvent,
