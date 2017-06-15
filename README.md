@@ -131,6 +131,11 @@ Displays a graphical icon within the current container.
 
 ### RadioButton
 
+### Rating
+
+### [Select](https://github.com/JedWatson/react-select/blob/master/README.md)
+A dropdown combo box control.  This uses the [react-select](https://www.npmjs.com/package/react-select) library from NPM.
+
 ### Slider
 
 ### Spinner

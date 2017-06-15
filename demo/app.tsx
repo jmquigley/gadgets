@@ -3,6 +3,8 @@ import * as React from 'react';
 import {render} from 'react-dom';
 import {getUUID} from 'util.toolbox';
 
+(window as any).$ = (window as any).jQuery = require('jquery');
+
 //
 // This is not how the components would typically be included within an
 // electron app.  This is kind of a "hack" to allow the demo app and the
@@ -10,27 +12,28 @@ import {getUUID} from 'util.toolbox';
 // CommonJS import.
 //
 
-const bundle = require('../dist/bundle');
-
-const Accordion = bundle.Accordion;
-const AccordionItem = bundle.AccordionItem;
-const Badge = bundle.Badge;
-const BadgePosition = bundle.BadgePosition;
-const Button = bundle.Button;
-const ButtonCircle = bundle.ButtonCircle;
-const ButtonDialog = bundle.ButtonDialog;
-const ButtonText = bundle.ButtonText;
-const ButtonToggle = bundle.ButtonToggle;
-const Container = bundle.Container;
-const Icon = bundle.Icon;
-const Label = bundle.Label;
-const List = bundle.List;
-const ListHeader = bundle.ListHeader;
-const ListItem = bundle.ListItem;
-const Size = bundle.Size;
-const Toast = bundle.Toast
-const ToastLevel = bundle.ToastLevel;
-const ToastType = bundle.ToastType;
+const {
+	Accordion,
+	AccordionItem,
+	Badge,
+	BadgePosition,
+	Button,
+	ButtonCircle,
+	ButtonDialog,
+	ButtonText,
+	ButtonToggle,
+	Container,
+	Icon,
+	Label,
+	List,
+	ListHeader,
+	ListItem,
+	Select,
+	Size,
+	Toast,
+	ToastLevel,
+	ToastType
+} = require('../dist/bundle');
 
 let maxItems: number = 5;
 
@@ -59,6 +62,11 @@ function createItems() {
 const items = createItems();
 const randomText = loremIpsum({units: 'sentences', count: 2, random: null});
 
+const selectOptions = [
+	{ value: 'one', label: 'One' },
+	{ value: 'two', label: 'Two' }
+];
+
 interface AppProps {
 }
 
@@ -73,6 +81,7 @@ interface AppState {
 	toastVisible4: boolean;
 	toastVisible5: boolean;
 	toastVisible6: boolean;
+	selectOption1: string;
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -89,7 +98,8 @@ class App extends React.Component<AppProps, AppState> {
 			toastVisible3: true,
 			toastVisible4: true,
 			toastVisible5: true,
-			toastVisible6: true
+			toastVisible6: true,
+			selectOption1: selectOptions[0].value
 		};
 
 		(window as any).state = this.state;
@@ -440,6 +450,21 @@ class App extends React.Component<AppProps, AppState> {
 					<List alternating>
 						{items}
 					</List>
+				</Container>
+
+				<h1>Select</h1>
+				<Container id="selectExample">
+					<Select
+						name="form-field-name"
+						value={this.state.selectOption1}
+						options={selectOptions}
+						onChange={(val: any) => {
+							if (val != null) {
+								console.log(`Select click handler: ${JSON.stringify(val)}`);
+								this.setState({selectOption1: val.value});
+							}
+						}}
+						/>
 				</Container>
 
 				<h1>Toast</h1>

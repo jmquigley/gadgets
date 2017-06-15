@@ -5,11 +5,28 @@
     <title>Gadgets Demo</title>
     <link rel="stylesheet" type="text/css" href="../dist/styles.css" />
 	<link rel="stylesheet" type="text/css" href="./styles.css" />
+
+	<!--
+	The library code for gadgets that is built into a bundle excludes React and
+	ReactDOM. That means that the app is responsible for including the library.  Since
+	this demo is in the same directory as the library you CANNOT have a node_modules
+	library here.  Having that directory, with React in it, will cause a multiple inclusion
+	problem and place the app into this ref hell "react refs must have owner".
+
+		https://gist.github.com/jimfb/4faa6cbfb1ef476bd105
+		https://facebook.github.io/react/warnings/refs-must-have-owner.html
+		https://stackoverflow.com/questions/28519287/what-does-only-a-reactowner-can-have-refs-mean
+
+	The easiest solution was to embed the two reference libraries into the demo
+
+	-->
+	<script src="./react.min.js"></script>
+	<script src="./react-dom.min.js"></script>
 </head>
 
 <body>
 
-<div id="root"></div>
+	<div id="root"></div>
 
 </body>
 

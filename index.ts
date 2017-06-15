@@ -1,3 +1,5 @@
+const Select = require('react-select');
+
 import {Accordion, AccordionItem} from './lib/accordion';
 import {Badge, BadgePosition} from './lib/badge';
 import {Button} from './lib/button';
@@ -32,6 +34,7 @@ export {
 	List,
 	ListHeader,
 	ListItem,
+	Select,
 	Size,
 	Title,
 	Toast,

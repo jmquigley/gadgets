@@ -1,5 +1,6 @@
 const BabiliPlugin = require("babili-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const path = require('path');
 const webpack = require('webpack');
 
@@ -7,6 +8,7 @@ module.exports = {
 	entry: [
 		path.resolve(__dirname, 'node_modules', 'font-awesome', 'css', 'font-awesome.min.css'),
 		path.resolve(__dirname, 'node_modules', 'css-ripple-effect', 'dist', 'ripple.min.css'),
+		path.resolve(__dirname, 'node_modules', 'react-select', 'dist', 'react-select.css'),
 		path.resolve(__dirname, 'lib', 'shared', 'ui.css'),
 		path.resolve(__dirname, 'index.ts')
 	],
@@ -14,11 +16,30 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
-		libraryTarget: "commonjs-module"
+		libraryTarget: "umd"
 	},
 	resolve: {
-		extensions: ['.ts', '.tsx', '.js', '.jsx', '.css']
-	},
+		extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
+		alias: {
+			"jquery": path.resolve(__dirname, 'node_modules', 'jquery', 'dist', 'jquery.min.js'),
+    		"react$": path.resolve(__dirname, 'node_modules', 'react', 'dist', 'react.min.js'),
+        	"react-dom$": path.resolve(__dirname, 'node_modules', 'react-dom', 'dist', 'react-dom.min.js')
+		}
+    },
+	externals: {
+        react: {
+            root: 'React',
+            commonjs2: 'react',
+            commonjs: 'react',
+            amd: 'react'
+        },
+        'react-dom': {
+            root: 'ReactDOM',
+            commonjs2: 'react-dom',
+            commonjs: 'react-dom',
+            amd: 'react-dom'
+        }
+  	},
 	resolveLoader: {
 		modules: [path.join(__dirname, "node_modules")]
 	},
@@ -71,6 +92,13 @@ module.exports = {
 		new webpack.DefinePlugin({
 			NODE_ENV: JSON.stringify("production")
 		}),
-		new BabiliPlugin()
+		new BabiliPlugin(),
+		new webpack.ProvidePlugin({
+    		$: "jquery",
+    		jQuery: "jquery",
+    		"window.jQuery": "jquery",
+			"window.$": "jquery"
+		})
+		// new BundleAnalyzerPlugin()
 	]
 };
