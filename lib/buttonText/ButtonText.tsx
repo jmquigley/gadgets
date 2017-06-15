@@ -50,7 +50,7 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 	return cloneDeep(Object.assign(
 		getDefaultIconProps(), {
 			justify: ButtonText.RIGHT,
-			text: ""
+			text: ''
 		}));
 }
 

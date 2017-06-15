@@ -1,5 +1,28 @@
+/**
+ * {description}
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {Button} from 'gadgets';
+ * <Button iconName="cab" onClick={someFunction} />
+ * ```
+ *
+ * #### Events
+ * - `{name}` - {description}
+ *
+ * #### Styles
+ * - `` - {description}
+ *
+ * #### Properties
+ * - `{name}: {datatype}` - {description}
+ *
+ * @module ButtonToggle
+ */
+
 'use strict';
 
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
@@ -15,13 +38,8 @@ export interface ButtonToggleProps extends ButtonProps {
 	iconNameOn?: string;       // font awesome string
 }
 
-export interface ButtonToggleState {
-	toggle: boolean;
-}
-
-export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleState> {
-
-    public static defaultProps: ButtonToggleProps = Object.assign(
+export function getDefaultButtonToggleProps(): ButtonToggleProps {
+	return cloneDeep(Object.assign(
 		getDefaultButtonProps(), {
 			bgColorOff: "inherit",
 			bgColorOn: "inherit",
@@ -30,7 +48,16 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 			initialToggle: false,
 			iconNameOff: "bomb",
 			iconNameOn: "bomb"
-		});
+		}));
+}
+
+export interface ButtonToggleState {
+	toggle: boolean;
+}
+
+export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleState> {
+
+    public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
     constructor(props: ButtonToggleProps) {
 		super(props, require("./styles.css"));

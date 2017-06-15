@@ -1,5 +1,3 @@
-const Select = require('react-select');
-
 import {Accordion, AccordionItem} from './lib/accordion';
 import {Badge} from './lib/badge';
 import {Button} from './lib/button';
@@ -12,6 +10,7 @@ import {Icon} from './lib/icon';
 import {Item} from './lib/item';
 import {Label} from './lib/label';
 import {List, ListHeader, ListItem} from './lib/list';
+import {Select} from './lib/select';
 import {BaseProps, Location, Size} from './lib/shared/props';
 import {Title} from './lib/title';
 import {Toast, ToastLevel, ToastType} from './lib/toast';

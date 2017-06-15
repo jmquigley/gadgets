@@ -22,6 +22,7 @@
 
 'use strict';
 
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
@@ -31,16 +32,20 @@ export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
 }
 
+export function getDefaultButtonDialogProps(): ButtonProps {
+	return cloneDeep(Object.assign(
+		getDefaultButtonProps(), {
+			dialogClasses: []
+		}));
+}
+
 export interface ButtonDialogState {
 	visible: boolean;
 }
 
 export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogState> {
 
-    public static defaultProps: ButtonDialogProps = Object.assign(
-		getDefaultButtonProps(), {
-			dialogClasses: []
-     });
+    public static defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
 
 	private _dialogClasses: string[] = [];
 

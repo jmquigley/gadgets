@@ -1,3 +1,25 @@
+/**
+ * {description}
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {Button} from 'gadgets';
+ * <Button iconName="cab" onClick={someFunction} />
+ * ```
+ *
+ * #### Events
+ * - `{name}` - {description}
+ *
+ * #### Styles
+ * - `` - {description}
+ *
+ * #### Properties
+ * - `{name}: {datatype}` - {description}
+ *
+ * @module List
+ */
+
 //
 // This is a container element that holds the contents of a list.  It creates
 // the `<ul>` tag that will hold all of the `<li>` tags.

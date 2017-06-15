@@ -1,5 +1,6 @@
-import {ButtonDialog} from './ButtonDialog';
+import {ButtonDialog, getDefaultButtonDialogProps} from './ButtonDialog';
 
 export {
-	ButtonDialog
+	ButtonDialog,
+	getDefaultButtonDialogProps
 };

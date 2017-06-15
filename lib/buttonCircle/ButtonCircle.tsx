@@ -22,7 +22,7 @@
 
 'use strict';
 
-import {cloneDeep} from "lodash";
+import {cloneDeep} from 'lodash';
 import * as React from "react";
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {BaseComponent, Size} from '../shared';

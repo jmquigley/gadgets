@@ -31,14 +31,25 @@ test('Test creation of a Button control', t => {
 	t.is(ctl.find('.test-class').length, 1);
 });
 
-test('Test creation of a Button control with custom icon', t => {
-	const ctl = mount(<Button iconName="superpowers" />);
+test('Test creation of a Button control with custom icon and colors', t => {
+	const ctl = mount(
+		<Button
+			color="red"
+			backgroundColor="black"
+			borderColor="green"
+			iconName="superpowers"
+			/>
+	);
 
 	t.truthy(ctl);
 	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'superpowers');
 	t.is(ctl.prop('id'), '');
+	t.is(ctl.prop('color'), 'red');
+	t.is(ctl.prop('backgroundColor'), 'black');
+	t.is(ctl.prop('borderColor'), 'green');
+
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
