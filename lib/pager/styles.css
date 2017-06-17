@@ -3,6 +3,7 @@
 :local {
 
 	.pager {
+		font-weight: bold;
 		display: inline-flex;
 	}
 
@@ -11,4 +12,8 @@
 		display: inline-block;
 	}
 
+	.pagerInput {
+		margin-left: 15px;
+		width: 42px;
+	}
 }

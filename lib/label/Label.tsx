@@ -60,13 +60,19 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			previousText: props.text,
 			text: props.text
 		};
+
+		this.handleBlur = this.handleBlur.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+		this.handleDoubleClick = this.handleDoubleClick.bind(this);
+		this.handleKeyDown = this.handleKeyDown.bind(this);
+		this.handleKeyPress = this.handleKeyPress.bind(this);
 	}
 
-	private handleBlur = (e: React.FocusEvent<HTMLSpanElement>) => {
+	private handleBlur(e: React.FocusEvent<HTMLSpanElement>) {
 		this.handleChange(e.target as Element);
 	}
 
-	private handleChange = (element: Element) => {
+	private handleChange(element: Element) {
 		if (this.state.editable) {
 			let val = element.innerHTML;
 			this.setState({
@@ -80,7 +86,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
-	private handleDoubleClick = (e: React.MouseEvent<HTMLSpanElement>) => {
+	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
 		if (!this.props.noedit) {
 			let range = document.caretRangeFromPoint(e.clientX, e.clientY);
 			let sel = window.getSelection();
@@ -96,7 +102,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
-	private handleKeyDown = (e: React.KeyboardEvent<HTMLSpanElement>) => {
+	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === "Escape") {
 			this.setState({
 				editable: false,
@@ -107,7 +113,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
-	private handleKeyPress = (e: React.KeyboardEvent<HTMLSpanElement>) => {
+	private handleKeyPress(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === "Enter") {
 			this.handleChange(e.target as Element);
 		}

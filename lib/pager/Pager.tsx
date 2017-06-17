@@ -35,6 +35,7 @@ export interface PagerProps extends BaseProps {
 	pagesToDisplay?: number;
 	pageSize?: number;
 	totalItems?: number;
+	useinput?: boolean;
 }
 
 export function getDefaultPagerProps(): PagerProps {
@@ -45,7 +46,8 @@ export function getDefaultPagerProps(): PagerProps {
 			pagesToDisplay: 3,
 			pageSize: 25,
 			size: Size.xsmall,
-			totalItems: 0
+			totalItems: 0,
+			useinput: false
 		}));
 }
 
@@ -80,6 +82,12 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 
 		this.createButtons();
+
+		this.handleSelect = this.handleSelect.bind(this);
+		this.moveToEnd = this.moveToEnd.bind(this);
+		this.moveToFront = this.moveToFront.bind(this);
+		this.moveToNext = this.moveToNext.bind(this);
+		this.moveToPrevious = this.moveToPrevious.bind(this);
 	}
 
 	get currentPage(): number {
@@ -199,7 +207,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		return false;
 	}
 
-	private handleSelect = (newPage: number) => {
+	private handleSelect(newPage: number) {
 		if (this.currentPage != newPage) {
 			this.setState({currentPage: newPage}, () => {
 				this.props.onSelect(newPage);
@@ -207,35 +215,27 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 	}
 
-	private moveToEnd = () => {
+	private moveToEnd() {
 		if (this.currentPage !== this._lastPage) {
-			this.setState({currentPage: this._lastPage}, () => {
-				console.log(`moving to last page: ${this.currentPage}`);
-			});
+			this.setState({currentPage: this._lastPage});
 		}
 	}
 
-	private moveToFront = () => {
+	private moveToFront() {
 		if (this.currentPage !== 1) {
-			this.setState({currentPage: 1}, () => {
-				console.log(`moving to first page: ${this.currentPage}`);
-			});
+			this.setState({currentPage: 1});
 		}
 	}
 
-	private moveToNext = () => {
+	private moveToNext() {
 		if (this.currentPage !== this._lastPage) {
-			this.setState({currentPage: this.currentPage + 1}, () => {
-				console.log(`moving to next page: ${this.currentPage}`);
-			});
+			this.setState({currentPage: this.currentPage + 1});
 		}
 	}
 
-	private moveToPrevious = () => {
+	private moveToPrevious() {
 		if (this.currentPage !== 1) {
-			this.setState({currentPage: this.currentPage - 1}, () => {
-				console.log(`moving to previous page: ${this.currentPage}`);
-			});
+			this.setState({currentPage: this.currentPage - 1});
 		}
 	}
 
@@ -252,30 +252,41 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		return (
 			<div className={this.classes.join(" ")}>
 				<Button
-				className={this.styles.pagerButton}
-				iconName="angle-double-left"
-				onClick={this.moveToFront}
-				size={this.props.size}
-				/>
+					className={this.styles.pagerButton}
+					iconName="angle-double-left"
+					onClick={this.moveToFront}
+					size={this.props.size}
+					/>
 				<Button
-				className={this.styles.pagerButton}
-				iconName="angle-left"
-				onClick={this.moveToPrevious}
-				size={this.props.size}
-				/>
+					className={this.styles.pagerButton}
+					iconName="angle-left"
+					onClick={this.moveToPrevious}
+					size={this.props.size}
+					/>
 				{this._buttonsDisplay}
 				<Button
-				className={this.styles.pagerButton}
-				iconName="angle-right"
-				onClick={this.moveToNext}
-				size={this.props.size}
-				/>
+					className={this.styles.pagerButton}
+					iconName="angle-right"
+					onClick={this.moveToNext}
+					size={this.props.size}
+					/>
 				<Button
-				className={this.styles.pagerButton}
-				iconName="angle-double-right"
-				onClick={this.moveToEnd}
-				size={this.props.size}
-				/>
+					className={this.styles.pagerButton}
+					iconName="angle-double-right"
+					onClick={this.moveToEnd}
+					size={this.props.size}
+					/>
+				{this.props.useinput ?
+					<input
+						className={`${this.styles.pagerInput} ${this._sizeStyle}`}
+						min="1"
+						max={this._lastPage}
+						placeholder={String(this.state.currentPage)}
+						type="number"
+					/>
+					:
+					null
+				}
 			</div>
 		);
 	}

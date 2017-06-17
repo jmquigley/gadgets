@@ -67,9 +67,11 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
     constructor(props: ButtonTextProps) {
 		super(props, require("./styles.css"));
+
+		this.handleClick = this.handleClick.bind(this);
 	}
 
-	private handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
 			this.props.onClick();
 		}

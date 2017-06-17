@@ -62,6 +62,8 @@ export class List extends BaseComponent<ListProps, ListState> {
 		this.state = {
 			selectedItem: null
 		}
+
+		this.selectHandler = this.selectHandler.bind(this);
 	}
 
 	protected buildStyles() {
@@ -75,7 +77,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 		}
 	}
 
-	private selectHandler = (item: ListItem) => {
+	private selectHandler(item: ListItem) {
 		console.log(`Selected: ${item.props.id}`);
 		if (this.state.selectedItem != null
 			&& item.props.id === this.state.selectedItem.props.id) {

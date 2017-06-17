@@ -475,10 +475,40 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildPager = () => (
 		<Container id="pagerExample">
+
+			<h3>xxsmall</h3>
 			<div className="pagerBox">
 				<Pager
 				initialPage="1"
-				totalItems="20"
+				totalItems="299"
+				size={Size.xxsmall}
+				onSelect={
+					(page: number) => {
+						console.log(`Clicked on page: ${page}`);
+					}
+				}
+				/>
+			</div>
+
+			<h3>xsmall</h3>
+			<div className="pagerBox">
+				<Pager
+				initialPage="1"
+				totalItems="299"
+				size={Size.xsmall}
+				onSelect={
+					(page: number) => {
+						console.log(`Clicked on page: ${page}`);
+					}
+				}
+				/>
+			</div>
+
+			<h3>medium</h3>
+			<div className="pagerBox">
+				<Pager
+				initialPage="1"
+				totalItems="299"
 				size={Size.medium}
 				onSelect={
 					(page: number) => {
@@ -488,28 +518,18 @@ class App extends React.Component<AppProps, AppState> {
 				/>
 			</div>
 
-			<div className="pagerBox">
-				<Pager
-				initialPage="1"
-				totalItems="299"
-				onSelect={
-					(page: number) => {
-						console.log(`Clicked on page: ${page}`);
-					}
-				}
-				/>
-			</div>
-
+			<h3>xmall, large range</h3>
 			<div className="pagerBox">
 				<Pager
 				initialPage="1"
 				pagesToDisplay="5"
-				totalItems="299"
+				totalItems="30000"
 				onSelect={
 					(page: number) => {
 						console.log(`Clicked on page: ${page}`);
 					}
 				}
+				useinput
 				/>
 			</div>
 

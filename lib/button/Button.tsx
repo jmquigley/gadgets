@@ -51,9 +51,11 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
     constructor(props: ButtonProps) {
 		super(props, require("./styles.css"));
+
+		this.handleClick = this.handleClick.bind(this);
 	}
 
-	private handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
 			this.props.onClick();
 		}
@@ -95,7 +97,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 				style={{...this.inlineStyle}}
 				>
 				<Icon
-					className={this.styles.icon}
+					className={(this.props.size === Size.xxsmall) ? this.styles.iconXXSmall : this.styles.icon}
 					iconName={this.props.iconName}
 					size={this.props.size}
 				/>

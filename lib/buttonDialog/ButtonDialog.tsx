@@ -54,9 +54,12 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		this.state = {
 			visible: false
 		};
+
+		this.handleClick = this.handleClick.bind(this);
+		this.handleDialogClick = this.handleDialogClick.bind(this);
 	}
 
-	private handleClick = () => {
+	private handleClick() {
 		this.setState({
 			visible: !this.state.visible
 		});
@@ -64,7 +67,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		this.props.onClick();
 	};
 
-	private handleDialogClick = () => {
+	private handleDialogClick() {
 		this.setState({
 			visible: false
 		});

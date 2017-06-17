@@ -171,12 +171,9 @@ Global UI color settings for components
 	border-color: #004358;
 }
 
-.ui-pager {
+.ui-pager > .ui-button {
 	border-top: solid 1px #004358;
 	border-bottom: solid 1px #004358;
-}
-
-.ui-pager > .ui-button {
 	border-right: solid 1px #004358;
 }
 
@@ -185,5 +182,6 @@ Global UI color settings for components
 }
 
 .ui-pager-selected {
-	background-color: red !important;
+	color: #ffe11a;
+	background-color: #004358;
 }

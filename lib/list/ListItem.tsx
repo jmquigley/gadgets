@@ -63,18 +63,25 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.state = {
 			toggleRipple: false
 		}
+
+		this.handleBlur = this.handleBlur.bind(this);
+		this.handleClick = this.handleClick.bind(this);
+		this.handleDoubleClick = this.handleDoubleClick.bind(this);
+		this.handleKeyDown = this.handleKeyDown.bind(this);
+		this.handleKeyPress = this.handleKeyPress.bind(this);
+		this.handleMouseOut = this.handleMouseOut.bind(this);
 	}
 
-	private deactivateEdit = () => {
+	private deactivateEdit() {
 		this._prevent = false;
 		this.setState({toggleRipple: false});
 	}
 
-	private handleBlur = () => {
+	private handleBlur() {
 		this.deactivateEdit();
 	}
 
-	private handleClick = () => {
+	private handleClick() {
 		// This timer will wait N seconds before respecting the single click
 		// It is a way to differentiate between single and double click events
 		// A double click is handled differently from the single
@@ -86,7 +93,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		}, this._delay);
 	}
 
-	private handleDoubleClick = () => {
+	private handleDoubleClick() {
 		// If a double click occurs, then sent a flag preventing the single click
 		// from firing after its timer expires
 		clearTimeout(this._timer);
@@ -94,19 +101,19 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.setState({toggleRipple: true});
 	}
 
-	private handleKeyDown = (e: KeyboardEvent) => {
+	private handleKeyDown(e: KeyboardEvent) {
 		if (e.key === "Escape") {
 			this.deactivateEdit();
 		}
 	}
 
-	private handleKeyPress = (e: KeyboardEvent) => {
+	private handleKeyPress(e: KeyboardEvent) {
 		if (e.key === "Enter") {
 			this.deactivateEdit();
 		}
 	}
 
-	private handleMouseOut = () => {
+	private handleMouseOut() {
 		this.deactivateEdit();
 	}
 

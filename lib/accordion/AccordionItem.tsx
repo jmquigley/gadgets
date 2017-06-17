@@ -76,9 +76,13 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		this.state = {
 			toggle: props.initialToggle
 		}
+
+
+		this.handleClick = this.handleClick.bind(this);
+		this.handleNew = this.handleNew.bind(this);
 	}
 
-	private handleClick = () => {
+	private handleClick() {
 		this.setState({
 			toggle: !this.state.toggle
 		});
@@ -86,7 +90,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		this.props.onClick(this.state.toggle);
 	}
 
-	private handleNew = () => {
+	private handleNew() {
 		if (!this.state.toggle) {
 			this.setState({
 				toggle: true

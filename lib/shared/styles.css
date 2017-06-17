@@ -1,6 +1,6 @@
 $baseZIndex: 99999;
 
-$xxsmall: 16px;
+$xxsmall: 20px;
 $xxsmall-fs: 0.5em;
 
 $xsmall: 24px;
@@ -43,6 +43,7 @@ $xxlarge-fs: 2.0em;
 
 	.xxsmall {
 		font-size: $xxsmall-fs;
+		font-weight: inherit;
 		width: $xxsmall;
 		height: $xxsmall;
 		line-height: $xxsmall;
@@ -50,6 +51,7 @@ $xxlarge-fs: 2.0em;
 
 	.xsmall {
 		font-size: $xsmall-fs;
+		font-weight: inherit;
 		width: $xsmall;
 		height: $xsmall;
 		line-height: $xsmall;
@@ -57,6 +59,7 @@ $xxlarge-fs: 2.0em;
 
 	.small {
 		font-size: $small-fs;
+		font-weight: inherit;
 		width: $small;
 		height: $small;
 		line-height: $small;
@@ -64,6 +67,7 @@ $xxlarge-fs: 2.0em;
 
 	.medium {
 		font-size: $medium-fs;
+		font-weight: inherit;
 		width: $medium;
 		height: $medium;
 		line-height: $medium;
@@ -71,6 +75,7 @@ $xxlarge-fs: 2.0em;
 
 	.large {
 		font-size: $large-fs;
+		font-weight: inherit;
 		width: $large;
 		height: $large;
 		line-height: $large;
@@ -78,6 +83,7 @@ $xxlarge-fs: 2.0em;
 
 	.xlarge {
 		font-size: $xlarge-fs;
+		font-weight: inherit;
 		width: $xlarge;
 		height: $xlarge;
 		line-height: $xlarge;
@@ -85,6 +91,7 @@ $xxlarge-fs: 2.0em;
 
 	.xxlarge {
 		font-size: $xxlarge-fs;
+		font-weight: inherit;
 		width: $xxlarge;
 		height: $xxlarge;
 		line-height: $xxlarge;

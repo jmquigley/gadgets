@@ -129,6 +129,9 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 			visible: props.visible
 		}
 
+		this.handleClose = this.handleClose.bind(this);
+		this.handleDecay = this.handleDecay.bind(this);
+
 		this.handleDecay();
 	}
 
@@ -144,7 +147,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		this.handleDecay();
 	}
 
-	private handleClose = () => {
+	private handleClose() {
 		if (this._timer) {
             clearTimeout(this._timer);
             this._timer = null;
@@ -157,7 +160,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		this.props.onClose();
 	}
 
-	private handleDecay = () => {
+	private handleDecay() {
 		if (this.props.type === ToastType.decay && this.state.visible) {
 			this._timer = setTimeout(() => {
 				if (this.state.visible) {
