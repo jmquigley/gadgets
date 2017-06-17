@@ -29,6 +29,7 @@
  * - `justify: number` - Determines if the button will be on the left or the right.
  * Two constants are available: ButtonText.LEFT & ButtonText.RIGHT.  It uses right
  * by default.
+ * - `noicon: boolean` - Turns off the icon and only shows the text in the center of the button.
  * - `text: string` - The text string used by the button
  *
  * @module ButtonText
@@ -43,6 +44,7 @@ import {BaseComponent} from '../shared';
 
 export interface ButtonTextProps extends IconProps {
 	justify?: number;
+	noicon?: boolean;
 	text?: string;
 }
 
@@ -50,6 +52,7 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 	return cloneDeep(Object.assign(
 		getDefaultIconProps(), {
 			justify: ButtonText.RIGHT,
+			noicon: false,
 			text: ''
 		}));
 }
@@ -60,6 +63,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 	public static LEFT: number = 0;
 	public static RIGHT: number = 1;
+	public static CENTER: number = 2;
 
     constructor(props: ButtonTextProps) {
 		super(props, require("./styles.css"));
@@ -99,12 +103,12 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	render() {
 		this.buildStyles();
 
-		let content = (justify: number) => (
+		let content = (justifyStyle: string) => (
 			<div
 				className={
 					this.styles.content + " " +
 					super.getSizeStyle() + " " +
-					((justify === ButtonText.LEFT) ? this.styles.left : this.styles.right)
+					justifyStyle
 				}>
 				{this.props.text}
 			</div>
@@ -113,25 +117,35 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		let leftButton = null;
 		let rightButton = null;
 
-		if (this.props.justify === ButtonText.LEFT) {
-			leftButton = content(ButtonText.LEFT);
+		if (this.props.justify === ButtonText.CENTER || this.props.noicon) {
+			leftButton = content(this.styles.center);
+		} else if (this.props.justify === ButtonText.LEFT) {
+			leftButton = content(this.styles.left);
 		} else {
-			rightButton = content(ButtonText.RIGHT);
+			rightButton = content(this.styles.right);
+		}
+
+		let icon = null;
+
+		if (!this.props.noicon && this.props.justify != ButtonText.CENTER) {
+			icon = (
+				<Icon
+					className={this.styles.icon}
+					iconName={this.props.iconName}
+					size={this.props.size}
+					/>
+			);
 		}
 
 		return (
 			<div
-			  className={this.classes.join(" ")}
-			  style={this.inlineStyle}
-			  disabled={this.props.disabled}
-			  onClick={this.handleClick}>
-			  {leftButton}
-			  <Icon
-				  className={this.styles.icon}
-				  iconName={this.props.iconName}
-				  size={this.props.size}
-				/>
-			  {rightButton}
+				className={this.classes.join(" ")}
+				style={this.inlineStyle}
+				disabled={this.props.disabled}
+				onClick={this.handleClick}>
+				{leftButton}
+				{icon}
+				{rightButton}
 			</div>
 		);
 	}

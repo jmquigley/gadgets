@@ -11,6 +11,7 @@ import {Item} from './lib/item';
 import {Label} from './lib/label';
 import {List, ListHeader, ListItem} from './lib/list';
 import {Select} from './lib/select';
+import {Pager} from './lib/pager';
 import {BaseProps, Location, Size} from './lib/shared/props';
 import {Title} from './lib/title';
 import {Toast, ToastLevel, ToastType} from './lib/toast';
@@ -33,6 +34,7 @@ export {
 	ListHeader,
 	ListItem,
 	Location,
+	Pager,
 	Select,
 	Size,
 	Title,

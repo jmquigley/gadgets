@@ -28,6 +28,7 @@ const {
 	ListHeader,
 	ListItem,
 	Location,
+	Pager,
 	Select,
 	Size,
 	Toast,
@@ -353,6 +354,17 @@ class App extends React.Component<AppProps, AppState> {
 						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.xxlarge}/></td>
 						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.normal} disabled={true}/></td>
 						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.normal} color="white" backgroundColor="red"/></td>
+					</tr><tr>
+						<th>ButtonText<br/>(Center)</th>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.xxsmall}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.xsmall}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.small}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.normal}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.large}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.xlarge}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.xxlarge}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.normal} disabled={true}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.normal} color="white" backgroundColor="red"/></td>
 					</tr>
 				</tbody>
 			</table>
@@ -461,19 +473,64 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	private buildPager = () => (
+		<Container id="pagerExample">
+			<div className="pagerBox">
+				<Pager
+				initialPage="1"
+				totalItems="20"
+				size={Size.medium}
+				onSelect={
+					(page: number) => {
+						console.log(`Clicked on page: ${page}`);
+					}
+				}
+				/>
+			</div>
+
+			<div className="pagerBox">
+				<Pager
+				initialPage="1"
+				totalItems="299"
+				onSelect={
+					(page: number) => {
+						console.log(`Clicked on page: ${page}`);
+					}
+				}
+				/>
+			</div>
+
+			<div className="pagerBox">
+				<Pager
+				initialPage="1"
+				pagesToDisplay="5"
+				totalItems="299"
+				onSelect={
+					(page: number) => {
+						console.log(`Clicked on page: ${page}`);
+					}
+				}
+				/>
+			</div>
+
+		</Container>
+	);
+
 	private buildSelect = () => (
 		<Container id="selectExample">
-			<Select
-			name="form-field-name"
-			value={this.state.selectOption}
-			options={selectOptions}
-			onChange={(val: any) => {
-					if (val != null) {
-						console.log(`Select click handler: ${JSON.stringify(val)}`);
-						this.setState({selectOption: val.value});
-					}
-			}}
-			/>
+			<div className="pagerBox">
+				<Select
+				name="form-field-name"
+				value={this.state.selectOption}
+				options={selectOptions}
+				onChange={(val: any) => {
+						if (val != null) {
+							console.log(`Select click handler: ${JSON.stringify(val)}`);
+							this.setState({selectOption: val.value});
+						}
+				}}
+				/>
+			</div>
 		</Container>
 	);
 
@@ -624,6 +681,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>List/ListItem (without header)</h1>
 				{this.buildListItemWithoutHeader()}
+
+				<h1>Pager</h1>
+				{this.buildPager()}
 
 				<h1>Select</h1>
 				{this.buildSelect()}

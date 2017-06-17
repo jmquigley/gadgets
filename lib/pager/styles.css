@@ -1,0 +1,14 @@
+@import '../shared/styles.css';
+
+:local {
+
+	.pager {
+		display: inline-flex;
+	}
+
+	.pagerButton {
+		flex: 1;
+		display: inline-block;
+	}
+
+}

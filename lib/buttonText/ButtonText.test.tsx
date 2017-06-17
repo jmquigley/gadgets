@@ -27,7 +27,7 @@ test('Test retrieval of ButtonText props object', t => {
 	t.is(props.text, '');
 });
 
-test('Test creation of a ButtonText control', t => {
+test('Test creation of a ButtonText control to the left', t => {
 	const ctl = mount(
 		<ButtonText
 		  className="test-class"

@@ -90,9 +90,10 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		return (
 			<div
 				className={this.classes.join(' ')}
-				style={{...this.inlineStyle}}
 				disabled={this.props.disabled}
-				onClick={this.handleClick}>
+				onClick={this.handleClick}
+				style={{...this.inlineStyle}}
+				>
 				<Icon
 					className={this.styles.icon}
 					iconName={this.props.iconName}

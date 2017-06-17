@@ -119,6 +119,10 @@ section {
 	margin: 0;
 }
 
+.pagerBox  {
+	margin-bottom: 30px;
+}
+
 /*
 
 Global UI color settings for components
@@ -165,4 +169,21 @@ Global UI color settings for components
 
 .ui-select .Select-control {
 	border-color: #004358;
+}
+
+.ui-pager {
+	border-top: solid 1px #004358;
+	border-bottom: solid 1px #004358;
+}
+
+.ui-pager > .ui-button {
+	border-right: solid 1px #004358;
+}
+
+.ui-pager > .ui-button:first-child {
+	border-left: solid 1px #004358;
+}
+
+.ui-pager-selected {
+	background-color: red !important;
 }

@@ -4,6 +4,7 @@
 	.buttonText {
 		@extend baseButton;
 		display: flex;
+		cursor: default;
 	}
 
 	.content {
@@ -16,7 +17,6 @@
 	.content span {
 		margin: 0 auto;
 		user-select: none;
-		cursor: default;
 	}
 
 	.icon {
@@ -33,5 +33,9 @@
 
 	.left {
 		text-align: right;
+	}
+
+	.center {
+		text-align: center;
 	}
 }
