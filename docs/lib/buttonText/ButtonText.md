@@ -31,5 +31,6 @@ buttons.
 - `justify: number` - Determines if the button will be on the left or the right.
 Two constants are available: ButtonText.LEFT & ButtonText.RIGHT.  It uses right
 by default.
+- `noicon: boolean` - Turns off the icon and only shows the text in the center of the button.
 - `text: string` - The text string used by the button
 
