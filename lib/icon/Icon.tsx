@@ -81,7 +81,8 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 
 		this.classes.push("ui-icon");
 		this.classes.push(this.styles.icon);
-		this.classes.push(super.getSizeStyle());
+		this.classes.push(this.sizeStyle);
+		this.classes.push(this.boxSizeStyle)
 		this.classes.push("fa");
 		this.classes.push(`fa-${this.props.iconName}`);
 	}

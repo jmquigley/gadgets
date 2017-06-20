@@ -28,6 +28,7 @@ import {getUUID, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {ButtonText} from '../buttonText';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Size} from '../shared';
+import {TextField} from '../textField';
 
 export interface PagerProps extends BaseProps {
 	initialPage?: number;
@@ -63,12 +64,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
 	private _buttons: any = [];
-	private _sizeStyle: string = '';
 
 	constructor(props: PagerProps) {
 		super(props, require("./styles.css"));
 
-		this._sizeStyle = super.getSizeStyle();
 		this._lastPage = this.computeLastPage();
 		this._initialPage = Number(props.initialPage);
 		if (this._initialPage < 1) {
@@ -277,10 +276,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					size={this.props.size}
 					/>
 				{this.props.useinput ?
-					<input
-						className={`${this.styles.pagerInput} ${this._sizeStyle}`}
+					<TextField
+						className={`${this.styles.pagerInput} ${this.sizeStyle}`}
 						min="1"
-						max={this._lastPage}
+						max={String(this._lastPage)}
 						placeholder={String(this.state.currentPage)}
 						type="number"
 					/>

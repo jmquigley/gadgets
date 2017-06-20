@@ -13,6 +13,7 @@ import {List, ListHeader, ListItem} from './lib/list';
 import {Pager} from './lib/pager';
 import {Select} from './lib/select';
 import {BaseProps, Location, Size} from './lib/shared/props';
+import {TextField} from './lib/textField';
 import {Title} from './lib/title';
 import {Toast, ToastLevel, ToastType} from './lib/toast';
 
@@ -37,6 +38,7 @@ export {
 	Pager,
 	Select,
 	Size,
+	TextField,
 	Title,
 	Toast,
 	ToastLevel,

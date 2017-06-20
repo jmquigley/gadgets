@@ -61,18 +61,18 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 
 		return (
 			<div className={this.classes.join(" ")}>
-				<div className={`${this.styles.buttonCircleContainer} ${super.getSizeStyle()}`}>
+				<div className={`${this.styles.buttonCircleContainer} ${this.boxSizeStyle}`}>
 					<Button
-					className={this.styles.buttonCircleIcon}
-					style={this.inlineStyle}
-					disabled={this.props.disabled}
-					color={this.props.color}
-					backgroundColor={this.props.backgroundColor}
-					borderColor={this.props.color}
-					iconName={this.props.iconName}
-					onClick={this.props.onClick}
-					size={this.props.size}
-					/>
+						className={this.styles.buttonCircleIcon}
+						style={this.inlineStyle}
+						disabled={this.props.disabled}
+						color={this.props.color}
+						backgroundColor={this.props.backgroundColor}
+						borderColor={this.props.color}
+						iconName={this.props.iconName}
+						onClick={this.props.onClick}
+						size={this.props.size}
+						/>
 				</div>
 			</div>
 		);

@@ -49,8 +49,6 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
-	private _positionStyle: string = "";
-
 	constructor(props: BadgeProps) {
 		super(props, require("./styles.css"));
 	}
@@ -64,7 +62,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 		this.classes.push("ui-badge");
 		this.classes.push(this.styles.badgeContainer);
-		this._positionStyle = super.getLocationStyle();
+		this.classes.push(this.locationStyle);
 	}
 
 	render() {
@@ -74,7 +72,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		if (this.props.counter !== 0) {
 			badge = (
 				<div
-					className={`${this.styles.badge} ${this._positionStyle}`}
+					className={`${this.styles.badge} ${this.locationStyle}`}
 					style={this.inlineStyle}>
 					{this.props.counter}
 				</div>

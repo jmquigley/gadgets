@@ -109,7 +109,8 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			<div
 				className={
 					this.styles.content + " " +
-					super.getSizeStyle() + " " +
+					this.sizeStyle + " " +
+					this.boxSizeStyle + " " +
 					justifyStyle
 				}>
 				{this.props.text}

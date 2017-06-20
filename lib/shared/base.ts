@@ -47,13 +47,25 @@ const defaultBaseOptions: BaseOptions = {
 
 export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 
-	protected _classes: string[] = [];
-	protected _inlineStyle: any = {};    // inline style overrides
-	protected _styles: any = {};         // css modules styles
+	private _classes: string[] = [];
+	private _inlineStyle: any = {};    // inline style overrides
+	private _styles: any = {};         // css modules styles
+	private _sizeStyle: string = '';
+	private _boxSizeStyle: string = '';
+	private _locationStyle: string = '';
 
 	constructor(props: P, pstyles: any = {}) {
 		super(props);
 		this._styles = pstyles;
+
+		if ('size' in props) {
+			this._sizeStyle = this.getSizeStyle();
+			this._boxSizeStyle = this.getBoxSizeStyle();
+		}
+
+		if ('location' in props) {
+			this._locationStyle = this.getLocationStyle();
+		}
 	}
 
 	get classes(): string[] {
@@ -64,12 +76,24 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		this._classes = str;
 	}
 
+	get boxSizeStyle(): string {
+		return this._boxSizeStyle;
+	}
+
 	get inlineStyle(): any {
 		return this._inlineStyle;
 	}
 
 	set inlineStyle(val: any) {
 		this._inlineStyle = Object.assign(this._inlineStyle, val);
+	}
+
+	get locationStyle() {
+		return this._locationStyle;
+	}
+
+	get sizeStyle(): string {
+		return this._sizeStyle;
 	}
 
 	get style(): string {
@@ -94,15 +118,15 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 			opts
 		);
 
-		if (props['className'] !== '' && opts.className) {
+		if ('className' in props && props['className'] !== '' && opts.className) {
 			this._classes.push(props['className']);
 		}
 
-		if (!props['visible'] && opts.visible) {
+		if ('visible' in props && !props['visible'] && opts.visible) {
 			this._classes.push(this.styles.invisible);
 		}
 
-		if (props['disabled'] && opts.disabled) {
+		if ('disabled' in props && props['disabled'] && opts.disabled) {
 			this._classes.push(styles.disabled);
 			this._classes.push('nohover');
 		}
@@ -115,8 +139,9 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	 * to their enumerations.
 	 * @returns {string} the name of the local style for that size.  If it
 	 * is not found, then and empty string is returned.
+	 * @private
 	 */
-	protected getLocationStyle() {
+	private getLocationStyle() {
 		switch (this.props['location']) {
 		case Location.topLeft:
 			if (Location.topLeft in this.styles) {
@@ -183,8 +208,9 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	 * enumerations.
 	 * @returns {string} the name of the local style for that size.  If
 	 * it is not found, then an empty string is returned.
+	 * @private
 	 */
-	protected getSizeStyle() {
+	private getSizeStyle() {
 
 		switch (this.props['size']) {
 		case Size.xxsmall:
@@ -228,6 +254,65 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		default:
 			if (Size.medium in this.styles) {
 				return this.styles.medium;
+			}
+		}
+
+		return '';
+	}
+
+	/**
+	 * Takes a sizing parameter and a styles object and searches for the
+	 * corresponding box/square style size class CSS.  If it is found, then it
+	 * returns the local style for that size.  This maps CSS module
+	 * generated strings to their enumerations.
+	 * @returns {string} the name of the local style for that size.  If
+	 * it is not found, then an empty string is returned.
+	 * @private
+	 */
+	private getBoxSizeStyle() {
+
+		switch (this.props['size']) {
+		case Size.xxsmall:
+			if (Size.xxsmall in this.styles) {
+				return this.styles.xxsmallBox;
+			}
+			break;
+
+		case Size.xsmall:
+			if (Size.xsmall in this.styles) {
+				return this.styles.xsmallBox;
+			}
+			break;
+
+		case Size.small:
+			if (Size.small in this.styles) {
+				return this.styles.smallBox;
+			}
+			break;
+
+		case Size.large:
+			if (Size.large in this.styles) {
+				return this.styles.largeBox;
+			}
+			break;
+
+		case Size.xlarge:
+			if (Size.xlarge in this.styles) {
+				return this.styles.xlargeBox;
+			}
+			break;
+
+		case Size.xxlarge:
+			if (Size.xxlarge in this.styles) {
+				return this.styles.xxlargeBox;
+			}
+			break;
+
+		case Size.normal:
+		case Size.medium:
+		default:
+			if (Size.medium in this.styles) {
+				return this.styles.mediumBox;
 			}
 		}
 
