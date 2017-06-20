@@ -25,7 +25,7 @@
 'use strict';
 
 import * as React from 'react';
-import {Location, Size} from './index';
+import {Location, Sizing} from './index';
 
 const styles = require('./styles.css');
 
@@ -58,7 +58,7 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		super(props);
 		this._styles = pstyles;
 
-		if ('size' in props) {
+		if ('sizing' in props) {
 			this._sizeStyle = this.getSizeStyle();
 			this._boxSizeStyle = this.getBoxSizeStyle();
 		}
@@ -212,47 +212,47 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	 */
 	private getSizeStyle() {
 
-		switch (this.props['size']) {
-		case Size.xxsmall:
-			if (Size.xxsmall in this.styles) {
+		switch (this.props['sizing']) {
+		case Sizing.xxsmall:
+			if (Sizing.xxsmall in this.styles) {
 				return this.styles.xxsmall;
 			}
 			break;
 
-		case Size.xsmall:
-			if (Size.xsmall in this.styles) {
+		case Sizing.xsmall:
+			if (Sizing.xsmall in this.styles) {
 				return this.styles.xsmall;
 			}
 			break;
 
-		case Size.small:
-			if (Size.small in this.styles) {
+		case Sizing.small:
+			if (Sizing.small in this.styles) {
 				return this.styles.small;
 			}
 			break;
 
-		case Size.large:
-			if (Size.large in this.styles) {
+		case Sizing.large:
+			if (Sizing.large in this.styles) {
 				return this.styles.large;
 			}
 			break;
 
-		case Size.xlarge:
-			if (Size.xlarge in this.styles) {
+		case Sizing.xlarge:
+			if (Sizing.xlarge in this.styles) {
 				return this.styles.xlarge;
 			}
 			break;
 
-		case Size.xxlarge:
-			if (Size.xxlarge in this.styles) {
+		case Sizing.xxlarge:
+			if (Sizing.xxlarge in this.styles) {
 				return this.styles.xxlarge;
 			}
 			break;
 
-		case Size.normal:
-		case Size.medium:
+		case Sizing.normal:
+		case Sizing.medium:
 		default:
-			if (Size.medium in this.styles) {
+			if (Sizing.medium in this.styles) {
 				return this.styles.medium;
 			}
 		}
@@ -271,47 +271,47 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	 */
 	private getBoxSizeStyle() {
 
-		switch (this.props['size']) {
-		case Size.xxsmall:
-			if (Size.xxsmall in this.styles) {
+		switch (this.props['sizing']) {
+		case Sizing.xxsmall:
+			if (Sizing.xxsmall in this.styles) {
 				return this.styles.xxsmallBox;
 			}
 			break;
 
-		case Size.xsmall:
-			if (Size.xsmall in this.styles) {
+		case Sizing.xsmall:
+			if (Sizing.xsmall in this.styles) {
 				return this.styles.xsmallBox;
 			}
 			break;
 
-		case Size.small:
-			if (Size.small in this.styles) {
+		case Sizing.small:
+			if (Sizing.small in this.styles) {
 				return this.styles.smallBox;
 			}
 			break;
 
-		case Size.large:
-			if (Size.large in this.styles) {
+		case Sizing.large:
+			if (Sizing.large in this.styles) {
 				return this.styles.largeBox;
 			}
 			break;
 
-		case Size.xlarge:
-			if (Size.xlarge in this.styles) {
+		case Sizing.xlarge:
+			if (Sizing.xlarge in this.styles) {
 				return this.styles.xlargeBox;
 			}
 			break;
 
-		case Size.xxlarge:
-			if (Size.xxlarge in this.styles) {
+		case Sizing.xxlarge:
+			if (Sizing.xxlarge in this.styles) {
 				return this.styles.xxlargeBox;
 			}
 			break;
 
-		case Size.normal:
-		case Size.medium:
+		case Sizing.normal:
+		case Sizing.medium:
 		default:
-			if (Size.medium in this.styles) {
+			if (Sizing.medium in this.styles) {
 				return this.styles.mediumBox;
 			}
 		}

@@ -104,7 +104,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					disabled={this.props.disabled}
 					iconName={this.props.iconName}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-					size={this.props.size}
+					sizing={this.props.sizing}
 					visible={this.props.visible}
 					/>
 				<div

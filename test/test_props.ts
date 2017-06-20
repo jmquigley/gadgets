@@ -5,7 +5,7 @@ mockupEnv();
 
 import test from 'ava';
 import * as _ from 'lodash';
-import {getDefaultBaseProps, Location, Size} from '../lib/shared';
+import {getDefaultBaseProps, Location, Sizing} from '../lib/shared';
 
 test('Test retrieval of default prop object', t => {
 	const props = getDefaultBaseProps();
@@ -70,8 +70,8 @@ test('Test retrieval of default prop object', t => {
 	t.true('selected' in props);
 	t.false(props.selected);
 
-	t.true('size' in props);
-	t.is(props.size, Size.normal);
+	t.true('sizing' in props);
+	t.is(props.sizing, Sizing.normal);
 
 	t.true('style' in props);
 	t.true(_.isEmpty(props.style));

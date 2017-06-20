@@ -3,15 +3,15 @@
  * uses [Font Awesome](http://fontawesome.io/) for the icons.  It can
  * also accept an image file.  It uses seve sizings for the icons: xxsmall,
  * xsmall, small, medium/normal, large, xlarge, and xxlarge.  These are
- * exposed through an enumeration named `Size` defined in the global
- * shared props..
+ * exposed through an enumeration named `Sizing` defined in the global
+ * shared props.
  *
  * #### Examples:
  *
  * ```javascript
- * import {Icon, Size} from 'gadgets';
- * <Icon size={Size.small} iconName="cab" />
- * <Icon size={Size.normal} iconName="paper-plane-o" />
+ * import {Icon, Sizing} from 'gadgets';
+ * <Icon sizing={Sizing.small} iconName="cab" />
+ * <Icon sizing={Sizing.normal} iconName="paper-plane-o" />
  * <Icon imageFile="./image.png" />
  * <Icon iconName="cab" color="red" backgroundColor="gray" />
  * ```
@@ -31,8 +31,8 @@
  * used in this icon.  This option is mutually exclusive to imageFile
  * - `imageFile: string` - The path to an image file that will be used in
  * this icon.  This option is mutually excludive to iconName.
- * - `size: Size` - There are seven icon sizes that can be used.  See the
- * shared props documentation for the enumerations used for each size.
+ * - `sizing: Sizing` - There are seven icon sizes that can be used.  See the
+ * shared props documentation for the enumerations used for each sizing.
  *
  * @module Icon
  */
@@ -45,13 +45,13 @@ import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
-	Size
+	Sizing
 } from '../shared';
 
 export interface IconProps extends BaseProps {
 	iconName?: string;
 	imageFile?: string;
-	size?: Size
+	sizing?: Sizing
 }
 
 export function getDefaultIconProps(): IconProps {
@@ -61,7 +61,7 @@ export function getDefaultIconProps(): IconProps {
 			color: "inherit",
 			iconName: "bomb",
 			imageFile: "",
-			size: Size.normal
+			sizing: Sizing.normal
 	}));
 }
 

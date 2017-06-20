@@ -26,7 +26,7 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 
-export enum Size {
+export enum Sizing {
 	xxsmall = 'xxsmall',
 	xsmall = 'xsmall',
 	small = 'small',
@@ -71,7 +71,7 @@ export interface BaseProps {
 	onKeyPress?: any;
 	onMouseOut?: any;
 	selected?: boolean;
-	size?: Size;
+	sizing?: Sizing;
 	style?: any;
 	visible?: boolean;
 }
@@ -98,7 +98,7 @@ export function getDefaultBaseProps(): BaseProps {
 		onKeyDown: nilEvent,
 		onMouseOut: nilEvent,
 		selected: false,
-		size: Size.normal,
+		sizing: Sizing.normal,
 		style: {},
 		visible: true
 	});

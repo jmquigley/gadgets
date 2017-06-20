@@ -135,7 +135,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 				<Icon
 					className={this.styles.icon}
 					iconName={this.props.iconName}
-					size={this.props.size}
+					sizing={this.props.sizing}
 					/>
 			);
 		}

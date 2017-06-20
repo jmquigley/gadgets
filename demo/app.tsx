@@ -30,7 +30,8 @@ const {
 	Location,
 	Pager,
 	Select,
-	Size,
+	Sizing,
+	TextField,
 	Toast,
 	ToastLevel,
 	ToastType
@@ -229,99 +230,99 @@ class App extends React.Component<AppProps, AppState> {
 				<tbody>
 					<tr className="tblIcons">
 						<th>Icon</th>
-						<td><Icon iconName="handshake-o" size={Size.xxsmall}/></td>
-						<td><Icon iconName="handshake-o" size={Size.xsmall}/></td>
-						<td><Icon iconName="handshake-o" size={Size.small}/></td>
-						<td><Icon iconName="handshake-o" size={Size.normal}/></td>
-						<td><Icon iconName="handshake-o" size={Size.large}/></td>
-						<td><Icon iconName="handshake-o" size={Size.xlarge}/></td>
-						<td><Icon iconName="handshake-o" size={Size.xxlarge}/></td>
-						<td><Icon iconName="handshake-o" size={Size.normal} disabled={true}/></td>
-						<td><Icon iconName="handshake-o" size={Size.normal} color="red" backgroundColor="blue"/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.xxsmall}/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.xsmall}/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.small}/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.normal}/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.large}/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.xlarge}/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.xxlarge}/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.normal} disabled={true}/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.normal} color="red" backgroundColor="blue"/></td>
 					</tr><tr className="tblIcons">
 						<th>Icon Images</th>
-						<td><Icon imageFile="./test-icon-image.png" size={Size.xxsmall}/></td>
-						<td><Icon imageFile="./test-icon-image.png" size={Size.xsmall}/></td>
-						<td><Icon imageFile="./test-icon-image.png" size={Size.small}/></td>
-						<td><Icon imageFile="./test-icon-image.png" size={Size.normal}/></td>
-						<td><Icon imageFile="./test-icon-image.png" size={Size.large}/></td>
-						<td><Icon imageFile="./test-icon-image.png" size={Size.xlarge}/></td>
-						<td><Icon imageFile="./test-icon-image.png" size={Size.xxlarge}/></td>
-						<td><Icon imageFile="./test-icon-image.png" size={Size.normal} disabled={true}/></td>
+						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xxsmall}/></td>
+						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xsmall}/></td>
+						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.small}/></td>
+						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.normal}/></td>
+						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.large}/></td>
+						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xlarge}/></td>
+						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xxlarge}/></td>
+						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.normal} disabled={true}/></td>
 						<td><span>N/A</span></td>
 					</tr><tr>
 						<th>Button</th>
-						<td><Button iconName="motorcycle" size={Size.xxsmall}/></td>
-						<td><Button iconName="motorcycle" size={Size.xsmall}/></td>
-						<td><Button iconName="motorcycle" size={Size.small}/></td>
-						<td><Button iconName="motorcycle" size={Size.normal}/></td>
-						<td><Button iconName="motorcycle" size={Size.large}/></td>
-						<td><Button iconName="motorcycle" size={Size.xlarge}/></td>
-						<td><Button iconName="motorcycle" size={Size.xxlarge}/></td>
-						<td><Button iconName="motorcycle" size={Size.normal} disabled={true}/></td>
-						<td><Button iconName="motorcycle" size={Size.normal} color="yellow" backgroundColor="green"/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.xxsmall}/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.xsmall}/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.small}/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.normal}/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.large}/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.xlarge}/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.xxlarge}/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.normal} disabled={true}/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.normal} color="yellow" backgroundColor="green"/></td>
 					</tr><tr>
 						<th>ButtonCircle</th>
-						<td><ButtonCircle iconName="times" size={Size.xxsmall}/></td>
-						<td><ButtonCircle iconName="times" size={Size.xsmall}/></td>
-						<td><ButtonCircle iconName="times" size={Size.small}/></td>
-						<td><ButtonCircle iconName="times" size={Size.normal}/></td>
-						<td><ButtonCircle iconName="times" size={Size.large}/></td>
-						<td><ButtonCircle iconName="times" size={Size.xlarge}/></td>
-						<td><ButtonCircle iconName="times" size={Size.xxlarge}/></td>
-						<td><ButtonCircle iconName="times" size={Size.normal} disabled={true}/></td>
-						<td><ButtonCircle iconName="times" size={Size.normal} color="white" backgroundColor="orange"/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.xxsmall}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.xsmall}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.small}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.normal}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.large}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.xlarge}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.xxlarge}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.normal} disabled={true}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.normal} color="white" backgroundColor="orange"/></td>
 					</tr><tr>
 						<th>ButtonDialog</th>
-						<td><ButtonDialog iconName="bars" size={Size.xxsmall}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" size={Size.xsmall}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" size={Size.small}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" size={Size.normal}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" size={Size.large}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" size={Size.xlarge}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" size={Size.xxlarge}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" size={Size.normal} disabled={true}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" size={Size.normal} color="white" backgroundColor="teal">dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.xxsmall}>dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.xsmall}>dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.small}>dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.normal}>dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.large}>dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.xlarge}>dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.xxlarge}>dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.normal} disabled={true}>dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.normal} color="white" backgroundColor="teal">dialog</ButtonDialog></td>
 					</tr><tr>
 						<th>ButtonToggle</th>
 						<td><ButtonToggle
 							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							size={Size.xxsmall}
+							sizing={Sizing.xxsmall}
 							/>
 						</td>
 						<td><ButtonToggle
 							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							size={Size.xsmall}
+							sizing={Sizing.xsmall}
 							/>
 						</td>
 						<td><ButtonToggle
 							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							size={Size.small}
+							sizing={Sizing.small}
 							/>
 						</td>
 						<td><ButtonToggle
 							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							size={Size.normal}
+							sizing={Sizing.normal}
 							/>
 						</td>
 						<td><ButtonToggle
 							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							size={Size.large}
+							sizing={Sizing.large}
 							/>
 						</td>
 						<td><ButtonToggle
 							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							size={Size.xlarge}
+							sizing={Sizing.xlarge}
 							/>
 						</td>
 						<td><ButtonToggle
 							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							size={Size.xxlarge}
+							sizing={Sizing.xxlarge}
 							/>
 						</td>
 						<td><ButtonToggle
 							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							size={Size.normal}
+							sizing={Sizing.normal}
 							disabled={true}
 							/>
 						</td>
@@ -329,42 +330,42 @@ class App extends React.Component<AppProps, AppState> {
 							iconNameOn="star" iconNameOff="star-o"
 							fgColorOn="red" fgColorOff="black"
 							bgColorOn="black" bgColorOff="red"
-							size={Size.normal}
+							sizing={Sizing.normal}
 							/>
 						</td>
 					</tr><tr>
 						<th>ButtonText<br/>(Right)</th>
-						<td><ButtonText text="Text" iconName="paper-plane" size={Size.xxsmall}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" size={Size.xsmall}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" size={Size.small}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" size={Size.normal}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" size={Size.large}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" size={Size.xlarge}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" size={Size.xxlarge}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" size={Size.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" size={Size.normal} color="white" backgroundColor="blue"/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xxsmall}/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xsmall}/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.small}/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal}/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.large}/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xlarge}/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal} disabled={true}/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal} color="white" backgroundColor="blue"/></td>
 					</tr><tr>
 						<th>ButtonText<br/>(Left)</th>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.xxsmall}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.xsmall}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.small}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.normal}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.large}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.xlarge}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.xxlarge}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" size={Size.normal} color="white" backgroundColor="red"/></td>
+						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.xxsmall}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.xsmall}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.small}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.normal}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.large}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.xlarge}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.normal} disabled={true}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.normal} color="white" backgroundColor="red"/></td>
 					</tr><tr>
 						<th>ButtonText<br/>(Center)</th>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.xxsmall}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.xsmall}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.small}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.normal}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.large}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.xlarge}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.xxlarge}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} size={Size.normal} color="white" backgroundColor="red"/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.xxsmall}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.xsmall}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.small}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.normal}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.large}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.xlarge}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.xxlarge}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.normal} disabled={true}/></td>
+						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.normal} color="white" backgroundColor="red"/></td>
 					</tr>
 				</tbody>
 			</table>
@@ -481,12 +482,13 @@ class App extends React.Component<AppProps, AppState> {
 				<Pager
 				initialPage="1"
 				totalItems="299"
-				size={Size.xxsmall}
+				sizing={Sizing.xxsmall}
 				onSelect={
 					(page: number) => {
 						console.log(`Clicked on page: ${page}`);
 					}
 				}
+				useinput
 				/>
 			</div>
 
@@ -495,7 +497,7 @@ class App extends React.Component<AppProps, AppState> {
 				<Pager
 				initialPage="1"
 				totalItems="299"
-				size={Size.xsmall}
+				sizing={Sizing.xsmall}
 				onSelect={
 					(page: number) => {
 						console.log(`Clicked on page: ${page}`);
@@ -509,7 +511,7 @@ class App extends React.Component<AppProps, AppState> {
 				<Pager
 				initialPage="1"
 				totalItems="299"
-				size={Size.medium}
+				sizing={Sizing.medium}
 				onSelect={
 					(page: number) => {
 						console.log(`Clicked on page: ${page}`);
@@ -551,6 +553,24 @@ class App extends React.Component<AppProps, AppState> {
 				}}
 				/>
 			</div>
+		</Container>
+	);
+
+	private buildTextField = () => (
+		<Container id="textfieldExample">
+			<TextField type="text" size="10" sizing={Sizing.xxsmall} placeholder="xxsmall" />
+			<br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.xsmall} placeholder="xsmall" />
+			<br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.small} placeholder="small" />
+			<br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.normal} placeholder="normal" />
+			<br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.large} placeholder="large" />
+			<br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.xlarge} placeholder="xlarge" />
+			<br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.xxlarge} placeholder="xxlarge" />
 		</Container>
 	);
 
@@ -707,6 +727,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Select</h1>
 				{this.buildSelect()}
+
+				<h1>TextField</h1>
+				{this.buildTextField()}
 
 				<h1>Toast</h1>
 				{this.buildToast()}

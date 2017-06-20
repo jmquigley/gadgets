@@ -94,7 +94,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
 				noripple
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-				size={this.props.size}
+				sizing={this.props.sizing}
 				style={this.inlineStyle}
 				/>
 		);

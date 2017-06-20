@@ -25,7 +25,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from "react";
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent, Size} from '../shared';
+import {BaseComponent, Sizing} from '../shared';
 
 export interface ButtonCircleProps extends ButtonProps {
 }
@@ -34,7 +34,7 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 	return cloneDeep(Object.assign(
 		getDefaultButtonProps(), {
 			borderColor: "black",
-			size: Size.normal,
+			sizing: Sizing.normal,
 			color: "black"
 	}));
 }
@@ -71,7 +71,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 						borderColor={this.props.color}
 						iconName={this.props.iconName}
 						onClick={this.props.onClick}
-						size={this.props.size}
+						sizing={this.props.sizing}
 						/>
 				</div>
 			</div>

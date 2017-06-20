@@ -27,7 +27,7 @@ import * as React from 'react';
 import {getUUID, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {ButtonText} from '../buttonText';
-import {BaseComponent, BaseProps, getDefaultBaseProps, Size} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 import {TextField} from '../textField';
 
 export interface PagerProps extends BaseProps {
@@ -46,7 +46,7 @@ export function getDefaultPagerProps(): PagerProps {
 			onSelect: nilEvent,
 			pagesToDisplay: 3,
 			pageSize: 25,
-			size: Size.xsmall,
+			sizing: Sizing.xsmall,
 			totalItems: 0,
 			useinput: false
 		}));
@@ -165,7 +165,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						key={String(page)}
 						noicon
 						onClick={() => {this.handleSelect(page)}}
-						size={this.props.size}
+						sizing={this.props.sizing}
 						text={String(page)}
 						/>
 				);
@@ -187,7 +187,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						key={getUUID()}
 						noicon
 						disabled
-						size={this.props.size}
+						sizing={this.props.sizing}
 						text=""
 						/>
 				);
@@ -254,26 +254,26 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					className={this.styles.pagerButton}
 					iconName="angle-double-left"
 					onClick={this.moveToFront}
-					size={this.props.size}
+					sizing={this.props.sizing}
 					/>
 				<Button
 					className={this.styles.pagerButton}
 					iconName="angle-left"
 					onClick={this.moveToPrevious}
-					size={this.props.size}
+					sizing={this.props.sizing}
 					/>
 				{this._buttonsDisplay}
 				<Button
 					className={this.styles.pagerButton}
 					iconName="angle-right"
 					onClick={this.moveToNext}
-					size={this.props.size}
+					sizing={this.props.sizing}
 					/>
 				<Button
 					className={this.styles.pagerButton}
 					iconName="angle-double-right"
 					onClick={this.moveToEnd}
-					size={this.props.size}
+					sizing={this.props.sizing}
 					/>
 				{this.props.useinput ?
 					<TextField
@@ -281,6 +281,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						min="1"
 						max={String(this._lastPage)}
 						placeholder={String(this.state.currentPage)}
+						style={{width: "4em"}}
 						type="number"
 					/>
 					:

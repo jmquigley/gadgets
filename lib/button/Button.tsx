@@ -32,7 +32,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Icon} from '../icon';
-import {BaseComponent, BaseProps, getDefaultBaseProps, Size} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
@@ -41,7 +41,7 @@ export interface ButtonProps extends BaseProps {
 export function getDefaultButtonProps(): ButtonProps {
 	return cloneDeep(Object.assign(getDefaultBaseProps(), {
 		iconName: "bomb",
-		size: Size.normal
+		sizing: Sizing.normal
 	}));
 }
 
@@ -97,9 +97,9 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 				style={{...this.inlineStyle}}
 				>
 				<Icon
-					className={(this.props.size === Size.xxsmall) ? this.styles.iconXXSmall : this.styles.icon}
+					className={(this.props.sizing === Sizing.xxsmall) ? this.styles.iconXXSmall : this.styles.icon}
 					iconName={this.props.iconName}
-					size={this.props.size}
+					sizing={this.props.sizing}
 				/>
 			</div>
 		);

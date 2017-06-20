@@ -24,7 +24,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent} from '../shared';
+import {BaseComponent, Sizing} from '../shared';
 
 export interface ValidatorFn {
 	(text: string): boolean;
@@ -38,15 +38,16 @@ export interface Validator {
 
 export interface TextFieldProps extends Partial<HTMLInputElement> {
 	disabled?: boolean;
-	visible?: boolean;
+	sizing?: Sizing;
 	validators?: Validator[];
+	visible?: boolean;
 }
 
 export function getDefaultTextFieldProps(): TextFieldProps {
 	return cloneDeep({
 		disabled: false,
-		visible: true,
 		id: '',
+		visible: true,
 		validators: []
 	});
 }
@@ -65,6 +66,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	protected buildStyles() {
 		super.buildStyles(this.props);
 		this.classes.push('ui-textfield');
+		this.classes.push(this.sizeStyle);
 	}
 
 	render() {
@@ -72,7 +74,9 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 		// Strip out props that the input control cannot recognize or use
 		const {
+			sizing,
 			validators,
+			visible,
 			...props
 		} = this.props;
 
