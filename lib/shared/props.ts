@@ -9,6 +9,7 @@
  * - onClick
  * - onClose
  * - onDoubleClick
+ * - onInput
  * - onKeyDown
  * - onKeyPress
  * - onMouseOut
@@ -114,6 +115,7 @@ export interface BaseProps {
 	onClick?: any;
 	onClose?: any;
 	onDoubleClick?: any;
+	onInput?: any;
 	onKeyDown?: any;
 	onKeyPress?: any;
 	onMouseOut?: any;
@@ -141,6 +143,7 @@ export function getDefaultBaseProps(): BaseProps {
 		onClick: nilEvent,
 		onClose: nilEvent,
 		onDoubleClick: nilEvent,
+		onInput: nilEvent,
 		onKeyPress: nilEvent,
 		onKeyDown: nilEvent,
 		onMouseOut: nilEvent,

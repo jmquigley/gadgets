@@ -11,6 +11,7 @@ The following are the current event types supported by components:
 - onClick
 - onClose
 - onDoubleClick
+- onInput
 - onKeyDown
 - onKeyPress
 - onMouseOut

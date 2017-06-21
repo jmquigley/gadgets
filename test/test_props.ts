@@ -58,11 +58,14 @@ test('Test retrieval of default prop object', t => {
 	t.true('onDoubleClick' in props);
 	t.true(props.onDoubleClick != null);
 
-	t.true('onKeyPress' in props);
-	t.true(props.onKeyPress != null);
+	t.true('onInput' in props);
+	t.true(props.onInput != null);
 
 	t.true('onKeyDown' in props);
 	t.true(props.onKeyDown != null);
+
+	t.true('onKeyPress' in props);
+	t.true(props.onKeyPress != null);
 
 	t.true('onMouseOut' in props);
 	t.true(props.onMouseOut != null);
