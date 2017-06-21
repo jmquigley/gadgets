@@ -86,7 +86,7 @@ test('Test the disabling of the ButtonDialog control', t => {
 	t.false(ctl.state('visible'));
 });
 
-test('Test the making the ButtonDialog invisible', t => {
+test('Test making the ButtonDialog invisible', t => {
 	const ctl = mount(
 		<ButtonDialog visible={false}>
 			<p>Dialog test</p>
