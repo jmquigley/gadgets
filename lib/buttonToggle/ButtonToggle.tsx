@@ -60,7 +60,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
     public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
     constructor(props: ButtonToggleProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 		this.state = {
 			toggle: props.initialToggle
 		};
@@ -78,7 +78,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 	protected buildStyles() {
 		super.buildStyles(this.props);
-		this.classes.push("ui-buttontoggle");
+		this.classes.push('ui-button-toggle');
 		this.classes.push(this.styles.buttonToggle);
 	}
 

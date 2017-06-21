@@ -52,7 +52,7 @@ test('Test creation of a ButtonText control to the left', t => {
 	t.is(ctl.prop('borderColor'), "green");
 
 	t.is(ctl.find('.test-class').length, 1);
-	t.is(ctl.find('.ui-button').length, 1);
+	t.is(ctl.find('.ui-button-text').length, 1);
 	t.is(ctl.find('.buttonText').length, 1);
 });
 
@@ -73,7 +73,7 @@ test('Test button click in ButtonText control', t => {
 	t.true(ctl.prop('visible'));
 	t.is(ctl.prop('text'), "test text");
 
-	let btn = ctl.find('.ui-buttontext');
+	let btn = ctl.find('.ui-button-text');
 	t.is(btn.length, 1);
 	btn.simulate('click');
 	t.true(click.calledOnce);
@@ -91,7 +91,7 @@ test('Test disabling of a ButtonText control', t => {
 	t.true(ctl.prop('visible'));
 	t.is(ctl.find('.disabled').length, 1);
 
-	ctl.find('.ui-buttontext').simulate('click');
+	ctl.find('.ui-button-text').simulate('click');
 	t.true(click.neverCalledWith());
 });
 
@@ -107,6 +107,6 @@ test('Test making a ButtonText control invisible', t => {
 	t.false(ctl.prop('visible'));
 	t.is(ctl.find('.invisible').length, 1);
 
-	ctl.find('.ui-buttontext').simulate('click');
+	ctl.find('.ui-button-text').simulate('click');
 	t.true(click.neverCalledWith());
 });

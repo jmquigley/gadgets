@@ -25,7 +25,7 @@ test('Test creation of a Button control', t => {
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 
-	t.is(ctl.find('.ui-buttontoggle').length, 1);
+	t.is(ctl.find('.ui-button-toggle').length, 1);
 	t.is(ctl.find('.fa').length, 1);
 	t.is(ctl.find('.fa-bomb').length, 1);
 	t.is(ctl.find('.test-class').length, 1);
@@ -49,7 +49,6 @@ test('Test creation of a ButtonToggle control with on/off icons', t => {
  	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
- 	t.is(ctl.find('.ui-button').length, 1);
  	t.is(ctl.find('.fa').length, 1);
  	t.is(ctl.find('.fa-star-o').length, 1);
 });

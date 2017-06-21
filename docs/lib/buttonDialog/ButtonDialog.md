@@ -1,21 +1,29 @@
 <a name="module_ButtonDialog"></a>
 
 ## ButtonDialog
-{description}
+A button control that opens up a local dialog box when clicked.
+The dialog box content is the child content of the control.  When the
+button is clicked the hidden dialog window is shown.  See the `Button` control
+for additional events and properties.
 
 #### Examples:
 
 ```javascript
-import {Button} from 'gadgets';
-<Button iconName="cab" onClick={someFunction} />
+import {ButtonDialog} from 'gadgets';
+<ButtonDialog iconName="bars" sizing={Sizing.normal} onClick={someFunction}>
+   ... dialog popup content
+</ButtonDialog>
 ```
 
 #### Events
-- `{name}` - {description}
+- `onClick()` - This callback is invoked when the control is clicked by the user
 
 #### Styles
-- `` - {description}
+- `ui-button-dialog` - A top level style placed on the `<div>` element that contains
+the button and the hidden dialogue window.
+- `ui-dialog-popup` - Exists on the hidden dialog window.
 
 #### Properties
-- `{name}: {datatype}` - {description}
+- `dialogClasses: string[] ([])` - An array of CSS class strings that will be
+applied to the dialog window.
 

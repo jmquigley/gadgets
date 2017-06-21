@@ -158,11 +158,14 @@ Global UI color settings for components
 	color: #ffe11a;
 }
 
-.ui-button:not(.nohover):hover {
+.ui-button:not(.nohover):hover,
+.ui-button-text:not(.nohover):hover
+{
 	background-color: silver !important;
 }
 
 .ui-dialog-popup {
+	color: black;
 	background-color: white;
 	border: solid 1px #004358;
 }
@@ -171,7 +174,7 @@ Global UI color settings for components
 	border-color: #004358;
 }
 
-.ui-pager > .ui-button {
+.ui-pager > .ui-button, .ui-pager > .ui-button-text {
 	border-top: solid 1px #004358;
 	border-bottom: solid 1px #004358;
 	border-right: solid 1px #004358;

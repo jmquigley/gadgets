@@ -66,7 +66,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	public static CENTER: number = 2;
 
     constructor(props: ButtonTextProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -79,26 +79,25 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	}
 
 	protected buildStyles() {
-		if (this.props.color !== "inherit") {
+		if (this.props.color !== 'inherit') {
 			this.inlineStyle["color"] = this.props.color;
 		}
 
-		if (this.props.backgroundColor !== "inherit") {
+		if (this.props.backgroundColor !== 'inherit') {
 			this.inlineStyle["backgroundColor"] = this.props.backgroundColor;
 		}
 
-		if (this.props.borderColor !== "inherit") {
+		if (this.props.borderColor !== 'inherit') {
 			this.inlineStyle["borderColor"] = this.props.borderColor;
 		}
 
 		super.buildStyles(this.props);
 
-		this.classes.push("ui-button");
-		this.classes.push("ui-buttontext");
+		this.classes.push('ui-button-text');
 		this.classes.push(this.styles.buttonText);
 
 		if (!this.props.noripple && !this.props.disabled) {
-			this.classes.push("ripple");
+			this.classes.push('ripple');
 		}
 	}
 

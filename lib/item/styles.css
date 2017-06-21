@@ -24,26 +24,24 @@
 	.rightButton {
 	}
 
-	.item:hover .itemButton div {
+	.hiddenButton {
+	}
+
+	.item:hover :global(.ui-button),
+	.item:hover .itemButton :global(.ui-button-circle) > div
+	{
 		width: 40px;
-		border-width: 2px !important;
+		border-width: 3px !important;
 		opacity: 1.0;
 	}
 
-	.hiddenButton div {
+	.hiddenButton :global(.ui-button),
+	.hiddenButton > :global(.ui-button-circle) > div
+	{
 		transition: width 0.33s, opacity 0.5s ease;
 		width: 0px;
 		border-width: 0 !important;
 		opacity: 0.0;
 	}
 
-	.item:hover .itemButton i {
-		font-size: 1.0em;
-	}
-
-	.hiddenButton i {
-		transition: font-size 0.25s ease;
-		font-size: 0;
-		flex: none;
-	}
 }

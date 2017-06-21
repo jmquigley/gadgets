@@ -224,7 +224,7 @@ class App extends React.Component<AppProps, AppState> {
 						<th>xlarge</th>
 						<th>xxlarge</th>
 						<th>disabled</th>
-						<th>colored</th>
+						<th>custom</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -393,7 +393,7 @@ class App extends React.Component<AppProps, AppState> {
 
 			<List alternating>
 				<ListHeader
-				leftButton={<ButtonDialog iconName="bars" />}
+				leftButton={<ButtonDialog iconName="bars"><div>header dialog</div><br/></ButtonDialog>}
 				noedit
 				rightButton={<Button iconName="plus" />}
 				title="Demo List Header"
@@ -412,7 +412,7 @@ class App extends React.Component<AppProps, AppState> {
 				leftButton={<Button />}
 				hiddenLeftButton
 				rightButton={
-					<ButtonCircle iconName="times" color="red" />
+					<ButtonCircle iconName="times" color="red" borderColor="red" />
 				}
 				hiddenRightButton
 				/>

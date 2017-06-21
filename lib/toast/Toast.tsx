@@ -77,7 +77,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ButtonCircle} from '../buttonCircle';
-import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 
 export enum ToastLevel {
 	info,
@@ -225,8 +225,10 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 				<ButtonCircle
 					className={this.styles.button}
 					color="white"
+					borderColor="white"
 					iconName="times"
 					onClick={this.handleClose}
+					sizing={Sizing.normal}
 					/>
 			</div>
 		);

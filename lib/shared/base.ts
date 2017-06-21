@@ -3,11 +3,23 @@
  * to guarantee certain variable will be present through inheritance.  These
  * variables include:
  *
- * - classes - an array of CSS classnames that will be used on the root element
+ * - `boxSizeStyle` -  Each `Icon` control exists within a box/square.  The
+ * `sizing` parameter determines which CSS class will be used for this box size.
+ * - `classes` - an array of CSS classnames that will be used on the root element
  * of the control
- * - inlineStyles - an object that holds user defined style overrides
- * - styles - an object that represent the styles in the CSS module associated
+ * - `inlineStyles` - an object that holds user defined style overrides
+ * - `locationStyle` - There are 9 locations within a region: topLeft, top,
+ * topRight, middleLeft, middle, middleRight, bottomLeft, bottom, bottomRight. The
+ * location prop is used to specify the CSS used to calculte this position in a
+ * control using transform and relative coordinates.
+ * - `sizeStyles` - The BaseProps used by most controls contains a field named
+ * `sizing`.  When this prop is set, then this variable will contain the name
+ * of the CSS class for that sizing type for fonts.
+ * - `styles` - an object that represent the styles in the CSS module associated
  * to this control.
+ *
+ * The values of these variables are computed automatically for any component
+ * that inhertis from BaseComponent (controlled by props).
  *
  * #### Examples:
  *
@@ -17,7 +29,14 @@
  * export class XYZ extends BaseComponent<Props, State> {
  *    ...
  * }
+ *
+ * ...
+ *
+ * <XYZ sizing={Sizing.xxsmall} location={Location.topRight} />
  * ```
+ * In the example above the `sizeStyle` and `locationStyle` would be computed
+ * automatically for the given values.  These values are then available to the
+ * child class to use in building the component using these styles.
  *
  * @module BaseComponent
  */
@@ -47,12 +66,12 @@ const defaultBaseOptions: BaseOptions = {
 
 export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 
+	private _boxSizeStyle: string = '';
 	private _classes: string[] = [];
 	private _inlineStyle: any = {};    // inline style overrides
-	private _styles: any = {};         // css modules styles
-	private _sizeStyle: string = '';
-	private _boxSizeStyle: string = '';
 	private _locationStyle: string = '';
+	private _sizeStyle: string = '';
+	private _styles: any = {};         // css modules styles
 
 	constructor(props: P, pstyles: any = {}) {
 		super(props);
@@ -107,10 +126,22 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	/**
 	 * Every component has a general set of CSS styles that may be applied each time
 	 * the component is rendered (like a style to enable/disable).  This function
-	 * is used to generate those basic, shared styles in all components.
+	 * is used to generate those basic, shared styles in all components.  It uses a
+	 * set of common props (className, visible, disable, etc).  There are cases where
+	 * one wants to ignore the computation of a value.  The third optional parameter
+	 * allows one to ignore a specific value calculated in this set.
+	 * @param props {P} the props for the given child class (generic type)
+	 * @param style {Object} a set of key value pairs that override any styles in
+	 * the props.
+	 * @param opts {BaseOption} determines which automatic names will be ignored
 	 */
 	protected buildStyles(props: P, style: any = {}, opts?: BaseOptions): void {
 		this._classes = [];
+
+		// Takes the initial iniline style object, the style object from props and
+		// an input user override and merges them together from left to right, Where
+		// the rightmost item in the function call has a higher priority when the
+		// objects have the same "key"
 		this._inlineStyle = Object.assign(this._inlineStyle, props['style'], style);
 
 		opts = Object.assign(
@@ -135,7 +166,7 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	/**
 	 * Takes a location parameter from the current props and searchs for the
 	 * corresponding style class CSS.  If it is found, then it returns the
-	 * location style for that lcoation.  This maps CSS module generated strings
+	 * location style for that location.  This maps CSS module generated strings
 	 * to their enumerations.
 	 * @returns {string} the name of the local style for that size.  If it
 	 * is not found, then and empty string is returned.

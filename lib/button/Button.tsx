@@ -21,8 +21,8 @@
  *
  * #### Properties
  * - `iconName: string` - the name of the font awesome icon used with this button
- * - `size: Size` - Allows one to change the size of the icon within the button.
- * See the shared props object for the `Size` enumeration.
+ * - `sizing: Sizing` - Allows one to change the size of the icon within the button.
+ * See the shared props object for the `Sizing` enumeration.
  *
  * @module Button
  */

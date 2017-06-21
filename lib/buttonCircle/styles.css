@@ -1,6 +1,7 @@
 @import '../shared/styles.css';
 
 :local {
+
 	.buttonCircle {
 		@extend baseButton;
 	}
@@ -9,12 +10,13 @@
 		display: inline-block;
 		position: relative;
 		top: 50%;
-		left: 50%;
+		left: 49%;
 		transform: translate(-50%, -50%);
 	}
 
 	.buttonCircleIcon {
-		border-radius: 42px;
+		border: solid 3px;
+		border-radius: $xxlarge;
 	}
 
 }

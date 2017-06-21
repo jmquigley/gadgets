@@ -22,8 +22,8 @@
  * - `onClick(toggleState)` - This callback is invoked when the header
  * portion of the AccordionItem is clicked.  It is given the current
  * state of the toggle (true if visible, otherwise false)
- * - `onNew()` - This callback is invoked if the "plus" button is
- * clicked.
+ * - `onNew(title)` - This callback is invoked if the "plus" button is
+ * clicked.  The name of the item is given to this callback.
  *
  * #### Styles
  * - `ui-accordionitem` - The top level style for the Item
@@ -97,7 +97,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 			});
 		}
 
-		this.props.onNew();
+		this.props.onNew(this.props.title);
 	}
 
 	protected buildStyles() {
@@ -129,7 +129,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 					title={this.props.title}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 					rightButton={rightButton}
-				/>
+					/>
 				{content}
 			</div>
 		);
