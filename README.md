@@ -114,7 +114,8 @@ A button control that when pushed displays a local dialog box.  The contents of 
 ### [ButtonText](docs/lib/buttonText/ButtonText.md)
 A button control that contains an icon and a text string.  The text string can be to the left or right of the icon.
 
-### ButtonToggle
+### [ButtonToggle](docs/lib/buttonToggle/ButtonToggle.md)
+A button control that switches between the given icons when clicked.  The state of the button is maintained until it is clicked again.
 
 ### Card
 

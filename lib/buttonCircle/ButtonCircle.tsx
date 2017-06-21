@@ -56,8 +56,6 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 	}
 
 	protected buildStyles() {
-		this.inlineStyle['border'] = 'solid 2px';
-
 		super.buildStyles(this.props);
 
 		this.classes.push('ui-button-circle');
@@ -71,15 +69,10 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 			<div className={this.classes.join(' ')}>
 				<div className={`${this.styles.buttonCircleContainer} ${this.boxSizeStyle}`}>
 					<Button
+						{...this.props}
 						className={this.styles.buttonCircleIcon}
-						style={this.inlineStyle}
-						disabled={this.props.disabled}
-						color={this.props.color}
-						backgroundColor={this.props.backgroundColor}
-						borderColor={this.props.borderColor}
 						iconName={this.props.iconName}
-						onClick={this.props.onClick}
-						sizing={this.props.sizing}
+						style={this.inlineStyle}
 						/>
 				</div>
 			</div>
