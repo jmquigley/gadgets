@@ -135,13 +135,15 @@ A button control that contains an icon and a text string.  The text string can b
 ### [Icon](docs/lib/icon/Icon.md)
 Displays a graphical icon within the current container.
 
-### Label
+### [Label](docs/lib/label/Label.md)
+A text string label that can made editable.  It is ultimately a `<span>` wrapper of the given text string.
 
 ### List/ListItem
 
 ### Menu
 
-### Pager
+### [Pager](docs/lib/pager/Pager.md)
+A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.
 
 ### ProgressBar
 
@@ -166,6 +168,8 @@ A text control with an up/down arrow that will increment a counter.
 ### TextField
 
 ### TimeChooser
+
+### Title
 
 ### [Toast](docs/lib/toast/Toast.md)
 A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.

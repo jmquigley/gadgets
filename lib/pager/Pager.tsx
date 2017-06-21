@@ -1,7 +1,7 @@
 /**
  * A pagination control.  This takes an input size `I` and a page size `P`
  * and breaks it up into N = I/P entries.  The entries are displayed as a
- * list of pages that the user can choose from.  When clicking on the page
+ * list of pages that can be chosen by the user.  When clicking on the page
  * entry a selection event is invoked to tell the user what page was selected.
  * The user is responsible for responding to the event and dealing with the
  * page switch.

@@ -1,6 +1,7 @@
 /**
  * The Badge widget is used to annotate/overlay another widget with a
- * counter.  This widget surrounds the component it will annotate.
+ * counter.  This widget surrounds the component it will annotate.  The
+ * control receives a prop named `counter` that sets the actual value.
  *
  * #### Examples:
  *
@@ -8,18 +9,24 @@
  * import {Badge} from 'gadgets';
  * <Badge
  *     counter={this.state.count}
- *     location={Location.topRight} >
+ *     location={Location.topRight}
+ *     >
  *     <div>...</div>
+ * </Badge>
  * ```
  *
  * #### Events
- * - `{name}` - {description}
+ * - `onClick(counter: number)` - when the counter value is clicked this
+ * callback is invoked.  It is given the current count value.
  *
  * #### Styles
- * - `` - {description}
+ * - `ui-badge` - Top level class on the `<div>` of the badge (not the
+ * container)
  *
  * #### Properties
- * - `{name}: {datatype}` - {description}
+ * - `counter: number (0)` - The number value displayed by the badge
+ * - `suppress: boolean (false)` - If this is set to true, then numbers
+ * less than 1 are not shown, otherwise all values are shown.
  *
  * @module Badge
  */
@@ -28,20 +35,23 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent, BaseProps} from '../shared';
+import {BaseComponent, BaseProps, Sizing} from '../shared';
 import {getDefaultBaseProps, Location} from '../shared/props';
 
 export interface BadgeProps extends BaseProps {
 	counter?: number;
+	suppress?: boolean;
 }
 
 export function getDefaultBadgeProps(): BadgeProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
-			backgroundColor: "white",
-			color: "red",
+			backgroundColor: 'white',
+			color: 'red',
 			counter: 0,
-			location: Location.topRight
+			location: Location.topRight,
+			sizing: Sizing.xsmall,
+			suppress: false
 	}));
 }
 
@@ -50,17 +60,21 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
 	constructor(props: BadgeProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	private handleClick() {
+		this.props.onClick(this.props.counter);
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props,{
-			color: (this.props.color || "black"),
-			backgroundColor: (this.props.backgroundColor || "white"),
+			color: (this.props.color || 'black'),
+			backgroundColor: (this.props.backgroundColor || 'white'),
 			border: `solid 3px ${this.props.color}`
 		});
 
-		this.classes.push("ui-badge");
 		this.classes.push(this.styles.badgeContainer);
 		this.classes.push(this.locationStyle);
 	}
@@ -69,18 +83,22 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		this.buildStyles();
 
 		let badge = null;
-		if (this.props.counter !== 0) {
+		if (this.props.suppress && this.props.counter < 1) {
+			badge = null;
+		} else {
 			badge = (
 				<div
-					className={`${this.styles.badge} ${this.locationStyle}`}
-					style={this.inlineStyle}>
+					className={`${this.sizeStyle} ui-badge ${this.styles.badge} ${this.locationStyle}`}
+					onClick={this.handleClick}
+					style={this.inlineStyle}
+					>
 					{this.props.counter}
 				</div>
 			);
 		}
 
 		return (
-			<div className={this.classes.join(" ")}>
+			<div className={this.classes.join(' ')}>
 				{this.props.children}
 				{badge}
 			</div>

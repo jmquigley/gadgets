@@ -10,13 +10,14 @@
 	}
 
 	.badge {
+		border-radius: $xxlarge;
+		font-weight: bold;
+		margin: 2px;
+		padding: 0 8px;
 		position: absolute;
 		text-align: center;
-		margin: 2px;
-		font-size: 0.5em;
-		font-weight: bold;
-		padding: 2px 4px;
-		border-radius: 30px;
+		user-select: none;
+		cursor: default;
 	}
 
 }

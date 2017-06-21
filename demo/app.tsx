@@ -81,6 +81,7 @@ interface AppState {
 	counter2?: number;
 	counter3?: number;
 	counter4?: number;
+	counter5?: number;
 	toastVisible1: boolean;
 	toastVisible2: boolean;
 	toastVisible3: boolean;
@@ -99,6 +100,7 @@ class App extends React.Component<AppProps, AppState> {
 			counter2: 1,
 			counter3: 99,
 			counter4: 1,
+			counter5: -5,
 			toastVisible1: true,
 			toastVisible2: true,
 			toastVisible3: true,
@@ -147,8 +149,11 @@ class App extends React.Component<AppProps, AppState> {
 
 			<div id="simple-buttons">
 				<div className="box">
-					<p>top right</p>
-					<Badge counter={this.state.counter1}>
+					<p>top right (suppress)</p>
+					<Badge
+						counter={this.state.counter1}
+						suppress
+						>
 						<div className="boxButtons">
 							<Button onClick={() => {
 									this.setState({
@@ -160,10 +165,13 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<div className="box">
-					<p>top left</p>
+					<p>top left<br/>&nbsp;</p>
 					<Badge
 						counter={this.state.counter2}
-						location={Location.topLeft}>
+						location={Location.topLeft}
+						onClick={(counter: number) => {
+							console.log(`Badge counter click: ${counter}`);
+						}}>
 						<div className="boxButtons">
 							<Button onClick={() => {
 									this.setState({
@@ -175,7 +183,7 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<div className="box">
-					<p>bottom right</p>
+					<p>bottom right<br/>&nbsp;</p>
 					<Badge
 						counter={this.state.counter3}
 						location={Location.bottomRight}
@@ -191,7 +199,7 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<div className="box">
-					<p>bottom left</p>
+					<p>bottom left<br/>&nbsp;</p>
 					<Badge
 						counter={this.state.counter4}
 						location={Location.bottomLeft}
@@ -200,6 +208,23 @@ class App extends React.Component<AppProps, AppState> {
 							<Button onClick={() => {
 									this.setState({
 										counter4: this.state.counter4 + 1
+									});
+							}}/>
+						</div>
+					</Badge>
+				</div>
+
+				<div className="box">
+					<p>bottom (negative)</p>
+					<Badge
+						counter={this.state.counter5}
+						location={Location.bottom}
+						color="blue"
+						>
+						<div className="boxButtons">
+							<Button onClick={() => {
+									this.setState({
+										counter5: this.state.counter5 + 1
 									});
 							}}/>
 						</div>

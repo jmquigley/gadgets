@@ -2,7 +2,8 @@
 
 ## Badge
 The Badge widget is used to annotate/overlay another widget with a
-counter.  This widget surrounds the component it will annotate.
+counter.  This widget surrounds the component it will annotate.  The
+control receives a prop named `counter` that sets the actual value.
 
 #### Examples:
 
@@ -10,16 +11,22 @@ counter.  This widget surrounds the component it will annotate.
 import {Badge} from 'gadgets';
 <Badge
     counter={this.state.count}
-    location={Location.topRight} >
+    location={Location.topRight}
+    >
     <div>...</div>
+</Badge>
 ```
 
 #### Events
-- `{name}` - {description}
+- `onClick(counter: number)` - when the counter value is clicked this
+callback is invoked.  It is given the current count value.
 
 #### Styles
-- `` - {description}
+- `ui-badge` - Top level class on the `<div>` of the badge (not the
+container)
 
 #### Properties
-- `{name}: {datatype}` - {description}
+- `counter: number (0)` - The number value displayed by the badge
+- `suppress: boolean (false)` - If this is set to true, then numbers
+less than 1 are not shown, otherwise all values are shown.
 
