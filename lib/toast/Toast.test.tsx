@@ -16,6 +16,8 @@ test.after.always.cb(t => {
 test('Test retrieval of Toast props object', t => {
 	const props = getDefaultToastProps();
 
+	t.truthy(props);
+
 	t.true('bottom' in props);
 	t.is(props.bottom, false);
 

@@ -16,6 +16,8 @@ test.after.always.cb(t => {
 test('Test retrieval of List props object', t => {
 	const props = getDefaultListProps();
 
+	t.truthy(props);
+
 	t.true('alternating' in props);
 	t.false(props.alternating);
 

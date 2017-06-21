@@ -16,6 +16,8 @@ test.after.always.cb(t => {
 test('Test retrieval of Title props object', t => {
 	const props = getDefaultTitleProps();
 
+	t.truthy(props);
+
 	t.true('stacked' in props);
 	t.false(props.stacked);
 

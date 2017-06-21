@@ -17,6 +17,8 @@ test.after.always.cb(t => {
 test('Test retrieval of ButtonText props object', t => {
 	const props = getDefaultButtonTextProps();
 
+	t.truthy(props);
+
 	t.true('iconName' in props);
 	t.is(props.iconName, 'bomb');
 

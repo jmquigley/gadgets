@@ -16,6 +16,8 @@ test.after.always.cb(t => {
 test('Test retrieval of DynamicList props object', t => {
 	const props = getDefaultDynamicListProps();
 
+	t.truthy(props);
+
 	t.true('title' in props);
 	t.is(props.title, '');
 });

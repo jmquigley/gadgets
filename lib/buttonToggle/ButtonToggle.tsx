@@ -1,21 +1,45 @@
 /**
- * {description}
+ * A button control that switches between the given icons when clicked.
+ * The state of the button is maintained until it is clicked again.  On
+ * each click the `onClick` is invoked and given the current state.
  *
  * #### Examples:
  *
  * ```javascript
- * import {Button} from 'gadgets';
- * <Button iconName="cab" onClick={someFunction} />
+ * import {ButtonToggle} from 'gadgets';
+ * <ButtonToggle
+ *     iconNameOn="star"
+ *     iconNameOff="star-o"
+ *     fgColorOn="red"
+ *     fgColorOff="blue"
+ *     sizing={Sizing.normal}
+ *     onClick={somefunction}
+ *     />
  * ```
  *
  * #### Events
- * - `{name}` - {description}
+ * - `onclick(toggle: boolean)` - When the button is clicked, then the
+ * button toggle is changed.  This callback returns the current state
+ * of the toggle.  True is on, false is off.
  *
  * #### Styles
- * - `` - {description}
+ * - `ui-button-toggle` - Style applied to the `<i>` button control.
  *
  * #### Properties
- * - `{name}: {datatype}` - {description}
+ * - `bgColorOff: string ('inherit')` - The background color when the
+ * button is in the off position.
+ * - `bgColorOn: string ('inherit')` - The background color when the
+ * button is in the on position
+ * - `fgColorOff: string ('gray')` - The foreground color when the
+ * button is in the off position
+ * - `fgColorOn: string ('black')` - the foreground color when the
+ * button is in the on position
+ * - `initialToggle: boolean (false)` - The initial on (true) or
+ * off (false) state of the button.
+ * - `iconNameOff: string ('bomb')` - the name of the font awesome icon
+ * associated with the button when it is off.
+ * - `iconNameOn: string ('bomb')` - the name of the font awesome icon
+ * associated with the button when it is on.
  *
  * @module ButtonToggle
  */
@@ -87,16 +111,15 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 		return (
 			<Button
-				backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
-				className={this.classes.join(" ")}
-				color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
-				disabled={this.props.disabled}
-				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
-				noripple
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-				sizing={this.props.sizing}
-				style={this.inlineStyle}
-				/>
+			{...this.props}
+			backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
+			className={this.classes.join(' ')}
+			color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
+			iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
+			noripple
+			onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+			style={this.inlineStyle}
+			/>
 		);
 	}
 }

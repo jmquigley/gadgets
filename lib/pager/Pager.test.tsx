@@ -16,6 +16,8 @@ test.after.always.cb(t => {
 test('Test retrieval of Pager props object', t => {
 	const props = getDefaultPagerProps();
 
+	t.truthy(props);
+
 	t.true('pagesToDisplay' in props);
 	t.is(props.pagesToDisplay, 3);
 

@@ -20,6 +20,8 @@ test.after.always.cb(t => {
 test('Test retrieval of ListItem props object', t => {
 	const props = getDefaultListItemProps();
 
+	t.truthy(props);
+
 	t.true('href' in props);
 	t.false(_.isEmpty(props.href));
 });

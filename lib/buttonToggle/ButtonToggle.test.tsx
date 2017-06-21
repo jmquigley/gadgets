@@ -8,13 +8,41 @@ import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
 import * as sinon from 'sinon';
-import {ButtonToggle} from './index';
+import {ButtonToggle, getDefaultButtonToggleProps} from './index';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
 });
 
-test('Test creation of a Button control', t => {
+test('Test retrieval of ButtonToggle props object', t => {
+	const props = getDefaultButtonToggleProps();
+
+	t.truthy(props);
+
+	t.true('bgColorOff' in props);
+	t.is(props.bgColorOff, 'inherit');
+
+	t.true('bgColorOn' in props);
+	t.is(props.bgColorOn, 'inherit');
+
+	t.true('fgColorOff' in props);
+	t.is(props.fgColorOff, 'gray');
+
+	t.true('fgColorOn' in props);
+	t.is(props.fgColorOn, 'black');
+
+	t.true('initialToggle' in props);
+	t.false(props.initialToggle);
+
+	t.true('iconNameOff' in props);
+	t.is(props.iconNameOff, 'bomb');
+
+	t.true('iconNameOn' in props);
+	t.is(props.iconNameOn, 'bomb');
+});
+
+
+test('Test creation of a ButtonToggle control', t => {
 	const ctl = mount(<ButtonToggle className="test-class"/>);
 
 	t.truthy(ctl);
@@ -49,6 +77,7 @@ test('Test creation of a ButtonToggle control with on/off icons', t => {
  	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
+	t.is(ctl.find('.ui-button-toggle').length, 1);
  	t.is(ctl.find('.fa').length, 1);
  	t.is(ctl.find('.fa-star-o').length, 1);
 });
@@ -73,7 +102,7 @@ test('Test ButtonToggle click event', t => {
  	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
- 	ctl.find('i').simulate('click');
+ 	ctl.find('.ui-button-toggle').simulate('click');
  	t.true(click.calledOnce);
 });
 
@@ -89,7 +118,7 @@ test('Test disabling of a ButtonToggle', t => {
  	t.true(ctl.prop('visible'));
  	t.is(ctl.find('.disabled').length, 1);
 
- 	ctl.find('i').simulate('click');
+ 	ctl.find('.ui-button-toggle').simulate('click');
  	t.true(click.neverCalledWith());
 });
 
@@ -106,7 +135,7 @@ test('Test making a ButtonToggle invisible', t => {
  	t.false(ctl.prop('visible'));
  	t.is(ctl.find('.invisible').length, 1);
 
- 	ctl.find('i').simulate('click');
+ 	ctl.find('.ui-button-toggle').simulate('click');
  	t.true(click.neverCalledWith());
 });
 
@@ -129,7 +158,7 @@ test('Test the icon switch in a ButtonToggle click', t => {
 	t.is(ctl.prop('iconNameOff'), 'star-o');
 
 	t.false(ctl.state('toggle'));
-	ctl.find('i').simulate('click');
+	ctl.find('.ui-button-toggle').simulate('click');
 	t.true(click.calledOnce);
 	t.true(ctl.state('toggle'));
 });

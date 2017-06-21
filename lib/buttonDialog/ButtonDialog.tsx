@@ -40,7 +40,7 @@ export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
 }
 
-export function getDefaultButtonDialogProps(): ButtonProps {
+export function getDefaultButtonDialogProps(): ButtonDialogProps {
 	return cloneDeep(Object.assign(
 		getDefaultButtonProps(), {
 			dialogClasses: []
@@ -103,22 +103,21 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			<div
 				className={this.classes.join(' ')}
 				disabled={this.props.disabled}
-			>
-
+				>
 				<Button
-				style={this.inlineStyle}
-				color={this.props.color}
-				backgroundColor={this.props.backgroundColor}
-				disabled={this.props.disabled}
-				iconName={this.props.iconName}
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-				sizing={this.props.sizing}
-				visible={this.props.visible}
-				/>
+					style={this.inlineStyle}
+					color={this.props.color}
+					backgroundColor={this.props.backgroundColor}
+					disabled={this.props.disabled}
+					iconName={this.props.iconName}
+					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+					sizing={this.props.sizing}
+					visible={this.props.visible}
+					/>
 				<div
 					onClick={this.handleDialogClick}
 					className={this._dialogClasses.join(' ')}
-				>
+					>
 					{this.props.children}
 				</div>
 			</div>

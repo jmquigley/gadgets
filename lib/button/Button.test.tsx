@@ -8,10 +8,23 @@ import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
 import * as sinon from 'sinon';
-import {Button} from './index';
+import {Button, getDefaultButtonProps} from './index';
+import {Sizing} from '../shared';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
+});
+
+test('Test retrieval of Button props object', t => {
+	const props = getDefaultButtonProps();
+
+	t.truthy(props);
+
+	t.true('iconName' in props);
+	t.is(props.iconName, 'bomb');
+
+	t.true('sizing' in props);
+	t.is(props.sizing, Sizing.normal);
 });
 
 test('Test creation of a Button control', t => {

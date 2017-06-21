@@ -17,6 +17,8 @@ test.after.always.cb(t => {
 test('Test retrieval of ButtonCircle props object', t => {
 	const props = getDefaultButtonCircleProps();
 
+	t.truthy(props);
+
 	t.true('iconName' in props);
 	t.is(props.iconName, 'bomb');
 });

@@ -16,6 +16,8 @@ test.after.always.cb(t => {
 test('Test retrieval of defalt Label props object', t => {
 	const props = getDefaultLabelProps();
 
+	t.truthy(props);
+
 	t.true('text' in props);
 	t.is(props.text, ' ');
 });
