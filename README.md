@@ -105,6 +105,8 @@ This module represents the properties that are shared by every class in the proj
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.
 
+### ButtonBar
+
 ### [ButtonCircle](docs/lib/buttonCircle/ButtonCircle.md)
 A circular button control.  Works like a typical button... except it's a circle.
 
@@ -146,6 +148,8 @@ A text string label that can made editable.  It is ultimately a `<span>` wrapper
 ### [Pager](docs/lib/pager/Pager.md)
 A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.
 
+### Popout
+
 ### ProgressBar
 
 ### RadioButton
@@ -175,7 +179,7 @@ A text control with an up/down arrow that will increment a counter.
 ### [Toast](docs/lib/toast/Toast.md)
 A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.
 
-### Toolbar
+### ToolBar
 
 ### Tooltip
 
