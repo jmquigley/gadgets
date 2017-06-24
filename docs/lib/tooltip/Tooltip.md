@@ -43,4 +43,7 @@ box
 - `location: Location (Location.middleRight)` - when the tooltip is
 displayed this is the side of the parent control where it will be
 displayed.
+- `show: boolean (false)` - if this is set to true, then the component
+is displayed (opacity set to 1.0).  When set to false then the
+opacity is set to 0.
 
