@@ -181,7 +181,8 @@ A popup that contains a message on the top or bottom of that container.  The mes
 
 ### ToolBar
 
-### Tooltip
+### [Tooltip](docs/lib/tooltip/Tooltip.md)
+A text popup window on a control used to give help or feedback to the user of that control.
 
 ### Treeview
 

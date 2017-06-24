@@ -16,6 +16,7 @@ import {BaseProps, Location, Sizing} from './lib/shared/props';
 import {TextField} from './lib/textField';
 import {Title} from './lib/title';
 import {Toast, ToastLevel, ToastType} from './lib/toast';
+import {Tooltip} from './lib/tooltip';
 
 export {
 	Accordion,
@@ -42,5 +43,6 @@ export {
 	Title,
 	Toast,
 	ToastLevel,
-	ToastType
+	ToastType,
+	Tooltip
 };

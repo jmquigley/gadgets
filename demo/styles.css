@@ -123,11 +123,63 @@ section {
 	margin-bottom: 30px;
 }
 
+#tooltipExample {
+	display: block;
+	width: 100%;
+}
+
+#tooltipContainer {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.tooltipCell {
+	display: inline-block;
+	position: relative;
+	flex: 0 0 32%;
+	height: 50px;
+	background-color: #bedb39;
+	border: solid 1px white;
+	line-height: 50px;
+	text-align: center;
+	min-width: 75px;
+}
+
+#tooltipContainer > .inactive {
+	background-color: gray;
+}
+
+#tooltipContainer .topLeft:hover > .ui-tooltip,
+#tooltipContainer .top:hover > .ui-tooltip,
+#tooltipContainer .topRight:hover > .ui-tooltip,
+#tooltipContainer .middleLeft:hover > .ui-tooltip,
+#tooltipContainer .middleRight:hover > .ui-tooltip,
+#tooltipContainer .bottomLeft:hover > .ui-tooltip,
+#tooltipContainer .bottom:hover > .ui-tooltip,
+#tooltipContainer .bottomRight:hover > .ui-tooltip,
+#tooltipStyleExample:hover > .ui-tooltip
+{
+	opacity: 1.0;
+	z-index: 99999;
+}
+
+#tooltipStyleExample {
+	display: flex;
+	position: relative;
+	width: 75px;
+	height: 75px;
+	margin: 30px auto;
+	background-color: #bedb39;
+}
+
+
 /*
 
-Global UI color settings for components
+   Global UI color settings for components
 
-*/
+ */
 
 .ui-accordion > .ui-accordionitem > .ui-item {
 	color: white;

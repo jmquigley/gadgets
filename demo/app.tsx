@@ -34,7 +34,8 @@ const {
 	TextField,
 	Toast,
 	ToastLevel,
-	ToastType
+	ToastType,
+	Tooltip
 } = require('../dist/bundle');
 
 // Build global testing data for List Item controls
@@ -724,6 +725,69 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	private buildTooltip = () => (
+		<Container id="tooltipExample">
+			<h3>Simple</h3>
+			Hover over each square to see the Tooltip.<br/><br/><br/>
+			<div id="tooltipContainer">
+				<div className="tooltipCell topLeft">
+					topLeft
+					<Tooltip location={Location.topLeft}>{randomText}</Tooltip>
+				</div>
+
+				<div className="tooltipCell top">
+					top
+					<Tooltip location={Location.top}>{randomText}</Tooltip>
+				</div>
+
+				<div className="tooltipCell topRight">
+					topRight
+					<Tooltip location={Location.topRight}>{randomText}</Tooltip>
+				</div>
+
+				<div className="tooltipCell middleLeft">
+					middleLeft
+					<Tooltip location={Location.middleLeft}>{randomText}</Tooltip>
+				</div>
+
+				<div className="tooltipCell middle inactive">N/A</div>
+
+				<div className="tooltipCell middleRight">
+					middleRight
+					<Tooltip location={Location.middleRight}>{randomText}</Tooltip>
+				</div>
+
+				<div className="tooltipCell bottomLeft">
+					bottomLeft
+					<Tooltip location={Location.bottomLeft}>{randomText}</Tooltip>
+				</div>
+
+				<div className="tooltipCell bottom">
+					bottom
+					<Tooltip location={Location.bottom}>{randomText}</Tooltip>
+				</div>
+
+				<div className="tooltipCell bottomRight">
+					bottomRight
+					<Tooltip location={Location.bottomRight}>{randomText}</Tooltip>
+				</div>
+			</div>
+
+			<h3>Custom style</h3>
+			Hover over the square to see the custom style colors on the tooltip
+			<div id="tooltipStyleExample">
+				<Tooltip
+					color="#fd7400"
+					backgroundColor="#004358"
+					location={Location.middleRight}
+					>
+					{randomText}
+				</Tooltip>
+			</div>
+
+		</Container>
+	);
+
 	render() {
 		return (
 			<div id="app">
@@ -759,6 +823,10 @@ class App extends React.Component<AppProps, AppState> {
 				<h1>Toast</h1>
 				{this.buildToast()}
 
+				<h1>Tooltip</h1>
+				{this.buildTooltip()}
+
+				<h1>Treeview</h1>
 			</div>
 		);
 	}
