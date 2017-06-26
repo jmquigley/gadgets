@@ -22,6 +22,7 @@ const {
 	ButtonText,
 	ButtonToggle,
 	Container,
+	Direction,
 	Icon,
 	Label,
 	List,
@@ -35,7 +36,8 @@ const {
 	Toast,
 	ToastLevel,
 	ToastType,
-	Tooltip
+	Tooltip,
+	Triangle
 } = require('../dist/bundle');
 
 // Build global testing data for List Item controls
@@ -51,12 +53,12 @@ function createItems() {
  	return listItems.map((item, idx) => {
  		return (
  			<ListItem
-				id={uuids[idx]}
-				key={uuids[idx]}
-				title={item}
-				widget={getUUID(true).substring(0,5)}
-				leftButton={<Button />}
-				rightButton={<Button iconName="paper-plane-o" />}
+			id={uuids[idx]}
+			key={uuids[idx]}
+			title={item}
+			widget={getUUID(true).substring(0,5)}
+			leftButton={<Button />}
+			rightButton={<Button iconName="paper-plane-o" />}
 			/>
  		);
  	});
@@ -154,7 +156,7 @@ class App extends React.Component<AppProps, AppState> {
 					<Badge
 						counter={this.state.counter1}
 						suppress
-						>
+					>
 						<div className="boxButtons">
 							<Button onClick={() => {
 									this.setState({
@@ -171,7 +173,7 @@ class App extends React.Component<AppProps, AppState> {
 						counter={this.state.counter2}
 						location={Location.topLeft}
 						onClick={(counter: number) => {
-							console.log(`Badge counter click: ${counter}`);
+								console.log(`Badge counter click: ${counter}`);
 						}}>
 						<div className="boxButtons">
 							<Button onClick={() => {
@@ -221,7 +223,7 @@ class App extends React.Component<AppProps, AppState> {
 						counter={this.state.counter5}
 						location={Location.bottom}
 						color="blue"
-						>
+					>
 						<div className="boxButtons">
 							<Button onClick={() => {
 									this.setState({
@@ -585,17 +587,17 @@ class App extends React.Component<AppProps, AppState> {
 	private buildTextField = () => (
 		<Container id="textfieldExample">
 			<TextField type="text" size="10" sizing={Sizing.xxsmall} placeholder="xxsmall" />
-			<br/><br/>
+			&nbsp;&nbsp;
 			<TextField type="text" size="10" sizing={Sizing.xsmall} placeholder="xsmall" />
-			<br/><br/>
+			&nbsp;&nbsp;
 			<TextField type="text" size="10" sizing={Sizing.small} placeholder="small" />
-			<br/><br/>
+			&nbsp;&nbsp;
 			<TextField type="text" size="10" sizing={Sizing.normal} placeholder="normal" />
 			<br/><br/>
 			<TextField type="text" size="10" sizing={Sizing.large} placeholder="large" />
-			<br/><br/>
+			&nbsp;&nbsp;
 			<TextField type="text" size="10" sizing={Sizing.xlarge} placeholder="xlarge" />
-			<br/><br/>
+			&nbsp;&nbsp;
 			<TextField type="text" size="10" sizing={Sizing.xxlarge} placeholder="xxlarge" />
 		</Container>
 	);
@@ -780,11 +782,59 @@ class App extends React.Component<AppProps, AppState> {
 					color="#fd7400"
 					backgroundColor="#004358"
 					location={Location.middleRight}
-					>
+				>
 					{randomText}
 				</Tooltip>
 			</div>
 
+		</Container>
+	);
+
+	private buildTriangles = () => (
+		<Container id="triangleExample">
+			<h3>xxsmall</h3>
+			<Triangle sizing={Sizing.xxsmall} direction={Direction.up} />
+			<Triangle sizing={Sizing.xxsmall} direction={Direction.right} />
+			<Triangle sizing={Sizing.xxsmall} direction={Direction.down} />
+			<Triangle sizing={Sizing.xxsmall} direction={Direction.left} />
+
+			<h3>xsmall</h3>
+			<Triangle sizing={Sizing.xsmall} direction={Direction.up} color="red" borderColor="red" />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.right} color="red" borderColor="red" />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.down} color="red" borderColor="red" />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.left} color="red" borderColor="red" />
+
+
+			<h3>small</h3>
+			<Triangle sizing={Sizing.small} direction={Direction.up} color="black" borderColor="yellow"/>
+			<Triangle sizing={Sizing.small} direction={Direction.right} color="black" borderColor="yellow"/>
+			<Triangle sizing={Sizing.small} direction={Direction.down} color="black" borderColor="yellow"/>
+			<Triangle sizing={Sizing.small} direction={Direction.left} color="black" borderColor="yellow"/>
+
+
+			<h3>normal</h3>
+			<Triangle sizing={Sizing.normal} direction={Direction.up} color="blue" borderColor="green" />
+			<Triangle sizing={Sizing.normal} direction={Direction.right} color="blue" borderColor="green" />
+			<Triangle sizing={Sizing.normal} direction={Direction.down} color="blue" borderColor="green" />
+			<Triangle sizing={Sizing.normal} direction={Direction.left} color="blue" borderColor="green" />
+
+			<h3>large</h3>
+			<Triangle sizing={Sizing.large} direction={Direction.up} />
+			<Triangle sizing={Sizing.large} direction={Direction.right} />
+			<Triangle sizing={Sizing.large} direction={Direction.down} />
+			<Triangle sizing={Sizing.large} direction={Direction.left} />
+
+			<h3>xlarge</h3>
+			<Triangle sizing={Sizing.xlarge} direction={Direction.up} />
+			<Triangle sizing={Sizing.xlarge} direction={Direction.right} />
+			<Triangle sizing={Sizing.xlarge} direction={Direction.down} />
+			<Triangle sizing={Sizing.xlarge} direction={Direction.left} />
+
+			<h3>xxlarge</h3>
+			<Triangle sizing={Sizing.xxlarge} direction={Direction.up} />
+			<Triangle sizing={Sizing.xxlarge} direction={Direction.right} />
+			<Triangle sizing={Sizing.xxlarge} direction={Direction.down} />
+			<Triangle sizing={Sizing.xxlarge} direction={Direction.left} />
 		</Container>
 	);
 
@@ -826,7 +876,9 @@ class App extends React.Component<AppProps, AppState> {
 				<h1>Tooltip</h1>
 				{this.buildTooltip()}
 
-				<h1>Treeview</h1>
+				<h1>Triangle</h1>
+				{this.buildTriangles()}
+
 			</div>
 		);
 	}

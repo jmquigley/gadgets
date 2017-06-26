@@ -1,0 +1,24 @@
+@import '../shared/styles.css';
+
+:local {
+
+	.triangle {
+	}
+
+	.triangleUp {
+		transform: rotate(0deg);
+	}
+
+	.triangleRight {
+		transform: rotate(90deg);
+	}
+
+	.triangleDown {
+		transform: rotate(180deg);
+	}
+
+	.triangleLeft {
+		transform: rotate(270deg);
+	}
+
+}

@@ -201,9 +201,9 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		}
 
 		if (this.props.bottom) {
-			this.classes.push(this.styles.bottom);
+			this.classes.push(this.styles.toastBottom);
 		} else {
-			this.classes.push(this.styles.top);
+			this.classes.push(this.styles.toastTop);
 		}
 
 		if (!this.state.visible) {

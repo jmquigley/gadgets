@@ -12,11 +12,17 @@ import {Label} from './lib/label';
 import {List, ListHeader, ListItem} from './lib/list';
 import {Pager} from './lib/pager';
 import {Select} from './lib/select';
-import {BaseProps, Location, Sizing} from './lib/shared/props';
+import {
+	BaseProps,
+	Direction,
+	Location,
+	Sizing
+} from './lib/shared/props';
 import {TextField} from './lib/textField';
 import {Title} from './lib/title';
 import {Toast, ToastLevel, ToastType} from './lib/toast';
 import {Tooltip} from './lib/tooltip';
+import {Triangle} from './lib/triangle';
 
 export {
 	Accordion,
@@ -29,6 +35,7 @@ export {
 	ButtonToggle,
 	ButtonText,
 	Container,
+	Direction,
 	Icon,
 	Item,
 	Label,
@@ -44,5 +51,6 @@ export {
 	Toast,
 	ToastLevel,
 	ToastType,
-	Tooltip
+	Tooltip,
+	Triangle
 };

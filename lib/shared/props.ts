@@ -74,15 +74,11 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 
-export enum Sizing {
-	xxsmall = 'xxsmall',
-	xsmall = 'xsmall',
-	small = 'small',
-	normal = 'normal',
-	medium = 'medium',
-	large = 'large',
-	xlarge = 'xlarge',
-	xxlarge = 'xxlarge'
+export enum Direction {
+	up = 'up',
+	down = 'down',
+	left = 'left',
+	right = 'right'
 }
 
 export enum Location {
@@ -98,6 +94,17 @@ export enum Location {
 	bottomRight = 'bottomRight'
 }
 
+export enum Sizing {
+	xxsmall = 'xxsmall',
+	xsmall = 'xsmall',
+	small = 'small',
+	normal = 'normal',
+	medium = 'medium',
+	large = 'large',
+	xlarge = 'xlarge',
+	xxlarge = 'xxlarge'
+}
+
 export interface BaseProps {
 	backgroundColor?: string;
 	borderColor?: string;
@@ -105,6 +112,7 @@ export interface BaseProps {
 	className?: string;
 	color?: string;
 	contentEditable?: boolean;
+	direction?: Direction;
 	disabled?: boolean;
 	id?: string;
 	location?: Location;
@@ -133,6 +141,7 @@ export function getDefaultBaseProps(): BaseProps {
 		className: '',
 		color: 'inherit',
 		contentEditable: false,
+		direction: Direction.right,
 		disabled: false,
 		id: '',
 		location: Location.none,

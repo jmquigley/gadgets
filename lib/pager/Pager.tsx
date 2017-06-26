@@ -212,13 +212,13 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 				this._buttons[page] = (
 					<ButtonText
-					className={this.styles.pagerButton}
-					key={String(page)}
-					noicon
-					onClick={() => {this.handleSelect(page)}}
-					sizing={this.props.sizing}
-					text={String(page)}
-					/>
+						className={this.styles.pagerButton}
+						key={String(page)}
+						noicon
+						onClick={() => {this.handleSelect(page)}}
+						sizing={this.props.sizing}
+						text={String(page)}
+						/>
 				);
 			}
 
@@ -234,13 +234,13 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			} else {
 				this._buttonsDisplay.push(
 					<ButtonText
-					className={this.styles.pagerButton}
-					key={getUUID()}
-					noicon
-					disabled
-					sizing={this.props.sizing}
-					text=""
-					/>
+						className={this.styles.pagerButton}
+						key={getUUID()}
+						noicon
+						disabled
+						sizing={this.props.sizing}
+						text=""
+						/>
 				);
 			}
 		});
