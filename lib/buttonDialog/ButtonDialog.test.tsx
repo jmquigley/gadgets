@@ -8,6 +8,7 @@ import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
 import {ButtonDialog, getDefaultButtonDialogProps} from './index';
+import {Location} from '../shared';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
@@ -39,6 +40,31 @@ test('Test creation of a ButtonDialog control', t => {
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
+	t.is(ctl.prop('id'), '');
+	t.is(ctl.prop('className'), 'test-class');
+	t.is(ctl.prop('dialogClasses').join('').trim(), 'test-class-dialog');
+
+	t.true(ctl.contains(<p>Dialog test</p>));
+});
+
+test('Test creation of a ButtonDialog control on top', t => {
+	const ctl = mount(
+		<ButtonDialog
+			className="test-class"
+			dialogClasses={["test-class-dialog"]}
+			location={Location.top}
+		>
+			<p>Dialog test</p>
+		</ButtonDialog>
+	);
+
+	t.truthy(ctl);
+	log.debug(ctl.html(), __filename);
+
+	t.is(ctl.prop('iconName'), 'bomb');
+	t.false(ctl.prop('disabled'));
+	t.true(ctl.prop('visible'));
+	t.is(ctl.prop('location'), Location.top);
 	t.is(ctl.prop('id'), '');
 	t.is(ctl.prop('className'), 'test-class');
 	t.is(ctl.prop('dialogClasses').join('').trim(), 'test-class-dialog');

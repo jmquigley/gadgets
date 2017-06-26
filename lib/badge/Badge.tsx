@@ -76,7 +76,6 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		});
 
 		this.classes.push(this.styles.badgeContainer);
-		this.classes.push(this.locationStyle);
 	}
 
 	render() {

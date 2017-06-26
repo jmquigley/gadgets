@@ -23,12 +23,61 @@ $xxlarge-fs: 2.0em;
 
 @define-extend baseButton {
 	background-color: inherit;
-	line-height: inherit;
-	font-size: inherit;
-	width: inherit;
-	height: inherit;
-	outline: none;
 	box-sizing: border-box;
+	font-size: inherit;
+	height: inherit;
+	line-height: inherit;
+	position: relative;
+	outline: none;
+	width: inherit;
+}
+
+@define-extend baseTriangle {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+@define-extend topTriangle {
+	border-bottom: 8px solid;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+
+	left: 50%;
+	top: -7px;
+	transform: translateX(-50%);
+}
+
+@define-extend bottomTriangle {
+	border-top: 8px solid;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+
+	left: 50%;
+	bottom: -7px;
+	transform: translateX(-50%);
+}
+
+@define-extend rightTriangle {
+	border-left: 8px solid;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+
+	right: -7px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@define-extend leftTriangle {
+	border-right: 8px solid;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+
+	left: -7px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 :local {
@@ -130,17 +179,19 @@ $xxlarge-fs: 2.0em;
 	.topLeft {
 		top: 0;
 		left: 0;
+		transform: translateY(-50%);
 	}
 
 	.top {
 		top: 0;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
 	}
 
 	.topRight {
 		top: 0;
 		right: 0;
+		transform: translateY(-50%);
 	}
 
 	.middleLeft {
@@ -162,18 +213,20 @@ $xxlarge-fs: 2.0em;
 	}
 
 	.bottomLeft {
-		bottom: 0;
+		top: 100%;
 		left: 0;
+		transform: translateY(-50%);
 	}
 
 	.bottom {
-		bottom: 0;
+		top: 100%;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
 	}
 
 	.bottomRight {
-		bottom: 0;
+		top: 100%;
 		right: 0;
+		transform: translateY(-50%);
 	}
 }

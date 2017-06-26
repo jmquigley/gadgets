@@ -7,13 +7,42 @@
 
 	.buttonDialogPopup {
 		position: absolute;
-		opacity: 1.0;
-		z-index: $baseZIndex;
 		width: 300px;
 		height: 300px;
+		z-index: $baseZIndex;
+	}
+
+	.buttonDialogShow {
+		display: block;
 	}
 
 	.buttonDialogHide {
 		display: none;
+	}
+
+	.dialogTop {
+		bottom: 110%;
+		right: 20%;
+
+		&::after {
+			@extend baseTriangle;
+			@extend bottomTriangle;
+
+			bottom: -9px;
+			left: 92%;
+		}
+	}
+
+	.dialogBottom {
+		top: 110%;
+		left: 20%;
+
+		&::after {
+			@extend baseTriangle;
+			@extend topTriangle;
+
+			top: -9px;
+			left: 8%;
+		}
 	}
 }

@@ -26,4 +26,6 @@ the button and the hidden dialogue window.
 #### Properties
 - `dialogClasses: string[] ([])` - An array of CSS class strings that will be
 applied to the dialog window.
+- `location: Location (Location.bottom)` - Determines if the popup will be shown
+above or below the button.  Only uses `Location.top` or `Location.bottom`.
 

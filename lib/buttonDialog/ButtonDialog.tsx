@@ -24,6 +24,8 @@
  * #### Properties
  * - `dialogClasses: string[] ([])` - An array of CSS class strings that will be
  * applied to the dialog window.
+ * - `location: Location (Location.bottom)` - Determines if the popup will be shown
+ * above or below the button.  Only uses `Location.top` or `Location.bottom`.
  *
  * @module ButtonDialog
  */
@@ -34,7 +36,7 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent} from '../shared';
+import {BaseComponent, Location} from '../shared';
 
 export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
@@ -43,7 +45,8 @@ export interface ButtonDialogProps extends ButtonProps {
 export function getDefaultButtonDialogProps(): ButtonDialogProps {
 	return cloneDeep(Object.assign(
 		getDefaultButtonProps(), {
-			dialogClasses: []
+			dialogClasses: [],
+			location: Location.bottom
 		}));
 }
 
@@ -91,8 +94,17 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		this._dialogClasses.push(this.styles.buttonDialogPopup);
 		this._dialogClasses.push('ui-dialog-popup');
 
-		if (!this.state.visible) {
+		if (this.state.visible) {
+			this._dialogClasses.push(this.styles.buttonDialogShow);
+		}
+		else {
 			this._dialogClasses.push(this.styles.buttonDialogHide);
+		}
+
+		if (this.props.location === Location.top) {
+			this._dialogClasses.push(this.styles.dialogTop);
+		} else {
+			this._dialogClasses.push(this.styles.dialogBottom);
 		}
 	}
 
@@ -115,8 +127,8 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					visible={this.props.visible}
 					/>
 				<div
-					onClick={this.handleDialogClick}
 					className={this._dialogClasses.join(' ')}
+					onClick={this.handleDialogClick}
 					>
 					{this.props.children}
 				</div>
