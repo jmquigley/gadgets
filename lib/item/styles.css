@@ -26,7 +26,8 @@
 	}
 
 	.item:hover :global(.ui-button),
-	.item:hover .itemButton :global(.ui-button-circle) > div
+	.item:hover .itemButton :global(.ui-button-circle) > div,
+	.item:hover .itemButton :global(.ui-button-dialog) > :global(.ui-button)
 	{
 		width: 40px;
 		border-width: 3px !important;
@@ -34,7 +35,8 @@
 	}
 
 	.hiddenButton :global(.ui-button),
-	.hiddenButton > :global(.ui-button-circle) > div
+	.hiddenButton > :global(.ui-button-circle) > div,
+	.hiddenButton > :global(.ui-button-dialog) > :global(.ui-button)
 	{
 		transition: width 0.33s, opacity 0.5s ease;
 		width: 0px;

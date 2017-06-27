@@ -88,11 +88,7 @@ section {
 	height: 42px;
 }
 
-.box .boxButtons, .toastBox i {
-	border: solid 1px lightgray;
-}
-
-#simple-icons .box .ui-icon, .box .ui-button {
+#simple-icons .box .ui-icon, .box .ui-button, .toastBox .ui-button, .box .boxButtons {
 	border: solid 1px lightgray;
 }
 
@@ -109,18 +105,17 @@ section {
 
 .toastBox {
 	display: flex;
+	align-items: left;
 }
 
 .toastBox .ui-button {
-	height: 40px;
-	width: 40px;
-	border: solid 1px lightgray;
+	flex: 1;
 }
 
 .toastBox p {
+	flex: 5;
 	color: red;
 	padding-left: 5px;
-	display: inline-block;
 	line-height: 32px;
 	margin: 0;
 }

@@ -1,15 +1,13 @@
 @import '../shared/styles.css';
 
 :local {
+
 	.button {
 		@extend baseButton;
+		flex: 1;
 	}
 
 	.icon {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
 	}
 
 }

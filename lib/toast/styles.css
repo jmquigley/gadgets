@@ -6,16 +6,17 @@ $br: 5px;
 
 	.toast {
 		display: flex;
-		position: absolute;
-		opacity: 1.0;
-		width: 70%;
 		margin: 0 auto;
+		opacity: 1.0;
+		padding: 4px;
+		position: absolute;
 		transition: opacity 0.75s ease;
+		width: 70%;
 	}
 
 	.toastTop {
-		top: 0;
 		left: 50%;
+		top: 0;
 		transform: translateX(-50%);
 	}
 
@@ -34,24 +35,6 @@ $br: 5px;
 		flex: 1;
 		color: black;
 		margin: 0 5px;
-	}
-
-	.info {
-		color: white;
-		border-color: #5bc0de;
-		background-color: #5bc0de;
-	}
-
-	.warning {
-		color: white;
-		border-color: #f0ad4e;
-		background-color: #f0ad4e;
-	}
-
-	.error {
-		color: white;
-		border-color: #d9534f;
-		background-color: #d9534f;
 	}
 
 	.hide {

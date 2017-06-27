@@ -22,6 +22,7 @@ $xxlarge: 80px;
 $xxlarge-fs: 2.0em;
 
 @define-extend baseButton {
+	display: flex;
 	background-color: inherit;
 	box-sizing: border-box;
 	font-size: inherit;
@@ -30,6 +31,9 @@ $xxlarge-fs: 2.0em;
 	position: relative;
 	outline: none;
 	width: inherit;
+	cursor: default;
+	align-items: center;
+	justify-content: center;
 }
 
 @define-extend baseTriangle {
@@ -229,4 +233,24 @@ $xxlarge-fs: 2.0em;
 		right: 0;
 		transform: translateY(-50%);
 	}
+
+
+	.info {
+		color: white;
+		border-color: #5bc0de;
+		background-color: #5bc0de;
+	}
+
+	.warning {
+		color: white;
+		border-color: #f0ad4e;
+		background-color: #f0ad4e;
+	}
+
+	.error {
+		color: white;
+		border-color: #d9534f;
+		background-color: #d9534f;
+	}
+
 }
