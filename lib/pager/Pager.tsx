@@ -100,9 +100,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
 	private _buttons: any = [];
+	private _buttonStyle: string[] = [];
 
 	constructor(props: PagerProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 
 		this._lastPage = this.computeLastPage();
 		this._initialPage = Number(props.initialPage);
@@ -115,6 +116,9 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.state = {
 			currentPage: this._initialPage
 		}
+
+		this._buttonStyle.push(this.styles.pagerButton);
+		this._buttonStyle.push(this.boxSizeStyle);
 
 		this.createButtons();
 
@@ -212,7 +216,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 				this._buttons[page] = (
 					<ButtonText
-						className={this.styles.pagerButton}
+						className={this._buttonStyle.join(' ')}
 						key={String(page)}
 						noicon
 						onClick={() => {this.handleSelect(page)}}
@@ -226,7 +230,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				if (page === this.currentPage) {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
-							className: this.styles.pagerButton + ' ui-pager-selected'
+							className: this._buttonStyle.join(' ') + ' ui-pager-selected'
 						}));
 				} else {
 					this._buttonsDisplay.push(this._buttons[page]);
@@ -234,7 +238,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			} else {
 				this._buttonsDisplay.push(
 					<ButtonText
-						className={this.styles.pagerButton}
+						className={this._buttonStyle.join(' ')}
 						key={getUUID()}
 						noicon
 						disabled
@@ -314,45 +318,45 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		return (
 			<div className={this.classes.join(" ")}>
 				<Button
-					className={this.styles.pagerButton}
-					iconName="angle-double-left"
-					onClick={this.moveToFront}
-					sizing={this.props.sizing}
-					/>
+				className={this._buttonStyle.join(' ')}
+				iconName="angle-double-left"
+				onClick={this.moveToFront}
+				sizing={this.props.sizing}
+				/>
 				<Button
-					className={this.styles.pagerButton}
-					iconName="angle-left"
-					onClick={this.moveToPrevious}
-					sizing={this.props.sizing}
-					/>
+				className={this._buttonStyle.join(' ')}
+				iconName="angle-left"
+				onClick={this.moveToPrevious}
+				sizing={this.props.sizing}
+				/>
 				{this._buttonsDisplay}
 				<Button
-					className={this.styles.pagerButton}
-					iconName="angle-right"
-					onClick={this.moveToNext}
-					sizing={this.props.sizing}
-					/>
+				className={this._buttonStyle.join(' ')}
+				iconName="angle-right"
+				onClick={this.moveToNext}
+				sizing={this.props.sizing}
+				/>
 				<Button
-					className={this.styles.pagerButton}
-					iconName="angle-double-right"
-					onClick={this.moveToEnd}
-					sizing={this.props.sizing}
-					/>
+				className={this._buttonStyle.join(' ')}
+				iconName="angle-double-right"
+				onClick={this.moveToEnd}
+				sizing={this.props.sizing}
+				/>
 				{this.props.useinput ?
-					<TextField
-						className={`${this.styles.pagerInput} ${this.sizeStyle}`}
-						min="1"
-						max={String(this._lastPage)}
-						onBlur={this.handleBlur}
-						onChange={this.handleChange}
-						onKeyPress={this.handleKeyPress}
-						placeholder={String(this.state.currentPage)}
-						style={{width: "4em"}}
-						type="number"
-						value={this.state.currentPage}
-					/>
-					:
-					null
+				 <TextField
+					 className={`${this.styles.pagerInput} ${this.sizeStyle}`}
+					 min="1"
+					 max={String(this._lastPage)}
+					 onBlur={this.handleBlur}
+					 onChange={this.handleChange}
+					 onKeyPress={this.handleKeyPress}
+					 placeholder={String(this.state.currentPage)}
+					 style={{width: "5em"}}
+					 type="number"
+					 value={this.state.currentPage}
+				 />
+				 :
+				 null
 				}
 			</div>
 		);

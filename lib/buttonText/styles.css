@@ -5,13 +5,12 @@
 		@extend baseButton;
 		display: flex;
 		cursor: default;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.content {
-		flex: 3;
-		position: relative;
-		top: 50%;
-		transform: translateY(-47%);
+		flex: 1;
 	}
 
 	.content span {
@@ -20,10 +19,7 @@
 	}
 
 	.icon {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-		flex: 1;
+		flex: 0;
 		padding: 1px 5px;
 	}
 

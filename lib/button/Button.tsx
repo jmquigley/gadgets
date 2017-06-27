@@ -47,6 +47,7 @@ export interface ButtonProps extends BaseProps {
 export function getDefaultButtonProps(): ButtonProps {
 	return cloneDeep(Object.assign(getDefaultBaseProps(), {
 		iconName: "bomb",
+		location: Location.middle,
 		sizing: Sizing.normal
 	}));
 }
@@ -103,8 +104,8 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 				style={{...this.inlineStyle}}
 				>
 				<Icon
+					className={this.styles.icon}
 					iconName={this.props.iconName}
-					location={Location.middle}
 					sizing={this.props.sizing}
 				/>
 			</div>

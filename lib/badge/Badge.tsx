@@ -87,7 +87,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		} else {
 			badge = (
 				<div
-					className={`${this.sizeStyle} ui-badge ${this.styles.badge} ${this.locationStyle}`}
+					className={`${this.boxSizeStyle} ${this.sizeStyle} ui-badge ${this.styles.badge} ${this.locationStyle}`}
 					onClick={this.handleClick}
 					style={this.inlineStyle}
 					>

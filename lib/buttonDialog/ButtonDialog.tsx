@@ -36,17 +36,20 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent, Location} from '../shared';
+import {BaseComponent, Direction, Location, Sizing} from '../shared';
+import {Triangle} from '../triangle';
 
 export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
+	triangleClasses? : string[];
 }
 
 export function getDefaultButtonDialogProps(): ButtonDialogProps {
 	return cloneDeep(Object.assign(
 		getDefaultButtonProps(), {
 			dialogClasses: [],
-			location: Location.bottom
+			location: Location.bottom,
+			triangleClasses: []
 		}));
 }
 
@@ -59,6 +62,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
     public static defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
 
 	private _dialogClasses: string[] = [];
+	private _triangleClasses: string[] = [];
 
 	constructor(props: ButtonDialogProps) {
 		super(props, require('./styles.css'));
@@ -94,17 +98,23 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		this._dialogClasses.push(this.styles.buttonDialogPopup);
 		this._dialogClasses.push('ui-dialog-popup');
 
+		this._triangleClasses = this.props.triangleClasses.slice();
+
 		if (this.state.visible) {
 			this._dialogClasses.push(this.styles.buttonDialogShow);
+			this._triangleClasses.push(this.styles.buttonDialogShow);
 		}
 		else {
 			this._dialogClasses.push(this.styles.buttonDialogHide);
+			this._triangleClasses.push(this.styles.buttonDialogHide);
 		}
 
 		if (this.props.location === Location.top) {
 			this._dialogClasses.push(this.styles.dialogTop);
+			this._triangleClasses.push(this.styles.dialogTriangleTop);
 		} else {
 			this._dialogClasses.push(this.styles.dialogBottom);
+			this._triangleClasses.push(this.styles.dialogTriangleBottom);
 		}
 	}
 
@@ -117,13 +127,13 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 				disabled={this.props.disabled}
 				>
 				<Button
-					style={this.inlineStyle}
-					color={this.props.color}
 					backgroundColor={this.props.backgroundColor}
+					color={this.props.color}
 					disabled={this.props.disabled}
 					iconName={this.props.iconName}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 					sizing={this.props.sizing}
+					style={this.inlineStyle}
 					visible={this.props.visible}
 					/>
 				<div
@@ -132,6 +142,13 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					>
 					{this.props.children}
 				</div>
+				<Triangle
+					className={this._triangleClasses.join(' ')}
+					direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
+					nobase
+					sizing={Sizing.xsmall}
+					/>
+
 			</div>
 		);
 	}

@@ -33,6 +33,7 @@ import {
 } from '../shared';
 
 export interface TriangleProps extends BaseProps {
+	nobase?: boolean;
 }
 
 export function getDefaultTriangleProps(): TriangleProps {
@@ -40,7 +41,9 @@ export function getDefaultTriangleProps(): TriangleProps {
 		getDefaultBaseProps(), {
 			color: 'white',
 			borderColor: 'black',
+			borderWidth: '1px',
 			direction: Direction.up,
+			nobase: false,
 			sizing: Sizing.normal
 		}));
 }
@@ -60,7 +63,7 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 		super.buildStyles(this.props, {
 			fill: this.props.color,
 			stroke: this.props.borderColor,
-			strokeSize: 1
+			strokeWidth: this.props.borderWidth
 		});
 		this.classes.push("ui-triangle");
 		this.classes.push(this.styles.triangle);
@@ -84,20 +87,31 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 				this.classes.push(this.styles.triangleUp);
 				break;
 		}
-
 	}
 
 	render() {
 		this.buildStyles();
 
 		return (
+			(this.props.nobase) ?
 			<svg
 				className={this.classes.join(' ')}
 				preserveAspectRatio="xMidYMid meet"
 				version="1.1"
 				viewBox="0 0 40 40"
 				xmlns="http://www.w3.org/2000/svg"
-				>
+			>
+				<polygon points="0,30, 20,10 40,30" style={{fill: this.props.color}} />
+				<polygon points="0,30, 20,10 40,30, 20,10" style={{stroke: this.props.borderColor, strokeWidth: this.props.borderWidth}} />
+			</svg>
+			:
+			<svg
+				className={this.classes.join(' ')}
+				preserveAspectRatio="xMidYMid meet"
+				version="1.1"
+				viewBox="0 0 40 40"
+				xmlns="http://www.w3.org/2000/svg"
+			>
 				<polygon points="0,30, 20,10 40,30" style={this.inlineStyle} />
 			</svg>
 		);

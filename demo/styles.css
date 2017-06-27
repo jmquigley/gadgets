@@ -58,7 +58,7 @@ section {
 }
 
 #buttonTable th, #buttonTable td {
-	width: 80px;
+	min-width: 80px;
 	height: 80px;
 }
 
@@ -109,6 +109,12 @@ section {
 
 .toastBox {
 	display: flex;
+}
+
+.toastBox .ui-button {
+	height: 40px;
+	width: 40px;
+	border: solid 1px lightgray;
 }
 
 .toastBox p {

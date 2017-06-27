@@ -108,6 +108,7 @@ export enum Sizing {
 export interface BaseProps {
 	backgroundColor?: string;
 	borderColor?: string;
+	borderWidth?: string;
 	children?: React.ReactNode;
 	className?: string;
 	color?: string;
@@ -137,6 +138,7 @@ export function getDefaultBaseProps(): BaseProps {
 	return cloneDeep({
 		backgroundColor: 'inherit',
 		borderColor: 'inherit',
+		borderWidth: "1px",
 		children: null,
 		className: '',
 		color: 'inherit',
