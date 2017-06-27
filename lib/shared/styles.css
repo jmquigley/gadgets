@@ -1,29 +1,28 @@
 $baseZIndex: 99999;
 
-$xxsmall: 16px;
+$xxsmall: 6px;
 $xxsmall-fs: 0.4em;
 
-$xsmall: 24px;
-$xsmall-fs: 0.6em;
+$xsmall: 8px;
+$xsmall-fs: 0.5em;
 
-$small: 32px;
-$small-fs: 0.8em;
+$small: 12px;
+$small-fs: 0.75em;
 
-$medium: 40px;
+$medium: 16px;
 $medium-fs: 1.0em;
 
-$large: 48px;
-$large-fs: 1.2em;
+$large: 24px;
+$large-fs: 1.5em;
 
-$xlarge: 64px;
-$xlarge-fs: 1.6em;
+$xlarge: 32px;
+$xlarge-fs: 2.0em;
 
-$xxlarge: 80px;
-$xxlarge-fs: 2.0em;
+$xxlarge: 48px;
+$xxlarge-fs: 3.0em;
 
 @define-extend baseButton {
 	display: flex;
-	background-color: inherit;
 	box-sizing: border-box;
 	font-size: inherit;
 	height: inherit;
@@ -84,6 +83,12 @@ $xxlarge-fs: 2.0em;
 	transform: translateY(-50%);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 :local {
 	.disabled {
 		opacity: 0.33;
@@ -97,45 +102,37 @@ $xxlarge-fs: 2.0em;
 	.xxsmall {
 		font-size: $xxsmall-fs;
 		font-weight: inherit;
-		line-height: $xxsmall-fs;
 	}
 
 	.xsmall {
 		font-size: $xsmall-fs;
 		font-weight: inherit;
-		line-height: $xsmall-fs;
 	}
 
 	.small {
 		font-size: $small-fs;
 		font-weight: inherit;
-		line-height: $small-fs;
 	}
 
 	.medium {
 		font-size: $medium-fs;
 		font-weight: inherit;
-		line-height: $medium-fs;
 	}
 
 	.large {
 		font-size: $large-fs;
 		font-weight: inherit;
-		line-height: $large-fs;
 	}
 
 	.xlarge {
 		font-size: $xlarge-fs;
 		font-weight: inherit;
-		line-height: $xlarge-fs;
 	}
 
 	.xxlarge {
 		font-size: $xxlarge-fs;
 		font-weight: inherit;
-		line-height: $xxlarge-fs;
 	}
-
 
 	.xxsmallBox {
 		width: $xxsmall;
@@ -178,7 +175,6 @@ $xxlarge-fs: 2.0em;
 		height: $xxlarge;
 		line-height: $xxlarge;
 	}
-
 
 	.topLeft {
 		top: 0;
@@ -233,7 +229,6 @@ $xxlarge-fs: 2.0em;
 		right: 0;
 		transform: translateY(-50%);
 	}
-
 
 	.info {
 		color: white;

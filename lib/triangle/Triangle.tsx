@@ -41,7 +41,7 @@ export function getDefaultTriangleProps(): TriangleProps {
 		getDefaultBaseProps(), {
 			color: 'white',
 			borderColor: 'black',
-			borderWidth: '1px',
+			borderWidth: '3px',
 			direction: Direction.up,
 			nobase: false,
 			sizing: Sizing.normal
@@ -101,8 +101,9 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 				viewBox="0 0 40 40"
 				xmlns="http://www.w3.org/2000/svg"
 			>
-				<polygon points="0,30, 20,10 40,30" style={{fill: this.props.color}} />
-				<polygon points="0,30, 20,10 40,30, 20,10" style={{stroke: this.props.borderColor, strokeWidth: this.props.borderWidth}} />
+				<polygon points="0,35, 20,10 40,35" style={{fill: this.props.color}} />
+				<polygon points="0,35, 20,10 40,35, 20,10" style={{stroke: this.props.borderColor, strokeWidth: this.props.borderWidth, strokeLinecap:"square"}} />
+				<rect x="0" y="35" width="40" height="5" style={{fill: this.props.color}} />
 			</svg>
 			:
 			<svg
@@ -112,7 +113,7 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 				viewBox="0 0 40 40"
 				xmlns="http://www.w3.org/2000/svg"
 			>
-				<polygon points="0,30, 20,10 40,30" style={this.inlineStyle} />
+				<polygon points="0,35, 20,10 40,35" style={this.inlineStyle} />
 			</svg>
 		);
 	}

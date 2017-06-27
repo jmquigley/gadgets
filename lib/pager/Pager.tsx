@@ -62,8 +62,9 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {getUUID, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
+import {ButtonDialog} from '../buttonDialog';
 import {ButtonText} from '../buttonText';
-import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps, Location, Sizing} from '../shared';
 import {TextField} from '../textField';
 
 export interface PagerProps extends BaseProps {
@@ -316,7 +317,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.createButtons();
 
 		return (
-			<div className={this.classes.join(" ")}>
+			<div className={this.classes.join(' ')}>
 				<Button
 				className={this._buttonStyle.join(' ')}
 				iconName="angle-double-left"
@@ -342,6 +343,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				onClick={this.moveToEnd}
 				sizing={this.props.sizing}
 				/>
+				<div className={this.styles.spacer}></div>
+				<div className={this.styles.spacer}></div>
 				{this.props.useinput ?
 				 <TextField
 					 className={`${this.styles.pagerInput} ${this.sizeStyle}`}
@@ -351,13 +354,21 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					 onChange={this.handleChange}
 					 onKeyPress={this.handleKeyPress}
 					 placeholder={String(this.state.currentPage)}
-					 style={{width: "5em"}}
+					 style={{width: "3.25em"}}
 					 type="number"
 					 value={this.state.currentPage}
 				 />
 				 :
 				 null
 				}
+				<div className={this.styles.spacer}></div>
+				<ButtonDialog
+					className={this._buttonStyle.join(' ')}
+					iconName="ellipsis-h"
+					location={Location.top}
+					sizing={this.props.sizing}>
+					Pager Dialog
+				</ButtonDialog>
 			</div>
 		);
 	}

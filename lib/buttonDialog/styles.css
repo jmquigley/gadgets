@@ -7,8 +7,13 @@
 
 	.buttonDialogPopup {
 		position: absolute;
-		width: 300px;
-		height: 300px;
+		width: 100px;
+		height: 100px;
+		z-index: calc($baseZIndex);
+	}
+
+	.buttonDialogContent {
+		position: absolute;
 		z-index: calc($baseZIndex + 1);
 	}
 
@@ -21,26 +26,26 @@
 	}
 
 	.dialogTop {
-		bottom: 100%;
+		bottom: 105%;
 		right: 0;
 	}
 
 	.dialogBottom {
-		top: 100%;
+		top: 105%;
 		left: 0;
 	}
 
 	.dialogTriangleTop {
 		position: absolute;
-		top: -7px;
-		left: 25%;
+		bottom: -14.25%;
+		right: 10%;
 		z-index: calc($baseZIndex + 2);
 	}
 
 	.dialogTriangleBottom {
 		position: absolute;
-		bottom: -7px;
-		left: 25%;
+		top: -14.25%;
+		left: 10%;
 		z-index: calc($baseZIndex + 2);
 	}
 

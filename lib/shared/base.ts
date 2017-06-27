@@ -71,6 +71,7 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	private _inlineStyle: any = {};    // inline style overrides
 	private _locationStyle: string = '';
 	private _sizeStyle: string = '';
+	private _sizing: any = {};
 	private _styles: any = {};         // css modules styles
 
 	constructor(props: P, pstyles: any = {}) {
@@ -80,6 +81,37 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		if ('sizing' in props) {
 			this._sizeStyle = this.getSizeStyle();
 			this._boxSizeStyle = this.getBoxSizeStyle();
+
+			this._sizing = {
+				xxsmall: {
+					fontSize: '0.4em',
+					size: '16px'
+				},
+				xsmall: {
+					fontSize: '0.6em',
+					size: '24px'
+				},
+				small: {
+					fontSize: '0.8em',
+					size: '32px'
+				},
+				medium: {
+					fontSize: '1.0em',
+					size: '40px'
+				},
+				large: {
+					fontSize: '1.2em',
+					size: '48px'
+				},
+				xlarge: {
+					fontSize: '1.6em',
+					size: '64px'
+				},
+				xxlarge: {
+					fontSize: '2.0em',
+					size: '80px'
+				}
+			};
 		}
 
 		if ('location' in props) {
@@ -109,6 +141,10 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 
 	get locationStyle() {
 		return this._locationStyle;
+	}
+
+	get sizing() {
+		return this._sizing;
 	}
 
 	get sizeStyle(): string {

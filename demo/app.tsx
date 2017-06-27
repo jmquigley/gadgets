@@ -186,7 +186,7 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<div className="box">
-					<p>bottom right<br/>&nbsp;</p>
+					<p>bottom right</p>
 					<Badge
 						counter={this.state.counter3}
 						location={Location.bottomRight}
@@ -412,6 +412,15 @@ class App extends React.Component<AppProps, AppState> {
 					   color="white"
 					   backgroundColor="blue" />
 				</p>
+
+				<Label text="xxsmall" sizing={Sizing.xxsmall} /><br/>
+				<Label text="xsmall" sizing={Sizing.xsmall} /><br/>
+				<Label text="small" sizing={Sizing.small} /><br/>
+				<Label text="normal" sizing={Sizing.normal} /><br/>
+				<Label text="large" sizing={Sizing.large} /><br/>
+				<Label text="xlarge" sizing={Sizing.xlarge} /><br/>
+				<Label text="xxlarge" sizing={Sizing.xxlarge} /><br/>
+
 			</div>
 		</Container>
 	);
@@ -534,6 +543,21 @@ class App extends React.Component<AppProps, AppState> {
 				/>
 			</div>
 
+			<h3>small</h3>
+			<div className="pagerBox">
+				<Pager
+				initialPage="1"
+				totalItems="299"
+				sizing={Sizing.small}
+				onSelect={
+					(page: number) => {
+						console.log(`Clicked on page: ${page}`);
+					}
+				}
+				useinputs
+				/>
+			</div>
+
 			<h3>medium</h3>
 			<div className="pagerBox">
 				<Pager
@@ -548,7 +572,7 @@ class App extends React.Component<AppProps, AppState> {
 				/>
 			</div>
 
-			<h3>xmall, large range</h3>
+			<h3>xsmall, large range</h3>
 			<div className="pagerBox">
 				<Pager
 				initialPage="1"
@@ -782,7 +806,7 @@ class App extends React.Component<AppProps, AppState> {
 					color="#fd7400"
 					backgroundColor="#004358"
 					location={Location.middleRight}
-				>
+					>
 					{randomText}
 				</Tooltip>
 			</div>

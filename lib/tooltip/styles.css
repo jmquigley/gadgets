@@ -25,91 +25,108 @@
 	}
 
 	.tooltipTopLeft {
-		bottom: 120%;
+		bottom: 125%;
 		left: 25%;
 		transform: translateX(-50%);
+	}
 
-		&::after {
-			@extend baseTriangle;
-			@extend bottomTriangle;
-		}
+	.tooltipTriangleTopLeft {
+		position: absolute;
+		bottom: -12px;
+		left: 75%;
+		transform: translateX(-50%) rotate(180deg);
 	}
 
 	.tooltipTop {
-		bottom: 120%;
+		bottom: 125%;
 		left: 50%;
 		transform: translateX(-50%);
+	}
 
-		&::after {
-			@extend baseTriangle;
-			@extend bottomTriangle;
-		}
+	.tooltipTriangleTop {
+		position: absolute;
+		bottom: -12px;
+		left: 50%;
+		transform: translateX(-50%) rotate(180deg);
 	}
 
 	.tooltipTopRight {
-		bottom: 120%;
+		bottom: 125%;
 		left: 75%;
 		transform: translateX(-50%);
+	}
 
-		&::after {
-			@extend baseTriangle;
-			@extend bottomTriangle;
-		}
+	.tooltipTriangleTopRight {
+		position: absolute;
+		bottom: -12px;
+		left: 25%;
+		transform: translateX(-50%) rotate(180deg);
 	}
 
 	.tooltipMiddleLeft {
 		top: 50%;
-		right: 110%;
+		right: 112%;
 		transform: translateY(-50%);
+	}
 
-		&::after {
-			@extend baseTriangle;
-			@extend rightTriangle;
-		}
+	.tooltipTriangleMiddleLeft {
+		position: absolute;
+		top: 50%;
+		right: -12px;
+		transform: translateY(-50%) rotate(90deg);
 	}
 
 	.tooltipMiddleRight,
 	.tooltipMiddle {
 		top: 50%;
-		left: 110%;
+		left: 112%;
 		transform: translateY(-50%);
+	}
 
-		&::after {
-			@extend baseTriangle;
-			@extend leftTriangle;
-		}
+	.tooltipTriangleMiddleRight {
+		position: absolute;
+		top: 50%;
+		left: -12px;
+		transform: translateY(-50%) rotate(270deg);
 	}
 
 	.tooltipBottomLeft {
-		top: 120%;
+		top: 125%;
 		left: 25%;
 		transform: translateX(-50%);
+	}
 
-		&::after {
-			@extend baseTriangle;
-			@extend topTriangle;
-		}
+	.tooltipTriangleBottomLeft {
+		position: absolute;
+		top: -12px;
+		left: 75%;
+		transform: translateX(-50%);
 	}
 
 	.tooltipBottom {
-		top: 120%;
+		top: 125%;
 		left: 50%;
 		transform: translateX(-50%);
+	}
 
-		&::after {
-			@extend baseTriangle;
-			@extend topTriangle;
-		}
+	.tooltipTriangleBottom {
+		position: absolute;
+		top: -12px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.tooltipBottomRight {
-		top: 120%;
+		top: 125%;
 		left: 75%;
 		transform: translateX(-50%);
-
-		&::after {
-			@extend baseTriangle;
-			@extend topTriangle;
-		}
 	}
+
+	.tooltipTriangleBottomRight {
+		position: absolute;
+		top: -12px;
+		left: 25%;
+		transform: translateX(-50%);
+	}
+
 }

@@ -1,3 +1,8 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
 h1 {
 	font-size: 1.75em;
 	margin: 0;
@@ -14,10 +19,7 @@ h3 {
 }
 
 p {
-	font-size: 0.9em;
-	margin: 0;
 	margin-bottom: 8px;
-	padding: 0;
 }
 
 section {
@@ -211,12 +213,6 @@ section {
 	color: #ffe11a;
 }
 
-.ui-button:not(.nohover):hover,
-.ui-button-text:not(.nohover):hover
-{
-	background-color: silver !important;
-}
-
 .ui-dialog-popup {
 	color: black;
 	background-color: white;
@@ -231,6 +227,10 @@ section {
 	border-top: solid 1px #004358;
 	border-bottom: solid 1px #004358;
 	border-right: solid 1px #004358;
+}
+
+.ui-pager > .ui-button-dialog {
+	border: solid 1px #004358;
 }
 
 .ui-pager > .ui-button:first-child {

@@ -3,17 +3,25 @@
 :local {
 
 	.pager {
-		font-weight: bold;
 		display: inline-flex;
 	}
 
 	.pagerButton {
 		flex: 1;
-		/* padding: 0 5px; */
+		height: inherit;
+	}
+
+	.pagerButton:not(.nohover):hover {
+		background-color: silver !important;
 	}
 
 	.pagerInput {
-		margin-left: 15px;
+	}
+
+	.spacer {
+		display: inline-block;
+		width: 0.25em;
+		height: inherit;
 	}
 
 }

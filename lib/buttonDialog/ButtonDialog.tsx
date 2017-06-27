@@ -26,6 +26,10 @@
  * applied to the dialog window.
  * - `location: Location (Location.bottom)` - Determines if the popup will be shown
  * above or below the button.  Only uses `Location.top` or `Location.bottom`.
+ * - `notriangle: boolean (false)` - If true this will suppress the triangle pointer
+ * within the dialog popup.  The default is to show it.
+ * - `triangleClasses: string[] ([])` - An array of CSS class strings that will be
+ * applied to the dialog box triangle.
  *
  * @module ButtonDialog
  */
@@ -41,6 +45,7 @@ import {Triangle} from '../triangle';
 
 export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
+	notriangle?: boolean;
 	triangleClasses? : string[];
 }
 
@@ -49,6 +54,7 @@ export function getDefaultButtonDialogProps(): ButtonDialogProps {
 		getDefaultButtonProps(), {
 			dialogClasses: [],
 			location: Location.bottom,
+			notriangle: false,
 			triangleClasses: []
 		}));
 }
@@ -125,30 +131,35 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			<div
 				className={this.classes.join(' ')}
 				disabled={this.props.disabled}
-				>
+			>
 				<Button
-					backgroundColor={this.props.backgroundColor}
-					color={this.props.color}
-					disabled={this.props.disabled}
-					iconName={this.props.iconName}
-					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-					sizing={this.props.sizing}
-					style={this.inlineStyle}
-					visible={this.props.visible}
-					/>
+				backgroundColor={this.props.backgroundColor}
+				color={this.props.color}
+				disabled={this.props.disabled}
+				iconName={this.props.iconName}
+				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+				sizing={this.props.sizing}
+				style={this.inlineStyle}
+				visible={this.props.visible}
+				/>
 				<div
 					className={this._dialogClasses.join(' ')}
 					onClick={this.handleDialogClick}
 					>
-					{this.props.children}
+					<div className={this.styles.buttonDialogContent}>
+						{this.props.children}
+					</div>
+					{this.props.notriangle ?
+						 null
+					 :
+						 <Triangle
+						 className={this._triangleClasses.join(' ')}
+						 direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
+						 nobase
+						 sizing={Sizing.normal}
+						 />
+					}
 				</div>
-				<Triangle
-					className={this._triangleClasses.join(' ')}
-					direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
-					nobase
-					sizing={Sizing.xsmall}
-					/>
-
 			</div>
 		);
 	}

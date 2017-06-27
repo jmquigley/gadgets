@@ -4,12 +4,11 @@
 
 	.item {
 		display: flex;
-		height: 40px;
 		cursor: default;
 	}
 
 	.itemTitle {
-		line-height: 40px;
+		padding: 5px;
 	}
 
 	.itemButton {
@@ -29,7 +28,7 @@
 	.item:hover .itemButton :global(.ui-button-circle) > div,
 	.item:hover .itemButton :global(.ui-button-dialog) > :global(.ui-button)
 	{
-		width: 40px;
+		width: inherit;
 		border-width: 3px !important;
 		opacity: 1.0;
 	}
