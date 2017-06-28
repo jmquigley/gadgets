@@ -131,7 +131,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			<div
 				className={this.classes.join(' ')}
 				disabled={this.props.disabled}
-			>
+				>
 				<Button
 				backgroundColor={this.props.backgroundColor}
 				color={this.props.color}

@@ -278,7 +278,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xlarge}/></td>
 						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xxlarge}/></td>
 						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.normal} disabled={true}/></td>
-						<td><span>N/A</span></td>
+						<td><span style={{display: "table", margin: "0 auto"}}>N/A</span></td>
 					</tr><tr>
 						<th>Button</th>
 						<td><Button iconName="motorcycle" sizing={Sizing.xxsmall}/></td>
@@ -862,24 +862,24 @@ class App extends React.Component<AppProps, AppState> {
 			<Triangle sizing={Sizing.xxsmall} direction={Direction.left} />
 
 			<h3>xsmall</h3>
-			<Triangle sizing={Sizing.xsmall} direction={Direction.up} color="red" borderColor="red" />
-			<Triangle sizing={Sizing.xsmall} direction={Direction.right} color="red" borderColor="red" />
-			<Triangle sizing={Sizing.xsmall} direction={Direction.down} color="red" borderColor="red" />
-			<Triangle sizing={Sizing.xsmall} direction={Direction.left} color="red" borderColor="red" />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.up} backgroundColor="red" borderColor="red" />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.right} backgroundColor="red" borderColor="red" />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.down} backgroundColor="red" borderColor="red" />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.left} backgroundColor="red" borderColor="red" />
 
 
 			<h3>small</h3>
-			<Triangle sizing={Sizing.small} direction={Direction.up} color="black" borderColor="yellow"/>
-			<Triangle sizing={Sizing.small} direction={Direction.right} color="black" borderColor="yellow"/>
-			<Triangle sizing={Sizing.small} direction={Direction.down} color="black" borderColor="yellow"/>
-			<Triangle sizing={Sizing.small} direction={Direction.left} color="black" borderColor="yellow"/>
+			<Triangle sizing={Sizing.small} direction={Direction.up} backgroundColor="black" borderColor="yellow"/>
+			<Triangle sizing={Sizing.small} direction={Direction.right} backgroundColor="black" borderColor="yellow"/>
+			<Triangle sizing={Sizing.small} direction={Direction.down} backgroundColor="black" borderColor="yellow"/>
+			<Triangle sizing={Sizing.small} direction={Direction.left} backgroundColor="black" borderColor="yellow"/>
 
 
 			<h3>normal</h3>
-			<Triangle sizing={Sizing.normal} direction={Direction.up} color="blue" borderColor="green" />
-			<Triangle sizing={Sizing.normal} direction={Direction.right} color="blue" borderColor="green" />
-			<Triangle sizing={Sizing.normal} direction={Direction.down} color="blue" borderColor="green" />
-			<Triangle sizing={Sizing.normal} direction={Direction.left} color="blue" borderColor="green" />
+			<Triangle sizing={Sizing.normal} direction={Direction.up} backgroundColor="blue" borderColor="green" />
+			<Triangle sizing={Sizing.normal} direction={Direction.right} backgroundColor="blue" borderColor="green" />
+			<Triangle sizing={Sizing.normal} direction={Direction.down} backgroundColor="blue" borderColor="green" />
+			<Triangle sizing={Sizing.normal} direction={Direction.left} backgroundColor="blue" borderColor="green" />
 
 			<h3>large</h3>
 			<Triangle sizing={Sizing.large} direction={Direction.up} />

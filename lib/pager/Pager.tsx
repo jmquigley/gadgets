@@ -354,7 +354,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					 onChange={this.handleChange}
 					 onKeyPress={this.handleKeyPress}
 					 placeholder={String(this.state.currentPage)}
-					 style={{width: "3.25em"}}
+					 style={{width: "3em"}}
 					 type="number"
 					 value={this.state.currentPage}
 				 />

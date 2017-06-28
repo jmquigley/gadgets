@@ -19,14 +19,20 @@ test('Test retrieval of Triangle props object', t => {
 
 	t.truthy(props);
 
-	t.true('color' in props);
-	t.is(props.color, 'white');
+	t.true('backgroundColor' in props);
+	t.is(props.backgroundColor, 'inherit');
 
 	t.true('borderColor' in props);
-	t.is(props.borderColor, 'black');
+	t.is(props.borderColor, 'inherit');
+
+	t.true('borderWidth' in props);
+	t.is(props.borderWidth, '2px');
 
 	t.true('direction' in props);
 	t.is(props.direction, Direction.up);
+
+	t.true('nobase' in props);
+	t.false(props.nobase);
 
 	t.true('sizing' in props);
 	t.is(props.sizing, Sizing.normal);

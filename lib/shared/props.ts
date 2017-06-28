@@ -105,6 +105,43 @@ export enum Sizing {
 	xxlarge = 'xxlarge'
 }
 
+export interface FontSize {
+	fontSize: string;
+	size: number;
+	sizepx: string;
+}
+
+export interface Sizings {
+	[key: string]: FontSize;
+}
+
+export let baseFontSize: number = 16;
+export let sizings: Sizings = ((baseSize: number) => {
+	const obj: Sizings = {};
+	const sizes = [
+		[Sizing.xxsmall, -10],
+		[Sizing.xsmall, -8],
+		[Sizing.small, -4],
+		[Sizing.medium, 0],
+		[Sizing.normal, 0],
+		[Sizing.large, 8],
+		[Sizing.xlarge, 16],
+		[Sizing.xxlarge, 32]
+	];
+
+	for (const [key, val] of sizes) {
+		const valSize = baseSize - Number(val);
+
+		obj[key] = {
+			size: valSize,
+			sizepx: `${valSize}px`,
+			fontSize: `${valSize / baseSize}em`
+		};
+	}
+
+	return obj;
+})(baseFontSize);
+
 export interface BaseProps {
 	backgroundColor?: string;
 	borderColor?: string;

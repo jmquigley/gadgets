@@ -1,11 +1,11 @@
 'use strict';
 
-import {mockupEnv} from './helpers';
+import {mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
 import * as _ from 'lodash';
-import {getDefaultBaseProps, Location, Sizing} from '../lib/shared';
+import {getDefaultBaseProps, Location, Sizing} from './index';
 
 test('Test retrieval of default prop object', t => {
 	const props = getDefaultBaseProps();

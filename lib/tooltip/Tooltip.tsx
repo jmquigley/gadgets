@@ -57,8 +57,7 @@ import {
 	BaseProps,
 	Direction,
 	getDefaultBaseProps,
-	Location,
-	Sizing
+	Location
 } from '../shared';
 import {Triangle} from '../triangle';
 
@@ -173,11 +172,9 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 					{this.props.children}
 				</span>
 				<Triangle
+					{...this.props}
 					className={this._triangleStyle}
-					color={this.props.backgroundColor}
-					borderColor={this.props.backgroundColor}
 					direction={this._triangleDirection}
-					sizing={Sizing.normal}
 					/>
 			</div>
 		);

@@ -39,9 +39,7 @@ export interface TriangleProps extends BaseProps {
 export function getDefaultTriangleProps(): TriangleProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
-			color: 'white',
-			borderColor: 'black',
-			borderWidth: '3px',
+			borderWidth: '2px',
 			direction: Direction.up,
 			nobase: false,
 			sizing: Sizing.normal
@@ -56,16 +54,16 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 	public static defaultProps: TriangleProps = getDefaultTriangleProps();
 
 	constructor(props: TriangleProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 	}
 
 	protected buildStyles() {
 		super.buildStyles(this.props, {
-			fill: this.props.color,
+			fill: this.props.backgroundColor,
 			stroke: this.props.borderColor,
 			strokeWidth: this.props.borderWidth
 		});
-		this.classes.push("ui-triangle");
+		this.classes.push('ui-triangle');
 		this.classes.push(this.styles.triangle);
 		this.classes.push(this.boxSizeStyle);
 
@@ -97,23 +95,25 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 			<svg
 				className={this.classes.join(' ')}
 				preserveAspectRatio="xMidYMid meet"
+				style={this.inlineStyle}
 				version="1.1"
 				viewBox="0 0 40 40"
 				xmlns="http://www.w3.org/2000/svg"
-			>
-				<polygon points="0,35, 20,10 40,35" style={{fill: this.props.color}} />
-				<polygon points="0,35, 20,10 40,35, 20,10" style={{stroke: this.props.borderColor, strokeWidth: this.props.borderWidth, strokeLinecap:"square"}} />
-				<rect x="0" y="35" width="40" height="5" style={{fill: this.props.color}} />
+				>
+				<polygon points="-3,35, 20,10 43,35" style={{fill: this.props.backgroundColor, stroke: "none"}} />
+				<polygon points="-3,35, 20,10 43,35, 20,10" style={{stroke: this.props.borderColor, strokeWidth: this.props.borderWidth, strokeLinecap:"square"}} />
+
 			</svg>
 			:
 			<svg
 				className={this.classes.join(' ')}
 				preserveAspectRatio="xMidYMid meet"
+				style={this.inlineStyle}
 				version="1.1"
 				viewBox="0 0 40 40"
 				xmlns="http://www.w3.org/2000/svg"
 			>
-				<polygon points="0,35, 20,10 40,35" style={this.inlineStyle} />
+				<polygon points="0,35, 20,10 40,35" />
 			</svg>
 		);
 	}

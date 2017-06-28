@@ -44,7 +44,7 @@
 'use strict';
 
 import * as React from 'react';
-import {Location, Sizing} from './index';
+import {baseFontSize, FontSize, Location, Sizing, sizings} from './index';
 
 const styles = require('./styles.css');
 
@@ -69,11 +69,10 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	private _borderStyle: string = '';
 	private _boxSizeStyle: string = '';
 	private _classes: string[] = [];
-	private _inlineStyle: any = {};    // inline style overrides
+	private _inlineStyle: any = {};     // inline style overrides
 	private _locationStyle: string = '';
 	private _sizeStyle: string = '';
-	private _sizing: any = {};
-	private _styles: any = {};         // css modules styles
+	private _styles: any = {};          // css modules styles
 
 	constructor(props: P, pstyles: any = {}) {
 		super(props);
@@ -83,38 +82,6 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 			this._sizeStyle = this.getSizeStyle();
 			this._borderStyle = this.getBorderStyle();
 			this._boxSizeStyle = this.getBoxSizeStyle();
-
-			this._sizing = {
-				baseSize: '16px',
-				xxsmall: {
-					fontSize: '0.375em',
-					size: '6px'
-				},
-				xsmall: {
-					fontSize: '0.5em',
-					size: '8px'
-				},
-				small: {
-					fontSize: '0.75em',
-					size: '12px'
-				},
-				medium: {
-					fontSize: '1.0em',
-					size: '16px'
-				},
-				large: {
-					fontSize: '1.5em',
-					size: '24px'
-				},
-				xlarge: {
-					fontSize: '2.0em',
-					size: '32px'
-				},
-				xxlarge: {
-					fontSize: '3.0em',
-					size: '48px'
-				}
-			};
 		}
 
 		if ('location' in props) {
@@ -150,8 +117,18 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		return this._locationStyle;
 	}
 
-	get sizing() {
-		return this._sizing;
+	get size(): FontSize {
+		if ('sizing' in this.props
+			&& this.props['sizing'] in Sizing
+			&& this.props['sizing'] in sizings) {
+			return sizings[this.props['sizing']];
+		}
+
+		return {
+			fontSize: '1.0em',
+			size: baseFontSize,
+			sizepx: `${baseFontSize}px`
+		};
 	}
 
 	get sizeStyle(): string {
