@@ -42,11 +42,13 @@ import {
 
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
+	iconStyle?: string;
 }
 
 export function getDefaultButtonProps(): ButtonProps {
 	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		iconName: "bomb",
+		iconName: 'bomb',
+		iconStyle: '',
 		location: Location.middle,
 		sizing: Sizing.normal
 	}));
@@ -57,7 +59,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
     public static defaultProps: ButtonProps = getDefaultButtonProps();
 
     constructor(props: ButtonProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -71,25 +73,29 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	protected buildStyles() {
 
-		if (this.props.color !== "inherit") {
-			this.inlineStyle["color"] = this.props.color;
+		if (this.props.color !== 'inherit') {
+			this.inlineStyle['color'] = this.props.color;
 		}
 
-		if (this.props.backgroundColor !== "inherit") {
-			this.inlineStyle["backgroundColor"] = this.props.backgroundColor;
+		if (this.props.backgroundColor !== 'inherit') {
+			this.inlineStyle['backgroundColor'] = this.props.backgroundColor;
 		}
 
-		if (this.props.borderColor !== "inherit") {
-			this.inlineStyle["borderColor"] = this.props.borderColor;
+		if (this.props.borderColor !== 'inherit') {
+			this.inlineStyle['borderColor'] = this.props.borderColor;
+		}
+
+		if (this.props.borderWidth != 'none') {
+			this.inlineStyle['borderWidth'] = this.props.borderWidth;
 		}
 
 		super.buildStyles(this.props);
 
-		this.classes.push("ui-button");
+		this.classes.push('ui-button');
 		this.classes.push(this.styles.button);
 
 		if (!this.props.noripple && !this.props.disabled) {
-			this.classes.push("ripple");
+			this.classes.push('ripple');
 		}
 	}
 
@@ -104,7 +110,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 				style={{...this.inlineStyle}}
 				>
 				<Icon
-					className={this.styles.icon}
+					className={`${this.props.iconStyle} ${this.styles.icon}`}
 					iconName={this.props.iconName}
 					sizing={this.props.sizing}
 				/>

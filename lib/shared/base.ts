@@ -66,6 +66,7 @@ const defaultBaseOptions: BaseOptions = {
 
 export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 
+	private _borderStyle: string = '';
 	private _boxSizeStyle: string = '';
 	private _classes: string[] = [];
 	private _inlineStyle: any = {};    // inline style overrides
@@ -80,36 +81,38 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 
 		if ('sizing' in props) {
 			this._sizeStyle = this.getSizeStyle();
+			this._borderStyle = this.getBorderStyle();
 			this._boxSizeStyle = this.getBoxSizeStyle();
 
 			this._sizing = {
+				baseSize: '16px',
 				xxsmall: {
-					fontSize: '0.4em',
-					size: '16px'
+					fontSize: '0.375em',
+					size: '6px'
 				},
 				xsmall: {
-					fontSize: '0.6em',
-					size: '24px'
+					fontSize: '0.5em',
+					size: '8px'
 				},
 				small: {
-					fontSize: '0.8em',
-					size: '32px'
+					fontSize: '0.75em',
+					size: '12px'
 				},
 				medium: {
 					fontSize: '1.0em',
-					size: '40px'
+					size: '16px'
 				},
 				large: {
-					fontSize: '1.2em',
-					size: '48px'
+					fontSize: '1.5em',
+					size: '24px'
 				},
 				xlarge: {
-					fontSize: '1.6em',
-					size: '64px'
+					fontSize: '2.0em',
+					size: '32px'
 				},
 				xxlarge: {
-					fontSize: '2.0em',
-					size: '80px'
+					fontSize: '3.0em',
+					size: '48px'
 				}
 			};
 		}
@@ -125,6 +128,10 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 
 	set classes(str: string[]) {
 		this._classes = str;
+	}
+
+	get borderStyle(): string {
+		return this._borderStyle;
 	}
 
 	get boxSizeStyle(): string {
@@ -197,6 +204,124 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 			this._classes.push(styles.disabled);
 			this._classes.push('nohover');
 		}
+	}
+
+	/**
+	 * Takes a sizing parameter and a styles object and searches for the
+	 * corresponding border sizing styleclass CSS.  If it is found, then it
+	 * returns the local style for that size.  This maps CSS module
+	 * generated strings to their enumerations.
+	 * @returns {string} the name of the local style for that size.  If
+	 * it is not found, then an empty string is returned.
+	 * @private
+	 */
+	private getBorderStyle() {
+
+		switch (this.props['sizing']) {
+		case Sizing.xxsmall:
+			if (Sizing.xxsmall in this.styles) {
+				return this.styles.xxsmallBorder;
+			}
+			break;
+
+		case Sizing.xsmall:
+			if (Sizing.xsmall in this.styles) {
+				return this.styles.xsmallBorder;
+			}
+			break;
+
+		case Sizing.small:
+			if (Sizing.small in this.styles) {
+				return this.styles.smallBorder;
+			}
+			break;
+
+		case Sizing.large:
+			if (Sizing.large in this.styles) {
+				return this.styles.largeBorder;
+			}
+			break;
+
+		case Sizing.xlarge:
+			if (Sizing.xlarge in this.styles) {
+				return this.styles.xlargeBorder;
+			}
+			break;
+
+		case Sizing.xxlarge:
+			if (Sizing.xxlarge in this.styles) {
+				return this.styles.xxlargeBorder;
+			}
+			break;
+
+		case Sizing.normal:
+		case Sizing.medium:
+		default:
+			if (Sizing.medium in this.styles) {
+				return this.styles.mediumBorder;
+			}
+		}
+
+		return '';
+	}
+
+	/**
+	 * Takes a sizing parameter and a styles object and searches for the
+	 * corresponding box/square style size class CSS.  If it is found, then it
+	 * returns the local style for that size.  This maps CSS module
+	 * generated strings to their enumerations.
+	 * @returns {string} the name of the local style for that size.  If
+	 * it is not found, then an empty string is returned.
+	 * @private
+	 */
+	private getBoxSizeStyle() {
+
+		switch (this.props['sizing']) {
+		case Sizing.xxsmall:
+			if (Sizing.xxsmall in this.styles) {
+				return this.styles.xxsmallBox;
+			}
+			break;
+
+		case Sizing.xsmall:
+			if (Sizing.xsmall in this.styles) {
+				return this.styles.xsmallBox;
+			}
+			break;
+
+		case Sizing.small:
+			if (Sizing.small in this.styles) {
+				return this.styles.smallBox;
+			}
+			break;
+
+		case Sizing.large:
+			if (Sizing.large in this.styles) {
+				return this.styles.largeBox;
+			}
+			break;
+
+		case Sizing.xlarge:
+			if (Sizing.xlarge in this.styles) {
+				return this.styles.xlargeBox;
+			}
+			break;
+
+		case Sizing.xxlarge:
+			if (Sizing.xxlarge in this.styles) {
+				return this.styles.xxlargeBox;
+			}
+			break;
+
+		case Sizing.normal:
+		case Sizing.medium:
+		default:
+			if (Sizing.medium in this.styles) {
+				return this.styles.mediumBox;
+			}
+		}
+
+		return '';
 	}
 
 	/**
@@ -321,65 +446,6 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		default:
 			if (Sizing.medium in this.styles) {
 				return this.styles.medium;
-			}
-		}
-
-		return '';
-	}
-
-	/**
-	 * Takes a sizing parameter and a styles object and searches for the
-	 * corresponding box/square style size class CSS.  If it is found, then it
-	 * returns the local style for that size.  This maps CSS module
-	 * generated strings to their enumerations.
-	 * @returns {string} the name of the local style for that size.  If
-	 * it is not found, then an empty string is returned.
-	 * @private
-	 */
-	private getBoxSizeStyle() {
-
-		switch (this.props['sizing']) {
-		case Sizing.xxsmall:
-			if (Sizing.xxsmall in this.styles) {
-				return this.styles.xxsmallBox;
-			}
-			break;
-
-		case Sizing.xsmall:
-			if (Sizing.xsmall in this.styles) {
-				return this.styles.xsmallBox;
-			}
-			break;
-
-		case Sizing.small:
-			if (Sizing.small in this.styles) {
-				return this.styles.smallBox;
-			}
-			break;
-
-		case Sizing.large:
-			if (Sizing.large in this.styles) {
-				return this.styles.largeBox;
-			}
-			break;
-
-		case Sizing.xlarge:
-			if (Sizing.xlarge in this.styles) {
-				return this.styles.xlargeBox;
-			}
-			break;
-
-		case Sizing.xxlarge:
-			if (Sizing.xxlarge in this.styles) {
-				return this.styles.xxlargeBox;
-			}
-			break;
-
-		case Sizing.normal:
-		case Sizing.medium:
-		default:
-			if (Sizing.medium in this.styles) {
-				return this.styles.mediumBox;
 			}
 		}
 

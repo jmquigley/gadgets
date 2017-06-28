@@ -138,7 +138,7 @@ export function getDefaultBaseProps(): BaseProps {
 	return cloneDeep({
 		backgroundColor: 'inherit',
 		borderColor: 'inherit',
-		borderWidth: '1px',
+		borderWidth: 'none',
 		children: null,
 		className: '',
 		color: 'inherit',

@@ -17,7 +17,7 @@ test('Test retrieval of default prop object', t => {
 	t.is(props.borderColor, 'inherit');
 
 	t.true('borderWidth' in props);
-	t.is(props.borderWidth, '1px');
+	t.is(props.borderWidth, 'none');
 
 	t.true('children' in props);
 	t.is(props.children, null);

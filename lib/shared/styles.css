@@ -98,6 +98,41 @@ input::-webkit-inner-spin-button {
 		font-weight: inherit;
 	}
 
+	.xxsmallBorder {
+		border: solid 1px;
+		padding: 1px;
+	}
+
+	.xsmallBorder {
+		border: solid 1px;
+		padding: 2px;
+	}
+
+	.smallBorder {
+		border: solid 2px;
+		padding: 3px;
+	}
+
+	.mediumBorder {
+		border: solid 2px;
+		padding: 4px;
+	}
+
+	.largeBorder {
+		border: solid 2px;
+		padding: 5px;
+	}
+
+	.xlargeBorder {
+		border: solid 3px;
+		padding: 6px;
+	}
+
+	.xxlargeBorder {
+		border: solid 3px;
+		padding: 7px;
+	}
+
 	.xxsmallBox {
 		width: $xxsmall;
 		height: $xxsmall;
