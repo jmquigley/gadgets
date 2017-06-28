@@ -8,7 +8,7 @@
 :local {
 	.titleBar {
 		@extend baseTitleBar;
-		display: inline-flex;
+		display: flex;
 		box-sizing: border-box;
 	}
 
@@ -28,12 +28,10 @@
 
 	.titleStacked {
 		display: block;
-		line-height: 24px;
+		font-size: inherit;
 	}
 
 	.widgetStacked {
 		display: block;
-		line-height: 8px;
-		font-size: 0.8em;
 	}
 }

@@ -9,6 +9,7 @@
 	.pagerButton {
 		flex: 1;
 		height: inherit;
+		font-weight: bold;
 	}
 
 	.pagerButton:not(.nohover):hover {
@@ -16,11 +17,18 @@
 	}
 
 	.pagerInput {
+		flex: none;
 	}
 
 	.spacer {
 		display: inline-block;
 		width: 0.25em;
+		height: inherit;
+		flex: none;
+	}
+
+	.pagerDialog {
+		flex: 1;
 		height: inherit;
 	}
 

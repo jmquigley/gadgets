@@ -33,6 +33,7 @@ const {
 	Select,
 	Sizing,
 	TextField,
+	Title,
 	Toast,
 	ToastLevel,
 	ToastType,
@@ -449,7 +450,7 @@ class App extends React.Component<AppProps, AppState> {
 				leftButton={<Button />}
 				hiddenLeftButton
 				rightButton={
-					<ButtonCircle iconName="times" color="red" borderColor="red" />
+					<ButtonCircle iconName="times" color="red" borderColor="red" sizing={Sizing.small}/>
 				}
 				hiddenRightButton
 				/>
@@ -514,35 +515,6 @@ class App extends React.Component<AppProps, AppState> {
 	private buildPager = () => (
 		<Container id="pagerExample">
 
-			<h3>xxsmall</h3>
-			<div className="pagerBox">
-				<Pager
-				initialPage="1"
-				totalItems="299"
-				sizing={Sizing.xxsmall}
-				onSelect={
-					(page: number) => {
-						console.log(`Clicked on page: ${page}`);
-					}
-				}
-				useinput
-				/>
-			</div>
-
-			<h3>xsmall</h3>
-			<div className="pagerBox">
-				<Pager
-				initialPage="1"
-				totalItems="299"
-				sizing={Sizing.xsmall}
-				onSelect={
-					(page: number) => {
-						console.log(`Clicked on page: ${page}`);
-					}
-				}
-				/>
-			</div>
-
 			<h3>small</h3>
 			<div className="pagerBox">
 				<Pager
@@ -554,16 +526,16 @@ class App extends React.Component<AppProps, AppState> {
 						console.log(`Clicked on page: ${page}`);
 					}
 				}
-				useinputs
+				useinput
 				/>
 			</div>
 
-			<h3>medium</h3>
+			<h3>normal</h3>
 			<div className="pagerBox">
 				<Pager
 				initialPage="1"
 				totalItems="299"
-				sizing={Sizing.medium}
+				sizing={Sizing.normal}
 				onSelect={
 					(page: number) => {
 						console.log(`Clicked on page: ${page}`);
@@ -572,7 +544,36 @@ class App extends React.Component<AppProps, AppState> {
 				/>
 			</div>
 
-			<h3>xsmall, large range</h3>
+			<h3>large</h3>
+			<div className="pagerBox">
+				<Pager
+				initialPage="1"
+				totalItems="299"
+				sizing={Sizing.large}
+				onSelect={
+					(page: number) => {
+						console.log(`Clicked on page: ${page}`);
+					}
+				}
+				useinputs
+				/>
+			</div>
+
+			<h3>xlarge</h3>
+			<div className="pagerBox">
+				<Pager
+				initialPage="1"
+				totalItems="299"
+				sizing={Sizing.xlarge}
+				onSelect={
+					(page: number) => {
+						console.log(`Clicked on page: ${page}`);
+					}
+				}
+				/>
+			</div>
+
+			<h3>normal, large range</h3>
 			<div className="pagerBox">
 				<Pager
 				initialPage="1"
@@ -598,10 +599,10 @@ class App extends React.Component<AppProps, AppState> {
 				value={this.state.selectOption}
 				options={selectOptions}
 				onChange={(val: any) => {
-						if (val != null) {
-							console.log(`Select click handler: ${JSON.stringify(val)}`);
-							this.setState({selectOption: val.value});
-						}
+					if (val != null) {
+						console.log(`Select click handler: ${JSON.stringify(val)}`);
+						this.setState({selectOption: val.value});
+					}
 				}}
 				/>
 			</div>
@@ -625,6 +626,29 @@ class App extends React.Component<AppProps, AppState> {
 			<TextField type="text" size="10" sizing={Sizing.xxlarge} placeholder="xxlarge" />
 		</Container>
 	);
+
+	private buildTitle = () => (
+		<Container id="titleExample">
+			<h3>Side-by-side (title/widget)</h3>
+			<Title widget="widget" sizing={Sizing.xxsmall}>xxsmall</Title><br/>
+			<Title widget="widget" sizing={Sizing.xsmall}>xsmall</Title><br/>
+			<Title widget="widget" sizing={Sizing.small}>small</Title><br/>
+			<Title widget="widget" sizing={Sizing.normal}>normal</Title><br/>
+			<Title widget="widget" sizing={Sizing.large}>large</Title><br/>
+			<Title widget="widget" sizing={Sizing.xlarge}>xlarge</Title><br/>
+			<Title widget="widget" sizing={Sizing.xxlarge}>xxlarge</Title><br/>
+		    <br/><br/>
+
+			<h3>Stacked (title over widget)</h3>
+			<Title widget="widget" stacked sizing={Sizing.xxsmall}>xxsmall</Title><br/>
+			<Title widget="widget" stacked sizing={Sizing.xsmall}>xsmall</Title><br/>
+			<Title widget="widget" stacked sizing={Sizing.small}>small</Title><br/>
+			<Title widget="widget" stacked sizing={Sizing.normal}>normal</Title><br/>
+			<Title widget="widget" stacked sizing={Sizing.large}>large</Title><br/>
+			<Title widget="widget" stacked sizing={Sizing.xlarge}>xlarge</Title><br/>
+			<Title widget="widget" stacked sizing={Sizing.xxlarge}>xxlarge</Title><br/>
+		</Container>
+	)
 
 	private buildToast = () => (
 		<Container id="toastExample">
@@ -893,6 +917,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>TextField</h1>
 				{this.buildTextField()}
+
+				<h1>Title</h1>
+				{this.buildTitle()}
 
 				<h1>Toast</h1>
 				{this.buildToast()}

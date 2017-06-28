@@ -4,13 +4,14 @@ html, body {
 }
 
 h1 {
+	background-color: #bedb39;
 	font-size: 1.75em;
-	margin: 0;
-	padding: 30px 0 8px 0;
+	margin: 30px 0 10px 0;
+	padding: 10px 0;
 }
 
 h1:first-child {
-	padding: 5px 0 5px 0;
+	margin: 0 0  10px 0;
 }
 
 h3 {
@@ -30,7 +31,7 @@ section {
 	padding: 10px;
 }
 
-#listExample1, #listExample2, #accordionExample, #selectExample, #toastExample {
+#listExample1, #listExample2, #accordionExample, #selectExample, #titleExample, #toastExample {
 	width: 80%;
 }
 
@@ -40,6 +41,21 @@ section {
 
 #simple-buttons, #simple-icons {
 	display: flex;
+}
+
+
+.box {
+	padding: 5px;
+	border-right: solid 1px #004358;
+	width: 75px;
+}
+
+.box:last-child {
+	border: 0;
+}
+
+.box .boxButtons {
+	height: 42px;
 }
 
 #buttonTable {
@@ -76,20 +92,6 @@ section {
 	transform: translateX(-50%);
 }
 
-.box {
-	padding: 5px;
-	border-right: solid 1px #004358;
-	width: 75px;
-}
-
-.box:last-child {
-	border: 0;
-}
-
-.box .boxButtons {
-	height: 42px;
-}
-
 #simple-icons .box .ui-icon, .box .ui-button, .toastBox .ui-button, .box .boxButtons {
 	border: solid 1px lightgray;
 }
@@ -97,6 +99,18 @@ section {
 .demoLabel {
 	background-color: #004358 !important;
 	color: #ffe11a !important;
+}
+
+.pagerBox  {
+	margin-bottom: 30px;
+}
+
+#titleExample .ui-title {
+	border: solid 1px #004358;
+}
+
+#titleExample .ui-widget {
+	border: solid 1px #fd7400;
 }
 
 .toastInfo {
@@ -121,11 +135,6 @@ section {
 	line-height: 32px;
 	margin: 0;
 }
-
-.pagerBox  {
-	margin-bottom: 30px;
-}
-
 #tooltipExample {
 	display: block;
 	width: 100%;
@@ -211,6 +220,12 @@ section {
 
 .ui-accordionitem > .ui-item > .ui-title-bar:not(.nohover):hover {
 	color: #ffe11a;
+}
+
+.ui-button:not(.nohover):hover,
+.ui-button-text:not(.nohover):hover
+{
+	background-color: silver !important;
 }
 
 .ui-dialog-popup {

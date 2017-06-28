@@ -83,7 +83,7 @@ export function getDefaultPagerProps(): PagerProps {
 			onSelect: nilEvent,
 			pagesToDisplay: 3,
 			pageSize: 25,
-			sizing: Sizing.xsmall,
+			sizing: Sizing.normal,
 			totalItems: 0,
 			useinput: false
 		}));

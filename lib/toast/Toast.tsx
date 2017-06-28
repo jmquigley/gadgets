@@ -228,7 +228,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 					borderColor="white"
 					iconName="times"
 					onClick={this.handleClose}
-					sizing={Sizing.normal}
+					sizing={Sizing.large}
 					/>
 			</div>
 		);

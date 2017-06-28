@@ -11,7 +11,7 @@
 
 	.buttonCircleIcon {
 		border: solid 3px;
-		border-radius: $xxlarge;
+		border-radius: calc($xxlarge * 2);
 	}
 
 }
