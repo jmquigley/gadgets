@@ -81,7 +81,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 				<div className={
 					this.styles.itemButton + ' ' +
 					this.styles.leftButton + ' ' +
-					((this.props.hiddenLeftButton) ? this.styles.hiddenButton : this.boxSizeStyle)
+					((this.props.hiddenLeftButton) ? this.styles.hiddenButton : this.sizeStyle)
 					}>
 					{this.props.leftButton != null ? this.props.leftButton : null}
 				</div>
@@ -94,7 +94,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 				<div className={
 					this.styles.itemButton + ' ' +
 					this.styles.rightButton + ' ' +
-					((this.props.hiddenRightButton) ? this.styles.hiddenButton : this.boxSizeStyle)
+					((this.props.hiddenRightButton) ? this.styles.hiddenButton : this.sizeStyle)
 					}>
 					{this.props.rightButton != null ? this.props.rightButton : null}
 				</div>

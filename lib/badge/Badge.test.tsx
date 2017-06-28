@@ -25,7 +25,7 @@ test('Test retrieval of Badge props object', t => {
 	t.is(props.location, Location.topRight);
 
 	t.true('sizing' in props);
-	t.is(props.sizing, Sizing.xsmall);
+	t.is(props.sizing, Sizing.normal);
 
 	t.true('suppress' in props);
 	t.false(props.suppress);

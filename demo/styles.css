@@ -101,7 +101,7 @@ section {
 	color: #ffe11a !important;
 }
 
-.pagerBox  {
+.pagerBox, selectBox  {
 	margin-bottom: 30px;
 }
 
@@ -120,8 +120,9 @@ section {
 }
 
 .toastBox {
-	display: flex;
 	align-items: left;
+	display: flex;
+	height: 32px;
 }
 
 .toastBox .ui-button {
@@ -156,7 +157,8 @@ section {
 	border: solid 1px white;
 	line-height: 50px;
 	text-align: center;
-	min-width: 75px;
+	min-width: 50px;
+	font-size: 0.66em;
 }
 
 #tooltipContainer > .inactive {
@@ -222,8 +224,9 @@ section {
 	color: #ffe11a;
 }
 
-.ui-button:not(.nohover):hover,
-.ui-button-text:not(.nohover):hover
+.ui-button-text:not(.nohover):hover,
+.ui-button-dialog:not(.nohover):hover,
+.ui-button:not(.nohover):hover
 {
 	background-color: silver !important;
 }

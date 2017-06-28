@@ -2,7 +2,10 @@
 
 :local {
 	.buttonDialog {
-		@extend baseButton;
+		display: flex;
+		width: inherit;
+		height: inherit;
+		position: relative;
 	}
 
 	.buttonDialogPopup {

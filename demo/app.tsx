@@ -526,7 +526,6 @@ class App extends React.Component<AppProps, AppState> {
 						console.log(`Clicked on page: ${page}`);
 					}
 				}
-				useinput
 				/>
 			</div>
 
@@ -593,18 +592,34 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildSelect = () => (
 		<Container id="selectExample">
-			<div className="pagerBox">
+			<div className="selectBox">
 				<Select
-				name="form-field-name"
-				value={this.state.selectOption}
-				options={selectOptions}
-				onChange={(val: any) => {
-					if (val != null) {
-						console.log(`Select click handler: ${JSON.stringify(val)}`);
-						this.setState({selectOption: val.value});
-					}
-				}}
-				/>
+					name="form-field-name"
+					value={this.state.selectOption}
+					options={selectOptions}
+					onChange={(val: any) => {
+							if (val != null) {
+								console.log(`Select click handler: ${JSON.stringify(val)}`);
+								this.setState({selectOption: val.value});
+							}
+					}}
+					sizing={Sizing.small}
+					/>
+			</div>
+
+			<div className="selectBox">
+				<Select
+					name="form-field-name"
+					value={this.state.selectOption}
+					options={selectOptions}
+					onChange={(val: any) => {
+							if (val != null) {
+								console.log(`Select click handler: ${JSON.stringify(val)}`);
+								this.setState({selectOption: val.value});
+							}
+					}}
+					sizing={Sizing.normal}
+					/>
 			</div>
 		</Container>
 	);
@@ -612,17 +627,17 @@ class App extends React.Component<AppProps, AppState> {
 	private buildTextField = () => (
 		<Container id="textfieldExample">
 			<TextField type="text" size="10" sizing={Sizing.xxsmall} placeholder="xxsmall" />
-			&nbsp;&nbsp;
+			<br/><br/>
 			<TextField type="text" size="10" sizing={Sizing.xsmall} placeholder="xsmall" />
-			&nbsp;&nbsp;
+			<br/><br/>
 			<TextField type="text" size="10" sizing={Sizing.small} placeholder="small" />
-			&nbsp;&nbsp;
+			<br/><br/>
 			<TextField type="text" size="10" sizing={Sizing.normal} placeholder="normal" />
 			<br/><br/>
 			<TextField type="text" size="10" sizing={Sizing.large} placeholder="large" />
-			&nbsp;&nbsp;
+			<br/><br/>
 			<TextField type="text" size="10" sizing={Sizing.xlarge} placeholder="xlarge" />
-			&nbsp;&nbsp;
+			<br/><br/>
 			<TextField type="text" size="10" sizing={Sizing.xxlarge} placeholder="xxlarge" />
 		</Container>
 	);
@@ -637,7 +652,7 @@ class App extends React.Component<AppProps, AppState> {
 			<Title widget="widget" sizing={Sizing.large}>large</Title><br/>
 			<Title widget="widget" sizing={Sizing.xlarge}>xlarge</Title><br/>
 			<Title widget="widget" sizing={Sizing.xxlarge}>xxlarge</Title><br/>
-		    <br/><br/>
+		    <br/>
 
 			<h3>Stacked (title over widget)</h3>
 			<Title widget="widget" stacked sizing={Sizing.xxsmall}>xxsmall</Title><br/>

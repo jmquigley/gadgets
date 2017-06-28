@@ -44,13 +44,14 @@
 const ReactSelect = require('react-select');
 
 import * as React from 'react';
-import {BaseComponent} from '../shared';
+import {BaseComponent, Sizing} from '../shared';
 
 export class Select extends BaseComponent<any, any> {
 
 	public static defaultProps: any = {
 		disabled: false,
-		visible: true
+		visible: true,
+		sizing: Sizing.normal
 	}
 
 	constructor(props: any) {
@@ -60,6 +61,7 @@ export class Select extends BaseComponent<any, any> {
 	protected buildStyles() {
 		super.buildStyles(this.props);
 		this.classes.push('ui-select');
+		this.classes.push(this.sizeStyle);
 	}
 
 	render() {

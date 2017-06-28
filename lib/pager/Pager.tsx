@@ -366,6 +366,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					className={this._buttonStyle.join(' ')}
 					iconName="ellipsis-h"
 					location={Location.top}
+					notriangle
 					sizing={this.props.sizing}>
 					Pager Dialog
 				</ButtonDialog>
