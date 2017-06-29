@@ -127,7 +127,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 		this.classes.push('ui-label');
 		this.classes.push(this.styles.label);
-		this.classes.push(this.sizeStyle);
+		this.classes.push(this.sizing.fontStyle);
 	}
 
 	render() {

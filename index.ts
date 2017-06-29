@@ -17,7 +17,7 @@ import {
 	Direction,
 	Location,
 	Sizing
-} from './lib/shared/props';
+} from './lib/shared';
 import {TextField} from './lib/textField';
 import {Title} from './lib/title';
 import {Toast, ToastLevel, ToastType} from './lib/toast';

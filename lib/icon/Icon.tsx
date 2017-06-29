@@ -51,7 +51,6 @@ import {
 export interface IconProps extends BaseProps {
 	iconName?: string;
 	imageFile?: string;
-	sizing?: Sizing
 }
 
 export function getDefaultIconProps(): IconProps {
@@ -86,9 +85,9 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		if (this.props.imageFile === '') {
 			this.classes.push('fa');
 			this.classes.push(`fa-${this.props.iconName}`);
-			this.classes.push(this.sizeStyle);
+			this.classes.push(this.sizing.fontStyle);
 		} else {
-			this.classes.push(this.boxSizeStyle);
+			this.classes.push(this.sizing.boxStyle);
 		}
 	}
 

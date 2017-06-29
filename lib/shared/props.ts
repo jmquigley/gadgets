@@ -35,22 +35,12 @@
  * - `noripple: boolean (false)` - turns off the ripple effect for a button.
  * - `selected: boolean (false)` - if true, then this component was selected via a
  * mouse click (such as the ListItem).  If false, then it was not clicked.
- * - `sizing: Sizing (Sizing.normal)` - The font sizing for the control.  It is set to
- * `Sizing.normal` by default which represents 1.0em.
+ * - `sizing: Sizing (Sizing.normal)` - The component sizing for the control.  It is
+ * set to `Sizing.normal` by default which represents 1.0em.
  * - `style: object ({})` - an object of key value/pairs that represent CSS style
  * settings
  * - `visible: boolean (true)` - turns the display of this control on or off.  If true,
  * then the component can be seen.
- *
- * The `Sizing` enumeration contains the following values:
- *
- * - Sizing.xxsmall (20px, 0.5em)
- * - Sizing.xsmall (24px, 0.75em)
- * - Sizing.small (32px, 0.9em)
- * - Sizing.medium/Sizing.normal (40px, 1.0em)
- * - Sizing.large (48px, 1.25em)
- * - Sizing.xlarge (64px, 1.5em)
- * - Sizing.xxsmall (80px, 2.0em)
  *
  * The `Location` enumeration contains the following values:
  *
@@ -73,6 +63,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
+import {Sizing} from './sizing';
 
 export enum Direction {
 	up = 'up',
@@ -93,54 +84,6 @@ export enum Location {
 	bottom = 'bottom',
 	bottomRight = 'bottomRight'
 }
-
-export enum Sizing {
-	xxsmall = 'xxsmall',
-	xsmall = 'xsmall',
-	small = 'small',
-	normal = 'normal',
-	medium = 'medium',
-	large = 'large',
-	xlarge = 'xlarge',
-	xxlarge = 'xxlarge'
-}
-
-export interface FontSize {
-	fontSize: string;
-	size: number;
-	sizepx: string;
-}
-
-export interface Sizings {
-	[key: string]: FontSize;
-}
-
-export let baseFontSize: number = 16;
-export let sizings: Sizings = ((baseSize: number) => {
-	const obj: Sizings = {};
-	const sizes = [
-		[Sizing.xxsmall, -10],
-		[Sizing.xsmall, -8],
-		[Sizing.small, -4],
-		[Sizing.medium, 0],
-		[Sizing.normal, 0],
-		[Sizing.large, 8],
-		[Sizing.xlarge, 16],
-		[Sizing.xxlarge, 32]
-	];
-
-	for (const [key, val] of sizes) {
-		const valSize = baseSize - Number(val);
-
-		obj[key] = {
-			size: valSize,
-			sizepx: `${valSize}px`,
-			fontSize: `${valSize / baseSize}em`
-		};
-	}
-
-	return obj;
-})(baseFontSize);
 
 export interface BaseProps {
 	backgroundColor?: string;
@@ -166,7 +109,7 @@ export interface BaseProps {
 	onKeyPress?: any;
 	onMouseOut?: any;
 	selected?: boolean;
-	sizing?: Sizing;
+	sizing?: string;
 	style?: any;
 	visible?: boolean;
 }

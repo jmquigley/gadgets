@@ -1,23 +1,22 @@
 import {BaseComponent} from './base';
 import {
-	baseFontSize,
 	BaseProps,
 	Direction,
-	FontSize,
 	getDefaultBaseProps,
-	Location,
-	Sizing,
-	sizings
+	Location
 } from './props';
 
+import {
+	FontSize,
+	Sizing
+} from './sizing';
+
 export {
-	baseFontSize,
 	BaseComponent,
 	BaseProps,
 	Direction,
 	FontSize,
 	getDefaultBaseProps,
 	Location,
-	Sizing,
-	sizings
+	Sizing
 };

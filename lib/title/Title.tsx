@@ -55,7 +55,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		super.buildStyles(this.props);
 
 		this.classes.push("ui-title-bar");
-		this.classes.push(this.sizeStyle);
+		this.classes.push(this.sizing.fontStyle);
 
 		if (this.props.stacked) {
 			this.classes.push(this.styles.titleBarStacked);

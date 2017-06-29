@@ -1,30 +1,5 @@
 $baseZIndex: 99999;
 
-$baseFontSize: 16;
-
-$xxsmall: 6px;
-$xxsmall-fs: 0.375em;
-
-$xsmall: 8px;
-$xsmall-fs: 0.5em;
-
-$small: 12px;
-$small-fs: 0.75em;
-
-$medium: 16px;
-$medium-fs: 1.0em;
-$normal: $medium;
-$normal-fs: $medium-fs;
-
-$large: 24px;
-$large-fs: 1.5em;
-
-$xlarge: 32px;
-$xlarge-fs: 2.0em;
-
-$xxlarge: 48px;
-$xxlarge-fs: 3.0em;
-
 @define-extend baseButton {
 	display: flex;
 	box-sizing: border-box;
@@ -37,14 +12,6 @@ $xxlarge-fs: 3.0em;
 	cursor: default;
 	align-items: center;
 	justify-content: center;
-}
-
-@define-extend baseTriangle {
-	content: "";
-	display: block;
-	position: absolute;
-	width: 0;
-	height: 0;
 }
 
 input::-webkit-outer-spin-button,
@@ -63,109 +30,7 @@ input::-webkit-inner-spin-button {
 		width: 0;
 	}
 
-	.xxsmall {
-		font-size: $xxsmall-fs;
-		font-weight: inherit;
-	}
-
-	.xsmall {
-		font-size: $xsmall-fs;
-		font-weight: inherit;
-	}
-
-	.small {
-		font-size: $small-fs;
-		font-weight: inherit;
-	}
-
-	.medium {
-		font-size: $medium-fs;
-		font-weight: inherit;
-	}
-
-	.large {
-		font-size: $large-fs;
-		font-weight: inherit;
-	}
-
-	.xlarge {
-		font-size: $xlarge-fs;
-		font-weight: inherit;
-	}
-
-	.xxlarge {
-		font-size: $xxlarge-fs;
-		font-weight: inherit;
-	}
-
-	.xxsmallBorder {
-		border: solid 1px;
-		padding: 1px;
-	}
-
-	.xsmallBorder {
-		border: solid 1px;
-		padding: 2px;
-	}
-
-	.smallBorder {
-		border: solid 2px;
-		padding: 4px;
-	}
-
-	.mediumBorder {
-		border: solid 3px;
-		padding: 6px;
-	}
-
-	.largeBorder {
-		border: solid 3px;
-		padding: 7px;
-	}
-
-	.xlargeBorder {
-		border: solid 3px;
-		padding: 8px;
-	}
-
-	.xxlargeBorder {
-		border: solid 4px;
-		padding: 10px;
-	}
-
-	.xxsmallBox {
-		width: $xxsmall;
-		height: $xxsmall;
-	}
-
-	.xsmallBox {
-		width: $xsmall;
-		height: $xsmall;
-	}
-
-	.smallBox {
-		width: $small;
-		height: $small;
-	}
-
-	.mediumBox {
-		width: $medium;
-		height: $medium;
-	}
-
-	.largeBox {
-		width: $large;
-		height: $large;
-	}
-
-	.xlargeBox {
-		width: $xlarge;
-		height: $xlarge;
-	}
-
-	.xxlargeBox {
-		width: $xxlarge;
-		height: $xxlarge;
+	.none {
 	}
 
 	.topLeft {

@@ -119,7 +119,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 
 		this._buttonStyle.push(this.styles.pagerButton);
-		this._buttonStyle.push(this.boxSizeStyle);
+		this._buttonStyle.push(this.sizing.boxStyle);
 
 		this.createButtons();
 
@@ -347,7 +347,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				<div className={this.styles.spacer}></div>
 				{this.props.useinput ?
 				 <TextField
-					 className={`${this.styles.pagerInput} ${this.sizeStyle}`}
+					 className={`${this.styles.pagerInput} ${this.sizing.fontStyle}`}
 					 min="1"
 					 max={String(this._lastPage)}
 					 onBlur={this.handleBlur}

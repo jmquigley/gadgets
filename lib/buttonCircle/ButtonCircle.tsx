@@ -70,9 +70,9 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 				<div className={`${this.styles.buttonCircleContainer}`}>
 					<Button
 						{...this.props}
-						className={`${this.borderStyle} ${this.styles.buttonCircleIcon}`}
+						className={`${this.sizing.borderStyle} ${this.styles.buttonCircleIcon}`}
 						iconName={this.props.iconName}
-						iconStyle={this.boxSizeStyle}
+						iconStyle={this.sizing.boxStyle}
 						style={this.inlineStyle}
 						/>
 				</div>
