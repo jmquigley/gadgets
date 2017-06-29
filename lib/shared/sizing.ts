@@ -111,6 +111,7 @@ export class Sizing {
 		obj[Sizing.xsmall] = new Sizing(Sizing.small);
 		obj[Sizing.small] = new Sizing(Sizing.normal);
 		obj[Sizing.normal] = new Sizing(Sizing.large);
+		obj[Sizing.medium] = new Sizing(Sizing.large);
 		obj[Sizing.large] = new Sizing(Sizing.xlarge);
 		obj[Sizing.xlarge] = new Sizing(Sizing.xxlarge);
 		obj[Sizing.xxlarge] = new Sizing(Sizing.xxlarge);
@@ -124,6 +125,7 @@ export class Sizing {
 		obj[Sizing.xsmall] = new Sizing(Sizing.xxsmall);
 		obj[Sizing.small] = new Sizing(Sizing.xsmall);
 		obj[Sizing.normal] = new Sizing(Sizing.small);
+		obj[Sizing.medium] = new Sizing(Sizing.small);
 		obj[Sizing.large] = new Sizing(Sizing.normal);
 		obj[Sizing.xlarge] = new Sizing(Sizing.large);
 		obj[Sizing.xxlarge] = new Sizing(Sizing.xlarge);

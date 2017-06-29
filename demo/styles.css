@@ -1,6 +1,12 @@
+@import url('./fonts.css');
+
 html, body {
 	margin: 0;
 	padding: 0;
+}
+
+body {
+	font-family: 'OpenSans', Georgia, serif;
 }
 
 h1 {
@@ -42,7 +48,6 @@ section {
 #simple-buttons, #simple-icons {
 	display: flex;
 }
-
 
 .box {
 	padding: 5px;
@@ -103,6 +108,7 @@ section {
 
 .pagerBox, selectBox  {
 	margin-bottom: 30px;
+	width: 80%;
 }
 
 #titleExample .ui-title {

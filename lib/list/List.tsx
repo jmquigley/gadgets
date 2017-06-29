@@ -67,7 +67,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 
 		this.classes.push("ui-list");
 		this.classes.push(this.styles.list);
@@ -75,6 +75,8 @@ export class List extends BaseComponent<ListProps, ListState> {
 		if (this.props.alternating) {
 			this.classes.push(this.styles.listAlternating);
 		}
+
+		super.buildStyles(this.props);
 	}
 
 	private selectHandler(item: ListItem) {

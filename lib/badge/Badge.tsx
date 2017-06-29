@@ -69,13 +69,15 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	}
 
 	protected buildStyles() {
+		super.resetStyles();
+
+		this.classes.push(this.styles.badgeContainer);
+
 		super.buildStyles(this.props,{
 			color: (this.props.color || 'black'),
 			backgroundColor: (this.props.backgroundColor || 'white'),
 			border: `solid 3px ${this.props.color}`
 		});
-
-		this.classes.push(this.styles.badgeContainer);
 	}
 
 	render() {

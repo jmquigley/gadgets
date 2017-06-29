@@ -59,9 +59,10 @@ export class Select extends BaseComponent<any, any> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 		this.classes.push('ui-select');
 		this.classes.push(this.sizing.fontStyle);
+		super.buildStyles(this.props);
 	}
 
 	render() {

@@ -62,7 +62,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 
 		this.classes.push('ui-item');
 		this.classes.push(this.styles.item);;
@@ -70,6 +70,8 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		if (this.props.selected) {
 			this.classes.push('ui-selected');
 		}
+
+		super.buildStyles(this.props);
 	}
 
 	render() {

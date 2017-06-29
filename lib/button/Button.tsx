@@ -72,6 +72,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	}
 
 	protected buildStyles() {
+		super.resetStyles();
 
 		if (this.props.color !== 'inherit') {
 			this.inlineStyle['color'] = this.props.color;
@@ -89,14 +90,14 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 			this.inlineStyle['borderWidth'] = this.props.borderWidth;
 		}
 
-		super.buildStyles(this.props);
-
 		this.classes.push('ui-button');
 		this.classes.push(this.styles.button);
 
 		if (!this.props.noripple && !this.props.disabled) {
 			this.classes.push('ripple');
 		}
+
+		super.buildStyles(this.props);
 	}
 
 	render() {

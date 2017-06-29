@@ -52,7 +52,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 
 		this.classes.push("ui-title-bar");
 		this.classes.push(this.sizing.fontStyle);
@@ -66,6 +66,8 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		if (!this.props.noripple && !this.props.disabled) {
 			this.classes.push("ripple");
 		}
+
+		super.buildStyles(this.props);
 	}
 
 	render() {

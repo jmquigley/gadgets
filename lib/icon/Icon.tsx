@@ -73,10 +73,7 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props, {
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white')
-		});
+		super.resetStyles();
 
 		this.classes.push('ui-icon');
 		this.classes.push(this.styles.icon);
@@ -89,6 +86,11 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		} else {
 			this.classes.push(this.sizing.boxStyle);
 		}
+
+		super.buildStyles(this.props, {
+			color: (this.props.color || 'black'),
+			backgroundColor: (this.props.backgroundColor || 'white')
+		});
 	}
 
 	render() {

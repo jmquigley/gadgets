@@ -58,11 +58,8 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props, {
-			fill: this.props.backgroundColor,
-			stroke: this.props.borderColor,
-			strokeWidth: this.props.borderWidth
-		});
+		super.resetStyles();
+
 		this.classes.push('ui-triangle');
 		this.classes.push(this.styles.triangle);
 		this.classes.push(this.sizing.boxStyle);
@@ -85,6 +82,12 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 				this.classes.push(this.styles.triangleUp);
 				break;
 		}
+
+		super.buildStyles(this.props, {
+			fill: this.props.backgroundColor,
+			stroke: this.props.borderColor,
+			strokeWidth: this.props.borderWidth
+		});
 	}
 
 	render() {

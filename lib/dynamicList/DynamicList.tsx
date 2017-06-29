@@ -49,8 +49,9 @@ export class DynamicList extends BaseComponent<DynamicListProps, undefined> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 		this.classes.push("ui-dynamiclist");
+		super.buildStyles(this.props);
 	}
 
 	render() {

@@ -91,8 +91,8 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		return this._classes;
 	}
 
-	set classes(str: string[]) {
-		this._classes = str;
+	set classes(arr: string[]) {
+		this._classes = arr;
 	}
 
 	get inlineStyle(): any {
@@ -132,7 +132,6 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	 * @param opts {BaseOption} determines which automatic names will be ignored
 	 */
 	protected buildStyles(props: P, style: any = {}, opts?: BaseOptions): void {
-		this._classes = [];
 
 		// Takes the initial iniline style object, the style object from props and
 		// an input user override and merges them together from left to right, Where
@@ -157,5 +156,15 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 			this._classes.push(styles.disabled);
 			this._classes.push('nohover');
 		}
+	}
+
+	/**
+	 * Sets the classes list back to empty.  Each class "buildStyles" will call this
+	 * to ensure that it is empty before building the list of classes for that
+	 * component.  Without this call the className list will just append duplicates.
+	 *
+	 */
+	protected resetStyles() {
+		this._classes = [];
 	}
 }

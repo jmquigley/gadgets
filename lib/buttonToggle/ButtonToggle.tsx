@@ -101,9 +101,10 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 		this.classes.push('ui-button-toggle');
 		this.classes.push(this.styles.buttonToggle);
+		super.buildStyles(this.props);
 	}
 
 	render() {
@@ -111,15 +112,15 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 		return (
 			<Button
-			{...this.props}
-			backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
-			className={this.classes.join(' ')}
-			color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
-			iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
-			noripple
-			onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-			style={this.inlineStyle}
-			/>
+				{...this.props}
+				backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
+				className={this.classes.join(' ')}
+				color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
+				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
+				noripple
+				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+				style={this.inlineStyle}
+				/>
 		);
 	}
 }

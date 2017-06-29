@@ -64,10 +64,11 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 		this.classes.push('ui-textfield');
 		this.classes.push(this.sizing.fontStyle);
 		this.classes.push(this.styles.textField);
+		super.buildStyles(this.props);
 	}
 
 	render() {

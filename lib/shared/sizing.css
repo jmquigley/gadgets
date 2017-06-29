@@ -40,7 +40,7 @@ $xxlarge-fs: 3.0em;
 		font-weight: inherit;
 	}
 
-	.medium {
+	.medium, .normal {
 		font-size: $medium-fs;
 		font-weight: inherit;
 	}
@@ -75,7 +75,7 @@ $xxlarge-fs: 3.0em;
 		padding: 4px;
 	}
 
-	.mediumBorder {
+	.mediumBorder, .normalBorder {
 		border: solid 3px;
 		padding: 6px;
 	}
@@ -110,7 +110,7 @@ $xxlarge-fs: 3.0em;
 		height: $small;
 	}
 
-	.mediumBox {
+	.mediumBox, .normalBox {
 		width: $medium;
 		height: $medium;
 	}

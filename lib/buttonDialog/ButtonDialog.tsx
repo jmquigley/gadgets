@@ -95,7 +95,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	};
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		this.resetStyles();
 
 		this.classes.push('ui-button-dialog');
 		this.classes.push(this.styles.buttonDialog);
@@ -122,6 +122,8 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			this._dialogClasses.push(this.styles.dialogBottom);
 			this._triangleClasses.push(this.styles.dialogTriangleBottom);
 		}
+
+		super.buildStyles(this.props);
 	}
 
 	render() {

@@ -40,9 +40,10 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Icon, IconProps, getDefaultIconProps} from '../icon';
-import {BaseComponent} from '../shared';
+import {BaseComponent, Sizing} from '../shared';
 
 export interface ButtonTextProps extends IconProps {
+	fontStyle?: string;
 	justify?: number;
 	noicon?: boolean;
 	text?: string;
@@ -51,8 +52,10 @@ export interface ButtonTextProps extends IconProps {
 export function getDefaultButtonTextProps(): ButtonTextProps {
 	return cloneDeep(Object.assign(
 		getDefaultIconProps(), {
+			fontStyle: null,
 			justify: ButtonText.RIGHT,
 			noicon: false,
+			sizing: Sizing.normal,
 			text: ''
 		}));
 }
@@ -65,8 +68,16 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	public static RIGHT: number = 1;
 	public static CENTER: number = 2;
 
+	private _fontSize: Sizing = null;
+
     constructor(props: ButtonTextProps) {
 		super(props, require('./styles.css'));
+
+		if (this.props.fontStyle == null) {
+			this._fontSize = new Sizing(this.props.sizing);
+		} else {
+			this._fontSize = new Sizing(this.props.fontStyle);
+		}
 
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -79,6 +90,8 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	}
 
 	protected buildStyles() {
+		super.resetStyles();
+
 		if (this.props.color !== 'inherit') {
 			this.inlineStyle["color"] = this.props.color;
 		}
@@ -91,14 +104,14 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			this.inlineStyle["borderColor"] = this.props.borderColor;
 		}
 
-		super.buildStyles(this.props);
-
 		this.classes.push('ui-button-text');
 		this.classes.push(this.styles.buttonText);
 
 		if (!this.props.noripple && !this.props.disabled) {
 			this.classes.push('ripple');
 		}
+
+		super.buildStyles(this.props);
 	}
 
 	render() {
@@ -108,7 +121,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			<div
 				className={
 					this.styles.content + " " +
-					this.sizing.fontStyle + " " +
+					this._fontSize.fontStyle + " " +
 					justifyStyle
 				}>
 				{this.props.text}

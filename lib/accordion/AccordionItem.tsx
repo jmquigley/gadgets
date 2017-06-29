@@ -101,9 +101,10 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 		this.classes.push("ui-accordionitem");
 		this.classes.push(this.styles.accordionItem);
+		super.buildStyles(this.props);
 	}
 
 	render() {

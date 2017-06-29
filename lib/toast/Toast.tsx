@@ -172,6 +172,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	}
 
 	protected buildStyles() {
+		super.resetStyles();
 
 		if (this.props.level === ToastLevel.custom) {
 			this.inlineStyle = {
@@ -180,8 +181,6 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 				borderColor: this.props.borderColor
 			}
 		}
-
-		super.buildStyles(this.props);
 
 		this.classes.push("ui-toast");
 		this.classes.push(this.styles.toast);
@@ -209,6 +208,8 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		if (!this.state.visible) {
 			this.classes.push(this.styles.hide);
 		}
+
+		super.buildStyles(this.props);
 	}
 
 	render() {

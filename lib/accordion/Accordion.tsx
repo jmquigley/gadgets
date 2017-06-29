@@ -57,9 +57,10 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 		this.classes.push('ui-accordion');
 		this.classes.push(this.styles.accordion);
+		super.buildStyles(this.props);
 	}
 
 	render() {

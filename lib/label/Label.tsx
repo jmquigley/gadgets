@@ -120,14 +120,16 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props, {
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white')
-		});
+		super.resetStyles();
 
 		this.classes.push('ui-label');
 		this.classes.push(this.styles.label);
 		this.classes.push(this.sizing.fontStyle);
+
+		super.buildStyles(this.props, {
+			color: (this.props.color || 'black'),
+			backgroundColor: (this.props.backgroundColor || 'white')
+		});
 	}
 
 	render() {

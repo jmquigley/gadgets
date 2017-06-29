@@ -4,11 +4,14 @@
 
 	.pager {
 		display: inline-flex;
+		width: inherit;
 	}
 
 	.pagerButton {
 		flex: 1;
 		height: inherit;
+		padding: 5px 0;
+		font-weight: 600;
 	}
 
 	.pagerButton:not(.nohover):hover {
@@ -17,6 +20,7 @@
 
 	.pagerInput {
 		flex: none;
+		width: 3em;
 	}
 
 	.spacer {
@@ -27,8 +31,9 @@
 	}
 
 	.pagerDialog {
-		flex: 1;
+		flex: none;
 		height: inherit;
+		width: 7%;
 	}
 
 }

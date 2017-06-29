@@ -54,9 +54,10 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 		this.classes.push("ui-list-header");
 		this.classes.push(this.styles.listHeader);
+		super.buildStyles(this.props);
 	}
 
 	render() {

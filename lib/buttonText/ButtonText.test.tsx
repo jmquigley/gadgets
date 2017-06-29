@@ -19,6 +19,9 @@ test('Test retrieval of ButtonText props object', t => {
 
 	t.truthy(props);
 
+	t.true('fontStyle' in props);
+	t.is(props.fontStyle, null);
+
 	t.true('iconName' in props);
 	t.is(props.iconName, 'bomb');
 

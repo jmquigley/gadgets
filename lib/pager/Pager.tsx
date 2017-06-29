@@ -218,6 +218,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttons[page] = (
 					<ButtonText
 						className={this._buttonStyle.join(' ')}
+						fontStyle={super.sizing.prev.type}
 						key={String(page)}
 						noicon
 						onClick={() => {this.handleSelect(page)}}
@@ -240,6 +241,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttonsDisplay.push(
 					<ButtonText
 						className={this._buttonStyle.join(' ')}
+						fontStyle={super.sizing.prev.type}
 						key={getUUID()}
 						noicon
 						disabled
@@ -307,9 +309,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 		this.classes.push("ui-pager");
 		this.classes.push(this.styles.pager);
+		super.buildStyles(this.props);
 	}
 
 	render() {
@@ -344,27 +347,26 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				sizing={this.props.sizing}
 				/>
 				<div className={this.styles.spacer}></div>
-				<div className={this.styles.spacer}></div>
 				{this.props.useinput ?
 				 <TextField
-					 className={`${this.styles.pagerInput} ${this.sizing.fontStyle}`}
-					 min="1"
-					 max={String(this._lastPage)}
-					 onBlur={this.handleBlur}
-					 onChange={this.handleChange}
-					 onKeyPress={this.handleKeyPress}
-					 placeholder={String(this.state.currentPage)}
-					 style={{width: "3em"}}
-					 type="number"
-					 value={this.state.currentPage}
+				 className={this.styles.pagerInput}
+				 min="1"
+				 max={String(this._lastPage)}
+				 onBlur={this.handleBlur}
+				 onChange={this.handleChange}
+				 onKeyPress={this.handleKeyPress}
+				 placeholder={String(this.state.currentPage)}
+				 sizing={super.sizing.prev.type}
+				 type="number"
+				 value={this.state.currentPage}
 				 />
 				 :
 				 null
 				}
 				<div className={this.styles.spacer}></div>
 				<ButtonDialog
-					className={this._buttonStyle.join(' ')}
-					iconName="ellipsis-h"
+					className={this.styles.pagerDialog}
+					iconName="ellipsis-v"
 					location={Location.top}
 					notriangle
 					sizing={this.props.sizing}>

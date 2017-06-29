@@ -118,9 +118,10 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props);
+		super.resetStyles();
 		this.classes.push("ui-listitem");
 		this.classes.push(this.styles.listItem);
+		super.buildStyles(this.props);
 	}
 
 	render() {

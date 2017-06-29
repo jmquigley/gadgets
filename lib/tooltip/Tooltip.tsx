@@ -90,12 +90,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 	}
 
 	protected buildStyles() {
-		super.buildStyles(this.props, {
-			color: this.props.backgroundColor,
-			backgroundColor: this.props.backgroundColor
-		});
-
-
+		super.resetStyles();
 
 		this.classes.push('ui-tooltip');
 		this.classes.push(this.styles.tooltip);
@@ -161,6 +156,11 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 		} else {
 			this.classes.push(this.styles.tooltipHide);
 		}
+
+		super.buildStyles(this.props, {
+			color: this.props.backgroundColor,
+			backgroundColor: this.props.backgroundColor
+		});
 	}
 
 	render() {

@@ -203,7 +203,7 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<div className="box">
-					<p>bottom left<br/>&nbsp;</p>
+					<p>bottom left</p>
 					<Badge
 						counter={this.state.counter4}
 						location={Location.bottomLeft}

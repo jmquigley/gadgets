@@ -1,3 +1,5 @@
+@import '../shared/sizing.css';
+
 $baseZIndex: 99999;
 
 @define-extend baseButton {
@@ -8,7 +10,6 @@ $baseZIndex: 99999;
 	line-height: inherit;
 	position: relative;
 	outline: none;
-	width: inherit;
 	cursor: default;
 	align-items: center;
 	justify-content: center;
