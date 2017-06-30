@@ -58,7 +58,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 	public static defaultProps: ListProps = getDefaultListProps();
 
 	constructor(props: ListProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 		this.state = {
 			selectedItem: null
 		}
@@ -69,7 +69,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 	protected buildStyles() {
 		super.resetStyles();
 
-		this.classes.push("ui-list");
+		this.classes.push('ui-list');
 		this.classes.push(this.styles.list);
 
 		if (this.props.alternating) {
@@ -96,18 +96,19 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 		let selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
 		let children = React.Children.map(this.props.children, child => {
-			let selected = child["props"].id === selectedKey;
+			let selected = child['props'].id === selectedKey;
 			return React.cloneElement(child as any, {
 				href: {
 					selectHandler: this.selectHandler
 				},
-				selected: (this.props.unselect) ? false : selected
+				selected: (this.props.unselect) ? false : selected,
+				sizing: this.props.sizing
 			});
 		});
 
 		return (
 			<div
-				className={this.classes.join(" ")}
+				className={this.classes.join(' ')}
 				disabled={this.props.disabled}
 				id={this.props.id}
 				style={this.inlineStyle}

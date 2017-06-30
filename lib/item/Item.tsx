@@ -77,14 +77,19 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 	render() {
 		this.buildStyles();
 
+		let buttonScale: number = 2.0;
+
 		let leftButton = null;
 		if (this.props.leftButton != null && !this.props.disabled) {
 			leftButton = (
-				<div className={
-					this.styles.itemButton + ' ' +
-					this.styles.leftButton + ' ' +
-					((this.props.hiddenLeftButton) ? this.styles.hiddenButton : this.sizing.fontStyle)
-					}>
+				<div
+					className={
+						this.styles.itemButton + ' ' +
+						this.sizing.fontStyle + ' ' +
+						((this.props.hiddenLeftButton) ? this.styles.hiddenButton : null)
+					}
+					style={{width: `calc(${super.sizing.size.fontSize} * ${buttonScale})`}}
+					>
 					{this.props.leftButton != null ? this.props.leftButton : null}
 				</div>
 			);
@@ -93,11 +98,14 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		let rightButton = null;
 		if (this.props.rightButton != null && !this.props.disabled) {
 			rightButton = (
-				<div className={
-					this.styles.itemButton + ' ' +
-					this.styles.rightButton + ' ' +
-					((this.props.hiddenRightButton) ? this.styles.hiddenButton : this.sizing.fontStyle)
-					}>
+				<div
+					className={
+						this.styles.itemButton + ' ' +
+							   this.sizing.fontStyle + ' ' +
+						 ((this.props.hiddenRightButton) ? this.styles.hiddenButton : null)
+					}
+					style={{width: `calc(${super.sizing.size.fontSize} * ${buttonScale})`}}
+					>
 					{this.props.rightButton != null ? this.props.rightButton : null}
 				</div>
 			);

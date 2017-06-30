@@ -13,7 +13,6 @@
 
 	.itemButton {
 		display: inline-flex;
-		width: 1.5em;
 		position: relative;
 	}
 
@@ -24,19 +23,12 @@
 		transform: translate(-50%,-50%);
 	}
 
-	.leftButton {
-	}
-
-	.rightButton {
-	}
-
 	.item:hover .itemButton,
 	.item:hover :global(.ui-button),
 	.item:hover .itemButton :global(.ui-button-circle) > div,
 	.item:hover .itemButton :global(.ui-button-dialog) > :global(.ui-button)
 	{
 		display: inline-flex;
-		width: 1.5em;
 		opacity: 1.0;
 	}
 
@@ -47,7 +39,6 @@
 	{
 		display: none;
 		opacity: 0;
-		width: 0;
 
 		:global {
 			animation: fade 0.5s;
@@ -59,12 +50,10 @@
 	0% {
 		display: none;
 		opacity: 0;
-		width: 0;
 	}
 
 	100% {
 		display: inline-flex;
 		opacity: 1.0;
-		width: 1.5em;
 	}
 }
