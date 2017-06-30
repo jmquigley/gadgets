@@ -442,18 +442,30 @@ class App extends React.Component<AppProps, AppState> {
 				leftButton={<Button iconName="podcast"/>}
 				rightButton={<Button iconName="paper-plane-o"/>}
 				/>
-				<ListItem id={getUUID()} title="List Item 2" widget="13" rightButton={<Button />}/>
-				<ListItem id={getUUID()} title="List Item 3" widget="14" />
 				<ListItem
-				id={getUUID()}
-				title="List Item 4a (hide/show)" widget="15"
-				leftButton={<Button />}
-				hiddenLeftButton
-				rightButton={
-					<ButtonCircle iconName="times" color="red" borderColor="red" sizing={Sizing.small}/>
-				}
-				hiddenRightButton
+					id={getUUID()}
+					title="List Item 2 (with icon)"
+					widget="13"
+					leftButton={<Icon iconName="bolt" />}
+					rightButton={<Button />}
 				/>
+				<ListItem
+					id={getUUID()}
+					title="List Item 3 (with hidden icon)"
+					widget="14"
+					leftButton={<Icon iconName="car" />}
+					hiddenLeftButton
+					/>
+				<ListItem
+					id={getUUID()}
+					title="List Item 4a (hide/show)" widget="15"
+					leftButton={<Button />}
+					hiddenLeftButton
+					rightButton={
+						<ButtonCircle iconName="times" color="red" borderColor="red" sizing={Sizing.small}/>
+					}
+					hiddenRightButton
+					/>
 				<ListItem
 				id={getUUID()}
 				title="List Item 4b (hide/show)" widget="15"

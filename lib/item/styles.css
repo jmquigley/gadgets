@@ -8,12 +8,20 @@
 	}
 
 	.itemTitle {
-		padding: 5px;
+		padding: 2px;
 	}
 
 	.itemButton {
 		display: inline-flex;
 		width: 1.5em;
+		position: relative;
+	}
+
+	.itemButton > i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
 	}
 
 	.leftButton {

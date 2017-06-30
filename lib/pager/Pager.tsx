@@ -322,46 +322,47 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		return (
 			<div className={this.classes.join(' ')}>
 				<Button
-				className={this._buttonStyle.join(' ')}
-				iconName="angle-double-left"
-				onClick={this.moveToFront}
-				sizing={this.props.sizing}
-				/>
+					className={this._buttonStyle.join(' ')}
+					iconName="angle-double-left"
+					onClick={this.moveToFront}
+					sizing={this.props.sizing}
+					/>
 				<Button
-				className={this._buttonStyle.join(' ')}
-				iconName="angle-left"
-				onClick={this.moveToPrevious}
-				sizing={this.props.sizing}
-				/>
+					className={this._buttonStyle.join(' ')}
+					iconName="angle-left"
+					onClick={this.moveToPrevious}
+					sizing={this.props.sizing}
+					/>
 				{this._buttonsDisplay}
 				<Button
-				className={this._buttonStyle.join(' ')}
-				iconName="angle-right"
-				onClick={this.moveToNext}
-				sizing={this.props.sizing}
-				/>
+					className={this._buttonStyle.join(' ')}
+					iconName="angle-right"
+					onClick={this.moveToNext}
+					sizing={this.props.sizing}
+					/>
 				<Button
-				className={this._buttonStyle.join(' ')}
-				iconName="angle-double-right"
-				onClick={this.moveToEnd}
-				sizing={this.props.sizing}
-				/>
+					className={this._buttonStyle.join(' ')}
+					iconName="angle-double-right"
+					onClick={this.moveToEnd}
+					sizing={this.props.sizing}
+					/>
+				<div className={this.styles.spacer}></div>
 				<div className={this.styles.spacer}></div>
 				{this.props.useinput ?
-				 <TextField
-				 className={this.styles.pagerInput}
-				 min="1"
-				 max={String(this._lastPage)}
-				 onBlur={this.handleBlur}
-				 onChange={this.handleChange}
-				 onKeyPress={this.handleKeyPress}
-				 placeholder={String(this.state.currentPage)}
-				 sizing={super.sizing.prev.type}
-				 type="number"
-				 value={this.state.currentPage}
-				 />
-				 :
-				 null
+				<TextField
+					className={this.styles.pagerInput}
+					min="1"
+					max={String(this._lastPage)}
+					onBlur={this.handleBlur}
+					onChange={this.handleChange}
+					onKeyPress={this.handleKeyPress}
+					placeholder={String(this.state.currentPage)}
+					sizing={super.sizing.prev.type}
+					type="number"
+					value={this.state.currentPage}
+				/>
+				:
+				null
 				}
 				<div className={this.styles.spacer}></div>
 				<ButtonDialog

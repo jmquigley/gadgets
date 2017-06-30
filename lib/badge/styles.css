@@ -9,13 +9,13 @@
 	}
 
 	.badge {
-		border-radius: $xxlarge;
+		border-radius: calc($xxlarge * 2);
 		font-weight: bold;
 		position: absolute;
 		text-align: center;
 		user-select: none;
 		cursor: default;
-		padding: 0 5px;
+		padding: 0 7px;
 	}
 
 }
