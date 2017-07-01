@@ -7,27 +7,37 @@
  * - Borders (.borderStyle)
  *
  * When a component is created in this library it will have a Sizing
- * parameter (part of the BaseProps).  This class will take that requested
- * size value and compute the appropriate CSS style strings.  The component
- * can then use these style strings to apply the appropriate, consistent
+ * parameter (part of the BaseProps).  The size class will take that requested
+ * value and compute the appropriate CSS style strings.  The component can
+ * then use these style strings to apply the appropriate, consistent
  * sizes for a component.
  *
  * #### Examples
  *
  * ```javascript
- * import {Sizing} from 'gadgets';
- * const sizing = new Sizing(Sizing.small);
+ * import {Sizes, Sizing} from 'gadgets';
  *
- * console.log(sizing.fontStyle);   // CSS class for font style '.small'
- * console.log(sizing.boxStyle);    // CSS class for box style '.smallBox'
+ * // Creates a default object with a 16px base font size.
+ * // It also sets the current size to "normal"
+ * const sizes = new Sizes();
+ *
+ * console.log(sizes.fontStyle);   // CSS class for font style '.normal'
+ * console.log(sizes.boxStyle);    // CSS class for box style '.normalBox'
+ * console.log(sizing.borderStyle); // CSS class for borders '.normalBorder'
+ *
+ * sizes.type = Sizing.small;
+ *
+ * console.log(sizes.fontStyle);   // CSS class for font style '.small'
+ * console.log(sizes.boxStyle);    // CSS class for box style '.smallBox'
  * console.log(sizing.borderStyle); // CSS class for borders '.smallBorder'
  * ```
  *
- * This would instantiate a new sizing object an set it to small.  Each
+ * This would instantiate a new sizing object an set it to `normal`.  Each
  * of the style class strings could then be retrieved and used within
  * a component.  With the current design this is handled automatically
  * within the `BaseComponent` class; it will create and expose this
- * object (composition).
+ * object (composition).  This class can be instantiate with a base size
+ * other than 16px when it is constructed.
  *
  * There are 7 basic sizings in the library:
  *
@@ -41,11 +51,9 @@
  *
  * Each of the sizes are offsets from normal/medium, where normal uses
  * the typical constant of 16px = 1.0em.  The sizings for the whole library
- * can be changed by setting a new value for `baseFontSize`.  When this
- * class is used all of the other offset values will be recalculated from
- * this new base.  The proper `XXem` size is then calculated (Note that
- * these values will not change with baseFontSize changes, only with offset
- * changes).
+ * can be changed by constructing a new object by passing a new value for
+ * the base size.  All of the other offset values will be recalculated from
+ * this new base.  The proper `XXem` size is then calculated
  *
  * The library uses these settings to assign sizes so the UI components can
  * be scaled/responsive to size changes.
@@ -54,32 +62,40 @@
 
 'use strict';
 
-export interface FontSize {
-	fontSize: string;
+export enum Sizing {
+	xxsmall = 'xxsmall',
+	xsmall = 'xsmall',
+	small = 'small',
+	normal = 'normal',
+	medium = 'medium',
+	large = 'large',
+	xlarge = 'xlarge',
+	xxlarge = 'xxlarge'
+}
+
+export interface FontStyle {
 	size: number;
+	sizeem: string;
 	sizepx: string;
+	style: string;
 }
 
-export interface Sizings {
-	[key: string]: FontSize;
+export interface Styling {
+	type: Sizing;
+	borderStyle: string;
+	boxStyle: string;
+	font: FontStyle;
 }
 
-export class Sizing {
+export class Sizes {
 	public static readonly styles = require('./sizing.css');
 
-	public static readonly baseFontSize: number = 16;
+	private _currentSizing: Sizing = Sizing.normal;
+	private _sizes: any = {};
 
-	public static readonly xxsmall: string = 'xxsmall';
-	public static readonly xsmall: string = 'xsmall';
-	public static readonly small: string = 'small';
-	public static readonly normal: string = 'normal';
-	public static readonly medium: string = 'medium';
-	public static readonly large: string = 'large';
-	public static readonly xlarge: string = 'xlarge';
-	public static readonly xxlarge: string = 'xxlarge';
+	constructor(initialSizing: Sizing = Sizing.normal, baseFontSize: number = 16) {
+		this._currentSizing = initialSizing;
 
-	public static readonly sizes: Sizings = ((baseSize: number) => {
-		const obj: Sizings = {};
 		const sizes = [
 			[Sizing.xxsmall, -10],
 			[Sizing.xsmall, -8],
@@ -92,104 +108,118 @@ export class Sizing {
 		];
 
 		for (const [key, val] of sizes) {
-			const valSize = baseSize + Number(val);
+			const valSize = baseFontSize + Number(val);
 
-			obj[key] = {
-				size: valSize,
-				sizepx: `${valSize}px`,
-				fontSize: `${valSize / baseSize}em`
+			this._sizes[key] = {
+				type: key,
+				borderStyle: Sizes.styles[`${key}Border`],
+				boxStyle: Sizes.styles[`${key}Box`],
+				font: {
+					size: valSize,
+					sizeem: `${valSize / baseFontSize}em`,
+					sizepx: `${valSize}px`,
+					style: Sizes.styles[key]
+				}
 			};
-		}
-
-		return obj;
-	})(Sizing.baseFontSize);
-
-	/** A reference object to the next sizing based on current */
-	private static readonly _next = (() => {
-		const obj: any = {};
-		obj[Sizing.xxsmall] = new Sizing(Sizing.xsmall);
-		obj[Sizing.xsmall] = new Sizing(Sizing.small);
-		obj[Sizing.small] = new Sizing(Sizing.normal);
-		obj[Sizing.normal] = new Sizing(Sizing.large);
-		obj[Sizing.medium] = new Sizing(Sizing.large);
-		obj[Sizing.large] = new Sizing(Sizing.xlarge);
-		obj[Sizing.xlarge] = new Sizing(Sizing.xxlarge);
-		obj[Sizing.xxlarge] = new Sizing(Sizing.xxlarge);
-		return obj;
-	})();
-
-	/** A referece object to the previous sizing based on current */
-	private static readonly _prev = (() => {
-		const obj: any = {};
-		obj[Sizing.xxsmall] = new Sizing(Sizing.xxsmall);
-		obj[Sizing.xsmall] = new Sizing(Sizing.xxsmall);
-		obj[Sizing.small] = new Sizing(Sizing.xsmall);
-		obj[Sizing.normal] = new Sizing(Sizing.small);
-		obj[Sizing.medium] = new Sizing(Sizing.small);
-		obj[Sizing.large] = new Sizing(Sizing.normal);
-		obj[Sizing.xlarge] = new Sizing(Sizing.large);
-		obj[Sizing.xxlarge] = new Sizing(Sizing.xlarge);
-		return obj;
-	})();
-
-	private _borderStyle: string = '';
-	private _boxStyle: string = '';
-	private _fontStyle: string = '';
-	private _size: FontSize = {
-		fontSize: '1.0em',
-		size: Sizing.baseFontSize,
-		sizepx: `${Sizing.baseFontSize}px`
-	};
-	private _type: string = '';
-
-	constructor(type: string = Sizing.normal) {
-		this._type = type;
-
-		if (type in Sizing.sizes) {
-			this._borderStyle = Sizing.styles[`${type}Border`];
-			this._boxStyle = Sizing.styles[`${type}Box`];
-			this._fontStyle = Sizing.styles[type];
-			this._size = Sizing.sizes[type];
 		}
 	}
 
 	get borderStyle(): string {
-		return this._borderStyle;
+		return this.styling.borderStyle;
 	}
 
 	get boxStyle(): string {
-		return this._boxStyle;
+		return this.styling.boxStyle;
+	}
+
+	get currentSizing(): Sizing {
+		return this._currentSizing;
+	}
+
+	set currentSizing(sizing: Sizing) {
+		if (sizing in this._sizes) {
+			this._currentSizing = sizing;
+		} else {
+			this._currentSizing = Sizing.normal;
+		}
+	}
+
+	get font(): FontStyle {
+		return this.styling.font;
 	}
 
 	get fontStyle(): string {
-		return this._fontStyle;
+		return this.styling.font.style;
 	}
 
-	get next(): Sizing {
-		return Sizing._next[this.type];
+	get fontSize(): number {
+		return this.styling.font.size;
 	}
 
-	get prev(): Sizing {
-		return Sizing._prev[this.type];
+	get next(): Styling {
+		return this._next(this._currentSizing);
 	}
 
-	get size(): FontSize {
-		return this._size;
+	get prev(): Styling {
+		return this._prev(this._currentSizing);
 	}
 
-	get type(): string {
-		return this._type;
+	get styling(): Styling {
+		return this._sizes[this._currentSizing];
+	}
+
+	get type(): Sizing {
+		return this.currentSizing;
+	}
+
+	public getSizing(sizing: Sizing) {
+		return this._sizes[sizing];
 	}
 
 	public toString(): string {
-		const s: string[] = [
-			`type: ${this._type}`,
-			`borderStyle: ${this._borderStyle}`,
-			`boxStyle: ${this._boxStyle}`,
-			`fontStyle: ${this._fontStyle}`,
-			`size: ${JSON.stringify(Sizing.sizes[this.type])}`
-		];
-
-		return s.join(',');
+		return JSON.stringify(this._sizes, null, 4);
 	}
+
+	private _next(sizing: Sizing): Styling {
+		switch (sizing) {
+		case Sizing.xxsmall: return this._sizes[Sizing.xsmall];
+		case Sizing.xsmall: return this._sizes[Sizing.small];
+		case Sizing.small: return this._sizes[Sizing.normal];
+		case Sizing.large: return this._sizes[Sizing.xlarge];
+		case Sizing.xlarge: return this._sizes[Sizing.xxlarge];
+		case Sizing.xxlarge: return this._sizes[Sizing.xxlarge];
+
+		case Sizing.normal:
+		case Sizing.medium:
+			return this._sizes[Sizing.large];
+
+		default:
+			return this._sizes[Sizing.normal];
+		}
+	}
+
+	private _prev(sizing: Sizing): Styling {
+		switch (sizing) {
+		case Sizing.xxsmall: return this._sizes[Sizing.xxsmall];
+		case Sizing.xsmall: return this._sizes[Sizing.xxsmall];
+		case Sizing.small: return this._sizes[Sizing.xsmall];
+		case Sizing.large: return this._sizes[Sizing.normal];
+		case Sizing.xlarge: return this._sizes[Sizing.large];
+		case Sizing.xxlarge: return this._sizes[Sizing.xlarge];
+
+		case Sizing.normal:
+		case Sizing.medium:
+			return this._sizes[Sizing.small];
+
+		default:
+			return this._sizes[Sizing.normal];
+		}
+	}
+
 }
+
+/**
+ * Create a single instance with the default values.  Don't instantiate this class
+ * over and over.
+ */
+export let defaultSize = new Sizes();

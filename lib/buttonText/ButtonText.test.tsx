@@ -9,6 +9,7 @@ import * as path from 'path';
 import * as React from 'react';
 import * as sinon from 'sinon';
 import {ButtonText, getDefaultButtonTextProps} from './index';
+import {Sizing} from '../shared';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
@@ -20,7 +21,7 @@ test('Test retrieval of ButtonText props object', t => {
 	t.truthy(props);
 
 	t.true('fontStyle' in props);
-	t.is(props.fontStyle, null);
+	t.is(props.fontStyle, Sizing.normal);
 
 	t.true('iconName' in props);
 	t.is(props.iconName, 'bomb');

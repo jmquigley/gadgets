@@ -7,16 +7,20 @@ import {
 } from './props';
 
 import {
-	FontSize,
-	Sizing
+	FontStyle,
+	Sizes,
+	Sizing,
+	Styling
 } from './sizing';
 
 export {
 	BaseComponent,
 	BaseProps,
 	Direction,
-	FontSize,
+	FontStyle,
 	getDefaultBaseProps,
 	Location,
-	Sizing
+	Sizes,
+	Sizing,
+	Styling
 };

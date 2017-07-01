@@ -85,10 +85,6 @@ section {
 	height: 80px;
 }
 
-#buttonTable td {
-	border: solid 1px lightgray;
-}
-
 #buttonTable .tblIcons td i, #buttonTable .tblIcons td img {
 	position: relative;
 	text-align: center;
@@ -97,7 +93,12 @@ section {
 	transform: translateX(-50%);
 }
 
-#simple-icons .box .ui-icon, .box .ui-button, .toastBox .ui-button, .box .boxButtons {
+#simple-icons .box .ui-icon,
+.box .ui-button,
+.toastBox .ui-button,
+.box .boxButtons,
+#buttonTable td
+{
 	border: solid 1px lightgray;
 }
 
@@ -108,7 +109,7 @@ section {
 
 .pagerBox, selectBox  {
 	margin-bottom: 30px;
-	width: 80%;
+	width: 350px;
 }
 
 #titleExample .ui-title {

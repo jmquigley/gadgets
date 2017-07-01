@@ -56,6 +56,7 @@ export interface ItemState {
 export class Item extends BaseComponent<ItemProps, ItemState> {
 
 	public static defaultProps: ItemProps = getDefaultItemProps();
+	private static readonly buttonScale: number = 1.5;
 
 	constructor(props: ItemProps) {
 		super(props, require('./styles.css'));
@@ -77,36 +78,44 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 	render() {
 		this.buildStyles();
 
-		let buttonScale: number = 2.0;
+		console.log(`ITEM (${this.styling.font.sizeem}, ${Item.buttonScale}) - calc(${this.styling.font.sizeem} * ${Item.buttonScale})`);
 
 		let leftButton = null;
 		if (this.props.leftButton != null && !this.props.disabled) {
+			let newButton = React.cloneElement(this.props.leftButton, {
+				sizing: this.props.sizing
+			});
+
 			leftButton = (
 				<div
 					className={
 						this.styles.itemButton + ' ' +
-						this.sizing.fontStyle + ' ' +
+						this.styling.fontStyle + ' ' +
 						((this.props.hiddenLeftButton) ? this.styles.hiddenButton : null)
 					}
-					style={{width: `calc(${super.sizing.size.fontSize} * ${buttonScale})`}}
+					style={{width: `calc(${this.styling.font.sizeem} * ${Item.buttonScale})`}}
 					>
-					{this.props.leftButton != null ? this.props.leftButton : null}
+					{newButton}
 				</div>
 			);
 		}
 
 		let rightButton = null;
 		if (this.props.rightButton != null && !this.props.disabled) {
+			let newButton = React.cloneElement(this.props.rightButton, {
+				sizing: this.props.sizing
+			});
+
 			rightButton = (
 				<div
 					className={
 						this.styles.itemButton + ' ' +
-							   this.sizing.fontStyle + ' ' +
-						 ((this.props.hiddenRightButton) ? this.styles.hiddenButton : null)
+						this.styling.fontStyle + ' ' +
+						((this.props.hiddenRightButton) ? this.styles.hiddenButton : null)
 					}
-					style={{width: `calc(${super.sizing.size.fontSize} * ${buttonScale})`}}
-					>
-					{this.props.rightButton != null ? this.props.rightButton : null}
+					style={{width: `calc(${this.styling.font.sizeem} * ${Item.buttonScale})`}}
+				>
+					{newButton}
 				</div>
 			);
 		}
@@ -120,7 +129,13 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 				className={this.classes.join(' ')}
 				style={this.inlineStyle}>
 				{leftButton}
-				<Title {...this.props} className={this.styles.itemTitle}>{this.props.title}</Title>
+				<Title
+					{...this.props}
+					className={this.styles.itemTitle}
+					sizing={this.props.sizing}
+					>
+					{this.props.title}
+				</Title>
 				{rightButton}
 			</li>
 		);

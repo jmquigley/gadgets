@@ -43,7 +43,7 @@ import {Icon, IconProps, getDefaultIconProps} from '../icon';
 import {BaseComponent, Sizing} from '../shared';
 
 export interface ButtonTextProps extends IconProps {
-	fontStyle?: string;
+	fontStyle?: Sizing;
 	justify?: number;
 	noicon?: boolean;
 	text?: string;
@@ -52,7 +52,7 @@ export interface ButtonTextProps extends IconProps {
 export function getDefaultButtonTextProps(): ButtonTextProps {
 	return cloneDeep(Object.assign(
 		getDefaultIconProps(), {
-			fontStyle: null,
+			fontStyle: Sizing.normal,
 			justify: ButtonText.RIGHT,
 			noicon: false,
 			sizing: Sizing.normal,
@@ -68,15 +68,15 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	public static RIGHT: number = 1;
 	public static CENTER: number = 2;
 
-	private _fontSize: Sizing = null;
+	private _fontSize: string = '';
 
     constructor(props: ButtonTextProps) {
 		super(props, require('./styles.css'));
 
 		if (this.props.fontStyle == null) {
-			this._fontSize = new Sizing(this.props.sizing);
+			this._fontSize = this.styling.fontStyle;
 		} else {
-			this._fontSize = new Sizing(this.props.fontStyle);
+			this._fontSize = this.styling.getSizing(this.props.fontStyle).font.style;
 		}
 
 		this.handleClick = this.handleClick.bind(this);
@@ -121,7 +121,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			<div
 				className={
 					this.styles.content + " " +
-					this._fontSize.fontStyle + " " +
+					this.styling.fontStyle + " " +
 					justifyStyle
 				}>
 				{this.props.text}

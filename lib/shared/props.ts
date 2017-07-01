@@ -109,7 +109,7 @@ export interface BaseProps {
 	onKeyPress?: any;
 	onMouseOut?: any;
 	selected?: boolean;
-	sizing?: string;
+	sizing?: Sizing;
 	style?: any;
 	visible?: boolean;
 }

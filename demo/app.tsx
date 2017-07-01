@@ -77,6 +77,16 @@ const selectOptions = [
 	{ value: 'five', label: 'Five' }
 ];
 
+const sizingOptions = [
+	{ value: Sizing.xxsmall, label: 'xxsmall' },
+	{ value: Sizing.xsmall, label: 'xsmall' },
+	{ value: Sizing.small, label: 'small' },
+	{ value: Sizing.normal, label: 'normal' },
+	{ value: Sizing.large, label: 'large' },
+	{ value: Sizing.xlarge, label: 'xlarge' },
+	{ value: Sizing.xxlarge, label: 'xxlarge' }
+];
+
 interface AppProps {
 }
 
@@ -93,6 +103,7 @@ interface AppState {
 	toastVisible5: boolean;
 	toastVisible6: boolean;
 	selectOption: string;
+	sizingOption: string;
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -111,10 +122,11 @@ class App extends React.Component<AppProps, AppState> {
 			toastVisible4: true,
 			toastVisible5: true,
 			toastVisible6: true,
-			selectOption: selectOptions[0].value
+			selectOption: selectOptions[0].value,
+			sizingOption: sizingOptions[3].value
 		};
 
-		(window as any).state = this.state;
+		/* (window as any).state = this.state;*/
 	}
 
 	private buildAccordion = () => (
@@ -429,90 +441,105 @@ class App extends React.Component<AppProps, AppState> {
 	private buildListItemWithHeader = () => (
 		<Container id="listExample1">
 
-			<List alternating>
+			<div className="selectBox">
+				<Select
+					name="size-selection"
+					value={this.state.sizingOption}
+					options={sizingOptions}
+					onChange={(val: any) => {
+						if (val != null) {
+							this.setState({sizingOption: val.value});
+						}
+					}}
+					sizing={Sizing.small}
+					/>
+					<br/><br/>
+			</div>
+
+			<List alternating sizing={this.state.sizingOption}>
 				<ListHeader
-				leftButton={<ButtonDialog iconName="bars"><div>header dialog</div><br/></ButtonDialog>}
-				noedit
-				rightButton={<Button iconName="plus" />}
-				title="Demo List Header"
-				/>
+					leftButton={<ButtonDialog iconName="bars"><div>header dialog</div><br/></ButtonDialog>}
+					noedit
+					rightButton={<Button iconName="plus" />}
+					title={`Demo List Header (${this.state.sizingOption})`}
+					/>
 				<ListItem
-				id={getUUID()}
-				title="List Item 1" widget="12"
-				leftButton={<Button iconName="podcast"/>}
-				rightButton={<Button iconName="paper-plane-o"/>}
-				/>
+					id="1"
+					title="List Item 1" widget="12"
+					leftButton={<Button iconName="podcast"/>}
+					rightButton={<Button iconName="paper-plane-o"/>}
+					/>
 				<ListItem
-					id={getUUID()}
+					id="2"
 					title="List Item 2 (with icon)"
 					widget="13"
 					leftButton={<Icon iconName="bolt" />}
 					rightButton={<Button />}
-				/>
+					/>
 				<ListItem
-					id={getUUID()}
+					id="3"
 					title="List Item 3 (with hidden icon)"
 					widget="14"
 					leftButton={<Icon iconName="car" />}
 					hiddenLeftButton
 					/>
 				<ListItem
-					id={getUUID()}
+					id="4"
 					title="List Item 4a (hide/show)" widget="15"
 					leftButton={<Button />}
 					hiddenLeftButton
 					rightButton={
-						<ButtonCircle iconName="times" color="red" borderColor="red" sizing={Sizing.small}/>
+						<ButtonCircle iconName="times" color="red" borderColor="red" sizing={Sizing.large}/>
 					}
 					hiddenRightButton
 					/>
 				<ListItem
-				id={getUUID()}
-				title="List Item 4b (hide/show)" widget="15"
-				hiddenLeftButton
-				leftButton={
-					<ButtonDialog iconName="wrench">Test Dialog Button</ButtonDialog>
-				}
-				hiddenRightButton
-				rightButton={
-					<Button iconName="times" color="red" />
-				}
-				/>
-				<ListItem id={getUUID()} title="List Item 5" />
+					id="5"
+					title="List Item 4b (hide/show)" widget="15"
+					hiddenLeftButton
+					leftButton={
+						<ButtonDialog iconName="wrench">Test Dialog Button</ButtonDialog>
+					}
+					hiddenRightButton
+					rightButton={
+						<Button iconName="times" color="red" />
+					}
+					/>
+				<ListItem id="6" title="List Item 5" />
 				<ListItem
-				id={getUUID()}
-				title="List Item 6 (Toggle)" widget="15"
-				rightButton={
-					<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358" />
-				}
-				/>
-				<ListItem id={getUUID()} title="List Item 7 (disabled)" disabled />
+					id="7"
+					title="List Item 6 (Toggle)" widget="15"
+					rightButton={
+						<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358" />
+					}
+					/>
+				<ListItem id="7" title="List Item 7 (disabled)" disabled />
 				<ListItem
-				id={getUUID()} title="List Item 8 (disabled w/ buttons)"
-				disabled
-				rightButton={
-					<Button />
-				}
-				/>
+					id="8" title="List Item 8 (disabled w/ buttons)"
+					disabled
+					rightButton={
+						<Button />
+					}
+					/>
 				<ListItem
-				id={getUUID()}
-				title="List Item 9 (stacked)"
-				widget="stacked bottom widget"
-				stacked
-				rightButton={<Button />}
-				/>
+					id="9"
+					title="List Item 9 (stacked)"
+					widget="stacked bottom widget"
+					stacked
+					rightButton={<Button />}
+					/>
 				<ListItem
-				id={getUUID()}
-				noripple
-				title="List Item 10 (noripple edit)"
-				/>
+					id="10"
+					noripple
+					title="List Item 10 (noripple edit)"
+					/>
 				<ListItem
-				id={getUUID()}
-				noripple
-				noedit
-				title="List Item 11 (noedit)"
-				/>
-			</List>
+					id="11"
+					noripple
+					noedit
+					title="List Item 11 (noedit)"
+					/>
+				</List>
 		</Container>
 	);
 

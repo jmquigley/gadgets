@@ -119,7 +119,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 
 		this._buttonStyle.push(this.styles.pagerButton);
-		this._buttonStyle.push(this.sizing.boxStyle);
+		this._buttonStyle.push(this.styling.boxStyle);
 
 		this.createButtons();
 
@@ -218,7 +218,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttons[page] = (
 					<ButtonText
 						className={this._buttonStyle.join(' ')}
-						fontStyle={super.sizing.prev.type}
+						fontStyle={this.styling.prev.type}
 						key={String(page)}
 						noicon
 						onClick={() => {this.handleSelect(page)}}
@@ -241,7 +241,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttonsDisplay.push(
 					<ButtonText
 						className={this._buttonStyle.join(' ')}
-						fontStyle={super.sizing.prev.type}
+						fontStyle={this.styling.prev.type}
 						key={getUUID()}
 						noicon
 						disabled
@@ -357,7 +357,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					onChange={this.handleChange}
 					onKeyPress={this.handleKeyPress}
 					placeholder={String(this.state.currentPage)}
-					sizing={super.sizing.prev.type}
+					sizing={this.styling.prev.type}
 					type="number"
 					value={this.state.currentPage}
 				/>

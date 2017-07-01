@@ -44,7 +44,8 @@
 'use strict';
 
 import * as React from 'react';
-import {Sizing} from './index';
+import {Sizes} from './index';
+import {defaultSize} from './sizing';
 
 const styles = require('./styles.css');
 
@@ -69,18 +70,12 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	private _classes: string[] = [];
 	private _inlineStyle: any = {};     // inline style overrides
 	private _locationStyle: string = '';
-	private _styles: any = {};          // css modules styles
-	private _sizing: Sizing = null;
+	private _styles: any = {};          // css modules styles per module
+	private _sizes: Sizes = defaultSize;
 
 	constructor(props: P, pstyles: any = {}) {
 		super(props);
 		this._styles = pstyles;
-
-		if ('sizing' in props) {
-			this._sizing = new Sizing(props['sizing']);
-		} else {
-			this._sizing = new Sizing(Sizing.normal);
-		}
 
 		if ('location' in props) {
 			this._locationStyle = this.styles[props['location']];
@@ -107,16 +102,16 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 		return this._locationStyle;
 	}
 
-	get sizing(): Sizing {
-		return this._sizing;
-	}
-
-	get style(): string {
-		return this._inlineStyle;
+	get sizes(): Sizes {
+		return this._sizes;
 	}
 
 	get styles(): any {
 		return this._styles;
+	}
+
+	get styling(): Sizes {
+		return this._sizes;
 	}
 
 	/**
@@ -165,6 +160,7 @@ export abstract class BaseComponent<P, S> extends React.Component<P, S> {
 	 *
 	 */
 	protected resetStyles() {
+		this._sizes.currentSizing = this.props['sizing'];
 		this._classes = [];
 	}
 }

@@ -62,7 +62,7 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 
 		this.classes.push('ui-triangle');
 		this.classes.push(this.styles.triangle);
-		this.classes.push(this.sizing.boxStyle);
+		this.classes.push(this.styling.boxStyle);
 
 		switch(this.props.direction) {
 			case Direction.right:

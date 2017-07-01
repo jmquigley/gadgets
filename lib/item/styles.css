@@ -8,7 +8,7 @@
 	}
 
 	.itemTitle {
-		padding: 2px;
+		padding: 2px 6px;
 	}
 
 	.itemButton {
@@ -16,7 +16,9 @@
 		position: relative;
 	}
 
-	.itemButton > i {
+	.itemButton > i,
+	.itemButton > :global(.ui-button-circle)
+	{
 		position: absolute;
 		top: 50%;
 		left: 50%;
