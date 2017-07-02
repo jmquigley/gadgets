@@ -60,7 +60,9 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 		}));
 }
 
-export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
+export interface ButtonTextState {}
+
+export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> {
 
     public static defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 
@@ -80,6 +82,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		}
 
 		this.handleClick = this.handleClick.bind(this);
+		this.shouldComponentUpdate(props);
 	}
 
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
@@ -90,33 +93,35 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	}
 
 	protected buildStyles() {
-		super.resetStyles();
+	}
 
-		if (this.props.color !== 'inherit') {
-			this.inlineStyle["color"] = this.props.color;
+	shouldComponentUpdate(nextProps: ButtonTextProps): boolean {
+		super.resetStyles(nextProps);
+
+		if (nextProps.color !== 'inherit') {
+			this.inlineStyle["color"] = nextProps.color;
 		}
 
-		if (this.props.backgroundColor !== 'inherit') {
-			this.inlineStyle["backgroundColor"] = this.props.backgroundColor;
+		if (nextProps.backgroundColor !== 'inherit') {
+			this.inlineStyle["backgroundColor"] = nextProps.backgroundColor;
 		}
 
-		if (this.props.borderColor !== 'inherit') {
-			this.inlineStyle["borderColor"] = this.props.borderColor;
+		if (nextProps.borderColor !== 'inherit') {
+			this.inlineStyle["borderColor"] = nextProps.borderColor;
 		}
 
 		this.classes.push('ui-button-text');
 		this.classes.push(this.styles.buttonText);
 
-		if (!this.props.noripple && !this.props.disabled) {
+		if (!nextProps.noripple && !nextProps.disabled) {
 			this.classes.push('ripple');
 		}
 
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		let content = (justifyStyle: string) => (
 			<div
 				className={

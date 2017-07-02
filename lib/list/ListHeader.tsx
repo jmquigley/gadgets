@@ -31,19 +31,22 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent} from '../shared';
+import {BaseComponent, Sizing} from '../shared';
 
 export interface ListHeaderProps extends ItemProps {
+	href?: any;
 }
 
 export function getDefaultListHeaderProps(): ListHeaderProps {
 	return cloneDeep(Object.assign(
 		getDefaultItemProps(), {
+			href: {
+				sizing: Sizing.normal
+			}
 		}));
 }
 
-export interface ListHeaderState {
-}
+export interface ListHeaderState {}
 
 export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> {
 
@@ -51,22 +54,23 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 
 	constructor(props: ListHeaderProps) {
 		super(props, require("./styles.css"));
+		this.shouldComponentUpdate(props);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: ListHeaderProps): boolean {
+		super.resetStyles(nextProps);
 		this.classes.push("ui-list-header");
 		this.classes.push(this.styles.listHeader);
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<Item
 				{...this.props}
 				className={this.classes.join(" ")}
+				sizing={this.props.href.sizing}
 				style={this.inlineStyle}
 				/>
 		);

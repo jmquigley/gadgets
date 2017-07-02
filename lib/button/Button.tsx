@@ -54,14 +54,16 @@ export function getDefaultButtonProps(): ButtonProps {
 	}));
 }
 
-export class Button extends BaseComponent<ButtonProps, undefined> {
+export interface ButtonState {}
+
+export class Button extends BaseComponent<ButtonProps, ButtonState> {
 
     public static defaultProps: ButtonProps = getDefaultButtonProps();
 
     constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
-
 		this.handleClick = this.handleClick.bind(this);
+		this.shouldComponentUpdate(props);
 	}
 
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
@@ -71,38 +73,37 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		e.stopPropagation();
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: ButtonProps): boolean {
+		super.resetStyles(nextProps);
 
-		if (this.props.color !== 'inherit') {
-			this.inlineStyle['color'] = this.props.color;
+		if (nextProps.color !== 'inherit') {
+			this.inlineStyle['color'] = nextProps.color;
 		}
 
-		if (this.props.backgroundColor !== 'inherit') {
-			this.inlineStyle['backgroundColor'] = this.props.backgroundColor;
+		if (nextProps.backgroundColor !== 'inherit') {
+			this.inlineStyle['backgroundColor'] = nextProps.backgroundColor;
 		}
 
-		if (this.props.borderColor !== 'inherit') {
-			this.inlineStyle['borderColor'] = this.props.borderColor;
+		if (nextProps.borderColor !== 'inherit') {
+			this.inlineStyle['borderColor'] = nextProps.borderColor;
 		}
 
-		if (this.props.borderWidth != 'none') {
-			this.inlineStyle['borderWidth'] = this.props.borderWidth;
+		if (nextProps.borderWidth != 'none') {
+			this.inlineStyle['borderWidth'] = nextProps.borderWidth;
 		}
 
 		this.classes.push('ui-button');
 		this.classes.push(this.styles.button);
 
-		if (!this.props.noripple && !this.props.disabled) {
+		if (!nextProps.noripple && !nextProps.disabled) {
 			this.classes.push('ripple');
 		}
 
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<div
 				className={this.classes.join(' ')}

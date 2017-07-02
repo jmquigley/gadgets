@@ -64,38 +64,41 @@ export function getDefaultIconProps(): IconProps {
 	}));
 }
 
-export class Icon extends BaseComponent<IconProps, undefined> {
+export interface IconState {}
+
+export class Icon extends BaseComponent<IconProps, IconState> {
 
     public static defaultProps: IconProps = getDefaultIconProps();
 
     constructor(props: IconProps) {
 		super(props, require('./styles.css'));
+		this.shouldComponentUpdate(props);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: IconProps): boolean {
+		super.resetStyles(nextProps);
 
 		this.classes.push('ui-icon');
 		this.classes.push(this.styles.icon);
 		this.classes.push(this.locationStyle);
 
-		if (this.props.imageFile === '') {
+		if (nextProps.imageFile === '') {
 			this.classes.push('fa');
-			this.classes.push(`fa-${this.props.iconName}`);
+			this.classes.push(`fa-${nextProps.iconName}`);
 			this.classes.push(this.styling.fontStyle);
 		} else {
 			this.classes.push(this.styling.boxStyle);
 		}
 
-		super.buildStyles(this.props, {
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white')
+		super.buildStyles(nextProps, {
+			color: (nextProps.color || 'black'),
+			backgroundColor: (nextProps.backgroundColor || 'white')
 		});
+
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		if (this.props.imageFile !== '') {
 			return (
 				<img

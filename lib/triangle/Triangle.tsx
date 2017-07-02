@@ -46,8 +46,7 @@ export function getDefaultTriangleProps(): TriangleProps {
 		}));
 }
 
-export interface TriangleState {
-}
+export interface TriangleState {}
 
 export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 
@@ -55,10 +54,11 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 
 	constructor(props: TriangleProps) {
 		super(props, require('./styles.css'));
+		this.shouldComponentUpdate(props);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: TriangleProps): boolean {
+		super.resetStyles(nextProps);
 
 		this.classes.push('ui-triangle');
 		this.classes.push(this.styles.triangle);
@@ -83,16 +83,16 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 				break;
 		}
 
-		super.buildStyles(this.props, {
-			fill: this.props.backgroundColor,
-			stroke: this.props.borderColor,
-			strokeWidth: this.props.borderWidth
+		super.buildStyles(nextProps, {
+			fill: nextProps.backgroundColor,
+			stroke: nextProps.borderColor,
+			strokeWidth: nextProps.borderWidth
 		});
+
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			(this.props.nobase) ?
 			<svg

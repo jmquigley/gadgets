@@ -56,18 +56,18 @@ export class Select extends BaseComponent<any, any> {
 
 	constructor(props: any) {
 		super(props, require("./styles.css"));
+		this.shouldComponentUpdate(props);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: any): boolean {
+		super.resetStyles(nextProps);
 		this.classes.push('ui-select');
 		this.classes.push(this.styling.fontStyle);
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<ReactSelect {...this.props} className={this.classes.join(' ')} />
 		);

@@ -77,9 +77,10 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 			toggle: props.initialToggle
 		}
 
-
 		this.handleClick = this.handleClick.bind(this);
 		this.handleNew = this.handleNew.bind(this);
+
+		this.shouldComponentUpdate(props);
 	}
 
 	private handleClick() {
@@ -100,16 +101,15 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		this.props.onNew(this.props.title);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: AccordionItemProps): boolean {
+		super.resetStyles(nextProps);
 		this.classes.push("ui-accordionitem");
 		this.classes.push(this.styles.accordionItem);
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		let content = null;
 		if ((this.props.children != null) && (this.state.toggle)) {
 			content = (

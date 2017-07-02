@@ -78,6 +78,8 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 		this.handleClick = this.handleClick.bind(this);
 		this.handleDialogClick = this.handleDialogClick.bind(this);
+
+		this.shouldComponentUpdate(props, this.state);
 	}
 
 	private handleClick() {
@@ -94,19 +96,27 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		});
 	};
 
-	protected buildStyles() {
-		this.resetStyles();
+	shouldComponentUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState): boolean {
+		this.resetStyles(nextProps);
 
 		this.classes.push('ui-button-dialog');
 		this.classes.push(this.styles.buttonDialog);
 
-		this._dialogClasses = this.props.dialogClasses.slice();
+		this._dialogClasses = nextProps.dialogClasses.slice();
 		this._dialogClasses.push(this.styles.buttonDialogPopup);
 		this._dialogClasses.push('ui-dialog-popup');
 
-		this._triangleClasses = this.props.triangleClasses.slice();
+		this._triangleClasses = nextProps.triangleClasses.slice();
 
-		if (this.state.visible) {
+		if (nextProps.location === Location.top) {
+			this._dialogClasses.push(this.styles.dialogTop);
+			this._triangleClasses.push(this.styles.dialogTriangleTop);
+		} else {
+			this._dialogClasses.push(this.styles.dialogBottom);
+			this._triangleClasses.push(this.styles.dialogTriangleBottom);
+		}
+
+		if (nextState.visible) {
 			this._dialogClasses.push(this.styles.buttonDialogShow);
 			this._triangleClasses.push(this.styles.buttonDialogShow);
 		}
@@ -115,20 +125,11 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			this._triangleClasses.push(this.styles.buttonDialogHide);
 		}
 
-		if (this.props.location === Location.top) {
-			this._dialogClasses.push(this.styles.dialogTop);
-			this._triangleClasses.push(this.styles.dialogTriangleTop);
-		} else {
-			this._dialogClasses.push(this.styles.dialogBottom);
-			this._triangleClasses.push(this.styles.dialogTriangleBottom);
-		}
-
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<div
 				className={this.classes.join(' ')}
@@ -152,14 +153,14 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 						{this.props.children}
 					</div>
 					{this.props.notriangle ?
-						 null
+					 null
 					 :
-						 <Triangle
+					 <Triangle
 						 className={this._triangleClasses.join(' ')}
 						 direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
 						 nobase
 						 sizing={Sizing.normal}
-						 />
+					 />
 					}
 				</div>
 			</div>

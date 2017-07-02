@@ -543,13 +543,13 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
-	private buildListItemWithoutHeader = () => (
-		<Container id="listExample2">
-			<List alternating>
-				{items}
-			</List>
-		</Container>
-	);
+	/* private buildListItemWithoutHeader = () => (
+	   <Container id="listExample2">
+	   <List alternating>
+	   {items}
+	   </List>
+	   </Container>
+	   );*/
 
 	private buildPager = () => (
 		<Container id="pagerExample">
@@ -960,8 +960,8 @@ class App extends React.Component<AppProps, AppState> {
 				<h1>List/ListItem (with header)</h1>
 				{this.buildListItemWithHeader()}
 
-				<h1>List/ListItem (without header)</h1>
-				{this.buildListItemWithoutHeader()}
+				{/* <h1>List/ListItem (without header)</h1>
+					{this.buildListItemWithoutHeader()} */}
 
 				<h1>Pager</h1>
 				{this.buildPager()}

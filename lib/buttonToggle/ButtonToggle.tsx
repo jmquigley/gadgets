@@ -90,6 +90,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		};
 
 		this.handleClick = this.handleClick.bind(this);
+		this.shouldComponentUpdate(props);
 	}
 
 	private handleClick() {
@@ -100,16 +101,15 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		this.props.onClick(this.state.toggle);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: ButtonToggleProps): boolean {
+		super.resetStyles(nextProps);
 		this.classes.push('ui-button-toggle');
 		this.classes.push(this.styles.buttonToggle);
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<Button
 				{...this.props}

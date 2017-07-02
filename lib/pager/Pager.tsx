@@ -131,6 +131,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.moveToFront = this.moveToFront.bind(this);
 		this.moveToNext = this.moveToNext.bind(this);
 		this.moveToPrevious = this.moveToPrevious.bind(this);
+
+		this.shouldComponentUpdate(props);
 	}
 
 	get currentPage(): number {
@@ -308,15 +310,15 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: PagerProps): boolean {
+		super.resetStyles(nextProps);
 		this.classes.push("ui-pager");
 		this.classes.push(this.styles.pager);
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
 		this.createButtons();
 
 		return (
@@ -349,20 +351,20 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				<div className={this.styles.spacer}></div>
 				<div className={this.styles.spacer}></div>
 				{this.props.useinput ?
-				<TextField
-					className={this.styles.pagerInput}
-					min="1"
-					max={String(this._lastPage)}
-					onBlur={this.handleBlur}
-					onChange={this.handleChange}
-					onKeyPress={this.handleKeyPress}
-					placeholder={String(this.state.currentPage)}
-					sizing={this.styling.prev.type}
-					type="number"
-					value={this.state.currentPage}
-				/>
-				:
-				null
+				 <TextField
+					 className={this.styles.pagerInput}
+					 min="1"
+					 max={String(this._lastPage)}
+					 onBlur={this.handleBlur}
+					 onChange={this.handleChange}
+					 onKeyPress={this.handleKeyPress}
+					 placeholder={String(this.state.currentPage)}
+					 sizing={this.styling.prev.type}
+					 type="number"
+					 value={this.state.currentPage}
+					 />
+				 :
+				 	null
 				}
 				<div className={this.styles.spacer}></div>
 				<ButtonDialog

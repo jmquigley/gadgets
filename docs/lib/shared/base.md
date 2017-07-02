@@ -5,8 +5,6 @@ The base class for all components in the library.  This enables each module
 to guarantee certain variable will be present through inheritance.  These
 variables include:
 
-- `boxSizeStyle` -  Each `Icon` control exists within a box/square.  The
-`sizing` parameter determines which CSS class will be used for this box size.
 - `classes` - an array of CSS classnames that will be used on the root element
 of the control
 - `inlineStyles` - an object that holds user defined style overrides
@@ -14,14 +12,16 @@ of the control
 topRight, middleLeft, middle, middleRight, bottomLeft, bottom, bottomRight. The
 location prop is used to specify the CSS used to calculte this position in a
 control using transform and relative coordinates.
-- `sizeStyles` - The BaseProps used by most controls contains a field named
-`sizing`.  When this prop is set, then this variable will contain the name
-of the CSS class for that sizing type for fonts.
 - `styles` - an object that represent the styles in the CSS module associated
 to this control.
+- `sizes` - Sizing class that has computed sizes from the base (normal) size
+font styles for the application.  A property getter named `.styling` retrieves
+the current font styles set for this component.
 
 The values of these variables are computed automatically for any component
-that inhertis from BaseComponent (controlled by props).
+that inherits from BaseComponent (controlled by props).  This class inherits
+from `React.PureComponent` to take advantage of `shouldComponentUpdate` shallow
+object comparison when computing styles based on props/state.
 
 #### Examples:
 

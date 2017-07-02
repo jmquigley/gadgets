@@ -33,7 +33,7 @@
 
 'use strict';
 
-import {cloneDeep} from 'lodash';
+import {cloneDeep, isEqual} from 'lodash';
 import * as React from 'react';
 import {BaseComponent, BaseProps, Sizing} from '../shared';
 import {getDefaultBaseProps, Location} from '../shared/props';
@@ -55,35 +55,45 @@ export function getDefaultBadgeProps(): BadgeProps {
 	}));
 }
 
-export class Badge extends BaseComponent<BadgeProps, undefined> {
+export interface BadgeState {}
+
+export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
 	constructor(props: BadgeProps) {
 		super(props, require('./styles.css'));
 		this.handleClick = this.handleClick.bind(this);
+		this.shouldComponentUpdate(props, this.state = {}, true);
 	}
 
 	private handleClick() {
 		this.props.onClick(this.props.counter);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(
+		nextProps: BadgeProps,
+		nextState: BadgeState,
+		initial: boolean = false): boolean {
 
-		this.classes.push(this.styles.badgeContainer);
+		if (!isEqual(nextProps, this.props) || !isEqual(nextState, this.state) || initial) {
+			super.resetStyles(nextProps);
 
-		super.buildStyles(this.props,{
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white'),
-			border: `solid 3px ${this.props.color}`
-		});
+			this.classes.push(this.styles.badgeContainer);
+
+			super.buildStyles(nextProps,{
+				color: (nextProps.color || 'black'),
+				backgroundColor: (nextProps.backgroundColor || 'white'),
+				border: `solid 3px ${nextProps.color}`
+			});
+		}
+
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		let badge = null;
+
 		if (this.props.suppress && this.props.counter < 1) {
 			badge = null;
 		} else {

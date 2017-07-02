@@ -40,8 +40,7 @@ export function getDefaultTitleProps(): TitleProps {
 	}));
 }
 
-export interface TitleState {
-}
+export interface TitleState {}
 
 export class Title extends BaseComponent<TitleProps, TitleState> {
 
@@ -49,30 +48,30 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 
 	constructor(props: TitleProps) {
 		super(props, require("./styles.css"));
+		this.shouldComponentUpdate(props);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: TitleProps): boolean {
+		super.resetStyles(nextProps);
 
 		this.classes.push("ui-title-bar");
 		this.classes.push(this.styling.fontStyle);
 
-		if (this.props.stacked) {
+		if (nextProps.stacked) {
 			this.classes.push(this.styles.titleBarStacked);
 		} else {
 			this.classes.push(this.styles.titleBar);
 		}
 
-		if (!this.props.noripple && !this.props.disabled) {
+		if (!nextProps.noripple && !nextProps.disabled) {
 			this.classes.push("ripple");
 		}
 
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		let title: string = "";
 		React.Children.forEach(this.props.children, child => {
 			title += String(child);

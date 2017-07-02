@@ -133,6 +133,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		this.handleDecay = this.handleDecay.bind(this);
 
 		this.handleDecay();
+		this.shouldComponentUpdate(props, this.state);
 	}
 
 	componentWillReceiveProps(nextProps: ToastProps) {
@@ -171,21 +172,21 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		}
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: ToastProps, nextState: ToastState): boolean {
+		super.resetStyles(nextProps);
 
-		if (this.props.level === ToastLevel.custom) {
+		if (nextProps.level === ToastLevel.custom) {
 			this.inlineStyle = {
-				color: this.props.color,
-				backgroundColor: this.props.backgroundColor,
-				borderColor: this.props.borderColor
+				color: nextProps.color,
+				backgroundColor: nextProps.backgroundColor,
+				borderColor: nextProps.borderColor
 			}
 		}
 
 		this.classes.push("ui-toast");
 		this.classes.push(this.styles.toast);
 
-		switch (this.props.level) {
+		switch (nextProps.level) {
 			case ToastLevel.info:
 				this.classes.push(this.styles.info);
 				break;
@@ -199,22 +200,22 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 				break;
 		}
 
-		if (this.props.bottom) {
+		if (nextProps.bottom) {
 			this.classes.push(this.styles.toastBottom);
 		} else {
 			this.classes.push(this.styles.toastTop);
 		}
 
-		if (!this.state.visible) {
+		if (!nextState.visible) {
 			this.classes.push(this.styles.hide);
 		}
 
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<div
 				className={this.classes.join(" ")}

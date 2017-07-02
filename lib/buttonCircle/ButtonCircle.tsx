@@ -47,24 +47,26 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 	}));
 }
 
-export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
+export interface ButtonCircleState {}
+
+export class ButtonCircle extends BaseComponent<ButtonCircleProps, ButtonCircleState> {
 
     public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 
     constructor(props: ButtonCircleProps) {
 		super(props, require('./styles.css'));
+		this.shouldComponentUpdate(props);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: ButtonCircleProps): boolean {
+		super.resetStyles(nextProps);
 		this.classes.push('ui-button-circle');
 		this.classes.push(this.styles.buttonCircle);
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<div className={this.classes.join(' ')}>
 				<div className={`${this.styles.buttonCircleContainer}`}>

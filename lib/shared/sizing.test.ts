@@ -10,7 +10,6 @@ test('Testing creation of the Sizing object', t => {
 	const sizes = new Sizes();
 	t.truthy(sizes);
 	t.is(typeof sizes.toString(), 'string');
-	console.log(sizes.toString());
 });
 
 test('Testing contents of FontSize xxsmall', t => {

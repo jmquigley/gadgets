@@ -66,6 +66,8 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.handleDoubleClick = this.handleDoubleClick.bind(this);
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 		this.handleKeyPress = this.handleKeyPress.bind(this);
+
+		this.shouldComponentUpdate(props);
 	}
 
 	private handleBlur(e: React.FocusEvent<HTMLSpanElement>) {
@@ -119,22 +121,22 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: LabelProps): boolean {
+		super.resetStyles(nextProps);
 
 		this.classes.push('ui-label');
 		this.classes.push(this.styles.label);
 		this.classes.push(this.styling.fontStyle);
 
-		super.buildStyles(this.props, {
-			color: (this.props.color || 'black'),
-			backgroundColor: (this.props.backgroundColor || 'white')
+		super.buildStyles(nextProps, {
+			color: (nextProps.color || 'black'),
+			backgroundColor: (nextProps.backgroundColor || 'white')
 		});
+
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<span
 				className={this.classes.join(' ')}

@@ -32,7 +32,7 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent} from '../shared';
+import {BaseComponent, Sizing} from '../shared';
 
 export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
@@ -42,7 +42,8 @@ export function getDefaultListItemProps(): ListItemProps {
 	return cloneDeep(Object.assign(
 		getDefaultItemProps(), {
 			href: {
-				selectHandler: nilEvent
+				selectHandler: nilEvent,
+				sizing: Sizing.normal
 			}
 		}));
 }
@@ -70,6 +71,8 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 		this.handleKeyPress = this.handleKeyPress.bind(this);
 		this.handleMouseOut = this.handleMouseOut.bind(this);
+
+		this.shouldComponentUpdate(props);
 	}
 
 	private deactivateEdit() {
@@ -117,16 +120,15 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.deactivateEdit();
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: ListItemProps): boolean {
+		super.resetStyles(nextProps);
 		this.classes.push('ui-listitem');
 		this.classes.push(this.styles.listItem);
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<Item
 				{...this.props}
@@ -138,7 +140,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 				onKeyDown={this.handleKeyDown}
 				onKeyPress={this.handleKeyPress}
 				onMouseOut={this.handleMouseOut}
-				sizing={this.props.sizing}
+				sizing={this.props.href.sizing}
 				style={this.inlineStyle}
 				/>
 		);

@@ -61,19 +61,19 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	constructor(props: TextFieldProps) {
 		super(props, require('./styles.css'));
+		this.shouldComponentUpdate(props);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: any): boolean {
+		super.resetStyles(nextProps);
 		this.classes.push('ui-textfield');
 		this.classes.push(this.styling.fontStyle);
 		this.classes.push(this.styles.textField);
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		// Strip out props that the input control cannot recognize or use
 		const {
 			sizing,

@@ -50,8 +50,7 @@ export function getDefaultItemProps(): ItemProps {
 		}));
 }
 
-export interface ItemState {
-}
+export interface ItemState {}
 
 export class Item extends BaseComponent<ItemProps, ItemState> {
 
@@ -60,26 +59,24 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 
 	constructor(props: ItemProps) {
 		super(props, require('./styles.css'));
+		this.shouldComponentUpdate(props);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: ItemProps): boolean {
+		super.resetStyles(nextProps);
 
 		this.classes.push('ui-item');
 		this.classes.push(this.styles.item);;
 
-		if (this.props.selected) {
+		if (nextProps.selected) {
 			this.classes.push('ui-selected');
 		}
 
-		super.buildStyles(this.props);
+		super.buildStyles(nextProps);
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
-		console.log(`ITEM (${this.styling.font.sizeem}, ${Item.buttonScale}) - calc(${this.styling.font.sizeem} * ${Item.buttonScale})`);
-
 		let leftButton = null;
 		if (this.props.leftButton != null && !this.props.disabled) {
 			let newButton = React.cloneElement(this.props.leftButton, {
@@ -114,7 +111,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 						((this.props.hiddenRightButton) ? this.styles.hiddenButton : null)
 					}
 					style={{width: `calc(${this.styling.font.sizeem} * ${Item.buttonScale})`}}
-				>
+					>
 					{newButton}
 				</div>
 			);

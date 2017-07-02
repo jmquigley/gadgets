@@ -87,15 +87,16 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 
 	constructor(props: TooltipProps) {
 		super(props, require('./styles.css'));
+		this.shouldComponentUpdate(props);
 	}
 
-	protected buildStyles() {
-		super.resetStyles();
+	shouldComponentUpdate(nextProps: TooltipProps): boolean {
+		super.resetStyles(nextProps);
 
 		this.classes.push('ui-tooltip');
 		this.classes.push(this.styles.tooltip);
 
-		switch (this.props.location) {
+		switch (nextProps.location) {
 			case Location.topLeft:
 				this.classes.push(this.styles.tooltipTopLeft);
 				this._triangleDirection = Direction.down;
@@ -151,21 +152,21 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 				break;
 		}
 
-		if (this.props.show) {
+		if (nextProps.show) {
 			this.classes.push(this.styles.tooltipShow);
 		} else {
 			this.classes.push(this.styles.tooltipHide);
 		}
 
-		super.buildStyles(this.props, {
-			color: this.props.backgroundColor,
-			backgroundColor: this.props.backgroundColor
+		super.buildStyles(nextProps, {
+			color: nextProps.backgroundColor,
+			backgroundColor: nextProps.backgroundColor
 		});
+
+		return true;
 	}
 
 	render() {
-		this.buildStyles();
-
 		return (
 			<div className={this.classes.join(' ')} style={this.inlineStyle}>
 				<span className="tooltipContent" style={{color: this.props.color}}>

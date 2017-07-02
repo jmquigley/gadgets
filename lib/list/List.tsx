@@ -64,19 +64,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 		}
 
 		this.selectHandler = this.selectHandler.bind(this);
-	}
-
-	protected buildStyles() {
-		super.resetStyles();
-
-		this.classes.push('ui-list');
-		this.classes.push(this.styles.list);
-
-		if (this.props.alternating) {
-			this.classes.push(this.styles.listAlternating);
-		}
-
-		super.buildStyles(this.props);
+		this.shouldComponentUpdate(props);
 	}
 
 	private selectHandler(item: ListItem) {
@@ -91,18 +79,30 @@ export class List extends BaseComponent<ListProps, ListState> {
 		});
 	}
 
-	render() {
-		this.buildStyles();
+	shouldComponentUpdate(nextProps: ListProps): boolean {
+		super.resetStyles(nextProps);
 
+		this.classes.push('ui-list');
+		this.classes.push(this.styles.list);
+
+		if (nextProps.alternating) {
+			this.classes.push(this.styles.listAlternating);
+		}
+
+		super.buildStyles(nextProps);
+		return true;
+	}
+
+	render() {
 		let selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
 		let children = React.Children.map(this.props.children, child => {
 			let selected = child['props'].id === selectedKey;
 			return React.cloneElement(child as any, {
 				href: {
-					selectHandler: this.selectHandler
+					selectHandler: this.selectHandler,
+					sizing: this.props.sizing
 				},
-				selected: (this.props.unselect) ? false : selected,
-				sizing: this.props.sizing
+				selected: (this.props.unselect) ? false : selected
 			});
 		});
 
