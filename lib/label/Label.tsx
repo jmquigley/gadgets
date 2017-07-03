@@ -129,8 +129,8 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.classes.push(this.styling.fontStyle);
 
 		super.buildStyles(nextProps, {
-			color: (nextProps.color || 'black'),
-			backgroundColor: (nextProps.backgroundColor || 'white')
+			color: nextProps.color,
+			backgroundColor: nextProps.backgroundColor
 		});
 
 		return true;

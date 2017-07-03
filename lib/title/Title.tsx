@@ -46,6 +46,9 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
 
+	private _titleClasses: string[] = [];
+	private _widgetClasses: string[] = [];
+
 	constructor(props: TitleProps) {
 		super(props, require("./styles.css"));
 		this.shouldComponentUpdate(props);
@@ -67,6 +70,14 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 			this.classes.push("ripple");
 		}
 
+		this._titleClasses = [];
+		this._titleClasses.push('ui-title');
+		this._titleClasses.push(nextProps.stacked ? this.styles.titleStacked : this.styles.title);
+
+		this._widgetClasses = [];
+		this._widgetClasses.push('ui-widget');
+		this._widgetClasses.push(nextProps.stacked ? this.styles.widgetStacked : this.styles.widget);
+
 		super.buildStyles(nextProps);
 		return true;
 	}
@@ -79,23 +90,16 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 
 		return (
 			<div
-				className={this.classes.join(" ")}
-				style={this.inlineStyle}
+				className={this.classes.join(' ')}
+				style={{...this.inlineStyle}}
 				onClick={this.props.onClick} onDoubleClick={this.props.onDoubleClick}
 				>
 				<Label
-					className={
-						"ui-title " +
-						(this.props.stacked ? this.styles.titleStacked : this.styles.title)
-					}
+					className={this._titleClasses.join(' ')}
 					noedit={this.props.noedit}
 					text={title}
 					/>
-				<div
-					className={
-						"ui-widget " +
-						(this.props.stacked ? this.styles.widgetStacked : this.styles.widget)
-					}>
+				<div className={this._widgetClasses.join(' ')}>
 					{this.props.widget}
 				</div>
 			</div>

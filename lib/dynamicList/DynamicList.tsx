@@ -33,7 +33,7 @@ export interface DynamicListProps extends BaseProps {
 export function getDefaultDynamicListProps(): DynamicListProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
-			title: ""
+			title: ''
 		}));
 }
 
@@ -44,20 +44,20 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
 
 	constructor(props: DynamicListProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 		this.shouldComponentUpdate(props);
 	}
 
 	shouldComponentUpdate(nextProps: DynamicListProps): boolean {
 		super.resetStyles(nextProps);
-		this.classes.push("ui-dynamiclist");
+		this.classes.push('ui-dynamiclist');
 		super.buildStyles(nextProps);
 		return true;
 	}
 
 	render() {
 		return (
-			<div className={this.classes.join(" ")}>
+			<div className={this.classes.join(' ')}>
 			</div>
 		);
 	}

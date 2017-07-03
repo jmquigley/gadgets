@@ -8,7 +8,6 @@ $br: 5px;
 		display: flex;
 		margin: 0 auto;
 		opacity: 1.0;
-		padding: 4px;
 		position: absolute;
 		transition: opacity 0.75s ease;
 		width: 70%;
@@ -28,13 +27,11 @@ $br: 5px;
 
 	.content {
 		flex: 6;
-		margin: 7px 10px 5px 10px;
+		padding: 12px 15px;
 	}
 
 	.button {
 		flex: 1;
-		color: black;
-		margin: 0 5px;
 	}
 
 	.hide {

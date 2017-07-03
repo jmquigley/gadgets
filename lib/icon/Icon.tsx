@@ -91,8 +91,8 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 		}
 
 		super.buildStyles(nextProps, {
-			color: (nextProps.color || 'black'),
-			backgroundColor: (nextProps.backgroundColor || 'white')
+			color: (nextProps.color),
+			backgroundColor: (nextProps.backgroundColor)
 		});
 
 		return true;

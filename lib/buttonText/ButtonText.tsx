@@ -70,19 +70,24 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 	public static RIGHT: number = 1;
 	public static CENTER: number = 2;
 
-	private _fontSize: string = '';
-
     constructor(props: ButtonTextProps) {
 		super(props, require('./styles.css'));
 
-		if (this.props.fontStyle == null) {
-			this._fontSize = this.styling.fontStyle;
-		} else {
-			this._fontSize = this.styling.getSizing(this.props.fontStyle).font.style;
-		}
-
 		this.handleClick = this.handleClick.bind(this);
 		this.shouldComponentUpdate(props);
+	}
+
+	buildContent(justifyStyle: string) {
+		return(
+			<div
+				className={
+					this.styles.content + " " +
+						   this.styling.fontStyle + " " +
+						   justifyStyle
+				}>
+				{this.props.text}
+			</div>
+		);
 	}
 
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
@@ -92,8 +97,6 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 		e.stopPropagation();
 	}
 
-	protected buildStyles() {
-	}
 
 	shouldComponentUpdate(nextProps: ButtonTextProps): boolean {
 		super.resetStyles(nextProps);
@@ -122,26 +125,15 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 	}
 
 	render() {
-		let content = (justifyStyle: string) => (
-			<div
-				className={
-					this.styles.content + " " +
-					this.styling.fontStyle + " " +
-					justifyStyle
-				}>
-				{this.props.text}
-			</div>
-		);
-
 		let leftButton = null;
 		let rightButton = null;
 
 		if (this.props.justify === ButtonText.CENTER || this.props.noicon) {
-			leftButton = content(this.styles.center);
+			leftButton = this.buildContent(this.styles.center);
 		} else if (this.props.justify === ButtonText.LEFT) {
-			leftButton = content(this.styles.left);
+			leftButton = this.buildContent(this.styles.left);
 		} else {
-			rightButton = content(this.styles.right);
+			rightButton = this.buildContent(this.styles.right);
 		}
 
 		let icon = null;

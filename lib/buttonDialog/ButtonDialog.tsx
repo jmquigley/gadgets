@@ -125,6 +125,8 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			this._triangleClasses.push(this.styles.buttonDialogHide);
 		}
 
+		this._dialogClasses.push(this.styling.fontStyle);
+
 		super.buildStyles(nextProps);
 		return true;
 	}
@@ -136,15 +138,15 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 				disabled={this.props.disabled}
 				>
 				<Button
-				backgroundColor={this.props.backgroundColor}
-				color={this.props.color}
-				disabled={this.props.disabled}
-				iconName={this.props.iconName}
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-				sizing={this.props.sizing}
-				style={this.inlineStyle}
-				visible={this.props.visible}
-				/>
+					backgroundColor={this.props.backgroundColor}
+					color={this.props.color}
+					disabled={this.props.disabled}
+					iconName={this.props.iconName}
+					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+					sizing={this.props.sizing}
+					style={this.inlineStyle}
+					visible={this.props.visible}
+					/>
 				<div
 					className={this._dialogClasses.join(' ')}
 					onClick={this.handleDialogClick}

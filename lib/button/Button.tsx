@@ -60,6 +60,8 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 
     public static defaultProps: ButtonProps = getDefaultButtonProps();
 
+	private _iconClasses: string[] = [];
+
     constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
 		this.handleClick = this.handleClick.bind(this);
@@ -99,6 +101,10 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 			this.classes.push('ripple');
 		}
 
+		this._iconClasses = [];
+		this._iconClasses.push(this.props.iconStyle);
+		this._iconClasses.push(this.styles.icon);
+
 		super.buildStyles(nextProps);
 		return true;
 	}
@@ -112,7 +118,7 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 				style={{...this.inlineStyle}}
 				>
 				<Icon
-					className={`${this.props.iconStyle} ${this.styles.icon}`}
+					className={this._iconClasses.join(' ')}
 					iconName={this.props.iconName}
 					sizing={this.props.sizing}
 				/>

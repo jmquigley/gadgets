@@ -76,7 +76,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ButtonCircle} from '../buttonCircle';
+import {Button} from '../button';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 
 export enum ToastLevel {
@@ -120,6 +120,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public static defaultProps: ToastProps = getDefaultToastProps();
 
+	private _contentClasses: string[] = [];
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
@@ -183,8 +184,9 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 			}
 		}
 
-		this.classes.push("ui-toast");
+		this.classes.push('ui-toast');
 		this.classes.push(this.styles.toast);
+		this.classes.push(this.styling.fontStyle);
 
 		switch (nextProps.level) {
 			case ToastLevel.info:
@@ -210,27 +212,30 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 			this.classes.push(this.styles.hide);
 		}
 
-		super.buildStyles(nextProps);
+		this._contentClasses = [];
+		this._contentClasses.push('ui-toast-content');
+		this._contentClasses.push(this.styles.content);
+		this._contentClasses.push(this.styling.fontStyle);
 
+		super.buildStyles(nextProps);
 		return true;
 	}
 
 	render() {
 		return (
 			<div
-				className={this.classes.join(" ")}
+				className={this.classes.join(' ')}
 				style={this.inlineStyle}>
-				<div className={`ui-toast-content ${this.styles.content}`}>
+				<div className={this._contentClasses.join(' ')}>
 					{this.props.children}
 				</div>
 
-				<ButtonCircle
+				<Button
 					className={this.styles.button}
 					color="white"
-					borderColor="white"
 					iconName="times"
 					onClick={this.handleClose}
-					sizing={Sizing.xlarge}
+					sizing={Sizing.large}
 					/>
 			</div>
 		);

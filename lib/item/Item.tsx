@@ -24,7 +24,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 import {Title, TitleProps} from '../title';
 
 export interface ItemProps extends BaseProps, TitleProps {
@@ -55,7 +55,9 @@ export interface ItemState {}
 export class Item extends BaseComponent<ItemProps, ItemState> {
 
 	public static defaultProps: ItemProps = getDefaultItemProps();
-	private static readonly buttonScale: number = 1.5;
+
+	private _buttonScale: number = 0;
+	private _titlePadding: string = '';
 
 	constructor(props: ItemProps) {
 		super(props, require('./styles.css'));
@@ -72,8 +74,35 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 			this.classes.push('ui-selected');
 		}
 
+		switch (nextProps.sizing) {
+			case Sizing.xxsmall:
+			case Sizing.xxsmall:
+				this._titlePadding = '1px 2px';
+				this._buttonScale = 0.75;
+				break;
+
+			case Sizing.large:
+			case Sizing.xlarge:
+			case Sizing.xxlarge:
+				this._titlePadding = '4px 8px';
+				this._buttonScale = 0.25;
+				break;
+
+			case Sizing.small:
+			case Sizing.normal:
+			default:
+				this._titlePadding = '2px 4px';
+				this._buttonScale = 0.5;
+		}
+
 		super.buildStyles(nextProps);
 		return true;
+	}
+
+	computeButtonWidth() {
+		let fontEM: number = Number(this.styling.font.sizeem.replace('em',''));
+		let size = fontEM + (fontEM * this._buttonScale * 2);
+		return `${size}em`;
 	}
 
 	render() {
@@ -90,7 +119,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 						this.styling.fontStyle + ' ' +
 						((this.props.hiddenLeftButton) ? this.styles.hiddenButton : null)
 					}
-					style={{width: `calc(${this.styling.font.sizeem} * ${Item.buttonScale})`}}
+					style={{width: this.computeButtonWidth()}}
 					>
 					{newButton}
 				</div>
@@ -110,7 +139,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 						this.styling.fontStyle + ' ' +
 						((this.props.hiddenRightButton) ? this.styles.hiddenButton : null)
 					}
-					style={{width: `calc(${this.styling.font.sizeem} * ${Item.buttonScale})`}}
+					style={{width: this.computeButtonWidth()}}
 					>
 					{newButton}
 				</div>
@@ -124,12 +153,13 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 				onKeyDown={this.props.onKeyDown}
 				onKeyPress={this.props.onKeyPress}
 				className={this.classes.join(' ')}
-				style={this.inlineStyle}>
+				style={{...this.inlineStyle}}>
 				{leftButton}
 				<Title
 					{...this.props}
 					className={this.styles.itemTitle}
 					sizing={this.props.sizing}
+					style={{padding: this._titlePadding}}
 					>
 					{this.props.title}
 				</Title>

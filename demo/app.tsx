@@ -489,7 +489,7 @@ class App extends React.Component<AppProps, AppState> {
 					leftButton={<Button />}
 					hiddenLeftButton
 					rightButton={
-						<ButtonCircle iconName="times" color="red" borderColor="red" sizing={Sizing.large}/>
+						<ButtonCircle iconName="times" color="red" borderColor="red" />
 					}
 					hiddenRightButton
 					/>
@@ -543,13 +543,13 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
-	/* private buildListItemWithoutHeader = () => (
-	   <Container id="listExample2">
-	   <List alternating>
-	   {items}
-	   </List>
-	   </Container>
-	   );*/
+	private buildListItemWithoutHeader = () => (
+		<Container id="listExample2">
+			<List alternating>
+				{items}
+			</List>
+		</Container>
+	);
 
 	private buildPager = () => (
 		<Container id="pagerExample">
@@ -816,13 +816,15 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<Toast
-					level={ToastLevel.custom}
 					backgroundColor="#7fbf3f"
-					color="magenta"
 					borderColor="#3fbfbf"
+					color="magenta"
+					level={ToastLevel.custom}
+					onClose={() => this.setState({toastVisible6: false})}
+					sizing={Sizing.small}
 					type={ToastType.persistent}
 					visible={this.state.toastVisible6}
-					onClose={() => this.setState({toastVisible6: false})}>
+					>
 					This is a sample custom message
 				</Toast>
 			</div>
@@ -960,8 +962,8 @@ class App extends React.Component<AppProps, AppState> {
 				<h1>List/ListItem (with header)</h1>
 				{this.buildListItemWithHeader()}
 
-				{/* <h1>List/ListItem (without header)</h1>
-					{this.buildListItemWithoutHeader()} */}
+				<h1>List/ListItem (without header)</h1>
+				{this.buildListItemWithoutHeader()}
 
 				<h1>Pager</h1>
 				{this.buildPager()}

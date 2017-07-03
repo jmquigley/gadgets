@@ -44,7 +44,7 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 			color: 'black',
 			iconName: 'bomb',
 			sizing: Sizing.normal
-	}));
+		}));
 }
 
 export interface ButtonCircleState {}
@@ -52,6 +52,8 @@ export interface ButtonCircleState {}
 export class ButtonCircle extends BaseComponent<ButtonCircleProps, ButtonCircleState> {
 
     public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
+
+	private _buttonClasses: string[] = [];
 
     constructor(props: ButtonCircleProps) {
 		super(props, require('./styles.css'));
@@ -62,6 +64,11 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, ButtonCircleS
 		super.resetStyles(nextProps);
 		this.classes.push('ui-button-circle');
 		this.classes.push(this.styles.buttonCircle);
+
+		this._buttonClasses = [];
+		this._buttonClasses.push(this.styling.borderStyle);
+		this._buttonClasses.push(this.styles.buttonCircleIcon);
+
 		super.buildStyles(nextProps);
 		return true;
 	}
@@ -69,10 +76,10 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, ButtonCircleS
 	render() {
 		return (
 			<div className={this.classes.join(' ')}>
-				<div className={`${this.styles.buttonCircleContainer}`}>
+				<div className={this.styles.buttonCircleContainer}>
 					<Button
 						{...this.props}
-						className={`${this.styling.borderStyle} ${this.styles.buttonCircleIcon}`}
+						className={this._buttonClasses.join(' ')}
 						iconName={this.props.iconName}
 						iconStyle={this.styling.boxStyle}
 						style={this.inlineStyle}

@@ -33,6 +33,8 @@
  *
  * #### Styles
  * - `ui-tooltip` - Applied to the top level `<div>` in the control
+ * - `ui-tooltip-content` - Applied to the container around the content
+ * (text) of the tooltip.
  *
  * #### Properties
  * - `color: string ('white')` - the color of the tooltip text
@@ -169,7 +171,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 	render() {
 		return (
 			<div className={this.classes.join(' ')} style={this.inlineStyle}>
-				<span className="tooltipContent" style={{color: this.props.color}}>
+				<span className="ui-tooltip-content" style={{color: this.props.color}}>
 					{this.props.children}
 				</span>
 				<Triangle
