@@ -26,6 +26,7 @@ const {
 	Icon,
 	Label,
 	List,
+	ListDivider,
 	ListHeader,
 	ListItem,
 	Location,
@@ -483,6 +484,7 @@ class App extends React.Component<AppProps, AppState> {
 					leftButton={<Icon iconName="car" />}
 					hiddenLeftButton
 					/>
+				<ListDivider />
 				<ListItem
 					id="4"
 					title="List Item 4a (hide/show)" widget="15"

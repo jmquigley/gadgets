@@ -9,7 +9,7 @@ import {Container} from './lib/container';
 import {Icon} from './lib/icon';
 import {Item} from './lib/item';
 import {Label} from './lib/label';
-import {List, ListHeader, ListItem} from './lib/list';
+import {List, ListDivider, ListHeader, ListItem} from './lib/list';
 import {Pager} from './lib/pager';
 import {Select} from './lib/select';
 import {
@@ -40,6 +40,7 @@ export {
 	Item,
 	Label,
 	List,
+	ListDivider,
 	ListHeader,
 	ListItem,
 	Location,

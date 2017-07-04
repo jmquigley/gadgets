@@ -35,6 +35,8 @@ None
 
 #### Styles
 - `ui-tooltip` - Applied to the top level `<div>` in the control
+- `ui-tooltip-content` - Applied to the container around the content
+(text) of the tooltip.
 
 #### Properties
 - `color: string ('white')` - the color of the tooltip text
