@@ -45,9 +45,10 @@
  * - `initialPage: number (1)` - The page to start with in the list
  * - `pagesToDisplay: number (3)` - The number of page buttons to show with
  * the control.
- * - `pageSize: number (25)` - The number of items per page.  It's the divisor
- * against the total items to determine the total number of pages in the
- * control.
+ * - `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
+ * can be used by the pager.  It will always use the first value as the default
+ * when the control is created.  It is used against the total items to
+ * determine the total number of pages in the control.
  * - `totalItems: number (0)` - The total number of items represented by the
  * control.
  * - `useinput: boolean (false)` - If this is true, then a text input is shown
@@ -58,12 +59,13 @@
 
 'use strict';
 
-import {cloneDeep} from 'lodash';
+import {cloneDeep, isEqual, sortBy} from 'lodash';
 import * as React from 'react';
 import {getUUID, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
 import {ButtonText} from '../buttonText';
+import {List, ListDivider, ListItem} from '../list';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Location, Sizing} from '../shared';
 import {TextField} from '../textField';
 
@@ -71,7 +73,7 @@ export interface PagerProps extends BaseProps {
 	initialPage?: number;
 	onSelect?: any;
 	pagesToDisplay?: number;
-	pageSize?: number;
+	pageSizes?: number[];
 	totalItems?: number;
 	useinput?: boolean;
 }
@@ -82,7 +84,7 @@ export function getDefaultPagerProps(): PagerProps {
 			initialPage: 1,
 			onSelect: nilEvent,
 			pagesToDisplay: 3,
-			pageSize: 25,
+			pageSizes: [25, 50, 100],
 			sizing: Sizing.normal,
 			totalItems: 0,
 			useinput: false
@@ -91,37 +93,34 @@ export function getDefaultPagerProps(): PagerProps {
 
 export interface PagerState {
 	currentPage: number;
+	pageSize: number;
 }
 
 export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	public static defaultProps: PagerProps = getDefaultPagerProps();
+	public static readonly defaultPageSize: number = 25;
 
-	private _initialPage: number = 0;
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
 	private _buttons: any = [];
 	private _buttonStyle: string[] = [];
+	private _dialog: any = null;
+	private _initialPage: number = 0;
+	private _initialPageSize: number = 0;
 
 	constructor(props: PagerProps) {
 		super(props, require('./styles.css'));
 
-		this._lastPage = this.computeLastPage();
-		this._initialPage = Number(props.initialPage);
-		if (this._initialPage < 1) {
-			this._initialPage = 1;
-		} else if (this._initialPage > this._lastPage) {
-			this._initialPage = this._lastPage;
-		}
+		this.computeInitialPages(props.pageSizes ? props.pageSizes[0] : Pager.defaultPageSize)
 
 		this.state = {
-			currentPage: this._initialPage
+			currentPage: this.initialPage,
+			pageSize: this.initialPageSize
 		}
 
 		this._buttonStyle.push(this.styles.pagerButton);
 		this._buttonStyle.push(this.styling.boxStyle);
-
-		this.createButtons();
 
 		this.handleBlur = this.handleBlur.bind(this);
 		this.handleChange = this.handleChange.bind(this);
@@ -131,6 +130,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.moveToFront = this.moveToFront.bind(this);
 		this.moveToNext = this.moveToNext.bind(this);
 		this.moveToPrevious = this.moveToPrevious.bind(this);
+		this.rebuildButtons = this.rebuildButtons.bind(this);
+
+		this.createButtons();
+		this.createDialog();
 
 		this.shouldComponentUpdate(props);
 	}
@@ -149,6 +152,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.setState({currentPage: val}, () => {
 			this.props.onSelect(val);
 		});
+	}
+
+	get initialPage(): number {
+		return this._initialPage;
+	}
+
+	get initialPageSize(): number {
+		return this._initialPageSize;
 	}
 
 	get lastPage(): number {
@@ -185,18 +196,46 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	componentWillReceiveProps(nextProps: PagerProps) {
 		if (!this.propsEqual(this.props, nextProps)) {
-			if (this.props.initialPage != nextProps.initialPage) {
-				this.setState({currentPage: nextProps.initialPage});
-			}
+			this.computeInitialPages(nextProps.pageSizes ? nextProps.pageSizes[0] : Pager.defaultPageSize, nextProps);
+			this.setState({
+				currentPage: this.initialPage,
+				pageSize: this.initialPageSize
+			});
 
-			this._lastPage = this.computeLastPage();
+			this.createDialog();
+		}
+	}
+	/**
+	 * Takes the given page size and input props and determines the appropriate initialPage,
+	 * lastPage, and initialPageSize.  These variables are saved within the class and
+	 * are used to set the state of the current page and the computed page size.
+	 * @param props {PagerProps} the set of props that should be used to
+	 * compute the initial page information (size, first/last page)
+	 */
+	private computeInitialPages(pageSize: number, props: PagerProps = this.props) {
+		this._initialPageSize = pageSize;
+		this._lastPage = this.computeLastPage(this.initialPageSize);
+		this._initialPage = Number(props.initialPage);
+
+		if (this._initialPage < 1) {
+			this._initialPage = 1;
+		} else if (this._initialPage > this._lastPage) {
+			this._initialPage = this._lastPage;
 		}
 	}
 
-	private computeLastPage() {
+	/**
+	 * Determines the last page number in the list from the requested
+	 * page size value.
+	 * @param pageSize {number} The number of elements per page.  Defaults
+	 * to the value stored in the state.pageSize
+	 * @returns {number} the last page number based on the total items
+	 * divided by the pageSize
+	 */
+	private computeLastPage(pageSize: number = this.state.pageSize) {
 		let size: number = 1;
-		if (this.props.pageSize > 0) {
-			size = Math.ceil(this.props.totalItems / this.props.pageSize);
+		if (pageSize > 0) {
+			size = Math.ceil(this.props.totalItems / pageSize);
 			if (size < 1) {
 				size = 1;
 			}
@@ -255,15 +294,37 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		});
 	}
 
-	private propsEqual(p1: PagerProps, p2: PagerProps): boolean {
-		if (p1.initialPage === p2.initialPage &&
-			p1.pagesToDisplay === p2.pagesToDisplay &&
-			p1.pageSize === p2.pageSize &&
-			p1.totalItems === p2.totalItems) {
-			return true;
+	/**
+	 * Dynamically creates the popup dialog menu used to select new values for the
+	 * control.  The values include navigation and changing the page size.
+	 */
+	private createDialog() {
+		let items: any = [];
+
+		for (let val of sortBy(this.props.pageSizes)) {
+			items.push(
+				<ListItem title={String(val)} key={getUUID()} noedit onSelect={(size: string) => {
+					this.setState({currentPage: 1, pageSize: Number(size)}, this.rebuildButtons);
+				}} />
+			);
 		}
 
-		return false;
+		items.push(
+			<ListItem title="all" key={getUUID()} noedit onSelect={() => {
+					this.setState({currentPage: 1, pageSize: this.props.totalItems}, this.rebuildButtons);
+			}} />
+		);
+
+		this._dialog = (
+			<List>
+				<ListItem title="First" noedit onSelect={() => {this.moveToFront()}}/>
+				<ListItem title="Last" noedit onSelect={() => {this.moveToEnd()}}/>
+				<ListItem title="Next" noedit onSelect={() => {this.moveToNext()}}/>
+				<ListItem title="Previous" noedit onSelect={() => {this.moveToPrevious()}}/>
+				<ListDivider />
+				{items}
+			</List>
+		);
 	}
 
 	private handleBlur(e: React.FocusEvent<HTMLInputElement>) {
@@ -308,6 +369,32 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		if (this.currentPage !== 1) {
 			this.currentPage = this.currentPage - 1;
 		}
+	}
+
+	/**
+	 * Performs a shallow comparison of two sets of input props.
+	 */
+	private propsEqual(p1: PagerProps, p2: PagerProps): boolean {
+		if (p1.initialPage === p2.initialPage &&
+			p1.pagesToDisplay === p2.pagesToDisplay &&
+			isEqual(p1.pageSizes, p2.pageSizes) &&
+			p1.totalItems === p2.totalItems) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * When the page size is changed on a button this callback function is used to
+	 * to recompute the buttons and redisplay them.\
+	 *
+	 * Without this forced update the buttons will not be redrawn until the
+	 * next click on the control.
+	 */
+	private rebuildButtons() {
+		this.computeInitialPages(this.state.pageSize);
+		this.forceUpdate();
 	}
 
 	shouldComponentUpdate(nextProps: PagerProps): boolean {
@@ -373,7 +460,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					location={Location.top}
 					notriangle
 					sizing={this.props.sizing}>
-					Pager Dialog
+					{this._dialog}
 				</ButtonDialog>
 			</div>
 		);

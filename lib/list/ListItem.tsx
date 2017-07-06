@@ -36,6 +36,7 @@ import {BaseComponent, Sizing} from '../shared';
 
 export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
+	onSelect?: any;
 }
 
 export function getDefaultListItemProps(): ListItemProps {
@@ -44,7 +45,8 @@ export function getDefaultListItemProps(): ListItemProps {
 			href: {
 				selectHandler: nilEvent,
 				sizing: Sizing.normal
-			}
+			},
+			onSelect: nilEvent
 		}));
 }
 
@@ -94,6 +96,8 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 				this.props.onClick();
 			}
 		}, this._delay);
+
+		this.props.onSelect(this.props.title);
 	}
 
 	private handleDoubleClick() {

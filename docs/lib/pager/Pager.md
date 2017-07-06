@@ -47,9 +47,10 @@ event is invoked.  It will give the new page selection as a parameter.
 - `initialPage: number (1)` - The page to start with in the list
 - `pagesToDisplay: number (3)` - The number of page buttons to show with
 the control.
-- `pageSize: number (25)` - The number of items per page.  It's the divisor
-against the total items to determine the total number of pages in the
-control.
+- `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
+can be used by the pager.  It will always use the first value as the default
+when the control is created.  It is used against the total items to
+determine the total number of pages in the control.
 - `totalItems: number (0)` - The total number of items represented by the
 control.
 - `useinput: boolean (false)` - If this is true, then a text input is shown

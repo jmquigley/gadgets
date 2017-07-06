@@ -21,8 +21,8 @@ test('Test retrieval of Pager props object', t => {
 	t.true('pagesToDisplay' in props);
 	t.is(props.pagesToDisplay, 3);
 
-	t.true('pageSize' in props);
-	t.is(props.pageSize, 25);
+	t.true('pageSizes' in props);
+	t.deepEqual(props.pageSizes, [25, 50, 100]);
 
 	t.true('totalItems' in props);
 	t.is(props.totalItems, 0);
@@ -43,7 +43,7 @@ test('Test creation of a Pager control', t => {
 test('Test pager getPages method with front of list', t => {
 	let pager = new Pager(Object.assign({...Pager.defaultProps}, {
 		initialPage: 1,
-		pageSize: 25,
+		pageSizes: [25, 50, 100],
 		totalItems: 299,
 	}));
 
@@ -56,7 +56,7 @@ test('Test pager getPages method with front of list', t => {
 test('Test pager getPages method with 2nd to last in list', t => {
 	let pager = new Pager(Object.assign({...Pager.defaultProps}, {
 		initialPage: 11,
-		pageSize: 25,
+		pageSizes: [25, 50, 100],
 		totalItems: 299,
 	}));
 
@@ -69,7 +69,7 @@ test('Test pager getPages method with 2nd to last in list', t => {
 test('Test Pager getPages method with last in the List', t => {
 	let pager = new Pager(Object.assign({...Pager.defaultProps}, {
 		initialPage: 12,
-		pageSize: 25,
+		pageSizes: [25, 50, 100],
 		totalItems: 299,
 	}));
 
@@ -82,7 +82,7 @@ test('Test Pager getPages method with last in the List', t => {
 test('Test Pager getPages method with invalid initial page (negative test)', t => {
 	let pager = new Pager(Object.assign({...Pager.defaultProps}, {
 		initialPage: -1,
-		pageSize: 25,
+		pageSizes: [25, 50, 100],
 		totalItems: 299,
 	}));
 
@@ -95,7 +95,7 @@ test('Test Pager getPages method with invalid initial page (negative test)', t =
 test('Test Pager getPages method with invalid pageSize (negative test)', t => {
 	let pager = new Pager(Object.assign({...Pager.defaultProps}, {
 		initialPage: 1,
-		pageSize: 0,
+		pageSize: null,
 		totalItems: 299,
 	}));
 
@@ -108,7 +108,7 @@ test('Test Pager getPages method with invalid pageSize (negative test)', t => {
 test('Test Pager getPages method with invalid totalItems (negative test)', t => {
 	let pager = new Pager(Object.assign({...Pager.defaultProps}, {
 		initialPage: 1,
-		pageSize: 25,
+		pageSizes: [25, 50, 100],
 		totalItems: 0,
 	}));
 

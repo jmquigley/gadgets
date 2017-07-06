@@ -141,7 +141,7 @@ Displays a graphical icon within the current container.
 ### [Label](docs/lib/label/Label.md)
 A text string label that can made editable.  It is ultimately a `<span>` wrapper of the given text string.
 
-### List/ListItem
+### List/ListDivider/ListFooter/ListHeader/ListItem
 
 ### Menu
 

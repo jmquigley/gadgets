@@ -1,21 +1,25 @@
-<a name="module_{name}"></a>
+<a name="module_ListDivider"></a>
 
-## {name} : <code>name</code>
-{description}
+## ListDivider
+Creats a dividing line within a List compoenent.  It uses a single
+`<hr />` to wihtin a list item to make the dividing line.
 
 #### Examples:
 
 ```javascript
-import {Button} from 'gadgets';
-<Button iconName="cab" onClick={someFunction} />
+import {List, ListDivider} from 'gadgets';
+<List>
+    <ListDivider backgroundColor="red" />
+</List>
 ```
 
 #### Events
-- `{name}` - {description}
+None
 
 #### Styles
-- `` - {description}
+- `ui-list-divider` - A class style on the `<li>` tag (root) of the
+component.
 
 #### Properties
-- `{name}: {datatype}` - {description}
+- `color: string (inherit)` - The color of the dividing line
 
