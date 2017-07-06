@@ -69,6 +69,9 @@ import {List, ListDivider, ListItem} from '../list';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Location, Sizing} from '../shared';
 import {TextField} from '../textField';
 
+export const defaultPageSize: number = 25;
+export const defaultPageSizes: number[] = [25,50,100];
+
 export interface PagerProps extends BaseProps {
 	initialPage?: number;
 	onSelect?: any;
@@ -84,7 +87,7 @@ export function getDefaultPagerProps(): PagerProps {
 			initialPage: 1,
 			onSelect: nilEvent,
 			pagesToDisplay: 3,
-			pageSizes: [25, 50, 100],
+			pageSizes: defaultPageSizes,
 			sizing: Sizing.normal,
 			totalItems: 0,
 			useinput: false
@@ -99,7 +102,6 @@ export interface PagerState {
 export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	public static defaultProps: PagerProps = getDefaultPagerProps();
-	public static readonly defaultPageSize: number = 25;
 
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
@@ -108,11 +110,13 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _dialog: any = null;
 	private _initialPage: number = 0;
 	private _initialPageSize: number = 0;
+	private _pageSizes: number[] = defaultPageSizes;
 
 	constructor(props: PagerProps) {
 		super(props, require('./styles.css'));
 
-		this.computeInitialPages(props.pageSizes ? props.pageSizes[0] : Pager.defaultPageSize)
+		this.pageSizes = props.pageSizes;
+		this.computeInitialPages(this.pageSizes[0]);
 
 		this.state = {
 			currentPage: this.initialPage,
@@ -152,6 +156,22 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.setState({currentPage: val}, () => {
 			this.props.onSelect(val);
 		});
+	}
+
+	get pageSizes(): number[] {
+		return this._pageSizes;
+	}
+
+	set pageSizes(val: number[]) {
+		if (val == null) {
+			this._pageSizes = defaultPageSizes;
+		} else {
+			if (val.length < 1) {
+				this._pageSizes = [defaultPageSize];
+			} else {
+				this._pageSizes = val;
+			}
+		}
 	}
 
 	get initialPage(): number {
@@ -196,7 +216,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	componentWillReceiveProps(nextProps: PagerProps) {
 		if (!this.propsEqual(this.props, nextProps)) {
-			this.computeInitialPages(nextProps.pageSizes ? nextProps.pageSizes[0] : Pager.defaultPageSize, nextProps);
+			this.pageSizes = nextProps.pageSizes;
+			this.computeInitialPages(this.pageSizes[0], nextProps);
 			this.setState({
 				currentPage: this.initialPage,
 				pageSize: this.initialPageSize
@@ -301,7 +322,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private createDialog() {
 		let items: any = [];
 
-		for (let val of sortBy(this.props.pageSizes)) {
+		for (let val of sortBy(this.pageSizes)) {
 			items.push(
 				<ListItem title={String(val)} key={getUUID()} noedit onSelect={(size: string) => {
 					this.setState({currentPage: 1, pageSize: Number(size)}, this.rebuildButtons);

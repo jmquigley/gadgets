@@ -51,6 +51,7 @@ test('Test pager getPages method with front of list', t => {
 	t.deepEqual(pager.pages, [1,2,3]);
 	t.is(pager.currentPage, 1);
 	t.is(pager.lastPage, 12);
+	t.is(pager.state.pageSize, 25);
 });
 
 test('Test pager getPages method with 2nd to last in list', t => {
@@ -64,6 +65,7 @@ test('Test pager getPages method with 2nd to last in list', t => {
 	t.deepEqual(pager.pages, [10,11,12]);
 	t.is(pager.currentPage, 11);
 	t.is(pager.lastPage, 12);
+	t.is(pager.state.pageSize, 25);
 });
 
 test('Test Pager getPages method with last in the List', t => {
@@ -77,6 +79,7 @@ test('Test Pager getPages method with last in the List', t => {
 	t.deepEqual(pager.pages, [10,11,12]);
 	t.is(pager.currentPage, 12);
 	t.is(pager.lastPage, 12);
+	t.is(pager.state.pageSize, 25);
 });
 
 test('Test Pager getPages method with invalid initial page (negative test)', t => {
@@ -90,19 +93,21 @@ test('Test Pager getPages method with invalid initial page (negative test)', t =
 	t.deepEqual(pager.pages, [1,2,3]);
 	t.is(pager.currentPage, 1);
 	t.is(pager.lastPage, 12);
+	t.is(pager.state.pageSize, 25);
 });
 
 test('Test Pager getPages method with invalid pageSize (negative test)', t => {
 	let pager = new Pager(Object.assign({...Pager.defaultProps}, {
 		initialPage: 1,
-		pageSize: null,
+		pageSizes: null,
 		totalItems: 299,
 	}));
 
 	t.truthy(pager);
-	t.deepEqual(pager.pages, [1,0,0]);
+	t.deepEqual(pager.pages, [1,2,3]);
 	t.is(pager.currentPage, 1);
-	t.is(pager.lastPage, 1);
+	t.is(pager.lastPage, 12);
+	t.is(pager.state.pageSize, 25);
 });
 
 test('Test Pager getPages method with invalid totalItems (negative test)', t => {
@@ -116,4 +121,5 @@ test('Test Pager getPages method with invalid totalItems (negative test)', t => 
 	t.deepEqual(pager.pages, [1,0,0]);
 	t.is(pager.currentPage, 1);
 	t.is(pager.lastPage, 1);
+	t.is(pager.state.pageSize, 25);
 });
