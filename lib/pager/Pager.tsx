@@ -94,7 +94,7 @@ export function getDefaultPagerProps(): PagerProps {
 			initialPage: 1,
 			onSelect: nilEvent,
 			pagesToDisplay: 3,
-			pageSizes: defaultPageSizes,
+			pageSizes: cloneDeep(defaultPageSizes),
 			sizing: Sizing.normal,
 			totalItems: 0,
 			useinput: false
@@ -117,7 +117,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _dialog: any = null;
 	private _initialPage: number = 0;
 	private _initialPageSize: number = 0;
-	private _pageSizes: number[] = defaultPageSizes;
+	private _pageSizes: number[] = cloneDeep(defaultPageSizes);
 
 	constructor(props: PagerProps) {
 		super(props, require('./styles.css'));
@@ -223,7 +223,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	set pageSizes(val: number[]) {
 		if (val == null) {
-			this._pageSizes = defaultPageSizes;
+			this._pageSizes = cloneDeep(defaultPageSizes);
 		} else {
 			if (val.length < 1) {
 				this._pageSizes = [defaultPageSize];
@@ -423,7 +423,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		if (p1.initialPage === p2.initialPage &&
 			p1.pagesToDisplay === p2.pagesToDisplay &&
 			isEqual(p1.pageSizes, p2.pageSizes) &&
-			p1.totalItems === p2.totalItems) {
+			p1.totalItems === p2.totalItems &&
+			p1.useinput == p2.useinput) {
 			return true;
 		}
 

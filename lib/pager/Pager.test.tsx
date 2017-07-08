@@ -8,6 +8,7 @@ import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
 import * as sinon from 'sinon';
+import {waitPromise} from 'util.wait';
 import {Pager, getDefaultPagerProps} from './index';
 
 test.after.always.cb(t => {
@@ -27,6 +28,9 @@ test('Test retrieval of Pager props object', t => {
 
 	t.truthy(props);
 
+	t.true('initialPage' in props);
+	t.is(props.initialPage, 1);
+
 	t.true('pagesToDisplay' in props);
 	t.is(props.pagesToDisplay, 3);
 
@@ -35,6 +39,9 @@ test('Test retrieval of Pager props object', t => {
 
 	t.true('totalItems' in props);
 	t.is(props.totalItems, 0);
+
+	t.true('useinput' in props);
+	t.false(props.useinput);
 });
 
 test('Test creation of a Pager control', t => {
@@ -48,8 +55,8 @@ test('Test creation of a Pager control', t => {
 test('Test pager getPages method with front of list', t => {
 	const ctl = mount(
 		<Pager
-			totalItems={299}
-			/>
+		totalItems={299}
+		/>
 	);
 
 	validate(ctl, t);
@@ -66,9 +73,9 @@ test('Test pager getPages method with front of list', t => {
 test('Test pager getPages method with 2nd to last in list', t => {
 	const ctl = mount(
 		<Pager
-			initialPage={11}
-			totalItems={299}
-			/>
+		initialPage={11}
+		totalItems={299}
+		/>
 	);
 
 	validate(ctl, t);
@@ -85,9 +92,9 @@ test('Test pager getPages method with 2nd to last in list', t => {
 test('Test Pager getPages method with last in the List', t => {
 	const ctl = mount(
 		<Pager
-			initialPage={12}
-			totalItems={299}
-			/>
+		initialPage={12}
+		totalItems={299}
+		/>
 	);
 
 	validate(ctl, t);
@@ -104,9 +111,9 @@ test('Test Pager getPages method with last in the List', t => {
 test('Test Pager getPages method with invalid initial page (negative test)', t => {
 	const ctl = mount(
 		<Pager
-			initialPage={-1}
-			totalItems={299}
-			/>
+		initialPage={-1}
+		totalItems={299}
+		/>
 	);
 
 	validate(ctl, t);
@@ -123,9 +130,9 @@ test('Test Pager getPages method with invalid initial page (negative test)', t =
 test('Test Pager getPages method with invalid pageSizes (negative test)', t => {
 	const ctl = mount(
 		<Pager
-			pageSizes={null}
-			totalItems={299}
-			/>
+		pageSizes={null}
+		totalItems={299}
+		/>
 	);
 
 	validate(ctl, t);
@@ -142,9 +149,9 @@ test('Test Pager getPages method with invalid pageSizes (negative test)', t => {
 test('Test Pager getPages method with empty pageSizes (negative test)', t => {
 	const ctl = mount(
 		<Pager
-			pageSizes={[]}
-			totalItems={299}
-			/>
+		pageSizes={[]}
+		totalItems={299}
+		/>
 	);
 
 	validate(ctl, t);
@@ -161,9 +168,9 @@ test('Test Pager getPages method with empty pageSizes (negative test)', t => {
 test('Test Pager getPages method with invalid totalItems (negative test)', t => {
 	const ctl = mount(
 		<Pager
-			pageSizes={[]}
-			totalItems={0}
-			/>
+		pageSizes={[]}
+		totalItems={0}
+		/>
 	);
 
 	validate(ctl, t);
@@ -182,10 +189,10 @@ test('Test selection of the second page in the control', t => {
 	const select = sinon.spy();
 	const ctl = mount(
 		<Pager
-			onSelect={select}
-			pageSizes={[10,25,100]}
-			totalItems={3000}
-			/>
+		onSelect={select}
+		pageSizes={[10,25,100]}
+		totalItems={3000}
+		/>
 	);
 
 	validate(ctl, t);
@@ -208,9 +215,9 @@ test('Test pressing the "<<" (first) button', t => {
 	const select = sinon.spy();
 	const ctl = mount(
 		<Pager
-			initialPage={2}
-			onSelect={select}
-			totalItems={299}
+		initialPage={2}
+		onSelect={select}
+		totalItems={299}
 		/>
 	);
 
@@ -237,10 +244,10 @@ test('Test pressing the "<" (previous) button', t => {
 	const select = sinon.spy();
 	const ctl = mount(
 		<Pager
-			initialPage={3}
-			onSelect={select}
-			totalItems={299}
-			/>
+		initialPage={3}
+		onSelect={select}
+		totalItems={299}
+		/>
 	);
 
 	validate(ctl, t);
@@ -266,9 +273,9 @@ test('Test pressing the ">" (next) button', t => {
 	const select = sinon.spy();
 	const ctl = mount(
 		<Pager
-			onSelect={select}
-			totalItems={299}
-			/>
+		onSelect={select}
+		totalItems={299}
+		/>
 	);
 
 	validate(ctl, t);
@@ -294,9 +301,9 @@ test('Test pressing the ">>" (last) button', t => {
 	const select = sinon.spy();
 	const ctl = mount(
 		<Pager
-			onSelect={select}
-			totalItems={299}
-			/>
+		onSelect={select}
+		totalItems={299}
+		/>
 	);
 
 	validate(ctl, t);
@@ -316,4 +323,65 @@ test('Test pressing the ">>" (last) button', t => {
 	ctl.find('.ui-button').at(3).simulate('click');
 	t.true(select.calledOnce);
 	t.true(select.calledWith(12));
+});
+
+test('Test selecting dialog "50" to change the page size', async t => {
+	const select = sinon.spy();
+	const ctl = mount(
+		<Pager
+		onSelect={select}
+		totalItems={299}
+		/>
+	);
+
+	validate(ctl, t);
+	const pager = ctl.instance() as Pager;
+	t.truthy(pager);
+	t.truthy(pager.dialog);
+
+	t.is(pager.currentPage, 1);
+	t.is(pager.lastPage, 12);
+	t.is(pager.state.pageSize, 25);
+
+	// Number of button controls in this instance
+	t.is(ctl.find('.ui-button').length, 5);
+	t.is(ctl.find('.ui-button-text').length, 3);
+	t.is(ctl.find('.ui-button-dialog').length, 1);
+	t.is(ctl.find('.ui-title').length, 8);
+
+	// Select the "50" from the dialog list, click and check page size
+	// Goes from 25 -> 50
+	ctl.find('.ui-title').at(5).simulate('click');
+
+	// This wait must occur during the test because there is a built in click
+	// delay where the component checks if a double click is occurring.
+	await waitPromise(1)
+		.then(() => {
+			t.true(select.calledOnce);
+			t.true(select.calledWith(1));
+
+			t.is(pager.currentPage, 1);
+			t.is(pager.lastPage, 6);
+			t.is(pager.state.pageSize, 50);
+		})
+		.catch((err: string) => {
+			t.fail(err);
+		});
+});
+
+test('Repeatedly create instance with different initial start for props test', t => {
+	for (let i=1; i<5; i++) {
+		const ctl = mount(
+			<Pager
+			initialPage={i}
+			totalItems={299}
+			/>
+		);
+
+		validate(ctl, t);
+		const pager = ctl.instance() as Pager;
+		t.truthy(pager);
+
+		t.is(pager.currentPage, i);
+	}
 });

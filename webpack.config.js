@@ -98,7 +98,8 @@ module.exports = {
     		jQuery: "jquery",
     		"window.jQuery": "jquery",
 			"window.$": "jquery"
-		})
+		}),
+		new webpack.optimize.ModuleConcatenationPlugin()
 		// new BundleAnalyzerPlugin()
 	]
 };
