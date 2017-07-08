@@ -3,16 +3,17 @@
 $baseZIndex: 99999;
 
 @define-extend baseButton {
-	display: flex;
+	align-items: center;
 	box-sizing: border-box;
+	cursor: default;
+	display: flex;
 	font-size: inherit;
 	height: inherit;
-	line-height: inherit;
-	position: relative;
-	outline: none;
-	cursor: default;
-	align-items: center;
 	justify-content: center;
+	line-height: inherit;
+	outline: none;
+	position: relative;
+	user-select: none;
 }
 
 input::-webkit-outer-spin-button,

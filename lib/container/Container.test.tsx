@@ -25,7 +25,8 @@ test('Test creation of a Container control', t => {
 
 	t.is(ctl.find('.ui-container').length, 1);
 	t.is(ctl.find('.container').length, 1);
-	t.is(ctl.prop('id'), undefined);
+	t.is(ctl.prop('id'), '');
+	t.true(ctl.contains(<p>Test Container</p>));
 });
 
 test('Test creation of a Container control with an id value', t => {
@@ -41,21 +42,5 @@ test('Test creation of a Container control with an id value', t => {
 	t.is(ctl.find('.ui-container').length, 1);
 	t.is(ctl.find('.container').length, 1);
 	t.is(ctl.prop('id'), 'testid');
-	t.true(ctl.contains(<p>Test Container</p>));
-});
-
-test('Test creation of a Container control with an empty id value', t => {
-	const ctl = mount(
-		<Container id="">
-			<p>Test Container</p>
-		</Container>
-	);
-
-	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
-
-	t.is(ctl.find('.ui-container').length, 1);
-	t.is(ctl.find('.container').length, 1);
-	t.is(ctl.prop('id'), '');
 	t.true(ctl.contains(<p>Test Container</p>));
 });

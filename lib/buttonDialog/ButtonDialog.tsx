@@ -46,6 +46,7 @@ import {Triangle} from '../triangle';
 export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
 	notriangle?: boolean;
+	onClick?: any;
 	triangleClasses? : string[];
 }
 
@@ -55,6 +56,7 @@ export function getDefaultButtonDialogProps(): ButtonDialogProps {
 			dialogClasses: [],
 			location: Location.bottom,
 			notriangle: false,
+			onClick: nilEvent,
 			triangleClasses: []
 		}));
 }

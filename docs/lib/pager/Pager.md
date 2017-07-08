@@ -15,14 +15,18 @@ If at the front of the list, then no operation is performed.  The last two
 buttons are used to move to the end of the list or to move foward one
 position.
 
+The right side of list contains a dialog button with `...`.  This allows
+the user of the control to change the page size.
+
 #### Examples:
 
 ```javascript
 import {Pager} from 'gadgets';
 <Pager
     initialPage="1"
-    totalItems="299"
+    pageSizes={[25,50,100,500]}
     sizing={Sizing.normal}
+    totalItems="2999"
     onSelect={
         (page: number) => {
             console.log(`Clicked on page: ${page}`);
@@ -32,9 +36,12 @@ import {Pager} from 'gadgets';
     />
 ```
 
-The example above would create a `Pager` control that contains 12 page
-entries to choose from.  It would also include a `TextField` control that
-allows the user to jump to a page by its number position.
+The example above would create a `Pager` control that contains 120 page
+entries to choose from.  The default page size is the first entry in
+the `pageSizes` array property.
+
+This control would also include a `TextField` that allows the user to jump
+to a page by its number position.
 
 #### Events
 - `onSelect(page: number)` - When the control changes to a new page, this
@@ -44,13 +51,13 @@ event is invoked.  It will give the new page selection as a parameter.
 - `ui-pager` - The top level style for the control on the `<div>` container.
 
 #### Properties
-- `initialPage: number (1)` - The page to start with in the list
+- `initialPage: number (1)` - The page to start with in the list display.
 - `pagesToDisplay: number (3)` - The number of page buttons to show with
 the control.
 - `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
 can be used by the pager.  It will always use the first value as the default
 when the control is created.  It is used against the total items to
-determine the total number of pages in the control.
+determine the total number of pages in the control display.
 - `totalItems: number (0)` - The total number of items represented by the
 control.
 - `useinput: boolean (false)` - If this is true, then a text input is shown

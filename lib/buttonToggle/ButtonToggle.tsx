@@ -60,6 +60,7 @@ export interface ButtonToggleProps extends ButtonProps {
 	initialToggle?: boolean;
 	iconNameOff?: string;      // font awesome string
 	iconNameOn?: string;       // font awesome string
+	onClick?: any;
 }
 
 export function getDefaultButtonToggleProps(): ButtonToggleProps {
@@ -71,7 +72,8 @@ export function getDefaultButtonToggleProps(): ButtonToggleProps {
 			fgColorOn: "black",
 			initialToggle: false,
 			iconNameOff: "bomb",
-			iconNameOn: "bomb"
+			iconNameOn: "bomb",
+			onClick: nilEvent
 		}));
 }
 

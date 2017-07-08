@@ -619,6 +619,7 @@ class App extends React.Component<AppProps, AppState> {
 				initialPage="1"
 				pagesToDisplay="5"
 				totalItems="30000"
+				pageSizes={[25, 50, 100, 500, 1000]}
 				onSelect={
 					(page: number) => {
 						console.log(`Clicked on page: ${page}`);

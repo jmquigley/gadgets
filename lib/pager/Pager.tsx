@@ -13,14 +13,18 @@
  * buttons are used to move to the end of the list or to move foward one
  * position.
  *
+ * The right side of list contains a dialog button with `...`.  This allows
+ * the user of the control to change the page size.
+ *
  * #### Examples:
  *
  * ```javascript
  * import {Pager} from 'gadgets';
  * <Pager
  *     initialPage="1"
- *     totalItems="299"
+ *     pageSizes={[25,50,100,500]}
  *     sizing={Sizing.normal}
+ *     totalItems="2999"
  *     onSelect={
  *         (page: number) => {
  *             console.log(`Clicked on page: ${page}`);
@@ -30,9 +34,12 @@
  *     />
  * ```
  *
- * The example above would create a `Pager` control that contains 12 page
- * entries to choose from.  It would also include a `TextField` control that
- * allows the user to jump to a page by its number position.
+ * The example above would create a `Pager` control that contains 120 page
+ * entries to choose from.  The default page size is the first entry in
+ * the `pageSizes` array property.
+ *
+ * This control would also include a `TextField` that allows the user to jump
+ * to a page by its number position.
  *
  * #### Events
  * - `onSelect(page: number)` - When the control changes to a new page, this
@@ -42,13 +49,13 @@
  * - `ui-pager` - The top level style for the control on the `<div>` container.
  *
  * #### Properties
- * - `initialPage: number (1)` - The page to start with in the list
+ * - `initialPage: number (1)` - The page to start with in the list display.
  * - `pagesToDisplay: number (3)` - The number of page buttons to show with
  * the control.
  * - `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
  * can be used by the pager.  It will always use the first value as the default
  * when the control is created.  It is used against the total items to
- * determine the total number of pages in the control.
+ * determine the total number of pages in the control display.
  * - `totalItems: number (0)` - The total number of items represented by the
  * control.
  * - `useinput: boolean (false)` - If this is true, then a text input is shown
@@ -158,20 +165,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		});
 	}
 
-	get pageSizes(): number[] {
-		return this._pageSizes;
-	}
-
-	set pageSizes(val: number[]) {
-		if (val == null) {
-			this._pageSizes = defaultPageSizes;
-		} else {
-			if (val.length < 1) {
-				this._pageSizes = [defaultPageSize];
-			} else {
-				this._pageSizes = val;
-			}
-		}
+	get dialog(): any {
+		return this._dialog;
 	}
 
 	get initialPage(): number {
@@ -214,14 +209,37 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		return l;
 	}
 
+	get pageSize(): number {
+		return this.state.pageSize;
+	}
+
+	set pageSize(val: number) {
+		this.setState({pageSize: val});
+	}
+
+	get pageSizes(): number[] {
+		return this._pageSizes;
+	}
+
+	set pageSizes(val: number[]) {
+		if (val == null) {
+			this._pageSizes = defaultPageSizes;
+		} else {
+			if (val.length < 1) {
+				this._pageSizes = [defaultPageSize];
+			} else {
+				this._pageSizes = val;
+			}
+		}
+	}
+
 	componentWillReceiveProps(nextProps: PagerProps) {
 		if (!this.propsEqual(this.props, nextProps)) {
 			this.pageSizes = nextProps.pageSizes;
 			this.computeInitialPages(this.pageSizes[0], nextProps);
-			this.setState({
-				currentPage: this.initialPage,
-				pageSize: this.initialPageSize
-			});
+
+			this.currentPage = this.initialPage;
+			this.pageSize = this.initialPageSize;
 
 			this.createDialog();
 		}
@@ -253,7 +271,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * @returns {number} the last page number based on the total items
 	 * divided by the pageSize
 	 */
-	private computeLastPage(pageSize: number = this.state.pageSize) {
+	private computeLastPage(pageSize: number = this.pageSize) {
 		let size: number = 1;
 		if (pageSize > 0) {
 			size = Math.ceil(this.props.totalItems / pageSize);
@@ -274,7 +292,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private createButtons() {
 		this._buttonsDisplay = [];
 
-		this.pages.forEach((page: number) => {
+		for (let page of this.pages) {
 			if (page !== 0 && this._buttons[page] == null) {
 
 				this._buttons[page] = (
@@ -312,7 +330,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						/>
 				);
 			}
-		});
+		};
 	}
 
 	/**
@@ -325,14 +343,20 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		for (let val of sortBy(this.pageSizes)) {
 			items.push(
 				<ListItem title={String(val)} key={getUUID()} noedit onSelect={(size: string) => {
-					this.setState({currentPage: 1, pageSize: Number(size)}, this.rebuildButtons);
+					this.setState({pageSize: Number(size)}, () => {
+						this.currentPage = 1;
+						this.rebuildButtons();
+					});
 				}} />
 			);
 		}
 
 		items.push(
 			<ListItem title="all" key={getUUID()} noedit onSelect={() => {
-					this.setState({currentPage: 1, pageSize: this.props.totalItems}, this.rebuildButtons);
+				this.setState({pageSize: this.props.totalItems}, () => {
+					this.currentPage = 1;
+					this.rebuildButtons();
+				});
 			}} />
 		);
 
@@ -414,7 +438,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * next click on the control.
 	 */
 	private rebuildButtons() {
-		this.computeInitialPages(this.state.pageSize);
+		this.computeInitialPages(this.pageSize);
 		this.forceUpdate();
 	}
 
@@ -466,10 +490,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					 onBlur={this.handleBlur}
 					 onChange={this.handleChange}
 					 onKeyPress={this.handleKeyPress}
-					 placeholder={String(this.state.currentPage)}
+					 placeholder={String(this.currentPage)}
 					 sizing={this.styling.prev.type}
 					 type="number"
-					 value={this.state.currentPage}
+					 value={this.currentPage}
 					 />
 				 :
 				 	null

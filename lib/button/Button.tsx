@@ -31,6 +31,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {nilEvent} from 'util.toolbox';
 import {Icon} from '../icon';
 import {
 	BaseComponent,
@@ -43,6 +44,7 @@ import {
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
 	iconStyle?: string;
+	onClick?: any;
 }
 
 export function getDefaultButtonProps(): ButtonProps {
@@ -50,6 +52,7 @@ export function getDefaultButtonProps(): ButtonProps {
 		iconName: 'bomb',
 		iconStyle: '',
 		location: Location.middle,
+		onClick: nilEvent,
 		sizing: Sizing.normal
 	}));
 }

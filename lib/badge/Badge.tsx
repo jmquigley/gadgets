@@ -35,11 +35,13 @@
 
 import {cloneDeep, isEqual} from 'lodash';
 import * as React from 'react';
+import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, Sizing} from '../shared';
 import {getDefaultBaseProps, Location} from '../shared/props';
 
 export interface BadgeProps extends BaseProps {
 	counter?: number;
+	onClick?: any;
 	suppress?: boolean;
 }
 
@@ -50,6 +52,7 @@ export function getDefaultBadgeProps(): BadgeProps {
 			color: 'red',
 			counter: 0,
 			location: Location.topRight,
+			onClick: nilEvent,
 			sizing: Sizing.normal,
 			suppress: false
 	}));

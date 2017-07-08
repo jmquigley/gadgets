@@ -3,19 +3,6 @@
 ## BaseProps
 The following properties are shared by all components in the library
 
-#### Events
-The following are the current event types supported by components:
-
-- onBlur
-- onChange
-- onClick
-- onClose
-- onDoubleClick
-- onInput
-- onKeyDown
-- onKeyPress
-- onMouseOut
-
 #### Properties
 The following are the properties on the BaseProps object used by most
 components.

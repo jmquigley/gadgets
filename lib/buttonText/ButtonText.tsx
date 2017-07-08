@@ -29,7 +29,8 @@
  * - `justify: number` - Determines if the button will be on the left or the right.
  * Two constants are available: ButtonText.LEFT & ButtonText.RIGHT.  It uses right
  * by default.
- * - `noicon: boolean` - Turns off the icon and only shows the text in the center of the button.
+ * - `noicon: boolean` - Turns off the icon and only shows the text in the center
+ * of the button.
  * - `text: string` - The text string used by the button
  *
  * @module ButtonText
@@ -39,6 +40,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {nilEvent} from 'util.toolbox';
 import {Icon, IconProps, getDefaultIconProps} from '../icon';
 import {BaseComponent, Sizing} from '../shared';
 
@@ -46,6 +48,7 @@ export interface ButtonTextProps extends IconProps {
 	fontStyle?: Sizing;
 	justify?: number;
 	noicon?: boolean;
+	onClick?: any;
 	text?: string;
 }
 
@@ -55,6 +58,7 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 			fontStyle: Sizing.normal,
 			justify: ButtonText.RIGHT,
 			noicon: false,
+			onClick: nilEvent,
 			sizing: Sizing.normal,
 			text: ''
 		}));

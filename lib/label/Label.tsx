@@ -30,6 +30,12 @@ import {BaseProps, getDefaultBaseProps} from '../shared/props';
 
 export interface LabelProps extends BaseProps {
 	noedit?: boolean;
+	onBlur?: any;
+	onChange?: any;
+	onClick?: any;
+	onDoubleClick?: any;
+	onKeyDown?: any;
+	onKeyPress?: any;
 	text?: string;
 }
 
@@ -39,6 +45,12 @@ export function getDefaultLabelProps(): LabelProps {
 	return cloneDeep(Object.assign(
 		baseProps, {
 			noedit: false,
+			onBlur: nilEvent,
+			onChange: nilEvent,
+			onClick: nilEvent,
+			onDoubleClick: nilEvent,
+			onKeyDown: nilEvent,
+			onKeyPress: nilEvent,
 			text: ' '
 		}));
 }

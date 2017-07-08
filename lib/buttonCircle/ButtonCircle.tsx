@@ -31,10 +31,12 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {BaseComponent, Sizing} from '../shared';
 
 export interface ButtonCircleProps extends ButtonProps {
+	onClick?: any;
 }
 
 export function getDefaultButtonCircleProps(): ButtonProps {
@@ -43,6 +45,7 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 			borderColor: 'black',
 			color: 'black',
 			iconName: 'bomb',
+			onClick: nilEvent,
 			sizing: Sizing.normal
 		}));
 }

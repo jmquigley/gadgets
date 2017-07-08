@@ -19,9 +19,6 @@ test('Test retrieval of default prop object', t => {
 	t.true('borderWidth' in props);
 	t.is(props.borderWidth, 'none');
 
-	t.true('children' in props);
-	t.is(props.children, null);
-
 	t.true('className' in props);
 	t.is(props.className, '');
 
@@ -45,33 +42,6 @@ test('Test retrieval of default prop object', t => {
 
 	t.true('noripple' in props);
 	t.false(props.noripple);
-
-	t.true('onBlur' in props);
-	t.true(props.onClick != null);
-
-	t.true('onChange' in props);
-	t.true(props.onChange != null);
-
-	t.true('onClick' in props);
-	t.true(props.onClick != null);
-
-	t.true('onClose' in props);
-	t.true(props.onClose != null);
-
-	t.true('onDoubleClick' in props);
-	t.true(props.onDoubleClick != null);
-
-	t.true('onInput' in props);
-	t.true(props.onInput != null);
-
-	t.true('onKeyDown' in props);
-	t.true(props.onKeyDown != null);
-
-	t.true('onKeyPress' in props);
-	t.true(props.onKeyPress != null);
-
-	t.true('onMouseOut' in props);
-	t.true(props.onMouseOut != null);
 
 	t.true('selected' in props);
 	t.false(props.selected);

@@ -24,6 +24,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 import {Title, TitleProps} from '../title';
 
@@ -31,6 +32,10 @@ export interface ItemProps extends BaseProps, TitleProps {
 	hiddenLeftButton?: boolean;
 	hiddenRightButton?: boolean;
 	leftButton?: any;
+	onBlur?: any;
+	onMouseOut?: any;
+	onKeyDown?: any;
+	onKeyPress?: any;
 	rightButton?: any;
 	selected?: boolean;
 	title?: string;
@@ -42,6 +47,10 @@ export function getDefaultItemProps(): ItemProps {
 			hiddenLeftButton: false,
 			hiddenRightButton: false,
 			leftButton: null,
+			onBlur: nilEvent,
+			onMouseOut: nilEvent,
+			onKeyDown: nilEvent,
+			onKeyPress: nilEvent,
 			rightButton: null,
 			selected: false,
 			stacked: false,

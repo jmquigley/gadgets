@@ -1,19 +1,6 @@
 /**
  * The following properties are shared by all components in the library
  *
- * #### Events
- * The following are the current event types supported by components:
- *
- * - onBlur
- * - onChange
- * - onClick
- * - onClose
- * - onDoubleClick
- * - onInput
- * - onKeyDown
- * - onKeyPress
- * - onMouseOut
- *
  * #### Properties
  * The following are the properties on the BaseProps object used by most
  * components.
@@ -61,8 +48,6 @@
 'use strict';
 
 import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
 import {Sizing} from './sizing';
 
 export enum Direction {
@@ -89,7 +74,6 @@ export interface BaseProps {
 	backgroundColor?: string;
 	borderColor?: string;
 	borderWidth?: string;
-	children?: React.ReactNode;
 	className?: string;
 	color?: string;
 	contentEditable?: boolean;
@@ -99,15 +83,6 @@ export interface BaseProps {
 	location?: Location;
 	noedit?: boolean;
 	noripple?: boolean;
-	onBlur?: any;
-	onChange?: any;
-	onClick?: any;
-	onClose?: any;
-	onDoubleClick?: any;
-	onInput?: any;
-	onKeyDown?: any;
-	onKeyPress?: any;
-	onMouseOut?: any;
 	selected?: boolean;
 	sizing?: Sizing;
 	style?: any;
@@ -119,7 +94,6 @@ export function getDefaultBaseProps(): BaseProps {
 		backgroundColor: 'inherit',
 		borderColor: 'inherit',
 		borderWidth: 'none',
-		children: null,
 		className: '',
 		color: 'inherit',
 		contentEditable: false,
@@ -129,15 +103,6 @@ export function getDefaultBaseProps(): BaseProps {
 		location: Location.none,
 		noedit: false,
 		noripple: false,
-		onBlur: nilEvent,
-		onChange: nilEvent,
-		onClick: nilEvent,
-		onClose: nilEvent,
-		onDoubleClick: nilEvent,
-		onInput: nilEvent,
-		onKeyPress: nilEvent,
-		onKeyDown: nilEvent,
-		onMouseOut: nilEvent,
 		selected: false,
 		sizing: Sizing.normal,
 		style: {},

@@ -76,6 +76,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 
@@ -95,6 +96,8 @@ export interface ToastProps extends BaseProps {
 	bottom?: boolean;
 	duration?: number;
 	level?: ToastLevel;
+	onClick?: any;
+	onClose?: any;
 	type?: ToastType;
 }
 
@@ -107,6 +110,8 @@ export function getDefaultToastProps(): ToastProps {
 			bottom: false,
 			duration: 3,
 			level: ToastLevel.info,
+			onClick: nilEvent,
+			onClose: nilEvent,
 			type: ToastType.decay,
 			visible: true
 		}));

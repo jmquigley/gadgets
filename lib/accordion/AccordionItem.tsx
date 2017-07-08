@@ -49,6 +49,7 @@ import {BaseComponent} from '../shared';
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
+	onClick?: any;
 	onNew?: any;
 	showButton?: boolean;
 }
@@ -57,6 +58,7 @@ export function getDefaultAccordionItemProps(): AccordionItemProps {
 	return cloneDeep(Object.assign(
 		getDefaultItemProps(), {
 			initialToggle: false,
+			onClick: nilEvent,
 			onNew: nilEvent,
 			showButton: true
 		})

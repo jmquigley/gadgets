@@ -36,6 +36,7 @@ import {BaseComponent, Sizing} from '../shared';
 
 export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
+	onClick?: any;
 	onSelect?: any;
 }
 
@@ -46,6 +47,7 @@ export function getDefaultListItemProps(): ListItemProps {
 				selectHandler: nilEvent,
 				sizing: Sizing.normal
 			},
+			onClick: nilEvent,
 			onSelect: nilEvent
 		}));
 }

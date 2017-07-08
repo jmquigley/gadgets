@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -46,7 +46,6 @@ test('Test creation of a ButtonToggle control', t => {
 	const ctl = mount(<ButtonToggle className="test-class"/>);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.is(ctl.prop('id'), '');
@@ -67,7 +66,6 @@ test('Test creation of a ButtonToggle control with on/off icons', t => {
 					  />);
 
  	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('iconName'), 'bomb');
  	t.is(ctl.prop('id'), '');
@@ -84,14 +82,16 @@ test('Test creation of a ButtonToggle control with on/off icons', t => {
 
 test('Test ButtonToggle click event', t => {
  	const click = sinon.spy();
- 	const ctl = mount(<ButtonToggle
-						  iconNameOn="star"
-						  iconNameOff="star-o"
-						  onClick={click}
-					  />);
+ 	const ctl = mount(
+		<ButtonToggle
+			iconNameOn="star"
+			iconNameOff="star-o"
+			onClick={click}
+			/>);
+	const btn = ctl.instance() as ButtonToggle;
 
  	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
+	t.truthy(btn);
 
  	t.is(ctl.prop('iconName'), 'bomb');
  	t.is(ctl.prop('id'), '');
@@ -102,8 +102,12 @@ test('Test ButtonToggle click event', t => {
  	t.false(ctl.prop('disabled'));
  	t.true(ctl.prop('visible'));
 
+	t.false(btn.state.toggle);
  	ctl.find('.ui-button-toggle').simulate('click');
  	t.true(click.calledOnce);
+	t.true(btn.state.toggle);
+
+	t.is(btn.state.toggle, ctl.state('toggle'));
 });
 
 test('Test disabling of a ButtonToggle', t => {
@@ -111,7 +115,6 @@ test('Test disabling of a ButtonToggle', t => {
  	const ctl = mount(<ButtonToggle onClick={click} disabled={true} />);
 
  	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('iconName'), 'bomb');
  	t.true(ctl.prop('disabled'));
@@ -127,7 +130,6 @@ test('Test making a ButtonToggle invisible', t => {
  	const ctl = mount(<ButtonToggle onClick={click} visible={false} />);
 
  	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('iconName'), 'bomb');
  	t.is(ctl.prop('id'), '');
@@ -148,7 +150,6 @@ test('Test the icon switch in a ButtonToggle click', t => {
 					  />);
 
  	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
  	t.false(ctl.prop('disabled'));
