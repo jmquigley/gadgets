@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -17,6 +17,14 @@ test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
 });
 
+function validate(ctl: any, t: any) {
+	t.truthy(ctl);
+	t.false(ctl.prop('disabled'));
+	t.true(ctl.prop('visible'));
+	t.is(ctl.find('.ui-listitem').length, 1);
+	t.is(ctl.find('.listItem').length, 1);
+}
+
 test('Test retrieval of ListItem props object', t => {
 	const props = getDefaultListItemProps();
 
@@ -31,19 +39,11 @@ test('Test the creation of a ListItem control with simple title', t => {
 		<ListItem
 			title="test title"
 			selected
-		/>
+			/>
 	);
 
-	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
-
+	validate(ctl, t);
 	t.is(ctl.prop('title'), 'test title');
-	t.false(ctl.prop('disabled'));
-	t.true(ctl.prop('visible'));
-
-	t.is(ctl.find('.ui-listitem').length, 1);
-	t.is(ctl.find('.ui-selected').length, 1);
-	t.is(ctl.find('.listItem').length, 1);
 });
 
 test('Test the creation of a ListItem control with left & right title', t => {
@@ -51,28 +51,26 @@ test('Test the creation of a ListItem control with left & right title', t => {
  		<ListItem
 			title="test title left"
 			widget="test title right"
-		/>
+			/>
  	);
 
- 	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
+	validate(ctl, t);
 
  	t.is(ctl.prop('title'), 'test title left');
  	t.is(ctl.prop('widget'), 'test title right');
- 	t.false(ctl.prop('disabled'));
- 	t.true(ctl.prop('visible'));
-
- 	t.is(ctl.find('.ui-listitem').length, 1);
- 	t.is(ctl.find('.listItem').length, 1);
-});
+ });
 
 test('Test disabling of a ListItem control', t => {
+	const click = sinon.spy();
  	const ctl = mount(
- 		<ListItem title="test title" disabled={true} />
+ 		<ListItem
+			disabled={true}
+			title="test title"
+			onClick={click}
+			/>
  	);
 
  	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('title'), 'test title');
  	t.true(ctl.prop('disabled'));
@@ -81,6 +79,7 @@ test('Test disabling of a ListItem control', t => {
  	t.is(ctl.find('.disabled').length, 2);
  	t.is(ctl.find('.ui-listitem').length, 1);
  	t.is(ctl.find('.listItem').length, 1);
+	t.true(click.notCalled);
 });
 
 test('Test making ListItem control invisible', t => {
@@ -89,7 +88,6 @@ test('Test making ListItem control invisible', t => {
  	);
 
  	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
 
  	t.is(ctl.prop('title'), 'test title');
  	t.false(ctl.prop('disabled'));
@@ -105,19 +103,13 @@ test('Test clicking of the left button on the ListItem control', t => {
  		<ListItem
 			title="test title"
 			leftButton={<Button iconName="bath" onClick={click} />}
-		/>
+			/>
  	);
 
- 	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
+	validate(ctl, t);
 
  	t.is(ctl.prop('title'), 'test title');
- 	t.false(ctl.prop('disabled'));
- 	t.true(ctl.prop('visible'));
-
- 	t.is(ctl.find('.ui-listitem').length, 1);
- 	t.is(ctl.find('.listItem').length, 1);
- 	ctl.find('i').first().simulate('click');
+ 	ctl.find('.ui-button').first().simulate('click');
  	t.true(click.calledOnce);
  	t.is(ctl.find('.fa').length, 1);
  	t.is(ctl.find('.fa-bath').length, 1);
@@ -129,19 +121,13 @@ test('Test clicking of the right button on the ListItem control', t => {
  		<ListItem
 			title="test title"
 			rightButton={<Button iconName="bath" onClick={click} />}
-		/>
+			/>
  	);
 
- 	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
+	validate(ctl, t);
 
  	t.is(ctl.prop('title'), 'test title');
- 	t.false(ctl.prop('disabled'));
- 	t.true(ctl.prop('visible'));
-
- 	t.is(ctl.find('.ui-listitem').length, 1);
- 	t.is(ctl.find('.listItem').length, 1);
- 	ctl.find('i').last().simulate('click');
+ 	ctl.find('.ui-button').last().simulate('click');
  	t.true(click.calledOnce);
  	t.is(ctl.find('.fa').length, 1);
  	t.is(ctl.find('.fa-bath').length, 1);
@@ -153,20 +139,13 @@ test('Test clicking of the title bar area of the ListItem', async t => {
  		<ListItem
 			title="test title"
 			onClick={click}
-		/>
+			/>
  	);
 
- 	t.truthy(ctl);
- 	log.debug(ctl.html(), __filename);
+	validate(ctl, t);
 
  	t.is(ctl.prop('title'), 'test title');
- 	t.false(ctl.prop('disabled'));
- 	t.true(ctl.prop('visible'));
-
- 	t.is(ctl.find('.ui-listitem').length, 1);
- 	t.is(ctl.find('.listItem').length, 1);
-
- 	ctl.find('.title').simulate('click');
+ 	ctl.find('.ui-item').simulate('click');
 
 	// This wait must occur during the test because there is a built in click
 	// delay where the component checks if a double click is occurring.
@@ -177,4 +156,37 @@ test('Test clicking of the title bar area of the ListItem', async t => {
 		.catch((err: string) => {
 			t.fail(err);
 		});
+});
+
+test('Test double click of the title bar area of the ListItem', t => {
+ 	const click = sinon.spy();
+ 	const ctl = mount(
+ 		<ListItem
+			title="test title"
+			onClick={click}
+			/>
+ 	);
+	const listItem = ctl.instance() as ListItem;
+
+	validate(ctl, t);
+	t.truthy(listItem);
+
+	let titleCtl = ctl.find('.ui-item');
+	t.truthy(titleCtl);
+
+	t.false(listItem.preventClick);
+	t.is(ctl.prop('title'), 'test title');
+	titleCtl.simulate('doubleClick');
+	t.true(listItem.preventClick);
+	t.true(ctl.state('toggleRipple'));
+
+	// The single click should be ignored because the double
+	// click was used.
+	t.true(click.notCalled);
+
+	// After the double click, simulate leaving focus and reseting
+	// the control.
+	titleCtl.simulate('blur');
+	t.false(listItem.preventClick);
+	t.false(ctl.state('toggleRipple'));
 });

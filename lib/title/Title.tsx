@@ -24,22 +24,17 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
 import {Label} from '../label';
 import {BaseComponent} from '../shared/base';
 import {BaseProps, getDefaultBaseProps} from '../shared';
 
 export interface TitleProps extends BaseProps {
-	onClick?: any;
-	onDoubleClick?: any;
 	stacked?: boolean;
 	widget?: any;
 }
 
 export function getDefaultTitleProps(): TitleProps {
 	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		onClick: nilEvent,
-		onDoubleClick: nilEvent,
 		stacked: false,
 		widget: null
 	}));
@@ -97,7 +92,6 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 			<div
 				className={this.classes.join(' ')}
 				style={{...this.inlineStyle}}
-				onClick={this.props.onClick} onDoubleClick={this.props.onDoubleClick}
 				>
 				<Label
 					className={this._titleClasses.join(' ')}

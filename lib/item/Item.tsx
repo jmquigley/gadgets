@@ -33,11 +33,12 @@ export interface ItemProps extends BaseProps, TitleProps {
 	hiddenRightButton?: boolean;
 	leftButton?: any;
 	onBlur?: any;
-	onMouseOut?: any;
+	onClick?: any;
+	onDoubleClick?: any;
 	onKeyDown?: any;
 	onKeyPress?: any;
+	onMouseOut?: any;
 	rightButton?: any;
-	selected?: boolean;
 	title?: string;
 }
 
@@ -48,9 +49,11 @@ export function getDefaultItemProps(): ItemProps {
 			hiddenRightButton: false,
 			leftButton: null,
 			onBlur: nilEvent,
-			onMouseOut: nilEvent,
+			onClick: nilEvent,
+			onDoubleClick: nilEvent,
 			onKeyDown: nilEvent,
 			onKeyPress: nilEvent,
+			onMouseOut: nilEvent,
 			rightButton: null,
 			selected: false,
 			stacked: false,
@@ -158,17 +161,23 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		return (
 			<li
 				id={this.props.id}
-				onMouseOut={this.props.onMouseOut}
+				className={this.classes.join(' ')}
+				onBlur={this.props.onBlur}
+				onClick={this.props.onClick}
+				onDoubleClick={this.props.onDoubleClick}
 				onKeyDown={this.props.onKeyDown}
 				onKeyPress={this.props.onKeyPress}
-				className={this.classes.join(' ')}
-				style={{...this.inlineStyle}}>
+				onMouseOut={this.props.onMouseOut}
+				style={{...this.inlineStyle}}
+				>
 				{leftButton}
 				<Title
-					{...this.props}
 					className={this.styles.itemTitle}
+					disabled={this.props.disabled}
+					noripple={this.props.noripple}
 					sizing={this.props.sizing}
 					style={{padding: this._titlePadding}}
+					visible={this.props.visible}
 					>
 					{this.props.title}
 				</Title>

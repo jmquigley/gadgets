@@ -95,24 +95,25 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				text: val
 			});
 
-			console.log(`Changed to: ${val}`);
 			this.props.onChange(val);
 		}
 	}
 
 	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
-		if (!this.props.noedit) {
-			let range = document.caretRangeFromPoint(e.clientX, e.clientY);
-			let sel = window.getSelection();
+		if (!this.props.noedit && document != null && window != null) {
+			if ('caretRangeFromPoint' in document) {
+				let range = document.caretRangeFromPoint(e.clientX, e.clientY);
+				let sel = window.getSelection();
 
-			this.setState({
-				editable: true
-			});
+				this.setState({
+					editable: true
+				});
 
-			window.setTimeout(() => {
-				sel.removeAllRanges();
-				sel.addRange(range);
-			}, 20);
+				window.setTimeout(() => {
+					sel.removeAllRanges();
+					sel.addRange(range);
+				}, 20);
+			}
 		}
 	}
 

@@ -68,7 +68,6 @@ export class List extends BaseComponent<ListProps, ListState> {
 	}
 
 	private selectHandler(item: ListItem) {
-		console.log(`Selected: ${item.props.id}`);
 		if (this.state.selectedItem != null
 			&& item.props.id === this.state.selectedItem.props.id) {
 			item = null;

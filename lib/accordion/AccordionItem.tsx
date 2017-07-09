@@ -127,11 +127,14 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 
 		return (
-			<div className={this.classes.join(" ")} style={this.inlineStyle}>
+			<div
+				className={this.classes.join(" ")}
+				style={this.inlineStyle}
+				>
 				<Item
-					title={this.props.title}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 					rightButton={rightButton}
+					title={this.props.title}
 					/>
 				{content}
 			</div>

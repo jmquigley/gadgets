@@ -60,7 +60,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
 	private _delay = 300;
-	private _prevent: boolean = false;
+	private _preventClick: boolean = false;
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
@@ -79,8 +79,16 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.shouldComponentUpdate(props);
 	}
 
+	get preventClick(): boolean {
+		return this._preventClick;
+	}
+
+	/**
+	 * When an edit is concluded, this function is called to restore the pre-edit
+	 * state.
+	 */
 	private deactivateEdit() {
-		this._prevent = false;
+		this._preventClick = false;
 		this.setState({toggleRipple: false});
 	}
 
@@ -93,20 +101,19 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		// It is a way to differentiate between single and double click events
 		// A double click is handled differently from the single
 		this._timer = setTimeout(() => {
-			if (!this._prevent) {
+			if (!this._preventClick) {
 				this.props.href.selectHandler(this);
 				this.props.onClick();
+				this.props.onSelect(this.props.title);
 			}
 		}, this._delay);
-
-		this.props.onSelect(this.props.title);
 	}
 
 	private handleDoubleClick() {
 		// If a double click occurs, then sent a flag preventing the single click
 		// from firing after its timer expires
 		clearTimeout(this._timer);
-		this._prevent = true;
+		this._preventClick = true;
 		this.setState({toggleRipple: true});
 	}
 
