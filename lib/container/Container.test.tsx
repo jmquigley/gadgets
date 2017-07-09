@@ -1,16 +1,25 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
 import {mount} from 'enzyme';
 import * as path from 'path';
 import * as React from 'react';
-import {Container} from './index';
+import {Container, getDefaultContainerProps} from './index';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
+});
+
+test('Test retrieval of Container props object', t => {
+	const props = getDefaultContainerProps();
+
+	t.truthy(props);
+
+	t.true('children' in props);
+	t.is(props.children, null);
 });
 
 test('Test creation of a Container control', t => {
@@ -21,7 +30,6 @@ test('Test creation of a Container control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.find('.ui-container').length, 1);
 	t.is(ctl.find('.container').length, 1);
@@ -37,7 +45,6 @@ test('Test creation of a Container control with an id value', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.find('.ui-container').length, 1);
 	t.is(ctl.find('.container').length, 1);

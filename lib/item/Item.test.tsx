@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -27,9 +27,12 @@ test('Test the creation of a Item control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('title'), 'test title');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 });
+
+// TODO: test adding a right and left button, click
+// TODO: create item disable test case
+// TODO; create item visible test case

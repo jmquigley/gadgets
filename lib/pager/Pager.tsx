@@ -298,7 +298,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttons[page] = (
 					<ButtonText
 						className={this._buttonStyle.join(' ')}
-						fontStyle={this.styling.prev.type}
 						key={String(page)}
 						noicon
 						onClick={() => {this.handleSelect(page)}}
@@ -321,7 +320,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttonsDisplay.push(
 					<ButtonText
 						className={this._buttonStyle.join(' ')}
-						fontStyle={this.styling.prev.type}
 						key={getUUID()}
 						noicon
 						disabled

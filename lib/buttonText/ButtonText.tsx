@@ -31,6 +31,7 @@
  * by default.
  * - `noicon: boolean` - Turns off the icon and only shows the text in the center
  * of the button.
+ * - `sizing: Sizing (normal)` - The size of this control set by the Sizing class
  * - `text: string` - The text string used by the button
  *
  * @module ButtonText
@@ -45,7 +46,6 @@ import {Icon, IconProps, getDefaultIconProps} from '../icon';
 import {BaseComponent, Sizing} from '../shared';
 
 export interface ButtonTextProps extends IconProps {
-	fontStyle?: Sizing;
 	justify?: number;
 	noicon?: boolean;
 	onClick?: any;
@@ -55,7 +55,6 @@ export interface ButtonTextProps extends IconProps {
 export function getDefaultButtonTextProps(): ButtonTextProps {
 	return cloneDeep(Object.assign(
 		getDefaultIconProps(), {
-			fontStyle: Sizing.normal,
 			justify: ButtonText.RIGHT,
 			noicon: false,
 			onClick: nilEvent,

@@ -2,20 +2,15 @@
  *  Throwaway test helper functions that are shared between tests
  */
 
+// TODO: move the test helper functions to lib/shared
+
 'use strict';
 
 import {CallbackTestContext} from 'ava';
 import * as fs from 'fs-extra';
 import {Fixture} from 'util.fixture';
-import logger from 'util.log';
 
 let jsdomCleanup: any = null;
-
-export const log = logger.instance({
-	debug: true,
-	namespace: 'app_testing',
-	nsWidth: 11
-});
 
 export function cleanup(msg: string, t: CallbackTestContext): void {
 	if (msg) {

@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -36,7 +36,6 @@ test('Test the creation of a List control container', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
@@ -54,7 +53,6 @@ test('Test disabling of a List control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.true(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
@@ -72,7 +70,6 @@ test('Test making List control invisible', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.false(ctl.prop('disabled'));
 	t.false(ctl.prop('visible'));
@@ -90,7 +87,7 @@ test('Test a list with ListItem and selection', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
+
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 	t.is(ctl.find('.ui-list').length, 1);
@@ -98,6 +95,6 @@ test('Test a list with ListItem and selection', t => {
 
 	let li1 = ctl.find(ListItem).first();
 	let li2 = ctl.find(ListItem).last();
-   t.is(li1.text(), "Item #1");
-   t.is(li2.text(), "Item #2");
+	t.is(li1.text(), "Item #1");
+	t.is(li2.text(), "Item #2");
 });

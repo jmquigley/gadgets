@@ -1,5 +1,6 @@
-import {Container} from './Container';
+import {Container, getDefaultContainerProps} from './Container';
 
 export {
-	Container
+	Container,
+	getDefaultContainerProps
 };

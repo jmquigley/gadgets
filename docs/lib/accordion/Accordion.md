@@ -27,5 +27,6 @@ None
 level of the control.
 
 #### Properties
-None
+- `children: React.ReactNode (null)` - the children nodes contained within
+this container.
 

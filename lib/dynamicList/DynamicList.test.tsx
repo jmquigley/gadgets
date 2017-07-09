@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -26,10 +26,13 @@ test('Test creation of a DynamicList control', t => {
 	const ctl = mount(<DynamicList className="test-class" />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 	t.is(ctl.find('.test-class').length, 1);
 });
+
+// TODO: test case for validating props object creator
+// TODO: disabling the DynamicList
+// TODO: make the DynamicList invisible

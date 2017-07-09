@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -23,6 +23,9 @@ test('Test retrieval of Button props object', t => {
 	t.true('iconName' in props);
 	t.is(props.iconName, 'bomb');
 
+	t.true('iconStyle' in props);
+	t.is(props.iconStyle, '');
+
 	t.true('sizing' in props);
 	t.is(props.sizing, Sizing.normal);
 });
@@ -31,7 +34,6 @@ test('Test creation of a Button control', t => {
 	const ctl = mount(<Button className="test-class"/>);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.is(ctl.prop('id'), '');
@@ -44,24 +46,25 @@ test('Test creation of a Button control', t => {
 	t.is(ctl.find('.test-class').length, 1);
 });
 
-test('Test creation of a Button control with custom icon and colors', t => {
+test('Test creation of a Button control with custom icon, colors, and border', t => {
 	const ctl = mount(
 		<Button
 			color="red"
 			backgroundColor="black"
 			borderColor="green"
+			borderWidth="2px"
 			iconName="superpowers"
 			/>
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'superpowers');
 	t.is(ctl.prop('id'), '');
 	t.is(ctl.prop('color'), 'red');
 	t.is(ctl.prop('backgroundColor'), 'black');
 	t.is(ctl.prop('borderColor'), 'green');
+	t.is(ctl.prop('borderWidth'), '2px');
 
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
@@ -76,7 +79,6 @@ test('Test Button click event', t => {
 	const ctl = mount(<Button onClick={click} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.is(ctl.prop('id'), '');
@@ -92,7 +94,6 @@ test('Test disabling of a Button', t => {
 	const ctl = mount(<Button onClick={click} disabled={true} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.true(ctl.prop('disabled'));
@@ -108,7 +109,6 @@ test('Test making a Button invisible', t => {
 	const ctl = mount(<Button onClick={click} visible={false} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.is(ctl.prop('id'), '');

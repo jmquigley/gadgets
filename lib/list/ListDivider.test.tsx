@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -28,7 +28,6 @@ test('Test the creation of a ListDivider control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));

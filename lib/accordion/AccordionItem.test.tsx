@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -20,7 +20,6 @@ test('Test the creation of a AccordionItem control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
@@ -38,7 +37,6 @@ test('Test clicking of the AccordionItem header', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	ctl.find('.ui-title-bar').simulate('click');
 	t.true(click.calledOnce);
@@ -51,7 +49,6 @@ test('Test clicking the AccordionItem new button', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	let btn = ctl.find('.ui-button');
 	t.is(btn.length, 1);
@@ -59,3 +56,7 @@ test('Test clicking the AccordionItem new button', t => {
 	btn.simulate('click');
 	t.true(click.calledOnce);
 });
+
+// TODO: test case for validating props object creator
+// TODO: disabling the accordion item
+// TODO: make the accordion item invisible

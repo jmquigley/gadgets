@@ -1,24 +1,4 @@
-/**
- * {description}
- *
- * #### Examples:
- *
- * ```javascript
- * import {Button} from 'gadgets';
- * <Button iconName="cab" onClick={someFunction} />
- * ```
- *
- * #### Events
- * - `{name}` - {description}
- *
- * #### Styles
- * - `` - {description}
- *
- * #### Properties
- * - `{name}: {datatype}` - {description}
- *
- * @module List
- */
+// TODO: add List documentation
 
 //
 // This is a container element that holds the contents of a list.  It creates

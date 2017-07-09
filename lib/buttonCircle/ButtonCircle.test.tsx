@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -27,7 +27,6 @@ test('Test creation of a ButtonCircle control', t => {
 	const ctl = mount(<ButtonCircle className="test-class" />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
@@ -42,7 +41,6 @@ test('Test ButtonCircle click event', t => {
 	const ctl = mount(<ButtonCircle onClick={click} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.is(ctl.prop('id'), '');
@@ -58,7 +56,6 @@ test('Test disabling of a ButtonCircle control', t => {
 	const ctl = mount(<ButtonCircle onClick={click} disabled={true} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.true(ctl.prop('disabled'));
@@ -74,7 +71,6 @@ test('Test making a ButtonCircle control invisible', t => {
 	const ctl = mount(<ButtonCircle onClick={click} visible={false} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));

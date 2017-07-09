@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -35,7 +35,6 @@ test('Test creation of a ButtonDialog control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));
@@ -59,7 +58,6 @@ test('Test creation of a ButtonDialog control on top', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));
@@ -80,7 +78,6 @@ test('Test the click event on a ButtonDialog control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));
@@ -88,7 +85,7 @@ test('Test the click event on a ButtonDialog control', t => {
 	t.is(ctl.prop('id'), '');
 	t.true(ctl.contains(<p>Dialog test</p>));
 
-	ctl.find('i').simulate('click');
+	ctl.find('.ui-button').simulate('click');
 	t.true(ctl.state('visible'));
 });
 
@@ -100,7 +97,6 @@ test('Test the disabling of the ButtonDialog control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.true(ctl.prop('disabled'));
@@ -108,7 +104,7 @@ test('Test the disabling of the ButtonDialog control', t => {
 	t.is(ctl.prop('id'), '');
 	t.is(ctl.find('.disabled').length, 2); // on control and button
 
-	ctl.find('i').simulate('click');
+	ctl.find('.ui-button').simulate('click');
 	t.false(ctl.state('visible'));
 });
 
@@ -120,7 +116,6 @@ test('Test making the ButtonDialog invisible', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));
@@ -141,9 +136,8 @@ test('Test opening the button dialog window', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
-	t.true(ctl.contains(<p>Dialog test</p>));
 
+	t.true(ctl.contains(<p>Dialog test</p>));
 	ctl.find('.ui-button').simulate('click');
 	t.true(ctl.state('visible'));
 });

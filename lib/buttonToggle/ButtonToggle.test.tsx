@@ -60,10 +60,12 @@ test('Test creation of a ButtonToggle control', t => {
 
 
 test('Test creation of a ButtonToggle control with on/off icons', t => {
- 	const ctl = mount(<ButtonToggle
-						  iconNameOn="star"
-						  iconNameOff="star-o"
-					  />);
+ 	const ctl = mount(
+		<ButtonToggle
+			iconNameOn="star"
+			iconNameOff="star-o"
+			/>
+	);
 
  	t.truthy(ctl);
 
@@ -143,11 +145,13 @@ test('Test making a ButtonToggle invisible', t => {
 
 test('Test the icon switch in a ButtonToggle click', t => {
  	const click = sinon.spy();
- 	const ctl = mount(<ButtonToggle
-						  iconNameOff='star-o'
-						  iconNameOn='star'
-						  onClick={click}
-					  />);
+ 	const ctl = mount(
+		<ButtonToggle
+			iconNameOff='star-o'
+			iconNameOn='star'
+			onClick={click}
+			/>
+	);
 
  	t.truthy(ctl);
 

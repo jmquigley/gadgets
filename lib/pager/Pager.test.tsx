@@ -385,3 +385,6 @@ test('Repeatedly create instance with different initial start for props test', t
 		t.is(pager.currentPage, i);
 	}
 });
+
+// TODO: add test case for TextInput in Pager
+// TODO: add test for Pager blur, change, keyPress

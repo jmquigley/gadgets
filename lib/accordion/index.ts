@@ -1,7 +1,9 @@
-import {Accordion} from './Accordion';
-import {AccordionItem} from './AccordionItem';
+import {Accordion, getDefaultAccordionProps} from './Accordion';
+import {AccordionItem, getDefaultAccordionItemProps} from './AccordionItem';
 
 export {
 	Accordion,
-	AccordionItem
+	AccordionItem,
+	getDefaultAccordionItemProps,
+	getDefaultAccordionProps
 };

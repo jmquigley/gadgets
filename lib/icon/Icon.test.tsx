@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -40,7 +40,6 @@ test('Test creation of an Icon control with icon', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
@@ -65,7 +64,6 @@ test('Test creation of an Icon control with image', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.find('.fa').length, 0);
 	t.is(ctl.find('.fa-bomb').length, 0);
@@ -77,7 +75,6 @@ test('Test the disabling of the Icon control', t => {
 	const ctl = mount(<Icon disabled={true} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.true(ctl.prop('disabled'));
@@ -91,7 +88,6 @@ test('Test making the ButtonDialog invisible', t => {
 		<Icon visible={false} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));

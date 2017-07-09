@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -9,7 +9,6 @@ import * as path from 'path';
 import * as React from 'react';
 import * as sinon from 'sinon';
 import {ButtonText, getDefaultButtonTextProps} from './index';
-import {Sizing} from '../shared';
 
 test.after.always.cb(t => {
 	cleanup(path.basename(__filename), t);
@@ -19,9 +18,6 @@ test('Test retrieval of ButtonText props object', t => {
 	const props = getDefaultButtonTextProps();
 
 	t.truthy(props);
-
-	t.true('fontStyle' in props);
-	t.is(props.fontStyle, Sizing.normal);
 
 	t.true('iconName' in props);
 	t.is(props.iconName, 'bomb');
@@ -46,7 +42,6 @@ test('Test creation of a ButtonText control to the left', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
@@ -73,7 +68,6 @@ test('Test button click in ButtonText control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
@@ -90,7 +84,6 @@ test('Test disabling of a ButtonText control', t => {
 	const ctl = mount(<ButtonText onClick={click} disabled={true} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.true(ctl.prop('disabled'));
@@ -106,7 +99,6 @@ test('Test making a ButtonText control invisible', t => {
 	const ctl = mount(<ButtonText onClick={click} visible={false} />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('iconName'), 'bomb');
 	t.false(ctl.prop('disabled'));

@@ -33,5 +33,6 @@ Two constants are available: ButtonText.LEFT & ButtonText.RIGHT.  It uses right
 by default.
 - `noicon: boolean` - Turns off the icon and only shows the text in the center
 of the button.
+- `sizing: Sizing (normal)` - The size of this control set by the Sizing class
 - `text: string` - The text string used by the button
 

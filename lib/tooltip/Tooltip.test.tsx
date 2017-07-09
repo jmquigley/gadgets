@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -124,7 +124,6 @@ test('Test creation of a Tooltip control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
@@ -143,7 +142,6 @@ test('Test disabling of a Tooltip', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
 	t.true(ctl.prop('disabled'));
@@ -156,7 +154,6 @@ test('Test making a Tooltip invisible', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));

@@ -25,7 +25,8 @@
  * level of the control.
  *
  * #### Properties
- * None
+ * - `children: React.ReactNode (null)` - the children nodes contained within
+ * this container.
  *
  * @module Accordion
  */
@@ -37,16 +38,17 @@ import * as React from 'react';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 export interface AccordionProps extends BaseProps {
+	children?: React.ReactNode;
 }
 
 export function getDefaultAccordionProps(): AccordionProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
+			children: null
 		}));
 }
 
-export interface AccordionState {
-}
+export interface AccordionState {}
 
 export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 

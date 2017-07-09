@@ -23,16 +23,17 @@
  * - `ui-icon` - applied to the top level container for the icon.
  *
  * #### Properties
- * - `backgroundColor: string` - Sets the background color of the icon when
- * `iconName` is used.
- * - `color: string` - Sets the icon color when `iconName` is used.  The
- * default is *black*.
- * - `iconName: string` - The name of the font awesome icon that will be
- * used in this icon.  This option is mutually exclusive to imageFile
- * - `imageFile: string` - The path to an image file that will be used in
- * this icon.  This option is mutually excludive to iconName.
- * - `sizing: Sizing` - There are seven icon sizes that can be used.  See the
- * shared props documentation for the enumerations used for each sizing.
+ * - `backgroundColor: string (inherit)` - Sets the background color of
+ * the icon when `iconName` is used.
+ * - `color: string (inherit)` - Sets the icon color when `iconName` is used.
+ *  The default is *black*.
+ * - `iconName: string (bomb)` - The name of the font awesome icon that
+ * will be used in this icon.  This option is mutually exclusive to imageFile
+ * - `imageFile: string ('')` - The path to an image file that will be used
+ * in this icon.  This option is mutually exclusive to iconName.
+ * - `sizing: Sizing (Sizing.normal)` - There are seven icon sizes that can
+ * be used. See the shared props documentation for the enumerations used for
+ * each sizing.
  *
  * @module Icon
  */

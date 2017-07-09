@@ -1,25 +1,4 @@
-/**
- * {description}
- *
- * #### Examples:
- *
- * ```javascript
- * import {Button} from 'gadgets';
- * <Button iconName="cab" onClick={someFunction} />
- * ```
- *
- * #### Events
- * - `{name}` - {description}
- *
- * #### Styles
- * - `` - {description}
- *
- * #### Properties
- * - `{name}: {datatype}` - {description}
- *
- * @module ListItem
- */
-
+// TODO: add documentation for ListItem
 
 //
 // Generates elements that will be contained within a List.  This resolved

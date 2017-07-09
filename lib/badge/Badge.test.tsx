@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -45,7 +45,6 @@ test('Test creation of a Badge control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('backgroundColor'), 'blue');
 	t.is(ctl.prop('color'), 'red');
@@ -71,7 +70,6 @@ test('Test clicking a Badge counter control', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
@@ -79,3 +77,6 @@ test('Test clicking a Badge counter control', t => {
 	ctl.find('.ui-badge').simulate('click');
 	t.true(click.calledOnce);
 });
+
+// TODO: disabling the badge control
+// TODO: make the badge invisible

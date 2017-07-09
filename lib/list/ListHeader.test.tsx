@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -27,7 +27,6 @@ test('Test the creation of a ListHeader control with simple title', t => {
 	);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('title'), 'test title');
 	t.false(ctl.prop('disabled'));
@@ -36,3 +35,7 @@ test('Test the creation of a ListHeader control with simple title', t => {
 	t.is(ctl.find('.ui-list-header').length, 1);
 	t.is(ctl.find('.listHeader').length, 1);
 });
+
+// TODO: test case for validating props object creator
+// TODO: disabling the accordion item
+// TODO: make the accordion item invisible

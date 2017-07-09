@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -17,10 +17,14 @@ test('Test creation of a TextField control', t => {
 	const ctl = mount(<TextField className="test-class" />);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
 	t.true(ctl.prop('visible'));
 	t.is(ctl.find('.test-class').length, 1);
 });
+
+// TODO: disabling the TextField control
+// TODO: make the TextField invisible
+// TODO: test adding/retrieving text example from the TextField control
+// TODO: test validation routines

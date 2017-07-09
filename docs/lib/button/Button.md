@@ -22,7 +22,9 @@ import {Button} from 'gadgets';
 button.
 
 #### Properties
-- `iconName: string` - the name of the font awesome icon used with this button
+- `iconName: string ('bomb')` - the name of the font awesome icon used with this button
+- `iconStyle: string ('')` - a CSS style class name that will be added to the
+icon within the button.
 - `sizing: Sizing` - Allows one to change the size of the icon within the button.
 See the shared props object for the `Sizing` enumeration.
 

@@ -1,6 +1,6 @@
 'use strict';
 
-import {cleanup, log, mockupEnv} from '../../test/helpers';
+import {cleanup, mockupEnv} from '../../test/helpers';
 mockupEnv();
 
 import test from 'ava';
@@ -30,7 +30,6 @@ test('Test creation of a Title control', t => {
 	const ctl = mount(<Title className="test-class">{s}</Title>);
 
 	t.truthy(ctl);
-	log.debug(ctl.html(), __filename);
 
 	t.is(ctl.prop('id'), '');
 	t.false(ctl.prop('disabled'));
@@ -39,3 +38,7 @@ test('Test creation of a Title control', t => {
 	t.is(ctl.find('.test-class').length, 1);
 	t.is(ctl.text(), s);
 });
+
+// TODO: add test for Title props retrieval
+// TODO: disabling the Title control
+// TODO: make the Title invisible
