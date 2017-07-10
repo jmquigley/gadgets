@@ -40,7 +40,8 @@ import {Toast, ToastLevel, ToastType} from 'gadgets';
 ```
 
 #### Events
-- `onClose()` - when the message is cloed or disappers this callback is
+- `onClick()` - If the user clicks the close button this event is invoked.
+- `onClose()` - when the message is closed or disappers this callback is
 invoked.  It takes no parameters.
 
 #### Styles

@@ -2,7 +2,7 @@
 
 ## ListDivider
 Creats a dividing line within a List compoenent.  It uses a single
-`<hr />` to wihtin a list item to make the dividing line.
+`<hr />` to within a list item to make the dividing line.
 
 #### Examples:
 
