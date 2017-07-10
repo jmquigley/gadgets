@@ -12,18 +12,18 @@
 		box-sizing: border-box;
 	}
 
-	.title {
-		text-align: left;
-		flex: 3;
+	.titleBarStacked {
+		@extend baseTitleBar;
 	}
 
-	.widget {
-		text-align: right;
+	.titleEven {
+		text-align: left;
 		flex: 1;
 	}
 
-	.titleBarStacked {
-		@extend baseTitleBar;
+	.widgetEven {
+		text-align: right;
+		flex: 1;
 	}
 
 	.titleStacked {
@@ -32,5 +32,35 @@
 
 	.widgetStacked {
 		display: block;
+	}
+
+	.titleThreeQuarter {
+		text-align: left;
+		flex: 3;
+	}
+
+	.widgetThreeQuarter {
+		text-align: right;
+		flex: 1;
+	}
+
+	.titleQuarter {
+		text-align: left;
+		flex: 1;
+	}
+
+	.widgetQuarter {
+		text-align: right;
+		flex: 3;
+	}
+
+	.titleDominant {
+		text-align: left;
+		flex: 5;
+	}
+
+	.widgetDominant {
+		text-align: right;
+		flex: 1;
 	}
 }

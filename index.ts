@@ -19,7 +19,7 @@ import {
 	Sizing
 } from './lib/shared';
 import {TextField} from './lib/textField';
-import {Title} from './lib/title';
+import {Title, TitleLayout} from './lib/title';
 import {Toast, ToastLevel, ToastType} from './lib/toast';
 import {Tooltip} from './lib/tooltip';
 import {Triangle} from './lib/triangle';
@@ -49,6 +49,7 @@ export {
 	Sizing,
 	TextField,
 	Title,
+	TitleLayout,
 	Toast,
 	ToastLevel,
 	ToastType,

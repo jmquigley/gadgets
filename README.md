@@ -197,8 +197,8 @@ TODO: create the TextField control
 ### TimeChooser
 TODO: create TimeChooser control
 
-### Title
-TODO: create Title control
+### [Title](docs/lib/title/Title.md)
+A reusable title block used to format two items: a title and a widget.  The title is generally a text string and the widget can be a text string or another control.
 
 ### [Toast](docs/lib/toast/Toast.md)
 A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.

@@ -6,12 +6,13 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
-import {Title, TitleProps} from '../title';
+import {Title, TitleLayout, TitleProps} from '../title';
 
 export interface ItemProps extends BaseProps, TitleProps {
 	hiddenLeftButton?: boolean;
 	hiddenRightButton?: boolean;
 	leftButton?: any;
+	layout?: TitleLayout;
 	onBlur?: any;
 	onClick?: any;
 	onDoubleClick?: any;
@@ -19,6 +20,7 @@ export interface ItemProps extends BaseProps, TitleProps {
 	onKeyPress?: any;
 	onMouseOut?: any;
 	rightButton?: any;
+	stacked?: boolean;
 	title?: string;
 }
 
@@ -27,6 +29,7 @@ export function getDefaultItemProps(): ItemProps {
 		getDefaultBaseProps(), {
 			hiddenLeftButton: false,
 			hiddenRightButton: false,
+			layout: TitleLayout.dominant,
 			leftButton: null,
 			onBlur: nilEvent,
 			onClick: nilEvent,
@@ -154,10 +157,12 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 				<Title
 					className={this.styles.itemTitle}
 					disabled={this.props.disabled}
+					layout={this.props.stacked ? TitleLayout.stacked : this.props.layout}
 					noripple={this.props.noripple}
 					sizing={this.props.sizing}
 					style={{padding: this._titlePadding}}
 					visible={this.props.visible}
+					widget={this.props.widget}
 					>
 					{this.props.title}
 				</Title>

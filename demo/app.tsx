@@ -35,6 +35,7 @@ const {
 	Sizing,
 	TextField,
 	Title,
+	TitleLayout,
 	Toast,
 	ToastLevel,
 	ToastType,
@@ -686,24 +687,24 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildTitle = () => (
 		<Container id="titleExample">
-			<h3>Side-by-side (title/widget)</h3>
-			<Title widget="widget" sizing={Sizing.xxsmall}>xxsmall</Title><br/>
-			<Title widget="widget" sizing={Sizing.xsmall}>xsmall</Title><br/>
-			<Title widget="widget" sizing={Sizing.small}>small</Title><br/>
-			<Title widget="widget" sizing={Sizing.normal}>normal</Title><br/>
-			<Title widget="widget" sizing={Sizing.large}>large</Title><br/>
-			<Title widget="widget" sizing={Sizing.xlarge}>xlarge</Title><br/>
-			<Title widget="widget" sizing={Sizing.xxlarge}>xxlarge</Title><br/>
+			<h3>Layouts</h3>
+			<Title widget="widget" layout={TitleLayout.quarter}>quarter</Title><br/>
+			<Title widget="widget" layout={TitleLayout.even}>even</Title><br/>
+			<Title widget="widget" layout={TitleLayout.threequarter}>three quarter</Title><br/>
+			<Title widget="widget" layout={TitleLayout.stacked}>stacked</Title><br/>
+			<Title widget="widget" layout={TitleLayout.dominant}>dominant</Title><br/>
+			<br/>
+
+			<h3>Sizes</h3>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xxsmall}>xxsmall</Title><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xsmall}>xsmall</Title><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.small}>small</Title><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.normal}>normal</Title><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.large}>large</Title><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xlarge}>xlarge</Title><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xxlarge}>xxlarge</Title><br/>
 		    <br/>
 
-			<h3>Stacked (title over widget)</h3>
-			<Title widget="widget" stacked sizing={Sizing.xxsmall}>xxsmall</Title><br/>
-			<Title widget="widget" stacked sizing={Sizing.xsmall}>xsmall</Title><br/>
-			<Title widget="widget" stacked sizing={Sizing.small}>small</Title><br/>
-			<Title widget="widget" stacked sizing={Sizing.normal}>normal</Title><br/>
-			<Title widget="widget" stacked sizing={Sizing.large}>large</Title><br/>
-			<Title widget="widget" stacked sizing={Sizing.xlarge}>xlarge</Title><br/>
-			<Title widget="widget" stacked sizing={Sizing.xxlarge}>xxlarge</Title><br/>
 		</Container>
 	)
 
@@ -827,7 +828,7 @@ class App extends React.Component<AppProps, AppState> {
 					sizing={Sizing.small}
 					type={ToastType.persistent}
 					visible={this.state.toastVisible6}
-					>
+				>
 					This is a sample custom message
 				</Toast>
 			</div>

@@ -1,4 +1,51 @@
-// TODO: add documentation for Title component
+/**
+ * A reusable title block used to format two items: a title and
+ * a widget.  The title is generally a text string and the widget
+ * can be a text string or another control.  The control takes these
+ * two items and presents them in one of four layouts controled by
+ * the enum `TitleLayout`:
+ *
+ * - TitleLayout.quarter
+ * - TitleLayout.even
+ * - TitleLayout.threequarter
+ * - TitleLayout.stacked
+ * - TitleLayout.dominant
+ *
+ * In `quarter` the title takes up 25% and the widget takes up 75%
+ * In `even` the title and widget take up 50%
+ * In `threequarter` the title takes up 75% and the widget takes up 25%
+ * In `stacked` the title is placed above the widget
+ * In `dominant` the title takes up 83% of the width (5/6)
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {Sizing, Title, TitleLayout} from 'gadgets';
+ * <Title
+ *     widget="widget"
+ *     layout={TitleLayout.stacked}
+ *     sizing={Sizing.small}>
+ *     title string
+ * </Title>
+ * ```
+ *
+ * #### Events
+ * N/A
+ *
+ * #### Styles
+ * - `ui-title-bar` - Placed on the top level `<div>` for the whole control
+ * - `ui-title` - Placed on the title label text within the title bar.
+ * - `ui-title-widget` - Placed on the widget control within the title block.
+ *  This is the `<div>` around the given widget.
+ *
+ * #### Properties
+ * - `layout: {TitleLayout} (TitleLayout.dominant)` - The structure of the
+ * title/widget within the component.
+ * - `widget: {any} (null)` - The given user defined widget control that is
+ * injected into the title.
+ *
+ * @module Title
+ */
 
 'use strict';
 
@@ -8,14 +55,22 @@ import {Label} from '../label';
 import {BaseComponent} from '../shared/base';
 import {BaseProps, getDefaultBaseProps} from '../shared';
 
+export enum TitleLayout {
+	quarter,
+	even,
+	threequarter,
+	stacked,
+	dominant
+}
+
 export interface TitleProps extends BaseProps {
-	stacked?: boolean;
+	layout?: TitleLayout;
 	widget?: any;
 }
 
 export function getDefaultTitleProps(): TitleProps {
 	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		stacked: false,
+		layout: TitleLayout.dominant,
 		widget: null
 	}));
 }
@@ -40,7 +95,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		this.classes.push("ui-title-bar");
 		this.classes.push(this.styling.fontStyle);
 
-		if (nextProps.stacked) {
+		if (nextProps.layout === TitleLayout.stacked) {
 			this.classes.push(this.styles.titleBarStacked);
 		} else {
 			this.classes.push(this.styles.titleBar);
@@ -51,12 +106,37 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		}
 
 		this._titleClasses = [];
-		this._titleClasses.push('ui-title');
-		this._titleClasses.push(nextProps.stacked ? this.styles.titleStacked : this.styles.title);
-
 		this._widgetClasses = [];
-		this._widgetClasses.push('ui-widget');
-		this._widgetClasses.push(nextProps.stacked ? this.styles.widgetStacked : this.styles.widget);
+
+		this._titleClasses.push('ui-title');
+		this._widgetClasses.push('ui-title-widget');
+
+		switch (nextProps.layout) {
+			case TitleLayout.quarter:
+				this._titleClasses.push(this.styles.titleQuarter);
+				this._widgetClasses.push(this.styles.widgetQuarter);
+				break;
+
+			case TitleLayout.even:
+				this._titleClasses.push(this.styles.titleEven);
+				this._widgetClasses.push(this.styles.widgetEven);
+				break;
+
+			case TitleLayout.threequarter:
+				this._titleClasses.push(this.styles.titleThreeQuarter);
+				this._widgetClasses.push(this.styles.widgetThreeQuarter);
+				break;
+
+			case TitleLayout.stacked:
+				this._titleClasses.push(this.styles.titleStacked);
+				this._widgetClasses.push(this.styles.widgetStacked);
+				break;
+
+			case TitleLayout.dominant:
+			default:
+				this._titleClasses.push(this.styles.titleDominant);
+				this._widgetClasses.push(this.styles.widgetDominant);
+		}
 
 		super.buildStyles(nextProps);
 		return true;
@@ -80,7 +160,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 					/>
 				<div className={this._widgetClasses.join(' ')}>
 					{this.props.widget}
-				</div>
+					</div>
 			</div>
 		);
 	}
