@@ -4,8 +4,23 @@ import {
 	TextFieldProps
 } from './TextField';
 
+import {
+	validateEmail,
+	validateMaxLength,
+	validateMinLength,
+	validateURL,
+	Validator,
+	ValidatorFn
+} from './validator';
+
 export {
 	getDefaultTextFieldProps,
 	TextField,
-	TextFieldProps
+	TextFieldProps,
+	validateEmail,
+	validateMaxLength,
+	validateMinLength,
+	validateURL,
+	Validator,
+	ValidatorFn
 };

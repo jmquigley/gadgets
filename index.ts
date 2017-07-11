@@ -18,7 +18,11 @@ import {
 	Location,
 	Sizing
 } from './lib/shared';
-import {TextField} from './lib/textField';
+import {
+	TextField,
+	Validator,
+	ValidatorFn
+} from './lib/textField';
 import {Title, TitleLayout} from './lib/title';
 import {Toast, ToastLevel, ToastType} from './lib/toast';
 import {Tooltip} from './lib/tooltip';
@@ -54,5 +58,7 @@ export {
 	ToastLevel,
 	ToastType,
 	Tooltip,
-	Triangle
+	Triangle,
+	Validator,
+	ValidatorFn
 };

@@ -669,19 +669,37 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildTextField = () => (
 		<Container id="textfieldExample">
-			<TextField type="text" size="10" sizing={Sizing.xxsmall} placeholder="xxsmall" />
-			<br/><br/>
-			<TextField type="text" size="10" sizing={Sizing.xsmall} placeholder="xsmall" />
-			<br/><br/>
-			<TextField type="text" size="10" sizing={Sizing.small} placeholder="small" />
-			<br/><br/>
-			<TextField type="text" size="10" sizing={Sizing.normal} placeholder="normal" />
-			<br/><br/>
-			<TextField type="text" size="10" sizing={Sizing.large} placeholder="large" />
-			<br/><br/>
-			<TextField type="text" size="10" sizing={Sizing.xlarge} placeholder="xlarge" />
-			<br/><br/>
-			<TextField type="text" size="10" sizing={Sizing.xxlarge} placeholder="xxlarge" />
+
+			<h3>Validation of Max & Min Length</h3>
+			<TextField
+				placeholder="validation"
+				minLength="5"
+				maxLength="10"
+				usevalidation
+				/>
+
+			<h3>Validation of Email</h3>
+			<TextField
+				placeholder="email validation"
+				type="email"
+				usevalidation
+				/>
+
+			<h3>Validation of URL</h3>
+			<TextField
+				placeholder="url validation"
+				type="url"
+				usevalidation
+				/>
+
+			<h3>Sizing</h3>
+			<TextField type="text" size="10" sizing={Sizing.xxsmall} placeholder="xxsmall" /><br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.xsmall} placeholder="xsmall" /><br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.small} placeholder="small" /><br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.normal} placeholder="normal" /><br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.large} placeholder="large" /><br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.xlarge} placeholder="xlarge" /><br/><br/>
+			<TextField type="text" size="10" sizing={Sizing.xxlarge} placeholder="xxlarge" /><br/>
 		</Container>
 	);
 

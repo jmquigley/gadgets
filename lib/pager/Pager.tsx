@@ -490,7 +490,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					 onChange={this.handleChange}
 					 onKeyPress={this.handleKeyPress}
 					 placeholder={String(this.currentPage)}
-					 sizing={this.styling.prev.type}
+					 sizing={this.props.sizing}
 					 type="number"
 					 value={this.currentPage}
 					 />
