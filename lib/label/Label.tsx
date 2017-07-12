@@ -134,7 +134,6 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			<span
 				className={this.classes.join(' ')}
 				contentEditable={this.state.editable}
-				disabled={this.props.disabled}
 				onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
 				onClick={this.props.onClick}
 				onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}

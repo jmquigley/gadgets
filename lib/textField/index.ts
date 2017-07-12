@@ -8,6 +8,7 @@ import {
 	validateEmail,
 	validateMaxLength,
 	validateMinLength,
+	validateRegex,
 	validateURL,
 	Validator,
 	ValidatorFn
@@ -20,6 +21,7 @@ export {
 	validateEmail,
 	validateMaxLength,
 	validateMinLength,
+	validateRegex,
 	validateURL,
 	Validator,
 	ValidatorFn

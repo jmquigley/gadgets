@@ -88,7 +88,6 @@ export class List extends BaseComponent<ListProps, ListState> {
 		return (
 			<div
 				className={this.classes.join(' ')}
-				disabled={this.props.disabled}
 				id={this.props.id}
 				style={this.inlineStyle}
 				>

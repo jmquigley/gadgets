@@ -116,7 +116,6 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 		return (
 			<div
 				className={this.classes.join(' ')}
-				disabled={this.props.disabled}
 				onClick={this.handleClick}
 				style={{...this.inlineStyle}}
 				>

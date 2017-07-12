@@ -155,7 +155,6 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 			<div
 				className={this.classes.join(" ")}
 				style={this.inlineStyle}
-				disabled={this.props.disabled}
 				onClick={this.handleClick}>
 				{leftButton}
 				{icon}

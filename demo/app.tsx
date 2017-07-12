@@ -40,7 +40,8 @@ const {
 	ToastLevel,
 	ToastType,
 	Tooltip,
-	Triangle
+	Triangle,
+	Validator
 } = require('../dist/bundle');
 
 // Build global testing data for List Item controls
@@ -670,7 +671,7 @@ class App extends React.Component<AppProps, AppState> {
 	private buildTextField = () => (
 		<Container id="textfieldExample">
 
-			<h3>Validation of Max & Min Length</h3>
+			<h3>Validation of Max (10) & Min (5) Length</h3>
 			<TextField
 				placeholder="validation"
 				minLength="5"
@@ -690,6 +691,21 @@ class App extends React.Component<AppProps, AppState> {
 				placeholder="url validation"
 				type="url"
 				usevalidation
+				/>
+
+			<h3>Validation with custom alphanumeric</h3>
+			<TextField
+				placeholder="custom"
+				usevalidation
+				validators={[
+					new Validator(
+						(value: string) => {
+							return /^[0-9a-zA-Z]+$/.test(value);
+						},
+						'Not alphanumeric only',
+						'Contains only alphanumeric'
+					)
+				]}
 				/>
 
 			<h3>Sizing</h3>
