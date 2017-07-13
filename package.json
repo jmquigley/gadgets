@@ -18,7 +18,7 @@
 		"main": "./dist/bundle.js",
 		"types": "./index.d.ts",
 		"scripts": {
-				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run docs && yarn run test",
+				"all": "yarn install && yarn run clean && yarn run build && yarn run docs && yarn run test",
 				"build": "pkgwrap --build --jsx --webpack",
 				"clean": "pkgwrap --clean",
 				"coverage": "pkgwrap --coverage --jest",
@@ -32,7 +32,7 @@
 		},
 		"dependencies": {
 				"process-nextick-args": "^1.0.7",
-				"util.pkgwrap": ">=0.0.61"
+				"util.pkgwrap": ">=0.0.62"
 		},
 		"devDependencies": {
 				"@types/enzyme": "^2.8.2",
@@ -64,7 +64,6 @@
 				"file-loader": "^0.11.2",
 				"font-awesome": "^4.7.0",
 				"jest": "^20.0.4",
-				"jest-css-modules": "^1.1.0",
 				"jquery": "^3.2.1",
 				"jsdom": "^11.1.0",
 				"jsdom-global": "^3.0.2",
@@ -108,7 +107,7 @@
 		},
 		"jest": {
 				"moduleNameMapper": {
-						"\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
+						"\\.(css)$": "<rootDir>/test/helpers/styleMock.js"
 				},
 				"testRegex": "__test__/.*\\.test\\.js$"
 		},
