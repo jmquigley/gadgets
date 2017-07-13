@@ -10,7 +10,7 @@ import {CallbackTestContext} from 'ava';
 import * as fs from 'fs-extra';
 import {Fixture} from 'util.fixture';
 
-// let jsdomCleanup: any = null;
+let jsdomCleanup: any = null;
 
 export function cleanup(msg: string, t: CallbackTestContext): void {
 	if (msg) {
@@ -29,9 +29,9 @@ export function cleanup(msg: string, t: CallbackTestContext): void {
 		t.end();
 	});
 
-	// if (jsdomCleanup != null) {
-	// 	jsdomCleanup();
-	// }
+	if (jsdomCleanup != null) {
+		jsdomCleanup();
+	}
 }
 
 /**
@@ -40,5 +40,5 @@ export function cleanup(msg: string, t: CallbackTestContext): void {
  */
 export function mockupEnv(): void {
 	require('mock-css-modules');
-	// jsdomCleanup = require('jsdom-global')();
+	jsdomCleanup = require('jsdom-global')();
 }

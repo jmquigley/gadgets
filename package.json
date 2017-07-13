@@ -18,23 +18,21 @@
 		"main": "./dist/bundle.js",
 		"types": "./index.d.ts",
 		"scripts": {
-				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run docs && yarn run test && yarn run report",
+				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run docs && yarn run test",
 				"build": "pkgwrap --build --jsx --webpack",
 				"clean": "pkgwrap --clean",
-				"coverage": "pkgwrap --coverage",
+				"coverage": "pkgwrap --coverage --jest",
 				"demo": "npm run all && npm start",
 				"docs": "pkgwrap --docs",
 				"lint": "pkgwrap --lint",
-				"postinstall": "pkgwrap --postinstall",
-				"report": "pkgwrap --reporting",
 				"start": "electron demo/.",
-				"test": "pkgwrap --testing --ava",
+				"test": "pkgwrap --testing --jest",
 				"watch": "webpack --watch --progress",
 				"webpack": "webpack"
 		},
 		"dependencies": {
 				"process-nextick-args": "^1.0.7",
-				"util.pkgwrap": ">=0.0.60"
+				"util.pkgwrap": ">=0.0.61"
 		},
 		"devDependencies": {
 				"@types/enzyme": "^2.8.2",
@@ -110,8 +108,14 @@
 		},
 		"jest": {
 				"moduleNameMapper": {
-      		"\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
-    		},
+						"\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
+				},
 				"testRegex": "__test__/.*\\.test\\.js$"
+		},
+		"ava": {
+				"files": [
+						"**/*.test.js",
+						"!**/__test__/*"
+				]
 		}
 }
