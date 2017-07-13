@@ -41,7 +41,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 		super(props, require('./styles.css'));
 		this.state = {
 			selectedItem: null
-		}
+		};
 
 		this.selectHandler = this.selectHandler.bind(this);
 		this.shouldComponentUpdate(props);
@@ -58,7 +58,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 		});
 	}
 
-	shouldComponentUpdate(nextProps: ListProps): boolean {
+	public shouldComponentUpdate(nextProps: ListProps): boolean {
 		super.resetStyles(nextProps);
 
 		this.classes.push('ui-list');
@@ -72,10 +72,10 @@ export class List extends BaseComponent<ListProps, ListState> {
 		return true;
 	}
 
-	render() {
-		let selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
-		let children = React.Children.map(this.props.children, child => {
-			let selected = child['props'].id === selectedKey;
+	public render() {
+		const selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
+		const children = React.Children.map(this.props.children, child => {
+			const selected = child['props'].id === selectedKey;
 			return React.cloneElement(child as any, {
 				href: {
 					selectHandler: this.selectHandler,
@@ -90,7 +90,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 				className={this.classes.join(' ')}
 				id={this.props.id}
 				style={this.inlineStyle}
-				>
+			>
 				<ul>
 					{children}
 				</ul>

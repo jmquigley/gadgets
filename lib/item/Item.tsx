@@ -45,9 +45,7 @@ export function getDefaultItemProps(): ItemProps {
 		}));
 }
 
-export interface ItemState {}
-
-export class Item extends BaseComponent<ItemProps, ItemState> {
+export class Item extends BaseComponent<ItemProps, undefined> {
 
 	public static defaultProps: ItemProps = getDefaultItemProps();
 
@@ -59,11 +57,17 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: ItemProps): boolean {
+	private computeButtonWidth() {
+		const fontEM: number = Number(this.styling.font.sizeem.replace('em', ''));
+		const size = fontEM + (fontEM * this._buttonScale * 2);
+		return `${size}em`;
+	}
+
+	public shouldComponentUpdate(nextProps: ItemProps): boolean {
 		super.resetStyles(nextProps);
 
 		this.classes.push('ui-item');
-		this.classes.push(this.styles.item);;
+		this.classes.push(this.styles.item);
 
 		if (nextProps.selected) {
 			this.classes.push('ui-selected');
@@ -94,16 +98,10 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		return true;
 	}
 
-	computeButtonWidth() {
-		let fontEM: number = Number(this.styling.font.sizeem.replace('em',''));
-		let size = fontEM + (fontEM * this._buttonScale * 2);
-		return `${size}em`;
-	}
-
-	render() {
+	public render() {
 		let leftButton = null;
 		if (this.props.leftButton != null && !this.props.disabled) {
-			let newButton = React.cloneElement(this.props.leftButton, {
+			const newButton = React.cloneElement(this.props.leftButton, {
 				sizing: this.props.sizing
 			});
 
@@ -115,7 +113,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 						((this.props.hiddenLeftButton) ? this.styles.hiddenButton : null)
 					}
 					style={{width: this.computeButtonWidth()}}
-					>
+				>
 					{newButton}
 				</div>
 			);
@@ -123,7 +121,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 
 		let rightButton = null;
 		if (this.props.rightButton != null && !this.props.disabled) {
-			let newButton = React.cloneElement(this.props.rightButton, {
+			const newButton = React.cloneElement(this.props.rightButton, {
 				sizing: this.props.sizing
 			});
 
@@ -135,7 +133,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 						((this.props.hiddenRightButton) ? this.styles.hiddenButton : null)
 					}
 					style={{width: this.computeButtonWidth()}}
-					>
+				>
 					{newButton}
 				</div>
 			);
@@ -152,7 +150,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 				onKeyPress={this.props.onKeyPress}
 				onMouseOut={this.props.onMouseOut}
 				style={{...this.inlineStyle}}
-				>
+			>
 				{leftButton}
 				<Title
 					className={this.styles.itemTitle}
@@ -163,11 +161,11 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 					style={{padding: this._titlePadding}}
 					visible={this.props.visible}
 					widget={this.props.widget}
-					>
+				>
 					{this.props.title}
 				</Title>
 				{rightButton}
 			</li>
 		);
 	}
-};
+}

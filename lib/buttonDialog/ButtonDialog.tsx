@@ -47,7 +47,7 @@ export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
 	notriangle?: boolean;
 	onClick?: any;
-	triangleClasses? : string[];
+	triangleClasses?: string[];
 }
 
 export function getDefaultButtonDialogProps(): ButtonDialogProps {
@@ -67,7 +67,7 @@ export interface ButtonDialogState {
 
 export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogState> {
 
-    public static defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
+	public static defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
 
 	private _dialogClasses: string[] = [];
 	private _triangleClasses: string[] = [];
@@ -90,15 +90,15 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		});
 
 		this.props.onClick();
-	};
+	}
 
 	private handleDialogClick() {
 		this.setState({
 			visible: false
 		});
-	};
+	}
 
-	shouldComponentUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState): boolean {
+	public shouldComponentUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState): boolean {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-button-dialog');
@@ -121,8 +121,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		if (nextState.visible) {
 			this._dialogClasses.push(this.styles.buttonDialogShow);
 			this._triangleClasses.push(this.styles.buttonDialogShow);
-		}
-		else {
+		} else {
 			this._dialogClasses.push(this.styles.buttonDialogHide);
 			this._triangleClasses.push(this.styles.buttonDialogHide);
 		}
@@ -133,11 +132,11 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<div
 				className={this.classes.join(' ')}
-				>
+			>
 				<Button
 					backgroundColor={this.props.backgroundColor}
 					color={this.props.color}
@@ -147,23 +146,23 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					sizing={this.props.sizing}
 					style={this.inlineStyle}
 					visible={this.props.visible}
-					/>
+				/>
 				<div
 					className={this._dialogClasses.join(' ')}
 					onClick={this.handleDialogClick}
-					>
+				>
 					<div className={this.styles.buttonDialogContent}>
 						{this.props.children}
 					</div>
 					{this.props.notriangle ?
-					 null
-					 :
-					 <Triangle
-						 className={this._triangleClasses.join(' ')}
-						 direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
-						 nobase
-						 sizing={Sizing.normal}
-					 />
+					null
+					:
+					<Triangle
+						className={this._triangleClasses.join(' ')}
+						direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
+						nobase
+						sizing={Sizing.normal}
+					/>
 					}
 				</div>
 			</div>

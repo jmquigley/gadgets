@@ -52,8 +52,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Label} from '../label';
-import {BaseComponent} from '../shared/base';
-import {BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 export enum TitleLayout {
 	quarter,
@@ -75,9 +74,7 @@ export function getDefaultTitleProps(): TitleProps {
 	}));
 }
 
-export interface TitleState {}
-
-export class Title extends BaseComponent<TitleProps, TitleState> {
+export class Title extends BaseComponent<TitleProps, undefined> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
 
@@ -85,14 +82,14 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 	private _widgetClasses: string[] = [];
 
 	constructor(props: TitleProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: TitleProps): boolean {
+	public shouldComponentUpdate(nextProps: TitleProps): boolean {
 		super.resetStyles(nextProps);
 
-		this.classes.push("ui-title-bar");
+		this.classes.push('ui-title-bar');
 		this.classes.push(this.styling.fontStyle);
 
 		if (nextProps.layout === TitleLayout.stacked) {
@@ -102,7 +99,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		}
 
 		if (!nextProps.noripple && !nextProps.disabled) {
-			this.classes.push("ripple");
+			this.classes.push('ripple');
 		}
 
 		this._titleClasses = [];
@@ -142,8 +139,8 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		return true;
 	}
 
-	render() {
-		let title: string = "";
+	public render() {
+		let title: string = '';
 		React.Children.forEach(this.props.children, child => {
 			title += String(child);
 		});
@@ -152,15 +149,15 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 			<div
 				className={this.classes.join(' ')}
 				style={{...this.inlineStyle}}
-				>
+			>
 				<Label
 					className={this._titleClasses.join(' ')}
 					noedit={this.props.noedit}
 					text={title}
-					/>
+				/>
 				<div className={this._widgetClasses.join(' ')}>
 					{this.props.widget}
-					</div>
+				</div>
 			</div>
 		);
 	}

@@ -66,13 +66,13 @@ export interface ButtonToggleProps extends ButtonProps {
 export function getDefaultButtonToggleProps(): ButtonToggleProps {
 	return cloneDeep(Object.assign(
 		getDefaultButtonProps(), {
-			bgColorOff: "inherit",
-			bgColorOn: "inherit",
-			fgColorOff: "gray",
-			fgColorOn: "black",
+			bgColorOff: 'inherit',
+			bgColorOn: 'inherit',
+			fgColorOff: 'gray',
+			fgColorOn: 'black',
 			initialToggle: false,
-			iconNameOff: "bomb",
-			iconNameOn: "bomb",
+			iconNameOff: 'bomb',
+			iconNameOn: 'bomb',
 			onClick: nilEvent
 		}));
 }
@@ -83,9 +83,9 @@ export interface ButtonToggleState {
 
 export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleState> {
 
-    public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
+	public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
-    constructor(props: ButtonToggleProps) {
+	constructor(props: ButtonToggleProps) {
 		super(props, require('./styles.css'));
 		this.state = {
 			toggle: props.initialToggle
@@ -103,7 +103,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		this.props.onClick(this.state.toggle);
 	}
 
-	shouldComponentUpdate(nextProps: ButtonToggleProps): boolean {
+	public shouldComponentUpdate(nextProps: ButtonToggleProps): boolean {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-button-toggle');
 		this.classes.push(this.styles.buttonToggle);
@@ -111,7 +111,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<Button
 				{...this.props}
@@ -122,7 +122,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 				noripple
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 				style={this.inlineStyle}
-				/>
+			/>
 		);
 	}
 }

@@ -1,19 +1,10 @@
 'use strict';
 
-/* import {mockupEnv} from '../../test/helpers';
- * mockupEnv();*/
-
-/* import test from 'ava';*/
 import {mount} from 'enzyme';
-// import * as path from 'path';
 import * as React from 'react';
-// import * as sinon from 'sinon';
+import * as sinon from 'sinon';
 import {Sizing} from '../../shared';
 import {getDefaultTextFieldProps, TextField} from '../index';
-
-/* test.after.always.cb(t => {
- * 	cleanup(path.basename(__filename), t);
- * });*/
 
 test('Test retrieval of TextField props object', () => {
 	const props = getDefaultTextFieldProps();
@@ -23,24 +14,24 @@ test('Test retrieval of TextField props object', () => {
 	expect('disabled' in props).toBe(true);
 	expect(props.disabled).toBe(false);
 
-	/* t.true('id' in props);
-	   t.is(props.id, '');
+	expect('id' in props).toBe(true);
+	expect(props.id).toBe('');
 
-	   t.true('sizing' in props);
-	   t.is(props.sizing, Sizing.normal);
+	expect('sizing' in props).toBe(true);
+	expect(props.sizing).toBe(Sizing.normal);
 
-	   t.true('type' in props);
-	   t.is(props.type, 'text');
+	expect('type' in props).toBe(true);
+	expect(props.type).toBe('text');
 
-	   t.true('usevalidation' in props);
-	   t.false(props.usevalidation);
+	expect('usevalidation' in props).toBe(true);
+	expect(props.usevalidation).toBe(false);
 
-	   t.true('validators' in props);
-	   t.true(props.validators instanceof Array);
-	   t.is(props.validators.length, 0);
+	expect('validators' in props).toBe(true);
+	expect(props.validators instanceof Array).toBe(true);
+	expect(props.validators.length).toBe(0);
 
-	   t.true('visible' in props);
-	   t.true(props.visible);*/
+	expect('visible' in props).toBe(true);
+	expect(props.visible).toBe(true);
 });
 
 function validate(ctl: any) {
@@ -59,30 +50,27 @@ test('Test creation of a TextField control', () => {
 	expect(ctl.prop('sizing')).toBe(Sizing.normal);
 	expect(ctl.prop('usevalidation')).toBe(false);
 	expect(ctl.find('.test-class').length).toBe(1);
-
-	/* 	expect(ctl.find('.textFieldMessage').length).toBe(0);*/
 });
 
-/* test('Test creation of a textfield with min/max validation', t => {
- * 	const keypress = sinon.spy();
- * 	const ctl = mount(
- * 		<TextField
- * 			maxLength="10"
- * 			minLength="5"
- * 			onKeyPress={keypress}
- * 			usevalidation
- * 			value=""
- * 			/>
- * 	);
- *
- * 	validate(ctl, t);
- *
- * 	t.true(ctl.state('valid'));
- * 	ctl.find('input').simulate('keyPress', {key: 'a'});
- * 	t.false(ctl.state('valid'));
- * 	t.true(keypress.calledOnce);
- * });*/
+test('Test creation of a textfield with min/max validation', () => {
+	const keypress = sinon.spy();
+	const ctl = mount(
+		<TextField
+			maxLength="10"
+			minLength="5"
+			onKeyPress={keypress}
+			usevalidation
+			value=""
+		/>
+	);
 
+	validate(ctl);
+
+	expect(ctl.state('valid')).toBe(true);
+	ctl.find('input').simulate('keyPress', {key: 'a'});
+	// expect(ctl.state('valid')).toBe(false);  TODO: fix this in TextField test
+	// expect(keypress.calledOnce).toBe(true);
+});
 
 // TODO: disabling the TextField control
 // TODO: make the TextField invisible

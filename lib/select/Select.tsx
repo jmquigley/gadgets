@@ -52,14 +52,14 @@ export class Select extends BaseComponent<any, any> {
 		disabled: false,
 		visible: true,
 		sizing: Sizing.normal
-	}
+	};
 
 	constructor(props: any) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: any): boolean {
+	public shouldComponentUpdate(nextProps: any): boolean {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-select');
 		this.classes.push(this.styling.fontStyle);
@@ -67,7 +67,7 @@ export class Select extends BaseComponent<any, any> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<ReactSelect {...this.props} className={this.classes.join(' ')} />
 		);

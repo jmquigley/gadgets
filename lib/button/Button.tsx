@@ -57,15 +57,13 @@ export function getDefaultButtonProps(): ButtonProps {
 	}));
 }
 
-export interface ButtonState {}
+export class Button extends BaseComponent<ButtonProps, undefined> {
 
-export class Button extends BaseComponent<ButtonProps, ButtonState> {
-
-    public static defaultProps: ButtonProps = getDefaultButtonProps();
+	public static defaultProps: ButtonProps = getDefaultButtonProps();
 
 	private _iconClasses: string[] = [];
 
-    constructor(props: ButtonProps) {
+	constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
 		this.handleClick = this.handleClick.bind(this);
 		this.shouldComponentUpdate(props);
@@ -78,7 +76,7 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 		e.stopPropagation();
 	}
 
-	shouldComponentUpdate(nextProps: ButtonProps): boolean {
+	public shouldComponentUpdate(nextProps: ButtonProps): boolean {
 		super.resetStyles(nextProps);
 
 		if (nextProps.color !== 'inherit') {
@@ -93,7 +91,7 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 			this.inlineStyle['borderColor'] = nextProps.borderColor;
 		}
 
-		if (nextProps.borderWidth != 'none') {
+		if (nextProps.borderWidth !== 'none') {
 			this.inlineStyle['borderWidth'] = nextProps.borderWidth;
 		}
 
@@ -112,13 +110,13 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<div
 				className={this.classes.join(' ')}
 				onClick={this.handleClick}
 				style={{...this.inlineStyle}}
-				>
+			>
 				<Icon
 					className={this._iconClasses.join(' ')}
 					iconName={this.props.iconName}

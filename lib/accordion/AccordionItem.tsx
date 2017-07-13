@@ -74,10 +74,10 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
 	constructor(props: AccordionItemProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 		this.state = {
 			toggle: props.initialToggle
-		}
+		};
 
 		this.handleClick = this.handleClick.bind(this);
 		this.handleNew = this.handleNew.bind(this);
@@ -103,15 +103,15 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		this.props.onNew(this.props.title);
 	}
 
-	shouldComponentUpdate(nextProps: AccordionItemProps): boolean {
+	public shouldComponentUpdate(nextProps: AccordionItemProps): boolean {
 		super.resetStyles(nextProps);
-		this.classes.push("ui-accordionitem");
+		this.classes.push('ui-accordionitem');
 		this.classes.push(this.styles.accordionItem);
 		super.buildStyles(nextProps);
 		return true;
 	}
 
-	render() {
+	public render() {
 		let content = null;
 		if ((this.props.children != null) && (this.state.toggle)) {
 			content = (
@@ -128,14 +128,14 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 		return (
 			<div
-				className={this.classes.join(" ")}
+				className={this.classes.join(' ')}
 				style={this.inlineStyle}
-				>
+			>
 				<Item
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 					rightButton={rightButton}
 					title={this.props.title}
-					/>
+				/>
 				{content}
 			</div>
 		);

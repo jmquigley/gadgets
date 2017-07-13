@@ -6,6 +6,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
+import {BaseComponent, Sizing} from '../shared';
 import {
 	validateEmail,
 	validateMaxLength,
@@ -13,8 +14,6 @@ import {
 	validateURL,
 	Validator
 } from './validator';
-import {BaseComponent, Sizing} from '../shared';
-
 
 export interface TextFieldProps extends Partial<HTMLInputElement> {
 	disabled?: boolean;
@@ -72,7 +71,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			message: '',
 			previousText: props.value || '',
 			valid: true
-		}
+		};
 
 		this._validators = cloneDeep(props.validators);
 
@@ -82,7 +81,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			}
 
 			if ('minLength' in props) {
-				this._validators.push(validateMinLength(Number(props.minLength)))
+				this._validators.push(validateMinLength(Number(props.minLength)));
 			}
 
 			switch (props.type) {
@@ -166,7 +165,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		return ret;
 	}
 
-	shouldComponentUpdate(nextProps: any): boolean {
+	public shouldComponentUpdate(nextProps: any): boolean {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-textfield');
 		this.classes.push(this.styles.textField);
@@ -184,7 +183,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		// Strip out props that the input control cannot recognize or use
 		const {
 			onValidation,
@@ -204,17 +203,17 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					onChange={this.handleChange}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
-					/>
+				/>
 					{this.props.usevalidation
-	  				?
+					?
 						<div className={this._messageStyles.join(' ')}>
 							{this.props.usevalidation ? '\u00a0' : null}
 							{this.state.message}
-							</div>
+						</div>
 					:
 						null
 					}
-					</div>
+			</div>
 		);
 	}
 }

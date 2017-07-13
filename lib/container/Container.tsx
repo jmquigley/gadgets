@@ -44,9 +44,7 @@ export function getDefaultContainerProps(): ContainerProps {
 	}));
 }
 
-export interface ContainerState {}
-
-export class Container extends BaseComponent<ContainerProps, ContainerState> {
+export class Container extends BaseComponent<ContainerProps, undefined> {
 
 	public static defaultProps: ContainerProps = getDefaultContainerProps();
 
@@ -54,12 +52,12 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 		super(props, require('./styles.css'));
 	}
 
-	render() {
+	public render() {
 		return (
 			<section
 				className={`ui-container ${this.styles.container}`}
 				id={this.props.id}
-				>
+			>
 				{this.props.children}
 			</section>
 		);

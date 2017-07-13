@@ -40,7 +40,7 @@ test('Test clicking the AccordionItem new button', () => {
 
 	expect(ctl).toBeTruthy();
 
-	let btn = ctl.find('.ui-button');
+	const btn = ctl.find('.ui-button');
 	expect(btn.length).toBe(1);
 
 	btn.simulate('click');

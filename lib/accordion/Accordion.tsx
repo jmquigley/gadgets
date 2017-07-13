@@ -48,9 +48,7 @@ export function getDefaultAccordionProps(): AccordionProps {
 		}));
 }
 
-export interface AccordionState {}
-
-export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
+export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public static defaultProps: AccordionProps = getDefaultAccordionProps();
 
@@ -59,7 +57,7 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: AccordionProps): boolean {
+	public shouldComponentUpdate(nextProps: AccordionProps): boolean {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-accordion');
 		this.classes.push(this.styles.accordion);
@@ -67,7 +65,7 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<ul className={this.classes.join(' ')} style={this.inlineStyle}>
 				{this.props.children}

@@ -33,7 +33,7 @@
 
 'use strict';
 
-import {cloneDeep, isEqual} from 'lodash';
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, Sizing} from '../shared';
@@ -58,43 +58,35 @@ export function getDefaultBadgeProps(): BadgeProps {
 	}));
 }
 
-export interface BadgeState {}
-
-export class Badge extends BaseComponent<BadgeProps, BadgeState> {
+export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
 	constructor(props: BadgeProps) {
 		super(props, require('./styles.css'));
 		this.handleClick = this.handleClick.bind(this);
-		this.shouldComponentUpdate(props, this.state = {}, true);
+		this.shouldComponentUpdate(props);
 	}
 
 	private handleClick() {
 		this.props.onClick(this.props.counter);
 	}
 
-	shouldComponentUpdate(
-		nextProps: BadgeProps,
-		nextState: BadgeState,
-		initial: boolean = false): boolean {
+	public shouldComponentUpdate(nextProps: BadgeProps): boolean {
+		super.resetStyles(nextProps);
 
-		if (!isEqual(nextProps, this.props) || !isEqual(nextState, this.state) || initial) {
-			super.resetStyles(nextProps);
+		this.classes.push(this.styles.badgeContainer);
 
-			this.classes.push(this.styles.badgeContainer);
-
-			super.buildStyles(nextProps,{
-				color: (nextProps.color || 'black'),
-				backgroundColor: (nextProps.backgroundColor || 'white'),
-				border: `solid 3px ${nextProps.color}`
-			});
-		}
+		super.buildStyles(nextProps, {
+			color: (nextProps.color || 'black'),
+			backgroundColor: (nextProps.backgroundColor || 'white'),
+			border: `solid 3px ${nextProps.color}`
+		});
 
 		return true;
 	}
 
-	render() {
+	public render() {
 		let badge = null;
 
 		if (this.props.suppress && this.props.counter < 1) {
@@ -105,7 +97,7 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 					className={`${this.styling.font.style} ui-badge ${this.styles.badge} ${this.locationStyle}`}
 					onClick={this.handleClick}
 					style={this.inlineStyle}
-					>
+				>
 					{this.props.counter}
 				</div>
 			);

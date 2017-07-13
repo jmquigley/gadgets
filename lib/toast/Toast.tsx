@@ -18,9 +18,9 @@
  * import {Toast, ToastLevel, ToastType} from 'gadgets';
  *
  * <Toast
- *	level={ToastLevel.info}
- *	type={ToastType.persistent}>
- *	This is a sample info message
+ *     level={ToastLevel.info}
+ *     type={ToastType.persistent}>
+ *     This is a sample info message
  * </Toast>
  * ```
  *
@@ -28,12 +28,13 @@
  * import {Toast, ToastLevel, ToastType} from 'gadgets';
  *
  * <Toast
- *	level={ToastLevel.custom}
- *	backgroundColor="#7fbf3f"
- *	color="magenta"
- *	borderColor="#3fbfbf"
- *	type={ToastType.persistent}>
- *	This is a sample custom message
+ *     level={ToastLevel.custom}
+ *     backgroundColor="#7fbf3f"
+ *     color="magenta"
+ *     borderColor="#3fbfbf"
+ *     type={ToastType.persistent}
+ * >
+ *     This is a sample custom message
  * </Toast>
  * ```
  *
@@ -105,9 +106,9 @@ export interface ToastProps extends BaseProps {
 export function getDefaultToastProps(): ToastProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
-			backgroundColor: "white",
-			borderColor: "black",
-			color: "black",
+			backgroundColor: 'white',
+			borderColor: 'black',
+			color: 'black',
 			bottom: false,
 			duration: 3,
 			level: ToastLevel.info,
@@ -130,11 +131,11 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
-		super(props, require("./styles.css"));
+		super(props, require('./styles.css'));
 
 		this.state = {
 			visible: props.visible
-		}
+		};
 
 		this.handleClose = this.handleClose.bind(this);
 		this.handleDecay = this.handleDecay.bind(this);
@@ -143,27 +144,27 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		this.shouldComponentUpdate(props, this.state);
 	}
 
-	componentWillReceiveProps(nextProps: ToastProps) {
-		if (nextProps.visible != this.state.visible) {
+	public componentWillReceiveProps(nextProps: ToastProps) {
+		if (nextProps.visible !== this.state.visible) {
 			this.setState({
 				visible: nextProps.visible
 			});
 		}
 	}
 
-	componentDidUpdate() {
+	public componentDidUpdate() {
 		this.handleDecay();
 	}
 
 	private handleClose() {
 		if (this._timer) {
-            clearTimeout(this._timer);
-            this._timer = null;
-        }
+			clearTimeout(this._timer);
+			this._timer = null;
+		}
 
 		this.setState({
 			visible: false
-		})
+		});
 
 		this.props.onClose();
 	}
@@ -179,7 +180,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		}
 	}
 
-	shouldComponentUpdate(nextProps: ToastProps, nextState: ToastState): boolean {
+	public shouldComponentUpdate(nextProps: ToastProps, nextState: ToastState): boolean {
 		super.resetStyles(nextProps);
 
 		if (nextProps.level === ToastLevel.custom) {
@@ -187,7 +188,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 				color: nextProps.color,
 				backgroundColor: nextProps.backgroundColor,
 				borderColor: nextProps.borderColor
-			}
+			};
 		}
 
 		this.classes.push('ui-toast');
@@ -227,22 +228,22 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<div
 				className={this.classes.join(' ')}
-				style={this.inlineStyle}>
+				style={this.inlineStyle}
+			>
 				<div className={this._contentClasses.join(' ')}>
 					{this.props.children}
 				</div>
-
 				<Button
 					className={this.styles.button}
 					color="white"
 					iconName="times"
 					onClick={this.handleClose}
 					sizing={Sizing.large}
-					/>
+				/>
 			</div>
 		);
 	}

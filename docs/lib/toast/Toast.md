@@ -20,9 +20,9 @@ parent needs to be relative for it to work.
 import {Toast, ToastLevel, ToastType} from 'gadgets';
 
 <Toast
-	level={ToastLevel.info}
-	type={ToastType.persistent}>
-	This is a sample info message
+    level={ToastLevel.info}
+    type={ToastType.persistent}>
+    This is a sample info message
 </Toast>
 ```
 
@@ -30,12 +30,13 @@ import {Toast, ToastLevel, ToastType} from 'gadgets';
 import {Toast, ToastLevel, ToastType} from 'gadgets';
 
 <Toast
-	level={ToastLevel.custom}
-	backgroundColor="#7fbf3f"
-	color="magenta"
-	borderColor="#3fbfbf"
-	type={ToastType.persistent}>
-	This is a sample custom message
+    level={ToastLevel.custom}
+    backgroundColor="#7fbf3f"
+    color="magenta"
+    borderColor="#3fbfbf"
+    type={ToastType.persistent}
+>
+    This is a sample custom message
 </Toast>
 ```
 

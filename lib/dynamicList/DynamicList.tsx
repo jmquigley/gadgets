@@ -18,9 +18,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 		}));
 }
 
-export interface DynamicListState {}
-
-export class DynamicList extends BaseComponent<DynamicListProps, DynamicListState> {
+export class DynamicList extends BaseComponent<DynamicListProps, undefined> {
 
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
 
@@ -29,17 +27,16 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: DynamicListProps): boolean {
+	public shouldComponentUpdate(nextProps: DynamicListProps): boolean {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-dynamiclist');
 		super.buildStyles(nextProps);
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
-			<div className={this.classes.join(' ')}>
-			</div>
+			<div className={this.classes.join(' ')} />
 		);
 	}
 }

@@ -42,7 +42,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
-import {Icon, IconProps, getDefaultIconProps} from '../icon';
+import {getDefaultIconProps, Icon, IconProps} from '../icon';
 import {BaseComponent, Sizing} from '../shared';
 
 export interface ButtonTextProps extends IconProps {
@@ -63,31 +63,30 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 		}));
 }
 
-export interface ButtonTextState {}
+export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
-export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> {
-
-    public static defaultProps: ButtonTextProps = getDefaultButtonTextProps();
+	public static defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 
 	public static LEFT: number = 0;
 	public static RIGHT: number = 1;
 	public static CENTER: number = 2;
 
-    constructor(props: ButtonTextProps) {
+	constructor(props: ButtonTextProps) {
 		super(props, require('./styles.css'));
 
 		this.handleClick = this.handleClick.bind(this);
 		this.shouldComponentUpdate(props);
 	}
 
-	buildContent(justifyStyle: string) {
+	private buildContent(justifyStyle: string) {
 		return(
 			<div
 				className={
-					this.styles.content + " " +
-						   this.styling.fontStyle + " " +
-						   justifyStyle
-				}>
+					this.styles.content + ' ' +
+						this.styling.fontStyle + ' ' +
+						justifyStyle
+				}
+			>
 				{this.props.text}
 			</div>
 		);
@@ -95,25 +94,24 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
-			this.props.onClick();
+			this.props.onClick(this.props.text);
 		}
 		e.stopPropagation();
 	}
 
-
-	shouldComponentUpdate(nextProps: ButtonTextProps): boolean {
+	public shouldComponentUpdate(nextProps: ButtonTextProps): boolean {
 		super.resetStyles(nextProps);
 
 		if (nextProps.color !== 'inherit') {
-			this.inlineStyle["color"] = nextProps.color;
+			this.inlineStyle['color'] = nextProps.color;
 		}
 
 		if (nextProps.backgroundColor !== 'inherit') {
-			this.inlineStyle["backgroundColor"] = nextProps.backgroundColor;
+			this.inlineStyle['backgroundColor'] = nextProps.backgroundColor;
 		}
 
 		if (nextProps.borderColor !== 'inherit') {
-			this.inlineStyle["borderColor"] = nextProps.borderColor;
+			this.inlineStyle['borderColor'] = nextProps.borderColor;
 		}
 
 		this.classes.push('ui-button-text');
@@ -127,7 +125,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 		return true;
 	}
 
-	render() {
+	public render() {
 		let leftButton = null;
 		let rightButton = null;
 
@@ -141,21 +139,22 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 
 		let icon = null;
 
-		if (!this.props.noicon && this.props.justify != ButtonText.CENTER) {
+		if (!this.props.noicon && this.props.justify !== ButtonText.CENTER) {
 			icon = (
 				<Icon
 					className={this.styles.icon}
 					iconName={this.props.iconName}
 					sizing={this.props.sizing}
-					/>
+				/>
 			);
 		}
 
 		return (
 			<div
-				className={this.classes.join(" ")}
+				className={this.classes.join(' ')}
 				style={this.inlineStyle}
-				onClick={this.handleClick}>
+				onClick={this.handleClick}
+			>
 				{leftButton}
 				{icon}
 				{rightButton}

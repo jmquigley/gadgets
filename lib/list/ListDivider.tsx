@@ -32,6 +32,7 @@ import {getDefaultItemProps, ItemProps} from '../item';
 import {BaseComponent} from '../shared';
 
 export interface ListDividerProps extends ItemProps {
+	color?: string;
 }
 
 export function getDefaultListDividerProps(): ListDividerProps {
@@ -41,9 +42,7 @@ export function getDefaultListDividerProps(): ListDividerProps {
 		}));
 }
 
-export interface ListDividerState {}
-
-export class ListDivider extends BaseComponent<ListDividerProps, ListDividerState> {
+export class ListDivider extends BaseComponent<ListDividerProps, undefined> {
 
 	public static defaultProps: ListDividerProps = getDefaultListDividerProps();
 
@@ -52,7 +51,7 @@ export class ListDivider extends BaseComponent<ListDividerProps, ListDividerStat
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: ListDividerProps) {
+	public shouldComponentUpdate(nextProps: ListDividerProps) {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-list-divider');
 		this.classes.push(this.styles.listDivider);
@@ -60,7 +59,7 @@ export class ListDivider extends BaseComponent<ListDividerProps, ListDividerStat
 		return true;
 	}
 
-	render() {
+	public render() {
 		return(
 			<li className={this.classes.join(' ')}>
 				<hr	style={{backgroundColor: this.props.color}} />

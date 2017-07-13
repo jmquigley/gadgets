@@ -78,16 +78,16 @@
   resolved "https://registry.yarnpkg.com/@types/lorem-ipsum/-/lorem-ipsum-1.0.2.tgz#77b11b0284fe315efedb9a31c0f1e1488469d99c"
 
 "@types/node@*", "@types/node@^8.0.10":
-  version "8.0.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.11.tgz#3cf80de7185292c6dab156ece696dffed0cc3502"
+  version "8.0.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.12.tgz#0560c3e8c9e3da0aa07d0b86e0b0a02b5fd29480"
 
 "@types/node@^6.0.46":
-  version "6.0.81"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.81.tgz#7a69740341b54a5b0c802289d852962cc5d2fd83"
+  version "6.0.82"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.82.tgz#8cbae8bd0c95c302ff3d652255f600d891adcbeb"
 
 "@types/node@^7.0.18":
-  version "7.0.35"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.35.tgz#04b7f487146619c685440c3428b51c5257ffa7a6"
+  version "7.0.36"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.36.tgz#54286fcce8a4f7498cea1ec5fce5f5edd3521948"
 
 "@types/react-dom@^15.5.1":
   version "15.5.1"
@@ -144,7 +144,7 @@ acorn@^4.0.3, acorn@^4.0.4:
   version "4.0.13"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
-acorn@^5.0.0, acorn@^5.0.3:
+acorn@^5.0.0, acorn@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.1.1.tgz#53fe161111f912ab999ee887a90a0bc52822fd75"
 
@@ -5968,10 +5968,11 @@ postcss-modules@^0.8.0:
     string-hash "^1.1.1"
 
 postcss-nested@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-2.0.2.tgz#f38fad547f5c3747160aec3bb34745819252974a"
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-2.0.3.tgz#7ee9dc547e02bc7e4f71dccff12ad4ef4c0f1888"
   dependencies:
-    postcss "^6.0.1"
+    postcss "^6.0.6"
+    postcss-selector-parser "^2.2.3"
 
 postcss-nesting@^4.0.1:
   version "4.0.1"
@@ -6874,8 +6875,8 @@ single-line-log@^1.1.2:
     string-width "^1.0.1"
 
 sinon@^2.3.7:
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-2.3.7.tgz#1451614a2eaab05bb4d876c1335cd40132ec5127"
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-2.3.8.tgz#31de06fed8fba3a671e576dd96d0a5863796f25c"
   dependencies:
     diff "^3.1.0"
     formatio "1.2.0"
@@ -7778,9 +7779,9 @@ util.pkgwrap@0.0.59:
     rimraf "^2.6.1"
     yargs "^8.0.2"
 
-util.pkgwrap@>=0.0.62:
-  version "0.0.62"
-  resolved "https://registry.yarnpkg.com/util.pkgwrap/-/util.pkgwrap-0.0.62.tgz#4bb6448b230780d5ba8f4f64e1d620d3da417faf"
+util.pkgwrap@>=0.0.64:
+  version "0.0.64"
+  resolved "https://registry.yarnpkg.com/util.pkgwrap/-/util.pkgwrap-0.0.64.tgz#106a5fbeaaa6833e3a79833e65473a3d59d089cc"
   dependencies:
     expand-home-dir "github:jmquigley/expand-home-dir"
     fs-extra "^3.0.1"
@@ -7909,10 +7910,10 @@ webidl-conversions@^4.0.0, webidl-conversions@^4.0.1:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.1.tgz#8015a17ab83e7e1b311638486ace81da6ce206a0"
 
 webpack-bundle-analyzer@^2.8.2:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.8.2.tgz#8b6240c29a9d63bc72f09d920fb050adbcce9fe8"
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.8.3.tgz#8e7b3deb3832698c24b09c84dfe5b43902a83991"
   dependencies:
-    acorn "^5.0.3"
+    acorn "^5.1.1"
     chalk "^1.1.3"
     commander "^2.9.0"
     ejs "^2.5.6"

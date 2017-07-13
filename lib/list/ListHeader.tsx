@@ -26,9 +26,7 @@ export function getDefaultListHeaderProps(): ListHeaderProps {
 		}));
 }
 
-export interface ListHeaderState {}
-
-export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> {
+export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 
 	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
 
@@ -37,7 +35,7 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: ListHeaderProps): boolean {
+	public shouldComponentUpdate(nextProps: ListHeaderProps): boolean {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-list-header');
 		this.classes.push(this.styles.listHeader);
@@ -45,14 +43,14 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<Item
 				{...this.props}
 				className={this.classes.join(' ')}
 				sizing={this.props.href.sizing}
 				style={this.inlineStyle}
-				/>
+			/>
 		);
 	}
 }

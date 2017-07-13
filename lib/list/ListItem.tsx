@@ -46,7 +46,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		super(props, require('./styles.css'));
 		this.state = {
 			toggleRipple: false
-		}
+		};
 
 		this.handleBlur = this.handleBlur.bind(this);
 		this.handleClick = this.handleClick.bind(this);
@@ -112,7 +112,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.deactivateEdit();
 	}
 
-	shouldComponentUpdate(nextProps: ListItemProps): boolean {
+	public shouldComponentUpdate(nextProps: ListItemProps): boolean {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-listitem');
 		this.classes.push(this.styles.listItem);
@@ -120,7 +120,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<Item
 				{...this.props}
@@ -134,7 +134,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 				onMouseOut={this.handleMouseOut}
 				sizing={this.props.href.sizing}
 				style={this.inlineStyle}
-				/>
+			/>
 		);
 	}
 }

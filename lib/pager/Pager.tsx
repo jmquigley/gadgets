@@ -77,7 +77,7 @@ import {BaseComponent, BaseProps, getDefaultBaseProps, Location, Sizing} from '.
 import {TextField} from '../textField';
 
 export const defaultPageSize: number = 25;
-export const defaultPageSizes: number[] = [25,50,100];
+export const defaultPageSizes: number[] = [25, 50, 100];
 
 export interface PagerProps extends BaseProps {
 	initialPage?: number;
@@ -128,13 +128,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.state = {
 			currentPage: this.initialPage,
 			pageSize: this.initialPageSize
-		}
+		};
 
 		this._buttonStyle.push(this.styles.pagerButton);
 		this._buttonStyle.push(this.styling.boxStyle);
 
 		this.handleBlur = this.handleBlur.bind(this);
 		this.handleChange = this.handleChange.bind(this);
+		this.handleDialogSelect = this.handleDialogSelect.bind(this);
 		this.handleKeyPress = this.handleKeyPress.bind(this);
 		this.handleSelect = this.handleSelect.bind(this);
 		this.moveToEnd = this.moveToEnd.bind(this);
@@ -187,7 +188,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * @returns {number[]} the list of page numbers associated with the range
 	 */
 	get pages(): number[] {
-		let l: number[] = [];
+		const l: number[] = [];
 
 		const endBlock = this.lastPage - this.props.pagesToDisplay;
 		if (this.currentPage > endBlock && this.lastPage >= this.props.pagesToDisplay) {
@@ -233,7 +234,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 	}
 
-	componentWillReceiveProps(nextProps: PagerProps) {
+	public componentWillReceiveProps(nextProps: PagerProps) {
 		if (!this.propsEqual(this.props, nextProps)) {
 			this.pageSizes = nextProps.pageSizes;
 			this.computeInitialPages(this.pageSizes[0], nextProps);
@@ -292,7 +293,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private createButtons() {
 		this._buttonsDisplay = [];
 
-		for (let page of this.pages) {
+		for (const page of this.pages) {
 			if (page !== 0 && this._buttons[page] == null) {
 
 				this._buttons[page] = (
@@ -300,10 +301,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						className={this._buttonStyle.join(' ')}
 						key={String(page)}
 						noicon
-						onClick={() => {this.handleSelect(page)}}
+						onClick={this.handleSelect}
 						sizing={this.props.sizing}
 						text={String(page)}
-						/>
+					/>
 				);
 			}
 
@@ -325,10 +326,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						disabled
 						sizing={this.props.sizing}
 						text=""
-						/>
+					/>
 				);
 			}
-		};
+		}
 	}
 
 	/**
@@ -336,34 +337,34 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * control.  The values include navigation and changing the page size.
 	 */
 	private createDialog() {
-		let items: any = [];
+		const items: any = [];
 
-		for (let val of sortBy(this.pageSizes)) {
+		for (const val of sortBy(this.pageSizes)) {
 			items.push(
-				<ListItem title={String(val)} key={getUUID()} noedit onSelect={(size: string) => {
-					this.setState({pageSize: Number(size)}, () => {
-						this.currentPage = 1;
-						this.rebuildButtons();
-					});
-				}} />
+				<ListItem
+					title={String(val)}
+					key={getUUID()}
+					noedit
+					onSelect={this.handleDialogSelect}
+				/>
 			);
 		}
 
 		items.push(
-			<ListItem title="all" key={getUUID()} noedit onSelect={() => {
-				this.setState({pageSize: this.props.totalItems}, () => {
-					this.currentPage = 1;
-					this.rebuildButtons();
-				});
-			}} />
+			<ListItem
+				title="all"
+				key={getUUID()}
+				noedit
+				onSelect={this.handleDialogSelect}
+			/>
 		);
 
 		this._dialog = (
 			<List>
-				<ListItem title="First" noedit onSelect={() => {this.moveToFront()}}/>
-				<ListItem title="Last" noedit onSelect={() => {this.moveToEnd()}}/>
-				<ListItem title="Next" noedit onSelect={() => {this.moveToNext()}}/>
-				<ListItem title="Previous" noedit onSelect={() => {this.moveToPrevious()}}/>
+				<ListItem title="First" noedit onSelect={this.moveToFront}/>
+				<ListItem title="Last" noedit onSelect={this.moveToEnd}/>
+				<ListItem title="Next" noedit onSelect={this.moveToNext}/>
+				<ListItem title="Previous" noedit onSelect={this.moveToPrevious}/>
 				<ListDivider />
 				{items}
 			</List>
@@ -378,14 +379,42 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.currentPage = Number((e.target as HTMLInputElement).value);
 	}
 
+	private handleDialogSelect(text: string) {
+		let size;
+
+		if (text === 'all') {
+			size = this.props.totalItems;
+		} else {
+			size = Number(text);
+		}
+
+		this.setState({pageSize: size}, () => {
+			this.currentPage = 1;
+			this.rebuildButtons();
+		});
+	}
+
 	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
-		if (e.key === "Enter") {
+		if (e.key === 'Enter') {
 			this.currentPage = Number((e.target as HTMLInputElement).value);
 		}
 	}
 
 	private handleSelect(newPage: number) {
-		if (this.currentPage != newPage) {
+
+		// This is a workaround check.  The createButtons function creates a series
+		// of ButtonText controls for each "page".  When the button is clicked this
+		// handler is invoked by that button.  It passes the number text for that
+		// button to the handler.  This is TEXT and not a number.  This appears to
+		// circumvent the type checking for this function.  If this receives a string
+		// then the logic for currentPage fails (as computing pages from this string
+		// doesn't work).  This check ensures the type for the newPage and converts
+		// when it is not a number.
+		if (typeof newPage !== 'number') {
+			newPage = Number(newPage);
+		}
+
+		if (this.currentPage !== newPage) {
 			this.currentPage = newPage;
 		}
 	}
@@ -422,7 +451,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			p1.pagesToDisplay === p2.pagesToDisplay &&
 			isEqual(p1.pageSizes, p2.pageSizes) &&
 			p1.totalItems === p2.totalItems &&
-			p1.useinput == p2.useinput) {
+			p1.useinput === p2.useinput) {
 			return true;
 		}
 
@@ -441,15 +470,15 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.forceUpdate();
 	}
 
-	shouldComponentUpdate(nextProps: PagerProps): boolean {
+	public shouldComponentUpdate(nextProps: PagerProps): boolean {
 		super.resetStyles(nextProps);
-		this.classes.push("ui-pager");
+		this.classes.push('ui-pager');
 		this.classes.push(this.styles.pager);
 		super.buildStyles(nextProps);
 		return true;
 	}
 
-	render() {
+	public render() {
 		this.createButtons();
 
 		return (
@@ -459,51 +488,52 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					iconName="angle-double-left"
 					onClick={this.moveToFront}
 					sizing={this.props.sizing}
-					/>
+				/>
 				<Button
 					className={this._buttonStyle.join(' ')}
 					iconName="angle-left"
 					onClick={this.moveToPrevious}
 					sizing={this.props.sizing}
-					/>
+				/>
 				{this._buttonsDisplay}
 				<Button
 					className={this._buttonStyle.join(' ')}
 					iconName="angle-right"
 					onClick={this.moveToNext}
 					sizing={this.props.sizing}
-					/>
+				/>
 				<Button
 					className={this._buttonStyle.join(' ')}
 					iconName="angle-double-right"
 					onClick={this.moveToEnd}
 					sizing={this.props.sizing}
-					/>
-				<div className={this.styles.spacer}></div>
-				<div className={this.styles.spacer}></div>
+				/>
+				<div className={this.styles.spacer} />
+				<div className={this.styles.spacer} />
 				{this.props.useinput ?
-				 <TextField
-					 className={this.styles.pagerInput}
-					 min="1"
-					 max={String(this._lastPage)}
-					 onBlur={this.handleBlur}
-					 onChange={this.handleChange}
-					 onKeyPress={this.handleKeyPress}
-					 placeholder={String(this.currentPage)}
-					 sizing={this.props.sizing}
-					 type="number"
-					 value={this.currentPage}
-					 />
-				 :
-				 	null
+				<TextField
+					className={this.styles.pagerInput}
+					min="1"
+					max={String(this._lastPage)}
+					onBlur={this.handleBlur}
+					onChange={this.handleChange}
+					onKeyPress={this.handleKeyPress}
+					placeholder={String(this.currentPage)}
+					sizing={this.props.sizing}
+					type="number"
+					value={this.currentPage}
+				/>
+				:
+					null
 				}
-				<div className={this.styles.spacer}></div>
+				<div className={this.styles.spacer} />
 				<ButtonDialog
 					className={this.styles.pagerDialog}
 					iconName="ellipsis-v"
 					location={Location.top}
 					notriangle
-					sizing={this.props.sizing}>
+					sizing={this.props.sizing}
+				>
 					{this._dialog}
 				</ButtonDialog>
 			</div>

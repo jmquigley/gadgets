@@ -20,7 +20,7 @@ export interface LabelProps extends BaseProps {
 }
 
 export function getDefaultLabelProps(): LabelProps {
-	let baseProps = getDefaultBaseProps();
+	const baseProps = getDefaultBaseProps();
 
 	return cloneDeep(Object.assign(
 		baseProps, {
@@ -68,7 +68,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	private handleChange(element: Element) {
 		if (this.state.editable) {
-			let val = element.innerHTML;
+			const val = element.innerHTML;
 			this.setState({
 				editable: false,
 				previousText: val,
@@ -82,8 +82,8 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
 		if (!this.props.noedit && document != null && window != null) {
 			if ('caretRangeFromPoint' in document) {
-				let range = document.caretRangeFromPoint(e.clientX, e.clientY);
-				let sel = window.getSelection();
+				const range = document.caretRangeFromPoint(e.clientX, e.clientY);
+				const sel = window.getSelection();
 
 				this.setState({
 					editable: true
@@ -114,7 +114,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
-	shouldComponentUpdate(nextProps: LabelProps): boolean {
+	public shouldComponentUpdate(nextProps: LabelProps): boolean {
 		super.resetStyles(nextProps);
 
 		this.classes.push('ui-label');
@@ -129,7 +129,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<span
 				className={this.classes.join(' ')}
@@ -141,7 +141,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				onKeyPress={this.handleKeyPress}
 				style={this.inlineStyle}
 				suppressContentEditableWarning
-				>
+			>
 				{this.state.text}
 			</span>
 		);

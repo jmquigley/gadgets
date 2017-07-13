@@ -65,18 +65,16 @@ export function getDefaultIconProps(): IconProps {
 	}));
 }
 
-export interface IconState {}
+export class Icon extends BaseComponent<IconProps, undefined> {
 
-export class Icon extends BaseComponent<IconProps, IconState> {
+	public static defaultProps: IconProps = getDefaultIconProps();
 
-    public static defaultProps: IconProps = getDefaultIconProps();
-
-    constructor(props: IconProps) {
+	constructor(props: IconProps) {
 		super(props, require('./styles.css'));
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: IconProps): boolean {
+	public shouldComponentUpdate(nextProps: IconProps): boolean {
 		super.resetStyles(nextProps);
 
 		this.classes.push('ui-icon');
@@ -99,21 +97,21 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		if (this.props.imageFile !== '') {
 			return (
 				<img
 					className={this.classes.join(' ')}
 					src={this.props.imageFile}
 					style={this.inlineStyle}
-					/>
+				/>
 			);
 		} else {
 			return (
 				<i
 					className={this.classes.join(' ')}
 					style={this.inlineStyle}
-					/>
+				/>
 			);
 		}
 	}

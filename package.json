@@ -22,7 +22,7 @@
 				"build": "pkgwrap --build --jsx --webpack",
 				"clean": "pkgwrap --clean",
 				"coverage": "pkgwrap --coverage --jest",
-				"demo": "npm run all && npm start",
+				"demo": "yarn run all && yarn start",
 				"docs": "pkgwrap --docs",
 				"lint": "pkgwrap --lint",
 				"start": "electron demo/.",
@@ -32,7 +32,7 @@
 		},
 		"dependencies": {
 				"process-nextick-args": "^1.0.7",
-				"util.pkgwrap": ">=0.0.62"
+				"util.pkgwrap": ">=0.0.64"
 		},
 		"devDependencies": {
 				"@types/enzyme": "^2.8.2",
@@ -106,10 +106,13 @@
 				]
 		},
 		"jest": {
+				"collectCoverage": true,
 				"moduleNameMapper": {
-						"\\.(css)$": "<rootDir>/test/helpers/styleMock.js"
+						"\\.(css)$": "<rootDir>/lib/shared/styleMock.js"
 				},
-				"testRegex": "__test__/.*\\.test\\.js$"
+				"notify": true,
+				"testRegex": "__test__/.*\\.test\\.js$",
+				"verbose": false
 		},
 		"ava": {
 				"files": [
