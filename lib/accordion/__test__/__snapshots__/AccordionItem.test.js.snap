@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the creation of a AccordionItem control 1`] = `
+<div
+  className="ui-accordionitem accordionItem test-class"
+  style={Object {}}
+>
+  <Item
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    id=""
+    layout={4}
+    leftButton={null}
+    location="none"
+    noedit={false}
+    noripple={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    rightButton={
+      <Button
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        iconName="plus"
+        iconStyle=""
+        id=""
+        location="none"
+        noedit={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      />
+    }
+    selected={false}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    title="Test Title"
+    visible={true}
+    widget={null}
+  />
+</div>
+`;

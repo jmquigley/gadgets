@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a Button control 1`] = `
+<div
+  className="ui-button button ripple test-class"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=" icon"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="bomb"
+    id=""
+    imageFile=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
+</div>
+`;
+
+exports[`Test creation of a Button control with custom icon, colors, and border 1`] = `
+<div
+  className="ui-button button ripple"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "black",
+      "borderColor": "green",
+      "borderWidth": "2px",
+      "color": "red",
+    }
+  }
+>
+  <Icon
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=" icon"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="superpowers"
+    id=""
+    imageFile=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
+</div>
+`;

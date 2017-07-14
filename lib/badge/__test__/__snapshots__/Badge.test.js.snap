@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a Badge control 1`] = `
+<div
+  className="badgeContainer test-class"
+>
+  Test Component
+  <div
+    className="normal ui-badge badge topRight"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "blue",
+        "border": "solid 3px red",
+        "color": "red",
+      }
+    }
+  >
+    1
+  </div>
+</div>
+`;

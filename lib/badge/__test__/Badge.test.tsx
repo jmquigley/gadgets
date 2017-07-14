@@ -1,55 +1,48 @@
 'use strict';
 
-import {mount} from 'enzyme';
+import * as assert from 'assert';
+import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import * as sinon from 'sinon';
 import {Location, Sizing} from '../../shared';
 import {Badge, getDefaultBadgeProps} from '../index';
 
 test('Test retrieval of Badge props object', () => {
 	const props = getDefaultBadgeProps();
 
-	expect('counter' in props).toBe(true);
-	expect(props.counter).toBe(0);
+	assert(props);
 
-	expect('location' in props).toBe(true);
-	expect(props.location).toBe(Location.topRight);
+	assert('counter' in props);
+	assert.equal(props.counter, 0);
 
-	expect('sizing' in props).toBe(true);
-	expect(props.sizing).toBe(Sizing.normal);
+	assert('location' in props);
+	assert.equal(props.location, Location.topRight);
 
-	expect('suppress' in props).toBe(true);
-	expect(props.suppress).toBe(false);
+	assert('sizing' in props);
+	assert.equal(props.sizing, Sizing.normal);
+
+	assert('suppress' in props);
+	assert(!props.suppress);
 });
 
 test('Test creation of a Badge control', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<Badge
 			backgroundColor="blue"
 			className="test-class"
 			color="red"
 			suppress
-			counter={-1}
+			counter={1}
 		>
 			Test Component
 		</Badge>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.prop('backgroundColor')).toBe('blue');
-	expect(ctl.prop('color')).toBe('red');
-	expect(ctl.prop('counter')).toBe(-1);
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('suppress')).toBe(true);
-	expect(ctl.prop('visible')).toBe(true);
-
-	expect(ctl.find('.test-class').length).toBe(1);
-	expect(ctl.find('.ui-badge').length).toBe(0);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test clicking a Badge counter control', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<Badge
 			counter={1}
@@ -59,13 +52,13 @@ test('Test clicking a Badge counter control', () => {
 		</Badge>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
+	assert(!ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
 
 	ctl.find('.ui-badge').simulate('click');
-	expect(click.calledOnce).toBe(true);
+	expect(click).toHaveBeenCalled();
 });
 
 // TODO: disabling the badge control
