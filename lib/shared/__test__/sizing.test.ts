@@ -1,7 +1,5 @@
 'use strict';
 
-const assert = require('assert');
-
 // TODO: redo Sizing test module.  Jest and CSS modules break most of this
 
 import {Sizes} from '../sizing';
@@ -10,12 +8,6 @@ test('Testing creation of the Sizing object', () => {
 	const sizes = new Sizes();
 	expect(sizes).toBeTruthy();
 	expect(typeof sizes.toString()).toBe('string');
-
-	let zero = 0;
-	let ary = [1,2,3];
-	let two = 2;
-
-	assert(ary.indexOf(zero) === two, 'Array #indexOf() should return index when the value is present');
 });
 
 // test('Testing contents of FontSize xxsmall', () => {
