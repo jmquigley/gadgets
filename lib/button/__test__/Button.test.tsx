@@ -31,6 +31,7 @@ test('Test creation of a Button control', () => {
 	expect(ctl.prop('visible')).toBe(true);
 
 	expect(ctl.find('.ui-button').length).toBe(1);
+	expect(ctl.find('.button').length).toBe(1);
 	expect(ctl.find('.fa').length).toBe(1);
 	expect(ctl.find('.fa-bomb').length).toBe(1);
 	expect(ctl.find('.test-class').length).toBe(1);
@@ -86,6 +87,7 @@ test('Test disabling of a Button', () => {
 	expect(ctl.prop('iconName')).toBe('bomb');
 	expect(ctl.prop('disabled')).toBe(true);
 	expect(ctl.prop('visible')).toBe(true);
+	expect(ctl.find('.disabled').length).toBe(1);
 
 	ctl.find('i').simulate('click');
 	expect(click.neverCalledWith()).toBe(true);
@@ -100,6 +102,7 @@ test('Test making a Button invisible', () => {
 	expect(ctl.prop('iconName')).toBe('bomb');
 	expect(ctl.prop('disabled')).toBe(false);
 	expect(ctl.prop('visible')).toBe(false);
+	expect(ctl.find('.invisible').length).toBe(1);
 
 	ctl.find('i').simulate('click');
 	expect(click.neverCalledWith()).toBe(true);
