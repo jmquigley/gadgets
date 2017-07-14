@@ -1,5 +1,6 @@
 'use strict';
 
+import * as assert from 'assert';
 import {mount} from 'enzyme';
 import * as React from 'react';
 import * as sinon from 'sinon';
@@ -9,32 +10,32 @@ import {Button, getDefaultButtonProps} from '../index';
 test('Test retrieval of Button props object', () => {
 	const props = getDefaultButtonProps();
 
-	expect(props).toBeTruthy();
+	assert(props);
 
-	expect('iconName' in props).toBe(true);
-	expect(props.iconName).toBe('bomb');
+	assert('iconName' in props);
+	assert(props.iconName === 'bomb');
 
-	expect('iconStyle' in props).toBe(true);
-	expect(props.iconStyle).toBe('');
+	assert('iconStyle' in props);
+	assert(props.iconStyle === '');
 
-	expect('sizing' in props).toBe(true);
-	expect(props.sizing).toBe(Sizing.normal);
+	assert('sizing' in props);
+	assert(props.sizing === Sizing.normal);
 });
 
 test('Test creation of a Button control', () => {
 	const ctl = mount(<Button className="test-class"/>);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
+	assert(ctl.prop('iconName') === 'bomb');
+	assert(!ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
 
-	expect(ctl.find('.ui-button').length).toBe(1);
-	expect(ctl.find('.button').length).toBe(1);
-	expect(ctl.find('.fa').length).toBe(1);
-	expect(ctl.find('.fa-bomb').length).toBe(1);
-	expect(ctl.find('.test-class').length).toBe(1);
+	assert(ctl.find('.ui-button').length === 1);
+	assert(ctl.find('.button').length === 1);
+	assert(ctl.find('.fa').length === 1);
+	assert(ctl.find('.fa-bomb').length === 1);
+	assert(ctl.find('.test-class').length === 1);
 });
 
 test('Test creation of a Button control with custom icon, colors, and border', () => {
@@ -48,62 +49,62 @@ test('Test creation of a Button control with custom icon, colors, and border', (
 		/>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('superpowers');
-	expect(ctl.prop('color')).toBe('red');
-	expect(ctl.prop('backgroundColor')).toBe('black');
-	expect(ctl.prop('borderColor')).toBe('green');
-	expect(ctl.prop('borderWidth')).toBe('2px');
+	assert(ctl.prop('iconName') === 'superpowers');
+	assert(ctl.prop('color') === 'red');
+	assert(ctl.prop('backgroundColor') === 'black');
+	assert(ctl.prop('borderColor') === 'green');
+	assert(ctl.prop('borderWidth') === '2px');
 
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
+	assert(!ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
 
-	expect(ctl.find('.ui-button').length).toBe(1);
-	expect(ctl.find('.fa').length).toBe(1);
-	expect(ctl.find('.fa-superpowers').length).toBe(1);
+	assert(ctl.find('.ui-button').length === 1);
+	assert(ctl.find('.fa').length === 1);
+	assert(ctl.find('.fa-superpowers').length === 1);
 });
 
 test('Test Button click event', () => {
 	const click = sinon.spy();
 	const ctl = mount(<Button onClick={click} />);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
+	assert(ctl.prop('iconName') === 'bomb');
+	assert(!ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
 
 	ctl.find('i').simulate('click');
-	expect(click.calledOnce).toBe(true);
+	assert(click.calledOnce);
 });
 
 test('Test disabling of a Button', () => {
 	const click = sinon.spy();
 	const ctl = mount(<Button onClick={click} disabled={true} />);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(true);
-	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.find('.disabled').length).toBe(1);
+	assert(ctl.prop('iconName') === 'bomb');
+	assert(ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
+	assert(ctl.find('.disabled').length === 1);
 
 	ctl.find('i').simulate('click');
-	expect(click.neverCalledWith()).toBe(true);
+	assert(click.neverCalledWith() === true);
 });
 
 test('Test making a Button invisible', () => {
 	const click = sinon.spy();
 	const ctl = mount(<Button onClick={click} visible={false} />);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(false);
-	expect(ctl.find('.invisible').length).toBe(1);
+	assert(ctl.prop('iconName') === 'bomb');
+	assert(!ctl.prop('disabled'));
+	assert(!ctl.prop('visible'));
+	assert(ctl.find('.invisible').length === 1);
 
 	ctl.find('i').simulate('click');
-	expect(click.neverCalledWith()).toBe(true);
+	assert(click.neverCalledWith());
 });

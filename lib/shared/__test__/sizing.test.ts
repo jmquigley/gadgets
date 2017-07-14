@@ -2,186 +2,187 @@
 
 // TODO: redo Sizing test module.  Jest and CSS modules break most of this
 
-import {Sizes} from '../sizing';
+import * as assert from 'assert';
+import {Sizes, Sizing} from '../sizing';
 
 test('Testing creation of the Sizing object', () => {
 	const sizes = new Sizes();
-	expect(sizes).toBeTruthy();
-	expect(typeof sizes.toString()).toBe('string');
+	assert(sizes);
+	assert(typeof sizes.toString() === 'string');
 });
 
-// test('Testing contents of FontSize xxsmall', () => {
-// 	const sizes = new Sizes();
+test('Testing contents of FontSize xxsmall', () => {
+	const sizes = new Sizes();
 
-// 	expect(sizes).toBeTruthy();
-// 	sizes.currentSizing = Sizing.xxsmall;
+	assert(sizes);
+	sizes.currentSizing = Sizing.xxsmall;
 
-// 	expect(sizes.type).toBe(Sizing.xxsmall);
-// 	expect(sizes.currentSizing).toBe(Sizing.xxsmall);
-// 	expect(sizes.font.sizeem).toBe('0.375em');
-// 	expect(sizes.font.sizepx).toBe('6px');
+	assert(sizes.type === Sizing.xxsmall);
+	assert(sizes.currentSizing === Sizing.xxsmall);
+	assert(sizes.font.sizeem === '0.375em');
+	assert(sizes.font.sizepx === '6px');
 
-// 	expect(sizes.fontSize).toBe(6);
-// 	expect(sizes.font.size).toBe(6);
+	assert(sizes.fontSize === 6);
+	assert(sizes.font.size === 6);
 
-// 	expect(sizes.fontStyle).toBe(Sizing.xxsmall);
-// 	expect(sizes.font.style).toBe(Sizing.xxsmall);
+	assert(sizes.fontStyle === Sizing.xxsmall);
+	assert(sizes.font.style === Sizing.xxsmall);
 
-// 	expect(sizes.borderStyle).toBe('xxsmallBorder');
-// 	expect(sizes.boxStyle).toBe('xxsmallBox');
-// 	expect(sizes.next.type).toBe(Sizing.xsmall);
-// 	expect(sizes.prev.type).toBe(Sizing.xxsmall);
+	assert(sizes.borderStyle === 'xxsmallBorder');
+	assert(sizes.boxStyle === 'xxsmallBox');
+	assert(sizes.next.type === Sizing.xsmall);
+	assert(sizes.prev.type === Sizing.xxsmall);
 
-// 	expect(sizes.getSizing(Sizing.xxsmall).type).toBe(Sizing.xxsmall);
-// });
+	assert(sizes.getSizing(Sizing.xxsmall).type === Sizing.xxsmall);
+});
 
-// test('Testing contents of FontSize xsmall', () => {
-// 	const sizes = new Sizes();
+test('Testing contents of FontSize xsmall', () => {
+	const sizes = new Sizes();
 
-// 	expect(sizes).toBeTruthy();
-// 	sizes.currentSizing = Sizing.xsmall;
+	assert(sizes);
+	sizes.currentSizing = Sizing.xsmall;
 
-// 	expect(sizes.type).toBe(Sizing.xsmall);
-// 	expect(sizes.currentSizing).toBe(Sizing.xsmall);
-// 	expect(sizes.font.sizeem).toBe('0.5em');
-// 	expect(sizes.font.sizepx).toBe('8px');
+	assert(sizes.type === Sizing.xsmall);
+	assert(sizes.currentSizing === Sizing.xsmall);
+	assert(sizes.font.sizeem === '0.5em');
+	assert(sizes.font.sizepx === '8px');
 
-// 	expect(sizes.fontSize).toBe(8);
-// 	expect(sizes.font.size).toBe(8);
+	assert(sizes.fontSize === 8);
+	assert(sizes.font.size === 8);
 
-// 	expect(sizes.fontStyle).toBe(Sizing.xsmall);
-// 	expect(sizes.font.style).toBe(Sizing.xsmall);
+	assert(sizes.fontStyle === Sizing.xsmall);
+	assert(sizes.font.style === Sizing.xsmall);
 
-// 	expect(sizes.borderStyle).toBe('xsmallBorder');
-// 	expect(sizes.boxStyle).toBe('xsmallBox');
-// 	expect(sizes.next.type).toBe(Sizing.small);
-// 	expect(sizes.prev.type).toBe(Sizing.xxsmall);
+	assert(sizes.borderStyle === 'xsmallBorder');
+	assert(sizes.boxStyle === 'xsmallBox');
+	assert(sizes.next.type === Sizing.small);
+	assert(sizes.prev.type === Sizing.xxsmall);
 
-// 	expect(sizes.getSizing(Sizing.xsmall).type).toBe(Sizing.xsmall);
-// });
+	assert(sizes.getSizing(Sizing.xsmall).type === Sizing.xsmall);
+});
 
-// test('Testing contents of FontSize small', () => {
-// 	const sizes = new Sizes();
+test('Testing contents of FontSize small', () => {
+	const sizes = new Sizes();
 
-// 	expect(sizes).toBeTruthy();
-// 	sizes.currentSizing = Sizing.small;
+	assert(sizes);
+	sizes.currentSizing = Sizing.small;
 
-// 	expect(sizes.type).toBe(Sizing.small);
-// 	expect(sizes.currentSizing).toBe(Sizing.small);
-// 	expect(sizes.font.sizeem).toBe('0.75em');
-// 	expect(sizes.font.sizepx).toBe('12px');
+	assert(sizes.type === Sizing.small);
+	assert(sizes.currentSizing === Sizing.small);
+	assert(sizes.font.sizeem === '0.75em');
+	assert(sizes.font.sizepx === '12px');
 
-// 	expect(sizes.fontSize).toBe(12);
-// 	expect(sizes.font.size).toBe(12);
+	assert(sizes.fontSize === 12);
+	assert(sizes.font.size === 12);
 
-// 	expect(sizes.fontStyle).toBe(Sizing.small);
-// 	expect(sizes.font.style).toBe(Sizing.small);
+	assert(sizes.fontStyle === Sizing.small);
+	assert(sizes.font.style === Sizing.small);
 
-// 	expect(sizes.borderStyle).toBe('smallBorder');
-// 	expect(sizes.boxStyle).toBe('smallBox');
-// 	expect(sizes.next.type).toBe(Sizing.normal);
-// 	expect(sizes.prev.type).toBe(Sizing.xsmall);
+	assert(sizes.borderStyle === 'smallBorder');
+	assert(sizes.boxStyle === 'smallBox');
+	assert(sizes.next.type === Sizing.normal);
+	assert(sizes.prev.type === Sizing.xsmall);
 
-// 	expect(sizes.getSizing(Sizing.small).type).toBe(Sizing.small);
-// });
+	assert(sizes.getSizing(Sizing.small).type === Sizing.small);
+});
 
-// test('Testing contents of FontSize normal', () => {
-// 	const sizes = new Sizes();
+test('Testing contents of FontSize normal', () => {
+	const sizes = new Sizes();
 
-// 	expect(sizes).toBeTruthy();
+	assert(sizes);
 
-// 	expect(sizes.type).toBe(Sizing.normal);
-// 	expect(sizes.currentSizing).toBe(Sizing.normal);
-// 	expect(sizes.font.sizeem).toBe('1em');
-// 	expect(sizes.font.sizepx).toBe('16px');
+	assert(sizes.type === Sizing.normal);
+	assert(sizes.currentSizing === Sizing.normal);
+	assert(sizes.font.sizeem === '1em');
+	assert(sizes.font.sizepx === '16px');
 
-// 	expect(sizes.fontSize).toBe(16);
-// 	expect(sizes.font.size).toBe(16);
+	assert(sizes.fontSize === 16);
+	assert(sizes.font.size === 16);
 
-// 	expect(sizes.fontStyle).toBe(Sizing.normal);
-// 	expect(sizes.font.style).toBe(Sizing.normal);
+	assert(sizes.fontStyle === Sizing.normal);
+	assert(sizes.font.style === Sizing.normal);
 
-// 	expect(sizes.borderStyle).toBe('normalBorder');
-// 	expect(sizes.boxStyle).toBe('normalBox');
-// 	expect(sizes.next.type).toBe(Sizing.large);
-// 	expect(sizes.prev.type).toBe(Sizing.small);
+	assert(sizes.borderStyle === 'normalBorder');
+	assert(sizes.boxStyle === 'normalBox');
+	assert(sizes.next.type === Sizing.large);
+	assert(sizes.prev.type === Sizing.small);
 
-// 	expect(sizes.getSizing(Sizing.normal).type).toBe(Sizing.normal);
-// });
+	assert(sizes.getSizing(Sizing.normal).type === Sizing.normal);
+});
 
-// test('Testing contents of FontSize large', () => {
-// 	const sizes = new Sizes();
+test('Testing contents of FontSize large', () => {
+	const sizes = new Sizes();
 
-// 	expect(sizes).toBeTruthy();
-// 	sizes.currentSizing = Sizing.large;
+	assert(sizes);
+	sizes.currentSizing = Sizing.large;
 
-// 	expect(sizes.type).toBe(Sizing.large);
-// 	expect(sizes.currentSizing).toBe(Sizing.large);
-// 	expect(sizes.font.sizeem).toBe('1.5em');
-// 	expect(sizes.font.sizepx).toBe('24px');
+	assert(sizes.type === Sizing.large);
+	assert(sizes.currentSizing === Sizing.large);
+	assert(sizes.font.sizeem === '1.5em');
+	assert(sizes.font.sizepx === '24px');
 
-// 	expect(sizes.fontSize).toBe(24);
-// 	expect(sizes.font.size).toBe(24);
+	assert(sizes.fontSize === 24);
+	assert(sizes.font.size === 24);
 
-// 	expect(sizes.fontStyle).toBe(Sizing.large);
-// 	expect(sizes.font.style).toBe(Sizing.large);
+	assert(sizes.fontStyle === Sizing.large);
+	assert(sizes.font.style === Sizing.large);
 
-// 	expect(sizes.borderStyle).toBe('largeBorder');
-// 	expect(sizes.boxStyle).toBe('largeBox');
-// 	expect(sizes.next.type).toBe(Sizing.xlarge);
-// 	expect(sizes.prev.type).toBe(Sizing.normal);
+	assert(sizes.borderStyle === 'largeBorder');
+	assert(sizes.boxStyle === 'largeBox');
+	assert(sizes.next.type === Sizing.xlarge);
+	assert(sizes.prev.type === Sizing.normal);
 
-// 	expect(sizes.getSizing(Sizing.large).type).toBe(Sizing.large);
-// });
+	assert(sizes.getSizing(Sizing.large).type === Sizing.large);
+});
 
-// test('Testing contents of FontSize xlarge', () => {
-// 	const sizes = new Sizes();
+test('Testing contents of FontSize xlarge', () => {
+	const sizes = new Sizes();
 
-// 	expect(sizes).toBeTruthy();
-// 	sizes.currentSizing = Sizing.xlarge;
+	assert(sizes);
+	sizes.currentSizing = Sizing.xlarge;
 
-// 	expect(sizes.type).toBe(Sizing.xlarge);
-// 	expect(sizes.currentSizing).toBe(Sizing.xlarge);
-// 	expect(sizes.font.sizeem).toBe('2em');
-// 	expect(sizes.font.sizepx).toBe('32px');
+	assert(sizes.type === Sizing.xlarge);
+	assert(sizes.currentSizing === Sizing.xlarge);
+	assert(sizes.font.sizeem === '2em');
+	assert(sizes.font.sizepx === '32px');
 
-// 	expect(sizes.fontSize).toBe(32);
-// 	expect(sizes.font.size).toBe(32);
+	assert(sizes.fontSize === 32);
+	assert(sizes.font.size === 32);
 
-// 	expect(sizes.fontStyle).toBe(Sizing.xlarge);
-// 	expect(sizes.font.style).toBe(Sizing.xlarge);
+	assert(sizes.fontStyle === Sizing.xlarge);
+	assert(sizes.font.style === Sizing.xlarge);
 
-// 	expect(sizes.borderStyle).toBe('xlargeBorder');
-// 	expect(sizes.boxStyle).toBe('xlargeBox');
-// 	expect(sizes.next.type).toBe(Sizing.xxlarge);
-// 	expect(sizes.prev.type).toBe(Sizing.large);
+	assert(sizes.borderStyle === 'xlargeBorder');
+	assert(sizes.boxStyle === 'xlargeBox');
+	assert(sizes.next.type === Sizing.xxlarge);
+	assert(sizes.prev.type === Sizing.large);
 
-// 	expect(sizes.getSizing(Sizing.xlarge).type).toBe(Sizing.xlarge);
-// });
+	assert(sizes.getSizing(Sizing.xlarge).type === Sizing.xlarge);
+});
 
-// test('Testing contents of FontSize xxlarge', () => {
-// 	const sizes = new Sizes();
+test('Testing contents of FontSize xxlarge', () => {
+	const sizes = new Sizes();
 
-// 	expect(sizes).toBeTruthy();
-// 	sizes.currentSizing = Sizing.xxlarge;
+	assert(sizes);
+	sizes.currentSizing = Sizing.xxlarge;
 
-// 	expect(sizes.type).toBe(Sizing.xxlarge);
-// 	expect(sizes.currentSizing).toBe(Sizing.xxlarge);
-// 	expect(sizes.font.sizeem).toBe('3em');
-// 	expect(sizes.font.sizepx).toBe('48px');
+	assert(sizes.type === Sizing.xxlarge);
+	assert(sizes.currentSizing === Sizing.xxlarge);
+	assert(sizes.font.sizeem === '3em');
+	assert(sizes.font.sizepx === '48px');
 
-// 	expect(sizes.fontSize).toBe(48);
-// 	expect(sizes.font.size).toBe(48);
+	assert(sizes.fontSize === 48);
+	assert(sizes.font.size === 48);
 
-// 	expect(sizes.fontStyle).toBe(Sizing.xxlarge);
-// 	expect(sizes.font.style).toBe(Sizing.xxlarge);
+	assert(sizes.fontStyle === Sizing.xxlarge);
+	assert(sizes.font.style === Sizing.xxlarge);
 
-// 	expect(sizes.borderStyle).toBe('xxlargeBorder');
-// 	expect(sizes.boxStyle).toBe('xxlargeBox');
-// 	expect(sizes.next.type).toBe(Sizing.xxlarge);
-// 	expect(sizes.prev.type).toBe(Sizing.xlarge);
+	assert(sizes.borderStyle === 'xxlargeBorder');
+	assert(sizes.boxStyle === 'xxlargeBox');
+	assert(sizes.next.type === Sizing.xxlarge);
+	assert(sizes.prev.type === Sizing.xlarge);
 
-// 	expect(sizes.getSizing(Sizing.xxlarge).type).toBe(Sizing.xxlarge);
-// });
+	assert(sizes.getSizing(Sizing.xxlarge).type === Sizing.xxlarge);
+});
 
 // TODO: create a sizing object with different base

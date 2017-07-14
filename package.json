@@ -31,7 +31,8 @@
 				"webpack": "webpack"
 		},
 		"dependencies": {
-				"util.pkgwrap": ">=0.0.64"
+				"util.join": "^0.0.12",
+				"util.pkgwrap": ">=0.0.66"
 		},
 		"devDependencies": {
 				"@types/enzyme": "^2.8.2",
@@ -41,7 +42,6 @@
 				"@types/lodash": "^4.14.68",
 				"@types/lorem-ipsum": "^1.0.2",
 				"@types/node": "^8.0.10",
-				"@types/power-assert": "^1.4.29",
 				"@types/react": "^15.0.37",
 				"@types/react-dom": "^15.5.1",
 				"@types/sinon": "^2.3.2",
@@ -52,7 +52,6 @@
 				"babel-preset-babili": "0.1.4",
 				"babel-preset-es2016": "^6.24.1",
 				"babel-preset-es2017": "^6.24.1",
-				"babel-preset-power-assert": "^1.0.0",
 				"babel-preset-react": "^6.24.1",
 				"babili-webpack-plugin": "0.1.2",
 				"coveralls": "^2.13.1",
@@ -72,7 +71,6 @@
 				"postcss-import": "^10.0.0",
 				"postcss-loader": "^2.0.6",
 				"postcss-modules": "^0.8.0",
-				"power-assert": "^1.4.4",
 				"precss": "^2.0.0",
 				"process-nextick-args": "^1.0.7",
 				"react": "^15.6.1",
@@ -86,7 +84,6 @@
 				"tslint-react": "^3.0.0",
 				"typescript": "^2.4.1",
 				"url-loader": "^0.5.9",
-				"util.fixture": "0.0.55",
 				"util.toolbox": "0.0.39",
 				"util.wait": "0.0.26",
 				"webpack": "^3.2.0",
@@ -94,7 +91,6 @@
 		},
 		"babel": {
 				"presets": [
-						"babel-preset-power-assert",
 						"es2016",
 						"es2017",
 						"react"
@@ -112,6 +108,7 @@
 				},
 				"notify": true,
 				"testRegex": "__test__/.*\\.test\\.js$",
+				"transform": {},
 				"verbose": false
 		}
 }
