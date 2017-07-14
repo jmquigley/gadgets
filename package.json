@@ -41,6 +41,7 @@
 				"@types/lodash": "^4.14.68",
 				"@types/lorem-ipsum": "^1.0.2",
 				"@types/node": "^8.0.10",
+				"@types/power-assert": "^1.4.29",
 				"@types/react": "^15.0.37",
 				"@types/react-dom": "^15.5.1",
 				"@types/sinon": "^2.3.2",
@@ -51,6 +52,7 @@
 				"babel-preset-babili": "0.1.4",
 				"babel-preset-es2016": "^6.24.1",
 				"babel-preset-es2017": "^6.24.1",
+				"babel-preset-power-assert": "^1.0.0",
 				"babel-preset-react": "^6.24.1",
 				"babili-webpack-plugin": "0.1.2",
 				"coveralls": "^2.13.1",
@@ -69,6 +71,7 @@
 				"postcss-import": "^10.0.0",
 				"postcss-loader": "^2.0.6",
 				"postcss-modules": "^0.8.0",
+				"power-assert": "^1.4.4",
 				"precss": "^2.0.0",
 				"process-nextick-args": "^1.0.7",
 				"react": "^15.6.1",
@@ -90,6 +93,7 @@
 		},
 		"babel": {
 				"presets": [
+						"babel-preset-power-assert",
 						"es2016",
 						"es2017",
 						"react"
@@ -108,11 +112,5 @@
 				"notify": true,
 				"testRegex": "__test__/.*\\.test\\.js$",
 				"verbose": false
-		},
-		"ava": {
-				"files": [
-						"**/*.test.js",
-						"!**/__test__/*"
-				]
 		}
 }

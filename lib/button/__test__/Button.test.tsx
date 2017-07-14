@@ -47,7 +47,7 @@ test('Test creation of a Button control with custom icon, colors, and border', (
 		/>
 	);
 
-	expect(ctl);
+	expect(ctl).toBeTruthy();
 
 	expect(ctl.prop('iconName')).toBe('superpowers');
 	expect(ctl.prop('color')).toBe('red');
