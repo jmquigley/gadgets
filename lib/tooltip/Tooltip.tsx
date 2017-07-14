@@ -77,10 +77,7 @@ export function getDefaultTooltipProps(): TooltipProps {
 		}));
 }
 
-export interface TooltipState {
-}
-
-export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
+export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 
 	public static defaultProps: TooltipProps = getDefaultTooltipProps();
 
@@ -92,7 +89,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: TooltipProps): boolean {
+	public shouldComponentUpdate(nextProps: TooltipProps): boolean {
 		super.resetStyles(nextProps);
 
 		this.classes.push('ui-tooltip');
@@ -168,7 +165,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
 			<div className={this.classes.join(' ')} style={this.inlineStyle}>
 				<span className="ui-tooltip-content" style={{color: this.props.color}}>
@@ -178,7 +175,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 					{...this.props}
 					className={this._triangleStyle}
 					direction={this._triangleDirection}
-					/>
+				/>
 			</div>
 		);
 	}

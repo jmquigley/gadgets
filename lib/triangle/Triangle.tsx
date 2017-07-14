@@ -26,9 +26,7 @@ export function getDefaultTriangleProps(): TriangleProps {
 		}));
 }
 
-export interface TriangleState {}
-
-export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
+export class Triangle extends BaseComponent<TriangleProps, undefined> {
 
 	public static defaultProps: TriangleProps = getDefaultTriangleProps();
 
@@ -37,14 +35,14 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 		this.shouldComponentUpdate(props);
 	}
 
-	shouldComponentUpdate(nextProps: TriangleProps): boolean {
+	public shouldComponentUpdate(nextProps: TriangleProps): boolean {
 		super.resetStyles(nextProps);
 
 		this.classes.push('ui-triangle');
 		this.classes.push(this.styles.triangle);
 		this.classes.push(this.styling.boxStyle);
 
-		switch(this.props.direction) {
+		switch (this.props.direction) {
 			case Direction.right:
 				this.classes.push(this.styles.triangleRight);
 				break;
@@ -72,32 +70,33 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 		return true;
 	}
 
-	render() {
+	public render() {
 		return (
-			(this.props.nobase) ?
-			<svg
-				className={this.classes.join(' ')}
-				preserveAspectRatio="xMidYMid meet"
-				style={this.inlineStyle}
-				version="1.1"
-				viewBox="0 0 40 40"
-				xmlns="http://www.w3.org/2000/svg"
+			(this.props.nobase) ? (
+				<svg
+					className={this.classes.join(' ')}
+					preserveAspectRatio="xMidYMid meet"
+					style={this.inlineStyle}
+					version="1.1"
+					viewBox="0 0 40 40"
+					xmlns="http://www.w3.org/2000/svg"
 				>
-				<polygon points="-3,35, 20,10 43,35" style={{fill: this.props.backgroundColor, stroke: "none"}} />
-				<polygon points="-3,35, 20,10 43,35, 20,10" style={{stroke: this.props.borderColor, strokeWidth: this.props.borderWidth, strokeLinecap:"square"}} />
+					<polygon points="-3,35, 20,10 43,35" style={{fill: this.props.backgroundColor, stroke: 'none'}} />
+					<polygon points="-3,35, 20,10 43,35, 20,10" style={{stroke: this.props.borderColor, strokeWidth: this.props.borderWidth, strokeLinecap: 'square'}} />
 
-			</svg>
-			:
-			<svg
-				className={this.classes.join(' ')}
-				preserveAspectRatio="xMidYMid meet"
-				style={this.inlineStyle}
-				version="1.1"
-				viewBox="0 0 40 40"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<polygon points="0,35, 20,10 40,35" />
-			</svg>
+				</svg>
+			) : (
+				<svg
+					className={this.classes.join(' ')}
+					preserveAspectRatio="xMidYMid meet"
+					style={this.inlineStyle}
+					version="1.1"
+					viewBox="0 0 40 40"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<polygon points="0,35, 20,10 40,35" />
+				</svg>
+			)
 		);
 	}
 }

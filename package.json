@@ -18,7 +18,7 @@
 		"main": "./dist/bundle.js",
 		"types": "./index.d.ts",
 		"scripts": {
-				"all": "yarn install && yarn run clean && yarn run build && yarn run docs && yarn run test",
+				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run docs && yarn run test",
 				"build": "pkgwrap --build --jsx --webpack",
 				"clean": "pkgwrap --clean",
 				"coverage": "pkgwrap --coverage --jest",
