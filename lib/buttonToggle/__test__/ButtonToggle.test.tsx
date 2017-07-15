@@ -9,27 +9,7 @@ test('Test retrieval of ButtonToggle props object', () => {
 	const props = getDefaultButtonToggleProps();
 
 	assert(props);
-
-	assert('bgColorOff' in props);
-	assert.equal(props.bgColorOff, 'inherit');
-
-	assert('bgColorOn' in props);
-	assert.equal(props.bgColorOn, 'inherit');
-
-	assert('fgColorOff' in props);
-	assert.equal(props.fgColorOff, 'gray');
-
-	assert('fgColorOn' in props);
-	assert.equal(props.fgColorOn, 'black');
-
-	assert('initialToggle' in props);
-	assert.equal(props.initialToggle, false);
-
-	assert('iconNameOff' in props);
-	assert.equal(props.iconNameOff, 'bomb');
-
-	assert('iconNameOn' in props);
-	assert.equal(props.iconNameOn, 'bomb');
+	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a ButtonToggle control', () => {

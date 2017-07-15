@@ -9,9 +9,7 @@ test('Test retrieval of Accordion props object', () => {
 	const props = getDefaultAccordionProps();
 
 	assert(props);
-
-	assert('children' in props);
-	assert.equal(props.children, null);
+	expect(props).toMatchSnapshot();
 });
 
 test('Test the creation of a Accordion control container', () => {

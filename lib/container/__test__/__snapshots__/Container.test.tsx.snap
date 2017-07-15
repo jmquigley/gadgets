@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a Container control 1`] = `
+<section
+  className="ui-container container"
+  id=""
+>
+  <p>
+    Test Container
+  </p>
+</section>
+`;
+
+exports[`Test creation of a Container control with an id value 1`] = `
+<section
+  className="ui-container container"
+  id="testid"
+>
+  <p>
+    Test Container
+  </p>
+</section>
+`;
+
+exports[`Test retrieval of Container props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "children": null,
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "id": "",
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "visible": true,
+}
+`;

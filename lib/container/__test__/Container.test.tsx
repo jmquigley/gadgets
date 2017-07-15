@@ -1,41 +1,35 @@
 'use strict';
 
-import {mount} from 'enzyme';
+import * as assert from 'assert';
+import {shallow} from 'enzyme';
 import * as React from 'react';
 import {Container, getDefaultContainerProps} from '../index';
 
 test('Test retrieval of Container props object', () => {
 	const props = getDefaultContainerProps();
 
-	expect(props).toBeTruthy();
-
-	expect('children' in props).toBe(true);
-	expect(props.children).toBeNull();
+	assert(props);
+	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a Container control', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<Container>
 			<p>Test Container</p>
 		</Container>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.find('.ui-container').length).toBe(1);
-	expect(ctl.contains(<p>Test Container</p>)).toBe(true);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test creation of a Container control with an id value', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<Container id="testid">
 			<p>Test Container</p>
 		</Container>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.find('.ui-container').length).toBe(1);
-	expect(ctl.prop('id')).toBe('testid');
-	expect(ctl.contains(<p>Test Container</p>)).toBe(true);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });

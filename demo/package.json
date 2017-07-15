@@ -1,5 +1,11 @@
 {
-  "name": "Demo",
-  "version": "0.1.0",
-  "main": "main.js"
+  	"name": "Demo",
+	  "version": "0.1.0",
+		"license": "MIT",
+		"main": "main.js",
+		"scripts": {
+				"build": "yarn run build:main && yarn run build:app",
+				"build:main": "../node_modules/.bin/tsc -p .",
+				"build:app": "../node_modules/.bin/babel app.jsx -o app.js"
+		}
 }

@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test retrieval of AccordionItem props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "hiddenLeftButton": false,
+  "hiddenRightButton": false,
+  "id": "",
+  "initialToggle": false,
+  "layout": 4,
+  "leftButton": null,
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "onBlur": [Function],
+  "onClick": [Function],
+  "onDoubleClick": [Function],
+  "onKeyDown": [Function],
+  "onKeyPress": [Function],
+  "onMouseOut": [Function],
+  "onNew": [Function],
+  "rightButton": null,
+  "selected": false,
+  "showButton": true,
+  "sizing": "normal",
+  "stacked": false,
+  "style": Object {},
+  "title": "",
+  "visible": true,
+  "widget": null,
+}
+`;
+
 exports[`Test the creation of a AccordionItem control 1`] = `
 <div
   className="ui-accordionitem accordionItem test-class"

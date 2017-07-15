@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test retrieval of Item props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "hiddenLeftButton": false,
+  "hiddenRightButton": false,
+  "id": "",
+  "layout": 4,
+  "leftButton": null,
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "onBlur": [Function],
+  "onClick": [Function],
+  "onDoubleClick": [Function],
+  "onKeyDown": [Function],
+  "onKeyPress": [Function],
+  "onMouseOut": [Function],
+  "rightButton": null,
+  "selected": false,
+  "sizing": "normal",
+  "stacked": false,
+  "style": Object {},
+  "title": "",
+  "visible": true,
+  "widget": null,
+}
+`;
+
+exports[`Test the creation of a Item control 1`] = `
+<li
+  className="ui-item item"
+  id=""
+  onBlur={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  style={Object {}}
+>
+  <Title
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="itemTitle"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    id=""
+    layout={4}
+    location="none"
+    noedit={false}
+    noripple={false}
+    selected={false}
+    sizing="normal"
+    style={
+      Object {
+        "padding": "2px 4px",
+      }
+    }
+    visible={true}
+    widget="widget"
+  >
+    test title
+  </Title>
+</li>
+`;

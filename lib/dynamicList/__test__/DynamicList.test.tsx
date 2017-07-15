@@ -9,9 +9,7 @@ test('Test retrieval of DynamicList props object', () => {
 	const props = getDefaultDynamicListProps();
 
 	assert(props);
-
-	assert('title' in props);
-	assert.equal(props.title, '');
+	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a DynamicList control', () => {

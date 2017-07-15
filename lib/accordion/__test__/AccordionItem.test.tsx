@@ -3,7 +3,14 @@
 import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {AccordionItem} from '../index';
+import {AccordionItem, getDefaultAccordionItemProps} from '../index';
+
+test('Test retrieval of AccordionItem props object', () => {
+	const props = getDefaultAccordionItemProps();
+
+	assert(props);
+	expect(props).toMatchSnapshot();
+});
 
 test('Test the creation of a AccordionItem control', () => {
 	const ctl = shallow(
@@ -41,6 +48,5 @@ test('Test clicking the AccordionItem new button', () => {
 	expect(click).toHaveBeenCalled();
 });
 
-// TODO: test case for validating props object creator
 // TODO: disabling the accordion item
 // TODO: make the accordion item invisible

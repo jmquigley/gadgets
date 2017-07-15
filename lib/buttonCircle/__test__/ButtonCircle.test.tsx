@@ -9,9 +9,7 @@ test('Test retrieval of ButtonCircle props object', () => {
 	const props = getDefaultButtonCircleProps();
 
 	assert(props);
-
-	assert('iconName' in props);
-	assert.equal(props.iconName, 'bomb');
+	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a ButtonCircle control', () => {

@@ -117,3 +117,30 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   </div>
 </div>
 `;
+
+exports[`Test retrieval of ButtonDialog props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "dialogClasses": Array [],
+  "direction": "right",
+  "disabled": false,
+  "iconName": "bomb",
+  "iconStyle": "",
+  "id": "",
+  "location": "bottom",
+  "noedit": false,
+  "noripple": false,
+  "notriangle": false,
+  "onClick": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "triangleClasses": Array [],
+  "visible": true,
+}
+`;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test retrieval of Accordion props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "children": null,
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "id": "",
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "visible": true,
+}
+`;
+
+exports[`Test the creation of a Accordion control container 1`] = `
+<ul
+  className="ui-accordion accordion test-class"
+  style={Object {}}
+>
+  <li>
+    some list item
+  </li>
+</ul>
+`;

@@ -1,27 +1,27 @@
 'use strict';
 
-import {mount} from 'enzyme';
+import * as assert from 'assert';
+import {shallow} from 'enzyme';
 import * as React from 'react';
 import {getDefaultItemProps, Item} from '../index';
 
 test('Test retrieval of Item props object', () => {
 	const props = getDefaultItemProps();
 
-	expect(props).toBeTruthy();
+	assert(props);
+	expect(props).toMatchSnapshot();
 });
 
 test('Test the creation of a Item control', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<Item
 			title="test title"
+			widget="widget"
 		/>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.prop('title')).toBe('test title');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 // TODO: test adding a right and left button, click

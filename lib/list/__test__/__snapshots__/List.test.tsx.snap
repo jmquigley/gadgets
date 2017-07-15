@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test retrieval of List props object 1`] = `
+Object {
+  "alternating": false,
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "id": "",
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "onAdd": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "unselect": false,
+  "visible": true,
+}
+`;
+
+exports[`Test the creation of a List control container 1`] = `
+<div
+  className="ui-list list listAlternating test-class"
+  id=""
+  style={Object {}}
+>
+  <ul>
+    <li
+      href={
+        Object {
+          "selectHandler": [Function],
+          "sizing": "normal",
+        }
+      }
+      selected={false}
+    >
+      some list item
+    </li>
+  </ul>
+</div>
+`;

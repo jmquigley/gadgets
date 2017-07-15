@@ -18,8 +18,9 @@
 		"main": "./dist/bundle.js",
 		"types": "./index.d.ts",
 		"scripts": {
-				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run docs && yarn run test",
-				"build": "pkgwrap --build --jsx --webpack",
+				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run build:demo && yarn run docs && yarn run test",
+				"build": "webpack",
+				"build:demo": "cd demo && yarn run build",
 				"clean": "pkgwrap --clean",
 				"coverage": "pkgwrap --coverage --jest",
 				"demo": "yarn run all && yarn start",
@@ -66,6 +67,7 @@
 				"jest": "^20.0.4",
 				"jest-serializer-enzyme": "^1.0.0",
 				"jquery": "^3.2.1",
+				"js-output-loader": ">=0.0.3",
 				"lodash": "^4.17.4",
 				"lorem-ipsum": "^1.0.4",
 				"postcss-cssnext": "^3.0.2",
@@ -84,6 +86,7 @@
 				"tslint": "^5.5.0",
 				"tslint-react": "^3.0.0",
 				"typescript": "^2.4.1",
+				"typescript-babel-jest": "^1.0.4",
 				"url-loader": "^0.5.9",
 				"util.toolbox": "0.0.39",
 				"util.wait": "0.0.26",
@@ -104,6 +107,13 @@
 		},
 		"jest": {
 				"collectCoverage": true,
+				"moduleFileExtensions": [
+						"js",
+						"jsx",
+						"json",
+						"ts",
+						"tsx"
+				],
 				"moduleNameMapper": {
 						"\\.(css)$": "identity-obj-proxy"
 				},
@@ -111,8 +121,10 @@
 				"snapshotSerializers": [
 						"<rootDir>/node_modules/jest-serializer-enzyme"
 				],
-				"testRegex": "__test__/.*\\.test\\.js$",
-				"transform": {},
+				"testRegex": "__test__/.*\\.test\\.(ts|tsx)$",
+				"transform": {
+						"^.+\\.(ts|tsx)$": "typescript-babel-jest"
+				},
 				"verbose": false
 		}
 }

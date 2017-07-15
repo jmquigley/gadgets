@@ -95,3 +95,27 @@ exports[`Test creation of a ButtonCircle control 1`] = `
   </div>
 </ButtonCircle>
 `;
+
+exports[`Test retrieval of ButtonCircle props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "black",
+  "borderWidth": "none",
+  "className": "",
+  "color": "black",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "iconName": "bomb",
+  "iconStyle": "",
+  "id": "",
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "onClick": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "visible": true,
+}
+`;

@@ -1,0 +1,29 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"alwaysStrict": true,
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"experimentalDecorators": true,
+		"inlineSourceMap": true,
+		"jsx": "preserve",
+		"lib": ["DOM", "ES6", "ES2016.Array.Include"],
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"removeComments": false,
+		"skipLibCheck": true,
+		"sourceMap": false,
+		"strictNullChecks": false,
+		"suppressImplicitAnyIndexErrors": true,
+		"module": "commonjs",
+		"target": "es6"
+	},
+	"exclude": [
+		"dist",
+		"coverage",
+		"node_modules"
+	]
+}

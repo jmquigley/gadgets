@@ -64,3 +64,27 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
   />
 </div>
 `;
+
+exports[`Test retrieval of Button props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "iconName": "bomb",
+  "iconStyle": "",
+  "id": "",
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "onClick": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "visible": true,
+}
+`;

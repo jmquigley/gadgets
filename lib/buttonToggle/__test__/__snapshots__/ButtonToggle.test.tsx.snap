@@ -131,3 +131,34 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
   </Button>
 </ButtonToggle>
 `;
+
+exports[`Test retrieval of ButtonToggle props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "bgColorOff": "inherit",
+  "bgColorOn": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "fgColorOff": "gray",
+  "fgColorOn": "black",
+  "iconName": "bomb",
+  "iconNameOff": "bomb",
+  "iconNameOn": "bomb",
+  "iconStyle": "",
+  "id": "",
+  "initialToggle": false,
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "onClick": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "visible": true,
+}
+`;

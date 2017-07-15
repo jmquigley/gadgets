@@ -10,10 +10,7 @@ test('Test retrieval of ButtonDialog props object', () => {
 	const props = getDefaultButtonDialogProps();
 
 	assert(props);
-
-	assert('dialogClasses' in props);
-	assert(props.dialogClasses instanceof Array);
-	assert.equal(props.dialogClasses.length, 0);
+	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a ButtonDialog control', () => {

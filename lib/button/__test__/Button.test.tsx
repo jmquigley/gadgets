@@ -3,22 +3,13 @@
 import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {Sizing} from '../../shared';
-import {Button, getDefaultButtonProps} from '../index';
+import {Button,	getDefaultButtonProps} from '../index';
 
 test('Test retrieval of Button props object', () => {
 	const props = getDefaultButtonProps();
 
 	assert(props);
-
-	assert('iconName' in props);
-	assert.equal(props.iconName, 'bomb');
-
-	assert('iconStyle' in props);
-	assert.equal(props.iconStyle, '');
-
-	assert('sizing' in props);
-	assert.equal(props.sizing, Sizing.normal);
+	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a Button control', () => {

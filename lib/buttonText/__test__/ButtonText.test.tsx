@@ -9,15 +9,7 @@ test('Test retrieval of ButtonText props object', () => {
 	const props = getDefaultButtonTextProps();
 
 	assert(props);
-
-	assert('iconName' in props);
-	assert.equal(props.iconName, 'bomb');
-
-	assert('justify' in props);
-	assert.equal(props.justify, ButtonText.RIGHT);
-
-	assert('text' in props);
-	assert.equal(props.text, '');
+	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a ButtonText control to the left', () => {

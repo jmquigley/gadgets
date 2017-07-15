@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a Label control 1`] = `
+<span
+  className="ui-label label normal test-class"
+  contentEditable={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+  suppressContentEditableWarning={true}
+>
+  Test label text
+</span>
+`;
+
+exports[`Test retrieval of default Label props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "id": "",
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "onBlur": [Function],
+  "onChange": [Function],
+  "onClick": [Function],
+  "onDoubleClick": [Function],
+  "onKeyDown": [Function],
+  "onKeyPress": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "text": " ",
+  "visible": true,
+}
+`;

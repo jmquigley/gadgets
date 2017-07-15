@@ -3,22 +3,13 @@
 import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {Sizing} from '../../shared';
 import {getDefaultIconProps, Icon} from '../index';
 
 test('Test retrieval of the Icon props object', () => {
 	const props = getDefaultIconProps();
 
 	assert(props);
-
-	assert('iconName' in props);
-	assert.equal(props.iconName, 'bomb');
-
-	assert('imageFile' in props);
-	assert.equal(props.imageFile, '');
-
-	assert('sizing' in props);
-	assert.equal(props.sizing, Sizing.normal);
+	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of an Icon control with icon', () => {

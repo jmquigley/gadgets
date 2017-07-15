@@ -3,25 +3,13 @@
 import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {Location, Sizing} from '../../shared';
 import {Badge, getDefaultBadgeProps} from '../index';
 
 test('Test retrieval of Badge props object', () => {
 	const props = getDefaultBadgeProps();
 
 	assert(props);
-
-	assert('counter' in props);
-	assert.equal(props.counter, 0);
-
-	assert('location' in props);
-	assert.equal(props.location, Location.topRight);
-
-	assert('sizing' in props);
-	assert.equal(props.sizing, Sizing.normal);
-
-	assert('suppress' in props);
-	assert(!props.suppress);
+	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a Badge control', () => {

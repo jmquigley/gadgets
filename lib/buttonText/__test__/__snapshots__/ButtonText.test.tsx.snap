@@ -74,3 +74,30 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   </div>
 </ButtonText>
 `;
+
+exports[`Test retrieval of ButtonText props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "iconName": "bomb",
+  "id": "",
+  "imageFile": "",
+  "justify": 1,
+  "location": "none",
+  "noedit": false,
+  "noicon": false,
+  "noripple": false,
+  "onClick": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "text": "",
+  "visible": true,
+}
+`;
