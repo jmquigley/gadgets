@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a ButtonText control to the left 1`] = `
+<ButtonText
+  backgroundColor="blue"
+  borderColor="green"
+  borderWidth="none"
+  className="test-class"
+  color="white"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  iconName="bomb"
+  id=""
+  imageFile=""
+  justify={0}
+  location="none"
+  noedit={false}
+  noicon={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  text="test text"
+  visible={true}
+>
+  <div
+    className="ui-button-text buttonText ripple test-class"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "blue",
+        "borderColor": "green",
+        "color": "white",
+      }
+    }
+  >
+    <div
+      className="content normal left"
+    >
+      test text
+    </div>
+    <Icon
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className="icon"
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      iconName="bomb"
+      id=""
+      imageFile=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      visible={true}
+    >
+      <i
+        className="ui-icon icon none fa fa-bomb normal icon"
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+      />
+    </Icon>
+  </div>
+</ButtonText>
+`;

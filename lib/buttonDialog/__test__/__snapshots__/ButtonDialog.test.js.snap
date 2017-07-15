@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a ButtonDialog control 1`] = `
+<div
+  className="ui-button-dialog buttonDialog test-class"
+>
+  <Button
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="bomb"
+    iconStyle=""
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
+  <div
+    className="test-class-dialog buttonDialogPopup ui-dialog-popup dialogBottom buttonDialogHide normal"
+    onClick={[Function]}
+  >
+    <div
+      className="buttonDialogContent"
+    >
+      <p>
+        Dialog test
+      </p>
+    </div>
+    <Triangle
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="2px"
+      className="dialogTriangleBottom buttonDialogHide"
+      color="inherit"
+      contentEditable={false}
+      direction="up"
+      disabled={false}
+      id=""
+      location="none"
+      nobase={true}
+      noedit={false}
+      noripple={false}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      visible={true}
+    />
+  </div>
+</div>
+`;
+
+exports[`Test creation of a ButtonDialog control on top 1`] = `
+<div
+  className="ui-button-dialog buttonDialog test-class"
+>
+  <Button
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="bomb"
+    iconStyle=""
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
+  <div
+    className="test-class-dialog buttonDialogPopup ui-dialog-popup dialogTop buttonDialogHide normal"
+    onClick={[Function]}
+  >
+    <div
+      className="buttonDialogContent"
+    >
+      <p>
+        Dialog test
+      </p>
+    </div>
+    <Triangle
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="2px"
+      className="dialogTriangleTop buttonDialogHide"
+      color="inherit"
+      contentEditable={false}
+      direction="down"
+      disabled={false}
+      id=""
+      location="none"
+      nobase={true}
+      noedit={false}
+      noripple={false}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      visible={true}
+    />
+  </div>
+</div>
+`;

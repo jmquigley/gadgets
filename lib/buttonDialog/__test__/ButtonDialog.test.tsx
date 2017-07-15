@@ -1,6 +1,7 @@
 'use strict';
 
-import {mount} from 'enzyme';
+import * as assert from 'assert';
+import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {Location} from '../../shared';
 import {ButtonDialog, getDefaultButtonDialogProps} from '../index';
@@ -8,15 +9,15 @@ import {ButtonDialog, getDefaultButtonDialogProps} from '../index';
 test('Test retrieval of ButtonDialog props object', () => {
 	const props = getDefaultButtonDialogProps();
 
-	expect(props).toBeTruthy();
+	assert(props);
 
-	expect('dialogClasses' in props).toBe(true);
-	expect(props.dialogClasses instanceof Array).toBe(true);
-	expect(props.dialogClasses.length).toBe(0);
+	assert('dialogClasses' in props);
+	assert(props.dialogClasses instanceof Array);
+	assert.equal(props.dialogClasses.length, 0);
 });
 
 test('Test creation of a ButtonDialog control', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<ButtonDialog
 			className="test-class"
 			dialogClasses={['test-class-dialog']}
@@ -25,19 +26,12 @@ test('Test creation of a ButtonDialog control', () => {
 		</ButtonDialog>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.prop('className')).toBe('test-class');
-	expect(ctl.prop('dialogClasses').join('').trim()).toBe('test-class-dialog');
-
-	expect(ctl.contains(<p>Dialog test</p>)).toBe(true);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test creation of a ButtonDialog control on top', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<ButtonDialog
 			className="test-class"
 			dialogClasses={['test-class-dialog']}
@@ -47,16 +41,8 @@ test('Test creation of a ButtonDialog control on top', () => {
 		</ButtonDialog>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.prop('location')).toBe(Location.top);
-	expect(ctl.prop('className')).toBe('test-class');
-	expect(ctl.prop('dialogClasses').join('').trim()).toBe('test-class-dialog');
-
-	expect(ctl.contains(<p>Dialog test</p>)).toBe(true);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test the click event on a ButtonDialog control', () => {
@@ -66,15 +52,15 @@ test('Test the click event on a ButtonDialog control', () => {
 		</ButtonDialog>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.contains(<p>Dialog test</p>)).toBe(true);
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert(!ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
+	assert(ctl.contains(<p>Dialog test</p>));
 
 	ctl.find('.ui-button').simulate('click');
-	expect(ctl.state('visible')).toBe(true);
+	assert(ctl.state('visible'));
 });
 
 test('Test the disabling of the ButtonDialog control', () => {
@@ -84,14 +70,14 @@ test('Test the disabling of the ButtonDialog control', () => {
 		</ButtonDialog>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(true);
-	expect(ctl.prop('visible')).toBe(true);
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert(ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
 
 	ctl.find('.ui-button').simulate('click');
-	expect(ctl.state('visible')).toBe(false);
+	assert(!ctl.state('visible'));
 });
 
 test('Test making the ButtonDialog invisible', () => {
@@ -101,15 +87,15 @@ test('Test making the ButtonDialog invisible', () => {
 		</ButtonDialog>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(false);
-	expect(ctl.contains(<p>Dialog test</p>)).toBe(true);
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert(!ctl.prop('disabled'));
+	assert(!ctl.prop('visible'));
+	assert(ctl.contains(<p>Dialog test</p>));
 
 	ctl.find('.ui-button').simulate('click');
-	expect(ctl.state('visible')).toBe(false);
+	assert(!ctl.state('visible'));
 });
 
 test('Test opening the button dialog window', () => {
@@ -119,9 +105,9 @@ test('Test opening the button dialog window', () => {
 		</ButtonDialog>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.contains(<p>Dialog test</p>)).toBe(true);
+	assert(ctl.contains(<p>Dialog test</p>));
 	ctl.find('.ui-button').simulate('click');
-	expect(ctl.state('visible')).toBe(true);
+	assert(ctl.state('visible'));
 });

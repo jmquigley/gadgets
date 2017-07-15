@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a ButtonCircle control 1`] = `
+<ButtonCircle
+  backgroundColor="inherit"
+  borderColor="black"
+  borderWidth="none"
+  className="test-class"
+  color="black"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  location="none"
+  noedit={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={true}
+>
+  <div
+    className="ui-button-circle buttonCircle test-class"
+  >
+    <div
+      className="buttonCircleContainer"
+    >
+      <Button
+        backgroundColor="inherit"
+        borderColor="black"
+        borderWidth="none"
+        className="normalBorder buttonCircleIcon"
+        color="black"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        iconName="bomb"
+        iconStyle="normalBox"
+        id=""
+        location="none"
+        noedit={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      >
+        <div
+          className="ui-button button ripple normalBorder buttonCircleIcon"
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "black",
+              "color": "black",
+            }
+          }
+        >
+          <Icon
+            backgroundColor="inherit"
+            borderColor="inherit"
+            borderWidth="none"
+            className="normalBox icon"
+            color="inherit"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            iconName="bomb"
+            id=""
+            imageFile=""
+            location="none"
+            noedit={false}
+            noripple={false}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            visible={true}
+          >
+            <i
+              className="ui-icon icon none fa fa-bomb normal normalBox icon"
+              style={
+                Object {
+                  "backgroundColor": "inherit",
+                  "color": "inherit",
+                }
+              }
+            />
+          </Icon>
+        </div>
+      </Button>
+    </div>
+  </div>
+</ButtonCircle>
+`;
