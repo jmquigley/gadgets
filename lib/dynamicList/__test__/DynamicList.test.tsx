@@ -1,26 +1,24 @@
 'use strict';
 
-import {mount} from 'enzyme';
+import * as assert from 'assert';
+import {shallow} from 'enzyme';
 import * as React from 'react';
 import {DynamicList, getDefaultDynamicListProps} from '../index';
 
 test('Test retrieval of DynamicList props object', () => {
 	const props = getDefaultDynamicListProps();
 
-	expect(props);
+	assert(props);
 
-	expect('title' in props).toBe(true);
-	expect(props.title).toBe('');
+	assert('title' in props);
+	assert.equal(props.title, '');
 });
 
 test('Test creation of a DynamicList control', () => {
-	const ctl = mount(<DynamicList className="test-class" />);
+	const ctl = shallow(<DynamicList className="test-class" />);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.find('.test-class').length).toBe(1);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 // TODO: test case for validating props object creator

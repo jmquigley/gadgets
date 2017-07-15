@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a ButtonToggle control 1`] = `
+<Button
+  backgroundColor="inherit"
+  bgColorOff="inherit"
+  bgColorOn="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className="ui-button-toggle buttonToggle test-class"
+  color="gray"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  fgColorOff="gray"
+  fgColorOn="black"
+  iconName="bomb"
+  iconNameOff="bomb"
+  iconNameOn="bomb"
+  iconStyle=""
+  id=""
+  initialToggle={false}
+  location="none"
+  noedit={false}
+  noripple={true}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={true}
+/>
+`;
+
+exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
+<ButtonToggle
+  backgroundColor="inherit"
+  bgColorOff="inherit"
+  bgColorOn="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  fgColorOff="gray"
+  fgColorOn="black"
+  iconName="bomb"
+  iconNameOff="star-o"
+  iconNameOn="star"
+  iconStyle=""
+  id=""
+  initialToggle={false}
+  location="none"
+  noedit={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={true}
+>
+  <Button
+    backgroundColor="inherit"
+    bgColorOff="inherit"
+    bgColorOn="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="ui-button-toggle buttonToggle"
+    color="gray"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    fgColorOff="gray"
+    fgColorOn="black"
+    iconName="star-o"
+    iconNameOff="star-o"
+    iconNameOn="star"
+    iconStyle=""
+    id=""
+    initialToggle={false}
+    location="none"
+    noedit={false}
+    noripple={true}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  >
+    <div
+      className="ui-button button ui-button-toggle buttonToggle"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "gray",
+        }
+      }
+    >
+      <Icon
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=" icon"
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        iconName="star-o"
+        id=""
+        imageFile=""
+        location="none"
+        noedit={false}
+        noripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      >
+        <i
+          className="ui-icon icon none fa fa-star-o normal  icon"
+          style={
+            Object {
+              "backgroundColor": "inherit",
+              "color": "inherit",
+            }
+          }
+        />
+      </Icon>
+    </div>
+  </Button>
+</ButtonToggle>
+`;

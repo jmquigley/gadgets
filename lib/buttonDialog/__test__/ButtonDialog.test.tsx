@@ -75,6 +75,7 @@ test('Test the disabling of the ButtonDialog control', () => {
 	assert.equal(ctl.prop('iconName'), 'bomb');
 	assert(ctl.prop('disabled'));
 	assert(ctl.prop('visible'));
+	assert.equal(ctl.find('.disabled').length, 2);
 
 	ctl.find('.ui-button').simulate('click');
 	assert(!ctl.state('visible'));
@@ -92,6 +93,7 @@ test('Test making the ButtonDialog invisible', () => {
 	assert.equal(ctl.prop('iconName'), 'bomb');
 	assert(!ctl.prop('disabled'));
 	assert(!ctl.prop('visible'));
+	assert.equal(ctl.find('.invisible').length, 2);
 	assert(ctl.contains(<p>Dialog test</p>));
 
 	ctl.find('.ui-button').simulate('click');

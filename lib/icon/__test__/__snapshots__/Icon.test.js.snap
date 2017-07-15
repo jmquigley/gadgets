@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of an Icon control with icon 1`] = `
+<i
+  className="ui-icon icon none fa fa-star normal test-class"
+  style={
+    Object {
+      "backgroundColor": "blue",
+      "color": "red",
+    }
+  }
+/>
+`;
+
+exports[`Test creation of an Icon control with image 1`] = `
+<img
+  className="ui-icon icon none normalBox"
+  src="./test-icon-image.png"
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+/>
+`;

@@ -44,6 +44,7 @@ test('Test disabling of a ButtonCircle control', () => {
 	assert.equal(ctl.prop('iconName'), 'bomb');
 	assert(ctl.prop('disabled'));
 	assert(ctl.prop('visible'));
+	assert.equal(ctl.find('.disabled').length, 2);
 
 	ctl.find('.ui-button').simulate('click');
 	expect(click).not.toHaveBeenCalled();
@@ -58,6 +59,7 @@ test('Test making a ButtonCircle control invisible', () => {
 	assert.equal(ctl.prop('iconName'), 'bomb');
 	assert(!ctl.prop('disabled'));
 	assert(!ctl.prop('visible'));
+	assert.equal(ctl.find('.invisible').length, 2);
 
 	ctl.find('.ui-button').simulate('click');
 	expect(click).not.toHaveBeenCalled();

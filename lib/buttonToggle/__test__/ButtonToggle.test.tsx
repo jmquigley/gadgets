@@ -1,50 +1,42 @@
 'use strict';
 
-import {mount} from 'enzyme';
+import * as assert from 'assert';
+import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import * as sinon from 'sinon';
 import {ButtonToggle, getDefaultButtonToggleProps} from '../index';
 
 test('Test retrieval of ButtonToggle props object', () => {
 	const props = getDefaultButtonToggleProps();
 
-	expect(props).toBeTruthy();
+	assert(props);
 
-	expect('bgColorOff' in props).toBe(true);
-	expect(props.bgColorOff).toBe('inherit');
+	assert('bgColorOff' in props);
+	assert.equal(props.bgColorOff, 'inherit');
 
-	expect('bgColorOn' in props).toBe(true);
-	expect(props.bgColorOn).toBe('inherit');
+	assert('bgColorOn' in props);
+	assert.equal(props.bgColorOn, 'inherit');
 
-	expect('fgColorOff' in props).toBe(true);
-	expect(props.fgColorOff).toBe('gray');
+	assert('fgColorOff' in props);
+	assert.equal(props.fgColorOff, 'gray');
 
-	expect('fgColorOn' in props).toBe(true);
-	expect(props.fgColorOn).toBe('black');
+	assert('fgColorOn' in props);
+	assert.equal(props.fgColorOn, 'black');
 
-	expect('initialToggle' in props).toBe(true);
-	expect(props.initialToggle).toBe(false);
+	assert('initialToggle' in props);
+	assert.equal(props.initialToggle, false);
 
-	expect('iconNameOff' in props).toBe(true);
-	expect(props.iconNameOff).toBe('bomb');
+	assert('iconNameOff' in props);
+	assert.equal(props.iconNameOff, 'bomb');
 
-	expect('iconNameOn' in props).toBe(true);
-	expect(props.iconNameOn).toBe('bomb');
+	assert('iconNameOn' in props);
+	assert.equal(props.iconNameOn, 'bomb');
 });
 
 test('Test creation of a ButtonToggle control', () => {
-	const ctl = mount(<ButtonToggle className="test-class"/>);
+	const ctl = shallow(<ButtonToggle className="test-class"/>);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
-
-	expect(ctl.find('.ui-button-toggle').length).toBe(1);
-	expect(ctl.find('.fa').length).toBe(1);
-	expect(ctl.find('.fa-bomb').length).toBe(1);
-	expect(ctl.find('.test-class').length).toBe(1);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test creation of a ButtonToggle control with on/off icons', () => {
@@ -55,22 +47,12 @@ test('Test creation of a ButtonToggle control with on/off icons', () => {
 		/>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('iconNameOn')).toBe('star');
-	expect(ctl.prop('iconNameOff')).toBe('star-o');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
-
-	expect(ctl.find('.ui-button-toggle').length).toBe(1);
-	expect(ctl.find('.fa').length).toBe(1);
-	expect(ctl.find('.fa-star-o').length).toBe(1);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test ButtonToggle click event', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<ButtonToggle
 			iconNameOn="star"
@@ -79,55 +61,56 @@ test('Test ButtonToggle click event', () => {
 		/>);
 	const btn = ctl.instance() as ButtonToggle;
 
-	expect(ctl).toBeTruthy();
-	expect(btn).toBeTruthy();
+	assert(ctl);
+	assert(btn);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('iconNameOn')).toBe('star');
-	expect(ctl.prop('iconNameOff')).toBe('star-o');
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert.equal(ctl.prop('iconNameOn'), 'star');
+	assert.equal(ctl.prop('iconNameOff'), 'star-o');
 
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
+	assert(!ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
 
-	expect(btn.state.toggle).toBe(false);
+	assert(!btn.state.toggle);
 	ctl.find('.ui-button-toggle').simulate('click');
-	expect(click.calledOnce).toBe(true);
-	expect(btn.state.toggle).toBe(true);
-
-	expect(btn.state.toggle).toBe(ctl.state('toggle'));
+	expect(click).toHaveBeenCalled();
+	assert(btn.state.toggle);
+	assert.equal(btn.state.toggle, ctl.state('toggle'));
 });
 
 test('Test disabling of a ButtonToggle', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(<ButtonToggle onClick={click} disabled={true} />);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(true);
-	expect(ctl.prop('visible')).toBe(true);
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert(ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
+	assert.equal(ctl.find('.disabled').length, 1);
 
 	ctl.find('.ui-button-toggle').simulate('click');
-	expect(click.neverCalledWith()).toBe(true);
+	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test making a ButtonToggle invisible', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(<ButtonToggle onClick={click} visible={false} />);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(false);
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert(!ctl.prop('disabled'));
+	assert(!ctl.prop('visible'));
+	assert.equal(ctl.find('.invisible').length, 1);
 
 	ctl.find('.ui-button-toggle').simulate('click');
-	expect(click.neverCalledWith()).toBe(true);
+	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test the icon switch in a ButtonToggle click', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<ButtonToggle
 			iconNameOff="star-o"
@@ -136,16 +119,16 @@ test('Test the icon switch in a ButtonToggle click', () => {
 		/>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('iconNameOn')).toBe('star');
-	expect(ctl.prop('iconNameOff')).toBe('star-o');
+	assert(!ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert.equal(ctl.prop('iconNameOn'), 'star');
+	assert.equal(ctl.prop('iconNameOff'), 'star-o');
 
-	expect(ctl.state('toggle')).toBe(false);
+	assert(!ctl.state('toggle'));
 	ctl.find('.ui-button-toggle').simulate('click');
-	expect(click.calledOnce).toBe(true);
-	expect(ctl.state('toggle')).toBe(true);
+	expect(click).toHaveBeenCalled();
+	assert(ctl.state('toggle'));
 });

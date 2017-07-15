@@ -67,6 +67,7 @@ test('Test disabling of a ButtonText control', () => {
 	assert.equal(ctl.prop('iconName'), 'bomb');
 	assert(ctl.prop('disabled'));
 	assert(ctl.prop('visible'));
+	assert.equal(ctl.find('.disabled').length, 1);
 
 	ctl.find('.ui-button-text').simulate('click');
 	expect(click).not.toHaveBeenCalled();
@@ -81,6 +82,7 @@ test('Test making a ButtonText control invisible', () => {
 	assert.equal(ctl.prop('iconName'), 'bomb');
 	assert(!ctl.prop('disabled'));
 	assert(!ctl.prop('visible'));
+	assert.equal(ctl.find('.invisible').length, 1);
 
 	ctl.find('.ui-button-text').simulate('click');
 	expect(click).not.toHaveBeenCalled();

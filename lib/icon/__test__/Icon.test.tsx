@@ -1,6 +1,7 @@
 'use strict';
 
-import {mount} from 'enzyme';
+import * as assert from 'assert';
+import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {Sizing} from '../../shared';
 import {getDefaultIconProps, Icon} from '../index';
@@ -8,20 +9,20 @@ import {getDefaultIconProps, Icon} from '../index';
 test('Test retrieval of the Icon props object', () => {
 	const props = getDefaultIconProps();
 
-	expect(props).toBeTruthy();
+	assert(props);
 
-	expect('iconName' in props).toBe(true);
-	expect(props.iconName).toBe('bomb');
+	assert('iconName' in props);
+	assert.equal(props.iconName, 'bomb');
 
-	expect('imageFile' in props).toBe(true);
-	expect(props.imageFile).toBe('');
+	assert('imageFile' in props);
+	assert.equal(props.imageFile, '');
 
-	expect('sizing' in props).toBe(true);
-	expect(props.sizing).toBe(Sizing.normal);
+	assert('sizing' in props);
+	assert.equal(props.sizing, Sizing.normal);
 });
 
 test('Test creation of an Icon control with icon', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<Icon
 			className="test-class"
 			color="red"
@@ -30,54 +31,40 @@ test('Test creation of an Icon control with icon', () => {
 		/>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.prop('color')).toBe('red');
-	expect(ctl.prop('backgroundColor')).toBe('blue');
-
-	expect(ctl.find('.ui-icon').length).toBe(1);
-	expect(ctl.find('.fa').length).toBe(1);
-	expect(ctl.find('.fa-star').length).toBe(1);
-	expect(ctl.find('.test-class').length).toBe(1);
-
-	expect(ctl.find('i').length).toBe(1);
-	expect(ctl.find('img').length).toBe(0);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test creation of an Icon control with image', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<Icon
 			imageFile="./test-icon-image.png"
 		/>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.find('.fa').length).toBe(0);
-	expect(ctl.find('.fa-bomb').length).toBe(0);
-	expect(ctl.find('i').length).toBe(0);
-	expect(ctl.find('img').length).toBe(1);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test the disabling of the Icon control', () => {
 	const ctl = mount(<Icon disabled={true} />);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(true);
-	expect(ctl.prop('visible')).toBe(true);
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert(ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
+	assert.equal(ctl.find('.disabled').length, 1);
 });
 
 test('Test making the ButtonDialog invisible', () => {
 	const ctl = mount(
 		<Icon visible={false} />);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 
-	expect(ctl.prop('iconName')).toBe('bomb');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(false);
+	assert.equal(ctl.prop('iconName'), 'bomb');
+	assert(!ctl.prop('disabled'));
+	assert(!ctl.prop('visible'));
+	assert.equal(ctl.find('.invisible').length, 1);
 });
