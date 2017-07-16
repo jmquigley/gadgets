@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a Triangle control 1`] = `
+<svg
+  className="ui-triangle triangle normalBox triangleUp test-class"
+  preserveAspectRatio="xMidYMid meet"
+  style={
+    Object {
+      "fill": "inherit",
+      "stroke": "inherit",
+      "strokeWidth": "2px",
+    }
+  }
+  version="1.1"
+  viewBox="0 0 40 40"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <polygon
+    points="0,35, 20,10 40,35"
+  />
+</svg>
+`;
+
+exports[`Test retrieval of Triangle props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "2px",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "up",
+  "disabled": false,
+  "id": "",
+  "location": "none",
+  "nobase": false,
+  "noedit": false,
+  "noripple": false,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "visible": true,
+}
+`;

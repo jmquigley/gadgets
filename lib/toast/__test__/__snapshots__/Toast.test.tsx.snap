@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a Toast control 1`] = `
+<div
+  className="ui-toast toast normal info toastTop test-class"
+  style={Object {}}
+>
+  <div
+    className="ui-toast-content content normal"
+  />
+  <Button
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="button"
+    color="white"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="times"
+    iconStyle=""
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="large"
+    style={Object {}}
+    visible={true}
+  />
+</div>
+`;
+
+exports[`Test retrieval of Toast props object 1`] = `
+Object {
+  "backgroundColor": "white",
+  "borderColor": "black",
+  "borderWidth": "none",
+  "bottom": false,
+  "className": "",
+  "color": "black",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "duration": 3,
+  "id": "",
+  "level": 0,
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "onClick": [Function],
+  "onClose": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "type": 1,
+  "visible": true,
+}
+`;
