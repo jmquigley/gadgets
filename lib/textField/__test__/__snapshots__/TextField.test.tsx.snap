@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a TextField control 1`] = `
+<div
+  className="ui-textfield textField test-class"
+>
+  <input
+    className="normal textFieldInput"
+    disabled={false}
+    id=""
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Test creation of a textfield with min/max validation 1`] = `
+<TextField
+  disabled={false}
+  id=""
+  maxLength="10"
+  minLength="5"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onValidation={[Function]}
+  sizing="normal"
+  type="text"
+  usevalidation={true}
+  validators={Array []}
+  value=""
+  visible={true}
+>
+  <div
+    className="ui-textfield textField"
+  >
+    <input
+      className="normal textFieldInput"
+      disabled={false}
+      id=""
+      maxLength="10"
+      minLength="5"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      type="text"
+      value=""
+    />
+    <div
+      className=" textFieldMessage small"
+    >
+       
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`Test retrieval of TextField props object 1`] = `
+Object {
+  "disabled": false,
+  "id": "",
+  "onBlur": [Function],
+  "onChange": [Function],
+  "onKeyDown": [Function],
+  "onKeyPress": [Function],
+  "onValidation": [Function],
+  "sizing": "normal",
+  "type": "text",
+  "usevalidation": false,
+  "validators": Array [],
+  "visible": true,
+}
+`;

@@ -75,6 +75,138 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
 </ButtonText>
 `;
 
+exports[`Test disabling of a ButtonText control 1`] = `
+<ButtonText
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  iconName="bomb"
+  id=""
+  imageFile=""
+  location="none"
+  noedit={false}
+  noicon={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  text=""
+  visible={true}
+>
+  <div
+    className="ui-button-text buttonText disabled nohover"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <Icon
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className="icon"
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      iconName="bomb"
+      id=""
+      imageFile=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      visible={true}
+    >
+      <i
+        className="ui-icon icon none fa fa-bomb normal icon"
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+      />
+    </Icon>
+    <div
+      className="content normal right"
+    />
+  </div>
+</ButtonText>
+`;
+
+exports[`Test making a ButtonText control invisible 1`] = `
+<ButtonText
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  iconName="bomb"
+  id=""
+  imageFile=""
+  location="none"
+  noedit={false}
+  noicon={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  text=""
+  visible={false}
+>
+  <div
+    className="ui-button-text buttonText ripple invisible"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <Icon
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className="icon"
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      iconName="bomb"
+      id=""
+      imageFile=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      visible={true}
+    >
+      <i
+        className="ui-icon icon none fa fa-bomb normal icon"
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+      />
+    </Icon>
+    <div
+      className="content normal right"
+    />
+  </div>
+</ButtonText>
+`;
+
 exports[`Test retrieval of ButtonText props object 1`] = `
 Object {
   "backgroundColor": "inherit",

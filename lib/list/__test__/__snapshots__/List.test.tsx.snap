@@ -1,5 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test disabling of a List control 1`] = `
+<div
+  className="ui-list list disabled nohover"
+  id=""
+  style={Object {}}
+>
+  <ul>
+    <li
+      href={
+        Object {
+          "selectHandler": [Function],
+          "sizing": "normal",
+        }
+      }
+      selected={false}
+    >
+      some list item
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Test making List control invisible 1`] = `
+<div
+  className="ui-list list invisible"
+  id=""
+  style={Object {}}
+>
+  <ul>
+    <li
+      href={
+        Object {
+          "selectHandler": [Function],
+          "sizing": "normal",
+        }
+      }
+      selected={false}
+    >
+      some list item
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Test retrieval of List props object 1`] = `
 Object {
   "alternating": false,

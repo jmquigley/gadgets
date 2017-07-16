@@ -42,6 +42,34 @@ test('Test creation of a ButtonDialog control on top', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
+test('Test the disabling of the ButtonDialog control', () => {
+	const ctl = mount(
+		<ButtonDialog disabled={true}>
+			<p>Dialog test</p>
+		</ButtonDialog>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	ctl.find('.ui-button').simulate('click');
+	assert(!ctl.state('visible'));
+});
+
+test('Test making the ButtonDialog invisible', () => {
+	const ctl = mount(
+		<ButtonDialog visible={false}>
+			<p>Dialog test</p>
+		</ButtonDialog>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	ctl.find('.ui-button').simulate('click');
+	assert(!ctl.state('visible'));
+});
+
 test('Test the click event on a ButtonDialog control', () => {
 	const ctl = mount(
 		<ButtonDialog>
@@ -58,43 +86,6 @@ test('Test the click event on a ButtonDialog control', () => {
 
 	ctl.find('.ui-button').simulate('click');
 	assert(ctl.state('visible'));
-});
-
-test('Test the disabling of the ButtonDialog control', () => {
-	const ctl = mount(
-		<ButtonDialog disabled={true}>
-			<p>Dialog test</p>
-		</ButtonDialog>
-	);
-
-	assert(ctl);
-
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert(ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.disabled').length, 2);
-
-	ctl.find('.ui-button').simulate('click');
-	assert(!ctl.state('visible'));
-});
-
-test('Test making the ButtonDialog invisible', () => {
-	const ctl = mount(
-		<ButtonDialog visible={false}>
-			<p>Dialog test</p>
-		</ButtonDialog>
-	);
-
-	assert(ctl);
-
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert(!ctl.prop('disabled'));
-	assert(!ctl.prop('visible'));
-	assert.equal(ctl.find('.invisible').length, 2);
-	assert(ctl.contains(<p>Dialog test</p>));
-
-	ctl.find('.ui-button').simulate('click');
-	assert(!ctl.state('visible'));
 });
 
 test('Test opening the button dialog window', () => {

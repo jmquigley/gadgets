@@ -24,5 +24,34 @@ test('Test the creation of a Accordion control container', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
-// TODO: disabling the container
-// TODO: make the container invisible
+test('Test the disabling of the Accordion control container', () => {
+	const li = <li>some list item</li>;
+	const ctl = shallow(
+		<Accordion
+			className="test-class"
+			disabled
+			id="1234"
+		>
+			{li}
+		</Accordion>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+});
+
+test('Test making the accordion control invisible', () => {
+	const li = <li>some list item</li>;
+	const ctl = shallow(
+		<Accordion
+			className="test-class"
+			id="1234"
+			visible={false}
+		>
+			{li}
+		</Accordion>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+});

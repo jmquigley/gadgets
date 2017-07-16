@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a Title control with default props 1`] = `
+<div
+  className="ui-title-bar normal titleBar ripple test-class"
+  style={Object {}}
+>
+  <Label
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="ui-title titleDominant"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text="Test label text"
+    visible={true}
+  />
+  <div
+    className="ui-title-widget widgetDominant"
+  />
+</div>
+`;
+
+exports[`Test creation of a Title control with even layout 1`] = `
+<div
+  className="ui-title-bar normal titleBar ripple"
+  style={Object {}}
+>
+  <Label
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="ui-title titleEven"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text="Test label text"
+    visible={true}
+  />
+  <div
+    className="ui-title-widget widgetEven"
+  >
+    widget
+  </div>
+</div>
+`;
+
+exports[`Test creation of a Title control with quarter layout 1`] = `
+<div
+  className="ui-title-bar normal titleBar ripple"
+  style={Object {}}
+>
+  <Label
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="ui-title titleQuarter"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text="Test label text"
+    visible={true}
+  />
+  <div
+    className="ui-title-widget widgetQuarter"
+  >
+    widget
+  </div>
+</div>
+`;
+
+exports[`Test creation of a Title control with stacked layout 1`] = `
+<div
+  className="ui-title-bar normal titleBarStacked ripple"
+  style={Object {}}
+>
+  <Label
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="ui-title titleStacked"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text="Test label text"
+    visible={true}
+  />
+  <div
+    className="ui-title-widget widgetStacked"
+  >
+    widget
+  </div>
+</div>
+`;
+
+exports[`Test creation of a Title control with threequarter layout 1`] = `
+<div
+  className="ui-title-bar normal titleBar ripple"
+  style={Object {}}
+>
+  <Label
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="ui-title titleThreeQuarter"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text="Test label text"
+    visible={true}
+  />
+  <div
+    className="ui-title-widget widgetThreeQuarter"
+  >
+    widget
+  </div>
+</div>
+`;
+
+exports[`Test disabling the Title control 1`] = `
+<Title
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  id=""
+  layout={4}
+  location="none"
+  noedit={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={true}
+  widget={null}
+>
+  <div
+    className="ui-title-bar normal titleBar disabled nohover"
+    style={Object {}}
+  >
+    <Label
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className="ui-title titleDominant"
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      id=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      text="Test label text"
+      visible={true}
+    >
+      <span
+        className="ui-label label normal ui-title titleDominant"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+        suppressContentEditableWarning={true}
+      >
+        Test label text
+      </span>
+    </Label>
+    <div
+      className="ui-title-widget widgetDominant"
+    />
+  </div>
+</Title>
+`;
+
+exports[`Test making the Title control invisible 1`] = `
+<Title
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  id=""
+  layout={4}
+  location="none"
+  noedit={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={false}
+  widget={null}
+>
+  <div
+    className="ui-title-bar normal titleBar ripple invisible"
+    style={Object {}}
+  >
+    <Label
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className="ui-title titleDominant"
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      id=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      text="Test label text"
+      visible={true}
+    >
+      <span
+        className="ui-label label normal ui-title titleDominant"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+        suppressContentEditableWarning={true}
+      >
+        Test label text
+      </span>
+    </Label>
+    <div
+      className="ui-title-widget widgetDominant"
+    />
+  </div>
+</Title>
+`;
+
+exports[`Test retrieval of Title props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "id": "",
+  "layout": 4,
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "visible": true,
+  "widget": null,
+}
+`;

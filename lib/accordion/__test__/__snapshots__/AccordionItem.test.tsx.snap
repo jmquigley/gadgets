@@ -1,5 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test making the AccordionItem invisible 1`] = `
+<div
+  className="ui-accordionitem accordionItem invisible"
+  style={Object {}}
+>
+  <Item
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    id=""
+    initialToggle={false}
+    layout={4}
+    leftButton={null}
+    location="none"
+    noedit={false}
+    noripple={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    onNew={[Function]}
+    rightButton={
+      <Button
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        iconName="plus"
+        iconStyle=""
+        id=""
+        location="none"
+        noedit={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      />
+    }
+    selected={false}
+    showButton={true}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    title="Test Title"
+    visible={false}
+    widget={null}
+  />
+</div>
+`;
+
 exports[`Test retrieval of AccordionItem props object 1`] = `
 Object {
   "backgroundColor": "inherit",
@@ -47,7 +112,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
     backgroundColor="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className=""
+    className="test-class"
     color="inherit"
     contentEditable={false}
     direction="right"
@@ -55,6 +120,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
     hiddenLeftButton={false}
     hiddenRightButton={false}
     id=""
+    initialToggle={false}
     layout={4}
     leftButton={null}
     location="none"
@@ -66,6 +132,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
+    onNew={[Function]}
     rightButton={
       <Button
         backgroundColor="inherit"
@@ -90,6 +157,72 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       />
     }
     selected={false}
+    showButton={true}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    title="Test Title"
+    visible={true}
+    widget={null}
+  />
+</div>
+`;
+
+exports[`Test the disabling of the AccordionItem 1`] = `
+<div
+  className="ui-accordionitem accordionItem disabled nohover"
+  style={Object {}}
+>
+  <Item
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={true}
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    id=""
+    initialToggle={false}
+    layout={4}
+    leftButton={null}
+    location="none"
+    noedit={false}
+    noripple={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    onNew={[Function]}
+    rightButton={
+      <Button
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        iconName="plus"
+        iconStyle=""
+        id=""
+        location="none"
+        noedit={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      />
+    }
+    selected={false}
+    showButton={true}
     sizing="normal"
     stacked={false}
     style={Object {}}

@@ -1,55 +1,56 @@
 'use strict';
 
+import * as assert from 'assert';
 import * as _ from 'lodash';
 import {getDefaultBaseProps, Location, Sizing} from '../index';
 
 test('Test retrieval of default prop object', () => {
 	const props = getDefaultBaseProps();
 
-	expect(props).toBeTruthy();
+	assert(props);
 
-	expect('backgroundColor' in props).toBe(true);
-	expect(props.backgroundColor).toBe('inherit');
+	assert('backgroundColor' in props);
+	assert.equal(props.backgroundColor, 'inherit');
 
-	expect('borderColor' in props).toBe(true);
-	expect(props.borderColor).toBe('inherit');
+	assert('borderColor' in props);
+	assert.equal(props.borderColor, 'inherit');
 
-	expect('borderWidth' in props).toBe(true);
-	expect(props.borderWidth).toBe('none');
+	assert('borderWidth' in props);
+	assert.equal(props.borderWidth, 'none');
 
-	expect('className' in props).toBe(true);
-	expect(props.className).toBe('');
+	assert('className' in props);
+	assert.equal(props.className, '');
 
-	expect('color' in props).toBe(true);
-	expect(props.color).toBe('inherit');
+	assert('color' in props);
+	assert.equal(props.color, 'inherit');
 
-	expect('contentEditable' in props).toBe(true);
-	expect(props.contentEditable).toBe(false);
+	assert('contentEditable' in props);
+	assert.equal(props.contentEditable, false);
 
-	expect('disabled' in props).toBe(true);
-	expect(props.disabled).toBe(false);
+	assert('disabled' in props);
+	assert.equal(props.disabled, false);
 
-	expect('id' in props).toBe(true);
-	expect(props.id).toBe('');
+	assert('id' in props);
+	assert.equal(props.id, '');
 
-	expect('location' in props).toBe(true);
-	expect(props.location).toBe(Location.none);
+	assert('location' in props);
+	assert.equal(props.location, Location.none);
 
-	expect('noedit' in props).toBe(true);
-	expect(props.noedit).toBe(false);
+	assert('noedit' in props);
+	assert.equal(props.noedit, false);
 
-	expect('noripple' in props).toBe(true);
-	expect(props.noripple).toBe(false);
+	assert('noripple' in props);
+	assert.equal(props.noripple, false);
 
-	expect('selected' in props).toBe(true);
-	expect(props.selected).toBe(false);
+	assert('selected' in props);
+	assert.equal(props.selected, false);
 
-	expect('sizing' in props).toBe(true);
-	expect(props.sizing).toBe(Sizing.normal);
+	assert('sizing' in props);
+	assert.equal(props.sizing, Sizing.normal);
 
-	expect('style' in props).toBe(true);
-	expect(_.isEmpty(props.style)).toBe(true);
+	assert('style' in props);
+	assert(_.isEmpty(props.style));
 
-	expect('visible' in props).toBe(true);
-	expect(props.visible).toBe(true);
+	assert('visible' in props);
+	assert.equal(props.visible, true);
 });

@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test making the accordion control invisible 1`] = `
+<ul
+  className="ui-accordion accordion test-class invisible"
+  style={Object {}}
+>
+  <li>
+    some list item
+  </li>
+</ul>
+`;
+
 exports[`Test retrieval of Accordion props object 1`] = `
 Object {
   "backgroundColor": "inherit",
@@ -25,6 +36,17 @@ Object {
 exports[`Test the creation of a Accordion control container 1`] = `
 <ul
   className="ui-accordion accordion test-class"
+  style={Object {}}
+>
+  <li>
+    some list item
+  </li>
+</ul>
+`;
+
+exports[`Test the disabling of the Accordion control container 1`] = `
+<ul
+  className="ui-accordion accordion test-class disabled nohover"
   style={Object {}}
 >
   <li>

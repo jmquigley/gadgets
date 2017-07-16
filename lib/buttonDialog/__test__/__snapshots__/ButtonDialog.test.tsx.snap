@@ -118,6 +118,162 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
 </div>
 `;
 
+exports[`Test making the ButtonDialog invisible 1`] = `
+<ButtonDialog
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  dialogClasses={Array []}
+  direction="right"
+  disabled={false}
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  location="bottom"
+  noedit={false}
+  noripple={false}
+  notriangle={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  triangleClasses={Array []}
+  visible={false}
+>
+  <div
+    className="ui-button-dialog buttonDialog invisible"
+  >
+    <Button
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      iconName="bomb"
+      iconStyle=""
+      id=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      visible={false}
+    >
+      <div
+        className="ui-button button ripple invisible"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <Icon
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=" icon"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          iconName="bomb"
+          id=""
+          imageFile=""
+          location="none"
+          noedit={false}
+          noripple={false}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <i
+            className="ui-icon icon none fa fa-bomb normal  icon"
+            style={
+              Object {
+                "backgroundColor": "inherit",
+                "color": "inherit",
+              }
+            }
+          />
+        </Icon>
+      </div>
+    </Button>
+    <div
+      className="buttonDialogPopup ui-dialog-popup dialogBottom buttonDialogHide normal"
+      onClick={[Function]}
+    >
+      <div
+        className="buttonDialogContent"
+      >
+        <p>
+          Dialog test
+        </p>
+      </div>
+      <Triangle
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="2px"
+        className="dialogTriangleBottom buttonDialogHide"
+        color="inherit"
+        contentEditable={false}
+        direction="up"
+        disabled={false}
+        id=""
+        location="none"
+        nobase={true}
+        noedit={false}
+        noripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      >
+        <svg
+          className="ui-triangle triangle normalBox triangleUp dialogTriangleBottom buttonDialogHide"
+          preserveAspectRatio="xMidYMid meet"
+          style={
+            Object {
+              "fill": "inherit",
+              "stroke": "inherit",
+              "strokeWidth": "2px",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 40 40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="-3,35, 20,10 43,35"
+            style={
+              Object {
+                "fill": "inherit",
+                "stroke": "none",
+              }
+            }
+          />
+          <polygon
+            points="-3,35, 20,10 43,35, 20,10"
+            style={
+              Object {
+                "stroke": "inherit",
+                "strokeLinecap": "square",
+                "strokeWidth": "2px",
+              }
+            }
+          />
+        </svg>
+      </Triangle>
+    </div>
+  </div>
+</ButtonDialog>
+`;
+
 exports[`Test retrieval of ButtonDialog props object 1`] = `
 Object {
   "backgroundColor": "inherit",
@@ -143,4 +299,160 @@ Object {
   "triangleClasses": Array [],
   "visible": true,
 }
+`;
+
+exports[`Test the disabling of the ButtonDialog control 1`] = `
+<ButtonDialog
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  dialogClasses={Array []}
+  direction="right"
+  disabled={true}
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  location="bottom"
+  noedit={false}
+  noripple={false}
+  notriangle={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  triangleClasses={Array []}
+  visible={true}
+>
+  <div
+    className="ui-button-dialog buttonDialog disabled nohover"
+  >
+    <Button
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      iconName="bomb"
+      iconStyle=""
+      id=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      visible={true}
+    >
+      <div
+        className="ui-button button disabled nohover"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <Icon
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=" icon"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          iconName="bomb"
+          id=""
+          imageFile=""
+          location="none"
+          noedit={false}
+          noripple={false}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <i
+            className="ui-icon icon none fa fa-bomb normal  icon"
+            style={
+              Object {
+                "backgroundColor": "inherit",
+                "color": "inherit",
+              }
+            }
+          />
+        </Icon>
+      </div>
+    </Button>
+    <div
+      className="buttonDialogPopup ui-dialog-popup dialogBottom buttonDialogHide normal"
+      onClick={[Function]}
+    >
+      <div
+        className="buttonDialogContent"
+      >
+        <p>
+          Dialog test
+        </p>
+      </div>
+      <Triangle
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="2px"
+        className="dialogTriangleBottom buttonDialogHide"
+        color="inherit"
+        contentEditable={false}
+        direction="up"
+        disabled={false}
+        id=""
+        location="none"
+        nobase={true}
+        noedit={false}
+        noripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      >
+        <svg
+          className="ui-triangle triangle normalBox triangleUp dialogTriangleBottom buttonDialogHide"
+          preserveAspectRatio="xMidYMid meet"
+          style={
+            Object {
+              "fill": "inherit",
+              "stroke": "inherit",
+              "strokeWidth": "2px",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 40 40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="-3,35, 20,10 43,35"
+            style={
+              Object {
+                "fill": "inherit",
+                "stroke": "none",
+              }
+            }
+          />
+          <polygon
+            points="-3,35, 20,10 43,35, 20,10"
+            style={
+              Object {
+                "stroke": "inherit",
+                "strokeLinecap": "square",
+                "strokeWidth": "2px",
+              }
+            }
+          />
+        </svg>
+      </Triangle>
+    </div>
+  </div>
+</ButtonDialog>
 `;

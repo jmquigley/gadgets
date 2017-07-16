@@ -1,0 +1,592 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a Pager control 1`] = `
+<div
+  className="ui-pager pager test-class"
+>
+  <Button
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="pagerButton normalBox"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="angle-double-left"
+    iconStyle=""
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
+  <Button
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="pagerButton normalBox"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="angle-left"
+    iconStyle=""
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
+  <ButtonText
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="pagerButton normalBox ui-pager-selected"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="bomb"
+    id=""
+    imageFile=""
+    location="none"
+    noedit={false}
+    noicon={true}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text="1"
+    visible={true}
+  />
+  <ButtonText
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="pagerButton normalBox"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={true}
+    iconName="bomb"
+    id=""
+    imageFile=""
+    location="none"
+    noedit={false}
+    noicon={true}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text=""
+    visible={true}
+  />
+  <ButtonText
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="pagerButton normalBox"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={true}
+    iconName="bomb"
+    id=""
+    imageFile=""
+    location="none"
+    noedit={false}
+    noicon={true}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text=""
+    visible={true}
+  />
+  <Button
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="pagerButton normalBox"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="angle-right"
+    iconStyle=""
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
+  <Button
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="pagerButton normalBox"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    iconName="angle-double-right"
+    iconStyle=""
+    id=""
+    location="none"
+    noedit={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
+  <div
+    className="spacer"
+  />
+  <div
+    className="spacer"
+  />
+  <div
+    className="spacer"
+  />
+  <ButtonDialog
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="pagerDialog"
+    color="inherit"
+    contentEditable={false}
+    dialogClasses={Array []}
+    direction="right"
+    disabled={false}
+    iconName="ellipsis-v"
+    iconStyle=""
+    id=""
+    location="top"
+    noedit={false}
+    noripple={false}
+    notriangle={true}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    triangleClasses={Array []}
+    visible={true}
+  >
+    <List
+      alternating={false}
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      id=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      onAdd={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      unselect={false}
+      visible={true}
+    >
+      <ListItem
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        href={
+          Object {
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={true}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        onSelect={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title="First"
+        visible={true}
+        widget={null}
+      />
+      <ListItem
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        href={
+          Object {
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={true}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        onSelect={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title="Last"
+        visible={true}
+        widget={null}
+      />
+      <ListItem
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        href={
+          Object {
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={true}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        onSelect={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title="Next"
+        visible={true}
+        widget={null}
+      />
+      <ListItem
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        href={
+          Object {
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={true}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        onSelect={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title="Previous"
+        visible={true}
+        widget={null}
+      />
+      <ListDivider
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="lightgray"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={false}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title=""
+        visible={true}
+        widget={null}
+      />
+      <ListItem
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        href={
+          Object {
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={true}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        onSelect={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title="25"
+        visible={true}
+        widget={null}
+      />
+      <ListItem
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        href={
+          Object {
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={true}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        onSelect={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title="50"
+        visible={true}
+        widget={null}
+      />
+      <ListItem
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        href={
+          Object {
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={true}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        onSelect={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title="100"
+        visible={true}
+        widget={null}
+      />
+      <ListItem
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        href={
+          Object {
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={true}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        onSelect={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title="all"
+        visible={true}
+        widget={null}
+      />
+    </List>
+  </ButtonDialog>
+</div>
+`;
+
+exports[`Test retrieval of Pager props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "id": "",
+  "initialPage": 1,
+  "location": "none",
+  "noedit": false,
+  "noripple": false,
+  "onSelect": [Function],
+  "pageSizes": Array [
+    25,
+    50,
+    100,
+  ],
+  "pagesToDisplay": 3,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "totalItems": 0,
+  "useinput": false,
+  "visible": true,
+}
+`;

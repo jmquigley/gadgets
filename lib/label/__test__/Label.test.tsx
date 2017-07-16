@@ -21,29 +21,27 @@ test('Test creation of a Label control', () => {
 });
 
 test('Test the disabling of the Label control', () => {
+	const click = jest.fn();
 	const s: string = 'Test label text';
 	const ctl = mount(<Label disabled text={s} />);
 
 	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 
-	assert(ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.ui-label').length, 1);
-	assert.equal(ctl.find('.disabled').length, 1);
-	assert.equal(ctl.text(), s);
+	ctl.find('span').simulate('click');
+	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test making the Label control invisible', () => {
+	const click = jest.fn();
 	const s: string = 'Test label text';
 	const ctl = mount(<Label visible={false} text={s} />);
 
 	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 
-	assert(!ctl.prop('disabled'));
-	assert(!ctl.prop('visible'));
-	assert.equal(ctl.find('.ui-label').length, 1);
-	assert.equal(ctl.find('.invisible').length, 1);
-	assert.equal(ctl.text(), s);
+	ctl.find('span').simulate('click');
+	expect(click).not.toHaveBeenCalled();
 });
 
 // TODO: add test for events: blur, change, click, doubleclick, keydown, keypress

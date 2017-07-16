@@ -21,6 +21,30 @@ test('Test the creation of a AccordionItem control', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
+test('Test the disabling of the AccordionItem', () => {
+	const ctl = shallow(
+		<AccordionItem
+			disabled
+			title="Test Title"
+		/>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+});
+
+test('Test making the AccordionItem invisible', () => {
+	const ctl = shallow(
+		<AccordionItem
+			title="Test Title"
+			visible={false}
+		/>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+});
+
 test('Test clicking of the AccordionItem header', () => {
 	const click = jest.fn();
 	const ctl = mount(
@@ -47,6 +71,3 @@ test('Test clicking the AccordionItem new button', () => {
 	btn.simulate('click');
 	expect(click).toHaveBeenCalled();
 });
-
-// TODO: disabling the accordion item
-// TODO: make the accordion item invisible

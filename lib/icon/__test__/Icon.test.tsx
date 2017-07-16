@@ -41,11 +41,7 @@ test('Test the disabling of the Icon control', () => {
 	const ctl = mount(<Icon disabled={true} />);
 
 	assert(ctl);
-
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert(ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.disabled').length, 1);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test making the ButtonDialog invisible', () => {
@@ -53,9 +49,5 @@ test('Test making the ButtonDialog invisible', () => {
 		<Icon visible={false} />);
 
 	assert(ctl);
-
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert(!ctl.prop('disabled'));
-	assert(!ctl.prop('visible'));
-	assert.equal(ctl.find('.invisible').length, 1);
+	expect(ctl).toMatchSnapshot();
 });

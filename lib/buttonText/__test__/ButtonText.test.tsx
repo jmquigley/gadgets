@@ -28,6 +28,28 @@ test('Test creation of a ButtonText control to the left', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
+test('Test disabling of a ButtonText control', () => {
+	const click = jest.fn();
+	const ctl = mount(<ButtonText onClick={click} disabled={true} />);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	ctl.find('.ui-button-text').simulate('click');
+	expect(click).not.toHaveBeenCalled();
+});
+
+test('Test making a ButtonText control invisible', () => {
+	const click = jest.fn();
+	const ctl = mount(<ButtonText onClick={click} visible={false} />);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	ctl.find('.ui-button-text').simulate('click');
+	expect(click).not.toHaveBeenCalled();
+});
+
 test('Test button click in ButtonText control', () => {
 	const click = jest.fn();
 	const ctl = mount(
@@ -48,34 +70,4 @@ test('Test button click in ButtonText control', () => {
 	assert.equal(btn.length, 1);
 	btn.simulate('click');
 	expect(click).toHaveBeenCalled();
-});
-
-test('Test disabling of a ButtonText control', () => {
-	const click = jest.fn();
-	const ctl = mount(<ButtonText onClick={click} disabled={true} />);
-
-	assert(ctl);
-
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert(ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.disabled').length, 1);
-
-	ctl.find('.ui-button-text').simulate('click');
-	expect(click).not.toHaveBeenCalled();
-});
-
-test('Test making a ButtonText control invisible', () => {
-	const click = jest.fn();
-	const ctl = mount(<ButtonText onClick={click} visible={false} />);
-
-	assert(ctl);
-
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert(!ctl.prop('disabled'));
-	assert(!ctl.prop('visible'));
-	assert.equal(ctl.find('.invisible').length, 1);
-
-	ctl.find('.ui-button-text').simulate('click');
-	expect(click).not.toHaveBeenCalled();
 });

@@ -1,89 +1,82 @@
 'use strict';
 
-import {mount} from 'enzyme';
-import * as _ from 'lodash';
+import * as assert from 'assert';
+import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import * as sinon from 'sinon';
 import {waitPromise} from 'util.wait';
 import {Button} from '../../button';
 import {getDefaultListItemProps, ListItem} from '../index';
 
 function validate(ctl: any) {
-	expect(ctl).toBeTruthy();
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.find('.ui-listitem').length).toBe(1);
+	assert(ctl);
+	assert(!ctl.prop('disabled'));
+	assert(ctl.prop('visible'));
+	assert.equal(ctl.find('.ui-listitem').length, 1);
 }
 
 test('Test retrieval of ListItem props object', () => {
 	const props = getDefaultListItemProps();
 
-	expect(props).toBeTruthy();
-
-	expect('href' in props).toBe(true);
-	expect(_.isEmpty(props.href)).toBe(false);
+	assert(props);
+	expect(props).toMatchSnapshot();
 });
 
 test('Test the creation of a ListItem control with simple title', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<ListItem
 			title="test title"
 			selected
 		/>
 	);
 
-	validate(ctl);
-	expect(ctl.prop('title')).toBe('test title');
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test the creation of a ListItem control with left & right title', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<ListItem
 			title="test title left"
 			widget="test title right"
 		/>
 	);
 
-	validate(ctl);
-
-	expect(ctl.prop('title')).toBe('test title left');
-	expect(ctl.prop('widget')).toBe('test title right');
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test disabling of a ListItem control', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<ListItem
 			disabled={true}
-			title="test title"
 			onClick={click}
+			title="test title"
 		/>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 
-	expect(ctl.prop('title')).toBe('test title');
-	expect(ctl.prop('disabled')).toBe(true);
-	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.find('.ui-listitem').length).toBe(1);
-	expect(click.notCalled).toBe(true);
+	ctl.find('.ui-item').simulate('click');
+	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test making ListItem control invisible', () => {
+	const click = jest.fn();
 	const ctl = mount(
 		<ListItem title="test title" visible={false} />
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 
-	expect(ctl.prop('title')).toBe('test title');
-	expect(ctl.prop('disabled')).toBe(false);
-	expect(ctl.prop('visible')).toBe(false);
-	expect(ctl.find('.ui-listitem').length).toBe(1);
+	ctl.find('.ui-item').simulate('click');
+	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test clicking of the left button on the ListItem control', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<ListItem
 			title="test title"
@@ -93,15 +86,16 @@ test('Test clicking of the left button on the ListItem control', () => {
 
 	validate(ctl);
 
-	expect(ctl.prop('title')).toBe('test title');
+	assert.equal(ctl.prop('title'), 'test title');
 	ctl.find('.ui-button').first().simulate('click');
-	expect(click.calledOnce).toBe(true);
-	expect(ctl.find('.fa').length).toBe(1);
-	expect(ctl.find('.fa-bath').length).toBe(1);
+	expect(click).toHaveBeenCalled();
+
+	assert.equal(ctl.find('.fa').length, 1);
+	assert.equal(ctl.find('.fa-bath').length, 1);
 });
 
 test('Test clicking of the right button on the ListItem control', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<ListItem
 			title="test title"
@@ -111,15 +105,16 @@ test('Test clicking of the right button on the ListItem control', () => {
 
 	validate(ctl);
 
-	expect(ctl.prop('title')).toBe('test title');
+	assert.equal(ctl.prop('title'), 'test title');
 	ctl.find('.ui-button').last().simulate('click');
-	expect(click.calledOnce).toBe(true);
-	expect(ctl.find('.fa').length).toBe(1);
-	expect(ctl.find('.fa-bath').length).toBe(1);
+	expect(click).toHaveBeenCalled();
+
+	assert.equal(ctl.find('.fa').length, 1);
+	assert.equal(ctl.find('.fa-bath').length, 1);
 });
 
 test('Test clicking of the title bar area of the ListItem', async () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<ListItem
 			title="test title"
@@ -129,22 +124,22 @@ test('Test clicking of the title bar area of the ListItem', async () => {
 
 	validate(ctl);
 
-	expect(ctl.prop('title')).toBe('test title');
+	assert.equal(ctl.prop('title'), 'test title');
 	ctl.find('.ui-item').simulate('click');
 
 	// This wait must occur during the test because there is a built in click
 	// delay where the component checks if a double click is occurring.
 	await waitPromise(1)
 		.then(() => {
-			expect(click.calledOnce).toBe(true);
+			expect(click).toHaveBeenCalled();
 		})
 		.catch((err: string) => {
-			console.error(err);
+			assert.fail(err);
 		});
 });
 
 test('Test double click of the title bar area of the ListItem', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<ListItem
 			title="test title"
@@ -154,24 +149,24 @@ test('Test double click of the title bar area of the ListItem', () => {
 	const listItem = ctl.instance() as ListItem;
 
 	validate(ctl);
-	expect(listItem).toBeTruthy();
+	assert(listItem);
 
 	const titleCtl = ctl.find('.ui-item');
-	expect(titleCtl).toBeTruthy();
+	assert(titleCtl);
 
-	expect(listItem.preventClick).toBe(false);
-	expect(ctl.prop('title')).toBe('test title');
+	assert(!listItem.preventClick);
+	assert.equal(ctl.prop('title'), 'test title');
 	titleCtl.simulate('doubleClick');
-	expect(listItem.preventClick).toBe(true);
-	expect(ctl.state('toggleRipple')).toBe(true);
+	assert(listItem.preventClick);
+	assert(ctl.state('toggleRipple'));
 
 	// The single click should be ignored because the double
 	// click was used.
-	expect(click.notCalled).toBe(true);
+	expect(click).not.toHaveBeenCalled();
 
 	// After the double click, simulate leaving focus and reseting
 	// the control.
 	titleCtl.simulate('blur');
-	expect(listItem.preventClick).toBe(false);
-	expect(ctl.state('toggleRipple')).toBe(false);
+	assert(!listItem.preventClick);
+	assert(!ctl.state('toggleRipple'));
 });

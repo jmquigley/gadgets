@@ -21,6 +21,26 @@ exports[`Test creation of a Badge control 1`] = `
 </div>
 `;
 
+exports[`Test making the Badge control invisible 1`] = `
+<div
+  className="badgeContainer invisible"
+>
+  <div
+    className="normal ui-badge badge topRight"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "border": "solid 3px red",
+        "color": "red",
+      }
+    }
+  >
+    0
+  </div>
+</div>
+`;
+
 exports[`Test retrieval of Badge props object 1`] = `
 Object {
   "backgroundColor": "white",
@@ -43,4 +63,24 @@ Object {
   "suppress": false,
   "visible": true,
 }
+`;
+
+exports[`Test the disabling of a Badge control 1`] = `
+<div
+  className="badgeContainer disabled nohover"
+>
+  <div
+    className="normal ui-badge badge topRight"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "border": "solid 3px red",
+        "color": "red",
+      }
+    }
+  >
+    0
+  </div>
+</div>
 `;

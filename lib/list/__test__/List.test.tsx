@@ -24,33 +24,25 @@ test('Test the creation of a List control container', () => {
 });
 
 test('Test disabling of a List control', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<List disabled={true}>
 			<li>some list item</li>
 		</List>
 	);
 
 	assert(ctl);
-
-	assert(ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.disabled').length, 1);
-	assert.equal(ctl.find('.ui-list').length, 1);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test making List control invisible', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<List visible={false}>
 			<li>some list item</li>
 		</List>
 	);
 
 	assert(ctl);
-
-	assert(!ctl.prop('disabled'));
-	assert(!ctl.prop('visible'));
-	assert.equal(ctl.find('.invisible').length, 1);
-	assert.equal(ctl.find('.ui-list').length, 1);
+	expect(ctl).toMatchSnapshot();
 });
 
 test('Test a list with ListItem and selection', () => {

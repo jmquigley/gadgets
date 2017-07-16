@@ -31,6 +31,28 @@ test('Test creation of a ButtonToggle control with on/off icons', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
+test('Test disabling of a ButtonToggle', () => {
+	const click = jest.fn();
+	const ctl = mount(<ButtonToggle onClick={click} disabled={true} />);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	ctl.find('.ui-button-toggle').simulate('click');
+	expect(click).not.toHaveBeenCalled();
+});
+
+test('Test making a ButtonToggle invisible', () => {
+	const click = jest.fn();
+	const ctl = mount(<ButtonToggle onClick={click} visible={false} />);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	ctl.find('.ui-button-toggle').simulate('click');
+	expect(click).not.toHaveBeenCalled();
+});
+
 test('Test ButtonToggle click event', () => {
 	const click = jest.fn();
 	const ctl = mount(
@@ -57,36 +79,6 @@ test('Test ButtonToggle click event', () => {
 	expect(click).toHaveBeenCalled();
 	assert(btn.state.toggle);
 	assert.equal(btn.state.toggle, ctl.state('toggle'));
-});
-
-test('Test disabling of a ButtonToggle', () => {
-	const click = jest.fn();
-	const ctl = mount(<ButtonToggle onClick={click} disabled={true} />);
-
-	assert(ctl);
-
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert(ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.disabled').length, 1);
-
-	ctl.find('.ui-button-toggle').simulate('click');
-	expect(click).not.toHaveBeenCalled();
-});
-
-test('Test making a ButtonToggle invisible', () => {
-	const click = jest.fn();
-	const ctl = mount(<ButtonToggle onClick={click} visible={false} />);
-
-	assert(ctl);
-
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert(!ctl.prop('disabled'));
-	assert(!ctl.prop('visible'));
-	assert.equal(ctl.find('.invisible').length, 1);
-
-	ctl.find('.ui-button-toggle').simulate('click');
-	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test the icon switch in a ButtonToggle click', () => {

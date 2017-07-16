@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test creation of a ButtonCircle control 1`] = `
+exports[`Test ButtonCircle click event 1`] = `
 <ButtonCircle
   backgroundColor="inherit"
   borderColor="black"
   borderWidth="none"
-  className="test-class"
+  className=""
   color="black"
   contentEditable={false}
   direction="right"
@@ -23,7 +23,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
   visible={true}
 >
   <div
-    className="ui-button-circle buttonCircle test-class"
+    className="ui-button-circle buttonCircle"
   >
     <div
       className="buttonCircleContainer"
@@ -51,6 +51,230 @@ exports[`Test creation of a ButtonCircle control 1`] = `
       >
         <div
           className="ui-button button ripple normalBorder buttonCircleIcon"
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "black",
+              "color": "black",
+            }
+          }
+        >
+          <Icon
+            backgroundColor="inherit"
+            borderColor="inherit"
+            borderWidth="none"
+            className="normalBox icon"
+            color="inherit"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            iconName="bomb"
+            id=""
+            imageFile=""
+            location="none"
+            noedit={false}
+            noripple={false}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            visible={true}
+          >
+            <i
+              className="ui-icon icon none fa fa-bomb normal normalBox icon"
+              style={
+                Object {
+                  "backgroundColor": "inherit",
+                  "color": "inherit",
+                }
+              }
+            />
+          </Icon>
+        </div>
+      </Button>
+    </div>
+  </div>
+</ButtonCircle>
+`;
+
+exports[`Test creation of a ButtonCircle control 1`] = `
+<div
+  className="ui-button-circle buttonCircle test-class"
+>
+  <div
+    className="buttonCircleContainer"
+  >
+    <Button
+      backgroundColor="inherit"
+      borderColor="black"
+      borderWidth="none"
+      className="normalBorder buttonCircleIcon"
+      color="black"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      iconName="bomb"
+      iconStyle="normalBox"
+      id=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      visible={true}
+    />
+  </div>
+</div>
+`;
+
+exports[`Test disabling of a ButtonCircle control 1`] = `
+<ButtonCircle
+  backgroundColor="inherit"
+  borderColor="black"
+  borderWidth="none"
+  className=""
+  color="black"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  location="none"
+  noedit={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={true}
+>
+  <div
+    className="ui-button-circle buttonCircle disabled nohover"
+  >
+    <div
+      className="buttonCircleContainer"
+    >
+      <Button
+        backgroundColor="inherit"
+        borderColor="black"
+        borderWidth="none"
+        className="normalBorder buttonCircleIcon"
+        color="black"
+        contentEditable={false}
+        direction="right"
+        disabled={true}
+        iconName="bomb"
+        iconStyle="normalBox"
+        id=""
+        location="none"
+        noedit={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      >
+        <div
+          className="ui-button button normalBorder buttonCircleIcon disabled nohover"
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "black",
+              "color": "black",
+            }
+          }
+        >
+          <Icon
+            backgroundColor="inherit"
+            borderColor="inherit"
+            borderWidth="none"
+            className="normalBox icon"
+            color="inherit"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            iconName="bomb"
+            id=""
+            imageFile=""
+            location="none"
+            noedit={false}
+            noripple={false}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            visible={true}
+          >
+            <i
+              className="ui-icon icon none fa fa-bomb normal normalBox icon"
+              style={
+                Object {
+                  "backgroundColor": "inherit",
+                  "color": "inherit",
+                }
+              }
+            />
+          </Icon>
+        </div>
+      </Button>
+    </div>
+  </div>
+</ButtonCircle>
+`;
+
+exports[`Test making a ButtonCircle control invisible 1`] = `
+<ButtonCircle
+  backgroundColor="inherit"
+  borderColor="black"
+  borderWidth="none"
+  className=""
+  color="black"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  location="none"
+  noedit={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={false}
+>
+  <div
+    className="ui-button-circle buttonCircle invisible"
+  >
+    <div
+      className="buttonCircleContainer"
+    >
+      <Button
+        backgroundColor="inherit"
+        borderColor="black"
+        borderWidth="none"
+        className="normalBorder buttonCircleIcon"
+        color="black"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        iconName="bomb"
+        iconStyle="normalBox"
+        id=""
+        location="none"
+        noedit={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={false}
+      >
+        <div
+          className="ui-button button ripple normalBorder buttonCircleIcon invisible"
           onClick={[Function]}
           style={
             Object {

@@ -34,29 +34,12 @@ test('Test creation of a Button control with custom icon, colors, and border', (
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test Button click event', () => {
-	const click = jest.fn();
-	const ctl = mount(<Button onClick={click} />);
-
-	assert(ctl);
-
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert(!ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-
-	ctl.find('.ui-button').simulate('click');
-	expect(click).toHaveBeenCalled();
-});
-
 test('Test disabling of a Button', () => {
 	const click = jest.fn();
 	const ctl = mount(<Button onClick={click} disabled={true} />);
 
 	assert(ctl);
-
-	assert(ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.disabled').length, 1);
+	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button').simulate('click');
 	expect(click).not.toHaveBeenCalled();
@@ -67,11 +50,19 @@ test('Test making a Button invisible', () => {
 	const ctl = mount(<Button onClick={click} visible={false} />);
 
 	assert(ctl);
-
-	assert(!ctl.prop('disabled'));
-	assert(!ctl.prop('visible'));
-	assert.equal(ctl.find('.invisible').length, 1);
+	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button').simulate('click');
 	expect(click).not.toHaveBeenCalled();
+});
+
+test('Test Button click event', () => {
+	const click = jest.fn();
+	const ctl = mount(<Button onClick={click} />);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	ctl.find('.ui-button').simulate('click');
+	expect(click).toHaveBeenCalled();
 });

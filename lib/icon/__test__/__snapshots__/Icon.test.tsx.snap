@@ -25,6 +25,39 @@ exports[`Test creation of an Icon control with image 1`] = `
 />
 `;
 
+exports[`Test making the ButtonDialog invisible 1`] = `
+<Icon
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  iconName="bomb"
+  id=""
+  imageFile=""
+  location="none"
+  noedit={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={false}
+>
+  <i
+    className="ui-icon icon none fa fa-bomb normal invisible"
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+  />
+</Icon>
+`;
+
 exports[`Test retrieval of the Icon props object 1`] = `
 Object {
   "backgroundColor": "inherit",
@@ -46,4 +79,37 @@ Object {
   "style": Object {},
   "visible": true,
 }
+`;
+
+exports[`Test the disabling of the Icon control 1`] = `
+<Icon
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  iconName="bomb"
+  id=""
+  imageFile=""
+  location="none"
+  noedit={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={true}
+>
+  <i
+    className="ui-icon icon none fa fa-bomb normal disabled nohover"
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+  />
+</Icon>
 `;

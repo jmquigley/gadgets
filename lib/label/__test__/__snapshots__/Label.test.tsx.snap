@@ -21,6 +21,53 @@ exports[`Test creation of a Label control 1`] = `
 </span>
 `;
 
+exports[`Test making the Label control invisible 1`] = `
+<Label
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  id=""
+  location="none"
+  noedit={false}
+  noripple={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  text="Test label text"
+  visible={false}
+>
+  <span
+    className="ui-label label normal invisible"
+    contentEditable={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+    suppressContentEditableWarning={true}
+  >
+    Test label text
+  </span>
+</Label>
+`;
+
 exports[`Test retrieval of default Label props object 1`] = `
 Object {
   "backgroundColor": "inherit",
@@ -47,4 +94,51 @@ Object {
   "text": " ",
   "visible": true,
 }
+`;
+
+exports[`Test the disabling of the Label control 1`] = `
+<Label
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  id=""
+  location="none"
+  noedit={false}
+  noripple={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  text="Test label text"
+  visible={true}
+>
+  <span
+    className="ui-label label normal disabled nohover"
+    contentEditable={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+    suppressContentEditableWarning={true}
+  >
+    Test label text
+  </span>
+</Label>
 `;

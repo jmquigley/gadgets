@@ -29,6 +29,20 @@ test('Test creation of a Badge control', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
+test('Test the disabling of a Badge control', () => {
+	const ctl = shallow(<Badge disabled />);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+});
+
+test('Test making the Badge control invisible', () => {
+	const ctl = shallow(<Badge visible={false} />);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+});
+
 test('Test clicking a Badge counter control', () => {
 	const click = jest.fn();
 	const ctl = mount(
@@ -48,6 +62,3 @@ test('Test clicking a Badge counter control', () => {
 	ctl.find('.ui-badge').simulate('click');
 	expect(click).toHaveBeenCalled();
 });
-
-// TODO: disabling the badge control
-// TODO: make the badge invisible
