@@ -28,6 +28,7 @@ exports[`Test creation of a Title control with default props 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    useedit={false}
     visible={true}
   />
   <div
@@ -64,6 +65,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    useedit={false}
     visible={true}
   />
   <div
@@ -102,6 +104,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    useedit={false}
     visible={true}
   />
   <div
@@ -140,6 +143,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    useedit={false}
     visible={true}
   />
   <div
@@ -178,6 +182,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    useedit={false}
     visible={true}
   />
   <div
@@ -236,6 +241,7 @@ exports[`Test disabling the Title control 1`] = `
       sizing="normal"
       style={Object {}}
       text="Test label text"
+      useedit={false}
       visible={true}
     >
       <span
@@ -312,6 +318,7 @@ exports[`Test making the Title control invisible 1`] = `
       sizing="normal"
       style={Object {}}
       text="Test label text"
+      useedit={false}
       visible={true}
     >
       <span

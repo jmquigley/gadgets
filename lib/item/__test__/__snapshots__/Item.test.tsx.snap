@@ -30,6 +30,7 @@ Object {
   "stacked": false,
   "style": Object {},
   "title": "",
+  "useedit": false,
   "visible": true,
   "widget": null,
 }
@@ -56,18 +57,31 @@ exports[`Test the creation of a Item control 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
     id=""
     layout={4}
+    leftButton={null}
     location="none"
     noedit={false}
     noripple={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    rightButton={null}
     selected={false}
     sizing="normal"
+    stacked={false}
     style={
       Object {
         "padding": "2px 4px",
       }
     }
+    title="test title"
+    useedit={false}
     visible={true}
     widget="widget"
   >

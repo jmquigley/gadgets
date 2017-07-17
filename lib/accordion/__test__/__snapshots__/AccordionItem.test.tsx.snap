@@ -29,36 +29,13 @@ exports[`Test making the AccordionItem invisible 1`] = `
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
-    onNew={[Function]}
-    rightButton={
-      <Button
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
-        className=""
-        color="inherit"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        iconName="plus"
-        iconStyle=""
-        id=""
-        location="none"
-        noedit={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        visible={true}
-      />
-    }
+    rightButton={null}
     selected={false}
-    showButton={true}
     sizing="normal"
     stacked={false}
     style={Object {}}
     title="Test Title"
+    useedit={false}
     visible={false}
     widget={null}
   />
@@ -90,14 +67,13 @@ Object {
   "onKeyDown": [Function],
   "onKeyPress": [Function],
   "onMouseOut": [Function],
-  "onNew": [Function],
   "rightButton": null,
   "selected": false,
-  "showButton": true,
   "sizing": "normal",
   "stacked": false,
   "style": Object {},
   "title": "",
+  "useedit": false,
   "visible": true,
   "widget": null,
 }
@@ -132,36 +108,13 @@ exports[`Test the creation of a AccordionItem control 1`] = `
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
-    onNew={[Function]}
-    rightButton={
-      <Button
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
-        className=""
-        color="inherit"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        iconName="plus"
-        iconStyle=""
-        id=""
-        location="none"
-        noedit={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        visible={true}
-      />
-    }
+    rightButton={null}
     selected={false}
-    showButton={true}
     sizing="normal"
     stacked={false}
     style={Object {}}
     title="Test Title"
+    useedit={false}
     visible={true}
     widget={null}
   />
@@ -197,36 +150,13 @@ exports[`Test the disabling of the AccordionItem 1`] = `
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
-    onNew={[Function]}
-    rightButton={
-      <Button
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
-        className=""
-        color="inherit"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        iconName="plus"
-        iconStyle=""
-        id=""
-        location="none"
-        noedit={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        visible={true}
-      />
-    }
+    rightButton={null}
     selected={false}
-    showButton={true}
     sizing="normal"
     stacked={false}
     style={Object {}}
     title="Test Title"
+    useedit={false}
     visible={true}
     widget={null}
   />

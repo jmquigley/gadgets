@@ -22,6 +22,7 @@ export interface ItemProps extends BaseProps, TitleProps {
 	rightButton?: any;
 	stacked?: boolean;
 	title?: string;
+	useedit?: boolean;
 }
 
 export function getDefaultItemProps(): ItemProps {
@@ -41,6 +42,7 @@ export function getDefaultItemProps(): ItemProps {
 			selected: false,
 			stacked: false,
 			title: '',
+			useedit: false,
 			widget: null
 		}));
 }
@@ -153,14 +155,10 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 			>
 				{leftButton}
 				<Title
+					{...this.props}
 					className={this.styles.itemTitle}
-					disabled={this.props.disabled}
 					layout={this.props.stacked ? TitleLayout.stacked : this.props.layout}
-					noripple={this.props.noripple}
-					sizing={this.props.sizing}
 					style={{padding: this._titlePadding}}
-					visible={this.props.visible}
-					widget={this.props.widget}
 				>
 					{this.props.title}
 				</Title>

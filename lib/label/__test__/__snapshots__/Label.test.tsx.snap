@@ -45,6 +45,7 @@ exports[`Test making the Label control invisible 1`] = `
   sizing="normal"
   style={Object {}}
   text="Test label text"
+  useedit={false}
   visible={false}
 >
   <span
@@ -92,6 +93,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "text": " ",
+  "useedit": false,
   "visible": true,
 }
 `;
@@ -120,6 +122,7 @@ exports[`Test the disabling of the Label control 1`] = `
   sizing="normal"
   style={Object {}}
   text="Test label text"
+  useedit={false}
   visible={true}
 >
   <span

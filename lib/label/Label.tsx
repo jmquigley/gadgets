@@ -17,6 +17,7 @@ export interface LabelProps extends BaseProps {
 	onKeyDown?: any;
 	onKeyPress?: any;
 	text?: string;
+	useedit?: boolean;
 }
 
 export function getDefaultLabelProps(): LabelProps {
@@ -31,7 +32,8 @@ export function getDefaultLabelProps(): LabelProps {
 			onDoubleClick: nilEvent,
 			onKeyDown: nilEvent,
 			onKeyPress: nilEvent,
-			text: ' '
+			text: ' ',
+			useedit: false
 		}));
 }
 
@@ -48,7 +50,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	constructor(props: LabelProps) {
 		super(props, require('./styles.css'));
 		this.state = {
-			editable: false,
+			editable: props.useedit,
 			previousText: props.text,
 			text: props.text
 		};

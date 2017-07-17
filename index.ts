@@ -1,16 +1,12 @@
-import {
-	Accordion,
-	AccordionItem,
-	getDefaultAccordionItemProps,
-	getDefaultAccordionProps
-} from './lib/accordion';
+import {Accordion, AccordionItem} from './lib/accordion';
 import {Badge} from './lib/badge';
-import {Button, getDefaultButtonProps} from './lib/button';
+import {Button} from './lib/button';
 import {ButtonCircle} from './lib/buttonCircle';
 import {ButtonDialog} from './lib/buttonDialog';
 import {ButtonText} from './lib/buttonText';
 import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
+import {DynamicList} from './lib/dynamicList';
 import {Icon} from './lib/icon';
 import {Item} from './lib/item';
 import {Label} from './lib/label';
@@ -45,9 +41,7 @@ export {
 	ButtonText,
 	Container,
 	Direction,
-	getDefaultAccordionItemProps,
-	getDefaultAccordionProps,
-	getDefaultButtonProps,
+	DynamicList,
 	Icon,
 	Item,
 	Label,

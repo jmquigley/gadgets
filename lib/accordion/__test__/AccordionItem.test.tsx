@@ -56,18 +56,3 @@ test('Test clicking of the AccordionItem header', () => {
 	ctl.find('.ui-title-bar').simulate('click');
 	expect(click).toHaveBeenCalled();
 });
-
-test('Test clicking the AccordionItem new button', () => {
-	const click = jest.fn();
-	const ctl = mount(
-		<AccordionItem title="Test Title" onNew={click} />
-	);
-
-	assert(ctl);
-
-	const btn = ctl.find('.ui-button');
-	expect(btn.length).toBe(1);
-
-	btn.simulate('click');
-	expect(click).toHaveBeenCalled();
-});

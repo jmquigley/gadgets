@@ -1,9 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a DynamicList control 1`] = `
-<div
+<Accordion
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
   className="ui-dynamiclist test-class"
-/>
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  id=""
+  location="none"
+  noedit={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={true}
+>
+  <AccordionItem
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    id=""
+    initialToggle={true}
+    layout={4}
+    leftButton={
+      <ButtonDialog
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        dialogClasses={Array []}
+        direction="right"
+        disabled={false}
+        iconName="bars"
+        iconStyle=""
+        id=""
+        location="bottom"
+        noedit={false}
+        noripple={false}
+        notriangle={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        triangleClasses={Array []}
+        visible={true}
+      />
+    }
+    location="none"
+    noedit={true}
+    noripple={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    rightButton={
+      <Button
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        iconName="plus"
+        iconStyle=""
+        id=""
+        location="none"
+        noedit={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      />
+    }
+    selected={false}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    title=""
+    useedit={false}
+    visible={true}
+    widget={null}
+  >
+    <List
+      alternating={true}
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      id=""
+      location="none"
+      noedit={false}
+      noripple={false}
+      onAdd={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      unselect={false}
+      visible={true}
+    >
+      <ListItem
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        hiddenLeftButton={false}
+        hiddenRightButton={false}
+        href={
+          Object {
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        id=""
+        layout={4}
+        leftButton={null}
+        location="none"
+        noedit={false}
+        noripple={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        onSelect={[Function]}
+        rightButton={null}
+        selected={false}
+        sizing="normal"
+        stacked={false}
+        style={Object {}}
+        title=" "
+        useedit={true}
+        visible={false}
+        widget={null}
+      />
+    </List>
+  </AccordionItem>
+</Accordion>
 `;
 
 exports[`Test retrieval of DynamicList props object 1`] = `
@@ -17,9 +177,11 @@ Object {
   "direction": "right",
   "disabled": false,
   "id": "",
+  "items": Array [],
   "location": "none",
   "noedit": false,
   "noripple": false,
+  "onNew": [Function],
   "selected": false,
   "sizing": "normal",
   "style": Object {},

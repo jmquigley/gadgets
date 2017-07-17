@@ -43,24 +43,23 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
-import {Button} from '../button';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent} from '../shared';
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
+	leftButton?: any;
 	onClick?: any;
-	onNew?: any;
-	showButton?: boolean;
+	rightButton?: any;
 }
 
 export function getDefaultAccordionItemProps(): AccordionItemProps {
 	return cloneDeep(Object.assign(
 		getDefaultItemProps(), {
 			initialToggle: false,
+			leftButton: null,
 			onClick: nilEvent,
-			onNew: nilEvent,
-			showButton: true
+			rightButton: null
 		})
 	);
 }
@@ -80,7 +79,6 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		};
 
 		this.handleClick = this.handleClick.bind(this);
-		this.handleNew = this.handleNew.bind(this);
 
 		this.shouldComponentUpdate(props);
 	}
@@ -91,16 +89,6 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		});
 
 		this.props.onClick(this.state.toggle);
-	}
-
-	private handleNew() {
-		if (!this.state.toggle) {
-			this.setState({
-				toggle: true
-			});
-		}
-
-		this.props.onNew(this.props.title);
 	}
 
 	public shouldComponentUpdate(nextProps: AccordionItemProps): boolean {
@@ -121,11 +109,6 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 			);
 		}
 
-		let rightButton = null;
-		if (this.props.showButton) {
-			rightButton = <Button iconName="plus" onClick={this.handleNew} />;
-		}
-
 		return (
 			<div
 				className={this.classes.join(' ')}
@@ -134,7 +117,6 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 				<Item
 					{...this.props}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-					rightButton={rightButton}
 					title={this.props.title}
 				/>
 				{content}

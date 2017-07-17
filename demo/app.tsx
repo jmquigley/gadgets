@@ -23,6 +23,7 @@ const {
 	ButtonToggle,
 	Container,
 	Direction,
+	DynamicList,
 	Icon,
 	Label,
 	List,
@@ -135,7 +136,11 @@ class App extends React.Component<AppProps, AppState> {
 	private buildAccordion = () => (
 		<Container id="accordionExample">
 			<Accordion>
-				<AccordionItem title="Accordion #1 (click to expand)">
+				<AccordionItem
+					rightButton={<Button iconName="plus" />}
+					leftButton={<Button iconName="bars" />}
+					title="Accordion #1 (click to expand)"
+				>
 					<List alternating>
 						{items}
 					</List>
@@ -413,6 +418,19 @@ class App extends React.Component<AppProps, AppState> {
 					</tr>
 				</tbody>
 			</table>
+		</Container>
+	);
+
+	private buildDynamicList = () => (
+		<Container id="dynamicListExample">
+			<DynamicList
+				items={[
+					'item 1',
+					'item 2',
+					'item 3'
+				]}
+				title="Dynamic List Test"
+			/>
 		</Container>
 	);
 
@@ -993,6 +1011,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Buttons & Icons</h1>
 				{this.buildButtons()}
+
+				<h1>Dynamic List</h1>
+				{this.buildDynamicList()}
 
 				<h1>Labels</h1>
 				{this.buildLabels()}
