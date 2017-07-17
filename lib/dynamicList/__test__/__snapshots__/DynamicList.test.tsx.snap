@@ -237,7 +237,41 @@ exports[`Test creation of a DynamicList control 1`] = `
       style={Object {}}
       unselect={false}
       visible={true}
-    />
+    >
+      <div>
+        <Pager
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          id=""
+          initialPage={1}
+          location="none"
+          noedit={false}
+          noripple={false}
+          onSelect={[Function]}
+          pageSizes={
+            Array [
+              25,
+              50,
+              100,
+            ]
+          }
+          pagesToDisplay={3}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          totalItems={0}
+          useinput={false}
+          visible={true}
+        />
+      </div>
+    </List>
   </AccordionItem>
 </Accordion>
 `;

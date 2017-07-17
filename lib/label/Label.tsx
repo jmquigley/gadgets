@@ -64,8 +64,13 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.handleDoubleClick = this.handleDoubleClick.bind(this);
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 		this.handleKeyPress = this.handleKeyPress.bind(this);
+		this.handleRef = this.handleRef.bind(this);
 
 		this.shouldComponentUpdate(props);
+	}
+
+	get label() {
+		return this._label;
 	}
 
 	public componentDidMount() {
@@ -132,6 +137,10 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.props.onKeyPress(e);
 	}
 
+	private handleRef(label: any) {
+		this._label = label;
+	}
+
 	public shouldComponentUpdate(nextProps: LabelProps): boolean {
 		super.resetStyles(nextProps);
 
@@ -157,7 +166,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
 				onKeyDown={this.handleKeyDown}
 				onKeyPress={this.handleKeyPress}
-				ref={(label) => this._label = label}
+				ref={this.handleRef}
 				style={this.inlineStyle}
 				suppressContentEditableWarning
 			>

@@ -10,7 +10,8 @@ import {Accordion, AccordionItem} from '../accordion';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
 import {List, ListItem} from '../list';
-// import {Pager} from '../pager';
+import {Pager} from '../pager';
+
 import {
 	BaseComponent,
 	BaseProps,
@@ -38,7 +39,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 export interface DynamicListState {
 	items?: string[];
 	showNew?: boolean;
-	sortOrder?: SortOrder
+	sortOrder?: SortOrder;
 }
 
 export class DynamicList extends BaseComponent<DynamicListProps, DynamicListState> {
@@ -92,7 +93,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	private buildListItems() {
-		let listItems = [];
+		const listItems = [];
 
 		if (this.state.showNew) {
 			listItems.push(this._emptyListItem);
@@ -130,11 +131,11 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	private createFooter() {
-		/* this._footer = (
-		   <div key={getUUID()}>
-		   <Pager  />
-		   </div>
-		   );*/
+		this._footer = (
+			<div key={getUUID()}>
+				<Pager  />
+			</div>
+		);
 	}
 
 	/**
@@ -186,7 +187,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === 'Escape') {
 			this.setState({
-				showNew: false,
+				showNew: false
 			});
 		}
 	}
@@ -220,8 +221,13 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	public shouldComponentUpdate(nextProps: DynamicListProps, nextState: DynamicListState): boolean {
 		for (const title of nextState.items) {
+
+			const deletor = () => {
+				this.handleDelete(title);
+			};
+
 			if (!(title in this._listItems)) {
-				let uuid = getUUID();
+				const uuid = getUUID();
 				this._listItems[title] = (
 					<ListItem
 						id={uuid}
@@ -231,7 +237,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						rightButton={
 							<Button
 								iconName="times"
-								onClick={() => this.handleDelete(title)}
+								onClick={deletor}
 							/>
 						}
 						title={title}
@@ -261,8 +267,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 					noedit
 					rightButton={
 						<Button
-						iconName="plus"
-						onClick={this.createNewItem}
+							iconName="plus"
+							onClick={this.createNewItem}
 						/>
 					}
 					title={this.props.title}
