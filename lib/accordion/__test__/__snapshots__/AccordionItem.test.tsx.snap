@@ -14,6 +14,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     id=""
@@ -24,11 +25,13 @@ exports[`Test making the AccordionItem invisible 1`] = `
     noedit={false}
     noripple={false}
     onBlur={[Function]}
+    onChange={[Function]}
     onClick={[Function]}
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
+    onUpdate={[Function]}
     rightButton={null}
     selected={false}
     sizing="normal"
@@ -52,6 +55,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "focus": false,
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
   "id": "",
@@ -62,11 +66,13 @@ Object {
   "noedit": false,
   "noripple": false,
   "onBlur": [Function],
+  "onChange": [Function],
   "onClick": [Function],
   "onDoubleClick": [Function],
   "onKeyDown": [Function],
   "onKeyPress": [Function],
   "onMouseOut": [Function],
+  "onUpdate": [Function],
   "rightButton": null,
   "selected": false,
   "sizing": "normal",
@@ -93,6 +99,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     id=""
@@ -103,11 +110,13 @@ exports[`Test the creation of a AccordionItem control 1`] = `
     noedit={false}
     noripple={false}
     onBlur={[Function]}
+    onChange={[Function]}
     onClick={[Function]}
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
+    onUpdate={[Function]}
     rightButton={null}
     selected={false}
     sizing="normal"
@@ -135,6 +144,7 @@ exports[`Test the disabling of the AccordionItem 1`] = `
     contentEditable={false}
     direction="right"
     disabled={true}
+    focus={false}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     id=""
@@ -145,11 +155,13 @@ exports[`Test the disabling of the AccordionItem 1`] = `
     noedit={false}
     noripple={false}
     onBlur={[Function]}
+    onChange={[Function]}
     onClick={[Function]}
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
+    onUpdate={[Function]}
     rightButton={null}
     selected={false}
     sizing="normal"

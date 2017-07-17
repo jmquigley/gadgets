@@ -151,8 +151,8 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 				style={{...this.inlineStyle}}
 			>
 				<Label
+					{...this.props}
 					className={this._titleClasses.join(' ')}
-					noedit={this.props.noedit}
 					text={title}
 				/>
 				<div className={this._widgetClasses.join(' ')}>

@@ -14,11 +14,13 @@ export interface ItemProps extends BaseProps, TitleProps {
 	leftButton?: any;
 	layout?: TitleLayout;
 	onBlur?: any;
+	onChange?: any;
 	onClick?: any;
 	onDoubleClick?: any;
 	onKeyDown?: any;
 	onKeyPress?: any;
 	onMouseOut?: any;
+	onUpdate?: any;
 	rightButton?: any;
 	stacked?: boolean;
 	title?: string;
@@ -33,11 +35,13 @@ export function getDefaultItemProps(): ItemProps {
 			layout: TitleLayout.dominant,
 			leftButton: null,
 			onBlur: nilEvent,
+			onChange: nilEvent,
 			onClick: nilEvent,
 			onDoubleClick: nilEvent,
 			onKeyDown: nilEvent,
 			onKeyPress: nilEvent,
 			onMouseOut: nilEvent,
+			onUpdate: nilEvent,
 			rightButton: null,
 			selected: false,
 			stacked: false,
@@ -146,7 +150,6 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 				id={this.props.id}
 				className={this.classes.join(' ')}
 				onBlur={this.props.onBlur}
-				onClick={this.props.onClick}
 				onDoubleClick={this.props.onDoubleClick}
 				onKeyDown={this.props.onKeyDown}
 				onKeyPress={this.props.onKeyPress}

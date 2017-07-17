@@ -10,6 +10,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "focus": false,
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
   "id": "",
@@ -19,11 +20,13 @@ Object {
   "noedit": false,
   "noripple": false,
   "onBlur": [Function],
+  "onChange": [Function],
   "onClick": [Function],
   "onDoubleClick": [Function],
   "onKeyDown": [Function],
   "onKeyPress": [Function],
   "onMouseOut": [Function],
+  "onUpdate": [Function],
   "rightButton": null,
   "selected": false,
   "sizing": "normal",
@@ -41,7 +44,6 @@ exports[`Test the creation of a Item control 1`] = `
   className="ui-item item"
   id=""
   onBlur={[Function]}
-  onClick={[Function]}
   onDoubleClick={[Function]}
   onKeyDown={[Function]}
   onKeyPress={[Function]}
@@ -57,6 +59,7 @@ exports[`Test the creation of a Item control 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     id=""
@@ -66,11 +69,13 @@ exports[`Test the creation of a Item control 1`] = `
     noedit={false}
     noripple={false}
     onBlur={[Function]}
+    onChange={[Function]}
     onClick={[Function]}
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
+    onUpdate={[Function]}
     rightButton={null}
     selected={false}
     sizing="normal"

@@ -96,16 +96,20 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.setState({toggleRipple: true});
 	}
 
-	private handleKeyDown(e: KeyboardEvent) {
+	private handleKeyDown(e: React.KeyboardEvent<HTMLLIElement>) {
 		if (e.key === 'Escape') {
 			this.deactivateEdit();
 		}
+
+		this.props.onKeyDown(e);
 	}
 
-	private handleKeyPress(e: KeyboardEvent) {
+	private handleKeyPress(e: React.KeyboardEvent<HTMLLIElement>) {
 		if (e.key === 'Enter') {
 			this.deactivateEdit();
 		}
+
+		this.props.onKeyPress(e);
 	}
 
 	private handleMouseOut() {

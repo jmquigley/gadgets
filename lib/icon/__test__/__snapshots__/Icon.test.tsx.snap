@@ -35,6 +35,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  focus={false}
   iconName="bomb"
   id=""
   imageFile=""
@@ -68,6 +69,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "focus": false,
   "iconName": "bomb",
   "id": "",
   "imageFile": "",
@@ -91,6 +93,7 @@ exports[`Test the disabling of the Icon control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={true}
+  focus={false}
   iconName="bomb"
   id=""
   imageFile=""

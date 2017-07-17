@@ -4,8 +4,12 @@ import {
 	ItemProps
 } from './Item';
 
+import {Title, TitleLayout} from '../title';
+
 export {
 	getDefaultItemProps,
 	Item,
-	ItemProps
+	ItemProps,
+	Title,
+	TitleLayout
 };

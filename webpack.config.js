@@ -1,4 +1,4 @@
-const BabiliPlugin = require("babili-webpack-plugin");
+// const BabiliPlugin = require("babili-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const path = require('path');
@@ -92,7 +92,7 @@ module.exports = {
 		new webpack.DefinePlugin({
 			NODE_ENV: JSON.stringify("production")
 		}),
-		new BabiliPlugin(),
+		// new BabiliPlugin(),
 		new webpack.ProvidePlugin({
     		$: "jquery",
     		jQuery: "jquery",

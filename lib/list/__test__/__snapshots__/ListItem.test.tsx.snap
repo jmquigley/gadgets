@@ -10,6 +10,7 @@ exports[`Test disabling of a ListItem control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={true}
+  focus={false}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -25,12 +26,14 @@ exports[`Test disabling of a ListItem control 1`] = `
   noedit={false}
   noripple={false}
   onBlur={[Function]}
+  onChange={[Function]}
   onClick={[Function]}
   onDoubleClick={[Function]}
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onMouseOut={[Function]}
   onSelect={[Function]}
+  onUpdate={[Function]}
   rightButton={null}
   selected={false}
   sizing="normal"
@@ -50,6 +53,7 @@ exports[`Test disabling of a ListItem control 1`] = `
     contentEditable={false}
     direction="right"
     disabled={true}
+    focus={false}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     href={
@@ -65,12 +69,14 @@ exports[`Test disabling of a ListItem control 1`] = `
     noedit={false}
     noripple={false}
     onBlur={[Function]}
+    onChange={[Function]}
     onClick={[Function]}
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
     onSelect={[Function]}
+    onUpdate={[Function]}
     rightButton={null}
     selected={false}
     sizing="normal"
@@ -85,7 +91,6 @@ exports[`Test disabling of a ListItem control 1`] = `
       className="ui-item item ui-listitem listItem disabled nohover disabled nohover"
       id=""
       onBlur={[Function]}
-      onClick={[Function]}
       onDoubleClick={[Function]}
       onKeyDown={[Function]}
       onKeyPress={[Function]}
@@ -101,6 +106,7 @@ exports[`Test disabling of a ListItem control 1`] = `
         contentEditable={false}
         direction="right"
         disabled={true}
+        focus={false}
         hiddenLeftButton={false}
         hiddenRightButton={false}
         href={
@@ -116,12 +122,14 @@ exports[`Test disabling of a ListItem control 1`] = `
         noedit={false}
         noripple={false}
         onBlur={[Function]}
+        onChange={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
         onMouseOut={[Function]}
         onSelect={[Function]}
+        onUpdate={[Function]}
         rightButton={null}
         selected={false}
         sizing="normal"
@@ -152,8 +160,19 @@ exports[`Test disabling of a ListItem control 1`] = `
             color="inherit"
             contentEditable={false}
             direction="right"
-            disabled={false}
+            disabled={true}
+            focus={false}
+            hiddenLeftButton={false}
+            hiddenRightButton={false}
+            href={
+              Object {
+                "selectHandler": [Function],
+                "sizing": "normal",
+              }
+            }
             id=""
+            layout={4}
+            leftButton={null}
             location="none"
             noedit={false}
             noripple={false}
@@ -163,15 +182,26 @@ exports[`Test disabling of a ListItem control 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
+            onMouseOut={[Function]}
+            onSelect={[Function]}
+            onUpdate={[Function]}
+            rightButton={null}
             selected={false}
             sizing="normal"
-            style={Object {}}
+            stacked={false}
+            style={
+              Object {
+                "padding": "2px 4px",
+              }
+            }
             text="test title"
+            title="test title"
             useedit={false}
             visible={true}
+            widget={null}
           >
             <span
-              className="ui-label label normal ui-title titleDominant"
+              className="ui-label label normal ui-title titleDominant disabled nohover"
               contentEditable={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -182,6 +212,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                 Object {
                   "backgroundColor": "inherit",
                   "color": "inherit",
+                  "padding": "2px 4px",
                 }
               }
               suppressContentEditableWarning={true}
@@ -209,6 +240,7 @@ exports[`Test making ListItem control invisible 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  focus={false}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -224,12 +256,14 @@ exports[`Test making ListItem control invisible 1`] = `
   noedit={false}
   noripple={false}
   onBlur={[Function]}
+  onChange={[Function]}
   onClick={[Function]}
   onDoubleClick={[Function]}
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onMouseOut={[Function]}
   onSelect={[Function]}
+  onUpdate={[Function]}
   rightButton={null}
   selected={false}
   sizing="normal"
@@ -249,6 +283,7 @@ exports[`Test making ListItem control invisible 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     href={
@@ -264,12 +299,14 @@ exports[`Test making ListItem control invisible 1`] = `
     noedit={false}
     noripple={false}
     onBlur={[Function]}
+    onChange={[Function]}
     onClick={[Function]}
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
     onSelect={[Function]}
+    onUpdate={[Function]}
     rightButton={null}
     selected={false}
     sizing="normal"
@@ -284,7 +321,6 @@ exports[`Test making ListItem control invisible 1`] = `
       className="ui-item item ui-listitem listItem invisible invisible"
       id=""
       onBlur={[Function]}
-      onClick={[Function]}
       onDoubleClick={[Function]}
       onKeyDown={[Function]}
       onKeyPress={[Function]}
@@ -300,6 +336,7 @@ exports[`Test making ListItem control invisible 1`] = `
         contentEditable={false}
         direction="right"
         disabled={false}
+        focus={false}
         hiddenLeftButton={false}
         hiddenRightButton={false}
         href={
@@ -315,12 +352,14 @@ exports[`Test making ListItem control invisible 1`] = `
         noedit={false}
         noripple={false}
         onBlur={[Function]}
+        onChange={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
         onMouseOut={[Function]}
         onSelect={[Function]}
+        onUpdate={[Function]}
         rightButton={null}
         selected={false}
         sizing="normal"
@@ -352,7 +391,18 @@ exports[`Test making ListItem control invisible 1`] = `
             contentEditable={false}
             direction="right"
             disabled={false}
+            focus={false}
+            hiddenLeftButton={false}
+            hiddenRightButton={false}
+            href={
+              Object {
+                "selectHandler": [Function],
+                "sizing": "normal",
+              }
+            }
             id=""
+            layout={4}
+            leftButton={null}
             location="none"
             noedit={false}
             noripple={false}
@@ -362,15 +412,26 @@ exports[`Test making ListItem control invisible 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
+            onMouseOut={[Function]}
+            onSelect={[Function]}
+            onUpdate={[Function]}
+            rightButton={null}
             selected={false}
             sizing="normal"
-            style={Object {}}
+            stacked={false}
+            style={
+              Object {
+                "padding": "2px 4px",
+              }
+            }
             text="test title"
+            title="test title"
             useedit={false}
-            visible={true}
+            visible={false}
+            widget={null}
           >
             <span
-              className="ui-label label normal ui-title titleDominant"
+              className="ui-label label normal ui-title titleDominant invisible"
               contentEditable={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -381,6 +442,7 @@ exports[`Test making ListItem control invisible 1`] = `
                 Object {
                   "backgroundColor": "inherit",
                   "color": "inherit",
+                  "padding": "2px 4px",
                 }
               }
               suppressContentEditableWarning={true}
@@ -408,6 +470,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "focus": false,
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
   "href": Object {
@@ -421,12 +484,14 @@ Object {
   "noedit": false,
   "noripple": false,
   "onBlur": [Function],
+  "onChange": [Function],
   "onClick": [Function],
   "onDoubleClick": [Function],
   "onKeyDown": [Function],
   "onKeyPress": [Function],
   "onMouseOut": [Function],
   "onSelect": [Function],
+  "onUpdate": [Function],
   "rightButton": null,
   "selected": false,
   "sizing": "normal",
@@ -449,6 +514,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  focus={false}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -464,12 +530,14 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   noedit={false}
   noripple={false}
   onBlur={[Function]}
+  onChange={[Function]}
   onClick={[Function]}
   onDoubleClick={[Function]}
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onMouseOut={[Function]}
   onSelect={[Function]}
+  onUpdate={[Function]}
   rightButton={null}
   selected={false}
   sizing="normal"
@@ -492,6 +560,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  focus={false}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -507,12 +576,14 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   noedit={false}
   noripple={false}
   onBlur={[Function]}
+  onChange={[Function]}
   onClick={[Function]}
   onDoubleClick={[Function]}
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onMouseOut={[Function]}
   onSelect={[Function]}
+  onUpdate={[Function]}
   rightButton={null}
   selected={true}
   sizing="normal"

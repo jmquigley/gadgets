@@ -3,7 +3,8 @@ import {
 	BaseProps,
 	Direction,
 	getDefaultBaseProps,
-	Location
+	Location,
+	SortOrder
 } from './props';
 
 import {
@@ -22,5 +23,6 @@ export {
 	Location,
 	Sizes,
 	Sizing,
+	SortOrder,
 	Styling
 };

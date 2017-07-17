@@ -53,6 +53,6 @@ test('Test clicking of the AccordionItem header', () => {
 
 	assert(ctl);
 
-	ctl.find('.ui-title-bar').simulate('click');
+	ctl.find('.ui-label').simulate('click');
 	expect(click).toHaveBeenCalled();
 });

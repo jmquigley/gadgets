@@ -14,6 +14,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
   disabled={false}
   fgColorOff="gray"
   fgColorOn="black"
+  focus={false}
   iconName="bomb"
   iconNameOff="bomb"
   iconNameOn="bomb"
@@ -45,6 +46,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
   disabled={false}
   fgColorOff="gray"
   fgColorOn="black"
+  focus={false}
   iconName="bomb"
   iconNameOff="star-o"
   iconNameOn="star"
@@ -73,6 +75,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
     disabled={false}
     fgColorOff="gray"
     fgColorOn="black"
+    focus={false}
     iconName="star-o"
     iconNameOff="star-o"
     iconNameOn="star"
@@ -106,6 +109,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
         contentEditable={false}
         direction="right"
         disabled={false}
+        focus={false}
         iconName="star-o"
         id=""
         imageFile=""
@@ -146,6 +150,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
   disabled={true}
   fgColorOff="gray"
   fgColorOn="black"
+  focus={false}
   iconName="bomb"
   iconNameOff="bomb"
   iconNameOn="bomb"
@@ -174,6 +179,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
     disabled={true}
     fgColorOff="gray"
     fgColorOn="black"
+    focus={false}
     iconName="bomb"
     iconNameOff="bomb"
     iconNameOn="bomb"
@@ -207,6 +213,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
         contentEditable={false}
         direction="right"
         disabled={false}
+        focus={false}
         iconName="bomb"
         id=""
         imageFile=""
@@ -247,6 +254,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
   disabled={false}
   fgColorOff="gray"
   fgColorOn="black"
+  focus={false}
   iconName="bomb"
   iconNameOff="bomb"
   iconNameOn="bomb"
@@ -275,6 +283,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
     disabled={false}
     fgColorOff="gray"
     fgColorOn="black"
+    focus={false}
     iconName="bomb"
     iconNameOff="bomb"
     iconNameOn="bomb"
@@ -308,6 +317,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
         contentEditable={false}
         direction="right"
         disabled={false}
+        focus={false}
         iconName="bomb"
         id=""
         imageFile=""
@@ -348,6 +358,7 @@ Object {
   "disabled": false,
   "fgColorOff": "gray",
   "fgColorOn": "black",
+  "focus": false,
   "iconName": "bomb",
   "iconNameOff": "bomb",
   "iconNameOn": "bomb",

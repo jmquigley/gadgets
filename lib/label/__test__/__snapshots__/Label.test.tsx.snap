@@ -31,6 +31,7 @@ exports[`Test making the Label control invisible 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  focus={false}
   id=""
   location="none"
   noedit={false}
@@ -41,6 +42,7 @@ exports[`Test making the Label control invisible 1`] = `
   onDoubleClick={[Function]}
   onKeyDown={[Function]}
   onKeyPress={[Function]}
+  onUpdate={[Function]}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -79,6 +81,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "focus": false,
   "id": "",
   "location": "none",
   "noedit": false,
@@ -89,6 +92,7 @@ Object {
   "onDoubleClick": [Function],
   "onKeyDown": [Function],
   "onKeyPress": [Function],
+  "onUpdate": [Function],
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -108,6 +112,7 @@ exports[`Test the disabling of the Label control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={true}
+  focus={false}
   id=""
   location="none"
   noedit={false}
@@ -118,6 +123,7 @@ exports[`Test the disabling of the Label control 1`] = `
   onDoubleClick={[Function]}
   onKeyDown={[Function]}
   onKeyPress={[Function]}
+  onUpdate={[Function]}
   selected={false}
   sizing="normal"
   style={Object {}}

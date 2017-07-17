@@ -70,6 +70,11 @@ export enum Location {
 	bottomRight = 'bottomRight'
 }
 
+export enum SortOrder {
+	ascending,
+	descending
+}
+
 export interface BaseProps {
 	backgroundColor?: string;
 	borderColor?: string;
@@ -79,6 +84,7 @@ export interface BaseProps {
 	contentEditable?: boolean;
 	direction?: Direction;
 	disabled?: boolean;
+	focus?: boolean;
 	id?: string;
 	location?: Location;
 	noedit?: boolean;
@@ -99,6 +105,7 @@ export function getDefaultBaseProps(): BaseProps {
 		contentEditable: false,
 		direction: Direction.right,
 		disabled: false,
+		focus: false,
 		id: '',
 		location: Location.none,
 		noedit: false,

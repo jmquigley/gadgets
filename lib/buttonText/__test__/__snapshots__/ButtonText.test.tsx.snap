@@ -10,6 +10,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  focus={false}
   iconName="bomb"
   id=""
   imageFile=""
@@ -50,6 +51,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      focus={false}
       iconName="bomb"
       id=""
       imageFile=""
@@ -85,6 +87,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={true}
+  focus={false}
   iconName="bomb"
   id=""
   imageFile=""
@@ -113,6 +116,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      focus={false}
       iconName="bomb"
       id=""
       imageFile=""
@@ -151,6 +155,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  focus={false}
   iconName="bomb"
   id=""
   imageFile=""
@@ -179,6 +184,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      focus={false}
       iconName="bomb"
       id=""
       imageFile=""
@@ -217,6 +223,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "focus": false,
   "iconName": "bomb",
   "id": "",
   "imageFile": "",

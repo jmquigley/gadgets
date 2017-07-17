@@ -125,7 +125,7 @@ test('Test clicking of the title bar area of the ListItem', async () => {
 	validate(ctl);
 
 	assert.equal(ctl.prop('title'), 'test title');
-	ctl.find('.ui-item').simulate('click');
+	ctl.find('.ui-label').simulate('click');
 
 	// This wait must occur during the test because there is a built in click
 	// delay where the component checks if a double click is occurring.
@@ -151,7 +151,7 @@ test('Test double click of the title bar area of the ListItem', () => {
 	validate(ctl);
 	assert(listItem);
 
-	const titleCtl = ctl.find('.ui-item');
+	const titleCtl = ctl.find('.ui-label');
 	assert(titleCtl);
 
 	assert(!listItem.preventClick);

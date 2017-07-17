@@ -14,7 +14,9 @@ exports[`Test creation of a Title control with default props 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     id=""
+    layout={4}
     location="none"
     noedit={false}
     noripple={false}
@@ -24,13 +26,17 @@ exports[`Test creation of a Title control with default props 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
+    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     text="Test label text"
     useedit={false}
     visible={true}
-  />
+    widget={null}
+  >
+    Test label text
+  </Label>
   <div
     className="ui-title-widget widgetDominant"
   />
@@ -51,7 +57,9 @@ exports[`Test creation of a Title control with even layout 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     id=""
+    layout={1}
     location="none"
     noedit={false}
     noripple={false}
@@ -61,13 +69,17 @@ exports[`Test creation of a Title control with even layout 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
+    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     text="Test label text"
     useedit={false}
     visible={true}
-  />
+    widget="widget"
+  >
+    Test label text
+  </Label>
   <div
     className="ui-title-widget widgetEven"
   >
@@ -90,7 +102,9 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     id=""
+    layout={0}
     location="none"
     noedit={false}
     noripple={false}
@@ -100,13 +114,17 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
+    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     text="Test label text"
     useedit={false}
     visible={true}
-  />
+    widget="widget"
+  >
+    Test label text
+  </Label>
   <div
     className="ui-title-widget widgetQuarter"
   >
@@ -129,7 +147,9 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     id=""
+    layout={3}
     location="none"
     noedit={false}
     noripple={false}
@@ -139,13 +159,17 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
+    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     text="Test label text"
     useedit={false}
     visible={true}
-  />
+    widget="widget"
+  >
+    Test label text
+  </Label>
   <div
     className="ui-title-widget widgetStacked"
   >
@@ -168,7 +192,9 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     id=""
+    layout={2}
     location="none"
     noedit={false}
     noripple={false}
@@ -178,13 +204,17 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
+    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     text="Test label text"
     useedit={false}
     visible={true}
-  />
+    widget="widget"
+  >
+    Test label text
+  </Label>
   <div
     className="ui-title-widget widgetThreeQuarter"
   >
@@ -203,6 +233,7 @@ exports[`Test disabling the Title control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={true}
+  focus={false}
   id=""
   layout={4}
   location="none"
@@ -226,8 +257,10 @@ exports[`Test disabling the Title control 1`] = `
       color="inherit"
       contentEditable={false}
       direction="right"
-      disabled={false}
+      disabled={true}
+      focus={false}
       id=""
+      layout={4}
       location="none"
       noedit={false}
       noripple={false}
@@ -237,15 +270,17 @@ exports[`Test disabling the Title control 1`] = `
       onDoubleClick={[Function]}
       onKeyDown={[Function]}
       onKeyPress={[Function]}
+      onUpdate={[Function]}
       selected={false}
       sizing="normal"
       style={Object {}}
       text="Test label text"
       useedit={false}
       visible={true}
+      widget={null}
     >
       <span
-        className="ui-label label normal ui-title titleDominant"
+        className="ui-label label normal ui-title titleDominant disabled nohover"
         contentEditable={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -280,6 +315,7 @@ exports[`Test making the Title control invisible 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  focus={false}
   id=""
   layout={4}
   location="none"
@@ -304,7 +340,9 @@ exports[`Test making the Title control invisible 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      focus={false}
       id=""
+      layout={4}
       location="none"
       noedit={false}
       noripple={false}
@@ -314,15 +352,17 @@ exports[`Test making the Title control invisible 1`] = `
       onDoubleClick={[Function]}
       onKeyDown={[Function]}
       onKeyPress={[Function]}
+      onUpdate={[Function]}
       selected={false}
       sizing="normal"
       style={Object {}}
       text="Test label text"
       useedit={false}
-      visible={true}
+      visible={false}
+      widget={null}
     >
       <span
-        className="ui-label label normal ui-title titleDominant"
+        className="ui-label label normal ui-title titleDominant invisible"
         contentEditable={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -357,6 +397,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "focus": false,
   "id": "",
   "layout": 4,
   "location": "none",

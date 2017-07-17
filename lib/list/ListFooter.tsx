@@ -4,7 +4,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {getDefaultItemProps, Item, ItemProps} from '../item';
+import {getDefaultItemProps, Item, ItemProps, TitleLayout} from '../item';
 import {BaseComponent, Sizing} from '../shared';
 
 export interface ListFooterProps extends ItemProps {
@@ -16,7 +16,8 @@ export function getDefaultListFooterProps(): ListFooterProps {
 		getDefaultItemProps(), {
 			href: {
 				sizing: Sizing.normal
-			}
+			},
+			layout: TitleLayout.even
 		}));
 }
 

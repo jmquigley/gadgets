@@ -429,6 +429,12 @@ class App extends React.Component<AppProps, AppState> {
 					'item 2',
 					'item 3'
 				]}
+				onDelete={(title: string) => {
+					console.log(`Deleting item from list: ${title}`);
+				}}
+				onNew={(title: string) => {
+					console.log(`Adding new item to list: ${title}`);
+				}}
 				title="Dynamic List Test"
 			/>
 		</Container>

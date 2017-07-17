@@ -16,6 +16,7 @@ export interface LabelProps extends BaseProps {
 	onDoubleClick?: any;
 	onKeyDown?: any;
 	onKeyPress?: any;
+	onUpdate?: any;
 	text?: string;
 	useedit?: boolean;
 }
@@ -32,6 +33,7 @@ export function getDefaultLabelProps(): LabelProps {
 			onDoubleClick: nilEvent,
 			onKeyDown: nilEvent,
 			onKeyPress: nilEvent,
+			onUpdate: nilEvent,
 			text: ' ',
 			useedit: false
 		}));
@@ -46,6 +48,8 @@ export interface LabelState {
 export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	public static defaultProps: LabelProps = getDefaultLabelProps();
+
+	private _label: any = null;
 
 	constructor(props: LabelProps) {
 		super(props, require('./styles.css'));
@@ -64,6 +68,12 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.shouldComponentUpdate(props);
 	}
 
+	public componentDidMount() {
+		if (this.props.focus) {
+			this._label.focus();
+		}
+	}
+
 	private handleBlur(e: React.FocusEvent<HTMLSpanElement>) {
 		this.handleChange(e.target as Element);
 	}
@@ -71,6 +81,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	private handleChange(element: Element) {
 		if (this.state.editable) {
 			const val = element.innerHTML;
+			const previous = this.state.previousText;
 			this.setState({
 				editable: false,
 				previousText: val,
@@ -78,6 +89,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			});
 
 			this.props.onChange(val);
+			this.props.onUpdate(previous, val);
 		}
 	}
 
@@ -108,12 +120,16 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 			(e.target as Node).textContent = this.state.previousText;
 		}
+
+		this.props.onKeyDown(e);
 	}
 
 	private handleKeyPress(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === 'Enter') {
 			this.handleChange(e.target as Element);
 		}
+
+		this.props.onKeyPress(e);
 	}
 
 	public shouldComponentUpdate(nextProps: LabelProps): boolean {
@@ -141,6 +157,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
 				onKeyDown={this.handleKeyDown}
 				onKeyPress={this.handleKeyPress}
+				ref={(label) => this._label = label}
 				style={this.inlineStyle}
 				suppressContentEditableWarning
 			>

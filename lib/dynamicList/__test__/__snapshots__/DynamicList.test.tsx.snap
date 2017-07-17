@@ -10,6 +10,7 @@ exports[`Test creation of a DynamicList control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  focus={false}
   id=""
   location="none"
   noedit={false}
@@ -28,6 +29,7 @@ exports[`Test creation of a DynamicList control 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    focus={false}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     id=""
@@ -44,6 +46,7 @@ exports[`Test creation of a DynamicList control 1`] = `
         dialogClasses={Array []}
         direction="right"
         disabled={false}
+        focus={false}
         iconName="bars"
         iconStyle=""
         id=""
@@ -57,17 +60,129 @@ exports[`Test creation of a DynamicList control 1`] = `
         style={Object {}}
         triangleClasses={Array []}
         visible={true}
-      />
+      >
+        <List
+          alternating={false}
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          id=""
+          location="none"
+          noedit={false}
+          noripple={false}
+          onAdd={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          unselect={false}
+          visible={true}
+        >
+          <ListItem
+            backgroundColor="inherit"
+            borderColor="inherit"
+            borderWidth="none"
+            className=""
+            color="inherit"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            hiddenLeftButton={false}
+            hiddenRightButton={false}
+            href={
+              Object {
+                "selectHandler": [Function],
+                "sizing": "normal",
+              }
+            }
+            id=""
+            layout={4}
+            leftButton={null}
+            location="none"
+            noedit={false}
+            noripple={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onMouseOut={[Function]}
+            onSelect={[Function]}
+            onUpdate={[Function]}
+            rightButton={null}
+            selected={false}
+            sizing="normal"
+            stacked={false}
+            style={Object {}}
+            title="ascending"
+            useedit={false}
+            visible={true}
+            widget={null}
+          />
+          <ListItem
+            backgroundColor="inherit"
+            borderColor="inherit"
+            borderWidth="none"
+            className=""
+            color="inherit"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            hiddenLeftButton={false}
+            hiddenRightButton={false}
+            href={
+              Object {
+                "selectHandler": [Function],
+                "sizing": "normal",
+              }
+            }
+            id=""
+            layout={4}
+            leftButton={null}
+            location="none"
+            noedit={false}
+            noripple={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onMouseOut={[Function]}
+            onSelect={[Function]}
+            onUpdate={[Function]}
+            rightButton={null}
+            selected={false}
+            sizing="normal"
+            stacked={false}
+            style={Object {}}
+            title="descending"
+            useedit={false}
+            visible={true}
+            widget={null}
+          />
+        </List>
+      </ButtonDialog>
     }
     location="none"
     noedit={true}
     noripple={false}
     onBlur={[Function]}
+    onChange={[Function]}
     onClick={[Function]}
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
+    onUpdate={[Function]}
     rightButton={
       <Button
         backgroundColor="inherit"
@@ -78,6 +193,7 @@ exports[`Test creation of a DynamicList control 1`] = `
         contentEditable={false}
         direction="right"
         disabled={false}
+        focus={false}
         iconName="plus"
         iconStyle=""
         id=""
@@ -110,6 +226,7 @@ exports[`Test creation of a DynamicList control 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      focus={false}
       id=""
       location="none"
       noedit={false}
@@ -120,48 +237,7 @@ exports[`Test creation of a DynamicList control 1`] = `
       style={Object {}}
       unselect={false}
       visible={true}
-    >
-      <ListItem
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
-        className=""
-        color="inherit"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        layout={4}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        noripple={false}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        title=" "
-        useedit={true}
-        visible={false}
-        widget={null}
-      />
-    </List>
+    />
   </AccordionItem>
 </Accordion>
 `;
@@ -176,11 +252,13 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "focus": false,
   "id": "",
   "items": Array [],
   "location": "none",
   "noedit": false,
   "noripple": false,
+  "onDelete": [Function],
   "onNew": [Function],
   "selected": false,
   "sizing": "normal",
