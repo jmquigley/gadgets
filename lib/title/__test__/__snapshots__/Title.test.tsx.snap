@@ -1,5 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test creation of a Title control with bad layout 1`] = `
+<Title
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  id=""
+  layout={9999}
+  location="none"
+  noedit={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  title="Test label text"
+  visible={true}
+  widget={null}
+>
+  <div
+    className="ui-title-bar normal titleBar ripple"
+    style={Object {}}
+  >
+    <Label
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className="ui-title titleDominant"
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      id=""
+      layout={9999}
+      location="none"
+      noedit={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      text="Test label text"
+      title="Test label text"
+      useedit={false}
+      visible={true}
+      widget={null}
+    >
+      <span
+        className="ui-label label normal ui-title titleDominant"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+        suppressContentEditableWarning={true}
+      >
+        Test label text
+      </span>
+    </Label>
+    <div
+      className="ui-title-widget widgetDominant"
+    />
+  </div>
+</Title>
+`;
+
 exports[`Test creation of a Title control with default props 1`] = `
 <div
   className="ui-title-bar normal titleBar ripple test-class"
@@ -16,7 +100,7 @@ exports[`Test creation of a Title control with default props 1`] = `
     disabled={false}
     focus={false}
     id=""
-    layout={4}
+    layout={5}
     location="none"
     noedit={false}
     noripple={false}
@@ -31,12 +115,11 @@ exports[`Test creation of a Title control with default props 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    title="Test label text"
     useedit={false}
     visible={true}
     widget={null}
-  >
-    Test label text
-  </Label>
+  />
   <div
     className="ui-title-widget widgetDominant"
   />
@@ -74,12 +157,11 @@ exports[`Test creation of a Title control with even layout 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    title="Test label text"
     useedit={false}
     visible={true}
     widget="widget"
-  >
-    Test label text
-  </Label>
+  />
   <div
     className="ui-title-widget widgetEven"
   >
@@ -119,12 +201,11 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    title="Test label text"
     useedit={false}
     visible={true}
     widget="widget"
-  >
-    Test label text
-  </Label>
+  />
   <div
     className="ui-title-widget widgetQuarter"
   >
@@ -149,6 +230,50 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     disabled={false}
     focus={false}
     id=""
+    layout={4}
+    location="none"
+    noedit={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onUpdate={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text="Test label text"
+    title="Test label text"
+    useedit={false}
+    visible={true}
+    widget="widget"
+  />
+  <div
+    className="ui-title-widget widgetStacked"
+  >
+    widget
+  </div>
+</div>
+`;
+
+exports[`Test creation of a Title control with thirds layout 1`] = `
+<div
+  className="ui-title-bar normal titleBar ripple"
+  style={Object {}}
+>
+  <Label
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="ui-title titleThird"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    id=""
     layout={3}
     location="none"
     noedit={false}
@@ -164,14 +289,13 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    title="Test label text"
     useedit={false}
     visible={true}
     widget="widget"
-  >
-    Test label text
-  </Label>
+  />
   <div
-    className="ui-title-widget widgetStacked"
+    className="ui-title-widget widgetThird"
   >
     widget
   </div>
@@ -209,12 +333,11 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     sizing="normal"
     style={Object {}}
     text="Test label text"
+    title="Test label text"
     useedit={false}
     visible={true}
     widget="widget"
-  >
-    Test label text
-  </Label>
+  />
   <div
     className="ui-title-widget widgetThreeQuarter"
   >
@@ -235,13 +358,14 @@ exports[`Test disabling the Title control 1`] = `
   disabled={true}
   focus={false}
   id=""
-  layout={4}
+  layout={5}
   location="none"
   noedit={false}
   noripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
+  title="Test label text"
   visible={true}
   widget={null}
 >
@@ -260,7 +384,7 @@ exports[`Test disabling the Title control 1`] = `
       disabled={true}
       focus={false}
       id=""
-      layout={4}
+      layout={5}
       location="none"
       noedit={false}
       noripple={false}
@@ -275,6 +399,7 @@ exports[`Test disabling the Title control 1`] = `
       sizing="normal"
       style={Object {}}
       text="Test label text"
+      title="Test label text"
       useedit={false}
       visible={true}
       widget={null}
@@ -317,13 +442,14 @@ exports[`Test making the Title control invisible 1`] = `
   disabled={false}
   focus={false}
   id=""
-  layout={4}
+  layout={5}
   location="none"
   noedit={false}
   noripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
+  title="Test label text"
   visible={false}
   widget={null}
 >
@@ -342,7 +468,7 @@ exports[`Test making the Title control invisible 1`] = `
       disabled={false}
       focus={false}
       id=""
-      layout={4}
+      layout={5}
       location="none"
       noedit={false}
       noripple={false}
@@ -357,6 +483,7 @@ exports[`Test making the Title control invisible 1`] = `
       sizing="normal"
       style={Object {}}
       text="Test label text"
+      title="Test label text"
       useedit={false}
       visible={false}
       widget={null}
@@ -399,7 +526,7 @@ Object {
   "disabled": false,
   "focus": false,
   "id": "",
-  "layout": 4,
+  "layout": 5,
   "location": "none",
   "noedit": false,
   "noripple": false,

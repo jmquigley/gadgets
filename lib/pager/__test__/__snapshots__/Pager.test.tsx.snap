@@ -170,9 +170,6 @@ exports[`Test creation of a Pager control 1`] = `
   <div
     className="spacer"
   />
-  <div
-    className="spacer"
-  />
   <ButtonDialog
     backgroundColor="inherit"
     borderColor="inherit"
@@ -239,7 +236,7 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
-        layout={4}
+        layout={5}
         leftButton={null}
         location="none"
         noedit={true}
@@ -282,7 +279,7 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
-        layout={4}
+        layout={5}
         leftButton={null}
         location="none"
         noedit={true}
@@ -325,7 +322,7 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
-        layout={4}
+        layout={5}
         leftButton={null}
         location="none"
         noedit={true}
@@ -368,7 +365,7 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
-        layout={4}
+        layout={5}
         leftButton={null}
         location="none"
         noedit={true}
@@ -405,7 +402,7 @@ exports[`Test creation of a Pager control 1`] = `
         hiddenLeftButton={false}
         hiddenRightButton={false}
         id=""
-        layout={4}
+        layout={5}
         leftButton={null}
         location="none"
         noedit={false}
@@ -447,7 +444,7 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
-        layout={4}
+        layout={5}
         leftButton={null}
         location="none"
         noedit={true}
@@ -490,7 +487,7 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
-        layout={4}
+        layout={5}
         leftButton={null}
         location="none"
         noedit={true}
@@ -533,7 +530,7 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
-        layout={4}
+        layout={5}
         leftButton={null}
         location="none"
         noedit={true}
@@ -576,7 +573,7 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
-        layout={4}
+        layout={5}
         leftButton={null}
         location="none"
         noedit={true}
@@ -618,9 +615,11 @@ Object {
   "focus": false,
   "id": "",
   "initialPage": 1,
+  "initialPageSize": 25,
   "location": "none",
   "noedit": false,
   "noripple": false,
+  "onChangePageSize": [Function],
   "onSelect": [Function],
   "pageSizes": Array [
     25,

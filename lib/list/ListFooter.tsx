@@ -7,13 +7,12 @@ import * as React from 'react';
 import {BaseComponent} from '../shared';
 import {getDefaultTitleProps, Title, TitleLayout, TitleProps} from '../title';
 
-export interface ListFooterProps extends TitleProps {
-	title?: string;
-}
+export type ListFooterProps = TitleProps;
 
 export function getDefaultListFooterProps(): TitleProps {
 	return cloneDeep(Object.assign(
 		getDefaultTitleProps(), {
+			layout: TitleLayout.even,
 			title: ''
 		}));
 }
@@ -40,12 +39,10 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 			<Title
 				{...this.props}
 				className={this.classes.join(' ')}
-				layout={TitleLayout.even}
 				noripple
 				style={this.inlineStyle}
-			>
-			{this.props.title}
-			</Title>
+				title={this.props.title}
+			/>
 		);
 	}
 }

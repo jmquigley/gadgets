@@ -360,5 +360,7 @@ test('Repeatedly create instance with different initial start for props test', (
 	}
 });
 
+// TODO: add a test to show changing page size but resetting current to 1
+// TODO: add a test to show changing page size keeps current page
 // TODO: add test case for TextInput in Pager
 // TODO: add test for Pager blur, change, keyPress

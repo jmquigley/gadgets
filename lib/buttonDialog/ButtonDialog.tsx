@@ -80,6 +80,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 		this.handleClick = this.handleClick.bind(this);
 		this.handleDialogClick = this.handleDialogClick.bind(this);
+		this.handleKeyDown = this.handleKeyDown.bind(this);
 
 		this.shouldComponentUpdate(props, this.state);
 	}
@@ -96,6 +97,22 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		this.setState({
 			visible: false
 		});
+	}
+
+	private handleKeyDown(e: any) {
+		if (e.key === 'Escape') {
+			this.setState({
+				visible: false
+			});
+		}
+	}
+
+	public componentWillMount() {
+		document.addEventListener('keydown', this.handleKeyDown);
+	}
+
+	public componentWillUnmount() {
+		document.removeEventListener('keydown', this.handleKeyDown);
 	}
 
 	public shouldComponentUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState): boolean {

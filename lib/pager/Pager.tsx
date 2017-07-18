@@ -42,6 +42,8 @@
  * to a page by its number position.
  *
  * #### Events
+ * - `onChangePageSize(pageSize: number)` - when the page size of the control
+ * is change in the dialog box this event is invoked with the new size.
  * - `onSelect(page: number)` - When the control changes to a new page, this
  * event is invoked.  It will give the new page selection as a parameter.
  *
@@ -81,6 +83,8 @@ export const defaultPageSizes: number[] = [25, 50, 100];
 
 export interface PagerProps extends BaseProps {
 	initialPage?: number;
+	initialPageSize?: number;
+	onChangePageSize?: any;
 	onSelect?: any;
 	pagesToDisplay?: number;
 	pageSizes?: number[];
@@ -92,6 +96,8 @@ export function getDefaultPagerProps(): PagerProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			initialPage: 1,
+			initialPageSize: defaultPageSize,
+			onChangePageSize: nilEvent,
 			onSelect: nilEvent,
 			pagesToDisplay: 3,
 			pageSizes: cloneDeep(defaultPageSizes),
@@ -123,7 +129,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		super(props, require('./styles.css'));
 
 		this.pageSizes = props.pageSizes;
-		this.computeInitialPages(this.pageSizes[0]);
+		this.computeInitialPages(props.initialPageSize);
 
 		this.state = {
 			currentPage: this.initialPage,
@@ -161,9 +167,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			val = this.lastPage;
 		}
 
-		this.setState({currentPage: val}, () => {
-			this.props.onSelect(val);
-		});
+		this.setState({currentPage: val});
+		this.props.onSelect(val);
 	}
 
 	get dialog(): any {
@@ -237,7 +242,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	public componentWillReceiveProps(nextProps: PagerProps) {
 		if (!this.propsEqual(this.props, nextProps)) {
 			this.pageSizes = nextProps.pageSizes;
-			this.computeInitialPages(this.pageSizes[0], nextProps);
+			this.computeInitialPages(nextProps.initialPageSize, nextProps);
 
 			this.currentPage = this.initialPage;
 			this.pageSize = this.initialPageSize;
@@ -380,7 +385,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	}
 
 	private handleDialogSelect(text: string) {
-		let size;
+		let size: number;
 
 		if (text === 'all') {
 			size = this.props.totalItems;
@@ -389,7 +394,15 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 
 		this.setState({pageSize: size}, () => {
-			this.currentPage = 1;
+			// Only change the current page if the new page size makes the current
+			// page invalid
+			const lastPage = this.computeLastPage(size);
+			if (lastPage < this.currentPage) {
+				this.currentPage = 1;
+			}
+
+			this.props.onSelect(this.currentPage);
+			this.props.onChangePageSize(size);
 			this.rebuildButtons();
 		});
 	}
@@ -508,7 +521,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					onClick={this.moveToEnd}
 					sizing={this.props.sizing}
 				/>
-				<div className={this.styles.spacer} />
 				<div className={this.styles.spacer} />
 				{this.props.useinput ?
 				<TextField

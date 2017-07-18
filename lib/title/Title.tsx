@@ -58,12 +58,14 @@ export enum TitleLayout {
 	quarter,
 	even,
 	threequarter,
+	third,
 	stacked,
 	dominant
 }
 
 export interface TitleProps extends BaseProps {
 	layout?: TitleLayout;
+	title?: any;
 	widget?: any;
 }
 
@@ -124,6 +126,11 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 				this._widgetClasses.push(this.styles.widgetThreeQuarter);
 				break;
 
+			case TitleLayout.third:
+				this._titleClasses.push(this.styles.titleThird);
+				this._widgetClasses.push(this.styles.widgetThird);
+				break;
+
 			case TitleLayout.stacked:
 				this._titleClasses.push(this.styles.titleStacked);
 				this._widgetClasses.push(this.styles.widgetStacked);
@@ -140,21 +147,31 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 	}
 
 	public render() {
-		let title: string = '';
-		React.Children.forEach(this.props.children, child => {
-			title += String(child);
-		});
+		let title: any = null;
+		if (typeof this.props.title === 'string') {
+			title = (
+				<Label
+					{...this.props}
+					className={this._titleClasses.join(' ')}
+					text={this.props.title}
+				/>
+			);
+		} else {
+			title = (
+				<div
+					className={this._titleClasses.join(' ')}
+				>
+					{this.props.title}
+				</div>
+			);
+		}
 
 		return (
 			<div
 				className={this.classes.join(' ')}
 				style={{...this.inlineStyle}}
 			>
-				<Label
-					{...this.props}
-					className={this._titleClasses.join(' ')}
-					text={title}
-				/>
+				{title}
 				<div className={this._widgetClasses.join(' ')}>
 					{this.props.widget}
 				</div>

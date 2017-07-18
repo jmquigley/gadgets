@@ -10,7 +10,9 @@ import {Accordion, AccordionItem} from '../accordion';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
 import {List, ListFooter, ListItem} from '../list';
-import {Pager} from '../pager';
+import {defaultPageSizes, Pager} from '../pager';
+import {Sizing} from '../shared';
+import {TextField} from '../textField';
 
 import {
 	BaseComponent,
@@ -23,7 +25,8 @@ export interface DynamicListProps extends BaseProps {
 	items?: string[];
 	onDelete?: any;
 	onNew?: any;
-	title?: string;
+	pageSizes?: number[];
+	title?: any;
 }
 
 export function getDefaultDynamicListProps(): DynamicListProps {
@@ -32,14 +35,18 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			items: [],
 			onDelete: nilEvent,
 			onNew: nilEvent,
+			pageSizes: defaultPageSizes,
 			title: ''
 		}));
 }
 
 export interface DynamicListState {
 	items?: string[];
+	page?: number;
+	pageSize?: number;
 	showNew?: boolean;
 	sortOrder?: SortOrder;
+	totalItems?: number;
 }
 
 export class DynamicList extends BaseComponent<DynamicListProps, DynamicListState> {
@@ -50,21 +57,29 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private _emptyListItem: any = null;
 	private _footer: any = null;
 	private _listItems: any = {};
+	private _pager: any = null;
+	private _previousSize: Sizing = this.styling.prev.type;
 
 	constructor(props: DynamicListProps) {
 		super(props, require('./styles.css'));
+
 		this.state = {
 			items: props.items.slice(),
+			page: 1,
+			pageSize: props.pageSizes[0],
 			showNew: false,
-			sortOrder: SortOrder.ascending
+			sortOrder: SortOrder.ascending,
+			totalItems: props.items.length
 		};
 
 		this.createNewItem = this.createNewItem.bind(this);
-		this.handleAscending = this.handleAscending.bind(this);
+		this.handleSortAscending = this.handleSortAscending.bind(this);
 		this.handleDelete = this.handleDelete.bind(this);
-		this.handleDescending = this.handleDescending.bind(this);
+		this.handleSortDescending = this.handleSortDescending.bind(this);
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 		this.handleNewItem = this.handleNewItem.bind(this);
+		this.handleNewPageSize = this.handleNewPageSize.bind(this);
+		this.handlePageChange = this.handlePageChange.bind(this);
 		this.handleUpdate = this.handleUpdate.bind(this);
 
 		this._emptyListItem = (
@@ -78,8 +93,20 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			/>
 		);
 
-		this.createDialog();
-		this.createFooter();
+		this._dialog = (
+			<List>
+				<ListItem
+					key={getUUID()}
+					onClick={this.handleSortAscending}
+					title="ascending"
+				/>
+				<ListItem
+					key={getUUID()}
+					onClick={this.handleSortDescending}
+					title="descending"
+				/>
+			</List>
+		);
 
 		this.shouldComponentUpdate(props, this.state);
 	}
@@ -88,8 +115,20 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		return this._dialog;
 	}
 
+	get emptyListItem() {
+		return this._emptyListItem;
+	}
+
 	get footer() {
 		return this._footer;
+	}
+
+	get pager() {
+		return this._pager;
+	}
+
+	get previousSize() {
+		return this._previousSize;
 	}
 
 	private buildListItems() {
@@ -99,44 +138,28 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			listItems.push(this._emptyListItem);
 		}
 
+		const start: number = ((this.state.page - 1) * this.state.pageSize);
+		const end: number = start + this.state.pageSize;
+
 		let keys: string[] = Object.keys(this._listItems).sort();
+
 		if (this.state.sortOrder === SortOrder.descending) {
 			keys = keys.reverse();
 		}
+		keys = keys.slice(start, end);
 
 		for (const key of keys) {
 			listItems.push(this._listItems[key]);
 		}
 
-		listItems.push(this.footer);
+		// Adds filler for the last items when it is smaller than the page size
+		for (let i = 0; i < (this.state.pageSize - keys.length); i++) {
+			listItems.push(<ListItem title="&nbsp;" noedit key={`fillerListItem-${i}`} />);
+		}
+
+		listItems.push(this._footer);
 
 		return listItems;
-	}
-
-	private createDialog() {
-		this._dialog = (
-			<List>
-				<ListItem
-					key={getUUID()}
-					onClick={this.handleAscending}
-					title="ascending"
-				/>
-				<ListItem
-					key={getUUID()}
-					onClick={this.handleDescending}
-					title="descending"
-				/>
-			</List>
-		);
-	}
-
-	private createFooter() {
-		this._footer = (
-			<ListFooter
-				key={getUUID()}
-				widget={<Pager sizing={this.styling.prev.type} />}
-			/>
-		);
 	}
 
 	/**
@@ -146,12 +169,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private createNewItem() {
 		this.setState({
 			showNew: !this.state.showNew
-		});
-	}
-
-	private handleAscending() {
-		this.setState({
-			sortOrder: SortOrder.ascending
 		});
 	}
 
@@ -171,18 +188,13 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			delete this._listItems[title];
 
 			this.setState({
-				items: arr
+				items: arr,
+				totalItems: this.state.totalItems - 1
 			}, () => {
 				this.props.onDelete(title);
 				cb(title);
 			});
 		}
-	}
-
-	private handleDescending() {
-		this.setState({
-			sortOrder: SortOrder.descending
-		});
 	}
 
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
@@ -206,12 +218,41 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		if (title.trim()) {
 			this.setState({
 				items: [...this.state.items, title],
-				showNew: false
+				showNew: false,
+				totalItems: this.state.totalItems + 1
 			}, () => {
 				this.props.onNew(title);
 				cb(title);
 			});
 		}
+	}
+
+	private handleNewPageSize(pageSize: number) {
+		if (pageSize !== this.state.pageSize) {
+			this.setState({
+				pageSize: pageSize
+			});
+		}
+	}
+
+	private handlePageChange(page: number) {
+		if (page !== this.state.page) {
+			this.setState({
+				page: page
+			});
+		}
+	}
+
+	private handleSortAscending() {
+		this.setState({
+			sortOrder: SortOrder.ascending
+		});
+	}
+
+	private handleSortDescending() {
+		this.setState({
+			sortOrder: SortOrder.descending
+		});
 	}
 
 	private handleUpdate(previous: string, title: string) {
@@ -221,6 +262,29 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	public shouldComponentUpdate(nextProps: DynamicListProps, nextState: DynamicListState): boolean {
+
+		this._pager = (
+			<Pager
+				initialPage={nextState.page}
+				initialPageSize={nextState.pageSize}
+				key={getUUID()}
+				onChangePageSize={this.handleNewPageSize}
+				onSelect={this.handlePageChange}
+				pageSizes={nextProps.pageSizes}
+				sizing={this.previousSize}
+				totalItems={nextState.totalItems}
+				useinput
+			/>
+		);
+
+		this._footer = (
+			<ListFooter
+				key={getUUID()}
+				title={<TextField />}
+				widget={this._pager}
+			/>
+		);
+
 		for (const title of nextState.items) {
 
 			const deletor = () => {

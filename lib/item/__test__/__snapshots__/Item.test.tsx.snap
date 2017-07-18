@@ -14,7 +14,7 @@ Object {
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
   "id": "",
-  "layout": 4,
+  "layout": 5,
   "leftButton": null,
   "location": "none",
   "noedit": false,
@@ -63,7 +63,7 @@ exports[`Test the creation of a Item control 1`] = `
     hiddenLeftButton={false}
     hiddenRightButton={false}
     id=""
-    layout={4}
+    layout={5}
     leftButton={null}
     location="none"
     noedit={false}
@@ -89,8 +89,6 @@ exports[`Test the creation of a Item control 1`] = `
     useedit={false}
     visible={true}
     widget="widget"
-  >
-    test title
-  </Title>
+  />
 </li>
 `;

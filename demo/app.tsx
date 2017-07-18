@@ -421,24 +421,28 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
-	private buildDynamicList = () => (
-		<Container id="dynamicListExample">
-			<DynamicList
-				items={[
-					'item 1',
-					'item 2',
-					'item 3'
-				]}
-				onDelete={(title: string) => {
-					console.log(`Deleting item from list: ${title}`);
-				}}
-				onNew={(title: string) => {
-					console.log(`Adding new item to list: ${title}`);
-				}}
-				title="Dynamic List Test"
-			/>
-		</Container>
-	);
+	private buildDynamicList = () => {
+		let items = [];
+		for (let i = 1; i <= 50; i++) {
+			items.push(`item ${i}`);
+		}
+
+		return (
+			<Container id="dynamicListExample">
+				<DynamicList
+					items={items}
+					onDelete={(title: string) => {
+						console.log(`Deleting item from list: ${title}`);
+					}}
+					onNew={(title: string) => {
+						console.log(`Adding new item to list: ${title}`);
+					}}
+					pageSizes={[10, 20, 30]}
+					title="Dynamic List Test"
+				/>
+			</Container>
+		);
+	}
 
 	private buildLabels = () => (
 		<Container id="labelExample">

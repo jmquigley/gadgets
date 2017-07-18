@@ -3,8 +3,7 @@
 :local {
 
 	.textField {
-
-		display: inline-block;
+		display: block;
 		font-size: inherit;
 	}
 
@@ -13,6 +12,7 @@
 		box-sizing: border-box;
 		width: 100%;
 		height: 100%;
+		outline: none;
 	}
 
 	.textFieldMessage {
