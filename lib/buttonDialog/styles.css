@@ -15,9 +15,8 @@
 	}
 
 	.buttonDialogContent {
-		min-width: 100px;
-		min-height: 100px;
-		position: relative;
+		min-width: 100%;
+		min-height: 100%;
 		z-index: calc($baseZIndex + 1);
 	}
 
@@ -41,15 +40,15 @@
 
 	.dialogTriangleTop {
 		position: absolute;
-		bottom: -13.25%;
-		right: 7%;
+		bottom: -13px;
+		right: 5%;
 		z-index: calc($baseZIndex + 2);
 	}
 
 	.dialogTriangleBottom {
 		position: absolute;
-		top: -13.25%;
-		left: 7%;
+		top: -13px;
+		left: 5%;
 		z-index: calc($baseZIndex + 2);
 	}
 

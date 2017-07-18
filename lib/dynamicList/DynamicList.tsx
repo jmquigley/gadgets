@@ -9,7 +9,7 @@ import {getUUID, nil, nilEvent} from 'util.toolbox';
 import {Accordion, AccordionItem} from '../accordion';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
-import {List, ListItem} from '../list';
+import {List, ListFooter, ListItem} from '../list';
 import {Pager} from '../pager';
 
 import {
@@ -132,9 +132,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	private createFooter() {
 		this._footer = (
-			<div key={getUUID()}>
-				<Pager  />
-			</div>
+			<ListFooter
+				key={getUUID()}
+				widget={
+					<Pager sizing={this.styling.prev.type} />
+				}
+			/>
 		);
 	}
 

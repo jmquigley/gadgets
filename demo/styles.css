@@ -37,7 +37,15 @@ section {
 	padding: 10px;
 }
 
-#listExample1, #listExample2, #accordionExample, #selectExample, #titleExample, #toastExample {
+#listExample1,
+#listExample2,
+#accordionExample,
+#selectExample,
+#titleExample,
+#toastExample,
+#dynamicListExample
+
+{
 	width: 80%;
 }
 
@@ -259,7 +267,7 @@ section {
 	border-right: solid 1px #004358;
 }
 
-.ui-pager > .ui-button-dialog {
+.ui-pager > .ui-button-dialog, .ui-dynamiclist {
 	border: solid 1px #004358;
 }
 

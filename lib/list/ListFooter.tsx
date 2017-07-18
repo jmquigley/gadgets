@@ -4,20 +4,17 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {getDefaultItemProps, Item, ItemProps, TitleLayout} from '../item';
-import {BaseComponent, Sizing} from '../shared';
+import {BaseComponent} from '../shared';
+import {Title, TitleLayout, TitleProps, getDefaultTitleProps} from '../title';
 
-export interface ListFooterProps extends ItemProps {
-	href?: any;
+export interface ListFooterProps extends TitleProps {
+	title?: string;
 }
 
-export function getDefaultListFooterProps(): ListFooterProps {
+export function getDefaultListFooterProps(): TitleProps {
 	return cloneDeep(Object.assign(
-		getDefaultItemProps(), {
-			href: {
-				sizing: Sizing.normal
-			},
-			layout: TitleLayout.even
+		getDefaultTitleProps(), {
+			title: ''
 		}));
 }
 
@@ -40,12 +37,15 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 
 	public render() {
 		return (
-			<Item
+			<Title
 				{...this.props}
 				className={this.classes.join(' ')}
-				sizing={this.props.href.sizing}
+				layout={TitleLayout.even}
+				noripple
 				style={this.inlineStyle}
-			/>
+			>
+			{this.props.title}
+			</Title>
 		);
 	}
 }

@@ -9,7 +9,7 @@
 		list-style: none;
 	}
 
-	.listAlternating li:nth-child(2n) {
+	.listAlternating > ul > li:nth-child(2n) {
 		background: #e6e6e6;
 	}
 
@@ -27,6 +27,8 @@
 	}
 
 	.listFooter {
+		margin: -1px;
+		padding: 0px;
 	}
 
 	.listItem {
