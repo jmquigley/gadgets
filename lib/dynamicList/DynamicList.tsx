@@ -134,9 +134,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this._footer = (
 			<ListFooter
 				key={getUUID()}
-				widget={
-					<Pager sizing={this.styling.prev.type} />
-				}
+				widget={<Pager sizing={this.styling.prev.type} />}
 			/>
 		);
 	}

@@ -5,7 +5,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {BaseComponent} from '../shared';
-import {Title, TitleLayout, TitleProps, getDefaultTitleProps} from '../title';
+import {getDefaultTitleProps, Title, TitleLayout, TitleProps} from '../title';
 
 export interface ListFooterProps extends TitleProps {
 	title?: string;
