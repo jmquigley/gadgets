@@ -26,7 +26,9 @@ input::-webkit-inner-spin-button {
 
 :local {
 	.disabled {
+		cursor: default;
 		opacity: 0.33;
+		user-select: none;
 	}
 
 	.invisible {

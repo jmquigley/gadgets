@@ -164,7 +164,6 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 					className={this.styles.itemTitle}
 					layout={this.props.stacked ? TitleLayout.stacked : this.props.layout}
 					style={{padding: this._titlePadding}}
-					title={this.props.title}
 				/>
 				{rightButton}
 			</li>

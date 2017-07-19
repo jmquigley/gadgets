@@ -13,6 +13,7 @@ import {List, ListFooter, ListItem} from '../list';
 import {defaultPageSizes, Pager} from '../pager';
 import {Sizing} from '../shared';
 import {TextField} from '../textField';
+import {TitleLayout} from '../title';
 
 import {
 	BaseComponent,
@@ -25,6 +26,7 @@ export interface DynamicListProps extends BaseProps {
 	items?: string[];
 	onClick?: any;
 	onBlur?: any;
+	onChange?: any;
 	onDelete?: any;
 	onFocus?: any;
 	onNew?: any;
@@ -38,6 +40,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			items: [],
 			onBlur: nilEvent,
 			onClick: nilEvent,
+			onChange: nilEvent,
 			onDelete: nilEvent,
 			onFocus: nilEvent,
 			onNew: nilEvent,
@@ -60,15 +63,21 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
 
+	private _count: number = 0;
 	private _dialog: any = null;
 	private _emptyListItem: any = null;
 	private _footer: any = null;
+	private _footerID: string = getUUID();
+	private _keys: string[] = [];
 	private _listItems: any = {};
 	private _pager: any = null;
+	private _pagerID: string = getUUID();
 	private _previousSize: Sizing = this.styling.prev.type;
 
 	constructor(props: DynamicListProps) {
 		super(props, require('./styles.css'));
+
+		this._count = props.items.length;
 
 		this.state = {
 			items: props.items.slice(),
@@ -150,22 +159,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			listItems.push(this._emptyListItem);
 		}
 
-		const start: number = ((this.state.page - 1) * this.state.pageSize);
-		const end: number = start + this.state.pageSize;
-
-		let keys: string[] = Object.keys(this._listItems).sort();
-
-		if (this.state.sortOrder === SortOrder.descending) {
-			keys = keys.reverse();
-		}
-		keys = keys.slice(start, end);
-
-		for (const key of keys) {
+		for (const key of this._keys) {
 			listItems.push(this._listItems[key]);
 		}
 
 		// Adds filler for the last items when it is smaller than the page size
-		for (let i = 0; i < (this.state.pageSize - keys.length); i++) {
+		for (let i = 0; i < (this.state.pageSize - this._keys.length); i++) {
 			listItems.push(
 				<ListItem
 					disabled
@@ -179,6 +178,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		listItems.push(this._footer);
 
 		return listItems;
+	}
+
+	private buildTitle() {
+		return `${this.props.title} - (${this._count} items)`;
 	}
 
 	/**
@@ -264,17 +267,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
-	private handleSearch(e: React.KeyboardEvent<HTMLInputElement>) {
-		const val: string = ((e.target as HTMLInputElement).value);
-		console.log(`search: ${val}, key: ${e.key}`);
-
-		/* this.setState({
-		   search: val
-		   });*/
-
-		if (e.key === 'Enter') {
-			console.log(`search key: ${val}`);
-		}
+	private handleSearch(e: React.FormEvent<HTMLSelectElement>) {
+		this.setState({
+			search: (e.target as HTMLSelectElement).value
+		});
 	}
 
 	private handleSortAscending() {
@@ -303,36 +299,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	public shouldComponentUpdate(nextProps: DynamicListProps, nextState: DynamicListState): boolean {
 
-		this._pager = (
-			<Pager
-				initialPage={nextState.page}
-				initialPageSize={nextState.pageSize}
-				key={getUUID()}
-				onChangePageSize={this.handleNewPageSize}
-				onSelect={this.handlePageChange}
-				pageSizes={nextProps.pageSizes}
-				sizing={this.previousSize}
-				totalItems={nextState.totalItems}
-				useinput
-			/>
-		);
-
-		console.log(`nextState.search: ${nextState.search}`);
-
-		this._footer = (
-			<ListFooter
-				key={getUUID()}
-				title={
-					<TextField
-						key={`abcdefg`}
-						onKeyPress={this.handleSearch}
-						type="search"
-					/>
-				}
-				widget={this._pager}
-			/>
-		);
-
 		for (const title of nextState.items) {
 
 			const deletor = () => {
@@ -350,6 +316,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						onUpdate={this.handleUpdate}
 						rightButton={
 							<Button
+								className={this.styles.dynamicListDeleteButton}
 								iconName="times"
 								onClick={deletor}
 							/>
@@ -360,6 +327,58 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			}
 		}
 
+		// Compute which items should be in the current list
+		const start: number = ((nextState.page - 1) * nextState.pageSize);
+		const end: number = start + nextState.pageSize;
+
+		if (nextState.search !== '') {
+			this._keys = Object.keys(this._listItems).filter((val: string) => {
+				return (val.indexOf(nextState.search) === -1) ? false : true;
+			}).sort();
+		} else {
+			this._keys = Object.keys(this._listItems).sort();
+		}
+
+		this._count = this._keys.length;
+
+		if (nextState.sortOrder === SortOrder.descending) {
+			this._keys = this._keys.reverse();
+		}
+
+		this._keys = this._keys.slice(start, end);
+
+		this._pager = (
+			<Pager
+				disabled={nextState.search === '' ? false : true}
+				initialPage={nextState.search === '' ? nextState.page : 1}
+				initialPageSize={nextState.pageSize}
+				key={this._pagerID}
+				onChangePageSize={this.handleNewPageSize}
+				onSelect={this.handlePageChange}
+				pageSizes={nextProps.pageSizes}
+				sizing={this.previousSize}
+				totalItems={nextState.totalItems}
+				useinput
+			/>
+		);
+
+		this._footer = (
+			<ListFooter
+				key={this._footerID}
+				layout={TitleLayout.third}
+				title={
+					<TextField
+						onChange={this.handleSearch}
+						placeholder="search"
+						type="search"
+						value={nextState.search}
+					/>
+				}
+				widget={this._pager}
+			/>
+		);
+
+		// Compute updated styles
 		super.resetStyles(nextProps);
 		this.classes.push('ui-dynamiclist');
 		this.classes.push(this.styles.dynamicList);
@@ -379,14 +398,13 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						{this.dialog}
 						</ButtonDialog>
 					}
-					noedit
 					rightButton={
 						<Button
 							iconName="plus"
 							onClick={this.createNewItem}
 						/>
 					}
-					title={this.props.title}
+					title={this.buildTitle()}
 				>
 					<List alternating>
 						{this.buildListItems()}

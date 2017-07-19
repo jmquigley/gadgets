@@ -117,7 +117,6 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 				<Item
 					{...this.props}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-					title={this.props.title}
 				/>
 				{content}
 			</div>

@@ -303,6 +303,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 				this._buttons[page] = (
 					<ButtonText
+						{...this.props}
 						className={this._buttonStyle.join(' ')}
 						key={String(page)}
 						noicon
@@ -315,16 +316,28 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 			if (page !== 0) {
 				if (page === this.currentPage) {
+					let selected: string;
+					if (this.props.disabled) {
+						selected = ' nohover';
+					} else {
+						selected = ' ui-pager-selected';
+					}
+
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
-							className: this._buttonStyle.join(' ') + ' ui-pager-selected'
+							className: this._buttonStyle.join(' ') + selected,
+							disabled: this.props.disabled
 						}));
 				} else {
-					this._buttonsDisplay.push(this._buttons[page]);
+					this._buttonsDisplay.push(
+						React.cloneElement(this._buttons[page], {
+							disabled: this.props.disabled
+						}));
 				}
 			} else {
 				this._buttonsDisplay.push(
 					<ButtonText
+						{...this.props}
 						className={this._buttonStyle.join(' ')}
 						key={getUUID()}
 						noicon
@@ -347,6 +360,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		for (const val of sortBy(this.pageSizes)) {
 			items.push(
 				<ListItem
+					{...this.props}
 					title={String(val)}
 					key={getUUID()}
 					noedit
@@ -357,19 +371,20 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		items.push(
 			<ListItem
-				title="all"
+				{...this.props}
 				key={getUUID()}
 				noedit
 				onSelect={this.handleDialogSelect}
+				title="all"
 			/>
 		);
 
 		this._dialog = (
 			<List>
-				<ListItem title="First" noedit onSelect={this.moveToFront}/>
-				<ListItem title="Last" noedit onSelect={this.moveToEnd}/>
-				<ListItem title="Next" noedit onSelect={this.moveToNext}/>
-				<ListItem title="Previous" noedit onSelect={this.moveToPrevious}/>
+				<ListItem {...this.props} title="First" noedit onSelect={this.moveToFront}/>
+				<ListItem {...this.props} title="Last" noedit onSelect={this.moveToEnd}/>
+				<ListItem {...this.props} title="Next" noedit onSelect={this.moveToNext}/>
+				<ListItem {...this.props} title="Previous" noedit onSelect={this.moveToPrevious}/>
 				<ListDivider />
 				{items}
 			</List>
@@ -497,12 +512,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		return (
 			<div className={this.classes.join(' ')}>
 				<Button
+					{...this.props}
 					className={this._buttonStyle.join(' ')}
 					iconName="angle-double-left"
 					onClick={this.moveToFront}
 					sizing={this.props.sizing}
 				/>
 				<Button
+					{...this.props}
 					className={this._buttonStyle.join(' ')}
 					iconName="angle-left"
 					onClick={this.moveToPrevious}
@@ -510,12 +527,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				/>
 				{this._buttonsDisplay}
 				<Button
+					{...this.props}
 					className={this._buttonStyle.join(' ')}
 					iconName="angle-right"
 					onClick={this.moveToNext}
 					sizing={this.props.sizing}
 				/>
 				<Button
+					{...this.props}
 					className={this._buttonStyle.join(' ')}
 					iconName="angle-double-right"
 					onClick={this.moveToEnd}
@@ -525,6 +544,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				{this.props.useinput ?
 				<TextField
 					className={this.styles.pagerInput}
+					disabled={this.props.disabled}
 					min="1"
 					max={String(this._lastPage)}
 					onBlur={this.handleBlur}
@@ -540,6 +560,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				}
 				<div className={this.styles.spacer} />
 				<ButtonDialog
+					{...this.props}
 					className={this.styles.pagerDialog}
 					iconName="ellipsis-v"
 					location={Location.top}

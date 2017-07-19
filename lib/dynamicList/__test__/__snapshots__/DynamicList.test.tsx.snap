@@ -175,7 +175,7 @@ exports[`Test creation of a DynamicList control 1`] = `
       </ButtonDialog>
     }
     location="none"
-    noedit={true}
+    noedit={false}
     noripple={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -214,7 +214,7 @@ exports[`Test creation of a DynamicList control 1`] = `
     sizing="normal"
     stacked={false}
     style={Object {}}
-    title=""
+    title=" - (0 items)"
     useedit={false}
     visible={true}
     widget={null}
@@ -1352,7 +1352,7 @@ exports[`Test creation of a DynamicList control 1`] = `
         disabled={false}
         focus={false}
         id=""
-        layout={1}
+        layout={3}
         location="none"
         noedit={false}
         noripple={false}
@@ -1368,10 +1368,12 @@ exports[`Test creation of a DynamicList control 1`] = `
             onKeyDown={[Function]}
             onKeyPress={[Function]}
             onValidation={[Function]}
+            placeholder="search"
             sizing="normal"
             type="search"
             usevalidation={false}
             validators={Array []}
+            value=""
             visible={true}
           />
         }
@@ -1434,6 +1436,7 @@ Object {
   "noedit": false,
   "noripple": false,
   "onBlur": [Function],
+  "onChange": [Function],
   "onClick": [Function],
   "onDelete": [Function],
   "onFocus": [Function],

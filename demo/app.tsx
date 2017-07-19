@@ -423,7 +423,7 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildDynamicList = () => {
 		let items = [];
-		for (let i = 1; i <= 50; i++) {
+		for (let i = 1; i <= 2000; i++) {
 			items.push(`item ${i}`);
 		}
 
@@ -589,73 +589,88 @@ class App extends React.Component<AppProps, AppState> {
 			<h3>small</h3>
 			<div className="pagerBox">
 				<Pager
-				initialPage="1"
-				totalItems="299"
-				sizing={Sizing.small}
-				onSelect={
-					(page: number) => {
-						console.log(`Clicked on page: ${page}`);
+					initialPage="1"
+					totalItems="299"
+					sizing={Sizing.small}
+					onSelect={
+						(page: number) => {
+							console.log(`Clicked on page: ${page}`);
+						}
 					}
-				}
 				/>
 			</div>
 
 			<h3>normal</h3>
 			<div className="pagerBox">
 				<Pager
-				initialPage="1"
-				totalItems="299"
-				sizing={Sizing.normal}
-				onSelect={
-					(page: number) => {
-						console.log(`Clicked on page: ${page}`);
+					initialPage="1"
+					totalItems="299"
+					sizing={Sizing.normal}
+					onSelect={
+						(page: number) => {
+							console.log(`Clicked on page: ${page}`);
+						}
 					}
-				}
 				/>
 			</div>
 
 			<h3>large</h3>
 			<div className="pagerBox">
 				<Pager
-				initialPage="1"
-				totalItems="299"
-				sizing={Sizing.large}
-				onSelect={
-					(page: number) => {
-						console.log(`Clicked on page: ${page}`);
+					initialPage="1"
+					totalItems="299"
+					sizing={Sizing.large}
+					onSelect={
+						(page: number) => {
+							console.log(`Clicked on page: ${page}`);
+						}
 					}
-				}
-				useinputs
+					useinputs
 				/>
 			</div>
 
 			<h3>xlarge</h3>
 			<div className="pagerBox">
 				<Pager
-				initialPage="1"
-				totalItems="299"
-				sizing={Sizing.xlarge}
-				onSelect={
-					(page: number) => {
-						console.log(`Clicked on page: ${page}`);
+					initialPage="1"
+					totalItems="299"
+					sizing={Sizing.xlarge}
+					onSelect={
+						(page: number) => {
+							console.log(`Clicked on page: ${page}`);
+						}
 					}
-				}
 				/>
 			</div>
 
 			<h3>normal, large range</h3>
 			<div className="pagerBox">
 				<Pager
-				initialPage="1"
-				pagesToDisplay="5"
-				totalItems="30000"
-				pageSizes={[25, 50, 100, 500, 1000]}
-				onSelect={
-					(page: number) => {
-						console.log(`Clicked on page: ${page}`);
+					initialPage="1"
+					pagesToDisplay="5"
+					totalItems="30000"
+					pageSizes={[25, 50, 100, 500, 1000]}
+					onSelect={
+						(page: number) => {
+							console.log(`Clicked on page: ${page}`);
+						}
 					}
-				}
-				useinput
+					useinput
+				/>
+			</div>
+
+			<h3>normal, disabled</h3>
+			<div className="pagerBox">
+				<Pager
+					disabled={true}
+					initialPage="1"
+					totalItems="299"
+					sizing={Sizing.normal}
+					onSelect={
+						(page: number) => {
+							console.log(`Clicked on page: ${page}`);
+						}
+					}
 				/>
 			</div>
 

@@ -17,13 +17,27 @@ exports[`Test creation of a Pager control 1`] = `
     iconName="angle-double-left"
     iconStyle=""
     id=""
+    initialPage={1}
+    initialPageSize={25}
     location="none"
     noedit={false}
     noripple={false}
+    onChangePageSize={[Function]}
     onClick={[Function]}
+    onSelect={[Function]}
+    pageSizes={
+      Array [
+        25,
+        50,
+        100,
+      ]
+    }
+    pagesToDisplay={3}
     selected={false}
     sizing="normal"
     style={Object {}}
+    totalItems={0}
+    useinput={false}
     visible={true}
   />
   <Button
@@ -39,13 +53,27 @@ exports[`Test creation of a Pager control 1`] = `
     iconName="angle-left"
     iconStyle=""
     id=""
+    initialPage={1}
+    initialPageSize={25}
     location="none"
     noedit={false}
     noripple={false}
+    onChangePageSize={[Function]}
     onClick={[Function]}
+    onSelect={[Function]}
+    pageSizes={
+      Array [
+        25,
+        50,
+        100,
+      ]
+    }
+    pagesToDisplay={3}
     selected={false}
     sizing="normal"
     style={Object {}}
+    totalItems={0}
+    useinput={false}
     visible={true}
   />
   <ButtonText
@@ -61,15 +89,29 @@ exports[`Test creation of a Pager control 1`] = `
     iconName="bomb"
     id=""
     imageFile=""
+    initialPage={1}
+    initialPageSize={25}
     location="none"
     noedit={false}
     noicon={true}
     noripple={false}
+    onChangePageSize={[Function]}
     onClick={[Function]}
+    onSelect={[Function]}
+    pageSizes={
+      Array [
+        25,
+        50,
+        100,
+      ]
+    }
+    pagesToDisplay={3}
     selected={false}
     sizing="normal"
     style={Object {}}
     text="1"
+    totalItems={0}
+    useinput={false}
     visible={true}
   />
   <ButtonText
@@ -85,15 +127,29 @@ exports[`Test creation of a Pager control 1`] = `
     iconName="bomb"
     id=""
     imageFile=""
+    initialPage={1}
+    initialPageSize={25}
     location="none"
     noedit={false}
     noicon={true}
     noripple={false}
+    onChangePageSize={[Function]}
     onClick={[Function]}
+    onSelect={[Function]}
+    pageSizes={
+      Array [
+        25,
+        50,
+        100,
+      ]
+    }
+    pagesToDisplay={3}
     selected={false}
     sizing="normal"
     style={Object {}}
     text=""
+    totalItems={0}
+    useinput={false}
     visible={true}
   />
   <ButtonText
@@ -109,15 +165,29 @@ exports[`Test creation of a Pager control 1`] = `
     iconName="bomb"
     id=""
     imageFile=""
+    initialPage={1}
+    initialPageSize={25}
     location="none"
     noedit={false}
     noicon={true}
     noripple={false}
+    onChangePageSize={[Function]}
     onClick={[Function]}
+    onSelect={[Function]}
+    pageSizes={
+      Array [
+        25,
+        50,
+        100,
+      ]
+    }
+    pagesToDisplay={3}
     selected={false}
     sizing="normal"
     style={Object {}}
     text=""
+    totalItems={0}
+    useinput={false}
     visible={true}
   />
   <Button
@@ -133,13 +203,27 @@ exports[`Test creation of a Pager control 1`] = `
     iconName="angle-right"
     iconStyle=""
     id=""
+    initialPage={1}
+    initialPageSize={25}
     location="none"
     noedit={false}
     noripple={false}
+    onChangePageSize={[Function]}
     onClick={[Function]}
+    onSelect={[Function]}
+    pageSizes={
+      Array [
+        25,
+        50,
+        100,
+      ]
+    }
+    pagesToDisplay={3}
     selected={false}
     sizing="normal"
     style={Object {}}
+    totalItems={0}
+    useinput={false}
     visible={true}
   />
   <Button
@@ -155,13 +239,27 @@ exports[`Test creation of a Pager control 1`] = `
     iconName="angle-double-right"
     iconStyle=""
     id=""
+    initialPage={1}
+    initialPageSize={25}
     location="none"
     noedit={false}
     noripple={false}
+    onChangePageSize={[Function]}
     onClick={[Function]}
+    onSelect={[Function]}
+    pageSizes={
+      Array [
+        25,
+        50,
+        100,
+      ]
+    }
+    pagesToDisplay={3}
     selected={false}
     sizing="normal"
     style={Object {}}
+    totalItems={0}
+    useinput={false}
     visible={true}
   />
   <div
@@ -184,15 +282,29 @@ exports[`Test creation of a Pager control 1`] = `
     iconName="ellipsis-v"
     iconStyle=""
     id=""
+    initialPage={1}
+    initialPageSize={25}
     location="top"
     noedit={false}
     noripple={false}
     notriangle={true}
+    onChangePageSize={[Function]}
     onClick={[Function]}
+    onSelect={[Function]}
+    pageSizes={
+      Array [
+        25,
+        50,
+        100,
+      ]
+    }
+    pagesToDisplay={3}
     selected={false}
     sizing="normal"
     style={Object {}}
+    totalItems={0}
     triangleClasses={Array []}
+    useinput={false}
     visible={true}
   >
     <List
@@ -221,7 +333,7 @@ exports[`Test creation of a Pager control 1`] = `
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
-        className=""
+        className="test-class"
         color="inherit"
         contentEditable={false}
         direction="right"
@@ -236,6 +348,8 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
+        initialPage={1}
+        initialPageSize={25}
         layout={5}
         leftButton={null}
         location="none"
@@ -243,6 +357,7 @@ exports[`Test creation of a Pager control 1`] = `
         noripple={false}
         onBlur={[Function]}
         onChange={[Function]}
+        onChangePageSize={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onFocus={[Function]}
@@ -251,13 +366,23 @@ exports[`Test creation of a Pager control 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
+        pageSizes={
+          Array [
+            25,
+            50,
+            100,
+          ]
+        }
+        pagesToDisplay={3}
         rightButton={null}
         selected={false}
         sizing="normal"
         stacked={false}
         style={Object {}}
         title="First"
+        totalItems={0}
         useedit={false}
+        useinput={false}
         visible={true}
         widget={null}
       />
@@ -265,7 +390,7 @@ exports[`Test creation of a Pager control 1`] = `
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
-        className=""
+        className="test-class"
         color="inherit"
         contentEditable={false}
         direction="right"
@@ -280,6 +405,8 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
+        initialPage={1}
+        initialPageSize={25}
         layout={5}
         leftButton={null}
         location="none"
@@ -287,6 +414,7 @@ exports[`Test creation of a Pager control 1`] = `
         noripple={false}
         onBlur={[Function]}
         onChange={[Function]}
+        onChangePageSize={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onFocus={[Function]}
@@ -295,13 +423,23 @@ exports[`Test creation of a Pager control 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
+        pageSizes={
+          Array [
+            25,
+            50,
+            100,
+          ]
+        }
+        pagesToDisplay={3}
         rightButton={null}
         selected={false}
         sizing="normal"
         stacked={false}
         style={Object {}}
         title="Last"
+        totalItems={0}
         useedit={false}
+        useinput={false}
         visible={true}
         widget={null}
       />
@@ -309,7 +447,7 @@ exports[`Test creation of a Pager control 1`] = `
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
-        className=""
+        className="test-class"
         color="inherit"
         contentEditable={false}
         direction="right"
@@ -324,6 +462,8 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
+        initialPage={1}
+        initialPageSize={25}
         layout={5}
         leftButton={null}
         location="none"
@@ -331,6 +471,7 @@ exports[`Test creation of a Pager control 1`] = `
         noripple={false}
         onBlur={[Function]}
         onChange={[Function]}
+        onChangePageSize={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onFocus={[Function]}
@@ -339,13 +480,23 @@ exports[`Test creation of a Pager control 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
+        pageSizes={
+          Array [
+            25,
+            50,
+            100,
+          ]
+        }
+        pagesToDisplay={3}
         rightButton={null}
         selected={false}
         sizing="normal"
         stacked={false}
         style={Object {}}
         title="Next"
+        totalItems={0}
         useedit={false}
+        useinput={false}
         visible={true}
         widget={null}
       />
@@ -353,7 +504,7 @@ exports[`Test creation of a Pager control 1`] = `
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
-        className=""
+        className="test-class"
         color="inherit"
         contentEditable={false}
         direction="right"
@@ -368,6 +519,8 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
+        initialPage={1}
+        initialPageSize={25}
         layout={5}
         leftButton={null}
         location="none"
@@ -375,6 +528,7 @@ exports[`Test creation of a Pager control 1`] = `
         noripple={false}
         onBlur={[Function]}
         onChange={[Function]}
+        onChangePageSize={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onFocus={[Function]}
@@ -383,13 +537,23 @@ exports[`Test creation of a Pager control 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
+        pageSizes={
+          Array [
+            25,
+            50,
+            100,
+          ]
+        }
+        pagesToDisplay={3}
         rightButton={null}
         selected={false}
         sizing="normal"
         stacked={false}
         style={Object {}}
         title="Previous"
+        totalItems={0}
         useedit={false}
+        useinput={false}
         visible={true}
         widget={null}
       />
@@ -434,7 +598,7 @@ exports[`Test creation of a Pager control 1`] = `
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
-        className=""
+        className="test-class"
         color="inherit"
         contentEditable={false}
         direction="right"
@@ -449,6 +613,8 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
+        initialPage={1}
+        initialPageSize={25}
         layout={5}
         leftButton={null}
         location="none"
@@ -456,6 +622,7 @@ exports[`Test creation of a Pager control 1`] = `
         noripple={false}
         onBlur={[Function]}
         onChange={[Function]}
+        onChangePageSize={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onFocus={[Function]}
@@ -464,13 +631,23 @@ exports[`Test creation of a Pager control 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
+        pageSizes={
+          Array [
+            25,
+            50,
+            100,
+          ]
+        }
+        pagesToDisplay={3}
         rightButton={null}
         selected={false}
         sizing="normal"
         stacked={false}
         style={Object {}}
         title="25"
+        totalItems={0}
         useedit={false}
+        useinput={false}
         visible={true}
         widget={null}
       />
@@ -478,7 +655,7 @@ exports[`Test creation of a Pager control 1`] = `
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
-        className=""
+        className="test-class"
         color="inherit"
         contentEditable={false}
         direction="right"
@@ -493,6 +670,8 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
+        initialPage={1}
+        initialPageSize={25}
         layout={5}
         leftButton={null}
         location="none"
@@ -500,6 +679,7 @@ exports[`Test creation of a Pager control 1`] = `
         noripple={false}
         onBlur={[Function]}
         onChange={[Function]}
+        onChangePageSize={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onFocus={[Function]}
@@ -508,13 +688,23 @@ exports[`Test creation of a Pager control 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
+        pageSizes={
+          Array [
+            25,
+            50,
+            100,
+          ]
+        }
+        pagesToDisplay={3}
         rightButton={null}
         selected={false}
         sizing="normal"
         stacked={false}
         style={Object {}}
         title="50"
+        totalItems={0}
         useedit={false}
+        useinput={false}
         visible={true}
         widget={null}
       />
@@ -522,7 +712,7 @@ exports[`Test creation of a Pager control 1`] = `
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
-        className=""
+        className="test-class"
         color="inherit"
         contentEditable={false}
         direction="right"
@@ -537,6 +727,8 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
+        initialPage={1}
+        initialPageSize={25}
         layout={5}
         leftButton={null}
         location="none"
@@ -544,6 +736,7 @@ exports[`Test creation of a Pager control 1`] = `
         noripple={false}
         onBlur={[Function]}
         onChange={[Function]}
+        onChangePageSize={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onFocus={[Function]}
@@ -552,13 +745,23 @@ exports[`Test creation of a Pager control 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
+        pageSizes={
+          Array [
+            25,
+            50,
+            100,
+          ]
+        }
+        pagesToDisplay={3}
         rightButton={null}
         selected={false}
         sizing="normal"
         stacked={false}
         style={Object {}}
         title="100"
+        totalItems={0}
         useedit={false}
+        useinput={false}
         visible={true}
         widget={null}
       />
@@ -566,7 +769,7 @@ exports[`Test creation of a Pager control 1`] = `
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
-        className=""
+        className="test-class"
         color="inherit"
         contentEditable={false}
         direction="right"
@@ -581,6 +784,8 @@ exports[`Test creation of a Pager control 1`] = `
           }
         }
         id=""
+        initialPage={1}
+        initialPageSize={25}
         layout={5}
         leftButton={null}
         location="none"
@@ -588,6 +793,7 @@ exports[`Test creation of a Pager control 1`] = `
         noripple={false}
         onBlur={[Function]}
         onChange={[Function]}
+        onChangePageSize={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
         onFocus={[Function]}
@@ -596,13 +802,23 @@ exports[`Test creation of a Pager control 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
+        pageSizes={
+          Array [
+            25,
+            50,
+            100,
+          ]
+        }
+        pagesToDisplay={3}
         rightButton={null}
         selected={false}
         sizing="normal"
         stacked={false}
         style={Object {}}
         title="all"
+        totalItems={0}
         useedit={false}
+        useinput={false}
         visible={true}
         widget={null}
       />

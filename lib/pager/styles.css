@@ -14,7 +14,7 @@
 		font-weight: 600;
 	}
 
-	.pagerButton:not(.nohover):hover {
+	.pagerButton:not(:global(.nohover)):hover {
 		background-color: silver !important;
 	}
 

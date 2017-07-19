@@ -141,6 +141,14 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this._label = label;
 	}
 
+	public componentWillReceiveProps(nextProps: LabelProps) {
+		if (this.props.text !== nextProps.text) {
+			this.setState({
+				text: nextProps.text
+			});
+		}
+	}
+
 	public shouldComponentUpdate(nextProps: LabelProps): boolean {
 		super.resetStyles(nextProps);
 

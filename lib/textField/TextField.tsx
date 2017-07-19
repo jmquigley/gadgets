@@ -178,6 +178,11 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		this._messageStyles.push(this.styles.textFieldMessage);
 		this._messageStyles.push(this.styling.prev.font.style);
 
+		if (nextProps.disabled) {
+			this._inputStyles.push(this.styles.disabled);
+			this._messageStyles.push(this.styles.disabled);
+		}
+
 		super.buildStyles(nextProps);
 		return true;
 	}
