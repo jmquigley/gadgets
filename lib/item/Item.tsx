@@ -17,6 +17,7 @@ export interface ItemProps extends BaseProps, TitleProps {
 	onChange?: any;
 	onClick?: any;
 	onDoubleClick?: any;
+	onFocus?: any;
 	onKeyDown?: any;
 	onKeyPress?: any;
 	onMouseOut?: any;
@@ -38,6 +39,7 @@ export function getDefaultItemProps(): ItemProps {
 			onChange: nilEvent,
 			onClick: nilEvent,
 			onDoubleClick: nilEvent,
+			onFocus: nilEvent,
 			onKeyDown: nilEvent,
 			onKeyPress: nilEvent,
 			onMouseOut: nilEvent,

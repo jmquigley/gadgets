@@ -23,7 +23,10 @@ import {
 
 export interface DynamicListProps extends BaseProps {
 	items?: string[];
+	onClick?: any;
+	onBlur?: any;
 	onDelete?: any;
+	onFocus?: any;
 	onNew?: any;
 	pageSizes?: number[];
 	title?: any;
@@ -33,7 +36,10 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			items: [],
+			onBlur: nilEvent,
+			onClick: nilEvent,
 			onDelete: nilEvent,
+			onFocus: nilEvent,
 			onNew: nilEvent,
 			pageSizes: defaultPageSizes,
 			title: ''
@@ -44,6 +50,7 @@ export interface DynamicListState {
 	items?: string[];
 	page?: number;
 	pageSize?: number;
+	search?: string;
 	showNew?: boolean;
 	sortOrder?: SortOrder;
 	totalItems?: number;
@@ -67,25 +74,30 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			items: props.items.slice(),
 			page: 1,
 			pageSize: props.pageSizes[0],
+			search: '',
 			showNew: false,
 			sortOrder: SortOrder.ascending,
 			totalItems: props.items.length
 		};
 
 		this.createNewItem = this.createNewItem.bind(this);
-		this.handleSortAscending = this.handleSortAscending.bind(this);
+		this.handleBlur = this.handleBlur.bind(this);
 		this.handleDelete = this.handleDelete.bind(this);
-		this.handleSortDescending = this.handleSortDescending.bind(this);
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 		this.handleNewItem = this.handleNewItem.bind(this);
 		this.handleNewPageSize = this.handleNewPageSize.bind(this);
 		this.handlePageChange = this.handlePageChange.bind(this);
+		this.handleSearch = this.handleSearch.bind(this);
+		this.handleSortAscending = this.handleSortAscending.bind(this);
+		this.handleSortDescending = this.handleSortDescending.bind(this);
 		this.handleUpdate = this.handleUpdate.bind(this);
+		this.hideEdit = this.hideEdit.bind(this);
 
 		this._emptyListItem = (
 			<ListItem
 				focus
 				key={getUUID()}
+				onBlur={this.handleBlur}
 				onKeyDown={this.handleKeyDown}
 				onChange={this.handleNewItem}
 				title=""
@@ -154,7 +166,14 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 		// Adds filler for the last items when it is smaller than the page size
 		for (let i = 0; i < (this.state.pageSize - keys.length); i++) {
-			listItems.push(<ListItem title="&nbsp;" noedit key={`fillerListItem-${i}`} />);
+			listItems.push(
+				<ListItem
+					disabled
+					key={`fillerListItem-${i}`}
+					noedit
+					title="&nbsp;"
+				/>
+			);
 		}
 
 		listItems.push(this._footer);
@@ -170,6 +189,11 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.setState({
 			showNew: !this.state.showNew
 		});
+	}
+
+	private handleBlur(e?: any) {
+		this.hideEdit();
+		this.props.onBlur(e);
 	}
 
 	/**
@@ -199,9 +223,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === 'Escape') {
-			this.setState({
-				showNew: false
-			});
+			this.hideEdit();
 		}
 	}
 
@@ -214,7 +236,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * complete
 	 */
 	private handleNewItem(title: string, cb: any = nil) {
-
 		if (title.trim()) {
 			this.setState({
 				items: [...this.state.items, title],
@@ -243,6 +264,19 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
+	private handleSearch(e: React.KeyboardEvent<HTMLInputElement>) {
+		const val: string = ((e.target as HTMLInputElement).value);
+		console.log(`search: ${val}, key: ${e.key}`);
+
+		/* this.setState({
+		   search: val
+		   });*/
+
+		if (e.key === 'Enter') {
+			console.log(`search key: ${val}`);
+		}
+	}
+
 	private handleSortAscending() {
 		this.setState({
 			sortOrder: SortOrder.ascending
@@ -258,6 +292,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private handleUpdate(previous: string, title: string) {
 		this.handleDelete(previous, () => {
 			this.handleNewItem(title);
+		});
+	}
+
+	private hideEdit() {
+		this.setState({
+			showNew: false
 		});
 	}
 
@@ -277,10 +317,18 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			/>
 		);
 
+		console.log(`nextState.search: ${nextState.search}`);
+
 		this._footer = (
 			<ListFooter
 				key={getUUID()}
-				title={<TextField />}
+				title={
+					<TextField
+						key={`abcdefg`}
+						onKeyPress={this.handleSearch}
+						type="search"
+					/>
+				}
 				widget={this._pager}
 			/>
 		);
@@ -298,6 +346,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						id={uuid}
 						key={uuid}
 						hiddenRightButton
+						onBlur={this.handleBlur}
 						onUpdate={this.handleUpdate}
 						rightButton={
 							<Button
@@ -313,6 +362,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 		super.resetStyles(nextProps);
 		this.classes.push('ui-dynamiclist');
+		this.classes.push(this.styles.dynamicList);
 		super.buildStyles(nextProps);
 		return true;
 	}

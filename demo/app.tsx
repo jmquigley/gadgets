@@ -750,22 +750,23 @@ class App extends React.Component<AppProps, AppState> {
 	private buildTitle = () => (
 		<Container id="titleExample">
 			<h3>Layouts</h3>
-			<Title widget="widget" layout={TitleLayout.quarter}>quarter</Title><br/>
-			<Title widget="widget" layout={TitleLayout.even}>even</Title><br/>
-			<Title widget="widget" layout={TitleLayout.threequarter}>three quarter</Title><br/>
-			<Title widget="widget" layout={TitleLayout.stacked}>stacked</Title><br/>
-			<Title widget="widget" layout={TitleLayout.dominant}>dominant</Title><br/>
+			<Title widget="widget" layout={TitleLayout.quarter} title="quarter" /><br/>
+			<Title widget="widget" layout={TitleLayout.third} title="third" /><br/>
+			<Title widget="widget" layout={TitleLayout.even} title="even" /><br/>
+			<Title widget="widget" layout={TitleLayout.threequarter} title="three quarter" /><br/>
+			<Title widget="widget" layout={TitleLayout.stacked} title="stacked" /><br/>
+			<Title widget="widget" layout={TitleLayout.dominant} title="dominant" /><br/>
 			<br/>
 
 			<h3>Sizes</h3>
-			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xxsmall}>xxsmall</Title><br/>
-			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xsmall}>xsmall</Title><br/>
-			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.small}>small</Title><br/>
-			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.normal}>normal</Title><br/>
-			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.large}>large</Title><br/>
-			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xlarge}>xlarge</Title><br/>
-			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xxlarge}>xxlarge</Title><br/>
-		    <br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xxsmall} title="xxsmall" /><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xsmall} title="xsmall" /><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.small} title="small" /><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.normal} title="normal" /><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.large} title="large" /><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xlarge} title="xlarge" /><br/>
+			<Title widget="widget" layout={TitleLayout.even} sizing={Sizing.xxlarge} title="xxlarge" /><br/>
+			<br/>
 
 		</Container>
 	)

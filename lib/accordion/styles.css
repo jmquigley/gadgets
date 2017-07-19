@@ -1,7 +1,10 @@
+@import '../shared/styles.css';
+
 :local {
 	.accordion {
-		list-style: none;
 		cursor: pointer;
+		list-style: none;
+		min-width: $baseMinWidth;
 	}
 
 	.accordionItem {

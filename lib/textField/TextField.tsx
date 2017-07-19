@@ -154,7 +154,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 				return true;
 			});
-
 		}
 
 		this.setState({

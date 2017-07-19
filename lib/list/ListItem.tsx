@@ -15,6 +15,7 @@ import {BaseComponent, Sizing} from '../shared';
 
 export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
+	onBlur?: any;
 	onClick?: any;
 	onSelect?: any;
 }
@@ -26,6 +27,7 @@ export function getDefaultListItemProps(): ListItemProps {
 				selectHandler: nilEvent,
 				sizing: Sizing.normal
 			},
+			onBlur: nilEvent,
 			onClick: nilEvent,
 			onSelect: nilEvent
 		}));
@@ -71,8 +73,9 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.setState({toggleRipple: false});
 	}
 
-	private handleBlur() {
+	private handleBlur(e: React.FocusEvent<HTMLLIElement>) {
 		this.deactivateEdit();
+		this.props.onBlur(e);
 	}
 
 	private handleClick() {
