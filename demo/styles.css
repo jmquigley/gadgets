@@ -48,6 +48,10 @@ section {
 	width: 80%;
 }
 
+#dialogBoxExample {
+	width: 33%;
+}
+
 #textfieldExample {
 	width: 50%;
 }
@@ -72,6 +76,11 @@ section {
 
 .box .boxButtons {
 	height: 42px;
+}
+
+.box .ui-button-text {
+	border: 1px solid gray;
+	width: 75px;
 }
 
 #buttonTable {

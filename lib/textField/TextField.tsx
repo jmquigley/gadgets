@@ -148,7 +148,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					this._messageStyle = this.styles.success;
 				} else {
 					message = it.failure;
-					this._messageStyle = this.styles.failure;
+					this._messageStyle = this.styles.error;
 					return false;
 				}
 

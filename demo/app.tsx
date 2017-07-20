@@ -1,6 +1,7 @@
 import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 import {render} from 'react-dom';
+import {sprintf} from 'sprintf-js';
 import {getUUID} from 'util.toolbox';
 
 (window as any).$ = (window as any).jQuery = require('jquery');
@@ -22,6 +23,8 @@ const {
 	ButtonText,
 	ButtonToggle,
 	Container,
+	DialogBox,
+	DialogBoxType,
 	Direction,
 	DynamicList,
 	Icon,
@@ -100,6 +103,11 @@ interface AppState {
 	counter3?: number;
 	counter4?: number;
 	counter5?: number;
+	dialogError: boolean;
+	dialogWarning: boolean;
+	dialogSuccess: boolean;
+	dialogInfo: boolean;
+	dialogCustom: boolean;
 	toastVisible1: boolean;
 	toastVisible2: boolean;
 	toastVisible3: boolean;
@@ -120,6 +128,11 @@ class App extends React.Component<AppProps, AppState> {
 			counter3: 99,
 			counter4: 1,
 			counter5: -5,
+			dialogError: false,
+			dialogWarning: false,
+			dialogSuccess: false,
+			dialogInfo: false,
+			dialogCustom: false,
 			toastVisible1: true,
 			toastVisible2: true,
 			toastVisible3: true,
@@ -421,10 +434,120 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	private buildDialogBox = () => (
+		<Container id="dialogBoxExample">
+
+			<div id="simple-buttons">
+				<div className="box">
+					<ButtonText
+						noicon
+						onClick={() => this.setState({dialogError: true})}
+						style={{
+							backgroundColor: "#d9534f"
+						}}
+						text="Show Error Dialog"
+					/>
+					<DialogBox
+						dialogType={DialogBoxType.error}
+						message={"This is a sample error dialog message\n" + randomText}
+						onSelection={(flag: boolean) => {
+								console.log(`Dialog selection: ${flag}`);
+								this.setState({dialogError: false});
+						}}
+						show={this.state.dialogError}
+					/>
+				</div>
+
+				<div className="box">
+					<ButtonText
+						noicon
+						onClick={() => this.setState({dialogWarning: true})}
+						style={{
+							backgroundColor: "#f0ad4e"
+						}}
+						text="Show Warning Dialog"
+					/>
+					<DialogBox
+						dialogType={DialogBoxType.warning}
+						message={"This is a sample warning dialog message\n" + randomText}
+						onSelection={(flag: boolean) => {
+								console.log(`Dialog selection: ${flag}`);
+								this.setState({dialogWarning: false});
+						}}
+						show={this.state.dialogWarning}
+					/>
+				</div>
+
+				<div className="box">
+					<ButtonText
+						noicon
+						onClick={() => this.setState({dialogSuccess: true})}
+						style={{
+							backgroundColor: "#5cb85c"
+						}}
+						text="Show Success Dialog"
+					/>
+					<DialogBox
+						dialogType={DialogBoxType.success}
+						message={"This is a sample success dialog message\n" + randomText}
+						onSelection={(flag: boolean) => {
+								console.log(`Dialog selection: ${flag}`);
+								this.setState({dialogSuccess: false});
+						}}
+						show={this.state.dialogSuccess}
+					/>
+				</div>
+
+				<div className="box">
+					<ButtonText
+						noicon
+						onClick={() => this.setState({dialogInfo: true})}
+						style={{
+							backgroundColor: "#5bc0de"
+						}}
+						text="Show Info Dialog"
+					/>
+					<DialogBox
+						dialogType={DialogBoxType.info}
+						message={"This is a sample info dialog message\n" + randomText}
+						onSelection={(flag: boolean) => {
+								console.log(`Dialog selection: ${flag}`);
+								this.setState({dialogInfo: false});
+						}}
+						show={this.state.dialogInfo}
+					/>
+				</div>
+
+				<div className="box">
+					<ButtonText
+						noicon
+						onClick={() => this.setState({dialogCustom: true})}
+						style={{
+							backgroundColor: "magenta"
+						}}
+						text="Show Custom Dialog"
+					/>
+					<DialogBox
+						color="magenta"
+						iconName="car"
+						dialogType={DialogBoxType.custom}
+						message={"This is a sample custom dialog message\n" + randomText}
+						onSelection={(flag: boolean) => {
+								console.log(`Dialog selection: ${flag}`);
+								this.setState({dialogCustom: false});
+						}}
+						show={this.state.dialogCustom}
+					/>
+				</div>
+
+			</div>
+		</Container>
+	);
+
 	private buildDynamicList = () => {
 		let items = [];
 		for (let i = 1; i <= 2000; i++) {
-			items.push(`item ${i}`);
+			items.push(`item ${sprintf('%04d', i)}`);
 		}
 
 		return (
@@ -749,7 +872,10 @@ class App extends React.Component<AppProps, AppState> {
 						'Contains only alphanumeric'
 					)
 				]}
-				/>
+			/>
+
+			<h3>Disabled TextField</h3>
+			<TextField type="text" placeholder="disabled" disabled /><br />
 
 			<h3>Sizing</h3>
 			<TextField type="text" size="10" sizing={Sizing.xxsmall} placeholder="xxsmall" /><br/><br/>
@@ -771,6 +897,7 @@ class App extends React.Component<AppProps, AppState> {
 			<Title widget="widget" layout={TitleLayout.threequarter} title="three quarter" /><br/>
 			<Title widget="widget" layout={TitleLayout.stacked} title="stacked" /><br/>
 			<Title widget="widget" layout={TitleLayout.dominant} title="dominant" /><br/>
+			<Title widget="widget" title="disabled" disabled /><br />
 			<br/>
 
 			<h3>Sizes</h3>
@@ -1037,6 +1164,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Buttons & Icons</h1>
 				{this.buildButtons()}
+
+				<h1>Dialog Box</h1>
+				{this.buildDialogBox()}
 
 				<h1>Dynamic List</h1>
 				{this.buildDynamicList()}

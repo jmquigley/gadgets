@@ -1,6 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test creation of a DialogBox control 1`] = `<div />`;
+exports[`Test creation of a DialogBox control 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  closeTimeoutMS={0}
+  contentLabel="DialogBox"
+  isOpen={false}
+  onAfterOpen={[Function]}
+  onRequestClose={[Function]}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={false}
+  style={
+    Object {
+      "content": Object {
+        "bottom": "auto",
+        "left": "50%",
+        "marginRight": "-50%",
+        "padding": "15px",
+        "right": "auto",
+        "top": "40%",
+        "transform": "translate(-50%, -50%)",
+      },
+    }
+  }
+>
+  <div
+    className="ui-dialogbox dialogBox normal test-class"
+  >
+    <div
+      className="dialogBoxIcon"
+    >
+      <Icon
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className="dialogBoxIcon"
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        focus={false}
+        iconName="info-circle"
+        id=""
+        imageFile=""
+        location="none"
+        noedit={false}
+        noripple={false}
+        selected={false}
+        sizing="xxlarge"
+        style={
+          Object {
+            "color": "#5bc0de",
+          }
+        }
+        visible={true}
+      />
+    </div>
+    <div
+      className="dialogBoxMessageContainer"
+    >
+      <div
+        className="dialogBoxMessage"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p></p>",
+          }
+        }
+      />
+      <div
+        className="buttonBar"
+      >
+        <ButtonText
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className="dialogBoxButton"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          iconName="bomb"
+          id=""
+          imageFile=""
+          justify={2}
+          location="none"
+          noedit={false}
+          noicon={true}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          text="Yes"
+          visible={true}
+        />
+        <div
+          className="spacer"
+        />
+        <ButtonText
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className="dialogBoxButton"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          iconName="bomb"
+          id=""
+          imageFile=""
+          justify={2}
+          location="none"
+          noedit={false}
+          noicon={true}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          text="No"
+          visible={true}
+        />
+      </div>
+    </div>
+  </div>
+</Modal>
+`;
 
 exports[`Test retrieval of DialogBox props object 1`] = `
 Object {
@@ -10,16 +139,22 @@ Object {
   "className": "",
   "color": "inherit",
   "contentEditable": false,
-  "dialogType": 3,
+  "dialogType": "info",
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "iconName": "bomb",
   "id": "",
   "location": "none",
+  "message": "",
   "noedit": false,
   "noripple": false,
+  "onClose": [Function],
+  "onKeyDown": [Function],
+  "onOpen": [Function],
   "onSelection": [Function],
   "selected": false,
+  "show": false,
   "sizing": "normal",
   "style": Object {},
   "visible": true,

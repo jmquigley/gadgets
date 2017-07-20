@@ -1,6 +1,7 @@
 import {BaseComponent} from './base';
 import {
 	BaseProps,
+	Color,
 	Direction,
 	getDefaultBaseProps,
 	Location,
@@ -17,6 +18,7 @@ import {
 export {
 	BaseComponent,
 	BaseProps,
+	Color,
 	Direction,
 	FontStyle,
 	getDefaultBaseProps,

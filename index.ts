@@ -16,6 +16,7 @@ import {Pager} from './lib/pager';
 import {Select} from './lib/select';
 import {
 	BaseProps,
+	Color,
 	Direction,
 	Location,
 	Sizing
@@ -40,6 +41,7 @@ export {
 	ButtonDialog,
 	ButtonToggle,
 	ButtonText,
+	Color,
 	Container,
 	DialogBox,
 	DialogBoxType,

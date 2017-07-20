@@ -57,6 +57,13 @@ export enum Direction {
 	right = 'right'
 }
 
+export enum Color {
+	error = '#d9534f',
+	warning = '#f0ad4e',
+	success = '#5cb85c',
+	info = '#5bc0de'
+}
+
 export enum Location {
 	none = 'none',
 	topLeft = 'topLeft',

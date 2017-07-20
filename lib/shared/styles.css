@@ -4,6 +4,11 @@ $baseZIndex: 99999;
 
 $baseMinWidth: 300px;
 
+$success: #5cb85c;
+$error: #d9534f;
+$info: #5bc0de;
+$warning: #f0ad4e;
+
 @define-extend baseButton {
 	align-items: center;
 	box-sizing: border-box;
@@ -95,26 +100,26 @@ input::-webkit-inner-spin-button {
 
 	.success {
 		color: white;
-		border-color: #5cb85c;
-		background-color: #5cb85c;
+		border-color: $success;
+		background-color: $success;
 	}
 
 	.info {
 		color: white;
-		border-color: #5bc0de;
-		background-color: #5bc0de;
+		border-color: $info;
+		background-color: $info;
 	}
 
 	.warning {
 		color: white;
-		border-color: #f0ad4e;
-		background-color: #f0ad4e;
+		border-color: $warning;
+		background-color: $warning;
 	}
 
 	.error {
 		color: white;
-		border-color: #d9534f;
-		background-color: #d9534f;
+		border-color: $error;
+		background-color: $error;
 	}
 
 }

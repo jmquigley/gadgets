@@ -20,5 +20,5 @@ test('Test creation of a DialogBox control', () => {
 });
 
 // TODO: add a test for each of the five types of DialogBox
-// TODO: disabling the DialogBox
-// TODO: make the DialogBox invisible
+// TODO: test with display and selecting the "yes"
+// TODO: test with display and selecting the "no"

@@ -89,10 +89,12 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 			this.classes.push(this.styling.boxStyle);
 		}
 
-		super.buildStyles(nextProps, {
+		this.inlineStyle = {
 			color: (nextProps.color),
 			backgroundColor: (nextProps.backgroundColor)
-		});
+		};
+
+		super.buildStyles(nextProps);
 
 		return true;
 	}

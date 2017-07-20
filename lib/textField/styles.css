@@ -20,11 +20,15 @@
 	}
 
 	.success {
-		color: #5cb85c;
+		color: $success;
+		background-color: unset;
+		border-color: unset;
 	}
 
-	.failure {
-		color: #d9534f;
+	.error {
+		color: $error;
+		background-color: unset;
+		border-color: unset;
 	}
 
 }

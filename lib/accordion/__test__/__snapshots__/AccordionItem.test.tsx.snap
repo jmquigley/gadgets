@@ -134,7 +134,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
           widget={null}
         >
           <div
-            className="ui-title-bar normal titleBar ripple itemTitle"
+            className="ui-title-bar titleBar ripple itemTitle"
             style={
               Object {
                 "padding": "2px 4px",
@@ -205,7 +205,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
               </span>
             </Label>
             <div
-              className="ui-title-widget widgetDominant"
+              className="normal ui-title-widget widgetDominant"
             />
           </div>
         </Title>

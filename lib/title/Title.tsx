@@ -92,7 +92,6 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 		super.resetStyles(nextProps);
 
 		this.classes.push('ui-title-bar');
-		this.classes.push(this.styling.fontStyle);
 
 		if (nextProps.layout === TitleLayout.stacked) {
 			this.classes.push(this.styles.titleBarStacked);
@@ -105,7 +104,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 		}
 
 		this._titleClasses = [];
-		this._widgetClasses = [];
+		this._widgetClasses = [this.styling.fontStyle];
 
 		this._titleClasses.push('ui-title');
 		this._widgetClasses.push('ui-title-widget');
