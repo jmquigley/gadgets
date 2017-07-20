@@ -1,7 +1,222 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test clicking of the AccordionItem header 1`] = `
+<AccordionItem
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  leftButton={null}
+  location="none"
+  noedit={false}
+  noripple={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  title="Test Title"
+  useedit={false}
+  visible={true}
+  widget={null}
+>
+  <ul
+    className="ui-accordionitem accordionItem"
+    style={Object {}}
+  >
+    <Item
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      id=""
+      initialToggle={false}
+      layout={5}
+      leftButton={null}
+      location="none"
+      noedit={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      rightButton={null}
+      selected={false}
+      sizing="normal"
+      stacked={false}
+      style={Object {}}
+      title="Test Title"
+      useedit={false}
+      visible={true}
+      widget={null}
+    >
+      <li
+        className="ui-item item"
+        id=""
+        onBlur={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        style={Object {}}
+      >
+        <Title
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className="itemTitle"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          id=""
+          initialToggle={false}
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={
+            Object {
+              "padding": "2px 4px",
+            }
+          }
+          title="Test Title"
+          useedit={false}
+          visible={true}
+          widget={null}
+        >
+          <div
+            className="ui-title-bar normal titleBar ripple itemTitle"
+            style={
+              Object {
+                "padding": "2px 4px",
+              }
+            }
+          >
+            <Label
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className="ui-title titleDominant"
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              hiddenLeftButton={false}
+              hiddenRightButton={false}
+              id=""
+              initialToggle={false}
+              layout={5}
+              leftButton={null}
+              location="none"
+              noedit={false}
+              noripple={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onMouseOut={[Function]}
+              onUpdate={[Function]}
+              rightButton={null}
+              selected={false}
+              sizing="normal"
+              stacked={false}
+              style={
+                Object {
+                  "padding": "2px 4px",
+                }
+              }
+              text="Test Title"
+              title="Test Title"
+              useedit={false}
+              visible={true}
+              widget={null}
+            >
+              <span
+                className="ui-label label normal ui-title titleDominant"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                    "padding": "2px 4px",
+                  }
+                }
+                suppressContentEditableWarning={true}
+              >
+                Test Title
+              </span>
+            </Label>
+            <div
+              className="ui-title-widget widgetDominant"
+            />
+          </div>
+        </Title>
+      </li>
+    </Item>
+  </ul>
+</AccordionItem>
+`;
+
 exports[`Test making the AccordionItem invisible 1`] = `
-<div
+<ul
   className="ui-accordionitem accordionItem invisible"
   style={Object {}}
 >
@@ -43,7 +258,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
     visible={false}
     widget={null}
   />
-</div>
+</ul>
 `;
 
 exports[`Test retrieval of AccordionItem props object 1`] = `
@@ -88,7 +303,7 @@ Object {
 `;
 
 exports[`Test the creation of a AccordionItem control 1`] = `
-<div
+<ul
   className="ui-accordionitem accordionItem test-class"
   style={Object {}}
 >
@@ -130,11 +345,11 @@ exports[`Test the creation of a AccordionItem control 1`] = `
     visible={true}
     widget={null}
   />
-</div>
+</ul>
 `;
 
 exports[`Test the disabling of the AccordionItem 1`] = `
-<div
+<ul
   className="ui-accordionitem accordionItem disabled nohover"
   style={Object {}}
 >
@@ -176,5 +391,5 @@ exports[`Test the disabling of the AccordionItem 1`] = `
     visible={true}
     widget={null}
   />
-</div>
+</ul>
 `;

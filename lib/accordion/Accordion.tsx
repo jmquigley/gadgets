@@ -3,14 +3,15 @@
  * control.  It creates a `<ul>` tag (Accordion) that will hold N number
  * of `<li>` tags (AccordionItem).
  *
- * An accordion control contains N number of AccordionItems.  These items
- * will display/hide the contents of that item when the header of that
- * item is clicked.
+ * An accordion control contains N number of AccordionItems.  The\
+ * AccordionItem will display/hide their contents when the header of
+ * that AccordionItem item is clicked.
  *
  * #### Examples:
  *
  * ```javascript
  * import {Accordion} from 'gadgets';
+ *
  * <Accordion>
  *     <AccordionItem ... />
  *     ...
@@ -26,7 +27,7 @@
  *
  * #### Properties
  * - `children: React.ReactNode (null)` - the children nodes contained within
- * this container.
+ * this container.  Generally this will be `AccordionItem` controls.
  *
  * @module Accordion
  */

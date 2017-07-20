@@ -6,6 +6,7 @@ import {ButtonDialog} from './lib/buttonDialog';
 import {ButtonText} from './lib/buttonText';
 import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
+import {DialogBox, DialogBoxType} from './lib/dialogBox';
 import {DynamicList} from './lib/dynamicList';
 import {Icon} from './lib/icon';
 import {Item} from './lib/item';
@@ -40,6 +41,8 @@ export {
 	ButtonToggle,
 	ButtonText,
 	Container,
+	DialogBox,
+	DialogBoxType,
 	Direction,
 	DynamicList,
 	Icon,

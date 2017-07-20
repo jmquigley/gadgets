@@ -47,12 +47,24 @@ test('Test making the AccordionItem invisible', () => {
 
 test('Test clicking of the AccordionItem header', () => {
 	const click = jest.fn();
+	const child = <div>child content</div>;
 	const ctl = mount(
-		<AccordionItem title="Test Title" onClick={click} />
+		<AccordionItem
+			initialToggle={false}
+			onClick={click}
+			title="Test Title"
+		>
+			{child}
+		</AccordionItem>
 	);
 
 	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 
+	assert(!ctl.state('toggle'));
+	assert(!ctl.contains(child));
 	ctl.find('.ui-label').simulate('click');
 	expect(click).toHaveBeenCalled();
+	assert(ctl.state('toggle'));
+	assert(ctl.contains(child));
 });
