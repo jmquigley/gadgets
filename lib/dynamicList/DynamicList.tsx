@@ -3,7 +3,7 @@
 
 'use strict';
 
-import {cloneDeep} from 'lodash';
+import {cloneDeep, omit} from 'lodash';
 import * as React from 'react';
 import {sprintf} from 'sprintf-js';
 import {getUUID, nil, nilEvent} from 'util.toolbox';
@@ -13,19 +13,22 @@ import {ButtonDialog} from '../buttonDialog';
 import {DialogBox, DialogBoxType} from '../dialogBox';
 import {List, ListFooter, ListItem} from '../list';
 import {defaultPageSizes, Pager} from '../pager';
-import {Sizing} from '../shared';
-import {TextField} from '../textField';
-import {TitleLayout} from '../title';
-
 import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
+	Sizing,
 	SortOrder
 } from '../shared';
+import {TextField} from '../textField';
+import {TitleLayout} from '../title';
+
+export interface DynamicListItem {
+	[key: string]: any;
+}
 
 export interface DynamicListProps extends BaseProps {
-	items?: string[];
+	items?: DynamicListItem;
 	nocollapse?: boolean;
 	onClick?: any;
 	onBlur?: any;
@@ -41,7 +44,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			collapsable: false,
-			items: [],
+			items: {},
 			nocollapse: false,
 			onBlur: nilEvent,
 			onClick: nilEvent,
@@ -55,7 +58,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 }
 
 export interface DynamicListState {
-	items?: string[];
+	items?: DynamicListItem;
 	page?: number;
 	pageSize?: number;
 	search?: string;
@@ -85,17 +88,17 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	constructor(props: DynamicListProps) {
 		super(props, require('./styles.css'));
 
-		this._count = props.items.length;
+		this._count = Object.keys(props.items).length;
 
 		this.state = {
-			items: props.items.slice(),
+			items: Object.assign({}, props.items),
 			page: 1,
 			pageSize: props.pageSizes[0],
 			search: '',
 			showConfirm: false,
 			showNew: false,
 			sortOrder: SortOrder.ascending,
-			totalItems: props.items.length
+			totalItems: this._count
 		};
 
 		this.createNewItem = this.createNewItem.bind(this);
@@ -121,6 +124,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				onChange={this.handleNewItem}
 				title=""
 				useedit
+				widget={null}
 			/>
 		);
 
@@ -217,15 +221,11 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * state event update completes.
 	 */
 	private handleDelete(title: string, cb: any = nil) {
-		const idx = this.state.items.indexOf(title);
-
-		if (idx !== -1) {
-			const arr = this.state.items.slice();
-			arr.splice(idx, 1);
+		if (title in this.state.items) {
 			delete this._listItems[title];
 
 			this.setState({
-				items: arr,
+				items: omit(this.state.items, title),
 				totalItems: this.state.totalItems - 1
 			}, () => {
 				this.props.onDelete(title);
@@ -256,10 +256,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * @param cb {Function} a callback function that is executed when the update is
 	 * complete
 	 */
-	private handleNewItem(title: string, cb: any = nil) {
+	private handleNewItem(title: string, widget: any = null, cb: any = nil) {
 		if (title.trim()) {
 			this.setState({
-				items: [...this.state.items, title],
+				items: Object.assign(this.state.items, {[title]: widget}),
 				showNew: false,
 				totalItems: this.state.totalItems + 1
 			}, () => {
@@ -304,8 +304,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	private handleUpdate(previous: string, title: string) {
-		this.handleDelete(previous, () => {
-			this.handleNewItem(title);
+		this.handleNewItem(title, this.state.items[previous], () => {
+			this.handleDelete(previous);
 		});
 	}
 
@@ -317,7 +317,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	public shouldComponentUpdate(nextProps: DynamicListProps, nextState: DynamicListState): boolean {
 
-		for (const title of nextState.items) {
+		for (const title in nextState.items) {
 			if (!(title in this._listItems)) {
 				const deletor = () => {
 					this._qDelete = title;
@@ -340,6 +340,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 							/>
 						}
 						title={title}
+						widget={nextState.items[title]}
 					/>
 				);
 			}

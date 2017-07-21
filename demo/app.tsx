@@ -58,9 +58,9 @@ for (let i=0; i<maxItems; i++) {
 }
 
 function createItems() {
- 	return listItems.map((item, idx) => {
- 		return (
- 			<ListItem
+	return listItems.map((item, idx) => {
+		return (
+			<ListItem
 			id={uuids[idx]}
 			key={uuids[idx]}
 			title={item}
@@ -68,12 +68,17 @@ function createItems() {
 			leftButton={<Button />}
 			rightButton={<Button iconName="paper-plane-o" />}
 			/>
- 		);
- 	});
+		);
+	});
 }
 
 const items = createItems();
 const randomText = loremIpsum({units: 'sentences', count: 2, random: null});
+
+let dynamicItems = {};
+for (let i = 1; i <= 2000; i++) {
+	dynamicItems[`item ${sprintf('%04d', i)}`] = `w${i}`;
+}
 
 // Build global test data for Select control
 const selectOptions = [
@@ -545,15 +550,10 @@ class App extends React.Component<AppProps, AppState> {
 	);
 
 	private buildDynamicList = () => {
-		let items = [];
-		for (let i = 1; i <= 2000; i++) {
-			items.push(`item ${sprintf('%04d', i)}`);
-		}
-
 		return (
 			<Container id="dynamicListExample">
 				<DynamicList
-					items={items}
+					items={dynamicItems}
 					onDelete={(title: string) => {
 						console.log(`Deleting item from list: ${title}`);
 					}}
