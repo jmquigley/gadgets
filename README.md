@@ -144,8 +144,6 @@ TODO: create the DateChooser control
 ### [DialogBox](docs/lib/dialogBox/DialogBox.md)
 A modal, dialog box popup window for yes/no user decisions.
 
-TODO: create the DialogBox control (decision popup)
-
 ### DialogWindow
 TODO: create the DialogWindow control (complex dialog)
 

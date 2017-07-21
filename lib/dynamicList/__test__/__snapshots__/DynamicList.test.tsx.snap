@@ -1416,6 +1416,32 @@ exports[`Test creation of a DynamicList control 1`] = `
       />
     </List>
   </AccordionItem>
+  <DialogBox
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    dialogType="warning"
+    direction="right"
+    disabled={false}
+    focus={false}
+    iconName="bomb"
+    id=""
+    location="none"
+    message="Are you sure you want to delete ?"
+    noedit={false}
+    noripple={false}
+    onClose={[Function]}
+    onOpen={[Function]}
+    onSelection={[Function]}
+    selected={false}
+    show={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
 </Accordion>
 `;
 

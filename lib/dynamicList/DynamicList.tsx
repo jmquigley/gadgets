@@ -5,10 +5,12 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {sprintf} from 'sprintf-js';
 import {getUUID, nil, nilEvent} from 'util.toolbox';
 import {Accordion, AccordionItem} from '../accordion';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
+import {DialogBox, DialogBoxType} from '../dialogBox';
 import {List, ListFooter, ListItem} from '../list';
 import {defaultPageSizes, Pager} from '../pager';
 import {Sizing} from '../shared';
@@ -54,6 +56,7 @@ export interface DynamicListState {
 	page?: number;
 	pageSize?: number;
 	search?: string;
+	showConfirm?: boolean;
 	showNew?: boolean;
 	sortOrder?: SortOrder;
 	totalItems?: number;
@@ -63,6 +66,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
 
+	private readonly _baseMessage: string = 'Are you sure you want to delete %s?';
 	private _count: number = 0;
 	private _dialog: any = null;
 	private _emptyListItem: any = null;
@@ -73,6 +77,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private _pager: any = null;
 	private _pagerID: string = getUUID();
 	private _previousSize: Sizing = this.styling.prev.type;
+	private _qDelete: string = '';
 
 	constructor(props: DynamicListProps) {
 		super(props, require('./styles.css'));
@@ -84,6 +89,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			page: 1,
 			pageSize: props.pageSizes[0],
 			search: '',
+			showConfirm: false,
 			showNew: false,
 			sortOrder: SortOrder.ascending,
 			totalItems: props.items.length
@@ -92,6 +98,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.createNewItem = this.createNewItem.bind(this);
 		this.handleBlur = this.handleBlur.bind(this);
 		this.handleDelete = this.handleDelete.bind(this);
+		this.handleDeleteConfirm = this.handleDeleteConfirm.bind(this);
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 		this.handleNewItem = this.handleNewItem.bind(this);
 		this.handleNewPageSize = this.handleNewPageSize.bind(this);
@@ -224,6 +231,14 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
+	private handleDeleteConfirm(selection: boolean) {
+		if (selection) {
+			this.handleDelete(this._qDelete);
+		}
+		this._qDelete = '';
+		this.setState({showConfirm: false});
+	}
+
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === 'Escape') {
 			this.hideEdit();
@@ -300,13 +315,13 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	public shouldComponentUpdate(nextProps: DynamicListProps, nextState: DynamicListState): boolean {
 
 		for (const title of nextState.items) {
-
-			const deletor = () => {
-				this.handleDelete(title);
-			};
-
 			if (!(title in this._listItems)) {
+				const deletor = () => {
+					this._qDelete = title;
+					this.setState({showConfirm: true});
+				};
 				const uuid = getUUID();
+
 				this._listItems[title] = (
 					<ListItem
 						id={uuid}
@@ -410,6 +425,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						{this.buildListItems()}
 					</List>
 				</AccordionItem>
+				<DialogBox
+					dialogType={DialogBoxType.warning}
+					message={sprintf(this._baseMessage, this._qDelete)}
+					onSelection={this.handleDeleteConfirm}
+					show={this.state.showConfirm}
+				/>
 			</Accordion>
 		);
 	}
