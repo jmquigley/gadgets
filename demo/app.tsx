@@ -529,8 +529,8 @@ class App extends React.Component<AppProps, AppState> {
 					/>
 					<DialogBox
 						color="magenta"
-						iconName="car"
 						dialogType={DialogBoxType.custom}
+						iconName="car"
 						message={"This is a sample custom dialog message\n" + randomText}
 						onSelection={(flag: boolean) => {
 								console.log(`Dialog selection: ${flag}`);

@@ -141,7 +141,9 @@ A generic control used to group other controls.  It creates a section tag around
 ### DateChooser
 TODO: create the DateChooser control
 
-### DialogBox
+### [DialogBox](docs/lib/dialogBox/DialogBox.md)
+A modal, dialog box popup window for yes/no user decisions.
+
 TODO: create the DialogBox control (decision popup)
 
 ### DialogWindow
