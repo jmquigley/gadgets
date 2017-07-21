@@ -42,6 +42,9 @@
  * the content is shown, otherwise it is hidden.  Set initially to false.
  * - `leftButton: Button (null)` - An instance of a button control placed to the
  * left of the title.
+ * - `nocollapse: boolean (false)` - When this is set to true, then this Accordion
+ * item will not expand/contract when the title bar is clicked.  This is false
+ * by default.
  * - `rightButton: Button (null)` - An instance of a button control placed to the
  * right of the title.
  *
@@ -59,6 +62,7 @@ import {BaseComponent} from '../shared';
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
 	leftButton?: any;
+	nocollapse?: boolean;
 	onClick?: any;
 	rightButton?: any;
 }
@@ -68,6 +72,7 @@ export function getDefaultAccordionItemProps(): AccordionItemProps {
 		getDefaultItemProps(), {
 			initialToggle: false,
 			leftButton: null,
+			nocollapse: false,
 			onClick: nilEvent,
 			rightButton: null
 		})
@@ -85,7 +90,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	constructor(props: AccordionItemProps) {
 		super(props, require('./styles.css'));
 		this.state = {
-			toggle: props.initialToggle
+			toggle: (props.nocollapse) ? true : props.initialToggle
 		};
 
 		this.handleClick = this.handleClick.bind(this);
@@ -94,9 +99,12 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	}
 
 	private handleClick() {
-		this.setState({
-			toggle: !this.state.toggle
-		});
+
+		if (!this.props.nocollapse) {
+			this.setState({
+				toggle: !this.state.toggle
+			});
+		}
 
 		this.props.onClick(this.state.toggle);
 	}

@@ -68,3 +68,28 @@ test('Test clicking of the AccordionItem header', () => {
 	assert(ctl.state('toggle'));
 	assert(ctl.contains(child));
 });
+
+test('Test clicking the AccordionItem header when setting nocollapse', () => {
+	const click = jest.fn();
+	const child = <div>child content</div>;
+	const ctl = mount(
+		<AccordionItem
+			initialToggle={false}
+			nocollapse
+			onClick={click}
+			title="Test Title"
+		>
+			{child}
+		</AccordionItem>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	assert(ctl.state('toggle'));
+	assert(ctl.contains(child));
+	ctl.find('.ui-label').simulate('click');
+	expect(click).toHaveBeenCalled();
+	assert(ctl.state('toggle'));
+	assert(ctl.contains(child));
+});

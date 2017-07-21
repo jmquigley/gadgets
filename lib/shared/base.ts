@@ -56,12 +56,14 @@ const styles = require('./styles.css');
 export interface BaseOptions {
 	className?: boolean;
 	disabled?: boolean;
+	nohover?: boolean;
 	visible?: boolean;
 }
 
 const defaultBaseOptions: BaseOptions = {
 	className: true,
 	disabled: true,
+	nohover: true,
 	visible: true
 };
 
@@ -150,6 +152,12 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		if ('disabled' in props && props['disabled'] && opts.disabled) {
 			this._classes.push(styles.disabled);
 			this._classes.push('nohover');
+		}
+
+		if ('nohover' in props && props['nohover'] && opts.nohover) {
+			if (this._classes.indexOf('nohover') === -1) {
+				this._classes.push('nohover');
+			}
 		}
 	}
 

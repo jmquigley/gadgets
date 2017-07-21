@@ -18,7 +18,9 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   layout={5}
   leftButton={null}
   location="none"
+  nocollapse={false}
   noedit={false}
+  nohover={false}
   noripple={false}
   onBlur={[Function]}
   onChange={[Function]}
@@ -60,7 +62,9 @@ exports[`Test clicking of the AccordionItem header 1`] = `
       layout={5}
       leftButton={null}
       location="none"
+      nocollapse={false}
       noedit={false}
+      nohover={false}
       noripple={false}
       onBlur={[Function]}
       onChange={[Function]}
@@ -108,7 +112,9 @@ exports[`Test clicking of the AccordionItem header 1`] = `
           layout={5}
           leftButton={null}
           location="none"
+          nocollapse={false}
           noedit={false}
+          nohover={false}
           noripple={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -158,7 +164,9 @@ exports[`Test clicking of the AccordionItem header 1`] = `
               layout={5}
               leftButton={null}
               location="none"
+              nocollapse={false}
               noedit={false}
+              nohover={false}
               noripple={false}
               onBlur={[Function]}
               onChange={[Function]}
@@ -215,6 +223,236 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 </AccordionItem>
 `;
 
+exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
+<AccordionItem
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  leftButton={null}
+  location="none"
+  nocollapse={true}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  title="Test Title"
+  useedit={false}
+  visible={true}
+  widget={null}
+>
+  <ul
+    className="ui-accordionitem accordionItem"
+    style={Object {}}
+  >
+    <Item
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      id=""
+      initialToggle={false}
+      layout={5}
+      leftButton={null}
+      location="none"
+      nocollapse={true}
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      rightButton={null}
+      selected={false}
+      sizing="normal"
+      stacked={false}
+      style={Object {}}
+      title="Test Title"
+      useedit={false}
+      visible={true}
+      widget={null}
+    >
+      <li
+        className="ui-item item"
+        id=""
+        onBlur={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onMouseOut={[Function]}
+        style={Object {}}
+      >
+        <Title
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className="itemTitle"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          id=""
+          initialToggle={false}
+          layout={5}
+          leftButton={null}
+          location="none"
+          nocollapse={true}
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={
+            Object {
+              "padding": "2px 4px",
+            }
+          }
+          title="Test Title"
+          useedit={false}
+          visible={true}
+          widget={null}
+        >
+          <div
+            className="ui-title-bar titleBar ripple itemTitle"
+            style={
+              Object {
+                "padding": "2px 4px",
+              }
+            }
+          >
+            <Label
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className="ui-title titleDominant"
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              hiddenLeftButton={false}
+              hiddenRightButton={false}
+              id=""
+              initialToggle={false}
+              layout={5}
+              leftButton={null}
+              location="none"
+              nocollapse={true}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onMouseOut={[Function]}
+              onUpdate={[Function]}
+              rightButton={null}
+              selected={false}
+              sizing="normal"
+              stacked={false}
+              style={
+                Object {
+                  "padding": "2px 4px",
+                }
+              }
+              text="Test Title"
+              title="Test Title"
+              useedit={false}
+              visible={true}
+              widget={null}
+            >
+              <span
+                className="ui-label label normal ui-title titleDominant"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                    "padding": "2px 4px",
+                  }
+                }
+                suppressContentEditableWarning={true}
+              >
+                Test Title
+              </span>
+            </Label>
+            <div
+              className="normal ui-title-widget widgetDominant"
+            />
+          </div>
+        </Title>
+      </li>
+    </Item>
+    <div
+      className="ui-accordion-content content"
+    >
+      <div>
+        child content
+      </div>
+    </div>
+  </ul>
+</AccordionItem>
+`;
+
 exports[`Test making the AccordionItem invisible 1`] = `
 <ul
   className="ui-accordionitem accordionItem invisible"
@@ -237,7 +475,9 @@ exports[`Test making the AccordionItem invisible 1`] = `
     layout={5}
     leftButton={null}
     location="none"
+    nocollapse={false}
     noedit={false}
+    nohover={false}
     noripple={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -279,7 +519,9 @@ Object {
   "layout": 5,
   "leftButton": null,
   "location": "none",
+  "nocollapse": false,
   "noedit": false,
+  "nohover": false,
   "noripple": false,
   "onBlur": [Function],
   "onChange": [Function],
@@ -324,7 +566,9 @@ exports[`Test the creation of a AccordionItem control 1`] = `
     layout={5}
     leftButton={null}
     location="none"
+    nocollapse={false}
     noedit={false}
+    nohover={false}
     noripple={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -370,7 +614,9 @@ exports[`Test the disabling of the AccordionItem 1`] = `
     layout={5}
     leftButton={null}
     location="none"
+    nocollapse={false}
     noedit={false}
+    nohover={false}
     noripple={false}
     onBlur={[Function]}
     onChange={[Function]}

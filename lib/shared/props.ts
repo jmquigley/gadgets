@@ -19,6 +19,8 @@
  * control (see the Location enumeration below).
  * - `noedit: boolean (false)` - When this is set the contents of the control can't be
  * changed.
+ * - `nohover: boolean (false)` - Controls that use a hover can use the nohover to
+ * turn off that function.
  * - `noripple: boolean (false)` - turns off the ripple effect for a button.
  * - `selected: boolean (false)` - if true, then this component was selected via a
  * mouse click (such as the ListItem).  If false, then it was not clicked.
@@ -95,6 +97,7 @@ export interface BaseProps {
 	id?: string;
 	location?: Location;
 	noedit?: boolean;
+	nohover?: boolean;
 	noripple?: boolean;
 	selected?: boolean;
 	sizing?: Sizing;
@@ -116,6 +119,7 @@ export function getDefaultBaseProps(): BaseProps {
 		id: '',
 		location: Location.none,
 		noedit: false,
+		nohover: false,
 		noripple: false,
 		selected: false,
 		sizing: Sizing.normal,

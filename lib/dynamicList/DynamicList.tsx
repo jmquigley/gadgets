@@ -26,6 +26,7 @@ import {
 
 export interface DynamicListProps extends BaseProps {
 	items?: string[];
+	nocollapse?: boolean;
 	onClick?: any;
 	onBlur?: any;
 	onChange?: any;
@@ -39,7 +40,9 @@ export interface DynamicListProps extends BaseProps {
 export function getDefaultDynamicListProps(): DynamicListProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
+			collapsable: false,
 			items: [],
+			nocollapse: false,
 			onBlur: nilEvent,
 			onClick: nilEvent,
 			onChange: nilEvent,
@@ -413,6 +416,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						{this.dialog}
 						</ButtonDialog>
 					}
+					nocollapse={this.props.nocollapse}
+					noedit
+					nohover={this.props.nocollapse}
+					noripple={this.props.nocollapse}
 					rightButton={
 						<Button
 							iconName="plus"

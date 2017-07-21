@@ -22,3 +22,4 @@ test('Test creation of a DynamicList control', () => {
 // TODO: test case for validating props object creator
 // TODO: disabling the DynamicList
 // TODO: make the DynamicList invisible
+// TODO: add a test for nocollapse flag test
