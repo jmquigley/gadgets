@@ -554,11 +554,15 @@ class App extends React.Component<AppProps, AppState> {
 			<Container id="dynamicListExample">
 				<DynamicList
 					items={dynamicItems}
+					layout={TitleLayout.dominant}
 					onDelete={(title: string) => {
 						console.log(`Deleting item from list: ${title}`);
 					}}
 					onNew={(title: string) => {
 						console.log(`Adding new item to list: ${title}`);
+					}}
+					onSelect={(title: string) => {
+						console.log(`Selected item: ${title}`);
 					}}
 					pageSizes={[10, 20, 30]}
 					title="Dynamic List Test"

@@ -29,6 +29,7 @@ export interface DynamicListItem {
 
 export interface DynamicListProps extends BaseProps {
 	items?: DynamicListItem;
+	layout?: TitleLayout;
 	nocollapse?: boolean;
 	onClick?: any;
 	onBlur?: any;
@@ -36,7 +37,9 @@ export interface DynamicListProps extends BaseProps {
 	onDelete?: any;
 	onFocus?: any;
 	onNew?: any;
+	onSelect?: any;
 	pageSizes?: number[];
+	sortOrder?: SortOrder;
 	title?: any;
 }
 
@@ -45,6 +48,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 		getDefaultBaseProps(), {
 			collapsable: false,
 			items: {},
+			layout: TitleLayout.dominant,
 			nocollapse: false,
 			onBlur: nilEvent,
 			onClick: nilEvent,
@@ -52,7 +56,9 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			onDelete: nilEvent,
 			onFocus: nilEvent,
 			onNew: nilEvent,
+			onSelect: nilEvent,
 			pageSizes: defaultPageSizes,
+			sortOrder: SortOrder.ascending,
 			title: ''
 		}));
 }
@@ -82,8 +88,11 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private _listItems: any = {};
 	private _pager: any = null;
 	private _pagerID: string = getUUID();
+	private _previousPage: number = 1;
 	private _previousSize: Sizing = this.styling.prev.type;
 	private _qDelete: string = '';
+	private _selection: string = '';
+	private _startSearch: boolean = true;
 
 	constructor(props: DynamicListProps) {
 		super(props, require('./styles.css'));
@@ -97,7 +106,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			search: '',
 			showConfirm: false,
 			showNew: false,
-			sortOrder: SortOrder.ascending,
+			sortOrder: props.sortOrder,
 			totalItems: this._count
 		};
 
@@ -110,6 +119,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.handleNewPageSize = this.handleNewPageSize.bind(this);
 		this.handlePageChange = this.handlePageChange.bind(this);
 		this.handleSearch = this.handleSearch.bind(this);
+		this.handleSelect = this.handleSelect.bind(this);
 		this.handleSortAscending = this.handleSortAscending.bind(this);
 		this.handleSortDescending = this.handleSortDescending.bind(this);
 		this.handleUpdate = this.handleUpdate.bind(this);
@@ -199,6 +209,24 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	/**
+	 * Takes the given title and computes the page where this title would
+	 * be found.  It takes the current position within the list items and
+	 * divides it by the page size to find its current page.
+	 * @param title {string} the title to find within the list items
+	 * @returns the page number where this item resides.  If it is not
+	 * found it will return 1.
+	 */
+	private computePageByItem(title: string): number {
+		const idx = Object.keys(this._listItems).indexOf(title);
+
+		if (idx === -1) {
+			return 1;
+		}
+
+		return Math.ceil(idx / this.state.pageSize);
+	}
+
+	/**
 	 * Sets the control into a new item mode.  This will show the input control and
 	 * wait for user input.
 	 */
@@ -279,6 +307,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	private handlePageChange(page: number) {
 		if (page !== this.state.page) {
+			this._previousPage = this.state.page;
 			this.setState({
 				page: page
 			});
@@ -286,9 +315,42 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	private handleSearch(e: React.FormEvent<HTMLSelectElement>) {
+		const val: string = (e.target as HTMLSelectElement).value;
+
+		if (this._startSearch) {
+			this._previousPage = this.state.page;
+			this._startSearch = false;
+		}
+
+		if (val === '') {
+
+			// If there is a selection title, check to see if it was a new
+			// selection from the search.  If it is is, then set
+			// a new page number by setting previous.  If it is not, then
+			// ignore.
+			if (this._selection !== '') {
+				const selectionPage = this.computePageByItem(this._selection);
+				if (selectionPage !== this._previousPage) {
+					this._previousPage = selectionPage;
+				}
+			}
+
+			this._startSearch = true;
+		}
+
 		this.setState({
-			search: (e.target as HTMLSelectElement).value
+			page: (val === '') ? this._previousPage : 1,
+			search: val
 		});
+	}
+
+	private handleSelect(title: string) {
+		if (this._selection !== title) {
+			this._selection = title;
+			this.props.onSelect(title);
+		} else {
+			this._selection = '';
+		}
 	}
 
 	private handleSortAscending() {
@@ -315,6 +377,14 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		});
 	}
 
+	public componentWillReceiveProps(nextProps: DynamicListProps) {
+		if (nextProps.sortOrder !== this.state.sortOrder) {
+			this.setState({
+				sortOrder: nextProps.sortOrder
+			});
+		}
+	}
+
 	public shouldComponentUpdate(nextProps: DynamicListProps, nextState: DynamicListState): boolean {
 
 		for (const title in nextState.items) {
@@ -330,7 +400,9 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						id={uuid}
 						key={uuid}
 						hiddenRightButton
+						layout={this.props.layout}
 						onBlur={this.handleBlur}
+						onSelect={this.handleSelect}
 						onUpdate={this.handleUpdate}
 						rightButton={
 							<Button
@@ -369,7 +441,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this._pager = (
 			<Pager
 				disabled={nextState.search === '' ? false : true}
-				initialPage={nextState.search === '' ? nextState.page : 1}
+				initialPage={nextState.page}
 				initialPageSize={nextState.pageSize}
 				key={this._pagerID}
 				onChangePageSize={this.handleNewPageSize}

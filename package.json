@@ -32,8 +32,10 @@
 				"webpack": "webpack"
 		},
 		"dependencies": {
+				"latest": "^0.2.0",
 				"util.join": "^0.0.12",
-				"util.pkgwrap": ">=0.0.67"
+				"util.pkgwrap": ">=0.0.67",
+				"yarn": "^0.28.1"
 		},
 		"devDependencies": {
 				"@types/enzyme": "^2.8.3",
