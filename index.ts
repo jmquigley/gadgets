@@ -18,6 +18,7 @@ import {
 	BaseProps,
 	Color,
 	Direction,
+	Justify,
 	Location,
 	Sizing
 } from './lib/shared';
@@ -50,6 +51,7 @@ export {
 	DynamicListItem,
 	Icon,
 	Item,
+	Justify,
 	Label,
 	List,
 	ListDivider,

@@ -1,7 +1,7 @@
 /**
  * A typical button control widget that uses an icon and text.  The
- * text for the button is given as a property.  It can be left or
- * right justified using the justify property.
+ * text for the button is given as a property.  It can be left, right,
+ * or center justified using the Justify enumeration.
  *
  * #### Examples:
  *
@@ -43,10 +43,10 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultIconProps, Icon, IconProps} from '../icon';
-import {BaseComponent, Sizing} from '../shared';
+import {BaseComponent, Justify, Sizing} from '../shared';
 
 export interface ButtonTextProps extends IconProps {
-	justify?: number;
+	justify?: Justify;
 	noicon?: boolean;
 	onClick?: any;
 	text?: string;
@@ -55,7 +55,7 @@ export interface ButtonTextProps extends IconProps {
 export function getDefaultButtonTextProps(): ButtonTextProps {
 	return cloneDeep(Object.assign(
 		getDefaultIconProps(), {
-			justify: ButtonText.RIGHT,
+			justify: Justify.right,
 			noicon: false,
 			onClick: nilEvent,
 			sizing: Sizing.normal,
@@ -66,10 +66,6 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 	public static defaultProps: ButtonTextProps = getDefaultButtonTextProps();
-
-	public static LEFT: number = 0;
-	public static RIGHT: number = 1;
-	public static CENTER: number = 2;
 
 	constructor(props: ButtonTextProps) {
 		super(props, require('./styles.css'));
@@ -129,9 +125,9 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		let leftButton = null;
 		let rightButton = null;
 
-		if (this.props.justify === ButtonText.CENTER || this.props.noicon) {
+		if (this.props.justify === Justify.center || this.props.noicon) {
 			leftButton = this.buildContent(this.styles.center);
-		} else if (this.props.justify === ButtonText.LEFT) {
+		} else if (this.props.justify === Justify.left) {
 			leftButton = this.buildContent(this.styles.left);
 		} else {
 			rightButton = this.buildContent(this.styles.right);
@@ -139,7 +135,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 		let icon = null;
 
-		if (!this.props.noicon && this.props.justify !== ButtonText.CENTER) {
+		if (!this.props.noicon && this.props.justify !== Justify.center) {
 			icon = (
 				<Icon
 					className={this.styles.icon}

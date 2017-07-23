@@ -3,6 +3,7 @@
 import * as assert from 'assert';
 import {mount} from 'enzyme';
 import * as React from 'react';
+import {Justify} from '../../shared';
 import {ButtonText, getDefaultButtonTextProps} from '../index';
 
 test('Test retrieval of ButtonText props object', () => {
@@ -17,7 +18,7 @@ test('Test creation of a ButtonText control to the left', () => {
 		<ButtonText
 			className="test-class"
 			text="test text"
-			justify={ButtonText.LEFT}
+			justify={Justify.left}
 			color="white"
 			borderColor="green"
 			backgroundColor="blue"

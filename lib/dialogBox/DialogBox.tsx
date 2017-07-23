@@ -68,6 +68,7 @@ import {
 	BaseProps,
 	Color,
 	getDefaultBaseProps,
+	Justify,
 	Sizing
 } from '../shared';
 
@@ -262,7 +263,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 						<div className={this.styles.buttonBar}>
 							<ButtonText
 								className={this.styles.dialogBoxButton}
-								justify={ButtonText.CENTER}
+								justify={Justify.center}
 								noicon
 								onClick={this.handleYes}
 								sizing={this.props.sizing}
@@ -271,7 +272,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 							<div className={this.styles.spacer} />
 							<ButtonText
 								className={this.styles.dialogBoxButton}
-								justify={ButtonText.CENTER}
+								justify={Justify.center}
 								noicon
 								onClick={this.handleNo}
 								sizing={this.props.sizing}

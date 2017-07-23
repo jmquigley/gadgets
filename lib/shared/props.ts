@@ -66,6 +66,12 @@ export enum Color {
 	info = '#5bc0de'
 }
 
+export enum Justify {
+	left,
+	right,
+	center
+}
+
 export enum Location {
 	none = 'none',
 	topLeft = 'topLeft',

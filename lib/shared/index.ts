@@ -4,6 +4,7 @@ import {
 	Color,
 	Direction,
 	getDefaultBaseProps,
+	Justify,
 	Location,
 	SortOrder
 } from './props';
@@ -22,6 +23,7 @@ export {
 	Direction,
 	FontStyle,
 	getDefaultBaseProps,
+	Justify,
 	Location,
 	Sizes,
 	Sizing,
