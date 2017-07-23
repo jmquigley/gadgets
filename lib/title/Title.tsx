@@ -8,14 +8,18 @@
  * - TitleLayout.quarter
  * - TitleLayout.even
  * - TitleLayout.threequarter
+ * - TitleLayout.third
  * - TitleLayout.stacked
  * - TitleLayout.dominant
+ * - TitleLayout.none
  *
  * In `quarter` the title takes up 25% and the widget takes up 75%
  * In `even` the title and widget take up 50%
  * In `threequarter` the title takes up 75% and the widget takes up 25%
+ * In `third` the titel takes up 33% of the space
  * In `stacked` the title is placed above the widget
  * In `dominant` the title takes up 83% of the width (5/6)
+ * In `none` the title takes up 100% of the width
  *
  * #### Examples:
  *
@@ -60,7 +64,8 @@ export enum TitleLayout {
 	threequarter,
 	third,
 	stacked,
-	dominant
+	dominant,
+	none
 }
 
 export interface TitleProps extends BaseProps {
@@ -116,6 +121,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 				break;
 
 			case TitleLayout.even:
+			case TitleLayout.none:
 				this._titleClasses.push(this.styles.titleEven);
 				this._widgetClasses.push(this.styles.widgetEven);
 				break;
@@ -165,15 +171,22 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 			);
 		}
 
+		let widget: any = null;
+		if (this.props.layout !== TitleLayout.none && this.props.widget != null) {
+			widget = (
+				<div className={this._widgetClasses.join(' ')}>
+					{this.props.widget}
+				</div>
+			);
+		}
+
 		return (
 			<div
 				className={this.classes.join(' ')}
 				style={{...this.inlineStyle}}
 			>
 				{title}
-				<div className={this._widgetClasses.join(' ')}>
-					{this.props.widget}
-				</div>
+				{widget}
 			</div>
 		);
 	}

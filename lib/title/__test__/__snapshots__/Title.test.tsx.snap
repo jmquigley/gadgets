@@ -79,9 +79,89 @@ exports[`Test creation of a Title control with bad layout 1`] = `
         Test label text
       </span>
     </Label>
-    <div
-      className="normal ui-title-widget widgetDominant"
-    />
+  </div>
+</Title>
+`;
+
+exports[`Test creation of a Title control with bad layout 2`] = `
+<Title
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  id=""
+  layout={9999}
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  title="Test label text"
+  visible={true}
+  widget={null}
+>
+  <div
+    className="ui-title-bar titleBar ripple"
+    style={Object {}}
+  >
+    <Label
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className="ui-title titleDominant"
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      id=""
+      layout={9999}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      text="Test label text"
+      title="Test label text"
+      useedit={false}
+      visible={true}
+      widget={null}
+    >
+      <span
+        className="ui-label label normal ui-title titleDominant"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+        suppressContentEditableWarning={true}
+      >
+        Test label text
+      </span>
+    </Label>
   </div>
 </Title>
 `;
@@ -122,9 +202,6 @@ exports[`Test creation of a Title control with default props 1`] = `
     useedit={false}
     visible={true}
     widget={null}
-  />
-  <div
-    className="normal ui-title-widget widgetDominant"
   />
 </div>
 `;
@@ -171,6 +248,46 @@ exports[`Test creation of a Title control with even layout 1`] = `
   >
     widget
   </div>
+</div>
+`;
+
+exports[`Test creation of a Title control with no layout 1`] = `
+<div
+  className="ui-title-bar titleBar ripple"
+  style={Object {}}
+>
+  <Label
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className="ui-title titleEven"
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    id=""
+    layout={6}
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onUpdate={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text="Test label text"
+    title="Test label text"
+    useedit={false}
+    visible={true}
+    widget={null}
+  />
 </div>
 `;
 
@@ -433,9 +550,6 @@ exports[`Test disabling the Title control 1`] = `
         Test label text
       </span>
     </Label>
-    <div
-      className="normal ui-title-widget widgetDominant"
-    />
   </div>
 </Title>
 `;
@@ -519,9 +633,6 @@ exports[`Test making the Title control invisible 1`] = `
         Test label text
       </span>
     </Label>
-    <div
-      className="normal ui-title-widget widgetDominant"
-    />
   </div>
 </Title>
 `;

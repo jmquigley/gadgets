@@ -5,15 +5,6 @@ import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {getDefaultTitleProps, Title, TitleLayout} from '../index';
 
-function validate(ctl: any) {
-	assert(ctl);
-	assert(!ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.ui-title-bar').length, 1);
-	assert.equal(ctl.find('.ui-title').length, 1);
-	assert.equal(ctl.find('.ui-title-widget').length, 1);
-}
-
 test('Test retrieval of Title props object', () => {
 	const props = getDefaultTitleProps();
 
@@ -93,10 +84,23 @@ test('Test creation of a Title control with stacked layout', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
+test('Test creation of a Title control with no layout', () => {
+	const ctl = shallow(
+		<Title
+			layout={TitleLayout.none}
+			title="Test label text"
+		/>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+});
+
 test('Test creation of a Title control with bad layout', () => {
 	const ctl = mount(<Title layout={9999} title="Test label text" />);
 
-	validate(ctl);
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
 
 	assert.equal(ctl.prop('widget'), null);
 	expect(ctl).toMatchSnapshot();

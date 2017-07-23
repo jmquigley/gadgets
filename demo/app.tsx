@@ -897,6 +897,7 @@ class App extends React.Component<AppProps, AppState> {
 			<Title widget="widget" layout={TitleLayout.threequarter} title="three quarter" /><br/>
 			<Title widget="widget" layout={TitleLayout.stacked} title="stacked" /><br/>
 			<Title widget="widget" layout={TitleLayout.dominant} title="dominant" /><br/>
+			<Title layout={TitleLayout.none} title="title only" /><br />
 			<Title widget="widget" title="disabled" disabled /><br />
 			<br/>
 
