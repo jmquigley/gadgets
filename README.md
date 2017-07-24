@@ -157,7 +157,7 @@ TODO: create the Editor control
 Displays a graphical icon within the current container.
 
 ### [Label](docs/lib/label/Label.md)
-A text string label that can made editable.  It is ultimately a `<span>` wrapper of the given text string.
+A text label string control that can be edited.
 
 ### List/[ListDivider](docs/lib/list/ListDivider.md)/ListFooter/ListHeader/ListItem
 

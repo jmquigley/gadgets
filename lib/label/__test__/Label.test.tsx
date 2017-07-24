@@ -53,6 +53,7 @@ test('Test a double click edit of the Label control', () => {
 	const s: string = 'A';
 	const ctl = mount(
 		<Label
+			focus
 			onChange={change}
 			onDoubleClick={dblclick}
 			onKeyDown={keydown}
@@ -114,17 +115,53 @@ test('Test cancelling a double click edit of the Label control', () => {
 	assert.equal(ctl.state('text'), s);
 });
 
+test('Test double click change to Label and blur to save', () => {
+	const blur = jest.fn();
+	const change = jest.fn();
+	const dblclick = jest.fn();
+	const update = jest.fn();
+	const s: string = 'A';
+	const ctl = mount(
+		<Label
+			focus
+			onBlur={blur}
+			onChange={change}
+			onDoubleClick={dblclick}
+			onUpdate={update}
+			text={s}
+		/>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	const label = ctl.find('.ui-label');
+	assert(label);
+	label.simulate('doubleClick');
+	expect(dblclick).toHaveBeenCalled();
+
+	assert(ctl.state('editable'));
+
+	label.simulate('blur', {target: {innerHTML: 'ABCDE'}});
+	expect(blur).toHaveBeenCalled();
+	expect(change).toHaveBeenCalled();
+	assert.equal(ctl.state('text'), 'ABCDE');
+	assert(!ctl.state('editable'));
+
+	expect(update).toHaveBeenCalled();
+	assert.equal(update.mock.calls[0][0], 'A');
+	assert.equal(update.mock.calls[0][1], 'ABCDE');
+});
+
 test('Test dynamically changing Label props', () => {
 	const arr = ['A', 'B', 'C'];
+	const ctl = mount(<Label/>);
 
 	for (const val of arr) {
-		const ctl = mount(
-			<Label
-				text={val}
-			/>
-		);
 
 		assert(ctl);
+		ctl.setProps({text: val});
+
 		const label = ctl.instance() as Label;
 		assert(label);
 		assert(label.label);

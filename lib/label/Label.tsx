@@ -1,4 +1,47 @@
-// TODO: Add Label documentation
+/**
+ * A text label string control that can be edited.  The label can be double
+ * clicked to enter editint mode (similar to a text field).  This behavior can
+ * also be suppressed to make the text static.  The contorl is a `<span>`
+ * element surrounding text.
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {Label} from 'gadgets';
+ *
+ * <Label
+ *     focus
+ *     text="label text"
+ * />
+ * ```
+ *
+ * #### Events
+ * - `onBlur` - Invoked when the focus moves away from the label
+ * - `onChange(val: string)` - Invoked when a label is changed.  This happens
+ * when editing the control and pressing enter or losing focus (blur).
+ * - `onClick` - Invoked when the label is clicked.
+ * - `onDoubleClick` - Invoked when the user double clicks on the control.  This
+ * will cause the control to enter an editing mode.
+ * - `onKeyDown` - Invoked when a key is initially pressed.  This captures the
+ * "escape" key and reverts the text to its previous state if in edit mode.
+ * - `onKeyPress' - Invoked when a key is pressed.  This captures the "Enter"
+ * key to commit a user edit to the text of the control if editing.
+ * - onUpdate(previous: string, text: string)` - Invoked when the label is
+ * changed from one value to another.  The previous text and new text are passed
+ * to the callback.
+ *
+ * #### Styles
+ * - `ui-label` - Applied to the surrounding `<span>` element for all labels
+ *
+ * #### Properties
+ * - `focus: {boolean} (false)` - If true, then this control is given the focus
+ * - `noedit: {boolean} (false)` - If true, then the control can't be edited
+ * - `text: {string} ('')` - the text value associated with the label.
+ * - `useedit: {string} ('')` - If true, then the control is initially placed in
+ * edit mode.
+ *
+ * @module Label
+ */
 
 'use strict';
 
@@ -81,6 +124,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	private handleBlur(e: React.FocusEvent<HTMLSpanElement>) {
 		this.handleChange(e.target as Element);
+		this.props.onBlur(e);
 	}
 
 	private handleChange(element: Element) {
@@ -93,7 +137,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				previousText: val,
 				text: val
 			}, () => {
-				this.props.onChange(element);
+				this.props.onChange(val);
 				this.props.onUpdate(previous, val);
 			});
 		}
