@@ -55,8 +55,7 @@
  * - `pagesToDisplay: number (3)` - The number of page buttons to show with
  * the control.
  * - `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
- * can be used by the pager.  It will always use the first value as the default
- * when the control is created.  It is used against the total items to
+ * can be used by the pager.  It is used against the total items to
  * determine the total number of pages in the control display.
  * - `totalItems: number (0)` - The total number of items represented by the
  * control.

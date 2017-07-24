@@ -1,5 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test a double click edit of the Label control 1`] = `
+<Label
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onUpdate={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  text="A"
+  useedit={false}
+  visible={true}
+>
+  <span
+    className="ui-label label normal"
+    contentEditable={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+    suppressContentEditableWarning={true}
+  >
+    A
+  </span>
+</Label>
+`;
+
 exports[`Test creation of a Label control 1`] = `
 <span
   className="ui-label label normal test-class"

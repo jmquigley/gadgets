@@ -148,7 +148,7 @@ A modal, dialog box popup window for yes/no user decisions.
 TODO: create the DialogWindow control (complex dialog)
 
 ### [DynamicList](docs/lib/dynamicList/DynamicList.md)
-TODO: create the DynamicList control
+A specialized List control that can be manipulated by the user.  They can add/remove/select items from it.
 
 ### Editor
 TODO: create the Editor control

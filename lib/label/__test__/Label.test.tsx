@@ -44,4 +44,90 @@ test('Test making the Label control invisible', () => {
 	expect(click).not.toHaveBeenCalled();
 });
 
-// TODO: add test for events: blur, change, click, doubleclick, keydown, keypress
+test('Test a double click edit of the Label control', () => {
+	const change = jest.fn();
+	const dblclick = jest.fn();
+	const keydown = jest.fn();
+	const keypress = jest.fn();
+	const update = jest.fn();
+	const s: string = 'A';
+	const ctl = mount(
+		<Label
+			onChange={change}
+			onDoubleClick={dblclick}
+			onKeyDown={keydown}
+			onKeyPress={keypress}
+			onUpdate={update}
+			text={s}
+		/>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	const label = ctl.find('.ui-label');
+	assert(label);
+	label.simulate('doubleClick');
+	expect(dblclick).toHaveBeenCalled();
+
+	assert(ctl.state('editable'));
+
+	label.simulate('keyDown', {key: 'B'});
+	expect(keydown).toHaveBeenCalled();
+
+	label.simulate('keyPress', {target: {innerHTML: 'ABCDE'}, key: 'Enter'});
+	expect(keypress).toHaveBeenCalled();
+	expect(change).toHaveBeenCalled();
+	assert.equal(ctl.state('text'), 'ABCDE');
+	assert(!ctl.state('editable'));
+
+	expect(update).toHaveBeenCalled();
+	assert.equal(update.mock.calls[0][0], 'A');
+	assert.equal(update.mock.calls[0][1], 'ABCDE');
+});
+
+test('Test cancelling a double click edit of the Label control', () => {
+	const s: string = 'A';
+	const dblclick = jest.fn();
+	const keydown = jest.fn();
+	const keypress = jest.fn();
+	const ctl = mount(
+		<Label
+			onDoubleClick={dblclick}
+			onKeyPress={keypress}
+			onKeyDown={keydown}
+			text={s}
+		/>
+	);
+
+	const label = ctl.find('.ui-label');
+	label.simulate('doubleClick');
+	expect(dblclick).toHaveBeenCalled();
+
+	label.simulate('keyPress', {target: {innerHTML: 'ABCDE'}, key: 'E'});
+	expect(keypress).toHaveBeenCalled();
+	assert(ctl.state('editable'));
+
+	label.simulate('keyDown', {key: 'Escape'});
+	expect(keydown).toHaveBeenCalled();
+	assert(!ctl.state('editable'));
+	assert.equal(ctl.state('text'), s);
+});
+
+test('Test dynamically changing Label props', () => {
+	const arr = ['A', 'B', 'C'];
+
+	for (const val of arr) {
+		const ctl = mount(
+			<Label
+				text={val}
+			/>
+		);
+
+		assert(ctl);
+		const label = ctl.instance() as Label;
+		assert(label);
+		assert(label.label);
+		assert(ctl.state('text'), val);
+	}
+});

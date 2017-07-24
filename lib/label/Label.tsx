@@ -87,14 +87,15 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		if (this.state.editable) {
 			const val = element.innerHTML;
 			const previous = this.state.previousText;
+
 			this.setState({
 				editable: false,
 				previousText: val,
 				text: val
+			}, () => {
+				this.props.onChange(element);
+				this.props.onUpdate(previous, val);
 			});
-
-			this.props.onChange(val);
-			this.props.onUpdate(previous, val);
 		}
 	}
 
@@ -104,16 +105,16 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				const range = document.caretRangeFromPoint(e.clientX, e.clientY);
 				const sel = window.getSelection();
 
-				this.setState({
-					editable: true
-				});
-
 				window.setTimeout(() => {
 					sel.removeAllRanges();
 					sel.addRange(range);
 				}, 20);
 			}
 		}
+
+		this.setState({editable: true}, () => {
+			this.props.onDoubleClick(e);
+		});
 	}
 
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {

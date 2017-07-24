@@ -1,5 +1,78 @@
-// TODO: add DynamicList documentation
-// TODO: add DynamicList implementation
+/**
+ * The `DynamicList` control is a specialized List control that
+ * can be manipulated by the user.  They can add/remove/select items
+ * from it.  The control takes an initial list to seed the control,
+ * but then items can be dynamically added/removed.
+ *
+ *  Some of the features include:
+ *
+ * - Add new items with the "+" button
+ * - Sort the list in ascending/descending order
+ * - Incrementally search for items
+ * - List is divided into pages for performance
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {DynamicList} from 'gadgets';
+ *
+ * <DynamicList
+ *     items={{
+ *         title1: widget1
+ *         title2: widget2
+ *         title1: widget3
+ *     }}
+ *     onDelete={(title: string) => {
+ *         console.log(`Deleting item from list: ${title}`);
+ *     }}
+ *     onNew={(title: string) => {
+ *         console.log(`Adding new item to list: ${title}`);
+ *     }}
+ *     onSelect={(title: string) => {
+ *         console.log(`Selected item: ${title}`);
+ *     }}
+ *     pageSizes={[10, 20, 30]}
+ *     title="Dynamic List Test"
+ * />
+ * ```
+ *
+ * #### Events
+ * - `onBlur` - Invoked when a list item control loses focus.
+ * - `onClick` - Invoked when a list item is clicked.
+ * - `onDelete(title: string)` - This event is executed when an
+ * item is removed form the list.
+ * - `onFocus` - Invoked when a list item is clicked.
+ * - `onNew(title: string)` - This event is executed when an
+ * item is added to the list.  The title of the new item is a
+ * parameter to the callback
+ * - `onSelect(title: string)` - Invoked when a list item is selected.
+ * The title of the selected item is a parameter to the callback.
+ * - `onUpdate(previous: string, title: string)` - When an item is
+ * renamed this callback is invoked.  The previous value and the new
+ * title are passed to the callback
+ *
+ * #### Styles
+ * - `ui-dynamiclist` - applied to the top level `div` accordion
+ * control that holds the list.
+ *
+ * #### Properties
+ * - `items: DynamicListItem ({}}` - An object that holds unique title
+ * and widgets in the format `{[title]: widget}`.  Each item in the Object
+ * represents a list item.  This is used to seed the control at creation.
+ * - `layout: TitleLayout (TitleLayout.dominant)` - How the title/widget
+ * will be displayed in the list item (seee the Title control).
+ * - `nocollapse: boolean (false)` - Determines if the list can be
+ * "rolled up" when the header is clicked.  The default behavior is to
+ * allow.  IF this is set to false, then the list can't be collapsed.
+ * - `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
+ * can be used by the pager.  It is used against the total items to
+ * determine the total number of pages in the control display.
+ * - `sortOrder: SortOrder (SortOrder.ascending)` - The list sort order.  Can
+ * be either ascending or descending.
+ * - `title: string ('')` - This string value is in the header of the control.
+ *
+ * @module DynamicList
+ */
 
 'use strict';
 
@@ -31,13 +104,13 @@ export interface DynamicListProps extends BaseProps {
 	items?: DynamicListItem;
 	layout?: TitleLayout;
 	nocollapse?: boolean;
-	onClick?: any;
 	onBlur?: any;
-	onChange?: any;
+	onClick?: any;
 	onDelete?: any;
 	onFocus?: any;
 	onNew?: any;
 	onSelect?: any;
+	onUpdate?: any;
 	pageSizes?: number[];
 	sortOrder?: SortOrder;
 	title?: any;
@@ -52,11 +125,11 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			nocollapse: false,
 			onBlur: nilEvent,
 			onClick: nilEvent,
-			onChange: nilEvent,
 			onDelete: nilEvent,
 			onFocus: nilEvent,
 			onNew: nilEvent,
 			onSelect: nilEvent,
+			onUpdate: nilEvent,
 			pageSizes: defaultPageSizes,
 			sortOrder: SortOrder.ascending,
 			title: ''
@@ -367,7 +440,9 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	private handleUpdate(previous: string, title: string) {
 		this.handleNewItem(title, this.state.items[previous], () => {
-			this.handleDelete(previous);
+			this.handleDelete(previous, () => {
+				this.props.onUpdate(previous, title);
+			});
 		});
 	}
 
@@ -393,15 +468,16 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 					this._qDelete = title;
 					this.setState({showConfirm: true});
 				};
-				const uuid = getUUID();
 
 				this._listItems[title] = (
 					<ListItem
-						id={uuid}
-						key={uuid}
+						id={title}
+						key={title}
 						hiddenRightButton
 						layout={this.props.layout}
+						onClick={this.props.onClick}
 						onBlur={this.handleBlur}
+						onFocus={this.props.onFocus}
 						onSelect={this.handleSelect}
 						onUpdate={this.handleUpdate}
 						rightButton={
