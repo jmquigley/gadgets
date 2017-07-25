@@ -32,7 +32,7 @@ export type ValidatorFn = (text: string, option?: any) => boolean;
  *
  * These instances are passed to the `validators` array list property on the
  * `TextField` control.  The `TextField` calls the `validate()`, with
- * the input data to determine if the current state of that data is
+ * the input data to determine, if the current state of that data is
  * valid.  This validators array can hold multiple instances of these
  * validation classes (generally different validations).  The validation
  * routine in the `TextField` will iterate through this array and use

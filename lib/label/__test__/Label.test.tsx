@@ -162,9 +162,9 @@ test('Test dynamically changing Label props', () => {
 		assert(ctl);
 		ctl.setProps({text: val});
 
-		const label = ctl.instance() as Label;
-		assert(label);
-		assert(label.label);
+		const instance = ctl.instance() as Label;
+		assert(instance);
+		assert(instance.label);
 		assert(ctl.state('text'), val);
 	}
 });

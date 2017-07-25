@@ -1,10 +1,10 @@
 /**
- * The `DynamicList` control is a specialized List control that
- * can be manipulated by the user.  They can add/remove/select items
- * from it.  The control takes an initial list to seed the control,
- * but then items can be dynamically added/removed.
+ * The `DynamicList` control is a specialized List control that can be
+ * manipulated by the user.  They can add/remove/select items from it.  The
+ * control takes an initial list to seed the control, but then items can be
+ * dynamically added/removed.
  *
- *  Some of the features include:
+ * Some of the features include:
  *
  * - Add new items with the "+" button
  * - Sort the list in ascending/descending order
@@ -39,25 +39,24 @@
  * #### Events
  * - `onBlur` - Invoked when a list item control loses focus.
  * - `onClick` - Invoked when a list item is clicked.
- * - `onDelete(title: string)` - This event is executed when an
- * item is removed form the list.
+ * - `onDelete(title: string)` - This event is executed when an item is removed
+ * from the list.
  * - `onFocus` - Invoked when a list item is clicked.
- * - `onNew(title: string)` - This event is executed when an
- * item is added to the list.  The title of the new item is a
- * parameter to the callback
- * - `onSelect(title: string)` - Invoked when a list item is selected.
- * The title of the selected item is a parameter to the callback.
- * - `onUpdate(previous: string, title: string)` - When an item is
- * renamed this callback is invoked.  The previous value and the new
- * title are passed to the callback
+ * - `onNew(title: string)` - This event is executed when an item is added to
+ * the list.  The title of the new item is a parameter to the callback
+ * - `onSelect(title: string)` - Invoked when a list item is selected. The title
+ * of the selected item is a parameter to the callback.
+ * - `onUpdate(previous: string, title: string)` - When an item is renamed this
+ * callback is invoked.  The previous value and the new title are passed to the
+ * callback
  *
  * #### Styles
  * - `ui-dynamiclist` - applied to the top level `div` accordion
  * control that holds the list.
  *
  * #### Properties
- * - `items: DynamicListItem ({}}` - An object that holds unique title
- * and widgets in the format `{[title]: widget}`.  Each item in the Object
+ * - `items: DynamicListItem ({}}` - An object that holds unique title and
+ * widgets in the format `{[title]: widget}`.  Each item in the Object
  * represents a list item.  This is used to seed the control at creation.
  * - `layout: TitleLayout (TitleLayout.dominant)` - How the title/widget
  * will be displayed in the list item (seee the Title control).
@@ -300,8 +299,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	/**
-	 * Sets the control into a new item mode.  This will show the input control and
-	 * wait for user input.
+	 * Sets the control into a new item mode.  This will show the input control
+	 * and wait for user input.
 	 */
 	private createNewItem() {
 		this.setState({
@@ -315,11 +314,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	/**
-	 * Receives the name of an element to remove from the List.  This will remove it
-	 * from the state and remove its ListItem control that was generated for it.
+	 * Receives the name of an element to remove from the List.  This will
+	 * remove it from the state and remove its ListItem control that was
+	 * generated for it.
 	 * @param title {string} the title to remove from the list
-	 * @param cb {Function} a callback function that is executed when the delete
-	 * state event update completes.
+	 * @param cb {Function} a callback function that is executed when the
+	 * delete state event update completes.
 	 */
 	private handleDelete(title: string, cb: any = nil) {
 		if (title in this.state.items) {
@@ -350,12 +350,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	/**
-	 * When the data in the input control is changed/added, this event handler is
-	 * called to process it.  This happens when the label within the ListItem for
-	 * new items is changed.
+	 * When the data in the input control is changed/added, this event handler
+	 * is called to process it.  This happens when the label within the
+	 * ListItem for new items is changed.
 	 * @param title {string} the title that will be added to the list
-	 * @param cb {Function} a callback function that is executed when the update is
-	 * complete
+	 * @param cb {Function} a callback function that is executed when the update
+	 * is complete
 	 */
 	private handleNewItem(title: string, widget: any = null, cb: any = nil) {
 		if (title.trim()) {

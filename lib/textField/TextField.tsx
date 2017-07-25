@@ -1,5 +1,100 @@
-// TODO: add documentation for TextField
-// TODO: add validation routines for TextField
+/**
+ * The TextField is a wrapper component for the built in `<input>` tag.  This
+ * control allows the user to add validation routines to the input control
+ * beyond the builtin routines.
+ *
+ * Validations are creation by creating an instance of the `Validator` class and
+ * implementing a validation funtion, failure message, and success message.
+ *
+ * Validation is NOT used by default.  It must be declared with a prop named
+ * `usevalidation.  The control has five built in validation routines (defined
+ * in validator.ts):
+ *
+ * - max length (when used with the "max" parameter)
+ * - min length (when used with the "min" parameter)
+ * - email
+ * - url
+ * - regex
+ *
+ * #### Examples:
+ *
+ * ##### Simple
+ * ```javascript
+ * import {TextField} from 'gadgets';
+ *
+ * <TextField placeholder="simple" />
+ * ```
+ * This will create a standard input text box with no validation.
+ *
+ * ##### Max/Min validator
+ * ```
+ * import {TextField} from 'gadgets';
+ *
+ * <TextField
+ *     placeholder="min/max validation"
+ *     minLength="5"
+ *     maxLength="10"
+ *     usevalidation
+ * />
+ * ```
+ * This will create an input control that uses validation.  It will check the
+ * width of the string to fall within the min/max range.  When the string is
+ * outside of the validation range the red *error* message value will be used
+ * too display a message below the control.  When it is within range a green
+ * *success* message will be printed below.
+ *
+ * ##### Custom validator
+ * ```
+ * import {TextField, Validator} from 'gadgets';
+ *
+ * <TextField
+ *     placeholder="custom"
+ *     usevalidation
+ *     validators={[
+ *         new Validator(
+ *             (value: string) => {
+ *                 return /^[0-9a-zA-Z]+$/.test(value);
+ *             },
+ *             'Not alphanumeric only',
+ *             'Contains only alphanumeric'
+ *         )
+ *     ]}
+ * />
+ * ```
+ * This will create a control with a custom alphanumeric validation routine.
+ *
+ * #### Events
+ * - `onBlur` - Invoked when focus on control is lost.
+ * - `onChange` - Invoked each time a key is pressed.  The validation routine is
+ * also called with each key.
+ * - `onKeyDown` - Invoked when a key is pressed.  The escape key is checked
+ * and if pressed the input is reverted to its previous setting.
+ * - `onKeyPress` - Invoked when a key pressed.  When the "Enter" key is pressed
+ * validation is performed and the `onValidation` routine is invoked and the
+ * results of the validation are sent to the callback.
+ * - `onValidation(flag: boolean)` - When enter is pressed this routine is
+ * called.  If validation passes, then true is given to the callback.
+ *
+ * #### Styles
+ * - `ui-textfield` - Placed on the `<div>` used to wrap the `<input>` field.
+ *
+ * #### Properties
+ * - `disabled: {boolean} (false)` - When true, the control is disabled
+ * - `id: {string} ('')` - The CSS id for this control
+ * - `sizing: {Sizing} (Sizing.normal) - The font size for the control (see
+ * the Sizing class in shared).
+ * - `type: {string} ('text')` - The type of input control.  This is the type
+ * defined by the [HTML input tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
+ * - `usevalidation: {boolean} (false)` - If this is true then the validation
+ * routines are exectued.
+ * - `validators: {Validator[]} ([])` - A list of Validator classes.  Each of the
+ * classes in this list are used against the input to check if it passes the
+ * rules set in that validator function.
+ * - `visible: {boolean} (true)` - If set to false this control is hidden (set
+ * to a display of none).
+ *
+ * @module TextField
+ */
 
 'use strict';
 
@@ -59,10 +154,12 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	public static defaultProps: TextFieldProps = getDefaultTextFieldProps();
 
+	private _input: HTMLInputElement = null;
 	private _inputStyles: string[] = [];
 	private _messageStyle: string = '';
 	private _messageStyles: string[] = [];
 	private _validators: Validator[] = null;
+	private _value: string = '';
 
 	constructor(props: TextFieldProps) {
 		super(props, require('./styles.css'));
@@ -99,8 +196,17 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 		this.handleKeyPress = this.handleKeyPress.bind(this);
+		this.handleRef = this.handleRef.bind(this);
 
 		this.shouldComponentUpdate(props);
+	}
+
+	get input(): any {
+		return this._input;
+	}
+
+	get value(): string {
+		return this._value;
 	}
 
 	private handleBlur(e: React.FocusEvent<HTMLInputElement>) {
@@ -109,7 +215,8 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	}
 
 	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-		this.validate((e.target as HTMLInputElement).value);
+		this._value = (e.target as HTMLInputElement).value;
+		this.validate(this._value);
 		this.props.onChange(e);
 	}
 
@@ -130,9 +237,15 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		this.props.onKeyPress(e);
 	}
 
+	private handleRef(ele: HTMLInputElement) {
+		this._input = ele;
+	}
+
 	private commit(ele: HTMLInputElement) {
 		this.setState({previousText: ele.value}, () => {
-			this.props.onValidation(this.validate(ele.value));
+			if (this.props.usevalidation) {
+				this.props.onValidation(this.validate(ele.value));
+			}
 		});
 	}
 
@@ -207,6 +320,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					onChange={this.handleChange}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
+					ref={this.handleRef}
 				/>
 					{this.props.usevalidation
 					?

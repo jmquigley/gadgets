@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test creating TextField and saving on blur 1`] = `
+<TextField
+  disabled={false}
+  id=""
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onValidation={[Function]}
+  sizing="normal"
+  type="text"
+  usevalidation={false}
+  validators={Array []}
+  visible={true}
+>
+  <div
+    className="ui-textfield textField"
+  >
+    <input
+      className="normal textFieldInput"
+      disabled={false}
+      id=""
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      type="text"
+    />
+  </div>
+</TextField>
+`;
+
 exports[`Test creation of a TextField control 1`] = `
 <div
   className="ui-textfield textField test-class"
@@ -15,6 +47,80 @@ exports[`Test creation of a TextField control 1`] = `
     type="text"
   />
 </div>
+`;
+
+exports[`Test creation of a TextField with email validation 1`] = `
+<TextField
+  disabled={false}
+  id=""
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onValidation={[Function]}
+  sizing="normal"
+  type="email"
+  usevalidation={true}
+  validators={Array []}
+  visible={true}
+>
+  <div
+    className="ui-textfield textField"
+  >
+    <input
+      className="normal textFieldInput"
+      disabled={false}
+      id=""
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      type="email"
+    />
+    <div
+      className=" textFieldMessage small"
+    >
+       
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`Test creation of a TextField with url validation 1`] = `
+<TextField
+  disabled={false}
+  id=""
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onValidation={[Function]}
+  sizing="normal"
+  type="url"
+  usevalidation={true}
+  validators={Array []}
+  visible={true}
+>
+  <div
+    className="ui-textfield textField"
+  >
+    <input
+      className="normal textFieldInput"
+      disabled={false}
+      id=""
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      type="url"
+    />
+    <div
+      className=" textFieldMessage small"
+    >
+       
+    </div>
+  </div>
+</TextField>
 `;
 
 exports[`Test creation of a textfield with min/max validation 1`] = `
@@ -56,6 +162,70 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
     >
        
     </div>
+  </div>
+</TextField>
+`;
+
+exports[`Test disabling of a TextField control 1`] = `
+<TextField
+  disabled={true}
+  id=""
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onValidation={[Function]}
+  sizing="normal"
+  type="text"
+  usevalidation={false}
+  validators={Array []}
+  visible={true}
+>
+  <div
+    className="ui-textfield textField disabled nohover"
+  >
+    <input
+      className="normal textFieldInput disabled"
+      disabled={true}
+      id=""
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      type="text"
+    />
+  </div>
+</TextField>
+`;
+
+exports[`Test making the TextField invisible 1`] = `
+<TextField
+  disabled={false}
+  id=""
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onValidation={[Function]}
+  sizing="normal"
+  type="text"
+  usevalidation={false}
+  validators={Array []}
+  visible={false}
+>
+  <div
+    className="ui-textfield textField invisible"
+  >
+    <input
+      className="normal textFieldInput"
+      disabled={false}
+      id=""
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      type="text"
+    />
   </div>
 </TextField>
 `;
