@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
+<TextField
+  disabled={false}
+  id=""
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onValidation={[Function]}
+  sizing="normal"
+  type="text"
+  usevalidation={false}
+  validators={Array []}
+  visible={true}
+>
+  <div
+    className="ui-textfield textField"
+  >
+    <input
+      className="normal textFieldInput"
+      disabled={false}
+      id=""
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      type="text"
+    />
+  </div>
+</TextField>
+`;
+
 exports[`Test creating TextField and saving on blur 1`] = `
 <TextField
   disabled={false}

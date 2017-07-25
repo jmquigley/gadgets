@@ -63,14 +63,66 @@ test('Test creating TextField and saving on blur', () => {
 	assert(instance.value, 'abcde');
 });
 
+test('Create text, change and revert with Enter/Escape in TextField', () => {
+	const change = jest.fn();
+	const keyDown = jest.fn();
+	const keyPress = jest.fn();
+	const validation = jest.fn();
+	const ctl = mount(
+		<TextField
+			onChange={change}
+			onKeyDown={keyDown}
+			onKeyPress={keyPress}
+			onValidation={validation}
+		/>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	const instance = ctl.instance() as TextField;
+	assert(instance);
+
+	const input = ctl.find('input');
+	assert(input);
+	assert(ctl.state('valid'));
+
+	// Add initial text 'abcde'
+	input.simulate('change', {target: {value: 'abcde'}});
+	expect(change).toHaveBeenCalled();
+	expect(validation).not.toHaveBeenCalled();
+	assert.equal(instance.value, 'abcde');
+	assert(ctl.state('valid'));
+
+	// Add another character 'f' and press enter commiting it
+	input.simulate('change', {target: {value: 'abcdef'}});
+	input.simulate('keyPress', {key: 'Enter', target: {value: 'abcdef'}});
+	expect(validation).not.toHaveBeenCalled();
+	expect(keyPress).toHaveBeenCalled();
+	assert.equal(instance.value, 'abcdef');
+	assert.equal(ctl.state('previousText'), 'abcdef');
+	assert(ctl.state('valid'));
+
+	// Remove characters and make text abc, press escape reverting it
+	input.simulate('change', {target: {value: 'abc'}});
+	assert.equal(instance.value, 'abc');
+	input.simulate('keyDown', {key: 'Escape'});
+	expect(validation).not.toHaveBeenCalled();
+	expect(keyDown).toHaveBeenCalled();
+	assert.equal(instance.value, 'abcdef');
+	assert(ctl.state('valid'));
+});
+
 test('Test creation of a textfield with min/max validation', () => {
 	const change = jest.fn();
+	const keypress = jest.fn();
 	const validation = jest.fn();
 	const ctl = mount(
 		<TextField
 			maxLength="10"
 			minLength="5"
 			onChange={change}
+			onKeyPress={keypress}
 			onValidation={validation}
 			type="text"
 			usevalidation
@@ -85,31 +137,45 @@ test('Test creation of a textfield with min/max validation', () => {
 	assert(instance);
 	assert(instance.input);
 
+	const input = ctl.find('input');
+	assert(input);
 	assert(ctl.state('valid'));
-	ctl.find('input').simulate('change', {target: {value: 'a'}});
+
+	// Min length failure with "a"
+	input.simulate('change', {target: {value: 'a'}});
 	expect(change).toHaveBeenCalled();
 	expect(validation).not.toHaveBeenCalled();
 	assert.equal(instance.value, 'a');
 	assert(!ctl.state('valid'));
 	assert.equal(ctl.state('message'), 'Invalid size < 5');
 
-	ctl.find('input').simulate('change', {target: {value: 'abcde'}});
+	// Min/Max success with 'abcde'
+	input.simulate('change', {target: {value: 'abcde'}});
 	assert.equal(instance.value, 'abcde');
 	assert(ctl.state('valid'));
 	assert.equal(ctl.state('message'), 'Valid size >= 5');
 
-	ctl.find('input').simulate('change', {target: {value: 'abcdefghijk'}});
+	// Max size failure
+	input.simulate('change', {target: {value: 'abcdefghijk'}});
 	assert.equal(instance.value, 'abcdefghijk');
 	assert(!ctl.state('valid'));
 	assert.equal(ctl.state('message'), 'Invalid size > 10');
+
+	// Final validation success call on enter
+	input.simulate('keyPress', {key: 'Enter', target: {value: 'abcdef'}});
+	expect(keypress).toHaveBeenCalled();
+	expect(validation).toHaveBeenCalled();
+	assert(validation.mock.calls[0][0]);
 });
 
 test('Test creation of a TextField with email validation', () => {
 	const change = jest.fn();
+	const keypress = jest.fn();
 	const validation = jest.fn();
 	const ctl = mount(
 		<TextField
 			onChange={change}
+			onKeyPress={keypress}
 			onValidation={validation}
 			type="email"
 			usevalidation
@@ -123,29 +189,45 @@ test('Test creation of a TextField with email validation', () => {
 	assert(instance);
 	assert(instance.input);
 
+	const input = ctl.find('input');
+	assert(input);
 	assert(ctl.state('valid'));
-	ctl.find('input').simulate('change', {target: {value: 'a'}});
+
+	// Add an invalid email address value
+	input.simulate('change', {target: {value: 'a'}});
 	expect(change).toHaveBeenCalled();
 	expect(validation).not.toHaveBeenCalled();
 	assert.equal(instance.value, 'a');
 	assert(!ctl.state('valid'));
 	assert.equal(ctl.state('message'), 'Invalid email address');
 
-	ctl.find('input').simulate('change', {target: {value: 'example@example.com'}});
+	// Use a valid email address
+	input.simulate('change', {target: {value: 'example@example.com'}});
 	assert.equal(instance.value, 'example@example.com');
 	assert(ctl.state('valid'));
 	assert.equal(ctl.state('message'), 'Valid email address');
+
+	// Make final change an invalid email to show onValidation failure
+	input.simulate('keyPress', {key: 'Enter', target: {value: 'abcdef'}});
+	expect(keypress).toHaveBeenCalled();
+	expect(validation).toHaveBeenCalled();
+	assert(!validation.mock.calls[0][0]);
 });
 
 test('Test creation of a TextField with url validation', () => {
 	const change = jest.fn();
+	const keypress = jest.fn();
+	const validation = jest.fn();
 	const ctl = mount(
 		<TextField
 			onChange={change}
+			onKeyPress={keypress}
+			onValidation={validation}
 			type="url"
 			usevalidation
 		/>
 	);
+	const url: string = 'http://example.com';
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
@@ -154,20 +236,27 @@ test('Test creation of a TextField with url validation', () => {
 	assert(instance);
 	assert(instance.input);
 
+	const input = ctl.find('input');
+	assert(input);
 	assert(ctl.state('valid'));
 
-	ctl.find('input').simulate('change', {target: {value: 'a'}});
+	// Add an invalid URL
+	input.simulate('change', {target: {value: 'a'}});
 	expect(change).toHaveBeenCalled();
+	expect(validation).not.toHaveBeenCalled();
 	assert.equal(instance.value, 'a');
 	assert(!ctl.state('valid'));
 	assert.equal(ctl.state('message'), 'Invalid URL');
 
-	ctl.find('input').simulate('change', {target: {value: 'http://example.com'}});
-	assert.equal(instance.value, 'http://example.com');
+	// Change to a valid URL
+	input.simulate('change', {target: {value: url}});
+	assert.equal(instance.value, url);
 	assert(ctl.state('valid'));
 	assert.equal(ctl.state('message'), 'Valid URL');
-});
 
-// TODO: call change/commit to show onValidation call
-// TODO: add keydown/keypress event tests with commit
-// TODO: add keydown/keypress event tests with rollback
+	// Perform final validation with a valid URL
+	input.simulate('keyPress', {key: 'Enter', target: {value: url}});
+	expect(keypress).toHaveBeenCalled();
+	expect(validation).toHaveBeenCalled();
+	assert(validation.mock.calls[0][0]);
+});

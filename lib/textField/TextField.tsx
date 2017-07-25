@@ -223,6 +223,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	private handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === 'Escape') {
 			(e.target as HTMLInputElement).value = this.state.previousText;
+			this._value = this.state.previousText;
 			this.validate(this.state.previousText);
 		}
 

@@ -201,8 +201,8 @@ TODO: create the Table control
 ### Tabs
 TODO: create a Tab control
 
-### TextField
-TODO: create the TextField control
+### [TextField](docs/lib/textField/TextField.md) ([Validator](docs/lib/textField/validator.md))
+The TextField is a wrapper component for the built in `<input>` tag.  This control allows the user to add validation routines to the input control beyond the builtin routines.
 
 ### TimeChooser
 TODO: create TimeChooser control
