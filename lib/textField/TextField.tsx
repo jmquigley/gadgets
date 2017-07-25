@@ -27,7 +27,7 @@
  * This will create a standard input text box with no validation.
  *
  * ##### Max/Min validator
- * ```
+ * ```javascript
  * import {TextField} from 'gadgets';
  *
  * <TextField
@@ -44,7 +44,7 @@
  * *success* message will be printed below.
  *
  * ##### Custom validator
- * ```
+ * ```javascript
  * import {TextField, Validator} from 'gadgets';
  *
  * <TextField
