@@ -65,7 +65,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
-		this.handleClick = this.handleClick.bind(this);
+		this.bindCallbacks("handleClick");
 		this.shouldComponentUpdate(props);
 	}
 
@@ -77,7 +77,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: ButtonProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 
 		if (nextProps.color !== 'inherit') {
 			this.inlineStyle['color'] = nextProps.color;
@@ -106,7 +106,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		this._iconClasses.push(this.props.iconStyle);
 		this._iconClasses.push(this.styles.icon);
 
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

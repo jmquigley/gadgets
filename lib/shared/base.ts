@@ -117,6 +117,29 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	}
 
 	/**
+	 * Many components must bind their callbacks to the original instance.  In the
+	 * constructor for each React component many `.bind` calls are made.  This
+	 * function will take N parameter strings, that represent the names of the
+	 * callback functions and will bind them to `this`.
+	 *
+	 * #### Example:
+	 * ```js
+	 * super.bindCallbacks('handleChange', 'handleClick', 'handleFocus');
+	 * ```
+	 *
+	 * This example would bind the three given callbacks (handleChange, handlClick,
+	 * and handleFocus) to the instance's `this` pointer.
+	 *
+	 * @param methods {variable any} a varialbe list of string parameters that represent
+	 * the name of a callback method that will be bound to `this` instance.
+	 */
+	protected bindCallbacks(...methods: string[]) {
+		methods.forEach((method: string) => {
+			this[method] = this[method].bind(this);
+		});
+	}
+
+	/**
 	 * Every component has a general set of CSS styles that may be applied each time
 	 * the component is rendered (like a style to enable/disable).  This function
 	 * is used to generate those basic, shared styles in all components.  It uses a
