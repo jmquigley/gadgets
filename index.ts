@@ -1,6 +1,7 @@
 import {Accordion, AccordionItem} from './lib/accordion';
 import {Badge} from './lib/badge';
 import {Button} from './lib/button';
+import {ButtonBar} from './lib/buttonBar';
 import {ButtonCircle} from './lib/buttonCircle';
 import {ButtonDialog} from './lib/buttonDialog';
 import {ButtonText} from './lib/buttonText';
@@ -38,6 +39,7 @@ export {
 	Badge,
 	BaseProps,
 	Button,
+	ButtonBar,
 	ButtonCircle,
 	ButtonDialog,
 	ButtonToggle,

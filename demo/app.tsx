@@ -18,6 +18,7 @@ const {
 	AccordionItem,
 	Badge,
 	Button,
+	ButtonBar,
 	ButtonCircle,
 	ButtonDialog,
 	ButtonText,
@@ -28,6 +29,7 @@ const {
 	Direction,
 	DynamicList,
 	Icon,
+	Justify,
 	Label,
 	List,
 	ListDivider,
@@ -436,6 +438,60 @@ class App extends React.Component<AppProps, AppState> {
 					</tr>
 				</tbody>
 			</table>
+		</Container>
+	);
+
+	private buildButtonBar = () => (
+		<Container id="buttonBarExample">
+
+			<h3>Left Justify</h3>
+			<ButtonBar justify={Justify.left} >
+				<Button iconName="car" />
+				<Button iconName="fighter-jet" />
+				<Button iconName="space-shuttle" />
+			</ButtonBar>
+			<br/>
+
+			<h3>Center Justify</h3>
+			<ButtonBar justify={Justify.center} >
+				<Button iconName="car" />
+				<Button iconName="fighter-jet" />
+				<Button iconName="space-shuttle" />
+			</ButtonBar>
+			<br/>
+
+			<h3>Right Justify</h3>
+			<ButtonBar justify={Justify.right} >
+				<Button iconName="car" />
+				<Button iconName="fighter-jet" />
+				<Button iconName="space-shuttle" />
+			</ButtonBar>
+			<br/>
+
+			<h3>Small Center Justify</h3>
+			<ButtonBar justify={Justify.center} sizing={Sizing.small} >
+				<Button iconName="car" />
+				<Button iconName="fighter-jet" />
+				<Button iconName="space-shuttle" />
+			</ButtonBar>
+			<br/>
+
+			<h3>Large Center Justify</h3>
+			<ButtonBar justify={Justify.center} sizing={Sizing.large} buttonSize="40px">
+				<Button iconName="car" />
+				<Button iconName="fighter-jet" />
+				<Button iconName="space-shuttle" />
+			</ButtonBar>
+			<br/>
+
+			<h3>Center Justify Disabled</h3>
+			<ButtonBar justify={Justify.center} disabled={true} >
+				<Button iconName="car" />
+				<Button iconName="fighter-jet" />
+				<Button iconName="space-shuttle" />
+			</ButtonBar>
+			<br/>
+
 		</Container>
 	);
 
@@ -1169,6 +1225,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Buttons & Icons</h1>
 				{this.buildButtons()}
+
+				<h1>ButtonBar</h1>
+				{this.buildButtonBar()}
 
 				<h1>Dialog Box</h1>
 				{this.buildDialogBox()}

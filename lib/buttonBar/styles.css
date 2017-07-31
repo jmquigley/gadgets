@@ -1,0 +1,32 @@
+@import '../shared/styles.css';
+
+:local {
+
+	.buttonBar {
+		display: flex;
+	}
+
+	.buttonBarBox {
+		display: inline-block;
+		padding: 2px 1px;
+	}
+
+	.buttonBar :global(.ui-button) {
+		border: solid 1px silver;
+	}
+
+	.buttonBarGroup {
+	}
+
+	.left {
+	}
+
+	.center {
+		margin: auto;
+	}
+
+	.right {
+		margin-left: auto;
+	}
+
+}

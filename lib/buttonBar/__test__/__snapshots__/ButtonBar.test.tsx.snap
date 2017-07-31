@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a simple ButtonBar instance 1`] = `
+<div
+  className="ui-button-bar buttonBar test-class"
+>
+  <div
+    className="buttonBarGroup left"
+  />
+</div>
+`;
+
+exports[`Test retrieval of ButtonBar props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "buttonSize": "24px",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "focus": false,
+  "id": "",
+  "justify": 0,
+  "location": "none",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "visible": true,
+}
+`;
