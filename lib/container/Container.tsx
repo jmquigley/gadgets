@@ -50,12 +50,23 @@ export class Container extends BaseComponent<ContainerProps, undefined> {
 
 	constructor(props: ContainerProps) {
 		super(props, require('./styles.css'));
+		this.shouldComponentUpdate(props);
+	}
+
+	public shouldComponentUpdate(nextProps: any): boolean {
+		this.resetStyles(nextProps);
+
+		this.classes.push('ui-container');
+		this.classes.push(this.styles.container);
+
+		this.buildStyles(nextProps);
+		return true;
 	}
 
 	public render() {
 		return (
 			<section
-				className={`ui-container ${this.styles.container}`}
+				className={this.classes.join(' ')}
 				id={this.props.id}
 			>
 				{this.props.children}

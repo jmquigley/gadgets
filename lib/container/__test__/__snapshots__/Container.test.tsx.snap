@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test adding custom className to Container control 1`] = `
+<section
+  className="ui-container container test-classname"
+  id="testid"
+>
+  <p>
+    Test Container
+  </p>
+</section>
+`;
+
 exports[`Test creation of a Container control 1`] = `
 <section
   className="ui-container container"

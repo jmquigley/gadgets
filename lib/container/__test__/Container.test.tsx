@@ -33,3 +33,14 @@ test('Test creation of a Container control with an id value', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
+
+test('Test adding custom className to Container control', () => {
+	const ctl = shallow(
+		<Container id="testid" className="test-classname">
+			<p>Test Container</p>
+		</Container>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+});
