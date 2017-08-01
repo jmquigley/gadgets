@@ -91,7 +91,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 			toggle: props.initialToggle
 		};
 
-		this.handleClick = this.handleClick.bind(this);
+		this.bindCallbacks('handleClick');
 		this.shouldComponentUpdate(props);
 	}
 
@@ -104,10 +104,10 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 	}
 
 	public shouldComponentUpdate(nextProps: ButtonToggleProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 		this.classes.push('ui-button-toggle');
 		this.classes.push(this.styles.buttonToggle);
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

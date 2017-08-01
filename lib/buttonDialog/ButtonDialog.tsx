@@ -78,9 +78,11 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			visible: false
 		};
 
-		this.handleClick = this.handleClick.bind(this);
-		this.handleDialogClick = this.handleDialogClick.bind(this);
-		this.handleKeyDown = this.handleKeyDown.bind(this);
+		this.bindCallbacks(
+			'handleClick',
+			'handleDialogClick',
+			'handleKeyDown'
+		);
 
 		this.shouldComponentUpdate(props, this.state);
 	}
@@ -145,7 +147,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 		this._dialogClasses.push(this.styling.fontStyle);
 
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

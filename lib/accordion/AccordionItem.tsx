@@ -34,19 +34,19 @@
  *
  * #### Styles
  * - `ui-accordionitem` - The top level style for the Item on the outer `<div>`
- * - `ui-accordion-content` - Style applied to the content under the AccordionItem.
- * This exists around the inner `<div>`
+ * - `ui-accordion-content` - Style applied to the content under the
+ * AccordionItem. This exists around the inner `<div>`
  *
  * #### Properties
  * - `initialToggle: boolean` - The initial state of the content.  If true, then
  * the content is shown, otherwise it is hidden.  Set initially to false.
  * - `leftButton: Button (null)` - An instance of a button control placed to the
  * left of the title.
- * - `nocollapse: boolean (false)` - When this is set to true, then this Accordion
- * item will not expand/contract when the title bar is clicked.  This is false
- * by default.
- * - `rightButton: Button (null)` - An instance of a button control placed to the
- * right of the title.
+ * - `nocollapse: boolean (false)` - When this is set to true, then this
+ * Accordion item will not expand/contract when the title bar is clicked.  This
+ * is false by default.
+ * - `rightButton: Button (null)` - An instance of a button control placed to
+ * the right of the title.
  *
  * @module AccordionItem
  */
@@ -93,8 +93,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 			toggle: (props.nocollapse) ? true : props.initialToggle
 		};
 
-		this.handleClick = this.handleClick.bind(this);
-
+		this.bindCallbacks('handleClick');
 		this.shouldComponentUpdate(props);
 	}
 
@@ -110,10 +109,10 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	}
 
 	public shouldComponentUpdate(nextProps: AccordionItemProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 		this.classes.push('ui-accordionitem');
 		this.classes.push(this.styles.accordionItem);
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

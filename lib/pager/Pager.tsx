@@ -138,16 +138,18 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this._buttonStyle.push(this.styles.pagerButton);
 		this._buttonStyle.push(this.styling.boxStyle);
 
-		this.handleBlur = this.handleBlur.bind(this);
-		this.handleChange = this.handleChange.bind(this);
-		this.handleDialogSelect = this.handleDialogSelect.bind(this);
-		this.handleKeyPress = this.handleKeyPress.bind(this);
-		this.handleSelect = this.handleSelect.bind(this);
-		this.moveToEnd = this.moveToEnd.bind(this);
-		this.moveToFront = this.moveToFront.bind(this);
-		this.moveToNext = this.moveToNext.bind(this);
-		this.moveToPrevious = this.moveToPrevious.bind(this);
-		this.rebuildButtons = this.rebuildButtons.bind(this);
+		this.bindCallbacks(
+			'handleBlur',
+			'handleChange',
+			'handleDialogSelect',
+			'handleKeyPress',
+			'handleSelect',
+			'moveToEnd',
+			'moveToFront',
+			'moveToNext',
+			'moveToPrevious',
+			'rebuildButtons'
+		);
 
 		this.createButtons();
 		this.createDialog();
@@ -498,10 +500,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	}
 
 	public shouldComponentUpdate(nextProps: PagerProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 		this.classes.push('ui-pager');
 		this.classes.push(this.styles.pager);
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

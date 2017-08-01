@@ -137,8 +137,10 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 			visible: props.visible
 		};
 
-		this.handleClose = this.handleClose.bind(this);
-		this.handleDecay = this.handleDecay.bind(this);
+		this.bindCallbacks(
+			'handleClose',
+			'handleDecay'
+		);
 
 		this.handleDecay();
 		this.shouldComponentUpdate(props, this.state);
@@ -181,7 +183,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	}
 
 	public shouldComponentUpdate(nextProps: ToastProps, nextState: ToastState): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 
 		if (nextProps.level === ToastLevel.custom) {
 			this.inlineStyle = {
@@ -224,7 +226,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		this._contentClasses.push(this.styles.content);
 		this._contentClasses.push(this.styling.fontStyle);
 
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

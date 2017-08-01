@@ -192,11 +192,13 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			}
 		}
 
-		this.handleBlur = this.handleBlur.bind(this);
-		this.handleChange = this.handleChange.bind(this);
-		this.handleKeyDown = this.handleKeyDown.bind(this);
-		this.handleKeyPress = this.handleKeyPress.bind(this);
-		this.handleRef = this.handleRef.bind(this);
+		this.bindCallbacks(
+			'handleBlur',
+			'handleChange',
+			'handleKeyDown',
+			'handleKeyPress',
+			'handleRef'
+		);
 
 		this.shouldComponentUpdate(props);
 	}
@@ -279,7 +281,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	}
 
 	public shouldComponentUpdate(nextProps: any): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 		this.classes.push('ui-textfield');
 		this.classes.push(this.styles.textField);
 
@@ -297,7 +299,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			this._messageStyles.push(this.styles.disabled);
 		}
 
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

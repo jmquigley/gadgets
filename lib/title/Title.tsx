@@ -94,8 +94,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: TitleProps): boolean {
-		super.resetStyles(nextProps);
-
+		this.resetStyles(nextProps);
 		this.classes.push('ui-title-bar');
 
 		if (nextProps.layout === TitleLayout.stacked) {
@@ -147,7 +146,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 				this._widgetClasses.push(this.styles.widgetDominant);
 		}
 
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

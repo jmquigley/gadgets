@@ -1,6 +1,6 @@
 /**
- * Creats a dividing line within a List compoenent.  It uses a single
- * `<hr />` to within a list item to make the dividing line.
+ * Creats a dividing line within a List compoenent.  It uses a single `<hr />`
+ * to within a list item to make the dividing line.
  *
  * #### Examples:
  *
@@ -52,10 +52,10 @@ export class ListDivider extends BaseComponent<ListDividerProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: ListDividerProps) {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 		this.classes.push('ui-list-divider');
 		this.classes.push(this.styles.listDivider);
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

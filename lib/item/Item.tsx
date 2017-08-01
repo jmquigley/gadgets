@@ -72,7 +72,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: ItemProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 
 		this.classes.push('ui-item');
 		this.classes.push(this.styles.item);
@@ -102,7 +102,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 				this._buttonScale = 0.5;
 		}
 
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

@@ -16,7 +16,8 @@
  * ```
  *
  * #### Events
- * - `onClick()` - This callback is invoked when the control is clicked by the user
+ * - `onClick()` - This callback is invoked when the control is clicked by the
+ * user
  *
  * #### Style
  * - `ui-button` - A top level style placed on the control that constructs the
@@ -25,13 +26,16 @@
  * buttons.
  *
  * #### Properties
- * - `iconName: string` - The name of the font awesome icon used with this button
- * - `justify: number` - Determines if the button will be on the left or the right.
- * Two constants are available: ButtonText.LEFT & ButtonText.RIGHT.  It uses right
- * by default.
- * - `noicon: boolean` - Turns off the icon and only shows the text in the center
- * of the button.
- * - `sizing: Sizing (normal)` - The size of this control set by the Sizing class
+ * - `iconName: string` - The name of the font awesome icon used with this
+ * button
+ * - `justify: number` - Determines if the button will be on the left or the
+ * right.
+ * Two constants are available: ButtonText.LEFT & ButtonText.RIGHT.  It uses
+ * right by default.
+ * - `noicon: boolean` - Turns off the icon and only shows the text in the
+ * center of the button.
+ * - `sizing: Sizing (normal)` - The size of this control set by the Sizing
+ * class
  * - `text: string` - The text string used by the button
  *
  * @module ButtonText
@@ -70,7 +74,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	constructor(props: ButtonTextProps) {
 		super(props, require('./styles.css'));
 
-		this.handleClick = this.handleClick.bind(this);
+		this.bindCallbacks('handleClick');
 		this.shouldComponentUpdate(props);
 	}
 
@@ -96,7 +100,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: ButtonTextProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 
 		if (nextProps.color !== 'inherit') {
 			this.inlineStyle['color'] = nextProps.color;
@@ -117,7 +121,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			this.classes.push('ripple');
 		}
 
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

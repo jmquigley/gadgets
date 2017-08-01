@@ -3,23 +3,23 @@
  * to guarantee certain variable will be present through inheritance.  These
  * variables include:
  *
- * - `classes` - an array of CSS classnames that will be used on the root element
- * of the control
+ * - `classes` - an array of CSS classnames that will be used on the root
+ * element of the control
  * - `inlineStyles` - an object that holds user defined style overrides
  * - `locationStyle` - There are 9 locations within a region: topLeft, top,
- * topRight, middleLeft, middle, middleRight, bottomLeft, bottom, bottomRight. The
- * location prop is used to specify the CSS used to calculte this position in a
- * control using transform and relative coordinates.
+ * topRight, middleLeft, middle, middleRight, bottomLeft, bottom, bottomRight.
+ * The location prop is used to specify the CSS used to calculte this position
+ * in a control using transform and relative coordinates.
  * - `styles` - an object that represent the styles in the CSS module associated
  * to this control.
  * - `sizes` - Sizing class that has computed sizes from the base (normal) size
- * font styles for the application.  A property getter named `.styling` retrieves
- * the current font styles set for this component.
+ * font styles for the application.  A property getter named `.styling`
+ * retrieves the current font styles set for this component.
  *
  * The values of these variables are computed automatically for any component
  * that inherits from BaseComponent (controlled by props).  This class inherits
- * from `React.PureComponent` to take advantage of `shouldComponentUpdate` shallow
- * object comparison when computing styles based on props/state.
+ * from `React.PureComponent` to take advantage of `shouldComponentUpdate`
+ * shallow object comparison when computing styles based on props/state.
  *
  * #### Examples:
  *
@@ -117,21 +117,22 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	}
 
 	/**
-	 * Many components must bind their callbacks to the original instance.  In the
-	 * constructor for each React component many `.bind` calls are made.  This
-	 * function will take N parameter strings, that represent the names of the
-	 * callback functions and will bind them to `this`.
+	 * Many components must bind their callbacks to the original instance.  In
+	 * the constructor for each React component many `.bind` calls are made.
+	 * This function will take N parameter strings, that represent the names of
+	 * the callback functions and will bind them to `this`.
 	 *
 	 * #### Example:
-	 * ```js
-	 * super.bindCallbacks('handleChange', 'handleClick', 'handleFocus');
+	 * ```
+	 * this.bindCallbacks('handleChange', 'handleClick', 'handleFocus');
 	 * ```
 	 *
-	 * This example would bind the three given callbacks (handleChange, handlClick,
-	 * and handleFocus) to the instance's `this` pointer.
+	 * This example would bind the three given callbacks (handleChange,
+	 * handlClick, and handleFocus) to the instance's `this` pointer.
 	 *
-	 * @param methods {variable any} a varialbe list of string parameters that represent
-	 * the name of a callback method that will be bound to `this` instance.
+	 * @param methods {any} a variable list of string parameters that
+	 * represent the name of a callback method that will be bound to `this`
+	 * instance.
 	 */
 	protected bindCallbacks(...methods: string[]) {
 		methods.forEach((method: string) => {

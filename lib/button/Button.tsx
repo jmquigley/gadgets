@@ -65,7 +65,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
-		this.bindCallbacks("handleClick");
+		this.bindCallbacks('handleClick');
 		this.shouldComponentUpdate(props);
 	}
 

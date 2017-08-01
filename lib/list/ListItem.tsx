@@ -50,12 +50,14 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 			toggleRipple: false
 		};
 
-		this.handleBlur = this.handleBlur.bind(this);
-		this.handleClick = this.handleClick.bind(this);
-		this.handleDoubleClick = this.handleDoubleClick.bind(this);
-		this.handleKeyDown = this.handleKeyDown.bind(this);
-		this.handleKeyPress = this.handleKeyPress.bind(this);
-		this.handleMouseOut = this.handleMouseOut.bind(this);
+		this.bindCallbacks(
+			'handleBlur',
+			'handleClick',
+			'handleDoubleClick',
+			'handleKeyDown',
+			'handleKeyPress',
+			'handleMouseOut'
+		);
 
 		this.shouldComponentUpdate(props);
 	}
@@ -120,10 +122,10 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	}
 
 	public shouldComponentUpdate(nextProps: ListItemProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 		this.classes.push('ui-listitem');
 		this.classes.push(this.styles.listItem);
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

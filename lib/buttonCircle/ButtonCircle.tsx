@@ -62,7 +62,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: ButtonCircleProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 		this.classes.push('ui-button-circle');
 		this.classes.push(this.styles.buttonCircle);
 
@@ -70,7 +70,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 		this._buttonClasses.push(this.styling.borderStyle);
 		this._buttonClasses.push(this.styles.buttonCircleIcon);
 
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

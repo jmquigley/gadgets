@@ -36,10 +36,10 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: ListHeaderProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 		this.classes.push('ui-list-header');
 		this.classes.push(this.styles.listHeader);
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

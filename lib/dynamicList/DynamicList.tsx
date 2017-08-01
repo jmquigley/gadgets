@@ -182,20 +182,22 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			totalItems: this._count
 		};
 
-		this.createNewItem = this.createNewItem.bind(this);
-		this.handleBlur = this.handleBlur.bind(this);
-		this.handleDelete = this.handleDelete.bind(this);
-		this.handleDeleteConfirm = this.handleDeleteConfirm.bind(this);
-		this.handleKeyDown = this.handleKeyDown.bind(this);
-		this.handleNewItem = this.handleNewItem.bind(this);
-		this.handleNewPageSize = this.handleNewPageSize.bind(this);
-		this.handlePageChange = this.handlePageChange.bind(this);
-		this.handleSearch = this.handleSearch.bind(this);
-		this.handleSelect = this.handleSelect.bind(this);
-		this.handleSortAscending = this.handleSortAscending.bind(this);
-		this.handleSortDescending = this.handleSortDescending.bind(this);
-		this.handleUpdate = this.handleUpdate.bind(this);
-		this.hideEdit = this.hideEdit.bind(this);
+		this.bindCallbacks(
+			'createNewItem',
+			'handleBlur',
+			'handleDelete',
+			'handleDeleteConfirm',
+			'handleKeyDown',
+			'handleNewItem',
+			'handleNewPageSize',
+			'handlePageChange',
+			'handleSearch',
+			'handleSelect',
+			'handleSortAscending',
+			'handleSortDescending',
+			'handleUpdate',
+			'hideEdit'
+		);
 
 		this._emptyListItem = (
 			<ListItem
@@ -546,10 +548,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		);
 
 		// Compute updated styles
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 		this.classes.push('ui-dynamiclist');
 		this.classes.push(this.styles.dynamicList);
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 		return true;
 	}
 

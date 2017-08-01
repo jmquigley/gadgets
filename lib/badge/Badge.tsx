@@ -1,7 +1,7 @@
 /**
- * The Badge widget is used to annotate/overlay another widget with a
- * counter.  This widget surrounds the component it will annotate.  The
- * control receives a prop named `counter` that sets the actual value.
+ * The Badge widget is used to annotate/overlay another widget with a counter.
+ * This widget surrounds the component it will annotate.  The control receives
+ * a prop named `counter` that sets the actual value.
  *
  * #### Examples:
  *
@@ -25,8 +25,8 @@
  *
  * #### Properties
  * - `counter: number (0)` - The number value displayed by the badge
- * - `suppress: boolean (false)` - If this is set to true, then numbers
- * less than 1 are not shown, otherwise all values are shown.
+ * - `suppress: boolean (false)` - If this is set to true, then numbers less
+ * than 1 are not shown, otherwise all values are shown.
  *
  * @module Badge
  */
@@ -64,7 +64,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 	constructor(props: BadgeProps) {
 		super(props, require('./styles.css'));
-		this.handleClick = this.handleClick.bind(this);
+		this.bindCallbacks('handleClick');
 		this.shouldComponentUpdate(props);
 	}
 
@@ -73,11 +73,11 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: BadgeProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 
 		this.classes.push(this.styles.badgeContainer);
 
-		super.buildStyles(nextProps, {
+		this.buildStyles(nextProps, {
 			color: (nextProps.color || 'black'),
 			backgroundColor: (nextProps.backgroundColor || 'white'),
 			border: `solid 3px ${nextProps.color}`

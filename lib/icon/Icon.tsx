@@ -75,7 +75,7 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: IconProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 
 		this.classes.push('ui-icon');
 		this.classes.push(this.styles.icon);
@@ -94,7 +94,7 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 			backgroundColor: (nextProps.backgroundColor)
 		};
 
-		super.buildStyles(nextProps);
+		this.buildStyles(nextProps);
 
 		return true;
 	}

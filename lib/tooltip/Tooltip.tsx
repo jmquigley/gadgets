@@ -90,7 +90,7 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 	}
 
 	public shouldComponentUpdate(nextProps: TooltipProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 
 		this.classes.push('ui-tooltip');
 		this.classes.push(this.styles.tooltip);
@@ -157,7 +157,7 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 			this.classes.push(this.styles.tooltipHide);
 		}
 
-		super.buildStyles(nextProps, {
+		this.buildStyles(nextProps, {
 			color: nextProps.backgroundColor,
 			backgroundColor: nextProps.backgroundColor
 		});

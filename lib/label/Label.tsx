@@ -102,12 +102,14 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			text: props.text
 		};
 
-		this.handleBlur = this.handleBlur.bind(this);
-		this.handleChange = this.handleChange.bind(this);
-		this.handleDoubleClick = this.handleDoubleClick.bind(this);
-		this.handleKeyDown = this.handleKeyDown.bind(this);
-		this.handleKeyPress = this.handleKeyPress.bind(this);
-		this.handleRef = this.handleRef.bind(this);
+		this.bindCallbacks(
+			'handleBlur',
+			'handleChange',
+			'handleDoubleClick',
+			'handleKeyDown',
+			'handleKeyPress',
+			'handleRef'
+		);
 
 		this.shouldComponentUpdate(props);
 	}
@@ -195,13 +197,13 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	public shouldComponentUpdate(nextProps: LabelProps): boolean {
-		super.resetStyles(nextProps);
+		this.resetStyles(nextProps);
 
 		this.classes.push('ui-label');
 		this.classes.push(this.styles.label);
 		this.classes.push(this.styling.fontStyle);
 
-		super.buildStyles(nextProps, {
+		this.buildStyles(nextProps, {
 			color: nextProps.color,
 			backgroundColor: nextProps.backgroundColor
 		});
