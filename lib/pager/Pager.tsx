@@ -30,6 +30,15 @@
  *             console.log(`Clicked on page: ${page}`);
  *         }
  *     }
+ *     onSort={
+ *         (sortOrder: any) => {
+ *             if (sortOrder === SortOrder.ascending) {
+ *                 console.log(`Sorting pager in ascending`);
+ *             } else {
+ *                 console.log(`Sorting pager in descending`);
+ *             }
+ *         }
+ *     }
  *     useinput
  *     />
  * ```
@@ -538,7 +547,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	/**
 	 * When the page size is changed on a button this callback function is used to
-	 * to recompute the buttons and redisplay them.\
+	 * to recompute the buttons and redisplay them.
 	 *
 	 * Without this forced update the buttons will not be redrawn until the
 	 * next click on the control.

@@ -89,7 +89,7 @@ test('Test clicking the AccordionItem header when setting nocollapse', () => {
 	assert(ctl.state('toggle'));
 	assert(ctl.contains(child));
 	ctl.find('.ui-label').simulate('click');
-	expect(click).toHaveBeenCalled();
+	expect(click).not.toHaveBeenCalled();
 	assert(ctl.state('toggle'));
 	assert(ctl.contains(child));
 });

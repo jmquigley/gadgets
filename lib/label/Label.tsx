@@ -158,9 +158,11 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			}
 		}
 
-		this.setState({editable: true}, () => {
-			this.props.onDoubleClick(e);
-		});
+		if (!this.props.noedit) {
+			this.setState({editable: true}, () => {
+				this.props.onDoubleClick(e);
+			});
+		}
 	}
 
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {

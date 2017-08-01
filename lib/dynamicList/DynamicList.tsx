@@ -139,6 +139,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 }
 
 export interface DynamicListState {
+	initialToggle?: boolean;
 	items?: DynamicListItem;
 	page?: number;
 	pageSize?: number;
@@ -174,6 +175,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this._count = Object.keys(props.items).length;
 
 		this.state = {
+			initialToggle: true,
 			items: Object.assign({}, props.items),
 			page: 1,
 			pageSize: props.pageSizes[0],
@@ -196,6 +198,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			'handleSearch',
 			'handleSelect',
 			'handleSort',
+			'handleTitleClick',
 			'handleUpdate',
 			'hideEdit'
 		);
@@ -288,6 +291,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 */
 	private createNewItem() {
 		this.setState({
+			initialToggle: true,
 			showNew: !this.state.showNew
 		});
 	}
@@ -420,6 +424,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.props.onSort(sortOrder);
 	}
 
+	private handleTitleClick(toggleState: boolean) {
+		this.setState({initialToggle: toggleState});
+	}
+
 	private handleUpdate(previous: string, title: string) {
 		this.handleNewItem(title, this.state.items[previous], () => {
 			this.handleDelete(previous, () => {
@@ -540,11 +548,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		return (
 			<Accordion className={this.classes.join(' ')}>
 				<AccordionItem
-					initialToggle={true}
+					initialToggle={this.state.initialToggle}
 					nocollapse={this.props.nocollapse}
 					noedit
 					nohover={this.props.nocollapse}
 					noripple={this.props.nocollapse}
+					onClick={this.handleTitleClick}
 					rightButton={
 						<Button
 							iconName="plus"
