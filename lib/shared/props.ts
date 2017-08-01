@@ -31,18 +31,26 @@
  * - `visible: boolean (true)` - turns the display of this control on or off.  If true,
  * then the component can be seen.
  *
- * The `Location` enumeration contains the following values:
  *
- * - Location.none
- * - Location.topLeft
- * - Location.top
- * - Location.topRight
- * - Location.middleLeft
- * - Location.middle
- * - Location.middleRight
- * - Location.bottomLeft
- * - Location.bottom
- * - Location.bottomRight
+ * #### Enumerations
+ *
+ * ##### Direction
+ * - up
+ * - down
+ * - left
+ * - right
+ *
+ * ##### Location
+ * - none
+ * - topLeft
+ * - top
+ * - topRight
+ * - middleLeft
+ * - middle
+ * - middleRight
+ * - bottomLeft
+ * - bottom
+ * - bottomRight
  *
  * @module BaseProps
  */
@@ -52,18 +60,18 @@
 import {cloneDeep} from 'lodash';
 import {Sizing} from './sizing';
 
-export enum Direction {
-	up = 'up',
-	down = 'down',
-	left = 'left',
-	right = 'right'
-}
-
 export enum Color {
 	error = '#d9534f',
 	warning = '#f0ad4e',
 	success = '#5cb85c',
 	info = '#5bc0de'
+}
+
+export enum Direction {
+	up = 'up',
+	down = 'down',
+	left = 'left',
+	right = 'right'
 }
 
 export enum Justify {

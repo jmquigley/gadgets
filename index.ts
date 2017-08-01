@@ -22,7 +22,8 @@ import {
 	Direction,
 	Justify,
 	Location,
-	Sizing
+	Sizing,
+	SortOrder
 } from './lib/shared';
 import {
 	TextField,
@@ -65,6 +66,7 @@ export {
 	Pager,
 	Select,
 	Sizing,
+	SortOrder,
 	TextField,
 	Title,
 	TitleLayout,

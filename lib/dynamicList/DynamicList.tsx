@@ -46,6 +46,8 @@
  * the list.  The title of the new item is a parameter to the callback
  * - `onSelect(title: string)` - Invoked when a list item is selected. The title
  * of the selected item is a parameter to the callback.
+ * - `onSort(sortOrder: SortOrder)` - Invoked whne the list is sorted.  It will
+ * give the selected order to the callback.
  * - `onUpdate(previous: string, title: string)` - When an item is renamed this
  * callback is invoked.  The previous value and the new title are passed to the
  * callback
@@ -81,7 +83,6 @@ import {sprintf} from 'sprintf-js';
 import {getUUID, nil, nilEvent} from 'util.toolbox';
 import {Accordion, AccordionItem} from '../accordion';
 import {Button} from '../button';
-import {ButtonDialog} from '../buttonDialog';
 import {DialogBox, DialogBoxType} from '../dialogBox';
 import {List, ListFooter, ListItem} from '../list';
 import {defaultPageSizes, Pager} from '../pager';
@@ -109,6 +110,7 @@ export interface DynamicListProps extends BaseProps {
 	onFocus?: any;
 	onNew?: any;
 	onSelect?: any;
+	onSort?: any;
 	onUpdate?: any;
 	pageSizes?: number[];
 	sortOrder?: SortOrder;
@@ -128,6 +130,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			onFocus: nilEvent,
 			onNew: nilEvent,
 			onSelect: nilEvent,
+			onSort: nilEvent,
 			onUpdate: nilEvent,
 			pageSizes: defaultPageSizes,
 			sortOrder: SortOrder.ascending,
@@ -152,7 +155,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	private readonly _baseMessage: string = 'Are you sure you want to delete %s?';
 	private _count: number = 0;
-	private _dialog: any = null;
 	private _emptyListItem: any = null;
 	private _footer: any = null;
 	private _footerID: string = getUUID();
@@ -193,8 +195,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			'handlePageChange',
 			'handleSearch',
 			'handleSelect',
-			'handleSortAscending',
-			'handleSortDescending',
+			'handleSort',
 			'handleUpdate',
 			'hideEdit'
 		);
@@ -212,26 +213,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			/>
 		);
 
-		this._dialog = (
-			<List>
-				<ListItem
-					key={getUUID()}
-					onClick={this.handleSortAscending}
-					title="ascending"
-				/>
-				<ListItem
-					key={getUUID()}
-					onClick={this.handleSortDescending}
-					title="descending"
-				/>
-			</List>
-		);
-
 		this.shouldComponentUpdate(props, this.state);
-	}
-
-	get dialog() {
-		return this._dialog;
 	}
 
 	get emptyListItem() {
@@ -428,16 +410,14 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
-	private handleSortAscending() {
-		this.setState({
-			sortOrder: SortOrder.ascending
-		});
-	}
+	private handleSort(sortOrder: SortOrder) {
+		if (sortOrder === SortOrder.ascending) {
+			this.setState({sortOrder: SortOrder.ascending});
+		} else {
+			this.setState({sortOrder: SortOrder.descending});
+		}
 
-	private handleSortDescending() {
-		this.setState({
-			sortOrder: SortOrder.descending
-		});
+		this.props.onSort(sortOrder);
 	}
 
 	private handleUpdate(previous: string, title: string) {
@@ -524,6 +504,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				key={this._pagerID}
 				onChangePageSize={this.handleNewPageSize}
 				onSelect={this.handlePageChange}
+				onSort={this.handleSort}
 				pageSizes={nextProps.pageSizes}
 				sizing={this.previousSize}
 				totalItems={nextState.totalItems}
@@ -560,13 +541,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			<Accordion className={this.classes.join(' ')}>
 				<AccordionItem
 					initialToggle={true}
-					leftButton={
-						<ButtonDialog
-							iconName="bars"
-						>
-						{this.dialog}
-						</ButtonDialog>
-					}
 					nocollapse={this.props.nocollapse}
 					noedit
 					nohover={this.props.nocollapse}

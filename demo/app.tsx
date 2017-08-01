@@ -39,6 +39,7 @@ const {
 	Pager,
 	Select,
 	Sizing,
+	SortOrder,
 	TextField,
 	Title,
 	TitleLayout,
@@ -826,7 +827,7 @@ class App extends React.Component<AppProps, AppState> {
 				/>
 			</div>
 
-			<h3>normal, large range</h3>
+			<h3>normal, large range, with sort</h3>
 			<div className="pagerBox">
 				<Pager
 					initialPage="1"
@@ -836,6 +837,15 @@ class App extends React.Component<AppProps, AppState> {
 					onSelect={
 						(page: number) => {
 							console.log(`Clicked on page: ${page}`);
+						}
+					}
+					onSort={
+						(sortOrder: any) => {
+							if (sortOrder === SortOrder.ascending) {
+								console.log(`Sorting pager in ascending`);
+							} else {
+								console.log(`Sorting pager in descending`);
+							}
 						}
 					}
 					useinput

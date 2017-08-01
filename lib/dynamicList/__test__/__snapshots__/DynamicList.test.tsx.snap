@@ -36,149 +36,7 @@ exports[`Test creation of a DynamicList control 1`] = `
     id=""
     initialToggle={true}
     layout={5}
-    leftButton={
-      <ButtonDialog
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
-        className=""
-        color="inherit"
-        contentEditable={false}
-        dialogClasses={Array []}
-        direction="right"
-        disabled={false}
-        focus={false}
-        iconName="bars"
-        iconStyle=""
-        id=""
-        location="bottom"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        notriangle={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        triangleClasses={Array []}
-        visible={true}
-      >
-        <List
-          alternating={false}
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
-          className=""
-          color="inherit"
-          contentEditable={false}
-          direction="right"
-          disabled={false}
-          focus={false}
-          id=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          onAdd={[Function]}
-          selected={false}
-          sizing="normal"
-          style={Object {}}
-          unselect={false}
-          visible={true}
-        >
-          <ListItem
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
-            className=""
-            color="inherit"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            hiddenLeftButton={false}
-            hiddenRightButton={false}
-            href={
-              Object {
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
-            id=""
-            layout={5}
-            leftButton={null}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onMouseOut={[Function]}
-            onSelect={[Function]}
-            onUpdate={[Function]}
-            rightButton={null}
-            selected={false}
-            sizing="normal"
-            stacked={false}
-            style={Object {}}
-            title="ascending"
-            useedit={false}
-            visible={true}
-            widget={null}
-          />
-          <ListItem
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
-            className=""
-            color="inherit"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            hiddenLeftButton={false}
-            hiddenRightButton={false}
-            href={
-              Object {
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
-            id=""
-            layout={5}
-            leftButton={null}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onMouseOut={[Function]}
-            onSelect={[Function]}
-            onUpdate={[Function]}
-            rightButton={null}
-            selected={false}
-            sizing="normal"
-            stacked={false}
-            style={Object {}}
-            title="descending"
-            useedit={false}
-            visible={true}
-            widget={null}
-          />
-        </List>
-      </ButtonDialog>
-    }
+    leftButton={null}
     location="none"
     nocollapse={false}
     noedit={true}
@@ -1433,6 +1291,7 @@ exports[`Test creation of a DynamicList control 1`] = `
             noripple={false}
             onChangePageSize={[Function]}
             onSelect={[Function]}
+            onSort={[Function]}
             pageSizes={
               Array [
                 25,
@@ -1514,6 +1373,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
   onFocus={[Function]}
   onNew={[Function]}
   onSelect={[Function]}
+  onSort={[Function]}
   onUpdate={[Function]}
   pageSizes={
     Array [
@@ -1568,149 +1428,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
         id=""
         initialToggle={true}
         layout={5}
-        leftButton={
-          <ButtonDialog
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
-            className=""
-            color="inherit"
-            contentEditable={false}
-            dialogClasses={Array []}
-            direction="right"
-            disabled={false}
-            focus={false}
-            iconName="bars"
-            iconStyle=""
-            id=""
-            location="bottom"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            notriangle={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            triangleClasses={Array []}
-            visible={true}
-          >
-            <List
-              alternating={false}
-              backgroundColor="inherit"
-              borderColor="inherit"
-              borderWidth="none"
-              className=""
-              color="inherit"
-              contentEditable={false}
-              direction="right"
-              disabled={false}
-              focus={false}
-              id=""
-              location="none"
-              noedit={false}
-              nohover={false}
-              noripple={false}
-              onAdd={[Function]}
-              selected={false}
-              sizing="normal"
-              style={Object {}}
-              unselect={false}
-              visible={true}
-            >
-              <ListItem
-                backgroundColor="inherit"
-                borderColor="inherit"
-                borderWidth="none"
-                className=""
-                color="inherit"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                hiddenLeftButton={false}
-                hiddenRightButton={false}
-                href={
-                  Object {
-                    "selectHandler": [Function],
-                    "sizing": "normal",
-                  }
-                }
-                id=""
-                layout={5}
-                leftButton={null}
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onClick={[Function]}
-                onDoubleClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onMouseOut={[Function]}
-                onSelect={[Function]}
-                onUpdate={[Function]}
-                rightButton={null}
-                selected={false}
-                sizing="normal"
-                stacked={false}
-                style={Object {}}
-                title="ascending"
-                useedit={false}
-                visible={true}
-                widget={null}
-              />
-              <ListItem
-                backgroundColor="inherit"
-                borderColor="inherit"
-                borderWidth="none"
-                className=""
-                color="inherit"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                hiddenLeftButton={false}
-                hiddenRightButton={false}
-                href={
-                  Object {
-                    "selectHandler": [Function],
-                    "sizing": "normal",
-                  }
-                }
-                id=""
-                layout={5}
-                leftButton={null}
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onClick={[Function]}
-                onDoubleClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onMouseOut={[Function]}
-                onSelect={[Function]}
-                onUpdate={[Function]}
-                rightButton={null}
-                selected={false}
-                sizing="normal"
-                stacked={false}
-                style={Object {}}
-                title="descending"
-                useedit={false}
-                visible={true}
-                widget={null}
-              />
-            </List>
-          </ButtonDialog>
-        }
+        leftButton={null}
         location="none"
         nocollapse={true}
         noedit={true}
@@ -1778,149 +1496,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
             id=""
             initialToggle={true}
             layout={5}
-            leftButton={
-              <ButtonDialog
-                backgroundColor="inherit"
-                borderColor="inherit"
-                borderWidth="none"
-                className=""
-                color="inherit"
-                contentEditable={false}
-                dialogClasses={Array []}
-                direction="right"
-                disabled={false}
-                focus={false}
-                iconName="bars"
-                iconStyle=""
-                id=""
-                location="bottom"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                notriangle={false}
-                onClick={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                triangleClasses={Array []}
-                visible={true}
-              >
-                <List
-                  alternating={false}
-                  backgroundColor="inherit"
-                  borderColor="inherit"
-                  borderWidth="none"
-                  className=""
-                  color="inherit"
-                  contentEditable={false}
-                  direction="right"
-                  disabled={false}
-                  focus={false}
-                  id=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  onAdd={[Function]}
-                  selected={false}
-                  sizing="normal"
-                  style={Object {}}
-                  unselect={false}
-                  visible={true}
-                >
-                  <ListItem
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
-                    className=""
-                    color="inherit"
-                    contentEditable={false}
-                    direction="right"
-                    disabled={false}
-                    focus={false}
-                    hiddenLeftButton={false}
-                    hiddenRightButton={false}
-                    href={
-                      Object {
-                        "selectHandler": [Function],
-                        "sizing": "normal",
-                      }
-                    }
-                    id=""
-                    layout={5}
-                    leftButton={null}
-                    location="none"
-                    noedit={false}
-                    nohover={false}
-                    noripple={false}
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onDoubleClick={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    onMouseOut={[Function]}
-                    onSelect={[Function]}
-                    onUpdate={[Function]}
-                    rightButton={null}
-                    selected={false}
-                    sizing="normal"
-                    stacked={false}
-                    style={Object {}}
-                    title="ascending"
-                    useedit={false}
-                    visible={true}
-                    widget={null}
-                  />
-                  <ListItem
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
-                    className=""
-                    color="inherit"
-                    contentEditable={false}
-                    direction="right"
-                    disabled={false}
-                    focus={false}
-                    hiddenLeftButton={false}
-                    hiddenRightButton={false}
-                    href={
-                      Object {
-                        "selectHandler": [Function],
-                        "sizing": "normal",
-                      }
-                    }
-                    id=""
-                    layout={5}
-                    leftButton={null}
-                    location="none"
-                    noedit={false}
-                    nohover={false}
-                    noripple={false}
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onDoubleClick={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    onMouseOut={[Function]}
-                    onSelect={[Function]}
-                    onUpdate={[Function]}
-                    rightButton={null}
-                    selected={false}
-                    sizing="normal"
-                    stacked={false}
-                    style={Object {}}
-                    title="descending"
-                    useedit={false}
-                    visible={true}
-                    widget={null}
-                  />
-                </List>
-              </ButtonDialog>
-            }
+            leftButton={null}
             location="none"
             nocollapse={true}
             noedit={true}
@@ -1979,669 +1555,6 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
               onMouseOut={[Function]}
               style={Object {}}
             >
-              <div
-                className="itemButton normal null"
-                style={
-                  Object {
-                    "width": "2em",
-                  }
-                }
-              >
-                <ButtonDialog
-                  backgroundColor="inherit"
-                  borderColor="inherit"
-                  borderWidth="none"
-                  className=""
-                  color="inherit"
-                  contentEditable={false}
-                  dialogClasses={Array []}
-                  direction="right"
-                  disabled={false}
-                  focus={false}
-                  iconName="bars"
-                  iconStyle=""
-                  id=""
-                  location="bottom"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  notriangle={false}
-                  onClick={[Function]}
-                  selected={false}
-                  sizing="normal"
-                  style={Object {}}
-                  triangleClasses={Array []}
-                  visible={true}
-                >
-                  <div
-                    className="ui-button-dialog buttonDialog"
-                  >
-                    <Button
-                      backgroundColor="inherit"
-                      borderColor="inherit"
-                      borderWidth="none"
-                      className=""
-                      color="inherit"
-                      contentEditable={false}
-                      direction="right"
-                      disabled={false}
-                      focus={false}
-                      iconName="bars"
-                      iconStyle=""
-                      id=""
-                      location="none"
-                      noedit={false}
-                      nohover={false}
-                      noripple={false}
-                      onClick={[Function]}
-                      selected={false}
-                      sizing="normal"
-                      style={Object {}}
-                      visible={true}
-                    >
-                      <div
-                        className="ui-button button ripple"
-                        onClick={[Function]}
-                        style={Object {}}
-                      >
-                        <Icon
-                          backgroundColor="inherit"
-                          borderColor="inherit"
-                          borderWidth="none"
-                          className=" icon"
-                          color="inherit"
-                          contentEditable={false}
-                          direction="right"
-                          disabled={false}
-                          focus={false}
-                          iconName="bars"
-                          id=""
-                          imageFile=""
-                          location="none"
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          selected={false}
-                          sizing="normal"
-                          style={Object {}}
-                          visible={true}
-                        >
-                          <i
-                            className="ui-icon icon none fa fa-bars normal  icon"
-                            style={
-                              Object {
-                                "backgroundColor": "inherit",
-                                "color": "inherit",
-                              }
-                            }
-                          />
-                        </Icon>
-                      </div>
-                    </Button>
-                    <div
-                      className="buttonDialogPopup ui-dialog-popup dialogBottom buttonDialogHide normal"
-                      onClick={[Function]}
-                    >
-                      <div
-                        className="buttonDialogContent"
-                      >
-                        <List
-                          alternating={false}
-                          backgroundColor="inherit"
-                          borderColor="inherit"
-                          borderWidth="none"
-                          className=""
-                          color="inherit"
-                          contentEditable={false}
-                          direction="right"
-                          disabled={false}
-                          focus={false}
-                          id=""
-                          location="none"
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          onAdd={[Function]}
-                          selected={false}
-                          sizing="normal"
-                          style={Object {}}
-                          unselect={false}
-                          visible={true}
-                        >
-                          <div
-                            className="ui-list list"
-                            id=""
-                            style={Object {}}
-                          >
-                            <ul>
-                              <ListItem
-                                backgroundColor="inherit"
-                                borderColor="inherit"
-                                borderWidth="none"
-                                className=""
-                                color="inherit"
-                                contentEditable={false}
-                                direction="right"
-                                disabled={false}
-                                focus={false}
-                                hiddenLeftButton={false}
-                                hiddenRightButton={false}
-                                href={
-                                  Object {
-                                    "selectHandler": [Function],
-                                    "sizing": "normal",
-                                  }
-                                }
-                                id=""
-                                layout={5}
-                                leftButton={null}
-                                location="none"
-                                noedit={false}
-                                nohover={false}
-                                noripple={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onClick={[Function]}
-                                onDoubleClick={[Function]}
-                                onFocus={[Function]}
-                                onKeyDown={[Function]}
-                                onKeyPress={[Function]}
-                                onMouseOut={[Function]}
-                                onSelect={[Function]}
-                                onUpdate={[Function]}
-                                rightButton={null}
-                                selected={false}
-                                sizing="normal"
-                                stacked={false}
-                                style={Object {}}
-                                title="ascending"
-                                useedit={false}
-                                visible={true}
-                                widget={null}
-                              >
-                                <Item
-                                  backgroundColor="inherit"
-                                  borderColor="inherit"
-                                  borderWidth="none"
-                                  className="ui-listitem listItem"
-                                  color="inherit"
-                                  contentEditable={false}
-                                  direction="right"
-                                  disabled={false}
-                                  focus={false}
-                                  hiddenLeftButton={false}
-                                  hiddenRightButton={false}
-                                  href={
-                                    Object {
-                                      "selectHandler": [Function],
-                                      "sizing": "normal",
-                                    }
-                                  }
-                                  id=""
-                                  layout={5}
-                                  leftButton={null}
-                                  location="none"
-                                  noedit={false}
-                                  nohover={false}
-                                  noripple={false}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onClick={[Function]}
-                                  onDoubleClick={[Function]}
-                                  onFocus={[Function]}
-                                  onKeyDown={[Function]}
-                                  onKeyPress={[Function]}
-                                  onMouseOut={[Function]}
-                                  onSelect={[Function]}
-                                  onUpdate={[Function]}
-                                  rightButton={null}
-                                  selected={false}
-                                  sizing="normal"
-                                  stacked={false}
-                                  style={Object {}}
-                                  title="ascending"
-                                  useedit={false}
-                                  visible={true}
-                                  widget={null}
-                                >
-                                  <li
-                                    className="ui-item item ui-listitem listItem"
-                                    id=""
-                                    onBlur={[Function]}
-                                    onDoubleClick={[Function]}
-                                    onKeyDown={[Function]}
-                                    onKeyPress={[Function]}
-                                    onMouseOut={[Function]}
-                                    style={Object {}}
-                                  >
-                                    <Title
-                                      backgroundColor="inherit"
-                                      borderColor="inherit"
-                                      borderWidth="none"
-                                      className="itemTitle"
-                                      color="inherit"
-                                      contentEditable={false}
-                                      direction="right"
-                                      disabled={false}
-                                      focus={false}
-                                      hiddenLeftButton={false}
-                                      hiddenRightButton={false}
-                                      href={
-                                        Object {
-                                          "selectHandler": [Function],
-                                          "sizing": "normal",
-                                        }
-                                      }
-                                      id=""
-                                      layout={5}
-                                      leftButton={null}
-                                      location="none"
-                                      noedit={false}
-                                      nohover={false}
-                                      noripple={false}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onClick={[Function]}
-                                      onDoubleClick={[Function]}
-                                      onFocus={[Function]}
-                                      onKeyDown={[Function]}
-                                      onKeyPress={[Function]}
-                                      onMouseOut={[Function]}
-                                      onSelect={[Function]}
-                                      onUpdate={[Function]}
-                                      rightButton={null}
-                                      selected={false}
-                                      sizing="normal"
-                                      stacked={false}
-                                      style={
-                                        Object {
-                                          "padding": "2px 4px",
-                                        }
-                                      }
-                                      title="ascending"
-                                      useedit={false}
-                                      visible={true}
-                                      widget={null}
-                                    >
-                                      <div
-                                        className="ui-title-bar titleBar ripple itemTitle"
-                                        style={
-                                          Object {
-                                            "padding": "2px 4px",
-                                          }
-                                        }
-                                      >
-                                        <Label
-                                          backgroundColor="inherit"
-                                          borderColor="inherit"
-                                          borderWidth="none"
-                                          className="ui-title titleDominant"
-                                          color="inherit"
-                                          contentEditable={false}
-                                          direction="right"
-                                          disabled={false}
-                                          focus={false}
-                                          hiddenLeftButton={false}
-                                          hiddenRightButton={false}
-                                          href={
-                                            Object {
-                                              "selectHandler": [Function],
-                                              "sizing": "normal",
-                                            }
-                                          }
-                                          id=""
-                                          layout={5}
-                                          leftButton={null}
-                                          location="none"
-                                          noedit={false}
-                                          nohover={false}
-                                          noripple={false}
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onClick={[Function]}
-                                          onDoubleClick={[Function]}
-                                          onFocus={[Function]}
-                                          onKeyDown={[Function]}
-                                          onKeyPress={[Function]}
-                                          onMouseOut={[Function]}
-                                          onSelect={[Function]}
-                                          onUpdate={[Function]}
-                                          rightButton={null}
-                                          selected={false}
-                                          sizing="normal"
-                                          stacked={false}
-                                          style={
-                                            Object {
-                                              "padding": "2px 4px",
-                                            }
-                                          }
-                                          text="ascending"
-                                          title="ascending"
-                                          useedit={false}
-                                          visible={true}
-                                          widget={null}
-                                        >
-                                          <span
-                                            className="ui-label label normal ui-title titleDominant"
-                                            contentEditable={false}
-                                            onBlur={[Function]}
-                                            onClick={[Function]}
-                                            onDoubleClick={[Function]}
-                                            onKeyDown={[Function]}
-                                            onKeyPress={[Function]}
-                                            style={
-                                              Object {
-                                                "backgroundColor": "inherit",
-                                                "color": "inherit",
-                                                "padding": "2px 4px",
-                                              }
-                                            }
-                                            suppressContentEditableWarning={true}
-                                          >
-                                            ascending
-                                          </span>
-                                        </Label>
-                                      </div>
-                                    </Title>
-                                  </li>
-                                </Item>
-                              </ListItem>
-                              <ListItem
-                                backgroundColor="inherit"
-                                borderColor="inherit"
-                                borderWidth="none"
-                                className=""
-                                color="inherit"
-                                contentEditable={false}
-                                direction="right"
-                                disabled={false}
-                                focus={false}
-                                hiddenLeftButton={false}
-                                hiddenRightButton={false}
-                                href={
-                                  Object {
-                                    "selectHandler": [Function],
-                                    "sizing": "normal",
-                                  }
-                                }
-                                id=""
-                                layout={5}
-                                leftButton={null}
-                                location="none"
-                                noedit={false}
-                                nohover={false}
-                                noripple={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onClick={[Function]}
-                                onDoubleClick={[Function]}
-                                onFocus={[Function]}
-                                onKeyDown={[Function]}
-                                onKeyPress={[Function]}
-                                onMouseOut={[Function]}
-                                onSelect={[Function]}
-                                onUpdate={[Function]}
-                                rightButton={null}
-                                selected={false}
-                                sizing="normal"
-                                stacked={false}
-                                style={Object {}}
-                                title="descending"
-                                useedit={false}
-                                visible={true}
-                                widget={null}
-                              >
-                                <Item
-                                  backgroundColor="inherit"
-                                  borderColor="inherit"
-                                  borderWidth="none"
-                                  className="ui-listitem listItem"
-                                  color="inherit"
-                                  contentEditable={false}
-                                  direction="right"
-                                  disabled={false}
-                                  focus={false}
-                                  hiddenLeftButton={false}
-                                  hiddenRightButton={false}
-                                  href={
-                                    Object {
-                                      "selectHandler": [Function],
-                                      "sizing": "normal",
-                                    }
-                                  }
-                                  id=""
-                                  layout={5}
-                                  leftButton={null}
-                                  location="none"
-                                  noedit={false}
-                                  nohover={false}
-                                  noripple={false}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onClick={[Function]}
-                                  onDoubleClick={[Function]}
-                                  onFocus={[Function]}
-                                  onKeyDown={[Function]}
-                                  onKeyPress={[Function]}
-                                  onMouseOut={[Function]}
-                                  onSelect={[Function]}
-                                  onUpdate={[Function]}
-                                  rightButton={null}
-                                  selected={false}
-                                  sizing="normal"
-                                  stacked={false}
-                                  style={Object {}}
-                                  title="descending"
-                                  useedit={false}
-                                  visible={true}
-                                  widget={null}
-                                >
-                                  <li
-                                    className="ui-item item ui-listitem listItem"
-                                    id=""
-                                    onBlur={[Function]}
-                                    onDoubleClick={[Function]}
-                                    onKeyDown={[Function]}
-                                    onKeyPress={[Function]}
-                                    onMouseOut={[Function]}
-                                    style={Object {}}
-                                  >
-                                    <Title
-                                      backgroundColor="inherit"
-                                      borderColor="inherit"
-                                      borderWidth="none"
-                                      className="itemTitle"
-                                      color="inherit"
-                                      contentEditable={false}
-                                      direction="right"
-                                      disabled={false}
-                                      focus={false}
-                                      hiddenLeftButton={false}
-                                      hiddenRightButton={false}
-                                      href={
-                                        Object {
-                                          "selectHandler": [Function],
-                                          "sizing": "normal",
-                                        }
-                                      }
-                                      id=""
-                                      layout={5}
-                                      leftButton={null}
-                                      location="none"
-                                      noedit={false}
-                                      nohover={false}
-                                      noripple={false}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onClick={[Function]}
-                                      onDoubleClick={[Function]}
-                                      onFocus={[Function]}
-                                      onKeyDown={[Function]}
-                                      onKeyPress={[Function]}
-                                      onMouseOut={[Function]}
-                                      onSelect={[Function]}
-                                      onUpdate={[Function]}
-                                      rightButton={null}
-                                      selected={false}
-                                      sizing="normal"
-                                      stacked={false}
-                                      style={
-                                        Object {
-                                          "padding": "2px 4px",
-                                        }
-                                      }
-                                      title="descending"
-                                      useedit={false}
-                                      visible={true}
-                                      widget={null}
-                                    >
-                                      <div
-                                        className="ui-title-bar titleBar ripple itemTitle"
-                                        style={
-                                          Object {
-                                            "padding": "2px 4px",
-                                          }
-                                        }
-                                      >
-                                        <Label
-                                          backgroundColor="inherit"
-                                          borderColor="inherit"
-                                          borderWidth="none"
-                                          className="ui-title titleDominant"
-                                          color="inherit"
-                                          contentEditable={false}
-                                          direction="right"
-                                          disabled={false}
-                                          focus={false}
-                                          hiddenLeftButton={false}
-                                          hiddenRightButton={false}
-                                          href={
-                                            Object {
-                                              "selectHandler": [Function],
-                                              "sizing": "normal",
-                                            }
-                                          }
-                                          id=""
-                                          layout={5}
-                                          leftButton={null}
-                                          location="none"
-                                          noedit={false}
-                                          nohover={false}
-                                          noripple={false}
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onClick={[Function]}
-                                          onDoubleClick={[Function]}
-                                          onFocus={[Function]}
-                                          onKeyDown={[Function]}
-                                          onKeyPress={[Function]}
-                                          onMouseOut={[Function]}
-                                          onSelect={[Function]}
-                                          onUpdate={[Function]}
-                                          rightButton={null}
-                                          selected={false}
-                                          sizing="normal"
-                                          stacked={false}
-                                          style={
-                                            Object {
-                                              "padding": "2px 4px",
-                                            }
-                                          }
-                                          text="descending"
-                                          title="descending"
-                                          useedit={false}
-                                          visible={true}
-                                          widget={null}
-                                        >
-                                          <span
-                                            className="ui-label label normal ui-title titleDominant"
-                                            contentEditable={false}
-                                            onBlur={[Function]}
-                                            onClick={[Function]}
-                                            onDoubleClick={[Function]}
-                                            onKeyDown={[Function]}
-                                            onKeyPress={[Function]}
-                                            style={
-                                              Object {
-                                                "backgroundColor": "inherit",
-                                                "color": "inherit",
-                                                "padding": "2px 4px",
-                                              }
-                                            }
-                                            suppressContentEditableWarning={true}
-                                          >
-                                            descending
-                                          </span>
-                                        </Label>
-                                      </div>
-                                    </Title>
-                                  </li>
-                                </Item>
-                              </ListItem>
-                            </ul>
-                          </div>
-                        </List>
-                      </div>
-                      <Triangle
-                        backgroundColor="inherit"
-                        borderColor="inherit"
-                        borderWidth="2px"
-                        className="dialogTriangleBottom buttonDialogHide"
-                        color="inherit"
-                        contentEditable={false}
-                        direction="up"
-                        disabled={false}
-                        focus={false}
-                        id=""
-                        location="none"
-                        nobase={true}
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        selected={false}
-                        sizing="normal"
-                        style={Object {}}
-                        visible={true}
-                      >
-                        <svg
-                          className="ui-triangle triangle normalBox triangleUp dialogTriangleBottom buttonDialogHide"
-                          preserveAspectRatio="xMidYMid meet"
-                          style={
-                            Object {
-                              "fill": "inherit",
-                              "stroke": "inherit",
-                              "strokeWidth": "2px",
-                            }
-                          }
-                          version="1.1"
-                          viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <polygon
-                            points="-3,35, 20,10 43,35"
-                            style={
-                              Object {
-                                "fill": "inherit",
-                                "stroke": "none",
-                              }
-                            }
-                          />
-                          <polygon
-                            points="-3,35, 20,10 43,35, 20,10"
-                            style={
-                              Object {
-                                "stroke": "inherit",
-                                "strokeLinecap": "square",
-                                "strokeWidth": "2px",
-                              }
-                            }
-                          />
-                        </svg>
-                      </Triangle>
-                    </div>
-                  </div>
-                </ButtonDialog>
-              </div>
               <Title
                 backgroundColor="inherit"
                 borderColor="inherit"
@@ -2657,149 +1570,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                 id=""
                 initialToggle={true}
                 layout={5}
-                leftButton={
-                  <ButtonDialog
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
-                    className=""
-                    color="inherit"
-                    contentEditable={false}
-                    dialogClasses={Array []}
-                    direction="right"
-                    disabled={false}
-                    focus={false}
-                    iconName="bars"
-                    iconStyle=""
-                    id=""
-                    location="bottom"
-                    noedit={false}
-                    nohover={false}
-                    noripple={false}
-                    notriangle={false}
-                    onClick={[Function]}
-                    selected={false}
-                    sizing="normal"
-                    style={Object {}}
-                    triangleClasses={Array []}
-                    visible={true}
-                  >
-                    <List
-                      alternating={false}
-                      backgroundColor="inherit"
-                      borderColor="inherit"
-                      borderWidth="none"
-                      className=""
-                      color="inherit"
-                      contentEditable={false}
-                      direction="right"
-                      disabled={false}
-                      focus={false}
-                      id=""
-                      location="none"
-                      noedit={false}
-                      nohover={false}
-                      noripple={false}
-                      onAdd={[Function]}
-                      selected={false}
-                      sizing="normal"
-                      style={Object {}}
-                      unselect={false}
-                      visible={true}
-                    >
-                      <ListItem
-                        backgroundColor="inherit"
-                        borderColor="inherit"
-                        borderWidth="none"
-                        className=""
-                        color="inherit"
-                        contentEditable={false}
-                        direction="right"
-                        disabled={false}
-                        focus={false}
-                        hiddenLeftButton={false}
-                        hiddenRightButton={false}
-                        href={
-                          Object {
-                            "selectHandler": [Function],
-                            "sizing": "normal",
-                          }
-                        }
-                        id=""
-                        layout={5}
-                        leftButton={null}
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onDoubleClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        onKeyPress={[Function]}
-                        onMouseOut={[Function]}
-                        onSelect={[Function]}
-                        onUpdate={[Function]}
-                        rightButton={null}
-                        selected={false}
-                        sizing="normal"
-                        stacked={false}
-                        style={Object {}}
-                        title="ascending"
-                        useedit={false}
-                        visible={true}
-                        widget={null}
-                      />
-                      <ListItem
-                        backgroundColor="inherit"
-                        borderColor="inherit"
-                        borderWidth="none"
-                        className=""
-                        color="inherit"
-                        contentEditable={false}
-                        direction="right"
-                        disabled={false}
-                        focus={false}
-                        hiddenLeftButton={false}
-                        hiddenRightButton={false}
-                        href={
-                          Object {
-                            "selectHandler": [Function],
-                            "sizing": "normal",
-                          }
-                        }
-                        id=""
-                        layout={5}
-                        leftButton={null}
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onDoubleClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        onKeyPress={[Function]}
-                        onMouseOut={[Function]}
-                        onSelect={[Function]}
-                        onUpdate={[Function]}
-                        rightButton={null}
-                        selected={false}
-                        sizing="normal"
-                        stacked={false}
-                        style={Object {}}
-                        title="descending"
-                        useedit={false}
-                        visible={true}
-                        widget={null}
-                      />
-                    </List>
-                  </ButtonDialog>
-                }
+                leftButton={null}
                 location="none"
                 nocollapse={true}
                 noedit={true}
@@ -2875,149 +1646,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                     id=""
                     initialToggle={true}
                     layout={5}
-                    leftButton={
-                      <ButtonDialog
-                        backgroundColor="inherit"
-                        borderColor="inherit"
-                        borderWidth="none"
-                        className=""
-                        color="inherit"
-                        contentEditable={false}
-                        dialogClasses={Array []}
-                        direction="right"
-                        disabled={false}
-                        focus={false}
-                        iconName="bars"
-                        iconStyle=""
-                        id=""
-                        location="bottom"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        notriangle={false}
-                        onClick={[Function]}
-                        selected={false}
-                        sizing="normal"
-                        style={Object {}}
-                        triangleClasses={Array []}
-                        visible={true}
-                      >
-                        <List
-                          alternating={false}
-                          backgroundColor="inherit"
-                          borderColor="inherit"
-                          borderWidth="none"
-                          className=""
-                          color="inherit"
-                          contentEditable={false}
-                          direction="right"
-                          disabled={false}
-                          focus={false}
-                          id=""
-                          location="none"
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          onAdd={[Function]}
-                          selected={false}
-                          sizing="normal"
-                          style={Object {}}
-                          unselect={false}
-                          visible={true}
-                        >
-                          <ListItem
-                            backgroundColor="inherit"
-                            borderColor="inherit"
-                            borderWidth="none"
-                            className=""
-                            color="inherit"
-                            contentEditable={false}
-                            direction="right"
-                            disabled={false}
-                            focus={false}
-                            hiddenLeftButton={false}
-                            hiddenRightButton={false}
-                            href={
-                              Object {
-                                "selectHandler": [Function],
-                                "sizing": "normal",
-                              }
-                            }
-                            id=""
-                            layout={5}
-                            leftButton={null}
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onClick={[Function]}
-                            onDoubleClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyPress={[Function]}
-                            onMouseOut={[Function]}
-                            onSelect={[Function]}
-                            onUpdate={[Function]}
-                            rightButton={null}
-                            selected={false}
-                            sizing="normal"
-                            stacked={false}
-                            style={Object {}}
-                            title="ascending"
-                            useedit={false}
-                            visible={true}
-                            widget={null}
-                          />
-                          <ListItem
-                            backgroundColor="inherit"
-                            borderColor="inherit"
-                            borderWidth="none"
-                            className=""
-                            color="inherit"
-                            contentEditable={false}
-                            direction="right"
-                            disabled={false}
-                            focus={false}
-                            hiddenLeftButton={false}
-                            hiddenRightButton={false}
-                            href={
-                              Object {
-                                "selectHandler": [Function],
-                                "sizing": "normal",
-                              }
-                            }
-                            id=""
-                            layout={5}
-                            leftButton={null}
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onClick={[Function]}
-                            onDoubleClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyPress={[Function]}
-                            onMouseOut={[Function]}
-                            onSelect={[Function]}
-                            onUpdate={[Function]}
-                            rightButton={null}
-                            selected={false}
-                            sizing="normal"
-                            stacked={false}
-                            style={Object {}}
-                            title="descending"
-                            useedit={false}
-                            visible={true}
-                            widget={null}
-                          />
-                        </List>
-                      </ButtonDialog>
-                    }
+                    leftButton={null}
                     location="none"
                     nocollapse={true}
                     noedit={true}
@@ -6098,6 +4727,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                         noripple={false}
                         onChangePageSize={[Function]}
                         onSelect={[Function]}
+                        onSort={[Function]}
                         pageSizes={
                           Array [
                             10,
@@ -6179,6 +4809,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                           noripple={false}
                           onChangePageSize={[Function]}
                           onSelect={[Function]}
+                          onSort={[Function]}
                           pageSizes={
                             Array [
                               10,
@@ -6259,6 +4890,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                             noripple={false}
                             onChangePageSize={[Function]}
                             onSelect={[Function]}
+                            onSort={[Function]}
                             pageSizes={
                               Array [
                                 10,
@@ -6299,6 +4931,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 onChangePageSize={[Function]}
                                 onClick={[Function]}
                                 onSelect={[Function]}
+                                onSort={[Function]}
                                 pageSizes={
                                   Array [
                                     10,
@@ -6375,6 +5008,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 onChangePageSize={[Function]}
                                 onClick={[Function]}
                                 onSelect={[Function]}
+                                onSort={[Function]}
                                 pageSizes={
                                   Array [
                                     10,
@@ -6453,6 +5087,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 onChangePageSize={[Function]}
                                 onClick={[Function]}
                                 onSelect={[Function]}
+                                onSort={[Function]}
                                 pageSizes={
                                   Array [
                                     10,
@@ -6505,6 +5140,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 onChangePageSize={[Function]}
                                 onClick={[Function]}
                                 onSelect={[Function]}
+                                onSort={[Function]}
                                 pageSizes={
                                   Array [
                                     10,
@@ -6555,6 +5191,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 onChangePageSize={[Function]}
                                 onClick={[Function]}
                                 onSelect={[Function]}
+                                onSort={[Function]}
                                 pageSizes={
                                   Array [
                                     10,
@@ -6603,6 +5240,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 onChangePageSize={[Function]}
                                 onClick={[Function]}
                                 onSelect={[Function]}
+                                onSort={[Function]}
                                 pageSizes={
                                   Array [
                                     10,
@@ -6679,6 +5317,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 onChangePageSize={[Function]}
                                 onClick={[Function]}
                                 onSelect={[Function]}
+                                onSort={[Function]}
                                 pageSizes={
                                   Array [
                                     10,
@@ -6801,6 +5440,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 onChangePageSize={[Function]}
                                 onClick={[Function]}
                                 onSelect={[Function]}
+                                onSort={[Function]}
                                 pageSizes={
                                   Array [
                                     10,
@@ -6955,6 +5595,639 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               onKeyPress={[Function]}
                                               onMouseOut={[Function]}
                                               onSelect={[Function]}
+                                              onSort={[Function]}
+                                              onUpdate={[Function]}
+                                              pageSizes={
+                                                Array [
+                                                  10,
+                                                  20,
+                                                  30,
+                                                ]
+                                              }
+                                              pagesToDisplay={3}
+                                              rightButton={null}
+                                              selected={false}
+                                              sizing="small"
+                                              stacked={false}
+                                              style={Object {}}
+                                              title="Ascending"
+                                              totalItems={3}
+                                              useedit={false}
+                                              useinput={true}
+                                              visible={true}
+                                              widget={null}
+                                            >
+                                              <Item
+                                                backgroundColor="inherit"
+                                                borderColor="inherit"
+                                                borderWidth="none"
+                                                className="ui-listitem listItem"
+                                                color="inherit"
+                                                contentEditable={false}
+                                                direction="right"
+                                                disabled={false}
+                                                focus={false}
+                                                hiddenLeftButton={false}
+                                                hiddenRightButton={false}
+                                                href={
+                                                  Object {
+                                                    "selectHandler": [Function],
+                                                    "sizing": "normal",
+                                                  }
+                                                }
+                                                id=""
+                                                initialPage={1}
+                                                initialPageSize={10}
+                                                layout={5}
+                                                leftButton={null}
+                                                location="none"
+                                                noedit={true}
+                                                nohover={false}
+                                                noripple={false}
+                                                onBlur={[Function]}
+                                                onChange={[Function]}
+                                                onChangePageSize={[Function]}
+                                                onClick={[Function]}
+                                                onDoubleClick={[Function]}
+                                                onFocus={[Function]}
+                                                onKeyDown={[Function]}
+                                                onKeyPress={[Function]}
+                                                onMouseOut={[Function]}
+                                                onSelect={[Function]}
+                                                onSort={[Function]}
+                                                onUpdate={[Function]}
+                                                pageSizes={
+                                                  Array [
+                                                    10,
+                                                    20,
+                                                    30,
+                                                  ]
+                                                }
+                                                pagesToDisplay={3}
+                                                rightButton={null}
+                                                selected={false}
+                                                sizing="normal"
+                                                stacked={false}
+                                                style={Object {}}
+                                                title="Ascending"
+                                                totalItems={3}
+                                                useedit={false}
+                                                useinput={true}
+                                                visible={true}
+                                                widget={null}
+                                              >
+                                                <li
+                                                  className="ui-item item ui-listitem listItem"
+                                                  id=""
+                                                  onBlur={[Function]}
+                                                  onDoubleClick={[Function]}
+                                                  onKeyDown={[Function]}
+                                                  onKeyPress={[Function]}
+                                                  onMouseOut={[Function]}
+                                                  style={Object {}}
+                                                >
+                                                  <Title
+                                                    backgroundColor="inherit"
+                                                    borderColor="inherit"
+                                                    borderWidth="none"
+                                                    className="itemTitle"
+                                                    color="inherit"
+                                                    contentEditable={false}
+                                                    direction="right"
+                                                    disabled={false}
+                                                    focus={false}
+                                                    hiddenLeftButton={false}
+                                                    hiddenRightButton={false}
+                                                    href={
+                                                      Object {
+                                                        "selectHandler": [Function],
+                                                        "sizing": "normal",
+                                                      }
+                                                    }
+                                                    id=""
+                                                    initialPage={1}
+                                                    initialPageSize={10}
+                                                    layout={5}
+                                                    leftButton={null}
+                                                    location="none"
+                                                    noedit={true}
+                                                    nohover={false}
+                                                    noripple={false}
+                                                    onBlur={[Function]}
+                                                    onChange={[Function]}
+                                                    onChangePageSize={[Function]}
+                                                    onClick={[Function]}
+                                                    onDoubleClick={[Function]}
+                                                    onFocus={[Function]}
+                                                    onKeyDown={[Function]}
+                                                    onKeyPress={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onSelect={[Function]}
+                                                    onSort={[Function]}
+                                                    onUpdate={[Function]}
+                                                    pageSizes={
+                                                      Array [
+                                                        10,
+                                                        20,
+                                                        30,
+                                                      ]
+                                                    }
+                                                    pagesToDisplay={3}
+                                                    rightButton={null}
+                                                    selected={false}
+                                                    sizing="normal"
+                                                    stacked={false}
+                                                    style={
+                                                      Object {
+                                                        "padding": "2px 4px",
+                                                      }
+                                                    }
+                                                    title="Ascending"
+                                                    totalItems={3}
+                                                    useedit={false}
+                                                    useinput={true}
+                                                    visible={true}
+                                                    widget={null}
+                                                  >
+                                                    <div
+                                                      className="ui-title-bar titleBar ripple itemTitle"
+                                                      style={
+                                                        Object {
+                                                          "padding": "2px 4px",
+                                                        }
+                                                      }
+                                                    >
+                                                      <Label
+                                                        backgroundColor="inherit"
+                                                        borderColor="inherit"
+                                                        borderWidth="none"
+                                                        className="ui-title titleDominant"
+                                                        color="inherit"
+                                                        contentEditable={false}
+                                                        direction="right"
+                                                        disabled={false}
+                                                        focus={false}
+                                                        hiddenLeftButton={false}
+                                                        hiddenRightButton={false}
+                                                        href={
+                                                          Object {
+                                                            "selectHandler": [Function],
+                                                            "sizing": "normal",
+                                                          }
+                                                        }
+                                                        id=""
+                                                        initialPage={1}
+                                                        initialPageSize={10}
+                                                        layout={5}
+                                                        leftButton={null}
+                                                        location="none"
+                                                        noedit={true}
+                                                        nohover={false}
+                                                        noripple={false}
+                                                        onBlur={[Function]}
+                                                        onChange={[Function]}
+                                                        onChangePageSize={[Function]}
+                                                        onClick={[Function]}
+                                                        onDoubleClick={[Function]}
+                                                        onFocus={[Function]}
+                                                        onKeyDown={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        onMouseOut={[Function]}
+                                                        onSelect={[Function]}
+                                                        onSort={[Function]}
+                                                        onUpdate={[Function]}
+                                                        pageSizes={
+                                                          Array [
+                                                            10,
+                                                            20,
+                                                            30,
+                                                          ]
+                                                        }
+                                                        pagesToDisplay={3}
+                                                        rightButton={null}
+                                                        selected={false}
+                                                        sizing="normal"
+                                                        stacked={false}
+                                                        style={
+                                                          Object {
+                                                            "padding": "2px 4px",
+                                                          }
+                                                        }
+                                                        text="Ascending"
+                                                        title="Ascending"
+                                                        totalItems={3}
+                                                        useedit={false}
+                                                        useinput={true}
+                                                        visible={true}
+                                                        widget={null}
+                                                      >
+                                                        <span
+                                                          className="ui-label label normal ui-title titleDominant"
+                                                          contentEditable={false}
+                                                          onBlur={[Function]}
+                                                          onClick={[Function]}
+                                                          onDoubleClick={[Function]}
+                                                          onKeyDown={[Function]}
+                                                          onKeyPress={[Function]}
+                                                          style={
+                                                            Object {
+                                                              "backgroundColor": "inherit",
+                                                              "color": "inherit",
+                                                              "padding": "2px 4px",
+                                                            }
+                                                          }
+                                                          suppressContentEditableWarning={true}
+                                                        >
+                                                          Ascending
+                                                        </span>
+                                                      </Label>
+                                                    </div>
+                                                  </Title>
+                                                </li>
+                                              </Item>
+                                            </ListItem>
+                                            <ListItem
+                                              backgroundColor="inherit"
+                                              borderColor="inherit"
+                                              borderWidth="none"
+                                              className=""
+                                              color="inherit"
+                                              contentEditable={false}
+                                              direction="right"
+                                              disabled={false}
+                                              focus={false}
+                                              hiddenLeftButton={false}
+                                              hiddenRightButton={false}
+                                              href={
+                                                Object {
+                                                  "selectHandler": [Function],
+                                                  "sizing": "normal",
+                                                }
+                                              }
+                                              id=""
+                                              initialPage={1}
+                                              initialPageSize={10}
+                                              layout={5}
+                                              leftButton={null}
+                                              location="none"
+                                              noedit={true}
+                                              nohover={false}
+                                              noripple={false}
+                                              onBlur={[Function]}
+                                              onChange={[Function]}
+                                              onChangePageSize={[Function]}
+                                              onClick={[Function]}
+                                              onDoubleClick={[Function]}
+                                              onFocus={[Function]}
+                                              onKeyDown={[Function]}
+                                              onKeyPress={[Function]}
+                                              onMouseOut={[Function]}
+                                              onSelect={[Function]}
+                                              onSort={[Function]}
+                                              onUpdate={[Function]}
+                                              pageSizes={
+                                                Array [
+                                                  10,
+                                                  20,
+                                                  30,
+                                                ]
+                                              }
+                                              pagesToDisplay={3}
+                                              rightButton={null}
+                                              selected={false}
+                                              sizing="small"
+                                              stacked={false}
+                                              style={Object {}}
+                                              title="Descending"
+                                              totalItems={3}
+                                              useedit={false}
+                                              useinput={true}
+                                              visible={true}
+                                              widget={null}
+                                            >
+                                              <Item
+                                                backgroundColor="inherit"
+                                                borderColor="inherit"
+                                                borderWidth="none"
+                                                className="ui-listitem listItem"
+                                                color="inherit"
+                                                contentEditable={false}
+                                                direction="right"
+                                                disabled={false}
+                                                focus={false}
+                                                hiddenLeftButton={false}
+                                                hiddenRightButton={false}
+                                                href={
+                                                  Object {
+                                                    "selectHandler": [Function],
+                                                    "sizing": "normal",
+                                                  }
+                                                }
+                                                id=""
+                                                initialPage={1}
+                                                initialPageSize={10}
+                                                layout={5}
+                                                leftButton={null}
+                                                location="none"
+                                                noedit={true}
+                                                nohover={false}
+                                                noripple={false}
+                                                onBlur={[Function]}
+                                                onChange={[Function]}
+                                                onChangePageSize={[Function]}
+                                                onClick={[Function]}
+                                                onDoubleClick={[Function]}
+                                                onFocus={[Function]}
+                                                onKeyDown={[Function]}
+                                                onKeyPress={[Function]}
+                                                onMouseOut={[Function]}
+                                                onSelect={[Function]}
+                                                onSort={[Function]}
+                                                onUpdate={[Function]}
+                                                pageSizes={
+                                                  Array [
+                                                    10,
+                                                    20,
+                                                    30,
+                                                  ]
+                                                }
+                                                pagesToDisplay={3}
+                                                rightButton={null}
+                                                selected={false}
+                                                sizing="normal"
+                                                stacked={false}
+                                                style={Object {}}
+                                                title="Descending"
+                                                totalItems={3}
+                                                useedit={false}
+                                                useinput={true}
+                                                visible={true}
+                                                widget={null}
+                                              >
+                                                <li
+                                                  className="ui-item item ui-listitem listItem"
+                                                  id=""
+                                                  onBlur={[Function]}
+                                                  onDoubleClick={[Function]}
+                                                  onKeyDown={[Function]}
+                                                  onKeyPress={[Function]}
+                                                  onMouseOut={[Function]}
+                                                  style={Object {}}
+                                                >
+                                                  <Title
+                                                    backgroundColor="inherit"
+                                                    borderColor="inherit"
+                                                    borderWidth="none"
+                                                    className="itemTitle"
+                                                    color="inherit"
+                                                    contentEditable={false}
+                                                    direction="right"
+                                                    disabled={false}
+                                                    focus={false}
+                                                    hiddenLeftButton={false}
+                                                    hiddenRightButton={false}
+                                                    href={
+                                                      Object {
+                                                        "selectHandler": [Function],
+                                                        "sizing": "normal",
+                                                      }
+                                                    }
+                                                    id=""
+                                                    initialPage={1}
+                                                    initialPageSize={10}
+                                                    layout={5}
+                                                    leftButton={null}
+                                                    location="none"
+                                                    noedit={true}
+                                                    nohover={false}
+                                                    noripple={false}
+                                                    onBlur={[Function]}
+                                                    onChange={[Function]}
+                                                    onChangePageSize={[Function]}
+                                                    onClick={[Function]}
+                                                    onDoubleClick={[Function]}
+                                                    onFocus={[Function]}
+                                                    onKeyDown={[Function]}
+                                                    onKeyPress={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onSelect={[Function]}
+                                                    onSort={[Function]}
+                                                    onUpdate={[Function]}
+                                                    pageSizes={
+                                                      Array [
+                                                        10,
+                                                        20,
+                                                        30,
+                                                      ]
+                                                    }
+                                                    pagesToDisplay={3}
+                                                    rightButton={null}
+                                                    selected={false}
+                                                    sizing="normal"
+                                                    stacked={false}
+                                                    style={
+                                                      Object {
+                                                        "padding": "2px 4px",
+                                                      }
+                                                    }
+                                                    title="Descending"
+                                                    totalItems={3}
+                                                    useedit={false}
+                                                    useinput={true}
+                                                    visible={true}
+                                                    widget={null}
+                                                  >
+                                                    <div
+                                                      className="ui-title-bar titleBar ripple itemTitle"
+                                                      style={
+                                                        Object {
+                                                          "padding": "2px 4px",
+                                                        }
+                                                      }
+                                                    >
+                                                      <Label
+                                                        backgroundColor="inherit"
+                                                        borderColor="inherit"
+                                                        borderWidth="none"
+                                                        className="ui-title titleDominant"
+                                                        color="inherit"
+                                                        contentEditable={false}
+                                                        direction="right"
+                                                        disabled={false}
+                                                        focus={false}
+                                                        hiddenLeftButton={false}
+                                                        hiddenRightButton={false}
+                                                        href={
+                                                          Object {
+                                                            "selectHandler": [Function],
+                                                            "sizing": "normal",
+                                                          }
+                                                        }
+                                                        id=""
+                                                        initialPage={1}
+                                                        initialPageSize={10}
+                                                        layout={5}
+                                                        leftButton={null}
+                                                        location="none"
+                                                        noedit={true}
+                                                        nohover={false}
+                                                        noripple={false}
+                                                        onBlur={[Function]}
+                                                        onChange={[Function]}
+                                                        onChangePageSize={[Function]}
+                                                        onClick={[Function]}
+                                                        onDoubleClick={[Function]}
+                                                        onFocus={[Function]}
+                                                        onKeyDown={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        onMouseOut={[Function]}
+                                                        onSelect={[Function]}
+                                                        onSort={[Function]}
+                                                        onUpdate={[Function]}
+                                                        pageSizes={
+                                                          Array [
+                                                            10,
+                                                            20,
+                                                            30,
+                                                          ]
+                                                        }
+                                                        pagesToDisplay={3}
+                                                        rightButton={null}
+                                                        selected={false}
+                                                        sizing="normal"
+                                                        stacked={false}
+                                                        style={
+                                                          Object {
+                                                            "padding": "2px 4px",
+                                                          }
+                                                        }
+                                                        text="Descending"
+                                                        title="Descending"
+                                                        totalItems={3}
+                                                        useedit={false}
+                                                        useinput={true}
+                                                        visible={true}
+                                                        widget={null}
+                                                      >
+                                                        <span
+                                                          className="ui-label label normal ui-title titleDominant"
+                                                          contentEditable={false}
+                                                          onBlur={[Function]}
+                                                          onClick={[Function]}
+                                                          onDoubleClick={[Function]}
+                                                          onKeyDown={[Function]}
+                                                          onKeyPress={[Function]}
+                                                          style={
+                                                            Object {
+                                                              "backgroundColor": "inherit",
+                                                              "color": "inherit",
+                                                              "padding": "2px 4px",
+                                                            }
+                                                          }
+                                                          suppressContentEditableWarning={true}
+                                                        >
+                                                          Descending
+                                                        </span>
+                                                      </Label>
+                                                    </div>
+                                                  </Title>
+                                                </li>
+                                              </Item>
+                                            </ListItem>
+                                            <ListDivider
+                                              backgroundColor="inherit"
+                                              borderColor="inherit"
+                                              borderWidth="none"
+                                              className=""
+                                              color="lightgray"
+                                              contentEditable={false}
+                                              direction="right"
+                                              disabled={false}
+                                              focus={false}
+                                              hiddenLeftButton={false}
+                                              hiddenRightButton={false}
+                                              href={
+                                                Object {
+                                                  "selectHandler": [Function],
+                                                  "sizing": "normal",
+                                                }
+                                              }
+                                              id=""
+                                              layout={5}
+                                              leftButton={null}
+                                              location="none"
+                                              noedit={false}
+                                              nohover={false}
+                                              noripple={false}
+                                              onBlur={[Function]}
+                                              onChange={[Function]}
+                                              onClick={[Function]}
+                                              onDoubleClick={[Function]}
+                                              onFocus={[Function]}
+                                              onKeyDown={[Function]}
+                                              onKeyPress={[Function]}
+                                              onMouseOut={[Function]}
+                                              onUpdate={[Function]}
+                                              rightButton={null}
+                                              selected={false}
+                                              sizing="normal"
+                                              stacked={false}
+                                              style={Object {}}
+                                              title=""
+                                              useedit={false}
+                                              visible={true}
+                                              widget={null}
+                                            >
+                                              <li
+                                                className="ui-list-divider listDivider"
+                                              >
+                                                <hr
+                                                  style={
+                                                    Object {
+                                                      "backgroundColor": "lightgray",
+                                                    }
+                                                  }
+                                                />
+                                              </li>
+                                            </ListDivider>
+                                            <ListItem
+                                              backgroundColor="inherit"
+                                              borderColor="inherit"
+                                              borderWidth="none"
+                                              className=""
+                                              color="inherit"
+                                              contentEditable={false}
+                                              direction="right"
+                                              disabled={false}
+                                              focus={false}
+                                              hiddenLeftButton={false}
+                                              hiddenRightButton={false}
+                                              href={
+                                                Object {
+                                                  "selectHandler": [Function],
+                                                  "sizing": "normal",
+                                                }
+                                              }
+                                              id=""
+                                              initialPage={1}
+                                              initialPageSize={10}
+                                              layout={5}
+                                              leftButton={null}
+                                              location="none"
+                                              noedit={true}
+                                              nohover={false}
+                                              noripple={false}
+                                              onBlur={[Function]}
+                                              onChange={[Function]}
+                                              onChangePageSize={[Function]}
+                                              onClick={[Function]}
+                                              onDoubleClick={[Function]}
+                                              onFocus={[Function]}
+                                              onKeyDown={[Function]}
+                                              onKeyPress={[Function]}
+                                              onMouseOut={[Function]}
+                                              onSelect={[Function]}
+                                              onSort={[Function]}
                                               onUpdate={[Function]}
                                               pageSizes={
                                                 Array [
@@ -7013,6 +6286,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onSort={[Function]}
                                                 onUpdate={[Function]}
                                                 pageSizes={
                                                   Array [
@@ -7081,6 +6355,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     onKeyPress={[Function]}
                                                     onMouseOut={[Function]}
                                                     onSelect={[Function]}
+                                                    onSort={[Function]}
                                                     onUpdate={[Function]}
                                                     pageSizes={
                                                       Array [
@@ -7151,6 +6426,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         onKeyPress={[Function]}
                                                         onMouseOut={[Function]}
                                                         onSelect={[Function]}
+                                                        onSort={[Function]}
                                                         onUpdate={[Function]}
                                                         pageSizes={
                                                           Array [
@@ -7239,6 +6515,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               onKeyPress={[Function]}
                                               onMouseOut={[Function]}
                                               onSelect={[Function]}
+                                              onSort={[Function]}
                                               onUpdate={[Function]}
                                               pageSizes={
                                                 Array [
@@ -7297,6 +6574,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onSort={[Function]}
                                                 onUpdate={[Function]}
                                                 pageSizes={
                                                   Array [
@@ -7365,6 +6643,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     onKeyPress={[Function]}
                                                     onMouseOut={[Function]}
                                                     onSelect={[Function]}
+                                                    onSort={[Function]}
                                                     onUpdate={[Function]}
                                                     pageSizes={
                                                       Array [
@@ -7435,6 +6714,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         onKeyPress={[Function]}
                                                         onMouseOut={[Function]}
                                                         onSelect={[Function]}
+                                                        onSort={[Function]}
                                                         onUpdate={[Function]}
                                                         pageSizes={
                                                           Array [
@@ -7523,6 +6803,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               onKeyPress={[Function]}
                                               onMouseOut={[Function]}
                                               onSelect={[Function]}
+                                              onSort={[Function]}
                                               onUpdate={[Function]}
                                               pageSizes={
                                                 Array [
@@ -7581,6 +6862,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onSort={[Function]}
                                                 onUpdate={[Function]}
                                                 pageSizes={
                                                   Array [
@@ -7649,6 +6931,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     onKeyPress={[Function]}
                                                     onMouseOut={[Function]}
                                                     onSelect={[Function]}
+                                                    onSort={[Function]}
                                                     onUpdate={[Function]}
                                                     pageSizes={
                                                       Array [
@@ -7719,6 +7002,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         onKeyPress={[Function]}
                                                         onMouseOut={[Function]}
                                                         onSelect={[Function]}
+                                                        onSort={[Function]}
                                                         onUpdate={[Function]}
                                                         pageSizes={
                                                           Array [
@@ -7807,6 +7091,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               onKeyPress={[Function]}
                                               onMouseOut={[Function]}
                                               onSelect={[Function]}
+                                              onSort={[Function]}
                                               onUpdate={[Function]}
                                               pageSizes={
                                                 Array [
@@ -7865,6 +7150,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onSort={[Function]}
                                                 onUpdate={[Function]}
                                                 pageSizes={
                                                   Array [
@@ -7933,6 +7219,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     onKeyPress={[Function]}
                                                     onMouseOut={[Function]}
                                                     onSelect={[Function]}
+                                                    onSort={[Function]}
                                                     onUpdate={[Function]}
                                                     pageSizes={
                                                       Array [
@@ -8003,6 +7290,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         onKeyPress={[Function]}
                                                         onMouseOut={[Function]}
                                                         onSelect={[Function]}
+                                                        onSort={[Function]}
                                                         onUpdate={[Function]}
                                                         pageSizes={
                                                           Array [
@@ -8147,6 +7435,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               onKeyPress={[Function]}
                                               onMouseOut={[Function]}
                                               onSelect={[Function]}
+                                              onSort={[Function]}
                                               onUpdate={[Function]}
                                               pageSizes={
                                                 Array [
@@ -8205,6 +7494,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onSort={[Function]}
                                                 onUpdate={[Function]}
                                                 pageSizes={
                                                   Array [
@@ -8273,6 +7563,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     onKeyPress={[Function]}
                                                     onMouseOut={[Function]}
                                                     onSelect={[Function]}
+                                                    onSort={[Function]}
                                                     onUpdate={[Function]}
                                                     pageSizes={
                                                       Array [
@@ -8343,6 +7634,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         onKeyPress={[Function]}
                                                         onMouseOut={[Function]}
                                                         onSelect={[Function]}
+                                                        onSort={[Function]}
                                                         onUpdate={[Function]}
                                                         pageSizes={
                                                           Array [
@@ -8431,6 +7723,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               onKeyPress={[Function]}
                                               onMouseOut={[Function]}
                                               onSelect={[Function]}
+                                              onSort={[Function]}
                                               onUpdate={[Function]}
                                               pageSizes={
                                                 Array [
@@ -8489,6 +7782,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onSort={[Function]}
                                                 onUpdate={[Function]}
                                                 pageSizes={
                                                   Array [
@@ -8557,6 +7851,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     onKeyPress={[Function]}
                                                     onMouseOut={[Function]}
                                                     onSelect={[Function]}
+                                                    onSort={[Function]}
                                                     onUpdate={[Function]}
                                                     pageSizes={
                                                       Array [
@@ -8627,6 +7922,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         onKeyPress={[Function]}
                                                         onMouseOut={[Function]}
                                                         onSelect={[Function]}
+                                                        onSort={[Function]}
                                                         onUpdate={[Function]}
                                                         pageSizes={
                                                           Array [
@@ -8715,6 +8011,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               onKeyPress={[Function]}
                                               onMouseOut={[Function]}
                                               onSelect={[Function]}
+                                              onSort={[Function]}
                                               onUpdate={[Function]}
                                               pageSizes={
                                                 Array [
@@ -8773,6 +8070,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onSort={[Function]}
                                                 onUpdate={[Function]}
                                                 pageSizes={
                                                   Array [
@@ -8841,6 +8139,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     onKeyPress={[Function]}
                                                     onMouseOut={[Function]}
                                                     onSelect={[Function]}
+                                                    onSort={[Function]}
                                                     onUpdate={[Function]}
                                                     pageSizes={
                                                       Array [
@@ -8911,6 +8210,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         onKeyPress={[Function]}
                                                         onMouseOut={[Function]}
                                                         onSelect={[Function]}
+                                                        onSort={[Function]}
                                                         onUpdate={[Function]}
                                                         pageSizes={
                                                           Array [
@@ -8999,6 +8299,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               onKeyPress={[Function]}
                                               onMouseOut={[Function]}
                                               onSelect={[Function]}
+                                              onSort={[Function]}
                                               onUpdate={[Function]}
                                               pageSizes={
                                                 Array [
@@ -9057,6 +8358,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onSort={[Function]}
                                                 onUpdate={[Function]}
                                                 pageSizes={
                                                   Array [
@@ -9125,6 +8427,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     onKeyPress={[Function]}
                                                     onMouseOut={[Function]}
                                                     onSelect={[Function]}
+                                                    onSort={[Function]}
                                                     onUpdate={[Function]}
                                                     pageSizes={
                                                       Array [
@@ -9195,6 +8498,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         onKeyPress={[Function]}
                                                         onMouseOut={[Function]}
                                                         onSelect={[Function]}
+                                                        onSort={[Function]}
                                                         onUpdate={[Function]}
                                                         pageSizes={
                                                           Array [
@@ -9359,149 +8663,7 @@ exports[`Test disabling of a Dynamic List control 1`] = `
     id=""
     initialToggle={true}
     layout={5}
-    leftButton={
-      <ButtonDialog
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
-        className=""
-        color="inherit"
-        contentEditable={false}
-        dialogClasses={Array []}
-        direction="right"
-        disabled={false}
-        focus={false}
-        iconName="bars"
-        iconStyle=""
-        id=""
-        location="bottom"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        notriangle={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        triangleClasses={Array []}
-        visible={true}
-      >
-        <List
-          alternating={false}
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
-          className=""
-          color="inherit"
-          contentEditable={false}
-          direction="right"
-          disabled={false}
-          focus={false}
-          id=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          onAdd={[Function]}
-          selected={false}
-          sizing="normal"
-          style={Object {}}
-          unselect={false}
-          visible={true}
-        >
-          <ListItem
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
-            className=""
-            color="inherit"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            hiddenLeftButton={false}
-            hiddenRightButton={false}
-            href={
-              Object {
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
-            id=""
-            layout={5}
-            leftButton={null}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onMouseOut={[Function]}
-            onSelect={[Function]}
-            onUpdate={[Function]}
-            rightButton={null}
-            selected={false}
-            sizing="normal"
-            stacked={false}
-            style={Object {}}
-            title="ascending"
-            useedit={false}
-            visible={true}
-            widget={null}
-          />
-          <ListItem
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
-            className=""
-            color="inherit"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            hiddenLeftButton={false}
-            hiddenRightButton={false}
-            href={
-              Object {
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
-            id=""
-            layout={5}
-            leftButton={null}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onMouseOut={[Function]}
-            onSelect={[Function]}
-            onUpdate={[Function]}
-            rightButton={null}
-            selected={false}
-            sizing="normal"
-            stacked={false}
-            style={Object {}}
-            title="descending"
-            useedit={false}
-            visible={true}
-            widget={null}
-          />
-        </List>
-      </ButtonDialog>
-    }
+    leftButton={null}
     location="none"
     nocollapse={false}
     noedit={true}
@@ -10153,6 +9315,7 @@ exports[`Test disabling of a Dynamic List control 1`] = `
             noripple={false}
             onChangePageSize={[Function]}
             onSelect={[Function]}
+            onSort={[Function]}
             pageSizes={
               Array [
                 10,
@@ -10238,149 +9401,7 @@ exports[`Test making a Dynamic List invisible 1`] = `
     id=""
     initialToggle={true}
     layout={5}
-    leftButton={
-      <ButtonDialog
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
-        className=""
-        color="inherit"
-        contentEditable={false}
-        dialogClasses={Array []}
-        direction="right"
-        disabled={false}
-        focus={false}
-        iconName="bars"
-        iconStyle=""
-        id=""
-        location="bottom"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        notriangle={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        triangleClasses={Array []}
-        visible={true}
-      >
-        <List
-          alternating={false}
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
-          className=""
-          color="inherit"
-          contentEditable={false}
-          direction="right"
-          disabled={false}
-          focus={false}
-          id=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          onAdd={[Function]}
-          selected={false}
-          sizing="normal"
-          style={Object {}}
-          unselect={false}
-          visible={true}
-        >
-          <ListItem
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
-            className=""
-            color="inherit"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            hiddenLeftButton={false}
-            hiddenRightButton={false}
-            href={
-              Object {
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
-            id=""
-            layout={5}
-            leftButton={null}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onMouseOut={[Function]}
-            onSelect={[Function]}
-            onUpdate={[Function]}
-            rightButton={null}
-            selected={false}
-            sizing="normal"
-            stacked={false}
-            style={Object {}}
-            title="ascending"
-            useedit={false}
-            visible={true}
-            widget={null}
-          />
-          <ListItem
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
-            className=""
-            color="inherit"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            hiddenLeftButton={false}
-            hiddenRightButton={false}
-            href={
-              Object {
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
-            id=""
-            layout={5}
-            leftButton={null}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onMouseOut={[Function]}
-            onSelect={[Function]}
-            onUpdate={[Function]}
-            rightButton={null}
-            selected={false}
-            sizing="normal"
-            stacked={false}
-            style={Object {}}
-            title="descending"
-            useedit={false}
-            visible={true}
-            widget={null}
-          />
-        </List>
-      </ButtonDialog>
-    }
+    leftButton={null}
     location="none"
     nocollapse={false}
     noedit={true}
@@ -11032,6 +10053,7 @@ exports[`Test making a Dynamic List invisible 1`] = `
             noripple={false}
             onChangePageSize={[Function]}
             onSelect={[Function]}
+            onSort={[Function]}
             pageSizes={
               Array [
                 10,
@@ -11107,6 +10129,7 @@ Object {
   "onFocus": [Function],
   "onNew": [Function],
   "onSelect": [Function],
+  "onSort": [Function],
   "onUpdate": [Function],
   "pageSizes": Array [
     25,

@@ -46,6 +46,10 @@
  * is change in the dialog box this event is invoked with the new size.
  * - `onSelect(page: number)` - When the control changes to a new page, this
  * event is invoked.  It will give the new page selection as a parameter.
+ * - `onSort(sortOrder: SortOrder)` - When this callback is given, then the
+ * dialog button will present an *ascending* and *descending* option.  When one
+ * of these are selected, then it will invoke this callback with the selected
+ * type.
  *
  * #### Styles
  * - `ui-pager` - The top level style for the control on the `<div>` container.
@@ -74,7 +78,14 @@ import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
 import {ButtonText} from '../buttonText';
 import {List, ListDivider, ListItem} from '../list';
-import {BaseComponent, BaseProps, getDefaultBaseProps, Location, Sizing} from '../shared';
+import {
+	BaseComponent,
+	BaseProps,
+	getDefaultBaseProps,
+	Location,
+	Sizing,
+	SortOrder
+} from '../shared';
 import {TextField} from '../textField';
 
 export const defaultPageSize: number = 25;
@@ -85,6 +96,7 @@ export interface PagerProps extends BaseProps {
 	initialPageSize?: number;
 	onChangePageSize?: any;
 	onSelect?: any;
+	onSort?: any;
 	pagesToDisplay?: number;
 	pageSizes?: number[];
 	totalItems?: number;
@@ -98,6 +110,7 @@ export function getDefaultPagerProps(): PagerProps {
 			initialPageSize: defaultPageSize,
 			onChangePageSize: nilEvent,
 			onSelect: nilEvent,
+			onSort: null,
 			pagesToDisplay: 3,
 			pageSizes: cloneDeep(defaultPageSizes),
 			sizing: Sizing.normal,
@@ -144,6 +157,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			'handleDialogSelect',
 			'handleKeyPress',
 			'handleSelect',
+			'handleSortAscending',
+			'handleSortDescending',
 			'moveToEnd',
 			'moveToFront',
 			'moveToNext',
@@ -357,6 +372,31 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 */
 	private createDialog() {
 		const items: any = [];
+		const sortOptions = [];
+
+		if (this.props.onSort && typeof this.props.onSort === 'function' && this.props.onSort !== nilEvent) {
+			sortOptions.push(
+				<ListItem
+					{...this.props}
+					key={getUUID()}
+					noedit
+					onSelect={this.handleSortAscending}
+					title="Ascending"
+				/>
+			);
+
+			sortOptions.push(
+				<ListItem
+					{...this.props}
+					key={getUUID()}
+					noedit
+					onSelect={this.handleSortDescending}
+					title="Descending"
+				/>
+			);
+
+			sortOptions.push(<ListDivider key={getUUID()} />);
+		}
 
 		for (const val of sortBy(this.pageSizes)) {
 			items.push(
@@ -382,6 +422,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		this._dialog = (
 			<List>
+				{sortOptions}
 				<ListItem {...this.props} title="First" noedit onSelect={this.moveToFront}/>
 				<ListItem {...this.props} title="Last" noedit onSelect={this.moveToEnd}/>
 				<ListItem {...this.props} title="Next" noedit onSelect={this.moveToNext}/>
@@ -446,6 +487,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		if (this.currentPage !== newPage) {
 			this.currentPage = newPage;
 		}
+	}
+
+	private handleSortAscending() {
+		this.props.onSort(SortOrder.ascending);
+	}
+
+	private handleSortDescending() {
+		this.props.onSort(SortOrder.descending);
 	}
 
 	private moveToEnd() {

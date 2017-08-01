@@ -18,7 +18,7 @@ This module uses [yarn](https://yarnpkg.com/en/) to manage dependencies and run 
 
 To install as an application dependency:
 ```
-$ yarn install --save gadgets
+$ yarn add gadgets
 ```
 
 To build the app and run all tests:
