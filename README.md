@@ -114,8 +114,8 @@ TODO: create the Breadcrums control
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.
 
-### ButtonBar
-TODO: create the ButtonBar control
+### [ButtonBar](docs/lib/buttonBar/ButtonBar.md)
+A container used to group buttons in a horizontal arrangement.
 
 ### [ButtonCircle](docs/lib/buttonCircle/ButtonCircle.md)
 A circular button control.  Works like a typical button... except it's a circle.
