@@ -5,7 +5,7 @@ exports[`Test creation of a ButtonBar with center justify 1`] = `
   className="ui-button-bar buttonBar"
 >
   <div
-    className="buttonBarGroup center"
+    className="ui-button-bar-group buttonBarGroup center"
   />
 </div>
 `;
@@ -15,7 +15,7 @@ exports[`Test creation of a ButtonBar with left justify 1`] = `
   className="ui-button-bar buttonBar"
 >
   <div
-    className="buttonBarGroup left"
+    className="ui-button-bar-group buttonBarGroup left"
   />
 </div>
 `;
@@ -25,7 +25,7 @@ exports[`Test creation of a ButtonBar with right justify 1`] = `
   className="ui-button-bar buttonBar"
 >
   <div
-    className="buttonBarGroup right"
+    className="ui-button-bar-group buttonBarGroup right"
   />
 </div>
 `;
@@ -57,7 +57,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
     className="ui-button-bar buttonBar test-class"
   >
     <div
-      className="buttonBarGroup left"
+      className="ui-button-bar-group buttonBarGroup left"
     >
       <div
         className="buttonBarBox"
@@ -235,7 +235,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
     className="ui-button-bar buttonBar disabled nohover"
   >
     <div
-      className="buttonBarGroup left"
+      className="ui-button-bar-group buttonBarGroup left"
     >
       <div
         className="buttonBarBox"
@@ -413,7 +413,7 @@ exports[`Test making the ButtonBar invisible 1`] = `
     className="ui-button-bar buttonBar invisible"
   >
     <div
-      className="buttonBarGroup left"
+      className="ui-button-bar-group buttonBarGroup left"
     />
   </div>
 </ButtonBar>
