@@ -1,13 +1,422 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test creation of a simple ButtonBar instance 1`] = `
+exports[`Test creation of a ButtonBar with center justify 1`] = `
 <div
-  className="ui-button-bar buttonBar test-class"
+  className="ui-button-bar buttonBar"
+>
+  <div
+    className="buttonBarGroup center"
+  />
+</div>
+`;
+
+exports[`Test creation of a ButtonBar with left justify 1`] = `
+<div
+  className="ui-button-bar buttonBar"
 >
   <div
     className="buttonBarGroup left"
   />
 </div>
+`;
+
+exports[`Test creation of a ButtonBar with right justify 1`] = `
+<div
+  className="ui-button-bar buttonBar"
+>
+  <div
+    className="buttonBarGroup right"
+  />
+</div>
+`;
+
+exports[`Test creation of a simple ButtonBar instance 1`] = `
+<ButtonBar
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  buttonSize="32px"
+  className="test-class"
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  id=""
+  justify={0}
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={true}
+>
+  <div
+    className="ui-button-bar buttonBar test-class"
+  >
+    <div
+      className="buttonBarGroup left"
+    >
+      <div
+        className="buttonBarBox"
+        style={
+          Object {
+            "height": "32px",
+            "width": "32px",
+          }
+        }
+      >
+        <Button
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          iconName="bomb"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <div
+            className="ui-button button ripple"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <Icon
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className=" icon"
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              iconName="bomb"
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              visible={true}
+            >
+              <i
+                className="ui-icon icon none fa fa-bomb normal  icon"
+                style={
+                  Object {
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                  }
+                }
+              />
+            </Icon>
+          </div>
+        </Button>
+      </div>
+      <div
+        className="buttonBarBox"
+        style={
+          Object {
+            "height": "32px",
+            "width": "32px",
+          }
+        }
+      >
+        <Button
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          iconName="bomb"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <div
+            className="ui-button button ripple"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <Icon
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className=" icon"
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              iconName="bomb"
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              visible={true}
+            >
+              <i
+                className="ui-icon icon none fa fa-bomb normal  icon"
+                style={
+                  Object {
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                  }
+                }
+              />
+            </Icon>
+          </div>
+        </Button>
+      </div>
+    </div>
+  </div>
+</ButtonBar>
+`;
+
+exports[`Test disabling of the ButtonBar control 1`] = `
+<ButtonBar
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  buttonSize="24px"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  focus={false}
+  id=""
+  justify={0}
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={true}
+>
+  <div
+    className="ui-button-bar buttonBar disabled nohover"
+  >
+    <div
+      className="buttonBarGroup left"
+    >
+      <div
+        className="buttonBarBox"
+        style={
+          Object {
+            "height": "24px",
+            "width": "24px",
+          }
+        }
+      >
+        <Button
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          iconName="bomb"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <div
+            className="ui-button button disabled nohover"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <Icon
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className=" icon"
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              iconName="bomb"
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              visible={true}
+            >
+              <i
+                className="ui-icon icon none fa fa-bomb normal  icon"
+                style={
+                  Object {
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                  }
+                }
+              />
+            </Icon>
+          </div>
+        </Button>
+      </div>
+      <div
+        className="buttonBarBox"
+        style={
+          Object {
+            "height": "24px",
+            "width": "24px",
+          }
+        }
+      >
+        <Button
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          iconName="bomb"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <div
+            className="ui-button button disabled nohover"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <Icon
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className=" icon"
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              iconName="bomb"
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              visible={true}
+            >
+              <i
+                className="ui-icon icon none fa fa-bomb normal  icon"
+                style={
+                  Object {
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                  }
+                }
+              />
+            </Icon>
+          </div>
+        </Button>
+      </div>
+    </div>
+  </div>
+</ButtonBar>
+`;
+
+exports[`Test making the ButtonBar invisible 1`] = `
+<ButtonBar
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  buttonSize="24px"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  id=""
+  justify={0}
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  visible={false}
+>
+  <div
+    className="ui-button-bar buttonBar invisible"
+  >
+    <div
+      className="buttonBarGroup left"
+    />
+  </div>
+</ButtonBar>
 `;
 
 exports[`Test retrieval of ButtonBar props object 1`] = `

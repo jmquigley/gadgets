@@ -16,6 +16,7 @@ import {List, ListDivider, ListHeader, ListItem} from './lib/list';
 import {Pager} from './lib/pager';
 import {Select} from './lib/select';
 import {
+	BaseComponent,
 	BaseProps,
 	Color,
 	Direction,
@@ -37,6 +38,7 @@ export {
 	Accordion,
 	AccordionItem,
 	Badge,
+	BaseComponent,
 	BaseProps,
 	Button,
 	ButtonBar,
