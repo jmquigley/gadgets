@@ -73,8 +73,8 @@ export interface Styling {
 }
 
 export class Sizes {
-	public static readonly styles = require('./sizing.css');
 
+	public static readonly styles = require('./sizing.css');
 	private _sizes: any = {};
 
 	public static instance(baseFontSize: number): Sizes {

@@ -75,7 +75,7 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	private _locationStyle: string = '';
 	private _styles: any = {};          // css modules styles per module
 	private _sizes: Sizes = null;
-	private _sizing: Sizing = Sizing.normal;
+	private _sizing: Sizing = null;
 
 	constructor(props: P, pstyles: any = {}, defaultFontSize: number = defaultSize) {
 		super(props);
@@ -85,6 +85,8 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
 		if ('sizing' in props) {
 			this._sizing = props['sizing'];
+		} else {
+			this._sizing = Sizing.normal;
 		}
 
 		if ('location' in props) {

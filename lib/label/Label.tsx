@@ -48,8 +48,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
-import {BaseComponent} from '../shared/base';
-import {BaseProps, getDefaultBaseProps} from '../shared/props';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 export interface LabelProps extends BaseProps {
 	noedit?: boolean;
@@ -65,21 +64,18 @@ export interface LabelProps extends BaseProps {
 }
 
 export function getDefaultLabelProps(): LabelProps {
-	const baseProps = getDefaultBaseProps();
-
-	return cloneDeep(Object.assign(
-		baseProps, {
-			noedit: false,
-			onBlur: nilEvent,
-			onChange: nilEvent,
-			onClick: nilEvent,
-			onDoubleClick: nilEvent,
-			onKeyDown: nilEvent,
-			onKeyPress: nilEvent,
-			onUpdate: nilEvent,
-			text: ' ',
-			useedit: false
-		}));
+	return cloneDeep(Object.assign(getDefaultBaseProps(), {
+		noedit: false,
+		onBlur: nilEvent,
+		onChange: nilEvent,
+		onClick: nilEvent,
+		onDoubleClick: nilEvent,
+		onKeyDown: nilEvent,
+		onKeyPress: nilEvent,
+		onUpdate: nilEvent,
+		text: ' ',
+		useedit: false
+	}));
 }
 
 export interface LabelState {
