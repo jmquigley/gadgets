@@ -145,7 +145,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			this._triangleClasses.push(this.styles.buttonDialogHide);
 		}
 
-		this._dialogClasses.push(this.styling.fontStyle);
+		this._dialogClasses.push(this.fontStyle());
 
 		this.buildStyles(nextProps);
 		return true;

@@ -233,7 +233,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 		this.classes.push('ui-dialogbox');
 		this.classes.push(this.styles.dialogBox);
-		this.classes.push(this.styling.fontStyle);
+		this.classes.push(this.fontStyle());
 
 		super.buildStyles(nextProps);
 		return true;

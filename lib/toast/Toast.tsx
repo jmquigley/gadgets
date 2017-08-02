@@ -195,7 +195,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 		this.classes.push('ui-toast');
 		this.classes.push(this.styles.toast);
-		this.classes.push(this.styling.fontStyle);
+		this.classes.push(this.fontStyle());
 
 		switch (nextProps.level) {
 			case ToastLevel.info:
@@ -224,7 +224,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		this._contentClasses = [];
 		this._contentClasses.push('ui-toast-content');
 		this._contentClasses.push(this.styles.content);
-		this._contentClasses.push(this.styling.fontStyle);
+		this._contentClasses.push(this.fontStyle());
 
 		this.buildStyles(nextProps);
 		return true;

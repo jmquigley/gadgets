@@ -13,8 +13,7 @@
  * - `styles` - an object that represent the styles in the CSS module associated
  * to this control.
  * - `sizes` - Sizing class that has computed sizes from the base (normal) size
- * font styles for the application.  A property getter named `.styling`
- * retrieves the current font styles set for this component.
+ * font styles for the application.
  *
  * The values of these variables are computed automatically for any component
  * that inherits from BaseComponent (controlled by props).  This class inherits
@@ -34,7 +33,8 @@
  *
  * <XYZ sizing={Sizing.xxsmall} location={Location.topRight} />
  * ```
- * In the example above the `sizeStyle` and `locationStyle` would be computed
+ *
+ * In the example above the `sizing` and `location` would be computed
  * automatically for the given values.  These values are then available to the
  * child class to use in building the component using these styles.
  *
@@ -44,10 +44,11 @@
 'use strict';
 
 import * as React from 'react';
-import {Sizes} from './index';
-import {defaultSize} from './sizing';
+import {FontStyle, Sizes, Sizing, Styling} from './index';
 
 const styles = require('./styles.css');
+
+export const defaultSize: number = 16;
 
 //
 // When using buildStyles in the base class these options are used to
@@ -73,11 +74,18 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	private _inlineStyle: any = {};     // inline style overrides
 	private _locationStyle: string = '';
 	private _styles: any = {};          // css modules styles per module
-	private _sizes: Sizes = defaultSize;
+	private _sizes: Sizes = null;
+	private _sizing: Sizing = Sizing.normal;
 
-	constructor(props: P, pstyles: any = {}) {
+	constructor(props: P, pstyles: any = {}, defaultFontSize: number = defaultSize) {
 		super(props);
+
 		this._styles = pstyles;
+		this._sizes = Sizes.instance(defaultFontSize);
+
+		if ('sizing' in props) {
+			this._sizing = props['sizing'];
+		}
 
 		if ('location' in props) {
 			this._locationStyle = this.styles[props['location']];
@@ -108,12 +116,12 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		return this._sizes;
 	}
 
-	get styles(): any {
-		return this._styles;
+	get sizing(): Sizing {
+		return this._sizing;
 	}
 
-	get styling(): Sizes {
-		return this._sizes;
+	get styles(): any {
+		return this._styles;
 	}
 
 	/**
@@ -141,23 +149,46 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	}
 
 	/**
-	 * Every component has a general set of CSS styles that may be applied each time
-	 * the component is rendered (like a style to enable/disable).  This function
-	 * is used to generate those basic, shared styles in all components.  It uses a
-	 * set of common props (className, visible, disable, etc).  There are cases where
-	 * one wants to ignore the computation of a value.  The third optional parameter
-	 * allows one to ignore a specific value calculated in this set.
+	 * Retrieves border styles based on the given sizing value in the base
+	 * class.
+	 * @param sizing {Sizing} an optional parameter that allows for overriding
+	 * the default sizing when the class is created.
+	 * @returns a string that represents the local CSS module style
+	 */
+	protected borderStyle(sizing: Sizing = this.sizing) {
+		return this.sizes[sizing].borderStyle;
+	}
+
+	/**
+	 * Retrieves styles that define the width/height of a box base on the
+	 * given Sizing.
+	 * @param sizing {Sizing} an optional parameter that allows for overriding
+	 * the default sizing when the class is created.
+	 * @returns a string that represents the local CSS module style
+	 */
+	protected boxStyle(sizing: Sizing = this.sizing): string {
+		return this.sizes[sizing].boxStyle;
+	}
+
+	/**
+	 * Every component has a general set of CSS styles that may be applied each
+	 * time the component is rendered (like a style to enable/disable).  This
+	 * function is used to generate those basic, shared styles in all
+	 * components.  It uses a set of common props (className, visible, disable,
+	 * etc).  There are cases where one wants to ignore the computation of a
+	 * value.  The third optional parameter allows one to ignore a specific
+	 * value calculated in this set.
 	 * @param props {P} the props for the given child class (generic type)
-	 * @param style {Object} a set of key value pairs that override any styles in
-	 * the props.
+	 * @param style {Object} a set of key value pairs that override any styles
+	 * in the props.
 	 * @param opts {BaseOption} determines which automatic names will be ignored
 	 */
 	protected buildStyles(props: P, style: any = {}, opts?: BaseOptions): void {
 
-		// Takes the initial iniline style object, the style object from props and
-		// an input user override and merges them together from left to right, Where
-		// the rightmost item in the function call has a higher priority when the
-		// objects have the same "key"
+		// Takes the initial iniline style object, the style object from props
+		// and an input user override and merges them together from left to
+		// right, Where the rightmost item in the function call has a higher
+		// priority when the objects have the same "key"
 		this._inlineStyle = Object.assign(this._inlineStyle, props['style'], style);
 
 		opts = Object.assign(
@@ -185,14 +216,94 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		}
 	}
 
+	protected font(sizing: Sizing = this.sizing): FontStyle {
+		return this.sizes[sizing].font;
+	}
+
+	protected fontSize(sizing: Sizing = this.sizing): number {
+		return this.sizes[sizing].font.size;
+	}
+
+	protected fontStyle(sizing: Sizing = this.sizing): string {
+		return this.sizes[sizing].font.style;
+	}
+
 	/**
-	 * Sets the classes list back to empty.  Each class "buildStyles" will call this
-	 * to ensure that it is empty before building the list of classes for that
-	 * component.  Without this call the className list will just append duplicates.
-	 *
+	 * Takes the given base Sizing and determines what the next size
+	 * in the list would be.  e.g. if current size is *normal*, then
+	 * the next size would be *large*.
+	 * @param sizing {Sizing} an optional parameter that allows for overriding
+	 * the default sizing when the class is created.
+	 * @returns a reference to a `Styling` object.  This contains
+	 * font type/size, box, and border information.
+	 */
+	protected next(sizing: Sizing = this.sizing): Styling {
+		switch (sizing) {
+			case Sizing.xxsmall: return this._sizes[Sizing.xsmall];
+			case Sizing.xsmall: return this._sizes[Sizing.small];
+			case Sizing.small: return this._sizes[Sizing.normal];
+			case Sizing.large: return this._sizes[Sizing.xlarge];
+			case Sizing.xlarge: return this._sizes[Sizing.xxlarge];
+			case Sizing.xxlarge: return this._sizes[Sizing.xxlarge];
+
+			case Sizing.normal:
+			case Sizing.medium:
+				return this._sizes[Sizing.large];
+
+			default:
+				return this._sizes[Sizing.normal];
+		}
+	}
+
+	/**
+	 * Takes the given base Sizing and determines what the previous size
+	 * in the list would be.  e.g. if current size is *normal*, then
+	 * the previous size would be *small*.
+	 * @param sizing {Sizing} an optional parameter that allows for overriding
+	 * the default sizing when the class is created.
+	 * @returns a reference to a `Styling` object.  This contains font type/size,
+	 * box, and border information.
+	 */
+	protected prev(sizing: Sizing = this.sizing): Styling {
+		switch (sizing) {
+		case Sizing.xxsmall: return this._sizes[Sizing.xxsmall];
+		case Sizing.xsmall: return this._sizes[Sizing.xxsmall];
+		case Sizing.small: return this._sizes[Sizing.xsmall];
+		case Sizing.large: return this._sizes[Sizing.normal];
+		case Sizing.xlarge: return this._sizes[Sizing.large];
+		case Sizing.xxlarge: return this._sizes[Sizing.xlarge];
+
+		case Sizing.normal:
+		case Sizing.medium:
+			return this._sizes[Sizing.small];
+
+		default:
+			return this._sizes[Sizing.normal];
+		}
+	}
+
+	protected styling(sizing: Sizing = this.sizing): Styling {
+		return this.sizes[sizing];
+	}
+
+	/**
+	 * Returns the Sizing enum value associated with the given sizing.
+	 * @param sizing {Sizing} an optional parameter that allows for overriding
+	 * the default sizing when the class is created.
+	 * @returns a refernce to a Sizing enum value.
+	 */
+	protected type(sizing: Sizing = this.sizing): Sizing {
+		return this.sizes[sizing].type;
+	}
+
+	/**
+	 * Sets the classes list back to empty.  Each class "buildStyles" will call
+	 * this to ensure that it is empty before building the list of classes for
+	 * that component.  Without this call the className list will just append
+	 * duplicates.
 	 */
 	protected resetStyles(props: P) {
-		this._sizes.currentSizing = props['sizing'];
+		this._sizing = props['sizing'];
 		this._classes = [];
 	}
 }

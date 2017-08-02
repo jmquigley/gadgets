@@ -203,7 +203,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 		this.classes.push('ui-label');
 		this.classes.push(this.styles.label);
-		this.classes.push(this.styling.fontStyle);
+		this.classes.push(this.fontStyle());
 
 		this.buildStyles(nextProps, {
 			color: nextProps.color,

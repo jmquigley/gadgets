@@ -62,7 +62,7 @@ export class Select extends BaseComponent<any, any> {
 	public shouldComponentUpdate(nextProps: any): boolean {
 		this.resetStyles(nextProps);
 		this.classes.push('ui-select');
-		this.classes.push(this.styling.fontStyle);
+		this.classes.push(this.fontStyle());
 		this.buildStyles(nextProps);
 		return true;
 	}

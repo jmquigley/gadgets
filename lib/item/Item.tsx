@@ -66,7 +66,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 	}
 
 	private computeButtonWidth() {
-		const fontEM: number = Number(this.styling.font.sizeem.replace('em', ''));
+		const fontEM: number = Number(this.font().sizeem.replace('em', ''));
 		const size = fontEM + (fontEM * this._buttonScale * 2);
 		return `${size}em`;
 	}
@@ -117,7 +117,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 				<div
 					className={
 						this.styles.itemButton + ' ' +
-						this.styling.fontStyle + ' ' +
+						this.fontStyle() + ' ' +
 						((this.props.hiddenLeftButton) ? this.styles.hiddenButton : null)
 					}
 					style={{width: this.computeButtonWidth()}}
@@ -137,7 +137,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 				<div
 					className={
 						this.styles.itemButton + ' ' +
-						this.styling.fontStyle + ' ' +
+						this.fontStyle() + ' ' +
 						((this.props.hiddenRightButton) ? this.styles.hiddenButton : null)
 					}
 					style={{width: this.computeButtonWidth()}}

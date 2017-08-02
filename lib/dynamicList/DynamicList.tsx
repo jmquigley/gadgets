@@ -164,7 +164,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private _pager: any = null;
 	private _pagerID: string = getUUID();
 	private _previousPage: number = 1;
-	private _previousSize: Sizing = this.styling.prev.type;
+	private _previousSize: Sizing = this.prev().type;
 	private _qDelete: string = '';
 	private _selection: string = '';
 	private _startSearch: boolean = true;

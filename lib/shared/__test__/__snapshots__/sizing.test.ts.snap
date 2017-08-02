@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing creation of the Sizing object with default 1`] = `
+Object {
+  "large": Object {
+    "borderStyle": "largeBorder",
+    "boxStyle": "largeBox",
+    "font": Object {
+      "size": 24,
+      "sizeem": "1.5em",
+      "sizepx": "24px",
+      "style": "large",
+    },
+    "type": "large",
+  },
+  "medium": Object {
+    "borderStyle": "mediumBorder",
+    "boxStyle": "mediumBox",
+    "font": Object {
+      "size": 16,
+      "sizeem": "1em",
+      "sizepx": "16px",
+      "style": "medium",
+    },
+    "type": "medium",
+  },
+  "normal": Object {
+    "borderStyle": "normalBorder",
+    "boxStyle": "normalBox",
+    "font": Object {
+      "size": 16,
+      "sizeem": "1em",
+      "sizepx": "16px",
+      "style": "normal",
+    },
+    "type": "normal",
+  },
+  "small": Object {
+    "borderStyle": "smallBorder",
+    "boxStyle": "smallBox",
+    "font": Object {
+      "size": 12,
+      "sizeem": "0.75em",
+      "sizepx": "12px",
+      "style": "small",
+    },
+    "type": "small",
+  },
+  "xlarge": Object {
+    "borderStyle": "xlargeBorder",
+    "boxStyle": "xlargeBox",
+    "font": Object {
+      "size": 32,
+      "sizeem": "2em",
+      "sizepx": "32px",
+      "style": "xlarge",
+    },
+    "type": "xlarge",
+  },
+  "xsmall": Object {
+    "borderStyle": "xsmallBorder",
+    "boxStyle": "xsmallBox",
+    "font": Object {
+      "size": 8,
+      "sizeem": "0.5em",
+      "sizepx": "8px",
+      "style": "xsmall",
+    },
+    "type": "xsmall",
+  },
+  "xxlarge": Object {
+    "borderStyle": "xxlargeBorder",
+    "boxStyle": "xxlargeBox",
+    "font": Object {
+      "size": 48,
+      "sizeem": "3em",
+      "sizepx": "48px",
+      "style": "xxlarge",
+    },
+    "type": "xxlarge",
+  },
+  "xxsmall": Object {
+    "borderStyle": "xxsmallBorder",
+    "boxStyle": "xxsmallBox",
+    "font": Object {
+      "size": 6,
+      "sizeem": "0.375em",
+      "sizepx": "6px",
+      "style": "xxsmall",
+    },
+    "type": "xxsmall",
+  },
+}
+`;
+
+exports[`Testing creation of the Sizing object with size 24 1`] = `
+Object {
+  "large": Object {
+    "borderStyle": "largeBorder",
+    "boxStyle": "largeBox",
+    "font": Object {
+      "size": 32,
+      "sizeem": "1.3333333333333333em",
+      "sizepx": "32px",
+      "style": "large",
+    },
+    "type": "large",
+  },
+  "medium": Object {
+    "borderStyle": "mediumBorder",
+    "boxStyle": "mediumBox",
+    "font": Object {
+      "size": 24,
+      "sizeem": "1em",
+      "sizepx": "24px",
+      "style": "medium",
+    },
+    "type": "medium",
+  },
+  "normal": Object {
+    "borderStyle": "normalBorder",
+    "boxStyle": "normalBox",
+    "font": Object {
+      "size": 24,
+      "sizeem": "1em",
+      "sizepx": "24px",
+      "style": "normal",
+    },
+    "type": "normal",
+  },
+  "small": Object {
+    "borderStyle": "smallBorder",
+    "boxStyle": "smallBox",
+    "font": Object {
+      "size": 20,
+      "sizeem": "0.8333333333333334em",
+      "sizepx": "20px",
+      "style": "small",
+    },
+    "type": "small",
+  },
+  "xlarge": Object {
+    "borderStyle": "xlargeBorder",
+    "boxStyle": "xlargeBox",
+    "font": Object {
+      "size": 40,
+      "sizeem": "1.6666666666666667em",
+      "sizepx": "40px",
+      "style": "xlarge",
+    },
+    "type": "xlarge",
+  },
+  "xsmall": Object {
+    "borderStyle": "xsmallBorder",
+    "boxStyle": "xsmallBox",
+    "font": Object {
+      "size": 16,
+      "sizeem": "0.6666666666666666em",
+      "sizepx": "16px",
+      "style": "xsmall",
+    },
+    "type": "xsmall",
+  },
+  "xxlarge": Object {
+    "borderStyle": "xxlargeBorder",
+    "boxStyle": "xxlargeBox",
+    "font": Object {
+      "size": 56,
+      "sizeem": "2.3333333333333335em",
+      "sizepx": "56px",
+      "style": "xxlarge",
+    },
+    "type": "xxlarge",
+  },
+  "xxsmall": Object {
+    "borderStyle": "xxsmallBorder",
+    "boxStyle": "xxsmallBox",
+    "font": Object {
+      "size": 14,
+      "sizeem": "0.5833333333333334em",
+      "sizepx": "14px",
+      "style": "xxsmall",
+    },
+    "type": "xxsmall",
+  },
+}
+`;

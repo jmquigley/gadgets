@@ -108,7 +108,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 		}
 
 		this._titleClasses = [];
-		this._widgetClasses = [this.styling.fontStyle];
+		this._widgetClasses = [this.fontStyle()];
 
 		this._titleClasses.push('ui-title');
 		this._widgetClasses.push('ui-title-widget');

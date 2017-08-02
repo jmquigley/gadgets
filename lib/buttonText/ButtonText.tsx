@@ -83,7 +83,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			<div
 				className={
 					this.styles.content + ' ' +
-						this.styling.fontStyle + ' ' +
+						this.fontStyle() + ' ' +
 						justifyStyle
 				}
 			>

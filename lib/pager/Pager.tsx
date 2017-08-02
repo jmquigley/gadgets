@@ -158,7 +158,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		};
 
 		this._buttonStyle.push(this.styles.pagerButton);
-		this._buttonStyle.push(this.styling.boxStyle);
+		this._buttonStyle.push(this.boxStyle());
 
 		this.bindCallbacks(
 			'handleBlur',

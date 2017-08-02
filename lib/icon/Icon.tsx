@@ -84,9 +84,9 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		if (nextProps.imageFile === '') {
 			this.classes.push('fa');
 			this.classes.push(`fa-${nextProps.iconName}`);
-			this.classes.push(this.styling.fontStyle);
+			this.classes.push(this.fontStyle());
 		} else {
-			this.classes.push(this.styling.boxStyle);
+			this.classes.push(this.boxStyle());
 		}
 
 		this.inlineStyle = {

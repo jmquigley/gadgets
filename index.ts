@@ -20,10 +20,12 @@ import {
 	BaseProps,
 	Color,
 	Direction,
+	FontStyle,
 	Justify,
 	Location,
 	Sizing,
-	SortOrder
+	SortOrder,
+	Styling
 } from './lib/shared';
 import {
 	TextField,
@@ -54,6 +56,7 @@ export {
 	Direction,
 	DynamicList,
 	DynamicListItem,
+	FontStyle,
 	Icon,
 	Item,
 	Justify,
@@ -67,6 +70,7 @@ export {
 	Select,
 	Sizing,
 	SortOrder,
+	Styling,
 	TextField,
 	Title,
 	TitleLayout,

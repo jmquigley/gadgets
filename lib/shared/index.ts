@@ -1,4 +1,7 @@
-import {BaseComponent} from './base';
+import {
+	BaseComponent,
+	defaultSize
+} from './base';
 import {
 	BaseProps,
 	Color,
@@ -20,6 +23,7 @@ export {
 	BaseComponent,
 	BaseProps,
 	Color,
+	defaultSize,
 	Direction,
 	FontStyle,
 	getDefaultBaseProps,
