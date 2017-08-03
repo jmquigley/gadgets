@@ -528,7 +528,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 					<TextField
 						onChange={this.handleSearch}
 						placeholder="search"
-						type="search"
+						style={{display: 'flex'}}
+						type="text"
 						value={nextState.search}
 					/>
 				}

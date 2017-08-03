@@ -282,11 +282,12 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	public componentWillUpdate(nextProps: any) {
 		this.resetStyles(nextProps);
+
 		this.classes.push('ui-textfield');
 		this.classes.push(this.styles.textField);
+		this.classes.push(this.fontStyle());
 
 		this._inputStyles = [];
-		this._inputStyles.push(this.fontStyle());
 		this._inputStyles.push(this.styles.textFieldInput);
 
 		this._messageStyles = [];
@@ -314,7 +315,10 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		} = this.props;
 
 		return (
-			<div className={this.classes.join(' ')}>
+			<div
+				className={this.classes.join(' ')}
+				style={this.props.style}
+			>
 				<input
 					{...props}
 					className={this._inputStyles.join(' ')}

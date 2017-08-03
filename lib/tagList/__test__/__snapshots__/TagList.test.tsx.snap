@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a simple TagList instance 1`] = `
+<div
+  className="ui-taglist tagList"
+>
+  <Icon
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    iconName="tags"
+    id=""
+    imageFile=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  />
+  <TextField
+    className="tagListInput"
+    disabled={false}
+    id=""
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onValidation={[Function]}
+    placeholder="new"
+    sizing="normal"
+    type="text"
+    usevalidation={false}
+    validators={Array []}
+    visible={true}
+  />
+</div>
+`;
+
+exports[`Test retrieval of TagList props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "focus": false,
+  "id": "",
+  "location": "none",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "tags": Array [],
+  "visible": true,
+}
+`;

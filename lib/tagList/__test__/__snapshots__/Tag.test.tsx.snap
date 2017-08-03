@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a simple Tag instance 1`] = `
+<div
+  className="ui-tag tag tagNoHover"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <Label
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    id=""
+    location="none"
+    noedit={true}
+    nohover={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onUpdate={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    text="test tag"
+    useedit={false}
+    visible={true}
+  />
+  <ButtonCircle
+    backgroundColor="white"
+    borderColor="#d9534f"
+    borderWidth="none"
+    className="tagDeleteButton middle"
+    color="#d9534f"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    iconName="times"
+    iconStyle=""
+    id=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="small"
+    style={Object {}}
+    visible={false}
+  />
+</div>
+`;
+
+exports[`Test retrieval of Tag props object 1`] = `
+Object {
+  "backgroundColor": "inherit",
+  "borderColor": "inherit",
+  "borderWidth": "none",
+  "className": "",
+  "color": "inherit",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "focus": false,
+  "id": "",
+  "location": "none",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "onClick": [Function],
+  "onMouseOut": [Function],
+  "onMouseOver": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "visible": true,
+}
+`;

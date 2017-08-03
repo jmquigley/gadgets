@@ -251,12 +251,12 @@ section {
 	color: #ffe11a;
 }
 
-.ui-button-text:not(.nohover):hover,
-.ui-button-dialog:not(.nohover):hover,
-.ui-button:not(.nohover):hover
-{
-	background-color: silver;
-}
+/* .ui-button-text:not(.nohover):hover,
+   .ui-button-dialog:not(.nohover):hover,
+   .ui-button:not(.nohover):hover
+   {
+   background-color: silver;
+   } */
 
 .ui-dialog-popup {
 	color: black;
@@ -290,10 +290,6 @@ section {
 .ui-pager-selected {
 	color: #ffe11a;
 	background-color: #004358;
-}
-
-.ui-textfield > input {
-	border: solid 1px #004358;
 }
 
 .ui-button-bar {

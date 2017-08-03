@@ -1,0 +1,49 @@
+@import '../shared/styles.css';
+
+:local {
+
+	.tagList {
+		display: inline;
+	}
+
+	.tagList > i {
+		margin-right: 5px;
+	}
+
+	.tag {
+		border: solid 1px silver;
+		border-radius: 3px;
+		cursor: default;
+		box-sizing: border-box;
+		display: inline;
+		margin: 0 1px;
+		padding: 0 3px;
+		position: relative;
+	}
+
+	.tagHover > span {
+		transition: opacity 0.25s ease-in-out;
+		opacity: 0.25;
+	}
+
+	.tagNoHover > span {
+		transition: opacity 0.25s ease-in-out;
+		opacity: 1.0;
+	}
+
+	.tagDeleteButton {
+		display: inline-block;
+		position: absolute;
+	}
+
+	.tagListInput {
+		margin-left: 5px;
+		width: 2.5em;
+	}
+
+	.tagListInput > input::-webkit-input-placeholder {
+		color: silver;
+		opacity: 0.25;
+	}
+
+}

@@ -2,7 +2,7 @@
 
 exports[`Test ButtonCircle click event 1`] = `
 <ButtonCircle
-  backgroundColor="inherit"
+  backgroundColor="white"
   borderColor="black"
   borderWidth="none"
   className=""
@@ -31,7 +31,7 @@ exports[`Test ButtonCircle click event 1`] = `
       className="buttonCircleContainer"
     >
       <Button
-        backgroundColor="inherit"
+        backgroundColor="white"
         borderColor="black"
         borderWidth="none"
         className="normalBorder buttonCircleIcon"
@@ -58,6 +58,7 @@ exports[`Test ButtonCircle click event 1`] = `
           onClick={[Function]}
           style={
             Object {
+              "backgroundColor": "white",
               "borderColor": "black",
               "color": "black",
             }
@@ -110,7 +111,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
     className="buttonCircleContainer"
   >
     <Button
-      backgroundColor="inherit"
+      backgroundColor="white"
       borderColor="black"
       borderWidth="none"
       className="normalBorder buttonCircleIcon"
@@ -138,7 +139,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
 
 exports[`Test disabling of a ButtonCircle control 1`] = `
 <ButtonCircle
-  backgroundColor="inherit"
+  backgroundColor="white"
   borderColor="black"
   borderWidth="none"
   className=""
@@ -167,7 +168,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
       className="buttonCircleContainer"
     >
       <Button
-        backgroundColor="inherit"
+        backgroundColor="white"
         borderColor="black"
         borderWidth="none"
         className="normalBorder buttonCircleIcon"
@@ -194,6 +195,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
           onClick={[Function]}
           style={
             Object {
+              "backgroundColor": "white",
               "borderColor": "black",
               "color": "black",
             }
@@ -240,7 +242,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
 
 exports[`Test making a ButtonCircle control invisible 1`] = `
 <ButtonCircle
-  backgroundColor="inherit"
+  backgroundColor="white"
   borderColor="black"
   borderWidth="none"
   className=""
@@ -269,7 +271,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
       className="buttonCircleContainer"
     >
       <Button
-        backgroundColor="inherit"
+        backgroundColor="white"
         borderColor="black"
         borderWidth="none"
         className="normalBorder buttonCircleIcon"
@@ -296,6 +298,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
           onClick={[Function]}
           style={
             Object {
+              "backgroundColor": "white",
               "borderColor": "black",
               "color": "black",
             }
@@ -342,7 +345,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
 
 exports[`Test retrieval of ButtonCircle props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
+  "backgroundColor": "white",
   "borderColor": "black",
   "borderWidth": "none",
   "className": "",

@@ -7,6 +7,10 @@
 		flex: 1;
 	}
 
+	.button:not(.nohover):hover {
+		background-color: silver !important;
+	}
+
 	.icon {
 	}
 

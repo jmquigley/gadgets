@@ -42,6 +42,7 @@ export interface ButtonCircleProps extends ButtonProps {
 export function getDefaultButtonCircleProps(): ButtonProps {
 	return cloneDeep(Object.assign(
 		getDefaultButtonProps(), {
+			backgroundColor: 'white',
 			borderColor: 'black',
 			color: 'black',
 			iconName: 'bomb',

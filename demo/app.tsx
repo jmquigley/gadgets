@@ -40,6 +40,7 @@ const {
 	Select,
 	Sizing,
 	SortOrder,
+	TagList,
 	TextField,
 	Title,
 	TitleLayout,
@@ -64,12 +65,12 @@ function createItems() {
 	return listItems.map((item, idx) => {
 		return (
 			<ListItem
-			id={uuids[idx]}
-			key={uuids[idx]}
-			title={item}
-			widget={getUUID(true).substring(0,5)}
-			leftButton={<Button />}
-			rightButton={<Button iconName="paper-plane-o" />}
+				id={uuids[idx]}
+				key={uuids[idx]}
+				title={item}
+				widget={getUUID(true).substring(0,5)}
+				leftButton={<Button />}
+				rightButton={<Button iconName="paper-plane-o" />}
 			/>
 		);
 	});
@@ -904,6 +905,12 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	private buildTagList = () => (
+		<Container id="tagListExample">
+			<TagList tags={['one', 'two', 'three']} />
+		</Container>
+	);
+
 	private buildTextField = () => (
 		<Container id="textfieldExample">
 
@@ -1259,6 +1266,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Select</h1>
 				{this.buildSelect()}
+
+				<h1>TagList</h1>
+				{this.buildTagList()}
 
 				<h1>TextField</h1>
 				{this.buildTextField()}

@@ -1263,7 +1263,12 @@ exports[`Test creation of a DynamicList control 1`] = `
             onValidation={[Function]}
             placeholder="search"
             sizing="normal"
-            type="search"
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+            type="text"
             usevalidation={false}
             validators={Array []}
             value=""
@@ -4699,7 +4704,12 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                         onValidation={[Function]}
                         placeholder="search"
                         sizing="normal"
-                        type="search"
+                        style={
+                          Object {
+                            "display": "flex",
+                          }
+                        }
+                        type="text"
                         usevalidation={false}
                         validators={Array []}
                         value=""
@@ -4781,7 +4791,12 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                           onValidation={[Function]}
                           placeholder="search"
                           sizing="normal"
-                          type="search"
+                          style={
+                            Object {
+                              "display": "flex",
+                            }
+                          }
+                          type="text"
                           usevalidation={false}
                           validators={Array []}
                           value=""
@@ -4844,17 +4859,27 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                             onValidation={[Function]}
                             placeholder="search"
                             sizing="normal"
-                            type="search"
+                            style={
+                              Object {
+                                "display": "flex",
+                              }
+                            }
+                            type="text"
                             usevalidation={false}
                             validators={Array []}
                             value=""
                             visible={true}
                           >
                             <div
-                              className="ui-textfield textField"
+                              className="ui-textfield textField normal"
+                              style={
+                                Object {
+                                  "display": "flex",
+                                }
+                              }
                             >
                               <input
-                                className="normal textFieldInput"
+                                className="textFieldInput"
                                 disabled={false}
                                 id=""
                                 onBlur={[Function]}
@@ -4862,7 +4887,12 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 onKeyDown={[Function]}
                                 onKeyPress={[Function]}
                                 placeholder="search"
-                                type="search"
+                                style={
+                                  Object {
+                                    "display": "flex",
+                                  }
+                                }
+                                type="text"
                                 value=""
                               />
                             </div>
@@ -5395,10 +5425,10 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 visible={true}
                               >
                                 <div
-                                  className="ui-textfield textField pagerInput"
+                                  className="ui-textfield textField small pagerInput"
                                 >
                                   <input
-                                    className="small textFieldInput"
+                                    className="textFieldInput"
                                     disabled={false}
                                     id=""
                                     max="1"
@@ -9287,7 +9317,12 @@ exports[`Test disabling of a Dynamic List control 1`] = `
             onValidation={[Function]}
             placeholder="search"
             sizing="normal"
-            type="search"
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+            type="text"
             usevalidation={false}
             validators={Array []}
             value=""
@@ -10025,7 +10060,12 @@ exports[`Test making a Dynamic List invisible 1`] = `
             onValidation={[Function]}
             placeholder="search"
             sizing="normal"
-            type="search"
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+            type="text"
             usevalidation={false}
             validators={Array []}
             value=""

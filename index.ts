@@ -27,6 +27,7 @@ import {
 	SortOrder,
 	Styling
 } from './lib/shared';
+import {Tag, TagList} from './lib/tagList';
 import {
 	TextField,
 	Validator,
@@ -72,6 +73,8 @@ export {
 	SortOrder,
 	Styling,
 	TextField,
+	Tag,
+	TagList,
 	Title,
 	TitleLayout,
 	Toast,

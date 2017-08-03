@@ -1,3 +1,5 @@
+'use strict';
+
 import {ButtonBar, ButtonBarProps, getDefaultButtonBarProps} from './ButtonBar';
 
 export {

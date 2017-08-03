@@ -16,10 +16,10 @@ exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField"
+    className="ui-textfield textField normal"
   >
     <input
-      className="normal textFieldInput"
+      className="textFieldInput"
       disabled={false}
       id=""
       onBlur={[Function]}
@@ -48,10 +48,10 @@ exports[`Test creating TextField and saving on blur 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField"
+    className="ui-textfield textField normal"
   >
     <input
-      className="normal textFieldInput"
+      className="textFieldInput"
       disabled={false}
       id=""
       onBlur={[Function]}
@@ -66,10 +66,10 @@ exports[`Test creating TextField and saving on blur 1`] = `
 
 exports[`Test creation of a TextField control 1`] = `
 <div
-  className="ui-textfield textField test-class"
+  className="ui-textfield textField normal test-class"
 >
   <input
-    className="normal textFieldInput"
+    className="textFieldInput"
     disabled={false}
     id=""
     onBlur={[Function]}
@@ -97,10 +97,10 @@ exports[`Test creation of a TextField with email validation 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField"
+    className="ui-textfield textField normal"
   >
     <input
-      className="normal textFieldInput"
+      className="textFieldInput"
       disabled={false}
       id=""
       onBlur={[Function]}
@@ -134,10 +134,10 @@ exports[`Test creation of a TextField with url validation 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField"
+    className="ui-textfield textField normal"
   >
     <input
-      className="normal textFieldInput"
+      className="textFieldInput"
       disabled={false}
       id=""
       onBlur={[Function]}
@@ -174,10 +174,10 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField"
+    className="ui-textfield textField normal"
   >
     <input
-      className="normal textFieldInput"
+      className="textFieldInput"
       disabled={false}
       id=""
       maxLength="10"
@@ -214,10 +214,10 @@ exports[`Test disabling of a TextField control 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField disabled nohover"
+    className="ui-textfield textField normal disabled nohover"
   >
     <input
-      className="normal textFieldInput disabled"
+      className="textFieldInput disabled"
       disabled={true}
       id=""
       onBlur={[Function]}
@@ -246,10 +246,10 @@ exports[`Test making the TextField invisible 1`] = `
   visible={false}
 >
   <div
-    className="ui-textfield textField invisible"
+    className="ui-textfield textField normal invisible"
   >
     <input
-      className="normal textFieldInput"
+      className="textFieldInput"
       disabled={false}
       id=""
       onBlur={[Function]}
