@@ -59,7 +59,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 			'handleMouseOut'
 		);
 
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	get preventClick(): boolean {
@@ -121,12 +121,11 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.deactivateEdit();
 	}
 
-	public shouldComponentUpdate(nextProps: ListItemProps): boolean {
+	public componentWillUpdate(nextProps: ListItemProps) {
 		this.resetStyles(nextProps);
 		this.classes.push('ui-listitem');
 		this.classes.push(this.styles.listItem);
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

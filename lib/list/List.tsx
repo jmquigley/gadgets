@@ -44,7 +44,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 		};
 
 		this.bindCallbacks('selectHandler');
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	private selectHandler(item: ListItem) {
@@ -58,7 +58,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 		});
 	}
 
-	public shouldComponentUpdate(nextProps: ListProps): boolean {
+	public componentWillUpdate(nextProps: ListProps) {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-list');
@@ -69,7 +69,6 @@ export class List extends BaseComponent<ListProps, ListState> {
 		}
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

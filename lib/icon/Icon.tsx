@@ -71,10 +71,10 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 
 	constructor(props: IconProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: IconProps): boolean {
+	public componentWillUpdate(nextProps: IconProps) {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-icon');
@@ -95,8 +95,6 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		};
 
 		this.buildStyles(nextProps);
-
-		return true;
 	}
 
 	public render() {

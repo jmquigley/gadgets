@@ -70,10 +70,10 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 	constructor(props: ButtonBarProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: ButtonBarProps): boolean {
+	public componentWillUpdate(nextProps: ButtonBarProps) {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-button-bar');
@@ -98,7 +98,6 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 		}
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

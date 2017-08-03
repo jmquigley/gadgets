@@ -32,15 +32,14 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 
 	constructor(props: ListHeaderProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: ListHeaderProps): boolean {
+	public componentWillUpdate(nextProps: ListHeaderProps) {
 		this.resetStyles(nextProps);
 		this.classes.push('ui-list-header');
 		this.classes.push(this.styles.listHeader);
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

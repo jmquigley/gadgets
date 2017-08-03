@@ -48,15 +48,14 @@ export class ListDivider extends BaseComponent<ListDividerProps, undefined> {
 
 	constructor(props: ListDividerProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: ListDividerProps) {
+	public componentWillUpdate(nextProps: ListDividerProps) {
 		this.resetStyles(nextProps);
 		this.classes.push('ui-list-divider');
 		this.classes.push(this.styles.listDivider);
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

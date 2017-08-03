@@ -75,7 +75,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		super(props, require('./styles.css'));
 
 		this.bindCallbacks('handleClick');
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	private buildContent(justifyStyle: string) {
@@ -99,7 +99,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		e.stopPropagation();
 	}
 
-	public shouldComponentUpdate(nextProps: ButtonTextProps): boolean {
+	public componentWillUpdate(nextProps: ButtonTextProps) {
 		this.resetStyles(nextProps);
 
 		if (nextProps.color !== 'inherit') {
@@ -122,7 +122,6 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		}
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

@@ -23,15 +23,14 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 
 	constructor(props: ListFooterProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: ListFooterProps): boolean {
+	public componentWillUpdate(nextProps: ListFooterProps) {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-list-footer');
 		this.classes.push(this.styles.listFooter);
 		super.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

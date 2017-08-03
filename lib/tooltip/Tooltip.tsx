@@ -86,10 +86,10 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 
 	constructor(props: TooltipProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: TooltipProps): boolean {
+	public componentWillUpdate(nextProps: TooltipProps) {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-tooltip');
@@ -161,8 +161,6 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 			color: nextProps.backgroundColor,
 			backgroundColor: nextProps.backgroundColor
 		});
-
-		return true;
 	}
 
 	public render() {

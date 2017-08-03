@@ -200,7 +200,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			'handleRef'
 		);
 
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	get input(): any {
@@ -280,7 +280,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		return ret;
 	}
 
-	public shouldComponentUpdate(nextProps: any): boolean {
+	public componentWillUpdate(nextProps: any) {
 		this.resetStyles(nextProps);
 		this.classes.push('ui-textfield');
 		this.classes.push(this.styles.textField);
@@ -300,7 +300,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		}
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

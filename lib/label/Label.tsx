@@ -107,7 +107,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			'handleRef'
 		);
 
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	get label() {
@@ -194,7 +194,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
-	public shouldComponentUpdate(nextProps: LabelProps): boolean {
+	public componentWillUpdate(nextProps: LabelProps) {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-label');
@@ -205,8 +205,6 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			color: nextProps.color,
 			backgroundColor: nextProps.backgroundColor
 		});
-
-		return true;
 	}
 
 	public render() {

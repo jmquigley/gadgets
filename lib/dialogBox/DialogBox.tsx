@@ -189,7 +189,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 			)
 		};
 
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	get message(): string {
@@ -228,7 +228,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		}
 	}
 
-	public shouldComponentUpdate(nextProps: DialogBoxProps) {
+	public componentWillUpdate(nextProps: DialogBoxProps) {
 		super.resetStyles(nextProps);
 
 		this.classes.push('ui-dialogbox');
@@ -236,7 +236,6 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		this.classes.push(this.fontStyle());
 
 		super.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

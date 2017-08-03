@@ -90,10 +90,10 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 
 	constructor(props: TitleProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: TitleProps): boolean {
+	public componentWillUpdate(nextProps: TitleProps) {
 		this.resetStyles(nextProps);
 		this.classes.push('ui-title-bar');
 
@@ -147,7 +147,6 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 		}
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

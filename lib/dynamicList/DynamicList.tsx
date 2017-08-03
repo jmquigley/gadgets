@@ -216,7 +216,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			/>
 		);
 
-		this.shouldComponentUpdate(props, this.state);
+		this.componentWillUpdate(props, this.state);
 	}
 
 	get emptyListItem() {
@@ -450,7 +450,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
-	public shouldComponentUpdate(nextProps: DynamicListProps, nextState: DynamicListState): boolean {
+	public componentWillUpdate(nextProps: DynamicListProps, nextState: DynamicListState) {
 
 		for (const title in nextState.items) {
 			if (!(title in this._listItems)) {
@@ -541,7 +541,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.classes.push('ui-dynamiclist');
 		this.classes.push(this.styles.dynamicList);
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

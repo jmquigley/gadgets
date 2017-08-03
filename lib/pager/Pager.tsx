@@ -178,7 +178,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.createButtons();
 		this.createDialog();
 
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	get currentPage(): number {
@@ -264,17 +264,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 	}
 
-	public componentWillReceiveProps(nextProps: PagerProps) {
-		if (!this.propsEqual(this.props, nextProps)) {
-			this.pageSizes = nextProps.pageSizes;
-			this.computeInitialPages(nextProps.initialPageSize, nextProps);
-
-			this.currentPage = this.initialPage;
-			this.pageSize = this.initialPageSize;
-
-			this.createDialog();
-		}
-	}
 	/**
 	 * Takes the given page size and input props and determines the appropriate initialPage,
 	 * lastPage, and initialPageSize.  These variables are saved within the class and
@@ -557,12 +546,23 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.forceUpdate();
 	}
 
-	public shouldComponentUpdate(nextProps: PagerProps): boolean {
+	public componentWillReceiveProps(nextProps: PagerProps) {
+		if (!this.propsEqual(this.props, nextProps)) {
+			this.pageSizes = nextProps.pageSizes;
+			this.computeInitialPages(nextProps.initialPageSize, nextProps);
+
+			this.currentPage = this.initialPage;
+			this.pageSize = this.initialPageSize;
+
+			this.createDialog();
+		}
+	}
+
+	public componentWillUpdate(nextProps: PagerProps) {
 		this.resetStyles(nextProps);
 		this.classes.push('ui-pager');
 		this.classes.push(this.styles.pager);
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

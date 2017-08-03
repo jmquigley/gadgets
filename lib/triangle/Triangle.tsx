@@ -32,10 +32,10 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 
 	constructor(props: TriangleProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: TriangleProps): boolean {
+	public componentWillUpdate(nextProps: TriangleProps) {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-triangle');
@@ -66,8 +66,6 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 			stroke: nextProps.borderColor,
 			strokeWidth: nextProps.borderWidth
 		});
-
-		return true;
 	}
 
 	public render() {

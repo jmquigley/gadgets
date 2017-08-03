@@ -62,7 +62,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 
 	constructor(props: ItemProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	private computeButtonWidth() {
@@ -71,7 +71,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 		return `${size}em`;
 	}
 
-	public shouldComponentUpdate(nextProps: ItemProps): boolean {
+	public componentWillUpdate(nextProps: ItemProps) {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-item');
@@ -103,7 +103,6 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 		}
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

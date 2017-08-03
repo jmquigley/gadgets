@@ -55,15 +55,14 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	constructor(props: AccordionProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: AccordionProps): boolean {
+	public componentWillUpdate(nextProps: AccordionProps) {
 		super.resetStyles(nextProps);
 		this.classes.push('ui-accordion');
 		this.classes.push(this.styles.accordion);
 		super.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

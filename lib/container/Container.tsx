@@ -50,17 +50,16 @@ export class Container extends BaseComponent<ContainerProps, undefined> {
 
 	constructor(props: ContainerProps) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: any): boolean {
+	public componentWillUpdate(nextProps: any) {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-container');
 		this.classes.push(this.styles.container);
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

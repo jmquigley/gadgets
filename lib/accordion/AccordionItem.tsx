@@ -94,7 +94,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		};
 
 		this.bindCallbacks('handleClick');
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	private handleClick() {
@@ -107,12 +107,11 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 	}
 
-	public shouldComponentUpdate(nextProps: AccordionItemProps): boolean {
+	public componentWillUpdate(nextProps: AccordionItemProps) {
 		this.resetStyles(nextProps);
 		this.classes.push('ui-accordionitem');
 		this.classes.push(this.styles.accordionItem);
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public componentWillReceiveProps(nextProps: AccordionItemProps) {

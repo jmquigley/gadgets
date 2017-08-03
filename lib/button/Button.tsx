@@ -66,7 +66,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
 		this.bindCallbacks('handleClick');
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
@@ -76,7 +76,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		e.stopPropagation();
 	}
 
-	public shouldComponentUpdate(nextProps: ButtonProps): boolean {
+	public componentWillUpdate(nextProps: ButtonProps) {
 		this.resetStyles(nextProps);
 
 		if (nextProps.color !== 'inherit') {
@@ -107,7 +107,6 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		this._iconClasses.push(this.styles.icon);
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

@@ -84,7 +84,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			'handleKeyDown'
 		);
 
-		this.shouldComponentUpdate(props, this.state);
+		this.componentWillUpdate(props, this.state);
 	}
 
 	private handleClick() {
@@ -117,7 +117,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		document.removeEventListener('keydown', this.handleKeyDown);
 	}
 
-	public shouldComponentUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState): boolean {
+	public componentWillUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState) {
 		this.resetStyles(nextProps);
 
 		this.classes.push('ui-button-dialog');
@@ -148,7 +148,6 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		this._dialogClasses.push(this.fontStyle());
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

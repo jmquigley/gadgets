@@ -143,19 +143,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		);
 
 		this.handleDecay();
-		this.shouldComponentUpdate(props, this.state);
-	}
-
-	public componentWillReceiveProps(nextProps: ToastProps) {
-		if (nextProps.visible !== this.state.visible) {
-			this.setState({
-				visible: nextProps.visible
-			});
-		}
-	}
-
-	public componentDidUpdate() {
-		this.handleDecay();
+		this.componentWillUpdate(props, this.state);
 	}
 
 	private handleClose() {
@@ -182,7 +170,19 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		}
 	}
 
-	public shouldComponentUpdate(nextProps: ToastProps, nextState: ToastState): boolean {
+	public componentDidUpdate() {
+		this.handleDecay();
+	}
+
+	public componentWillReceiveProps(nextProps: ToastProps) {
+		if (nextProps.visible !== this.state.visible) {
+			this.setState({
+				visible: nextProps.visible
+			});
+		}
+	}
+
+	public componentWillUpdate(nextProps: ToastProps, nextState: ToastState) {
 		this.resetStyles(nextProps);
 
 		if (nextProps.level === ToastLevel.custom) {
@@ -227,7 +227,6 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		this._contentClasses.push(this.fontStyle());
 
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

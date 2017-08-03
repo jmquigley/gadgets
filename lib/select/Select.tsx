@@ -56,15 +56,14 @@ export class Select extends BaseComponent<any, any> {
 
 	constructor(props: any) {
 		super(props, require('./styles.css'));
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
-	public shouldComponentUpdate(nextProps: any): boolean {
+	public componentWillUpdate(nextProps: any) {
 		this.resetStyles(nextProps);
 		this.classes.push('ui-select');
 		this.classes.push(this.fontStyle());
 		this.buildStyles(nextProps);
-		return true;
 	}
 
 	public render() {

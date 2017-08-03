@@ -65,14 +65,14 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	constructor(props: BadgeProps) {
 		super(props, require('./styles.css'));
 		this.bindCallbacks('handleClick');
-		this.shouldComponentUpdate(props);
+		this.componentWillUpdate(props);
 	}
 
 	private handleClick() {
 		this.props.onClick(this.props.counter);
 	}
 
-	public shouldComponentUpdate(nextProps: BadgeProps): boolean {
+	public componentWillUpdate(nextProps: BadgeProps) {
 		this.resetStyles(nextProps);
 
 		this.classes.push(this.styles.badgeContainer);
@@ -82,8 +82,6 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 			backgroundColor: (nextProps.backgroundColor || 'white'),
 			border: `solid 3px ${nextProps.color}`
 		});
-
-		return true;
 	}
 
 	public render() {
