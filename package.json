@@ -32,6 +32,7 @@
 				"webpack": "webpack"
 		},
 		"dependencies": {
+				"immutable": "^3.8.1",
 				"latest": "^0.2.0",
 				"util.join": "^0.0.12",
 				"util.pkgwrap": ">=0.0.67",
@@ -58,11 +59,12 @@
 				"babel-preset-es2017": "^6.24.1",
 				"babel-preset-power-assert": "^1.0.0",
 				"babel-preset-react": "^6.24.1",
+				"babel-preset-stage-3": "^6.24.1",
 				"babili-webpack-plugin": "0.1.2",
 				"coveralls": "^2.13.1",
 				"css-loader": "^0.28.4",
 				"css-ripple-effect": "^1.0.5",
-				"electron": "^1.6.11",
+				"electron": "1.7.5",
 				"enzyme": "^2.9.1",
 				"extract-text-webpack-plugin": "^3.0.0",
 				"file-loader": "^0.11.2",
@@ -104,7 +106,8 @@
 						"babel-preset-power-assert",
 						"es2016",
 						"es2017",
-						"react"
+						"react",
+						"stage-3"
 				]
 		},
 		"pkgwrap": {
