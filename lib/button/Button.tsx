@@ -113,7 +113,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 		toggleOnIf(this._rootClasses, !nextProps.noripple && !nextProps.disabled)(
 			'ripple'
-		)
+		);
 
 		this.buildCommonStyles(this._rootClasses, nextProps);
 	}

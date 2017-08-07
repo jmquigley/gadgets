@@ -2,11 +2,11 @@
 
 exports[`Test creation of a Badge control 1`] = `
 <div
-  className="badgeContainer test-class"
+  className="badgeContainer normal test-class"
 >
   Test Component
   <div
-    className="normal ui-badge badge topRight"
+    className="ui-badge badge topRight normal"
     onClick={[Function]}
     style={
       Object {
@@ -23,10 +23,10 @@ exports[`Test creation of a Badge control 1`] = `
 
 exports[`Test making the Badge control invisible 1`] = `
 <div
-  className="badgeContainer invisible"
+  className="badgeContainer normal invisible"
 >
   <div
-    className="normal ui-badge badge topRight"
+    className="ui-badge badge topRight normal"
     onClick={[Function]}
     style={
       Object {
@@ -69,10 +69,10 @@ Object {
 
 exports[`Test the disabling of a Badge control 1`] = `
 <div
-  className="badgeContainer disabled nohover"
+  className="badgeContainer normal disabled"
 >
   <div
-    className="normal ui-badge badge topRight"
+    className="ui-badge badge topRight normal"
     onClick={[Function]}
     style={
       Object {

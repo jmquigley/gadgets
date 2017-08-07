@@ -180,7 +180,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       visible={false}
     >
       <div
-        className="ui-button button ripple invisible"
+        className="ui-button button ripple normal invisible"
         onClick={[Function]}
         style={Object {}}
       >
@@ -373,7 +373,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
       visible={true}
     >
       <div
-        className="ui-button button disabled nohover"
+        className="ui-button button normal disabled"
         onClick={[Function]}
         style={Object {}}
       >

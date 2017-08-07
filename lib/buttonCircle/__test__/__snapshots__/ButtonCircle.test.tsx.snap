@@ -54,7 +54,7 @@ exports[`Test ButtonCircle click event 1`] = `
         visible={true}
       >
         <div
-          className="ui-button button ripple normalBorder buttonCircleIcon"
+          className="ui-button button ripple normal normalBorder buttonCircleIcon"
           onClick={[Function]}
           style={
             Object {
@@ -191,7 +191,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         visible={true}
       >
         <div
-          className="ui-button button normalBorder buttonCircleIcon disabled nohover"
+          className="ui-button button normal normalBorder buttonCircleIcon disabled"
           onClick={[Function]}
           style={
             Object {
@@ -294,7 +294,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
         visible={false}
       >
         <div
-          className="ui-button button ripple normalBorder buttonCircleIcon invisible"
+          className="ui-button button ripple normal normalBorder buttonCircleIcon invisible"
           onClick={[Function]}
           style={
             Object {

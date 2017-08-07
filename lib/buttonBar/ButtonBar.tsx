@@ -116,7 +116,6 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 			buttons.push(
 				<div
-					id={this._keys.at(idx)}
 					key={this._keys.at(idx)}
 					style={{
 						width: this.props.buttonSize,
