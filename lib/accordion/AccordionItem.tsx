@@ -87,14 +87,26 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
+	private _rootClasses: Set<string>;
+
 	constructor(props: AccordionItemProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-accordionitem',
+			this.styles.accordionItem
+		]);
+
 		this.state = {
 			toggle: (props.nocollapse) ? true : props.initialToggle
 		};
 
 		this.bindCallbacks('handleClick');
-		this.componentWillUpdate(props);
+		super.buildCommonStyles(this._rootClasses, props);
+	}
+
+	get rootClasses(): string {
+		return Array.from(this._rootClasses).join(' ');
 	}
 
 	private handleClick() {
@@ -108,10 +120,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	}
 
 	public componentWillUpdate(nextProps: AccordionItemProps) {
-		this.resetStyles(nextProps);
-		this.classes.push('ui-accordionitem');
-		this.classes.push(this.styles.accordionItem);
-		this.buildStyles(nextProps);
+		super.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public componentWillReceiveProps(nextProps: AccordionItemProps) {
@@ -132,7 +141,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 		return (
 			<ul
-				className={this.classes.join(' ')}
+				className={this.rootClasses}
 				style={this.inlineStyle}
 			>
 				<Item

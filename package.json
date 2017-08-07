@@ -32,22 +32,19 @@
 				"webpack": "webpack"
 		},
 		"dependencies": {
-				"immutable": "^3.8.1",
-				"latest": "^0.2.0",
 				"util.join": "^0.0.12",
-				"util.pkgwrap": ">=0.0.67",
-				"yarn": "^0.28.1"
+				"util.pkgwrap": ">=0.0.67"
 		},
 		"devDependencies": {
 				"@types/enzyme": "^2.8.4",
 				"@types/fs-extra": "^4.0.0",
-				"@types/jest": "^20.0.5",
-				"@types/jquery": "^3.2.10",
+				"@types/jest": "^20.0.6",
+				"@types/jquery": "^3.2.11",
 				"@types/lodash": "^4.14.71",
 				"@types/lorem-ipsum": "^1.0.2",
 				"@types/node": "^8.0.19",
 				"@types/react": "^16.0.0",
-				"@types/react-dom": "^15.5.1",
+				"@types/react-dom": "^15.5.2",
 				"@types/react-modal": "^1.6.8",
 				"@types/sinon": "^2.3.3",
 				"@types/sprintf-js": "^0.0.27",
@@ -70,6 +67,7 @@
 				"file-loader": "^0.11.2",
 				"font-awesome": "^4.7.0",
 				"identity-obj-proxy": "^3.0.0",
+				"immutable": "^3.8.1",
 				"jest": "^20.0.4",
 				"jest-serializer-enzyme": "^1.0.0",
 				"jquery": "^3.2.1",
@@ -96,10 +94,11 @@
 				"typescript": "^2.4.2",
 				"typescript-babel-jest": "^1.0.5",
 				"url-loader": "^0.5.9",
+				"util.toggle": "^0.0.1",
 				"util.toolbox": "0.0.39",
 				"util.wait": "0.0.26",
 				"webpack": "^3.4.1",
-				"webpack-bundle-analyzer": "^2.8.3"
+				"webpack-bundle-analyzer": "^2.9.0"
 		},
 		"babel": {
 				"presets": [

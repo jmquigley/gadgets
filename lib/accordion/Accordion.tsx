@@ -46,28 +46,38 @@ export function getDefaultAccordionProps(): AccordionProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			children: null
-		}));
+		})
+	);
 }
 
 export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public static defaultProps: AccordionProps = getDefaultAccordionProps();
 
+	private _rootClasses: Set<string>;
+
 	constructor(props: AccordionProps) {
 		super(props, require('./styles.css'));
-		this.componentWillUpdate(props);
+
+		this._rootClasses = new Set<string>([
+			'ui-accordion',
+			this.styles.accordion
+		]);
+
+		super.buildCommonStyles(this._rootClasses, props);
+	}
+
+	get rootClasses(): string {
+		return Array.from(this._rootClasses).join(' ');
 	}
 
 	public componentWillUpdate(nextProps: AccordionProps) {
-		super.resetStyles(nextProps);
-		this.classes.push('ui-accordion');
-		this.classes.push(this.styles.accordion);
-		super.buildStyles(nextProps);
+		super.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		return (
-			<ul className={this.classes.join(' ')} style={this.inlineStyle}>
+			<ul className={this.rootClasses} style={this.inlineStyle}>
 				{this.props.children}
 			</ul>
 		);

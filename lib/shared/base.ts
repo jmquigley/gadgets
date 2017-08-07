@@ -44,6 +44,7 @@
 'use strict';
 
 import * as React from 'react';
+import {toggleOff, toggleOnIf} from 'util.toggle';
 import {FontStyle, Sizes, Sizing, Styling} from './index';
 
 const styles = require('./styles.css');
@@ -58,6 +59,7 @@ export interface BaseOptions {
 	className?: boolean;
 	disabled?: boolean;
 	nohover?: boolean;
+	sizing?: boolean;
 	visible?: boolean;
 }
 
@@ -65,6 +67,7 @@ const defaultBaseOptions: BaseOptions = {
 	className: true,
 	disabled: true,
 	nohover: true,
+	sizing: true,
 	visible: true
 };
 
@@ -180,6 +183,54 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	 * etc).  There are cases where one wants to ignore the computation of a
 	 * value.  The third optional parameter allows one to ignore a specific
 	 * value calculated in this set.
+	 * @param classes {Set<string>} the set that holds the class selector strings
+	 * @param props {P} the props for the given child class (generic type)
+	 * @param opts {BaseOption} determines which automatic names will be ignored
+	 */
+	protected buildCommonStyles(classes: Set<string>, props: P, opts?: BaseOptions): Set<string> {
+
+		opts = Object.assign(
+			defaultBaseOptions,
+			opts
+		);
+
+		if ('sizing' in props && this._sizing !== props['sizing']) {
+			toggleOff(classes)(this._sizing);
+			this._sizing = props['sizing'];
+		}
+
+		toggleOnIf(classes, 'sizing' in props && opts.sizing)(
+			this.fontStyle()
+		);
+
+		toggleOnIf(classes, 'className' in props && props['className'] && opts.className)(
+			props['className']
+		);
+
+		toggleOnIf(classes, 'visible' in props && !props['visible'] && opts.visible)(
+			this.styles.invisible
+		);
+
+		toggleOnIf(classes, 'disabled' in props && props['disabled'] && opts.disabled)(
+			styles.disabled,
+			'nohover'
+		);
+
+		toggleOnIf(classes, 'nohover' in props && props['nohover'] && opts.nohover)(
+			'nohover'
+		);
+
+		return classes;
+	}
+
+	/**
+	 * Every component has a general set of CSS styles that may be applied each
+	 * time the component is rendered (like a style to enable/disable).  This
+	 * function is used to generate those basic, shared styles in all
+	 * components.  It uses a set of common props (className, visible, disable,
+	 * etc).  There are cases where one wants to ignore the computation of a
+	 * value.  The third optional parameter allows one to ignore a specific
+	 * value calculated in this set.
 	 * @param props {P} the props for the given child class (generic type)
 	 * @param style {Object} a set of key value pairs that override any styles
 	 * in the props.
@@ -187,7 +238,7 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	 */
 	protected buildStyles(props: P, style: any = {}, opts?: BaseOptions): void {
 
-		// Takes the initial iniline style object, the style object from props
+		// Takes the initial inline style object, the style object from props
 		// and an input user override and merges them together from left to
 		// right, Where the rightmost item in the function call has a higher
 		// priority when the objects have the same "key"
@@ -308,4 +359,5 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		this._sizing = props['sizing'];
 		this._classes = [];
 	}
+
 }
