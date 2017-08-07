@@ -38,9 +38,10 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {toggleOnIfElse} from 'util.toggle';
 import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent, Direction, Location, Sizing} from '../shared';
+import {BaseComponent, cls, Direction, Location, Sizing} from '../shared';
 import {Triangle} from '../triangle';
 
 export interface ButtonDialogProps extends ButtonProps {
@@ -69,11 +70,28 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 	public static defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
 
-	private _dialogClasses: string[] = [];
-	private _triangleClasses: string[] = [];
+	private _dialogClasses: Set<string>;
+	private _rootClasses: Set<string>;
+	private _triangleClasses: Set<string>;
 
 	constructor(props: ButtonDialogProps) {
 		super(props, require('./styles.css'));
+
+		this._dialogClasses = new Set<string>([
+			'ui-dialog-popup',
+			...props.dialogClasses.slice(),
+			this.styles.buttonDialogPopup
+		]);
+
+		this._rootClasses = new Set<string>([
+			'ui-button-dialog',
+			this.styles.buttonDialog
+		]);
+
+		this._triangleClasses = new Set<string>([
+			...props.triangleClasses.slice()
+		])
+
 		this.state = {
 			visible: false
 		};
@@ -118,42 +136,38 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	}
 
 	public componentWillUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState) {
-		this.resetStyles(nextProps);
 
-		this.classes.push('ui-button-dialog');
-		this.classes.push(this.styles.buttonDialog);
+		toggleOnIfElse(this._dialogClasses, nextProps.location === Location.top)(
+			this.styles.dialogTop
+		)(
+			this.styles.dialogBottom
+		);
 
-		this._dialogClasses = nextProps.dialogClasses.slice();
-		this._dialogClasses.push(this.styles.buttonDialogPopup);
-		this._dialogClasses.push('ui-dialog-popup');
+		toggleOnIfElse(this._triangleClasses, nextProps.location === Location.top)(
+			this.styles.dialogTriangleTop
+		)(
+			this.styles.dialogTriangleBottom
+		);
 
-		this._triangleClasses = nextProps.triangleClasses.slice();
+		toggleOnIfElse(this._dialogClasses, nextState.visible)(
+			this.styles.buttonDialogShow
+		)(
+			this.styles.buttonDialogHide
+		);
 
-		if (nextProps.location === Location.top) {
-			this._dialogClasses.push(this.styles.dialogTop);
-			this._triangleClasses.push(this.styles.dialogTriangleTop);
-		} else {
-			this._dialogClasses.push(this.styles.dialogBottom);
-			this._triangleClasses.push(this.styles.dialogTriangleBottom);
-		}
+		toggleOnIfElse(this._triangleClasses, nextState.visible)(
+			this.styles.buttonDialogShow
+		)(
+			this.styles.buttonDialogHide
+		);
 
-		if (nextState.visible) {
-			this._dialogClasses.push(this.styles.buttonDialogShow);
-			this._triangleClasses.push(this.styles.buttonDialogShow);
-		} else {
-			this._dialogClasses.push(this.styles.buttonDialogHide);
-			this._triangleClasses.push(this.styles.buttonDialogHide);
-		}
-
-		this._dialogClasses.push(this.fontStyle());
-
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		return (
 			<div
-				className={this.classes.join(' ')}
+				className={cls(this._rootClasses)}
 			>
 				<Button
 					backgroundColor={this.props.backgroundColor}
@@ -166,7 +180,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					visible={this.props.visible}
 				/>
 				<div
-					className={this._dialogClasses.join(' ')}
+					className={cls(this._dialogClasses)}
 					onClick={this.handleDialogClick}
 				>
 					<div className={this.styles.buttonDialogContent}>
@@ -176,7 +190,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					null
 					:
 					<Triangle
-						className={this._triangleClasses.join(' ')}
+						className={cls(this._triangleClasses)}
 						direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
 						nobase
 						sizing={Sizing.normal}

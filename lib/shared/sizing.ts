@@ -60,7 +60,7 @@ export enum Sizing {
 
 export interface FontStyle {
 	size: number;
-	sizeem: string;
+	sizerem: string;
 	sizepx: string;
 	style: string;
 }
@@ -109,7 +109,7 @@ export class Sizes {
 				boxStyle: Sizes.styles[`${key}Box`],
 				font: {
 					size: valSize,
-					sizeem: `${valSize / baseFontSize}em`,
+					sizerem: `${valSize / baseFontSize}rem`,
 					sizepx: `${valSize}px`,
 					style: Sizes.styles[key]
 				}

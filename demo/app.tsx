@@ -417,26 +417,26 @@ class App extends React.Component<AppProps, AppState> {
 						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal} color="white" backgroundColor="blue"/></td>
 					</tr><tr>
 						<th>ButtonText<br/>(Left)</th>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.xxsmall}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.xsmall}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.small}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.normal}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.large}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.xlarge}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.LEFT} iconName="paper-plane" sizing={Sizing.normal} color="white" backgroundColor="red"/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xxsmall}/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xsmall}/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.small}/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal}/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.large}/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xlarge}/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal} disabled={true}/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal} color="white" backgroundColor="red"/></td>
 					</tr><tr>
 						<th>ButtonText<br/>(Center)</th>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.xxsmall}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.xsmall}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.small}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.normal}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.large}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.xlarge}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.xxlarge}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" justify={ButtonText.CENTER} sizing={Sizing.normal} color="white" backgroundColor="red"/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xxsmall}/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xsmall}/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.small}/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal}/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.large}/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xlarge}/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xxlarge}/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal} disabled={true}/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal} color="white" backgroundColor="red"/></td>
 					</tr>
 				</tbody>
 			</table>
@@ -479,7 +479,7 @@ class App extends React.Component<AppProps, AppState> {
 			<br/>
 
 			<h3>Large Center Justify</h3>
-			<ButtonBar justify={Justify.center} sizing={Sizing.large} buttonSize="48px">
+			<ButtonBar justify={Justify.center} sizing={Sizing.large} buttonSize="32px">
 				<Button iconName="car" />
 				<Button iconName="fighter-jet" />
 				<Button iconName="space-shuttle" />

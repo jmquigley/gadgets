@@ -66,9 +66,9 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 	}
 
 	private computeButtonWidth() {
-		const fontEM: number = Number(this.font().sizeem.replace('em', ''));
-		const size = fontEM + (fontEM * this._buttonScale * 2);
-		return `${size}em`;
+		const fontREM: number = Number(this.font().sizerem.replace('rem', ''));
+		const size = fontREM + (fontREM * this._buttonScale * 2);
+		return `${size}rem`;
 	}
 
 	public componentWillUpdate(nextProps: ItemProps) {

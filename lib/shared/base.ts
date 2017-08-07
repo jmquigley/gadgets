@@ -44,7 +44,7 @@
 'use strict';
 
 import * as React from 'react';
-import {toggleOff, toggleOnIf} from 'util.toggle';
+import {toggleOff, toggleOn, toggleOnIf} from 'util.toggle';
 import {FontStyle, Sizes, Sizing, Styling} from './index';
 
 const styles = require('./styles.css');
@@ -217,9 +217,9 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 			'nohover'
 		);
 
-		toggleOnIf(classes, 'nohover' in props && props['nohover'] && opts.nohover)(
-			'nohover'
-		);
+		if ('nohover' in props && props['nohover'] && opts.nohover) {
+			toggleOn(classes)('nohover');
+		}
 
 		return classes;
 	}

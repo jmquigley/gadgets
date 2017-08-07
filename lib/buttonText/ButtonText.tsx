@@ -45,9 +45,10 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {toggleOnIf} from 'util.toggle';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultIconProps, Icon, IconProps} from '../icon';
-import {BaseComponent, Justify, Sizing} from '../shared';
+import {BaseComponent, cls, Justify, Sizing} from '../shared';
 
 export interface ButtonTextProps extends IconProps {
 	justify?: Justify;
@@ -71,8 +72,15 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 	public static defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 
+	private _rootClasses: Set<string>;
+
 	constructor(props: ButtonTextProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-button-text',
+			this.styles.buttonText
+		])
 
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(props);
@@ -83,8 +91,8 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			<div
 				className={
 					this.styles.content + ' ' +
-						this.fontStyle() + ' ' +
-						justifyStyle
+					this.fontStyle() + ' ' +
+					justifyStyle
 				}
 			>
 				{this.props.text}
@@ -100,28 +108,27 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ButtonTextProps) {
-		this.resetStyles(nextProps);
+		const style = {};
 
 		if (nextProps.color !== 'inherit') {
-			this.inlineStyle['color'] = nextProps.color;
+			style['color'] = nextProps.color;
 		}
 
 		if (nextProps.backgroundColor !== 'inherit') {
-			this.inlineStyle['backgroundColor'] = nextProps.backgroundColor;
+			style['backgroundColor'] = nextProps.backgroundColor;
 		}
 
 		if (nextProps.borderColor !== 'inherit') {
-			this.inlineStyle['borderColor'] = nextProps.borderColor;
+			style['borderColor'] = nextProps.borderColor;
 		}
 
-		this.classes.push('ui-button-text');
-		this.classes.push(this.styles.buttonText);
+		this.buildInlineStyles(nextProps, style);
 
-		if (!nextProps.noripple && !nextProps.disabled) {
-			this.classes.push('ripple');
-		}
+		toggleOnIf(this._rootClasses, !nextProps.noripple && !nextProps.disabled)(
+			'ripple'
+		)
 
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
@@ -150,7 +157,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 		return (
 			<div
-				className={this.classes.join(' ')}
+				className={cls(this._rootClasses)}
 				style={this.inlineStyle}
 				onClick={this.handleClick}
 			>

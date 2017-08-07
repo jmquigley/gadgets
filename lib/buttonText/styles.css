@@ -5,6 +5,10 @@
 		@extend baseButton;
 	}
 
+	.buttonText:not(:global(.nohover)):hover {
+		background-color: silver !important;
+	}
+
 	.content {
 		flex: 1;
 	}
