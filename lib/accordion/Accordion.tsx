@@ -36,7 +36,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, cls, getDefaultBaseProps} from '../shared';
 
 export interface AccordionProps extends BaseProps {
 	children?: React.ReactNode;
@@ -64,20 +64,16 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 			this.styles.accordion
 		]);
 
-		super.buildCommonStyles(this._rootClasses, props);
-	}
-
-	get rootClasses(): string {
-		return Array.from(this._rootClasses).join(' ');
+		this.componentWillUpdate(props);
 	}
 
 	public componentWillUpdate(nextProps: AccordionProps) {
-		super.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		return (
-			<ul className={this.rootClasses} style={this.inlineStyle}>
+			<ul className={cls(this._rootClasses)} style={this.inlineStyle}>
 				{this.props.children}
 			</ul>
 		);

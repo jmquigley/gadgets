@@ -57,7 +57,7 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent} from '../shared';
+import {BaseComponent, cls} from '../shared';
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
@@ -102,11 +102,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		};
 
 		this.bindCallbacks('handleClick');
-		super.buildCommonStyles(this._rootClasses, props);
-	}
-
-	get rootClasses(): string {
-		return Array.from(this._rootClasses).join(' ');
+		this.componentWillUpdate(props);
 	}
 
 	private handleClick() {
@@ -120,7 +116,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	}
 
 	public componentWillUpdate(nextProps: AccordionItemProps) {
-		super.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public componentWillReceiveProps(nextProps: AccordionItemProps) {
@@ -141,7 +137,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 		return (
 			<ul
-				className={this.rootClasses}
+				className={cls(this._rootClasses)}
 				style={this.inlineStyle}
 			>
 				<Item

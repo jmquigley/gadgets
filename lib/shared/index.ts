@@ -2,6 +2,11 @@ import {
 	BaseComponent,
 	defaultSize
 } from './base';
+
+import {
+	cls
+} from './helpers';
+
 import {
 	BaseProps,
 	Color,
@@ -22,6 +27,7 @@ import {
 export {
 	BaseComponent,
 	BaseProps,
+	cls,
 	Color,
 	defaultSize,
 	Direction,

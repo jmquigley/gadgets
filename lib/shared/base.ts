@@ -110,7 +110,7 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	}
 
 	set inlineStyle(val: any) {
-		this._inlineStyle = Object.assign(this._inlineStyle, val);
+		this._inlineStyle = Object.assign({}, this._inlineStyle, val);
 	}
 
 	get locationStyle() {
@@ -190,6 +190,7 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	protected buildCommonStyles(classes: Set<string>, props: P, opts?: BaseOptions): Set<string> {
 
 		opts = Object.assign(
+			{},
 			defaultBaseOptions,
 			opts
 		);
@@ -223,6 +224,15 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		return classes;
 	}
 
+	protected buildInlineStyles(props: P, style: any = {}) {
+		// Takes the initial inline style object, the style object from props
+		// and an input user override and merges them together from left to
+		// right, Where the rightmost item in the function call has a higher
+		// priority when the objects have the same "key"
+		this._inlineStyle = Object.assign({}, this._inlineStyle, props['style'], style);
+		return this._inlineStyle;
+	}
+
 	/**
 	 * Every component has a general set of CSS styles that may be applied each
 	 * time the component is rendered (like a style to enable/disable).  This
@@ -245,6 +255,7 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		this._inlineStyle = Object.assign(this._inlineStyle, props['style'], style);
 
 		opts = Object.assign(
+			{},
 			defaultBaseOptions,
 			opts
 		);

@@ -36,7 +36,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
-import {BaseComponent, BaseProps, Sizing} from '../shared';
+import {BaseComponent, BaseProps, cls, Sizing} from '../shared';
 import {getDefaultBaseProps, Location} from '../shared/props';
 
 export interface BadgeProps extends BaseProps {
@@ -55,15 +55,31 @@ export function getDefaultBadgeProps(): BadgeProps {
 			onClick: nilEvent,
 			sizing: Sizing.normal,
 			suppress: false
-	}));
+		})
+	);
 }
 
 export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
+	private _rootClasses: Set<string>;
+	private _badgeClasses: Set<string>;
+
 	constructor(props: BadgeProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			this.styles.badgeContainer
+		]);
+
+		this._badgeClasses = new Set<string>([
+			'ui-badge',
+			this.styles.badge,
+			this.locationStyle,
+			this.fontStyle()
+		]);
+
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(props);
 	}
@@ -73,11 +89,8 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: BadgeProps) {
-		this.resetStyles(nextProps);
-
-		this.classes.push(this.styles.badgeContainer);
-
-		this.buildStyles(nextProps, {
+		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildInlineStyles(nextProps, {
 			color: (nextProps.color || 'black'),
 			backgroundColor: (nextProps.backgroundColor || 'white'),
 			border: `solid 3px ${nextProps.color}`
@@ -92,7 +105,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		} else {
 			badge = (
 				<div
-					className={`${this.fontStyle()} ui-badge ${this.styles.badge} ${this.locationStyle}`}
+					className={cls(this._badgeClasses)}
 					onClick={this.handleClick}
 					style={this.inlineStyle}
 				>
@@ -102,7 +115,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		}
 
 		return (
-			<div className={this.classes.join(' ')}>
+			<div className={cls(this._rootClasses)}>
 				{this.props.children}
 				{badge}
 			</div>

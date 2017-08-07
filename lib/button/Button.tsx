@@ -33,11 +33,13 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {toggleOnIf} from 'util.toggle';
 import {nilEvent} from 'util.toolbox';
 import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
+	cls,
 	getDefaultBaseProps,
 	Sizing
 } from '../shared';
@@ -61,10 +63,22 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	public static defaultProps: ButtonProps = getDefaultButtonProps();
 
-	private _iconClasses: string[] = [];
+	private _iconClasses: Set<string>;
+	private _rootClasses: Set<string>;
 
 	constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
+
+		this._iconClasses = new Set<string>([
+			this.props.iconStyle,
+			this.styles.icon
+		]);
+
+		this._rootClasses = new Set<string>([
+			'ui-button',
+			this.styles.button
+		]);
+
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(props);
 	}
@@ -77,47 +91,42 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ButtonProps) {
-		this.resetStyles(nextProps);
+		const style = {};
 
 		if (nextProps.color !== 'inherit') {
-			this.inlineStyle['color'] = nextProps.color;
+			style['color'] = nextProps.color;
 		}
 
 		if (nextProps.backgroundColor !== 'inherit') {
-			this.inlineStyle['backgroundColor'] = nextProps.backgroundColor;
+			style['backgroundColor'] = nextProps.backgroundColor;
 		}
 
 		if (nextProps.borderColor !== 'inherit') {
-			this.inlineStyle['borderColor'] = nextProps.borderColor;
+			style['borderColor'] = nextProps.borderColor;
 		}
 
 		if (nextProps.borderWidth !== 'none') {
-			this.inlineStyle['borderWidth'] = nextProps.borderWidth;
+			style['borderWidth'] = nextProps.borderWidth;
 		}
 
-		this.classes.push('ui-button');
-		this.classes.push(this.styles.button);
+		this.buildInlineStyles(nextProps, style);
 
-		if (!nextProps.noripple && !nextProps.disabled) {
-			this.classes.push('ripple');
-		}
+		toggleOnIf(this._rootClasses, !nextProps.noripple && !nextProps.disabled)(
+			'ripple'
+		)
 
-		this._iconClasses = [];
-		this._iconClasses.push(this.props.iconStyle);
-		this._iconClasses.push(this.styles.icon);
-
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		return (
 			<div
-				className={this.classes.join(' ')}
+				className={cls(this._rootClasses)}
 				onClick={this.handleClick}
-				style={{...this.inlineStyle}}
+				style={this.inlineStyle}
 			>
 				<Icon
-					className={this._iconClasses.join(' ')}
+					className={cls(this._iconClasses)}
 					iconName={this.props.iconName}
 					sizing={this.props.sizing}
 				/>

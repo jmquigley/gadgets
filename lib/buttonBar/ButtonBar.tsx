@@ -42,10 +42,12 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {getUUID} from 'util.toolbox';
+import {Keys} from 'util.keys';
+import {toggleOnIf} from 'util.toggle';
 import {
 	BaseComponent,
 	BaseProps,
+	cls,
 	getDefaultBaseProps,
 	Justify
 } from '../shared';
@@ -66,48 +68,46 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 	public static readonly defaultProps: ButtonBarProps = getDefaultButtonBarProps();
 
-	private _groupClasses: string[] = [];
+	private _groupClasses: Set<string>;
+	private _keys: Keys = new Keys();
+	private _rootClasses: Set<string>;
 
 	constructor(props: ButtonBarProps) {
 		super(props, require('./styles.css'));
+
+		this._groupClasses = new Set<string>([
+			'ui-button-bar-group',
+			this.styles.buttonBarGroup
+		]);
+
+		this._rootClasses = new Set<string>([
+			'ui-button-bar',
+			this.styles.buttonBar
+		]);
+
 		this.componentWillUpdate(props);
 	}
 
 	public componentWillUpdate(nextProps: ButtonBarProps) {
-		this.resetStyles(nextProps);
 
-		this.classes.push('ui-button-bar');
-		this.classes.push(this.styles.buttonBar);
+		toggleOnIf(this._groupClasses, this.props.justify === Justify.right)(
+			this.styles.right
+		);
 
-		this._groupClasses = [];
-		this._groupClasses.push('ui-button-bar-group');
-		this._groupClasses.push(this.styles.buttonBarGroup);
+		toggleOnIf(this._groupClasses, this.props.justify === Justify.center)(
+			this.styles.center
+		);
 
-		switch (this.props.justify) {
-			case Justify.right:
-				this._groupClasses.push(this.styles.right);
-				break;
+		toggleOnIf(this._groupClasses, this.props.justify === Justify.left)(
+			this.styles.left
+		);
 
-			case Justify.center:
-				this._groupClasses.push(this.styles.center);
-				break;
-
-			case Justify.left:
-			default:
-				this._groupClasses.push(this.styles.left);
-		}
-
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		const buttons: any = [];
-		const buttonStyle = {
-			width: this.props.buttonSize,
-			height: this.props.buttonSize
-		};
-
-		React.Children.forEach(this.props.children, child => {
+		React.Children.forEach(this.props.children, (child: any, idx: number) => {
 			const newChild = React.cloneElement(child as any, {
 				disabled: this.props.disabled,
 				sizing: this.props.sizing,
@@ -115,15 +115,23 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 			});
 
 			buttons.push(
-				<div key={getUUID()} style={{...buttonStyle}} className={this.styles.buttonBarBox}>
+				<div
+					id={this._keys.at(idx)}
+					key={this._keys.at(idx)}
+					style={{
+						width: this.props.buttonSize,
+						height: this.props.buttonSize
+					}}
+					className={this.styles.buttonBarBox}
+				>
 					{newChild}
 				</div>
 			);
 		});
 
 		return(
-			<div className={this.classes.join(' ')}>
-				<div className={this._groupClasses.join(' ')}>
+			<div className={cls(this._rootClasses)}>
+				<div className={cls(this._groupClasses)}>
 					{buttons}
 				</div>
 			</div>

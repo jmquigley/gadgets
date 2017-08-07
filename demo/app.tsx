@@ -479,7 +479,7 @@ class App extends React.Component<AppProps, AppState> {
 			<br/>
 
 			<h3>Large Center Justify</h3>
-			<ButtonBar justify={Justify.center} sizing={Sizing.large} buttonSize="40px">
+			<ButtonBar justify={Justify.center} sizing={Sizing.large} buttonSize="48px">
 				<Button iconName="car" />
 				<Button iconName="fighter-jet" />
 				<Button iconName="space-shuttle" />
