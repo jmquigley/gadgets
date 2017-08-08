@@ -80,7 +80,7 @@
 import {cloneDeep, omit} from 'lodash';
 import * as React from 'react';
 import {sprintf} from 'sprintf-js';
-import {getUUID, nil, nilEvent} from 'util.toolbox';
+import {getUUID, join, nil, nilEvent} from 'util.toolbox';
 import {Accordion, AccordionItem} from '../accordion';
 import {Button} from '../button';
 import {DialogBox, DialogBoxType} from '../dialogBox';
@@ -166,11 +166,17 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private _previousPage: number = 1;
 	private _previousSize: Sizing = this.prev().type;
 	private _qDelete: string = '';
+	private _rootClasses: Set<string>;
 	private _selection: string = '';
 	private _startSearch: boolean = true;
 
 	constructor(props: DynamicListProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-dynamiclist',
+			this.styles.dynamicList
+		]);
 
 		this._count = Object.keys(props.items).length;
 
@@ -537,16 +543,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			/>
 		);
 
-		// Compute updated styles
-		this.resetStyles(nextProps);
-		this.classes.push('ui-dynamiclist');
-		this.classes.push(this.styles.dynamicList);
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		return (
-			<Accordion className={this.classes.join(' ')}>
+			<Accordion className={join(this._rootClasses, ' ')}>
 				<AccordionItem
 					initialToggle={this.state.initialToggle}
 					nocollapse={this.props.nocollapse}

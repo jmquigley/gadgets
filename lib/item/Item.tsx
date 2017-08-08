@@ -4,7 +4,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import {toggleOnIf} from 'util.toggle';
+import {join, nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 import {Title, TitleLayout, TitleProps} from '../title';
 
@@ -58,10 +59,17 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 	public static defaultProps: ItemProps = getDefaultItemProps();
 
 	private _buttonScale: number = 0;
+	private _rootClasses: Set<string>;
 	private _titlePadding: string = '';
 
 	constructor(props: ItemProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-item',
+			this.styles.item
+		]);
+
 		this.componentWillUpdate(props);
 	}
 
@@ -72,17 +80,13 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ItemProps) {
-		this.resetStyles(nextProps);
 
-		this.classes.push('ui-item');
-		this.classes.push(this.styles.item);
-
-		if (nextProps.selected) {
-			this.classes.push('ui-selected');
-		}
+		toggleOnIf(this._rootClasses, nextProps.selected)(
+			'ui-selected'
+		);
 
 		switch (nextProps.sizing) {
-			case Sizing.xxsmall:
+			case Sizing.xsmall:
 			case Sizing.xxsmall:
 				this._titlePadding = '1px 2px';
 				this._buttonScale = 0.75;
@@ -102,7 +106,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 				this._buttonScale = 0.5;
 		}
 
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
@@ -149,13 +153,13 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 		return (
 			<li
 				id={this.props.id}
-				className={this.classes.join(' ')}
+				className={join(this._rootClasses, ' ')}
 				onBlur={this.props.onBlur}
 				onDoubleClick={this.props.onDoubleClick}
 				onKeyDown={this.props.onKeyDown}
 				onKeyPress={this.props.onKeyPress}
 				onMouseOut={this.props.onMouseOut}
-				style={{...this.inlineStyle}}
+				style={this.inlineStyle}
 			>
 				{leftButton}
 				<Title

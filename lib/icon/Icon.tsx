@@ -42,6 +42,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {toggleOffIfElse} from 'util.toggle';
+import {join} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
@@ -62,46 +64,51 @@ export function getDefaultIconProps(): IconProps {
 			iconName: 'bomb',
 			imageFile: '',
 			sizing: Sizing.normal
-	}));
+		})
+	);
 }
 
 export class Icon extends BaseComponent<IconProps, undefined> {
 
 	public static defaultProps: IconProps = getDefaultIconProps();
 
+	private _rootClasses: Set<string>;
+
 	constructor(props: IconProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-icon',
+			this.styles.icon,
+			this.locationStyle,
+			(props.imageFile === '') && 'fa',
+			(props.imageFile === '') && `fa-${props.iconName}`,
+			(props.imageFile !== '') && this.boxStyle()
+		]);
+
 		this.componentWillUpdate(props);
 	}
 
 	public componentWillUpdate(nextProps: IconProps) {
-		this.resetStyles(nextProps);
+		const cond = this.props.imageFile === '' && this.props.iconName !== nextProps.iconName;
+		toggleOffIfElse(this._rootClasses, cond)(
+			`fa-${this.props.iconName}`
+		)(
+			`fa-${nextProps.iconName}`
+		);
 
-		this.classes.push('ui-icon');
-		this.classes.push(this.styles.icon);
-		this.classes.push(this.locationStyle);
-
-		if (nextProps.imageFile === '') {
-			this.classes.push('fa');
-			this.classes.push(`fa-${nextProps.iconName}`);
-			this.classes.push(this.fontStyle());
-		} else {
-			this.classes.push(this.boxStyle());
-		}
-
-		this.inlineStyle = {
+		this.buildInlineStyles(nextProps, {
 			color: (nextProps.color),
 			backgroundColor: (nextProps.backgroundColor)
-		};
-
-		this.buildStyles(nextProps);
+		});
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		if (this.props.imageFile !== '') {
 			return (
 				<img
-					className={this.classes.join(' ')}
+					className={join(this._rootClasses, ' ')}
 					src={this.props.imageFile}
 					style={this.inlineStyle}
 				/>
@@ -109,7 +116,7 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		} else {
 			return (
 				<i
-					className={this.classes.join(' ')}
+					className={join(this._rootClasses, ' ')}
 					style={this.inlineStyle}
 				/>
 			);

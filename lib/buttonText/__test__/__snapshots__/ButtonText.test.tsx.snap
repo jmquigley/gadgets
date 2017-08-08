@@ -66,7 +66,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
       visible={true}
     >
       <i
-        className="ui-icon icon none fa fa-bomb normal icon"
+        className="ui-icon icon none fa false fa-bomb normal"
         style={
           Object {
             "backgroundColor": "inherit",
@@ -134,7 +134,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
       visible={true}
     >
       <i
-        className="ui-icon icon none fa fa-bomb normal icon"
+        className="ui-icon icon none fa false fa-bomb normal"
         style={
           Object {
             "backgroundColor": "inherit",
@@ -205,7 +205,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
       visible={true}
     >
       <i
-        className="ui-icon icon none fa fa-bomb normal icon"
+        className="ui-icon icon none fa false fa-bomb normal"
         style={
           Object {
             "backgroundColor": "inherit",
