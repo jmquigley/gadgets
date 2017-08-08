@@ -126,7 +126,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
         visible={true}
       >
         <i
-          className="ui-icon icon none fa false fa-star-o normal  icon"
+          className="ui-icon icon none fa fa-fw false fa-star-o normal  icon"
           style={
             Object {
               "backgroundColor": "inherit",
@@ -233,7 +233,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
         visible={true}
       >
         <i
-          className="ui-icon icon none fa false fa-bomb normal  icon"
+          className="ui-icon icon none fa fa-fw false fa-bomb normal  icon"
           style={
             Object {
               "backgroundColor": "inherit",
@@ -340,7 +340,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
         visible={true}
       >
         <i
-          className="ui-icon icon none fa false fa-bomb normal  icon"
+          className="ui-icon icon none fa fa-fw false fa-bomb normal  icon"
           style={
             Object {
               "backgroundColor": "inherit",

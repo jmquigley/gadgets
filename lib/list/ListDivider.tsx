@@ -28,6 +28,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {join} from 'util.toolbox';
 import {getDefaultItemProps, ItemProps} from '../item';
 import {BaseComponent} from '../shared';
 
@@ -46,21 +47,26 @@ export class ListDivider extends BaseComponent<ListDividerProps, undefined> {
 
 	public static defaultProps: ListDividerProps = getDefaultListDividerProps();
 
+	private _rootClasses: Set<string>;
+
 	constructor(props: ListDividerProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-list-divider',
+			this.styles.listDivider
+		]);
+
 		this.componentWillUpdate(props);
 	}
 
 	public componentWillUpdate(nextProps: ListDividerProps) {
-		this.resetStyles(nextProps);
-		this.classes.push('ui-list-divider');
-		this.classes.push(this.styles.listDivider);
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		return(
-			<li className={this.classes.join(' ')}>
+			<li className={join(this._rootClasses, ' ')}>
 				<hr	style={{backgroundColor: this.props.color}} />
 			</li>
 		);

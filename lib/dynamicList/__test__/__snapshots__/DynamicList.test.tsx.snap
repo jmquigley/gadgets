@@ -1786,7 +1786,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       visible={true}
                     >
                       <i
-                        className="ui-icon icon none fa false fa-plus normal  icon"
+                        className="ui-icon icon none fa fa-fw false fa-plus normal  icon"
                         style={
                           Object {
                             "backgroundColor": "inherit",
@@ -1827,7 +1827,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
               visible={true}
             >
               <div
-                className="ui-list list listAlternating"
+                className="ui-list list listAlternating normal"
                 id=""
                 style={Object {}}
               >
@@ -1905,7 +1905,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem"
+                      className="ui-listitem listItem normal"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -1971,7 +1971,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget="widget1"
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem"
+                        className="ui-item item normal ui-listitem listItem normal"
                         id="title1"
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -2221,7 +2221,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 visible={true}
                               >
                                 <i
-                                  className="ui-icon icon none fa false fa-times normal  icon"
+                                  className="ui-icon icon none fa fa-fw false fa-times normal  icon"
                                   style={
                                     Object {
                                       "backgroundColor": "inherit",
@@ -2309,7 +2309,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem"
+                      className="ui-listitem listItem normal"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -2375,7 +2375,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget="widget2"
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem"
+                        className="ui-item item normal ui-listitem listItem normal"
                         id="title2"
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -2625,7 +2625,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 visible={true}
                               >
                                 <i
-                                  className="ui-icon icon none fa false fa-times normal  icon"
+                                  className="ui-icon icon none fa fa-fw false fa-times normal  icon"
                                   style={
                                     Object {
                                       "backgroundColor": "inherit",
@@ -2713,7 +2713,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem"
+                      className="ui-listitem listItem normal"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -2779,7 +2779,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget="widget3"
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem"
+                        className="ui-item item normal ui-listitem listItem normal"
                         id="title3"
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -3029,7 +3029,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 visible={true}
                               >
                                 <i
-                                  className="ui-icon icon none fa false fa-times normal  icon"
+                                  className="ui-icon icon none fa fa-fw false fa-times normal  icon"
                                   style={
                                     Object {
                                       "backgroundColor": "inherit",
@@ -3093,7 +3093,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem disabled nohover"
+                      className="ui-listitem listItem normal disabled nohover"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -3135,7 +3135,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget={null}
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem disabled nohover disabled nohover"
+                        className="ui-item item normal ui-listitem listItem normal disabled nohover disabled nohover"
                         id=""
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -3325,7 +3325,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem disabled nohover"
+                      className="ui-listitem listItem normal disabled nohover"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -3367,7 +3367,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget={null}
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem disabled nohover disabled nohover"
+                        className="ui-item item normal ui-listitem listItem normal disabled nohover disabled nohover"
                         id=""
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -3557,7 +3557,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem disabled nohover"
+                      className="ui-listitem listItem normal disabled nohover"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -3599,7 +3599,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget={null}
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem disabled nohover disabled nohover"
+                        className="ui-item item normal ui-listitem listItem normal disabled nohover disabled nohover"
                         id=""
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -3789,7 +3789,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem disabled nohover"
+                      className="ui-listitem listItem normal disabled nohover"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -3831,7 +3831,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget={null}
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem disabled nohover disabled nohover"
+                        className="ui-item item normal ui-listitem listItem normal disabled nohover disabled nohover"
                         id=""
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -4021,7 +4021,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem disabled nohover"
+                      className="ui-listitem listItem normal disabled nohover"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -4063,7 +4063,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget={null}
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem disabled nohover disabled nohover"
+                        className="ui-item item normal ui-listitem listItem normal disabled nohover disabled nohover"
                         id=""
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -4253,7 +4253,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem disabled nohover"
+                      className="ui-listitem listItem normal disabled nohover"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -4295,7 +4295,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget={null}
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem disabled nohover disabled nohover"
+                        className="ui-item item normal ui-listitem listItem normal disabled nohover disabled nohover"
                         id=""
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -4485,7 +4485,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       backgroundColor="inherit"
                       borderColor="inherit"
                       borderWidth="none"
-                      className="ui-listitem listItem disabled nohover"
+                      className="ui-listitem listItem normal disabled nohover"
                       color="inherit"
                       contentEditable={false}
                       direction="right"
@@ -4527,7 +4527,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                       widget={null}
                     >
                       <li
-                        className="ui-item item normal ui-listitem listItem disabled nohover disabled nohover"
+                        className="ui-item item normal ui-listitem listItem normal disabled nohover disabled nohover"
                         id=""
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -4937,7 +4937,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-pager pager"
+                              className="ui-pager pager small"
                             >
                               <Button
                                 backgroundColor="inherit"
@@ -5005,7 +5005,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                     visible={true}
                                   >
                                     <i
-                                      className="ui-icon icon none fa false fa-angle-double-left small  icon"
+                                      className="ui-icon icon none fa fa-fw false fa-angle-double-left small  icon"
                                       style={
                                         Object {
                                           "backgroundColor": "inherit",
@@ -5082,7 +5082,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                     visible={true}
                                   >
                                     <i
-                                      className="ui-icon icon none fa false fa-angle-left small  icon"
+                                      className="ui-icon icon none fa fa-fw false fa-angle-left small  icon"
                                       style={
                                         Object {
                                           "backgroundColor": "inherit",
@@ -5314,7 +5314,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                     visible={true}
                                   >
                                     <i
-                                      className="ui-icon icon none fa false fa-angle-right small  icon"
+                                      className="ui-icon icon none fa fa-fw false fa-angle-right small  icon"
                                       style={
                                         Object {
                                           "backgroundColor": "inherit",
@@ -5391,7 +5391,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                     visible={true}
                                   >
                                     <i
-                                      className="ui-icon icon none fa false fa-angle-double-right small  icon"
+                                      className="ui-icon icon none fa fa-fw false fa-angle-double-right small  icon"
                                       style={
                                         Object {
                                           "backgroundColor": "inherit",
@@ -5541,7 +5541,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                         visible={true}
                                       >
                                         <i
-                                          className="ui-icon icon none fa false fa-ellipsis-v small  icon"
+                                          className="ui-icon icon none fa fa-fw false fa-ellipsis-v small  icon"
                                           style={
                                             Object {
                                               "backgroundColor": "inherit",
@@ -5577,13 +5577,13 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                         noripple={false}
                                         onAdd={[Function]}
                                         selected={false}
-                                        sizing="normal"
+                                        sizing="small"
                                         style={Object {}}
                                         unselect={false}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-list list"
+                                          className="ui-list list small"
                                           id=""
                                           style={Object {}}
                                         >
@@ -5603,7 +5603,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -5651,7 +5651,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -5662,7 +5662,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -5696,7 +5696,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="Ascending"
@@ -5707,7 +5707,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -5731,7 +5731,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -5765,7 +5765,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -5802,7 +5802,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -5836,7 +5836,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -5852,7 +5852,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
@@ -5891,7 +5891,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -5939,7 +5939,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -5950,7 +5950,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -5984,7 +5984,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="Descending"
@@ -5995,7 +5995,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -6019,7 +6019,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -6053,7 +6053,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -6090,7 +6090,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -6124,7 +6124,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -6140,7 +6140,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
@@ -6179,7 +6179,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -6209,7 +6209,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               widget={null}
                                             >
                                               <li
-                                                className="ui-list-divider listDivider"
+                                                className="ui-list-divider listDivider normal"
                                               >
                                                 <hr
                                                   style={
@@ -6235,7 +6235,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -6283,7 +6283,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -6294,7 +6294,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -6328,7 +6328,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="First"
@@ -6339,7 +6339,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -6363,7 +6363,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -6397,7 +6397,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -6434,7 +6434,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -6468,7 +6468,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -6484,7 +6484,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
@@ -6523,7 +6523,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -6571,7 +6571,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -6582,7 +6582,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -6616,7 +6616,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="Last"
@@ -6627,7 +6627,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -6651,7 +6651,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -6685,7 +6685,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -6722,7 +6722,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -6756,7 +6756,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -6772,7 +6772,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
@@ -6811,7 +6811,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -6859,7 +6859,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -6870,7 +6870,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -6904,7 +6904,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="Next"
@@ -6915,7 +6915,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -6939,7 +6939,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -6973,7 +6973,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -7010,7 +7010,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -7044,7 +7044,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -7060,7 +7060,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
@@ -7099,7 +7099,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -7147,7 +7147,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -7158,7 +7158,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -7192,7 +7192,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="Previous"
@@ -7203,7 +7203,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -7227,7 +7227,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -7261,7 +7261,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -7298,7 +7298,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -7332,7 +7332,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -7348,7 +7348,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
@@ -7387,7 +7387,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -7417,7 +7417,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               widget={null}
                                             >
                                               <li
-                                                className="ui-list-divider listDivider"
+                                                className="ui-list-divider listDivider normal"
                                               >
                                                 <hr
                                                   style={
@@ -7443,7 +7443,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -7491,7 +7491,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -7502,7 +7502,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -7536,7 +7536,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="10"
@@ -7547,7 +7547,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -7571,7 +7571,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -7605,7 +7605,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -7642,7 +7642,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -7676,7 +7676,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -7692,7 +7692,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
@@ -7731,7 +7731,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -7779,7 +7779,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -7790,7 +7790,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -7824,7 +7824,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="20"
@@ -7835,7 +7835,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -7859,7 +7859,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -7893,7 +7893,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -7930,7 +7930,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -7964,7 +7964,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -7980,7 +7980,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
@@ -8019,7 +8019,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -8067,7 +8067,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -8078,7 +8078,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -8112,7 +8112,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="30"
@@ -8123,7 +8123,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -8147,7 +8147,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -8181,7 +8181,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -8218,7 +8218,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -8252,7 +8252,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -8268,7 +8268,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
@@ -8307,7 +8307,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                               href={
                                                 Object {
                                                   "selectHandler": [Function],
-                                                  "sizing": "normal",
+                                                  "sizing": "small",
                                                 }
                                               }
                                               id=""
@@ -8355,7 +8355,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 backgroundColor="inherit"
                                                 borderColor="inherit"
                                                 borderWidth="none"
-                                                className="ui-listitem listItem"
+                                                className="ui-listitem listItem small"
                                                 color="inherit"
                                                 contentEditable={false}
                                                 direction="right"
@@ -8366,7 +8366,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
-                                                    "sizing": "normal",
+                                                    "sizing": "small",
                                                   }
                                                 }
                                                 id=""
@@ -8400,7 +8400,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 pagesToDisplay={3}
                                                 rightButton={null}
                                                 selected={false}
-                                                sizing="normal"
+                                                sizing="small"
                                                 stacked={false}
                                                 style={Object {}}
                                                 title="all"
@@ -8411,7 +8411,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                 widget={null}
                                               >
                                                 <li
-                                                  className="ui-item item normal ui-listitem listItem"
+                                                  className="ui-item item small ui-listitem listItem small"
                                                   id=""
                                                   onBlur={[Function]}
                                                   onDoubleClick={[Function]}
@@ -8435,7 +8435,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     href={
                                                       Object {
                                                         "selectHandler": [Function],
-                                                        "sizing": "normal",
+                                                        "sizing": "small",
                                                       }
                                                     }
                                                     id=""
@@ -8469,7 +8469,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                     pagesToDisplay={3}
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={
                                                       Object {
@@ -8506,7 +8506,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         href={
                                                           Object {
                                                             "selectHandler": [Function],
-                                                            "sizing": "normal",
+                                                            "sizing": "small",
                                                           }
                                                         }
                                                         id=""
@@ -8540,7 +8540,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         pagesToDisplay={3}
                                                         rightButton={null}
                                                         selected={false}
-                                                        sizing="normal"
+                                                        sizing="small"
                                                         stacked={false}
                                                         style={
                                                           Object {
@@ -8556,7 +8556,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                                         widget={null}
                                                       >
                                                         <span
-                                                          className="ui-label label normal ui-title titleDominant"
+                                                          className="ui-label label small ui-title titleDominant"
                                                           contentEditable={false}
                                                           onBlur={[Function]}
                                                           onClick={[Function]}

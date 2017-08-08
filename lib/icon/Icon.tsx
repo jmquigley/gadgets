@@ -82,6 +82,7 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 			this.styles.icon,
 			this.locationStyle,
 			(props.imageFile === '') && 'fa',
+			(props.imageFile === '') && 'fa-fw',
 			(props.imageFile === '') && `fa-${props.iconName}`,
 			(props.imageFile !== '') && this.boxStyle()
 		]);

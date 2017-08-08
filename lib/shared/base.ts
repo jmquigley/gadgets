@@ -73,6 +73,7 @@ const defaultBaseOptions: BaseOptions = {
 
 export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
+	private _className: string = '';
 	private _classes: string[] = [];
 	private _inlineStyle: any = {};     // inline style overrides
 	private _locationStyle: string = '';
@@ -92,6 +93,10 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 			this._sizing = Sizing.normal;
 		}
 
+		if ('className' in props) {
+			this._className = props['className'];
+		}
+
 		if ('location' in props) {
 			this._locationStyle = this.styles[props['location']];
 		}
@@ -103,6 +108,10 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
 	set classes(arr: string[]) {
 		this._classes = arr;
+	}
+
+	get className(): string {
+		return this._className;
 	}
 
 	get inlineStyle(): any {
@@ -195,18 +204,27 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 			opts
 		);
 
-		if ('sizing' in props && this._sizing !== props['sizing']) {
-			toggleOff(classes)(this._sizing);
-			this._sizing = props['sizing'];
+		if (opts.sizing) {
+			if ('sizing' in props && this._sizing !== props['sizing']) {
+				toggleOff(classes)(this.fontStyle(this._sizing));
+				this._sizing = props['sizing'];
+			}
+
+			toggleOnIf(classes, 'sizing' in props)(
+				this.fontStyle()
+			);
 		}
 
-		toggleOnIf(classes, 'sizing' in props && opts.sizing)(
-			this.fontStyle()
-		);
+		if (opts.className) {
+			if ('className' in props && this._className !== props['className']) {
+				toggleOff(classes)(this._className);
+				this._className = props['className'];
+			}
 
-		toggleOnIf(classes, 'className' in props && props['className'] && opts.className)(
-			props['className']
-		);
+			toggleOnIf(classes, 'className' in props && props['className'])(
+				props['className']
+			);
+		}
 
 		toggleOnIf(classes, 'visible' in props && !props['visible'] && opts.visible)(
 			this.styles.invisible

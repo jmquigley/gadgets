@@ -7,22 +7,31 @@
  *
  * ```javascript
  * import {ButtonCircle} from 'gadgets';
- * <ButtonCircle iconName="times" sizing={Sizing.small} onClick={someFunction} />
+ *
+ * <ButtonCircle
+ *     iconName="times"
+ *     sizing={Sizing.small}
+ *     onClick={someFunction}
+ * />
  * ```
  *
  * #### Events
- * - `onClick()` - This callback is invoked when the control is clicked by the user
+ * - `onClick()` - This callback is invoked when the control is clicked by the
+ * user
  *
  * #### Styles
- * - `ui-button-circle` - A top level style placed on the `<div>` container for the
- * control.
+ * - `ui-button-circle` - A top level style placed on the `<div>` container for
+ * the control.
  *
  * #### Properties
- * - `borderColor: string ('black')` - The color of the border around the circle.
+ * - `borderColor: string ('black')` - The color of the border around the
+ * circle.
  * - `color: string ('black')` - the color of the button icon
- * - `iconName: string ('bomb')` - the name of the font awesome icon used with this button
- * - `sizing: Sizing (Sizing.normal)` - Allows one to change the size of the icon within the button.
- * See the shared props object for the `Sizing` enumeration.
+ * - `iconName: string ('bomb')` - the name of the font awesome icon used with
+ * this button
+ * - `sizing: Sizing (Sizing.normal)` - Allows one to change the size of the
+ * icon within the button.  See the shared props object for the `Sizing`
+ * enumeration.
  *
  * @module ButtonCircle
  */
@@ -57,6 +66,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 	public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 
 	private _buttonClasses: Set<string>;
+	private _containerClasses: Set<string>;
 	private _rootClasses: Set<string>;
 
 	constructor(props: ButtonCircleProps) {
@@ -65,6 +75,10 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 		this._buttonClasses = new Set<string>([
 			this.borderStyle(),
 			this.styles.buttonCircleIcon
+		]);
+
+		this._containerClasses = new Set<string>([
+			this.styles.buttonCircleContainer
 		]);
 
 		this._rootClasses = new Set<string>([
@@ -82,7 +96,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 	public render() {
 		return (
 			<div className={join(this._rootClasses, ' ')}>
-				<div className={this.styles.buttonCircleContainer}>
+				<div className={join(this._containerClasses, ' ')}>
 					<Button
 						{...this.props}
 						className={join(this._buttonClasses, ' ')}

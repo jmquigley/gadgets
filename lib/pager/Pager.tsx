@@ -82,7 +82,7 @@
 
 import {cloneDeep, isEqual, sortBy} from 'lodash';
 import * as React from 'react';
-import {getUUID, nilEvent} from 'util.toolbox';
+import {getUUID, join, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
 import {ButtonText} from '../buttonText';
@@ -125,7 +125,8 @@ export function getDefaultPagerProps(): PagerProps {
 			sizing: Sizing.normal,
 			totalItems: 0,
 			useinput: false
-		}));
+		})
+	);
 }
 
 export interface PagerState {
@@ -140,14 +141,25 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
 	private _buttons: any = [];
-	private _buttonStyle: string[] = [];
+	private _buttonStyle: Set<string>;
 	private _dialog: any = null;
 	private _initialPage: number = 0;
 	private _initialPageSize: number = 0;
 	private _pageSizes: number[] = cloneDeep(defaultPageSizes);
+	private _rootClasses: Set<string>;
 
 	constructor(props: PagerProps) {
 		super(props, require('./styles.css'));
+
+		this._buttonStyle = new Set<string>([
+			this.styles.pagerButton,
+			this.boxStyle()
+		]);
+
+		this._rootClasses = new Set<string>([
+			'ui-pager',
+			this.styles.pager
+		]);
 
 		this.pageSizes = props.pageSizes;
 		this.computeInitialPages(props.initialPageSize);
@@ -156,9 +168,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			currentPage: this.initialPage,
 			pageSize: this.initialPageSize
 		};
-
-		this._buttonStyle.push(this.styles.pagerButton);
-		this._buttonStyle.push(this.boxStyle());
 
 		this.bindCallbacks(
 			'handleBlur',
@@ -176,7 +185,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		);
 
 		this.createButtons();
-		this.createDialog();
+		this.createDialog(props);
 
 		this.componentWillUpdate(props);
 	}
@@ -318,7 +327,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttons[page] = (
 					<ButtonText
 						{...this.props}
-						className={this._buttonStyle.join(' ')}
+						className={join(this._buttonStyle, ' ')}
 						key={String(page)}
 						noicon
 						onClick={this.handleSelect}
@@ -339,12 +348,13 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
-							className: this._buttonStyle.join(' ') + selected,
+							className: join(this._buttonStyle, ' ') + selected,
 							disabled: this.props.disabled
 						}));
 				} else {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
+							className: join(this._buttonStyle, ' '),
 							disabled: this.props.disabled
 						}));
 				}
@@ -352,7 +362,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttonsDisplay.push(
 					<ButtonText
 						{...this.props}
-						className={this._buttonStyle.join(' ')}
+						className={join(this._buttonStyle, ' ')}
 						key={getUUID()}
 						noicon
 						disabled
@@ -368,14 +378,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * Dynamically creates the popup dialog menu used to select new values for the
 	 * control.  The values include navigation and changing the page size.
 	 */
-	private createDialog() {
+	private createDialog(props: PagerProps) {
 		const items: any = [];
 		const sortOptions = [];
 
-		if (this.props.onSort && typeof this.props.onSort === 'function' && this.props.onSort !== nilEvent) {
+		if (props.onSort && typeof props.onSort === 'function' && props.onSort !== nilEvent) {
 			sortOptions.push(
 				<ListItem
-					{...this.props}
+					{...props}
 					key={getUUID()}
 					noedit
 					onSelect={this.handleSortAscending}
@@ -385,7 +395,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 			sortOptions.push(
 				<ListItem
-					{...this.props}
+					{...props}
 					key={getUUID()}
 					noedit
 					onSelect={this.handleSortDescending}
@@ -399,7 +409,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		for (const val of sortBy(this.pageSizes)) {
 			items.push(
 				<ListItem
-					{...this.props}
+					{...props}
 					title={String(val)}
 					key={getUUID()}
 					noedit
@@ -410,7 +420,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		items.push(
 			<ListItem
-				{...this.props}
+				{...props}
 				key={getUUID()}
 				noedit
 				onSelect={this.handleDialogSelect}
@@ -419,12 +429,12 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		);
 
 		this._dialog = (
-			<List>
+			<List sizing={props.sizing}>
 				{sortOptions}
-				<ListItem {...this.props} title="First" noedit onSelect={this.moveToFront}/>
-				<ListItem {...this.props} title="Last" noedit onSelect={this.moveToEnd}/>
-				<ListItem {...this.props} title="Next" noedit onSelect={this.moveToNext}/>
-				<ListItem {...this.props} title="Previous" noedit onSelect={this.moveToPrevious}/>
+				<ListItem {...props} title="First" noedit onSelect={this.moveToFront}/>
+				<ListItem {...props} title="Last" noedit onSelect={this.moveToEnd}/>
+				<ListItem {...props} title="Next" noedit onSelect={this.moveToNext}/>
+				<ListItem {...props} title="Previous" noedit onSelect={this.moveToPrevious}/>
 				<ListDivider />
 				{items}
 			</List>
@@ -554,32 +564,29 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			this.currentPage = this.initialPage;
 			this.pageSize = this.initialPageSize;
 
-			this.createDialog();
+			this.createDialog(nextProps);
 		}
 	}
 
 	public componentWillUpdate(nextProps: PagerProps) {
-		this.resetStyles(nextProps);
-		this.classes.push('ui-pager');
-		this.classes.push(this.styles.pager);
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		this.createButtons();
 
 		return (
-			<div className={this.classes.join(' ')}>
+			<div className={join(this._rootClasses, ' ')}>
 				<Button
 					{...this.props}
-					className={this._buttonStyle.join(' ')}
+					className={join(this._buttonStyle, ' ')}
 					iconName="angle-double-left"
 					onClick={this.moveToFront}
 					sizing={this.props.sizing}
 				/>
 				<Button
 					{...this.props}
-					className={this._buttonStyle.join(' ')}
+					className={join(this._buttonStyle, ' ')}
 					iconName="angle-left"
 					onClick={this.moveToPrevious}
 					sizing={this.props.sizing}
@@ -587,14 +594,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				{this._buttonsDisplay}
 				<Button
 					{...this.props}
-					className={this._buttonStyle.join(' ')}
+					className={join(this._buttonStyle, ' ')}
 					iconName="angle-right"
 					onClick={this.moveToNext}
 					sizing={this.props.sizing}
 				/>
 				<Button
 					{...this.props}
-					className={this._buttonStyle.join(' ')}
+					className={join(this._buttonStyle, ' ')}
 					iconName="angle-double-right"
 					onClick={this.moveToEnd}
 					sizing={this.props.sizing}

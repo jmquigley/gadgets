@@ -2,7 +2,7 @@
 
 exports[`Test disabling of a List control 1`] = `
 <div
-  className="ui-list list disabled nohover"
+  className="ui-list list normal disabled nohover"
   id=""
   style={Object {}}
 >
@@ -24,7 +24,7 @@ exports[`Test disabling of a List control 1`] = `
 
 exports[`Test making List control invisible 1`] = `
 <div
-  className="ui-list list invisible"
+  className="ui-list list normal invisible"
   id=""
   style={Object {}}
 >
@@ -72,7 +72,7 @@ Object {
 
 exports[`Test the creation of a List control container 1`] = `
 <div
-  className="ui-list list listAlternating test-class"
+  className="ui-list list listAlternating normal test-class"
   id=""
   style={Object {}}
 >

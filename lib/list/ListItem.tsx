@@ -9,7 +9,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import {join, nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent, Sizing} from '../shared';
 
@@ -30,7 +30,8 @@ export function getDefaultListItemProps(): ListItemProps {
 			onBlur: nilEvent,
 			onClick: nilEvent,
 			onSelect: nilEvent
-		}));
+		})
+	);
 }
 
 export interface ListItemState {
@@ -42,10 +43,17 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
 	private _delay = 300;
 	private _preventClick: boolean = false;
+	private _rootClasses: Set<string>;
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-listitem',
+			this.styles.listItem
+		]);
+
 		this.state = {
 			toggleRipple: false
 		};
@@ -122,17 +130,14 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	}
 
 	public componentWillUpdate(nextProps: ListItemProps) {
-		this.resetStyles(nextProps);
-		this.classes.push('ui-listitem');
-		this.classes.push(this.styles.listItem);
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		return (
 			<Item
 				{...this.props}
-				className={this.classes.join(' ')}
+				className={join(this._rootClasses, ' ')}
 				noripple={this.state.toggleRipple || this.props.noripple}
 				onBlur={this.handleBlur}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}

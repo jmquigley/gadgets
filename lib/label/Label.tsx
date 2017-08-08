@@ -47,7 +47,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import {join, nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 export interface LabelProps extends BaseProps {
@@ -89,9 +89,16 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	public static defaultProps: LabelProps = getDefaultLabelProps();
 
 	private _label: any = null;
+	private _rootClasses: Set<string>;
 
 	constructor(props: LabelProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-label',
+			this.styles.label
+		]);
+
 		this.state = {
 			editable: props.useedit,
 			previousText: props.text,
@@ -195,22 +202,18 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	public componentWillUpdate(nextProps: LabelProps) {
-		this.resetStyles(nextProps);
-
-		this.classes.push('ui-label');
-		this.classes.push(this.styles.label);
-		this.classes.push(this.fontStyle());
-
-		this.buildStyles(nextProps, {
+		this.buildInlineStyles(nextProps, {
 			color: nextProps.color,
 			backgroundColor: nextProps.backgroundColor
 		});
+
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		return (
 			<span
-				className={this.classes.join(' ')}
+				className={join(this._rootClasses, ' ')}
 				contentEditable={this.state.editable}
 				onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
 				onClick={this.props.onClick}

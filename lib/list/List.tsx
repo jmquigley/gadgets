@@ -9,7 +9,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import {toggleOnIf} from 'util.toggle';
+import {join, nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 import {ListItem} from './index';
 
@@ -37,8 +38,17 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 	public static defaultProps: ListProps = getDefaultListProps();
 
+	private _rootClasses: Set<string>;
+
 	constructor(props: ListProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-list',
+			this.styles.list
+
+		]);
+
 		this.state = {
 			selectedItem: null
 		};
@@ -59,16 +69,11 @@ export class List extends BaseComponent<ListProps, ListState> {
 	}
 
 	public componentWillUpdate(nextProps: ListProps) {
-		this.resetStyles(nextProps);
+		toggleOnIf(this._rootClasses, nextProps.alternating)(
+			this.styles.listAlternating
+		);
 
-		this.classes.push('ui-list');
-		this.classes.push(this.styles.list);
-
-		if (nextProps.alternating) {
-			this.classes.push(this.styles.listAlternating);
-		}
-
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
@@ -86,7 +91,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 		return (
 			<div
-				className={this.classes.join(' ')}
+				className={join(this._rootClasses, ' ')}
 				id={this.props.id}
 				style={this.inlineStyle}
 			>
