@@ -25,7 +25,7 @@ exports[`Test ButtonCircle click event 1`] = `
   visible={true}
 >
   <div
-    className="ui-button-circle buttonCircle"
+    className="ui-button-circle buttonCircle normal"
   >
     <div
       className="buttonCircleContainer"
@@ -105,7 +105,7 @@ exports[`Test ButtonCircle click event 1`] = `
 
 exports[`Test creation of a ButtonCircle control 1`] = `
 <div
-  className="ui-button-circle buttonCircle test-class"
+  className="ui-button-circle buttonCircle normal test-class"
 >
   <div
     className="buttonCircleContainer"
@@ -162,7 +162,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   visible={true}
 >
   <div
-    className="ui-button-circle buttonCircle disabled nohover"
+    className="ui-button-circle buttonCircle normal disabled nohover"
   >
     <div
       className="buttonCircleContainer"
@@ -191,7 +191,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         visible={true}
       >
         <div
-          className="ui-button button normal normalBorder buttonCircleIcon disabled"
+          className="ui-button button normal normalBorder buttonCircleIcon disabled nohover"
           onClick={[Function]}
           style={
             Object {
@@ -265,7 +265,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   visible={false}
 >
   <div
-    className="ui-button-circle buttonCircle invisible"
+    className="ui-button-circle buttonCircle normal invisible"
   >
     <div
       className="buttonCircleContainer"

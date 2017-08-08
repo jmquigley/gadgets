@@ -28,6 +28,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {join} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
@@ -48,24 +49,27 @@ export class Container extends BaseComponent<ContainerProps, undefined> {
 
 	public static defaultProps: ContainerProps = getDefaultContainerProps();
 
+	private _rootClasses: Set<string>;
+
 	constructor(props: ContainerProps) {
 		super(props, require('./styles.css'));
+
+		this._rootClasses = new Set<string>([
+			'ui-container',
+			this.styles.container
+		]);
+
 		this.componentWillUpdate(props);
 	}
 
 	public componentWillUpdate(nextProps: any) {
-		this.resetStyles(nextProps);
-
-		this.classes.push('ui-container');
-		this.classes.push(this.styles.container);
-
-		this.buildStyles(nextProps);
+		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
 
 	public render() {
 		return (
 			<section
-				className={this.classes.join(' ')}
+				className={join(this._rootClasses, ' ')}
 				id={this.props.id}
 			>
 				{this.props.children}

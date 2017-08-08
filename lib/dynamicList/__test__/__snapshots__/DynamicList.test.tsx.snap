@@ -1731,7 +1731,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                 className="itemButton normal null"
                 style={
                   Object {
-                    "width": "2em",
+                    "width": "2rem",
                   }
                 }
               >
@@ -2166,7 +2166,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                           className="itemButton normal hiddenButton"
                           style={
                             Object {
-                              "width": "2em",
+                              "width": "2rem",
                             }
                           }
                         >
@@ -2570,7 +2570,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                           className="itemButton normal hiddenButton"
                           style={
                             Object {
-                              "width": "2em",
+                              "width": "2rem",
                             }
                           }
                         >
@@ -2974,7 +2974,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                           className="itemButton normal hiddenButton"
                           style={
                             Object {
-                              "width": "2em",
+                              "width": "2rem",
                             }
                           }
                         >
@@ -5135,7 +5135,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button-text buttonText ripple pagerButton smallBox ui-pager-selected"
+                                  className="ui-button-text buttonText ripple small pagerButton smallBox ui-pager-selected"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -5188,7 +5188,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button-text buttonText pagerButton smallBox disabled nohover"
+                                  className="ui-button-text buttonText small pagerButton smallBox disabled nohover"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -5239,7 +5239,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button-text buttonText pagerButton smallBox disabled nohover"
+                                  className="ui-button-text buttonText small pagerButton smallBox disabled nohover"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -5488,7 +5488,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button-dialog buttonDialog pagerDialog"
+                                  className="ui-button-dialog buttonDialog small pagerDialog"
                                 >
                                   <Button
                                     backgroundColor="inherit"
@@ -5553,7 +5553,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
                                     </div>
                                   </Button>
                                   <div
-                                    className="buttonDialogPopup ui-dialog-popup dialogTop buttonDialogHide small"
+                                    className="ui-dialog-popup buttonDialogPopup dialogTop buttonDialogHide"
                                     onClick={[Function]}
                                   >
                                     <div

@@ -39,9 +39,9 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {toggleOnIfElse} from 'util.toggle';
-import {nilEvent} from 'util.toolbox';
+import {join, nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent, cls, Direction, Location, Sizing} from '../shared';
+import {BaseComponent, Direction, Location, Sizing} from '../shared';
 import {Triangle} from '../triangle';
 
 export interface ButtonDialogProps extends ButtonProps {
@@ -90,7 +90,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 		this._triangleClasses = new Set<string>([
 			...props.triangleClasses.slice()
-		])
+		]);
 
 		this.state = {
 			visible: false
@@ -167,7 +167,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	public render() {
 		return (
 			<div
-				className={cls(this._rootClasses)}
+				className={join(this._rootClasses, ' ')}
 			>
 				<Button
 					backgroundColor={this.props.backgroundColor}
@@ -180,7 +180,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					visible={this.props.visible}
 				/>
 				<div
-					className={cls(this._dialogClasses)}
+					className={join(this._dialogClasses, ' ')}
 					onClick={this.handleDialogClick}
 				>
 					<div className={this.styles.buttonDialogContent}>
@@ -190,7 +190,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					null
 					:
 					<Triangle
-						className={cls(this._triangleClasses)}
+						className={join(this._triangleClasses, ' ')}
 						direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
 						nobase
 						sizing={Sizing.normal}

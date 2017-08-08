@@ -36,7 +36,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent, BaseProps, cls, getDefaultBaseProps} from '../shared';
+import {join} from 'util.toolbox';
+import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 export interface AccordionProps extends BaseProps {
 	children?: React.ReactNode;
@@ -73,7 +74,7 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public render() {
 		return (
-			<ul className={cls(this._rootClasses)} style={this.inlineStyle}>
+			<ul className={join(this._rootClasses, ' ')} style={this.inlineStyle}>
 				{this.props.children}
 			</ul>
 		);

@@ -31,9 +31,9 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import {join, nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent, cls, Sizing} from '../shared';
+import {BaseComponent, Sizing} from '../shared';
 
 export interface ButtonCircleProps extends ButtonProps {
 	onClick?: any;
@@ -81,11 +81,11 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 
 	public render() {
 		return (
-			<div className={cls(this._rootClasses)}>
+			<div className={join(this._rootClasses, ' ')}>
 				<div className={this.styles.buttonCircleContainer}>
 					<Button
 						{...this.props}
-						className={cls(this._buttonClasses)}
+						className={join(this._buttonClasses, ' ')}
 						iconName={this.props.iconName}
 						iconStyle={this.boxStyle()}
 						style={this.inlineStyle}

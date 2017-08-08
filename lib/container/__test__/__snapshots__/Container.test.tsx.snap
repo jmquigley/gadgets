@@ -2,7 +2,7 @@
 
 exports[`Test adding custom className to Container control 1`] = `
 <section
-  className="ui-container container test-classname"
+  className="ui-container container normal test-classname"
   id="testid"
 >
   <p>
@@ -13,7 +13,7 @@ exports[`Test adding custom className to Container control 1`] = `
 
 exports[`Test creation of a Container control 1`] = `
 <section
-  className="ui-container container"
+  className="ui-container container normal"
   id=""
 >
   <p>
@@ -24,7 +24,7 @@ exports[`Test creation of a Container control 1`] = `
 
 exports[`Test creation of a Container control with an id value 1`] = `
 <section
-  className="ui-container container"
+  className="ui-container container normal"
   id="testid"
 >
   <p>

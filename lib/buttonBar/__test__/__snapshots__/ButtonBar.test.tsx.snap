@@ -232,7 +232,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
   visible={true}
 >
   <div
-    className="ui-button-bar buttonBar normal disabled"
+    className="ui-button-bar buttonBar normal disabled nohover"
   >
     <div
       className="ui-button-bar-group buttonBarGroup left"
@@ -270,7 +270,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
           visible={true}
         >
           <div
-            className="ui-button button normal disabled"
+            className="ui-button button normal disabled nohover"
             onClick={[Function]}
             style={Object {}}
           >
@@ -342,7 +342,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
           visible={true}
         >
           <div
-            className="ui-button button normal disabled"
+            className="ui-button button normal disabled nohover"
             onClick={[Function]}
             style={Object {}}
           >

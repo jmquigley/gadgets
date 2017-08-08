@@ -7,7 +7,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
   bgColorOn="inherit"
   borderColor="inherit"
   borderWidth="none"
-  className="ui-button-toggle buttonToggle test-class"
+  className="ui-button-toggle buttonToggle normal test-class"
   color="gray"
   contentEditable={false}
   direction="right"
@@ -70,7 +70,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
     bgColorOn="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-button-toggle buttonToggle"
+    className="ui-button-toggle buttonToggle normal"
     color="gray"
     contentEditable={false}
     direction="right"
@@ -95,7 +95,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
     visible={true}
   >
     <div
-      className="ui-button button normal ui-button-toggle buttonToggle"
+      className="ui-button button normal ui-button-toggle buttonToggle normal"
       onClick={[Function]}
       style={
         Object {
@@ -177,7 +177,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
     bgColorOn="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-button-toggle buttonToggle disabled nohover"
+    className="ui-button-toggle buttonToggle normal disabled nohover"
     color="gray"
     contentEditable={false}
     direction="right"
@@ -202,7 +202,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
     visible={true}
   >
     <div
-      className="ui-button button normal ui-button-toggle buttonToggle disabled nohover disabled"
+      className="ui-button button normal ui-button-toggle buttonToggle normal disabled nohover disabled nohover"
       onClick={[Function]}
       style={
         Object {
@@ -284,7 +284,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
     bgColorOn="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-button-toggle buttonToggle invisible"
+    className="ui-button-toggle buttonToggle normal invisible"
     color="gray"
     contentEditable={false}
     direction="right"
@@ -309,7 +309,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
     visible={false}
   >
     <div
-      className="ui-button button normal ui-button-toggle buttonToggle invisible invisible"
+      className="ui-button button normal ui-button-toggle buttonToggle normal invisible invisible"
       onClick={[Function]}
       style={
         Object {

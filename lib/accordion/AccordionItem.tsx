@@ -55,9 +55,9 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import {join, nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent, cls} from '../shared';
+import {BaseComponent} from '../shared';
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
@@ -137,7 +137,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 		return (
 			<ul
-				className={cls(this._rootClasses)}
+				className={join(this._rootClasses, ' ')}
 				style={this.inlineStyle}
 			>
 				<Item

@@ -34,12 +34,11 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {toggleOnIf} from 'util.toggle';
-import {nilEvent} from 'util.toolbox';
+import {join, nilEvent} from 'util.toolbox';
 import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
-	cls,
 	getDefaultBaseProps,
 	Sizing
 } from '../shared';
@@ -113,7 +112,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 		toggleOnIf(this._rootClasses, !nextProps.noripple && !nextProps.disabled)(
 			'ripple'
-		)
+		);
 
 		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
@@ -121,12 +120,12 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	public render() {
 		return (
 			<div
-				className={cls(this._rootClasses)}
+				className={join(this._rootClasses, ' ')}
 				onClick={this.handleClick}
 				style={this.inlineStyle}
 			>
 				<Icon
-					className={cls(this._iconClasses)}
+					className={join(this._iconClasses, ' ')}
 					iconName={this.props.iconName}
 					sizing={this.props.sizing}
 				/>

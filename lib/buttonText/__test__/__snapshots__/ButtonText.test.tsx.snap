@@ -28,7 +28,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   visible={true}
 >
   <div
-    className="ui-button-text buttonText ripple test-class"
+    className="ui-button-text buttonText ripple normal test-class"
     onClick={[Function]}
     style={
       Object {
@@ -107,7 +107,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
   visible={true}
 >
   <div
-    className="ui-button-text buttonText disabled nohover"
+    className="ui-button-text buttonText normal disabled nohover"
     onClick={[Function]}
     style={Object {}}
   >
@@ -178,7 +178,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
   visible={false}
 >
   <div
-    className="ui-button-text buttonText ripple invisible"
+    className="ui-button-text buttonText ripple normal invisible"
     onClick={[Function]}
     style={Object {}}
   >

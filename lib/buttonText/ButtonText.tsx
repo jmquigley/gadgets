@@ -46,9 +46,9 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {toggleOnIf} from 'util.toggle';
-import {nilEvent} from 'util.toolbox';
+import {join, nilEvent} from 'util.toolbox';
 import {getDefaultIconProps, Icon, IconProps} from '../icon';
-import {BaseComponent, cls, Justify, Sizing} from '../shared';
+import {BaseComponent, Justify, Sizing} from '../shared';
 
 export interface ButtonTextProps extends IconProps {
 	justify?: Justify;
@@ -80,7 +80,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		this._rootClasses = new Set<string>([
 			'ui-button-text',
 			this.styles.buttonText
-		])
+		]);
 
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(props);
@@ -126,7 +126,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 		toggleOnIf(this._rootClasses, !nextProps.noripple && !nextProps.disabled)(
 			'ripple'
-		)
+		);
 
 		this.buildCommonStyles(this._rootClasses, nextProps);
 	}
@@ -157,7 +157,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 		return (
 			<div
-				className={cls(this._rootClasses)}
+				className={join(this._rootClasses, ' ')}
 				style={this.inlineStyle}
 				onClick={this.handleClick}
 			>

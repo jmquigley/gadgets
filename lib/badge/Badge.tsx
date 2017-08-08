@@ -35,8 +35,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {BaseComponent, BaseProps, cls, Sizing} from '../shared';
+import {join, nilEvent} from 'util.toolbox';
+import {BaseComponent, BaseProps, Sizing} from '../shared';
 import {getDefaultBaseProps, Location} from '../shared/props';
 
 export interface BadgeProps extends BaseProps {
@@ -105,7 +105,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		} else {
 			badge = (
 				<div
-					className={cls(this._badgeClasses)}
+					className={join(this._badgeClasses, ' ')}
 					onClick={this.handleClick}
 					style={this.inlineStyle}
 				>
@@ -115,7 +115,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		}
 
 		return (
-			<div className={cls(this._rootClasses)}>
+			<div className={join(this._rootClasses, ' ')}>
 				{this.props.children}
 				{badge}
 			</div>

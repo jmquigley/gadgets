@@ -2,7 +2,7 @@
 
 exports[`Test creation of a ButtonDialog control 1`] = `
 <div
-  className="ui-button-dialog buttonDialog test-class"
+  className="ui-button-dialog buttonDialog normal test-class"
 >
   <Button
     backgroundColor="inherit"
@@ -28,7 +28,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
     visible={true}
   />
   <div
-    className="test-class-dialog buttonDialogPopup ui-dialog-popup dialogBottom buttonDialogHide normal"
+    className="ui-dialog-popup test-class-dialog buttonDialogPopup dialogBottom buttonDialogHide"
     onClick={[Function]}
   >
     <div
@@ -65,7 +65,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
 
 exports[`Test creation of a ButtonDialog control on top 1`] = `
 <div
-  className="ui-button-dialog buttonDialog test-class"
+  className="ui-button-dialog buttonDialog normal test-class"
 >
   <Button
     backgroundColor="inherit"
@@ -91,7 +91,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
     visible={true}
   />
   <div
-    className="test-class-dialog buttonDialogPopup ui-dialog-popup dialogTop buttonDialogHide normal"
+    className="ui-dialog-popup test-class-dialog buttonDialogPopup dialogTop buttonDialogHide"
     onClick={[Function]}
   >
     <div
@@ -154,7 +154,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   visible={false}
 >
   <div
-    className="ui-button-dialog buttonDialog invisible"
+    className="ui-button-dialog buttonDialog normal invisible"
   >
     <Button
       backgroundColor="inherit"
@@ -219,7 +219,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       </div>
     </Button>
     <div
-      className="buttonDialogPopup ui-dialog-popup dialogBottom buttonDialogHide normal"
+      className="ui-dialog-popup buttonDialogPopup dialogBottom buttonDialogHide"
       onClick={[Function]}
     >
       <div
@@ -347,7 +347,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   visible={true}
 >
   <div
-    className="ui-button-dialog buttonDialog disabled nohover"
+    className="ui-button-dialog buttonDialog normal disabled nohover"
   >
     <Button
       backgroundColor="inherit"
@@ -373,7 +373,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
       visible={true}
     >
       <div
-        className="ui-button button normal disabled"
+        className="ui-button button normal disabled nohover"
         onClick={[Function]}
         style={Object {}}
       >
@@ -412,7 +412,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
       </div>
     </Button>
     <div
-      className="buttonDialogPopup ui-dialog-popup dialogBottom buttonDialogHide normal"
+      className="ui-dialog-popup buttonDialogPopup dialogBottom buttonDialogHide"
       onClick={[Function]}
     >
       <div

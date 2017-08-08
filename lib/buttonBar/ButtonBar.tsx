@@ -44,10 +44,10 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Keys} from 'util.keys';
 import {toggleOnIf} from 'util.toggle';
+import {join} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
-	cls,
 	getDefaultBaseProps,
 	Justify
 } from '../shared';
@@ -129,8 +129,8 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 		});
 
 		return(
-			<div className={cls(this._rootClasses)}>
-				<div className={cls(this._groupClasses)}>
+			<div className={join(this._rootClasses, ' ')}>
+				<div className={join(this._groupClasses, ' ')}>
 					{buttons}
 				</div>
 			</div>
