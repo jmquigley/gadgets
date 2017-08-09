@@ -40,7 +40,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {BaseComponent, Sizing} from '../shared';
 
@@ -65,23 +66,23 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 
 	public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 
-	private _buttonClasses: Set<string>;
-	private _containerClasses: Set<string>;
-	private _rootClasses: Set<string>;
+	private _buttonCN: ClassNames;
+	private _containerCN: ClassNames;
+	private _rootCN: ClassNames;
 
 	constructor(props: ButtonCircleProps) {
 		super(props, require('./styles.css'));
 
-		this._buttonClasses = new Set<string>([
+		this._buttonCN = new ClassNames([
 			this.borderStyle(),
 			this.styles.buttonCircleIcon
 		]);
 
-		this._containerClasses = new Set<string>([
+		this._containerCN = new ClassNames([
 			this.styles.buttonCircleContainer
 		]);
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-button-circle',
 			this.styles.buttonCircle
 		]);
@@ -90,16 +91,16 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ButtonCircleProps) {
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
 		return (
-			<div className={join(this._rootClasses, ' ')}>
-				<div className={join(this._containerClasses, ' ')}>
+			<div className={this._rootCN.classnames}>
+				<div className={this._containerCN.classnames}>
 					<Button
 						{...this.props}
-						className={join(this._buttonClasses, ' ')}
+						className={this._buttonCN.classnames}
 						iconName={this.props.iconName}
 						iconStyle={this.boxStyle()}
 						style={this.inlineStyle}

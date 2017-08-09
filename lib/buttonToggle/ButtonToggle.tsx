@@ -48,7 +48,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {BaseComponent} from '../shared';
 
@@ -74,7 +75,8 @@ export function getDefaultButtonToggleProps(): ButtonToggleProps {
 			iconNameOff: 'bomb',
 			iconNameOn: 'bomb',
 			onClick: nilEvent
-		}));
+		})
+	);
 }
 
 export interface ButtonToggleState {
@@ -85,12 +87,12 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 	public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
-	private _rootClasses: Set<string>;
+	private _rootCN: ClassNames;
 
 	constructor(props: ButtonToggleProps) {
 		super(props, require('./styles.css'));
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-button-toggle',
 			this.styles.buttonToggle
 		]);
@@ -112,7 +114,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 	}
 
 	public componentWillUpdate(nextProps: ButtonToggleProps) {
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
@@ -120,7 +122,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 			<Button
 				{...this.props}
 				backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
-				className={join(this._rootClasses, ' ')}
+				className={this._rootCN.classnames}
 				color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
 				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
 				noripple

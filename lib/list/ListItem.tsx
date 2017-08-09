@@ -9,7 +9,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent, Sizing} from '../shared';
 
@@ -41,15 +42,15 @@ export interface ListItemState {
 export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
-	private _delay = 300;
+	private _delay = 200;
 	private _preventClick: boolean = false;
-	private _rootClasses: Set<string>;
+	private _rootCN: ClassNames;
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
 		super(props, require('./styles.css'));
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-listitem',
 			this.styles.listItem
 		]);
@@ -130,14 +131,14 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	}
 
 	public componentWillUpdate(nextProps: ListItemProps) {
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
 		return (
 			<Item
 				{...this.props}
-				className={join(this._rootClasses, ' ')}
+				className={this._rootCN.classnames}
 				noripple={this.state.toggleRipple || this.props.noripple}
 				onBlur={this.handleBlur}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}

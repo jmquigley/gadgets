@@ -38,8 +38,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {toggleOnIfElse} from 'util.toggle';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
 import {BaseComponent, Direction, Location, Sizing} from '../shared';
 import {Triangle} from '../triangle';
@@ -59,7 +59,8 @@ export function getDefaultButtonDialogProps(): ButtonDialogProps {
 			notriangle: false,
 			onClick: nilEvent,
 			triangleClasses: []
-		}));
+		})
+	);
 }
 
 export interface ButtonDialogState {
@@ -70,25 +71,25 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 	public static defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
 
-	private _dialogClasses: Set<string>;
-	private _rootClasses: Set<string>;
-	private _triangleClasses: Set<string>;
+	private _dialogCN: ClassNames;
+	private _rootCN: ClassNames;
+	private _triangleCN: ClassNames;
 
 	constructor(props: ButtonDialogProps) {
 		super(props, require('./styles.css'));
 
-		this._dialogClasses = new Set<string>([
+		this._dialogCN = new ClassNames([
 			'ui-dialog-popup',
 			...props.dialogClasses.slice(),
 			this.styles.buttonDialogPopup
 		]);
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-button-dialog',
 			this.styles.buttonDialog
 		]);
 
-		this._triangleClasses = new Set<string>([
+		this._triangleCN = new ClassNames([
 			...props.triangleClasses.slice()
 		]);
 
@@ -137,37 +138,37 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 	public componentWillUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState) {
 
-		toggleOnIfElse(this._dialogClasses, nextProps.location === Location.top)(
+		this._dialogCN.onIfElse(nextProps.location === Location.top)(
 			this.styles.dialogTop
 		)(
 			this.styles.dialogBottom
 		);
 
-		toggleOnIfElse(this._triangleClasses, nextProps.location === Location.top)(
+		this._triangleCN.onIfElse(nextProps.location === Location.top)(
 			this.styles.dialogTriangleTop
 		)(
 			this.styles.dialogTriangleBottom
 		);
 
-		toggleOnIfElse(this._dialogClasses, nextState.visible)(
+		this._dialogCN.onIfElse(nextState.visible)(
 			this.styles.buttonDialogShow
 		)(
 			this.styles.buttonDialogHide
 		);
 
-		toggleOnIfElse(this._triangleClasses, nextState.visible)(
+		this._triangleCN.onIfElse(nextState.visible)(
 			this.styles.buttonDialogShow
 		)(
 			this.styles.buttonDialogHide
 		);
 
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
 		return (
 			<div
-				className={join(this._rootClasses, ' ')}
+				className={this._rootCN.classnames}
 			>
 				<Button
 					backgroundColor={this.props.backgroundColor}
@@ -180,7 +181,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					visible={this.props.visible}
 				/>
 				<div
-					className={join(this._dialogClasses, ' ')}
+					className={this._dialogCN.classnames}
 					onClick={this.handleDialogClick}
 				>
 					<div className={this.styles.buttonDialogContent}>
@@ -190,7 +191,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					null
 					:
 					<Triangle
-						className={join(this._triangleClasses, ' ')}
+						className={this._triangleCN.classnames}
 						direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
 						nobase
 						sizing={Sizing.normal}

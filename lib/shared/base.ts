@@ -44,7 +44,7 @@
 'use strict';
 
 import * as React from 'react';
-import {toggleOff, toggleOn, toggleOnIf} from 'util.toggle';
+import {ClassNames} from 'util.classnames';
 import {FontStyle, Sizes, Sizing, Styling} from './index';
 
 const styles = require('./styles.css');
@@ -192,11 +192,11 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	 * etc).  There are cases where one wants to ignore the computation of a
 	 * value.  The third optional parameter allows one to ignore a specific
 	 * value calculated in this set.
-	 * @param classes {Set<string>} the set that holds the class selector strings
+	 * @param classes {ClassNames} the Map that holds the class selector strings
 	 * @param props {P} the props for the given child class (generic type)
 	 * @param opts {BaseOption} determines which automatic names will be ignored
 	 */
-	protected buildCommonStyles(classes: Set<string>, props: P, opts?: BaseOptions): Set<string> {
+	protected buildCommonStyles(classes: ClassNames, props: P, opts?: BaseOptions) {
 
 		opts = Object.assign(
 			{},
@@ -206,40 +206,38 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
 		if (opts.sizing) {
 			if ('sizing' in props && this._sizing !== props['sizing']) {
-				toggleOff(classes)(this.fontStyle(this._sizing));
+				classes.off(this.fontStyle(this._sizing));
 				this._sizing = props['sizing'];
 			}
 
-			toggleOnIf(classes, 'sizing' in props)(
+			classes.onIf('sizing' in props)(
 				this.fontStyle()
 			);
 		}
 
 		if (opts.className) {
 			if ('className' in props && this._className !== props['className']) {
-				toggleOff(classes)(this._className);
+				classes.off(this._className);
 				this._className = props['className'];
 			}
 
-			toggleOnIf(classes, 'className' in props && props['className'])(
+			classes.onIf('className' in props && props['className'])(
 				props['className']
 			);
 		}
 
-		toggleOnIf(classes, 'visible' in props && !props['visible'] && opts.visible)(
+		classes.onIf('visible' in props && !props['visible'] && opts.visible)(
 			this.styles.invisible
 		);
 
-		toggleOnIf(classes, 'disabled' in props && props['disabled'] && opts.disabled)(
+		classes.onIf('disabled' in props && props['disabled'] && opts.disabled)(
 			styles.disabled,
 			'nohover'
 		);
 
 		if ('nohover' in props && props['nohover'] && opts.nohover) {
-			toggleOn(classes)('nohover');
+			classes.on('nohover');
 		}
-
-		return classes;
 	}
 
 	protected buildInlineStyles(props: P, style: any = {}) {

@@ -42,8 +42,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {toggleOffIfElse} from 'util.toggle';
-import {join} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
 import {
 	BaseComponent,
 	BaseProps,
@@ -72,12 +71,12 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 
 	public static defaultProps: IconProps = getDefaultIconProps();
 
-	private _rootClasses: Set<string>;
+	private _rootCN: ClassNames;
 
 	constructor(props: IconProps) {
 		super(props, require('./styles.css'));
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-icon',
 			this.styles.icon,
 			this.locationStyle,
@@ -91,25 +90,25 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: IconProps) {
-		const cond = this.props.imageFile === '' && this.props.iconName !== nextProps.iconName;
-		toggleOffIfElse(this._rootClasses, cond)(
-			`fa-${this.props.iconName}`
-		)(
-			`fa-${nextProps.iconName}`
-		);
+
+		if (this.props.imageFile === '' && this.props.iconName !== nextProps.iconName) {
+			this._rootCN.off(`fa-${this.props.iconName}`);
+		}
+
+		this._rootCN.on(`fa-${nextProps.iconName}`);
 
 		this.buildInlineStyles(nextProps, {
 			color: (nextProps.color),
 			backgroundColor: (nextProps.backgroundColor)
 		});
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
 		if (this.props.imageFile !== '') {
 			return (
 				<img
-					className={join(this._rootClasses, ' ')}
+					className={this._rootCN.classnames}
 					src={this.props.imageFile}
 					style={this.inlineStyle}
 				/>
@@ -117,7 +116,7 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		} else {
 			return (
 				<i
-					className={join(this._rootClasses, ' ')}
+					className={this._rootCN.classnames}
 					style={this.inlineStyle}
 				/>
 			);

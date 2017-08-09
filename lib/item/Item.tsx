@@ -4,8 +4,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {toggleOnIf} from 'util.toggle';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 import {Title, TitleLayout, TitleProps} from '../title';
 
@@ -59,13 +59,13 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 	public static defaultProps: ItemProps = getDefaultItemProps();
 
 	private _buttonScale: number = 0;
-	private _rootClasses: Set<string>;
+	private _rootCN: ClassNames;
 	private _titlePadding: string = '';
 
 	constructor(props: ItemProps) {
 		super(props, require('./styles.css'));
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-item',
 			this.styles.item
 		]);
@@ -81,7 +81,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 
 	public componentWillUpdate(nextProps: ItemProps) {
 
-		toggleOnIf(this._rootClasses, nextProps.selected)(
+		this._rootCN.onIf(nextProps.selected)(
 			'ui-selected'
 		);
 
@@ -106,7 +106,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 				this._buttonScale = 0.5;
 		}
 
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
@@ -153,7 +153,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 		return (
 			<li
 				id={this.props.id}
-				className={join(this._rootClasses, ' ')}
+				className={this._rootCN.classnames}
 				onBlur={this.props.onBlur}
 				onDoubleClick={this.props.onDoubleClick}
 				onKeyDown={this.props.onKeyDown}

@@ -45,8 +45,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {toggleOnIf} from 'util.toggle';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {getDefaultIconProps, Icon, IconProps} from '../icon';
 import {BaseComponent, Justify, Sizing} from '../shared';
 
@@ -65,36 +65,36 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 			onClick: nilEvent,
 			sizing: Sizing.normal,
 			text: ''
-		}));
+		})
+	);
 }
 
 export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 	public static defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 
-	private _rootClasses: Set<string>;
+	private _rootCN: ClassNames;
+	private _contentCN: ClassNames;
 
 	constructor(props: ButtonTextProps) {
 		super(props, require('./styles.css'));
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-button-text',
 			this.styles.buttonText
+		]);
+
+		this._contentCN = new ClassNames([
+			this.styles.content
 		]);
 
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(props);
 	}
 
-	private buildContent(justifyStyle: string) {
+	private buildContent() {
 		return(
-			<div
-				className={
-					this.styles.content + ' ' +
-					this.fontStyle() + ' ' +
-					justifyStyle
-				}
-			>
+			<div className={this._contentCN.classnames}>
 				{this.props.text}
 			</div>
 		);
@@ -122,29 +122,42 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			style['borderColor'] = nextProps.borderColor;
 		}
 
-		this.buildInlineStyles(nextProps, style);
+		this._contentCN.onIf(this.props.justify === Justify.center || this.props.noicon)(
+			this.styles.center
+		);
 
-		toggleOnIf(this._rootClasses, !nextProps.noripple && !nextProps.disabled)(
+		this._contentCN.onIf(this.props.justify === Justify.left)(
+			this.styles.left
+		);
+
+		this._contentCN.onIf(this.props.justify === Justify.right)(
+			this.styles.right
+		);
+
+		if (this.props.sizing !== nextProps.sizing) {
+			this._contentCN.off(this.fontStyle(this.props.sizing));
+		}
+		this._contentCN.on(this.fontStyle(nextProps.sizing));
+
+		this.buildInlineStyles(nextProps, style);
+		this._rootCN.onIf(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
 		);
 
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
 		let leftButton = null;
 		let rightButton = null;
 
-		if (this.props.justify === Justify.center || this.props.noicon) {
-			leftButton = this.buildContent(this.styles.center);
-		} else if (this.props.justify === Justify.left) {
-			leftButton = this.buildContent(this.styles.left);
+		if (this.props.justify === Justify.right) {
+			rightButton = this.buildContent();
 		} else {
-			rightButton = this.buildContent(this.styles.right);
+			leftButton = this.buildContent();
 		}
 
 		let icon = null;
-
 		if (!this.props.noicon && this.props.justify !== Justify.center) {
 			icon = (
 				<Icon
@@ -157,7 +170,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 		return (
 			<div
-				className={join(this._rootClasses, ' ')}
+				className={this._rootCN.classnames}
 				style={this.inlineStyle}
 				onClick={this.handleClick}
 			>

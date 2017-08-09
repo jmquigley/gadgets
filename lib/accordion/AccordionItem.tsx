@@ -55,7 +55,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent} from '../shared';
 
@@ -87,12 +88,12 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
-	private _rootClasses: Set<string>;
+	private _rootCN: ClassNames;
 
 	constructor(props: AccordionItemProps) {
 		super(props, require('./styles.css'));
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-accordionitem',
 			this.styles.accordionItem
 		]);
@@ -116,7 +117,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	}
 
 	public componentWillUpdate(nextProps: AccordionItemProps) {
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public componentWillReceiveProps(nextProps: AccordionItemProps) {
@@ -137,7 +138,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 		return (
 			<ul
-				className={join(this._rootClasses, ' ')}
+				className={this._rootCN.classnames}
 				style={this.inlineStyle}
 			>
 				<Item

@@ -2,7 +2,7 @@
 
 exports[`Test creation of an Icon control with icon 1`] = `
 <i
-  className="ui-icon icon none fa fa-fw false fa-star normal test-class"
+  className="ui-icon icon none fa fa-fw fa-star normal test-class"
   style={
     Object {
       "backgroundColor": "blue",
@@ -14,7 +14,7 @@ exports[`Test creation of an Icon control with icon 1`] = `
 
 exports[`Test creation of an Icon control with image 1`] = `
 <img
-  className="ui-icon icon none false normalBox fa-bomb normal"
+  className="ui-icon icon none normalBox fa-bomb normal"
   src="./test-icon-image.png"
   style={
     Object {
@@ -49,7 +49,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   visible={false}
 >
   <i
-    className="ui-icon icon none fa fa-fw false fa-bomb normal invisible"
+    className="ui-icon icon none fa fa-fw fa-bomb normal invisible"
     style={
       Object {
         "backgroundColor": "inherit",
@@ -109,7 +109,7 @@ exports[`Test the disabling of the Icon control 1`] = `
   visible={true}
 >
   <i
-    className="ui-icon icon none fa fa-fw false fa-bomb normal disabled nohover"
+    className="ui-icon icon none fa fa-fw fa-bomb normal disabled nohover"
     style={
       Object {
         "backgroundColor": "inherit",

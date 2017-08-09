@@ -9,8 +9,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {toggleOnIf} from 'util.toggle';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 import {ListItem} from './index';
 
@@ -38,12 +38,12 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 	public static defaultProps: ListProps = getDefaultListProps();
 
-	private _rootClasses: Set<string>;
+	private _rootCN: ClassNames;
 
 	constructor(props: ListProps) {
 		super(props, require('./styles.css'));
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-list',
 			this.styles.list
 
@@ -69,11 +69,11 @@ export class List extends BaseComponent<ListProps, ListState> {
 	}
 
 	public componentWillUpdate(nextProps: ListProps) {
-		toggleOnIf(this._rootClasses, nextProps.alternating)(
+		this._rootCN.onIf(nextProps.alternating)(
 			this.styles.listAlternating
 		);
 
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
@@ -91,7 +91,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 		return (
 			<div
-				className={join(this._rootClasses, ' ')}
+				className={this._rootCN.classnames}
 				id={this.props.id}
 				style={this.inlineStyle}
 			>

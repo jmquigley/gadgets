@@ -42,9 +42,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {ClassNames} from 'util.classnames';
 import {Keys} from 'util.keys';
-import {toggleOnIf} from 'util.toggle';
-import {join} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
@@ -68,19 +67,19 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 	public static readonly defaultProps: ButtonBarProps = getDefaultButtonBarProps();
 
-	private _groupClasses: Set<string>;
+	private _groupCN: ClassNames;
 	private _keys: Keys = new Keys();
-	private _rootClasses: Set<string>;
+	private _rootCN: ClassNames;
 
 	constructor(props: ButtonBarProps) {
 		super(props, require('./styles.css'));
 
-		this._groupClasses = new Set<string>([
+		this._groupCN = new ClassNames([
 			'ui-button-bar-group',
 			this.styles.buttonBarGroup
 		]);
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-button-bar',
 			this.styles.buttonBar
 		]);
@@ -90,19 +89,19 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 	public componentWillUpdate(nextProps: ButtonBarProps) {
 
-		toggleOnIf(this._groupClasses, this.props.justify === Justify.right)(
+		this._groupCN.onIf(this.props.justify === Justify.right)(
 			this.styles.right
 		);
 
-		toggleOnIf(this._groupClasses, this.props.justify === Justify.center)(
+		this._groupCN.onIf(this.props.justify === Justify.center)(
 			this.styles.center
 		);
 
-		toggleOnIf(this._groupClasses, this.props.justify === Justify.left)(
+		this._groupCN.onIf(this.props.justify === Justify.left)(
 			this.styles.left
 		);
 
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
@@ -129,8 +128,8 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 		});
 
 		return(
-			<div className={join(this._rootClasses, ' ')}>
-				<div className={join(this._groupClasses, ' ')}>
+			<div className={this._rootCN.classnames}>
+				<div className={this._groupCN.classnames}>
 					{buttons}
 				</div>
 			</div>

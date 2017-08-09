@@ -33,8 +33,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {toggleOnIf} from 'util.toggle';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {Icon} from '../icon';
 import {
 	BaseComponent,
@@ -62,18 +62,18 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	public static defaultProps: ButtonProps = getDefaultButtonProps();
 
-	private _iconClasses: Set<string>;
-	private _rootClasses: Set<string>;
+	private _iconCN: ClassNames;
+	private _rootCN: ClassNames;
 
 	constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
 
-		this._iconClasses = new Set<string>([
+		this._iconCN = new ClassNames([
 			this.props.iconStyle,
 			this.styles.icon
 		]);
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-button',
 			this.styles.button
 		]);
@@ -110,22 +110,22 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 		this.buildInlineStyles(nextProps, style);
 
-		toggleOnIf(this._rootClasses, !nextProps.noripple && !nextProps.disabled)(
+		this._rootCN.onIf(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
 		);
 
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
 		return (
 			<div
-				className={join(this._rootClasses, ' ')}
+				className={this._rootCN.classnames}
 				onClick={this.handleClick}
 				style={this.inlineStyle}
 			>
 				<Icon
-					className={join(this._iconClasses, ' ')}
+					className={this._iconCN.classnames}
 					iconName={this.props.iconName}
 					sizing={this.props.sizing}
 				/>

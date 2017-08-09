@@ -35,7 +35,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {join, nilEvent} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, Sizing} from '../shared';
 import {getDefaultBaseProps, Location} from '../shared/props';
 
@@ -63,17 +64,17 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
-	private _rootClasses: Set<string>;
-	private _badgeClasses: Set<string>;
+	private _rootCN: ClassNames;
+	private _badgeCN: ClassNames;
 
 	constructor(props: BadgeProps) {
 		super(props, require('./styles.css'));
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			this.styles.badgeContainer
 		]);
 
-		this._badgeClasses = new Set<string>([
+		this._badgeCN = new ClassNames([
 			'ui-badge',
 			this.styles.badge,
 			this.locationStyle,
@@ -89,7 +90,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: BadgeProps) {
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 		this.buildInlineStyles(nextProps, {
 			color: (nextProps.color || 'black'),
 			backgroundColor: (nextProps.backgroundColor || 'white'),
@@ -105,7 +106,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		} else {
 			badge = (
 				<div
-					className={join(this._badgeClasses, ' ')}
+					className={this._badgeCN.classnames}
 					onClick={this.handleClick}
 					style={this.inlineStyle}
 				>
@@ -115,7 +116,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		}
 
 		return (
-			<div className={join(this._rootClasses, ' ')}>
+			<div className={this._rootCN.classnames}>
 				{this.props.children}
 				{badge}
 			</div>

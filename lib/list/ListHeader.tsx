@@ -10,7 +10,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {join} from 'util.toolbox';
+import {ClassNames} from 'util.classnames';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent, Sizing} from '../shared';
 
@@ -24,19 +24,20 @@ export function getDefaultListHeaderProps(): ListHeaderProps {
 			href: {
 				sizing: Sizing.normal
 			}
-		}));
+		})
+	);
 }
 
 export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 
 	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
 
-	private _rootClasses: Set<string>;
+	private _rootCN: ClassNames;
 
 	constructor(props: ListHeaderProps) {
 		super(props, require('./styles.css'));
 
-		this._rootClasses = new Set<string>([
+		this._rootCN = new ClassNames([
 			'ui-list-header',
 			this.styles.listHeader
 		]);
@@ -45,14 +46,14 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ListHeaderProps) {
-		this.buildCommonStyles(this._rootClasses, nextProps);
+		this.buildCommonStyles(this._rootCN, nextProps);
 	}
 
 	public render() {
 		return (
 			<Item
 				{...this.props}
-				className={join(this._rootClasses, ' ')}
+				className={this._rootCN.classnames}
 				sizing={this.props.href.sizing}
 				style={this.inlineStyle}
 			/>
