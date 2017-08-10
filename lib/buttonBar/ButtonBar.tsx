@@ -51,29 +51,39 @@ import {
 	Justify
 } from '../shared';
 
+const styles = require('./styles.css');
+
 export interface ButtonBarProps extends BaseProps {
 	buttonSize?: string;
 	justify?: Justify;
 }
 
 export function getDefaultButtonBarProps(): ButtonBarProps {
-	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		buttonSize: '24px',
-		justify: Justify.left
-	}));
+	return cloneDeep(Object.assign({},
+		getDefaultBaseProps(), {
+			buttonSize: '24px',
+			justify: Justify.left
+		})
+	);
 }
 
 export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 	public static readonly defaultProps: ButtonBarProps = getDefaultButtonBarProps();
 
-	private _groupCN: ClassNames = new ClassNames();
+	private static readonly _resetJustify = [
+		styles.right,
+		styles.center,
+		styles.left
+	];
+
+	private _groupStyles: ClassNames = new ClassNames();
 	private _keys: Keys = new Keys();
 
 	constructor(props: ButtonBarProps) {
-		super(props, require('./styles.css'));
+		super(props, styles);
 
-		this._groupCN.add([
+		this._groupStyles.add([
 			'ui-button-bar-group',
 			this.styles.buttonBarGroup
 		]);
@@ -88,17 +98,24 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 	public componentWillUpdate(nextProps: ButtonBarProps) {
 
-		this._groupCN.onIf(this.props.justify === Justify.right)(
-			this.styles.right
-		);
+		if (nextProps.justify !== this.props.justify) {
+			this._groupStyles.reset(ButtonBar._resetJustify);
+		}
 
-		this._groupCN.onIf(this.props.justify === Justify.center)(
-			this.styles.center
-		);
+		switch (nextProps.justify) {
+			case Justify.right:
+				this._groupStyles.on(this.styles.right);
+				break;
 
-		this._groupCN.onIf(this.props.justify === Justify.left)(
-			this.styles.left
-		);
+			case Justify.center:
+				this._groupStyles.on(this.styles.center);
+				break;
+
+			case Justify.left:
+			default:
+				this._groupStyles.on(this.styles.left);
+				break;
+		}
 
 		super.componentWillUpdate(nextProps);
 	}
@@ -128,7 +145,7 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 		return(
 			<div className={this._rootStyles.classnames}>
-				<div className={this._groupCN.classnames}>
+				<div className={this._groupStyles.classnames}>
 					{buttons}
 				</div>
 			</div>

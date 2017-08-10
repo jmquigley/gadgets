@@ -18,7 +18,7 @@ export interface ListHeaderProps extends ItemProps {
 }
 
 export function getDefaultListHeaderProps(): ListHeaderProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultItemProps(), {
 			href: {
 				sizing: Sizing.normal

@@ -83,6 +83,8 @@ import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
 
+const styles = require('./styles.css');
+
 export enum ToastLevel {
 	info,
 	warning,
@@ -105,7 +107,7 @@ export interface ToastProps extends BaseProps {
 }
 
 export function getDefaultToastProps(): ToastProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			backgroundColor: 'white',
 			borderColor: 'black',
@@ -128,28 +130,28 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public static defaultProps: ToastProps = getDefaultToastProps();
 
-	private _contentClasses: ClassNames = new ClassNames();
-	private _resetRootStyles: any;
+	private static readonly _resetMessageLevels = [
+		styles.info,
+		styles.warning,
+		styles.error
+	];
+
+	private _buttonSizing: Sizing;
+	private _contentStyles: ClassNames = new ClassNames();
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
-		super(props, require('./styles.css'));
+		super(props, styles);
 
 		this._rootStyles.add([
 			'ui-toast',
 			this.styles.toast
 		]);
 
-		this._contentClasses.add([
+		this._contentStyles.add([
 			'ui-toast-content',
 			this.styles.content
 		]);
-
-		this._resetRootStyles = {
-			[this.styles.info]: false,
-			[this.styles.warning]: false,
-			[this.styles.error]: false
-		};
 
 		this.state = {
 			visible: props.visible
@@ -202,6 +204,8 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public componentWillUpdate(nextProps: ToastProps, nextState: ToastState) {
 
+		this._buttonSizing = this.next(nextProps.sizing).type;
+
 		if (nextProps.level === ToastLevel.custom) {
 			const style = {};
 
@@ -221,7 +225,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		}
 
 		if (nextProps.level !== this.props.level) {
-			this._rootStyles.add(this._resetRootStyles);
+			this._rootStyles.reset(Toast._resetMessageLevels);
 		}
 
 		switch (nextProps.level) {
@@ -248,10 +252,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 			this.styles.hide
 		);
 
-		if (this.props.sizing !== nextProps['sizing']) {
-			this._contentClasses.off(this.fontStyle(this.props.sizing));
-		}
-		this._contentClasses.on(this.fontStyle(nextProps.sizing));
+		this.updateFontStyle(this._contentStyles, nextProps, this.props);
 
 		super.componentWillUpdate(nextProps);
 	}
@@ -262,7 +263,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 				className={this._rootStyles.classnames}
 				style={this.inlineStyle}
 			>
-				<div className={this._contentClasses.classnames}>
+				<div className={this._contentStyles.classnames}>
 					{this.props.children}
 				</div>
 				<Button
@@ -270,7 +271,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 					color="white"
 					iconName="times"
 					onClick={this.handleClose}
-					sizing={Sizing.normal}
+					sizing={this._buttonSizing}
 				/>
 			</div>
 		);

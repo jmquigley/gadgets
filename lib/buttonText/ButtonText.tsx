@@ -50,6 +50,8 @@ import {nilEvent} from 'util.toolbox';
 import {getDefaultIconProps, Icon, IconProps} from '../icon';
 import {BaseComponent, Justify, Sizing} from '../shared';
 
+const styles = require('./styles.css');
+
 export interface ButtonTextProps extends IconProps {
 	justify?: Justify;
 	noicon?: boolean;
@@ -58,7 +60,7 @@ export interface ButtonTextProps extends IconProps {
 }
 
 export function getDefaultButtonTextProps(): ButtonTextProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultIconProps(), {
 			justify: Justify.right,
 			noicon: false,
@@ -73,12 +75,18 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 	public static defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 
-	private _contentCN: ClassNames = new ClassNames();
+	private static readonly _resetJustify = [
+		styles.right,
+		styles.center,
+		styles.left
+	];
+
+	private _contentStyles: ClassNames = new ClassNames();
 
 	constructor(props: ButtonTextProps) {
-		super(props, require('./styles.css'));
+		super(props, styles);
 
-		this._contentCN.add([
+		this._contentStyles.add([
 			this.styles.content
 		]);
 
@@ -93,7 +101,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 	private buildContent() {
 		return(
-			<div className={this._contentCN.classnames}>
+			<div className={this._contentStyles.classnames}>
 				{this.props.text}
 			</div>
 		);
@@ -121,22 +129,19 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			style['borderColor'] = nextProps.borderColor;
 		}
 
-		this._contentCN.onIf(this.props.justify === Justify.center || this.props.noicon)(
-			this.styles.center
-		);
-
-		this._contentCN.onIf(this.props.justify === Justify.left)(
-			this.styles.left
-		);
-
-		this._contentCN.onIf(this.props.justify === Justify.right)(
-			this.styles.right
-		);
-
-		if (this.props.sizing !== nextProps.sizing) {
-			this._contentCN.off(this.fontStyle(this.props.sizing));
+		if (nextProps.justify !== this.props.justify) {
+			this._contentStyles.reset(ButtonText._resetJustify);
 		}
-		this._contentCN.on(this.fontStyle(nextProps.sizing));
+
+		if (this.props.justify === Justify.center || this.props.noicon) {
+			this._contentStyles.on(this.styles.center);
+		} else if (this.props.justify === Justify.left) {
+			this._contentStyles.on(this.styles.left);
+		} else {
+			this._contentStyles.on(this.styles.right);
+		}
+
+		this.updateFontStyle(this._contentStyles, nextProps, this.props);
 
 		this.buildInlineStyles(nextProps, style);
 		this._rootStyles.onIf(!nextProps.noripple && !nextProps.disabled)(

@@ -12,12 +12,14 @@ import {
 	Sizing
 } from '../shared';
 
+const styles = require('./styles.css');
+
 export interface TriangleProps extends BaseProps {
 	nobase?: boolean;
 }
 
 export function getDefaultTriangleProps(): TriangleProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			borderWidth: '2px',
 			direction: Direction.up,
@@ -30,22 +32,20 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 
 	public static defaultProps: TriangleProps = getDefaultTriangleProps();
 
-	private _resetRootStyles: any;
+	private static readonly _resetPosition: string[] = [
+		styles.triangleRight,
+		styles.triangleLeft,
+		styles.triangleDown,
+		styles.triangleUp
+	];
 
 	constructor(props: TriangleProps) {
-		super(props, require('./styles.css'));
+		super(props, styles);
 
 		this._rootStyles.add([
 			'ui-triangle',
 			this.styles.triangle
 		]);
-
-		this._resetRootStyles = {
-			[this.styles.triangleRight]: false,
-			[this.styles.triangleLeft]: false,
-			[this.styles.triangleDown]: false,
-			[this.styles.triangleUp]: false
-		};
 
 		this.componentWillUpdate(props);
 	}
@@ -63,7 +63,7 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 		}
 
 		if (nextProps.direction !== this.props.direction) {
-			this._rootStyles.add(this._resetRootStyles);
+			this._rootStyles.reset(Triangle._resetPosition);
 		}
 
 		switch (nextProps.direction) {

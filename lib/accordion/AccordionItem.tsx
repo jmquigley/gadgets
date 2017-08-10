@@ -68,7 +68,7 @@ export interface AccordionItemProps extends ItemProps {
 }
 
 export function getDefaultAccordionItemProps(): AccordionItemProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultItemProps(), {
 			initialToggle: false,
 			leftButton: null,

@@ -64,7 +64,7 @@ export interface ButtonToggleProps extends ButtonProps {
 }
 
 export function getDefaultButtonToggleProps(): ButtonToggleProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultButtonProps(), {
 			bgColorOff: 'inherit',
 			bgColorOn: 'inherit',

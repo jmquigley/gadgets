@@ -10,7 +10,7 @@ import {getDefaultTitleProps, Title, TitleLayout, TitleProps} from '../title';
 export type ListFooterProps = TitleProps;
 
 export function getDefaultListFooterProps(): TitleProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultTitleProps(), {
 			layout: TitleLayout.even,
 			title: ''

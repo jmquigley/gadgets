@@ -65,12 +65,14 @@ import {
 } from '../shared';
 import {Triangle} from '../triangle';
 
+const styles = require('./styles.css');
+
 export interface TooltipProps extends BaseProps {
 	show?: boolean;
 }
 
 export function getDefaultTooltipProps(): TooltipProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			color: 'white',
 			backgroundColor: 'gray',
@@ -85,31 +87,30 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 
 	public static defaultProps: TooltipProps = getDefaultTooltipProps();
 
+	private static readonly _resetTooltipLocation = [
+		styles.tooltipTopLeft,
+		styles.tooltipTop,
+		styles.tooltipTopRight,
+		styles.tooltipMiddleLeft,
+		styles.tooltipMiddle,
+		styles.tooltipMiddleRight,
+		styles.tooltipBottomLeft,
+		styles.tooltipBottom,
+		styles.tooltipBottomRight
+	];
+
 	private _contentStyles: ClassNames = new ClassNames();
-	private _resetTooltipLocation: string[];
 	private _triangleDirection: Direction = Direction.down;
 	private _triangleStyle: string = '';
 
 	constructor(props: TooltipProps) {
-		super(props, require('./styles.css'));
+		super(props, styles);
 
 		this._contentStyles.add('ui-tooltip-content');
 		this._rootStyles.add([
 			'ui-tooltip',
 			this.styles.tooltip
 		]);
-
-		this._resetTooltipLocation = [
-			this.styles.tooltipTopLeft,
-			this.styles.tooltipTop,
-			this.styles.tooltipTopRight,
-			this.styles.tooltipMiddleLeft,
-			this.styles.tooltipMiddle,
-			this.styles.tooltipMiddleRight,
-			this.styles.tooltipBottomLeft,
-			this.styles.tooltipBottom,
-			this.styles.tooltipBottomRight
-		];
 
 		this.componentWillUpdate(props);
 	}
@@ -119,7 +120,7 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 		this.updateFontStyle(this._contentStyles, nextProps, this.props);
 
 		if (nextProps.location !== this.props.location) {
-			this._rootStyles.reset(this._resetTooltipLocation);
+			this._rootStyles.reset(Tooltip._resetTooltipLocation);
 		}
 
 		switch (nextProps.location) {

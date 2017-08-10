@@ -114,7 +114,7 @@ export interface PagerProps extends BaseProps {
 }
 
 export function getDefaultPagerProps(): PagerProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			initialPage: 1,
 			initialPageSize: defaultPageSize,
@@ -142,7 +142,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
 	private _buttons: any = [];
-	private _buttonStyle: ClassNames = new ClassNames();
+	private _buttonStyles: ClassNames = new ClassNames();
 	private _dialog: any = null;
 	private _initialPage: number = 0;
 	private _initialPageSize: number = 0;
@@ -151,7 +151,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	constructor(props: PagerProps) {
 		super(props, require('./styles.css'));
 
-		this._buttonStyle.add([
+		this._buttonStyles.add([
 			this.styles.pagerButton,
 			this.boxStyle()
 		]);
@@ -327,7 +327,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttons[page] = (
 					<ButtonText
 						{...this.props}
-						className={this._buttonStyle.classnames}
+						className={this._buttonStyles.classnames}
 						key={String(page)}
 						noicon
 						onClick={this.handleSelect}
@@ -348,13 +348,13 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
-							className: this._buttonStyle.classnames + selected,
+							className: this._buttonStyles.classnames + selected,
 							disabled: this.props.disabled
 						}));
 				} else {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
-							className: this._buttonStyle.classnames,
+							className: this._buttonStyles.classnames,
 							disabled: this.props.disabled
 						}));
 				}
@@ -362,7 +362,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this._buttonsDisplay.push(
 					<ButtonText
 						{...this.props}
-						className={this._buttonStyle.classnames}
+						className={this._buttonStyles.classnames}
 						key={getUUID()}
 						noicon
 						disabled
@@ -575,14 +575,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			<div className={this._rootStyles.classnames}>
 				<Button
 					{...this.props}
-					className={this._buttonStyle.classnames}
+					className={this._buttonStyles.classnames}
 					iconName="angle-double-left"
 					onClick={this.moveToFront}
 					sizing={this.props.sizing}
 				/>
 				<Button
 					{...this.props}
-					className={this._buttonStyle.classnames}
+					className={this._buttonStyles.classnames}
 					iconName="angle-left"
 					onClick={this.moveToPrevious}
 					sizing={this.props.sizing}
@@ -590,14 +590,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				{this._buttonsDisplay}
 				<Button
 					{...this.props}
-					className={this._buttonStyle.classnames}
+					className={this._buttonStyles.classnames}
 					iconName="angle-right"
 					onClick={this.moveToNext}
 					sizing={this.props.sizing}
 				/>
 				<Button
 					{...this.props}
-					className={this._buttonStyle.classnames}
+					className={this._buttonStyles.classnames}
 					iconName="angle-double-right"
 					onClick={this.moveToEnd}
 					sizing={this.props.sizing}

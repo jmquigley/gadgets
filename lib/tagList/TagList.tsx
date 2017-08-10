@@ -18,9 +18,11 @@ export interface TagListProps extends BaseProps {
 }
 
 export function getDefaultTagListProps(): TagListProps {
-	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		tags: []
-	}));
+	return cloneDeep(Object.assign({},
+		getDefaultBaseProps(), {
+			tags: []
+		})
+	);
 }
 
 export interface TagListState {

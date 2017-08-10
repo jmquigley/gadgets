@@ -50,24 +50,26 @@ export interface ButtonProps extends BaseProps {
 }
 
 export function getDefaultButtonProps(): ButtonProps {
-	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		iconName: 'bomb',
-		iconStyle: '',
-		onClick: nilEvent,
-		sizing: Sizing.normal
-	}));
+	return cloneDeep(Object.assign({},
+		getDefaultBaseProps(), {
+			iconName: 'bomb',
+			iconStyle: '',
+			onClick: nilEvent,
+			sizing: Sizing.normal
+		})
+	);
 }
 
 export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	public static defaultProps: ButtonProps = getDefaultButtonProps();
 
-	private _iconCN: ClassNames = new ClassNames();
+	private _iconStyles: ClassNames = new ClassNames();
 
 	constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
 
-		this._iconCN.add([
+		this._iconStyles.add([
 			this.props.iconStyle,
 			this.styles.icon
 		]);
@@ -123,7 +125,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 				style={this.inlineStyle}
 			>
 				<Icon
-					className={this._iconCN.classnames}
+					className={this._iconStyles.classnames}
 					iconName={this.props.iconName}
 					sizing={this.props.sizing}
 				/>

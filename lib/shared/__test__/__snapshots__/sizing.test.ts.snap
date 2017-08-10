@@ -2,6 +2,17 @@
 
 exports[`Testing creation of the Sizing object with default 1`] = `
 Object {
+  "inherit": Object {
+    "borderStyle": "inheritBorder",
+    "boxStyle": "inheritBox",
+    "font": Object {
+      "size": 16,
+      "sizepx": "16px",
+      "sizerem": "1rem",
+      "style": "inherit",
+    },
+    "type": "inherit",
+  },
   "large": Object {
     "borderStyle": "largeBorder",
     "boxStyle": "largeBox",
@@ -95,6 +106,17 @@ Object {
 
 exports[`Testing creation of the Sizing object with size 24 1`] = `
 Object {
+  "inherit": Object {
+    "borderStyle": "inheritBorder",
+    "boxStyle": "inheritBox",
+    "font": Object {
+      "size": 24,
+      "sizepx": "24px",
+      "sizerem": "1rem",
+      "style": "inherit",
+    },
+    "type": "inherit",
+  },
   "large": Object {
     "borderStyle": "largeBorder",
     "boxStyle": "largeBox",

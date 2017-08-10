@@ -55,7 +55,7 @@ export interface IconProps extends BaseProps {
 }
 
 export function getDefaultIconProps(): IconProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			backgroundColor: 'inherit',
 			color: 'inherit',

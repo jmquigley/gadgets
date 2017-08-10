@@ -91,15 +91,17 @@ export interface DialogBoxProps extends BaseProps {
 }
 
 export function getDefaultDialogBoxProps(): DialogBoxProps {
-	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		dialogType: DialogBoxType.info,
-		iconName: 'bomb',
-		message: '',
-		onClose: nilEvent,
-		onOpen: nilEvent,
-		onSelection: nilEvent,
-		show: false
-	}));
+	return cloneDeep(Object.assign({},
+		getDefaultBaseProps(), {
+			dialogType: DialogBoxType.info,
+			iconName: 'bomb',
+			message: '',
+			onClose: nilEvent,
+			onOpen: nilEvent,
+			onSelection: nilEvent,
+			show: false
+		})
+	);
 }
 
 export interface DialogBoxState {

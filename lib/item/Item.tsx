@@ -29,7 +29,7 @@ export interface ItemProps extends BaseProps, TitleProps {
 }
 
 export function getDefaultItemProps(): ItemProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			hiddenLeftButton: false,
 			hiddenRightButton: false,

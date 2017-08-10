@@ -21,7 +21,7 @@ export interface ListItemProps extends ItemProps {
 }
 
 export function getDefaultListItemProps(): ListItemProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultItemProps(), {
 			href: {
 				selectHandler: nilEvent,

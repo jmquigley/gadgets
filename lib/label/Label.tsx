@@ -64,18 +64,20 @@ export interface LabelProps extends BaseProps {
 }
 
 export function getDefaultLabelProps(): LabelProps {
-	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		noedit: false,
-		onBlur: nilEvent,
-		onChange: nilEvent,
-		onClick: nilEvent,
-		onDoubleClick: nilEvent,
-		onKeyDown: nilEvent,
-		onKeyPress: nilEvent,
-		onUpdate: nilEvent,
-		text: ' ',
-		useedit: false
-	}));
+	return cloneDeep(Object.assign({},
+		getDefaultBaseProps(), {
+			noedit: false,
+			onBlur: nilEvent,
+			onChange: nilEvent,
+			onClick: nilEvent,
+			onDoubleClick: nilEvent,
+			onKeyDown: nilEvent,
+			onKeyPress: nilEvent,
+			onUpdate: nilEvent,
+			text: ' ',
+			useedit: false
+		})
+	);
 }
 
 export interface LabelState {

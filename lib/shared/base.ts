@@ -60,6 +60,7 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	private _sizes: Sizes = null;
 	private _sizing: Sizing = null;
 
+	// The style object applied (generally) to the root of a component
 	protected _rootStyles: ClassNames = new ClassNames();
 
 	constructor(props: P, pstyles: any = {}, defaultFontSize: number = defaultSize) {
@@ -303,14 +304,10 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
 		nextState = null;
 
+		this.updateFontStyle(this._rootStyles, nextProps, this.props);
 		if ('sizing' in nextProps && this._sizing !== nextProps['sizing']) {
-			this._rootStyles.off(this.fontStyle(this._sizing));
 			this._sizing = nextProps['sizing'];
 		}
-
-		this._rootStyles.onIf('sizing' in nextProps)(
-			this.fontStyle()
-		);
 
 		if ('className' in nextProps && this._className !== nextProps['className']) {
 			this._rootStyles.off(this._className);

@@ -43,7 +43,7 @@ export interface AccordionProps extends BaseProps {
 }
 
 export function getDefaultAccordionProps(): AccordionProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			children: null
 		})

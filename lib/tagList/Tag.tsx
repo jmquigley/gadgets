@@ -21,11 +21,13 @@ export interface TagProps extends BaseProps {
 }
 
 export function getDefaultTagProps(): TagProps {
-	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		onClick: nilEvent,
-		onMouseOut: nilEvent,
-		onMouseOver: nilEvent
-	}));
+	return cloneDeep(Object.assign(
+		getDefaultBaseProps(), {
+			onClick: nilEvent,
+			onMouseOut: nilEvent,
+			onMouseOver: nilEvent
+		})
+	);
 }
 
 export interface TagState {

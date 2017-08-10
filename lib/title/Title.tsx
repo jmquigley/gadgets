@@ -59,6 +59,8 @@ import {ClassNames} from 'util.classnames';
 import {Label} from '../label';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
+const styles = require('./styles.css');
+
 export enum TitleLayout {
 	quarter,
 	even,
@@ -76,47 +78,45 @@ export interface TitleProps extends BaseProps {
 }
 
 export function getDefaultTitleProps(): TitleProps {
-	return cloneDeep(Object.assign(getDefaultBaseProps(), {
-		layout: TitleLayout.dominant,
-		widget: null
-	}));
+	return cloneDeep(Object.assign({},
+		getDefaultBaseProps(), {
+			layout: TitleLayout.dominant,
+			widget: null
+		})
+	);
 }
 
 export class Title extends BaseComponent<TitleProps, undefined> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
 
+	private static readonly _resetTitleClasses = [
+		styles.titleQuarter,
+		styles.titleEven,
+		styles.titleThreeQuarter,
+		styles.titleThird,
+		styles.titleStacked,
+		styles.titleDominant
+	];
+
+	private static readonly _resetWidgetClasses = [
+		styles.widgetQuarter,
+		styles.widgetEven,
+		styles.widgetThreeQuarter,
+		styles.widgetThird,
+		styles.widgetStacked,
+		styles.widgetDominant
+	];
+
 	private _titleClasses: ClassNames = new ClassNames();
 	private _widgetClasses: ClassNames = new ClassNames();
-	private _resetTitleClasses: any;
-	private _resetWidgetClasses: any;
 
 	constructor(props: TitleProps) {
-		super(props, require('./styles.css'));
+		super(props, styles);
 
 		this._rootStyles.add('ui-title-bar');
 		this._titleClasses.add('ui-title');
 		this._widgetClasses.add('ui-title-widget');
-
-		this._resetTitleClasses = {
-			[this.styles.titleQuarter]: false,
-			[this.styles.titleEven]: false,
-			[this.styles.titleEven]: false,
-			[this.styles.titleThreeQuarter]: false,
-			[this.styles.titleThird]: false,
-			[this.styles.titleStacked]: false,
-			[this.styles.titleDominant]: false
-		};
-
-		this._resetWidgetClasses = {
-			[this.styles.widgetQuarter]: false,
-			[this.styles.widgetEven]: false,
-			[this.styles.widgetEven]: false,
-			[this.styles.widgetThreeQuarter]: false,
-			[this.styles.widgetThird]: false,
-			[this.styles.widgetStacked]: false,
-			[this.styles.widgetDominant]: false
-		};
 
 		this.componentWillUpdate(props);
 	}
@@ -124,9 +124,8 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 	public componentWillUpdate(nextProps: TitleProps) {
 
 		if (nextProps.layout !== this.props.layout) {
-			// Resets all title/widget styles when a change occurs
-			this._titleClasses.add(this._resetTitleClasses);
-			this._widgetClasses.add(this._resetWidgetClasses);
+			this._titleClasses.reset(Title._resetTitleClasses);
+			this._widgetClasses.reset(Title._resetWidgetClasses);
 		}
 
 		switch (nextProps.layout) {
@@ -173,10 +172,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 			'ripple'
 		);
 
-		if (this.props.sizing !== nextProps['sizing']) {
-			this._widgetClasses.off(this.fontStyle(this.props.sizing));
-		}
-		this._widgetClasses.on(this.fontStyle(nextProps.sizing));
+		this.updateFontStyle(this._widgetClasses, nextProps, this.props);
 
 		super.componentWillUpdate(nextProps);
 	}

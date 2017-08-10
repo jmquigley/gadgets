@@ -20,7 +20,7 @@ export interface ListProps extends BaseProps {
 }
 
 export function getDefaultListProps(): ListProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			alternating: false,
 			onAdd: nilEvent,

@@ -52,7 +52,7 @@ export interface ButtonDialogProps extends ButtonProps {
 }
 
 export function getDefaultButtonDialogProps(): ButtonDialogProps {
-	return cloneDeep(Object.assign(
+	return cloneDeep(Object.assign({},
 		getDefaultButtonProps(), {
 			dialogClasses: [],
 			location: Location.bottom,
@@ -71,13 +71,13 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 	public static defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
 
-	private _dialogCN: ClassNames = new ClassNames();
-	private _triangleCN: ClassNames = new ClassNames();
+	private _dialogStyles: ClassNames = new ClassNames();
+	private _triangleStyles: ClassNames = new ClassNames();
 
 	constructor(props: ButtonDialogProps) {
 		super(props, require('./styles.css'));
 
-		this._dialogCN.add([
+		this._dialogStyles.add([
 			'ui-dialog-popup',
 			...props.dialogClasses.slice(),
 			this.styles.buttonDialogPopup
@@ -88,7 +88,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			this.styles.buttonDialog
 		]);
 
-		this._triangleCN.add([
+		this._triangleStyles.add([
 			...props.triangleClasses.slice()
 		]);
 
@@ -137,25 +137,25 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 	public componentWillUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState) {
 
-		this._dialogCN.onIfElse(nextProps.location === Location.top)(
+		this._dialogStyles.onIfElse(nextProps.location === Location.top)(
 			this.styles.dialogTop
 		)(
 			this.styles.dialogBottom
 		);
 
-		this._triangleCN.onIfElse(nextProps.location === Location.top)(
+		this._triangleStyles.onIfElse(nextProps.location === Location.top)(
 			this.styles.dialogTriangleTop
 		)(
 			this.styles.dialogTriangleBottom
 		);
 
-		this._dialogCN.onIfElse(nextState.visible)(
+		this._dialogStyles.onIfElse(nextState.visible)(
 			this.styles.buttonDialogShow
 		)(
 			this.styles.buttonDialogHide
 		);
 
-		this._triangleCN.onIfElse(nextState.visible)(
+		this._triangleStyles.onIfElse(nextState.visible)(
 			this.styles.buttonDialogShow
 		)(
 			this.styles.buttonDialogHide
@@ -180,7 +180,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					visible={this.props.visible}
 				/>
 				<div
-					className={this._dialogCN.classnames}
+					className={this._dialogStyles.classnames}
 					onClick={this.handleDialogClick}
 				>
 					<div className={this.styles.buttonDialogContent}>
@@ -190,7 +190,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					null
 					:
 					<Triangle
-						className={this._triangleCN.classnames}
+						className={this._triangleStyles.classnames}
 						direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
 						nobase
 						sizing={Sizing.normal}
