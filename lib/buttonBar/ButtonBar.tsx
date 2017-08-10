@@ -67,19 +67,18 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 	public static readonly defaultProps: ButtonBarProps = getDefaultButtonBarProps();
 
-	private _groupCN: ClassNames;
+	private _groupCN: ClassNames = new ClassNames();
 	private _keys: Keys = new Keys();
-	private _rootCN: ClassNames;
 
 	constructor(props: ButtonBarProps) {
 		super(props, require('./styles.css'));
 
-		this._groupCN = new ClassNames([
+		this._groupCN.add([
 			'ui-button-bar-group',
 			this.styles.buttonBarGroup
 		]);
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-button-bar',
 			this.styles.buttonBar
 		]);
@@ -101,7 +100,7 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 			this.styles.left
 		);
 
-		this.buildCommonStyles(this._rootCN, nextProps);
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
@@ -128,7 +127,7 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 		});
 
 		return(
-			<div className={this._rootCN.classnames}>
+			<div className={this._rootStyles.classnames}>
 				<div className={this._groupCN.classnames}>
 					{buttons}
 				</div>

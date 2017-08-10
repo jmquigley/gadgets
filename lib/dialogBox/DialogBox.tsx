@@ -127,6 +127,11 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	constructor(props: DialogBoxProps) {
 		super(props, require('./styles.css'));
 
+		this._rootStyles.add([
+			'ui-dialogbox',
+			this.styles.dialogBox
+		]);
+
 		this.state = {
 			showModal: props.show
 		};
@@ -228,16 +233,6 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		}
 	}
 
-	public componentWillUpdate(nextProps: DialogBoxProps) {
-		super.resetStyles(nextProps);
-
-		this.classes.push('ui-dialogbox');
-		this.classes.push(this.styles.dialogBox);
-		this.classes.push(this.fontStyle());
-
-		super.buildStyles(nextProps);
-	}
-
 	public render() {
 		return (
 			<Modal
@@ -248,7 +243,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 				shouldCloseOnOverlayClick={false}
 				style={this._customStyle}
 			>
-				<div className={this.classes.join(' ')}>
+				<div className={this._rootStyles.classnames}>
 
 					<div className={this.styles.dialogBoxIcon}>
 						{this._icon[this.props.dialogType]}

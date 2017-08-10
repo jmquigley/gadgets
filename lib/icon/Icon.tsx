@@ -42,7 +42,6 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {
 	BaseComponent,
 	BaseProps,
@@ -71,12 +70,10 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 
 	public static defaultProps: IconProps = getDefaultIconProps();
 
-	private _rootCN: ClassNames;
-
 	constructor(props: IconProps) {
 		super(props, require('./styles.css'));
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-icon',
 			this.styles.icon,
 			this.locationStyle,
@@ -90,25 +87,31 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: IconProps) {
+		const style = {};
 
 		if (this.props.imageFile === '' && this.props.iconName !== nextProps.iconName) {
-			this._rootCN.off(`fa-${this.props.iconName}`);
+			this._rootStyles.off(`fa-${this.props.iconName}`);
 		}
 
-		this._rootCN.on(`fa-${nextProps.iconName}`);
+		this._rootStyles.on(`fa-${nextProps.iconName}`);
 
-		this.buildInlineStyles(nextProps, {
-			color: (nextProps.color),
-			backgroundColor: (nextProps.backgroundColor)
-		});
-		this.buildCommonStyles(this._rootCN, nextProps);
+		if (nextProps.color !== 'inherit') {
+			style['color'] = nextProps.color;
+		}
+
+		if (nextProps.backgroundColor !== 'inherit') {
+			style['backgroundColor'] = nextProps.backgroundColor;
+		}
+
+		this.buildInlineStyles(nextProps, style);
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
 		if (this.props.imageFile !== '') {
 			return (
 				<img
-					className={this._rootCN.classnames}
+					className={this._rootStyles.classnames}
 					src={this.props.imageFile}
 					style={this.inlineStyle}
 				/>
@@ -116,7 +119,7 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		} else {
 			return (
 				<i
-					className={this._rootCN.classnames}
+					className={this._rootStyles.classnames}
 					style={this.inlineStyle}
 				/>
 			);

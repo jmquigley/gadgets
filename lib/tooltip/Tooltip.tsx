@@ -165,7 +165,10 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 
 	public render() {
 		return (
-			<div className={this.classes.join(' ')} style={this.inlineStyle}>
+			<div
+				className={this.classes.join(' ')}
+				style={this.inlineStyle}
+			>
 				<span className="ui-tooltip-content" style={{color: this.props.color}}>
 					{this.props.children}
 				</span>

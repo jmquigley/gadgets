@@ -151,12 +151,8 @@ exports[`Test disabling of a ListItem control 1`] = `
         widget={null}
       >
         <div
-          className="ui-title-bar titleBar itemTitle disabled nohover"
-          style={
-            Object {
-              "padding": "2px 4px",
-            }
-          }
+          className="ui-title-bar titleBar normal itemTitle disabled nohover"
+          style={Object {}}
         >
           <Label
             backgroundColor="inherit"
@@ -386,12 +382,8 @@ exports[`Test making ListItem control invisible 1`] = `
         widget={null}
       >
         <div
-          className="ui-title-bar titleBar ripple itemTitle invisible"
-          style={
-            Object {
-              "padding": "2px 4px",
-            }
-          }
+          className="ui-title-bar titleBar ripple normal itemTitle invisible"
+          style={Object {}}
         >
           <Label
             backgroundColor="inherit"

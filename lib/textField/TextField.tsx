@@ -100,6 +100,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {BaseComponent, Sizing} from '../shared';
 import {
@@ -155,14 +156,26 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	public static defaultProps: TextFieldProps = getDefaultTextFieldProps();
 
 	private _input: HTMLInputElement = null;
-	private _inputStyles: string[] = [];
-	private _messageStyle: string = '';
-	private _messageStyles: string[] = [];
+	private _inputStyles: ClassNames = new ClassNames();
+	private _messageStyles: ClassNames = new ClassNames();
 	private _validators: Validator[] = null;
 	private _value: string = '';
 
 	constructor(props: TextFieldProps) {
 		super(props, require('./styles.css'));
+
+		this._inputStyles.add([
+			this.styles.textFieldInput
+		]);
+
+		this._messageStyles.add([
+			this.styles.textFieldMessage
+		]);
+
+		this._rootStyles.add([
+			'ui-textfield',
+			this.styles.textField
+		]);
 
 		this.state = {
 			message: '',
@@ -261,10 +274,12 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 				if (it.validate(value)) {
 					message = it.success;
-					this._messageStyle = this.styles.success;
+					this._messageStyles.on(this.styles.success);
+					this._messageStyles.off(this.styles.error);
 				} else {
 					message = it.failure;
-					this._messageStyle = this.styles.error;
+					this._messageStyles.off(this.styles.success);
+					this._messageStyles.on(this.styles.error);
 					return false;
 				}
 
@@ -281,26 +296,21 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	}
 
 	public componentWillUpdate(nextProps: any) {
-		this.resetStyles(nextProps);
 
-		this.classes.push('ui-textfield');
-		this.classes.push(this.styles.textField);
-		this.classes.push(this.fontStyle());
-
-		this._inputStyles = [];
-		this._inputStyles.push(this.styles.textFieldInput);
-
-		this._messageStyles = [];
-		this._messageStyles.push(this._messageStyle);
-		this._messageStyles.push(this.styles.textFieldMessage);
-		this._messageStyles.push(this.prev().font.style);
-
-		if (nextProps.disabled) {
-			this._inputStyles.push(this.styles.disabled);
-			this._messageStyles.push(this.styles.disabled);
+		if (this.props.sizing !== nextProps['sizing']) {
+			this._messageStyles.off(this.fontStyle(this.props.sizing));
 		}
+		this._messageStyles.on(this.prev().font.style);
 
-		this.buildStyles(nextProps);
+		this._inputStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
+			this.styles.disabled
+		);
+
+		this._messageStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
+			this.styles.disabled
+		);
+
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
@@ -316,12 +326,12 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 		return (
 			<div
-				className={this.classes.join(' ')}
+				className={this._rootStyles.classnames}
 				style={this.props.style}
 			>
 				<input
 					{...props}
-					className={this._inputStyles.join(' ')}
+					className={this._inputStyles.classnames}
 					onBlur={this.handleBlur}
 					onChange={this.handleChange}
 					onKeyDown={this.handleKeyDown}
@@ -330,7 +340,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 				/>
 					{this.props.usevalidation
 					?
-						<div className={this._messageStyles.join(' ')}>
+						<div className={this._messageStyles.classnames}>
 							{this.props.usevalidation ? '\u00a0' : null}
 							{this.state.message}
 						</div>

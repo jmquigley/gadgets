@@ -9,7 +9,6 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent, Sizing} from '../shared';
@@ -44,13 +43,12 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
 	private _delay = 200;
 	private _preventClick: boolean = false;
-	private _rootCN: ClassNames;
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
 		super(props, require('./styles.css'));
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-listitem',
 			this.styles.listItem
 		]);
@@ -130,15 +128,11 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.deactivateEdit();
 	}
 
-	public componentWillUpdate(nextProps: ListItemProps) {
-		this.buildCommonStyles(this._rootCN, nextProps);
-	}
-
 	public render() {
 		return (
 			<Item
 				{...this.props}
-				className={this._rootCN.classnames}
+				className={this._rootStyles.classnames}
 				noripple={this.state.toggleRipple || this.props.noripple}
 				onBlur={this.handleBlur}
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}

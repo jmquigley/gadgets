@@ -142,22 +142,21 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
 	private _buttons: any = [];
-	private _buttonStyle: ClassNames;
+	private _buttonStyle: ClassNames = new ClassNames();
 	private _dialog: any = null;
 	private _initialPage: number = 0;
 	private _initialPageSize: number = 0;
 	private _pageSizes: number[] = cloneDeep(defaultPageSizes);
-	private _rootCN: ClassNames;
 
 	constructor(props: PagerProps) {
 		super(props, require('./styles.css'));
 
-		this._buttonStyle = new ClassNames([
+		this._buttonStyle.add([
 			this.styles.pagerButton,
 			this.boxStyle()
 		]);
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-pager',
 			this.styles.pager
 		]);
@@ -569,15 +568,11 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 	}
 
-	public componentWillUpdate(nextProps: PagerProps) {
-		this.buildCommonStyles(this._rootCN, nextProps);
-	}
-
 	public render() {
 		this.createButtons();
 
 		return (
-			<div className={this._rootCN.classnames}>
+			<div className={this._rootStyles.classnames}>
 				<Button
 					{...this.props}
 					className={this._buttonStyle.classnames}

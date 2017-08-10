@@ -2,7 +2,7 @@
 
 exports[`Test creation of a Toast control 1`] = `
 <div
-  className="ui-toast toast normal info toastTop test-class"
+  className="ui-toast toast info toastTop normal test-class"
   style={Object {}}
 >
   <div
@@ -27,7 +27,7 @@ exports[`Test creation of a Toast control 1`] = `
     noripple={false}
     onClick={[Function]}
     selected={false}
-    sizing="large"
+    sizing="normal"
     style={Object {}}
     visible={true}
   />

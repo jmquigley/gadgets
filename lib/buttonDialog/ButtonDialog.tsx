@@ -71,25 +71,24 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 	public static defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
 
-	private _dialogCN: ClassNames;
-	private _rootCN: ClassNames;
-	private _triangleCN: ClassNames;
+	private _dialogCN: ClassNames = new ClassNames();
+	private _triangleCN: ClassNames = new ClassNames();
 
 	constructor(props: ButtonDialogProps) {
 		super(props, require('./styles.css'));
 
-		this._dialogCN = new ClassNames([
+		this._dialogCN.add([
 			'ui-dialog-popup',
 			...props.dialogClasses.slice(),
 			this.styles.buttonDialogPopup
 		]);
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-button-dialog',
 			this.styles.buttonDialog
 		]);
 
-		this._triangleCN = new ClassNames([
+		this._triangleCN.add([
 			...props.triangleClasses.slice()
 		]);
 
@@ -162,13 +161,13 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			this.styles.buttonDialogHide
 		);
 
-		this.buildCommonStyles(this._rootCN, nextProps);
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
 		return (
 			<div
-				className={this._rootCN.classnames}
+				className={this._rootStyles.classnames}
 			>
 				<Button
 					backgroundColor={this.props.backgroundColor}

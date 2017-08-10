@@ -25,7 +25,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
   widget={null}
 >
   <div
-    className="ui-title-bar titleBar ripple"
+    className="ui-title-bar titleBar ripple normal"
     style={Object {}}
   >
     <Label
@@ -108,7 +108,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
   widget={null}
 >
   <div
-    className="ui-title-bar titleBar ripple"
+    className="ui-title-bar titleBar ripple normal"
     style={Object {}}
   >
     <Label
@@ -168,7 +168,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
 
 exports[`Test creation of a Title control with default props 1`] = `
 <div
-  className="ui-title-bar titleBar ripple test-class"
+  className="ui-title-bar titleBar ripple normal test-class"
   style={Object {}}
 >
   <Label
@@ -208,7 +208,7 @@ exports[`Test creation of a Title control with default props 1`] = `
 
 exports[`Test creation of a Title control with even layout 1`] = `
 <div
-  className="ui-title-bar titleBar ripple"
+  className="ui-title-bar titleBar ripple normal"
   style={Object {}}
 >
   <Label
@@ -244,7 +244,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
     widget="widget"
   />
   <div
-    className="normal ui-title-widget widgetEven"
+    className="ui-title-widget widgetEven normal"
   >
     widget
   </div>
@@ -253,7 +253,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
 
 exports[`Test creation of a Title control with no layout 1`] = `
 <div
-  className="ui-title-bar titleBar ripple"
+  className="ui-title-bar titleBar ripple normal"
   style={Object {}}
 >
   <Label
@@ -293,7 +293,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
 
 exports[`Test creation of a Title control with quarter layout 1`] = `
 <div
-  className="ui-title-bar titleBar ripple"
+  className="ui-title-bar titleBar ripple normal"
   style={Object {}}
 >
   <Label
@@ -329,7 +329,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     widget="widget"
   />
   <div
-    className="normal ui-title-widget widgetQuarter"
+    className="ui-title-widget widgetQuarter normal"
   >
     widget
   </div>
@@ -338,7 +338,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
 
 exports[`Test creation of a Title control with stacked layout 1`] = `
 <div
-  className="ui-title-bar titleBarStacked ripple"
+  className="ui-title-bar titleBarStacked ripple normal"
   style={Object {}}
 >
   <Label
@@ -374,7 +374,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     widget="widget"
   />
   <div
-    className="normal ui-title-widget widgetStacked"
+    className="ui-title-widget widgetStacked normal"
   >
     widget
   </div>
@@ -383,7 +383,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
 
 exports[`Test creation of a Title control with thirds layout 1`] = `
 <div
-  className="ui-title-bar titleBar ripple"
+  className="ui-title-bar titleBar ripple normal"
   style={Object {}}
 >
   <Label
@@ -419,7 +419,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     widget="widget"
   />
   <div
-    className="normal ui-title-widget widgetThird"
+    className="ui-title-widget widgetThird normal"
   >
     widget
   </div>
@@ -428,7 +428,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
 
 exports[`Test creation of a Title control with threequarter layout 1`] = `
 <div
-  className="ui-title-bar titleBar ripple"
+  className="ui-title-bar titleBar ripple normal"
   style={Object {}}
 >
   <Label
@@ -464,7 +464,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     widget="widget"
   />
   <div
-    className="normal ui-title-widget widgetThreeQuarter"
+    className="ui-title-widget widgetThreeQuarter normal"
   >
     widget
   </div>
@@ -496,7 +496,7 @@ exports[`Test disabling the Title control 1`] = `
   widget={null}
 >
   <div
-    className="ui-title-bar titleBar disabled nohover"
+    className="ui-title-bar titleBar normal disabled nohover"
     style={Object {}}
   >
     <Label
@@ -579,7 +579,7 @@ exports[`Test making the Title control invisible 1`] = `
   widget={null}
 >
   <div
-    className="ui-title-bar titleBar ripple invisible"
+    className="ui-title-bar titleBar ripple normal invisible"
     style={Object {}}
   >
     <Label

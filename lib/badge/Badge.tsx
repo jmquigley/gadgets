@@ -64,17 +64,16 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 	public static defaultProps: BadgeProps = getDefaultBadgeProps();
 
-	private _rootCN: ClassNames;
-	private _badgeCN: ClassNames;
+	private _badgeCN: ClassNames = new ClassNames();
 
 	constructor(props: BadgeProps) {
 		super(props, require('./styles.css'));
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			this.styles.badgeContainer
 		]);
 
-		this._badgeCN = new ClassNames([
+		this._badgeCN.add([
 			'ui-badge',
 			this.styles.badge,
 			this.locationStyle,
@@ -90,12 +89,12 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: BadgeProps) {
-		this.buildCommonStyles(this._rootCN, nextProps);
 		this.buildInlineStyles(nextProps, {
 			color: (nextProps.color || 'black'),
 			backgroundColor: (nextProps.backgroundColor || 'white'),
 			border: `solid 3px ${nextProps.color}`
 		});
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
@@ -116,7 +115,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		}
 
 		return (
-			<div className={this._rootCN.classnames}>
+			<div className={this._rootStyles.classnames}>
 				{this.props.children}
 				{badge}
 			</div>

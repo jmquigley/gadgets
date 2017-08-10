@@ -73,19 +73,18 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 	public static defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 
-	private _rootCN: ClassNames;
-	private _contentCN: ClassNames;
+	private _contentCN: ClassNames = new ClassNames();
 
 	constructor(props: ButtonTextProps) {
 		super(props, require('./styles.css'));
 
-		this._rootCN = new ClassNames([
-			'ui-button-text',
-			this.styles.buttonText
+		this._contentCN.add([
+			this.styles.content
 		]);
 
-		this._contentCN = new ClassNames([
-			this.styles.content
+		this._rootStyles.add([
+			'ui-button-text',
+			this.styles.buttonText
 		]);
 
 		this.bindCallbacks('handleClick');
@@ -140,11 +139,11 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		this._contentCN.on(this.fontStyle(nextProps.sizing));
 
 		this.buildInlineStyles(nextProps, style);
-		this._rootCN.onIf(!nextProps.noripple && !nextProps.disabled)(
+		this._rootStyles.onIf(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
 		);
 
-		this.buildCommonStyles(this._rootCN, nextProps);
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
@@ -170,7 +169,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 		return (
 			<div
-				className={this._rootCN.classnames}
+				className={this._rootStyles.classnames}
 				style={this.inlineStyle}
 				onClick={this.handleClick}
 			>

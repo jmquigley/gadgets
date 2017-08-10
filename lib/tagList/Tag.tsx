@@ -39,6 +39,11 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	constructor(props: TagProps) {
 		super(props, require('./styles.css'));
 
+		this._rootStyles.add([
+			'ui-tag',
+			this.styles.tag
+		]);
+
 		this.state = {
 			showDelete: false
 		};
@@ -60,18 +65,14 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	}
 
 	public componentWillUpdate(nextProps: TagProps, nextState: TagState) {
-		this.resetStyles(nextProps);
 
-		this.classes.push('ui-tag');
-		this.classes.push(this.styles.tag);
+		this._rootStyles.onIfElse(nextState.showDelete)(
+			this.styles.tagHover
+		)(
+			this.styles.tagNoHover
+		);
 
-		if (nextState.showDelete) {
-			this.classes.push(this.styles.tagHover);
-		} else {
-			this.classes.push(this.styles.tagNoHover);
-		}
-
-		this.buildStyles(nextProps);
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
@@ -82,7 +83,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 
 		return (
 			<div
-				className={this.classes.join(' ')}
+				className={this._rootStyles.classnames}
 				onMouseOut={this.handleMouseOut}
 				onMouseOver={this.handleMouseOver}
 			>

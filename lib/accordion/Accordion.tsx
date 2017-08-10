@@ -36,7 +36,6 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 export interface AccordionProps extends BaseProps {
@@ -55,12 +54,10 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public static defaultProps: AccordionProps = getDefaultAccordionProps();
 
-	private _rootCN: ClassNames;
-
 	constructor(props: AccordionProps) {
 		super(props, require('./styles.css'));
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-accordion',
 			this.styles.accordion
 		]);
@@ -68,13 +65,9 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 		this.componentWillUpdate(props);
 	}
 
-	public componentWillUpdate(nextProps: AccordionProps) {
-		this.buildCommonStyles(this._rootCN, nextProps);
-	}
-
 	public render() {
 		return (
-			<ul className={this._rootCN.classnames} style={this.inlineStyle}>
+			<ul className={this._rootStyles.classnames} style={this.inlineStyle}>
 				{this.props.children}
 			</ul>
 		);

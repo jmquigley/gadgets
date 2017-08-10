@@ -78,6 +78,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
@@ -127,11 +128,28 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public static defaultProps: ToastProps = getDefaultToastProps();
 
-	private _contentClasses: string[] = [];
+	private _contentClasses: ClassNames = new ClassNames();
+	private _resetRootStyles: any;
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
 		super(props, require('./styles.css'));
+
+		this._rootStyles.add([
+			'ui-toast',
+			this.styles.toast
+		]);
+
+		this._contentClasses.add([
+			'ui-toast-content',
+			this.styles.content
+		]);
+
+		this._resetRootStyles = {
+			[this.styles.info]: false,
+			[this.styles.warning]: false,
+			[this.styles.error]: false
+		};
 
 		this.state = {
 			visible: props.visible
@@ -183,59 +201,68 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	}
 
 	public componentWillUpdate(nextProps: ToastProps, nextState: ToastState) {
-		this.resetStyles(nextProps);
 
 		if (nextProps.level === ToastLevel.custom) {
-			this.inlineStyle = {
-				color: nextProps.color,
-				backgroundColor: nextProps.backgroundColor,
-				borderColor: nextProps.borderColor
-			};
+			const style = {};
+
+			if (nextProps.color !== 'inherit') {
+				style['color'] = nextProps.color;
+			}
+
+			if (nextProps.backgroundColor !== 'inherit') {
+				style['backgroundColor'] = nextProps.backgroundColor;
+			}
+
+			if (nextProps.borderColor !== 'inherit') {
+				style['borderColor'] = nextProps.borderColor;
+			}
+
+			this.buildInlineStyles(nextProps, style);
 		}
 
-		this.classes.push('ui-toast');
-		this.classes.push(this.styles.toast);
-		this.classes.push(this.fontStyle());
+		if (nextProps.level !== this.props.level) {
+			this._rootStyles.add(this._resetRootStyles);
+		}
 
 		switch (nextProps.level) {
 			case ToastLevel.info:
-				this.classes.push(this.styles.info);
+				this._rootStyles.on(this.styles.info);
 				break;
 
 			case ToastLevel.warning:
-				this.classes.push(this.styles.warning);
+				this._rootStyles.on(this.styles.warning);
 				break;
 
 			case ToastLevel.error:
-				this.classes.push(this.styles.error);
+				this._rootStyles.on(this.styles.error);
 				break;
 		}
 
-		if (nextProps.bottom) {
-			this.classes.push(this.styles.toastBottom);
-		} else {
-			this.classes.push(this.styles.toastTop);
+		this._rootStyles.onIfElse(nextProps.bottom)(
+			this.styles.toastBottom
+		)(
+			this.styles.toastTop
+		);
+
+		this._rootStyles.onIf(!nextState.visible)(
+			this.styles.hide
+		);
+
+		if (this.props.sizing !== nextProps['sizing']) {
+			this._contentClasses.off(this.fontStyle(this.props.sizing));
 		}
+		this._contentClasses.on(this.fontStyle(nextProps.sizing));
 
-		if (!nextState.visible) {
-			this.classes.push(this.styles.hide);
-		}
-
-		this._contentClasses = [];
-		this._contentClasses.push('ui-toast-content');
-		this._contentClasses.push(this.styles.content);
-		this._contentClasses.push(this.fontStyle());
-
-		this.buildStyles(nextProps);
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
 		return (
 			<div
-				className={this.classes.join(' ')}
+				className={this._rootStyles.classnames}
 				style={this.inlineStyle}
 			>
-				<div className={this._contentClasses.join(' ')}>
+				<div className={this._contentClasses.classnames}>
 					{this.props.children}
 				</div>
 				<Button
@@ -243,7 +270,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 					color="white"
 					iconName="times"
 					onClick={this.handleClose}
-					sizing={Sizing.large}
+					sizing={Sizing.normal}
 				/>
 			</div>
 		);

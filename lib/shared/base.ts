@@ -81,6 +81,8 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	private _sizes: Sizes = null;
 	private _sizing: Sizing = null;
 
+	protected _rootStyles: ClassNames = new ClassNames();
+
 	constructor(props: P, pstyles: any = {}, defaultFontSize: number = defaultSize) {
 		super(props);
 
@@ -184,62 +186,6 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		return this.sizes[sizing].boxStyle;
 	}
 
-	/**
-	 * Every component has a general set of CSS styles that may be applied each
-	 * time the component is rendered (like a style to enable/disable).  This
-	 * function is used to generate those basic, shared styles in all
-	 * components.  It uses a set of common props (className, visible, disable,
-	 * etc).  There are cases where one wants to ignore the computation of a
-	 * value.  The third optional parameter allows one to ignore a specific
-	 * value calculated in this set.
-	 * @param classes {ClassNames} the Map that holds the class selector strings
-	 * @param props {P} the props for the given child class (generic type)
-	 * @param opts {BaseOption} determines which automatic names will be ignored
-	 */
-	protected buildCommonStyles(classes: ClassNames, props: P, opts?: BaseOptions) {
-
-		opts = Object.assign(
-			{},
-			defaultBaseOptions,
-			opts
-		);
-
-		if (opts.sizing) {
-			if ('sizing' in props && this._sizing !== props['sizing']) {
-				classes.off(this.fontStyle(this._sizing));
-				this._sizing = props['sizing'];
-			}
-
-			classes.onIf('sizing' in props)(
-				this.fontStyle()
-			);
-		}
-
-		if (opts.className) {
-			if ('className' in props && this._className !== props['className']) {
-				classes.off(this._className);
-				this._className = props['className'];
-			}
-
-			classes.onIf('className' in props && props['className'])(
-				props['className']
-			);
-		}
-
-		classes.onIf('visible' in props && !props['visible'] && opts.visible)(
-			this.styles.invisible
-		);
-
-		classes.onIf('disabled' in props && props['disabled'] && opts.disabled)(
-			styles.disabled,
-			'nohover'
-		);
-
-		if ('nohover' in props && props['nohover'] && opts.nohover) {
-			classes.on('nohover');
-		}
-	}
-
 	protected buildInlineStyles(props: P, style: any = {}) {
 		// Takes the initial inline style object, the style object from props
 		// and an input user override and merges them together from left to
@@ -268,7 +214,7 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		// and an input user override and merges them together from left to
 		// right, Where the rightmost item in the function call has a higher
 		// priority when the objects have the same "key"
-		this._inlineStyle = Object.assign(this._inlineStyle, props['style'], style);
+		this._inlineStyle = Object.assign({}, this._inlineStyle, props['style'], style);
 
 		opts = Object.assign(
 			{},
@@ -385,6 +331,58 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	protected resetStyles(props: P) {
 		this._sizing = props['sizing'];
 		this._classes = [];
+	}
+
+	/**
+	 * Every component has a general set of CSS styles that may be applied each
+	 * time the component is rendered (like a style to enable/disable).  This
+	 * lifecycle function is used to generate those basic, shared styles in all
+	 * components.  It uses a set of common props (className, visible, disable,
+	 * etc).
+	 *
+	 * This version of the funtion is in the BaseComponent inherited by all
+	 * components.  If the component doesn't define a version then this is
+	 * called on the base class.  When the component defines a version, then
+	 * super is used to call this version.
+	 *
+	 * @param nextProps {P} the next set of props passed to an update
+	 * @param nextState {S} the next set of base info passed to an update
+	 */
+	public componentWillUpdate(nextProps?: P, nextState?: S) {
+
+		nextState = null;
+
+		if ('sizing' in nextProps && this._sizing !== nextProps['sizing']) {
+			this._rootStyles.off(this.fontStyle(this._sizing));
+			this._sizing = nextProps['sizing'];
+		}
+
+		this._rootStyles.onIf('sizing' in nextProps)(
+			this.fontStyle()
+		);
+
+		if ('className' in nextProps && this._className !== nextProps['className']) {
+			this._rootStyles.off(this._className);
+			this._className = nextProps['className'];
+		}
+
+		this._rootStyles.onIf('className' in nextProps && nextProps['className'])(
+			nextProps['className']
+		);
+
+		this._rootStyles.onIf('visible' in nextProps && !nextProps['visible'])(
+			this.styles.invisible
+		);
+
+		this._rootStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
+			styles.disabled,
+			'nohover'
+		);
+
+		if ('nohover' in nextProps && nextProps['nohover']) {
+			this._rootStyles.on('nohover');
+		}
+
 	}
 
 }

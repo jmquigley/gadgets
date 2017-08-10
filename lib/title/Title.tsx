@@ -55,6 +55,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {ClassNames} from 'util.classnames';
 import {Label} from '../label';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
@@ -85,68 +86,99 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
 
-	private _titleClasses: string[] = [];
-	private _widgetClasses: string[] = [];
+	private _titleClasses: ClassNames = new ClassNames();
+	private _widgetClasses: ClassNames = new ClassNames();
+	private _resetTitleClasses: any;
+	private _resetWidgetClasses: any;
 
 	constructor(props: TitleProps) {
 		super(props, require('./styles.css'));
+
+		this._rootStyles.add('ui-title-bar');
+		this._titleClasses.add('ui-title');
+		this._widgetClasses.add('ui-title-widget');
+
+		this._resetTitleClasses = {
+			[this.styles.titleQuarter]: false,
+			[this.styles.titleEven]: false,
+			[this.styles.titleEven]: false,
+			[this.styles.titleThreeQuarter]: false,
+			[this.styles.titleThird]: false,
+			[this.styles.titleStacked]: false,
+			[this.styles.titleDominant]: false
+		};
+
+		this._resetWidgetClasses = {
+			[this.styles.widgetQuarter]: false,
+			[this.styles.widgetEven]: false,
+			[this.styles.widgetEven]: false,
+			[this.styles.widgetThreeQuarter]: false,
+			[this.styles.widgetThird]: false,
+			[this.styles.widgetStacked]: false,
+			[this.styles.widgetDominant]: false
+		};
+
 		this.componentWillUpdate(props);
 	}
 
 	public componentWillUpdate(nextProps: TitleProps) {
-		this.resetStyles(nextProps);
-		this.classes.push('ui-title-bar');
 
-		if (nextProps.layout === TitleLayout.stacked) {
-			this.classes.push(this.styles.titleBarStacked);
-		} else {
-			this.classes.push(this.styles.titleBar);
+		if (nextProps.layout !== this.props.layout) {
+			// Resets all title/widget styles when a change occurs
+			this._titleClasses.add(this._resetTitleClasses);
+			this._widgetClasses.add(this._resetWidgetClasses);
 		}
-
-		if (!nextProps.noripple && !nextProps.disabled) {
-			this.classes.push('ripple');
-		}
-
-		this._titleClasses = [];
-		this._widgetClasses = [this.fontStyle()];
-
-		this._titleClasses.push('ui-title');
-		this._widgetClasses.push('ui-title-widget');
 
 		switch (nextProps.layout) {
 			case TitleLayout.quarter:
-				this._titleClasses.push(this.styles.titleQuarter);
-				this._widgetClasses.push(this.styles.widgetQuarter);
+				this._titleClasses.on(this.styles.titleQuarter);
+				this._widgetClasses.on(this.styles.widgetQuarter);
 				break;
 
 			case TitleLayout.even:
 			case TitleLayout.none:
-				this._titleClasses.push(this.styles.titleEven);
-				this._widgetClasses.push(this.styles.widgetEven);
+				this._titleClasses.on(this.styles.titleEven);
+				this._widgetClasses.on(this.styles.widgetEven);
 				break;
 
 			case TitleLayout.threequarter:
-				this._titleClasses.push(this.styles.titleThreeQuarter);
-				this._widgetClasses.push(this.styles.widgetThreeQuarter);
+				this._titleClasses.on(this.styles.titleThreeQuarter);
+				this._widgetClasses.on(this.styles.widgetThreeQuarter);
 				break;
 
 			case TitleLayout.third:
-				this._titleClasses.push(this.styles.titleThird);
-				this._widgetClasses.push(this.styles.widgetThird);
+				this._titleClasses.on(this.styles.titleThird);
+				this._widgetClasses.on(this.styles.widgetThird);
 				break;
 
 			case TitleLayout.stacked:
-				this._titleClasses.push(this.styles.titleStacked);
-				this._widgetClasses.push(this.styles.widgetStacked);
+				this._titleClasses.on(this.styles.titleStacked);
+				this._widgetClasses.on(this.styles.widgetStacked);
 				break;
 
 			case TitleLayout.dominant:
 			default:
-				this._titleClasses.push(this.styles.titleDominant);
-				this._widgetClasses.push(this.styles.widgetDominant);
+				this._titleClasses.on(this.styles.titleDominant);
+				this._widgetClasses.on(this.styles.widgetDominant);
 		}
 
-		this.buildStyles(nextProps);
+		this._rootStyles.onIfElse(nextProps.layout === TitleLayout.stacked)
+		(
+			this.styles.titleBarStacked
+		)(
+			this.styles.titleBar
+		);
+
+		this._rootStyles.onIf(!nextProps.noripple && !nextProps.disabled)(
+			'ripple'
+		);
+
+		if (this.props.sizing !== nextProps['sizing']) {
+			this._widgetClasses.off(this.fontStyle(this.props.sizing));
+		}
+		this._widgetClasses.on(this.fontStyle(nextProps.sizing));
+
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
@@ -155,14 +187,14 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 			title = (
 				<Label
 					{...this.props}
-					className={this._titleClasses.join(' ')}
+					className={this._titleClasses.classnames}
 					text={this.props.title}
 				/>
 			);
 		} else {
 			title = (
 				<div
-					className={this._titleClasses.join(' ')}
+					className={this._titleClasses.classnames}
 				>
 					{this.props.title}
 				</div>
@@ -172,7 +204,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 		let widget: any = null;
 		if (this.props.layout !== TitleLayout.none && this.props.widget != null) {
 			widget = (
-				<div className={this._widgetClasses.join(' ')}>
+				<div className={this._widgetClasses.classnames}>
 					{this.props.widget}
 				</div>
 			);
@@ -180,7 +212,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 
 		return (
 			<div
-				className={this.classes.join(' ')}
+				className={this._rootStyles.classnames}
 				style={{...this.inlineStyle}}
 			>
 				{title}

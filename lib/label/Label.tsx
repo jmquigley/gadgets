@@ -47,7 +47,6 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
@@ -90,12 +89,11 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	public static defaultProps: LabelProps = getDefaultLabelProps();
 
 	private _label: any = null;
-	private _rootCN: ClassNames;
 
 	constructor(props: LabelProps) {
 		super(props, require('./styles.css'));
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-label',
 			this.styles.label
 		]);
@@ -208,13 +206,13 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			backgroundColor: nextProps.backgroundColor
 		});
 
-		this.buildCommonStyles(this._rootCN, nextProps);
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
 		return (
 			<span
-				className={this._rootCN.classnames}
+				className={this._rootStyles.classnames}
 				contentEditable={this.state.editable}
 				onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
 				onClick={this.props.onClick}

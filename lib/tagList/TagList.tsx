@@ -34,6 +34,11 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	constructor(props: TagListProps) {
 		super(props, require('./styles.css'));
 
+		this._rootStyles.add([
+			'ui-taglist',
+			this.styles.tagList
+		]);
+
 		this.state = {
 			tags: props.tags
 		};
@@ -45,13 +50,6 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		if (!isEqual(nextProps.tags, this.state.tags)) {
 			this.setState({tags: nextProps.tags});
 		}
-	}
-
-	public componentWillUpdate(nextProps: TagListProps) {
-		this.resetStyles(nextProps);
-		this.classes.push('ui-taglist');
-		this.classes.push(this.styles.tagList);
-		this.buildStyles(nextProps);
 	}
 
 	public render() {
@@ -66,7 +64,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		}
 
 		return (
-			<div className={this.classes.join(' ')}>
+			<div className={this._rootStyles.classnames}>
 				<Icon iconName="tags" />
 				{tags}
 				<TextField

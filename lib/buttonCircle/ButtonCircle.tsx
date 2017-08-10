@@ -66,23 +66,22 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 
 	public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 
-	private _buttonCN: ClassNames;
-	private _containerCN: ClassNames;
-	private _rootCN: ClassNames;
+	private _buttonCN: ClassNames = new ClassNames();
+	private _containerCN: ClassNames = new ClassNames();
 
 	constructor(props: ButtonCircleProps) {
 		super(props, require('./styles.css'));
 
-		this._buttonCN = new ClassNames([
+		this._buttonCN.add([
 			this.borderStyle(),
 			this.styles.buttonCircleIcon
 		]);
 
-		this._containerCN = new ClassNames([
+		this._containerCN.add([
 			this.styles.buttonCircleContainer
 		]);
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-button-circle',
 			this.styles.buttonCircle
 		]);
@@ -90,13 +89,9 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 		this.componentWillUpdate(props);
 	}
 
-	public componentWillUpdate(nextProps: ButtonCircleProps) {
-		this.buildCommonStyles(this._rootCN, nextProps);
-	}
-
 	public render() {
 		return (
-			<div className={this._rootCN.classnames}>
+			<div className={this._rootStyles.classnames}>
 				<div className={this._containerCN.classnames}>
 					<Button
 						{...this.props}

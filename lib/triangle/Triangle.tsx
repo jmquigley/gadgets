@@ -30,49 +30,70 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 
 	public static defaultProps: TriangleProps = getDefaultTriangleProps();
 
+	private _resetRootStyles: any;
+
 	constructor(props: TriangleProps) {
 		super(props, require('./styles.css'));
+
+		this._rootStyles.add([
+			'ui-triangle',
+			this.styles.triangle
+		]);
+
+		this._resetRootStyles = {
+			[this.styles.triangleRight]: false,
+			[this.styles.triangleLeft]: false,
+			[this.styles.triangleDown]: false,
+			[this.styles.triangleUp]: false
+		};
+
 		this.componentWillUpdate(props);
 	}
 
 	public componentWillUpdate(nextProps: TriangleProps) {
-		this.resetStyles(nextProps);
 
-		this.classes.push('ui-triangle');
-		this.classes.push(this.styles.triangle);
-		this.classes.push(this.boxStyle());
+		if (this.props.sizing !== nextProps['sizing']) {
+			this._rootStyles.off(this.boxStyle(this.props.sizing));
+		}
+		this._rootStyles.on(this.boxStyle(nextProps.sizing));
 
-		switch (this.props.direction) {
+		if (nextProps.direction !== this.props.direction) {
+			this._rootStyles.add(this._resetRootStyles);
+		}
+
+		switch (nextProps.direction) {
 			case Direction.right:
-				this.classes.push(this.styles.triangleRight);
+				this._rootStyles.on(this.styles.triangleRight);
 				break;
 
 			case Direction.left:
-				this.classes.push(this.styles.triangleLeft);
+				this._rootStyles.on(this.styles.triangleLeft);
 				break;
 
 			case Direction.down:
-				this.classes.push(this.styles.triangleDown);
+				this._rootStyles.on(this.styles.triangleDown);
 				break;
 
 			case Direction.up:
 			default:
-				this.classes.push(this.styles.triangleUp);
+				this._rootStyles.on(this.styles.triangleUp);
 				break;
 		}
 
-		this.buildStyles(nextProps, {
+		this.buildInlineStyles(nextProps, {
 			fill: nextProps.backgroundColor,
 			stroke: nextProps.borderColor,
 			strokeWidth: nextProps.borderWidth
 		});
+
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
 		return (
 			(this.props.nobase) ? (
 				<svg
-					className={this.classes.join(' ')}
+					className={this._rootStyles.classnames}
 					preserveAspectRatio="xMidYMid meet"
 					style={this.inlineStyle}
 					version="1.1"
@@ -85,7 +106,7 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 				</svg>
 			) : (
 				<svg
-					className={this.classes.join(' ')}
+					className={this._rootStyles.classnames}
 					preserveAspectRatio="xMidYMid meet"
 					style={this.inlineStyle}
 					version="1.1"

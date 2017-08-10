@@ -62,18 +62,17 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	public static defaultProps: ButtonProps = getDefaultButtonProps();
 
-	private _iconCN: ClassNames;
-	private _rootCN: ClassNames;
+	private _iconCN: ClassNames = new ClassNames();
 
 	constructor(props: ButtonProps) {
 		super(props, require('./styles.css'));
 
-		this._iconCN = new ClassNames([
+		this._iconCN.add([
 			this.props.iconStyle,
 			this.styles.icon
 		]);
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-button',
 			this.styles.button
 		]);
@@ -108,19 +107,18 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 			style['borderWidth'] = nextProps.borderWidth;
 		}
 
-		this.buildInlineStyles(nextProps, style);
-
-		this._rootCN.onIf(!nextProps.noripple && !nextProps.disabled)(
+		this._rootStyles.onIf(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
 		);
 
-		this.buildCommonStyles(this._rootCN, nextProps);
+		this.buildInlineStyles(nextProps, style);
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
 		return (
 			<div
-				className={this._rootCN.classnames}
+				className={this._rootStyles.classnames}
 				onClick={this.handleClick}
 				style={this.inlineStyle}
 			>

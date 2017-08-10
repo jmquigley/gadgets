@@ -9,7 +9,6 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 import {ListItem} from './index';
@@ -38,15 +37,12 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 	public static defaultProps: ListProps = getDefaultListProps();
 
-	private _rootCN: ClassNames;
-
 	constructor(props: ListProps) {
 		super(props, require('./styles.css'));
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-list',
 			this.styles.list
-
 		]);
 
 		this.state = {
@@ -69,11 +65,11 @@ export class List extends BaseComponent<ListProps, ListState> {
 	}
 
 	public componentWillUpdate(nextProps: ListProps) {
-		this._rootCN.onIf(nextProps.alternating)(
+		this._rootStyles.onIf(nextProps.alternating)(
 			this.styles.listAlternating
 		);
 
-		this.buildCommonStyles(this._rootCN, nextProps);
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
@@ -91,7 +87,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 		return (
 			<div
-				className={this._rootCN.classnames}
+				className={this._rootStyles.classnames}
 				id={this.props.id}
 				style={this.inlineStyle}
 			>

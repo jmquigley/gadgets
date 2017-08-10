@@ -55,7 +55,6 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent} from '../shared';
@@ -88,12 +87,10 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
-	private _rootCN: ClassNames;
-
 	constructor(props: AccordionItemProps) {
 		super(props, require('./styles.css'));
 
-		this._rootCN = new ClassNames([
+		this._rootStyles.add([
 			'ui-accordionitem',
 			this.styles.accordionItem
 		]);
@@ -116,10 +113,6 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 	}
 
-	public componentWillUpdate(nextProps: AccordionItemProps) {
-		this.buildCommonStyles(this._rootCN, nextProps);
-	}
-
 	public componentWillReceiveProps(nextProps: AccordionItemProps) {
 		if (nextProps.initialToggle !== this.state.toggle) {
 			this.setState({toggle: nextProps.initialToggle});
@@ -138,7 +131,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 		return (
 			<ul
-				className={this._rootCN.classnames}
+				className={this._rootStyles.classnames}
 				style={this.inlineStyle}
 			>
 				<Item
