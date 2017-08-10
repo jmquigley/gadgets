@@ -55,7 +55,8 @@ export enum Sizing {
 	medium = 'medium',
 	large = 'large',
 	xlarge = 'xlarge',
-	xxlarge = 'xxlarge'
+	xxlarge = 'xxlarge',
+	inherit = 'inherit'
 }
 
 export interface FontStyle {
@@ -97,7 +98,8 @@ export class Sizes {
 			[Sizing.normal, 0],
 			[Sizing.large, 8],
 			[Sizing.xlarge, 16],
-			[Sizing.xxlarge, 32]
+			[Sizing.xxlarge, 32],
+			[Sizing.inherit, 0]
 		];
 
 		for (const [key, val] of sizes) {

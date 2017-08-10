@@ -51,30 +51,9 @@ const styles = require('./styles.css');
 
 export const defaultSize: number = 16;
 
-//
-// When using buildStyles in the base class these options are used to
-// suppress the use of these variables
-//
-export interface BaseOptions {
-	className?: boolean;
-	disabled?: boolean;
-	nohover?: boolean;
-	sizing?: boolean;
-	visible?: boolean;
-}
-
-const defaultBaseOptions: BaseOptions = {
-	className: true,
-	disabled: true,
-	nohover: true,
-	sizing: true,
-	visible: true
-};
-
 export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
 	private _className: string = '';
-	private _classes: string[] = [];
 	private _inlineStyle: any = {};     // inline style overrides
 	private _locationStyle: string = '';
 	private _styles: any = {};          // css modules styles per module
@@ -102,14 +81,6 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		if ('location' in props) {
 			this._locationStyle = this.styles[props['location']];
 		}
-	}
-
-	get classes(): string[] {
-		return this._classes;
-	}
-
-	set classes(arr: string[]) {
-		this._classes = arr;
 	}
 
 	get className(): string {
@@ -195,53 +166,6 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		return this._inlineStyle;
 	}
 
-	/**
-	 * Every component has a general set of CSS styles that may be applied each
-	 * time the component is rendered (like a style to enable/disable).  This
-	 * function is used to generate those basic, shared styles in all
-	 * components.  It uses a set of common props (className, visible, disable,
-	 * etc).  There are cases where one wants to ignore the computation of a
-	 * value.  The third optional parameter allows one to ignore a specific
-	 * value calculated in this set.
-	 * @param props {P} the props for the given child class (generic type)
-	 * @param style {Object} a set of key value pairs that override any styles
-	 * in the props.
-	 * @param opts {BaseOption} determines which automatic names will be ignored
-	 */
-	protected buildStyles(props: P, style: any = {}, opts?: BaseOptions): void {
-
-		// Takes the initial inline style object, the style object from props
-		// and an input user override and merges them together from left to
-		// right, Where the rightmost item in the function call has a higher
-		// priority when the objects have the same "key"
-		this._inlineStyle = Object.assign({}, this._inlineStyle, props['style'], style);
-
-		opts = Object.assign(
-			{},
-			defaultBaseOptions,
-			opts
-		);
-
-		if ('className' in props && props['className'] !== '' && opts.className) {
-			this._classes.push(props['className']);
-		}
-
-		if ('visible' in props && !props['visible'] && opts.visible) {
-			this._classes.push(this.styles.invisible);
-		}
-
-		if ('disabled' in props && props['disabled'] && opts.disabled) {
-			this._classes.push(styles.disabled);
-			this._classes.push('nohover');
-		}
-
-		if ('nohover' in props && props['nohover'] && opts.nohover) {
-			if (this._classes.indexOf('nohover') === -1) {
-				this._classes.push('nohover');
-			}
-		}
-	}
-
 	protected font(sizing: Sizing = this.sizing): FontStyle {
 		return this.sizes[sizing].font;
 	}
@@ -323,14 +247,41 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	}
 
 	/**
-	 * Sets the classes list back to empty.  Each class "buildStyles" will call
-	 * this to ensure that it is empty before building the list of classes for
-	 * that component.  Without this call the className list will just append
-	 * duplicates.
+	 * Compares the sizing parameter between two props objects.  If they differ
+	 * then unset the previous version of the boxStyle in props and set it
+	 * to the size contained in nextProps.
+	 * @param classes {ClassNames} the styles object to toggle
+	 * @param nextProps {P} the next set of props that may be changing
+	 * @param props {P} a reference to the current (or previous) props
+	 * @return {ClassNames} a reference to the original input classes
 	 */
-	protected resetStyles(props: P) {
-		this._sizing = props['sizing'];
-		this._classes = [];
+	protected updateBoxStyle(classes: ClassNames, nextProps: P, props: P) {
+		if (props['sizing'] !== nextProps['sizing']) {
+			classes.off(this.boxStyle(this.props['sizing']));
+		}
+		classes.onIf('sizing' in nextProps)(
+			this.boxStyle(nextProps['sizing'])
+		);
+		return classes;
+	}
+
+	/**
+	 * Compares the sizing parameter between two props objects.  If they differ
+	 * then unset the previous version of the fontStyle in props and set it
+	 * to the size contained in nextProps.
+	 * @param classes {ClassNames} the styles object to toggle
+	 * @param nextProps {P} the next set of props that may be changing
+	 * @param props {P} a reference to the current (or previous) props
+	 * @return {ClassNames} a reference to the original input classes
+	 */
+	protected updateFontStyle(classes: ClassNames, nextProps: P, props: P) {
+		if (props['sizing'] !== nextProps['sizing']) {
+			classes.off(this.fontStyle(this.props['sizing']));
+		}
+		classes.onIf('sizing' in nextProps)(
+			this.fontStyle(nextProps['sizing'])
+		);
+		return classes;
 	}
 
 	/**
@@ -382,7 +333,5 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		if ('nohover' in nextProps && nextProps['nohover']) {
 			this._rootStyles.on('nohover');
 		}
-
 	}
-
 }

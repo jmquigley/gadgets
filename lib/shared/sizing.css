@@ -60,6 +60,11 @@ $xxlarge-fs: 3.0rem;
 		font-weight: inherit;
 	}
 
+	.inherit {
+		font-size: inherit;
+		font-weight: inherit;
+	}
+
 	.xxsmallBorder {
 		border: solid 1px;
 		/* padding: 1px; */
@@ -95,6 +100,10 @@ $xxlarge-fs: 3.0rem;
 		/* 		padding: 10px; */
 	}
 
+	.inheritBorder {
+		border: inherit;
+	}
+
 	.xxsmallBox {
 		width: $xxsmall;
 		height: $xxsmall;
@@ -128,6 +137,11 @@ $xxlarge-fs: 3.0rem;
 	.xxlargeBox {
 		width: $xxlarge;
 		height: $xxlarge;
+	}
+
+	.inheritBox {
+		width: inherit;
+		height: inherit;
 	}
 
 }

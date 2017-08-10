@@ -54,12 +54,14 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {ClassNames} from 'util.classnames';
 import {
 	BaseComponent,
 	BaseProps,
 	Direction,
 	getDefaultBaseProps,
-	Location
+	Location,
+	Sizing
 } from '../shared';
 import {Triangle} from '../triangle';
 
@@ -73,71 +75,96 @@ export function getDefaultTooltipProps(): TooltipProps {
 			color: 'white',
 			backgroundColor: 'gray',
 			location: Location.middleRight,
-			show: false
-		}));
+			show: false,
+			sizing: Sizing.inherit
+		})
+	);
 }
 
 export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 
 	public static defaultProps: TooltipProps = getDefaultTooltipProps();
 
+	private _contentStyles: ClassNames = new ClassNames();
+	private _resetTooltipLocation: string[];
 	private _triangleDirection: Direction = Direction.down;
 	private _triangleStyle: string = '';
 
 	constructor(props: TooltipProps) {
 		super(props, require('./styles.css'));
+
+		this._contentStyles.add('ui-tooltip-content');
+		this._rootStyles.add([
+			'ui-tooltip',
+			this.styles.tooltip
+		]);
+
+		this._resetTooltipLocation = [
+			this.styles.tooltipTopLeft,
+			this.styles.tooltipTop,
+			this.styles.tooltipTopRight,
+			this.styles.tooltipMiddleLeft,
+			this.styles.tooltipMiddle,
+			this.styles.tooltipMiddleRight,
+			this.styles.tooltipBottomLeft,
+			this.styles.tooltipBottom,
+			this.styles.tooltipBottomRight
+		];
+
 		this.componentWillUpdate(props);
 	}
 
 	public componentWillUpdate(nextProps: TooltipProps) {
-		this.resetStyles(nextProps);
 
-		this.classes.push('ui-tooltip');
-		this.classes.push(this.styles.tooltip);
+		this.updateFontStyle(this._contentStyles, nextProps, this.props);
+
+		if (nextProps.location !== this.props.location) {
+			this._rootStyles.reset(this._resetTooltipLocation);
+		}
 
 		switch (nextProps.location) {
 			case Location.topLeft:
-				this.classes.push(this.styles.tooltipTopLeft);
+				this._rootStyles.on(this.styles.tooltipTopLeft);
 				this._triangleDirection = Direction.down;
 				this._triangleStyle = this.styles.tooltipTriangleTopLeft;
 				break;
 
 			case Location.top:
-				this.classes.push(this.styles.tooltipTop);
+				this._rootStyles.on(this.styles.tooltipTop);
 				this._triangleDirection = Direction.down;
 				this._triangleStyle = this.styles.tooltipTriangleTop;
 				break;
 
 			case Location.topRight:
-				this.classes.push(this.styles.tooltipTopRight);
+				this._rootStyles.on(this.styles.tooltipTopRight);
 				this._triangleDirection = Direction.down;
 				this._triangleStyle = this.styles.tooltipTriangleTopRight;
 				break;
 
 			case Location.middleLeft:
-				this.classes.push(this.styles.tooltipMiddleLeft);
+				this._rootStyles.on(this.styles.tooltipMiddleLeft);
 				this._triangleDirection = Direction.right;
 				this._triangleStyle = this.styles.tooltipTriangleMiddleLeft;
 				break;
 
 			case Location.none:
-				this.classes.push(this.styles.invisible);
+				this._rootStyles.on(this.styles.invisible);
 				break;
 
 			case Location.bottomLeft:
-				this.classes.push(this.styles.tooltipBottomLeft);
+				this._rootStyles.on(this.styles.tooltipBottomLeft);
 				this._triangleDirection = Direction.up;
 				this._triangleStyle = this.styles.tooltipTriangleBottomLeft;
 				break;
 
 			case Location.bottom:
-				this.classes.push(this.styles.tooltipBottom);
+				this._rootStyles.on(this.styles.tooltipBottom);
 				this._triangleDirection = Direction.up;
 				this._triangleStyle = this.styles.tooltipTriangleBottom;
 				break;
 
 			case Location.bottomRight:
-				this.classes.push(this.styles.tooltipBottomRight);
+				this._rootStyles.on(this.styles.tooltipBottomRight);
 				this._triangleDirection = Direction.up;
 				this._triangleStyle = this.styles.tooltipTriangleBottomRight;
 				break;
@@ -145,31 +172,36 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 			case Location.middle:
 			case Location.middleRight:
 			default:
-				this.classes.push(this.styles.tooltipMiddleRight);
+				this._rootStyles.on(this.styles.tooltipMiddleRight);
 				this._triangleDirection = Direction.left;
 				this._triangleStyle = this.styles.tooltipTriangleMiddleRight;
 				break;
 		}
 
-		if (nextProps.show) {
-			this.classes.push(this.styles.tooltipShow);
-		} else {
-			this.classes.push(this.styles.tooltipHide);
-		}
+		this._rootStyles.onIfElse(nextProps.show)(
+			this.styles.tooltipShow
+		)(
+			this.styles.tooltipHide
+		);
 
-		this.buildStyles(nextProps, {
+		this.buildInlineStyles(nextProps, {
 			color: nextProps.backgroundColor,
 			backgroundColor: nextProps.backgroundColor
 		});
+
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
 		return (
 			<div
-				className={this.classes.join(' ')}
+				className={this._rootStyles.classnames}
 				style={this.inlineStyle}
 			>
-				<span className="ui-tooltip-content" style={{color: this.props.color}}>
+				<span
+					className={this._contentStyles.classnames}
+					style={{color: this.props.color}}
+				>
 					{this.props.children}
 				</span>
 				<Triangle

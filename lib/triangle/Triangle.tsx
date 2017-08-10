@@ -55,7 +55,12 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 		if (this.props.sizing !== nextProps['sizing']) {
 			this._rootStyles.off(this.boxStyle(this.props.sizing));
 		}
-		this._rootStyles.on(this.boxStyle(nextProps.sizing));
+
+		if (nextProps.sizing === Sizing.inherit) {
+			this._rootStyles.on(this.boxStyle(Sizing.normal));
+		} else {
+			this._rootStyles.on(this.boxStyle(nextProps.sizing));
+		}
 
 		if (nextProps.direction !== this.props.direction) {
 			this._rootStyles.add(this._resetRootStyles);
