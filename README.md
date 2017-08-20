@@ -192,8 +192,8 @@ TODO: create the Spinner control
 ### Switch
 TODO: create the Switch control
 
-### TagList
-TODO: create the TagList control
+### [TagList](docs/lib/tagList/TagList.md) ([Tag](docs/lib/tagList/Tag.md))
+The tag list control is a basic list of strings that act as metadata for another control.  They are used to categorize information.
 
 ### Table
 TODO: create the Table control

@@ -85,7 +85,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
-			this.props.onClick();
+			this.props.onClick(e);
 		}
 		e.stopPropagation();
 	}

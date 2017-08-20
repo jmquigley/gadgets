@@ -1,4 +1,32 @@
-// TODO: add documentation for Tag
+/**
+ * A wrapper for a single string value that will appear within a `TagList`.
+ * A tag can be static or contain a delete button within it.  This control
+ * would generally just be used within the `TagList`.
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {Tag} from 'gadgets';
+ * <Tag usedelete>strvalue</Tag>
+ * ```
+ *
+ * #### Events
+ * - `onClick` - invoked when the user clicks on the delete button within the
+ * control.  This is only visible when `usedelete` is specified.
+ * - `onDelete(tag: string)` - invoked when the delete button is pressed.  The
+ * value of the tag is given to the callback as a parameter.
+ * - `onMouseOut` - invoked when the mouse leaves the control
+ * - `onMouseOver` - invoked when the mouse moves over the control.
+ *
+ * #### Styles
+ * - `ui-tag` - placed on the root `<div>` of the control.
+ *
+ * #### Properties
+ * - `usedelete: {boolean} (false)`- if true then the delete button will be
+ * shown when the mouse enters the tag, otherwise this is suppressed.
+ *
+ * @module Tag
+ */
 
 'use strict';
 
@@ -15,17 +43,21 @@ import {
 } from '../shared';
 
 export interface TagProps extends BaseProps {
-	onBlur?: any;
 	onClick?: any;
-	onFocus?: any;
+	onDelete?: any;
+	onMouseOut?: any;
+	onMouseOver?: any;
+	usedelete?: boolean;
 }
 
 export function getDefaultTagProps(): TagProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			onClick: nilEvent,
+			onDelete: nilEvent,
 			onMouseOut: nilEvent,
-			onMouseOver: nilEvent
+			onMouseOver: nilEvent,
+			usedelete: false
 		})
 	);
 }
@@ -36,6 +68,7 @@ export interface TagState {
 
 export class Tag extends BaseComponent<TagProps, TagState> {
 
+	private tag: string;
 	public static readonly defaultProps: TagProps = getDefaultTagProps();
 
 	constructor(props: TagProps) {
@@ -51,6 +84,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		};
 
 		this.bindCallbacks(
+			'handleOnClick',
 			'handleMouseOut',
 			'handleMouseOver'
 		);
@@ -58,17 +92,33 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		this.componentWillUpdate(props, this.state);
 	}
 
+	private handleOnClick(e: React.MouseEvent<HTMLDivElement>) {
+		if (this.props.usedelete && !this.props.disabled) {
+			this.props.onDelete(this.tag);
+		}
+
+		this.props.onClick(e);
+	}
+
 	private handleMouseOut() {
-		this.setState({showDelete: false});
+		if (this.props.usedelete && !this.props.disabled) {
+			this.setState({showDelete: false});
+		}
+
+		this.props.onMouseOut();
 	}
 
 	private handleMouseOver() {
-		this.setState({showDelete: true});
+		if (this.props.usedelete && !this.props.disabled) {
+			this.setState({showDelete: true});
+		}
+
+		this.props.onMouseOver();
 	}
 
 	public componentWillUpdate(nextProps: TagProps, nextState: TagState) {
 
-		this._rootStyles.onIfElse(nextState.showDelete)(
+		this._rootStyles.onIfElse(nextState.showDelete && !this.props.disabled)(
 			this.styles.tagHover
 		)(
 			this.styles.tagNoHover
@@ -79,7 +129,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 
 	public render() {
 
-		const text = React.Children.map(this.props.children, (child: any) => {
+		this.tag = React.Children.map(this.props.children, (child: any) => {
 			return String(child);
 		}).join(' ');
 
@@ -89,16 +139,24 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 				onMouseOut={this.handleMouseOut}
 				onMouseOver={this.handleMouseOver}
 			>
-				<Label noedit text={text} />
+				<Label
+					disabled={this.props.disabled}
+					noedit
+					text={this.tag}
+					visible={this.props.visible}
+				/>
+				{this.props.usedelete &&
 				<ButtonCircle
 					borderColor={Color.error}
 					className={`${this.styles.tagDeleteButton} ${this.styles.middle}`}
 					color={Color.error}
+					disabled={this.props.disabled}
 					iconName="times"
-					onClick={this.props.onClick}
+					onClick={this.handleOnClick}
 					sizing={this.prev().type}
 					visible={this.state.showDelete}
 				/>
+				}
 			</div>
 		);
 	}

@@ -297,6 +297,11 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	public componentWillUpdate(nextProps: any) {
 
+		const style = {};
+		if ('size' in nextProps) {
+			style['width'] = `${(nextProps.size / 2.0) + 2}rem`;
+		}
+
 		if (this.props.sizing !== nextProps['sizing']) {
 			this._messageStyles.off(this.fontStyle(this.props.sizing));
 		}
@@ -310,10 +315,12 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			this.styles.disabled
 		);
 
+		this.buildInlineStyles(nextProps, style);
 		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
+
 		// Strip out props that the input control cannot recognize or use
 		const {
 			onValidation,
@@ -337,6 +344,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
 					ref={this.handleRef}
+					style={this.inlineStyle}
 				/>
 					{this.props.usevalidation
 					?

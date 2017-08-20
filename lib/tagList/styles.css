@@ -37,13 +37,17 @@
 	}
 
 	.tagListInput {
-		margin-left: 5px;
+		margin-left: 4px;
 		width: 2.5em;
+	}
+
+	.tagListInput > input {
+		border: none;
 	}
 
 	.tagListInput > input::-webkit-input-placeholder {
 		color: silver;
-		opacity: 0.25;
+		opacity: 0.5;
 	}
 
 }

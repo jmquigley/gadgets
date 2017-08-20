@@ -35,30 +35,363 @@ exports[`Test creation of a simple Tag instance 1`] = `
     useedit={false}
     visible={true}
   />
-  <ButtonCircle
-    backgroundColor="white"
-    borderColor="#d9534f"
-    borderWidth="none"
-    className="tagDeleteButton middle"
-    color="#d9534f"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    iconName="times"
-    iconStyle=""
-    id=""
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onClick={[Function]}
-    selected={false}
-    sizing="small"
-    style={Object {}}
-    visible={false}
-  />
 </div>
+`;
+
+exports[`Test disabling of the simple Tag instance 1`] = `
+<Tag
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  focus={false}
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  onDelete={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  usedelete={true}
+  visible={true}
+>
+  <div
+    className="ui-tag tag tagNoHover normal disabled nohover"
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    <Label
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      id=""
+      location="none"
+      noedit={true}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      text="test tag"
+      useedit={false}
+      visible={true}
+    >
+      <span
+        className="ui-label label normal disabled nohover"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+        suppressContentEditableWarning={true}
+      >
+        test tag
+      </span>
+    </Label>
+    <ButtonCircle
+      backgroundColor="white"
+      borderColor="#d9534f"
+      borderWidth="none"
+      className="tagDeleteButton middle"
+      color="#d9534f"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      iconName="times"
+      iconStyle=""
+      id=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="small"
+      style={Object {}}
+      visible={false}
+    >
+      <div
+        className="ui-button-circle buttonCircle small tagDeleteButton middle invisible disabled nohover"
+      >
+        <div
+          className="buttonCircleContainer"
+        >
+          <Button
+            backgroundColor="white"
+            borderColor="#d9534f"
+            borderWidth="none"
+            className="smallBorder buttonCircleIcon"
+            color="#d9534f"
+            contentEditable={false}
+            direction="right"
+            disabled={true}
+            focus={false}
+            iconName="times"
+            iconStyle="smallBox"
+            id=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            selected={false}
+            sizing="small"
+            style={Object {}}
+            visible={false}
+          >
+            <div
+              className="ui-button button small smallBorder buttonCircleIcon invisible disabled nohover"
+              onClick={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "borderColor": "#d9534f",
+                  "color": "#d9534f",
+                }
+              }
+            >
+              <Icon
+                backgroundColor="inherit"
+                borderColor="inherit"
+                borderWidth="none"
+                className="smallBox icon"
+                color="inherit"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                iconName="times"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="small"
+                style={Object {}}
+                visible={true}
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-times small smallBox icon"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </ButtonCircle>
+  </div>
+</Tag>
+`;
+
+exports[`Test making Tag invisible 1`] = `
+<Tag
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  focus={false}
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  onDelete={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  usedelete={true}
+  visible={false}
+>
+  <div
+    className="ui-tag tag tagNoHover normal invisible disabled nohover"
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    <Label
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      id=""
+      location="none"
+      noedit={true}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      text="test tag"
+      useedit={false}
+      visible={false}
+    >
+      <span
+        className="ui-label label normal invisible disabled nohover"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+        suppressContentEditableWarning={true}
+      >
+        test tag
+      </span>
+    </Label>
+    <ButtonCircle
+      backgroundColor="white"
+      borderColor="#d9534f"
+      borderWidth="none"
+      className="tagDeleteButton middle"
+      color="#d9534f"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      iconName="times"
+      iconStyle=""
+      id=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="small"
+      style={Object {}}
+      visible={false}
+    >
+      <div
+        className="ui-button-circle buttonCircle small tagDeleteButton middle invisible disabled nohover"
+      >
+        <div
+          className="buttonCircleContainer"
+        >
+          <Button
+            backgroundColor="white"
+            borderColor="#d9534f"
+            borderWidth="none"
+            className="smallBorder buttonCircleIcon"
+            color="#d9534f"
+            contentEditable={false}
+            direction="right"
+            disabled={true}
+            focus={false}
+            iconName="times"
+            iconStyle="smallBox"
+            id=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            selected={false}
+            sizing="small"
+            style={Object {}}
+            visible={false}
+          >
+            <div
+              className="ui-button button small smallBorder buttonCircleIcon invisible disabled nohover"
+              onClick={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "borderColor": "#d9534f",
+                  "color": "#d9534f",
+                }
+              }
+            >
+              <Icon
+                backgroundColor="inherit"
+                borderColor="inherit"
+                borderWidth="none"
+                className="smallBox icon"
+                color="inherit"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                iconName="times"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="small"
+                style={Object {}}
+                visible={true}
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-times small smallBox icon"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </ButtonCircle>
+  </div>
+</Tag>
 `;
 
 exports[`Test retrieval of Tag props object 1`] = `
@@ -78,11 +411,13 @@ Object {
   "nohover": false,
   "noripple": false,
   "onClick": [Function],
+  "onDelete": [Function],
   "onMouseOut": [Function],
   "onMouseOver": [Function],
   "selected": false,
   "sizing": "normal",
   "style": Object {},
+  "usedelete": false,
   "visible": true,
 }
 `;

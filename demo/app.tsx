@@ -907,7 +907,22 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildTagList = () => (
 		<Container id="tagListExample">
+
+			<h3>Static</h3>
 			<TagList tags={['one', 'two', 'three']} />
+			<br/><br/>
+
+			<h3>Changeable (no sorting)</h3>
+			<TagList nosort tags={['one', 'two', 'three']} useinput />
+			<br/><br/>
+
+			<h3>Changeable (sorted)</h3>
+			<TagList tags={['one', 'two', 'three']} useinput />
+			<br/><br/>
+
+			<h3>Disabled</h3>
+			<TagList disabled tags={['one', 'two', 'three']} useinput />
+
 		</Container>
 	);
 
