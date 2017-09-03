@@ -4,6 +4,8 @@ import {render} from 'react-dom';
 import {sprintf} from 'sprintf-js';
 import {getUUID} from 'util.toolbox';
 
+const debug = require('debug')('app');
+
 (window as any).$ = (window as any).jQuery = require('jquery');
 
 //
@@ -928,8 +930,8 @@ class App extends React.Component<AppProps, AppState> {
 			</TabContainer>
 			<br/>
 
-			<h3>Bottom</h3>
-			<TabContainer maxTabs={3} location={Location.bottom}>
+			<h3>Bottom (no navigation)</h3>
+			<TabContainer maxTabs={3} location={Location.bottom} nonavigation>
 				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
 				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
 				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
@@ -937,8 +939,15 @@ class App extends React.Component<AppProps, AppState> {
 			</TabContainer>
 			<br/>
 
-			<h3>Right</h3>
-			<TabContainer maxTabs={3} location={Location.right}>
+			<h3>Right (no navigation, onSelect)</h3>
+			<TabContainer
+				maxTabs={3}
+				location={Location.right}
+				nonavigation
+				onSelect={(tab: any, previous: any) => {
+					debug(`new: %o (id=${tab.props['id']}), old: %o (id=${previous.props['id']})`, tab, previous);
+				}}
+			>
 				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
 				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
 				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>

@@ -54,13 +54,22 @@
 	.tab {
 		box-sizing: border-box;
 		cursor: default;
-		flex: 1;
 		padding-left: 3px;
 	}
 
-	.tabsTop {
+	.tabsTop, .tabsBottom {
 		flex: 1;
 		flex-direction: row;
+	}
+
+	.tabsTop > .tab, .tabsBottom > .tab {
+		flex: 1;
+	}
+
+	.tabsLeft, .tabsRight {
+		display: inline-flex;
+		flex: 1;
+		flex-direction: column;
 	}
 
 	.tabBorderTop {
@@ -72,11 +81,6 @@
 		border-left: solid 1px #004358;
 	}
 
-	.tabsBottom {
-		flex: 1;
-		flex-direction: row;
-	}
-
 	.tabBorderBottom {
 		border-right: solid 1px #004358;
 		border-bottom: solid 1px #004358;
@@ -86,12 +90,6 @@
 		border-left: solid 1px #004358;
 	}
 
-	.tabsLeft {
-		display: inline-flex;
-		flex: 1;
-		flex-direction: column;
-	}
-
 	.tabBorderLeft {
 		border-left: solid 1px #004358;
 		border-bottom: solid 1px #004358;
@@ -99,12 +97,6 @@
 
 	.tabBorderLeft:first-child {
 		border-top: solid 1px #004358;
-	}
-
-	.tabsRight {
-		display: inline-flex;
-		flex: 1;
-		flex-direction: column;
 	}
 
 	.tabBorderRight {

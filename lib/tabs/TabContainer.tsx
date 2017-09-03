@@ -7,6 +7,7 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
 import {Keys} from 'util.keys';
+import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {
 	BaseComponent,
@@ -24,6 +25,8 @@ export interface TabContainerProps extends BaseProps {
 	children?: any;
 	maxTabs?: number;
 	noclose?: boolean;
+	nonavigation?: boolean;
+	onSelect?: any;
 }
 
 export function getDefaultTabContainerProps(): TabContainerProps {
@@ -32,7 +35,9 @@ export function getDefaultTabContainerProps(): TabContainerProps {
 			children: null,
 			location: Location.top,
 			maxTabs: 5,
-			noclose: false
+			noclose: false,
+			nonavigation: false,
+			onSelect: nilEvent
 		})
 	);
 }
@@ -56,6 +61,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		super(props, styles);
 
 		this._tabBarStyles.add([
+			'ui-tab-bar',
 			this.styles.tabBar
 		]);
 
@@ -65,6 +71,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		]);
 
 		this._tabNavStyles.add([
+			'ui-tab-navigation',
 			this.styles.navigation
 		]);
 
@@ -79,6 +86,23 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 		this.bindCallbacks('selectHandler');
 		this.componentWillUpdate(props);
+	}
+
+	/**
+	 * Searches the current tab list and finds the tab object associated with
+	 * the given id.
+	 * @param id {string} the id value associated with a Tag
+	 * @return {Tag} a reference to the Tag object associated with this id.
+	 * returns null if the tag is not found.
+	 */
+	private getTab(id: string): Tab {
+		for (let idx: number = 0; idx < this._tabs.length; idx++) {
+			if (this._tabs[idx].props['id'] === id) {
+				return this._tabs[idx] as Tab;
+			}
+		}
+
+		return null;
 	}
 
 	public buildTabs(props: TabContainerProps) {
@@ -103,6 +127,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 						sizing: this.props.sizing
 					},
 					id: this._keys.at(idx),
+					key: this._keys.at(idx),
 					selected: selected
 				});
 			}
@@ -110,8 +135,11 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	}
 
 	private selectHandler(tab: Tab) {
-		debug(`selected tab: ${tab.props['id']}, tab: %O`, tab);
-		this.setState({selectedTab: tab.props['id']});
+		const previous: Tab = this.getTab(this.state.selectedTab);
+		this.setState({selectedTab: tab.props['id']}, () => {
+			debug(`selected tab: ${tab.props['id']}, tab: %O`, tab);
+			this.props.onSelect(tab, previous);
+		});
 	}
 
 	public componentWillUpdate(nextProps: TabContainerProps) {
@@ -157,10 +185,12 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		tabBar = (
 			<div className={this._tabBarStyles.classnames}>
 				{this._tabs}
-				<div className={this._tabNavStyles.classnames}>
+				{!this.props.nonavigation &&
+				 <div className={this._tabNavStyles.classnames}>
 					<Button iconName="chevron-left" />
 					<Button iconName="chevron-right" />
 				</div>
+				}
 			</div>
 		);
 
