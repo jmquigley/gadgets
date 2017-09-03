@@ -96,9 +96,9 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	 * returns null if the tag is not found.
 	 */
 	private getTab(id: string): Tab {
-		for (let idx: number = 0; idx < this._tabs.length; idx++) {
-			if (this._tabs[idx].props['id'] === id) {
-				return this._tabs[idx] as Tab;
+		for (const tab of this._tabs) {
+			if (tab.props['id'] === id) {
+				return tab;
 			}
 		}
 
@@ -110,12 +110,11 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	 * current view orientation and select handler to each child.
 	 */
 	public buildTabs(props: TabContainerProps) {
-		let children = React.Children.toArray(props.children);
+		const children = React.Children.toArray(props.children);
 		let pos: number = 0;
 
 		if (children) {
-			for (let idx = 0; idx < children.length; idx++) {
-				const child = children[idx];
+			for (const child of children) {
 
 				if (child['type'] === Tab) {
 					const selected = this.state.selectedTab === this._keys.at(pos);
@@ -197,7 +196,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			<div className={this._tabBarStyles.classnames}>
 				{this._tabs}
 				{!this.props.nonavigation &&
-				 <div className={this._tabNavStyles.classnames}>
+				<div className={this._tabNavStyles.classnames}>
 					<Button iconName="chevron-left" />
 					<Button iconName="chevron-right" />
 				</div>
