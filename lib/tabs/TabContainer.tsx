@@ -55,6 +55,10 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	constructor(props: TabContainerProps) {
 		super(props, styles);
 
+		this._tabBarStyles.add([
+			this.styles.tabBar
+		]);
+
 		this._tabContentStyles.add([
 			'ui-tab-content',
 			this.styles.tabContent
@@ -89,7 +93,6 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 				const selected = this.state.selectedTab === this._keys.at(idx);
 
 				if (selected) {
-					debug(`child: %O`, children[idx]);
 					this._tabContent = children[idx]['props'].children;
 				}
 
@@ -112,6 +115,15 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	}
 
 	public componentWillUpdate(nextProps: TabContainerProps) {
+
+		this._rootStyles.onIfElse(
+			this.props.location === Location.top || this.props.location === Location.bottom)
+		(
+			this.styles.tabContainerHorizontal
+		)(
+			this.styles.tabContainerVertical
+		);
+
 		this._tabBarStyles.onIf(this.props.location === Location.top)(this.styles.tabsTop);
 		this._tabBarStyles.onIf(this.props.location === Location.bottom)(this.styles.tabsBottom);
 		this._tabBarStyles.onIf(this.props.location === Location.left)(this.styles.tabsLeft);

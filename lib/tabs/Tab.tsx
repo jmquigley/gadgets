@@ -5,6 +5,7 @@
 
 import {cloneDeep} from 'lodash';
 import {nilEvent} from 'util.toolbox';
+import {Label} from '../label';
 import {
 	BaseComponent,
 	BaseProps,
@@ -78,12 +79,17 @@ export class Tab extends BaseComponent<TabProps, undefined> {
 
 	public render() {
 		return (
-			<span
+			<div
 				className={this._rootStyles.classnames}
 				onClick={!this.props.disabled && this.props.visible ? this.handleClick : nilEvent}
 			>
-			{this.props.title}
-			</span>
+			<Label
+				disabled={this.props.disabled}
+				noedit
+				text={this.props.title}
+				visible={this.props.visible}
+			/>
+			</div>
 		);
 	}
 }

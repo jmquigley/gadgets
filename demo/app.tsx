@@ -912,37 +912,37 @@ class App extends React.Component<AppProps, AppState> {
 
 			<h3>Top</h3>
 			<TabContainer maxTabs={3}>
-				<Tab title="tab #1">blah 1</Tab>
-				<Tab title="tab #2">blah 2</Tab>
-				<Tab title="tab #3">blah 3</Tab>
-				<Tab title="tab #4">blah 4</Tab>
+				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
+				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
+				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
+				<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
 			</TabContainer>
 			<br/>
 
 			<h3>Left</h3>
 			<TabContainer maxTabs={3} location={Location.left}>
-				<Tab title="tab #1">blah 1</Tab>
-				<Tab title="tab #2">blah 2</Tab>
-				<Tab title="tab #3">blah 3</Tab>
-				<Tab title="tab #4">blah 4</Tab>
+				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
+				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
+				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
+				<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
 			</TabContainer>
 			<br/>
 
 			<h3>Bottom</h3>
 			<TabContainer maxTabs={3} location={Location.bottom}>
-				<Tab title="tab #1">blah 1</Tab>
-				<Tab title="tab #2">blah 2</Tab>
-				<Tab title="tab #3">blah 3</Tab>
-				<Tab title="tab #4">blah 4</Tab>
+				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
+				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
+				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
+				<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
 			</TabContainer>
 			<br/>
 
 			<h3>Right</h3>
 			<TabContainer maxTabs={3} location={Location.right}>
-				<Tab title="tab #1">blah 1</Tab>
-				<Tab title="tab #2">blah 2</Tab>
-				<Tab title="tab #3">blah 3</Tab>
-				<Tab title="tab #4">blah 4</Tab>
+				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
+				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
+				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
+				<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
 			</TabContainer>
 
 		</Container>
