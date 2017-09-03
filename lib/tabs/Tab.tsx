@@ -5,7 +5,6 @@
 
 import {cloneDeep} from 'lodash';
 import {nilEvent} from 'util.toolbox';
-import {Label} from '../label';
 import {
 	BaseComponent,
 	BaseProps,
@@ -13,6 +12,7 @@ import {
 	Location,
 	Sizing
 } from '../shared';
+import {Title} from '../title';
 
 const styles = require('./styles.css');
 
@@ -79,17 +79,13 @@ export class Tab extends BaseComponent<TabProps, undefined> {
 
 	public render() {
 		return (
-			<div
+			<Title
+				{...this.props}
 				className={this._rootStyles.classnames}
+				noripple
 				onClick={!this.props.disabled && this.props.visible ? this.handleClick : nilEvent}
-			>
-			<Label
-				disabled={this.props.disabled}
-				noedit
-				text={this.props.title}
-				visible={this.props.visible}
+				title={this.props.title}
 			/>
-			</div>
 		);
 	}
 }

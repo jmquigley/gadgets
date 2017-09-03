@@ -56,6 +56,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
+import {nilEvent} from 'util.toolbox';
 import {Label} from '../label';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
@@ -73,6 +74,7 @@ export enum TitleLayout {
 
 export interface TitleProps extends BaseProps {
 	layout?: TitleLayout;
+	onClick?: any;
 	title?: any;
 	widget?: any;
 }
@@ -81,6 +83,7 @@ export function getDefaultTitleProps(): TitleProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			layout: TitleLayout.dominant,
+			onClick: nilEvent,
 			widget: null
 		})
 	);

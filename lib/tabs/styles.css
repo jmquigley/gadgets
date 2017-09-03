@@ -52,9 +52,8 @@
 	}
 
 	.tab {
-		box-sizing: border-box;
 		cursor: default;
-		padding-left: 3px;
+		flex-grow: unset;
 	}
 
 	.tabsTop, .tabsBottom {
