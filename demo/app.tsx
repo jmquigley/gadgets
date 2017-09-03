@@ -948,6 +948,7 @@ class App extends React.Component<AppProps, AppState> {
 					debug(`new: %o (id=${tab.props['id']}), old: %o (id=${previous.props['id']})`, tab, previous);
 				}}
 			>
+				<p>Bad tab type to be ignored</p>
 				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
 				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
 				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>

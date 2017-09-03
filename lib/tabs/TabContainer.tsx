@@ -105,31 +105,42 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		return null;
 	}
 
+	/**
+	 * Iterates through all of the given child Tab instances and passes the
+	 * current view orientation and select handler to each child.
+	 */
 	public buildTabs(props: TabContainerProps) {
 		let children = React.Children.toArray(props.children);
+		let pos: number = 0;
 
 		if (children) {
-			if (props.maxTabs > 0) {
-				children = children.slice(0, this.props.maxTabs);
+			for (let idx = 0; idx < children.length; idx++) {
+				const child = children[idx];
+
+				if (child['type'] === Tab) {
+					const selected = this.state.selectedTab === this._keys.at(pos);
+
+					if (selected) {
+						this._tabContent = child['props'].children;
+					}
+
+					this._tabs[pos] = React.cloneElement(child as any, {
+						href: {
+							orientation: this.props.location,
+							selectHandler: this.selectHandler,
+							sizing: this.props.sizing
+						},
+						id: this._keys.at(pos),
+						key: this._keys.at(pos),
+						selected: selected
+					});
+
+					pos++;
+				}
 			}
 
-			for (let idx = 0; idx < children.length; idx++) {
-				const selected = this.state.selectedTab === this._keys.at(idx);
-
-				if (selected) {
-					this._tabContent = children[idx]['props'].children;
-				}
-
-				this._tabs[idx] = React.cloneElement(children[idx] as any, {
-					href: {
-						orientation: this.props.location,
-						selectHandler: this.selectHandler,
-						sizing: this.props.sizing
-					},
-					id: this._keys.at(idx),
-					key: this._keys.at(idx),
-					selected: selected
-				});
+			if (props.maxTabs > 0) {
+				this._tabs = this._tabs.slice(0, this.props.maxTabs);
 			}
 		}
 	}
@@ -138,7 +149,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		const previous: Tab = this.getTab(this.state.selectedTab);
 		this.setState({selectedTab: tab.props['id']}, () => {
 			debug(`selected tab: ${tab.props['id']}, tab: %O`, tab);
-			this.props.onSelect(tab, previous);
+			this.props.onSelect(tab, previous ? previous : tab);
 		});
 	}
 
