@@ -10,7 +10,7 @@
  * ```javascript
  * import {Button, ButtonBar, Justify} from 'gadgets';
  *
- * <ButtonBar buttonSize="32px" justify=Justify.right>
+ * <ButtonBar buttonSize="32px" justify={Justify.right}>
  *     <Button />
  *     <Button />
  * </ButtonBar>

@@ -110,7 +110,6 @@ This module represents the properties that are shared by every class in the proj
 ### Breadcrumbs
 TODO: create the Breadcrums control
 
-
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.
 
@@ -128,9 +127,6 @@ A button control that contains an icon and a text string.  The text string can b
 
 ### [ButtonToggle](docs/lib/buttonToggle/ButtonToggle.md)
 A button control that switches between the given icons when clicked.  The state of the button is maintained until it is clicked again.
-
-### Card
-TODO: create the Card control
 
 ### Checkbox
 TODO: create the Checkbox control
@@ -161,14 +157,14 @@ A text label string control that can be edited.
 
 ### List/[ListDivider](docs/lib/list/ListDivider.md)/ListFooter/ListHeader/ListItem
 
-### Menu
-TODO: create the popup Menu control
-
 ### [Pager](docs/lib/pager/Pager.md)
 A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.
 
 ### Popout
 TODO: create the PopOut control
+
+### PopupMenu
+TODO: create the popup Menu control
 
 ### ProgressBar
 TODO: create the ProgressBar control
@@ -198,7 +194,7 @@ The tag list control is a basic list of strings that act as metadata for another
 ### Table
 TODO: create the Table control
 
-### Tabs
+### TabContainer/Tab
 TODO: create a Tab control
 
 ### [TextField](docs/lib/textField/TextField.md) ([Validator](docs/lib/textField/validator.md))
@@ -213,7 +209,7 @@ A reusable title block used to format two items: a title and a widget.  The titl
 ### [Toast](docs/lib/toast/Toast.md)
 A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.
 
-### ToolBar
+### ToolBar/ToolBarDivider
 TODO: create a ToolBar control
 
 ### [Tooltip](docs/lib/tooltip/Tooltip.md)

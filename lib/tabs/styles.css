@@ -2,4 +2,108 @@
 
 :local {
 
+	.tab {
+		box-sizing: border-box;
+		cursor: default;
+		flex: 2;
+	}
+
+	.tabContainer {
+	}
+
+	.tabContent {
+		border: solid 1px;
+		box-sizing: border-box;
+		min-height: 8em;
+	}
+
+	.tabBarVertical {
+		display: inline-block;
+		width: 80%;
+	}
+
+	.tabNavVertical {
+		display: inline-flex;
+		flex: 0;
+		padding-top: 0.5em;
+	}
+
+	.tabNavVertical > :global(.ui-button) {
+		flex: unset;
+	}
+
+	.tabBarHorizontal {
+		display: block;
+	}
+
+	.tabNavHorizontal {
+		display: inline-flex;
+		flex: 0;
+		padding-left: 3em;
+	}
+
+	.tabsTop {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.tabBorderTop {
+		border-right: solid 1px #004358;
+		border-top: solid 1px #004358;
+	}
+
+	.tabBorderTop:first-child {
+		border-left: solid 1px #004358;
+	}
+
+	.tabsBottom {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.tabBorderBottom {
+		border-right: solid 1px #004358;
+		border-bottom: solid 1px #004358;
+	}
+
+	.tabBorderBottom:first-child {
+		border-left: solid 1px #004358;
+	}
+
+	.tabsLeft {
+		display: inline-flex;
+		flex-direction: column;
+		width: 20%;
+	}
+
+	.tabBorderLeft {
+		border-left: solid 1px #004358;
+		border-bottom: solid 1px #004358;
+	}
+
+	.tabBorderLeft:first-child {
+		border-top: solid 1px #004358;
+	}
+
+	.tabsRight {
+		display: inline-flex;
+		flex-direction: column;
+		width: 20%;
+	}
+
+	.tabBorderRight {
+		border-right: solid 1px #004358;
+		border-bottom: solid 1px #004358;
+	}
+
+	.tabBorderRight:first-child {
+		border-top: solid 1px #004358;
+	}
+
+	.navigation {
+	}
+
+	.navigation > :global(.ui-button) {
+		padding: 5px 2px;
+	}
 }

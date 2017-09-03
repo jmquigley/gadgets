@@ -27,7 +27,7 @@ import {
 	SortOrder,
 	Styling
 } from './lib/shared';
-import {Tab, Tabs} from './lib/tabs';
+import {Tab, TabContainer} from './lib/tabs';
 import {Tag, TagList} from './lib/tagList';
 import {
 	TextField,
@@ -75,7 +75,7 @@ export {
 	Styling,
 	TextField,
 	Tab,
-	Tabs,
+	TabContainer,
 	Tag,
 	TagList,
 	Title,

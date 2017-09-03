@@ -8,19 +8,33 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
-	getDefaultBaseProps
+	getDefaultBaseProps,
+	Location,
+	Sizing
 } from '../shared';
 
 const styles = require('./styles.css');
 
 export interface TabProps extends BaseProps {
+	href?: any;
+	onClick?: any;
 	onClose?: any;
+	selected?: boolean;
+	title?: string;
 }
 
 export function getDefaultTabProps(): TabProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			onClose: nilEvent
+			href: {
+				selectHandler: nilEvent,
+				sizing: Sizing.normal,
+				orientation: Location.top
+			},
+			onClick: nilEvent,
+			onClose: nilEvent,
+			selected: false,
+			title: ''
 		})
 	);
 }
@@ -31,11 +45,45 @@ export class Tab extends BaseComponent<TabProps, undefined> {
 
 	constructor(props: TabProps) {
 		super(props, styles);
+
+		this._rootStyles.add([
+			'ui-tab',
+			this.styles.tab
+		]);
+
+		this.bindCallbacks(
+			'handleClick'
+		);
+
+		this.componentWillUpdate(props);
+	}
+
+	private handleClick() {
+		this.props.href.selectHandler(this);
+		this.props.onClick();
+	}
+
+	public componentWillUpdate(nextProps: TabProps) {
+		this._rootStyles.onIf(nextProps.selected)(
+			'ui-selected'
+		);
+
+		this._rootStyles.onIf(this.props.href.orientation === Location.top)(this.styles.tabBorderTop);
+		this._rootStyles.onIf(this.props.href.orientation === Location.bottom)(this.styles.tabBorderBottom);
+		this._rootStyles.onIf(this.props.href.orientation === Location.left)(this.styles.tabBorderLeft);
+		this._rootStyles.onIf(this.props.href.orientation === Location.right)(this.styles.tabBorderRight);
+
+		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
 		return (
-			<div />
+			<span
+				className={this._rootStyles.classnames}
+				onClick={!this.props.disabled && this.props.visible ? this.handleClick : nilEvent}
+			>
+			{this.props.title}
+			</span>
 		);
 	}
 }

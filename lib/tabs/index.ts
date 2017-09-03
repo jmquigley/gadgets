@@ -1,9 +1,9 @@
 import {getDefaultTabProps, Tab} from './Tab';
-import {getDefaultTabsProps, Tabs} from './Tabs';
+import {getDefaultTabContainerProps, TabContainer} from './TabContainer';
 
 export {
 	getDefaultTabProps,
-	getDefaultTabsProps,
+	getDefaultTabContainerProps,
 	Tab,
-	Tabs
+	TabContainer
 };

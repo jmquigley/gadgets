@@ -90,7 +90,9 @@ export enum Location {
 	middleRight = 'middleRight',
 	bottomLeft = 'bottomLeft',
 	bottom = 'bottom',
-	bottomRight = 'bottomRight'
+	bottomRight = 'bottomRight',
+	left = 'left',
+	right = 'right'
 }
 
 export enum SortOrder {

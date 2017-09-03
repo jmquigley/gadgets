@@ -40,6 +40,8 @@ const {
 	Select,
 	Sizing,
 	SortOrder,
+	Tab,
+	TabContainer,
 	TagList,
 	TextField,
 	Title,
@@ -905,6 +907,47 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	private buildTabs = () => (
+		<Container id="tabControl">
+
+			<h3>Top</h3>
+			<TabContainer maxTabs={3}>
+				<Tab title="tab #1">blah 1</Tab>
+				<Tab title="tab #2">blah 2</Tab>
+				<Tab title="tab #3">blah 3</Tab>
+				<Tab title="tab #4">blah 4</Tab>
+			</TabContainer>
+			<br/>
+
+			<h3>Left</h3>
+			<TabContainer maxTabs={3} location={Location.left}>
+				<Tab title="tab #1">blah 1</Tab>
+				<Tab title="tab #2">blah 2</Tab>
+				<Tab title="tab #3">blah 3</Tab>
+				<Tab title="tab #4">blah 4</Tab>
+			</TabContainer>
+			<br/>
+
+			<h3>Bottom</h3>
+			<TabContainer maxTabs={3} location={Location.bottom}>
+				<Tab title="tab #1">blah 1</Tab>
+				<Tab title="tab #2">blah 2</Tab>
+				<Tab title="tab #3">blah 3</Tab>
+				<Tab title="tab #4">blah 4</Tab>
+			</TabContainer>
+			<br/>
+
+			<h3>Right</h3>
+			<TabContainer maxTabs={3} location={Location.right}>
+				<Tab title="tab #1">blah 1</Tab>
+				<Tab title="tab #2">blah 2</Tab>
+				<Tab title="tab #3">blah 3</Tab>
+				<Tab title="tab #4">blah 4</Tab>
+			</TabContainer>
+
+		</Container>
+	);
+
 	private buildTagList = () => (
 		<Container id="tagListExample">
 
@@ -1281,6 +1324,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Select</h1>
 				{this.buildSelect()}
+
+				<h1>Tabs</h1>
+				{this.buildTabs()}
 
 				<h1>TagList</h1>
 				{this.buildTagList()}
