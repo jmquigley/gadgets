@@ -2,10 +2,18 @@
 
 @define-extend baseTitleBar {
 	flex-grow: 1;
-	/* padding: 0 5px 0 5px; */
+
 }
 
 :local {
+
+	.title {
+		padding: 0 5px 0 5px;
+	}
+
+	.widget {
+	}
+
 	.titleBar {
 		@extend baseTitleBar;
 		display: flex;

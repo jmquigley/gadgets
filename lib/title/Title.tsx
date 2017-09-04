@@ -118,8 +118,16 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 		super(props, styles);
 
 		this._rootStyles.add('ui-title-bar');
-		this._titleClasses.add('ui-title');
-		this._widgetClasses.add('ui-title-widget');
+
+		this._titleClasses.add([
+			'ui-title',
+			this.styles.title
+		]);
+
+		this._widgetClasses.add([
+			'ui-title-widget',
+			this.styles.widget
+		]);
 
 		this.componentWillUpdate(props);
 	}

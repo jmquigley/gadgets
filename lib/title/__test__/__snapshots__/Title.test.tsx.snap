@@ -33,7 +33,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
       backgroundColor="inherit"
       borderColor="inherit"
       borderWidth="none"
-      className="ui-title titleDominant"
+      className="ui-title title titleDominant"
       color="inherit"
       contentEditable={false}
       direction="right"
@@ -62,7 +62,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
       widget={null}
     >
       <span
-        className="ui-label label normal ui-title titleDominant"
+        className="ui-label label normal ui-title title titleDominant"
         contentEditable={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -117,7 +117,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
       backgroundColor="inherit"
       borderColor="inherit"
       borderWidth="none"
-      className="ui-title titleDominant"
+      className="ui-title title titleDominant"
       color="inherit"
       contentEditable={false}
       direction="right"
@@ -146,7 +146,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
       widget={null}
     >
       <span
-        className="ui-label label normal ui-title titleDominant"
+        className="ui-label label normal ui-title title titleDominant"
         contentEditable={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -177,7 +177,7 @@ exports[`Test creation of a Title control with default props 1`] = `
     backgroundColor="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-title titleDominant"
+    className="ui-title title titleDominant"
     color="inherit"
     contentEditable={false}
     direction="right"
@@ -217,7 +217,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
     backgroundColor="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-title titleEven"
+    className="ui-title title titleEven"
     color="inherit"
     contentEditable={false}
     direction="right"
@@ -246,7 +246,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
     widget="widget"
   />
   <div
-    className="ui-title-widget widgetEven normal"
+    className="ui-title-widget widget widgetEven normal"
   >
     widget
   </div>
@@ -262,7 +262,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
     backgroundColor="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-title titleEven"
+    className="ui-title title titleEven"
     color="inherit"
     contentEditable={false}
     direction="right"
@@ -302,7 +302,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     backgroundColor="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-title titleQuarter"
+    className="ui-title title titleQuarter"
     color="inherit"
     contentEditable={false}
     direction="right"
@@ -331,7 +331,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     widget="widget"
   />
   <div
-    className="ui-title-widget widgetQuarter normal"
+    className="ui-title-widget widget widgetQuarter normal"
   >
     widget
   </div>
@@ -347,7 +347,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     backgroundColor="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-title titleStacked"
+    className="ui-title title titleStacked"
     color="inherit"
     contentEditable={false}
     direction="right"
@@ -376,7 +376,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     widget="widget"
   />
   <div
-    className="ui-title-widget widgetStacked normal"
+    className="ui-title-widget widget widgetStacked normal"
   >
     widget
   </div>
@@ -392,7 +392,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     backgroundColor="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-title titleThird"
+    className="ui-title title titleThird"
     color="inherit"
     contentEditable={false}
     direction="right"
@@ -421,7 +421,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     widget="widget"
   />
   <div
-    className="ui-title-widget widgetThird normal"
+    className="ui-title-widget widget widgetThird normal"
   >
     widget
   </div>
@@ -437,7 +437,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     backgroundColor="inherit"
     borderColor="inherit"
     borderWidth="none"
-    className="ui-title titleThreeQuarter"
+    className="ui-title title titleThreeQuarter"
     color="inherit"
     contentEditable={false}
     direction="right"
@@ -466,7 +466,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     widget="widget"
   />
   <div
-    className="ui-title-widget widgetThreeQuarter normal"
+    className="ui-title-widget widget widgetThreeQuarter normal"
   >
     widget
   </div>
@@ -506,7 +506,7 @@ exports[`Test disabling the Title control 1`] = `
       backgroundColor="inherit"
       borderColor="inherit"
       borderWidth="none"
-      className="ui-title titleDominant"
+      className="ui-title title titleDominant"
       color="inherit"
       contentEditable={false}
       direction="right"
@@ -535,7 +535,7 @@ exports[`Test disabling the Title control 1`] = `
       widget={null}
     >
       <span
-        className="ui-label label normal ui-title titleDominant disabled nohover"
+        className="ui-label label normal ui-title title titleDominant disabled nohover"
         contentEditable={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -590,7 +590,7 @@ exports[`Test making the Title control invisible 1`] = `
       backgroundColor="inherit"
       borderColor="inherit"
       borderWidth="none"
-      className="ui-title titleDominant"
+      className="ui-title title titleDominant"
       color="inherit"
       contentEditable={false}
       direction="right"
@@ -619,7 +619,7 @@ exports[`Test making the Title control invisible 1`] = `
       widget={null}
     >
       <span
-        className="ui-label label normal ui-title titleDominant invisible"
+        className="ui-label label normal ui-title title titleDominant invisible"
         contentEditable={false}
         onBlur={[Function]}
         onClick={[Function]}

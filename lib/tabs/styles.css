@@ -114,4 +114,20 @@
 	.navigation > :global(.ui-button) {
 		padding: 5px 2px;
 	}
+
+	.tab:hover :global(.ui-button)
+	{
+		display: flex;
+		opacity: 1.0;
+	}
+
+	.tab :global(.ui-button)
+	{
+		display: none;
+		opacity: 0;
+
+		:global {
+			animation: fade 0.5s;
+		}
+	}
 }

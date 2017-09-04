@@ -909,54 +909,60 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
-	private buildTabs = () => (
-		<Container id="tabControl">
+	private buildTabs = () => {
 
-			<h3>Top</h3>
-			<TabContainer maxTabs={3}>
-				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
-				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
-				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
-				<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
-			</TabContainer>
-			<br/>
+		const close = (tab: any) => {
+			debug(`closing tab: ${tab.props['id']}`);
+		};
 
-			<h3>Left</h3>
-			<TabContainer maxTabs={3} location={Location.left}>
-				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
-				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
-				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
-				<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
-			</TabContainer>
-			<br/>
+		return (
+			<Container id="tabControl">
+				<h3>Top</h3>
+				<TabContainer maxTabs={3}>
+					<Tab title="tab #1" onClose={close}>#1<br/><br/>{randomText}</Tab>
+					<Tab title="tab #2" onClose={close}>#2<br/><br/>{randomText}</Tab>
+					<Tab title="tab #3" onClose={close}>#3<br/><br/>{randomText}</Tab>
+					<Tab title="tab #4" onclose={close}>#4<br/><br/>{randomText}</Tab>
+				</TabContainer>
+				<br/>
 
-			<h3>Bottom (no navigation)</h3>
-			<TabContainer maxTabs={3} location={Location.bottom} nonavigation>
-				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
-				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
-				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
-				<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
-			</TabContainer>
-			<br/>
+				<h3>Left</h3>
+				<TabContainer maxTabs={3} location={Location.left}>
+					<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
+					<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
+					<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
+					<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
+				</TabContainer>
+				<br/>
 
-			<h3>Right (no navigation, onSelect)</h3>
-			<TabContainer
-				maxTabs={3}
-				location={Location.right}
-				nonavigation
-				onSelect={(tab: any, previous: any) => {
-					debug(`new: %o (id=${tab.props['id']}), old: %o (id=${previous.props['id']})`, tab, previous);
-				}}
-			>
-				<p>Bad tab type to be ignored</p>
-				<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
-				<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
-				<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
-				<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
-			</TabContainer>
+				<h3>Bottom (no navigation)</h3>
+				<TabContainer maxTabs={3} location={Location.bottom} nonavigation>
+					<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
+					<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
+					<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
+					<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
+				</TabContainer>
+				<br/>
 
-		</Container>
-	);
+				<h3>Right (no navigation, onSelect)</h3>
+				<TabContainer
+					maxTabs={3}
+					location={Location.right}
+					nonavigation
+					onSelect={(tab: any, previous: any) => {
+							debug(`new: %o (id=${tab.props['id']}), old: %o (id=${previous.props['id']})`, tab, previous);
+					}}
+				>
+					<p>Bad tab type to be ignored</p>
+					<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
+					<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
+					<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
+					<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
+				</TabContainer>
+
+			</Container>
+		);
+	};
 
 	private buildTagList = () => (
 		<Container id="tagListExample">

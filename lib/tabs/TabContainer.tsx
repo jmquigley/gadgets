@@ -84,7 +84,10 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			selectedTab: this._keys.at(0)
 		};
 
-		this.bindCallbacks('selectHandler');
+		this.bindCallbacks(
+			'selectHandler',
+			'hiddenTabHandler'
+		);
 		this.componentWillUpdate(props);
 	}
 
@@ -116,7 +119,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		if (children) {
 			for (const child of children) {
 
-				if (child['type'] === Tab) {
+				if (child['type'] === Tab && child['props']['visible']) {
 					const selected = this.state.selectedTab === this._keys.at(pos);
 
 					if (selected) {
@@ -125,6 +128,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 					this._tabs[pos] = React.cloneElement(child as any, {
 						href: {
+							hiddenTabHandler: this.hiddenTabHandler,
 							orientation: this.props.location,
 							selectHandler: this.selectHandler,
 							sizing: this.props.sizing
@@ -142,6 +146,16 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 				this._tabs = this._tabs.slice(0, this.props.maxTabs);
 			}
 		}
+	}
+
+	private hiddenTabHandler(tab: Tab) {
+		debug(`hiding tab: ${tab.props['id']}`);
+		this.setState({selectedTab: null});
+
+		// Select a new tab that is not this one and set it in the state
+
+		// if there are no tabs to select, then present an empty control
+
 	}
 
 	private selectHandler(tab: Tab) {
