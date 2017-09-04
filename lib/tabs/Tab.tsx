@@ -96,15 +96,19 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 
 	public render() {
 		return (
-			<Title
-				{...this.props}
+			<div
 				className={this._rootStyles.classnames}
-				noripple
-				onClick={!this.props.disabled && this.props.visible ? this.handleClick : nilEvent}
-				title={this.props.title}
-				widget={<Button iconName="times" onClick={this.handleClose} />}
-				visible={!this.state.hidden}
-			/>
+				style={{minWidth: '75px', width: this.props.width}}
+			>
+				<Title
+					{...this.props}
+					noripple
+					onClick={!this.props.disabled && this.props.visible ? this.handleClick : nilEvent}
+					title={this.props.title}
+					widget={<Button iconName="times" onClick={this.handleClose} />}
+					visible={!this.state.hidden}
+				/>
+			</div>
 		);
 	}
 }

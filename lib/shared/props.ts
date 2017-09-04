@@ -69,7 +69,9 @@ export enum Color {
 
 export enum Direction {
 	up = 'up',
+	top = 'top',
 	down = 'down',
+	bottom = 'bottom',
 	left = 'left',
 	right = 'right'
 }
@@ -110,6 +112,7 @@ export interface BaseProps {
 	direction?: Direction;
 	disabled?: boolean;
 	focus?: boolean;
+	height?: string;
 	id?: string;
 	location?: Location;
 	noedit?: boolean;
@@ -119,6 +122,7 @@ export interface BaseProps {
 	sizing?: Sizing;
 	style?: any;
 	visible?: boolean;
+	width?: string;
 }
 
 export function getDefaultBaseProps(): BaseProps {
@@ -132,6 +136,7 @@ export function getDefaultBaseProps(): BaseProps {
 		direction: Direction.right,
 		disabled: false,
 		focus: false,
+		height: '',
 		id: '',
 		location: Location.none,
 		noedit: false,
@@ -140,6 +145,7 @@ export function getDefaultBaseProps(): BaseProps {
 		selected: false,
 		sizing: Sizing.normal,
 		style: {},
-		visible: true
+		visible: true,
+		width: ''
 	});
 }

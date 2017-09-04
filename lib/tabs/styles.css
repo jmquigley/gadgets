@@ -2,13 +2,23 @@
 
 :local {
 
+	.tabContainer {
+		min-width: 350px;
+	}
+
 	.tabBar {
 		display: flex;
 	}
 
-	.tabContainer {
-		display: flex;
+	.tabBarHorizontal {
+		display: block;
 	}
+
+	.tabBarVertical {
+		display: flex;
+		flex-direction: column;
+	}
+
 
 	.tabContent {
 		border: solid 1px;
@@ -23,9 +33,6 @@
 		flex-direction: column;
 	}
 
-	.tabBarHorizontal {
-	}
-
 	.tabNavHorizontal {
 		display: inline-flex;
 		flex: 1;
@@ -35,10 +42,6 @@
 	/* Vertical alignment means right/left tabs */
 	.tabContainerVertical {
 		flex-direction: row;
-	}
-
-	.tabBarVertical {
-		display: inline-block;
 	}
 
 	.tabNavVertical {
@@ -52,6 +55,7 @@
 	}
 
 	.tab {
+		display: inline-block;
 		cursor: default;
 		flex-grow: unset;
 	}
@@ -108,11 +112,13 @@
 	}
 
 	.navigation {
-		flex: none;
+		display: inline-block;
+		float: right;
 	}
 
 	.navigation > :global(.ui-button) {
-		padding: 5px 2px;
+		display: inline-block;
+		flex: unset;
 	}
 
 	.tab:hover :global(.ui-button)
