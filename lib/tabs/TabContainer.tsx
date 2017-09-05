@@ -117,7 +117,6 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 			for (const child of children) {
 				if (child['type'] === Tab && child['props']['visible']) {
-					debug(`adding child: ${this._keys.at(pos)}`);
 					this._tabs[pos] = React.cloneElement(child as any, {
 						id: this._keys.at(pos),
 						key: this._keys.at(pos)

@@ -11,6 +11,7 @@
 
 	.tabContainerVertical {
 		display: flex;
+		flex-wrap: nowrap;
 	}
 
 	.tabBarHorizontal {
@@ -35,6 +36,7 @@
 		display: inline-flex;
 		min-height: 8em;
 		padding: 0 3px;
+		flex-grow: 1;
 	}
 
 	.tab {
