@@ -11,6 +11,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   id=""
   layout={9999}
   location="none"
@@ -24,6 +25,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
   title="Test label text"
   visible={true}
   widget={null}
+  width=""
 >
   <div
     className="ui-title-bar titleBar ripple normal"
@@ -39,6 +41,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       id=""
       layout={9999}
       location="none"
@@ -60,6 +63,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
       useedit={false}
       visible={true}
       widget={null}
+      width=""
     >
       <span
         className="ui-label label normal ui-title title titleDominant"
@@ -95,6 +99,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   id=""
   layout={9999}
   location="none"
@@ -108,6 +113,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
   title="Test label text"
   visible={true}
   widget={null}
+  width=""
 >
   <div
     className="ui-title-bar titleBar ripple normal"
@@ -123,6 +129,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       id=""
       layout={9999}
       location="none"
@@ -144,6 +151,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
       useedit={false}
       visible={true}
       widget={null}
+      width=""
     >
       <span
         className="ui-label label normal ui-title title titleDominant"
@@ -183,6 +191,7 @@ exports[`Test creation of a Title control with default props 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     id=""
     layout={5}
     location="none"
@@ -204,6 +213,7 @@ exports[`Test creation of a Title control with default props 1`] = `
     useedit={false}
     visible={true}
     widget={null}
+    width=""
   />
 </div>
 `;
@@ -223,6 +233,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     id=""
     layout={1}
     location="none"
@@ -244,6 +255,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
     useedit={false}
     visible={true}
     widget="widget"
+    width=""
   />
   <div
     className="ui-title-widget widget widgetEven normal"
@@ -268,6 +280,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     id=""
     layout={6}
     location="none"
@@ -289,6 +302,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
     useedit={false}
     visible={true}
     widget={null}
+    width=""
   />
 </div>
 `;
@@ -308,6 +322,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     id=""
     layout={0}
     location="none"
@@ -329,6 +344,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     useedit={false}
     visible={true}
     widget="widget"
+    width=""
   />
   <div
     className="ui-title-widget widget widgetQuarter normal"
@@ -353,6 +369,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     id=""
     layout={4}
     location="none"
@@ -374,6 +391,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     useedit={false}
     visible={true}
     widget="widget"
+    width=""
   />
   <div
     className="ui-title-widget widget widgetStacked normal"
@@ -398,6 +416,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     id=""
     layout={3}
     location="none"
@@ -419,6 +438,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     useedit={false}
     visible={true}
     widget="widget"
+    width=""
   />
   <div
     className="ui-title-widget widget widgetThird normal"
@@ -443,6 +463,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     id=""
     layout={2}
     location="none"
@@ -464,6 +485,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     useedit={false}
     visible={true}
     widget="widget"
+    width=""
   />
   <div
     className="ui-title-widget widget widgetThreeQuarter normal"
@@ -484,6 +506,7 @@ exports[`Test disabling the Title control 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   id=""
   layout={5}
   location="none"
@@ -497,6 +520,7 @@ exports[`Test disabling the Title control 1`] = `
   title="Test label text"
   visible={true}
   widget={null}
+  width=""
 >
   <div
     className="ui-title-bar titleBar normal disabled nohover"
@@ -512,6 +536,7 @@ exports[`Test disabling the Title control 1`] = `
       direction="right"
       disabled={true}
       focus={false}
+      height=""
       id=""
       layout={5}
       location="none"
@@ -533,6 +558,7 @@ exports[`Test disabling the Title control 1`] = `
       useedit={false}
       visible={true}
       widget={null}
+      width=""
     >
       <span
         className="ui-label label normal ui-title title titleDominant disabled nohover"
@@ -568,6 +594,7 @@ exports[`Test making the Title control invisible 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   id=""
   layout={5}
   location="none"
@@ -581,6 +608,7 @@ exports[`Test making the Title control invisible 1`] = `
   title="Test label text"
   visible={false}
   widget={null}
+  width=""
 >
   <div
     className="ui-title-bar titleBar ripple normal invisible"
@@ -596,6 +624,7 @@ exports[`Test making the Title control invisible 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       id=""
       layout={5}
       location="none"
@@ -617,6 +646,7 @@ exports[`Test making the Title control invisible 1`] = `
       useedit={false}
       visible={false}
       widget={null}
+      width=""
     >
       <span
         className="ui-label label normal ui-title title titleDominant invisible"
@@ -652,6 +682,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "id": "",
   "layout": 5,
   "location": "none",
@@ -664,5 +695,6 @@ Object {
   "style": Object {},
   "visible": true,
   "widget": null,
+  "width": "",
 }
 `;

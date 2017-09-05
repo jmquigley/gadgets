@@ -16,6 +16,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     id=""
     location="none"
     noedit={true}
@@ -34,6 +35,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
     text="test tag"
     useedit={false}
     visible={true}
+    width=""
   />
 </div>
 `;
@@ -49,6 +51,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   id=""
   location="none"
   noedit={false}
@@ -63,6 +66,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   style={Object {}}
   usedelete={true}
   visible={true}
+  width=""
 >
   <div
     className="ui-tag tag tagNoHover normal disabled nohover"
@@ -79,6 +83,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       direction="right"
       disabled={true}
       focus={false}
+      height=""
       id=""
       location="none"
       noedit={true}
@@ -97,6 +102,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       text="test tag"
       useedit={false}
       visible={true}
+      width=""
     >
       <span
         className="ui-label label normal disabled nohover"
@@ -127,6 +133,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       direction="right"
       disabled={true}
       focus={false}
+      height=""
       iconName="times"
       iconStyle=""
       id=""
@@ -139,6 +146,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       sizing="small"
       style={Object {}}
       visible={false}
+      width=""
     >
       <div
         className="ui-button-circle buttonCircle small tagDeleteButton middle invisible disabled nohover"
@@ -156,6 +164,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
             direction="right"
             disabled={true}
             focus={false}
+            height=""
             iconName="times"
             iconStyle="smallBox"
             id=""
@@ -168,6 +177,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
             sizing="small"
             style={Object {}}
             visible={false}
+            width=""
           >
             <div
               className="ui-button button small smallBorder buttonCircleIcon invisible disabled nohover"
@@ -190,6 +200,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 direction="right"
                 disabled={false}
                 focus={false}
+                height=""
                 iconName="times"
                 id=""
                 imageFile=""
@@ -201,6 +212,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 sizing="small"
                 style={Object {}}
                 visible={true}
+                width=""
               >
                 <i
                   className="ui-icon icon none fa fa-fw fa-times small smallBox icon"
@@ -227,6 +239,7 @@ exports[`Test making Tag invisible 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   id=""
   location="none"
   noedit={false}
@@ -241,6 +254,7 @@ exports[`Test making Tag invisible 1`] = `
   style={Object {}}
   usedelete={true}
   visible={false}
+  width=""
 >
   <div
     className="ui-tag tag tagNoHover normal invisible disabled nohover"
@@ -257,6 +271,7 @@ exports[`Test making Tag invisible 1`] = `
       direction="right"
       disabled={true}
       focus={false}
+      height=""
       id=""
       location="none"
       noedit={true}
@@ -275,6 +290,7 @@ exports[`Test making Tag invisible 1`] = `
       text="test tag"
       useedit={false}
       visible={false}
+      width=""
     >
       <span
         className="ui-label label normal invisible disabled nohover"
@@ -305,6 +321,7 @@ exports[`Test making Tag invisible 1`] = `
       direction="right"
       disabled={true}
       focus={false}
+      height=""
       iconName="times"
       iconStyle=""
       id=""
@@ -317,6 +334,7 @@ exports[`Test making Tag invisible 1`] = `
       sizing="small"
       style={Object {}}
       visible={false}
+      width=""
     >
       <div
         className="ui-button-circle buttonCircle small tagDeleteButton middle invisible disabled nohover"
@@ -334,6 +352,7 @@ exports[`Test making Tag invisible 1`] = `
             direction="right"
             disabled={true}
             focus={false}
+            height=""
             iconName="times"
             iconStyle="smallBox"
             id=""
@@ -346,6 +365,7 @@ exports[`Test making Tag invisible 1`] = `
             sizing="small"
             style={Object {}}
             visible={false}
+            width=""
           >
             <div
               className="ui-button button small smallBorder buttonCircleIcon invisible disabled nohover"
@@ -368,6 +388,7 @@ exports[`Test making Tag invisible 1`] = `
                 direction="right"
                 disabled={false}
                 focus={false}
+                height=""
                 iconName="times"
                 id=""
                 imageFile=""
@@ -379,6 +400,7 @@ exports[`Test making Tag invisible 1`] = `
                 sizing="small"
                 style={Object {}}
                 visible={true}
+                width=""
               >
                 <i
                   className="ui-icon icon none fa fa-fw fa-times small smallBox icon"
@@ -405,6 +427,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "id": "",
   "location": "none",
   "noedit": false,
@@ -419,5 +442,6 @@ Object {
   "style": Object {},
   "usedelete": false,
   "visible": true,
+  "width": "",
 }
 `;

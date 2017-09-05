@@ -11,6 +11,7 @@ exports[`Test Button click event 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   iconName="bomb"
   iconStyle=""
   id=""
@@ -23,6 +24,7 @@ exports[`Test Button click event 1`] = `
   sizing="normal"
   style={Object {}}
   visible={true}
+  width=""
 >
   <div
     className="ui-button button ripple normal"
@@ -39,6 +41,7 @@ exports[`Test Button click event 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       iconName="bomb"
       id=""
       imageFile=""
@@ -50,6 +53,7 @@ exports[`Test Button click event 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     >
       <i
         className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -76,6 +80,7 @@ exports[`Test creation of a Button control 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     iconName="bomb"
     id=""
     imageFile=""
@@ -87,6 +92,7 @@ exports[`Test creation of a Button control 1`] = `
     sizing="normal"
     style={Object {}}
     visible={true}
+    width=""
   />
 </div>
 `;
@@ -114,6 +120,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     iconName="superpowers"
     id=""
     imageFile=""
@@ -125,6 +132,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
     sizing="normal"
     style={Object {}}
     visible={true}
+    width=""
   />
 </div>
 `;
@@ -140,6 +148,7 @@ exports[`Test disabling of a Button 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   iconName="bomb"
   iconStyle=""
   id=""
@@ -152,6 +161,7 @@ exports[`Test disabling of a Button 1`] = `
   sizing="normal"
   style={Object {}}
   visible={true}
+  width=""
 >
   <div
     className="ui-button button normal disabled nohover"
@@ -168,6 +178,7 @@ exports[`Test disabling of a Button 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       iconName="bomb"
       id=""
       imageFile=""
@@ -179,6 +190,7 @@ exports[`Test disabling of a Button 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     >
       <i
         className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -200,6 +212,7 @@ exports[`Test making a Button invisible 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   iconName="bomb"
   iconStyle=""
   id=""
@@ -212,6 +225,7 @@ exports[`Test making a Button invisible 1`] = `
   sizing="normal"
   style={Object {}}
   visible={false}
+  width=""
 >
   <div
     className="ui-button button ripple normal invisible"
@@ -228,6 +242,7 @@ exports[`Test making a Button invisible 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       iconName="bomb"
       id=""
       imageFile=""
@@ -239,6 +254,7 @@ exports[`Test making a Button invisible 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     >
       <i
         className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -260,6 +276,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "iconName": "bomb",
   "iconStyle": "",
   "id": "",
@@ -272,5 +289,6 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "visible": true,
+  "width": "",
 }
 `;

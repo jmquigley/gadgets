@@ -42,6 +42,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   id=""
   justify={0}
   location="none"
@@ -52,6 +53,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
   sizing="normal"
   style={Object {}}
   visible={true}
+  width=""
 >
   <div
     className="ui-button-bar buttonBar normal test-class"
@@ -78,6 +80,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
           direction="right"
           disabled={false}
           focus={false}
+          height=""
           iconName="bomb"
           iconStyle=""
           id=""
@@ -90,6 +93,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
           sizing="normal"
           style={Object {}}
           visible={true}
+          width=""
         >
           <div
             className="ui-button button ripple normal"
@@ -106,6 +110,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
               direction="right"
               disabled={false}
               focus={false}
+              height=""
               iconName="bomb"
               id=""
               imageFile=""
@@ -117,6 +122,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
               sizing="normal"
               style={Object {}}
               visible={true}
+              width=""
             >
               <i
                 className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -145,6 +151,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
           direction="right"
           disabled={false}
           focus={false}
+          height=""
           iconName="bomb"
           iconStyle=""
           id=""
@@ -157,6 +164,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
           sizing="normal"
           style={Object {}}
           visible={true}
+          width=""
         >
           <div
             className="ui-button button ripple normal"
@@ -173,6 +181,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
               direction="right"
               disabled={false}
               focus={false}
+              height=""
               iconName="bomb"
               id=""
               imageFile=""
@@ -184,6 +193,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
               sizing="normal"
               style={Object {}}
               visible={true}
+              width=""
             >
               <i
                 className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -210,6 +220,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   id=""
   justify={0}
   location="none"
@@ -220,6 +231,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
   sizing="normal"
   style={Object {}}
   visible={true}
+  width=""
 >
   <div
     className="ui-button-bar buttonBar normal disabled nohover"
@@ -246,6 +258,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
           direction="right"
           disabled={true}
           focus={false}
+          height=""
           iconName="bomb"
           iconStyle=""
           id=""
@@ -258,6 +271,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
           sizing="normal"
           style={Object {}}
           visible={true}
+          width=""
         >
           <div
             className="ui-button button normal disabled nohover"
@@ -274,6 +288,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
               direction="right"
               disabled={false}
               focus={false}
+              height=""
               iconName="bomb"
               id=""
               imageFile=""
@@ -285,6 +300,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
               sizing="normal"
               style={Object {}}
               visible={true}
+              width=""
             >
               <i
                 className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -313,6 +329,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
           direction="right"
           disabled={true}
           focus={false}
+          height=""
           iconName="bomb"
           iconStyle=""
           id=""
@@ -325,6 +342,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
           sizing="normal"
           style={Object {}}
           visible={true}
+          width=""
         >
           <div
             className="ui-button button normal disabled nohover"
@@ -341,6 +359,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
               direction="right"
               disabled={false}
               focus={false}
+              height=""
               iconName="bomb"
               id=""
               imageFile=""
@@ -352,6 +371,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
               sizing="normal"
               style={Object {}}
               visible={true}
+              width=""
             >
               <i
                 className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -378,6 +398,7 @@ exports[`Test making the ButtonBar invisible 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   id=""
   justify={0}
   location="none"
@@ -388,6 +409,7 @@ exports[`Test making the ButtonBar invisible 1`] = `
   sizing="normal"
   style={Object {}}
   visible={false}
+  width=""
 >
   <div
     className="ui-button-bar buttonBar normal invisible"
@@ -411,6 +433,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "id": "",
   "justify": 0,
   "location": "none",
@@ -421,5 +444,6 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "visible": true,
+  "width": "",
 }
 `;

@@ -2,11 +2,14 @@
 
 :local {
 
-	.tabContainer {
-		min-width: 350px;
+	.tabBar {
+		display: flex;
 	}
 
-	.tabBar {
+	.tabContainerHorizontal {
+	}
+
+	.tabContainerVertical {
 		display: flex;
 	}
 
@@ -15,64 +18,29 @@
 	}
 
 	.tabBarVertical {
-		display: flex;
+		display: inline-flex;
 		flex-direction: column;
 	}
 
-
-	.tabContent {
+	.tabContentHorizontal {
 		border: solid 1px;
 		box-sizing: border-box;
-		flex: 4;
 		min-height: 8em;
 		padding: 0 3px;
 	}
 
-	/* Horizontal alignment means top/bottom tabs */
-	.tabContainerHorizontal {
-		flex-direction: column;
-	}
-
-	.tabNavHorizontal {
+	.tabContentVertical {
+		border: solid 1px;
+		box-sizing: border-box;
 		display: inline-flex;
-		flex: 1;
-		padding-left: 3em;
-	}
-
-	/* Vertical alignment means right/left tabs */
-	.tabContainerVertical {
-		flex-direction: row;
-	}
-
-	.tabNavVertical {
-		display: inline-flex;
-		flex: 0;
-		padding-top: 0.5em;
-	}
-
-	.tabNavVertical > :global(.ui-button) {
-		flex: unset;
+		min-height: 8em;
+		padding: 0 3px;
 	}
 
 	.tab {
 		display: inline-block;
 		cursor: default;
 		flex-grow: unset;
-	}
-
-	.tabsTop, .tabsBottom {
-		flex: 1;
-		flex-direction: row;
-	}
-
-	.tabsTop > .tab, .tabsBottom > .tab {
-		flex: 1;
-	}
-
-	.tabsLeft, .tabsRight {
-		display: inline-flex;
-		flex: 1;
-		flex-direction: column;
 	}
 
 	.tabBorderTop {
@@ -114,6 +82,7 @@
 	.navigation {
 		display: inline-block;
 		float: right;
+		align-self: center;
 	}
 
 	.navigation > :global(.ui-button) {

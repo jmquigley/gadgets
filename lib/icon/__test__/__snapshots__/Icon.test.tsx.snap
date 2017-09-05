@@ -31,6 +31,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   iconName="bomb"
   id=""
   imageFile=""
@@ -42,6 +43,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   sizing="normal"
   style={Object {}}
   visible={false}
+  width=""
 >
   <i
     className="ui-icon icon none fa fa-fw fa-bomb normal invisible"
@@ -61,6 +63,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "iconName": "bomb",
   "id": "",
   "imageFile": "",
@@ -72,6 +75,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "visible": true,
+  "width": "",
 }
 `;
 
@@ -86,6 +90,7 @@ exports[`Test the disabling of the Icon control 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   iconName="bomb"
   id=""
   imageFile=""
@@ -97,6 +102,7 @@ exports[`Test the disabling of the Icon control 1`] = `
   sizing="normal"
   style={Object {}}
   visible={true}
+  width=""
 >
   <i
     className="ui-icon icon none fa fa-fw fa-bomb normal disabled nohover"

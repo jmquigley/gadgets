@@ -14,6 +14,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     iconName="bomb"
     iconStyle=""
     id=""
@@ -26,6 +27,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
     sizing="normal"
     style={Object {}}
     visible={true}
+    width=""
   />
   <div
     className="ui-dialog-popup test-class-dialog buttonDialogPopup dialogBottom buttonDialogHide"
@@ -48,6 +50,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       direction="up"
       disabled={false}
       focus={false}
+      height=""
       id=""
       location="none"
       nobase={true}
@@ -58,6 +61,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     />
   </div>
 </div>
@@ -77,6 +81,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     iconName="bomb"
     iconStyle=""
     id=""
@@ -89,6 +94,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
     sizing="normal"
     style={Object {}}
     visible={true}
+    width=""
   />
   <div
     className="ui-dialog-popup test-class-dialog buttonDialogPopup dialogTop buttonDialogHide"
@@ -111,6 +117,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       direction="down"
       disabled={false}
       focus={false}
+      height=""
       id=""
       location="none"
       nobase={true}
@@ -121,6 +128,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     />
   </div>
 </div>
@@ -138,6 +146,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   iconName="bomb"
   iconStyle=""
   id=""
@@ -152,6 +161,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   style={Object {}}
   triangleClasses={Array []}
   visible={false}
+  width=""
 >
   <div
     className="ui-button-dialog buttonDialog normal invisible"
@@ -166,6 +176,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       iconName="bomb"
       iconStyle=""
       id=""
@@ -178,6 +189,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       sizing="normal"
       style={Object {}}
       visible={false}
+      width=""
     >
       <div
         className="ui-button button ripple normal invisible"
@@ -194,6 +206,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
           direction="right"
           disabled={false}
           focus={false}
+          height=""
           iconName="bomb"
           id=""
           imageFile=""
@@ -205,6 +218,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
           sizing="normal"
           style={Object {}}
           visible={true}
+          width=""
         >
           <i
             className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -234,6 +248,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         direction="up"
         disabled={false}
         focus={false}
+        height=""
         id=""
         location="none"
         nobase={true}
@@ -244,6 +259,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         sizing="normal"
         style={Object {}}
         visible={true}
+        width=""
       >
         <svg
           className="ui-triangle triangle normalBox triangleUp normal dialogTriangleBottom buttonDialogHide"
@@ -297,6 +313,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "iconName": "bomb",
   "iconStyle": "",
   "id": "",
@@ -311,6 +328,7 @@ Object {
   "style": Object {},
   "triangleClasses": Array [],
   "visible": true,
+  "width": "",
 }
 `;
 
@@ -326,6 +344,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   iconName="bomb"
   iconStyle=""
   id=""
@@ -340,6 +359,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   style={Object {}}
   triangleClasses={Array []}
   visible={true}
+  width=""
 >
   <div
     className="ui-button-dialog buttonDialog normal disabled nohover"
@@ -354,6 +374,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
       direction="right"
       disabled={true}
       focus={false}
+      height=""
       iconName="bomb"
       iconStyle=""
       id=""
@@ -366,6 +387,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     >
       <div
         className="ui-button button normal disabled nohover"
@@ -382,6 +404,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
           direction="right"
           disabled={false}
           focus={false}
+          height=""
           iconName="bomb"
           id=""
           imageFile=""
@@ -393,6 +416,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
           sizing="normal"
           style={Object {}}
           visible={true}
+          width=""
         >
           <i
             className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -422,6 +446,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         direction="up"
         disabled={false}
         focus={false}
+        height=""
         id=""
         location="none"
         nobase={true}
@@ -432,6 +457,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         sizing="normal"
         style={Object {}}
         visible={true}
+        width=""
       >
         <svg
           className="ui-triangle triangle normalBox triangleUp normal dialogTriangleBottom buttonDialogHide"

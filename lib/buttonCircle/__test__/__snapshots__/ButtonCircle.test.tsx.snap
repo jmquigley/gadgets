@@ -11,6 +11,7 @@ exports[`Test ButtonCircle click event 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   iconName="bomb"
   iconStyle=""
   id=""
@@ -23,6 +24,7 @@ exports[`Test ButtonCircle click event 1`] = `
   sizing="normal"
   style={Object {}}
   visible={true}
+  width=""
 >
   <div
     className="ui-button-circle buttonCircle normal"
@@ -40,6 +42,7 @@ exports[`Test ButtonCircle click event 1`] = `
         direction="right"
         disabled={false}
         focus={false}
+        height=""
         iconName="bomb"
         iconStyle="normalBox"
         id=""
@@ -52,6 +55,7 @@ exports[`Test ButtonCircle click event 1`] = `
         sizing="normal"
         style={Object {}}
         visible={true}
+        width=""
       >
         <div
           className="ui-button button ripple normal normalBorder buttonCircleIcon"
@@ -74,6 +78,7 @@ exports[`Test ButtonCircle click event 1`] = `
             direction="right"
             disabled={false}
             focus={false}
+            height=""
             iconName="bomb"
             id=""
             imageFile=""
@@ -85,6 +90,7 @@ exports[`Test ButtonCircle click event 1`] = `
             sizing="normal"
             style={Object {}}
             visible={true}
+            width=""
           >
             <i
               className="ui-icon icon none fa fa-fw fa-bomb normal normalBox icon"
@@ -115,6 +121,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       iconName="bomb"
       iconStyle="normalBox"
       id=""
@@ -127,6 +134,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     />
   </div>
 </div>
@@ -143,6 +151,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   iconName="bomb"
   iconStyle=""
   id=""
@@ -155,6 +164,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   sizing="normal"
   style={Object {}}
   visible={true}
+  width=""
 >
   <div
     className="ui-button-circle buttonCircle normal disabled nohover"
@@ -172,6 +182,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         direction="right"
         disabled={true}
         focus={false}
+        height=""
         iconName="bomb"
         iconStyle="normalBox"
         id=""
@@ -184,6 +195,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         sizing="normal"
         style={Object {}}
         visible={true}
+        width=""
       >
         <div
           className="ui-button button normal normalBorder buttonCircleIcon disabled nohover"
@@ -206,6 +218,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
             direction="right"
             disabled={false}
             focus={false}
+            height=""
             iconName="bomb"
             id=""
             imageFile=""
@@ -217,6 +230,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
             sizing="normal"
             style={Object {}}
             visible={true}
+            width=""
           >
             <i
               className="ui-icon icon none fa fa-fw fa-bomb normal normalBox icon"
@@ -241,6 +255,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   iconName="bomb"
   iconStyle=""
   id=""
@@ -253,6 +268,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   sizing="normal"
   style={Object {}}
   visible={false}
+  width=""
 >
   <div
     className="ui-button-circle buttonCircle normal invisible"
@@ -270,6 +286,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
         direction="right"
         disabled={false}
         focus={false}
+        height=""
         iconName="bomb"
         iconStyle="normalBox"
         id=""
@@ -282,6 +299,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
         sizing="normal"
         style={Object {}}
         visible={false}
+        width=""
       >
         <div
           className="ui-button button ripple normal normalBorder buttonCircleIcon invisible"
@@ -304,6 +322,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
             direction="right"
             disabled={false}
             focus={false}
+            height=""
             iconName="bomb"
             id=""
             imageFile=""
@@ -315,6 +334,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
             sizing="normal"
             style={Object {}}
             visible={true}
+            width=""
           >
             <i
               className="ui-icon icon none fa fa-fw fa-bomb normal normalBox icon"
@@ -339,6 +359,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "iconName": "bomb",
   "iconStyle": "",
   "id": "",
@@ -351,5 +372,6 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "visible": true,
+  "width": "",
 }
 `;

@@ -11,6 +11,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
   "href": Object {
@@ -41,6 +42,7 @@ Object {
   "useedit": false,
   "visible": true,
   "widget": null,
+  "width": "",
 }
 `;
 
@@ -55,6 +57,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -87,5 +90,6 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   useedit={false}
   visible={true}
   widget={null}
+  width=""
 />
 `;

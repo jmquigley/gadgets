@@ -11,6 +11,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   iconName="bomb"
   id=""
   imageFile=""
@@ -26,6 +27,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   style={Object {}}
   text="test text"
   visible={true}
+  width=""
 >
   <div
     className="ui-button-text buttonText ripple normal test-class"
@@ -53,6 +55,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       iconName="bomb"
       id=""
       imageFile=""
@@ -64,6 +67,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     >
       <i
         className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -85,6 +89,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   iconName="bomb"
   id=""
   imageFile=""
@@ -100,6 +105,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
   style={Object {}}
   text=""
   visible={true}
+  width=""
 >
   <div
     className="ui-button-text buttonText normal disabled nohover"
@@ -116,6 +122,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       iconName="bomb"
       id=""
       imageFile=""
@@ -127,6 +134,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     >
       <i
         className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -151,6 +159,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   iconName="bomb"
   id=""
   imageFile=""
@@ -166,6 +175,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
   style={Object {}}
   text=""
   visible={false}
+  width=""
 >
   <div
     className="ui-button-text buttonText ripple normal invisible"
@@ -182,6 +192,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
       direction="right"
       disabled={false}
       focus={false}
+      height=""
       iconName="bomb"
       id=""
       imageFile=""
@@ -193,6 +204,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
       sizing="normal"
       style={Object {}}
       visible={true}
+      width=""
     >
       <i
         className="ui-icon icon none fa fa-fw fa-bomb normal"
@@ -217,6 +229,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "iconName": "bomb",
   "id": "",
   "imageFile": "",
@@ -232,5 +245,6 @@ Object {
   "style": Object {},
   "text": "",
   "visible": true,
+  "width": "",
 }
 `;

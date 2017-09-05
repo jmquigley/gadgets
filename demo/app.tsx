@@ -918,12 +918,13 @@ class App extends React.Component<AppProps, AppState> {
 		return (
 			<Container id="tabControl">
 				<h3>Top</h3>
-				<TabContainer maxTabs={4}>
+				<TabContainer maxTabs={5}>
 					<Tab title="tab #1" onClose={close}>#1<br/><br/>{randomText}</Tab>
 					<Tab title="tab #2" onClose={close}>#2<br/><br/>{randomText}</Tab>
 					<Tab title="tab #3" onClose={close}>#3<br/><br/>{randomText}</Tab>
 					<Tab title="tab #4" onclose={close}>#4<br/><br/>{randomText}</Tab>
 					<Tab title="tab #5" onclose={close}>#5<br/><br/>{randomText}</Tab>
+					<Tab title="tab #6" onclose={close}>#6<br/><br/>{randomText}</Tab>
 				</TabContainer>
 				<br/>
 

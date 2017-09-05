@@ -11,6 +11,7 @@ exports[`Test disabling of a ListItem control 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  height=""
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -45,6 +46,7 @@ exports[`Test disabling of a ListItem control 1`] = `
   useedit={false}
   visible={true}
   widget={null}
+  width=""
 >
   <Item
     backgroundColor="inherit"
@@ -56,6 +58,7 @@ exports[`Test disabling of a ListItem control 1`] = `
     direction="right"
     disabled={true}
     focus={false}
+    height=""
     hiddenLeftButton={false}
     hiddenRightButton={false}
     href={
@@ -90,6 +93,7 @@ exports[`Test disabling of a ListItem control 1`] = `
     useedit={false}
     visible={true}
     widget={null}
+    width=""
   >
     <li
       className="ui-item item normal ui-listitem listItem normal disabled nohover disabled nohover"
@@ -111,6 +115,7 @@ exports[`Test disabling of a ListItem control 1`] = `
         direction="right"
         disabled={true}
         focus={false}
+        height=""
         hiddenLeftButton={false}
         hiddenRightButton={false}
         href={
@@ -149,6 +154,7 @@ exports[`Test disabling of a ListItem control 1`] = `
         useedit={false}
         visible={true}
         widget={null}
+        width=""
       >
         <div
           className="ui-title-bar titleBar normal itemTitle disabled nohover"
@@ -164,6 +170,7 @@ exports[`Test disabling of a ListItem control 1`] = `
             direction="right"
             disabled={true}
             focus={false}
+            height=""
             hiddenLeftButton={false}
             hiddenRightButton={false}
             href={
@@ -203,6 +210,7 @@ exports[`Test disabling of a ListItem control 1`] = `
             useedit={false}
             visible={true}
             widget={null}
+            width=""
           >
             <span
               className="ui-label label normal ui-title title titleDominant disabled nohover"
@@ -242,6 +250,7 @@ exports[`Test making ListItem control invisible 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -276,6 +285,7 @@ exports[`Test making ListItem control invisible 1`] = `
   useedit={false}
   visible={false}
   widget={null}
+  width=""
 >
   <Item
     backgroundColor="inherit"
@@ -287,6 +297,7 @@ exports[`Test making ListItem control invisible 1`] = `
     direction="right"
     disabled={false}
     focus={false}
+    height=""
     hiddenLeftButton={false}
     hiddenRightButton={false}
     href={
@@ -321,6 +332,7 @@ exports[`Test making ListItem control invisible 1`] = `
     useedit={false}
     visible={false}
     widget={null}
+    width=""
   >
     <li
       className="ui-item item normal ui-listitem listItem normal invisible invisible"
@@ -342,6 +354,7 @@ exports[`Test making ListItem control invisible 1`] = `
         direction="right"
         disabled={false}
         focus={false}
+        height=""
         hiddenLeftButton={false}
         hiddenRightButton={false}
         href={
@@ -380,6 +393,7 @@ exports[`Test making ListItem control invisible 1`] = `
         useedit={false}
         visible={false}
         widget={null}
+        width=""
       >
         <div
           className="ui-title-bar titleBar ripple normal itemTitle invisible"
@@ -395,6 +409,7 @@ exports[`Test making ListItem control invisible 1`] = `
             direction="right"
             disabled={false}
             focus={false}
+            height=""
             hiddenLeftButton={false}
             hiddenRightButton={false}
             href={
@@ -434,6 +449,7 @@ exports[`Test making ListItem control invisible 1`] = `
             useedit={false}
             visible={false}
             widget={null}
+            width=""
           >
             <span
               className="ui-label label normal ui-title title titleDominant invisible"
@@ -473,6 +489,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "height": "",
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
   "href": Object {
@@ -505,6 +522,7 @@ Object {
   "useedit": false,
   "visible": true,
   "widget": null,
+  "width": "",
 }
 `;
 
@@ -519,6 +537,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -553,6 +572,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   useedit={false}
   visible={true}
   widget="test title right"
+  width=""
 />
 `;
 
@@ -567,6 +587,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  height=""
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -601,5 +622,6 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   useedit={false}
   visible={true}
   widget={null}
+  width=""
 />
 `;
