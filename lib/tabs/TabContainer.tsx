@@ -299,10 +299,10 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 	public render() {
 		let body = null;
-		let style = {};
+		const style = {};
 
 		if (this.props.location === Location.right || this.props.location === Location.left) {
-			style['width'] = `${this.props.tabWidth}px`
+			style['width'] = `${this.props.tabWidth}px`;
 		}
 
 		const tabNavigation = (
