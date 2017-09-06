@@ -54,11 +54,7 @@ export const TabBar = (props: any) => (
 		style={props.style}
 	>
 		{props.tabs}
-		<TabNavigation
-			{...props}
-			className={props.navClassName}
-			nonavigation={props.nonavigation}
-		/>
+		{props.navigation}
 	</div>
 );
 
@@ -71,8 +67,8 @@ export const TabContent = (props: any) => (
 export const TabNavigation = (props: any) => (
 	!props.nonavigation && (
 		<div className={props.className}>
-			<Button iconName="chevron-left" />
-			<Button iconName="chevron-right" />
+			<Button iconName="chevron-left" onClick={props.handleLeftClick}/>
+			<Button iconName="chevron-right" onClick={props.handleRightClick}/>
 		</div>
 	)
 );
@@ -136,11 +132,30 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		};
 
 		this.bindCallbacks(
-			'selectHandler',
-			'hiddenTabHandler'
+			'handleNextTab',
+			'handlePreviousTab',
+			'hiddenTabHandler',
+			'selectHandler'
 		);
 
 		this.componentWillUpdate(this.props, this.state);
+	}
+
+	/**
+	 * @return {number} the index value location for the currently selected
+	 * tab.
+	 */
+	get currentIdx(): number {
+		return this.getTabIdx(this.state.selectedTab);
+	}
+
+	/**
+	 * Sets the current tab ID/Key value in the state.  This update is NOT
+	 * synchronous (like all React setState calls)
+	 * @param id {string} the unique tab key value to set in this id.
+	 */
+	set selectedTab(id: string) {
+		this.setState({selectedTab: id});
 	}
 
 	/**
@@ -168,7 +183,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	 * @return {number} the number index of this id with the tabs array.  If
 	 * the value is not found it returns -1.
 	 */
-	private getTabId(id: string): number {
+	private getTabIdx(id: string): number {
 		for (const [idx, tab] of this._tabs.entries()) {
 			if (tab.props['id'] === id) {
 				return idx;
@@ -178,34 +193,46 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		return -1;
 	}
 
-	private hiddenTabHandler(tab: Tab) {
-		debug(`hiding tab: ${tab.props['id']}`);
+	private handlePreviousTab() {
+		const idx: number = this.currentIdx;
 
+		if (this._tabs.length && idx - 1 >= 0) {
+			this.selectedTab = this._tabs[idx - 1].props['id'];
+		}
+	}
+
+	private handleNextTab() {
+		const idx: number = this.currentIdx;
+
+		if (this._tabs.length && idx + 1 <= this._tabs.length - 1) {
+			this.selectedTab = this._tabs[idx + 1].props['id'];
+		}
+	}
+
+	private hiddenTabHandler(tab: Tab) {
 		// Get the id of the tab that was removed.
 		// try to get the one to the left first.  If that doesn't exist
 		// the get the one to the right.  If that doesn't exist (it was
 		// the last tab), then set to null
-		const idx: number = this.getTabId(tab.props['id']);
+		const idx: number = this.getTabIdx(tab.props['id']);
 		let id: string = null;
 
 		if (idx - 1 >= 0) {
 			id = this._tabs[idx - 1].props['id'];
-			debug(`selected left id: ${id}`);
 		} else if (idx + 1 <= this._tabs.length - 1) {
 			id = this._tabs[idx + 1].props['id'];
-			debug(`selected right id: ${id}`);
 		}
 
 		this._tabs.splice(idx, 1);
-		this.setState({selectedTab: id});
+		this.selectedTab = id;
 	}
 
 	private selectHandler(tab: Tab) {
 		const [previous, idx] = this.getTab(this.state.selectedTab);
-		this.setState({selectedTab: tab.props['id']}, () => {
-			debug(`selected tab: ${tab.props['id']}, tab: %O, previous @ ${idx}: %O`, tab, previous);
-			this.props.onSelect(tab, previous ? previous : tab);
-		});
+
+		this.selectedTab = tab.props['id'];
+		this.props.onSelect(tab, previous ? previous : tab);
+		debug(`selected tab: ${tab.props['id']}, tab: %O, previous @ ${idx}: %O`, tab, previous);
 	}
 
 	public componentWillUpdate(nextProps: TabContainerProps, nextState: TabContainerState) {
@@ -232,7 +259,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		if (this._tabs.length > 0) {
 
 			// Add select and delete handlers to each of the tabs in the current
-			// tab array.
+			// tab array.  Also ensure that the correct tab width is set.
 
 			for (const [idx, child] of this._tabs.entries()) {
 				const selected = nextState.selectedTab === child.props['id'];
@@ -252,6 +279,10 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 						width: `${nextProps.tabWidth}px`
 					});
 			}
+
+			// Sets the default width of the content container for the component
+			// It uses the number of tabs and the current tab width to compute
+			// a reasonable size.
 
 			if (nextProps.location === Location.top || nextProps.location === Location.bottom) {
 				this._containerWidth = (this._tabs.length + 1) * nextProps.tabWidth;
@@ -274,11 +305,21 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			style['width'] = `${this.props.tabWidth}px`
 		}
 
+		const tabNavigation = (
+			<TabNavigation
+				{...this.props}
+				className={this._tabNavStyles.classnames}
+				handleLeftClick={this.handlePreviousTab}
+				handleRightClick={this.handleNextTab}
+				nonavigation={this.props.nonavigation}
+			/>
+		);
+
 		const tabBar = (
 			<TabBar
 				{...this.props}
 				className={this._tabBarStyles.classnames}
-				navClassName={this._tabNavStyles.classnames}
+				navigation={tabNavigation}
 				style={style}
 				tabs={this._tabs}
 			/>
