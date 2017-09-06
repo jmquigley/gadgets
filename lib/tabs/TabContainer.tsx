@@ -161,13 +161,43 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		return null;
 	}
 
+	/**
+	 * Searches the current tab list and finds the tab index associated with
+	 * the given id.
+	 * @param id {string} the id value associated with a Tag to find
+	 * @return {number} the number index of this id with the tabs array.  If
+	 * the value is not found it returns -1.
+	 */
+	private getTabId(id: string): number {
+		for (const [idx, tab] of this._tabs.entries()) {
+			if (tab.props['id'] === id) {
+				return idx;
+			}
+		}
+
+		return -1;
+	}
+
 	private hiddenTabHandler(tab: Tab) {
 		debug(`hiding tab: ${tab.props['id']}`);
-		// this.setState({selectedTab: null});
 
-		// Select a new tab that is not this one and set it in the state
+		// Get the id of the tab that was removed.
+		// try to get the one to the left first.  If that doesn't exist
+		// the get the one to the right.  If that doesn't exist (it was
+		// the last tab), then set to null
+		const idx: number = this.getTabId(tab.props['id']);
+		let id: string = null;
 
-		// if there are no tabs to select, then present an empty control
+		if (idx - 1 >= 0) {
+			id = this._tabs[idx - 1].props['id'];
+			debug(`selected left id: ${id}`);
+		} else if (idx + 1 <= this._tabs.length - 1) {
+			id = this._tabs[idx + 1].props['id'];
+			debug(`selected right id: ${id}`);
+		}
+
+		this._tabs.splice(idx, 1);
+		this.setState({selectedTab: id});
 	}
 
 	private selectHandler(tab: Tab) {
@@ -201,7 +231,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 		if (this._tabs.length > 0) {
 			for (const [idx, child] of this._tabs.entries()) {
-				const selected = nextState.selectedTab === this._keys.at(idx);
+				const selected = nextState.selectedTab === child.props['id'];
 
 				if (selected) {
 					this._tabContent = child['props'].children;
@@ -224,6 +254,8 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			} else {
 				this._containerWidth = 5 * nextProps.tabWidth;
 			}
+		} else {
+			this._tabContent = null;
 		}
 
 		super.componentWillUpdate(nextProps, nextState);
@@ -273,7 +305,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 					className={this._rootStyles.classnames}
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
-					{tabBar}
+					{this._tabs.length > 0 && tabBar}
 					{content}
 				</div>
 			);
@@ -284,7 +316,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
 					{content}
-					{tabBar}
+					{this._tabs.length > 0 && tabBar}
 				</div>
 			);
 		}

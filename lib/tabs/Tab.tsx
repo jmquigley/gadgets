@@ -66,7 +66,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 			hidden: false
 		};
 
-		this.componentWillUpdate(props);
+		this.componentWillUpdate(this.props, this.state);
 	}
 
 	private handleClick() {
@@ -81,7 +81,9 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		});
 	}
 
-	public componentWillUpdate(nextProps: TabProps) {
+	public componentWillUpdate(nextProps: TabProps, nextState: TabState) {
+		const style = {};
+
 		this._rootStyles.onIf(nextProps.selected)(
 			'ui-selected'
 		);
@@ -91,17 +93,28 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		this._rootStyles.onIf(this.props.href.orientation === Location.left)(this.styles.tabBorderLeft);
 		this._rootStyles.onIf(this.props.href.orientation === Location.right)(this.styles.tabBorderRight);
 
-		super.componentWillUpdate(nextProps);
+		if (nextState.hidden) {
+			style['display'] = 'none';
+			style['minWidth'] = '';
+			style['width'] = '';
+		} else {
+			style['minWidth'] = '75px';
+			style['width'] = nextProps.width;
+		}
+
+		this.buildInlineStyles(nextProps, style);
+		super.componentWillUpdate(nextProps, nextState);
 	}
 
 	public render() {
 		return (
 			<div
 				className={this._rootStyles.classnames}
-				style={{minWidth: '75px', width: this.props.width}}
+				style={this.inlineStyle}
 			>
 				<Title
 					{...this.props}
+					noedit
 					noripple
 					onClick={!this.props.disabled && this.props.visible ? this.handleClick : nilEvent}
 					title={this.props.title}
