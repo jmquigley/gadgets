@@ -230,6 +230,10 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		);
 
 		if (this._tabs.length > 0) {
+
+			// Add select and delete handlers to each of the tabs in the current
+			// tab array.
+
 			for (const [idx, child] of this._tabs.entries()) {
 				const selected = nextState.selectedTab === child.props['id'];
 
@@ -255,6 +259,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 				this._containerWidth = 5 * nextProps.tabWidth;
 			}
 		} else {
+			// No more tabs, suppress content
 			this._tabContent = null;
 		}
 
@@ -263,36 +268,23 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 	public render() {
 		let body = null;
-		let tabBar = null;
+		let style = {};
 
-		switch (this.props.location) {
-			case Location.top:
-			case Location.bottom:
-				tabBar = (
-					<TabBar
-						{...this.props}
-						className={this._tabBarStyles.classnames}
-						navClassName={this._tabNavStyles.classnames}
-						tabs={this._tabs}
-					/>
-				);
-				break;
-
-			case Location.left:
-			case Location.right:
-				tabBar = (
-					<TabBar
-						{...this.props}
-						className={this._tabBarStyles.classnames}
-						navClassName={this._tabNavStyles.classnames}
-						style={{width: `${this.props.tabWidth}px`}}
-						tabs={this._tabs}
-					/>
-				);
-				break;
+		if (this.props.location === Location.right || this.props.location === Location.left) {
+			style['width'] = `${this.props.tabWidth}px`
 		}
 
-		const content = (
+		const tabBar = (
+			<TabBar
+				{...this.props}
+				className={this._tabBarStyles.classnames}
+				navClassName={this._tabNavStyles.classnames}
+				style={style}
+				tabs={this._tabs}
+			/>
+		);
+
+		const tabContent = (
 			<TabContent
 				className={this._tabContentStyles.classnames}
 				content={this._tabContent}
@@ -306,7 +298,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
 					{this._tabs.length > 0 && tabBar}
-					{content}
+					{tabContent}
 				</div>
 			);
 		} else {
@@ -315,7 +307,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 					className={this._rootStyles.classnames}
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
-					{content}
+					{tabContent}
 					{this._tabs.length > 0 && tabBar}
 				</div>
 			);
