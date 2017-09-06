@@ -36,6 +36,7 @@
 
 'use strict';
 
+import * as $ from 'jquery';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
@@ -128,11 +129,13 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	}
 
 	public componentWillMount() {
-		document.addEventListener('keydown', this.handleKeyDown);
+		$(document).on('keydown', this.handleKeyDown);
+		$(window).on('click', this.handleDialogClick);
 	}
 
 	public componentWillUnmount() {
-		document.removeEventListener('keydown', this.handleKeyDown);
+		$(document).off('keydown', this.handleKeyDown);
+		$(window).off('click', this.handleDialogClick);
 	}
 
 	public componentWillUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState) {

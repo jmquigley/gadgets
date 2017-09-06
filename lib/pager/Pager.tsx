@@ -83,10 +83,12 @@
 import {cloneDeep, isEqual, sortBy} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
+import {Keys} from 'util.keys';
 import {getUUID, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
 import {ButtonText} from '../buttonText';
+import {Icon} from '../icon';
 import {List, ListDivider, ListItem} from '../list';
 import {
 	BaseComponent,
@@ -132,6 +134,7 @@ export function getDefaultPagerProps(): PagerProps {
 
 export interface PagerState {
 	currentPage: number;
+	currentSort: SortOrder;
 	pageSize: number;
 }
 
@@ -144,6 +147,9 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _buttons: any = [];
 	private _buttonStyles: ClassNames = new ClassNames();
 	private _dialog: any = null;
+	private _dialogKeys: Keys = new Keys();
+	private _iconCheck: any = null;
+	private _iconBlank: any = null;
 	private _initialPage: number = 0;
 	private _initialPageSize: number = 0;
 	private _pageSizes: number[] = cloneDeep(defaultPageSizes);
@@ -166,6 +172,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		this.state = {
 			currentPage: this.initialPage,
+			currentSort: SortOrder.ascending,
 			pageSize: this.initialPageSize
 		};
 
@@ -184,10 +191,25 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			'rebuildButtons'
 		);
 
-		this.createButtons();
-		this.createDialog(props);
+		this._iconBlank = (
+			<Icon
+				iconName=""
+				key={getUUID()}
+				sizing={this.props.sizing}
+			/>
+		);
 
-		this.componentWillUpdate(props);
+		this._iconCheck = (
+			<Icon
+				color="green"
+				iconName="check"
+				key={getUUID()}
+				sizing={this.props.sizing}
+			/>
+		);
+
+		this.createButtons();
+		this.componentWillUpdate(this.props);
 	}
 
 	get currentPage(): number {
@@ -378,15 +400,23 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * Dynamically creates the popup dialog menu used to select new values for the
 	 * control.  The values include navigation and changing the page size.
 	 */
-	private createDialog(props: PagerProps) {
+	private createDialog(nextProps: PagerProps, nextState: PagerState) {
 		const items: any = [];
 		const sortOptions = [];
+		let idx: number = 0;
 
-		if (props.onSort && typeof props.onSort === 'function' && props.onSort !== nilEvent) {
+		if (nextProps.onSort && typeof nextProps.onSort === 'function' && nextProps.onSort !== nilEvent) {
 			sortOptions.push(
 				<ListItem
-					{...props}
-					key={getUUID()}
+					{...nextProps}
+					key={this._dialogKeys.at(idx++)}
+					leftButton={
+						nextState.currentSort === SortOrder.ascending
+						?
+						this._iconCheck
+						:
+						this._iconBlank
+					}
 					noedit
 					onSelect={this.handleSortAscending}
 					title="Ascending"
@@ -395,33 +425,52 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 			sortOptions.push(
 				<ListItem
-					{...props}
-					key={getUUID()}
+					{...nextProps}
+					key={this._dialogKeys.at(idx++)}
+					leftButton={
+						nextState.currentSort === SortOrder.descending
+						?
+						this._iconCheck
+						:
+						this._iconBlank
+					}
 					noedit
 					onSelect={this.handleSortDescending}
 					title="Descending"
 				/>
 			);
 
-			sortOptions.push(<ListDivider key={getUUID()} />);
+			sortOptions.push(<ListDivider key={this._dialogKeys.at(idx++)} />);
 		}
 
+		let allFlag: boolean = true;
 		for (const val of sortBy(this.pageSizes)) {
+			let icon: Icon = null;
+
+			if (nextState.pageSize === val) {
+				icon = this._iconCheck;
+				allFlag = false;
+			} else {
+				icon = this._iconBlank;
+			}
+
 			items.push(
 				<ListItem
-					{...props}
-					title={String(val)}
-					key={getUUID()}
+					{...nextProps}
+					key={this._dialogKeys.at(idx++)}
+					leftButton={icon}
 					noedit
 					onSelect={this.handleDialogSelect}
+					title={String(val)}
 				/>
 			);
 		}
 
 		items.push(
 			<ListItem
-				{...props}
-				key={getUUID()}
+				{...nextProps}
+				key={this._dialogKeys.at(idx++)}
+				leftButton={allFlag ? this._iconCheck : this._iconBlank}
 				noedit
 				onSelect={this.handleDialogSelect}
 				title="all"
@@ -429,12 +478,40 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		);
 
 		this._dialog = (
-			<List sizing={props.sizing}>
+			<List sizing={nextProps.sizing}>
 				{sortOptions}
-				<ListItem {...props} title="First" noedit onSelect={this.moveToFront}/>
-				<ListItem {...props} title="Last" noedit onSelect={this.moveToEnd}/>
-				<ListItem {...props} title="Next" noedit onSelect={this.moveToNext}/>
-				<ListItem {...props} title="Previous" noedit onSelect={this.moveToPrevious}/>
+				<ListItem
+					{...nextProps}
+					key={this._dialogKeys.at(idx++)}
+					leftButton={this._iconBlank}
+					noedit
+					onSelect={this.moveToFront}
+					title="First"
+				/>
+				<ListItem
+					{...nextProps}
+					key={this._dialogKeys.at(idx++)}
+					leftButton={this._iconBlank}
+					noedit
+					onSelect={this.moveToEnd}
+					title="Last"
+				/>
+				<ListItem
+					{...nextProps}
+					key={this._dialogKeys.at(idx++)}
+					leftButton={this._iconBlank}
+					noedit
+					onSelect={this.moveToNext}
+					title="Next"
+				/>
+				<ListItem
+					{...nextProps}
+					key={this._dialogKeys.at(idx++)}
+					leftButton={this._iconBlank}
+					noedit
+					onSelect={this.moveToPrevious}
+					title="Previous"
+				/>
 				<ListDivider />
 				{items}
 			</List>
@@ -498,10 +575,12 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	}
 
 	private handleSortAscending() {
+		this.setState({currentSort: SortOrder.ascending});
 		this.props.onSort(SortOrder.ascending);
 	}
 
 	private handleSortDescending() {
+		this.setState({currentSort: SortOrder.descending});
 		this.props.onSort(SortOrder.descending);
 	}
 
@@ -564,12 +643,13 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			this.currentPage = this.initialPage;
 			this.pageSize = this.initialPageSize;
 
-			this.createDialog(nextProps);
+			this.createDialog(nextProps, this.state);
 		}
 	}
 
 	public render() {
 		this.createButtons();
+		this.createDialog(this.props, this.state);
 
 		return (
 			<div className={this._rootStyles.classnames}>
