@@ -1,5 +1,583 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test disabling of a Tab 1`] = `
+<Tab
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  focus={false}
+  height=""
+  href={
+    Object {
+      "selectHandler": [Function],
+    }
+  }
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  onClose={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  title="tab title"
+  visible={true}
+  width=""
+>
+  <div
+    className="ui-tab tab normal disabled nohover"
+    style={
+      Object {
+        "minWidth": "75px",
+        "width": "",
+      }
+    }
+  >
+    <Title
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      height=""
+      href={
+        Object {
+          "selectHandler": [Function],
+        }
+      }
+      id=""
+      layout={5}
+      location="none"
+      noedit={true}
+      nohover={false}
+      noripple={true}
+      onClick={[Function]}
+      onClose={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      title="tab title"
+      visible={true}
+      widget={
+        <Button
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "selectHandler": [Function],
+            }
+          }
+          iconName="times"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          onClose={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          title="tab title"
+          visible={true}
+          width=""
+        >
+          Test content
+        </Button>
+      }
+      width=""
+    >
+      <div
+        className="ui-title-bar titleBar normal disabled nohover"
+        style={Object {}}
+      >
+        <Label
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className="ui-title title titleDominant"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "selectHandler": [Function],
+            }
+          }
+          id=""
+          layout={5}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onClose={[Function]}
+          onDoubleClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onUpdate={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          text="tab title"
+          title="tab title"
+          useedit={false}
+          visible={true}
+          widget={
+            <Button
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className=""
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={true}
+              focus={false}
+              height=""
+              href={
+                Object {
+                  "selectHandler": [Function],
+                }
+              }
+              iconName="times"
+              iconStyle=""
+              id=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              onClick={[Function]}
+              onClose={[Function]}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              title="tab title"
+              visible={true}
+              width=""
+            >
+              Test content
+            </Button>
+          }
+          width=""
+        >
+          <span
+            className="ui-label label normal ui-title title titleDominant disabled nohover"
+            contentEditable={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            style={
+              Object {
+                "backgroundColor": "inherit",
+                "color": "inherit",
+              }
+            }
+            suppressContentEditableWarning={true}
+          >
+            tab title
+          </span>
+        </Label>
+        <div
+          className="ui-title-widget widget widgetDominant normal"
+        >
+          <Button
+            backgroundColor="inherit"
+            borderColor="inherit"
+            borderWidth="none"
+            className=""
+            color="inherit"
+            contentEditable={false}
+            direction="right"
+            disabled={true}
+            focus={false}
+            height=""
+            href={
+              Object {
+                "selectHandler": [Function],
+              }
+            }
+            iconName="times"
+            iconStyle=""
+            id=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            onClose={[Function]}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            title="tab title"
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button normal disabled nohover"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Icon
+                backgroundColor="inherit"
+                borderColor="inherit"
+                borderWidth="none"
+                className="icon"
+                color="inherit"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="times"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="normal"
+                style={Object {}}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-times normal"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </Title>
+  </div>
+</Tab>
+`;
+
+exports[`Test making a Tab invisible 1`] = `
+<Tab
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  height=""
+  href={
+    Object {
+      "orientation": "top",
+      "selectHandler": [Function],
+      "sizing": "normal",
+    }
+  }
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  onClose={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  title="tab title"
+  visible={false}
+  width=""
+>
+  <div
+    className="ui-tab tab tabBorderTop normal invisible"
+    style={
+      Object {
+        "minWidth": "75px",
+        "width": "",
+      }
+    }
+  >
+    <Title
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      href={
+        Object {
+          "orientation": "top",
+          "selectHandler": [Function],
+          "sizing": "normal",
+        }
+      }
+      id=""
+      layout={5}
+      location="none"
+      noedit={true}
+      nohover={false}
+      noripple={true}
+      onClick={[Function]}
+      onClose={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      title="tab title"
+      visible={true}
+      widget={
+        <Button
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "orientation": "top",
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          iconName="times"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          onClose={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          title="tab title"
+          visible={false}
+          width=""
+        >
+          Test content
+        </Button>
+      }
+      width=""
+    >
+      <div
+        className="ui-title-bar titleBar normal"
+        style={Object {}}
+      >
+        <Label
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className="ui-title title titleDominant"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "orientation": "top",
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          layout={5}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onClose={[Function]}
+          onDoubleClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onUpdate={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          text="tab title"
+          title="tab title"
+          useedit={false}
+          visible={true}
+          widget={
+            <Button
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className=""
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              href={
+                Object {
+                  "orientation": "top",
+                  "selectHandler": [Function],
+                  "sizing": "normal",
+                }
+              }
+              iconName="times"
+              iconStyle=""
+              id=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              onClick={[Function]}
+              onClose={[Function]}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              title="tab title"
+              visible={false}
+              width=""
+            >
+              Test content
+            </Button>
+          }
+          width=""
+        >
+          <span
+            className="ui-label label normal ui-title title titleDominant"
+            contentEditable={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            style={
+              Object {
+                "backgroundColor": "inherit",
+                "color": "inherit",
+              }
+            }
+            suppressContentEditableWarning={true}
+          >
+            tab title
+          </span>
+        </Label>
+        <div
+          className="ui-title-widget widget widgetDominant normal"
+        >
+          <Button
+            backgroundColor="inherit"
+            borderColor="inherit"
+            borderWidth="none"
+            className=""
+            color="inherit"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            href={
+              Object {
+                "orientation": "top",
+                "selectHandler": [Function],
+                "sizing": "normal",
+              }
+            }
+            iconName="times"
+            iconStyle=""
+            id=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            onClose={[Function]}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            title="tab title"
+            visible={false}
+            width=""
+          >
+            <div
+              className="ui-button button ripple normal invisible"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Icon
+                backgroundColor="inherit"
+                borderColor="inherit"
+                borderWidth="none"
+                className="icon"
+                color="inherit"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="times"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="normal"
+                style={Object {}}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-times normal"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </Title>
+  </div>
+</Tab>
+`;
+
 exports[`Test retrieval of Tab props object 1`] = `
 Object {
   "backgroundColor": "inherit",
@@ -31,4 +609,656 @@ Object {
   "visible": true,
   "width": "",
 }
+`;
+
+exports[`Test the click handler in the Tab instnace 1`] = `
+<Tab
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  height=""
+  href={
+    Object {
+      "selectHandler": [Function],
+    }
+  }
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  onClose={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  title="tab title"
+  visible={true}
+  width=""
+>
+  <div
+    className="ui-tab tab normal"
+    style={
+      Object {
+        "minWidth": "75px",
+        "width": "",
+      }
+    }
+  >
+    <Title
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      href={
+        Object {
+          "selectHandler": [Function],
+        }
+      }
+      id=""
+      layout={5}
+      location="none"
+      noedit={true}
+      nohover={false}
+      noripple={true}
+      onClick={[Function]}
+      onClose={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      title="tab title"
+      visible={true}
+      widget={
+        <Button
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "selectHandler": [Function],
+            }
+          }
+          iconName="times"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          onClose={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          title="tab title"
+          visible={true}
+          width=""
+        >
+          Test content
+        </Button>
+      }
+      width=""
+    >
+      <div
+        className="ui-title-bar titleBar normal"
+        style={Object {}}
+      >
+        <Label
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className="ui-title title titleDominant"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "selectHandler": [Function],
+            }
+          }
+          id=""
+          layout={5}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onClose={[Function]}
+          onDoubleClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onUpdate={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          text="tab title"
+          title="tab title"
+          useedit={false}
+          visible={true}
+          widget={
+            <Button
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className=""
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              href={
+                Object {
+                  "selectHandler": [Function],
+                }
+              }
+              iconName="times"
+              iconStyle=""
+              id=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              onClick={[Function]}
+              onClose={[Function]}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              title="tab title"
+              visible={true}
+              width=""
+            >
+              Test content
+            </Button>
+          }
+          width=""
+        >
+          <span
+            className="ui-label label normal ui-title title titleDominant"
+            contentEditable={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            style={
+              Object {
+                "backgroundColor": "inherit",
+                "color": "inherit",
+              }
+            }
+            suppressContentEditableWarning={true}
+          >
+            tab title
+          </span>
+        </Label>
+        <div
+          className="ui-title-widget widget widgetDominant normal"
+        >
+          <Button
+            backgroundColor="inherit"
+            borderColor="inherit"
+            borderWidth="none"
+            className=""
+            color="inherit"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            href={
+              Object {
+                "selectHandler": [Function],
+              }
+            }
+            iconName="times"
+            iconStyle=""
+            id=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            onClose={[Function]}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            title="tab title"
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button ripple normal"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Icon
+                backgroundColor="inherit"
+                borderColor="inherit"
+                borderWidth="none"
+                className="icon"
+                color="inherit"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="times"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="normal"
+                style={Object {}}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-times normal"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </Title>
+  </div>
+</Tab>
+`;
+
+exports[`Test the close click handler on a Tab instance 1`] = `
+<Tab
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  height=""
+  href={
+    Object {
+      "hiddenTabHandler": [Function],
+    }
+  }
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  onClose={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  title="tab title"
+  visible={true}
+  width=""
+>
+  <div
+    className="ui-tab tab normal"
+    style={
+      Object {
+        "minWidth": "75px",
+        "width": "",
+      }
+    }
+  >
+    <Title
+      backgroundColor="inherit"
+      borderColor="inherit"
+      borderWidth="none"
+      className=""
+      color="inherit"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      href={
+        Object {
+          "hiddenTabHandler": [Function],
+        }
+      }
+      id=""
+      layout={5}
+      location="none"
+      noedit={true}
+      nohover={false}
+      noripple={true}
+      onClick={[Function]}
+      onClose={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      title="tab title"
+      visible={true}
+      widget={
+        <Button
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className=""
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "hiddenTabHandler": [Function],
+            }
+          }
+          iconName="times"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          onClose={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          title="tab title"
+          visible={true}
+          width=""
+        >
+          Test content
+        </Button>
+      }
+      width=""
+    >
+      <div
+        className="ui-title-bar titleBar normal"
+        style={Object {}}
+      >
+        <Label
+          backgroundColor="inherit"
+          borderColor="inherit"
+          borderWidth="none"
+          className="ui-title title titleDominant"
+          color="inherit"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "hiddenTabHandler": [Function],
+            }
+          }
+          id=""
+          layout={5}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onClose={[Function]}
+          onDoubleClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onUpdate={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          text="tab title"
+          title="tab title"
+          useedit={false}
+          visible={true}
+          widget={
+            <Button
+              backgroundColor="inherit"
+              borderColor="inherit"
+              borderWidth="none"
+              className=""
+              color="inherit"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              href={
+                Object {
+                  "hiddenTabHandler": [Function],
+                }
+              }
+              iconName="times"
+              iconStyle=""
+              id=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              onClick={[Function]}
+              onClose={[Function]}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              title="tab title"
+              visible={true}
+              width=""
+            >
+              Test content
+            </Button>
+          }
+          width=""
+        >
+          <span
+            className="ui-label label normal ui-title title titleDominant"
+            contentEditable={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            style={
+              Object {
+                "backgroundColor": "inherit",
+                "color": "inherit",
+              }
+            }
+            suppressContentEditableWarning={true}
+          >
+            tab title
+          </span>
+        </Label>
+        <div
+          className="ui-title-widget widget widgetDominant normal"
+        >
+          <Button
+            backgroundColor="inherit"
+            borderColor="inherit"
+            borderWidth="none"
+            className=""
+            color="inherit"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            href={
+              Object {
+                "hiddenTabHandler": [Function],
+              }
+            }
+            iconName="times"
+            iconStyle=""
+            id=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            onClose={[Function]}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            title="tab title"
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button ripple normal"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Icon
+                backgroundColor="inherit"
+                borderColor="inherit"
+                borderWidth="none"
+                className="icon"
+                color="inherit"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="times"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="normal"
+                style={Object {}}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-times normal"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </Title>
+  </div>
+</Tab>
+`;
+
+exports[`Test the creation of a Tab instance 1`] = `
+<div
+  className="ui-tab tab ui-selected tabBorderTop normal"
+  style={
+    Object {
+      "minWidth": "75px",
+      "width": "",
+    }
+  }
+>
+  <Title
+    backgroundColor="inherit"
+    borderColor="inherit"
+    borderWidth="none"
+    className=""
+    color="inherit"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    href={
+      Object {
+        "orientation": "top",
+        "selectHandler": [Function],
+        "sizing": "normal",
+      }
+    }
+    id=""
+    layout={5}
+    location="none"
+    noedit={true}
+    nohover={false}
+    noripple={true}
+    onClick={[Function]}
+    onClose={[Function]}
+    selected={true}
+    sizing="normal"
+    style={Object {}}
+    title="tab title"
+    visible={true}
+    widget={
+      <Button
+        backgroundColor="inherit"
+        borderColor="inherit"
+        borderWidth="none"
+        className=""
+        color="inherit"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        focus={false}
+        height=""
+        href={
+          Object {
+            "orientation": "top",
+            "selectHandler": [Function],
+            "sizing": "normal",
+          }
+        }
+        iconName="times"
+        iconStyle=""
+        id=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        onClick={[Function]}
+        onClose={[Function]}
+        selected={true}
+        sizing="normal"
+        style={Object {}}
+        title="tab title"
+        visible={true}
+        width=""
+      >
+        Test content
+      </Button>
+    }
+    width=""
+  >
+    Test content
+  </Title>
+</div>
 `;

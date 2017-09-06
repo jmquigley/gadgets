@@ -195,7 +195,7 @@ The tag list control is a basic list of strings that act as metadata for another
 ### Table
 TODO: create the Table control
 
-### [TabContainer](docs/lib/tabs/TabContainer.md)/[Tab](docs/lib/tabs/Tab.md)
+### [TabContainer](docs/lib/tabs/TabContainer.md) ([Tab](docs/lib/tabs/Tab.md))
 A typical tab control container.  This manages `Tab` elements within it.
 
 ### [TextField](docs/lib/textField/TextField.md) ([Validator](docs/lib/textField/validator.md))

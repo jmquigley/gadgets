@@ -51,6 +51,7 @@
 'use strict';
 
 import {cloneDeep} from 'lodash';
+import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {
@@ -165,7 +166,13 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 					noripple
 					onClick={!this.props.disabled && this.props.visible ? this.handleClick : nilEvent}
 					title={this.props.title}
-					widget={<Button iconName="times" onClick={this.handleClose} />}
+					widget={
+						<Button
+							{...this.props}
+							iconName="times"
+							onClick={this.handleClose}
+						/>
+					}
 					visible={!this.state.hidden}
 				/>
 			</div>
