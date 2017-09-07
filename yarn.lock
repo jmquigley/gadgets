@@ -7005,6 +7005,13 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
+util.calc@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/util.calc/-/util.calc-0.0.2.tgz#7971e55a31c6662ce16f8dfe53e9f457a17c69a1"
+  dependencies:
+    util.pkgwrap "0.0.67"
+    util.toolbox "^0.0.43"
+
 util.classnames@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/util.classnames/-/util.classnames-0.0.10.tgz#ee9405ce49cdb3424ee03eaf70b9b844f4988763"
@@ -7087,6 +7094,15 @@ util.toolbox@0.0.36:
 util.toolbox@0.0.42, util.toolbox@^0.0.42:
   version "0.0.42"
   resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.42.tgz#fb8e7aea06de633c53b633161314ea44bbde66af"
+  dependencies:
+    fs-extra "^4.0.1"
+    util.pkgwrap "0.0.67"
+    util.rstrip "0.0.23"
+    uuid "^3.1.0"
+
+util.toolbox@^0.0.43:
+  version "0.0.43"
+  resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.43.tgz#f4f99207189506c5e5b18d503d212a8f1ee276e1"
   dependencies:
     fs-extra "^4.0.1"
     util.pkgwrap "0.0.67"

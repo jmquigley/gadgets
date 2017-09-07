@@ -44,6 +44,7 @@
 'use strict';
 
 import * as React from 'react';
+import {calc} from 'util.calc';
 import {ClassNames} from 'util.classnames';
 import {FontStyle, Sizes, Sizing, Styling} from './index';
 
@@ -175,6 +176,10 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		return this.sizes[sizing].font.size;
 	}
 
+	protected fontSizePX(sizing: Sizing = this.sizing, scale: number = 1.0): string {
+		return calc(this.sizes[sizing].font.sizepx, `* ${scale}`);
+	}
+
 	protected fontStyle(sizing: Sizing = this.sizing): string {
 		return this.sizes[sizing].font.style;
 	}
@@ -231,6 +236,17 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		default:
 			return this._sizes[Sizing.normal];
 		}
+	}
+
+	/**
+	 * Retrieves styles that define the width/height of a rectangle base on the
+	 * given Sizing.
+	 * @param sizing {Sizing} an optional parameter that allows for overriding
+	 * the default sizing when the class is created.
+	 * @returns a string that represents the local CSS module style
+	 */
+	protected rectStyle(sizing: Sizing = this.sizing): string {
+		return this.sizes[sizing].rectStyle;
 	}
 
 	protected styling(sizing: Sizing = this.sizing): Styling {

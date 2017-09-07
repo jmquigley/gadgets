@@ -1,6 +1,11 @@
-import {getDefaultSwitchProps, Switch} from './Switch';
+import {
+	getDefaultSwitchProps,
+	Switch,
+	SwitchType
+} from './Switch';
 
 export {
 	getDefaultSwitchProps,
-	Switch
+	Switch,
+	SwitchType
 };

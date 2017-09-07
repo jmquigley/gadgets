@@ -47,7 +47,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.tsx?$/,
-				exclude: /node_modules|dist/,
+				exclude: /node_modules|dist|demo/,
 				loader: 'js-output-loader!awesome-typescript-loader?useBabel=true&useCache=true'
 			},
 			{

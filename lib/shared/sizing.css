@@ -144,4 +144,43 @@ $xxlarge-fs: 3.0rem;
 		height: inherit;
 	}
 
+	.xxsmallRect {
+		width: calc($xxsmall * 2);
+		height: $xxsmall;
+	}
+
+	.xsmallRect {
+		width: calc($xsmall * 2);
+		height: $xsmall;
+	}
+
+	.smallRect {
+		width: calc($small * 2);
+		height: $small;
+	}
+
+	.mediumRect, .normalRect {
+		width: calc($medium * 2);
+		height: $medium;
+	}
+
+	.largeRect {
+		width: calc($large * 2);
+		height: $large;
+	}
+
+	.xlargeRect {
+		width: calc($xlarge * 2);
+		height: $xlarge;
+	}
+
+	.xxlargeRect {
+		width: calc($xxlarge * 2);
+		height: $xxlarge;
+	}
+
+	.inheritRect {
+		width: inherit;
+		height: inherit;
+	}
 }

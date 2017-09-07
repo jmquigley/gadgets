@@ -71,6 +71,7 @@ export interface Styling {
 	borderStyle: string;
 	boxStyle: string;
 	font: FontStyle;
+	rectStyle: string;
 }
 
 export class Sizes {
@@ -109,6 +110,7 @@ export class Sizes {
 				type: key,
 				borderStyle: Sizes.styles[`${key}Border`],
 				boxStyle: Sizes.styles[`${key}Box`],
+				rectStyle: Sizes.styles[`${key}Rect`],
 				font: {
 					size: valSize,
 					sizerem: `${valSize / baseFontSize}rem`,
