@@ -94,6 +94,7 @@ export interface TabContainerProps extends BaseProps {
 	onRemove?: any;
 	onSelect?: any;
 	tabWidth?: number;
+	testing?: boolean;
 }
 
 export function getDefaultTabContainerProps(): TabContainerProps {
@@ -106,7 +107,8 @@ export function getDefaultTabContainerProps(): TabContainerProps {
 			nonavigation: false,
 			onRemove: nilEvent,
 			onSelect: nilEvent,
-			tabWidth: 75
+			tabWidth: 75,
+			testing: false
 		})
 	);
 }
@@ -155,7 +157,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	constructor(props: TabContainerProps) {
 		super(props, styles);
 
-		this._keys = new Keys();
+		this._keys = new Keys({testing: this.props.testing});
 
 		this._rootStyles.add([
 			'ui-tab-container'

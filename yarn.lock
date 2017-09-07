@@ -7033,12 +7033,12 @@ util.join@^0.0.12:
     util.home "0.0.17"
     util.pkgwrap "0.0.59"
 
-util.keys@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/util.keys/-/util.keys-0.0.4.tgz#73ff74ca48001a94f398bfbbbfc9c6679a3b0767"
+util.keys@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/util.keys/-/util.keys-0.0.6.tgz#fc84e4c2ccbe5146eda0cd2d61c157192a559681"
   dependencies:
     util.pkgwrap "0.0.67"
-    util.toolbox "^0.0.39"
+    util.toolbox "^0.0.42"
 
 util.pkgwrap@0.0.59:
   version "0.0.59"
@@ -7084,21 +7084,12 @@ util.toolbox@0.0.36:
     util.rstrip "0.0.23"
     uuid "^3.1.0"
 
-util.toolbox@0.0.42:
+util.toolbox@0.0.42, util.toolbox@^0.0.42:
   version "0.0.42"
   resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.42.tgz#fb8e7aea06de633c53b633161314ea44bbde66af"
   dependencies:
     fs-extra "^4.0.1"
     util.pkgwrap "0.0.67"
-    util.rstrip "0.0.23"
-    uuid "^3.1.0"
-
-util.toolbox@^0.0.39:
-  version "0.0.39"
-  resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.39.tgz#85205532a800148d6403ebd0e22924732b33da45"
-  dependencies:
-    fs-extra "^3.0.1"
-    util.pkgwrap "0.0.59"
     util.rstrip "0.0.23"
     uuid "^3.1.0"
 
