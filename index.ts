@@ -27,6 +27,7 @@ import {
 	SortOrder,
 	Styling
 } from './lib/shared';
+import {Switch} from './lib/switch';
 import {Tab, TabContainer} from './lib/tabs';
 import {Tag, TagList} from './lib/tagList';
 import {
@@ -73,6 +74,7 @@ export {
 	Sizing,
 	SortOrder,
 	Styling,
+	Switch,
 	TextField,
 	Tab,
 	TabContainer,
