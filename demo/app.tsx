@@ -951,8 +951,11 @@ class App extends React.Component<AppProps, AppState> {
 					maxTabs={3}
 					location={Location.right}
 					nonavigation
+					onRemove={(tab: any) => {
+						debug(`removing %o (id=${tab.props['id']})`, tab);
+					}}
 					onSelect={(tab: any, previous: any) => {
-							debug(`new: %o (id=${tab.props['id']}), old: %o (id=${previous.props['id']})`, tab, previous);
+						debug(`new: %o (id=${tab.props['id']}), old: %o (id=${previous.props['id']})`, tab, previous);
 					}}
 				>
 					<p>Bad tab type to be ignored</p>
@@ -961,6 +964,25 @@ class App extends React.Component<AppProps, AppState> {
 					<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
 					<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
 				</TabContainer>
+				<br />
+
+				<h3>Disabled Tab within container</h3>
+				<TabContainer location={Location.bottom}>
+					<Tab title="tab #1" disabled>#1<br/><br/>{randomText}</Tab>
+					<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
+					<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
+					<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
+				</TabContainer>
+				<br/>
+
+				<h3>Disabled Container</h3>
+				<TabContainer disabled location={Location.bottom}>
+					<Tab title="tab #1">#1<br/><br/>{randomText}</Tab>
+					<Tab title="tab #2">#2<br/><br/>{randomText}</Tab>
+					<Tab title="tab #3">#3<br/><br/>{randomText}</Tab>
+					<Tab title="tab #4">#4<br/><br/>{randomText}</Tab>
+				</TabContainer>
+				<br/>
 
 			</Container>
 		);

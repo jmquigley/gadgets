@@ -1,7 +1,7 @@
 'use strict';
 
 import * as assert from 'assert';
-import {mount, shallow} from 'enzyme';
+import {shallow} from 'enzyme';
 import * as React from 'react';
 import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from '../index';
 
@@ -86,17 +86,17 @@ test('Test the creation of an custom DialogBox', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test pressing the "yes" button on the default DialogBox', () => {
-	const selection = jest.fn();
-	const ctl = mount(
-		<DialogBox
-			message="Testing click handler for yes"
-			onSelection={selection}
-			show
-		/>
-	);
-
-	assert(ctl);
-	expect(ctl).toMatchSnapshot();
-	assert(ctl.state('showModal'));
-});
+/* test('Test pressing the "yes" button on the default DialogBox', () => {
+ * 	const selection = jest.fn();
+ * 	const ctl = mount(
+ * 		<DialogBox
+ * 			message="Testing click handler for yes"
+ * 			onSelection={selection}
+ * 			show
+ * 		/>
+ * 	);
+ *
+ * 	assert(ctl);
+ * 	expect(ctl).toMatchSnapshot();
+ * 	assert(ctl.state('showModal'));
+ * });*/

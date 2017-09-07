@@ -12,6 +12,9 @@
  *      maxTabs={3}
  *      location={Location.bottom}
  *      nonavigation
+ *      onRemove={(tab: any) => {
+ *          debug(removing %o (id=${tab.props['id']})`, tab);
+ *      }}
  *      onSelect={(tab: any, previous: any) => {
  *          debug(`new: %o (id=${tab.props['id']}),
  *              old: %o (id=${previous.props['id']})`, tab, previous);
@@ -30,6 +33,8 @@
  * be suppressed.
  *
  * #### Events
+ * - `onRemove(tab)` - When a tab is removed this event is invoked.  The
+ * callback will receive the tab instance that was removed.
  * - `onSelect(tab, previousTab)` - When a `Tab` is selected this event is
  * invoked.  The callback will receive a reference to the selected tab and the
  * previous tab.  If there is no previous tab, then the selected and
@@ -86,6 +91,7 @@ export interface TabContainerProps extends BaseProps {
 	maxTabs?: number;
 	noclose?: boolean;
 	nonavigation?: boolean;
+	onRemove?: any;
 	onSelect?: any;
 	tabWidth?: number;
 }
@@ -98,6 +104,7 @@ export function getDefaultTabContainerProps(): TabContainerProps {
 			maxTabs: 5,
 			noclose: false,
 			nonavigation: false,
+			onRemove: nilEvent,
 			onSelect: nilEvent,
 			tabWidth: 75
 		})
@@ -125,7 +132,7 @@ export const TabContent = (props: any) => (
 );
 
 export const TabNavigation = (props: any) => (
-	!props.nonavigation && (
+	!props.nonavigation && !props.disabled && (
 		<div className={props.className}>
 			<Button iconName="chevron-left" onClick={props.handleLeftClick}/>
 			<Button iconName="chevron-right" onClick={props.handleRightClick}/>
@@ -136,7 +143,7 @@ export const TabNavigation = (props: any) => (
 export class TabContainer extends BaseComponent<TabContainerProps, TabContainerState> {
 
 	private _containerWidth: number = 0;
-	private _keys: Keys = new Keys();
+	private _keys: Keys;
 	private _tabBarStyles: ClassNames = new ClassNames();
 	private _tabContent: any = null;
 	private _tabContentStyles: ClassNames = new ClassNames();
@@ -147,6 +154,8 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 	constructor(props: TabContainerProps) {
 		super(props, styles);
+
+		this._keys = new Keys();
 
 		this._rootStyles.add([
 			'ui-tab-container'
@@ -172,7 +181,8 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			let pos: number = 0;
 
 			for (const child of children) {
-				if (child['type'] === Tab && child['props']['visible']) {
+
+				if (child['type'] === Tab && (child['props']['visible'] && !child['props']['disabled'])) {
 					this._tabs[pos] = React.cloneElement(child as any, {
 						id: this._keys.at(pos),
 						key: this._keys.at(pos)
@@ -188,7 +198,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		}
 
 		this.state = {
-			selectedTab: this._tabs[0].props['id']
+			selectedTab: this._tabs.length > 0 ? this._tabs[0].props['id'] : null
 		};
 
 		this.bindCallbacks(
@@ -206,7 +216,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	 * tab.
 	 */
 	get currentIdx(): number {
-		return this.getTabIdx(this.state.selectedTab);
+		return this._getTabIdx(this.state.selectedTab);
 	}
 
 	/**
@@ -219,45 +229,18 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	}
 
 	/**
-	 * Searches the current tab list and finds the tab object associated with
-	 * the given id.
-	 * @param id {string} the id value associated with a Tag to find
-	 * @return {tuple} a tuple reference to the Tag object associated with this
-	 * id and its index position within the child array.  It returns null if
-	 * the tag is not found.
+	 * @return {any[]} the child tab array used by this control.  This only
+	 * useful for testing purposes.
 	 */
-	private getTab(id: string): any {
-		for (const [idx, tab] of this._tabs.entries()) {
-			if (tab.props['id'] === id) {
-				return [this._tabs[idx], idx];
-			}
-		}
-
-		return null;
-	}
-
-	/**
-	 * Searches the current tab list and finds the tab index associated with
-	 * the given id.
-	 * @param id {string} the id value associated with a Tag to find
-	 * @return {number} the number index of this id with the tabs array.  If
-	 * the value is not found it returns -1.
-	 */
-	private getTabIdx(id: string): number {
-		for (const [idx, tab] of this._tabs.entries()) {
-			if (tab.props['id'] === id) {
-				return idx;
-			}
-		}
-
-		return -1;
+	get tabs(): any[] {
+		return this._tabs;
 	}
 
 	private handlePreviousTab() {
 		const idx: number = this.currentIdx;
 
 		if (this._tabs.length && idx - 1 >= 0) {
-			this.selectedTab = this._tabs[idx - 1].props['id'];
+			this.selectHandler(this._tabs[idx - 1]);
 		}
 	}
 
@@ -265,7 +248,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		const idx: number = this.currentIdx;
 
 		if (this._tabs.length && idx + 1 <= this._tabs.length - 1) {
-			this.selectedTab = this._tabs[idx + 1].props['id'];
+			this.selectHandler(this._tabs[idx + 1]);
 		}
 	}
 
@@ -274,7 +257,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		// try to get the one to the left first.  If that doesn't exist
 		// the get the one to the right.  If that doesn't exist (it was
 		// the last tab), then set to null
-		const idx: number = this.getTabIdx(tab.props['id']);
+		const idx: number = this._getTabIdx(tab.props['id']);
 		let id: string = null;
 
 		if (idx - 1 >= 0) {
@@ -285,14 +268,56 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 		this._tabs.splice(idx, 1);
 		this.selectedTab = id;
+		this.props.onRemove(tab);
 	}
 
 	private selectHandler(tab: Tab) {
-		const [previous, idx] = this.getTab(this.state.selectedTab);
+		const [previous, idx] = this._getTab(this.state.selectedTab);
 
 		this.selectedTab = tab.props['id'];
 		this.props.onSelect(tab, previous ? previous : tab);
 		debug(`selected tab: ${tab.props['id']}, tab: %O, previous @ ${idx}: %O`, tab, previous);
+	}
+
+	/**
+	 * Searches the current tab list and finds the tab object associated with
+	 * the given id.  This method is private by convention.  It is only exposed
+	 * for testing purposes.
+	 * @param id {string} the id value associated with a Tag to find
+	 * @return {tuple} a tuple reference to the Tag object associated with this
+	 * id and its index position within the child array.  It returns null if
+	 * the tag is not found.
+	 */
+	public _getTab(id: string): any {
+		if (id) {
+			for (const [idx, tab] of this._tabs.entries()) {
+				if (tab.props['id'] === id) {
+					return [this._tabs[idx], idx];
+				}
+			}
+		}
+
+		return [null, -1];
+	}
+
+	/**
+	 * Searches the current tab list and finds the tab index associated with
+	 * the given id.  This method is private by convention.  It is only exposed
+	 * for testing purposes.
+	 * @param id {string} the id value associated with a Tag to find
+	 * @return {number} the number index of this id with the tabs array.  If
+	 * the value is not found it returns -1.
+	 */
+	public _getTabIdx(id: string): number {
+		if (id) {
+			for (const [idx, tab] of this._tabs.entries()) {
+				if (tab.props['id'] === id) {
+					return idx;
+				}
+			}
+		}
+
+		return -1;
 	}
 
 	public componentWillUpdate(nextProps: TabContainerProps, nextState: TabContainerState) {
@@ -323,12 +348,17 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 			for (const [idx, child] of this._tabs.entries()) {
 				const selected = nextState.selectedTab === child.props['id'];
+				const opts = {};
 
-				if (selected) {
+				if (this.props.disabled) {
+					opts['disabled'] = true;
+				}
+
+				if (selected && !nextProps.disabled) {
 					this._tabContent = child['props'].children;
 				}
 
-				this._tabs[idx] = React.cloneElement(child as any, {
+				this._tabs[idx] = React.cloneElement(child as any, Object.assign({
 						href: {
 							hiddenTabHandler: this.hiddenTabHandler,
 							orientation: nextProps.location,
@@ -337,7 +367,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 						},
 						selected: selected,
 						width: `${nextProps.tabWidth}px`
-					});
+					}, opts));
 			}
 
 			// Sets the default width of the content container for the component

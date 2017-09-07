@@ -57,7 +57,7 @@ test('Test making a Tab invisible', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test the click handler in the Tab instnace', () => {
+test('Test the click handler in the Tab instance', () => {
 	const click = sinon.spy();
 	const ctl = mount(
 		<Tab

@@ -167,6 +167,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 					onClick={!this.props.disabled && this.props.visible ? this.handleClick : nilEvent}
 					title={this.props.title}
 					widget={
+						!this.props.disabled &&
 						<Button
 							{...this.props}
 							iconName="times"

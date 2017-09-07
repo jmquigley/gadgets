@@ -141,65 +141,6 @@ exports[`Test creation of a default DialogBox control 1`] = `
 </Modal>
 `;
 
-exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
-<DialogBox
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
-  className=""
-  color="inherit"
-  contentEditable={false}
-  dialogType="info"
-  direction="right"
-  disabled={false}
-  focus={false}
-  height=""
-  iconName="bomb"
-  id=""
-  location="none"
-  message="Testing click handler for yes"
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  onClose={[Function]}
-  onOpen={[Function]}
-  onSelection={[Function]}
-  selected={false}
-  show={true}
-  sizing="normal"
-  style={Object {}}
-  visible={true}
-  width=""
->
-  <Modal
-    ariaHideApp={true}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="DialogBox"
-    isOpen={true}
-    onAfterOpen={[Function]}
-    onRequestClose={[Function]}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    shouldCloseOnOverlayClick={false}
-    shouldFocusAfterRender={true}
-    style={
-      Object {
-        "content": Object {
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "padding": "15px",
-          "right": "auto",
-          "top": "40%",
-          "transform": "translate(-50%, -50%)",
-        },
-      }
-    }
-  />
-</DialogBox>
-`;
-
 exports[`Test retrieval of DialogBox props object 1`] = `
 Object {
   "backgroundColor": "inherit",

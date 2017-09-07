@@ -69,42 +69,7 @@ exports[`Test disabling of a Tab 1`] = `
       style={Object {}}
       title="tab title"
       visible={true}
-      widget={
-        <Button
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
-          className=""
-          color="inherit"
-          contentEditable={false}
-          direction="right"
-          disabled={true}
-          focus={false}
-          height=""
-          href={
-            Object {
-              "selectHandler": [Function],
-            }
-          }
-          iconName="times"
-          iconStyle=""
-          id=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          onClick={[Function]}
-          onClose={[Function]}
-          selected={false}
-          sizing="normal"
-          style={Object {}}
-          title="tab title"
-          visible={true}
-          width=""
-        >
-          Test content
-        </Button>
-      }
+      widget={false}
       width=""
     >
       <div
@@ -148,42 +113,7 @@ exports[`Test disabling of a Tab 1`] = `
           title="tab title"
           useedit={false}
           visible={true}
-          widget={
-            <Button
-              backgroundColor="inherit"
-              borderColor="inherit"
-              borderWidth="none"
-              className=""
-              color="inherit"
-              contentEditable={false}
-              direction="right"
-              disabled={true}
-              focus={false}
-              height=""
-              href={
-                Object {
-                  "selectHandler": [Function],
-                }
-              }
-              iconName="times"
-              iconStyle=""
-              id=""
-              location="none"
-              noedit={false}
-              nohover={false}
-              noripple={false}
-              onClick={[Function]}
-              onClose={[Function]}
-              selected={false}
-              sizing="normal"
-              style={Object {}}
-              title="tab title"
-              visible={true}
-              width=""
-            >
-              Test content
-            </Button>
-          }
+          widget={false}
           width=""
         >
           <span
@@ -207,76 +137,7 @@ exports[`Test disabling of a Tab 1`] = `
         </Label>
         <div
           className="ui-title-widget widget widgetDominant normal"
-        >
-          <Button
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
-            className=""
-            color="inherit"
-            contentEditable={false}
-            direction="right"
-            disabled={true}
-            focus={false}
-            height=""
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            onClose={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            title="tab title"
-            visible={true}
-            width=""
-          >
-            <div
-              className="ui-button button normal disabled nohover"
-              onClick={[Function]}
-              style={Object {}}
-            >
-              <Icon
-                backgroundColor="inherit"
-                borderColor="inherit"
-                borderWidth="none"
-                className="icon"
-                color="inherit"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                iconName="times"
-                id=""
-                imageFile=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                visible={true}
-                width=""
-              >
-                <i
-                  className="ui-icon icon none fa fa-fw fa-times normal"
-                  style={Object {}}
-                />
-              </Icon>
-            </div>
-          </Button>
-        </div>
+        />
       </div>
     </Title>
   </div>
@@ -611,7 +472,7 @@ Object {
 }
 `;
 
-exports[`Test the click handler in the Tab instnace 1`] = `
+exports[`Test the click handler in the Tab instance 1`] = `
 <Tab
   backgroundColor="inherit"
   borderColor="inherit"
