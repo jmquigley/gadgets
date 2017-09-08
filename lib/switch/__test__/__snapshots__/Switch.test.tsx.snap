@@ -1,5 +1,161 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test creation of an inny type Switch 1`] = `
+<div
+  className="ui-switch container normal"
+  style={
+    Object {
+      "height": "24px",
+    }
+  }
+>
+  <div
+    className="ui-switch-slider slider normalRect ui-slider-on sliderOn"
+  >
+    <div
+      className="ui-switch-button buttonRightInny ripple"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": "12.8px",
+          "width": "12.8px",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Test creation of an outy type Switch 1`] = `
+<div
+  className="ui-switch container normal"
+  style={
+    Object {
+      "height": "24px",
+    }
+  }
+>
+  <div
+    className="ui-switch-slider slider normalRect ui-slider-on sliderOn"
+  >
+    <div
+      className="ui-switch-button buttonRightOuty ripple"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": "24px",
+          "width": "24px",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Test disabling of the Switch control 1`] = `
+<Switch
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  focus={false}
+  height=""
+  id=""
+  initialState={false}
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  switchType={1}
+  visible={true}
+  width=""
+>
+  <div
+    className="ui-switch container normal disabled nohover"
+    style={
+      Object {
+        "height": "24px",
+      }
+    }
+  >
+    <div
+      className="ui-switch-slider slider normalRect ui-slider-off sliderOff"
+    >
+      <div
+        className="ui-switch-button buttonLeftOuty"
+        onClick={false}
+        style={
+          Object {
+            "height": "24px",
+            "width": "24px",
+          }
+        }
+      />
+    </div>
+  </div>
+</Switch>
+`;
+
+exports[`Test making the Switch control invisible 1`] = `
+<Switch
+  backgroundColor="inherit"
+  borderColor="inherit"
+  borderWidth="none"
+  className=""
+  color="inherit"
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  height=""
+  id=""
+  initialState={false}
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  switchType={1}
+  visible={false}
+  width=""
+>
+  <div
+    className="ui-switch container normal invisible"
+    style={
+      Object {
+        "height": "24px",
+      }
+    }
+  >
+    <div
+      className="ui-switch-slider slider normalRect ui-slider-off sliderOff"
+    >
+      <div
+        className="ui-switch-button buttonLeftOuty ripple"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": "24px",
+            "width": "24px",
+          }
+        }
+      />
+    </div>
+  </div>
+</Switch>
+`;
+
 exports[`Test retrieval of the Switch props object 1`] = `
 Object {
   "backgroundColor": "inherit",
@@ -26,4 +182,30 @@ Object {
   "visible": true,
   "width": "",
 }
+`;
+
+exports[`Test the click handler on the Switch control 1`] = `
+<div
+  className="ui-switch container normal"
+  style={
+    Object {
+      "height": "24px",
+    }
+  }
+>
+  <div
+    className="ui-switch-slider slider normalRect ui-slider-off sliderOff"
+  >
+    <div
+      className="ui-switch-button buttonLeftOuty ripple"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": "24px",
+          "width": "24px",
+        }
+      }
+    />
+  </div>
+</div>
 `;

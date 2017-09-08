@@ -299,7 +299,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 		const style = {};
 		if ('size' in nextProps) {
-			style['width'] = `${(nextProps.size / 2.0) + 2}rem`;
+			style['minWidth'] = `${(nextProps.size / 2.0) + 2}rem`;
 		}
 
 		if (this.props.sizing !== nextProps['sizing']) {

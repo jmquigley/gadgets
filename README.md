@@ -186,8 +186,8 @@ TODO: create the Slider control
 A text control with an up/down arrow that will increment a counter.
 TODO: create the Spinner control
 
-### Switch
-TODO: create the Switch control
+### [Switch](docs/lib/switch/Switch.md)
+A button control that works like a toggle.  Pressing the button will turn it *on* or *off*.  The color of the slider shows the state.
 
 ### [TagList](docs/lib/tagList/TagList.md) ([Tag](docs/lib/tagList/Tag.md))
 The tag list control is a basic list of strings that act as metadata for another control.  They are used to categorize information.
