@@ -264,7 +264,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 				style={this.inlineStyle}
 			>
 				<div className={this._contentStyles.classnames}>
-					{this.props.children}
+					<span>{this.props.children}</span>
 				</div>
 				<Button
 					className={this.styles.button}

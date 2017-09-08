@@ -26,12 +26,19 @@ $br: 5px;
 	}
 
 	.content {
+		align-items: center;
+		display: flex;
 		flex: 6;
 		padding: 12px 15px;
 	}
 
+	.content > span {
+		display: inline-flex;
+	}
+
 	.button {
 		flex: 1;
+		height: inherit;
 	}
 
 	.hide {

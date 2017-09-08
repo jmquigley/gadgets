@@ -105,6 +105,10 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 				? this.styles.buttonLeftOuty : this.styles.buttonLeftInny
 		);
 
+		this._buttonStyles.onIf(!nextProps.noripple && !nextProps.disabled)(
+			'ripple'
+		);
+
 		this._containerInline['height'] = this.fontSizePX(nextProps.sizing, 1.5);
 
 		if (nextProps.switchType === SwitchType.outy) {
@@ -126,12 +130,10 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 				className={this._rootStyles.classnames}
 				style={this._containerInline}
 			>
-				<div
-					className={this._sliderStyles.classnames}
-					onClick={!this.props.disabled && this.handleClick}
-				>
+				<div className={this._sliderStyles.classnames} >
 					<div
 						className={this._buttonStyles.classnames}
+						onClick={!this.props.disabled && this.handleClick}
 						style={this._buttonInline}
 					/>
 				</div>
