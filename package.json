@@ -54,7 +54,8 @@
 				"awesome-typescript-loader": "^3.2.3",
 				"babel-cli": "^6.26.0",
 				"babel-plugin-css-modules-transform": "^1.2.7",
-				"babel-preset-env": "^1.6.0",
+				"babel-preset-es2016": "^6.24.1",
+				"babel-preset-es2017": "^6.24.1",
 				"babel-preset-minify": "^0.2.0",
 				"babel-preset-power-assert": "^1.0.0",
 				"babel-preset-react": "^6.24.1",
@@ -107,7 +108,8 @@
 		"babel": {
 				"presets": [
 						"babel-preset-power-assert",
-						"env",
+						"es2016",
+						"es2017",
 						"react",
 						"stage-3"
 				]
