@@ -59,7 +59,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import Modal from 'react-modal';
+import ReactModal from 'react-modal';
 import {nilEvent} from 'util.toolbox';
 import {ButtonText} from '../buttonText';
 import {Icon} from '../icon';
@@ -237,7 +237,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 	public render() {
 		return (
-			<Modal
+			<ReactModal
 				contentLabel="DialogBox"
 				isOpen={this.state.showModal}
 				onAfterOpen={this.handleOpen}
@@ -278,7 +278,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 					</div>
 				</div>
 
-			</Modal>
+			</ReactModal>
 		);
 	}
 }
