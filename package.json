@@ -54,12 +54,10 @@
 				"awesome-typescript-loader": "^3.2.3",
 				"babel-cli": "^6.26.0",
 				"babel-plugin-css-modules-transform": "^1.2.7",
-				"babel-preset-es2016": "^6.24.1",
-				"babel-preset-es2017": "^6.24.1",
+				"babel-preset-env": "^1.6.0",
 				"babel-preset-minify": "^0.2.0",
 				"babel-preset-power-assert": "^1.0.0",
 				"babel-preset-react": "^6.24.1",
-				"babel-preset-stage-3": "^6.24.1",
 				"coveralls": "^2.13.1",
 				"css-loader": "^0.28.7",
 				"css-ripple-effect": "^1.0.5",
@@ -108,10 +106,8 @@
 		"babel": {
 				"presets": [
 						"babel-preset-power-assert",
-						"es2016",
-						"es2017",
-						"react",
-						"stage-3"
+						"env",
+						"react"
 				]
 		},
 		"pkgwrap": {
