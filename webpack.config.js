@@ -20,6 +20,7 @@ module.exports = {
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
 		alias: {
+			"ace": path.resolve(__dirname, 'node_modules', 'ace-builds', 'src-noconflict', 'ace.js'),
 			"jquery": path.resolve(__dirname, 'node_modules', 'jquery', 'dist', 'jquery.min.js'),
     		"react$": path.resolve(__dirname, 'node_modules', 'react', 'dist', 'react.min.js'),
         	"react-dom$": path.resolve(__dirname, 'node_modules', 'react-dom', 'dist', 'react-dom.min.js')

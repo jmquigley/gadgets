@@ -9,6 +9,7 @@ import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
 import {DialogBox, DialogBoxType} from './lib/dialogBox';
 import {DynamicList, DynamicListItem} from './lib/dynamicList';
+import {Editor} from './lib/editor';
 import {Icon} from './lib/icon';
 import {Item} from './lib/item';
 import {Label} from './lib/label';
@@ -59,6 +60,7 @@ export {
 	Direction,
 	DynamicList,
 	DynamicListItem,
+	Editor,
 	FontStyle,
 	Icon,
 	Item,

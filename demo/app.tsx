@@ -30,6 +30,7 @@ const {
 	DialogBoxType,
 	Direction,
 	DynamicList,
+	Editor,
 	Icon,
 	Justify,
 	Label,
@@ -634,6 +635,12 @@ class App extends React.Component<AppProps, AppState> {
 			</Container>
 		);
 	}
+
+	private buildEditor = () => (
+		<Container id="editorExample">
+			<Editor />
+		</Container>
+	);
 
 	private buildLabels = () => (
 		<Container id="labelExample">
@@ -1408,6 +1415,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Dynamic List</h1>
 				{this.buildDynamicList()}
+
+				<h1>Editor</h1>
+				{this.buildEditor()}
 
 				<h1>Labels</h1>
 				{this.buildLabels()}

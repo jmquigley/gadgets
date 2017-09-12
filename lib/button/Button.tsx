@@ -80,7 +80,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		]);
 
 		this.bindCallbacks('handleClick');
-		this.componentWillUpdate(props);
+		this.componentWillUpdate(this.props);
 	}
 
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
