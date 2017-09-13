@@ -6,15 +6,17 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {
+	EditorMode,
+	EditorStyle,
+	instance
+} from './modules';
+import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps
 } from '../shared';
 
 const debug = require('debug')('Editor');
-const Quill = require('quill');
-
-debug(Quill);
 
 export interface EditorProps extends BaseProps {
 	maxTabs?: number;
@@ -51,11 +53,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 
 	public componentDidMount() {
 
-		this._editor = new Quill(`#${this._editorKey}`, {
-			theme: 'snow'
-		});
-
-		debug(`Quill: %o, version: %s`, this._editor, Quill.version);
+		this._editor = instance(EditorMode.markdown, EditorStyle.monokai, null, this._editorKey);
 		this._editor.on('text-change', this.handleChange);
 
 		// this.forceUpdate();

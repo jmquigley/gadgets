@@ -149,6 +149,9 @@ A specialized List control that can be manipulated by the user.  They can add/re
 ### Editor
 TODO: create the Editor control
 
+### History
+TODO: create a History selection control
+
 ### [Icon](docs/lib/icon/Icon.md)
 Displays a graphical icon within the current container.
 
