@@ -11,12 +11,10 @@ import {
 	getDefaultBaseProps
 } from '../shared';
 
-const ace = require('brace');
-require('brace/theme/monokai');
-require('brace/mode/javascript');
-
 const debug = require('debug')('Editor');
-debug(`ACE: %o, version: ${ace.version}`, ace);
+const Quill = require('quill');
+
+debug(Quill);
 
 export interface EditorProps extends BaseProps {
 	maxTabs?: number;
@@ -39,21 +37,27 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 
 	constructor(props: EditorProps)	{
 		super(props, require('./styles.css'));
-		/* const script = document.createElement('script');
-		   const container = document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0];
 
-		   script.type = 'text/javascript';
-		   script.src = './ace/ace.js';
-		   script.async = false;
-		   container.appendChild(script);*/
+		this.bindCallbacks(
+			'handleChange'
+		);
 
 		this.componentWillUpdate(this.props);
 	}
 
+	private handleChange(delta: any, old: any, source: string) {
+		debug(`change: %o, old: %o, source: %s`, delta, old, source);
+	}
+
 	public componentDidMount() {
-		this._editor = ace.edit(this._editorKey);
-		this._editor.setTheme('ace/theme/monokai');
-		this._editor.getSession().setMode('ace/mode/javascript');
+
+		this._editor = new Quill(`#${this._editorKey}`, {
+			theme: 'snow'
+		});
+
+		debug(`Quill: %o, version: %s`, this._editor, Quill.version);
+		this._editor.on('text-change', this.handleChange);
+
 		// this.forceUpdate();
 	}
 
