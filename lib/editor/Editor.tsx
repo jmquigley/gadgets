@@ -6,15 +6,15 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {
-	EditorMode,
-	EditorStyle,
-	instance
-} from './modules';
-import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps
 } from '../shared';
+import {
+	EditorMode,
+	EditorStyle,
+	instance
+} from './modules';
 
 const debug = require('debug')('Editor');
 
