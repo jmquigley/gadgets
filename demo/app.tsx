@@ -43,8 +43,8 @@ const {
 	Select,
 	Sizing,
 	SortOrder,
-//	Switch,
-//	SwitchType,
+	Switch,
+	SwitchType,
 	Tab,
 	TabContainer,
 	TagList,
@@ -918,7 +918,6 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
-/*
 	private buildSwitch = () => (
 		<Container id="switchExample">
 
@@ -946,7 +945,7 @@ class App extends React.Component<AppProps, AppState> {
 			/>
 			<Switch
 				initialState={true}
-					onClick={(toggle: boolean) => {
+				onClick={(toggle: boolean) => {
 					debug(`Switch toggle (inny): ${toggle ? 'on' : 'off'}`);
 				}}
 				switchType={SwitchType.inny}
@@ -975,7 +974,6 @@ class App extends React.Component<AppProps, AppState> {
 
 		</Container>
 	);
-*/
 
 	private buildTabs = () => {
 
@@ -1437,6 +1435,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Select</h1>
 				{this.buildSelect()}
+
+				<h1>Switch</h1>
+				{this.buildSwitch()}
 
 				<h1>Tabs</h1>
 				{this.buildTabs()}

@@ -170,13 +170,13 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 		return (
 			<div
 				className={this._rootStyles.classnames}
-				style={this._containerInline}
+				style={{...this._containerInline}}
 			>
 				<div className={this._sliderStyles.classnames} >
 					<div
 						className={this._buttonStyles.classnames}
-						onClick={!this.props.disabled && this.handleClick}
-						style={this._buttonInline}
+						onClick={this.props.disabled ? nilEvent : this.handleClick}
+						style={{...this._buttonInline}}
 					/>
 				</div>
 			</div>
