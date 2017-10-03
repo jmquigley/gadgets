@@ -1,3 +1,4 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const path = require('path');
@@ -11,6 +12,7 @@ module.exports = {
 		path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.core.css'),
 		path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.bubble.css'),
 		path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.snow.css'),
+		path.resolve(__dirname, 'node_modules', 'quill-markup', 'public', 'styles.css'),
 		path.resolve(__dirname, 'lib', 'shared', 'ui.css'),
 		path.resolve(__dirname, 'index.ts')
 	],
@@ -23,7 +25,6 @@ module.exports = {
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
 		alias: {
-			"ace": path.resolve(__dirname, 'node_modules', 'ace-builds', 'src-noconflict', 'ace.js'),
 			"jquery": path.resolve(__dirname, 'node_modules', 'jquery', 'dist', 'jquery.min.js'),
     		"react$": path.resolve(__dirname, 'node_modules', 'react', 'dist', 'react.min.js'),
         	"react-dom$": path.resolve(__dirname, 'node_modules', 'react-dom', 'dist', 'react-dom.min.js')
@@ -101,7 +102,13 @@ module.exports = {
     		"window.jQuery": "jquery",
 			"window.$": "jquery"
 		}),
-		new webpack.optimize.ModuleConcatenationPlugin()
-		// new BundleAnalyzerPlugin()
+		new webpack.optimize.ModuleConcatenationPlugin(),
+		new CopyWebpackPlugin([{
+			from: 'node_modules/quill-markup/public/highlights/**/*.css',
+			to: 'highlights',
+			flatten: true
+		}])
+		// new BundleAnalyzerPlugin(),
+    	// new MinifyPlugin(minifyOpts, pluginOpts)
 	]
 };
