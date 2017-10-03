@@ -44,6 +44,7 @@ exports[`Create an empty TabContainer instance 1`] = `
     >
       <div
         className="ui-tab-content tabContentHorizontal"
+        style={undefined}
       />
     </Component>
   </div>
@@ -386,6 +387,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             }
           }
           id="0"
+          key="0"
           location="none"
           noedit={false}
           nohover={false}
@@ -684,6 +686,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             }
           }
           id="1"
+          key="1"
           location="none"
           noedit={false}
           nohover={false}
@@ -982,6 +985,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             }
           }
           id="2"
+          key="2"
           location="none"
           noedit={false}
           nohover={false}
@@ -1426,6 +1430,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
     >
       <div
         className="ui-tab-content tabContentHorizontal"
+        style={undefined}
       >
         #1
       </div>
@@ -1770,6 +1775,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             }
           }
           id="0"
+          key="0"
           location="none"
           noedit={false}
           nohover={false}
@@ -1895,7 +1901,9 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 </Label>
                 <div
                   className="ui-title-widget widget widgetDominant normal"
-                />
+                >
+                  <undefined />
+                </div>
               </div>
             </Title>
           </div>
@@ -1920,6 +1928,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             }
           }
           id="1"
+          key="1"
           location="none"
           noedit={false}
           nohover={false}
@@ -2045,7 +2054,9 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 </Label>
                 <div
                   className="ui-title-widget widget widgetDominant normal"
-                />
+                >
+                  <undefined />
+                </div>
               </div>
             </Title>
           </div>
@@ -2070,6 +2081,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             }
           }
           id="2"
+          key="2"
           location="none"
           noedit={false}
           nohover={false}
@@ -2195,7 +2207,9 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 </Label>
                 <div
                   className="ui-title-widget widget widgetDominant normal"
-                />
+                >
+                  <undefined />
+                </div>
               </div>
             </Title>
           </div>
@@ -2239,6 +2253,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
     >
       <div
         className="ui-tab-content tabContentHorizontal"
+        style={undefined}
       />
     </Component>
   </div>
@@ -2269,7 +2284,7 @@ exports[`Test making the TabContainer invisible 1`] = `
     location="top"
     maxTabs={5}
     navigation={
-      <Component
+      <Unknown
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
@@ -2402,7 +2417,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         >
           #3
         </Tab>
-      </Component>
+      </Unknown>
     }
     noclose={false}
     noedit={false}
@@ -2974,6 +2989,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             }
           }
           id="0"
+          key="0"
           location="none"
           noedit={false}
           nohover={false}
@@ -3272,6 +3288,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             }
           }
           id="1"
+          key="1"
           location="none"
           noedit={false}
           nohover={false}
@@ -3570,6 +3587,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             }
           }
           id="2"
+          key="2"
           location="none"
           noedit={false}
           nohover={false}
@@ -4014,6 +4032,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
     >
       <div
         className="ui-tab-content tabContentHorizontal"
+        style={undefined}
       >
         #1
       </div>
@@ -4391,6 +4410,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             }
           }
           id="0"
+          key="0"
           location="none"
           noedit={false}
           nohover={false}
@@ -4689,6 +4709,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             }
           }
           id="1"
+          key="1"
           location="none"
           noedit={false}
           nohover={false}
@@ -4987,6 +5008,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             }
           }
           id="2"
+          key="2"
           location="none"
           noedit={false}
           nohover={false}
@@ -5431,6 +5453,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
     >
       <div
         className="ui-tab-content tabContentHorizontal"
+        style={undefined}
       >
         #1
       </div>
@@ -5775,6 +5798,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             }
           }
           id="0"
+          key="0"
           location="none"
           noedit={false}
           nohover={false}
@@ -6073,6 +6097,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             }
           }
           id="1"
+          key="1"
           location="none"
           noedit={false}
           nohover={false}
@@ -6371,6 +6396,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             }
           }
           id="2"
+          key="2"
           location="none"
           noedit={false}
           nohover={false}
@@ -6815,6 +6841,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
     >
       <div
         className="ui-tab-content tabContentHorizontal"
+        style={undefined}
       >
         #1
       </div>
@@ -6851,7 +6878,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
     location="bottom"
     maxTabs={5}
     navigation={
-      <Component
+      <Unknown
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
@@ -6984,7 +7011,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         >
           #3
         </Tab>
-      </Component>
+      </Unknown>
     }
     noclose={false}
     noedit={false}
@@ -7240,7 +7267,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
     location="left"
     maxTabs={5}
     navigation={
-      <Component
+      <Unknown
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
@@ -7373,7 +7400,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         >
           #3
         </Tab>
-      </Component>
+      </Unknown>
     }
     noclose={false}
     noedit={false}
@@ -7641,7 +7668,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
     location="right"
     maxTabs={5}
     navigation={
-      <Component
+      <Unknown
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
@@ -7774,7 +7801,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         >
           #3
         </Tab>
-      </Component>
+      </Unknown>
     }
     noclose={false}
     noedit={false}
@@ -8034,7 +8061,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
     location="top"
     maxTabs={5}
     navigation={
-      <Component
+      <Unknown
         backgroundColor="inherit"
         borderColor="inherit"
         borderWidth="none"
@@ -8167,7 +8194,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         >
           #3
         </Tab>
-      </Component>
+      </Unknown>
     }
     noclose={false}
     noedit={false}

@@ -43,17 +43,17 @@ const {
 	Select,
 	Sizing,
 	SortOrder,
-	Switch,
-	SwitchType,
+//	Switch,
+//	SwitchType,
 	Tab,
 	TabContainer,
 	TagList,
 	TextField,
 	Title,
 	TitleLayout,
-	Toast,
-	ToastLevel,
-	ToastType,
+//	Toast,
+//	ToastLevel,
+//	ToastType,
 	Tooltip,
 	Triangle,
 	Validator
@@ -918,6 +918,7 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+/*
 	private buildSwitch = () => (
 		<Container id="switchExample">
 
@@ -974,6 +975,7 @@ class App extends React.Component<AppProps, AppState> {
 
 		</Container>
 	);
+*/
 
 	private buildTabs = () => {
 
@@ -1155,6 +1157,7 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	)
 
+/*
 	private buildToast = () => (
 		<Container id="toastExample">
 			<h3>Info message with decay</h3>
@@ -1281,6 +1284,7 @@ class App extends React.Component<AppProps, AppState> {
 			</div>
 		</Container>
 	);
+*/
 
 	private buildTooltip = () => (
 		<Container id="tooltipExample">
@@ -1434,9 +1438,6 @@ class App extends React.Component<AppProps, AppState> {
 				<h1>Select</h1>
 				{this.buildSelect()}
 
-				<h1>Switch</h1>
-				{this.buildSwitch()}
-
 				<h1>Tabs</h1>
 				{this.buildTabs()}
 
@@ -1448,9 +1449,6 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Title</h1>
 				{this.buildTitle()}
-
-				<h1>Toast</h1>
-				{this.buildToast()}
 
 				<h1>Tooltip</h1>
 				{this.buildTooltip()}
