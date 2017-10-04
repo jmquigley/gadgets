@@ -122,14 +122,14 @@ A circular button control.  Works like a typical button... except it's a circle.
 ### [ButtonDialog](docs/lib/buttonDialog/ButtonDialog.md)
 A button control that when pushed displays a local dialog box.  The contents of the control make up the dialog window.
 
+### ButtonGroup
+TODO: create the ButtonGroup control (radio button like grouping)
+
 ### [ButtonText](docs/lib/buttonText/ButtonText.md)
 A button control that contains an icon and a text string.  The text string can be to the left or right of the icon.
 
 ### [ButtonToggle](docs/lib/buttonToggle/ButtonToggle.md)
 A button control that switches between the given icons when clicked.  The state of the button is maintained until it is clicked again.
-
-### Checkbox
-TODO: create the Checkbox control
 
 ### [Container](docs/lib/container/Container.md)
 A generic control used to group other controls.  It creates a section tag around the given child component.
@@ -149,6 +149,9 @@ A specialized List control that can be manipulated by the user.  They can add/re
 ### Editor
 TODO: create the Editor control
 
+### Gauge
+TODO: create the gague control
+
 ### History
 TODO: create a History selection control
 
@@ -161,6 +164,9 @@ A text label string control that can be edited.
 ### [List](docs/lib/list/List.md)/[ListDivider](docs/lib/list/ListDivider.md)/[ListFooter](docs/lib/list/ListFooter.md)/[ListHeader](docs/lib/list/ListHeader.md)/[ListItem](docs/lib/list/ListItem.md)
 A container element that holds a list of other elements.  The `List` resolves to a `<ul>` and the items within it resolve to `<li>`.
 
+### Option
+TODO: create the Checkbox or radio button control.  This is just a specialized form of ButtonToggle.
+
 ### [Pager](docs/lib/pager/Pager.md)
 A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.
 
@@ -172,9 +178,6 @@ TODO: create the popup Menu control
 
 ### ProgressBar
 TODO: create the ProgressBar control
-
-### RadioButton
-TODO: create the RadioButton control
 
 ### Rating
 TODO: create the Rating control
