@@ -38,7 +38,7 @@ test('Test disabling of a ButtonToggle', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button-toggle').simulate('click');
+	ctl.find('.ui-button-toggle').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
@@ -49,7 +49,7 @@ test('Test making a ButtonToggle invisible', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button-toggle').simulate('click');
+	ctl.find('.ui-button-toggle').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
@@ -75,7 +75,7 @@ test('Test ButtonToggle click event', () => {
 	assert(ctl.prop('visible'));
 
 	assert(!btn.state.toggle);
-	ctl.find('.ui-button-toggle').simulate('click');
+	ctl.find('.ui-button-toggle').first().simulate('click');
 	expect(click).toHaveBeenCalled();
 	assert(btn.state.toggle);
 	assert.equal(btn.state.toggle, ctl.state('toggle'));
@@ -100,7 +100,7 @@ test('Test the icon switch in a ButtonToggle click', () => {
 	assert.equal(ctl.prop('iconNameOff'), 'star-o');
 
 	assert(!ctl.state('toggle'));
-	ctl.find('.ui-button-toggle').simulate('click');
+	ctl.find('.ui-button-toggle').first().simulate('click');
 	expect(click).toHaveBeenCalled();
 	assert(ctl.state('toggle'));
 });

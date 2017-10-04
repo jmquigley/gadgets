@@ -80,7 +80,8 @@
 import {cloneDeep, omit} from 'lodash';
 import * as React from 'react';
 import {sprintf} from 'sprintf-js';
-import {getUUID, nil, nilEvent} from 'util.toolbox';
+import {Keys} from 'util.keys';
+import {nil, nilEvent} from 'util.toolbox';
 import {Accordion, AccordionItem} from '../accordion';
 import {Button} from '../button';
 import {DialogBox, DialogBoxType} from '../dialogBox';
@@ -157,12 +158,14 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private readonly _baseMessage: string = 'Are you sure you want to delete %s?';
 	private _count: number = 0;
 	private _emptyListItem: any = null;
+	private _fillerKeys: Keys;
+	private _fillerIdx: number = 0;
 	private _footer: any = null;
-	private _footerID: string = getUUID();
+	private _footerID: string;
 	private _keys: string[] = [];
 	private _listItems: any = {};
 	private _pager: any = null;
-	private _pagerID: string = getUUID();
+	private _pagerID: string;
 	private _previousPage: number = 1;
 	private _previousSize: Sizing = this.prev().type;
 	private _qDelete: string = '';
@@ -171,6 +174,11 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	constructor(props: DynamicListProps) {
 		super(props, require('./styles.css'));
+
+		this._fillerKeys = new Keys({testing: this.props.testing});
+
+		this._footerID = this._fillerKeys.at(this._fillerIdx++);
+		this._pagerID = this._fillerKeys.at(this._fillerIdx++);
 
 		this._rootStyles.add([
 			'ui-dynamiclist',
@@ -211,7 +219,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this._emptyListItem = (
 			<ListItem
 				focus
-				key={getUUID()}
+				key={this._fillerKeys.at(this._fillerIdx++)}
 				onBlur={this.handleBlur}
 				onKeyDown={this.handleKeyDown}
 				onChange={this.handleNewItem}
@@ -522,6 +530,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				onSort={this.handleSort}
 				pageSizes={nextProps.pageSizes}
 				sizing={this.previousSize}
+				testing={this.props.testing}
 				totalItems={nextState.totalItems}
 				useinput
 			/>

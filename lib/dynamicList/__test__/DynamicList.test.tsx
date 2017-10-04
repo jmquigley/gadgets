@@ -13,7 +13,7 @@ test('Test retrieval of DynamicList props object', () => {
 });
 
 test('Test creation of a DynamicList control', () => {
-	const ctl = shallow(<DynamicList className="test-class" />);
+	const ctl = shallow(<DynamicList className="test-class" testing/>);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
@@ -30,6 +30,7 @@ test('Test creation of a DynamicList with 3 items', () => {
 			nocollapse
 			pageSizes={[10, 20, 30]}
 			title="Test List Title"
+			testing
 		/>);
 
 	assert(ctl);
@@ -46,6 +47,7 @@ test('Test disabling of a Dynamic List control', () => {
 			}}
 			pageSizes={[10, 20, 30]}
 			disabled
+			testing
 		/>
 	);
 
@@ -63,6 +65,7 @@ test('Test making a Dynamic List invisible', () => {
 			}}
 			pageSizes={[10, 20, 30]}
 			visible={false}
+			testing
 		/>
 	);
 

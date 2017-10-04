@@ -78,10 +78,12 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 	];
 
 	private _groupStyles: ClassNames = new ClassNames();
-	private _keys: Keys = new Keys();
+	private _keys: Keys;
 
 	constructor(props: ButtonBarProps) {
 		super(props, styles);
+
+		this._keys = new Keys({testing: this.props.testing});
 
 		this._groupStyles.add([
 			'ui-button-bar-group',

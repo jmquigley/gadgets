@@ -19,6 +19,7 @@ test('Test creation of a simple ButtonBar instance', () => {
 		<ButtonBar
 			buttonSize="32px"
 			className="test-class"
+			testing
 		>
 			<Button />
 			<Button />
@@ -31,7 +32,7 @@ test('Test creation of a simple ButtonBar instance', () => {
 
 test('Test creation of a ButtonBar with left justify', () => {
 	const ctl = shallow(
-		<ButtonBar justify={Justify.left} />
+		<ButtonBar justify={Justify.left} testing/>
 	);
 
 	assert(ctl);
@@ -40,7 +41,7 @@ test('Test creation of a ButtonBar with left justify', () => {
 
 test('Test creation of a ButtonBar with right justify', () => {
 	const ctl = shallow(
-		<ButtonBar justify={Justify.right} />
+		<ButtonBar justify={Justify.right} testing/>
 	);
 
 	assert(ctl);
@@ -49,7 +50,7 @@ test('Test creation of a ButtonBar with right justify', () => {
 
 test('Test creation of a ButtonBar with center justify', () => {
 	const ctl = shallow(
-		<ButtonBar justify={Justify.center} />
+		<ButtonBar justify={Justify.center} testing/>
 	);
 
 	assert(ctl);
@@ -58,7 +59,7 @@ test('Test creation of a ButtonBar with center justify', () => {
 
 test('Test disabling of the ButtonBar control', () => {
 	const ctl = mount(
-		<ButtonBar disabled={true}>
+		<ButtonBar disabled={true} testing>
 			<Button />
 			<Button />
 		</ButtonBar>
@@ -70,7 +71,7 @@ test('Test disabling of the ButtonBar control', () => {
 
 test('Test making the ButtonBar invisible', () => {
 	const ctl = mount(
-		<ButtonBar visible={false} />
+		<ButtonBar visible={false} testing/>
 	);
 
 	assert(ctl);

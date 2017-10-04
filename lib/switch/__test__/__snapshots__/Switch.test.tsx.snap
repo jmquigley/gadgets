@@ -75,6 +75,7 @@ exports[`Test disabling of the Switch control 1`] = `
   sizing="normal"
   style={Object {}}
   switchType={1}
+  testing={false}
   visible={true}
   width=""
 >
@@ -91,7 +92,7 @@ exports[`Test disabling of the Switch control 1`] = `
     >
       <div
         className="ui-switch-button buttonLeftOuty"
-        onClick={false}
+        onClick={[Function]}
         style={
           Object {
             "height": "24px",
@@ -127,6 +128,7 @@ exports[`Test making the Switch control invisible 1`] = `
   sizing="normal"
   style={Object {}}
   switchType={1}
+  testing={false}
   visible={false}
   width=""
 >
@@ -179,6 +181,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "switchType": 1,
+  "testing": false,
   "visible": true,
   "width": "",
 }

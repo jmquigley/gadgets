@@ -52,6 +52,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
+  testing={true}
   visible={true}
   width=""
 >
@@ -63,7 +64,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
     >
       <div
         className="buttonBarBox"
-        key="c18a5741-d1bc-44e9-9293-9803c902f9c2"
+        key="0"
         style={
           Object {
             "height": "32px",
@@ -93,6 +94,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
+          testing={false}
           visible={true}
           width=""
         >
@@ -122,6 +124,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
               selected={false}
               sizing="normal"
               style={Object {}}
+              testing={false}
               visible={true}
               width=""
             >
@@ -135,7 +138,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
       </div>
       <div
         className="buttonBarBox"
-        key="b39d848d-0959-488b-8b4b-b12749baa685"
+        key="1"
         style={
           Object {
             "height": "32px",
@@ -165,6 +168,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
+          testing={false}
           visible={true}
           width=""
         >
@@ -194,6 +198,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
               selected={false}
               sizing="normal"
               style={Object {}}
+              testing={false}
               visible={true}
               width=""
             >
@@ -232,6 +237,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
+  testing={true}
   visible={true}
   width=""
 >
@@ -243,7 +249,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
     >
       <div
         className="buttonBarBox"
-        key="80d43410-0a3e-4e86-9845-4495ecae1086"
+        key="0"
         style={
           Object {
             "height": "24px",
@@ -273,6 +279,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
+          testing={false}
           visible={true}
           width=""
         >
@@ -302,6 +309,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
               selected={false}
               sizing="normal"
               style={Object {}}
+              testing={false}
               visible={true}
               width=""
             >
@@ -315,7 +323,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
       </div>
       <div
         className="buttonBarBox"
-        key="8eca56c4-fe14-462c-8736-d65ffc88655d"
+        key="1"
         style={
           Object {
             "height": "24px",
@@ -345,6 +353,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
+          testing={false}
           visible={true}
           width=""
         >
@@ -374,6 +383,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
               selected={false}
               sizing="normal"
               style={Object {}}
+              testing={false}
               visible={true}
               width=""
             >
@@ -412,6 +422,7 @@ exports[`Test making the ButtonBar invisible 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
+  testing={true}
   visible={false}
   width=""
 >
@@ -447,6 +458,7 @@ Object {
   "selected": false,
   "sizing": "normal",
   "style": Object {},
+  "testing": false,
   "visible": true,
   "width": "",
 }

@@ -121,6 +121,7 @@ export interface BaseProps {
 	selected?: boolean;
 	sizing?: Sizing;
 	style?: any;
+	testing?: boolean;
 	visible?: boolean;
 	width?: string;
 }
@@ -145,6 +146,7 @@ export function getDefaultBaseProps(): BaseProps {
 		selected: false,
 		sizing: Sizing.normal,
 		style: {},
+		testing: false,
 		visible: true,
 		width: ''
 	});

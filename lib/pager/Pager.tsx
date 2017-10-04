@@ -84,7 +84,7 @@ import {cloneDeep, isEqual, sortBy} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
 import {Keys} from 'util.keys';
-import {getUUID, nilEvent} from 'util.toolbox';
+import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
 import {ButtonText} from '../buttonText';
@@ -147,7 +147,9 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _buttons: any = [];
 	private _buttonStyles: ClassNames = new ClassNames();
 	private _dialog: any = null;
-	private _dialogKeys: Keys = new Keys();
+	private _dialogKeys: Keys;
+	private _fillerKeys: Keys;
+	private _fillerIdx: number = 0;
 	private _iconCheck: any = null;
 	private _iconBlank: any = null;
 	private _initialPage: number = 0;
@@ -156,6 +158,9 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	constructor(props: PagerProps) {
 		super(props, require('./styles.css'));
+
+		this._dialogKeys = new Keys({testing: this.props.testing});
+		this._fillerKeys = new Keys({testing: this.props.testing});
 
 		this._buttonStyles.add([
 			this.styles.pagerButton,
@@ -194,7 +199,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this._iconBlank = (
 			<Icon
 				iconName=""
-				key={getUUID()}
+				key={this._fillerKeys.at(this._fillerIdx++)}
 				sizing={this.props.sizing}
 			/>
 		);
@@ -203,7 +208,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			<Icon
 				color="green"
 				iconName="check"
-				key={getUUID()}
+				key={this._fillerKeys.at(this._fillerIdx++)}
 				sizing={this.props.sizing}
 			/>
 		);
@@ -385,7 +390,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					<ButtonText
 						{...this.props}
 						className={this._buttonStyles.classnames}
-						key={getUUID()}
+						key={this._fillerKeys.at(this._fillerIdx++)}
 						noicon
 						disabled
 						sizing={this.props.sizing}

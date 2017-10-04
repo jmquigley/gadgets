@@ -94,7 +94,6 @@ export interface TabContainerProps extends BaseProps {
 	onRemove?: any;
 	onSelect?: any;
 	tabWidth?: number;
-	testing?: boolean;
 }
 
 export function getDefaultTabContainerProps(): TabContainerProps {
