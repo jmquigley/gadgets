@@ -68,6 +68,9 @@
 
 'use strict';
 
+const debug = require('debug')('TabContainer');
+
+import {List} from 'immutable';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
@@ -80,10 +83,8 @@ import {
 	getDefaultBaseProps,
 	Location
 } from '../shared';
-
 import {Tab} from './Tab';
 
-const debug = require('debug')('TabContainer');
 const styles = require('./styles.css');
 
 export interface TabContainerProps extends BaseProps {
@@ -349,26 +350,22 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 			for (const [idx, child] of this._tabs.entries()) {
 				const selected = nextState.selectedTab === child.props['id'];
-				const opts = {};
-
-				if (this.props.disabled) {
-					opts['disabled'] = true;
-				}
 
 				if (selected && !nextProps.disabled) {
 					this._tabContent = child['props'].children;
 				}
 
-				this._tabs[idx] = React.cloneElement(child as any, Object.assign({
-						href: {
-							hiddenTabHandler: this.hiddenTabHandler,
-							orientation: nextProps.location,
-							selectHandler: this.selectHandler,
-							sizing: nextProps.sizing
-						},
-						selected: selected,
-						width: `${nextProps.tabWidth}px`
-					}, opts));
+				this._tabs[idx] = React.cloneElement(child as any, {
+					disabled: this.props.disabled,
+					href: {
+						hiddenTabHandler: this.hiddenTabHandler,
+						orientation: nextProps.location,
+						selectHandler: this.selectHandler,
+						sizing: nextProps.sizing
+					},
+					selected: selected,
+					width: `${nextProps.tabWidth}px`
+				});
 			}
 
 			// Sets the default width of the content container for the component
@@ -412,7 +409,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 				className={this._tabBarStyles.classnames}
 				navigation={tabNavigation}
 				style={style}
-				tabs={this._tabs}
+				tabs={List(this._tabs)}
 			/>
 		);
 
