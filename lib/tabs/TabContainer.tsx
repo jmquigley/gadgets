@@ -88,7 +88,7 @@ import {Tab} from './Tab';
 const styles = require('./styles.css');
 
 export interface TabContainerProps extends BaseProps {
-	children?: any;
+	children?: React.ReactNode;
 	maxTabs?: number;
 	noclose?: boolean;
 	nonavigation?: boolean;
@@ -150,7 +150,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	private _tabContent: any = null;
 	private _tabContentStyles: ClassNames = new ClassNames();
 	private _tabNavStyles: ClassNames = new ClassNames();
-	private _tabs: any[] = [];
+	private _tabs: any = List();
 
 	public static defaultProps: TabContainerProps = getDefaultTabContainerProps();
 
@@ -185,10 +185,10 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			for (const child of children) {
 
 				if (child['type'] === Tab && (child['props']['visible'] && !child['props']['disabled'])) {
-					this._tabs[pos] = React.cloneElement(child as any, {
+					this._tabs = this._tabs.set(pos, React.cloneElement(child as any, {
 						id: this._keys.at(pos),
 						key: this._keys.at(pos)
-					});
+					}));
 
 					pos++;
 				}
@@ -199,8 +199,10 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			}
 		}
 
+		debug('initial tab children: %O', this._tabs);
+
 		this.state = {
-			selectedTab: this._tabs.length > 0 ? this._tabs[0].props['id'] : null
+			selectedTab: this._tabs.size > 0 ? this._tabs.get(0).props['id'] : null
 		};
 
 		this.bindCallbacks(
@@ -234,23 +236,23 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	 * @return {any[]} the child tab array used by this control.  This only
 	 * useful for testing purposes.
 	 */
-	get tabs(): any[] {
+	get tabs() {
 		return this._tabs;
 	}
 
 	private handlePreviousTab() {
 		const idx: number = this.currentIdx;
 
-		if (this._tabs.length && idx - 1 >= 0) {
-			this.selectHandler(this._tabs[idx - 1]);
+		if (this._tabs.size && idx - 1 >= 0) {
+			this.selectHandler(this._tabs.get(idx - 1));
 		}
 	}
 
 	private handleNextTab() {
 		const idx: number = this.currentIdx;
 
-		if (this._tabs.length && idx + 1 <= this._tabs.length - 1) {
-			this.selectHandler(this._tabs[idx + 1]);
+		if (this._tabs.size && idx + 1 <= this._tabs.size - 1) {
+			this.selectHandler(this._tabs.get(idx + 1));
 		}
 	}
 
@@ -263,12 +265,12 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		let id: string = null;
 
 		if (idx - 1 >= 0) {
-			id = this._tabs[idx - 1].props['id'];
-		} else if (idx + 1 <= this._tabs.length - 1) {
-			id = this._tabs[idx + 1].props['id'];
+			id = this._tabs.get(idx - 1).props['id'];
+		} else if (idx + 1 <= this._tabs.size - 1) {
+			id = this._tabs.get(idx + 1).props['id'];
 		}
 
-		this._tabs.splice(idx, 1);
+		this._tabs = this._tabs.splice(idx, 1);
 		this.selectedTab = id;
 		this.props.onRemove(tab);
 	}
@@ -294,7 +296,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		if (id) {
 			for (const [idx, tab] of this._tabs.entries()) {
 				if (tab.props['id'] === id) {
-					return [this._tabs[idx], idx];
+					return [this._tabs.get(idx), idx];
 				}
 			}
 		}
@@ -343,7 +345,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			this.styles.tabBarVertical
 		);
 
-		if (this._tabs.length > 0) {
+		if (this._tabs.size > 0) {
 
 			// Add select and delete handlers to each of the tabs in the current
 			// tab array.  Also ensure that the correct tab width is set.
@@ -355,7 +357,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 					this._tabContent = child['props'].children;
 				}
 
-				this._tabs[idx] = React.cloneElement(child as any, {
+				this._tabs = this._tabs.set(idx, React.cloneElement(child as any, {
 					disabled: this.props.disabled,
 					href: {
 						hiddenTabHandler: this.hiddenTabHandler,
@@ -365,7 +367,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 					},
 					selected: selected,
 					width: `${nextProps.tabWidth}px`
-				});
+				}));
 			}
 
 			// Sets the default width of the content container for the component
@@ -373,7 +375,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			// a reasonable size.
 
 			if (nextProps.location === Location.top || nextProps.location === Location.bottom) {
-				this._containerWidth = (this._tabs.length + 1) * nextProps.tabWidth;
+				this._containerWidth = (this._tabs.size + 1) * nextProps.tabWidth;
 			} else {
 				this._containerWidth = 5 * nextProps.tabWidth;
 			}
@@ -409,7 +411,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 				className={this._tabBarStyles.classnames}
 				navigation={tabNavigation}
 				style={style}
-				tabs={List(this._tabs)}
+				tabs={this._tabs}
 			/>
 		);
 
@@ -426,7 +428,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 					className={this._rootStyles.classnames}
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
-					{this._tabs.length > 0 && tabBar}
+					{this._tabs.size > 0 && tabBar}
 					{tabContent}
 				</div>
 			);
@@ -437,7 +439,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
 					{tabContent}
-					{this._tabs.length > 0 && tabBar}
+					{this._tabs.size > 0 && tabBar}
 				</div>
 			);
 		}
