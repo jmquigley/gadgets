@@ -34,26 +34,26 @@ test('Test TabContainer retrieval functions', () => {
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
-	/* const container = ctl.instance() as TabContainer;
-	   assert(container);
+	const container = ctl.instance() as TabContainer;
+	assert(container);
 
-	   const id: string = container.tabs[0].props['id'];
-	   let tab;
-	   let idx;
+	const id: string = container.tabs.get(0).props['id'];
+	let tab;
+	let idx;
 
-	   [tab, idx] = container._getTab(id);
-	   assert.equal(idx, 0);
-	   assert.equal(tab.props['id'], id);
+	[tab, idx] = container._getTab(id);
+	assert.equal(idx, 0);
+	assert.equal(tab.props['id'], id);
 
-	   [tab, idx] = container._getTab('');
-	   assert(tab == null);
-	   assert(idx === -1);
+	[tab, idx] = container._getTab('');
+	assert(tab == null);
+	assert(idx === -1);
 
-	   idx = container._getTabIdx(id);
-	   assert(idx === 0);
+	idx = container._getTabIdx(id);
+	assert(idx === 0);
 
-	   idx = container._getTabIdx('');
-	   assert(idx === -1);*/
+	idx = container._getTabIdx('');
+	assert(idx === -1);
 });
 
 test('Test the creation of a TabContainer instance (top)', () => {
@@ -197,22 +197,22 @@ test('Test the TabContainer with the previous and next buttons', () => {
 	expect(ctl).toMatchSnapshot();
 	const container = ctl.instance() as TabContainer;
 	assert(container);
-	/*
-	 * 	// Assert that the current tab is the first in the list
-	 * 	assert.equal(ctl.state('selectedTab'), container.tabs[0].props['id']);
-	 *
-	 * 	const prevButton = ctl.find('.ui-tab-navigation').find('.ui-button').first();
-	 * 	assert(prevButton);
-	 * 	const nextButton = ctl.find('.ui-tab-navigation').find('.ui-button').last();
-	 * 	assert(nextButton);
-	 *
-	 * 	// Click the "next" button and move from 1 -> 2
-	 * 	nextButton.simulate('click');
-	 * 	assert(select.calledOnce);
-	 * 	assert.equal(ctl.state('selectedTab'), container.tabs[1].props['id']);
-	 *
-	 * 	// Click the "previous" button and move from 2 -> 1
-	 * 	prevButton.simulate('click');
-	 * 	assert(select.calledTwice);
-	 * 	assert.equal(ctl.state('selectedTab'), container.tabs[0].props['id']);*/
+
+	// Assert that the current tab is the first in the list
+	assert.equal(ctl.state('selectedTab'), container.tabs.get(0).props['id']);
+
+	const prevButton = ctl.find('.ui-tab-navigation').find('.ui-button').first();
+	assert(prevButton);
+	const nextButton = ctl.find('.ui-tab-navigation').find('.ui-button').last();
+	assert(nextButton);
+
+	// Click the "next" button and move from 1 -> 2
+	nextButton.simulate('click');
+	assert(select.calledOnce);
+	assert.equal(ctl.state('selectedTab'), container.tabs.get(1).props['id']);
+
+	// Click the "previous" button and move from 2 -> 1
+	prevButton.simulate('click');
+	assert(select.calledTwice);
+	assert.equal(ctl.state('selectedTab'), container.tabs.get(0).props['id']);
 });
