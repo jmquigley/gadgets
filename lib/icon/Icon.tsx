@@ -57,8 +57,6 @@ export interface IconProps extends BaseProps {
 export function getDefaultIconProps(): IconProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			backgroundColor: 'inherit',
-			color: 'inherit',
 			iconName: 'bomb',
 			imageFile: '',
 			sizing: Sizing.normal
@@ -87,23 +85,12 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: IconProps) {
-		const style = {};
-
 		if (this.props.imageFile === '' && this.props.iconName !== nextProps.iconName) {
 			this._rootStyles.off(`fa-${this.props.iconName}`);
 		}
 
 		this._rootStyles.on(`fa-${nextProps.iconName}`);
 
-		if (nextProps.color !== 'inherit') {
-			style['color'] = nextProps.color;
-		}
-
-		if (nextProps.backgroundColor !== 'inherit') {
-			style['backgroundColor'] = nextProps.backgroundColor;
-		}
-
-		this.buildInlineStyles(nextProps, style);
 		super.componentWillUpdate(nextProps);
 	}
 
@@ -113,14 +100,14 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 				<img
 					className={this._rootStyles.classnames}
 					src={this.props.imageFile}
-					style={this.inlineStyle}
+					style={this.inlineStyles}
 				/>
 			);
 		} else {
 			return (
 				<i
 					className={this._rootStyles.classnames}
-					style={this.inlineStyle}
+					style={this.inlineStyles}
 				/>
 			);
 		}

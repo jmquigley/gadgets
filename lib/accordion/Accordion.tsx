@@ -34,6 +34,7 @@
 
 'use strict';
 
+import {Map} from 'immutable';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
@@ -46,8 +47,8 @@ export function getDefaultAccordionProps(): AccordionProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			children: null
-		})
-	);
+		}
+	));
 }
 
 export class Accordion extends BaseComponent<AccordionProps, undefined> {
@@ -66,8 +67,10 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 	}
 
 	public render() {
+		const istyles = Map(this.inlineStyles)
+
 		return (
-			<ul className={this._rootStyles.classnames} style={this.inlineStyle}>
+			<ul className={this._rootStyles.classnames} style={istyles}>
 				{this.props.children}
 			</ul>
 		);

@@ -240,7 +240,8 @@ class App extends React.Component<AppProps, AppState> {
 					<Badge
 						counter={this.state.counter3}
 						location={Location.bottomRight}
-						color="green">
+						style={{color: 'green'}}
+					>
 						<div className="boxButtons">
 							<Button onClick={() => {
 									this.setState({
@@ -256,7 +257,8 @@ class App extends React.Component<AppProps, AppState> {
 					<Badge
 						counter={this.state.counter4}
 						location={Location.bottomLeft}
-						color="magenta">
+						style={{color: 'magenta'}}
+					>
 						<div className="boxButtons">
 							<Button onClick={() => {
 									this.setState({
@@ -272,7 +274,7 @@ class App extends React.Component<AppProps, AppState> {
 					<Badge
 						counter={this.state.counter5}
 						location={Location.bottom}
-						color="blue"
+						style={{color: 'blue'}}
 					>
 						<div className="boxButtons">
 							<Button onClick={() => {
@@ -316,7 +318,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><Icon iconName="handshake-o" sizing={Sizing.xlarge}/></td>
 						<td><Icon iconName="handshake-o" sizing={Sizing.xxlarge}/></td>
 						<td><Icon iconName="handshake-o" sizing={Sizing.normal} disabled={true}/></td>
-						<td><Icon iconName="handshake-o" sizing={Sizing.normal} color="red" backgroundColor="blue"/></td>
+						<td><Icon iconName="handshake-o" sizing={Sizing.normal} style={{color: "red", backgroundColor: "blue"}}/></td>
 					</tr><tr className="tblIcons">
 						<th>Icon Images</th>
 						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xxsmall}/></td>
@@ -338,7 +340,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><Button iconName="motorcycle" sizing={Sizing.xlarge}/></td>
 						<td><Button iconName="motorcycle" sizing={Sizing.xxlarge}/></td>
 						<td><Button iconName="motorcycle" sizing={Sizing.normal} disabled={true}/></td>
-						<td><Button iconName="motorcycle" sizing={Sizing.normal} color="yellow" backgroundColor="green"/></td>
+						<td><Button iconName="motorcycle" sizing={Sizing.normal} style={{color: "yellow", backgroundColor: "green"}}/></td>
 					</tr><tr>
 						<th>ButtonCircle</th>
 						<td><ButtonCircle iconName="times" sizing={Sizing.xxsmall}/></td>
@@ -349,7 +351,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><ButtonCircle iconName="times" sizing={Sizing.xlarge}/></td>
 						<td><ButtonCircle iconName="times" sizing={Sizing.xxlarge}/></td>
 						<td><ButtonCircle iconName="times" sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.normal} color="white" backgroundColor="orange"/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.normal} style={{color: "white", backgroundColor: "orange"}}/></td>
 					</tr><tr>
 						<th>ButtonDialog</th>
 						<td><ButtonDialog iconName="bars" sizing={Sizing.xxsmall}>dialog</ButtonDialog></td>
@@ -360,7 +362,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><ButtonDialog iconName="bars" sizing={Sizing.xlarge}>dialog</ButtonDialog></td>
 						<td><ButtonDialog iconName="bars" sizing={Sizing.xxlarge}>dialog</ButtonDialog></td>
 						<td><ButtonDialog iconName="bars" sizing={Sizing.normal} disabled={true}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.normal} color="white" backgroundColor="teal">dialog</ButtonDialog></td>
+						<td><ButtonDialog iconName="bars" sizing={Sizing.normal} style={{color: "white", backgroundColor: "teal"}}>dialog</ButtonDialog></td>
 					</tr><tr>
 						<th>ButtonToggle</th>
 						<td><ButtonToggle
@@ -421,7 +423,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xlarge}/></td>
 						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
 						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal} color="white" backgroundColor="blue"/></td>
+						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal} style={{ color: "white", backgroundColor: "blue"}}/></td>
 					</tr><tr>
 						<th>ButtonText<br/>(Left)</th>
 						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xxsmall}/></td>
@@ -432,7 +434,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xlarge}/></td>
 						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
 						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal} color="white" backgroundColor="red"/></td>
+						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal} style={{color: "white", backgroundColor: "red"}}/></td>
 					</tr><tr>
 						<th>ButtonText<br/>(Center)</th>
 						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xxsmall}/></td>
@@ -443,7 +445,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xlarge}/></td>
 						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xxlarge}/></td>
 						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal} color="white" backgroundColor="red"/></td>
+						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal} style={{color: "white", backgroundColor: "red"}}/></td>
 					</tr>
 				</tbody>
 			</table>

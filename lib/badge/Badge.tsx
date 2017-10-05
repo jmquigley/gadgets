@@ -49,12 +49,15 @@ export interface BadgeProps extends BaseProps {
 export function getDefaultBadgeProps(): BadgeProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
-			backgroundColor: 'white',
-			color: 'red',
 			counter: 0,
 			location: Location.topRight,
 			onClick: nilEvent,
 			sizing: Sizing.normal,
+			style: {
+				backgroundColor: 'white',
+				border: 'solid 3px',
+				color: 'red'
+			},
 			suppress: false
 		})
 	);
@@ -62,12 +65,12 @@ export function getDefaultBadgeProps(): BadgeProps {
 
 export class Badge extends BaseComponent<BadgeProps, undefined> {
 
-	public static defaultProps: BadgeProps = getDefaultBadgeProps();
+	public static readonly defaultProps: BadgeProps = getDefaultBadgeProps();
 
 	private _badgeCN: ClassNames = new ClassNames();
 
 	constructor(props: BadgeProps) {
-		super(props, require('./styles.css'));
+		super(props, require('./styles.css'), Badge.defaultProps.style);
 
 		this._rootStyles.add([
 			this.styles.badgeContainer
@@ -88,15 +91,6 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		this.props.onClick(this.props.counter);
 	}
 
-	public componentWillUpdate(nextProps: BadgeProps) {
-		this.buildInlineStyles(nextProps, {
-			color: (nextProps.color || 'black'),
-			backgroundColor: (nextProps.backgroundColor || 'white'),
-			border: `solid 3px ${nextProps.color}`
-		});
-		super.componentWillUpdate(nextProps);
-	}
-
 	public render() {
 		let badge = null;
 
@@ -107,7 +101,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 				<div
 					className={this._badgeCN.classnames}
 					onClick={this.handleClick}
-					style={this.inlineStyle}
+					style={this.inlineStyles}
 				>
 					{this.props.counter}
 				</div>

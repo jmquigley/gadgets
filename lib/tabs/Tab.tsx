@@ -95,10 +95,10 @@ export interface TabState {
 
 export class Tab extends BaseComponent<TabProps, TabState> {
 
-	public static defaultProps: TabProps = getDefaultTabProps();
+	public static readonly defaultProps: TabProps = getDefaultTabProps();
 
 	constructor(props: TabProps) {
-		super(props, styles);
+		super(props, styles, Tab.defaultProps.style);
 
 		this._rootStyles.add([
 			'ui-tab',
@@ -130,7 +130,6 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	}
 
 	public componentWillUpdate(nextProps: TabProps, nextState: TabState) {
-		const style = {};
 
 		this._rootStyles.onIf(nextProps.selected)(
 			'ui-selected'
@@ -142,15 +141,18 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		this._rootStyles.onIf(this.props.href.orientation === Location.right)(this.styles.tabBorderRight);
 
 		if (nextState.hidden) {
-			style['display'] = 'none';
-			style['minWidth'] = '';
-			style['width'] = '';
+			this.inlineStyles = {
+				display: 'none',
+				minWidth: '',
+				width: ''
+			};
 		} else {
-			style['minWidth'] = '75px';
-			style['width'] = nextProps.width;
+			this.inlineStyles = {
+				minWidth: '75px',
+				width: nextProps.width
+			};
 		}
 
-		this.buildInlineStyles(nextProps, style);
 		super.componentWillUpdate(nextProps, nextState);
 	}
 
@@ -158,7 +160,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		return (
 			<div
 				className={this._rootStyles.classnames}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 			>
 				<Title
 					{...this.props}

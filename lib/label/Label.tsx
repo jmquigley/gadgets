@@ -88,12 +88,12 @@ export interface LabelState {
 
 export class Label extends BaseComponent<LabelProps, LabelState> {
 
-	public static defaultProps: LabelProps = getDefaultLabelProps();
+	public static readonly defaultProps: LabelProps = getDefaultLabelProps();
 
 	private _label: any = null;
 
 	constructor(props: LabelProps) {
-		super(props, require('./styles.css'));
+		super(props, require('./styles.css'), Label.defaultProps.style);
 
 		this._rootStyles.add([
 			'ui-label',
@@ -202,15 +202,6 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
-	public componentWillUpdate(nextProps: LabelProps) {
-		this.buildInlineStyles(nextProps, {
-			color: nextProps.color,
-			backgroundColor: nextProps.backgroundColor
-		});
-
-		super.componentWillUpdate(nextProps);
-	}
-
 	public render() {
 		return (
 			<span
@@ -222,7 +213,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				onKeyDown={this.handleKeyDown}
 				onKeyPress={this.handleKeyPress}
 				ref={this.handleRef}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 				suppressContentEditableWarning
 			>
 				{this.state.text}

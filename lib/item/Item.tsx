@@ -157,7 +157,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 				onKeyDown={this.props.onKeyDown}
 				onKeyPress={this.props.onKeyPress}
 				onMouseOut={this.props.onMouseOut}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 			>
 				{leftButton}
 				<Title

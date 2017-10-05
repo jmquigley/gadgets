@@ -199,8 +199,6 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			}
 		}
 
-		debug('initial tab children: %O', this._tabs);
-
 		this.state = {
 			selectedTab: this._tabs.size > 0 ? this._tabs.get(0).props['id'] : null
 		};

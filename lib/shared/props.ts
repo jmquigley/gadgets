@@ -102,6 +102,10 @@ export enum SortOrder {
 	descending
 }
 
+export interface Styles {
+	[key: string]: string;
+}
+
 export interface BaseProps {
 	backgroundColor?: string;
 	borderColor?: string;
@@ -120,34 +124,36 @@ export interface BaseProps {
 	noripple?: boolean;
 	selected?: boolean;
 	sizing?: Sizing;
-	style?: any;
+	style?: Styles;
 	testing?: boolean;
 	visible?: boolean;
 	width?: string;
 }
 
+const defaultBaseProps = {
+	backgroundColor: 'inherit',
+	borderColor: 'inherit',
+	borderWidth: 'none',
+	className: '',
+	color: 'inherit',
+	contentEditable: false,
+	direction: Direction.right,
+	disabled: false,
+	focus: false,
+	height: '',
+	id: '',
+	location: Location.none,
+	noedit: false,
+	nohover: false,
+	noripple: false,
+	selected: false,
+	sizing: Sizing.normal,
+	style: {},
+	testing: false,
+	visible: true,
+	width: ''
+}
+
 export function getDefaultBaseProps(): BaseProps {
-	return cloneDeep({
-		backgroundColor: 'inherit',
-		borderColor: 'inherit',
-		borderWidth: 'none',
-		className: '',
-		color: 'inherit',
-		contentEditable: false,
-		direction: Direction.right,
-		disabled: false,
-		focus: false,
-		height: '',
-		id: '',
-		location: Location.none,
-		noedit: false,
-		nohover: false,
-		noripple: false,
-		selected: false,
-		sizing: Sizing.normal,
-		style: {},
-		testing: false,
-		visible: true,
-		width: ''
-	});
+	return cloneDeep(defaultBaseProps);
 }

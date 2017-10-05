@@ -21,16 +21,21 @@ export interface TriangleProps extends BaseProps {
 export function getDefaultTriangleProps(): TriangleProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			borderWidth: '2px',
 			direction: Direction.up,
 			nobase: false,
-			sizing: Sizing.normal
-		}));
+			sizing: Sizing.normal,
+			style: {
+				fill: 'black',
+				stroke: 'black',
+				strokeWidth: '2px'
+			}
+		}
+	));
 }
 
 export class Triangle extends BaseComponent<TriangleProps, undefined> {
 
-	public static defaultProps: TriangleProps = getDefaultTriangleProps();
+	public static readonly defaultProps: TriangleProps = getDefaultTriangleProps();
 
 	private static readonly _resetPosition: string[] = [
 		styles.triangleRight,
@@ -40,7 +45,7 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 	];
 
 	constructor(props: TriangleProps) {
-		super(props, styles);
+		super(props, styles, Triangle.defaultProps.style);
 
 		this._rootStyles.add([
 			'ui-triangle',
@@ -85,12 +90,6 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 				break;
 		}
 
-		this.buildInlineStyles(nextProps, {
-			fill: nextProps.backgroundColor,
-			stroke: nextProps.borderColor,
-			strokeWidth: nextProps.borderWidth
-		});
-
 		super.componentWillUpdate(nextProps);
 	}
 
@@ -100,7 +99,7 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 				<svg
 					className={this._rootStyles.classnames}
 					preserveAspectRatio="xMidYMid meet"
-					style={this.inlineStyle}
+					style={this.inlineStyles}
 					version="1.1"
 					viewBox="0 0 40 40"
 					xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +112,7 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 				<svg
 					className={this._rootStyles.classnames}
 					preserveAspectRatio="xMidYMid meet"
-					style={this.inlineStyle}
+					style={this.inlineStyles}
 					version="1.1"
 					viewBox="0 0 40 40"
 					xmlns="http://www.w3.org/2000/svg"

@@ -48,7 +48,7 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 				{...this.props}
 				className={this._rootStyles.classnames}
 				sizing={this.props.href.sizing}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 			/>
 		);
 	}

@@ -38,7 +38,7 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 				{...this.props}
 				className={this._rootStyles.classnames}
 				noripple
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 				title={this.props.title}
 			/>
 		);

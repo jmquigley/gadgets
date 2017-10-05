@@ -141,7 +141,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 				onKeyPress={this.handleKeyPress}
 				onMouseOut={this.handleMouseOut}
 				sizing={this.props.href.sizing}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 			/>
 		);
 	}

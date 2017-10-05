@@ -18,6 +18,16 @@ function createWindow() {
 		slashes: true
 	}));
 
+	// This will load the React development tools into electron.
+	// It uses the environment variable "REACT_DEV_TOOL" to get the path to
+	// the chrome extension (directory path).  Set this path in the development
+	// environment to enable the extension.
+	if (process.env.NODE_ENV !== 'production'
+			&& 'REACT_DEV_TOOL' in process.env
+			&& process.env.REACT_DEV_TOOL) {
+		BrowserWindow.addDevToolsExtension(process.env.REACT_DEV_TOOL);
+	}
+
 	mainWindow.webContents.openDevTools();
 	mainWindow.on('closed', () => {
 		mainWindow = null;

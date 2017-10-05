@@ -132,7 +132,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		return (
 			<ul
 				className={this._rootStyles.classnames}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 			>
 				<Item
 					{...this.props}

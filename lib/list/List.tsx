@@ -89,7 +89,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 			<div
 				className={this._rootStyles.classnames}
 				id={this.props.id}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 			>
 				<ul>
 					{children}

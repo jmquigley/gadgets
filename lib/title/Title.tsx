@@ -220,7 +220,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 		return (
 			<div
 				className={this._rootStyles.classnames}
-				style={{...this.inlineStyle}}
+				style={{...this.inlineStyles}}
 			>
 				{title}
 				{widget}

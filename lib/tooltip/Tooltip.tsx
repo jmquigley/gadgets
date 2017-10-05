@@ -74,18 +74,20 @@ export interface TooltipProps extends BaseProps {
 export function getDefaultTooltipProps(): TooltipProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			color: 'white',
-			backgroundColor: 'gray',
 			location: Location.middleRight,
 			show: false,
-			sizing: Sizing.inherit
+			sizing: Sizing.inherit,
+			style: {
+				color: 'white',
+				backgroundColor: 'gray'
+			}
 		})
 	);
 }
 
 export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 
-	public static defaultProps: TooltipProps = getDefaultTooltipProps();
+	public static readonly defaultProps: TooltipProps = getDefaultTooltipProps();
 
 	private static readonly _resetTooltipLocation = [
 		styles.tooltipTopLeft,
@@ -104,7 +106,7 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 	private _triangleStyle: string = '';
 
 	constructor(props: TooltipProps) {
-		super(props, styles);
+		super(props, styles, Tooltip.defaultProps.style);
 
 		this._contentStyles.add('ui-tooltip-content');
 		this._rootStyles.add([
@@ -185,11 +187,6 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 			this.styles.tooltipHide
 		);
 
-		this.buildInlineStyles(nextProps, {
-			color: nextProps.backgroundColor,
-			backgroundColor: nextProps.backgroundColor
-		});
-
 		super.componentWillUpdate(nextProps);
 	}
 
@@ -197,7 +194,7 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 		return (
 			<div
 				className={this._rootStyles.classnames}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 			>
 				<span
 					className={this._contentStyles.classnames}

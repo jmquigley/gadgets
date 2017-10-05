@@ -128,7 +128,7 @@ export interface ToastState {
 
 export class Toast extends BaseComponent<ToastProps, ToastState> {
 
-	public static defaultProps: ToastProps = getDefaultToastProps();
+	public static readonly defaultProps: ToastProps = getDefaultToastProps();
 
 	private static readonly _resetMessageLevels = [
 		styles.info,
@@ -141,7 +141,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
-		super(props, styles);
+		super(props, styles, Toast.defaultProps.style);
 
 		this._rootStyles.add([
 			'ui-toast',
@@ -206,24 +206,6 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 		this._buttonSizing = this.next(nextProps.sizing).type;
 
-		if (nextProps.level === ToastLevel.custom) {
-			const style = {};
-
-			if (nextProps.color !== 'inherit') {
-				style['color'] = nextProps.color;
-			}
-
-			if (nextProps.backgroundColor !== 'inherit') {
-				style['backgroundColor'] = nextProps.backgroundColor;
-			}
-
-			if (nextProps.borderColor !== 'inherit') {
-				style['borderColor'] = nextProps.borderColor;
-			}
-
-			this.buildInlineStyles(nextProps, style);
-		}
-
 		if (nextProps.level !== this.props.level) {
 			this._rootStyles.reset(Toast._resetMessageLevels);
 		}
@@ -261,7 +243,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		return (
 			<div
 				className={this._rootStyles.classnames}
-				style={{...this.inlineStyle}}
+				style={this.inlineStyles}
 			>
 				<div className={this._contentStyles.classnames}>
 					<span>{this.props.children}</span>

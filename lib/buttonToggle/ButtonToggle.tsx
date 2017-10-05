@@ -99,7 +99,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		};
 
 		this.bindCallbacks('handleClick');
-		this.componentWillUpdate(props);
+		this.componentWillUpdate(this.props, this.state);
 	}
 
 	private handleClick() {
@@ -110,16 +110,32 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		this.props.onClick(this.state.toggle);
 	}
 
+	public componentWillUpdate(nextProps: ButtonToggleProps, nextState: ButtonToggleState) {
+
+		if (nextState.toggle) {
+			this.inlineStyles = {
+				backgroundColor: nextProps.bgColorOn,
+				color: nextProps.fgColorOn
+			}
+		} else {
+			this.inlineStyles = {
+				backgroundColor: nextProps.bgColorOff,
+				color: nextProps.fgColorOff
+			}
+		}
+
+		super.componentWillUpdate(nextProps, nextState);
+	}
+
 	public render() {
 		return (
 			<Button
 				{...this.props}
-				backgroundColor={(this.state.toggle) ? this.props.bgColorOn : this.props.bgColorOff}
 				className={this._rootStyles.classnames}
-				color={(this.state.toggle) ? this.props.fgColorOn : this.props.fgColorOff}
 				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
 				noripple
 				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+				style={this.inlineStyles}
 			/>
 		);
 	}

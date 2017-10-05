@@ -120,6 +120,7 @@ export interface TextFieldProps extends Partial<HTMLInputElement> {
 	onKeyPress?: any;
 	onValidation?: any;
 	sizing?: Sizing;
+	style?: any;
 	type?: string;
 	usevalidation?: boolean;
 	validators?: Validator[];
@@ -136,6 +137,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		onKeyPress: nilEvent,
 		onValidation: nilEvent,
 		sizing: Sizing.normal,
+		style: {},
 		type: 'text',
 		usevalidation: false,
 		validators: [],
@@ -153,7 +155,7 @@ const textTypes: any[] = ['text', 'email', 'search', 'password', 'tel', 'url'];
 
 export class TextField extends BaseComponent<any, TextFieldState> {
 
-	public static defaultProps: TextFieldProps = getDefaultTextFieldProps();
+	public static readonly defaultProps: TextFieldProps = getDefaultTextFieldProps();
 
 	private _input: HTMLInputElement = null;
 	private _inputStyles: ClassNames = new ClassNames();
@@ -162,7 +164,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	private _value: string = '';
 
 	constructor(props: TextFieldProps) {
-		super(props, require('./styles.css'));
+		super(props, require('./styles.css'), TextField.defaultProps.style);
 
 		this._inputStyles.add([
 			this.styles.textFieldInput
@@ -297,9 +299,10 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	public componentWillUpdate(nextProps: any) {
 
-		const style = {};
 		if ('size' in nextProps) {
-			style['minWidth'] = `${(nextProps.size / 2.0) + 2}rem`;
+			this.inlineStyles = {
+				minWidth: `${(nextProps.size / 2.0) + 2}rem`
+			};
 		}
 
 		if (this.props.sizing !== nextProps['sizing']) {
@@ -315,7 +318,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			this.styles.disabled
 		);
 
-		this.buildInlineStyles(nextProps, style);
 		super.componentWillUpdate(nextProps);
 	}
 
@@ -344,7 +346,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
 					ref={this.handleRef}
-					style={this.inlineStyle}
+					style={this.inlineStyles}
 				/>
 					{this.props.usevalidation
 					?

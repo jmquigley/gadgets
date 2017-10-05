@@ -10,7 +10,8 @@ import {
 	getDefaultBaseProps,
 	Justify,
 	Location,
-	SortOrder
+	SortOrder,
+	Styles
 } from './props';
 
 import {
@@ -33,5 +34,6 @@ export {
 	Sizes,
 	Sizing,
 	SortOrder,
+	Styles,
 	Styling
 };

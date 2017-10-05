@@ -62,12 +62,12 @@ export function getDefaultButtonProps(): ButtonProps {
 
 export class Button extends BaseComponent<ButtonProps, undefined> {
 
-	public static defaultProps: ButtonProps = getDefaultButtonProps();
+	public static readonly defaultProps: ButtonProps = getDefaultButtonProps();
 
 	private _iconStyles: ClassNames = new ClassNames();
 
 	constructor(props: ButtonProps) {
-		super(props, require('./styles.css'));
+		super(props, require('./styles.css'), Button.defaultProps.style);
 
 		this._iconStyles.add([
 			this.props.iconStyle,
@@ -91,29 +91,10 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ButtonProps) {
-		const style = {};
-
-		if (nextProps.color !== 'inherit') {
-			style['color'] = nextProps.color;
-		}
-
-		if (nextProps.backgroundColor !== 'inherit') {
-			style['backgroundColor'] = nextProps.backgroundColor;
-		}
-
-		if (nextProps.borderColor !== 'inherit') {
-			style['borderColor'] = nextProps.borderColor;
-		}
-
-		if (nextProps.borderWidth !== 'none') {
-			style['borderWidth'] = nextProps.borderWidth;
-		}
-
 		this._rootStyles.onIf(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
 		);
 
-		this.buildInlineStyles(nextProps, style);
 		super.componentWillUpdate(nextProps);
 	}
 
@@ -122,7 +103,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 			<div
 				className={this._rootStyles.classnames}
 				onClick={this.handleClick}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 			>
 				<Icon
 					className={this._iconStyles.classnames}

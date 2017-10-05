@@ -73,7 +73,7 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 
 export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
-	public static defaultProps: ButtonTextProps = getDefaultButtonTextProps();
+	public static readonly defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 
 	private static readonly _resetJustify = [
 		styles.right,
@@ -84,7 +84,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	private _contentStyles: ClassNames = new ClassNames();
 
 	constructor(props: ButtonTextProps) {
-		super(props, styles);
+		super(props, styles, ButtonText.defaultProps.style);
 
 		this._contentStyles.add([
 			this.styles.content
@@ -115,19 +115,6 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ButtonTextProps) {
-		const style = {};
-
-		if (nextProps.color !== 'inherit') {
-			style['color'] = nextProps.color;
-		}
-
-		if (nextProps.backgroundColor !== 'inherit') {
-			style['backgroundColor'] = nextProps.backgroundColor;
-		}
-
-		if (nextProps.borderColor !== 'inherit') {
-			style['borderColor'] = nextProps.borderColor;
-		}
 
 		if (nextProps.justify !== this.props.justify) {
 			this._contentStyles.reset(ButtonText._resetJustify);
@@ -143,7 +130,6 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 		this.updateFontStyle(this._contentStyles, nextProps, this.props);
 
-		this.buildInlineStyles(nextProps, style);
 		this._rootStyles.onIf(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
 		);
@@ -175,7 +161,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		return (
 			<div
 				className={this._rootStyles.classnames}
-				style={this.inlineStyle}
+				style={this.inlineStyles}
 				onClick={this.handleClick}
 			>
 				{leftButton}

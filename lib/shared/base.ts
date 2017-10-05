@@ -43,31 +43,33 @@
 
 'use strict';
 
+import {Map} from 'immutable';
+import {isEmpty} from 'lodash';
 import * as React from 'react';
 import {calc} from 'util.calc';
 import {ClassNames} from 'util.classnames';
-import {FontStyle, Sizes, Sizing, Styling} from './index';
+import {FontStyle, Sizes, Sizing, Styles, Styling} from './index';
 
-const styles = require('./styles.css');
+const gstyles = require('./styles.css');
 
 export const defaultSize: number = 16;
 
 export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
 	private _className: string = '';
-	private _inlineStyle: any = {};     // inline style overrides
+	private _inlineStyles: Map<string, string> = Map({});
 	private _locationStyle: string = '';
-	private _styles: any = {};          // css modules styles per module
+	private _styles: any  = {};  // css modules styles per module
 	private _sizes: Sizes = null;
 	private _sizing: Sizing = null;
 
 	// The style object applied (generally) to the root of a component
 	protected _rootStyles: ClassNames = new ClassNames();
 
-	constructor(props: P, pstyles: any = {}, defaultFontSize: number = defaultSize) {
+	constructor(props: P, styles: Styles = {}, defaultInlineStyles: Styles = {}, defaultFontSize: number = defaultSize) {
 		super(props);
 
-		this._styles = pstyles;
+		this._styles = styles;
 		this._sizes = Sizes.instance(defaultFontSize);
 
 		if ('sizing' in props) {
@@ -83,18 +85,24 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		if ('location' in props) {
 			this._locationStyle = this.styles[props['location']];
 		}
+
+		this.inlineStyles = Object.assign({}, defaultInlineStyles, props['style']);
 	}
 
 	get className(): string {
 		return this._className;
 	}
 
-	get inlineStyle(): any {
-		return this._inlineStyle;
+	get inlineStyles(): any {
+		return this._inlineStyles.toObject();
 	}
 
-	set inlineStyle(val: any) {
-		this._inlineStyle = Object.assign({}, this._inlineStyle, val);
+	set inlineStyles(obj: any) {
+		for (const key in obj) {
+			if (obj.hasOwnProperty(key)) {
+				this._inlineStyles = this._inlineStyles.set(key, obj[key]);
+			}
+		}
 	}
 
 	get locationStyle() {
@@ -157,15 +165,6 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	 */
 	protected boxStyle(sizing: Sizing = this.sizing): string {
 		return this.sizes[sizing].boxStyle;
-	}
-
-	protected buildInlineStyles(props: P, style: any = {}) {
-		// Takes the initial inline style object, the style object from props
-		// and an input user override and merges them together from left to
-		// right, Where the rightmost item in the function call has a higher
-		// priority when the objects have the same "key"
-		this._inlineStyle = Object.assign({}, this._inlineStyle, props['style'], style);
-		return this._inlineStyle;
 	}
 
 	protected font(sizing: Sizing = this.sizing): FontStyle {
@@ -339,12 +338,16 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		);
 
 		this._rootStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
-			styles.disabled,
+			gstyles.disabled,
 			'nohover'
 		);
 
 		if ('nohover' in nextProps && nextProps['nohover']) {
 			this._rootStyles.on('nohover');
+		}
+
+		if (!isEmpty(nextProps['style'])) {
+			this.inlineStyles = nextProps['style'];
 		}
 	}
 }
