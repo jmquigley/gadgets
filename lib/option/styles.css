@@ -1,0 +1,18 @@
+@import '../shared/styles.css';
+
+:local {
+
+	.option {
+		align-items: center;
+		cursor: default;
+		display: inline-flex;
+	}
+
+	.option > span {
+		padding: 0 0.33rem;
+	}
+
+	.optionButton {
+	}
+
+}

@@ -1,3 +1,4 @@
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
@@ -25,9 +26,12 @@ module.exports = {
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
 		alias: {
+			"immutable": path.resolve(__dirname, 'node_modules', 'immutable', 'dist', 'immutable.min.js'),
 			"jquery": path.resolve(__dirname, 'node_modules', 'jquery', 'dist', 'jquery.min.js'),
-    		"react$": path.resolve(__dirname, 'node_modules', 'react', 'dist', 'react.min.js'),
-        	"react-dom$": path.resolve(__dirname, 'node_modules', 'react-dom', 'dist', 'react-dom.min.js')
+			"lodash": path.resolve(__dirname, 'node_modules', 'lodash', 'lodash.min.js'),
+			"quill": path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.min.js'),
+    		"react$": path.resolve(__dirname, 'node_modules', 'react', 'umd', 'react.production.min.js'),
+        	"react-dom$": path.resolve(__dirname, 'node_modules', 'react-dom', 'umd', 'react-dom.production.min.js')
 		}
     },
 	externals: {
@@ -93,9 +97,9 @@ module.exports = {
 	},
 	plugins: [
 		new ExtractTextPlugin({filename: "styles.css"}),
-		// new webpack.DefinePlugin({
-		// 	NODE_ENV: JSON.stringify("production")
-		// }),
+		new webpack.DefinePlugin({
+			NODE_ENV: JSON.stringify("production")
+		}),
 		new webpack.ProvidePlugin({
     		$: "jquery",
     		jQuery: "jquery",
@@ -107,8 +111,8 @@ module.exports = {
 			from: 'node_modules/quill-markup/public/highlights/**/*.css',
 			to: 'highlights',
 			flatten: true
-		}])
+		}]),
 		// new BundleAnalyzerPlugin(),
-    	// new MinifyPlugin(minifyOpts, pluginOpts)
+		new MinifyPlugin()
 	]
 };

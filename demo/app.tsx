@@ -39,6 +39,8 @@ const {
 	ListHeader,
 	ListItem,
 	Location,
+	Option,
+	OptionType,
 	Pager,
 	Select,
 	Sizing,
@@ -794,6 +796,63 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	private buildOption = () => (
+		<Container id="optionExample">
+			<Option type={OptionType.square} />
+			<Option selected text="square" type={OptionType.square} />
+			<br/>
+
+			<Option type={OptionType.squareFilled} />
+			<Option selected text="squareFilled" type={OptionType.squareFilled} />
+			<br/>
+
+			<Option type={OptionType.squareReverse} />
+			<Option selected text="squareReverse" type={OptionType.squareReverse} />
+			<br/>
+
+			<Option type={OptionType.circle} />
+			<Option selected text="circle" type={OptionType.circle} />
+			<br/>
+
+			<Option type={OptionType.circleFilled} />
+			<Option selected text="circleFilled" type={OptionType.circleFilled} />
+			<br/>
+
+			<Option type={OptionType.circleReverse} />
+			<Option selected text="circleReverse" type={OptionType.circleReverse} />
+			<br/>
+
+			<Option type={OptionType.times} />
+			<Option selected text="times" type={OptionType.times} />
+			<br/>
+
+			<Option type={OptionType.timesReverse} />
+			<Option selected text="timesReverse" type={OptionType.timesReverse} />
+			<br/>
+
+			<Option type={OptionType.dot} />
+			<Option selected text="dot" type={OptionType.dot} />
+			<br/>
+
+			<Option type={OptionType.star} />
+			<Option selected text="star" type={OptionType.star} /><br/>
+			<br/>
+
+			<Option text="colored" type={OptionType.square} style={{color: 'blue'}} /><br/>
+			<Option text="colored" type={OptionType.square} style={{color: 'yellow', backgroundColor: 'black'}} /><br/>
+			<br/>
+
+			<Option text="xxsmall" sizing={Sizing.xxsmall} /><br/>
+			<Option text="xsmall" sizing={Sizing.xsmall} /><br/>
+			<Option text="small" sizing={Sizing.small} /><br/>
+			<Option text="normal" sizing={Sizing.normal} /><br/>
+			<Option text="large" sizing={Sizing.large} /><br/>
+			<Option text="xlarge" sizing={Sizing.xlarge} /><br/>
+			<Option text="xxlarge" sizing={Sizing.xxlarge} /><br/>
+
+		</Container>
+	)
+
 	private buildPager = () => (
 		<Container id="pagerExample">
 
@@ -1442,6 +1501,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>List/ListItem (without header)</h1>
 				{this.buildListItemWithoutHeader()}
+
+				<h1>Option</h1>
+				{this.buildOption()}
 
 				<h1>Pager</h1>
 				{this.buildPager()}

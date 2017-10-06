@@ -13,17 +13,20 @@
  * ```
  *
  * #### Events
- * - `onClick()` - This callback is invoked when the control is clicked by the user
+ * - `onClick()` - This callback is invoked when the control is clicked by the
+ * user
  *
  * #### Styles
  * - `ui-button` - A top level style placed on `<i>` control that constructs the
  * button.
  *
  * #### Properties
- * - `iconName: string ('bomb')` - the name of the font awesome icon used with this button
+ * - `iconName: string ('bomb')` - the name of the font awesome icon used with
+ * this button
  * - `iconStyle: string ('')` - a CSS style class name that will be added to the
  * icon within the button.
- * - `sizing: Sizing` - Allows one to change the size of the icon within the button.
+ * - `sizing: Sizing` - Allows one to change the size of the icon within the
+ * button.
  * See the shared props object for the `Sizing` enumeration.
  *
  * @module Button
@@ -84,7 +87,9 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	}
 
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
-		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
+		if (!this.props.disabled
+			&& this.props.visible
+			&& this.props.onClick != null) {
 			this.props.onClick(e);
 		}
 		e.stopPropagation();
