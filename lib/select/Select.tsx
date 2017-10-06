@@ -41,9 +41,8 @@
 
 'use strict';
 
-const ReactSelect = require('react-select');
-
 import * as React from 'react';
+import ReactSelect from 'react-select';
 import {BaseComponent, Sizing} from '../shared';
 
 export class Select extends BaseComponent<any, any> {
