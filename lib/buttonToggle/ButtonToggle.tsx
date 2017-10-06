@@ -105,9 +105,9 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 	public handleClick() {
 		this.setState({
 			toggle: !this.state.toggle
+		}, () => {
+			this.props.onClick(this.state.toggle);
 		});
-
-		this.props.onClick(this.state.toggle);
 	}
 
 	public componentWillUpdate(nextProps: ButtonToggleProps, nextState: ButtonToggleState) {

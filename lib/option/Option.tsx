@@ -1,5 +1,50 @@
-// TODO: add Option implementation
-// TODO: add Option documentation
+/**
+ * A checkbox/radio button control.  This is a specialized wrapper of the
+ * ButtonToggle control.  It contains an enum named OptionType used to
+ * determine what visual type the control will take on.  The options are:
+ *
+ * - square
+ * - squareFilled
+ * - squareReverse
+ * - circle
+ * - circleFilled
+ * - circleReverse
+ * - times
+ * - timesReverse
+ * - dot
+ * - star
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {Option, OptionType} from 'gadgets';
+ * <Option
+ *     onClick={someFunction}
+ *     selected
+ *     text="lorem ipsum"
+ *     type={OptionType.square}
+ * />
+ * ```
+ *
+ * #### Events
+ * - `onClick(toggle: boolean)` - When the option is clicked, then the button
+ * display is chagned (toggled).  The callback returns the current state of
+ * the toggle.  When the button is "clear", it is off and "false" is sent to
+ * the callback.  When the button is "checked", it is on and true is sent to
+ * the callback.
+ *
+ * #### Styles
+ * - `ui-option` - Style applied to the root `<div>` of the control.
+ *
+ * #### Properties
+ * - `selected: {boolean} (false)` - determines the initial state of the
+ * control.  If true, then the control is "checked", otherwise it is "off"
+ * - `text: {string} ('')` - text string to the right of the control
+ * - `type: {OptionType} (OptionType.square)` - An enumerated type that will
+ * determine what icons will be displayed.  They are listed above.
+ *
+ * @module Option
+ */
 
 'use strict';
 import {cloneDeep} from 'lodash';
@@ -110,8 +155,6 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 		if (this._btn) {
 			this._btn.handleClick();
 		}
-
-		this.props.onClick();
 	}
 
 	public render() {
@@ -131,6 +174,7 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 					iconNameOff={this.icons[this.props.type].off}
 					initialToggle={this.props.selected}
 					nohover
+					onClick={this.props.onClick}
 					ref={(btn: ButtonToggle) => {
 						this._btn = btn;
 					}}

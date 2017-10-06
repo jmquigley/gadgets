@@ -1,4 +1,4 @@
-const MinifyPlugin = require("babel-minify-webpack-plugin");
+// const MinifyPlugin = require("babel-minify-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
@@ -113,6 +113,6 @@ module.exports = {
 			flatten: true
 		}]),
 		// new BundleAnalyzerPlugin(),
-		new MinifyPlugin()
+		// new MinifyPlugin()
 	]
 };

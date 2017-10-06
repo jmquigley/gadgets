@@ -799,7 +799,14 @@ class App extends React.Component<AppProps, AppState> {
 	private buildOption = () => (
 		<Container id="optionExample">
 			<Option type={OptionType.square} />
-			<Option selected text="square" type={OptionType.square} />
+			<Option
+				onClick={(val: boolean) => {
+					debug('clicked option, flag: %o', val);
+				}}
+				selected
+				text="square"
+				type={OptionType.square}
+			/>
 			<br/>
 
 			<Option type={OptionType.squareFilled} />

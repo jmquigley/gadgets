@@ -163,8 +163,8 @@ A text label string control that can be edited.
 ### [List](docs/lib/list/List.md)/[ListDivider](docs/lib/list/ListDivider.md)/[ListFooter](docs/lib/list/ListFooter.md)/[ListHeader](docs/lib/list/ListHeader.md)/[ListItem](docs/lib/list/ListItem.md)
 A container element that holds a list of other elements.  The `List` resolves to a `<ul>` and the items within it resolve to `<li>`.
 
-### Option
-TODO: create the Checkbox or radio button control.  This is just a specialized form of ButtonToggle.
+### [Option](docs/lib/option/Option.md)
+A checkbox/radio button control.  This is just a specialized form of ButtonToggle.
 
 ### [Pager](docs/lib/pager/Pager.md)
 A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.
