@@ -2,11 +2,7 @@
 
 exports[`Test retrieval of ListHeader props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
@@ -49,11 +45,7 @@ Object {
 
 exports[`Test the creation of a ListHeader control with simple title 1`] = `
 <Item
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className="ui-list-header listHeader normal"
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}

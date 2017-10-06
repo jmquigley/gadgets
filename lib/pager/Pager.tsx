@@ -206,10 +206,12 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		this._iconCheck = (
 			<Icon
-				color="green"
 				iconName="check"
 				key={this._fillerKeys.at(this._fillerIdx++)}
 				sizing={this.props.sizing}
+				style={{
+					color: 'green'
+				}}
 			/>
 		);
 

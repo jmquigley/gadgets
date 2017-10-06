@@ -2,11 +2,7 @@
 
 exports[`Create a new dynamic TagList by adding a new input 1`] = `
 <TagList
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -43,11 +39,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
     className="ui-taglist tagList normal"
   >
     <Icon
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -73,11 +65,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
       />
     </Icon>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -107,11 +95,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -146,12 +130,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             b
@@ -159,10 +138,9 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
         </Label>
         <ButtonCircle
           backgroundColor="white"
-          borderColor="#d9534f"
-          borderWidth="none"
+          borderColor="black"
           className="tagDeleteButton middle"
-          color="#d9534f"
+          color="black"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -178,7 +156,12 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           onClick={[Function]}
           selected={false}
           sizing="small"
-          style={Object {}}
+          style={
+            Object {
+              "borderColor": "#d9534f",
+              "color": "#d9534f",
+            }
+          }
           testing={false}
           visible={false}
           width=""
@@ -191,10 +174,9 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
             >
               <Button
                 backgroundColor="white"
-                borderColor="#d9534f"
-                borderWidth="none"
+                borderColor="black"
                 className="smallBorder buttonCircleIcon"
-                color="#d9534f"
+                color="black"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -210,7 +192,12 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                 onClick={[Function]}
                 selected={false}
                 sizing="small"
-                style={Object {}}
+                style={
+                  Object {
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                  }
+                }
                 testing={false}
                 visible={false}
                 width=""
@@ -220,18 +207,13 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                   onClick={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "white",
                       "borderColor": "#d9534f",
                       "color": "#d9534f",
                     }
                   }
                 >
                   <Icon
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
                     className="smallBox icon"
-                    color="inherit"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -264,11 +246,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -298,11 +276,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -337,12 +311,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             c
@@ -350,10 +319,9 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
         </Label>
         <ButtonCircle
           backgroundColor="white"
-          borderColor="#d9534f"
-          borderWidth="none"
+          borderColor="black"
           className="tagDeleteButton middle"
-          color="#d9534f"
+          color="black"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -369,7 +337,12 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           onClick={[Function]}
           selected={false}
           sizing="small"
-          style={Object {}}
+          style={
+            Object {
+              "borderColor": "#d9534f",
+              "color": "#d9534f",
+            }
+          }
           testing={false}
           visible={false}
           width=""
@@ -382,10 +355,9 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
             >
               <Button
                 backgroundColor="white"
-                borderColor="#d9534f"
-                borderWidth="none"
+                borderColor="black"
                 className="smallBorder buttonCircleIcon"
-                color="#d9534f"
+                color="black"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -401,7 +373,12 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                 onClick={[Function]}
                 selected={false}
                 sizing="small"
-                style={Object {}}
+                style={
+                  Object {
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                  }
+                }
                 testing={false}
                 visible={false}
                 width=""
@@ -411,18 +388,13 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                   onClick={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "white",
                       "borderColor": "#d9534f",
                       "color": "#d9534f",
                     }
                   }
                 >
                   <Icon
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
                     className="smallBox icon"
-                    color="inherit"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -455,11 +427,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -489,11 +457,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -528,12 +492,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             d
@@ -541,10 +500,9 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
         </Label>
         <ButtonCircle
           backgroundColor="white"
-          borderColor="#d9534f"
-          borderWidth="none"
+          borderColor="black"
           className="tagDeleteButton middle"
-          color="#d9534f"
+          color="black"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -560,7 +518,12 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           onClick={[Function]}
           selected={false}
           sizing="small"
-          style={Object {}}
+          style={
+            Object {
+              "borderColor": "#d9534f",
+              "color": "#d9534f",
+            }
+          }
           testing={false}
           visible={false}
           width=""
@@ -573,10 +536,9 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
             >
               <Button
                 backgroundColor="white"
-                borderColor="#d9534f"
-                borderWidth="none"
+                borderColor="black"
                 className="smallBorder buttonCircleIcon"
-                color="#d9534f"
+                color="black"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -592,7 +554,12 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                 onClick={[Function]}
                 selected={false}
                 sizing="small"
-                style={Object {}}
+                style={
+                  Object {
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                  }
+                }
                 testing={false}
                 visible={false}
                 width=""
@@ -602,18 +569,13 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                   onClick={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "white",
                       "borderColor": "#d9534f",
                       "color": "#d9534f",
                     }
                   }
                 >
                   <Icon
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
                     className="smallBox icon"
-                    color="inherit"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -657,6 +619,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
       placeholder="new"
       size={1}
       sizing="normal"
+      style={Object {}}
       type="text"
       usevalidation={false}
       validators={Array []}
@@ -664,7 +627,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
     >
       <div
         className="ui-textfield textField normal tagListInput"
-        style={undefined}
+        style={Object {}}
       >
         <input
           className="textFieldInput"
@@ -691,11 +654,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 
 exports[`Create a new dynamic TagList item and cancel creation with escape 1`] = `
 <TagList
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -732,11 +691,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
     className="ui-taglist tagList normal"
   >
     <Icon
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -762,11 +717,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
       />
     </Icon>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -796,11 +747,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -835,12 +782,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             a
@@ -848,10 +790,9 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
         </Label>
         <ButtonCircle
           backgroundColor="white"
-          borderColor="#d9534f"
-          borderWidth="none"
+          borderColor="black"
           className="tagDeleteButton middle"
-          color="#d9534f"
+          color="black"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -867,7 +808,12 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           onClick={[Function]}
           selected={false}
           sizing="small"
-          style={Object {}}
+          style={
+            Object {
+              "borderColor": "#d9534f",
+              "color": "#d9534f",
+            }
+          }
           testing={false}
           visible={false}
           width=""
@@ -880,10 +826,9 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
             >
               <Button
                 backgroundColor="white"
-                borderColor="#d9534f"
-                borderWidth="none"
+                borderColor="black"
                 className="smallBorder buttonCircleIcon"
-                color="#d9534f"
+                color="black"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -899,7 +844,12 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                 onClick={[Function]}
                 selected={false}
                 sizing="small"
-                style={Object {}}
+                style={
+                  Object {
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                  }
+                }
                 testing={false}
                 visible={false}
                 width=""
@@ -909,18 +859,13 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                   onClick={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "white",
                       "borderColor": "#d9534f",
                       "color": "#d9534f",
                     }
                   }
                 >
                   <Icon
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
                     className="smallBox icon"
-                    color="inherit"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -953,11 +898,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -987,11 +928,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -1026,12 +963,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             b
@@ -1039,10 +971,9 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
         </Label>
         <ButtonCircle
           backgroundColor="white"
-          borderColor="#d9534f"
-          borderWidth="none"
+          borderColor="black"
           className="tagDeleteButton middle"
-          color="#d9534f"
+          color="black"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -1058,7 +989,12 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           onClick={[Function]}
           selected={false}
           sizing="small"
-          style={Object {}}
+          style={
+            Object {
+              "borderColor": "#d9534f",
+              "color": "#d9534f",
+            }
+          }
           testing={false}
           visible={false}
           width=""
@@ -1071,10 +1007,9 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
             >
               <Button
                 backgroundColor="white"
-                borderColor="#d9534f"
-                borderWidth="none"
+                borderColor="black"
                 className="smallBorder buttonCircleIcon"
-                color="#d9534f"
+                color="black"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -1090,7 +1025,12 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                 onClick={[Function]}
                 selected={false}
                 sizing="small"
-                style={Object {}}
+                style={
+                  Object {
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                  }
+                }
                 testing={false}
                 visible={false}
                 width=""
@@ -1100,18 +1040,13 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                   onClick={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "white",
                       "borderColor": "#d9534f",
                       "color": "#d9534f",
                     }
                   }
                 >
                   <Icon
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
                     className="smallBox icon"
-                    color="inherit"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -1144,11 +1079,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -1178,11 +1109,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -1217,12 +1144,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             c
@@ -1230,10 +1152,9 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
         </Label>
         <ButtonCircle
           backgroundColor="white"
-          borderColor="#d9534f"
-          borderWidth="none"
+          borderColor="black"
           className="tagDeleteButton middle"
-          color="#d9534f"
+          color="black"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -1249,7 +1170,12 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           onClick={[Function]}
           selected={false}
           sizing="small"
-          style={Object {}}
+          style={
+            Object {
+              "borderColor": "#d9534f",
+              "color": "#d9534f",
+            }
+          }
           testing={false}
           visible={false}
           width=""
@@ -1262,10 +1188,9 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
             >
               <Button
                 backgroundColor="white"
-                borderColor="#d9534f"
-                borderWidth="none"
+                borderColor="black"
                 className="smallBorder buttonCircleIcon"
-                color="#d9534f"
+                color="black"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -1281,7 +1206,12 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                 onClick={[Function]}
                 selected={false}
                 sizing="small"
-                style={Object {}}
+                style={
+                  Object {
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                  }
+                }
                 testing={false}
                 visible={false}
                 width=""
@@ -1291,18 +1221,13 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                   onClick={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "white",
                       "borderColor": "#d9534f",
                       "color": "#d9534f",
                     }
                   }
                 >
                   <Icon
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
                     className="smallBox icon"
-                    color="inherit"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -1346,6 +1271,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
       placeholder="new"
       size={1}
       sizing="normal"
+      style={Object {}}
       type="text"
       usevalidation={false}
       validators={Array []}
@@ -1353,7 +1279,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
     >
       <div
         className="ui-textfield textField normal tagListInput"
-        style={undefined}
+        style={Object {}}
       >
         <input
           className="textFieldInput"
@@ -1380,11 +1306,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 
 exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
 <TagList
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -1421,11 +1343,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
     className="ui-taglist tagList normal"
   >
     <Icon
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -1451,11 +1369,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
       />
     </Icon>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -1485,11 +1399,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -1524,12 +1434,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             a
@@ -1538,11 +1443,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -1572,11 +1473,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -1611,12 +1508,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             b
@@ -1625,11 +1517,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -1659,11 +1547,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -1698,12 +1582,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             c
@@ -1717,11 +1596,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
 
 exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] = `
 <TagList
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -1758,11 +1633,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
     className="ui-taglist tagList normal"
   >
     <Icon
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -1788,11 +1659,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
       />
     </Icon>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -1822,11 +1689,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -1861,12 +1724,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             c
@@ -1875,11 +1733,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -1909,11 +1763,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -1948,12 +1798,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             b
@@ -1962,11 +1807,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -1996,11 +1837,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -2035,12 +1872,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             a
@@ -2054,11 +1886,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
 
 exports[`Remove a tag from a TagList 1`] = `
 <TagList
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -2095,11 +1923,7 @@ exports[`Remove a tag from a TagList 1`] = `
     className="ui-taglist tagList normal"
   >
     <Icon
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -2125,11 +1949,7 @@ exports[`Remove a tag from a TagList 1`] = `
       />
     </Icon>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -2159,11 +1979,7 @@ exports[`Remove a tag from a TagList 1`] = `
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -2198,12 +2014,7 @@ exports[`Remove a tag from a TagList 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             a
@@ -2211,10 +2022,9 @@ exports[`Remove a tag from a TagList 1`] = `
         </Label>
         <ButtonCircle
           backgroundColor="white"
-          borderColor="#d9534f"
-          borderWidth="none"
+          borderColor="black"
           className="tagDeleteButton middle"
-          color="#d9534f"
+          color="black"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -2230,7 +2040,12 @@ exports[`Remove a tag from a TagList 1`] = `
           onClick={[Function]}
           selected={false}
           sizing="small"
-          style={Object {}}
+          style={
+            Object {
+              "borderColor": "#d9534f",
+              "color": "#d9534f",
+            }
+          }
           testing={false}
           visible={false}
           width=""
@@ -2243,10 +2058,9 @@ exports[`Remove a tag from a TagList 1`] = `
             >
               <Button
                 backgroundColor="white"
-                borderColor="#d9534f"
-                borderWidth="none"
+                borderColor="black"
                 className="smallBorder buttonCircleIcon"
-                color="#d9534f"
+                color="black"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -2262,7 +2076,12 @@ exports[`Remove a tag from a TagList 1`] = `
                 onClick={[Function]}
                 selected={false}
                 sizing="small"
-                style={Object {}}
+                style={
+                  Object {
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                  }
+                }
                 testing={false}
                 visible={false}
                 width=""
@@ -2272,18 +2091,13 @@ exports[`Remove a tag from a TagList 1`] = `
                   onClick={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "white",
                       "borderColor": "#d9534f",
                       "color": "#d9534f",
                     }
                   }
                 >
                   <Icon
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
                     className="smallBox icon"
-                    color="inherit"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -2316,11 +2130,7 @@ exports[`Remove a tag from a TagList 1`] = `
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -2350,11 +2160,7 @@ exports[`Remove a tag from a TagList 1`] = `
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -2389,12 +2195,7 @@ exports[`Remove a tag from a TagList 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             b
@@ -2402,10 +2203,9 @@ exports[`Remove a tag from a TagList 1`] = `
         </Label>
         <ButtonCircle
           backgroundColor="white"
-          borderColor="#d9534f"
-          borderWidth="none"
+          borderColor="black"
           className="tagDeleteButton middle"
-          color="#d9534f"
+          color="black"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -2421,7 +2221,12 @@ exports[`Remove a tag from a TagList 1`] = `
           onClick={[Function]}
           selected={false}
           sizing="small"
-          style={Object {}}
+          style={
+            Object {
+              "borderColor": "#d9534f",
+              "color": "#d9534f",
+            }
+          }
           testing={false}
           visible={false}
           width=""
@@ -2434,10 +2239,9 @@ exports[`Remove a tag from a TagList 1`] = `
             >
               <Button
                 backgroundColor="white"
-                borderColor="#d9534f"
-                borderWidth="none"
+                borderColor="black"
                 className="smallBorder buttonCircleIcon"
-                color="#d9534f"
+                color="black"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -2453,7 +2257,12 @@ exports[`Remove a tag from a TagList 1`] = `
                 onClick={[Function]}
                 selected={false}
                 sizing="small"
-                style={Object {}}
+                style={
+                  Object {
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                  }
+                }
                 testing={false}
                 visible={false}
                 width=""
@@ -2463,18 +2272,13 @@ exports[`Remove a tag from a TagList 1`] = `
                   onClick={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "white",
                       "borderColor": "#d9534f",
                       "color": "#d9534f",
                     }
                   }
                 >
                   <Icon
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
                     className="smallBox icon"
-                    color="inherit"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -2507,11 +2311,7 @@ exports[`Remove a tag from a TagList 1`] = `
       </div>
     </Tag>
     <Tag
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -2541,11 +2341,7 @@ exports[`Remove a tag from a TagList 1`] = `
         onMouseOver={[Function]}
       >
         <Label
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -2580,12 +2376,7 @@ exports[`Remove a tag from a TagList 1`] = `
             onDoubleClick={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
-            style={
-              Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-              }
-            }
+            style={Object {}}
             suppressContentEditableWarning={true}
           >
             c
@@ -2593,10 +2384,9 @@ exports[`Remove a tag from a TagList 1`] = `
         </Label>
         <ButtonCircle
           backgroundColor="white"
-          borderColor="#d9534f"
-          borderWidth="none"
+          borderColor="black"
           className="tagDeleteButton middle"
-          color="#d9534f"
+          color="black"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -2612,7 +2402,12 @@ exports[`Remove a tag from a TagList 1`] = `
           onClick={[Function]}
           selected={false}
           sizing="small"
-          style={Object {}}
+          style={
+            Object {
+              "borderColor": "#d9534f",
+              "color": "#d9534f",
+            }
+          }
           testing={false}
           visible={false}
           width=""
@@ -2625,10 +2420,9 @@ exports[`Remove a tag from a TagList 1`] = `
             >
               <Button
                 backgroundColor="white"
-                borderColor="#d9534f"
-                borderWidth="none"
+                borderColor="black"
                 className="smallBorder buttonCircleIcon"
-                color="#d9534f"
+                color="black"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -2644,7 +2438,12 @@ exports[`Remove a tag from a TagList 1`] = `
                 onClick={[Function]}
                 selected={false}
                 sizing="small"
-                style={Object {}}
+                style={
+                  Object {
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                  }
+                }
                 testing={false}
                 visible={false}
                 width=""
@@ -2654,18 +2453,13 @@ exports[`Remove a tag from a TagList 1`] = `
                   onClick={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "white",
                       "borderColor": "#d9534f",
                       "color": "#d9534f",
                     }
                   }
                 >
                   <Icon
-                    backgroundColor="inherit"
-                    borderColor="inherit"
-                    borderWidth="none"
                     className="smallBox icon"
-                    color="inherit"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -2709,6 +2503,7 @@ exports[`Remove a tag from a TagList 1`] = `
       placeholder="new"
       size={1}
       sizing="normal"
+      style={Object {}}
       type="text"
       usevalidation={false}
       validators={Array []}
@@ -2716,7 +2511,7 @@ exports[`Remove a tag from a TagList 1`] = `
     >
       <div
         className="ui-textfield textField normal tagListInput"
-        style={undefined}
+        style={Object {}}
       >
         <input
           className="textFieldInput"
@@ -2746,11 +2541,7 @@ exports[`Test creation of a simple TagList instance 1`] = `
   className="ui-taglist tagList normal"
 >
   <Icon
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className=""
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -2775,11 +2566,7 @@ exports[`Test creation of a simple TagList instance 1`] = `
 
 exports[`Test retrieval of TagList props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
@@ -2810,11 +2597,7 @@ Object {
 
 exports[`Test the change/blur events in TagList 1`] = `
 <TagList
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -2845,11 +2628,7 @@ exports[`Test the change/blur events in TagList 1`] = `
     className="ui-taglist tagList normal"
   >
     <Icon
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -2886,6 +2665,7 @@ exports[`Test the change/blur events in TagList 1`] = `
       placeholder="new"
       size={1}
       sizing="normal"
+      style={Object {}}
       type="text"
       usevalidation={false}
       validators={Array []}
@@ -2893,7 +2673,7 @@ exports[`Test the change/blur events in TagList 1`] = `
     >
       <div
         className="ui-textfield textField normal tagListInput"
-        style={undefined}
+        style={Object {}}
       >
         <input
           className="textFieldInput"

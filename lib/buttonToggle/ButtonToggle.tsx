@@ -116,12 +116,12 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 			this.inlineStyles = {
 				backgroundColor: nextProps.bgColorOn,
 				color: nextProps.fgColorOn
-			}
+			};
 		} else {
 			this.inlineStyles = {
 				backgroundColor: nextProps.bgColorOff,
 				color: nextProps.fgColorOff
-			}
+			};
 		}
 
 		super.componentWillUpdate(nextProps, nextState);

@@ -74,11 +74,13 @@ test('Test the creation of an info DialogBox', () => {
 test('Test the creation of an custom DialogBox', () => {
 	const ctl = shallow(
 		<DialogBox
-			color="magenta"
 			dialogType={DialogBoxType.custom}
 			iconName="car"
 			message="Sample info message"
 			show
+			style={{
+				color: 'magenta'
+			}}
 		/>
 	);
 

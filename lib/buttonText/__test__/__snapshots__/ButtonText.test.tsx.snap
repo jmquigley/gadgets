@@ -2,11 +2,7 @@
 
 exports[`Test creation of a ButtonText control to the left 1`] = `
 <ButtonText
-  backgroundColor="blue"
-  borderColor="green"
-  borderWidth="none"
   className="test-class"
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -24,7 +20,13 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   onClick={[Function]}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "blue",
+      "borderColor": "green",
+      "color": "white",
+    }
+  }
   testing={false}
   text="test text"
   visible={true}
@@ -47,11 +49,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
       test text
     </div>
     <Icon
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className="icon"
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -82,11 +80,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
 
 exports[`Test disabling of a ButtonText control 1`] = `
 <ButtonText
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={true}
@@ -116,11 +110,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
     style={Object {}}
   >
     <Icon
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className="icon"
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -154,11 +144,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
 
 exports[`Test making a ButtonText control invisible 1`] = `
 <ButtonText
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -188,11 +174,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
     style={Object {}}
   >
     <Icon
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className="icon"
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -226,11 +208,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
 
 exports[`Test retrieval of ButtonText props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,

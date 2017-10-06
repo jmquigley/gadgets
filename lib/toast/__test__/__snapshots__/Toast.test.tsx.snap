@@ -11,11 +11,7 @@ exports[`Test creation of a Toast control 1`] = `
     <span />
   </div>
   <Button
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="button"
-    color="white"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -31,7 +27,11 @@ exports[`Test creation of a Toast control 1`] = `
     onClick={[Function]}
     selected={false}
     sizing="large"
-    style={Object {}}
+    style={
+      Object {
+        "color": "white",
+      }
+    }
     testing={false}
     visible={true}
     width=""
@@ -41,12 +41,8 @@ exports[`Test creation of a Toast control 1`] = `
 
 exports[`Test retrieval of Toast props object 1`] = `
 Object {
-  "backgroundColor": "white",
-  "borderColor": "black",
-  "borderWidth": "none",
   "bottom": false,
   "className": "",
-  "color": "black",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
@@ -62,6 +58,7 @@ Object {
   "onClick": [Function],
   "onClose": [Function],
   "selected": false,
+  "show": true,
   "sizing": "normal",
   "style": Object {},
   "testing": false,

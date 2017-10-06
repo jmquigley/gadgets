@@ -189,9 +189,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 					className={this.styles.dialogBoxIcon}
 					iconName={this.props.iconName}
 					sizing={Sizing.xxlarge}
-					style={{
-						color: this.props.color
-					}}
+					style={this.props.style}
 				/>
 			)
 		};

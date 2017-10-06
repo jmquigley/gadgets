@@ -173,8 +173,6 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 				className={this._rootStyles.classnames}
 			>
 				<Button
-					backgroundColor={this.props.backgroundColor}
-					color={this.props.color}
 					disabled={this.props.disabled}
 					iconName={this.props.iconName}
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
@@ -197,6 +195,9 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 						direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
 						nobase
 						sizing={Sizing.normal}
+						style={{
+							fill: this.props.style['backgroundColor']
+						}}
 					/>
 					}
 				</div>

@@ -92,10 +92,15 @@
 		flex: unset;
 	}
 
-	.tab:hover :global(.ui-button)
-	{
+	.tab:hover :global(.ui-button) {
+		color: white;
+		background-color: silver;
 		display: flex;
 		opacity: 1.0;
+	}
+
+	.tab :global(.ui-button:hover) {
+		background-color: $error !important;
 	}
 
 	.tab :global(.ui-button)
@@ -104,7 +109,7 @@
 		opacity: 0;
 
 		:global {
-			animation: fade 0.5s;
+			animation: fadeIn 0.5s;
 		}
 	}
 }

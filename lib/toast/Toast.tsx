@@ -104,21 +104,19 @@ export interface ToastProps extends BaseProps {
 	onClick?: any;
 	onClose?: any;
 	type?: ToastType;
+	show?: boolean;
 }
 
 export function getDefaultToastProps(): ToastProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			backgroundColor: 'white',
-			borderColor: 'black',
-			color: 'black',
 			bottom: false,
 			duration: 3,
 			level: ToastLevel.info,
 			onClick: nilEvent,
 			onClose: nilEvent,
-			type: ToastType.decay,
-			visible: true
+			show: true,
+			type: ToastType.decay
 		}));
 }
 
@@ -154,7 +152,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		]);
 
 		this.state = {
-			visible: props.visible
+			visible: props.show
 		};
 
 		this.bindCallbacks(
@@ -174,18 +172,15 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 		this.setState({
 			visible: false
+		}, () => {
+			this.props.onClose();
 		});
-
-		this.props.onClose();
 	}
 
 	private handleDecay() {
 		if (this.props.type === ToastType.decay && this.state.visible) {
 			this._timer = setTimeout(() => {
-				if (this.state.visible) {
-					this.setState({visible: false});
-					this.props.onClose();
-				}
+				this.handleClose();
 			}, this.props.duration * 1000);
 		}
 	}
@@ -195,7 +190,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	}
 
 	public componentWillReceiveProps(nextProps: ToastProps) {
-		if (nextProps.visible !== this.state.visible) {
+		if (nextProps.show !== this.state.visible) {
 			this.setState({
 				visible: nextProps.visible
 			});
@@ -235,8 +230,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		);
 
 		this.updateFontStyle(this._contentStyles, nextProps, this.props);
-
-		super.componentWillUpdate(nextProps);
+		super.componentWillUpdate(nextProps, nextState);
 	}
 
 	public render() {
@@ -250,10 +244,12 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 				</div>
 				<Button
 					className={this.styles.button}
-					color="white"
 					iconName="times"
 					onClick={this.handleClose}
 					sizing={this._buttonSizing}
+					style={{
+						color: 'white'
+					}}
 				/>
 			</div>
 		);

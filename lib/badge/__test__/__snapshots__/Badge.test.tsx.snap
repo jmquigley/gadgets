@@ -11,7 +11,7 @@ exports[`Test creation of a Badge control 1`] = `
     style={
       Object {
         "backgroundColor": "blue",
-        "border": "solid 3px red",
+        "border": "solid 3px",
         "color": "red",
       }
     }
@@ -31,7 +31,7 @@ exports[`Test making the Badge control invisible 1`] = `
     style={
       Object {
         "backgroundColor": "white",
-        "border": "solid 3px red",
+        "border": "solid 3px",
         "color": "red",
       }
     }
@@ -43,11 +43,7 @@ exports[`Test making the Badge control invisible 1`] = `
 
 exports[`Test retrieval of Badge props object 1`] = `
 Object {
-  "backgroundColor": "white",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "red",
   "contentEditable": false,
   "counter": 0,
   "direction": "right",
@@ -62,7 +58,11 @@ Object {
   "onClick": [Function],
   "selected": false,
   "sizing": "normal",
-  "style": Object {},
+  "style": Object {
+    "backgroundColor": "white",
+    "border": "solid 3px",
+    "color": "red",
+  },
   "suppress": false,
   "testing": false,
   "visible": true,
@@ -80,7 +80,7 @@ exports[`Test the disabling of a Badge control 1`] = `
     style={
       Object {
         "backgroundColor": "white",
-        "border": "solid 3px red",
+        "border": "solid 3px",
         "color": "red",
       }
     }

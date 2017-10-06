@@ -5,11 +5,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   className="ui-button-dialog buttonDialog normal test-class"
 >
   <Button
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className=""
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -42,11 +38,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       </p>
     </div>
     <Triangle
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="2px"
       className="dialogTriangleBottom buttonDialogHide"
-      color="inherit"
       contentEditable={false}
       direction="up"
       disabled={false}
@@ -60,7 +52,11 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       noripple={false}
       selected={false}
       sizing="normal"
-      style={Object {}}
+      style={
+        Object {
+          "fill": undefined,
+        }
+      }
       testing={false}
       visible={true}
       width=""
@@ -74,11 +70,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   className="ui-button-dialog buttonDialog normal test-class"
 >
   <Button
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className=""
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -111,11 +103,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       </p>
     </div>
     <Triangle
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="2px"
       className="dialogTriangleTop buttonDialogHide"
-      color="inherit"
       contentEditable={false}
       direction="down"
       disabled={false}
@@ -129,7 +117,11 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       noripple={false}
       selected={false}
       sizing="normal"
-      style={Object {}}
+      style={
+        Object {
+          "fill": undefined,
+        }
+      }
       testing={false}
       visible={true}
       width=""
@@ -140,11 +132,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
 
 exports[`Test making the ButtonDialog invisible 1`] = `
 <ButtonDialog
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   dialogClasses={Array []}
   direction="right"
@@ -172,11 +160,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
     className="ui-button-dialog buttonDialog normal invisible"
   >
     <Button
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -203,11 +187,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         style={Object {}}
       >
         <Icon
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className="icon"
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -246,11 +226,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         </p>
       </div>
       <Triangle
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="2px"
         className="dialogTriangleBottom buttonDialogHide"
-        color="inherit"
         contentEditable={false}
         direction="up"
         disabled={false}
@@ -264,7 +240,11 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         noripple={false}
         selected={false}
         sizing="normal"
-        style={Object {}}
+        style={
+          Object {
+            "fill": undefined,
+          }
+        }
         testing={false}
         visible={true}
         width=""
@@ -272,13 +252,6 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         <svg
           className="ui-triangle triangle normalBox triangleUp normal dialogTriangleBottom buttonDialogHide"
           preserveAspectRatio="xMidYMid meet"
-          style={
-            Object {
-              "fill": "inherit",
-              "stroke": "inherit",
-              "strokeWidth": "2px",
-            }
-          }
           version="1.1"
           viewBox="0 0 40 40"
           xmlns="http://www.w3.org/2000/svg"
@@ -287,7 +260,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
             points="-3,35, 20,10 43,35"
             style={
               Object {
-                "fill": "inherit",
+                "fill": undefined,
                 "stroke": "none",
               }
             }
@@ -296,9 +269,9 @@ exports[`Test making the ButtonDialog invisible 1`] = `
             points="-3,35, 20,10 43,35, 20,10"
             style={
               Object {
-                "stroke": "inherit",
+                "stroke": "black",
                 "strokeLinecap": "square",
-                "strokeWidth": "2px",
+                "strokeWidth": undefined,
               }
             }
           />
@@ -311,11 +284,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
 
 exports[`Test retrieval of ButtonDialog props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "dialogClasses": Array [],
   "direction": "right",
@@ -343,11 +312,7 @@ Object {
 
 exports[`Test the disabling of the ButtonDialog control 1`] = `
 <ButtonDialog
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   dialogClasses={Array []}
   direction="right"
@@ -375,11 +340,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
     className="ui-button-dialog buttonDialog normal disabled nohover"
   >
     <Button
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={true}
@@ -406,11 +367,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         style={Object {}}
       >
         <Icon
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className="icon"
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -449,11 +406,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         </p>
       </div>
       <Triangle
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="2px"
         className="dialogTriangleBottom buttonDialogHide"
-        color="inherit"
         contentEditable={false}
         direction="up"
         disabled={false}
@@ -467,7 +420,11 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         noripple={false}
         selected={false}
         sizing="normal"
-        style={Object {}}
+        style={
+          Object {
+            "fill": undefined,
+          }
+        }
         testing={false}
         visible={true}
         width=""
@@ -475,13 +432,6 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         <svg
           className="ui-triangle triangle normalBox triangleUp normal dialogTriangleBottom buttonDialogHide"
           preserveAspectRatio="xMidYMid meet"
-          style={
-            Object {
-              "fill": "inherit",
-              "stroke": "inherit",
-              "strokeWidth": "2px",
-            }
-          }
           version="1.1"
           viewBox="0 0 40 40"
           xmlns="http://www.w3.org/2000/svg"
@@ -490,7 +440,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
             points="-3,35, 20,10 43,35"
             style={
               Object {
-                "fill": "inherit",
+                "fill": undefined,
                 "stroke": "none",
               }
             }
@@ -499,9 +449,9 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
             points="-3,35, 20,10 43,35, 20,10"
             style={
               Object {
-                "stroke": "inherit",
+                "stroke": "black",
                 "strokeLinecap": "square",
-                "strokeWidth": "2px",
+                "strokeWidth": undefined,
               }
             }
           />

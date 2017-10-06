@@ -2,11 +2,7 @@
 
 exports[`Test a double click edit of the Label control 1`] = `
 <Label
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -41,12 +37,7 @@ exports[`Test a double click edit of the Label control 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
-    style={
-      Object {
-        "backgroundColor": "inherit",
-        "color": "inherit",
-      }
-    }
+    style={Object {}}
     suppressContentEditableWarning={true}
   >
     A
@@ -63,12 +54,7 @@ exports[`Test creation of a Label control 1`] = `
   onDoubleClick={[Function]}
   onKeyDown={[Function]}
   onKeyPress={[Function]}
-  style={
-    Object {
-      "backgroundColor": "inherit",
-      "color": "inherit",
-    }
-  }
+  style={Object {}}
   suppressContentEditableWarning={true}
 >
   Test label text
@@ -77,11 +63,7 @@ exports[`Test creation of a Label control 1`] = `
 
 exports[`Test double click change to Label and blur to save 1`] = `
 <Label
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -116,12 +98,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
-    style={
-      Object {
-        "backgroundColor": "inherit",
-        "color": "inherit",
-      }
-    }
+    style={Object {}}
     suppressContentEditableWarning={true}
   >
     A
@@ -131,11 +108,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
 
 exports[`Test making the Label control invisible 1`] = `
 <Label
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -170,12 +143,7 @@ exports[`Test making the Label control invisible 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
-    style={
-      Object {
-        "backgroundColor": "inherit",
-        "color": "inherit",
-      }
-    }
+    style={Object {}}
     suppressContentEditableWarning={true}
   >
     Test label text
@@ -185,11 +153,7 @@ exports[`Test making the Label control invisible 1`] = `
 
 exports[`Test retrieval of default Label props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
@@ -220,11 +184,7 @@ Object {
 
 exports[`Test the disabling of the Label control 1`] = `
 <Label
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={true}
@@ -259,12 +219,7 @@ exports[`Test the disabling of the Label control 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
-    style={
-      Object {
-        "backgroundColor": "inherit",
-        "color": "inherit",
-      }
-    }
+    style={Object {}}
     suppressContentEditableWarning={true}
   >
     Test label text

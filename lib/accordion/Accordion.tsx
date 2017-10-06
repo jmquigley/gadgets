@@ -34,7 +34,6 @@
 
 'use strict';
 
-import {Map} from 'immutable';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
@@ -53,10 +52,10 @@ export function getDefaultAccordionProps(): AccordionProps {
 
 export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
-	public static defaultProps: AccordionProps = getDefaultAccordionProps();
+	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
 
 	constructor(props: AccordionProps) {
-		super(props, require('./styles.css'));
+		super(props, require('./styles.css'), Accordion.defaultProps.style);
 
 		this._rootStyles.add([
 			'ui-accordion',
@@ -67,10 +66,8 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 	}
 
 	public render() {
-		const istyles = Map(this.inlineStyles)
-
 		return (
-			<ul className={this._rootStyles.classnames} style={istyles}>
+			<ul className={this._rootStyles.classnames} style={this.inlineStyles}>
 				{this.props.children}
 			</ul>
 		);

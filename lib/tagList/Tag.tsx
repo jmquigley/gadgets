@@ -147,13 +147,15 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 				/>
 				{this.props.usedelete &&
 				<ButtonCircle
-					borderColor={Color.error}
 					className={`${this.styles.tagDeleteButton} ${this.styles.middle}`}
-					color={Color.error}
 					disabled={this.props.disabled}
 					iconName="times"
 					onClick={this.handleOnClick}
 					sizing={this.prev().type}
+					style={{
+						borderColor: Color.error,
+						color: Color.error
+					}}
 					visible={this.state.showDelete}
 				/>
 				}

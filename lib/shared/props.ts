@@ -107,11 +107,7 @@ export interface Styles {
 }
 
 export interface BaseProps {
-	backgroundColor?: string;
-	borderColor?: string;
-	borderWidth?: string;
 	className?: string;
-	color?: string;
 	contentEditable?: boolean;
 	direction?: Direction;
 	disabled?: boolean;
@@ -131,11 +127,7 @@ export interface BaseProps {
 }
 
 const defaultBaseProps = {
-	backgroundColor: 'inherit',
-	borderColor: 'inherit',
-	borderWidth: 'none',
 	className: '',
-	color: 'inherit',
 	contentEditable: false,
 	direction: Direction.right,
 	disabled: false,
@@ -152,7 +144,7 @@ const defaultBaseProps = {
 	testing: false,
 	visible: true,
 	width: ''
-}
+};
 
 export function getDefaultBaseProps(): BaseProps {
 	return cloneDeep(defaultBaseProps);

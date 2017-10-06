@@ -351,7 +351,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><ButtonCircle iconName="times" sizing={Sizing.xlarge}/></td>
 						<td><ButtonCircle iconName="times" sizing={Sizing.xxlarge}/></td>
 						<td><ButtonCircle iconName="times" sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.normal} style={{color: "white", backgroundColor: "orange"}}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.normal} style={{color: "green", backgroundColor: "orange"}}/></td>
 					</tr><tr>
 						<th>ButtonDialog</th>
 						<td><ButtonDialog iconName="bars" sizing={Sizing.xxsmall}>dialog</ButtonDialog></td>
@@ -523,8 +523,8 @@ class App extends React.Component<AppProps, AppState> {
 						dialogType={DialogBoxType.error}
 						message={"This is a sample error dialog message\n" + randomText}
 						onSelection={(flag: boolean) => {
-								console.log(`Dialog selection: ${flag}`);
-								this.setState({dialogError: false});
+							console.log(`Dialog selection: ${flag}`);
+							this.setState({dialogError: false});
 						}}
 						show={this.state.dialogError}
 					/>
@@ -543,8 +543,8 @@ class App extends React.Component<AppProps, AppState> {
 						dialogType={DialogBoxType.warning}
 						message={"This is a sample warning dialog message\n" + randomText}
 						onSelection={(flag: boolean) => {
-								console.log(`Dialog selection: ${flag}`);
-								this.setState({dialogWarning: false});
+							console.log(`Dialog selection: ${flag}`);
+							this.setState({dialogWarning: false});
 						}}
 						show={this.state.dialogWarning}
 					/>
@@ -563,8 +563,8 @@ class App extends React.Component<AppProps, AppState> {
 						dialogType={DialogBoxType.success}
 						message={"This is a sample success dialog message\n" + randomText}
 						onSelection={(flag: boolean) => {
-								console.log(`Dialog selection: ${flag}`);
-								this.setState({dialogSuccess: false});
+							console.log(`Dialog selection: ${flag}`);
+							this.setState({dialogSuccess: false});
 						}}
 						show={this.state.dialogSuccess}
 					/>
@@ -583,8 +583,8 @@ class App extends React.Component<AppProps, AppState> {
 						dialogType={DialogBoxType.info}
 						message={"This is a sample info dialog message\n" + randomText}
 						onSelection={(flag: boolean) => {
-								console.log(`Dialog selection: ${flag}`);
-								this.setState({dialogInfo: false});
+							console.log(`Dialog selection: ${flag}`);
+							this.setState({dialogInfo: false});
 						}}
 						show={this.state.dialogInfo}
 					/>
@@ -600,15 +600,17 @@ class App extends React.Component<AppProps, AppState> {
 						text="Show Custom Dialog"
 					/>
 					<DialogBox
-						color="magenta"
 						dialogType={DialogBoxType.custom}
 						iconName="car"
 						message={"This is a sample custom dialog message\n" + randomText}
 						onSelection={(flag: boolean) => {
-								console.log(`Dialog selection: ${flag}`);
-								this.setState({dialogCustom: false});
+							console.log(`Dialog selection: ${flag}`);
+							this.setState({dialogCustom: false});
 						}}
 						show={this.state.dialogCustom}
+						style={{
+							color: 'magenta'
+						}}
 					/>
 				</div>
 
@@ -652,9 +654,12 @@ class App extends React.Component<AppProps, AppState> {
 				<p><Label className="demoLabel" text="Test Label #3 Styled" /></p>
 				<p><Label text="Text Label #4 (no edit)" noedit /></p>
 				<p><Label
-					   text="Text Label #5 (inline style)"
-					   color="white"
-					   backgroundColor="blue" />
+						style={{
+							color: 'white',
+							backgroundColor: 'blue'
+						}}
+						text="Text Label #5 (inline style)"
+					/>
 				</p>
 
 				<Label text="xxsmall" sizing={Sizing.xxsmall} /><br/>
@@ -721,7 +726,13 @@ class App extends React.Component<AppProps, AppState> {
 					leftButton={<Button />}
 					hiddenLeftButton
 					rightButton={
-						<ButtonCircle iconName="times" color="red" borderColor="red" />
+						<ButtonCircle
+							iconName="times"
+							style={{
+								color: 'red',
+								borderColor: 'red'
+							}}
+						/>
 					}
 					hiddenRightButton
 					/>
@@ -734,7 +745,7 @@ class App extends React.Component<AppProps, AppState> {
 					}
 					hiddenRightButton
 					rightButton={
-						<Button iconName="times" color="red" />
+						<Button iconName="times" style={{color: 'red'}} />
 					}
 					/>
 				<ListItem id="6" title="List Item 5" />
@@ -1172,7 +1183,7 @@ class App extends React.Component<AppProps, AppState> {
 
 				<Toast
 					level={ToastLevel.info}
-					visible={this.state.toastVisible1}
+					show={this.state.toastVisible1}
 					onClose={() => this.setState({toastVisible1: false})}>
 					This is a sample info message
 				</Toast>
@@ -1191,7 +1202,7 @@ class App extends React.Component<AppProps, AppState> {
 
 				<Toast
 					level={ToastLevel.warning}
-					visible={this.state.toastVisible2}
+					show={this.state.toastVisible2}
 					onClose={() => this.setState({toastVisible2: false})}>
 					This is a sample warning message
 				</Toast>
@@ -1210,7 +1221,7 @@ class App extends React.Component<AppProps, AppState> {
 
 				<Toast
 					level={ToastLevel.error}
-					visible={this.state.toastVisible3}
+					show={this.state.toastVisible3}
 					onClose={() => this.setState({toastVisible3: false})}>
 					This is a sample error message
 				</Toast>
@@ -1230,7 +1241,7 @@ class App extends React.Component<AppProps, AppState> {
 				<Toast
 					level={ToastLevel.info}
 					type={ToastType.persistent}
-					visible={this.state.toastVisible4}
+					show={this.state.toastVisible4}
 					onClose={() => this.setState({toastVisible4: false})}>
 					This is a sample info message
 				</Toast>
@@ -1251,7 +1262,7 @@ class App extends React.Component<AppProps, AppState> {
 					bottom
 					level={ToastLevel.error}
 					type={ToastType.persistent}
-					visible={this.state.toastVisible5}
+					show={this.state.toastVisible5}
 					onClose={() => this.setState({toastVisible5: false})}>
 					This is a sample error message on the bottom
 				</Toast>
@@ -1269,14 +1280,16 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<Toast
-					backgroundColor="#7fbf3f"
-					borderColor="#3fbfbf"
-					color="magenta"
 					level={ToastLevel.custom}
 					onClose={() => this.setState({toastVisible6: false})}
 					sizing={Sizing.small}
+					style={{
+						backgroundColor: '#7fbf3f',
+						borderColor: '#3fbfbf',
+						color: 'magenta'
+					}}
 					type={ToastType.persistent}
-					visible={this.state.toastVisible6}
+					show={this.state.toastVisible6}
 				>
 					This is a sample custom message
 				</Toast>
@@ -1336,10 +1349,12 @@ class App extends React.Component<AppProps, AppState> {
 			Hover over the square to see the custom style colors on the tooltip
 			<div id="tooltipStyleExample">
 				<Tooltip
-					color="#fd7400"
-					backgroundColor="#004358"
 					location={Location.middleRight}
-					>
+					style={{
+						color: '#fd7400',
+						backgroundColor: '#004358'
+					}}
+				>
 					{randomText}
 				</Tooltip>
 			</div>
@@ -1356,24 +1371,23 @@ class App extends React.Component<AppProps, AppState> {
 			<Triangle sizing={Sizing.xxsmall} direction={Direction.left} />
 
 			<h3>xsmall</h3>
-			<Triangle sizing={Sizing.xsmall} direction={Direction.up} backgroundColor="red" borderColor="red" />
-			<Triangle sizing={Sizing.xsmall} direction={Direction.right} backgroundColor="red" borderColor="red" />
-			<Triangle sizing={Sizing.xsmall} direction={Direction.down} backgroundColor="red" borderColor="red" />
-			<Triangle sizing={Sizing.xsmall} direction={Direction.left} backgroundColor="red" borderColor="red" />
-
+			<Triangle sizing={Sizing.xsmall} direction={Direction.up} style={{fill: 'red', stroke: 'red'}} />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.right} style={{fill: 'red', stroke: 'red'}} />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.down} style={{fill: 'red', stroke: 'red'}} />
+			<Triangle sizing={Sizing.xsmall} direction={Direction.left} style={{fill: 'red', stroke: 'red'}} />
 
 			<h3>small</h3>
-			<Triangle sizing={Sizing.small} direction={Direction.up} backgroundColor="black" borderColor="yellow"/>
-			<Triangle sizing={Sizing.small} direction={Direction.right} backgroundColor="black" borderColor="yellow"/>
-			<Triangle sizing={Sizing.small} direction={Direction.down} backgroundColor="black" borderColor="yellow"/>
-			<Triangle sizing={Sizing.small} direction={Direction.left} backgroundColor="black" borderColor="yellow"/>
+			<Triangle sizing={Sizing.small} direction={Direction.up} style={{fill: 'black', stroke: 'yellow'}} />
+			<Triangle sizing={Sizing.small} direction={Direction.right} style={{fill: 'black', stroke: 'yellow'}} />
+			<Triangle sizing={Sizing.small} direction={Direction.down} style={{fill: 'black', stroke: 'yellow'}} />
+			<Triangle sizing={Sizing.small} direction={Direction.left} style={{fill: 'black', stroke: 'yellow'}} />
 
 
 			<h3>normal</h3>
-			<Triangle sizing={Sizing.normal} direction={Direction.up} backgroundColor="blue" borderColor="green" />
-			<Triangle sizing={Sizing.normal} direction={Direction.right} backgroundColor="blue" borderColor="green" />
-			<Triangle sizing={Sizing.normal} direction={Direction.down} backgroundColor="blue" borderColor="green" />
-			<Triangle sizing={Sizing.normal} direction={Direction.left} backgroundColor="blue" borderColor="green" />
+			<Triangle sizing={Sizing.normal} direction={Direction.up} style={{fill: 'blue', stroke: 'green'}} />
+			<Triangle sizing={Sizing.normal} direction={Direction.right} style={{fill: 'blue', stroke: 'green'}} />
+			<Triangle sizing={Sizing.normal} direction={Direction.down} style={{fill: 'blue', stroke: 'green'}} />
+			<Triangle sizing={Sizing.normal} direction={Direction.left} style={{fill: 'blue', stroke: 'green'}} />
 
 			<h3>large</h3>
 			<Triangle sizing={Sizing.large} direction={Direction.up} />

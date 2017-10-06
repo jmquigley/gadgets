@@ -2,11 +2,7 @@
 
 exports[`Test disabling of a ListItem control 1`] = `
 <ListItem
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={true}
@@ -50,11 +46,7 @@ exports[`Test disabling of a ListItem control 1`] = `
   width=""
 >
   <Item
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-listitem listItem normal disabled nohover"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={true}
@@ -108,11 +100,7 @@ exports[`Test disabling of a ListItem control 1`] = `
       style={Object {}}
     >
       <Title
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
         className="itemTitle"
-        color="inherit"
         contentEditable={false}
         direction="right"
         disabled={true}
@@ -161,14 +149,14 @@ exports[`Test disabling of a ListItem control 1`] = `
       >
         <div
           className="ui-title-bar titleBar normal itemTitle disabled nohover"
-          style={Object {}}
+          style={
+            Object {
+              "padding": "2px 4px",
+            }
+          }
         >
           <Label
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
             className="ui-title title titleDominant"
-            color="inherit"
             contentEditable={false}
             direction="right"
             disabled={true}
@@ -226,8 +214,6 @@ exports[`Test disabling of a ListItem control 1`] = `
               onKeyPress={[Function]}
               style={
                 Object {
-                  "backgroundColor": "inherit",
-                  "color": "inherit",
                   "padding": "2px 4px",
                 }
               }
@@ -245,11 +231,7 @@ exports[`Test disabling of a ListItem control 1`] = `
 
 exports[`Test making ListItem control invisible 1`] = `
 <ListItem
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -293,11 +275,7 @@ exports[`Test making ListItem control invisible 1`] = `
   width=""
 >
   <Item
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-listitem listItem normal invisible"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -351,11 +329,7 @@ exports[`Test making ListItem control invisible 1`] = `
       style={Object {}}
     >
       <Title
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
         className="itemTitle"
-        color="inherit"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -404,14 +378,14 @@ exports[`Test making ListItem control invisible 1`] = `
       >
         <div
           className="ui-title-bar titleBar ripple normal itemTitle invisible"
-          style={Object {}}
+          style={
+            Object {
+              "padding": "2px 4px",
+            }
+          }
         >
           <Label
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
             className="ui-title title titleDominant"
-            color="inherit"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -469,8 +443,6 @@ exports[`Test making ListItem control invisible 1`] = `
               onKeyPress={[Function]}
               style={
                 Object {
-                  "backgroundColor": "inherit",
-                  "color": "inherit",
                   "padding": "2px 4px",
                 }
               }
@@ -488,11 +460,7 @@ exports[`Test making ListItem control invisible 1`] = `
 
 exports[`Test retrieval of ListItem props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
@@ -537,11 +505,7 @@ Object {
 
 exports[`Test the creation of a ListItem control with left & right title 1`] = `
 <Item
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className="ui-listitem listItem normal"
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -588,11 +552,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
 
 exports[`Test the creation of a ListItem control with simple title 1`] = `
 <Item
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className="ui-listitem listItem normal"
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}

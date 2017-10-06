@@ -22,11 +22,7 @@ exports[`Test creation of an Icon control with image 1`] = `
 
 exports[`Test making the ButtonDialog invisible 1`] = `
 <Icon
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -55,11 +51,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
 
 exports[`Test retrieval of the Icon props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
@@ -83,11 +75,7 @@ Object {
 
 exports[`Test the disabling of the Icon control 1`] = `
 <Icon
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={true}

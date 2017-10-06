@@ -2,11 +2,7 @@
 
 exports[`Test clicking of the AccordionItem header 1`] = `
 <AccordionItem
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -49,11 +45,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
     style={Object {}}
   >
     <Item
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -102,11 +94,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
         style={Object {}}
       >
         <Title
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className="itemTitle"
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -150,14 +138,14 @@ exports[`Test clicking of the AccordionItem header 1`] = `
         >
           <div
             className="ui-title-bar titleBar ripple normal itemTitle"
-            style={Object {}}
+            style={
+              Object {
+                "padding": "2px 4px",
+              }
+            }
           >
             <Label
-              backgroundColor="inherit"
-              borderColor="inherit"
-              borderWidth="none"
               className="ui-title title titleDominant"
-              color="inherit"
               contentEditable={false}
               direction="right"
               disabled={false}
@@ -210,8 +198,6 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                 onKeyPress={[Function]}
                 style={
                   Object {
-                    "backgroundColor": "inherit",
-                    "color": "inherit",
                     "padding": "2px 4px",
                   }
                 }
@@ -230,11 +216,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 
 exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 <AccordionItem
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -277,11 +259,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
     style={Object {}}
   >
     <Item
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -330,11 +308,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
         style={Object {}}
       >
         <Title
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className="itemTitle"
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -378,14 +352,14 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
         >
           <div
             className="ui-title-bar titleBar ripple normal itemTitle"
-            style={Object {}}
+            style={
+              Object {
+                "padding": "2px 4px",
+              }
+            }
           >
             <Label
-              backgroundColor="inherit"
-              borderColor="inherit"
-              borderWidth="none"
               className="ui-title title titleDominant"
-              color="inherit"
               contentEditable={false}
               direction="right"
               disabled={false}
@@ -438,8 +412,6 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                 onKeyPress={[Function]}
                 style={
                   Object {
-                    "backgroundColor": "inherit",
-                    "color": "inherit",
                     "padding": "2px 4px",
                   }
                 }
@@ -469,11 +441,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
   style={Object {}}
 >
   <Item
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className=""
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -516,11 +484,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
 
 exports[`Test retrieval of AccordionItem props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
@@ -566,11 +530,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
   style={Object {}}
 >
   <Item
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="test-class"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -617,11 +577,7 @@ exports[`Test the disabling of the AccordionItem 1`] = `
   style={Object {}}
 >
   <Item
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className=""
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={true}

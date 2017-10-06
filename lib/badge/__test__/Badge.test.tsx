@@ -15,11 +15,13 @@ test('Test retrieval of Badge props object', () => {
 test('Test creation of a Badge control', () => {
 	const ctl = shallow(
 		<Badge
-			backgroundColor="blue"
 			className="test-class"
-			color="red"
-			suppress
 			counter={1}
+			style={{
+				backgroundColor: 'blue',
+				color: 'red'
+			}}
+			suppress
 		>
 			Test Component
 		</Badge>

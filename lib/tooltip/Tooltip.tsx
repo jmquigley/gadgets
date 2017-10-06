@@ -198,14 +198,18 @@ export class Tooltip extends BaseComponent<TooltipProps, undefined> {
 			>
 				<span
 					className={this._contentStyles.classnames}
-					style={{color: this.props.color}}
+					style={this.props.style}
 				>
 					{this.props.children}
 				</span>
 				<Triangle
-					{...this.props}
+
 					className={this._triangleStyle}
 					direction={this._triangleDirection}
+					style={{
+						fill: this.props.style['backgroundColor'],
+						stroke: this.props.style['backgroundColor']
+					}}
 				/>
 			</div>
 		);

@@ -2,11 +2,7 @@
 
 exports[`Test creation of Tooltip location bottom 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -20,7 +16,12 @@ exports[`Test creation of Tooltip location bottom 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -30,7 +31,7 @@ exports[`Test creation of Tooltip location bottom 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -38,6 +39,7 @@ exports[`Test creation of Tooltip location bottom 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -45,40 +47,34 @@ exports[`Test creation of Tooltip location bottom 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className="tooltipTriangleBottom"
-      color="white"
       contentEditable={false}
       direction="up"
       disabled={false}
       focus={false}
       height=""
       id=""
-      location="bottom"
+      location="none"
       nobase={false}
       noedit={false}
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleUp inherit tooltipTriangleBottom"
+        className="ui-triangle triangle normalBox triangleUp normal tooltipTriangleBottom"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -94,11 +90,7 @@ exports[`Test creation of Tooltip location bottom 1`] = `
 
 exports[`Test creation of Tooltip location bottomLeft 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -112,7 +104,12 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -122,7 +119,7 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -130,6 +127,7 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -137,40 +135,34 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className="tooltipTriangleBottomLeft"
-      color="white"
       contentEditable={false}
       direction="up"
       disabled={false}
       focus={false}
       height=""
       id=""
-      location="bottomLeft"
+      location="none"
       nobase={false}
       noedit={false}
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleUp inherit tooltipTriangleBottomLeft"
+        className="ui-triangle triangle normalBox triangleUp normal tooltipTriangleBottomLeft"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -186,11 +178,7 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
 
 exports[`Test creation of Tooltip location bottomRight 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -204,7 +192,12 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -214,7 +207,7 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -222,6 +215,7 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -229,40 +223,34 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className="tooltipTriangleBottomRight"
-      color="white"
       contentEditable={false}
       direction="up"
       disabled={false}
       focus={false}
       height=""
       id=""
-      location="bottomRight"
+      location="none"
       nobase={false}
       noedit={false}
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleUp inherit tooltipTriangleBottomRight"
+        className="ui-triangle triangle normalBox triangleUp normal tooltipTriangleBottomRight"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -278,11 +266,7 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
 
 exports[`Test creation of Tooltip location middle 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -296,7 +280,12 @@ exports[`Test creation of Tooltip location middle 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -306,7 +295,7 @@ exports[`Test creation of Tooltip location middle 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -314,6 +303,7 @@ exports[`Test creation of Tooltip location middle 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -321,40 +311,34 @@ exports[`Test creation of Tooltip location middle 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className="tooltipTriangleMiddleRight"
-      color="white"
       contentEditable={false}
       direction="left"
       disabled={false}
       focus={false}
       height=""
       id=""
-      location="middle"
+      location="none"
       nobase={false}
       noedit={false}
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleLeft inherit tooltipTriangleMiddleRight"
+        className="ui-triangle triangle normalBox triangleLeft normal tooltipTriangleMiddleRight"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -370,11 +354,7 @@ exports[`Test creation of Tooltip location middle 1`] = `
 
 exports[`Test creation of Tooltip location middleLeft 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -388,7 +368,12 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -398,7 +383,7 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -406,6 +391,7 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -413,40 +399,34 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className="tooltipTriangleMiddleLeft"
-      color="white"
       contentEditable={false}
       direction="right"
       disabled={false}
       focus={false}
       height=""
       id=""
-      location="middleLeft"
+      location="none"
       nobase={false}
       noedit={false}
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleRight inherit tooltipTriangleMiddleLeft"
+        className="ui-triangle triangle normalBox triangleRight normal tooltipTriangleMiddleLeft"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -462,11 +442,7 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
 
 exports[`Test creation of Tooltip location middleRight 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -480,7 +456,12 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -490,7 +471,7 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -498,6 +479,7 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -505,40 +487,34 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className="tooltipTriangleMiddleRight"
-      color="white"
       contentEditable={false}
       direction="left"
       disabled={false}
       focus={false}
       height=""
       id=""
-      location="middleRight"
+      location="none"
       nobase={false}
       noedit={false}
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleLeft inherit tooltipTriangleMiddleRight"
+        className="ui-triangle triangle normalBox triangleLeft normal tooltipTriangleMiddleRight"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -554,11 +530,7 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
 
 exports[`Test creation of Tooltip location none 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -572,7 +544,12 @@ exports[`Test creation of Tooltip location none 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -582,7 +559,7 @@ exports[`Test creation of Tooltip location none 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -590,6 +567,7 @@ exports[`Test creation of Tooltip location none 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -597,11 +575,7 @@ exports[`Test creation of Tooltip location none 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="white"
       contentEditable={false}
       direction="down"
       disabled={false}
@@ -614,23 +588,21 @@ exports[`Test creation of Tooltip location none 1`] = `
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleDown inherit"
+        className="ui-triangle triangle normalBox triangleDown normal"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -646,11 +618,7 @@ exports[`Test creation of Tooltip location none 1`] = `
 
 exports[`Test creation of Tooltip location top 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -664,7 +632,12 @@ exports[`Test creation of Tooltip location top 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -674,7 +647,7 @@ exports[`Test creation of Tooltip location top 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -682,6 +655,7 @@ exports[`Test creation of Tooltip location top 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -689,40 +663,34 @@ exports[`Test creation of Tooltip location top 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className="tooltipTriangleTop"
-      color="white"
       contentEditable={false}
       direction="down"
       disabled={false}
       focus={false}
       height=""
       id=""
-      location="top"
+      location="none"
       nobase={false}
       noedit={false}
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleDown inherit tooltipTriangleTop"
+        className="ui-triangle triangle normalBox triangleDown normal tooltipTriangleTop"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -738,11 +706,7 @@ exports[`Test creation of Tooltip location top 1`] = `
 
 exports[`Test creation of Tooltip location topLeft 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -756,7 +720,12 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -766,7 +735,7 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -774,6 +743,7 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -781,40 +751,34 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className="tooltipTriangleTopLeft"
-      color="white"
       contentEditable={false}
       direction="down"
       disabled={false}
       focus={false}
       height=""
       id=""
-      location="topLeft"
+      location="none"
       nobase={false}
       noedit={false}
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleDown inherit tooltipTriangleTopLeft"
+        className="ui-triangle triangle normalBox triangleDown normal tooltipTriangleTopLeft"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -830,11 +794,7 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
 
 exports[`Test creation of Tooltip location topRight 1`] = `
 <Tooltip
-  backgroundColor="gray"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="white"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -848,7 +808,12 @@ exports[`Test creation of Tooltip location topRight 1`] = `
   selected={false}
   show={false}
   sizing="inherit"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "color": "white",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -858,7 +823,7 @@ exports[`Test creation of Tooltip location topRight 1`] = `
     style={
       Object {
         "backgroundColor": "gray",
-        "color": "gray",
+        "color": "white",
       }
     }
   >
@@ -866,6 +831,7 @@ exports[`Test creation of Tooltip location topRight 1`] = `
       className="ui-tooltip-content inherit"
       style={
         Object {
+          "backgroundColor": "gray",
           "color": "white",
         }
       }
@@ -873,40 +839,34 @@ exports[`Test creation of Tooltip location topRight 1`] = `
       Test Text
     </span>
     <Triangle
-      backgroundColor="gray"
-      borderColor="inherit"
-      borderWidth="none"
       className="tooltipTriangleTopRight"
-      color="white"
       contentEditable={false}
       direction="down"
       disabled={false}
       focus={false}
       height=""
       id=""
-      location="topRight"
+      location="none"
       nobase={false}
       noedit={false}
       nohover={false}
       noripple={false}
       selected={false}
-      show={false}
-      sizing="inherit"
-      style={Object {}}
+      sizing="normal"
+      style={
+        Object {
+          "fill": "gray",
+          "stroke": "gray",
+        }
+      }
       testing={false}
       visible={true}
       width=""
     >
       <svg
-        className="ui-triangle triangle normalBox triangleDown inherit tooltipTriangleTopRight"
+        className="ui-triangle triangle normalBox triangleDown normal tooltipTriangleTopRight"
         preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "fill": "gray",
-            "stroke": "inherit",
-            "strokeWidth": "none",
-          }
-        }
+        style={null}
         version="1.1"
         viewBox="0 0 40 40"
         xmlns="http://www.w3.org/2000/svg"
@@ -926,7 +886,7 @@ exports[`Test creation of a Tooltip control 1`] = `
   style={
     Object {
       "backgroundColor": "gray",
-      "color": "gray",
+      "color": "white",
     }
   }
 >
@@ -934,6 +894,7 @@ exports[`Test creation of a Tooltip control 1`] = `
     className="ui-tooltip-content inherit"
     style={
       Object {
+        "backgroundColor": "gray",
         "color": "white",
       }
     }
@@ -943,34 +904,30 @@ exports[`Test creation of a Tooltip control 1`] = `
     </span>
   </span>
   <Triangle
-    backgroundColor="gray"
-    borderColor="inherit"
-    borderWidth="none"
     className="tooltipTriangleMiddleRight"
-    color="white"
     contentEditable={false}
     direction="left"
     disabled={false}
     focus={false}
     height=""
     id=""
-    location="middleRight"
+    location="none"
     nobase={false}
     noedit={false}
     nohover={false}
     noripple={false}
     selected={false}
-    show={true}
-    sizing="inherit"
-    style={Object {}}
+    sizing="normal"
+    style={
+      Object {
+        "fill": "gray",
+        "stroke": "gray",
+      }
+    }
     testing={false}
     visible={true}
     width=""
-  >
-    <span>
-      Test Text
-    </span>
-  </Triangle>
+  />
 </div>
 `;
 
@@ -980,7 +937,7 @@ exports[`Test disabling of a Tooltip 1`] = `
   style={
     Object {
       "backgroundColor": "gray",
-      "color": "gray",
+      "color": "white",
     }
   }
 >
@@ -988,31 +945,32 @@ exports[`Test disabling of a Tooltip 1`] = `
     className="ui-tooltip-content inherit"
     style={
       Object {
+        "backgroundColor": "gray",
         "color": "white",
       }
     }
   />
   <Triangle
-    backgroundColor="gray"
-    borderColor="inherit"
-    borderWidth="none"
     className="tooltipTriangleMiddleRight"
-    color="white"
     contentEditable={false}
     direction="left"
-    disabled={true}
+    disabled={false}
     focus={false}
     height=""
     id=""
-    location="middleRight"
+    location="none"
     nobase={false}
     noedit={false}
     nohover={false}
     noripple={false}
     selected={false}
-    show={false}
-    sizing="inherit"
-    style={Object {}}
+    sizing="normal"
+    style={
+      Object {
+        "fill": "gray",
+        "stroke": "gray",
+      }
+    }
     testing={false}
     visible={true}
     width=""
@@ -1026,7 +984,7 @@ exports[`Test making a Tooltip invisible 1`] = `
   style={
     Object {
       "backgroundColor": "gray",
-      "color": "gray",
+      "color": "white",
     }
   }
 >
@@ -1034,33 +992,34 @@ exports[`Test making a Tooltip invisible 1`] = `
     className="ui-tooltip-content inherit"
     style={
       Object {
+        "backgroundColor": "gray",
         "color": "white",
       }
     }
   />
   <Triangle
-    backgroundColor="gray"
-    borderColor="inherit"
-    borderWidth="none"
     className="tooltipTriangleMiddleRight"
-    color="white"
     contentEditable={false}
     direction="left"
     disabled={false}
     focus={false}
     height=""
     id=""
-    location="middleRight"
+    location="none"
     nobase={false}
     noedit={false}
     nohover={false}
     noripple={false}
     selected={false}
-    show={false}
-    sizing="inherit"
-    style={Object {}}
+    sizing="normal"
+    style={
+      Object {
+        "fill": "gray",
+        "stroke": "gray",
+      }
+    }
     testing={false}
-    visible={false}
+    visible={true}
     width=""
   />
 </div>
@@ -1068,11 +1027,7 @@ exports[`Test making a Tooltip invisible 1`] = `
 
 exports[`Test retrieval of Tooltip props object 1`] = `
 Object {
-  "backgroundColor": "gray",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "white",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
@@ -1086,7 +1041,10 @@ Object {
   "selected": false,
   "show": false,
   "sizing": "inherit",
-  "style": Object {},
+  "style": Object {
+    "backgroundColor": "gray",
+    "color": "white",
+  },
   "testing": false,
   "visible": true,
   "width": "",

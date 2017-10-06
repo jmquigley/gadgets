@@ -1,7 +1,5 @@
 @import '../shared/styles.css';
 
-$br: 5px;
-
 :local {
 
 	.toast {
@@ -9,8 +7,8 @@ $br: 5px;
 		margin: 0 auto;
 		opacity: 1.0;
 		position: absolute;
-		transition: opacity 0.75s ease;
 		width: 70%;
+		z-index: auto;
 	}
 
 	.toastTop {
@@ -34,6 +32,7 @@ $br: 5px;
 
 	.content > span {
 		display: inline-flex;
+		user-select: auto;
 	}
 
 	.button {
@@ -43,5 +42,10 @@ $br: 5px;
 
 	.hide {
 		opacity: 0;
+		z-index: -1;
+
+		:global {
+			animation: fadeOut 1.0s;
+		}
 	}
 }

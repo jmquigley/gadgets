@@ -4,7 +4,6 @@ exports[`Test ButtonCircle click event 1`] = `
 <ButtonCircle
   backgroundColor="white"
   borderColor="black"
-  borderWidth="none"
   className=""
   color="black"
   contentEditable={false}
@@ -36,7 +35,6 @@ exports[`Test ButtonCircle click event 1`] = `
       <Button
         backgroundColor="white"
         borderColor="black"
-        borderWidth="none"
         className="normalBorder buttonCircleIcon"
         color="black"
         contentEditable={false}
@@ -62,20 +60,10 @@ exports[`Test ButtonCircle click event 1`] = `
         <div
           className="ui-button button ripple normal normalBorder buttonCircleIcon"
           onClick={[Function]}
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderColor": "black",
-              "color": "black",
-            }
-          }
+          style={Object {}}
         >
           <Icon
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
             className="normalBox icon"
-            color="inherit"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -117,7 +105,6 @@ exports[`Test creation of a ButtonCircle control 1`] = `
     <Button
       backgroundColor="white"
       borderColor="black"
-      borderWidth="none"
       className="normalBorder buttonCircleIcon"
       color="black"
       contentEditable={false}
@@ -148,7 +135,6 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
 <ButtonCircle
   backgroundColor="white"
   borderColor="black"
-  borderWidth="none"
   className=""
   color="black"
   contentEditable={false}
@@ -180,7 +166,6 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
       <Button
         backgroundColor="white"
         borderColor="black"
-        borderWidth="none"
         className="normalBorder buttonCircleIcon"
         color="black"
         contentEditable={false}
@@ -206,20 +191,10 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         <div
           className="ui-button button normal normalBorder buttonCircleIcon disabled nohover"
           onClick={[Function]}
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderColor": "black",
-              "color": "black",
-            }
-          }
+          style={Object {}}
         >
           <Icon
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
             className="normalBox icon"
-            color="inherit"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -255,7 +230,6 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
 <ButtonCircle
   backgroundColor="white"
   borderColor="black"
-  borderWidth="none"
   className=""
   color="black"
   contentEditable={false}
@@ -287,7 +261,6 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
       <Button
         backgroundColor="white"
         borderColor="black"
-        borderWidth="none"
         className="normalBorder buttonCircleIcon"
         color="black"
         contentEditable={false}
@@ -313,20 +286,10 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
         <div
           className="ui-button button ripple normal normalBorder buttonCircleIcon invisible"
           onClick={[Function]}
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderColor": "black",
-              "color": "black",
-            }
-          }
+          style={Object {}}
         >
           <Icon
-            backgroundColor="inherit"
-            borderColor="inherit"
-            borderWidth="none"
             className="normalBox icon"
-            color="inherit"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -362,7 +325,6 @@ exports[`Test retrieval of ButtonCircle props object 1`] = `
 Object {
   "backgroundColor": "white",
   "borderColor": "black",
-  "borderWidth": "none",
   "className": "",
   "color": "black",
   "contentEditable": false,

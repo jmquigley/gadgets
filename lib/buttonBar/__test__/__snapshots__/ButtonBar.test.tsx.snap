@@ -32,12 +32,8 @@ exports[`Test creation of a ButtonBar with right justify 1`] = `
 
 exports[`Test creation of a simple ButtonBar instance 1`] = `
 <ButtonBar
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   buttonSize="32px"
   className="test-class"
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -73,11 +69,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
         }
       >
         <Button
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -104,11 +96,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
             style={Object {}}
           >
             <Icon
-              backgroundColor="inherit"
-              borderColor="inherit"
-              borderWidth="none"
               className="icon"
-              color="inherit"
               contentEditable={false}
               direction="right"
               disabled={false}
@@ -147,11 +135,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
         }
       >
         <Button
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -178,11 +162,7 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
             style={Object {}}
           >
             <Icon
-              backgroundColor="inherit"
-              borderColor="inherit"
-              borderWidth="none"
               className="icon"
-              color="inherit"
               contentEditable={false}
               direction="right"
               disabled={false}
@@ -217,12 +197,8 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
 
 exports[`Test disabling of the ButtonBar control 1`] = `
 <ButtonBar
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   buttonSize="24px"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={true}
@@ -258,11 +234,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
         }
       >
         <Button
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={true}
@@ -289,11 +261,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
             style={Object {}}
           >
             <Icon
-              backgroundColor="inherit"
-              borderColor="inherit"
-              borderWidth="none"
               className="icon"
-              color="inherit"
               contentEditable={false}
               direction="right"
               disabled={false}
@@ -332,11 +300,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
         }
       >
         <Button
-          backgroundColor="inherit"
-          borderColor="inherit"
-          borderWidth="none"
           className=""
-          color="inherit"
           contentEditable={false}
           direction="right"
           disabled={true}
@@ -363,11 +327,7 @@ exports[`Test disabling of the ButtonBar control 1`] = `
             style={Object {}}
           >
             <Icon
-              backgroundColor="inherit"
-              borderColor="inherit"
-              borderWidth="none"
               className="icon"
-              color="inherit"
               contentEditable={false}
               direction="right"
               disabled={false}
@@ -402,12 +362,8 @@ exports[`Test disabling of the ButtonBar control 1`] = `
 
 exports[`Test making the ButtonBar invisible 1`] = `
 <ButtonBar
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   buttonSize="24px"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -438,12 +394,8 @@ exports[`Test making the ButtonBar invisible 1`] = `
 
 exports[`Test retrieval of ButtonBar props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "buttonSize": "24px",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,

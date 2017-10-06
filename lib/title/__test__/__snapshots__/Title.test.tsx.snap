@@ -2,11 +2,7 @@
 
 exports[`Test creation of a Title control with bad layout 1`] = `
 <Title
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -33,11 +29,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
     style={Object {}}
   >
     <Label
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className="ui-title title titleDominant"
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -75,12 +67,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
         onDoubleClick={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
-        style={
-          Object {
-            "backgroundColor": "inherit",
-            "color": "inherit",
-          }
-        }
+        style={Object {}}
         suppressContentEditableWarning={true}
       >
         Test label text
@@ -92,11 +79,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
 
 exports[`Test creation of a Title control with bad layout 2`] = `
 <Title
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -123,11 +106,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
     style={Object {}}
   >
     <Label
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className="ui-title title titleDominant"
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -165,12 +144,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
         onDoubleClick={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
-        style={
-          Object {
-            "backgroundColor": "inherit",
-            "color": "inherit",
-          }
-        }
+        style={Object {}}
         suppressContentEditableWarning={true}
       >
         Test label text
@@ -186,11 +160,7 @@ exports[`Test creation of a Title control with default props 1`] = `
   style={Object {}}
 >
   <Label
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-title title titleDominant"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -229,11 +199,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
   style={Object {}}
 >
   <Label
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-title title titleEven"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -277,11 +243,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
   style={Object {}}
 >
   <Label
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-title title titleEven"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -320,11 +282,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
   style={Object {}}
 >
   <Label
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-title title titleQuarter"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -368,11 +326,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
   style={Object {}}
 >
   <Label
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-title title titleStacked"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -416,11 +370,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
   style={Object {}}
 >
   <Label
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-title title titleThird"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -464,11 +414,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
   style={Object {}}
 >
   <Label
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-title title titleThreeQuarter"
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -508,11 +454,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
 
 exports[`Test disabling the Title control 1`] = `
 <Title
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={true}
@@ -539,11 +481,7 @@ exports[`Test disabling the Title control 1`] = `
     style={Object {}}
   >
     <Label
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className="ui-title title titleDominant"
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={true}
@@ -581,12 +519,7 @@ exports[`Test disabling the Title control 1`] = `
         onDoubleClick={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
-        style={
-          Object {
-            "backgroundColor": "inherit",
-            "color": "inherit",
-          }
-        }
+        style={Object {}}
         suppressContentEditableWarning={true}
       >
         Test label text
@@ -598,11 +531,7 @@ exports[`Test disabling the Title control 1`] = `
 
 exports[`Test making the Title control invisible 1`] = `
 <Title
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -629,11 +558,7 @@ exports[`Test making the Title control invisible 1`] = `
     style={Object {}}
   >
     <Label
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className="ui-title title titleDominant"
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={false}
@@ -671,12 +596,7 @@ exports[`Test making the Title control invisible 1`] = `
         onDoubleClick={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
-        style={
-          Object {
-            "backgroundColor": "inherit",
-            "color": "inherit",
-          }
-        }
+        style={Object {}}
         suppressContentEditableWarning={true}
       >
         Test label text
@@ -688,11 +608,7 @@ exports[`Test making the Title control invisible 1`] = `
 
 exports[`Test retrieval of Title props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,

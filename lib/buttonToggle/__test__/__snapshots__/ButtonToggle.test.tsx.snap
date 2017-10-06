@@ -2,13 +2,9 @@
 
 exports[`Test creation of a ButtonToggle control 1`] = `
 <Button
-  backgroundColor="inherit"
   bgColorOff="inherit"
   bgColorOn="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className="ui-button-toggle buttonToggle normal test-class"
-  color="gray"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -29,7 +25,12 @@ exports[`Test creation of a ButtonToggle control 1`] = `
   onClick={[Function]}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "gray",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -38,13 +39,9 @@ exports[`Test creation of a ButtonToggle control 1`] = `
 
 exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
 <ButtonToggle
-  backgroundColor="inherit"
   bgColorOff="inherit"
   bgColorOn="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -71,13 +68,9 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
   width=""
 >
   <Button
-    backgroundColor="inherit"
     bgColorOff="inherit"
     bgColorOn="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-button-toggle buttonToggle normal"
-    color="gray"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -98,7 +91,12 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
     onClick={[Function]}
     selected={false}
     sizing="normal"
-    style={Object {}}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "gray",
+      }
+    }
     testing={false}
     visible={true}
     width=""
@@ -108,16 +106,13 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
       onClick={[Function]}
       style={
         Object {
+          "backgroundColor": "inherit",
           "color": "gray",
         }
       }
     >
       <Icon
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
         className="icon"
-        color="inherit"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -149,13 +144,9 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
 
 exports[`Test disabling of a ButtonToggle 1`] = `
 <ButtonToggle
-  backgroundColor="inherit"
   bgColorOff="inherit"
   bgColorOn="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={true}
@@ -182,13 +173,9 @@ exports[`Test disabling of a ButtonToggle 1`] = `
   width=""
 >
   <Button
-    backgroundColor="inherit"
     bgColorOff="inherit"
     bgColorOn="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-button-toggle buttonToggle normal disabled nohover"
-    color="gray"
     contentEditable={false}
     direction="right"
     disabled={true}
@@ -209,7 +196,12 @@ exports[`Test disabling of a ButtonToggle 1`] = `
     onClick={[Function]}
     selected={false}
     sizing="normal"
-    style={Object {}}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "gray",
+      }
+    }
     testing={false}
     visible={true}
     width=""
@@ -219,16 +211,13 @@ exports[`Test disabling of a ButtonToggle 1`] = `
       onClick={[Function]}
       style={
         Object {
+          "backgroundColor": "inherit",
           "color": "gray",
         }
       }
     >
       <Icon
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
         className="icon"
-        color="inherit"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -260,13 +249,9 @@ exports[`Test disabling of a ButtonToggle 1`] = `
 
 exports[`Test making a ButtonToggle invisible 1`] = `
 <ButtonToggle
-  backgroundColor="inherit"
   bgColorOff="inherit"
   bgColorOn="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -293,13 +278,9 @@ exports[`Test making a ButtonToggle invisible 1`] = `
   width=""
 >
   <Button
-    backgroundColor="inherit"
     bgColorOff="inherit"
     bgColorOn="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className="ui-button-toggle buttonToggle normal invisible"
-    color="gray"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -320,7 +301,12 @@ exports[`Test making a ButtonToggle invisible 1`] = `
     onClick={[Function]}
     selected={false}
     sizing="normal"
-    style={Object {}}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "gray",
+      }
+    }
     testing={false}
     visible={false}
     width=""
@@ -330,16 +316,13 @@ exports[`Test making a ButtonToggle invisible 1`] = `
       onClick={[Function]}
       style={
         Object {
+          "backgroundColor": "inherit",
           "color": "gray",
         }
       }
     >
       <Icon
-        backgroundColor="inherit"
-        borderColor="inherit"
-        borderWidth="none"
         className="icon"
-        color="inherit"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -371,13 +354,9 @@ exports[`Test making a ButtonToggle invisible 1`] = `
 
 exports[`Test retrieval of ButtonToggle props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
   "bgColorOff": "inherit",
   "bgColorOn": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,

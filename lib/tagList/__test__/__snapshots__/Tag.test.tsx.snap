@@ -7,11 +7,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
   onMouseOver={[Function]}
 >
   <Label
-    backgroundColor="inherit"
-    borderColor="inherit"
-    borderWidth="none"
     className=""
-    color="inherit"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -43,11 +39,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
 
 exports[`Test disabling of the simple Tag instance 1`] = `
 <Tag
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={true}
@@ -76,11 +68,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
     onMouseOver={[Function]}
   >
     <Label
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={true}
@@ -115,12 +103,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
         onDoubleClick={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
-        style={
-          Object {
-            "backgroundColor": "inherit",
-            "color": "inherit",
-          }
-        }
+        style={Object {}}
         suppressContentEditableWarning={true}
       >
         test tag
@@ -128,10 +111,9 @@ exports[`Test disabling of the simple Tag instance 1`] = `
     </Label>
     <ButtonCircle
       backgroundColor="white"
-      borderColor="#d9534f"
-      borderWidth="none"
+      borderColor="black"
       className="tagDeleteButton middle"
-      color="#d9534f"
+      color="black"
       contentEditable={false}
       direction="right"
       disabled={true}
@@ -147,7 +129,12 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       onClick={[Function]}
       selected={false}
       sizing="small"
-      style={Object {}}
+      style={
+        Object {
+          "borderColor": "#d9534f",
+          "color": "#d9534f",
+        }
+      }
       testing={false}
       visible={false}
       width=""
@@ -160,10 +147,9 @@ exports[`Test disabling of the simple Tag instance 1`] = `
         >
           <Button
             backgroundColor="white"
-            borderColor="#d9534f"
-            borderWidth="none"
+            borderColor="black"
             className="smallBorder buttonCircleIcon"
-            color="#d9534f"
+            color="black"
             contentEditable={false}
             direction="right"
             disabled={true}
@@ -179,7 +165,12 @@ exports[`Test disabling of the simple Tag instance 1`] = `
             onClick={[Function]}
             selected={false}
             sizing="small"
-            style={Object {}}
+            style={
+              Object {
+                "borderColor": "#d9534f",
+                "color": "#d9534f",
+              }
+            }
             testing={false}
             visible={false}
             width=""
@@ -189,18 +180,13 @@ exports[`Test disabling of the simple Tag instance 1`] = `
               onClick={[Function]}
               style={
                 Object {
-                  "backgroundColor": "white",
                   "borderColor": "#d9534f",
                   "color": "#d9534f",
                 }
               }
             >
               <Icon
-                backgroundColor="inherit"
-                borderColor="inherit"
-                borderWidth="none"
                 className="smallBox icon"
-                color="inherit"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -236,11 +222,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
 
 exports[`Test making Tag invisible 1`] = `
 <Tag
-  backgroundColor="inherit"
-  borderColor="inherit"
-  borderWidth="none"
   className=""
-  color="inherit"
   contentEditable={false}
   direction="right"
   disabled={true}
@@ -269,11 +251,7 @@ exports[`Test making Tag invisible 1`] = `
     onMouseOver={[Function]}
   >
     <Label
-      backgroundColor="inherit"
-      borderColor="inherit"
-      borderWidth="none"
       className=""
-      color="inherit"
       contentEditable={false}
       direction="right"
       disabled={true}
@@ -308,12 +286,7 @@ exports[`Test making Tag invisible 1`] = `
         onDoubleClick={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
-        style={
-          Object {
-            "backgroundColor": "inherit",
-            "color": "inherit",
-          }
-        }
+        style={Object {}}
         suppressContentEditableWarning={true}
       >
         test tag
@@ -321,10 +294,9 @@ exports[`Test making Tag invisible 1`] = `
     </Label>
     <ButtonCircle
       backgroundColor="white"
-      borderColor="#d9534f"
-      borderWidth="none"
+      borderColor="black"
       className="tagDeleteButton middle"
-      color="#d9534f"
+      color="black"
       contentEditable={false}
       direction="right"
       disabled={true}
@@ -340,7 +312,12 @@ exports[`Test making Tag invisible 1`] = `
       onClick={[Function]}
       selected={false}
       sizing="small"
-      style={Object {}}
+      style={
+        Object {
+          "borderColor": "#d9534f",
+          "color": "#d9534f",
+        }
+      }
       testing={false}
       visible={false}
       width=""
@@ -353,10 +330,9 @@ exports[`Test making Tag invisible 1`] = `
         >
           <Button
             backgroundColor="white"
-            borderColor="#d9534f"
-            borderWidth="none"
+            borderColor="black"
             className="smallBorder buttonCircleIcon"
-            color="#d9534f"
+            color="black"
             contentEditable={false}
             direction="right"
             disabled={true}
@@ -372,7 +348,12 @@ exports[`Test making Tag invisible 1`] = `
             onClick={[Function]}
             selected={false}
             sizing="small"
-            style={Object {}}
+            style={
+              Object {
+                "borderColor": "#d9534f",
+                "color": "#d9534f",
+              }
+            }
             testing={false}
             visible={false}
             width=""
@@ -382,18 +363,13 @@ exports[`Test making Tag invisible 1`] = `
               onClick={[Function]}
               style={
                 Object {
-                  "backgroundColor": "white",
                   "borderColor": "#d9534f",
                   "color": "#d9534f",
                 }
               }
             >
               <Icon
-                backgroundColor="inherit"
-                borderColor="inherit"
-                borderWidth="none"
                 className="smallBox icon"
-                color="inherit"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -429,11 +405,7 @@ exports[`Test making Tag invisible 1`] = `
 
 exports[`Test retrieval of Tag props object 1`] = `
 Object {
-  "backgroundColor": "inherit",
-  "borderColor": "inherit",
-  "borderWidth": "none",
   "className": "",
-  "color": "inherit",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,

@@ -17,11 +17,13 @@ test('Test creation of a ButtonText control to the left', () => {
 	const ctl = mount(
 		<ButtonText
 			className="test-class"
-			text="test text"
 			justify={Justify.left}
-			color="white"
-			borderColor="green"
-			backgroundColor="blue"
+			style={{
+				color: 'white',
+				borderColor: 'green',
+				backgroundColor: 'blue'
+			}}
+			text="test text"
 		/>
 	);
 

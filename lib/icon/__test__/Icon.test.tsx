@@ -16,9 +16,11 @@ test('Test creation of an Icon control with icon', () => {
 	const ctl = shallow(
 		<Icon
 			className="test-class"
-			color="red"
-			backgroundColor="blue"
 			iconName="star"
+			style={{
+				color: 'red',
+				backgroundColor: 'blue'
+			}}
 		/>
 	);
 

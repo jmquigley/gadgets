@@ -22,11 +22,13 @@ test('Test creation of a Button control', () => {
 test('Test creation of a Button control with custom icon, colors, and border', () => {
 	const ctl = shallow(
 		<Button
-			color="red"
-			backgroundColor="black"
-			borderColor="green"
-			borderWidth="2px"
 			iconName="superpowers"
+			style={{
+				backgroundColor: 'black',
+				borderColor: 'green',
+				borderWidth: '2px',
+				color: 'red'
+			}}
 		/>
 	);
 
