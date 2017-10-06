@@ -4,7 +4,13 @@ exports[`Test creation of a Triangle control 1`] = `
 <svg
   className="ui-triangle triangle normalBox triangleUp normal test-class"
   preserveAspectRatio="xMidYMid meet"
-  style={null}
+  style={
+    Object {
+      "fill": "black",
+      "stokeWidth": "2px",
+      "stroke": "black",
+    }
+  }
   version="1.1"
   viewBox="0 0 40 40"
   xmlns="http://www.w3.org/2000/svg"

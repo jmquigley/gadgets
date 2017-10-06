@@ -66,12 +66,6 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react-modal@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@types/react-modal/-/react-modal-2.2.1.tgz#bd820a3aecec7f5556b681538e19c7f940278dcf"
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-select@^1.0.58":
   version "1.0.58"
   resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-1.0.58.tgz#8246befde5452ca201a02d924d293842357d7538"
@@ -6110,10 +6104,6 @@ rc@^1.1.2, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom-factories@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-dom-factories/-/react-dom-factories-1.0.2.tgz#eb7705c4db36fb501b3aa38ff759616aa0ff96e0"
-
 react-dom@^16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.0.0.tgz#9cc3079c3dcd70d4c6e01b84aab2a7e34c303f58"
@@ -6130,13 +6120,12 @@ react-input-autosize@^2.0.1:
     create-react-class "^15.5.2"
     prop-types "^15.5.8"
 
-react-modal@2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-2.2.4.tgz#a32483c3555bd7677f09bca65d82f51da3abcbc0"
+react-modal@^3.0.0-rc2:
+  version "3.0.0-rc2"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.0.0-rc2.tgz#fff07df3d09c350462ce4454dcff9873bddde70a"
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.5.10"
-    react-dom-factories "^1.0.0"
 
 react-select@1.0.0-rc.10:
   version "1.0.0-rc.10"

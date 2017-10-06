@@ -57,9 +57,13 @@
 
 'use strict';
 
+const debug = require('debug')('DialogBox');
+const ReactModal = require('react-modal');
+
+debug('%O', ReactModal);
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import ReactModal from 'react-modal';
 import {nilEvent} from 'util.toolbox';
 import {ButtonText} from '../buttonText';
 import {Icon} from '../icon';

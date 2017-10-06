@@ -1382,7 +1382,6 @@ class App extends React.Component<AppProps, AppState> {
 			<Triangle sizing={Sizing.small} direction={Direction.down} style={{fill: 'black', stroke: 'yellow'}} />
 			<Triangle sizing={Sizing.small} direction={Direction.left} style={{fill: 'black', stroke: 'yellow'}} />
 
-
 			<h3>normal</h3>
 			<Triangle sizing={Sizing.normal} direction={Direction.up} style={{fill: 'blue', stroke: 'green'}} />
 			<Triangle sizing={Sizing.normal} direction={Direction.right} style={{fill: 'blue', stroke: 'green'}} />

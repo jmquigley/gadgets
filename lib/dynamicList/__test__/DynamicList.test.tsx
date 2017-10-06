@@ -1,7 +1,7 @@
 'use strict';
 
 import * as assert from 'assert';
-import {mount, shallow} from 'enzyme';
+import {shallow} from 'enzyme';
 import * as React from 'react';
 import {DynamicList, getDefaultDynamicListProps} from '../index';
 
@@ -20,7 +20,7 @@ test('Test creation of a DynamicList control', () => {
 });
 
 test('Test creation of a DynamicList with 3 items', () => {
-	const ctl = mount(
+	const ctl = shallow(
 		<DynamicList
 			items={{
 				title1: 'widget1',

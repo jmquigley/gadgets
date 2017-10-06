@@ -12,6 +12,7 @@ exports[`Test creation of a default DialogBox control 1`] = `
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   shouldCloseOnOverlayClick={false}
+  shouldFocusAfterRender={true}
   style={
     Object {
       "content": Object {
@@ -132,58 +133,135 @@ exports[`Test creation of a default DialogBox control 1`] = `
 `;
 
 exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
-<DialogBox
-  className=""
-  contentEditable={false}
-  dialogType="info"
-  direction="right"
-  disabled={false}
-  focus={false}
-  height=""
-  iconName="bomb"
-  id=""
-  location="none"
-  message="Testing click handler for yes"
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  onClose={[Function]}
-  onOpen={[Function]}
-  onSelection={[Function]}
-  selected={false}
-  show={true}
-  sizing="normal"
-  style={Object {}}
-  testing={false}
-  visible={true}
-  width=""
->
-  <Modal
-    ariaHideApp={true}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="DialogBox"
-    isOpen={true}
-    onAfterOpen={[Function]}
-    onRequestClose={[Function]}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    shouldCloseOnOverlayClick={false}
-    style={
-      Object {
-        "content": Object {
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "padding": "15px",
-          "right": "auto",
-          "top": "40%",
-          "transform": "translate(-50%, -50%)",
-        },
-      }
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  closeTimeoutMS={0}
+  contentLabel="DialogBox"
+  isOpen={true}
+  onAfterOpen={[Function]}
+  onRequestClose={[Function]}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={false}
+  shouldFocusAfterRender={true}
+  style={
+    Object {
+      "content": Object {
+        "bottom": "auto",
+        "left": "50%",
+        "marginRight": "-50%",
+        "padding": "15px",
+        "right": "auto",
+        "top": "40%",
+        "transform": "translate(-50%, -50%)",
+      },
     }
-  />
-</DialogBox>
+  }
+>
+  <div
+    className="ui-dialogbox dialogBox normal"
+  >
+    <div
+      className="dialogBoxIcon"
+    >
+      <Icon
+        className="dialogBoxIcon"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        focus={false}
+        height=""
+        iconName="info-circle"
+        id=""
+        imageFile=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        selected={false}
+        sizing="xxlarge"
+        style={
+          Object {
+            "color": "#5bc0de",
+          }
+        }
+        testing={false}
+        visible={true}
+        width=""
+      />
+    </div>
+    <div
+      className="dialogBoxMessageContainer"
+    >
+      <div
+        className="dialogBoxMessage"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Testing click handler for yes</p>",
+          }
+        }
+      />
+      <div
+        className="buttonBar"
+      >
+        <ButtonText
+          className="dialogBoxButton"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="bomb"
+          id=""
+          imageFile=""
+          justify={2}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noicon={true}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={false}
+          text="Yes"
+          visible={true}
+          width=""
+        />
+        <div
+          className="spacer"
+        />
+        <ButtonText
+          className="dialogBoxButton"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="bomb"
+          id=""
+          imageFile=""
+          justify={2}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noicon={true}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={false}
+          text="No"
+          visible={true}
+          width=""
+        />
+      </div>
+    </div>
+  </div>
+</Modal>
 `;
 
 exports[`Test retrieval of DialogBox props object 1`] = `
@@ -227,6 +305,7 @@ exports[`Test the creation of an custom DialogBox 1`] = `
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   shouldCloseOnOverlayClick={false}
+  shouldFocusAfterRender={true}
   style={
     Object {
       "content": Object {
@@ -358,6 +437,7 @@ exports[`Test the creation of an error DialogBox 1`] = `
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   shouldCloseOnOverlayClick={false}
+  shouldFocusAfterRender={true}
   style={
     Object {
       "content": Object {
@@ -489,6 +569,7 @@ exports[`Test the creation of an info DialogBox 1`] = `
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   shouldCloseOnOverlayClick={false}
+  shouldFocusAfterRender={true}
   style={
     Object {
       "content": Object {
@@ -620,6 +701,7 @@ exports[`Test the creation of an success DialogBox 1`] = `
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   shouldCloseOnOverlayClick={false}
+  shouldFocusAfterRender={true}
   style={
     Object {
       "content": Object {
@@ -751,6 +833,7 @@ exports[`Test the creation of an warning DialogBox 1`] = `
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   shouldCloseOnOverlayClick={false}
+  shouldFocusAfterRender={true}
   style={
     Object {
       "content": Object {

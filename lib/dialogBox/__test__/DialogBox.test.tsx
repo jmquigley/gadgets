@@ -1,7 +1,7 @@
 'use strict';
 
 import * as assert from 'assert';
-import {mount, shallow} from 'enzyme';
+import {shallow} from 'enzyme';
 import * as React from 'react';
 import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from '../index';
 
@@ -90,7 +90,7 @@ test('Test the creation of an custom DialogBox', () => {
 
 test('Test pressing the "yes" button on the default DialogBox', () => {
 	const selection = jest.fn();
-	const ctl = mount(
+	const ctl = shallow(
 		<DialogBox
 			message="Testing click handler for yes"
 			onSelection={selection}
