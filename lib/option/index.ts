@@ -1,4 +1,4 @@
-import {getDefaultOptionProps, Option, OptionType} from './option';
+import {getDefaultOptionProps, Option, OptionType} from './Option';
 
 export {
 	getDefaultOptionProps,

@@ -38,7 +38,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
 `;
 
 exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
-<b
+<ButtonToggle
   bgColorOff="inherit"
   bgColorOn="inherit"
   className=""
@@ -139,11 +139,11 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
       </Icon>
     </div>
   </Button>
-</b>
+</ButtonToggle>
 `;
 
 exports[`Test disabling of a ButtonToggle 1`] = `
-<b
+<ButtonToggle
   bgColorOff="inherit"
   bgColorOn="inherit"
   className=""
@@ -244,11 +244,11 @@ exports[`Test disabling of a ButtonToggle 1`] = `
       </Icon>
     </div>
   </Button>
-</b>
+</ButtonToggle>
 `;
 
 exports[`Test making a ButtonToggle invisible 1`] = `
-<b
+<ButtonToggle
   bgColorOff="inherit"
   bgColorOn="inherit"
   className=""
@@ -349,7 +349,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
       </Icon>
     </div>
   </Button>
-</b>
+</ButtonToggle>
 `;
 
 exports[`Test retrieval of ButtonToggle props object 1`] = `

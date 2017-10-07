@@ -97,9 +97,9 @@ module.exports = {
 	},
 	plugins: [
 		new ExtractTextPlugin({filename: "styles.css"}),
-		new webpack.DefinePlugin({
-			NODE_ENV: JSON.stringify("production")
-		}),
+		// new webpack.DefinePlugin({
+		// 	NODE_ENV: JSON.stringify("production")
+		// }),
 		new webpack.ProvidePlugin({
     		$: "jquery",
     		jQuery: "jquery",
