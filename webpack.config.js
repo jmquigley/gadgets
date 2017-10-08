@@ -51,12 +51,13 @@ module.exports = {
 	resolveLoader: {
 		modules: [path.join(__dirname, "node_modules")]
 	},
+	devtool: 'source-map',
 	module: {
 		rules: [
 			{
 				test: /\.tsx?$/,
 				exclude: /node_modules|dist|demo/,
-				loader: 'js-output-loader!awesome-typescript-loader?useBabel=true&useCache=true'
+				loader: 'js-output-loader!babel-loader!awesome-typescript-loader'
 			},
 			{
 				test: /\.css$/,

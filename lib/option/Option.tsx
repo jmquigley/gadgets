@@ -48,6 +48,7 @@
 
 'use strict';
 import {cloneDeep} from 'lodash';
+import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {ButtonToggle} from '../buttonToggle';
 import {
@@ -165,6 +166,7 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 				style={this.inlineStyles}
 			>
 				<ButtonToggle
+					{...this.props}
 					bgColorOff={this.inlineStyles['backgroundColor']}
 					bgColorOn={this.inlineStyles['backgroundColor']}
 					className={this.styles.optionButton}
@@ -178,7 +180,6 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 					ref={(btn: ButtonToggle) => {
 						this._btn = btn;
 					}}
-					sizing={this.props.sizing}
 				/>
 				{(this.props.text) ? <span>{this.props.text}</span> : null}
 			</div>

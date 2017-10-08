@@ -3,6 +3,7 @@
 import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
+import * as sinon from 'sinon';
 import {ButtonToggle, getDefaultButtonToggleProps} from '../index';
 
 test('Test retrieval of ButtonToggle props object', () => {
@@ -32,29 +33,29 @@ test('Test creation of a ButtonToggle control with on/off icons', () => {
 });
 
 test('Test disabling of a ButtonToggle', () => {
-	const click = jest.fn();
+	const click = sinon.spy();
 	const ctl = mount(<ButtonToggle onClick={click} disabled={true} />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button-toggle').first().simulate('click');
-	expect(click).not.toHaveBeenCalled();
+	assert(!click.calledOnce);
 });
 
 test('Test making a ButtonToggle invisible', () => {
-	const click = jest.fn();
+	const click = sinon.spy();
 	const ctl = mount(<ButtonToggle onClick={click} visible={false} />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button-toggle').first().simulate('click');
-	expect(click).not.toHaveBeenCalled();
+	assert(!click.calledOnce);
 });
 
 test('Test ButtonToggle click event', () => {
-	const click = jest.fn();
+	const click = sinon.spy();
 	const ctl = mount(
 		<ButtonToggle
 			iconNameOn="star"
@@ -76,13 +77,14 @@ test('Test ButtonToggle click event', () => {
 
 	assert(!btn.state.toggle);
 	ctl.find('.ui-button-toggle').first().simulate('click');
-	expect(click).toHaveBeenCalled();
+	assert(click.calledOnce);
+	assert(click.calledWith(true));
 	assert(btn.state.toggle);
 	assert.equal(btn.state.toggle, ctl.state('toggle'));
 });
 
 test('Test the icon switch in a ButtonToggle click', () => {
-	const click = jest.fn();
+	const click = sinon.spy();
 	const ctl = mount(
 		<ButtonToggle
 			iconNameOff="star-o"
@@ -101,6 +103,7 @@ test('Test the icon switch in a ButtonToggle click', () => {
 
 	assert(!ctl.state('toggle'));
 	ctl.find('.ui-button-toggle').first().simulate('click');
-	expect(click).toHaveBeenCalled();
+	assert(click.calledOnce);
+	assert(click.calledWith(true));
 	assert(ctl.state('toggle'));
 });

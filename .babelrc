@@ -4,9 +4,10 @@
 				"env",
 				"react"
 		],
+		"sourceMaps": "inline",
 		"plugins": [
 				["transform-runtime", {
-						"helpers": false,
+						"helpers": true,
 						"polyfill": false,
 						"regenerator": true,
 						"moduleName": "babel-runtime"

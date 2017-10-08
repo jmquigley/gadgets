@@ -1,5 +1,517 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Creation of the Option control 1`] = `
+<div
+  className="ui-option option normal test-class"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+>
+  <ButtonToggle
+    bgColorOff="inherit"
+    bgColorOn="inherit"
+    className="optionButton"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    fgColorOff="inherit"
+    fgColorOn="inherit"
+    focus={false}
+    height=""
+    iconName="bomb"
+    iconNameOff="square-o"
+    iconNameOn="check-square-o"
+    iconStyle=""
+    id=""
+    initialToggle={true}
+    location="none"
+    noedit={false}
+    nohover={true}
+    noripple={false}
+    onClick={[Function]}
+    selected={true}
+    sizing="normal"
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+    testing={false}
+    text="test"
+    type={0}
+    visible={true}
+    width=""
+  />
+  <span>
+    test
+  </span>
+</div>
+`;
+
+exports[`Test Option control click event 1`] = `
+<Option
+  className=""
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  height=""
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+  testing={false}
+  text=""
+  type={0}
+  visible={true}
+  width=""
+>
+  <div
+    className="ui-option option normal"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+  >
+    <ButtonToggle
+      bgColorOff="inherit"
+      bgColorOn="inherit"
+      className="optionButton"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      fgColorOff="inherit"
+      fgColorOn="inherit"
+      focus={false}
+      height=""
+      iconName="bomb"
+      iconNameOff="square-o"
+      iconNameOn="check-square-o"
+      iconStyle=""
+      id=""
+      initialToggle={false}
+      location="none"
+      noedit={false}
+      nohover={true}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="normal"
+      style={
+        Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
+        }
+      }
+      testing={false}
+      text=""
+      type={0}
+      visible={true}
+      width=""
+    >
+      <Button
+        bgColorOff="inherit"
+        bgColorOn="inherit"
+        className="ui-button-toggle buttonToggle normal optionButton nohover"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        fgColorOff="inherit"
+        fgColorOn="inherit"
+        focus={false}
+        height=""
+        iconName="square-o"
+        iconNameOff="square-o"
+        iconNameOn="check-square-o"
+        iconStyle=""
+        id=""
+        initialToggle={false}
+        location="none"
+        noedit={false}
+        nohover={true}
+        noripple={true}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+        testing={false}
+        text=""
+        type={0}
+        visible={true}
+        width=""
+      >
+        <div
+          className="ui-button button normal ui-button-toggle buttonToggle normal optionButton nohover nohover"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "inherit",
+              "color": "inherit",
+            }
+          }
+        >
+          <Icon
+            className="icon"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="square-o"
+            id=""
+            imageFile=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <i
+              className="ui-icon icon none fa fa-fw fa-square-o normal"
+              style={Object {}}
+            />
+          </Icon>
+        </div>
+      </Button>
+    </ButtonToggle>
+  </div>
+</Option>
+`;
+
+exports[`Test disabling of the Option control 1`] = `
+<Option
+  className=""
+  contentEditable={false}
+  direction="right"
+  disabled={true}
+  focus={false}
+  height=""
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+  testing={false}
+  text=""
+  type={0}
+  visible={true}
+  width=""
+>
+  <div
+    className="ui-option option normal disabled nohover"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+  >
+    <ButtonToggle
+      bgColorOff="inherit"
+      bgColorOn="inherit"
+      className="optionButton"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      fgColorOff="inherit"
+      fgColorOn="inherit"
+      focus={false}
+      height=""
+      iconName="bomb"
+      iconNameOff="square-o"
+      iconNameOn="check-square-o"
+      iconStyle=""
+      id=""
+      initialToggle={false}
+      location="none"
+      noedit={false}
+      nohover={true}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="normal"
+      style={
+        Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
+        }
+      }
+      testing={false}
+      text=""
+      type={0}
+      visible={true}
+      width=""
+    >
+      <Button
+        bgColorOff="inherit"
+        bgColorOn="inherit"
+        className="ui-button-toggle buttonToggle normal optionButton disabled nohover"
+        contentEditable={false}
+        direction="right"
+        disabled={true}
+        fgColorOff="inherit"
+        fgColorOn="inherit"
+        focus={false}
+        height=""
+        iconName="square-o"
+        iconNameOff="square-o"
+        iconNameOn="check-square-o"
+        iconStyle=""
+        id=""
+        initialToggle={false}
+        location="none"
+        noedit={false}
+        nohover={true}
+        noripple={true}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+        testing={false}
+        text=""
+        type={0}
+        visible={true}
+        width=""
+      >
+        <div
+          className="ui-button button normal ui-button-toggle buttonToggle normal optionButton disabled nohover disabled nohover"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "inherit",
+              "color": "inherit",
+            }
+          }
+        >
+          <Icon
+            className="icon"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="square-o"
+            id=""
+            imageFile=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <i
+              className="ui-icon icon none fa fa-fw fa-square-o normal"
+              style={Object {}}
+            />
+          </Icon>
+        </div>
+      </Button>
+    </ButtonToggle>
+  </div>
+</Option>
+`;
+
+exports[`Test making the Option control invisible 1`] = `
+<Option
+  className=""
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  height=""
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+  testing={false}
+  text=""
+  type={0}
+  visible={false}
+  width=""
+>
+  <div
+    className="ui-option option normal invisible"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+  >
+    <ButtonToggle
+      bgColorOff="inherit"
+      bgColorOn="inherit"
+      className="optionButton"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      fgColorOff="inherit"
+      fgColorOn="inherit"
+      focus={false}
+      height=""
+      iconName="bomb"
+      iconNameOff="square-o"
+      iconNameOn="check-square-o"
+      iconStyle=""
+      id=""
+      initialToggle={false}
+      location="none"
+      noedit={false}
+      nohover={true}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="normal"
+      style={
+        Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
+        }
+      }
+      testing={false}
+      text=""
+      type={0}
+      visible={false}
+      width=""
+    >
+      <Button
+        bgColorOff="inherit"
+        bgColorOn="inherit"
+        className="ui-button-toggle buttonToggle normal optionButton invisible nohover"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        fgColorOff="inherit"
+        fgColorOn="inherit"
+        focus={false}
+        height=""
+        iconName="square-o"
+        iconNameOff="square-o"
+        iconNameOn="check-square-o"
+        iconStyle=""
+        id=""
+        initialToggle={false}
+        location="none"
+        noedit={false}
+        nohover={true}
+        noripple={true}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+          }
+        }
+        testing={false}
+        text=""
+        type={0}
+        visible={false}
+        width=""
+      >
+        <div
+          className="ui-button button normal ui-button-toggle buttonToggle normal optionButton invisible nohover invisible nohover"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "inherit",
+              "color": "inherit",
+            }
+          }
+        >
+          <Icon
+            className="icon"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="square-o"
+            id=""
+            imageFile=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <i
+              className="ui-icon icon none fa fa-fw fa-square-o normal"
+              style={Object {}}
+            />
+          </Icon>
+        </div>
+      </Button>
+    </ButtonToggle>
+  </div>
+</Option>
+`;
+
 exports[`Test retrieval of Option props object 1`] = `
 Object {
   "className": "",
