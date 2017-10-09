@@ -21,7 +21,14 @@ exports[`Test creation of a ButtonDialog control 1`] = `
     onClick={[Function]}
     selected={false}
     sizing="normal"
-    style={Object {}}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+        "fill": "white",
+        "stroke": "black",
+      }
+    }
     testing={false}
     visible={true}
     width=""
@@ -54,7 +61,8 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       sizing="normal"
       style={
         Object {
-          "fill": undefined,
+          "fill": "white",
+          "stroke": "black",
         }
       }
       testing={false}
@@ -86,7 +94,14 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
     onClick={[Function]}
     selected={false}
     sizing="normal"
-    style={Object {}}
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+        "fill": "white",
+        "stroke": "black",
+      }
+    }
     testing={false}
     visible={true}
     width=""
@@ -119,7 +134,8 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       sizing="normal"
       style={
         Object {
-          "fill": undefined,
+          "fill": "white",
+          "stroke": "black",
         }
       }
       testing={false}
@@ -150,7 +166,12 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   onClick={[Function]}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
   testing={false}
   triangleClasses={Array []}
   visible={false}
@@ -176,7 +197,14 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       onClick={[Function]}
       selected={false}
       sizing="normal"
-      style={Object {}}
+      style={
+        Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
+          "fill": "white",
+          "stroke": "black",
+        }
+      }
       testing={false}
       visible={false}
       width=""
@@ -184,7 +212,14 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       <div
         className="ui-button button ripple normal invisible"
         onClick={[Function]}
-        style={Object {}}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+            "fill": "white",
+            "stroke": "black",
+          }
+        }
       >
         <Icon
           className="icon"
@@ -242,7 +277,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         sizing="normal"
         style={
           Object {
-            "fill": undefined,
+            "fill": "white",
+            "stroke": "black",
           }
         }
         testing={false}
@@ -252,6 +288,13 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         <svg
           className="ui-triangle triangle normalBox triangleUp normal dialogTriangleBottom buttonDialogHide"
           preserveAspectRatio="xMidYMid meet"
+          style={
+            Object {
+              "fill": "white",
+              "stokeWidth": "2px",
+              "stroke": "black",
+            }
+          }
           version="1.1"
           viewBox="0 0 40 40"
           xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +303,6 @@ exports[`Test making the ButtonDialog invisible 1`] = `
             points="-3,35, 20,10 43,35"
             style={
               Object {
-                "fill": undefined,
                 "stroke": "none",
               }
             }
@@ -269,7 +311,6 @@ exports[`Test making the ButtonDialog invisible 1`] = `
             points="-3,35, 20,10 43,35, 20,10"
             style={
               Object {
-                "stroke": "black",
                 "strokeLinecap": "square",
                 "strokeWidth": undefined,
               }
@@ -302,7 +343,10 @@ Object {
   "onClick": [Function],
   "selected": false,
   "sizing": "normal",
-  "style": Object {},
+  "style": Object {
+    "backgroundColor": "inherit",
+    "color": "inherit",
+  },
   "testing": false,
   "triangleClasses": Array [],
   "visible": true,
@@ -330,7 +374,12 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   onClick={[Function]}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
   testing={false}
   triangleClasses={Array []}
   visible={true}
@@ -356,7 +405,14 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
       onClick={[Function]}
       selected={false}
       sizing="normal"
-      style={Object {}}
+      style={
+        Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
+          "fill": "white",
+          "stroke": "black",
+        }
+      }
       testing={false}
       visible={true}
       width=""
@@ -364,7 +420,14 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
       <div
         className="ui-button button normal disabled nohover"
         onClick={[Function]}
-        style={Object {}}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "inherit",
+            "fill": "white",
+            "stroke": "black",
+          }
+        }
       >
         <Icon
           className="icon"
@@ -422,7 +485,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         sizing="normal"
         style={
           Object {
-            "fill": undefined,
+            "fill": "white",
+            "stroke": "black",
           }
         }
         testing={false}
@@ -432,6 +496,13 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         <svg
           className="ui-triangle triangle normalBox triangleUp normal dialogTriangleBottom buttonDialogHide"
           preserveAspectRatio="xMidYMid meet"
+          style={
+            Object {
+              "fill": "white",
+              "stokeWidth": "2px",
+              "stroke": "black",
+            }
+          }
           version="1.1"
           viewBox="0 0 40 40"
           xmlns="http://www.w3.org/2000/svg"
@@ -440,7 +511,6 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
             points="-3,35, 20,10 43,35"
             style={
               Object {
-                "fill": undefined,
                 "stroke": "none",
               }
             }
@@ -449,7 +519,6 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
             points="-3,35, 20,10 43,35, 20,10"
             style={
               Object {
-                "stroke": "black",
                 "strokeLinecap": "square",
                 "strokeWidth": undefined,
               }

@@ -94,25 +94,26 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 	}
 
 	public render() {
-		const is = this.inlineStyles;
+		const ils = this.inlineStyles;
 
 		return (
 			(this.props.nobase) ? (
 				<svg
 					className={this._rootStyles.classnames}
 					preserveAspectRatio="xMidYMid meet"
+					style={ils}
 					version="1.1"
 					viewBox="0 0 40 40"
 					xmlns="http://www.w3.org/2000/svg"
 				>
-					<polygon points="-3,35, 20,10 43,35" style={{fill: is['fill'], stroke: 'none'}} />
-					<polygon points="-3,35, 20,10 43,35, 20,10" style={{stroke: is['stroke'], strokeWidth: is['strokeWidth'], strokeLinecap: 'square'}} />
+					<polygon points="-3,35, 20,10 43,35" style={{stroke: 'none'}} />
+					<polygon points="-3,35, 20,10 43,35, 20,10" style={{strokeWidth: ils['strokeWidth'], strokeLinecap: 'square'}} />
 				</svg>
 			) : (
 				<svg
 					className={this._rootStyles.classnames}
 					preserveAspectRatio="xMidYMid meet"
-					style={is}
+					style={ils}
 					version="1.1"
 					viewBox="0 0 40 40"
 					xmlns="http://www.w3.org/2000/svg"

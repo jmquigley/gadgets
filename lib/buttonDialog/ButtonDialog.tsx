@@ -59,6 +59,10 @@ export function getDefaultButtonDialogProps(): ButtonDialogProps {
 			location: Location.bottom,
 			notriangle: false,
 			onClick: nilEvent,
+			style: {
+				backgroundColor: 'inherit',
+				color: 'inherit'
+			},
 			triangleClasses: []
 		})
 	);
@@ -70,13 +74,13 @@ export interface ButtonDialogState {
 
 export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogState> {
 
-	public static defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
+	public static readonly defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
 
 	private _dialogStyles: ClassNames = new ClassNames();
 	private _triangleStyles: ClassNames = new ClassNames();
 
 	constructor(props: ButtonDialogProps) {
-		super(props, require('./styles.css'));
+		super(props, require('./styles.css'), ButtonDialog.defaultProps.style);
 
 		this._dialogStyles.add([
 			'ui-dialog-popup',
@@ -139,6 +143,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	}
 
 	public componentWillUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState) {
+		const ils = this.inlineStyles;
 
 		this._dialogStyles.onIfElse(nextProps.location === Location.top)(
 			this.styles.dialogTop
@@ -164,10 +169,24 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			this.styles.buttonDialogHide
 		);
 
+		if (ils['color'] !== 'inherit') {
+			this.inlineStyles = {stroke: ils['color']};
+		} else {
+			this.inlineStyles = {stroke: 'black'};
+		}
+
+		if (ils['backgroundColor'] !== 'inherit') {
+			this.inlineStyles = {fill: ils['backgroundColor']};
+		} else {
+			this.inlineStyles = {fill: 'white'};
+		}
+
 		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
+		const ils = this.inlineStyles;
+
 		return (
 			<div
 				className={this._rootStyles.classnames}
@@ -196,7 +215,8 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 						nobase
 						sizing={Sizing.normal}
 						style={{
-							fill: this.props.style['backgroundColor']
+							fill: ils['fill'],
+							stroke: ils['stroke']
 						}}
 					/>
 					}
