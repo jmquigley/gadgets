@@ -1,4 +1,4 @@
-bin
+bin/
 coverage/
 demo/
 docs/
@@ -14,11 +14,9 @@ tmp/
 .travis.yml
 *.jsx
 *.map
-!lib/**/*.d.ts
-!index.d.ts
-*.ts
 *.tsx
 index.js
+index.ts
 jsdoc.json
 lib/**/*.css
 lib/**/*.css.json
