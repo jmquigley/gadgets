@@ -4,6 +4,20 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const path = require('path');
 const webpack = require('webpack');
+const pkg = require('./package.json');
+
+const banner = new webpack.BannerPlugin({
+	banner:
+		'Gadgets v' + pkg.version + '\n' +
+		'https://www.npmjs.com/package/gadgets\n' +
+		'Copyright (c) 2017, James Quigley\n',
+	entryOnly: true
+});
+
+const constants = new webpack.DefinePlugin({
+	GADGETS_VERSION: JSON.stringify(pkg.version)
+	// NODE_ENV: JSON.stringify("production")
+});
 
 module.exports = {
 	entry: [
@@ -30,24 +44,24 @@ module.exports = {
 			"jquery": path.resolve(__dirname, 'node_modules', 'jquery', 'dist', 'jquery.min.js'),
 			"lodash": path.resolve(__dirname, 'node_modules', 'lodash', 'lodash.min.js'),
 			"quill": path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.min.js'),
-    		"react$": path.resolve(__dirname, 'node_modules', 'react', 'umd', 'react.production.min.js'),
-        	"react-dom$": path.resolve(__dirname, 'node_modules', 'react-dom', 'umd', 'react-dom.production.min.js')
+			"react$": path.resolve(__dirname, 'node_modules', 'react', 'umd', 'react.production.min.js'),
+			"react-dom$": path.resolve(__dirname, 'node_modules', 'react-dom', 'umd', 'react-dom.production.min.js')
 		}
-    },
+	},
 	externals: {
-        react: {
-            root: 'React',
-            commonjs2: 'react',
-            commonjs: 'react',
-            amd: 'react'
-        },
-        'react-dom': {
-            root: 'ReactDOM',
-            commonjs2: 'react-dom',
-            commonjs: 'react-dom',
-            amd: 'react-dom'
-        }
-  	},
+		react: {
+			root: 'React',
+			commonjs2: 'react',
+			commonjs: 'react',
+			amd: 'react'
+		},
+		'react-dom': {
+			root: 'ReactDOM',
+			commonjs2: 'react-dom',
+			commonjs: 'react-dom',
+			amd: 'react-dom'
+		}
+	},
 	resolveLoader: {
 		modules: [path.join(__dirname, "node_modules")]
 	},
@@ -97,14 +111,13 @@ module.exports = {
 		]
 	},
 	plugins: [
+		banner,
+		constants,
 		new ExtractTextPlugin({filename: "styles.css"}),
-		// new webpack.DefinePlugin({
-		// 	NODE_ENV: JSON.stringify("production")
-		// }),
 		new webpack.ProvidePlugin({
-    		$: "jquery",
-    		jQuery: "jquery",
-    		"window.jQuery": "jquery",
+			$: "jquery",
+			jQuery: "jquery",
+			"window.jQuery": "jquery",
 			"window.$": "jquery"
 		}),
 		new webpack.optimize.ModuleConcatenationPlugin(),

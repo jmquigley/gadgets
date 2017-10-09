@@ -42,6 +42,9 @@ import {Toast, ToastLevel, ToastType} from './lib/toast';
 import {Tooltip} from './lib/tooltip';
 import {Triangle} from './lib/triangle';
 
+const pkg = require('./package.json');
+const version = `v${JSON.stringify(pkg.version)}`;
+
 export {
 	Accordion,
 	AccordionItem,
@@ -93,6 +96,7 @@ export {
 	ToastType,
 	Tooltip,
 	Triangle,
+	version,
 	Validator,
 	ValidatorFn
 };
