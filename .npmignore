@@ -6,6 +6,7 @@ lib/**/__test__/
 node_modules/
 tmp/
 
+.awcache
 .babelrc
 .editorconfig
 .gitattributes
@@ -16,7 +17,6 @@ tmp/
 *.map
 *.tsx
 index.js
-index.ts
 jsdoc.json
 lib/**/*.css
 lib/**/*.css.json
@@ -27,3 +27,5 @@ tsconfig.json
 tslint.json
 webpack.config.js
 yarn.lock
+*.ts
+!*.d.ts
