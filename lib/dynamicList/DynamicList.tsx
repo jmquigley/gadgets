@@ -11,7 +11,10 @@
  * - Incrementally search for items
  * - List is divided into pages for performance
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/dynamicList.png" width="60%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {DynamicList} from 'gadgets';
@@ -36,6 +39,7 @@
  * />
  * ```
  *
+ * ## API
  * #### Events
  * - `onBlur` - Invoked when a list item control loses focus.
  * - `onClick` - Invoked when a list item is clicked.

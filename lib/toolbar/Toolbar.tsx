@@ -13,9 +13,10 @@
  * - Switch
  * - TextField
  *
+ * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/toolbar.png" width="60%" />
  *
- * #### Examples:
+ * ## Examples:
  *
  * ```javascript
  * import {Button, Sizing, Toolbar} from 'gadgets';
@@ -28,6 +29,7 @@
  * </Toolbar>
  * ```
  *
+ * ## API
  * #### Events
  * None
  *
