@@ -1,5 +1,210 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test creation of a Toolbar instance with center justification 1`] = `
+<div
+  className="ui-toolbar toolbar small"
+>
+  <div
+    className="ui-toolbar-group toolbarGroup center"
+  >
+    <Button
+      className="toolbarElement"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="car"
+      iconStyle=""
+      id=""
+      key="0"
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="small"
+      style={
+        Object {
+          "border": "solid 1px silver",
+          "height": "18px",
+          "margin": "0 1px 0 2px",
+          "width": "18px",
+        }
+      }
+      testing={false}
+      visible={true}
+      width=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Test creation of a Toolbar instance with left justification 1`] = `
+<div
+  className="ui-toolbar toolbar small"
+>
+  <div
+    className="ui-toolbar-group toolbarGroup left"
+  >
+    <Button
+      className="toolbarElement"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="car"
+      iconStyle=""
+      id=""
+      key="0"
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="small"
+      style={
+        Object {
+          "border": "solid 1px silver",
+          "height": "18px",
+          "margin": "0 1px 0 2px",
+          "width": "18px",
+        }
+      }
+      testing={false}
+      visible={true}
+      width=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Test creation of a Toolbar instance with right justification 1`] = `
+<div
+  className="ui-toolbar toolbar small"
+>
+  <div
+    className="ui-toolbar-group toolbarGroup right"
+  >
+    <Button
+      className="toolbarElement"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="car"
+      iconStyle=""
+      id=""
+      key="0"
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="small"
+      style={
+        Object {
+          "border": "solid 1px silver",
+          "height": "18px",
+          "margin": "0 1px 0 2px",
+          "width": "18px",
+        }
+      }
+      testing={false}
+      visible={true}
+      width=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Test disabling of a Toolbar instance 1`] = `
+<div
+  className="ui-toolbar toolbar normal disabled nohover"
+>
+  <div
+    className="ui-toolbar-group toolbarGroup left"
+  >
+    <Button
+      className="toolbarElement"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      height=""
+      iconName="car"
+      iconStyle=""
+      id=""
+      key="0"
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="normal"
+      style={
+        Object {
+          "border": "solid 1px silver",
+          "height": "24px",
+          "margin": "0 1px 0 2px",
+          "width": "24px",
+        }
+      }
+      testing={false}
+      visible={true}
+      width=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Test making the Toolbar invisible 1`] = `
+<div
+  className="ui-toolbar toolbar normal invisible"
+>
+  <div
+    className="ui-toolbar-group toolbarGroup left"
+  >
+    <Button
+      className="toolbarElement"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="car"
+      iconStyle=""
+      id=""
+      key="0"
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onClick={[Function]}
+      selected={false}
+      sizing="normal"
+      style={
+        Object {
+          "border": "solid 1px silver",
+          "height": "24px",
+          "margin": "0 1px 0 2px",
+          "width": "24px",
+        }
+      }
+      testing={false}
+      visible={false}
+      width=""
+    />
+  </div>
+</div>
+`;
+
 exports[`Test retrieval of Toolbar props object 1`] = `
 Object {
   "className": "",

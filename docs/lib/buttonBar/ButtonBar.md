@@ -1,5 +1,0 @@
-<a name="module_ButtonBar"></a>
-
-## ButtonBar
-A container used to group buttons in a horizontal arrangement.  This is ablock level control.  The buttons are given a size that is equivalent toboth the width/height (to make them square).  The buttons within this controlare all uniform in size.  They also have a `Justify`  property that allowsthem to be left, right, or center justified as a group.#### Examples:```javascriptimport {Button, ButtonBar, Justify} from 'gadgets';<ButtonBar justify={Justify.right}>    <Button />    <Button /></ButtonBar>```#### EventsNone#### Styles- `ui-button-bar` - Applied to the top level `<div>` that surrounds theblock of buttons.- `ui-button-bar-group` - Applied to the second leve `<div>` that surroundsthe buttons.  This grouping makes it possible to justify the buttons withinthe button bar.#### Properties- `justify: {Justify} (Justify.left)` - The location/justification of thebutton group.  This can be left, right, or center.- `sizing: Sizing (Sizing.normal)` - Allows one to change the size of theicon within the buttons.  See the shared props object for the `Sizing`enumeration.
-

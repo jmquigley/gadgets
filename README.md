@@ -43,19 +43,19 @@ To change the code while electron is running and use `CMD + R` to refresh electr
 
 
 This library was created for use in the [Electron UI](
-https://electron.atom.io/) and has been tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets used in an internal project.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the module.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`).  The library makes use of [css modules](https://github.com/css-modules/css-modules).
+https://electron.atom.io/) and has been tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets used in an internal project.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the module.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`).  The library also makes use of [css modules](https://github.com/css-modules/css-modules).
 
 
 ### Requirements
 
 - [Electron](https://electron.atom.io/) v1.6.10+
-- [Node](https://nodejs.org/en/) v7.4+
-- [React](https://facebook.github.io/react/) v15.6.0+
+- [Node](https://nodejs.org/en/) v7.8+
+- [React](https://facebook.github.io/react/) v16.0.0+
 
 
 ## Usage
 
-The CSS styles must be included within code using CSS modules or via webpack configuration:
+The CSS styles must be included within a project using CSS modules or via webpack configuration:
 
 #### code snippet
 ```javascript
@@ -77,7 +77,6 @@ import {
 module.exports = {
 	entry: [
 		path.resolve(__dirname, 'node_modules', 'gadgets', 'dist', 'styles.css'),
-		path.resolve(__dirname, 'src', 'js', 'init.tsx')
 	],
 	target: 'node',
 	output: {
@@ -89,9 +88,9 @@ module.exports = {
     ...
 ```
 
-This will give a webpack module an **entry** point to copy in the gadgets CSS file into this distribution.  Without this the built in styles for each control will be missing.
+This will give a webpack module an **entry** point to copy the gadgets CSS file into that build's distribution.  Without this the built in styles for each control will be missing.
 
-Note that React is NOT packaged with the app.  The app that uses this library must supply the React library.  The demo application shows an example of this.
+Note that React is NOT packaged with the app.  An app that uses this library must supply the React library.  The demo application shows an example of this.
 
 
 ## Widgets
@@ -111,9 +110,6 @@ TODO: create the Breadcrums control
 
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.
-
-### [ButtonBar](docs/lib/buttonBar/ButtonBar.md)
-A container used to group buttons in a horizontal arrangement.
 
 ### [ButtonCircle](docs/lib/buttonCircle/ButtonCircle.md)
 A circular button control.  Works like a typical button... except it's a circle.
@@ -218,8 +214,8 @@ A reusable title block used to format two items: a title and a widget.  The titl
 ### [Toast](docs/lib/toast/Toast.md)
 A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.
 
-### [ToolBar](docs/lib/toolbar/Toolbar.md)/ToolBarDivider
-TODO: create a ToolBar control
+### [ToolBar](docs/lib/toolbar/Toolbar.md)/[Divider](docs/lib/divider/Divider.md)
+A grouping of buttons and/or controls in a horizontal bar.
 
 ### [Tooltip](docs/lib/tooltip/Tooltip.md)
 A text popup window on a control used to give help or feedback to the user of that control.
