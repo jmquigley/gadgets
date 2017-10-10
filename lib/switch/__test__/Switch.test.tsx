@@ -15,7 +15,7 @@ test('Test retrieval of the Switch props object', () => {
 
 test('Test creation of an inny type Switch', () => {
 	const ctl = shallow(
-		<Switch initialState={true} switchType={SwitchType.inny} />
+		<Switch initialToggle={true} switchType={SwitchType.inny} />
 	);
 
 	assert(ctl);
@@ -24,7 +24,7 @@ test('Test creation of an inny type Switch', () => {
 
 test('Test creation of an outy type Switch', () => {
 	const ctl = shallow(
-		<Switch initialState={true} switchType={SwitchType.outy} />
+		<Switch initialToggle={true} switchType={SwitchType.outy} />
 	);
 
 	assert(ctl);

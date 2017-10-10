@@ -18,7 +18,7 @@
 		"main": "./dist/bundle.js",
 		"types": "./index.d.ts",
 		"scripts": {
-				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run build:demo && yarn test && yarn run docs",
+				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run build:demo && yarn run docs && yarn test",
 				"build": "pkgwrap --build --webpack",
 				"build:demo": "cd demo && yarn run build",
 				"clean": "pkgwrap --clean",
@@ -118,6 +118,7 @@
 				"webpack-bundle-analyzer": "^2.9.0"
 		},
 		"pkgwrap": {
+				"bail": true,
 				"cleanup": [
 						"index.d.ts",
 						"index.js",
@@ -130,6 +131,10 @@
 		},
 		"jest": {
 				"collectCoverage": true,
+				"coveragePathIgnorePatterns": [
+						"<rootDir>/bin/",
+						"<rootDir>/node_modules/"
+				],
 				"moduleFileExtensions": [
 						"js",
 						"jsx",
@@ -147,6 +152,10 @@
 				],
 				"snapshotSerializers": [
 						"enzyme-to-json/serializer"
+				],
+				"testPathIgnorePatterns": [
+						"<rootDir>/bin/",
+						"<rootDir>/node_modules/"
 				],
 				"testRegex": "__test__/.*\\.test\\.(ts|tsx)$",
 				"transform": {

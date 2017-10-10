@@ -1003,17 +1003,17 @@ class App extends React.Component<AppProps, AppState> {
 
 			<h3>xxsmall</h3>
 			<Switch sizing={Sizing.xxsmall}/>
-			<Switch initialState={true} sizing={Sizing.xxsmall} switchType={SwitchType.inny}/>
+			<Switch initialToggle={true} sizing={Sizing.xxsmall} switchType={SwitchType.inny}/>
 			<br />
 
 			<h3>xsmall</h3>
 			<Switch sizing={Sizing.xsmall}/>
-			<Switch initialState={true} sizing={Sizing.xsmall} switchType={SwitchType.inny}/>
+			<Switch initialToggle={true} sizing={Sizing.xsmall} switchType={SwitchType.inny}/>
 			<br />
 
 			<h3>small</h3>
 			<Switch sizing={Sizing.small}/>
-			<Switch initialState={true} sizing={Sizing.small} switchType={SwitchType.inny}/>
+			<Switch initialToggle={true} sizing={Sizing.small} switchType={SwitchType.inny}/>
 			<br />
 
 			<h3>normal</h3>
@@ -1024,7 +1024,7 @@ class App extends React.Component<AppProps, AppState> {
 				switchType={SwitchType.outy}
 			/>
 			<Switch
-				initialState={true}
+				initialToggle={true}
 				onClick={(toggle: boolean) => {
 					debug(`Switch toggle (inny): ${toggle ? 'on' : 'off'}`);
 				}}
@@ -1034,22 +1034,22 @@ class App extends React.Component<AppProps, AppState> {
 
 			<h3>large</h3>
 			<Switch sizing={Sizing.large}/>
-			<Switch initialState={true} sizing={Sizing.large} switchType={SwitchType.inny}/>
+			<Switch initialToggle={true} sizing={Sizing.large} switchType={SwitchType.inny}/>
 			<br />
 
 			<h3>xlarge</h3>
 			<Switch sizing={Sizing.xlarge}/>
-			<Switch initialState={true} sizing={Sizing.xlarge} switchType={SwitchType.inny}/>
+			<Switch initialToggle={true} sizing={Sizing.xlarge} switchType={SwitchType.inny}/>
 			<br />
 
 			<h3>xxlarge</h3>
 			<Switch sizing={Sizing.xxlarge}/>
-			<Switch initialState={true} sizing={Sizing.xxlarge} switchType={SwitchType.inny}/>
+			<Switch initialToggle={true} sizing={Sizing.xxlarge} switchType={SwitchType.inny}/>
 			<br />
 
 			<h3>normal, disabled</h3>
 			<Switch disabled/>
-			<Switch initialState={true} disabled switchType={SwitchType.inny}/>
+			<Switch initialToggle={true} disabled switchType={SwitchType.inny}/>
 			<br />
 
 		</Container>

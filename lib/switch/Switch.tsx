@@ -10,7 +10,7 @@
  * ```javascript
  * import {Switch, SwitchType} from 'gadgets';
  * <Switch
- *     initialState={true}
+ *     initialToggle={true}
  *     onClick={(toggle: boolean) => {
  *         console.log(`clicked: ${toggle}`);
  *     }}
@@ -32,7 +32,7 @@
  * - `ui-slider-off` - style applied when the state is *off* (false)
  *
  * #### Properties
- * - `initialState: {boolean} (false)` - The initial on/off state for the
+ * - `initialToggle: {boolean} (false)` - The initial on/off state for the
  * toggle.
  * - `noripple: {boolean} (false)` - Turns off the ripple effect that occurs
  * when the circular button is pressed.
@@ -60,7 +60,7 @@ export enum SwitchType {
 }
 
 export interface SwitchProps extends BaseProps {
-	initialState?: boolean;
+	initialToggle?: boolean;
 	onClick?: any;
 	switchType?: SwitchType;
 }
@@ -68,7 +68,7 @@ export interface SwitchProps extends BaseProps {
 export function getDefaultSwitchProps(): SwitchProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			initialState: false,
+			initialToggle: false,
 			onClick: nilEvent,
 			switchType: SwitchType.outy
 		})
@@ -106,7 +106,7 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 		]);
 
 		this.state = {
-			toggle: this.props.initialState
+			toggle: this.props.initialToggle
 		};
 
 		this.bindCallbacks(
@@ -172,7 +172,10 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 				className={this._rootStyles.classnames}
 				style={{...this._containerInline}}
 			>
-				<div className={this._sliderStyles.classnames} >
+				<div
+					className={this._sliderStyles.classnames}
+					onClick={this.props.disabled ? nilEvent : this.handleClick}
+				>
 					<div
 						className={this._buttonStyles.classnames}
 						onClick={this.props.disabled ? nilEvent : this.handleClick}

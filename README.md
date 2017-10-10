@@ -43,7 +43,7 @@ To change the code while electron is running and use `CMD + R` to refresh electr
 
 
 This library was created for use in the [Electron UI](
-https://electron.atom.io/) and has only be tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets used in an internal project.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the module.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`).  The library makes use of [css modules](https://github.com/css-modules/css-modules).
+https://electron.atom.io/) and has been tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets used in an internal project.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the module.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`).  The library makes use of [css modules](https://github.com/css-modules/css-modules).
 
 
 ### Requirements
@@ -218,7 +218,7 @@ A reusable title block used to format two items: a title and a widget.  The titl
 ### [Toast](docs/lib/toast/Toast.md)
 A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.
 
-### ToolBar/ToolBarDivider
+### [ToolBar](docs/lib/toolbar/Toolbar.md)/ToolBarDivider
 TODO: create a ToolBar control
 
 ### [Tooltip](docs/lib/tooltip/Tooltip.md)

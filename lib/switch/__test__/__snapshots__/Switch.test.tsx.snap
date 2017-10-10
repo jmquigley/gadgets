@@ -11,6 +11,7 @@ exports[`Test creation of an inny type Switch 1`] = `
 >
   <div
     className="ui-switch-slider slider normalRect ui-slider-on sliderOn"
+    onClick={[Function]}
   >
     <div
       className="ui-switch-button buttonRightInny ripple"
@@ -37,6 +38,7 @@ exports[`Test creation of an outy type Switch 1`] = `
 >
   <div
     className="ui-switch-slider slider normalRect ui-slider-on sliderOn"
+    onClick={[Function]}
   >
     <div
       className="ui-switch-button buttonRightOuty ripple"
@@ -61,7 +63,7 @@ exports[`Test disabling of the Switch control 1`] = `
   focus={false}
   height=""
   id=""
-  initialState={false}
+  initialToggle={false}
   location="none"
   noedit={false}
   nohover={false}
@@ -85,6 +87,7 @@ exports[`Test disabling of the Switch control 1`] = `
   >
     <div
       className="ui-switch-slider slider normalRect ui-slider-off sliderOff"
+      onClick={[Function]}
     >
       <div
         className="ui-switch-button buttonLeftOuty"
@@ -110,7 +113,7 @@ exports[`Test making the Switch control invisible 1`] = `
   focus={false}
   height=""
   id=""
-  initialState={false}
+  initialToggle={false}
   location="none"
   noedit={false}
   nohover={false}
@@ -134,6 +137,7 @@ exports[`Test making the Switch control invisible 1`] = `
   >
     <div
       className="ui-switch-slider slider normalRect ui-slider-off sliderOff"
+      onClick={[Function]}
     >
       <div
         className="ui-switch-button buttonLeftOuty ripple"
@@ -159,7 +163,7 @@ Object {
   "focus": false,
   "height": "",
   "id": "",
-  "initialState": false,
+  "initialToggle": false,
   "location": "none",
   "noedit": false,
   "nohover": false,
@@ -186,6 +190,7 @@ exports[`Test the click handler on the Switch control 1`] = `
 >
   <div
     className="ui-switch-slider slider normalRect ui-slider-off sliderOff"
+    onClick={[Function]}
   >
     <div
       className="ui-switch-button buttonLeftOuty ripple"
