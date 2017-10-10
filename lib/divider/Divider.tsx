@@ -1,15 +1,21 @@
 /**
  * The `Divider` component is used to put a space between elements in a
- * `Toolbar` control.
+ * `Toolbar` control.  An enumeration named `DividerType` will be used
+ * to determine a division character within the divider.  It can be one
+ * of three types:
+ *
+ * - horizontal (-)
+ * - vertical (|)
+ * - none
  *
  * #### Examples:
  *
  * ```javascript
- * import {Button, Divider, Sizing, Toolbar} from 'gadgets';
+ * import {Button, Divider, DividerType, Sizing, Toolbar} from 'gadgets';
  *
  * <Toolbar sizing={Sizing.small}>
  *     <Button />
- *     <Divider />
+ *     <Divider dividerType={Divider.vertical}/>
  *     <Button />
  * </Toolbar>
  * ```
@@ -22,6 +28,8 @@
  * is the only element in the component.
  *
  * #### Properties
+ * - `dividerType {DividerType} (Divider.none)` - determines if a divide
+ * character will be placed within the control.
  * - `sizing {Sizing} (Sizing.normal)` - Sets the actual box size of the
  * element.  When used with a `Toolbar` this property is not needed as
  * the toolbar handled the sizing.
@@ -39,11 +47,21 @@ import {
 	getDefaultBaseProps
 } from '../shared';
 
-export type DividerProps = BaseProps;
+export enum DividerType {
+	horizontal = '-',
+	vertical = '|',
+	none = ' '
+}
+
+export interface DividerProps extends BaseProps {
+	dividerType?: DividerType;
+}
 
 export function getDefaultDividerProps(): DividerProps {
 	return cloneDeep(Object.assign({},
-		getDefaultBaseProps())
+		getDefaultBaseProps(), {
+			dividerType: DividerType.none
+		})
 	);
 }
 
@@ -52,7 +70,7 @@ export class Divider extends BaseComponent<DividerProps, undefined> {
 	public static readonly defaultProps: DividerProps = getDefaultDividerProps();
 
 	constructor(props: DividerProps) {
-		super(props, require('./styles.css'));
+		super(props, require('./styles.css'), Divider.defaultProps.style);
 
 		this._rootStyles.add([
 			'ui-divider',
@@ -60,22 +78,20 @@ export class Divider extends BaseComponent<DividerProps, undefined> {
 		]);
 
 		this.componentWillUpdate(this.props);
-		this.componentWillReceiveProps(this.props);
-	}
-
-	public componentWillReceiveProps(nextProps: DividerProps) {
-		this.inlineStyles = {
-			width: this.fontSizePX(nextProps.sizing, 0.5),
-			height: this.fontSizePX(nextProps.sizing, 0.5)
-		};
 	}
 
 	public render() {
+		this.inlineStyles = {
+			width: this.fontSizePX(this.props.sizing, 0.5)
+		};
+
 		return(
 			<div
 				className={this._rootStyles.classnames}
 				style={this.inlineStyles}
-			/>
+			>
+			{this.props.dividerType}
+			</div>
 		);
 	}
 }

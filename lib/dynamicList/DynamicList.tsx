@@ -140,7 +140,8 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			pageSizes: defaultPageSizes,
 			sortOrder: SortOrder.ascending,
 			title: ''
-		}));
+		})
+	);
 }
 
 export interface DynamicListState {

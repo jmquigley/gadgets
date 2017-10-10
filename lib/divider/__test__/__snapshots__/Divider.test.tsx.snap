@@ -5,11 +5,12 @@ exports[`Test creating a Divider instance for size inherit 1`] = `
   className="ui-divider divider inherit"
   style={
     Object {
-      "height": "8px",
       "width": "8px",
     }
   }
-/>
+>
+   
+</div>
 `;
 
 exports[`Test creating a Divider instance for size large 1`] = `
@@ -17,11 +18,12 @@ exports[`Test creating a Divider instance for size large 1`] = `
   className="ui-divider divider large"
   style={
     Object {
-      "height": "12px",
       "width": "12px",
     }
   }
-/>
+>
+   
+</div>
 `;
 
 exports[`Test creating a Divider instance for size medium 1`] = `
@@ -29,11 +31,12 @@ exports[`Test creating a Divider instance for size medium 1`] = `
   className="ui-divider divider medium"
   style={
     Object {
-      "height": "8px",
       "width": "8px",
     }
   }
-/>
+>
+   
+</div>
 `;
 
 exports[`Test creating a Divider instance for size normal 1`] = `
@@ -41,11 +44,12 @@ exports[`Test creating a Divider instance for size normal 1`] = `
   className="ui-divider divider normal"
   style={
     Object {
-      "height": "8px",
       "width": "8px",
     }
   }
-/>
+>
+   
+</div>
 `;
 
 exports[`Test creating a Divider instance for size small 1`] = `
@@ -53,11 +57,12 @@ exports[`Test creating a Divider instance for size small 1`] = `
   className="ui-divider divider small"
   style={
     Object {
-      "height": "6px",
       "width": "6px",
     }
   }
-/>
+>
+   
+</div>
 `;
 
 exports[`Test creating a Divider instance for size xlarge 1`] = `
@@ -65,11 +70,12 @@ exports[`Test creating a Divider instance for size xlarge 1`] = `
   className="ui-divider divider xlarge"
   style={
     Object {
-      "height": "16px",
       "width": "16px",
     }
   }
-/>
+>
+   
+</div>
 `;
 
 exports[`Test creating a Divider instance for size xsmall 1`] = `
@@ -77,11 +83,12 @@ exports[`Test creating a Divider instance for size xsmall 1`] = `
   className="ui-divider divider xsmall"
   style={
     Object {
-      "height": "4px",
       "width": "4px",
     }
   }
-/>
+>
+   
+</div>
 `;
 
 exports[`Test creating a Divider instance for size xxlarge 1`] = `
@@ -89,11 +96,12 @@ exports[`Test creating a Divider instance for size xxlarge 1`] = `
   className="ui-divider divider xxlarge"
   style={
     Object {
-      "height": "24px",
       "width": "24px",
     }
   }
-/>
+>
+   
+</div>
 `;
 
 exports[`Test creating a Divider instance for size xxsmall 1`] = `
@@ -101,11 +109,12 @@ exports[`Test creating a Divider instance for size xxsmall 1`] = `
   className="ui-divider divider xxsmall"
   style={
     Object {
-      "height": "3px",
       "width": "3px",
     }
   }
-/>
+>
+   
+</div>
 `;
 
 exports[`Test retrieval of Divider props object 1`] = `
@@ -114,6 +123,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "dividerType": " ",
   "focus": false,
   "height": "",
   "id": "",

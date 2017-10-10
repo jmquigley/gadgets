@@ -29,6 +29,7 @@ const {
 	DialogBoxType,
 	Direction,
 	Divider,
+	DividerType,
 	DynamicList,
 	Editor,
 	Icon,
@@ -1313,7 +1314,7 @@ class App extends React.Component<AppProps, AppState> {
 	private buildToolbar = () => (
 		<Container id="toolbarExample">
 
-			<h3>Left Justify</h3>
+			<h3>Left Justify no divider chevron</h3>
 			<Toolbar justify={Justify.left} >
 				<Button iconName="car" />
 				<ButtonCircle iconName="times" />
@@ -1327,12 +1328,12 @@ class App extends React.Component<AppProps, AppState> {
 			</Toolbar>
 			<br/>
 
-			<h3>Center Justify</h3>
+			<h3>Center Justify vertical divider chevron</h3>
 			<Toolbar justify={Justify.center} >
 				<Button iconName="car" />
 				<ButtonCircle iconName="times" />
 				<ButtonDialog iconName="bars">Test Text</ButtonDialog>
-				<Divider />
+				<Divider dividerType={DividerType.vertical}/>
 				<ButtonText text="btext" iconName="fighter-jet" />
 				<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="red" fgColorOff="green" />
 				<Option optionType={OptionType.dot} text="test" />
@@ -1341,12 +1342,12 @@ class App extends React.Component<AppProps, AppState> {
 			</Toolbar>
 			<br/>
 
-			<h3>Right Justify</h3>
+			<h3>Right Justify horizontal divider chevron</h3>
 			<Toolbar justify={Justify.right} >
 				<Button iconName="car" />
 				<ButtonCircle iconName="times" />
 				<ButtonDialog iconName="bars">Test Text</ButtonDialog>
-				<Divider />
+				<Divider dividerType={DividerType.horizontal}/>
 				<ButtonText text="btext" iconName="fighter-jet" />
 				<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="red" fgColorOff="green" />
 				<Option optionType={OptionType.dot} text="test" />

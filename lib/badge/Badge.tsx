@@ -3,7 +3,10 @@
  * This widget surrounds the component it will annotate.  The control receives
  * a prop named `counter` that sets the actual value.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/badge.png" width="60%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Badge} from 'gadgets';
@@ -15,6 +18,7 @@
  * </Badge>
  * ```
  *
+ * ## API
  * #### Events
  * - `onClick(counter: number)` - when the counter value is clicked this
  * callback is invoked.  It is given the current count value.

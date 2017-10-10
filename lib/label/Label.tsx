@@ -4,7 +4,10 @@
  * also be suppressed to make the text static.  The contorl is a `<span>`
  * element surrounding text.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/label.png" width="60%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Label} from 'gadgets';
@@ -15,6 +18,7 @@
  * />
  * ```
  *
+ * ## API
  * #### Events
  * - `onBlur` - Invoked when the focus moves away from the label
  * - `onChange(val: string)` - Invoked when a label is changed.  This happens
