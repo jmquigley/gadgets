@@ -20,9 +20,9 @@
  * import {Option, OptionType} from 'gadgets';
  * <Option
  *     onClick={someFunction}
+ *     optionType={OptionType.square}
  *     selected
  *     text="lorem ipsum"
- *     type={OptionType.square}
  * />
  * ```
  *
@@ -37,11 +37,11 @@
  * - `ui-option` - Style applied to the root `<div>` of the control.
  *
  * #### Properties
+ * - `optionType: {OptionType} (OptionType.square)` - An enumerated type that will
+ * determine what icons will be displayed.  They are listed above.
  * - `selected: {boolean} (false)` - determines the initial state of the
  * control.  If true, then the control is "checked", otherwise it is "off"
  * - `text: {string} ('')` - text string to the right of the control
- * - `type: {OptionType} (OptionType.square)` - An enumerated type that will
- * determine what icons will be displayed.  They are listed above.
  *
  * @module Option
  */
@@ -72,22 +72,22 @@ export enum OptionType {
 
 export interface OptionProps extends BaseProps {
 	onClick?: any;
+	optionType?: OptionType;
 	selected?: boolean;
 	text?: string;
-	type?: OptionType;
 }
 
 export function getDefaultOptionProps(): OptionProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			onClick: nilEvent,
+			optionType: OptionType.square,
 			selected: false,
 			style: {
 				backgroundColor: 'inherit',
 				color: 'inherit'
 			},
-			text: '',
-			type: OptionType.square
+			text: ''
 		})
 	);
 }
@@ -172,8 +172,8 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 					className={this.styles.optionButton}
 					fgColorOff={this.inlineStyles['color']}
 					fgColorOn={this.inlineStyles['color']}
-					iconNameOn={this.icons[this.props.type].on}
-					iconNameOff={this.icons[this.props.type].off}
+					iconNameOn={this.icons[this.props.optionType].on}
+					iconNameOff={this.icons[this.props.optionType].off}
 					initialToggle={this.props.selected}
 					nohover
 					onClick={this.props.onClick}

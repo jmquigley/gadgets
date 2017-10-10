@@ -1,0 +1,30 @@
+@import '../shared/styles.css';
+
+:local {
+
+	.toolbar {
+		border: solid 1px silver;
+		display: flex;
+		padding: 3px 0;
+	}
+
+	.toolbarGroup {
+		display: flex;
+		align-items: center;
+	}
+
+	.toolbarElement {
+		margin: 0 1px 0 2px;
+	}
+
+	.left {
+	}
+
+	.center {
+		margin: auto;
+	}
+
+	.right {
+		margin-left: auto;
+	}
+}

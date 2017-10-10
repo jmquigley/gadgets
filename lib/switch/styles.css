@@ -18,7 +18,7 @@
 		align-items: center;
 		box-sizing: border-box;
 		display: inline-flex;
-		padding: 0 4%;
+		padding: 0 2%;
 		width: auto;
 	}
 
@@ -38,12 +38,12 @@
 
 	.buttonLeftOuty {
 		@extend switchButton;
-		left: -20%;
+		left: -15%;
 	}
 
 	.buttonRightOuty {
 		@extend switchButton;
-		left: 50%;
+		left: 45%;
 	}
 
 	.buttonLeftInny {
@@ -53,7 +53,7 @@
 
 	.buttonRightInny {
 		@extend switchButton;
-		left: 55%;
+		left: 60%;
 	}
 
 }

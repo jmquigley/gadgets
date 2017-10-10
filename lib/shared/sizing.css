@@ -23,6 +23,9 @@ $xlarge-fs: 2.0rem;
 $xxlarge: 48px;
 $xxlarge-fs: 3.0rem;
 
+$rectWidth: 1.75;
+$rectHeight: 0.80;
+
 :local {
 
 	.xxsmall {
@@ -145,38 +148,38 @@ $xxlarge-fs: 3.0rem;
 	}
 
 	.xxsmallRect {
-		width: calc($xxsmall * 2);
-		height: $xxsmall;
+		width: calc($xxsmall * $rectWidth);
+		height: calc($xxsmall * $rectHeight);
 	}
 
 	.xsmallRect {
-		width: calc($xsmall * 2);
-		height: $xsmall;
+		width: calc($xsmall * $rectWidth);
+		height: calc($xsmall * $rectHeight);
 	}
 
 	.smallRect {
-		width: calc($small * 2);
-		height: $small;
+		width: calc($small * $rectWidth);
+		height: calc($small * $rectHeight);
 	}
 
 	.mediumRect, .normalRect {
-		width: calc($medium * 2);
-		height: $medium;
+		width: calc($medium * $rectWidth);
+		height: calc($medium * $rectHeight);
 	}
 
 	.largeRect {
-		width: calc($large * 2);
-		height: $large;
+		width: calc($large * $rectWidth);
+		height: calc($large * $rectHeight);
 	}
 
 	.xlargeRect {
-		width: calc($xlarge * 2);
-		height: $xlarge;
+		width: calc($xlarge * $rectWidth);
+		height: calc($xlarge * $rectHeight);
 	}
 
 	.xxlargeRect {
-		width: calc($xxlarge * 2);
-		height: $xxlarge;
+		width: calc($xxlarge * $rectWidth);
+		height: calc($xxlarge * $rectHeight);
 	}
 
 	.inheritRect {

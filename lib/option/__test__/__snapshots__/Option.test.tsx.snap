@@ -33,6 +33,7 @@ exports[`Creation of the Option control 1`] = `
     nohover={true}
     noripple={false}
     onClick={[Function]}
+    optionType={0}
     selected={true}
     sizing="normal"
     style={
@@ -43,7 +44,6 @@ exports[`Creation of the Option control 1`] = `
     }
     testing={false}
     text="test"
-    type={0}
     visible={true}
     width=""
   />
@@ -67,6 +67,7 @@ exports[`Test Option control click event 1`] = `
   nohover={false}
   noripple={false}
   onClick={[Function]}
+  optionType={0}
   selected={false}
   sizing="normal"
   style={
@@ -77,7 +78,6 @@ exports[`Test Option control click event 1`] = `
   }
   testing={false}
   text=""
-  type={0}
   visible={true}
   width=""
 >
@@ -113,6 +113,7 @@ exports[`Test Option control click event 1`] = `
       nohover={true}
       noripple={false}
       onClick={[Function]}
+      optionType={0}
       selected={false}
       sizing="normal"
       style={
@@ -123,7 +124,6 @@ exports[`Test Option control click event 1`] = `
       }
       testing={false}
       text=""
-      type={0}
       visible={true}
       width=""
     >
@@ -149,6 +149,7 @@ exports[`Test Option control click event 1`] = `
         nohover={true}
         noripple={true}
         onClick={[Function]}
+        optionType={0}
         selected={false}
         sizing="normal"
         style={
@@ -159,7 +160,6 @@ exports[`Test Option control click event 1`] = `
         }
         testing={false}
         text=""
-        type={0}
         visible={true}
         width=""
       >
@@ -220,6 +220,7 @@ exports[`Test disabling of the Option control 1`] = `
   nohover={false}
   noripple={false}
   onClick={[Function]}
+  optionType={0}
   selected={false}
   sizing="normal"
   style={
@@ -230,7 +231,6 @@ exports[`Test disabling of the Option control 1`] = `
   }
   testing={false}
   text=""
-  type={0}
   visible={true}
   width=""
 >
@@ -266,6 +266,7 @@ exports[`Test disabling of the Option control 1`] = `
       nohover={true}
       noripple={false}
       onClick={[Function]}
+      optionType={0}
       selected={false}
       sizing="normal"
       style={
@@ -276,7 +277,6 @@ exports[`Test disabling of the Option control 1`] = `
       }
       testing={false}
       text=""
-      type={0}
       visible={true}
       width=""
     >
@@ -302,6 +302,7 @@ exports[`Test disabling of the Option control 1`] = `
         nohover={true}
         noripple={true}
         onClick={[Function]}
+        optionType={0}
         selected={false}
         sizing="normal"
         style={
@@ -312,7 +313,6 @@ exports[`Test disabling of the Option control 1`] = `
         }
         testing={false}
         text=""
-        type={0}
         visible={true}
         width=""
       >
@@ -373,6 +373,7 @@ exports[`Test making the Option control invisible 1`] = `
   nohover={false}
   noripple={false}
   onClick={[Function]}
+  optionType={0}
   selected={false}
   sizing="normal"
   style={
@@ -383,7 +384,6 @@ exports[`Test making the Option control invisible 1`] = `
   }
   testing={false}
   text=""
-  type={0}
   visible={false}
   width=""
 >
@@ -419,6 +419,7 @@ exports[`Test making the Option control invisible 1`] = `
       nohover={true}
       noripple={false}
       onClick={[Function]}
+      optionType={0}
       selected={false}
       sizing="normal"
       style={
@@ -429,7 +430,6 @@ exports[`Test making the Option control invisible 1`] = `
       }
       testing={false}
       text=""
-      type={0}
       visible={false}
       width=""
     >
@@ -455,6 +455,7 @@ exports[`Test making the Option control invisible 1`] = `
         nohover={true}
         noripple={true}
         onClick={[Function]}
+        optionType={0}
         selected={false}
         sizing="normal"
         style={
@@ -465,7 +466,6 @@ exports[`Test making the Option control invisible 1`] = `
         }
         testing={false}
         text=""
-        type={0}
         visible={false}
         width=""
       >
@@ -526,6 +526,7 @@ Object {
   "nohover": false,
   "noripple": false,
   "onClick": [Function],
+  "optionType": 0,
   "selected": false,
   "sizing": "normal",
   "style": Object {
@@ -534,7 +535,6 @@ Object {
   },
   "testing": false,
   "text": "",
-  "type": 0,
   "visible": true,
   "width": "",
 }

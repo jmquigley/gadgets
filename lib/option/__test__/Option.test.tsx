@@ -4,7 +4,7 @@ import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import * as sinon from 'sinon';
-import {getDefaultOptionProps, Option} from '../index';
+import {getDefaultOptionProps, Option, OptionType} from '../index';
 
 test('Test retrieval of Option props object', () => {
 	const props = getDefaultOptionProps();
@@ -14,7 +14,14 @@ test('Test retrieval of Option props object', () => {
 });
 
 test('Creation of the Option control', () => {
-	const ctl = shallow(<Option text="test" selected className="test-class" />);
+	const ctl = shallow(
+		<Option
+			className="test-class"
+			optionType={OptionType.square}
+			selected
+			text="test"
+		/>
+	);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();

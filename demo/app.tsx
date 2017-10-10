@@ -56,6 +56,7 @@ const {
 	Toast,
 	ToastLevel,
 	ToastType,
+	Toolbar,
 	Tooltip,
 	Triangle,
 	Validator
@@ -490,7 +491,7 @@ class App extends React.Component<AppProps, AppState> {
 			<br/>
 
 			<h3>Large Center Justify</h3>
-			<ButtonBar justify={Justify.center} sizing={Sizing.large} buttonSize="32px">
+			<ButtonBar justify={Justify.center} sizing={Sizing.large} >
 				<Button iconName="car" />
 				<Button iconName="fighter-jet" />
 				<Button iconName="space-shuttle" />
@@ -798,55 +799,55 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildOption = () => (
 		<Container id="optionExample">
-			<Option type={OptionType.square} />
+			<Option optionType={OptionType.square} />
 			<Option
 				onClick={(val: boolean) => {
 					debug('clicked option, flag: %o', val);
 				}}
+				optionType={OptionType.square}
 				selected
 				text="square"
-				type={OptionType.square}
 			/>
 			<br/>
 
 			<Option type={OptionType.squareFilled} />
-			<Option selected text="squareFilled" type={OptionType.squareFilled} />
+			<Option selected text="squareFilled" optionType={OptionType.squareFilled} />
 			<br/>
 
 			<Option type={OptionType.squareReverse} />
-			<Option selected text="squareReverse" type={OptionType.squareReverse} />
+			<Option selected text="squareReverse" optionType={OptionType.squareReverse} />
 			<br/>
 
 			<Option type={OptionType.circle} />
-			<Option selected text="circle" type={OptionType.circle} />
+			<Option selected text="circle" optionType={OptionType.circle} />
 			<br/>
 
 			<Option type={OptionType.circleFilled} />
-			<Option selected text="circleFilled" type={OptionType.circleFilled} />
+			<Option selected text="circleFilled" optionType={OptionType.circleFilled} />
 			<br/>
 
 			<Option type={OptionType.circleReverse} />
-			<Option selected text="circleReverse" type={OptionType.circleReverse} />
+			<Option selected text="circleReverse" optionType={OptionType.circleReverse} />
 			<br/>
 
 			<Option type={OptionType.times} />
-			<Option selected text="times" type={OptionType.times} />
+			<Option selected text="times" optionType={OptionType.times} />
 			<br/>
 
 			<Option type={OptionType.timesReverse} />
-			<Option selected text="timesReverse" type={OptionType.timesReverse} />
+			<Option selected text="timesReverse" optionType={OptionType.timesReverse} />
 			<br/>
 
 			<Option type={OptionType.dot} />
-			<Option selected text="dot" type={OptionType.dot} />
+			<Option selected text="dot" optionType={OptionType.dot} />
 			<br/>
 
 			<Option type={OptionType.star} />
-			<Option selected text="star" type={OptionType.star} /><br/>
+			<Option selected text="star" optionType={OptionType.star} /><br/>
 			<br/>
 
-			<Option text="colored" type={OptionType.square} style={{color: 'blue'}} /><br/>
-			<Option text="colored" type={OptionType.square} style={{color: 'yellow', backgroundColor: 'black'}} /><br/>
+			<Option text="colored" optionType={OptionType.square} style={{color: 'blue'}} /><br/>
+			<Option text="colored" optionType={OptionType.square} style={{color: 'yellow', backgroundColor: 'black'}} /><br/>
 			<br/>
 
 			<Option text="xxsmall" sizing={Sizing.xxsmall} /><br/>
@@ -1363,6 +1364,77 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	private buildToolbar = () => (
+		<Container id="toolbarExample">
+
+			<h3>Left Justify</h3>
+			<Toolbar justify={Justify.left} >
+				<Button iconName="car" />
+				<ButtonCircle iconName="times" />
+				<ButtonDialog iconName="bars">Test Text</ButtonDialog>
+				<ButtonText text="btext" iconName="fighter-jet" />
+				<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="red" fgColorOff="green" />
+				<Option optionType={OptionType.dot} text="test" />
+				<Switch />
+				<TextField placeholder='test' size={4} maxLength={4} />
+			</Toolbar>
+			<br/>
+
+			<h3>Center Justify</h3>
+			<Toolbar justify={Justify.center} >
+				<Button iconName="car" />
+				<ButtonCircle iconName="times" />
+				<ButtonDialog iconName="bars">Test Text</ButtonDialog>
+				<ButtonText text="btext" iconName="fighter-jet" />
+				<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="red" fgColorOff="green" />
+				<Option optionType={OptionType.dot} text="test" />
+				<Switch />
+				<TextField placeholder='test' size={4} maxLength={4} />
+			</Toolbar>
+			<br/>
+
+			<h3>Right Justify</h3>
+			<Toolbar justify={Justify.right} >
+				<Button iconName="car" />
+				<ButtonCircle iconName="times" />
+				<ButtonDialog iconName="bars">Test Text</ButtonDialog>
+				<ButtonText text="btext" iconName="fighter-jet" />
+				<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="red" fgColorOff="green" />
+				<Option optionType={OptionType.dot} text="test" />
+				<Switch />
+				<TextField placeholder='test' size={4} maxLength={4} />
+			</Toolbar>
+			<br/>
+
+			<h3>Center Justify Diabled</h3>
+			<Toolbar justify={Justify.center} disabled >
+				<Button iconName="car" />
+				<ButtonCircle iconName="times" />
+				<ButtonDialog iconName="bars">Test Text</ButtonDialog>
+				<ButtonText text="btext" iconName="fighter-jet" />
+				<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="red" fgColorOff="green" />
+				<Option optionType={OptionType.dot} text="test" />
+				<Switch />
+				<TextField placeholder='test' size={4} maxLength={4} />
+			</Toolbar>
+			<br/>
+
+			<h3>Center Justify xsmall</h3>
+			<Toolbar justify={Justify.center} sizing={Sizing.small} >
+				<Button iconName="car" />
+				<ButtonCircle iconName="times" />
+				<ButtonDialog iconName="bars">Test Text</ButtonDialog>
+				<ButtonText text="btext" iconName="fighter-jet" />
+				<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="red" fgColorOff="green" />
+				<Option optionType={OptionType.dot} text="test" />
+				<Switch />
+				<TextField placeholder='test' size={4} maxLength={4} />
+			</Toolbar>
+			<br/>
+
+		</Container>
+	);
+
 	private buildTooltip = () => (
 		<Container id="tooltipExample">
 			<h3>Simple</h3>
@@ -1535,6 +1607,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Toast</h1>
 				{this.buildToast()}
+
+				<h1>Toolbar</h1>
+				{this.buildToolbar()}
 
 				<h1>Tooltip</h1>
 				{this.buildTooltip()}

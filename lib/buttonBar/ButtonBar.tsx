@@ -10,7 +10,7 @@
  * ```javascript
  * import {Button, ButtonBar, Justify} from 'gadgets';
  *
- * <ButtonBar buttonSize="32px" justify={Justify.right}>
+ * <ButtonBar justify={Justify.right}>
  *     <Button />
  *     <Button />
  * </ButtonBar>
@@ -27,8 +27,6 @@
  * the button bar.
  *
  * #### Properties
- * - `buttonSize: {string} ('24px')` - The width and height of the buttons added
- * to the button bar control.
  * - `justify: {Justify} (Justify.left)` - The location/justification of the
  * button group.  This can be left, right, or center.
  * - `sizing: Sizing (Sizing.normal)` - Allows one to change the size of the
@@ -54,14 +52,12 @@ import {
 const styles = require('./styles.css');
 
 export interface ButtonBarProps extends BaseProps {
-	buttonSize?: string;
 	justify?: Justify;
 }
 
 export function getDefaultButtonBarProps(): ButtonBarProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			buttonSize: '24px',
 			justify: Justify.left
 		})
 	);
@@ -124,6 +120,7 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 	public render() {
 		const buttons: any = [];
+
 		React.Children.forEach(this.props.children, (child: any, idx: number) => {
 			const newChild = React.cloneElement(child as any, {
 				disabled: this.props.disabled,
@@ -133,12 +130,12 @@ export class ButtonBar extends BaseComponent<ButtonBarProps, undefined> {
 
 			buttons.push(
 				<div
+					className={this.styles.buttonBarBox}
 					key={this._keys.at(idx)}
 					style={{
-						width: this.props.buttonSize,
-						height: this.props.buttonSize
+						width: this.fontSizePX(this.props.sizing, 1.5),
+						height: this.fontSizePX(this.props.sizing, 1.5)
 					}}
-					className={this.styles.buttonBarBox}
 				>
 					{newChild}
 				</div>

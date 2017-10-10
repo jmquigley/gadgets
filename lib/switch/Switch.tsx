@@ -151,16 +151,16 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 			'ripple'
 		);
 
-		this._containerInline['height'] = this.fontSizePX(nextProps.sizing, 1.5);
+		this._containerInline['height'] = this.fontSizePX(nextProps.sizing, 1.25);
 
 		if (nextProps.switchType === SwitchType.outy) {
 			this._buttonInline['width'] =
 			this._buttonInline['height'] =
-				this.fontSizePX(nextProps.sizing, 1.5);
+				this.fontSizePX(nextProps.sizing, 1.25);
 		} else {
 			this._buttonInline['width'] =
 			this._buttonInline['height'] =
-				this.fontSizePX(nextProps.sizing, 0.8);
+				this.fontSizePX(nextProps.sizing, 0.6);
 		}
 
 		super.componentWillUpdate(nextProps, nextState);

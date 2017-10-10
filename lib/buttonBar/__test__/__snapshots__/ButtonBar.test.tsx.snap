@@ -63,8 +63,8 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
         key="0"
         style={
           Object {
-            "height": "32px",
-            "width": "32px",
+            "height": "24px",
+            "width": "24px",
           }
         }
       >
@@ -129,8 +129,8 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
         key="1"
         style={
           Object {
-            "height": "32px",
-            "width": "32px",
+            "height": "24px",
+            "width": "24px",
           }
         }
       >
@@ -197,7 +197,6 @@ exports[`Test creation of a simple ButtonBar instance 1`] = `
 
 exports[`Test disabling of the ButtonBar control 1`] = `
 <ButtonBar
-  buttonSize="24px"
   className=""
   contentEditable={false}
   direction="right"
@@ -362,7 +361,6 @@ exports[`Test disabling of the ButtonBar control 1`] = `
 
 exports[`Test making the ButtonBar invisible 1`] = `
 <ButtonBar
-  buttonSize="24px"
   className=""
   contentEditable={false}
   direction="right"
@@ -394,7 +392,6 @@ exports[`Test making the ButtonBar invisible 1`] = `
 
 exports[`Test retrieval of ButtonBar props object 1`] = `
 Object {
-  "buttonSize": "24px",
   "className": "",
   "contentEditable": false,
   "direction": "right",
