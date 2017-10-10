@@ -13,7 +13,7 @@
  * - Switch
  * - TextField
  *
- * ![screen](https://github.com/jmquigley/gadgets/blob/master/images/toolbar.png)
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/toolbar.png" width="60%" />
  *
  * #### Examples:
  *
