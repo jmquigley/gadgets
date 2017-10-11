@@ -47,6 +47,7 @@
  */
 
 'use strict';
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';

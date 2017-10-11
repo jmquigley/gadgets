@@ -8,6 +8,7 @@ import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
 import {DialogBox, DialogBoxType} from './lib/dialogBox';
 import {Divider, DividerType} from './lib/divider';
+import {Dropdown} from './lib/dropdown';
 import {DynamicList, DynamicListItem} from './lib/dynamicList';
 import {Editor} from './lib/editor';
 import {Icon} from './lib/icon';
@@ -64,6 +65,7 @@ export {
 	Direction,
 	Divider,
 	DividerType,
+	Dropdown,
 	DynamicList,
 	DynamicListItem,
 	Editor,

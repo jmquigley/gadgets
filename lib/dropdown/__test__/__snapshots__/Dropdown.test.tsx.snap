@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creation of the Dropdown control 1`] = `
+<select
+  className="ui-dropdown dropdown normal"
+  defaultValue="idstr2"
+  disabled={false}
+  onChange={[Function]}
+  style={
+    Object {
+      "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+      "paddingLeft": "3.2px",
+      "paddingRight": "16px",
+    }
+  }
+>
+  <option
+    key="0"
+    value="idstr1"
+  >
+    lstr1
+  </option>
+  <option
+    key="1"
+    value="idstr2"
+  >
+    lstr2
+  </option>
+  <option
+    key="2"
+    value="idstr3"
+  >
+    lstr3
+  </option>
+</select>
+`;
+
+exports[`Disable the Dropdown control 1`] = `
+<Dropdown
+  className=""
+  contentEditable={false}
+  defaultVal="idstr2"
+  direction="right"
+  disabled={true}
+  focus={false}
+  height=""
+  id=""
+  initialItem=""
+  items={
+    Array [
+      Object {
+        "label": "lstr1",
+        "val": "idstr1",
+      },
+      Object {
+        "label": "lstr2",
+        "val": "idstr2",
+      },
+      Object {
+        "label": "lstr3",
+        "val": "idstr3",
+      },
+    ]
+  }
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onSelect={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  visible={true}
+  width=""
+>
+  <select
+    className="ui-dropdown dropdown normal disabled nohover"
+    defaultValue="idstr2"
+    disabled={true}
+    onChange={[Function]}
+    style={
+      Object {
+        "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+        "paddingLeft": "3.2px",
+        "paddingRight": "16px",
+      }
+    }
+  >
+    <option
+      key="0"
+      value="idstr1"
+    >
+      lstr1
+    </option>
+    <option
+      key="1"
+      value="idstr2"
+    >
+      lstr2
+    </option>
+    <option
+      key="2"
+      value="idstr3"
+    >
+      lstr3
+    </option>
+  </select>
+</Dropdown>
+`;
+
+exports[`Make the Dropdown control invisible 1`] = `
+<select
+  className="ui-dropdown dropdown normal invisible"
+  defaultValue="idstr2"
+  disabled={false}
+  onChange={[Function]}
+  style={
+    Object {
+      "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+      "paddingLeft": "3.2px",
+      "paddingRight": "16px",
+    }
+  }
+>
+  <option
+    key="0"
+    value="idstr1"
+  >
+    lstr1
+  </option>
+  <option
+    key="1"
+    value="idstr2"
+  >
+    lstr2
+  </option>
+  <option
+    key="2"
+    value="idstr3"
+  >
+    lstr3
+  </option>
+</select>
+`;
+
+exports[`Test retrieval of Dropdown props object 1`] = `
+Object {
+  "className": "",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "focus": false,
+  "height": "",
+  "id": "",
+  "initialItem": "",
+  "items": Array [],
+  "location": "none",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "onSelect": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "testing": false,
+  "visible": true,
+  "width": "",
+}
+`;
+
+exports[`Test the Dropdown click event 1`] = `
+<Dropdown
+  className=""
+  contentEditable={false}
+  defaultVal="idstr1"
+  direction="right"
+  disabled={false}
+  focus={false}
+  height=""
+  id=""
+  initialItem=""
+  items={
+    Array [
+      Object {
+        "label": "lstr1",
+        "val": "idstr1",
+      },
+      Object {
+        "label": "lstr2",
+        "val": "idstr2",
+      },
+      Object {
+        "label": "lstr3",
+        "val": "idstr3",
+      },
+    ]
+  }
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onSelect={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  visible={true}
+  width=""
+>
+  <select
+    className="ui-dropdown dropdown normal"
+    defaultValue="idstr1"
+    disabled={false}
+    onChange={[Function]}
+    style={
+      Object {
+        "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+        "paddingLeft": "3.2px",
+        "paddingRight": "16px",
+      }
+    }
+  >
+    <option
+      key="0"
+      value="idstr1"
+    >
+      lstr1
+    </option>
+    <option
+      key="1"
+      value="idstr2"
+    >
+      lstr2
+    </option>
+    <option
+      key="2"
+      value="idstr3"
+    >
+      lstr3
+    </option>
+  </select>
+</Dropdown>
+`;

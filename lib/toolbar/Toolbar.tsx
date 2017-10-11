@@ -62,6 +62,7 @@ import {
 	ButtonText,
 	ButtonToggle,
 	Divider,
+	Dropdown,
 	Option,
 	Switch,
 	TextField
@@ -105,6 +106,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 		ButtonText.name,
 		ButtonToggle.name,
 		Divider.name,
+		Dropdown.name,
 		Option.name,
 		Switch.name,
 		TextField.name

@@ -179,10 +179,9 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 			}, () => {
 				this.props.onNew(target.value);
 				this.clearInput(target);
+				this.props.onKeyPress(e);
 			});
 		}
-
-		this.props.onKeyPress(e);
 	}
 
 	public render() {

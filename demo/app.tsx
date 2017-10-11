@@ -30,6 +30,7 @@ const {
 	Direction,
 	Divider,
 	DividerType,
+	Dropdown,
 	DynamicList,
 	Editor,
 	Icon,
@@ -568,27 +569,150 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
-	private buildDynamicList = () => {
-		return (
-			<Container id="dynamicListExample">
-				<DynamicList
-					items={dynamicItems}
-					layout={TitleLayout.dominant}
-					onDelete={(title: string) => {
-						console.log(`Deleting item from list: ${title}`);
-					}}
-					onNew={(title: string) => {
-						console.log(`Adding new item to list: ${title}`);
-					}}
-					onSelect={(title: string) => {
-						console.log(`Selected item: ${title}`);
-					}}
-					pageSizes={[10, 20, 30]}
-					title="Dynamic List Test"
-				/>
-			</Container>
-		);
-	}
+	private buildDropdown = () => (
+		<Container id="dropdownExample">
+
+			<h3>xxsmall</h3>
+			<Dropdown
+				defaultVal="idstr2"
+				items={[
+					{val: 'idstr1', label: 'lstr1'},
+					{val: 'idstr2', label: 'lstr2'},
+					{val: 'idstr3', label: 'lstr3'}
+				]}
+				onSelect={(val: string) => {
+					debug('dropdown selected: %s', val);
+				}}
+				sizing={Sizing.xxsmall}
+			/>
+			<br />
+
+			<h3>xsmall</h3>
+			<Dropdown
+				defaultVal="idstr2"
+				items={[
+					{val: 'idstr1', label: 'lstr1'},
+					{val: 'idstr2', label: 'lstr2'},
+					{val: 'idstr3', label: 'lstr3'}
+				]}
+				onSelect={(val: string) => {
+					debug('dropdown selected: %s', val);
+				}}
+				sizing={Sizing.xsmall}
+			/>
+			<br />
+
+			<h3>small</h3>
+			<Dropdown
+				defaultVal="idstr2"
+				items={[
+					{val: 'idstr1', label: 'lstr1'},
+					{val: 'idstr2', label: 'lstr2'},
+					{val: 'idstr3', label: 'lstr3'}
+				]}
+				onSelect={(val: string) => {
+					debug('dropdown selected: %s', val);
+				}}
+				sizing={Sizing.small}
+			/>
+			<br />
+
+			<h3>normal</h3>
+			<Dropdown
+				defaultVal="idstr2"
+				items={[
+					{val: 'idstr1', label: 'lstr1'},
+					{val: 'idstr2', label: 'lstr2'},
+					{val: 'idstr3', label: 'lstr3'}
+				]}
+				onSelect={(val: string) => {
+					debug('dropdown selected: %s', val);
+				}}
+			/>
+			<br />
+
+			<h3>large</h3>
+			<Dropdown
+				defaultVal="idstr2"
+				items={[
+					{val: 'idstr1', label: 'lstr1'},
+					{val: 'idstr2', label: 'lstr2'},
+					{val: 'idstr3', label: 'lstr3'}
+				]}
+				onSelect={(val: string) => {
+					debug('dropdown selected: %s', val);
+				}}
+				sizing={Sizing.large}
+			/>
+			<br />
+
+			<h3>xlarge</h3>
+			<Dropdown
+				defaultVal="idstr2"
+				items={[
+					{val: 'idstr1', label: 'lstr1'},
+					{val: 'idstr2', label: 'lstr2'},
+					{val: 'idstr3', label: 'lstr3'}
+				]}
+				onSelect={(val: string) => {
+					debug('dropdown selected: %s', val);
+				}}
+				sizing={Sizing.xlarge}
+			/>
+			<br />
+
+			<h3>xxlarge</h3>
+			<Dropdown
+				defaultVal="idstr2"
+				items={[
+					{val: 'idstr1', label: 'lstr1'},
+					{val: 'idstr2', label: 'lstr2'},
+					{val: 'idstr3', label: 'lstr3'}
+				]}
+				onSelect={(val: string) => {
+					debug('dropdown selected: %s', val);
+				}}
+				sizing={Sizing.xxlarge}
+			/>
+			<br />
+
+			<h3>disabled</h3>
+			<Dropdown
+				defaultVal="idstr2"
+				disabled
+				items={[
+					{val: 'idstr1', label: 'lstr1'},
+					{val: 'idstr2', label: 'lstr2'},
+					{val: 'idstr3', label: 'lstr3'}
+				]}
+				onSelect={(val: string) => {
+					debug('dropdown selected: %s', val);
+				}}
+			/>
+			<br />
+
+		</Container>
+	);
+
+	private buildDynamicList = () => (
+		<Container id="dynamicListExample">
+			<DynamicList
+				items={dynamicItems}
+				layout={TitleLayout.dominant}
+				onDelete={(title: string) => {
+					console.log(`Deleting item from list: ${title}`);
+				}}
+				onNew={(title: string) => {
+					console.log(`Adding new item to list: ${title}`);
+				}}
+				onSelect={(title: string) => {
+					console.log(`Selected item: ${title}`);
+				}}
+				pageSizes={[10, 20, 30]}
+				title="Dynamic List Test"
+			/>
+		</Container>
+	);
 
 	private buildEditor = () => (
 		<Container id="editorExample">
@@ -1325,6 +1449,14 @@ class App extends React.Component<AppProps, AppState> {
 				<Option optionType={OptionType.dot} text="test" />
 				<Switch />
 				<TextField placeholder='test' size={4} maxLength={4} />
+				<Dropdown
+					defaultVal="idstr1"
+					items={[
+						{val: 'idstr1', label: 'lstr1'},
+						{val: 'idstr2', label: 'lstr2'},
+						{val: 'idstr3', label: 'lstr3'}
+					]}
+				/>
 			</Toolbar>
 			<br/>
 
@@ -1339,6 +1471,14 @@ class App extends React.Component<AppProps, AppState> {
 				<Option optionType={OptionType.dot} text="test" />
 				<Switch />
 				<TextField placeholder='test' size={4} maxLength={4} />
+				<Dropdown
+					defaultVal="idstr1"
+					items={[
+						{val: 'idstr1', label: 'lstr1'},
+						{val: 'idstr2', label: 'lstr2'},
+						{val: 'idstr3', label: 'lstr3'}
+					]}
+				/>
 			</Toolbar>
 			<br/>
 
@@ -1353,6 +1493,14 @@ class App extends React.Component<AppProps, AppState> {
 				<Option optionType={OptionType.dot} text="test" />
 				<Switch />
 				<TextField placeholder='test' size={4} maxLength={4} />
+				<Dropdown
+					defaultVal="idstr1"
+					items={[
+						{val: 'idstr1', label: 'lstr1'},
+						{val: 'idstr2', label: 'lstr2'},
+						{val: 'idstr3', label: 'lstr3'}
+					]}
+				/>
 			</Toolbar>
 			<br/>
 
@@ -1512,6 +1660,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Dialog Box</h1>
 				{this.buildDialogBox()}
+
+				<h1>Dropdown</h1>
+				{this.buildDropdown()}
 
 				<h1>Dynamic List</h1>
 				{this.buildDynamicList()}

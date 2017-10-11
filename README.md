@@ -138,8 +138,8 @@ A modal, dialog box popup window for yes/no user decisions.
 ### DialogWindow
 TODO: create the DialogWindow control (complex dialog)
 
-### Dropdown
-TODO: create a simple dropdown list using select/option HTML
+### [Dropdown](docs/lib/dropdown/Dropdown.md)
+A dropdown list using the HTML select/option elements.
 
 ### [DynamicList](docs/lib/dynamicList/DynamicList.md)
 A specialized List control that can be manipulated by the user.  They can add/remove/select items from it.
@@ -214,7 +214,7 @@ A reusable title block used to format two items: a title and a widget.  The titl
 ### [Toast](docs/lib/toast/Toast.md)
 A popup that contains a message on the top or bottom of that container.  The message will disapper after N seconds.  Contains an X button to remove sooner.  It contains four basic modes: info, warning, error, custom.
 
-### [ToolBar](docs/lib/toolbar/Toolbar.md)/[Divider](docs/lib/divider/Divider.md)
+### [Toolbar](docs/lib/toolbar/Toolbar.md)/[Divider](docs/lib/divider/Divider.md)
 A grouping of buttons and/or controls in a horizontal bar.
 
 ### [Tooltip](docs/lib/tooltip/Tooltip.md)
