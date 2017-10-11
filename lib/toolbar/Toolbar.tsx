@@ -50,6 +50,8 @@
 
 'use strict';
 
+// const debug = require('debug')('Toolbar');
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
@@ -157,9 +159,9 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 
 		React.Children.forEach(this.props.children, (child: any, idx: number) => {
 			if (Toolbar._whitelist.contains(child['type'].name)) {
-				const style = {
+				const style = Object.assign({}, child['props'].style, {
 					height: this.fontSizePX(this.props.sizing, 1.5)
-				};
+				});
 
 				switch (child['type'].name) {
 					case Button.name:

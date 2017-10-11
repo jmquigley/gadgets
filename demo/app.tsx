@@ -1,7 +1,9 @@
+import * as fs from 'fs';
 import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 import {render} from 'react-dom';
 import {sprintf} from 'sprintf-js';
+import {join} from 'util.join';
 import {getUUID} from 'util.toolbox';
 
 const debug = require('debug')('app');
@@ -63,6 +65,9 @@ const {
 	Triangle,
 	Validator
 } = require('../dist/bundle');
+
+debug('cwd: %s', process.cwd());
+const markdown: string = fs.readFileSync(join(process.cwd(), 'demo', 'sample.md'), 'utf8');
 
 // Build global testing data for List Item controls
 let maxItems: number = 5;
@@ -716,7 +721,7 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildEditor = () => (
 		<Container id="editorExample">
-			<Editor />
+			<Editor content={markdown} />
 		</Container>
 	);
 

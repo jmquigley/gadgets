@@ -9,15 +9,17 @@ import {globalize} from '../shared/helpers';
 globalize('hljs', require('highlight.js'));
 const Quill = globalize('Quill', require('quill'));
 
-import {cloneDeep} from 'lodash';
+import {cloneDeep, range} from 'lodash';
 import {Markup, MarkupMode} from 'quill-markup';
 import * as React from 'react';
 import {getUUID, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
+import {Divider, DividerType} from '../divider';
 import {Dropdown, DropdownOption} from '../dropdown';
 import {
 	BaseComponent,
 	BaseProps,
+	Color,
 	getDefaultBaseProps,
 	Sizing
 } from '../shared';
@@ -28,8 +30,11 @@ export interface QuillKeyBindings {
 }
 
 export interface EditorProps extends BaseProps {
+	background?: string;
+	content?: string;
 	defaultFont?: string;
 	defaultFontSize?: number;
+	foreground?: string;
 	onChange?: any;
 	onClick?: any;
 	onClickLink?: any;
@@ -38,8 +43,11 @@ export interface EditorProps extends BaseProps {
 export function getDefaultEditorProps(): EditorProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
+			background: Color.black,
+			content: '',
 			defaultFont: 'Fira Code',
 			defaultFontSize: 12,
+			foreground: Color.white,
 			onChange: nilEvent,
 			onClick: nilEvent,
 			onClickLink: nilEvent
@@ -53,11 +61,13 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	private _editorKey: string = 'editor';
 	private _fontList: DropdownOption[] = [];
 	private _fontSizes: DropdownOption[] = [];
+	private _headings: DropdownOption[] = [];
+	private _highlights: DropdownOption[] = [];
 	private _keybindings: QuillKeyBindings = {
 		'tab': {
 			key: 9,
-			handler: function(range: any) {
-				this.quill.insertText(range.index, '    ');
+			handler: function(textRange: any) {
+				this.quill.insertText(textRange.index, '    ');
 				return false;
 			}
 		},
@@ -71,6 +81,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		'list autofill': null
 	};
 	private _markup: Markup;
+	private _modes: DropdownOption[] = [];
 
 	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
 
@@ -80,28 +91,48 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		if (!this.props.testing) {
 			this._editorKey = `editor-${getUUID()}`;
 		}
-
 		debug('using editor key: %s', this._editorKey);
 
-		this.bindCallbacks(
-			'handleBold',
-			'handleFont',
-			'handleFontSize'
-		);
+		this._rootStyles.add([
+			'ui-editor'
+		]);
 
 		this.componentWillUpdate(this.props);
 	}
 
-	private handleBold() {
-		this._markup.setBold();
+	private buildFontList() {
+		this._fontList = this._markup.fonts.map((fontName: string) => (
+			{val: fontName, label: fontName}
+		));
 	}
 
-	private handleFont(fontName: string) {
-		this._markup.setFont(fontName);
+	private buildFontSizes() {
+		const sizes: number[] = [
+			8, 9, 10, 11, 12, 13, 14, 16, 20, 24, 32, 48
+		];
+
+		this._fontSizes = sizes.map((size: number) => (
+			{val: String(size), label: String(size)}
+		));
 	}
 
-	private handleFontSize(fontSize: string) {
-		this._markup.setFontSize(Number(fontSize));
+	private buildHeadings() {
+		this._headings = range(1, 7).map((it: number) => (
+			{val: String(it), label: `h${it}`}
+		));
+		this._headings.splice(0, 0, {val: '0', label: '--'});
+	}
+
+	private buildHighlights() {
+		this._highlights = this._markup.highlights.map((highlight: string) => (
+			{val: highlight, label: highlight.capitalize().replace(/\W/g, ' ')}
+		));
+	}
+
+	private buildModes() {
+		this._modes = this._markup.modes.map((mode: string) => (
+			{val: mode, label: mode.capitalize()}
+		));
 	}
 
 	public componentDidMount() {
@@ -123,6 +154,12 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 					bindings: this._keybindings
 				},
 				markup: {
+					custom: {
+						background: this.props.background,
+						foreground: this.props.foreground
+					},
+					fontName: this.props.defaultFont,
+					fontSize: this.props.defaultFontSize,
 					followLinks: true,
 					mode: MarkupMode.markdown,
 					onChange: this.props.onChange,
@@ -138,9 +175,14 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		});
 
 		this._markup = this._editor.getModule('markup');
+		this._markup.setContent(this.props.content);
+		this._markup.refresh();
 
 		this.buildFontList();
 		this.buildFontSizes();
+		this.buildHeadings();
+		this.buildHighlights();
+		this.buildModes();
 
 		// This lifecycle method occurs after render on the first instance.
 		// The component can't get some items from the component on the
@@ -149,37 +191,51 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		this.forceUpdate();
 	}
 
-	private buildFontList() {
-		this._fontList = this._markup.fonts.map((fontName: string) => (
-			{val: fontName, label: fontName}
-		));
-	}
-
-	private buildFontSizes() {
-		const sizes: number[] = [
-			8, 9, 10, 11, 12, 13, 14, 16, 20, 24, 32, 48
-		];
-
-		this._fontSizes = sizes.map((size: number) => (
-			{val: String(size), label: String(size)}
-		));
-	}
-
 	public render() {
 		return(
-			<div>
+			<div
+				className={this._rootStyles.classnames}
+				style={this.inlineStyles}
+			>
 				<Toolbar className={this.styles.toolbar} sizing={Sizing.small}>
 					<Dropdown
 						defaultVal={this.props.defaultFont}
 						items={this._fontList}
-						onSelect={this.handleFont}
+						onSelect={this._markup && this._markup.setFont}
 					/>
 					<Dropdown
 						defaultVal={this.props.defaultFontSize.toString()}
 						items={this._fontSizes}
-						onSelect={this.handleFontSize}
+						onSelect={this._markup && this._markup.setFontSize}
 					/>
-					<Button iconName="bold" onClick={this.handleBold} />
+					<Dropdown
+						defaultVal={'--'}
+						items={this._headings}
+						onSelect={this._markup && this._markup.setHeader}
+					/>
+					<Divider dividerType={DividerType.vertical} />
+					<Button iconName="bold" onClick={this._markup && this._markup.setBold} />
+					<Button iconName="italic" onClick={this._markup && this._markup.setItalic} />
+					<Button iconName="underline" onClick={this._markup && this._markup.setUnderline} />
+					<Button iconName="strikethrough" onClick={this._markup && this._markup.setStrikeThrough} />
+					<Divider dividerType={DividerType.vertical} />
+					<Button iconName="undo" onClick={this._markup && this._markup.undo} />
+					<Button iconName="repeat" onClick={this._markup && this._markup.redo} />
+					<Divider dividerType={DividerType.vertical} />
+					<Dropdown
+						defaultVal={'markdown'}
+						items={this._modes}
+						onSelect={this._markup && this._markup.setMode}
+					/>
+					<Dropdown
+						defaultVal={'solarized-light'}
+						items={this._highlights}
+						onSelect={this._markup && this._markup.setHighlight}
+						style={{
+							width: '6rem'
+						}}
+					/>
+					<Button iconName="refresh" onClick={this._markup && this._markup.refresh()} />
 				</Toolbar>
 				<div id={this._editorKey} className={this.styles.editor} />
 			</div>

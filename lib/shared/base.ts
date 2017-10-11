@@ -73,21 +73,21 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		this._styles = styles;
 		this._sizes = Sizes.instance(defaultFontSize);
 
-		if ('sizing' in props) {
-			this._sizing = props['sizing'];
+		if ('sizing' in this.props) {
+			this._sizing = this.props['sizing'];
 		} else {
 			this._sizing = Sizing.normal;
 		}
 
-		if ('className' in props) {
-			this._className = props['className'];
+		if ('className' in this.props) {
+			this._className = this.props['className'];
 		}
 
-		if ('location' in props) {
-			this._locationStyle = this.styles[props['location']];
+		if ('location' in this.props) {
+			this._locationStyle = this.styles[this.props['location']];
 		}
 
-		this.inlineStyles = Object.assign({}, defaultInlineStyles, props['style']);
+		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props['style']);
 	}
 
 	get className(): string {
