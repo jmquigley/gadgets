@@ -48,7 +48,8 @@ import {isEmpty} from 'lodash';
 import * as React from 'react';
 import {calc} from 'util.calc';
 import {ClassNames} from 'util.classnames';
-import {FontStyle, Sizes, Sizing, Styles, Styling} from './index';
+import {Styles} from './props';
+import {FontStyle, Sizes, Sizing, Styling} from './sizing';
 
 const gstyles = require('./styles.css');
 

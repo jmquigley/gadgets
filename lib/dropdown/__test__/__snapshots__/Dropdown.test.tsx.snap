@@ -3,7 +3,6 @@
 exports[`Creation of the Dropdown control 1`] = `
 <select
   className="ui-dropdown dropdown normal"
-  defaultValue="idstr2"
   disabled={false}
   onChange={[Function]}
   style={
@@ -13,6 +12,7 @@ exports[`Creation of the Dropdown control 1`] = `
       "paddingRight": "16px",
     }
   }
+  value="idstr2"
 >
   <option
     key="0"
@@ -76,7 +76,6 @@ exports[`Disable the Dropdown control 1`] = `
 >
   <select
     className="ui-dropdown dropdown normal disabled nohover"
-    defaultValue="idstr2"
     disabled={true}
     onChange={[Function]}
     style={
@@ -86,6 +85,7 @@ exports[`Disable the Dropdown control 1`] = `
         "paddingRight": "16px",
       }
     }
+    value="idstr2"
   >
     <option
       key="0"
@@ -112,7 +112,6 @@ exports[`Disable the Dropdown control 1`] = `
 exports[`Make the Dropdown control invisible 1`] = `
 <select
   className="ui-dropdown dropdown normal invisible"
-  defaultValue="idstr2"
   disabled={false}
   onChange={[Function]}
   style={
@@ -122,6 +121,7 @@ exports[`Make the Dropdown control invisible 1`] = `
       "paddingRight": "16px",
     }
   }
+  value="idstr2"
 >
   <option
     key="0"
@@ -210,7 +210,6 @@ exports[`Test the Dropdown click event 1`] = `
 >
   <select
     className="ui-dropdown dropdown normal"
-    defaultValue="idstr1"
     disabled={false}
     onChange={[Function]}
     style={
@@ -220,6 +219,7 @@ exports[`Test the Dropdown click event 1`] = `
         "paddingRight": "16px",
       }
     }
+    value="idstr1"
   >
     <option
       key="0"

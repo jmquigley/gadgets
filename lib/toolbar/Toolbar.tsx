@@ -55,24 +55,22 @@ import * as React from 'react';
 import {ClassNames} from 'util.classnames';
 import {BinaryTree} from 'util.ds';
 import {Keys} from 'util.keys';
-import {
-	Button,
-	ButtonCircle,
-	ButtonDialog,
-	ButtonText,
-	ButtonToggle,
-	Divider,
-	Dropdown,
-	Option,
-	Switch,
-	TextField
-} from '../../index';
+import {Button} from '../button';
+import {ButtonCircle} from '../buttonCircle';
+import {ButtonDialog} from '../buttonDialog';
+import {ButtonText} from '../buttonText';
+import {ButtonToggle} from '../buttonToggle';
+import {Divider} from '../divider';
+import {Dropdown} from '../dropdown';
+import {Option} from '../option';
 import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
 	Justify
 } from '../shared';
+import {Switch} from '../switch';
+import {TextField} from '../textField';
 
 const styles = require('./styles.css');
 

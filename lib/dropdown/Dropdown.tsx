@@ -34,7 +34,11 @@ export function getDefaultDropdownProps(): DropdownProps {
 	);
 }
 
-export class Dropdown extends BaseComponent<DropdownProps, undefined> {
+export interface DropdownState {
+	currentValue: string;
+}
+
+export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 
 	private _keys: Keys;
 	private _options: any[] = [];
@@ -43,6 +47,10 @@ export class Dropdown extends BaseComponent<DropdownProps, undefined> {
 
 	constructor(props: DropdownProps) {
 		super(props, require('./styles.css'), Dropdown.defaultProps.style);
+
+		this.state = {
+			currentValue: this.props.defaultVal
+		};
 
 		this._keys = new Keys({testing: this.props.testing});
 
@@ -56,7 +64,7 @@ export class Dropdown extends BaseComponent<DropdownProps, undefined> {
 		);
 
 		this.componentWillReceiveProps(this.props);
-		this.componentWillUpdate(this.props);
+		this.componentWillUpdate(this.props, this.state);
 	}
 
 	public componentWillReceiveProps(nextProps: DropdownProps) {
@@ -78,14 +86,19 @@ export class Dropdown extends BaseComponent<DropdownProps, undefined> {
 	}
 
 	private handleChange(e: React.FormEvent<HTMLSelectElement>) {
-		this.props.onSelect(e.currentTarget.value as string);
+		const val: string = e.currentTarget.value;
+		this.setState({
+			currentValue: val
+		}, () => {
+			this.props.onSelect(val);
+		});
 	}
 
 	public render() {
 		return(
 			<select
 				className={this._rootStyles.classnames}
-				defaultValue={this.props.defaultVal}
+				value={this.state.currentValue}
 				disabled={this.props.disabled}
 				onChange={this.props.disabled ? nilEvent : this.handleChange}
 				style={this.inlineStyles}

@@ -1,4 +1,5 @@
 // const MinifyPlugin = require("babel-minify-webpack-plugin");
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
@@ -113,6 +114,7 @@ module.exports = {
 	plugins: [
 		banner,
 		constants,
+		new CircularDependencyPlugin({failOnError: true}),
 		new ExtractTextPlugin({filename: "styles.css"}),
 		new webpack.ProvidePlugin({
 			$: "jquery",

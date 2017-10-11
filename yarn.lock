@@ -3,16 +3,16 @@
 
 
 "@types/cheerio@*":
-  version "0.22.2"
-  resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.2.tgz#539625874bc856086ad491c2fdc9b10c05ae308e"
+  version "0.22.3"
+  resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.3.tgz#c448036ec3d1b4fd8a61c6b37b3faa6d9c8b7b97"
 
 "@types/debug@^0.0.30":
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-0.0.30.tgz#dc1e40f7af3b9c815013a7860e6252f6352a84df"
 
-"@types/enzyme@^2.8.11":
-  version "2.8.11"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-2.8.11.tgz#d8fb69c934ab4e1cd2099d0d390eac72f20d107c"
+"@types/enzyme@^2.8.12":
+  version "2.8.12"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-2.8.12.tgz#a669d79ce1760d7241bc4b6fb7535d68669d78ad"
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "*"
@@ -43,9 +43,9 @@
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/lorem-ipsum/-/lorem-ipsum-1.0.2.tgz#77b11b0284fe315efedb9a31c0f1e1488469d99c"
 
-"@types/node@*", "@types/node@^8.0.33":
-  version "8.0.33"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.33.tgz#1126e94374014e54478092830704f6ea89df04cd"
+"@types/node@*", "@types/node@^8.0.34":
+  version "8.0.34"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.34.tgz#55f801fa2ddb2a40dd6dfc15ecfe1dde9c129fe9"
 
 "@types/node@^6.0.46":
   version "6.0.89"
@@ -66,9 +66,9 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react-select@^1.0.58":
-  version "1.0.58"
-  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-1.0.58.tgz#8246befde5452ca201a02d924d293842357d7538"
+"@types/react-select@^1.0.59":
+  version "1.0.59"
+  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-1.0.59.tgz#791022e5b2c7cd5c86301949ea5e4cc94a55bc66"
   dependencies:
     "@types/react" "*"
 
@@ -76,9 +76,9 @@
   version "16.0.10"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.10.tgz#a24b630f5f1f170866a148a147d4fc8636ea88e0"
 
-"@types/sinon@^2.3.5":
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-2.3.5.tgz#68f1e0ac15f2eb6cc682b7af87cd517acc77b589"
+"@types/sinon@^2.3.6":
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-2.3.6.tgz#ff600951c756286e38ce14d0b0e2924e38a91006"
 
 "@types/sprintf-js@^1.1.0":
   version "1.1.0"
@@ -1447,8 +1447,8 @@ browserslist@^1.3.6, browserslist@^1.5.2, browserslist@^1.7.6:
     electron-to-chromium "^1.2.7"
 
 browserslist@^2.0.0, browserslist@^2.1.2, browserslist@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.5.0.tgz#0ea00d22813a4dfae5786485225a9c584b3ef37c"
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.5.1.tgz#68e4bc536bbcc6086d62843a2ffccea8396821c6"
   dependencies:
     caniuse-lite "^1.0.30000744"
     electron-to-chromium "^1.3.24"
@@ -1564,12 +1564,12 @@ caniuse-api@^2.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000744"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000744.tgz#00758ff7dd5f7138d34a15608dccf71a59656ffe"
+  version "1.0.30000745"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000745.tgz#b259a61737a3e48c4fb4b6b1bc44edeb264cd422"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000744:
-  version "1.0.30000744"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000744.tgz#860fa5c83ba34fe619397d607f30bb474821671b"
+  version "1.0.30000745"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000745.tgz#20d6fede1157a4935133502946fc7e0e6b880da5"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1642,6 +1642,10 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+circular-dependency-plugin@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/circular-dependency-plugin/-/circular-dependency-plugin-4.2.1.tgz#d3af66e04b3bb3f47300824740b817cea74e38f1"
 
 clap@^1.0.9:
   version "1.2.3"
@@ -2380,9 +2384,9 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.24:
   version "1.3.24"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.24.tgz#9b7b88bb05ceb9fa016a177833cc2dde388f21b6"
 
-electron@1.7.8:
-  version "1.7.8"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-1.7.8.tgz#27b791a6895171a7d52991b99442cdbd10a3539d"
+electron@1.7.9:
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.7.9.tgz#add54e9f8f83ed02f6519ec10135f698b19336cf"
   dependencies:
     "@types/node" "^7.0.18"
     electron-download "^3.0.1"
@@ -2520,13 +2524,13 @@ es-to-primitive@^1.1.1:
     is-symbol "^1.0.1"
 
 es5-ext@^0.10.14, es5-ext@^0.10.9, es5-ext@~0.10.14:
-  version "0.10.30"
-  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.30.tgz#7141a16836697dbabfaaaeee41495ce29f52c939"
+  version "0.10.31"
+  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.31.tgz#7bb938c95a7f1b9f728092dc09c41edcc398eefe"
   dependencies:
-    es6-iterator "2"
-    es6-symbol "~3.1"
+    es6-iterator "~2.0.1"
+    es6-symbol "~3.1.1"
 
-es6-iterator@2, es6-iterator@^2.0.1, es6-iterator@~2.0.1:
+es6-iterator@^2.0.1, es6-iterator@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/es6-iterator/-/es6-iterator-2.0.1.tgz#8e319c9f0453bf575d374940a655920e59ca5512"
   dependencies:
@@ -2559,7 +2563,7 @@ es6-set@~0.1.5:
     es6-symbol "3.1.1"
     event-emitter "~0.3.5"
 
-es6-symbol@3.1.1, es6-symbol@^3.1, es6-symbol@^3.1.1, es6-symbol@~3.1, es6-symbol@~3.1.1:
+es6-symbol@3.1.1, es6-symbol@^3.1, es6-symbol@^3.1.1, es6-symbol@~3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/es6-symbol/-/es6-symbol-3.1.1.tgz#bf00ef4fdab6ba1b46ecb7b629b4c7ed5715cc77"
   dependencies:
@@ -2740,8 +2744,8 @@ expect@^21.2.1:
     jest-regex-util "^21.2.0"
 
 express@^4.15.2:
-  version "4.16.1"
-  resolved "https://registry.yarnpkg.com/express/-/express-4.16.1.tgz#6b33b560183c9b253b7b62144df33a4654ac9ed0"
+  version "4.16.2"
+  resolved "https://registry.yarnpkg.com/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
   dependencies:
     accepts "~1.3.4"
     array-flatten "1.1.1"
@@ -2829,9 +2833,9 @@ fast-deep-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.0.0.tgz#96256a3bc975595eb36d82e9929d060d893439ff"
 
-fast-diff@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.1.1.tgz#0aea0e4e605b6a2189f0e936d4b7fbaf1b7cfd9b"
+fast-diff@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.1.2.tgz#4b62c42b8e03de3f848460b639079920695d0154"
 
 fast-levenshtein@~2.0.4:
   version "2.0.6"
@@ -5230,8 +5234,8 @@ postcss-calc@^5.2.0:
     reduce-css-calc "^1.2.6"
 
 postcss-calc@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-6.0.0.tgz#b681b279c6d24fbe0e33ed9045803705445d613b"
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-6.0.1.tgz#3d24171bbf6e7629d422a436ebfe6dd9511f4330"
   dependencies:
     css-unit-converter "^1.1.1"
     postcss "^6.0.0"
@@ -5495,12 +5499,12 @@ postcss-load-plugins@^2.3.0:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
 
-postcss-loader@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.0.6.tgz#8c7e0055a3df1889abc6bad52dd45b2f41bbc6fc"
+postcss-loader@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.0.7.tgz#4d2da1489cee0a14f72c0d9440c9ee7eded34345"
   dependencies:
     loader-utils "^1.1.0"
-    postcss "^6.0.2"
+    postcss "^6.0.0"
     postcss-load-config "^1.2.0"
     schema-utils "^0.3.0"
 
@@ -5626,9 +5630,9 @@ postcss-modules-values@1.3.0, postcss-modules-values@^1.1.0, postcss-modules-val
     icss-replace-symbols "^1.1.0"
     postcss "^6.0.1"
 
-postcss-modules@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/postcss-modules/-/postcss-modules-0.8.0.tgz#a9d01806dffe19c2607dee88ea1cbd80dc059992"
+postcss-modules@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-modules/-/postcss-modules-1.0.0.tgz#d4b00c55f3437a1f94ba4624b5584af1e11314d0"
   dependencies:
     css-modules-loader-core "^1.1.0"
     generic-names "^1.0.2"
@@ -6035,42 +6039,42 @@ querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
-quill-delta@3.6.1:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/quill-delta/-/quill-delta-3.6.1.tgz#8f8f89ac1fb7b0b52ed3a31cf6554b1c4291b64d"
+quill-delta@3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/quill-delta/-/quill-delta-3.6.2.tgz#76eed0163b8b09a076fba6ade29307c42b40b8d8"
   dependencies:
     deep-equal "^1.0.1"
     extend "^3.0.1"
-    fast-diff "1.1.1"
+    fast-diff "1.1.2"
 
-quill-markup@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/quill-markup/-/quill-markup-0.0.10.tgz#08ff0626b6a28235d3c45e5670cd8b43f6cd077f"
+quill-markup@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/quill-markup/-/quill-markup-0.0.11.tgz#4f1c88d588eacdc9b16fb702b5aa3e589caf4512"
   dependencies:
     hash.js "^1.1.3"
     highlight.js "^9.12.0"
     lodash "^4.17.4"
     parchment "^1.1.0"
-    quill "^1.3.2"
+    quill "^1.3.3"
     util.ds "^0.0.31"
     util.fontlist "^0.0.3"
     util.join "^0.0.14"
     util.matches "^0.0.4"
-    util.pkgwrap "0.0.69"
+    util.pkgwrap "0.0.70"
     util.rstrip "^0.0.26"
     util.section "^0.0.6"
     xregexp "^3.2.0"
 
-quill@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/quill/-/quill-1.3.2.tgz#fe396b4fa1d1439d76956ff92218a0cb90c09f3f"
+quill@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/quill/-/quill-1.3.3.tgz#c04dd17a07cdd7fc32d03db05b20bae73b02fbbf"
   dependencies:
     clone "~2.1.1"
     deep-equal "~1.0.1"
     eventemitter3 "~2.0.3"
     extend "~3.0.1"
     parchment "1.1.0"
-    quill-delta "3.6.1"
+    quill-delta "3.6.2"
 
 raf@^3.3.2:
   version "3.4.0"
@@ -6253,8 +6257,8 @@ reduce-css-calc@^1.2.6, reduce-css-calc@^1.2.7:
     reduce-function-call "^1.0.1"
 
 reduce-css-calc@^2.0.0:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/reduce-css-calc/-/reduce-css-calc-2.0.5.tgz#33c97838c5d4c711a5c14ef85ce4fde41483f7bd"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/reduce-css-calc/-/reduce-css-calc-2.1.0.tgz#a7a334e26631baf959bbe131ad8469ae443c408a"
   dependencies:
     css-unit-converter "^1.1.1"
     postcss-value-parser "^3.3.0"
@@ -7173,8 +7177,8 @@ tslint@^5.7.0:
     tsutils "^2.8.1"
 
 tsutils@^2.8.0, tsutils@^2.8.1:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.12.0.tgz#c892a84c8f2f8de13f8ef32c2c5c38b457cceac6"
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.12.1.tgz#f4d95ce3391c8971e46e54c4cf0edb0a21dd5b24"
   dependencies:
     tslib "^1.7.1"
 
@@ -7448,21 +7452,6 @@ util.matches@^0.0.4:
 util.pkgwrap@0.0.68:
   version "0.0.68"
   resolved "https://registry.yarnpkg.com/util.pkgwrap/-/util.pkgwrap-0.0.68.tgz#e258de014366ed04ee488072afcf1c0ccd5777d4"
-  dependencies:
-    expand-home-dir "github:jmquigley/expand-home-dir"
-    fs-extra "^4.0.1"
-    globby "^6.1.0"
-    jsdoc "^3.5.4"
-    jsdoc-to-markdown "^3.0.0"
-    klaw-sync "^3.0.0"
-    lodash "^4.17.4"
-    rimraf "^2.6.1"
-    workerpool "^2.2.4"
-    yargs "^8.0.2"
-
-util.pkgwrap@0.0.69:
-  version "0.0.69"
-  resolved "https://registry.yarnpkg.com/util.pkgwrap/-/util.pkgwrap-0.0.69.tgz#adc60da2c8f2b0ac428477849c72f9f9ae25a37f"
   dependencies:
     expand-home-dir "github:jmquigley/expand-home-dir"
     fs-extra "^4.0.1"
