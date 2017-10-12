@@ -1,5 +1,60 @@
-// TODO: Add implementation for Editor
-// TODO: Add documentation for Editor
+/**
+ * A multi-line text editor control.  It uses a custom
+ * [markup module](https://github.com/jmquigley/quill-markup) under the
+ * [Quill](https://quilljs.com/) editor/api.  It has the following
+ * editing modes for highlighting:
+ *
+ * - Plaintext
+ * - Markdown
+ *
+ * The modes available are dependent on the Quill module.
+ *
+ * The control has a built in toolbar to assist with editing a document.
+ * The tools include:
+ *
+ * - Changing the font and font size of the content
+ * - Modifying text properties (bold, italic, etc)
+ * - Changing the editing mode highlighting
+ * - Changing the syntax highlihgting color scheme
+ *
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/editor.png" width="60%" />
+ *
+ * ## Examples:
+ *
+ * ```javascript
+ * import {Editor} from 'gadgets';
+ * <Editor content='' onChange={someFunction(text)} />
+ * ```
+ *
+ * ## API
+ * #### Events
+ * - `onChange(text: string)` - Invoked when the editor control is modified.
+ * It receives a reference to the content text that was changed.  It is rate
+ * limited to only be called once every 250ms
+ * - `onClick(pos: number)` - Invoked when the user clicks on a position within
+ * the editor.
+ * - `onClickLink(link: Match)` - Invoked when a user clicks on a reference link
+ * within the content (dependent on the editing mode)
+ *
+ * #### Styles
+ * - `ui-editor` - a global style attached to the root `<div>` around the toolbar
+ * and the editor.
+ * - `ui-editor-toolbar` - a global style attached to the `<div>` around the
+ * toolbar component.
+ * - `ql-editor` - a global style attached to the Quill editor component
+ *
+ * #### Properties
+ * - `background: {string} (Color.black)` - Sets the default background color
+ * for the editing window.
+ * - `content: {string} ('')` - the initial text content for the component
+ * - `defaultFont: {string} ('Fira Code')` - The name of the default editor font
+ * - `defaultFontSize: {number} (12)` - The size of the font in pixels (px)
+ * - `foreground: {string} (Color.white)` - Sets the default foreground (text)
+ * color for the editing window
+ *
+ * @module Editor
+ */
 
 'use strict';
 
@@ -12,6 +67,7 @@ const Quill = globalize('Quill', require('quill'));
 import {cloneDeep, range} from 'lodash';
 import {Markup, MarkupMode} from 'quill-markup';
 import * as React from 'react';
+import {ClassNames} from 'util.classnames';
 import {getUUID, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {Divider, DividerType} from '../divider';
@@ -82,6 +138,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	};
 	private _markup: Markup;
 	private _modes: DropdownOption[] = [];
+	private _toolbarStyles: ClassNames = new ClassNames();
 
 	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
 
@@ -95,6 +152,11 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 
 		this._rootStyles.add([
 			'ui-editor'
+		]);
+
+		this._toolbarStyles.add([
+			'ui-editor-toolbar',
+			this.styles.toolbar
 		]);
 
 		this.componentWillUpdate(this.props);
@@ -136,7 +198,6 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	}
 
 	public componentDidMount() {
-		debug('componentDidMount');
 
 		// The quill editor must be added after the component has mounted
 		// because the DOM element used for replacement is not available
@@ -197,7 +258,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 				className={this._rootStyles.classnames}
 				style={this.inlineStyles}
 			>
-				<Toolbar className={this.styles.toolbar} sizing={Sizing.small}>
+				<Toolbar className={this._toolbarStyles.classnames} sizing={Sizing.small}>
 					<Dropdown
 						defaultVal={this.props.defaultFont}
 						items={this._fontList}

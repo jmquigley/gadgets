@@ -144,8 +144,8 @@ A dropdown list using the HTML select/option elements.
 ### [DynamicList](docs/lib/dynamicList/DynamicList.md)
 A specialized List control that can be manipulated by the user.  They can add/remove/select items from it.
 
-### Editor
-TODO: create the Editor control
+### [Editor](docs/lib/editor/Editor.md)
+A multi-line text editor control.  It uses a custom [markup module](https://github.com/jmquigley/quill-markup) under the [Quill](https://quilljs.com/) editor/api.
 
 ### Gauge
 TODO: create the gague control

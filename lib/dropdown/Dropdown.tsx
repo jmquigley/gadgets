@@ -1,8 +1,31 @@
+/**
+ * {description}
+ *
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/dropdown.png" width="60%" />
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {Button} from 'gadgets';
+ * <Button iconName="cab" onClick={someFunction} />
+ * ```
+ *
+ * #### Events
+ * - `{name}` - {description}
+ *
+ * #### Styles
+ * - `` - {description}
+ *
+ * #### Properties
+ * - `{name}: {datatype}` - {description}
+ *
+ * @module Dropdown
+ */
+
 // TODO: add Dropdown documentation
 
 'use strict';
-
-// const debug = require('debug')('Dropdown');
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
