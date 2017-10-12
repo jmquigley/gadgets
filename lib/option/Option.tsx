@@ -14,7 +14,10 @@
  * - dot
  * - star
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/editor.png" width="50%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Option, OptionType} from 'gadgets';
@@ -26,6 +29,7 @@
  * />
  * ```
  *
+ * ## API
  * #### Events
  * - `onClick(toggle: boolean)` - When the option is clicked, then the button
  * display is chagned (toggled).  The callback returns the current state of

@@ -1,4 +1,4 @@
-require('./lib/monkey');
+require('./lib/shared/monkey');
 
 import {Accordion, AccordionItem} from './lib/accordion';
 import {Badge} from './lib/badge';

@@ -5,7 +5,7 @@
  * element surrounding text.
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/label.png" width="60%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/label.png" width="30%" />
  *
  * ## Examples:
  *

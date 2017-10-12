@@ -9,6 +9,7 @@
  * - ButtonText
  * - ButtonToggle
  * - Divider
+ * - Dropdown
  * - Option
  * - Switch
  * - TextField

@@ -13,7 +13,10 @@
  * - info (blue i icon) `DialogType.info`
  * - custom (user selected from font awesome) `DialogType.custom`
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/dialogBox.png" width="30%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {DialogBox} from 'gadgets';
@@ -30,6 +33,7 @@
  *  />
  * ```
  *
+ * ## API
  * #### Events
  * - `onClose` - invoked when the dialog box is closed.
  * - `onOpen` - invoked when the dialot box is opened.
