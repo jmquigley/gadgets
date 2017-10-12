@@ -1,5 +1,1990 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test creation of an Editor instance 1`] = `
+<Editor
+  background="#000000"
+  className=""
+  content="test content"
+  contentEditable={false}
+  defaultFont="Fira Code"
+  defaultFontSize={12}
+  direction="right"
+  disabled={false}
+  focus={false}
+  foreground="#ffffff"
+  height=""
+  id=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onChange={[Function]}
+  onClick={[Function]}
+  onClickLink={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  visible={true}
+  width=""
+>
+  <div
+    className="ui-editor"
+    style={Object {}}
+  >
+    <Toolbar
+      background="#000000"
+      className="ui-editor-toolbar toolbar"
+      content="test content"
+      contentEditable={false}
+      defaultFont="Fira Code"
+      defaultFontSize={12}
+      direction="right"
+      disabled={false}
+      focus={false}
+      foreground="#ffffff"
+      height=""
+      id=""
+      justify={0}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onChange={[Function]}
+      onClick={[Function]}
+      onClickLink={[Function]}
+      selected={false}
+      sizing="small"
+      style={Object {}}
+      testing={true}
+      visible={true}
+      width=""
+    >
+      <div
+        className="ui-toolbar toolbar small ui-editor-toolbar toolbar"
+      >
+        <div
+          className="ui-toolbar-group toolbarGroup left"
+        >
+          <Dropdown
+            background="#000000"
+            className="toolbarElement"
+            content="test content"
+            contentEditable={false}
+            defaultFont="Fira Code"
+            defaultFontSize={12}
+            defaultVal="Fira Code"
+            direction="right"
+            disabled={false}
+            focus={false}
+            foreground="#ffffff"
+            height=""
+            id=""
+            initialItem=""
+            items={
+              Array [
+                Object {
+                  "label": "Fira Code",
+                  "val": "Fira Code",
+                },
+                Object {
+                  "label": "Inconsolata",
+                  "val": "Inconsolata",
+                },
+                Object {
+                  "label": "Source Code Pro",
+                  "val": "Source Code Pro",
+                },
+              ]
+            }
+            key="0"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onChange={[Function]}
+            onClick={[Function]}
+            onClickLink={[Function]}
+            onSelect={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "height": "18px",
+              }
+            }
+            testing={true}
+            visible={true}
+            width=""
+          >
+            <select
+              className="ui-dropdown dropdown small toolbarElement"
+              disabled={false}
+              onChange={[Function]}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                  "height": "18px",
+                  "paddingLeft": "2.4000000000000004px",
+                  "paddingRight": "12px",
+                }
+              }
+              value="Fira Code"
+            >
+              <option
+                key="0"
+                value="Fira Code"
+              >
+                Fira Code
+              </option>
+              <option
+                key="1"
+                value="Inconsolata"
+              >
+                Inconsolata
+              </option>
+              <option
+                key="2"
+                value="Source Code Pro"
+              >
+                Source Code Pro
+              </option>
+            </select>
+          </Dropdown>
+          <Dropdown
+            background="#000000"
+            className="toolbarElement"
+            content="test content"
+            contentEditable={false}
+            defaultFont="Fira Code"
+            defaultFontSize={12}
+            defaultVal="12"
+            direction="right"
+            disabled={false}
+            focus={false}
+            foreground="#ffffff"
+            height=""
+            id=""
+            initialItem=""
+            items={
+              Array [
+                Object {
+                  "label": "8",
+                  "val": "8",
+                },
+                Object {
+                  "label": "9",
+                  "val": "9",
+                },
+                Object {
+                  "label": "10",
+                  "val": "10",
+                },
+                Object {
+                  "label": "11",
+                  "val": "11",
+                },
+                Object {
+                  "label": "12",
+                  "val": "12",
+                },
+                Object {
+                  "label": "13",
+                  "val": "13",
+                },
+                Object {
+                  "label": "14",
+                  "val": "14",
+                },
+                Object {
+                  "label": "16",
+                  "val": "16",
+                },
+                Object {
+                  "label": "20",
+                  "val": "20",
+                },
+                Object {
+                  "label": "24",
+                  "val": "24",
+                },
+                Object {
+                  "label": "32",
+                  "val": "32",
+                },
+                Object {
+                  "label": "48",
+                  "val": "48",
+                },
+              ]
+            }
+            key="1"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onChange={[Function]}
+            onClick={[Function]}
+            onClickLink={[Function]}
+            onSelect={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "height": "18px",
+              }
+            }
+            testing={true}
+            visible={true}
+            width=""
+          >
+            <select
+              className="ui-dropdown dropdown small toolbarElement"
+              disabled={false}
+              onChange={[Function]}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                  "height": "18px",
+                  "paddingLeft": "2.4000000000000004px",
+                  "paddingRight": "12px",
+                }
+              }
+              value="12"
+            >
+              <option
+                key="0"
+                value="8"
+              >
+                8
+              </option>
+              <option
+                key="1"
+                value="9"
+              >
+                9
+              </option>
+              <option
+                key="2"
+                value="10"
+              >
+                10
+              </option>
+              <option
+                key="3"
+                value="11"
+              >
+                11
+              </option>
+              <option
+                key="4"
+                value="12"
+              >
+                12
+              </option>
+              <option
+                key="5"
+                value="13"
+              >
+                13
+              </option>
+              <option
+                key="6"
+                value="14"
+              >
+                14
+              </option>
+              <option
+                key="7"
+                value="16"
+              >
+                16
+              </option>
+              <option
+                key="8"
+                value="20"
+              >
+                20
+              </option>
+              <option
+                key="9"
+                value="24"
+              >
+                24
+              </option>
+              <option
+                key="10"
+                value="32"
+              >
+                32
+              </option>
+              <option
+                key="11"
+                value="48"
+              >
+                48
+              </option>
+            </select>
+          </Dropdown>
+          <Dropdown
+            background="#000000"
+            className="toolbarElement"
+            content="test content"
+            contentEditable={false}
+            defaultFont="Fira Code"
+            defaultFontSize={12}
+            defaultVal="--"
+            direction="right"
+            disabled={false}
+            focus={false}
+            foreground="#ffffff"
+            height=""
+            id=""
+            initialItem=""
+            items={
+              Array [
+                Object {
+                  "label": "--",
+                  "val": "0",
+                },
+                Object {
+                  "label": "h1",
+                  "val": "1",
+                },
+                Object {
+                  "label": "h2",
+                  "val": "2",
+                },
+                Object {
+                  "label": "h3",
+                  "val": "3",
+                },
+                Object {
+                  "label": "h4",
+                  "val": "4",
+                },
+                Object {
+                  "label": "h5",
+                  "val": "5",
+                },
+                Object {
+                  "label": "h6",
+                  "val": "6",
+                },
+              ]
+            }
+            key="2"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onChange={[Function]}
+            onClick={[Function]}
+            onClickLink={[Function]}
+            onSelect={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "height": "18px",
+              }
+            }
+            testing={true}
+            visible={true}
+            width=""
+          >
+            <select
+              className="ui-dropdown dropdown small toolbarElement"
+              disabled={false}
+              onChange={[Function]}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                  "height": "18px",
+                  "paddingLeft": "2.4000000000000004px",
+                  "paddingRight": "12px",
+                }
+              }
+              value="--"
+            >
+              <option
+                key="0"
+                value="0"
+              >
+                --
+              </option>
+              <option
+                key="1"
+                value="1"
+              >
+                h1
+              </option>
+              <option
+                key="2"
+                value="2"
+              >
+                h2
+              </option>
+              <option
+                key="3"
+                value="3"
+              >
+                h3
+              </option>
+              <option
+                key="4"
+                value="4"
+              >
+                h4
+              </option>
+              <option
+                key="5"
+                value="5"
+              >
+                h5
+              </option>
+              <option
+                key="6"
+                value="6"
+              >
+                h6
+              </option>
+            </select>
+          </Dropdown>
+          <Divider
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            dividerType="|"
+            focus={false}
+            height=""
+            id=""
+            key="3"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "height": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-divider divider small toolbarElement"
+              style={
+                Object {
+                  "height": "18px",
+                  "width": "6px",
+                }
+              }
+            >
+              |
+            </div>
+          </Divider>
+          <Button
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="bold"
+            iconStyle=""
+            id=""
+            key="4"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "border": "solid 1px silver",
+                "height": "18px",
+                "margin": "0 1px 0 2px",
+                "width": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button ripple small toolbarElement"
+              onClick={[Function]}
+              style={
+                Object {
+                  "border": "solid 1px silver",
+                  "height": "18px",
+                  "margin": "0 1px 0 2px",
+                  "width": "18px",
+                }
+              }
+            >
+              <Icon
+                className="icon"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="bold"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="small"
+                style={Object {}}
+                testing={false}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-bold small"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+          <Button
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="italic"
+            iconStyle=""
+            id=""
+            key="5"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "border": "solid 1px silver",
+                "height": "18px",
+                "margin": "0 1px 0 2px",
+                "width": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button ripple small toolbarElement"
+              onClick={[Function]}
+              style={
+                Object {
+                  "border": "solid 1px silver",
+                  "height": "18px",
+                  "margin": "0 1px 0 2px",
+                  "width": "18px",
+                }
+              }
+            >
+              <Icon
+                className="icon"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="italic"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="small"
+                style={Object {}}
+                testing={false}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-italic small"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+          <Button
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="underline"
+            iconStyle=""
+            id=""
+            key="6"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "border": "solid 1px silver",
+                "height": "18px",
+                "margin": "0 1px 0 2px",
+                "width": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button ripple small toolbarElement"
+              onClick={[Function]}
+              style={
+                Object {
+                  "border": "solid 1px silver",
+                  "height": "18px",
+                  "margin": "0 1px 0 2px",
+                  "width": "18px",
+                }
+              }
+            >
+              <Icon
+                className="icon"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="underline"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="small"
+                style={Object {}}
+                testing={false}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-underline small"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+          <Button
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="strikethrough"
+            iconStyle=""
+            id=""
+            key="7"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "border": "solid 1px silver",
+                "height": "18px",
+                "margin": "0 1px 0 2px",
+                "width": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button ripple small toolbarElement"
+              onClick={[Function]}
+              style={
+                Object {
+                  "border": "solid 1px silver",
+                  "height": "18px",
+                  "margin": "0 1px 0 2px",
+                  "width": "18px",
+                }
+              }
+            >
+              <Icon
+                className="icon"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="strikethrough"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="small"
+                style={Object {}}
+                testing={false}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-strikethrough small"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+          <Divider
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            dividerType="|"
+            focus={false}
+            height=""
+            id=""
+            key="8"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "height": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-divider divider small toolbarElement"
+              style={
+                Object {
+                  "height": "18px",
+                  "width": "6px",
+                }
+              }
+            >
+              |
+            </div>
+          </Divider>
+          <Button
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="undo"
+            iconStyle=""
+            id=""
+            key="9"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "border": "solid 1px silver",
+                "height": "18px",
+                "margin": "0 1px 0 2px",
+                "width": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button ripple small toolbarElement"
+              onClick={[Function]}
+              style={
+                Object {
+                  "border": "solid 1px silver",
+                  "height": "18px",
+                  "margin": "0 1px 0 2px",
+                  "width": "18px",
+                }
+              }
+            >
+              <Icon
+                className="icon"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="undo"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="small"
+                style={Object {}}
+                testing={false}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-undo small"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+          <Button
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="repeat"
+            iconStyle=""
+            id=""
+            key="10"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "border": "solid 1px silver",
+                "height": "18px",
+                "margin": "0 1px 0 2px",
+                "width": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button ripple small toolbarElement"
+              onClick={[Function]}
+              style={
+                Object {
+                  "border": "solid 1px silver",
+                  "height": "18px",
+                  "margin": "0 1px 0 2px",
+                  "width": "18px",
+                }
+              }
+            >
+              <Icon
+                className="icon"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="repeat"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="small"
+                style={Object {}}
+                testing={false}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-repeat small"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+          <Divider
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            dividerType="|"
+            focus={false}
+            height=""
+            id=""
+            key="11"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "height": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-divider divider small toolbarElement"
+              style={
+                Object {
+                  "height": "18px",
+                  "width": "6px",
+                }
+              }
+            >
+              |
+            </div>
+          </Divider>
+          <Dropdown
+            background="#000000"
+            className="toolbarElement"
+            content="test content"
+            contentEditable={false}
+            defaultFont="Fira Code"
+            defaultFontSize={12}
+            defaultVal="markdown"
+            direction="right"
+            disabled={false}
+            focus={false}
+            foreground="#ffffff"
+            height=""
+            id=""
+            initialItem=""
+            items={
+              Array [
+                Object {
+                  "label": "Markdown",
+                  "val": "markdown",
+                },
+                Object {
+                  "label": "Text",
+                  "val": "text",
+                },
+              ]
+            }
+            key="12"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onChange={[Function]}
+            onClick={[Function]}
+            onClickLink={[Function]}
+            onSelect={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "height": "18px",
+              }
+            }
+            testing={true}
+            visible={true}
+            width=""
+          >
+            <select
+              className="ui-dropdown dropdown small toolbarElement"
+              disabled={false}
+              onChange={[Function]}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                  "height": "18px",
+                  "paddingLeft": "2.4000000000000004px",
+                  "paddingRight": "12px",
+                }
+              }
+              value="markdown"
+            >
+              <option
+                key="0"
+                value="markdown"
+              >
+                Markdown
+              </option>
+              <option
+                key="1"
+                value="text"
+              >
+                Text
+              </option>
+            </select>
+          </Dropdown>
+          <Dropdown
+            background="#000000"
+            className="toolbarElement"
+            content="test content"
+            contentEditable={false}
+            defaultFont="Fira Code"
+            defaultFontSize={12}
+            defaultVal="solarized-light"
+            direction="right"
+            disabled={false}
+            focus={false}
+            foreground="#ffffff"
+            height=""
+            id=""
+            initialItem=""
+            items={
+              Array [
+                Object {
+                  "label": "Agate",
+                  "val": "agate",
+                },
+                Object {
+                  "label": "Androidstudio",
+                  "val": "androidstudio",
+                },
+                Object {
+                  "label": "Arduino light",
+                  "val": "arduino-light",
+                },
+                Object {
+                  "label": "Arta",
+                  "val": "arta",
+                },
+                Object {
+                  "label": "Ascetic",
+                  "val": "ascetic",
+                },
+                Object {
+                  "label": "Atelier cave dark",
+                  "val": "atelier-cave-dark",
+                },
+                Object {
+                  "label": "Atelier cave light",
+                  "val": "atelier-cave-light",
+                },
+                Object {
+                  "label": "Atelier dune dark",
+                  "val": "atelier-dune-dark",
+                },
+                Object {
+                  "label": "Atelier dune light",
+                  "val": "atelier-dune-light",
+                },
+                Object {
+                  "label": "Atelier estuary dark",
+                  "val": "atelier-estuary-dark",
+                },
+                Object {
+                  "label": "Atelier estuary light",
+                  "val": "atelier-estuary-light",
+                },
+                Object {
+                  "label": "Atelier forest dark",
+                  "val": "atelier-forest-dark",
+                },
+                Object {
+                  "label": "Atelier forest light",
+                  "val": "atelier-forest-light",
+                },
+                Object {
+                  "label": "Atelier heath dark",
+                  "val": "atelier-heath-dark",
+                },
+                Object {
+                  "label": "Atelier heath light",
+                  "val": "atelier-heath-light",
+                },
+                Object {
+                  "label": "Atelier lakeside dark",
+                  "val": "atelier-lakeside-dark",
+                },
+                Object {
+                  "label": "Atelier lakeside light",
+                  "val": "atelier-lakeside-light",
+                },
+                Object {
+                  "label": "Atelier plateau dark",
+                  "val": "atelier-plateau-dark",
+                },
+                Object {
+                  "label": "Atelier plateau light",
+                  "val": "atelier-plateau-light",
+                },
+                Object {
+                  "label": "Atelier savanna dark",
+                  "val": "atelier-savanna-dark",
+                },
+                Object {
+                  "label": "Atelier savanna light",
+                  "val": "atelier-savanna-light",
+                },
+                Object {
+                  "label": "Atelier seaside dark",
+                  "val": "atelier-seaside-dark",
+                },
+                Object {
+                  "label": "Atelier seaside light",
+                  "val": "atelier-seaside-light",
+                },
+                Object {
+                  "label": "Atelier sulphurpool dark",
+                  "val": "atelier-sulphurpool-dark",
+                },
+                Object {
+                  "label": "Atelier sulphurpool light",
+                  "val": "atelier-sulphurpool-light",
+                },
+                Object {
+                  "label": "Atom one dark",
+                  "val": "atom-one-dark",
+                },
+                Object {
+                  "label": "Atom one light",
+                  "val": "atom-one-light",
+                },
+                Object {
+                  "label": "Brown paper",
+                  "val": "brown-paper",
+                },
+                Object {
+                  "label": "Codepen embed",
+                  "val": "codepen-embed",
+                },
+                Object {
+                  "label": "Color brewer",
+                  "val": "color-brewer",
+                },
+                Object {
+                  "label": "Darcula",
+                  "val": "darcula",
+                },
+                Object {
+                  "label": "Dark",
+                  "val": "dark",
+                },
+                Object {
+                  "label": "Darkula",
+                  "val": "darkula",
+                },
+                Object {
+                  "label": "Default",
+                  "val": "default",
+                },
+                Object {
+                  "label": "Docco",
+                  "val": "docco",
+                },
+                Object {
+                  "label": "Dracula",
+                  "val": "dracula",
+                },
+                Object {
+                  "label": "Far",
+                  "val": "far",
+                },
+                Object {
+                  "label": "Foundation",
+                  "val": "foundation",
+                },
+                Object {
+                  "label": "Github gist",
+                  "val": "github-gist",
+                },
+                Object {
+                  "label": "Github",
+                  "val": "github",
+                },
+                Object {
+                  "label": "Googlecode",
+                  "val": "googlecode",
+                },
+                Object {
+                  "label": "Grayscale",
+                  "val": "grayscale",
+                },
+                Object {
+                  "label": "Gruvbox dark",
+                  "val": "gruvbox-dark",
+                },
+                Object {
+                  "label": "Gruvbox light",
+                  "val": "gruvbox-light",
+                },
+                Object {
+                  "label": "Hopscotch",
+                  "val": "hopscotch",
+                },
+                Object {
+                  "label": "Hybrid",
+                  "val": "hybrid",
+                },
+                Object {
+                  "label": "Idea",
+                  "val": "idea",
+                },
+                Object {
+                  "label": "Ir black",
+                  "val": "ir-black",
+                },
+                Object {
+                  "label": "Kimbie dark",
+                  "val": "kimbie.dark",
+                },
+                Object {
+                  "label": "Kimbie light",
+                  "val": "kimbie.light",
+                },
+                Object {
+                  "label": "Magula",
+                  "val": "magula",
+                },
+                Object {
+                  "label": "Mono blue",
+                  "val": "mono-blue",
+                },
+                Object {
+                  "label": "Monokai sublime",
+                  "val": "monokai-sublime",
+                },
+                Object {
+                  "label": "Monokai",
+                  "val": "monokai",
+                },
+                Object {
+                  "label": "Obsidian",
+                  "val": "obsidian",
+                },
+                Object {
+                  "label": "Ocean",
+                  "val": "ocean",
+                },
+                Object {
+                  "label": "Paraiso dark",
+                  "val": "paraiso-dark",
+                },
+                Object {
+                  "label": "Paraiso light",
+                  "val": "paraiso-light",
+                },
+                Object {
+                  "label": "Pojoaque",
+                  "val": "pojoaque",
+                },
+                Object {
+                  "label": "Purebasic",
+                  "val": "purebasic",
+                },
+                Object {
+                  "label": "Qtcreator_dark",
+                  "val": "qtcreator_dark",
+                },
+                Object {
+                  "label": "Qtcreator_light",
+                  "val": "qtcreator_light",
+                },
+                Object {
+                  "label": "Railscasts",
+                  "val": "railscasts",
+                },
+                Object {
+                  "label": "Rainbow",
+                  "val": "rainbow",
+                },
+                Object {
+                  "label": "Routeros",
+                  "val": "routeros",
+                },
+                Object {
+                  "label": "School book",
+                  "val": "school-book",
+                },
+                Object {
+                  "label": "Solarized dark",
+                  "val": "solarized-dark",
+                },
+                Object {
+                  "label": "Solarized light",
+                  "val": "solarized-light",
+                },
+                Object {
+                  "label": "Sunburst",
+                  "val": "sunburst",
+                },
+                Object {
+                  "label": "Tomorrow night blue",
+                  "val": "tomorrow-night-blue",
+                },
+                Object {
+                  "label": "Tomorrow night bright",
+                  "val": "tomorrow-night-bright",
+                },
+                Object {
+                  "label": "Tomorrow night eighties",
+                  "val": "tomorrow-night-eighties",
+                },
+                Object {
+                  "label": "Tomorrow night",
+                  "val": "tomorrow-night",
+                },
+                Object {
+                  "label": "Tomorrow",
+                  "val": "tomorrow",
+                },
+                Object {
+                  "label": "Vs",
+                  "val": "vs",
+                },
+                Object {
+                  "label": "Vs2015",
+                  "val": "vs2015",
+                },
+                Object {
+                  "label": "Xcode",
+                  "val": "xcode",
+                },
+                Object {
+                  "label": "Xt256",
+                  "val": "xt256",
+                },
+                Object {
+                  "label": "Zenburn",
+                  "val": "zenburn",
+                },
+              ]
+            }
+            key="13"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onChange={[Function]}
+            onClick={[Function]}
+            onClickLink={[Function]}
+            onSelect={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "height": "18px",
+                "width": "6rem",
+              }
+            }
+            testing={true}
+            visible={true}
+            width=""
+          >
+            <select
+              className="ui-dropdown dropdown small toolbarElement"
+              disabled={false}
+              onChange={[Function]}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                  "height": "18px",
+                  "paddingLeft": "2.4000000000000004px",
+                  "paddingRight": "12px",
+                  "width": "6rem",
+                }
+              }
+              value="solarized-light"
+            >
+              <option
+                key="0"
+                value="agate"
+              >
+                Agate
+              </option>
+              <option
+                key="1"
+                value="androidstudio"
+              >
+                Androidstudio
+              </option>
+              <option
+                key="2"
+                value="arduino-light"
+              >
+                Arduino light
+              </option>
+              <option
+                key="3"
+                value="arta"
+              >
+                Arta
+              </option>
+              <option
+                key="4"
+                value="ascetic"
+              >
+                Ascetic
+              </option>
+              <option
+                key="5"
+                value="atelier-cave-dark"
+              >
+                Atelier cave dark
+              </option>
+              <option
+                key="6"
+                value="atelier-cave-light"
+              >
+                Atelier cave light
+              </option>
+              <option
+                key="7"
+                value="atelier-dune-dark"
+              >
+                Atelier dune dark
+              </option>
+              <option
+                key="8"
+                value="atelier-dune-light"
+              >
+                Atelier dune light
+              </option>
+              <option
+                key="9"
+                value="atelier-estuary-dark"
+              >
+                Atelier estuary dark
+              </option>
+              <option
+                key="10"
+                value="atelier-estuary-light"
+              >
+                Atelier estuary light
+              </option>
+              <option
+                key="11"
+                value="atelier-forest-dark"
+              >
+                Atelier forest dark
+              </option>
+              <option
+                key="12"
+                value="atelier-forest-light"
+              >
+                Atelier forest light
+              </option>
+              <option
+                key="13"
+                value="atelier-heath-dark"
+              >
+                Atelier heath dark
+              </option>
+              <option
+                key="14"
+                value="atelier-heath-light"
+              >
+                Atelier heath light
+              </option>
+              <option
+                key="15"
+                value="atelier-lakeside-dark"
+              >
+                Atelier lakeside dark
+              </option>
+              <option
+                key="16"
+                value="atelier-lakeside-light"
+              >
+                Atelier lakeside light
+              </option>
+              <option
+                key="17"
+                value="atelier-plateau-dark"
+              >
+                Atelier plateau dark
+              </option>
+              <option
+                key="18"
+                value="atelier-plateau-light"
+              >
+                Atelier plateau light
+              </option>
+              <option
+                key="19"
+                value="atelier-savanna-dark"
+              >
+                Atelier savanna dark
+              </option>
+              <option
+                key="20"
+                value="atelier-savanna-light"
+              >
+                Atelier savanna light
+              </option>
+              <option
+                key="21"
+                value="atelier-seaside-dark"
+              >
+                Atelier seaside dark
+              </option>
+              <option
+                key="22"
+                value="atelier-seaside-light"
+              >
+                Atelier seaside light
+              </option>
+              <option
+                key="23"
+                value="atelier-sulphurpool-dark"
+              >
+                Atelier sulphurpool dark
+              </option>
+              <option
+                key="24"
+                value="atelier-sulphurpool-light"
+              >
+                Atelier sulphurpool light
+              </option>
+              <option
+                key="25"
+                value="atom-one-dark"
+              >
+                Atom one dark
+              </option>
+              <option
+                key="26"
+                value="atom-one-light"
+              >
+                Atom one light
+              </option>
+              <option
+                key="27"
+                value="brown-paper"
+              >
+                Brown paper
+              </option>
+              <option
+                key="28"
+                value="codepen-embed"
+              >
+                Codepen embed
+              </option>
+              <option
+                key="29"
+                value="color-brewer"
+              >
+                Color brewer
+              </option>
+              <option
+                key="30"
+                value="darcula"
+              >
+                Darcula
+              </option>
+              <option
+                key="31"
+                value="dark"
+              >
+                Dark
+              </option>
+              <option
+                key="32"
+                value="darkula"
+              >
+                Darkula
+              </option>
+              <option
+                key="33"
+                value="default"
+              >
+                Default
+              </option>
+              <option
+                key="34"
+                value="docco"
+              >
+                Docco
+              </option>
+              <option
+                key="35"
+                value="dracula"
+              >
+                Dracula
+              </option>
+              <option
+                key="36"
+                value="far"
+              >
+                Far
+              </option>
+              <option
+                key="37"
+                value="foundation"
+              >
+                Foundation
+              </option>
+              <option
+                key="38"
+                value="github-gist"
+              >
+                Github gist
+              </option>
+              <option
+                key="39"
+                value="github"
+              >
+                Github
+              </option>
+              <option
+                key="40"
+                value="googlecode"
+              >
+                Googlecode
+              </option>
+              <option
+                key="41"
+                value="grayscale"
+              >
+                Grayscale
+              </option>
+              <option
+                key="42"
+                value="gruvbox-dark"
+              >
+                Gruvbox dark
+              </option>
+              <option
+                key="43"
+                value="gruvbox-light"
+              >
+                Gruvbox light
+              </option>
+              <option
+                key="44"
+                value="hopscotch"
+              >
+                Hopscotch
+              </option>
+              <option
+                key="45"
+                value="hybrid"
+              >
+                Hybrid
+              </option>
+              <option
+                key="46"
+                value="idea"
+              >
+                Idea
+              </option>
+              <option
+                key="47"
+                value="ir-black"
+              >
+                Ir black
+              </option>
+              <option
+                key="48"
+                value="kimbie.dark"
+              >
+                Kimbie dark
+              </option>
+              <option
+                key="49"
+                value="kimbie.light"
+              >
+                Kimbie light
+              </option>
+              <option
+                key="50"
+                value="magula"
+              >
+                Magula
+              </option>
+              <option
+                key="51"
+                value="mono-blue"
+              >
+                Mono blue
+              </option>
+              <option
+                key="52"
+                value="monokai-sublime"
+              >
+                Monokai sublime
+              </option>
+              <option
+                key="53"
+                value="monokai"
+              >
+                Monokai
+              </option>
+              <option
+                key="54"
+                value="obsidian"
+              >
+                Obsidian
+              </option>
+              <option
+                key="55"
+                value="ocean"
+              >
+                Ocean
+              </option>
+              <option
+                key="56"
+                value="paraiso-dark"
+              >
+                Paraiso dark
+              </option>
+              <option
+                key="57"
+                value="paraiso-light"
+              >
+                Paraiso light
+              </option>
+              <option
+                key="58"
+                value="pojoaque"
+              >
+                Pojoaque
+              </option>
+              <option
+                key="59"
+                value="purebasic"
+              >
+                Purebasic
+              </option>
+              <option
+                key="60"
+                value="qtcreator_dark"
+              >
+                Qtcreator_dark
+              </option>
+              <option
+                key="61"
+                value="qtcreator_light"
+              >
+                Qtcreator_light
+              </option>
+              <option
+                key="62"
+                value="railscasts"
+              >
+                Railscasts
+              </option>
+              <option
+                key="63"
+                value="rainbow"
+              >
+                Rainbow
+              </option>
+              <option
+                key="64"
+                value="routeros"
+              >
+                Routeros
+              </option>
+              <option
+                key="65"
+                value="school-book"
+              >
+                School book
+              </option>
+              <option
+                key="66"
+                value="solarized-dark"
+              >
+                Solarized dark
+              </option>
+              <option
+                key="67"
+                value="solarized-light"
+              >
+                Solarized light
+              </option>
+              <option
+                key="68"
+                value="sunburst"
+              >
+                Sunburst
+              </option>
+              <option
+                key="69"
+                value="tomorrow-night-blue"
+              >
+                Tomorrow night blue
+              </option>
+              <option
+                key="70"
+                value="tomorrow-night-bright"
+              >
+                Tomorrow night bright
+              </option>
+              <option
+                key="71"
+                value="tomorrow-night-eighties"
+              >
+                Tomorrow night eighties
+              </option>
+              <option
+                key="72"
+                value="tomorrow-night"
+              >
+                Tomorrow night
+              </option>
+              <option
+                key="73"
+                value="tomorrow"
+              >
+                Tomorrow
+              </option>
+              <option
+                key="74"
+                value="vs"
+              >
+                Vs
+              </option>
+              <option
+                key="75"
+                value="vs2015"
+              >
+                Vs2015
+              </option>
+              <option
+                key="76"
+                value="xcode"
+              >
+                Xcode
+              </option>
+              <option
+                key="77"
+                value="xt256"
+              >
+                Xt256
+              </option>
+              <option
+                key="78"
+                value="zenburn"
+              >
+                Zenburn
+              </option>
+            </select>
+          </Dropdown>
+          <Button
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="refresh"
+            iconStyle=""
+            id=""
+            key="14"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onClick={[Function]}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "border": "solid 1px silver",
+                "height": "18px",
+                "margin": "0 1px 0 2px",
+                "width": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-button button ripple small toolbarElement"
+              onClick={[Function]}
+              style={
+                Object {
+                  "border": "solid 1px silver",
+                  "height": "18px",
+                  "margin": "0 1px 0 2px",
+                  "width": "18px",
+                }
+              }
+            >
+              <Icon
+                className="icon"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                iconName="refresh"
+                id=""
+                imageFile=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="small"
+                style={Object {}}
+                testing={false}
+                visible={true}
+                width=""
+              >
+                <i
+                  className="ui-icon icon none fa fa-fw fa-refresh small"
+                  style={Object {}}
+                />
+              </Icon>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </Toolbar>
+    <div
+      className="ui-editor-quill editor"
+      id="editor"
+    />
+  </div>
+</Editor>
+`;
+
 exports[`Test retrieval of the Editor props object 1`] = `
 Object {
   "background": "#000000",

@@ -1,29 +1,53 @@
 /**
- * {description}
+ * A dropdown list using the HTML select/option elements.  An initial list of
+ * values and their associated labels are given to the control.
+ *
+ * This is a static dropdown.  Use the `Select` dropdown for a dynamic
+ * version.
+ *
+ * Items are placed into an array of structures of type `DropdownOption`.
+ * Each option contains a value (the id)  and the dispay label.  This strucure
+ * is used to build the `<option>` list under the `<select>`.  The user then
+ * selects an optoin from this list.  The selection invoks an `onSelect`
+ * callback.
  *
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/dropdown.png" width="60%" />
  *
- * #### Examples:
+ * ## Examples:
  *
  * ```javascript
- * import {Button} from 'gadgets';
- * <Button iconName="cab" onClick={someFunction} />
+ * import {Dropdown, DropdownOption} from 'gadgets';
+ *
+ * let options: DropdownOption[] = [
+ *     {val: 'val1', label: 'label1'},
+ *     {val: 'val2', label: 'label2'},
+ *     {val: 'val3', label: 'label3'}
+ * ];
+ *
+ * <Dropdown iconName="cab" onClick={someFunction}
+ *     defaultVal='val1'
+ *     items={options}
+ *     onSelect{(val: string) => {// process value}}
+ * />
  * ```
  *
+ * ## API
  * #### Events
- * - `{name}` - {description}
+ * - `onSelect(val: string)` - The value (id) of the item that was selected
+ * from the list.
  *
  * #### Styles
- * - `` - {description}
+ * - `ui-dropdown` - A global style placed on the `<select>` element.
  *
  * #### Properties
- * - `{name}: {datatype}` - {description}
+ * - `initialItem: {string} ('')` - The initial id value from the list of
+ * provided items.
+ * - `items: {DropdownOption[]} ([])` - An array of items used to build
+ * the list (see example above for construction).
  *
  * @module Dropdown
  */
-
-// TODO: add Dropdown documentation
 
 'use strict';
 

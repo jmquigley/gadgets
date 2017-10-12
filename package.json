@@ -34,7 +34,7 @@
 		"dependencies": {
 				"debug": "^3.1.0",
 				"util.join": "^0.0.14",
-				"util.pkgwrap": ">=0.0.70"
+				"util.pkgwrap": ">=0.0.71"
 		},
 		"devDependencies": {
 				"@types/debug": "^0.0.30",
@@ -115,7 +115,7 @@
 				"util.promise": "^0.0.14",
 				"util.toolbox": "0.0.49",
 				"util.wait": "0.0.27",
-				"webpack": "^3.6.0",
+				"webpack": "^3.7.1",
 				"webpack-bundle-analyzer": "^2.9.0"
 		},
 		"pkgwrap": {
@@ -126,7 +126,8 @@
 						"bin/**/*.js",
 						"bin/**/*.d.ts",
 						"docs",
-						"lib/**/*.jsx?",
+						"lib/**/*.js",
+						"lib/**/*.jsx",
 						"lib/**/*.d.ts"
 				]
 		},
@@ -134,7 +135,8 @@
 				"collectCoverage": true,
 				"coveragePathIgnorePatterns": [
 						"<rootDir>/bin/",
-						"<rootDir>/node_modules/"
+						"<rootDir>/node_modules/",
+						"<rootDir>/test"
 				],
 				"moduleFileExtensions": [
 						"js",
@@ -149,11 +151,13 @@
 				"notify": true,
 				"setupFiles": [
 						"<rootDir>/bin/workaround.js",
-						"<rootDir>/bin/setupEnzyme.js"
+						"<rootDir>/bin/setupEnzyme.js",
+						"<rootDir>/bin/setupDOM.js"
 				],
 				"snapshotSerializers": [
 						"enzyme-to-json/serializer"
 				],
+				"testEnvironment": "jsdom",
 				"testPathIgnorePatterns": [
 						"<rootDir>/bin/",
 						"<rootDir>/node_modules/"

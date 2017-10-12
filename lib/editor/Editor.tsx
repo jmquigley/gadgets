@@ -42,7 +42,7 @@
  * and the editor.
  * - `ui-editor-toolbar` - a global style attached to the `<div>` around the
  * toolbar component.
- * - `ql-editor` - a global style attached to the Quill editor component
+ * - `ui-editor-quill` - a global style attached to the Quill editor component
  *
  * #### Properties
  * - `background: {string} (Color.black)` - Sets the default background color
@@ -138,6 +138,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	};
 	private _markup: Markup;
 	private _modes: DropdownOption[] = [];
+	private _editorStyles: ClassNames = new ClassNames();
 	private _toolbarStyles: ClassNames = new ClassNames();
 
 	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
@@ -150,6 +151,11 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		}
 		debug('using editor key: %s', this._editorKey);
 
+		this._editorStyles.add([
+			'ui-editor-quill',
+			this.styles.editor
+		]);
+
 		this._rootStyles.add([
 			'ui-editor'
 		]);
@@ -159,6 +165,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 			this.styles.toolbar
 		]);
 
+		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props);
 	}
 
@@ -195,6 +202,23 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		this._modes = this._markup.modes.map((mode: string) => (
 			{val: mode, label: mode.capitalize()}
 		));
+	}
+
+	public componentWillUpdate(nextProps: EditorProps) {
+		this._editorStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
+			this.styles.disabled,
+			'nohover'
+		);
+	}
+
+	public componentWillReceiveProps(nextProps: EditorProps) {
+		if (this._editor) {
+			if (nextProps.disabled) {
+				this._editor.enable(false);
+			} else {
+				this._editor.enable(true);
+			}
+		}
 	}
 
 	public componentDidMount() {
@@ -258,18 +282,25 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 				className={this._rootStyles.classnames}
 				style={this.inlineStyles}
 			>
-				<Toolbar className={this._toolbarStyles.classnames} sizing={Sizing.small}>
+				<Toolbar
+					{...this.props}
+					className={this._toolbarStyles.classnames}
+					sizing={Sizing.small}
+				>
 					<Dropdown
+						{...this.props}
 						defaultVal={this.props.defaultFont}
 						items={this._fontList}
 						onSelect={this._markup && this._markup.setFont}
 					/>
 					<Dropdown
+						{...this.props}
 						defaultVal={this.props.defaultFontSize.toString()}
 						items={this._fontSizes}
 						onSelect={this._markup && this._markup.setFontSize}
 					/>
 					<Dropdown
+						{...this.props}
 						defaultVal={'--'}
 						items={this._headings}
 						onSelect={this._markup && this._markup.setHeader}
@@ -284,11 +315,13 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 					<Button iconName="repeat" onClick={this._markup && this._markup.redo} />
 					<Divider dividerType={DividerType.vertical} />
 					<Dropdown
+						{...this.props}
 						defaultVal={'markdown'}
 						items={this._modes}
 						onSelect={this._markup && this._markup.setMode}
 					/>
 					<Dropdown
+						{...this.props}
 						defaultVal={'solarized-light'}
 						items={this._highlights}
 						onSelect={this._markup && this._markup.setHighlight}
@@ -298,7 +331,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 					/>
 					<Button iconName="refresh" onClick={this._markup && this._markup.refresh()} />
 				</Toolbar>
-				<div id={this._editorKey} className={this.styles.editor} />
+				<div id={this._editorKey} className={this._editorStyles.classnames} />
 			</div>
 		);
 	}
