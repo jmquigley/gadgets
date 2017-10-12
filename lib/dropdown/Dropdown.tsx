@@ -12,7 +12,7 @@
  * callback.
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/dropdown.png" width="60%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/dropdown.png" width="20%" height="20%" />
  *
  * ## Examples:
  *

@@ -18,7 +18,7 @@
  * - Changing the syntax highlihgting color scheme
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/editor.png" width="60%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/editor.png" width="70%" />
  *
  * ## Examples:
  *
