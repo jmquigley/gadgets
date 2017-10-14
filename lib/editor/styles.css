@@ -2,8 +2,13 @@
 
 :local {
 
+	.container {
+		min-width: 600px;
+		min-height: 500px;
+	}
+
 	.editor {
-		height: 500px;
+		height: 100%;
 		position: relative;
 	}
 

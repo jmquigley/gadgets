@@ -24,7 +24,12 @@
  *
  * ```javascript
  * import {Editor} from 'gadgets';
- * <Editor content='' onChange={someFunction(text)} />
+ *
+ * <Editor
+ *     content=''
+ *     onChange={someFunction(text)}
+ *     scheme={{bold: "red"}}
+ * />
  * ```
  *
  * ## API
@@ -45,13 +50,41 @@
  * - `ui-editor-quill` - a global style attached to the Quill editor component
  *
  * #### Properties
- * - `background: {string} (Color.black)` - Sets the default background color
- * for the editing window.
  * - `content: {string} ('')` - the initial text content for the component
  * - `defaultFont: {string} ('Fira Code')` - The name of the default editor font
  * - `defaultFontSize: {number} (12)` - The size of the font in pixels (px)
- * - `foreground: {string} (Color.white)` - Sets the default foreground (text)
- * color for the editing window
+ * - `scheme: {Object} ({foreground: 'white', background: 'black'})` - the
+ * color customizations used by the markup processor.  It contains the following
+ * keys:
+ *
+ *   - `admonition` - special strings like TODO or FIXME.  This is the foreground color
+ *   - `admonitionBackground` - background color for special strings like TODO and FIXME
+ *   - `background (white)` - the editor background color
+ *   - `blockquote`
+ *   - `bold`
+ *   - `chevron` - the paren, brace, brackets around an item (such as a link)
+ *   - `fence` - The color of the fenced code region
+ *   - `foreground (black)` - the editor foreground color
+ *   - `forumula` - LaTeX formula regions or inlines
+ *   - `h1` - header level 1
+ *   - `h2` - header level 2
+ *   - `h3` - header level 3
+ *   - `h4` - header level 4
+ *   - `h5` - header level 5
+ *   - `h6` - header level 6
+ *   - `hr` - horizontal line markup
+ *   - `italic`
+ *   - `language` - the name of the language for a fenced code region.  Today
+ *     this is just decoration due to limits in Quill (it  only uses code to
+ *     try discover the language implicitly instead of  explicit declaration)
+ *   - `link` - URI links
+ *   - `linkName` - The color associated with the name ([name](link)) in a link
+ *   - `linkTitle` - optional title values on links
+ *   - `list` - number and bullet list chevrons
+ *   - `mono`
+ *   - `strikethrough`
+ *   - `underline`
+ *   - `wiki` - wiki name coloring in [[name | link]]
  *
  * @module Editor
  */
@@ -94,25 +127,29 @@ export interface EditorProps extends BaseProps {
 	onChange?: any;
 	onClick?: any;
 	onClickLink?: any;
+	scheme?: any;
 }
 
 export function getDefaultEditorProps(): EditorProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			background: Color.black,
 			content: '',
 			defaultFont: 'Fira Code',
 			defaultFontSize: 12,
-			foreground: Color.white,
 			onChange: nilEvent,
 			onClick: nilEvent,
-			onClickLink: nilEvent
+			onClickLink: nilEvent,
+			scheme: {
+				background: Color.black,
+				foreground: Color.white
+			}
 		})
 	);
 }
 
 export class Editor extends BaseComponent<EditorProps, undefined> {
 
+	private _custom: any;
 	private _editor: any;
 	private _editorKey: string = 'editor';
 	private _fontList: DropdownOption[] = [];
@@ -157,7 +194,8 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		]);
 
 		this._rootStyles.add([
-			'ui-editor'
+			'ui-editor',
+			this.styles.container
 		]);
 
 		this._toolbarStyles.add([
@@ -219,6 +257,11 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 				this._editor.enable(true);
 			}
 		}
+
+		this._custom = Object.assign({},
+			Editor.defaultProps.scheme,
+			nextProps.scheme
+		);
 	}
 
 	public componentDidMount() {
@@ -239,10 +282,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 					bindings: this._keybindings
 				},
 				markup: {
-					custom: {
-						background: this.props.background,
-						foreground: this.props.foreground
-					},
+					custom: this._custom,
 					fontName: this.props.defaultFont,
 					fontSize: this.props.defaultFontSize,
 					followLinks: true,

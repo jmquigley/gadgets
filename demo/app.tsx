@@ -721,7 +721,7 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildEditor = () => (
 		<Container id="editorExample">
-			<Editor content={markdown} />
+			<Editor content={markdown} scheme={{bold: "red"}} />
 		</Container>
 	);
 
