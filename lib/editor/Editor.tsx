@@ -278,6 +278,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	}
 
 	public componentDidMount() {
+		debug('componentDidMount()');
 
 		// The quill editor must be added after the component has mounted
 		// because the DOM element used for replacement is not available
@@ -386,7 +387,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 							width: '6rem'
 						}}
 					/>
-					<Button iconName="refresh" onClick={this._markup && this._markup.refresh()} />
+					<Button iconName="refresh" onClick={this._markup && this._markup.refresh} />
 				</Toolbar>
 				<div id={this._editorKey} className={this._editorStyles.classnames} />
 			</div>
