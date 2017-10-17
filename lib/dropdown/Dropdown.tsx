@@ -34,7 +34,7 @@
  *
  * ## API
  * #### Events
- * - `onSelect(val: string)` - The value (id) of the item that was selected
+ * - `onSelect(val: any)` - The value (id) of the item that was selected
  * from the list.
  *
  * #### Styles
@@ -63,7 +63,7 @@ import {
 } from '../shared';
 
 export interface DropdownOption {
-	val: string;
+	value: string;
 	label: string;
 }
 
@@ -127,17 +127,17 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 			paddingLeft: calc(size, '* 0.2')
 		};
 
-		this._options = nextProps.items.map(({val, label}, idx) => (
-			<option key={this._keys.at(idx)} value={val}>
+		this._options = nextProps.items.map(({value, label}, idx) => (
+			<option key={this._keys.at(idx)} value={value}>
 			{label}
 			</option>
 		));
 	}
 
 	private handleChange(e: React.FormEvent<HTMLSelectElement>) {
-		const val: string = e.currentTarget.value;
+		const val: any = e.currentTarget.value;
 		this.setState({
-			currentValue: val
+			currentValue: String(val)
 		}, () => {
 			this.props.onSelect(val);
 		});

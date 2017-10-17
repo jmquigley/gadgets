@@ -52,12 +52,14 @@ export interface ButtonCircleProps extends ButtonProps {
 export function getDefaultButtonCircleProps(): ButtonProps {
 	return cloneDeep(Object.assign({},
 		getDefaultButtonProps(), {
-			backgroundColor: 'white',
-			borderColor: 'black',
-			color: 'black',
 			iconName: 'bomb',
 			onClick: nilEvent,
-			sizing: Sizing.normal
+			sizing: Sizing.normal,
+			style: {
+				backgroundColor: 'white',
+				borderColor: 'black',
+				color: 'black'
+			}
 		})
 	);
 }
@@ -70,7 +72,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 	private _containerStyles: ClassNames = new ClassNames();
 
 	constructor(props: ButtonCircleProps) {
-		super(props, require('./styles.css'));
+		super(props, require('./styles.css'), ButtonCircle.defaultProps.style);
 
 		this._buttonStyles.add([
 			this.borderStyle(),
@@ -97,7 +99,6 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 						{...this.props}
 						className={this._buttonStyles.classnames}
 						iconName={this.props.iconName}
-						iconStyle={this.boxStyle()}
 						style={this.inlineStyles}
 					/>
 				</div>

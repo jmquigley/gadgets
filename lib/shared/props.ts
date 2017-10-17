@@ -5,13 +5,11 @@
  * The following are the properties on the BaseProps object used by most
  * components.
  *
- * - `backgroundColor: string (inherit)` - the CSS background color for the control
- * - `borderColor: string (inherit)` - the CSS border color around the control.
- * - `children: React.ReactNode (null)` - the React child nodes that may exists
- * within this control (not all controls will have children i.e. self closed)
- * - `color: string (inherit)` - the CSS foreground color for the control.
+ * - `className: {string} ('')` - the global classname string that will be applied
+ * to the given component
  * - `contentEditable: boolean (false)` - this will make the control editable.  This
  * is used in controls like the Label to allow changing the string contents.
+ * - `direction`
  * - `disabled: boolean (false)` - if true then then the control is disabled.
  * - `id: string ('')` - the CSS id field.  This is used to uniquely identify a
  * component (for CSS)

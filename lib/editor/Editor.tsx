@@ -4,8 +4,9 @@
  * [Quill](https://quilljs.com/) editor/api.  It has the following
  * editing modes for highlighting:
  *
- * - Plaintext
+ * - Asciidoc
  * - Markdown
+ * - Plaintext
  *
  * The modes available are dependent on the Quill module.
  *
@@ -222,7 +223,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 
 	private buildFontList() {
 		this._fontList = this._markup.fonts.map((fontName: string) => (
-			{val: fontName, label: fontName}
+			{value: fontName, label: fontName}
 		));
 	}
 
@@ -232,19 +233,19 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		];
 
 		this._fontSizes = sizes.map((size: number) => (
-			{val: String(size), label: String(size)}
+			{value: String(size), label: String(size)}
 		));
 	}
 
 	private buildHighlights() {
 		this._highlights = this._markup.highlights.map((highlight: string) => (
-			{val: highlight, label: highlight.capitalize().replace(/\W/g, ' ')}
+			{value: highlight, label: highlight.capitalize().replace(/\W/g, ' ')}
 		));
 	}
 
 	private buildModes() {
 		this._modes = this._markup.modes.map((mode: string) => (
-			{val: mode, label: mode.capitalize()}
+			{value: mode, label: mode.capitalize()}
 		));
 	}
 
@@ -343,7 +344,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 					<Button iconName="underline" onClick={this._markup && this._markup.setUnderline} />
 					<Button iconName="strikethrough" onClick={this._markup && this._markup.setStrikeThrough} />
 					<Button iconName="code" onClick={this._markup && this._markup.setMono} />
-					<ButtonDialog iconName="header">
+					<ButtonDialog iconName="header" notriangle>
 						<List sizing={Sizing.small} alternating>
 							<ListItem title="h1" onSelect={this.handleSelect('1')} />
 							<ListItem title="h2" onSelect={this.handleSelect('2')} />
@@ -369,6 +370,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 						items={this._fontSizes}
 						onSelect={this._markup && this._markup.setFontSize}
 					/>
+					<Divider dividerType={DividerType.vertical} />
 					<Dropdown
 						{...this.props}
 						defaultVal={'markdown'}

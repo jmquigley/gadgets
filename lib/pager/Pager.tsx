@@ -360,7 +360,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						key={String(page)}
 						noicon
 						onClick={this.handleSelect}
-						sizing={this.props.sizing}
+						sizing={this.prev(this.props.sizing).type}
 						text={String(page)}
 					/>
 				);

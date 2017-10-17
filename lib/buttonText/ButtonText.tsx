@@ -151,7 +151,6 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		if (!this.props.noicon && this.props.justify !== Justify.center) {
 			icon = (
 				<Icon
-					className={this.styles.icon}
 					iconName={this.props.iconName}
 					sizing={this.props.sizing}
 				/>

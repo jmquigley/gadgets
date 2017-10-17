@@ -110,10 +110,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       </span>
     </Label>
     <ButtonCircle
-      backgroundColor="white"
-      borderColor="black"
       className="tagDeleteButton middle"
-      color="black"
       contentEditable={false}
       direction="right"
       disabled={true}
@@ -131,6 +128,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       sizing="small"
       style={
         Object {
+          "backgroundColor": "#ffffff",
           "borderColor": "#d9534f",
           "color": "#d9534f",
         }
@@ -146,17 +144,14 @@ exports[`Test disabling of the simple Tag instance 1`] = `
           className="buttonCircleContainer"
         >
           <Button
-            backgroundColor="white"
-            borderColor="black"
             className="smallBorder buttonCircleIcon"
-            color="black"
             contentEditable={false}
             direction="right"
             disabled={true}
             focus={false}
             height=""
             iconName="times"
-            iconStyle="smallBox"
+            iconStyle=""
             id=""
             location="none"
             noedit={false}
@@ -167,6 +162,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
             sizing="small"
             style={
               Object {
+                "backgroundColor": "#ffffff",
                 "borderColor": "#d9534f",
                 "color": "#d9534f",
               }
@@ -180,13 +176,14 @@ exports[`Test disabling of the simple Tag instance 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "backgroundColor": "#ffffff",
                   "borderColor": "#d9534f",
                   "color": "#d9534f",
                 }
               }
             >
               <Icon
-                className="smallBox icon"
+                className="icon"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -207,7 +204,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 width=""
               >
                 <i
-                  className="ui-icon icon none fa fa-fw fa-times small smallBox icon"
+                  className="ui-icon icon none fa fa-fw fa-times small"
                   style={Object {}}
                 />
               </Icon>
@@ -293,10 +290,7 @@ exports[`Test making Tag invisible 1`] = `
       </span>
     </Label>
     <ButtonCircle
-      backgroundColor="white"
-      borderColor="black"
       className="tagDeleteButton middle"
-      color="black"
       contentEditable={false}
       direction="right"
       disabled={true}
@@ -314,6 +308,7 @@ exports[`Test making Tag invisible 1`] = `
       sizing="small"
       style={
         Object {
+          "backgroundColor": "#ffffff",
           "borderColor": "#d9534f",
           "color": "#d9534f",
         }
@@ -329,17 +324,14 @@ exports[`Test making Tag invisible 1`] = `
           className="buttonCircleContainer"
         >
           <Button
-            backgroundColor="white"
-            borderColor="black"
             className="smallBorder buttonCircleIcon"
-            color="black"
             contentEditable={false}
             direction="right"
             disabled={true}
             focus={false}
             height=""
             iconName="times"
-            iconStyle="smallBox"
+            iconStyle=""
             id=""
             location="none"
             noedit={false}
@@ -350,6 +342,7 @@ exports[`Test making Tag invisible 1`] = `
             sizing="small"
             style={
               Object {
+                "backgroundColor": "#ffffff",
                 "borderColor": "#d9534f",
                 "color": "#d9534f",
               }
@@ -363,13 +356,14 @@ exports[`Test making Tag invisible 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "backgroundColor": "#ffffff",
                   "borderColor": "#d9534f",
                   "color": "#d9534f",
                 }
               }
             >
               <Icon
-                className="smallBox icon"
+                className="icon"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -390,7 +384,7 @@ exports[`Test making Tag invisible 1`] = `
                 width=""
               >
                 <i
-                  className="ui-icon icon none fa fa-fw fa-times small smallBox icon"
+                  className="ui-icon icon none fa fa-fw fa-times small"
                   style={Object {}}
                 />
               </Icon>

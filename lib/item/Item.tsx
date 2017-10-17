@@ -94,7 +94,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 			case Sizing.xlarge:
 			case Sizing.xxlarge:
 				this._titlePadding = '4px 8px';
-				this._buttonScale = 0.25;
+				this._buttonScale = 0.33;
 				break;
 
 			case Sizing.small:

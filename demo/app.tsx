@@ -361,7 +361,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><ButtonCircle iconName="times" sizing={Sizing.xlarge}/></td>
 						<td><ButtonCircle iconName="times" sizing={Sizing.xxlarge}/></td>
 						<td><ButtonCircle iconName="times" sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.normal} style={{color: "green", backgroundColor: "orange"}}/></td>
+						<td><ButtonCircle iconName="times" sizing={Sizing.normal} style={{color: "green", backgroundColor: "orange", borderColor: "green"}}/></td>
 					</tr><tr>
 						<th>ButtonDialog</th>
 						<td><ButtonDialog iconName="bars" sizing={Sizing.xxsmall}>dialog</ButtonDialog></td>
@@ -756,20 +756,17 @@ class App extends React.Component<AppProps, AppState> {
 	private buildListItemWithHeader = () => (
 		<Container id="listExample1">
 
-			<div className="selectBox">
-				<Select
-					name="size-selection"
-					value={this.state.sizingOption}
-					options={sizingOptions}
-					onChange={(val: any) => {
-						if (val != null) {
-							this.setState({sizingOption: val.value});
-						}
-					}}
-					sizing={Sizing.small}
-					/>
-					<br/><br/>
-			</div>
+			<Dropdown
+				defaultVal="normal"
+				items={sizingOptions}
+				onSelect={(val: any) => {
+					if (val != null) {
+						debug('select sizing: %o', val);
+						this.setState({sizingOption: val});
+					}
+				}}
+			/>
+			<br /><br/>
 
 			<List alternating sizing={this.state.sizingOption}>
 				<ListHeader

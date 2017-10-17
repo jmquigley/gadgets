@@ -153,6 +153,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 					onClick={this.handleOnClick}
 					sizing={this.prev().type}
 					style={{
+						backgroundColor: Color.white,
 						borderColor: Color.error,
 						color: Color.error
 					}}

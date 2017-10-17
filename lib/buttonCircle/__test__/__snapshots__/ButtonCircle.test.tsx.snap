@@ -2,10 +2,7 @@
 
 exports[`Test ButtonCircle click event 1`] = `
 <ButtonCircle
-  backgroundColor="white"
-  borderColor="black"
   className=""
-  color="black"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -21,7 +18,13 @@ exports[`Test ButtonCircle click event 1`] = `
   onClick={[Function]}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "black",
+      "color": "black",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -33,17 +36,14 @@ exports[`Test ButtonCircle click event 1`] = `
       className="buttonCircleContainer"
     >
       <Button
-        backgroundColor="white"
-        borderColor="black"
         className="normalBorder buttonCircleIcon"
-        color="black"
         contentEditable={false}
         direction="right"
         disabled={false}
         focus={false}
         height=""
         iconName="bomb"
-        iconStyle="normalBox"
+        iconStyle=""
         id=""
         location="none"
         noedit={false}
@@ -52,7 +52,13 @@ exports[`Test ButtonCircle click event 1`] = `
         onClick={[Function]}
         selected={false}
         sizing="normal"
-        style={Object {}}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "black",
+            "color": "black",
+          }
+        }
         testing={false}
         visible={true}
         width=""
@@ -60,10 +66,16 @@ exports[`Test ButtonCircle click event 1`] = `
         <div
           className="ui-button button ripple normal normalBorder buttonCircleIcon"
           onClick={[Function]}
-          style={Object {}}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderColor": "black",
+              "color": "black",
+            }
+          }
         >
           <Icon
-            className="normalBox icon"
+            className="icon"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -84,7 +96,7 @@ exports[`Test ButtonCircle click event 1`] = `
             width=""
           >
             <i
-              className="ui-icon icon none fa fa-fw fa-bomb normal normalBox icon"
+              className="ui-icon icon none fa fa-fw fa-bomb normal"
               style={Object {}}
             />
           </Icon>
@@ -103,17 +115,14 @@ exports[`Test creation of a ButtonCircle control 1`] = `
     className="buttonCircleContainer"
   >
     <Button
-      backgroundColor="white"
-      borderColor="black"
       className="normalBorder buttonCircleIcon"
-      color="black"
       contentEditable={false}
       direction="right"
       disabled={false}
       focus={false}
       height=""
       iconName="bomb"
-      iconStyle="normalBox"
+      iconStyle=""
       id=""
       location="none"
       noedit={false}
@@ -122,7 +131,13 @@ exports[`Test creation of a ButtonCircle control 1`] = `
       onClick={[Function]}
       selected={false}
       sizing="normal"
-      style={Object {}}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "color": "black",
+        }
+      }
       testing={false}
       visible={true}
       width=""
@@ -133,10 +148,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
 
 exports[`Test disabling of a ButtonCircle control 1`] = `
 <ButtonCircle
-  backgroundColor="white"
-  borderColor="black"
   className=""
-  color="black"
   contentEditable={false}
   direction="right"
   disabled={true}
@@ -152,7 +164,13 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   onClick={[Function]}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "black",
+      "color": "black",
+    }
+  }
   testing={false}
   visible={true}
   width=""
@@ -164,17 +182,14 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
       className="buttonCircleContainer"
     >
       <Button
-        backgroundColor="white"
-        borderColor="black"
         className="normalBorder buttonCircleIcon"
-        color="black"
         contentEditable={false}
         direction="right"
         disabled={true}
         focus={false}
         height=""
         iconName="bomb"
-        iconStyle="normalBox"
+        iconStyle=""
         id=""
         location="none"
         noedit={false}
@@ -183,7 +198,13 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         onClick={[Function]}
         selected={false}
         sizing="normal"
-        style={Object {}}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "black",
+            "color": "black",
+          }
+        }
         testing={false}
         visible={true}
         width=""
@@ -191,10 +212,16 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         <div
           className="ui-button button normal normalBorder buttonCircleIcon disabled nohover"
           onClick={[Function]}
-          style={Object {}}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderColor": "black",
+              "color": "black",
+            }
+          }
         >
           <Icon
-            className="normalBox icon"
+            className="icon"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -215,7 +242,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
             width=""
           >
             <i
-              className="ui-icon icon none fa fa-fw fa-bomb normal normalBox icon"
+              className="ui-icon icon none fa fa-fw fa-bomb normal"
               style={Object {}}
             />
           </Icon>
@@ -228,10 +255,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
 
 exports[`Test making a ButtonCircle control invisible 1`] = `
 <ButtonCircle
-  backgroundColor="white"
-  borderColor="black"
   className=""
-  color="black"
   contentEditable={false}
   direction="right"
   disabled={false}
@@ -247,7 +271,13 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   onClick={[Function]}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "black",
+      "color": "black",
+    }
+  }
   testing={false}
   visible={false}
   width=""
@@ -259,17 +289,14 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
       className="buttonCircleContainer"
     >
       <Button
-        backgroundColor="white"
-        borderColor="black"
         className="normalBorder buttonCircleIcon"
-        color="black"
         contentEditable={false}
         direction="right"
         disabled={false}
         focus={false}
         height=""
         iconName="bomb"
-        iconStyle="normalBox"
+        iconStyle=""
         id=""
         location="none"
         noedit={false}
@@ -278,7 +305,13 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
         onClick={[Function]}
         selected={false}
         sizing="normal"
-        style={Object {}}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "black",
+            "color": "black",
+          }
+        }
         testing={false}
         visible={false}
         width=""
@@ -286,10 +319,16 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
         <div
           className="ui-button button ripple normal normalBorder buttonCircleIcon invisible"
           onClick={[Function]}
-          style={Object {}}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderColor": "black",
+              "color": "black",
+            }
+          }
         >
           <Icon
-            className="normalBox icon"
+            className="icon"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -310,7 +349,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
             width=""
           >
             <i
-              className="ui-icon icon none fa fa-fw fa-bomb normal normalBox icon"
+              className="ui-icon icon none fa fa-fw fa-bomb normal"
               style={Object {}}
             />
           </Icon>
@@ -323,10 +362,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
 
 exports[`Test retrieval of ButtonCircle props object 1`] = `
 Object {
-  "backgroundColor": "white",
-  "borderColor": "black",
   "className": "",
-  "color": "black",
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
@@ -342,7 +378,11 @@ Object {
   "onClick": [Function],
   "selected": false,
   "sizing": "normal",
-  "style": Object {},
+  "style": Object {
+    "backgroundColor": "white",
+    "borderColor": "black",
+    "color": "black",
+  },
   "testing": false,
   "visible": true,
   "width": "",

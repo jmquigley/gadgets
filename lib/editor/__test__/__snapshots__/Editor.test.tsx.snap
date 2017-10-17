@@ -440,7 +440,7 @@ exports[`Test creation of an Editor instance 1`] = `
             noedit={false}
             nohover={false}
             noripple={false}
-            notriangle={false}
+            notriangle={true}
             onClick={[Function]}
             selected={false}
             sizing="small"
@@ -1940,64 +1940,6 @@ exports[`Test creation of an Editor instance 1`] = `
                     </div>
                   </List>
                 </div>
-                <Triangle
-                  className="dialogTriangleBottom buttonDialogHide"
-                  contentEditable={false}
-                  direction="up"
-                  disabled={false}
-                  focus={false}
-                  height=""
-                  id=""
-                  location="none"
-                  nobase={true}
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
-                  style={
-                    Object {
-                      "fill": "white",
-                      "stroke": "black",
-                    }
-                  }
-                  testing={false}
-                  visible={true}
-                  width=""
-                >
-                  <svg
-                    className="ui-triangle triangle normalBox triangleUp normal dialogTriangleBottom buttonDialogHide"
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "fill": "white",
-                        "stokeWidth": "2px",
-                        "stroke": "black",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 40 40"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon
-                      points="-3,35, 20,10 43,35"
-                      style={
-                        Object {
-                          "stroke": "none",
-                        }
-                      }
-                    />
-                    <polygon
-                      points="-3,35, 20,10 43,35, 20,10"
-                      style={
-                        Object {
-                          "strokeLinecap": "square",
-                          "strokeWidth": undefined,
-                        }
-                      }
-                    />
-                  </svg>
-                </Triangle>
               </div>
             </div>
           </ButtonDialog>
@@ -2232,15 +2174,15 @@ exports[`Test creation of an Editor instance 1`] = `
               Array [
                 Object {
                   "label": "Fira Code",
-                  "val": "Fira Code",
+                  "value": "Fira Code",
                 },
                 Object {
                   "label": "Inconsolata",
-                  "val": "Inconsolata",
+                  "value": "Inconsolata",
                 },
                 Object {
                   "label": "Source Code Pro",
-                  "val": "Source Code Pro",
+                  "value": "Source Code Pro",
                 },
               ]
             }
@@ -2321,51 +2263,51 @@ exports[`Test creation of an Editor instance 1`] = `
               Array [
                 Object {
                   "label": "8",
-                  "val": "8",
+                  "value": "8",
                 },
                 Object {
                   "label": "9",
-                  "val": "9",
+                  "value": "9",
                 },
                 Object {
                   "label": "10",
-                  "val": "10",
+                  "value": "10",
                 },
                 Object {
                   "label": "11",
-                  "val": "11",
+                  "value": "11",
                 },
                 Object {
                   "label": "12",
-                  "val": "12",
+                  "value": "12",
                 },
                 Object {
                   "label": "13",
-                  "val": "13",
+                  "value": "13",
                 },
                 Object {
                   "label": "14",
-                  "val": "14",
+                  "value": "14",
                 },
                 Object {
                   "label": "16",
-                  "val": "16",
+                  "value": "16",
                 },
                 Object {
                   "label": "20",
-                  "val": "20",
+                  "value": "20",
                 },
                 Object {
                   "label": "24",
-                  "val": "24",
+                  "value": "24",
                 },
                 Object {
                   "label": "32",
-                  "val": "32",
+                  "value": "32",
                 },
                 Object {
                   "label": "48",
-                  "val": "48",
+                  "value": "48",
                 },
               ]
             }
@@ -2483,6 +2425,43 @@ exports[`Test creation of an Editor instance 1`] = `
               </option>
             </select>
           </Dropdown>
+          <Divider
+            className="toolbarElement"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            dividerType="|"
+            focus={false}
+            height=""
+            id=""
+            key="12"
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
+            sizing="small"
+            style={
+              Object {
+                "height": "18px",
+              }
+            }
+            testing={false}
+            visible={true}
+            width=""
+          >
+            <div
+              className="ui-divider divider small toolbarElement"
+              style={
+                Object {
+                  "height": "18px",
+                  "width": "6px",
+                }
+              }
+            >
+              |
+            </div>
+          </Divider>
           <Dropdown
             className="toolbarElement"
             content="test content"
@@ -2500,19 +2479,19 @@ exports[`Test creation of an Editor instance 1`] = `
               Array [
                 Object {
                   "label": "Asciidoc",
-                  "val": "asciidoc",
+                  "value": "asciidoc",
                 },
                 Object {
                   "label": "Markdown",
-                  "val": "markdown",
+                  "value": "markdown",
                 },
                 Object {
                   "label": "Text",
-                  "val": "text",
+                  "value": "text",
                 },
               ]
             }
-            key="12"
+            key="13"
             location="none"
             noedit={false}
             nohover={false}
@@ -2589,323 +2568,323 @@ exports[`Test creation of an Editor instance 1`] = `
               Array [
                 Object {
                   "label": "Agate",
-                  "val": "agate",
+                  "value": "agate",
                 },
                 Object {
                   "label": "Androidstudio",
-                  "val": "androidstudio",
+                  "value": "androidstudio",
                 },
                 Object {
                   "label": "Arduino light",
-                  "val": "arduino-light",
+                  "value": "arduino-light",
                 },
                 Object {
                   "label": "Arta",
-                  "val": "arta",
+                  "value": "arta",
                 },
                 Object {
                   "label": "Ascetic",
-                  "val": "ascetic",
+                  "value": "ascetic",
                 },
                 Object {
                   "label": "Atelier cave dark",
-                  "val": "atelier-cave-dark",
+                  "value": "atelier-cave-dark",
                 },
                 Object {
                   "label": "Atelier cave light",
-                  "val": "atelier-cave-light",
+                  "value": "atelier-cave-light",
                 },
                 Object {
                   "label": "Atelier dune dark",
-                  "val": "atelier-dune-dark",
+                  "value": "atelier-dune-dark",
                 },
                 Object {
                   "label": "Atelier dune light",
-                  "val": "atelier-dune-light",
+                  "value": "atelier-dune-light",
                 },
                 Object {
                   "label": "Atelier estuary dark",
-                  "val": "atelier-estuary-dark",
+                  "value": "atelier-estuary-dark",
                 },
                 Object {
                   "label": "Atelier estuary light",
-                  "val": "atelier-estuary-light",
+                  "value": "atelier-estuary-light",
                 },
                 Object {
                   "label": "Atelier forest dark",
-                  "val": "atelier-forest-dark",
+                  "value": "atelier-forest-dark",
                 },
                 Object {
                   "label": "Atelier forest light",
-                  "val": "atelier-forest-light",
+                  "value": "atelier-forest-light",
                 },
                 Object {
                   "label": "Atelier heath dark",
-                  "val": "atelier-heath-dark",
+                  "value": "atelier-heath-dark",
                 },
                 Object {
                   "label": "Atelier heath light",
-                  "val": "atelier-heath-light",
+                  "value": "atelier-heath-light",
                 },
                 Object {
                   "label": "Atelier lakeside dark",
-                  "val": "atelier-lakeside-dark",
+                  "value": "atelier-lakeside-dark",
                 },
                 Object {
                   "label": "Atelier lakeside light",
-                  "val": "atelier-lakeside-light",
+                  "value": "atelier-lakeside-light",
                 },
                 Object {
                   "label": "Atelier plateau dark",
-                  "val": "atelier-plateau-dark",
+                  "value": "atelier-plateau-dark",
                 },
                 Object {
                   "label": "Atelier plateau light",
-                  "val": "atelier-plateau-light",
+                  "value": "atelier-plateau-light",
                 },
                 Object {
                   "label": "Atelier savanna dark",
-                  "val": "atelier-savanna-dark",
+                  "value": "atelier-savanna-dark",
                 },
                 Object {
                   "label": "Atelier savanna light",
-                  "val": "atelier-savanna-light",
+                  "value": "atelier-savanna-light",
                 },
                 Object {
                   "label": "Atelier seaside dark",
-                  "val": "atelier-seaside-dark",
+                  "value": "atelier-seaside-dark",
                 },
                 Object {
                   "label": "Atelier seaside light",
-                  "val": "atelier-seaside-light",
+                  "value": "atelier-seaside-light",
                 },
                 Object {
                   "label": "Atelier sulphurpool dark",
-                  "val": "atelier-sulphurpool-dark",
+                  "value": "atelier-sulphurpool-dark",
                 },
                 Object {
                   "label": "Atelier sulphurpool light",
-                  "val": "atelier-sulphurpool-light",
+                  "value": "atelier-sulphurpool-light",
                 },
                 Object {
                   "label": "Atom one dark",
-                  "val": "atom-one-dark",
+                  "value": "atom-one-dark",
                 },
                 Object {
                   "label": "Atom one light",
-                  "val": "atom-one-light",
+                  "value": "atom-one-light",
                 },
                 Object {
                   "label": "Brown paper",
-                  "val": "brown-paper",
+                  "value": "brown-paper",
                 },
                 Object {
                   "label": "Codepen embed",
-                  "val": "codepen-embed",
+                  "value": "codepen-embed",
                 },
                 Object {
                   "label": "Color brewer",
-                  "val": "color-brewer",
+                  "value": "color-brewer",
                 },
                 Object {
                   "label": "Darcula",
-                  "val": "darcula",
+                  "value": "darcula",
                 },
                 Object {
                   "label": "Dark",
-                  "val": "dark",
+                  "value": "dark",
                 },
                 Object {
                   "label": "Darkula",
-                  "val": "darkula",
+                  "value": "darkula",
                 },
                 Object {
                   "label": "Default",
-                  "val": "default",
+                  "value": "default",
                 },
                 Object {
                   "label": "Docco",
-                  "val": "docco",
+                  "value": "docco",
                 },
                 Object {
                   "label": "Dracula",
-                  "val": "dracula",
+                  "value": "dracula",
                 },
                 Object {
                   "label": "Far",
-                  "val": "far",
+                  "value": "far",
                 },
                 Object {
                   "label": "Foundation",
-                  "val": "foundation",
+                  "value": "foundation",
                 },
                 Object {
                   "label": "Github gist",
-                  "val": "github-gist",
+                  "value": "github-gist",
                 },
                 Object {
                   "label": "Github",
-                  "val": "github",
+                  "value": "github",
                 },
                 Object {
                   "label": "Googlecode",
-                  "val": "googlecode",
+                  "value": "googlecode",
                 },
                 Object {
                   "label": "Grayscale",
-                  "val": "grayscale",
+                  "value": "grayscale",
                 },
                 Object {
                   "label": "Gruvbox dark",
-                  "val": "gruvbox-dark",
+                  "value": "gruvbox-dark",
                 },
                 Object {
                   "label": "Gruvbox light",
-                  "val": "gruvbox-light",
+                  "value": "gruvbox-light",
                 },
                 Object {
                   "label": "Hopscotch",
-                  "val": "hopscotch",
+                  "value": "hopscotch",
                 },
                 Object {
                   "label": "Hybrid",
-                  "val": "hybrid",
+                  "value": "hybrid",
                 },
                 Object {
                   "label": "Idea",
-                  "val": "idea",
+                  "value": "idea",
                 },
                 Object {
                   "label": "Ir black",
-                  "val": "ir-black",
+                  "value": "ir-black",
                 },
                 Object {
                   "label": "Kimbie dark",
-                  "val": "kimbie.dark",
+                  "value": "kimbie.dark",
                 },
                 Object {
                   "label": "Kimbie light",
-                  "val": "kimbie.light",
+                  "value": "kimbie.light",
                 },
                 Object {
                   "label": "Magula",
-                  "val": "magula",
+                  "value": "magula",
                 },
                 Object {
                   "label": "Mono blue",
-                  "val": "mono-blue",
+                  "value": "mono-blue",
                 },
                 Object {
                   "label": "Monokai sublime",
-                  "val": "monokai-sublime",
+                  "value": "monokai-sublime",
                 },
                 Object {
                   "label": "Monokai",
-                  "val": "monokai",
+                  "value": "monokai",
                 },
                 Object {
                   "label": "Obsidian",
-                  "val": "obsidian",
+                  "value": "obsidian",
                 },
                 Object {
                   "label": "Ocean",
-                  "val": "ocean",
+                  "value": "ocean",
                 },
                 Object {
                   "label": "Paraiso dark",
-                  "val": "paraiso-dark",
+                  "value": "paraiso-dark",
                 },
                 Object {
                   "label": "Paraiso light",
-                  "val": "paraiso-light",
+                  "value": "paraiso-light",
                 },
                 Object {
                   "label": "Pojoaque",
-                  "val": "pojoaque",
+                  "value": "pojoaque",
                 },
                 Object {
                   "label": "Purebasic",
-                  "val": "purebasic",
+                  "value": "purebasic",
                 },
                 Object {
                   "label": "Qtcreator_dark",
-                  "val": "qtcreator_dark",
+                  "value": "qtcreator_dark",
                 },
                 Object {
                   "label": "Qtcreator_light",
-                  "val": "qtcreator_light",
+                  "value": "qtcreator_light",
                 },
                 Object {
                   "label": "Railscasts",
-                  "val": "railscasts",
+                  "value": "railscasts",
                 },
                 Object {
                   "label": "Rainbow",
-                  "val": "rainbow",
+                  "value": "rainbow",
                 },
                 Object {
                   "label": "Routeros",
-                  "val": "routeros",
+                  "value": "routeros",
                 },
                 Object {
                   "label": "School book",
-                  "val": "school-book",
+                  "value": "school-book",
                 },
                 Object {
                   "label": "Solarized dark",
-                  "val": "solarized-dark",
+                  "value": "solarized-dark",
                 },
                 Object {
                   "label": "Solarized light",
-                  "val": "solarized-light",
+                  "value": "solarized-light",
                 },
                 Object {
                   "label": "Sunburst",
-                  "val": "sunburst",
+                  "value": "sunburst",
                 },
                 Object {
                   "label": "Tomorrow night blue",
-                  "val": "tomorrow-night-blue",
+                  "value": "tomorrow-night-blue",
                 },
                 Object {
                   "label": "Tomorrow night bright",
-                  "val": "tomorrow-night-bright",
+                  "value": "tomorrow-night-bright",
                 },
                 Object {
                   "label": "Tomorrow night eighties",
-                  "val": "tomorrow-night-eighties",
+                  "value": "tomorrow-night-eighties",
                 },
                 Object {
                   "label": "Tomorrow night",
-                  "val": "tomorrow-night",
+                  "value": "tomorrow-night",
                 },
                 Object {
                   "label": "Tomorrow",
-                  "val": "tomorrow",
+                  "value": "tomorrow",
                 },
                 Object {
                   "label": "Vs",
-                  "val": "vs",
+                  "value": "vs",
                 },
                 Object {
                   "label": "Vs2015",
-                  "val": "vs2015",
+                  "value": "vs2015",
                 },
                 Object {
                   "label": "Xcode",
-                  "val": "xcode",
+                  "value": "xcode",
                 },
                 Object {
                   "label": "Xt256",
-                  "val": "xt256",
+                  "value": "xt256",
                 },
                 Object {
                   "label": "Zenburn",
-                  "val": "zenburn",
+                  "value": "zenburn",
                 },
               ]
             }
-            key="13"
+            key="14"
             location="none"
             noedit={false}
             nohover={false}
@@ -3433,7 +3412,7 @@ exports[`Test creation of an Editor instance 1`] = `
             iconName="refresh"
             iconStyle=""
             id=""
-            key="14"
+            key="15"
             location="none"
             noedit={false}
             nohover={false}

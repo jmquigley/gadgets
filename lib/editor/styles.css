@@ -3,24 +3,28 @@
 :local {
 
 	.container {
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 		height: inherit;
+		min-width: 600px;
 		width: inherit;
 	}
 
 	.editor {
 		display: flex;
-		min-width: 600px;
+		min-width: inherit;
 	}
 
 	.editor > :global(.ql-editor) {
+		min-width: inherit;
 		padding: 5px;
 		width: 100%;
 	}
 
 	.toolbar {
 		margin-bottom: -1px;
+		min-width: inherit;
 	}
 
 }

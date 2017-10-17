@@ -8,9 +8,9 @@ import * as React from 'react';
 import {Dropdown, DropdownOption, getDefaultDropdownProps} from '../index';
 
 const testData: DropdownOption[] = [
-	{val: 'idstr1', label: 'lstr1'},
-	{val: 'idstr2', label: 'lstr2'},
-	{val: 'idstr3', label: 'lstr3'}
+	{value: 'idstr1', label: 'lstr1'},
+	{value: 'idstr2', label: 'lstr2'},
+	{value: 'idstr3', label: 'lstr3'}
 ];
 
 test('Test retrieval of Dropdown props object', () => {
