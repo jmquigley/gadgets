@@ -67,7 +67,7 @@ const {
 } = require('../dist/bundle');
 
 debug('cwd: %s', process.cwd());
-const markdown: string = fs.readFileSync(join(process.cwd(), 'demo', 'sample.md'), 'utf8');
+const markdown: string = fs.readFileSync(join(process.cwd(), 'demo', 'samples', 'markdown.md'), 'utf8');
 
 // Build global testing data for List Item controls
 let maxItems: number = 5;

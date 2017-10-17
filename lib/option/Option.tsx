@@ -15,7 +15,7 @@
  * - star
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/editor.png" width="50%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/option.png" width="50%" />
  *
  * ## Examples:
  *

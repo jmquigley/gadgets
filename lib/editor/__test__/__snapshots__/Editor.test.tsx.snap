@@ -1018,6 +1018,10 @@ exports[`Test creation of an Editor instance 1`] = `
             items={
               Array [
                 Object {
+                  "label": "Asciidoc",
+                  "val": "asciidoc",
+                },
+                Object {
                   "label": "Markdown",
                   "val": "markdown",
                 },
@@ -1069,12 +1073,18 @@ exports[`Test creation of an Editor instance 1`] = `
             >
               <option
                 key="0"
+                value="asciidoc"
+              >
+                Asciidoc
+              </option>
+              <option
+                key="1"
                 value="markdown"
               >
                 Markdown
               </option>
               <option
-                key="1"
+                key="2"
                 value="text"
               >
                 Text
