@@ -3,17 +3,20 @@
 :local {
 
 	.container {
-		min-width: 600px;
-		min-height: 500px;
+		display: flex;
+		flex-direction: column;
+		height: inherit;
+		width: inherit;
 	}
 
 	.editor {
-		height: 100%;
-		position: relative;
+		display: flex;
+		min-width: 600px;
 	}
 
 	.editor > :global(.ql-editor) {
 		padding: 5px;
+		width: 100%;
 	}
 
 	.toolbar {

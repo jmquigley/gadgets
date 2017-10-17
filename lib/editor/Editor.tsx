@@ -57,12 +57,18 @@
  * color customizations used by the markup processor.  It contains the following
  * keys:
  *
- *   - `admonition` - special strings like TODO or FIXME.  This is the foreground color
- *   - `admonitionBackground` - background color for special strings like TODO and FIXME
+ *   - `admonition` - special strings like TODO or FIXME.  This is the
+ *     foreground color
+ *   - `admonitionBackground` - background color for special strings like TODO
+ *     and FIXME
+ *   - `attribute` - special mode attribute highlighting (like ascii doc keys
+ *     and attributes)
  *   - `background (white)` - the editor background color
  *   - `blockquote`
  *   - `bold`
  *   - `chevron` - the paren, brace, brackets around an item (such as a link)
+ *   - `comment` - a comment block within the document.  These sections are not
+ *     used when the document is generated.
  *   - `fence` - The color of the fenced code region
  *   - `foreground (black)` - the editor foreground color
  *   - `forumula` - LaTeX formula regions or inlines
@@ -74,6 +80,8 @@
  *   - `h6` - header level 6
  *   - `hr` - horizontal line markup
  *   - `italic`
+ *   - `keywords` - special keywords that are used by a mode.  Not all modes
+ *     will use these
  *   - `language` - the name of the language for a fenced code region.  Today
  *     this is just decoration due to limits in Quill (it  only uses code to
  *     try discover the language implicitly instead of  explicit declaration)
@@ -82,6 +90,8 @@
  *   - `linkTitle` - optional title values on links
  *   - `list` - number and bullet list chevrons
  *   - `mono`
+ * - `option` - special option inline tokens (like the .Title token in
+ *   asciidoc)
  *   - `strikethrough`
  *   - `underline`
  *   - `wiki` - wiki name coloring in [[name | link]]
@@ -97,14 +107,16 @@ import {globalize} from '../shared/helpers';
 globalize('hljs', require('highlight.js'));
 const Quill = globalize('Quill', require('quill'));
 
-import {cloneDeep, range} from 'lodash';
+import {cloneDeep} from 'lodash';
 import {Markup, MarkupMode} from 'quill-markup';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
 import {getUUID, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
+import {ButtonDialog} from '../buttonDialog';
 import {Divider, DividerType} from '../divider';
 import {Dropdown, DropdownOption} from '../dropdown';
+import {List, ListItem} from '../list';
 import {
 	BaseComponent,
 	BaseProps,
@@ -154,7 +166,6 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	private _editorKey: string = 'editor';
 	private _fontList: DropdownOption[] = [];
 	private _fontSizes: DropdownOption[] = [];
-	private _headings: DropdownOption[] = [];
 	private _highlights: DropdownOption[] = [];
 	private _keybindings: QuillKeyBindings = {
 		'tab': {
@@ -203,6 +214,8 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 			this.styles.toolbar
 		]);
 
+		this.bindCallbacks('handleSelect');
+
 		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props);
 	}
@@ -223,13 +236,6 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		));
 	}
 
-	private buildHeadings() {
-		this._headings = range(1, 7).map((it: number) => (
-			{val: String(it), label: `h${it}`}
-		));
-		this._headings.splice(0, 0, {val: '0', label: '--'});
-	}
-
 	private buildHighlights() {
 		this._highlights = this._markup.highlights.map((highlight: string) => (
 			{val: highlight, label: highlight.capitalize().replace(/\W/g, ' ')}
@@ -240,6 +246,12 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		this._modes = this._markup.modes.map((mode: string) => (
 			{val: mode, label: mode.capitalize()}
 		));
+	}
+
+	private handleSelect(level: string) {
+		return () => {
+			this._markup.setHeader(level);
+		};
 	}
 
 	public componentWillUpdate(nextProps: EditorProps) {
@@ -276,7 +288,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 				history: {
 					delay: 2000,
 					maxStack: 500,
-					userOnly: true
+					userOnly: false
 				},
 				keyboard: {
 					bindings: this._keybindings
@@ -305,7 +317,6 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 
 		this.buildFontList();
 		this.buildFontSizes();
-		this.buildHeadings();
 		this.buildHighlights();
 		this.buildModes();
 
@@ -327,6 +338,25 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 					className={this._toolbarStyles.classnames}
 					sizing={Sizing.small}
 				>
+					<Button iconName="bold" onClick={this._markup && this._markup.setBold} />
+					<Button iconName="italic" onClick={this._markup && this._markup.setItalic} />
+					<Button iconName="underline" onClick={this._markup && this._markup.setUnderline} />
+					<Button iconName="strikethrough" onClick={this._markup && this._markup.setStrikeThrough} />
+					<Button iconName="code" onClick={this._markup && this._markup.setMono} />
+					<ButtonDialog iconName="header">
+						<List sizing={Sizing.small} alternating>
+							<ListItem title="h1" onSelect={this.handleSelect('1')} />
+							<ListItem title="h2" onSelect={this.handleSelect('2')} />
+							<ListItem title="h3" onSelect={this.handleSelect('3')} />
+							<ListItem title="h4" onSelect={this.handleSelect('4')} />
+							<ListItem title="h5" onSelect={this.handleSelect('5')} />
+							<ListItem title="h6" onSelect={this.handleSelect('6')} />
+						</List>
+					</ButtonDialog>
+					<Divider dividerType={DividerType.vertical} />
+					<Button iconName="undo" onClick={this._markup && this._markup.undo} />
+					<Button iconName="repeat" onClick={this._markup && this._markup.redo} />
+					<Divider dividerType={DividerType.vertical} />
 					<Dropdown
 						{...this.props}
 						defaultVal={this.props.defaultFont}
@@ -339,21 +369,6 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 						items={this._fontSizes}
 						onSelect={this._markup && this._markup.setFontSize}
 					/>
-					<Dropdown
-						{...this.props}
-						defaultVal={'--'}
-						items={this._headings}
-						onSelect={this._markup && this._markup.setHeader}
-					/>
-					<Divider dividerType={DividerType.vertical} />
-					<Button iconName="bold" onClick={this._markup && this._markup.setBold} />
-					<Button iconName="italic" onClick={this._markup && this._markup.setItalic} />
-					<Button iconName="underline" onClick={this._markup && this._markup.setUnderline} />
-					<Button iconName="strikethrough" onClick={this._markup && this._markup.setStrikeThrough} />
-					<Divider dividerType={DividerType.vertical} />
-					<Button iconName="undo" onClick={this._markup && this._markup.undo} />
-					<Button iconName="repeat" onClick={this._markup && this._markup.redo} />
-					<Divider dividerType={DividerType.vertical} />
 					<Dropdown
 						{...this.props}
 						defaultVal={'markdown'}
