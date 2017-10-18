@@ -4,6 +4,7 @@ exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
 <TextField
   disabled={false}
   id=""
+  noborder={false}
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
@@ -12,13 +13,18 @@ exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
   sizing="normal"
   style={Object {}}
   type="text"
+  useclear={false}
   usevalidation={false}
   validators={Array []}
   visible={true}
 >
   <div
     className="ui-textfield textField normal"
-    style={Object {}}
+    style={
+      Object {
+        "border": "solid 1px silver",
+      }
+    }
   >
     <input
       className="textFieldInput"
@@ -39,6 +45,7 @@ exports[`Test creating TextField and saving on blur 1`] = `
 <TextField
   disabled={false}
   id=""
+  noborder={false}
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
@@ -47,13 +54,18 @@ exports[`Test creating TextField and saving on blur 1`] = `
   sizing="normal"
   style={Object {}}
   type="text"
+  useclear={false}
   usevalidation={false}
   validators={Array []}
   visible={true}
 >
   <div
     className="ui-textfield textField normal"
-    style={Object {}}
+    style={
+      Object {
+        "border": "solid 1px silver",
+      }
+    }
   >
     <input
       className="textFieldInput"
@@ -73,7 +85,11 @@ exports[`Test creating TextField and saving on blur 1`] = `
 exports[`Test creation of a TextField control 1`] = `
 <div
   className="ui-textfield textField normal test-class"
-  style={Object {}}
+  style={
+    Object {
+      "border": "solid 1px silver",
+    }
+  }
 >
   <input
     className="textFieldInput"
@@ -93,6 +109,7 @@ exports[`Test creation of a TextField with email validation 1`] = `
 <TextField
   disabled={false}
   id=""
+  noborder={false}
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
@@ -101,13 +118,18 @@ exports[`Test creation of a TextField with email validation 1`] = `
   sizing="normal"
   style={Object {}}
   type="email"
+  useclear={false}
   usevalidation={true}
   validators={Array []}
   visible={true}
 >
   <div
     className="ui-textfield textField normal"
-    style={Object {}}
+    style={
+      Object {
+        "border": "solid 1px silver",
+      }
+    }
   >
     <input
       className="textFieldInput"
@@ -133,6 +155,7 @@ exports[`Test creation of a TextField with url validation 1`] = `
 <TextField
   disabled={false}
   id=""
+  noborder={false}
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
@@ -141,13 +164,18 @@ exports[`Test creation of a TextField with url validation 1`] = `
   sizing="normal"
   style={Object {}}
   type="url"
+  useclear={false}
   usevalidation={true}
   validators={Array []}
   visible={true}
 >
   <div
     className="ui-textfield textField normal"
-    style={Object {}}
+    style={
+      Object {
+        "border": "solid 1px silver",
+      }
+    }
   >
     <input
       className="textFieldInput"
@@ -175,6 +203,7 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
   id=""
   maxLength="10"
   minLength="5"
+  noborder={false}
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
@@ -183,6 +212,7 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
   sizing="normal"
   style={Object {}}
   type="text"
+  useclear={false}
   usevalidation={true}
   validators={Array []}
   value=""
@@ -190,7 +220,11 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
 >
   <div
     className="ui-textfield textField normal"
-    style={Object {}}
+    style={
+      Object {
+        "border": "solid 1px silver",
+      }
+    }
   >
     <input
       className="textFieldInput"
@@ -219,6 +253,7 @@ exports[`Test disabling of a TextField control 1`] = `
 <TextField
   disabled={true}
   id=""
+  noborder={false}
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
@@ -227,13 +262,18 @@ exports[`Test disabling of a TextField control 1`] = `
   sizing="normal"
   style={Object {}}
   type="text"
+  useclear={false}
   usevalidation={false}
   validators={Array []}
   visible={true}
 >
   <div
     className="ui-textfield textField normal disabled nohover"
-    style={Object {}}
+    style={
+      Object {
+        "border": "solid 1px silver",
+      }
+    }
   >
     <input
       className="textFieldInput disabled"
@@ -254,6 +294,7 @@ exports[`Test making the TextField invisible 1`] = `
 <TextField
   disabled={false}
   id=""
+  noborder={false}
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
@@ -262,13 +303,18 @@ exports[`Test making the TextField invisible 1`] = `
   sizing="normal"
   style={Object {}}
   type="text"
+  useclear={false}
   usevalidation={false}
   validators={Array []}
   visible={false}
 >
   <div
     className="ui-textfield textField normal invisible"
-    style={Object {}}
+    style={
+      Object {
+        "border": "solid 1px silver",
+      }
+    }
   >
     <input
       className="textFieldInput"
@@ -289,6 +335,7 @@ exports[`Test retrieval of TextField props object 1`] = `
 Object {
   "disabled": false,
   "id": "",
+  "noborder": false,
   "onBlur": [Function],
   "onChange": [Function],
   "onKeyDown": [Function],
@@ -297,6 +344,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "type": "text",
+  "useclear": false,
   "usevalidation": false,
   "validators": Array [],
   "visible": true,

@@ -81,10 +81,14 @@
  * #### Properties
  * - `disabled: {boolean} (false)` - When true, the control is disabled
  * - `id: {string} ('')` - The CSS id for this control
+ * - `noborder: {boolean} (false)` - Turns off the border around the component
  * - `sizing: {Sizing} (Sizing.normal) - The font size for the control (see
  * the Sizing class in shared).
  * - `type: {string} ('text')` - The type of input control.  This is the type
  * defined by the [HTML input tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
+ * - `useclear {boolean} (false)` - When used it presents a circle "x" button
+ * that will clear the current input from the control and set the focus to
+ * the input.
  * - `usevalidation: {boolean} (false)` - If this is true then the validation
  * routines are exectued.
  * - `validators: {Validator[]} ([])` - A list of Validator classes.  Each of the
@@ -102,7 +106,8 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
-import {BaseComponent, Sizing} from '../shared';
+import {ButtonCircle} from '../buttonCircle';
+import {BaseComponent, Color, Sizing} from '../shared';
 import {
 	validateEmail,
 	validateMaxLength,
@@ -113,6 +118,7 @@ import {
 
 export interface TextFieldProps extends Partial<HTMLInputElement> {
 	disabled?: boolean;
+	noborder?: boolean;
 	id?: string;
 	onBlur?: any;
 	onChange?: any;
@@ -122,6 +128,7 @@ export interface TextFieldProps extends Partial<HTMLInputElement> {
 	sizing?: Sizing;
 	style?: any;
 	type?: string;
+	useclear?: boolean;
 	usevalidation?: boolean;
 	validators?: Validator[];
 	visible?: boolean;
@@ -131,6 +138,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 	return cloneDeep({
 		disabled: false,
 		id: '',
+		noborder: false,
 		onBlur: nilEvent,
 		onChange: nilEvent,
 		onKeyDown: nilEvent,
@@ -139,6 +147,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		sizing: Sizing.normal,
 		style: {},
 		type: 'text',
+		useclear: false,
 		usevalidation: false,
 		validators: [],
 		visible: true
@@ -157,6 +166,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	public static readonly defaultProps: TextFieldProps = getDefaultTextFieldProps();
 
+	private _clearStyles: ClassNames = new ClassNames();
 	private _input: HTMLInputElement = null;
 	private _inputStyles: ClassNames = new ClassNames();
 	private _messageStyles: ClassNames = new ClassNames();
@@ -177,6 +187,11 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		this._rootStyles.add([
 			'ui-textfield',
 			this.styles.textField
+		]);
+
+		this._clearStyles.add([
+			'ui-textfield-clear-button',
+			this.styles.clearButton
 		]);
 
 		this.state = {
@@ -210,6 +225,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		this.bindCallbacks(
 			'handleBlur',
 			'handleChange',
+			'handleClearButton',
 			'handleKeyDown',
 			'handleKeyPress',
 			'handleRef'
@@ -235,6 +251,17 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		this._value = (e.target as HTMLInputElement).value;
 		this.validate(this._value);
 		this.props.onChange(e);
+	}
+
+	private handleClearButton() {
+		this.setState({
+			message: '',
+			previousText: ''
+		}, () => {
+			this.input.value = '';
+			this.handleChange({target: this.input} as any);
+			this.input.focus();
+		});
 	}
 
 	private handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
@@ -307,8 +334,10 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 		if (this.props.sizing !== nextProps['sizing']) {
 			this._messageStyles.off(this.fontStyle(this.props.sizing));
+			this._clearStyles.off(this.fontStyle(this.props.sizing));
 		}
 		this._messageStyles.on(this.prev().font.style);
+		this._clearStyles.on(this.fontStyle());
 
 		this._inputStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
 			this.styles.disabled
@@ -318,6 +347,12 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			this.styles.disabled
 		);
 
+		if (this.props.noborder) {
+			this.inlineStyles = {border: 'none'};
+		} else {
+			this.inlineStyles = {border: 'solid 1px silver'};
+		}
+
 		super.componentWillUpdate(nextProps);
 	}
 
@@ -325,18 +360,38 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 		// Strip out props that the input control cannot recognize or use
 		const {
+			noborder,
 			onValidation,
 			sizing,
+			useclear,
 			usevalidation,
 			validators,
 			visible,
 			...props
 		} = this.props;
 
+		let clearBtn: any = null;
+		if (this.props.useclear) {
+			clearBtn = (
+				<div className={this._clearStyles.classnames}>
+					<ButtonCircle
+						iconName="times"
+						onClick={this.handleClearButton}
+						sizing={this.prev().type}
+						style={{
+							backgroundColor: Color.white,
+							borderColor: Color.error,
+							color: Color.error
+						}}
+					/>
+				</div>
+			);
+		}
+
 		return (
 			<div
 				className={this._rootStyles.classnames}
-				style={this.props.style}
+				style={this.inlineStyles}
 			>
 				<input
 					{...props}
@@ -346,9 +401,9 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
 					ref={this.handleRef}
-					style={this.inlineStyles}
 				/>
-					{this.props.usevalidation
+				{clearBtn}
+				{this.props.usevalidation
 					?
 						<div className={this._messageStyles.classnames}>
 							{this.props.usevalidation ? '\u00a0' : null}

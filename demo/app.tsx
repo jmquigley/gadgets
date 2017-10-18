@@ -1215,11 +1215,11 @@ class App extends React.Component<AppProps, AppState> {
 			<br/><br/>
 
 			<h3>Changeable (no sorting)</h3>
-			<TagList nosort tags={['a', 'c', 'b']} useinput />
+			<TagList nosort tags={['aaa', 'ccc', 'bbb']} useinput />
 			<br/><br/>
 
 			<h3>Changeable (sorted)</h3>
-			<TagList tags={['a', 'c', 'b']} useinput />
+			<TagList tags={['aaa', 'ccc', 'bbb']} useinput />
 			<br/><br/>
 
 			<h3>Disabled</h3>
@@ -1266,6 +1266,16 @@ class App extends React.Component<AppProps, AppState> {
 						'Contains only alphanumeric'
 					)
 				]}
+			/>
+
+			<h3>Search text field</h3>
+			<TextField
+				placeholder="search"
+				style={{
+					width: '11em'
+				}}
+				type="text"
+				useclear
 			/>
 
 			<h3>Disabled TextField</h3>
@@ -1440,7 +1450,7 @@ class App extends React.Component<AppProps, AppState> {
 	private buildToolbar = () => (
 		<Container id="toolbarExample">
 
-			<h3>Left Justify no divider chevron</h3>
+			<h3>Left Justify space divider chevron</h3>
 			<Toolbar justify={Justify.left} >
 				<Button iconName="car" />
 				<ButtonCircle iconName="times" />

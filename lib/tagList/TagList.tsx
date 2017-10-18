@@ -217,6 +217,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 				<TextField
 					className={this.styles.tagListInput}
 					disabled={this.props.disabled}
+					noborder
 					onBlur={this.handleBlur}
 					onChange={this.handleChange}
 					onKeyDown={this.handleKeyDown}

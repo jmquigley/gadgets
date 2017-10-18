@@ -602,6 +602,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
       className="tagListInput"
       disabled={false}
       id=""
+      noborder={true}
       onBlur={[Function]}
       onChange={[Function]}
       onKeyDown={[Function]}
@@ -612,13 +613,19 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
       sizing="normal"
       style={Object {}}
       type="text"
+      useclear={false}
       usevalidation={false}
       validators={Array []}
       visible={true}
     >
       <div
         className="ui-textfield textField normal tagListInput"
-        style={Object {}}
+        style={
+          Object {
+            "border": "none",
+            "minWidth": "2.5rem",
+          }
+        }
       >
         <input
           className="textFieldInput"
@@ -630,11 +637,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           onKeyPress={[Function]}
           placeholder="new"
           size={1}
-          style={
-            Object {
-              "minWidth": "2.5rem",
-            }
-          }
+          style={Object {}}
           type="text"
         />
       </div>
@@ -1245,6 +1248,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
       className="tagListInput"
       disabled={false}
       id=""
+      noborder={true}
       onBlur={[Function]}
       onChange={[Function]}
       onKeyDown={[Function]}
@@ -1255,13 +1259,19 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
       sizing="normal"
       style={Object {}}
       type="text"
+      useclear={false}
       usevalidation={false}
       validators={Array []}
       visible={true}
     >
       <div
         className="ui-textfield textField normal tagListInput"
-        style={Object {}}
+        style={
+          Object {
+            "border": "none",
+            "minWidth": "2.5rem",
+          }
+        }
       >
         <input
           className="textFieldInput"
@@ -1273,11 +1283,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           onKeyPress={[Function]}
           placeholder="new"
           size={1}
-          style={
-            Object {
-              "minWidth": "2.5rem",
-            }
-          }
+          style={Object {}}
           type="text"
         />
       </div>
@@ -2468,6 +2474,7 @@ exports[`Remove a tag from a TagList 1`] = `
       className="tagListInput"
       disabled={false}
       id=""
+      noborder={true}
       onBlur={[Function]}
       onChange={[Function]}
       onKeyDown={[Function]}
@@ -2478,13 +2485,19 @@ exports[`Remove a tag from a TagList 1`] = `
       sizing="normal"
       style={Object {}}
       type="text"
+      useclear={false}
       usevalidation={false}
       validators={Array []}
       visible={true}
     >
       <div
         className="ui-textfield textField normal tagListInput"
-        style={Object {}}
+        style={
+          Object {
+            "border": "none",
+            "minWidth": "2.5rem",
+          }
+        }
       >
         <input
           className="textFieldInput"
@@ -2496,11 +2509,7 @@ exports[`Remove a tag from a TagList 1`] = `
           onKeyPress={[Function]}
           placeholder="new"
           size={1}
-          style={
-            Object {
-              "minWidth": "2.5rem",
-            }
-          }
+          style={Object {}}
           type="text"
         />
       </div>
@@ -2630,6 +2639,7 @@ exports[`Test the change/blur events in TagList 1`] = `
       className="tagListInput"
       disabled={false}
       id=""
+      noborder={true}
       onBlur={[Function]}
       onChange={[Function]}
       onKeyDown={[Function]}
@@ -2640,13 +2650,19 @@ exports[`Test the change/blur events in TagList 1`] = `
       sizing="normal"
       style={Object {}}
       type="text"
+      useclear={false}
       usevalidation={false}
       validators={Array []}
       visible={true}
     >
       <div
         className="ui-textfield textField normal tagListInput"
-        style={Object {}}
+        style={
+          Object {
+            "border": "none",
+            "minWidth": "2.5rem",
+          }
+        }
       >
         <input
           className="textFieldInput"
@@ -2658,11 +2674,7 @@ exports[`Test the change/blur events in TagList 1`] = `
           onKeyPress={[Function]}
           placeholder="new"
           size={1}
-          style={
-            Object {
-              "minWidth": "2.5rem",
-            }
-          }
+          style={Object {}}
           type="text"
         />
       </div>
@@ -3273,6 +3285,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
       className="tagListInput"
       disabled={false}
       id=""
+      noborder={true}
       onBlur={[Function]}
       onChange={[Function]}
       onKeyDown={[Function]}
@@ -3283,13 +3296,19 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
       sizing="normal"
       style={Object {}}
       type="text"
+      useclear={false}
       usevalidation={false}
       validators={Array []}
       visible={true}
     >
       <div
         className="ui-textfield textField normal tagListInput"
-        style={Object {}}
+        style={
+          Object {
+            "border": "none",
+            "minWidth": "2.5rem",
+          }
+        }
       >
         <input
           className="textFieldInput"
@@ -3301,11 +3320,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
           onKeyPress={[Function]}
           placeholder="new"
           size={1}
-          style={
-            Object {
-              "minWidth": "2.5rem",
-            }
-          }
+          style={Object {}}
           type="text"
         />
       </div>

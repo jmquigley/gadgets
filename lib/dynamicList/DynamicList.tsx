@@ -551,6 +551,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						placeholder="search"
 						style={{display: 'flex'}}
 						type="text"
+						useclear
 						value={nextState.search}
 					/>
 				}
