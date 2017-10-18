@@ -253,13 +253,6 @@ section {
 	color: #ffe11a;
 }
 
-/* .ui-button-text:not(.nohover):hover,
-   .ui-button-dialog:not(.nohover):hover,
-   .ui-button:not(.nohover):hover
-   {
-   background-color: silver;
-   } */
-
 .ui-dialog-popup {
 	color: black;
 	background-color: white;
@@ -297,8 +290,8 @@ section {
 	background-color: #004358;
 }
 
-.ui-button-bar {
-	border: solid 1px #004358;
+.ui-tab > .ui-title-bar:not(.nohover):hover {
+	color: #1fa870 !important;
 }
 
 .ui-tab-container {

@@ -1215,11 +1215,11 @@ class App extends React.Component<AppProps, AppState> {
 			<br/><br/>
 
 			<h3>Changeable (no sorting)</h3>
-			<TagList nosort tags={['one', 'two', 'three']} useinput />
+			<TagList nosort tags={['a', 'c', 'b']} useinput />
 			<br/><br/>
 
 			<h3>Changeable (sorted)</h3>
-			<TagList tags={['one', 'two', 'three']} useinput />
+			<TagList tags={['a', 'c', 'b']} useinput />
 			<br/><br/>
 
 			<h3>Disabled</h3>

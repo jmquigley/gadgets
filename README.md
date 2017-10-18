@@ -120,9 +120,6 @@ A circular button control.  Works like a typical button... except it's a circle.
 ### [ButtonDialog](docs/lib/buttonDialog/ButtonDialog.md)
 A button control that when pushed displays a local dialog box.  The contents of the control make up the dialog window.
 
-### ButtonGroup
-TODO: create the ButtonGroup control (radio button like grouping)
-
 ### [ButtonText](docs/lib/buttonText/ButtonText.md)
 A button control that contains an icon and a text string.  The text string can be to the left or right of the icon.
 
@@ -167,6 +164,9 @@ A container element that holds a list of other elements.  The `List` resolves to
 
 ### [Option](docs/lib/option/Option.md)
 A checkbox/radio button control.  This is just a specialized form of ButtonToggle.
+
+### OptionGroup
+TODO: create the OptionGroup control (radio button like grouping)
 
 ### [Pager](docs/lib/pager/Pager.md)
 A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.

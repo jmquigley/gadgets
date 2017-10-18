@@ -68,6 +68,31 @@ test('Create a new dynamic TagList by adding a new input', () => {
 	assert.deepEqual(ctl.state('tags'), ['a', 'b', 'c', 'd']);
 });
 
+test('Try to create a duplicate entry within a dynamic TagList', () => {
+	const keypress = sinon.spy();
+	const onnew = sinon.spy();
+	const ctl = mount(
+		<TagList
+			onKeyPress={keypress}
+			onNew={onnew}
+			tags={['c', 'b', 'd']}
+			useinput
+		/>
+	);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
+	const input = ctl.find('input');
+	assert(input);
+
+	assert.deepEqual(ctl.state('tags'), ['b', 'c', 'd']);
+	input.simulate('keyPress', {key: 'Enter', target: {value: 'd'}});
+	assert(keypress.calledOnce);
+	assert(!onnew.calledOnce);
+	assert.deepEqual(ctl.state('tags'), ['b', 'c', 'd']);
+});
+
 test('Create a new dynamic TagList item and cancel creation with escape', () => {
 	const keydown = sinon.spy();
 	const ctl = mount(

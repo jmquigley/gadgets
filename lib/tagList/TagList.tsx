@@ -7,7 +7,10 @@
  * be added or removed from the list.  Each operation results in an event
  * signalling what occurred.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="60%" />
+ *
+ * ## Examples:
  *
  * ##### Dynamic TagList
  * ```javascript
@@ -23,6 +26,7 @@
  * <TagList tags={['one', 'two', 'three']} />
  * ```
  *
+ * ## API
  * #### Events
  * - `onBlur` - invoked when the user leaves the control.  This event works
  * like the escape key (resets the input)
@@ -173,14 +177,19 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		if (e.key === 'Enter') {
 			const target = e.target as HTMLInputElement;
 
-			this.tags.insert(target.value);
-			this.setState({
-				tags: this.tags.array
-			}, () => {
-				this.props.onNew(target.value);
+			if (!this.tags.contains(target.value)) {
+				this.tags.insert(target.value);
+				this.setState({
+					tags: this.tags.array
+				}, () => {
+					this.props.onNew(target.value);
+					this.clearInput(target);
+					this.props.onKeyPress(e);
+				});
+			} else {
 				this.clearInput(target);
 				this.props.onKeyPress(e);
-			});
+			}
 		}
 	}
 

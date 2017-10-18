@@ -3,13 +3,17 @@
  * A tag can be static or contain a delete button within it.  This control
  * would generally just be used within the `TagList`.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="60%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Tag} from 'gadgets';
  * <Tag usedelete>strvalue</Tag>
  * ```
  *
+ * ## API
  * #### Events
  * - `onClick` - invoked when the user clicks on the delete button within the
  * control.  This is only visible when `usedelete` is specified.
