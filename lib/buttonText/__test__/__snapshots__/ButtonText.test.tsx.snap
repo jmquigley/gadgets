@@ -69,10 +69,16 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
       visible={true}
       width=""
     >
-      <i
-        className="ui-icon icon none fa fa-fw fa-bomb normal"
+      <styled.i
+        className="ui-icon fa fa-fw fa-bomb"
+        sizing="normal"
         style={Object {}}
-      />
+      >
+        <i
+          className="ui-icon fa fa-fw fa-bomb sc-bdVaJa ifzSmG"
+          style={Object {}}
+        />
+      </styled.i>
     </Icon>
   </div>
 </ButtonText>
@@ -130,10 +136,16 @@ exports[`Test disabling of a ButtonText control 1`] = `
       visible={true}
       width=""
     >
-      <i
-        className="ui-icon icon none fa fa-fw fa-bomb normal"
+      <styled.i
+        className="ui-icon fa fa-fw fa-bomb"
+        sizing="normal"
         style={Object {}}
-      />
+      >
+        <i
+          className="ui-icon fa fa-fw fa-bomb sc-bdVaJa ifzSmG"
+          style={Object {}}
+        />
+      </styled.i>
     </Icon>
     <div
       className="content right normal"
@@ -194,10 +206,16 @@ exports[`Test making a ButtonText control invisible 1`] = `
       visible={true}
       width=""
     >
-      <i
-        className="ui-icon icon none fa fa-fw fa-bomb normal"
+      <styled.i
+        className="ui-icon fa fa-fw fa-bomb"
+        sizing="normal"
         style={Object {}}
-      />
+      >
+        <i
+          className="ui-icon fa fa-fw fa-bomb sc-bdVaJa ifzSmG"
+          style={Object {}}
+        />
+      </styled.i>
     </Icon>
     <div
       className="content right normal"

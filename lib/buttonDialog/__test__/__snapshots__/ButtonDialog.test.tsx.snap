@@ -242,10 +242,16 @@ exports[`Test making the ButtonDialog invisible 1`] = `
           visible={true}
           width=""
         >
-          <i
-            className="ui-icon icon none fa fa-fw fa-bomb normal"
+          <styled.i
+            className="ui-icon fa fa-fw fa-bomb"
+            sizing="normal"
             style={Object {}}
-          />
+          >
+            <i
+              className="ui-icon fa fa-fw fa-bomb sc-bdVaJa ifzSmG"
+              style={Object {}}
+            />
+          </styled.i>
         </Icon>
       </div>
     </Button>
@@ -450,10 +456,16 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
           visible={true}
           width=""
         >
-          <i
-            className="ui-icon icon none fa fa-fw fa-bomb normal"
+          <styled.i
+            className="ui-icon fa fa-fw fa-bomb"
+            sizing="normal"
             style={Object {}}
-          />
+          >
+            <i
+              className="ui-icon fa fa-fw fa-bomb sc-bdVaJa ifzSmG"
+              style={Object {}}
+            />
+          </styled.i>
         </Icon>
       </div>
     </Button>

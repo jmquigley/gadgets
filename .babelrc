@@ -6,6 +6,7 @@
 		],
 		"sourceMaps": "inline",
 		"plugins": [
+				"babel-plugin-styled-components",
 				["transform-runtime", {
 						"helpers": true,
 						"polyfill": false,

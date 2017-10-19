@@ -90,8 +90,8 @@ test('Test clicking of the left button on the ListItem control', () => {
 	ctl.find('.ui-button').first().simulate('click');
 	expect(click).toHaveBeenCalled();
 
-	assert.equal(ctl.find('.fa').length, 1);
-	assert.equal(ctl.find('.fa-bath').length, 1);
+	assert.equal(ctl.find('.fa').length, 2);
+	assert.equal(ctl.find('.fa-bath').length, 2);
 });
 
 test('Test clicking of the right button on the ListItem control', () => {
@@ -109,8 +109,8 @@ test('Test clicking of the right button on the ListItem control', () => {
 	ctl.find('.ui-button').last().simulate('click');
 	expect(click).toHaveBeenCalled();
 
-	assert.equal(ctl.find('.fa').length, 1);
-	assert.equal(ctl.find('.fa-bath').length, 1);
+	assert.equal(ctl.find('.fa').length, 2);
+	assert.equal(ctl.find('.fa-bath').length, 2);
 });
 
 test('Test clicking of the title bar area of the ListItem', async () => {

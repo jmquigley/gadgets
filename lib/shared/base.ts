@@ -43,6 +43,8 @@
 
 'use strict';
 
+// const debug = require('debug')('base');
+
 import {Map} from 'immutable';
 import {isEmpty} from 'lodash';
 import * as React from 'react';
@@ -57,7 +59,7 @@ export const defaultSize: number = 16;
 
 export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
-	private _className: string = '';
+	// private _className: string = '';
 	private _inlineStyles: Map<string, string> = Map({});
 	private _locationStyle: string = '';
 	private _styles: any  = {};  // css modules styles per module
@@ -66,6 +68,7 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
 	// The style object applied (generally) to the root of a component
 	protected _rootStyles: ClassNames = new ClassNames();
+	protected _classes: ClassNames = new ClassNames();
 
 	constructor(props: P, styles: Styles = {}, defaultInlineStyles: Styles = {}, defaultFontSize: number = defaultSize) {
 		super(props);
@@ -79,10 +82,6 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 			this._sizing = Sizing.normal;
 		}
 
-		if ('className' in this.props) {
-			this._className = this.props['className'];
-		}
-
 		if ('location' in this.props) {
 			this._locationStyle = this.styles[this.props['location']];
 		}
@@ -90,8 +89,8 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props['style']);
 	}
 
-	get className(): string {
-		return this._className;
+	get classes(): string {
+		return this._classes.classnames;
 	}
 
 	get inlineStyles(): any {
@@ -325,9 +324,8 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 			this._sizing = nextProps['sizing'];
 		}
 
-		if ('className' in nextProps && this._className !== nextProps['className']) {
-			this._rootStyles.off(this._className);
-			this._className = nextProps['className'];
+		if ('className' in nextProps && this.props['className'] !== nextProps['className']) {
+			this._rootStyles.off(this.props['className']);
 		}
 
 		this._rootStyles.onIf('className' in nextProps && nextProps['className'])(

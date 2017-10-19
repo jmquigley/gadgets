@@ -385,10 +385,16 @@ exports[`Test making a Tab invisible 1`] = `
                 visible={true}
                 width=""
               >
-                <i
-                  className="ui-icon icon none fa fa-fw fa-times normal"
+                <styled.i
+                  className="ui-icon fa fa-fw fa-times"
+                  sizing="normal"
                   style={Object {}}
-                />
+                >
+                  <i
+                    className="ui-icon fa fa-fw fa-times sc-bdVaJa ifzSmG"
+                    style={Object {}}
+                  />
+                </styled.i>
               </Icon>
             </div>
           </Button>
@@ -672,10 +678,16 @@ exports[`Test the click handler in the Tab instance 1`] = `
                 visible={true}
                 width=""
               >
-                <i
-                  className="ui-icon icon none fa fa-fw fa-times normal"
+                <styled.i
+                  className="ui-icon fa fa-fw fa-times"
+                  sizing="normal"
                   style={Object {}}
-                />
+                >
+                  <i
+                    className="ui-icon fa fa-fw fa-times sc-bdVaJa ifzSmG"
+                    style={Object {}}
+                  />
+                </styled.i>
               </Icon>
             </div>
           </Button>
@@ -929,10 +941,16 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                 visible={true}
                 width=""
               >
-                <i
-                  className="ui-icon icon none fa fa-fw fa-times normal"
+                <styled.i
+                  className="ui-icon fa fa-fw fa-times"
+                  sizing="normal"
                   style={Object {}}
-                />
+                >
+                  <i
+                    className="ui-icon fa fa-fw fa-times sc-bdVaJa ifzSmG"
+                    style={Object {}}
+                  />
+                </styled.i>
               </Icon>
             </div>
           </Button>

@@ -15,6 +15,8 @@ import {
 } from './props';
 
 import {
+	boxStyle,
+	fontStyle,
 	FontStyle,
 	Sizes,
 	Sizing,
@@ -24,9 +26,11 @@ import {
 export {
 	BaseComponent,
 	BaseProps,
+	boxStyle,
 	Color,
 	defaultSize,
 	Direction,
+	fontStyle,
 	FontStyle,
 	getDefaultBaseProps,
 	Justify,

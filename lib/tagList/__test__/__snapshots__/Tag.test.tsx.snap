@@ -203,10 +203,16 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 visible={true}
                 width=""
               >
-                <i
-                  className="ui-icon icon none fa fa-fw fa-times small"
+                <styled.i
+                  className="ui-icon fa fa-fw fa-times"
+                  sizing="small"
                   style={Object {}}
-                />
+                >
+                  <i
+                    className="ui-icon fa fa-fw fa-times sc-bdVaJa gDsVnc"
+                    style={Object {}}
+                  />
+                </styled.i>
               </Icon>
             </div>
           </Button>
@@ -383,10 +389,16 @@ exports[`Test making Tag invisible 1`] = `
                 visible={true}
                 width=""
               >
-                <i
-                  className="ui-icon icon none fa fa-fw fa-times small"
+                <styled.i
+                  className="ui-icon fa fa-fw fa-times"
+                  sizing="small"
                   style={Object {}}
-                />
+                >
+                  <i
+                    className="ui-icon fa fa-fw fa-times sc-bdVaJa gDsVnc"
+                    style={Object {}}
+                  />
+                </styled.i>
               </Icon>
             </div>
           </Button>

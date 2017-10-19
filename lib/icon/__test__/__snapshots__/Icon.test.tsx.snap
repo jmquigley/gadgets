@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of an Icon control with icon 1`] = `
-<i
-  className="ui-icon icon none fa fa-fw fa-star normal test-class"
+<styled.i
+  className="ui-icon fa fa-fw fa-star"
+  sizing="normal"
   style={
     Object {
       "backgroundColor": "blue",
@@ -13,14 +14,21 @@ exports[`Test creation of an Icon control with icon 1`] = `
 `;
 
 exports[`Test creation of an Icon control with image 1`] = `
-<img
-  className="ui-icon icon none normalBox fa-bomb normal"
+<styled.img
+  className="ui-icon"
+  sizing="normal"
   src="./test-icon-image.png"
   style={Object {}}
 />
 `;
 
 exports[`Test making the ButtonDialog invisible 1`] = `
+.c0 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
 <Icon
   className=""
   contentEditable={false}
@@ -42,10 +50,16 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   visible={false}
   width=""
 >
-  <i
-    className="ui-icon icon none fa fa-fw fa-bomb normal invisible"
+  <styled.i
+    className="ui-icon fa fa-fw fa-bomb"
+    sizing="normal"
     style={Object {}}
-  />
+  >
+    <i
+      className="ui-icon fa fa-fw fa-bomb c0"
+      style={Object {}}
+    />
+  </styled.i>
 </Icon>
 `;
 
@@ -74,6 +88,12 @@ Object {
 `;
 
 exports[`Test the disabling of the Icon control 1`] = `
+.c0 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
 <Icon
   className=""
   contentEditable={false}
@@ -95,9 +115,15 @@ exports[`Test the disabling of the Icon control 1`] = `
   visible={true}
   width=""
 >
-  <i
-    className="ui-icon icon none fa fa-fw fa-bomb normal disabled nohover"
+  <styled.i
+    className="ui-icon fa fa-fw fa-bomb"
+    sizing="normal"
     style={Object {}}
-  />
+  >
+    <i
+      className="ui-icon fa fa-fw fa-bomb c0"
+      style={Object {}}
+    />
+  </styled.i>
 </Icon>
 `;

@@ -45,6 +45,10 @@
 
 'use strict';
 
+const debug = require('debug')('sizing');
+
+import {css} from 'styled-components';
+
 const instances = new Map();
 
 export enum Sizing {
@@ -73,6 +77,9 @@ export interface Styling {
 	font: FontStyle;
 	rectStyle: string;
 }
+
+export const boxStyle: any = {};
+export const fontStyle: any = {};
 
 export class Sizes {
 
@@ -106,6 +113,16 @@ export class Sizes {
 		for (const [key, val] of sizes) {
 			const valSize = baseFontSize + Number(val);
 
+			boxStyle[key] = css`
+				width: ${valSize}px;
+				height: ${valSize}px;
+			`;
+
+			fontStyle[key] = css`
+				font-size: ${valSize / baseFontSize}rem;
+				font-weight: inherit;
+			`;
+
 			this._sizes[key] = {
 				type: key,
 				borderStyle: Sizes.styles[`${key}Border`],
@@ -119,6 +136,12 @@ export class Sizes {
 				}
 			};
 		}
+
+		debug('Sizing: %O, boxStyle: %O, fontStyle: %O',
+			this._sizes,
+			boxStyle,
+			fontStyle
+		);
 	}
 
 	public toString(): string {
