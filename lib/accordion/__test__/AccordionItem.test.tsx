@@ -1,5 +1,7 @@
 'use strict';
 
+import 'jest-styled-components';
+
 import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';

@@ -55,6 +55,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import styled from 'styled-components';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent} from '../shared';
@@ -83,16 +84,22 @@ export interface AccordionItemState {
 	toggle: boolean;
 }
 
+export const AccordionItemView: any = styled.ul`
+	border-bottom: solid 1px black;
+	&:last-child {
+		border-bottom: 0;
+	}
+`;
+
 export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionItemState> {
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
 	constructor(props: AccordionItemProps) {
-		super(props, require('./styles.css'));
+		super(props);
 
-		this._rootStyles.add([
-			'ui-accordionitem',
-			this.styles.accordionItem
+		this._classes.add([
+			'ui-accordionitem'
 		]);
 
 		this.state = {
@@ -123,15 +130,15 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		let content = null;
 		if ((this.props.children != null) && (this.state.toggle)) {
 			content = (
-				<div className={`ui-accordion-content ${this.styles.content}`}>
+				<div className="ui-accordion-content">
 					{this.props.children}
 				</div>
 			);
 		}
 
 		return (
-			<ul
-				className={this._rootStyles.classnames}
+			<AccordionItemView
+				className={this.classes}
 				style={this.inlineStyles}
 			>
 				<Item
@@ -139,7 +146,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
 				/>
 				{content}
-			</ul>
+			</AccordionItemView>
 		);
 	}
 }

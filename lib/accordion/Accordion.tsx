@@ -40,6 +40,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import styled from 'styled-components';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 export interface AccordionProps extends BaseProps {
@@ -54,16 +55,22 @@ export function getDefaultAccordionProps(): AccordionProps {
 	));
 }
 
+export const AccordionView: any = styled.ul`
+	border: solid 1px;
+	cursor: default;
+	list-style: none;
+	min-width: 300px;
+`;
+
 export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
 
 	constructor(props: AccordionProps) {
-		super(props, require('./styles.css'), Accordion.defaultProps.style);
+		super(props, {}, Accordion.defaultProps.style);
 
-		this._rootStyles.add([
-			'ui-accordion',
-			this.styles.accordion
+		this._classes.add([
+			'ui-accordion'
 		]);
 
 		this.componentWillUpdate(props);
@@ -71,9 +78,12 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public render() {
 		return (
-			<ul className={this._rootStyles.classnames} style={this.inlineStyles}>
+			<AccordionView
+				className={this.classes}
+				style={this.inlineStyles}
+			>
 				{this.props.children}
-			</ul>
+			</AccordionView>
 		);
 	}
 }
