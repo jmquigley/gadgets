@@ -85,7 +85,10 @@ export interface AccordionItemState {
 }
 
 export const AccordionItemView: any = styled.ul`
-	border-bottom: solid 1px black;
+	border-bottom: solid 1px;
+	border-color: ${props => props.theme.borderColor || 'black'};
+	color: ${props => props.theme.headerForegroundColor || 'white'}
+	background-color: ${props => props.theme.headerBackgroundColor || 'white'}
 	&:last-child {
 		border-bottom: 0;
 	}

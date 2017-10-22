@@ -23,6 +23,11 @@ import {
 	Styling
 } from './sizing';
 
+import {
+	getTheme,
+	setTheme
+} from './themes';
+
 export {
 	BaseComponent,
 	BaseProps,
@@ -33,8 +38,10 @@ export {
 	fontStyle,
 	FontStyle,
 	getDefaultBaseProps,
+	getTheme,
 	Justify,
 	Location,
+	setTheme,
 	Sizes,
 	Sizing,
 	SortOrder,

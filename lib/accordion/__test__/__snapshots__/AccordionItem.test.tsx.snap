@@ -2,10 +2,11 @@
 
 exports[`Test clicking of the AccordionItem header 1`] = `
 .c0 {
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px;
+  border-color: black;
 }
 
-.c0:last-child {
+color:white background-color:white .c0:last-child {
   border-bottom: 0;
 }
 
@@ -229,10 +230,11 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 
 exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 .c0 {
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px;
+  border-color: black;
 }
 
-.c0:last-child {
+color:white background-color:white .c0:last-child {
   border-bottom: 0;
 }
 

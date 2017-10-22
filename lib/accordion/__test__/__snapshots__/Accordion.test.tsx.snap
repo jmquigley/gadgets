@@ -1,14 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test making the accordion control invisible 1`] = `
-<styled.ul
-  className="ui-accordion"
-  style={Object {}}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#004358",
+      "color": "black",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "white",
+      "hoverColor": "#ffe11a",
+    }
+  }
 >
-  <li>
-    some list item
-  </li>
-</styled.ul>
+  <styled.ul
+    className="ui-accordion"
+    style={Object {}}
+  >
+    <li>
+      some list item
+    </li>
+  </styled.ul>
+</ThemeProvider>
 `;
 
 exports[`Test retrieval of Accordion props object 1`] = `
@@ -35,23 +48,49 @@ Object {
 `;
 
 exports[`Test the creation of a Accordion control container 1`] = `
-<styled.ul
-  className="ui-accordion"
-  style={Object {}}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#004358",
+      "color": "black",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "white",
+      "hoverColor": "#ffe11a",
+    }
+  }
 >
-  <li>
-    some list item
-  </li>
-</styled.ul>
+  <styled.ul
+    className="ui-accordion"
+    style={Object {}}
+  >
+    <li>
+      some list item
+    </li>
+  </styled.ul>
+</ThemeProvider>
 `;
 
 exports[`Test the disabling of the Accordion control container 1`] = `
-<styled.ul
-  className="ui-accordion"
-  style={Object {}}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#004358",
+      "color": "black",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "white",
+      "hoverColor": "#ffe11a",
+    }
+  }
 >
-  <li>
-    some list item
-  </li>
-</styled.ul>
+  <styled.ul
+    className="ui-accordion"
+    style={Object {}}
+  >
+    <li>
+      some list item
+    </li>
+  </styled.ul>
+</ThemeProvider>
 `;
