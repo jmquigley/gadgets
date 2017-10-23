@@ -61,6 +61,10 @@ export const AccordionView: any = styled.ul`
 	cursor: default;
 	list-style: none;
 	min-width: 300px;
+
+	&:last-child {
+		border-bottom: 0;
+	}
 `;
 
 export class Accordion extends BaseComponent<AccordionProps, undefined> {

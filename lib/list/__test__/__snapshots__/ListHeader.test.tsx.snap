@@ -18,7 +18,7 @@ Object {
   "leftButton": null,
   "location": "none",
   "noedit": false,
-  "nohover": false,
+  "nohover": true,
   "noripple": false,
   "onBlur": [Function],
   "onChange": [Function],
@@ -44,46 +44,64 @@ Object {
 `;
 
 exports[`Test the creation of a ListHeader control with simple title 1`] = `
-<Item
-  className="ui-list-header listHeader normal"
-  contentEditable={false}
-  direction="right"
-  disabled={false}
-  focus={false}
-  height=""
-  hiddenLeftButton={false}
-  hiddenRightButton={false}
-  href={
+<ThemeProvider
+  theme={
     Object {
-      "sizing": "normal",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
     }
   }
-  id=""
-  layout={5}
-  leftButton={null}
-  location="none"
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onClick={[Function]}
-  onDoubleClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyPress={[Function]}
-  onMouseOut={[Function]}
-  onUpdate={[Function]}
-  rightButton={null}
-  selected={false}
-  sizing="normal"
-  stacked={false}
-  style={Object {}}
-  testing={false}
-  title="test title"
-  useedit={false}
-  visible={true}
-  widget={null}
-  width=""
-/>
+>
+  <Item
+    className="ui-list-header"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    href={
+      Object {
+        "sizing": "normal",
+      }
+    }
+    id=""
+    layout={5}
+    leftButton={null}
+    location="none"
+    noedit={false}
+    nohover={true}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    onUpdate={[Function]}
+    rightButton={null}
+    selected={false}
+    sizing="normal"
+    stacked={false}
+    style={
+      Object {
+        "backgroundColor": "#004358",
+        "color": "#ffffff",
+      }
+    }
+    testing={false}
+    title="test title"
+    useedit={false}
+    visible={true}
+    widget={null}
+    width=""
+  />
+</ThemeProvider>
 `;

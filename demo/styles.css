@@ -224,11 +224,6 @@ section {
 
  */
 
-.ui-accordion > .ui-accordionitem > .ui-item {
-	color: white;
-	background-color: #004358;
-}
-
 .ui-list {
 }
 
@@ -243,14 +238,6 @@ section {
 
 .ui-selected .ui-title, .ui-selected .ui-title-widget {
 	color: white !important;
-}
-
-.ui-listitem:not(.nohover):hover {
-	background-color: #bedb39;
-}
-
-.ui-accordionitem > .ui-item > .ui-title-bar:not(.nohover):hover {
-	color: #ffe11a;
 }
 
 .ui-dialog-popup {
@@ -288,10 +275,6 @@ section {
 .ui-pager-selected {
 	color: #ffe11a;
 	background-color: #004358;
-}
-
-.ui-tab > .ui-title-bar:not(.nohover):hover {
-	color: #1fa870 !important;
 }
 
 .ui-tab-container {

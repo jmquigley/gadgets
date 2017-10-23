@@ -42,15 +42,28 @@ Object {
 `;
 
 exports[`Test the creation of a ListDivider control 1`] = `
-<li
-  className="ui-list-divider listDivider normal"
->
-  <hr
-    style={
-      Object {
-        "backgroundColor": "blue",
-      }
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
     }
-  />
-</li>
+  }
+>
+  <styled.li
+    className="ui-list-divider"
+  >
+    <hr
+      style={
+        Object {
+          "backgroundColor": "blue",
+        }
+      }
+    />
+  </styled.li>
+</ThemeProvider>
 `;

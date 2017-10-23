@@ -14,9 +14,7 @@ test('Test retrieval of ListFooter props object', () => {
 
 test('Test the creation of a ListFooter control with simple title', () => {
 	const ctl = mount(
-		<ListFooter
-			title="test title"
-		/>
+		<ListFooter title="test title" testing />
 	);
 
 	expect(ctl).toBeTruthy();

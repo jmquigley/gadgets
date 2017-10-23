@@ -14,7 +14,7 @@ test('Test retrieval of List props object', () => {
 
 test('Test the creation of a List control container', () => {
 	const ctl = shallow(
-		<List alternating className="test-class">
+		<List alternating className="test-class" testing>
 			<li>some list item</li>
 		</List>
 	);
@@ -25,7 +25,7 @@ test('Test the creation of a List control container', () => {
 
 test('Test disabling of a List control', () => {
 	const ctl = shallow(
-		<List disabled={true}>
+		<List disabled={true} testing>
 			<li>some list item</li>
 		</List>
 	);
@@ -36,7 +36,7 @@ test('Test disabling of a List control', () => {
 
 test('Test making List control invisible', () => {
 	const ctl = shallow(
-		<List visible={false}>
+		<List visible={false} testing>
 			<li>some list item</li>
 		</List>
 	);
@@ -47,7 +47,7 @@ test('Test making List control invisible', () => {
 
 test('Test a list with ListItem and selection', () => {
 	const ctl = mount(
-		<List>
+		<List testing>
 			<ListItem title="Item #1" />
 			<ListItem title="Item #2" />
 		</List>

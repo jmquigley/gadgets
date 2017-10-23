@@ -27,7 +27,8 @@ import {
 	getTheme,
 	getThemeList,
 	setTheme,
-	Theme
+	Theme,
+	ThemeProps
 } from './themes';
 
 export {
@@ -50,5 +51,6 @@ export {
 	SortOrder,
 	Styles,
 	Styling,
-	Theme
+	Theme,
+	ThemeProps
 };

@@ -22,11 +22,10 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 	public static defaultProps: ListFooterProps = getDefaultListFooterProps();
 
 	constructor(props: ListFooterProps) {
-		super(props, require('./styles.css'));
+		super(props);
 
-		this._rootStyles.add([
-			'ui-list-footer',
-			this.styles.listFooter
+		this._classes.add([
+			'ui-list-footer'
 		]);
 
 		this.componentWillUpdate(props);
@@ -36,7 +35,7 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 		return (
 			<Title
 				{...this.props}
-				className={this._rootStyles.classnames}
+				className={this.classes}
 				noripple
 				style={this.inlineStyles}
 				title={this.props.title}

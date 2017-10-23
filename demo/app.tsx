@@ -776,20 +776,17 @@ class App extends React.Component<AppProps, AppState> {
 					title={`Demo List Header (${this.state.sizingOption})`}
 					/>
 				<ListItem
-					id="1"
 					title="List Item 1" widget="12"
 					leftButton={<Button iconName="podcast"/>}
 					rightButton={<Button iconName="paper-plane-o"/>}
 					/>
 				<ListItem
-					id="2"
 					title="List Item 2 (with icon)"
 					widget="13"
 					leftButton={<Icon iconName="bolt" />}
 					rightButton={<Button />}
 					/>
 				<ListItem
-					id="3"
 					title="List Item 3 (with hidden icon)"
 					widget="14"
 					leftButton={<Icon iconName="car" />}
@@ -797,7 +794,6 @@ class App extends React.Component<AppProps, AppState> {
 					/>
 				<ListDivider />
 				<ListItem
-					id="4"
 					title="List Item 4a (hide/show)" widget="15"
 					leftButton={<Button />}
 					hiddenLeftButton
@@ -813,7 +809,6 @@ class App extends React.Component<AppProps, AppState> {
 					hiddenRightButton
 					/>
 				<ListItem
-					id="5"
 					title="List Item 4b (hide/show)" widget="15"
 					hiddenLeftButton
 					leftButton={
@@ -824,36 +819,32 @@ class App extends React.Component<AppProps, AppState> {
 						<Button iconName="times" style={{color: 'red'}} />
 					}
 					/>
-				<ListItem id="6" title="List Item 5" />
+				<ListItem title="List Item 5" />
 				<ListItem
-					id="7"
 					title="List Item 6 (Toggle)" widget="15"
 					rightButton={
 						<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358" />
 					}
 					/>
-				<ListItem id="7" title="List Item 7 (disabled)" disabled />
+				<ListItem title="List Item 7 (disabled)" disabled />
 				<ListItem
-					id="8" title="List Item 8 (disabled w/ buttons)"
+					title="List Item 8 (disabled w/ buttons)"
 					disabled
 					rightButton={
 						<Button />
 					}
 					/>
 				<ListItem
-					id="9"
 					title="List Item 9 (stacked)"
 					widget="stacked bottom widget"
 					stacked
 					rightButton={<Button />}
 					/>
 				<ListItem
-					id="10"
 					noripple
 					title="List Item 10 (noripple edit)"
 					/>
 				<ListItem
-					id="11"
 					noripple
 					noedit
 					title="List Item 11 (noedit)"

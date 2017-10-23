@@ -9,9 +9,10 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {ThemeProvider} from 'styled-components';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent, Sizing} from '../shared';
+import {BaseComponent, getTheme, Sizing} from '../shared';
 
 export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
@@ -46,11 +47,10 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
-		super(props, require('./styles.css'));
+		super(props);
 
-		this._rootStyles.add([
-			'ui-listitem',
-			this.styles.listItem
+		this._classes.add([
+			'ui-listitem'
 		]);
 
 		this.state = {
@@ -130,19 +130,21 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	public render() {
 		return (
-			<Item
-				{...this.props}
-				className={this._rootStyles.classnames}
-				noripple={this.state.toggleRipple || this.props.noripple}
-				onBlur={this.handleBlur}
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-				onDoubleClick={this.handleDoubleClick}
-				onKeyDown={this.handleKeyDown}
-				onKeyPress={this.handleKeyPress}
-				onMouseOut={this.handleMouseOut}
-				sizing={this.props.href.sizing}
-				style={this.inlineStyles}
-			/>
+			<ThemeProvider theme={getTheme()}>
+				<Item
+					{...this.props}
+					className={this.classes}
+					noripple={this.state.toggleRipple || this.props.noripple}
+					onBlur={this.handleBlur}
+					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+					onDoubleClick={this.handleDoubleClick}
+					onKeyDown={this.handleKeyDown}
+					onKeyPress={this.handleKeyPress}
+					onMouseOut={this.handleMouseOut}
+					sizing={this.props.href.sizing}
+					style={this.inlineStyles}
+				/>
+			</ThemeProvider>
 		);
 	}
 }

@@ -55,10 +55,10 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, {ThemeProvider} from 'styled-components';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent} from '../shared';
+import {BaseComponent, getTheme} from '../shared';
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
@@ -86,11 +86,16 @@ export interface AccordionItemState {
 
 export const AccordionItemView: any = styled.ul`
 	border-bottom: solid 1px;
-	border-color: ${props => props.theme.borderColor || 'black'};
-	color: ${props => props.theme.headerForegroundColor || 'white'}
-	background-color: ${props => props.theme.headerBackgroundColor || 'white'}
-	&:last-child {
-		border-bottom: 0;
+	border-color: black;
+
+	> .ui-item, > .ui-item-button {
+		color: ${props => props.theme.headerForegroundColor || 'white'};
+		background-color: ${props => props.theme.headerBackgroundColor || 'black'};
+	}
+
+	> .ui-item:hover {
+		color: #ffe11a;
+		background-color: ${props => props.theme.headerBackgroundColor || 'black'} !important;
 	}
 `;
 
@@ -130,7 +135,9 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	}
 
 	public render() {
+		const theme = getTheme();
 		let content = null;
+
 		if ((this.props.children != null) && (this.state.toggle)) {
 			content = (
 				<div className="ui-accordion-content">
@@ -140,16 +147,18 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 
 		return (
-			<AccordionItemView
-				className={this.classes}
-				style={this.inlineStyles}
-			>
-				<Item
-					{...this.props}
-					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-				/>
-				{content}
-			</AccordionItemView>
+			<ThemeProvider theme={theme}>
+				<AccordionItemView
+					className={this.classes}
+					style={this.inlineStyles}
+				>
+					<Item
+						{...this.props}
+						onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+					/>
+					{content}
+				</AccordionItemView>
+			</ThemeProvider>
 		);
 	}
 }

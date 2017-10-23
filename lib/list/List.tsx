@@ -9,12 +9,15 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import styled, {ThemeProvider} from 'styled-components';
+import {Keys} from 'util.keys';
 import {nilEvent} from 'util.toolbox';
-import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
+import {BaseComponent, BaseProps, getDefaultBaseProps, getTheme} from '../shared';
 import {ListItem} from './index';
 
 export interface ListProps extends BaseProps {
 	alternating?: boolean;
+	children?: React.ReactNode;
 	onAdd?: any;
 	unselect?: boolean;
 }
@@ -23,6 +26,7 @@ export function getDefaultListProps(): ListProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			alternating: false,
+			children: null,
 			onAdd: nilEvent,
 			unselect: false
 		})
@@ -33,16 +37,28 @@ export interface ListState {
 	selectedItem: ListItem;
 }
 
+export const ListView: any = styled.ul`
+	list-style: none;
+
+	${(props: ListProps) => props.alternating &&
+		'> li:nth-child(2n) {background: #e6e6e6;}'
+	}
+`;
+
 export class List extends BaseComponent<ListProps, ListState> {
+
+	private _children: any[] = [];
+	private _keys: Keys;
 
 	public static defaultProps: ListProps = getDefaultListProps();
 
 	constructor(props: ListProps) {
 		super(props, require('./styles.css'));
 
-		this._rootStyles.add([
-			'ui-list',
-			this.styles.list
+		this._keys = new Keys({testing: this.props.testing});
+
+		this._classes.add([
+			'ui-list'
 		]);
 
 		this.state = {
@@ -50,7 +66,9 @@ export class List extends BaseComponent<ListProps, ListState> {
 		};
 
 		this.bindCallbacks('selectHandler');
-		this.componentWillUpdate(props);
+
+		this.componentWillReceiveProps(this.props);
+		this.componentWillUpdate(this.props);
 	}
 
 	private selectHandler(item: ListItem) {
@@ -64,37 +82,41 @@ export class List extends BaseComponent<ListProps, ListState> {
 		});
 	}
 
-	public componentWillUpdate(nextProps: ListProps) {
-		this._rootStyles.onIf(nextProps.alternating)(
-			this.styles.listAlternating
-		);
-
-		super.componentWillUpdate(nextProps);
+	public componentWillReceiveProps(nextProps: ListProps) {
+		if (nextProps.children) {
+			this._children = [];
+			const children = React.Children.toArray(nextProps.children);
+			for (const [idx, child] of children.entries()) {
+				this._children.push(React.cloneElement(child as any, {
+					id: nextProps.id || this._keys.at(idx),
+					href: {
+						selectHandler: this.selectHandler,
+						sizing: this.props.sizing
+					}
+				}));
+			}
+		}
 	}
 
 	public render() {
 		const selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
-		const children = React.Children.map(this.props.children, child => {
+		const children = this._children.map(child => {
 			const selected = child['props'].id === selectedKey;
 			return React.cloneElement(child as any, {
-				href: {
-					selectHandler: this.selectHandler,
-					sizing: this.props.sizing
-				},
 				selected: (this.props.unselect) ? false : selected
 			});
 		});
 
 		return (
-			<div
-				className={this._rootStyles.classnames}
-				id={this.props.id}
-				style={this.inlineStyles}
-			>
-				<ul>
+			<ThemeProvider theme={getTheme()}>
+				<ListView
+					alternating={this.props.alternating}
+					className={this.classes}
+					style={this.inlineStyles}
+				>
 					{children}
-				</ul>
-			</div>
+				</ListView>
+			</ThemeProvider>
 		);
 	}
 }

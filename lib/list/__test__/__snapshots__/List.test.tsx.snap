@@ -1,12 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test disabling of a List control 1`] = `
-<div
-  className="ui-list list normal disabled nohover"
-  id=""
-  style={Object {}}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
+    }
+  }
 >
-  <ul>
+  <styled.ul
+    alternating={false}
+    className="ui-list"
+    style={Object {}}
+  >
     <li
       href={
         Object {
@@ -14,22 +25,34 @@ exports[`Test disabling of a List control 1`] = `
           "sizing": "normal",
         }
       }
+      id="0"
       key=".0"
       selected={false}
     >
       some list item
     </li>
-  </ul>
-</div>
+  </styled.ul>
+</ThemeProvider>
 `;
 
 exports[`Test making List control invisible 1`] = `
-<div
-  className="ui-list list normal invisible"
-  id=""
-  style={Object {}}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
+    }
+  }
 >
-  <ul>
+  <styled.ul
+    alternating={false}
+    className="ui-list"
+    style={Object {}}
+  >
     <li
       href={
         Object {
@@ -37,18 +60,20 @@ exports[`Test making List control invisible 1`] = `
           "sizing": "normal",
         }
       }
+      id="0"
       key=".0"
       selected={false}
     >
       some list item
     </li>
-  </ul>
-</div>
+  </styled.ul>
+</ThemeProvider>
 `;
 
 exports[`Test retrieval of List props object 1`] = `
 Object {
   "alternating": false,
+  "children": null,
   "className": "",
   "contentEditable": false,
   "direction": "right",
@@ -72,12 +97,23 @@ Object {
 `;
 
 exports[`Test the creation of a List control container 1`] = `
-<div
-  className="ui-list list listAlternating normal test-class"
-  id=""
-  style={Object {}}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
+    }
+  }
 >
-  <ul>
+  <styled.ul
+    alternating={true}
+    className="ui-list"
+    style={Object {}}
+  >
     <li
       href={
         Object {
@@ -85,11 +121,12 @@ exports[`Test the creation of a List control container 1`] = `
           "sizing": "normal",
         }
       }
+      id="0"
       key=".0"
       selected={false}
     >
       some list item
     </li>
-  </ul>
-</div>
+  </styled.ul>
+</ThemeProvider>
 `;

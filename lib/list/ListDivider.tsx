@@ -28,8 +28,9 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import styled, {ThemeProvider} from 'styled-components';
 import {getDefaultItemProps, ItemProps} from '../item';
-import {BaseComponent} from '../shared';
+import {BaseComponent, getTheme} from '../shared';
 
 export interface ListDividerProps extends ItemProps {
 	color?: string;
@@ -43,16 +44,25 @@ export function getDefaultListDividerProps(): ListDividerProps {
 	);
 }
 
+export const ListDividerView: any = styled.li`
+	background-color: inherit;
+
+	> hr {
+		border: none;
+		height: 1px;
+		margin: 5px;
+	}
+`;
+
 export class ListDivider extends BaseComponent<ListDividerProps, undefined> {
 
 	public static defaultProps: ListDividerProps = getDefaultListDividerProps();
 
 	constructor(props: ListDividerProps) {
-		super(props, require('./styles.css'));
+		super(props);
 
-		this._rootStyles.add([
-			'ui-list-divider',
-			this.styles.listDivider
+		this._classes.add([
+			'ui-list-divider'
 		]);
 
 		this.componentWillUpdate(props);
@@ -60,9 +70,11 @@ export class ListDivider extends BaseComponent<ListDividerProps, undefined> {
 
 	public render() {
 		return(
-			<li className={this._rootStyles.classnames}>
-				<hr	style={{backgroundColor: this.props.color}} />
-			</li>
+			<ThemeProvider theme={getTheme()}>
+				<ListDividerView className={this.classes}>
+					<hr	style={{backgroundColor: this.props.color}} />
+				</ListDividerView>
+			</ThemeProvider>
 		);
 	}
 }

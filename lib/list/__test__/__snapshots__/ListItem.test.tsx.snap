@@ -38,194 +38,232 @@ exports[`Test disabling of a ListItem control 1`] = `
   sizing="normal"
   stacked={false}
   style={Object {}}
-  testing={false}
+  testing={true}
   title="test title"
   useedit={false}
   visible={true}
   widget={null}
   width=""
 >
-  <Item
-    className="ui-listitem listItem normal disabled nohover"
-    contentEditable={false}
-    direction="right"
-    disabled={true}
-    focus={false}
-    height=""
-    hiddenLeftButton={false}
-    hiddenRightButton={false}
-    href={
+  <ThemeProvider
+    theme={
       Object {
-        "selectHandler": [Function],
-        "sizing": "normal",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "hoverColor": "#ffe11a",
       }
     }
-    id=""
-    layout={5}
-    leftButton={null}
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onMouseOut={[Function]}
-    onSelect={[Function]}
-    onUpdate={[Function]}
-    rightButton={null}
-    selected={false}
-    sizing="normal"
-    stacked={false}
-    style={Object {}}
-    testing={false}
-    title="test title"
-    useedit={false}
-    visible={true}
-    widget={null}
-    width=""
   >
-    <li
-      className="ui-item item normal ui-listitem listItem normal disabled nohover disabled nohover"
+    <Item
+      className="ui-listitem"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      href={
+        Object {
+          "selectHandler": [Function],
+          "sizing": "normal",
+        }
+      }
       id=""
+      layout={5}
+      leftButton={null}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
       onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
       onDoubleClick={[Function]}
+      onFocus={[Function]}
       onKeyDown={[Function]}
       onKeyPress={[Function]}
       onMouseOut={[Function]}
+      onSelect={[Function]}
+      onUpdate={[Function]}
+      rightButton={null}
+      selected={false}
+      sizing="normal"
+      stacked={false}
       style={Object {}}
+      testing={true}
+      title="test title"
+      useedit={false}
+      visible={true}
+      widget={null}
+      width=""
     >
-      <Title
-        className="itemTitle"
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
+      <ThemeProvider
+        theme={
           Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
           }
         }
-        id=""
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={
-          Object {
-            "padding": "2px 4px",
-          }
-        }
-        testing={false}
-        title="test title"
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
       >
-        <div
-          className="ui-title-bar titleBar normal itemTitle disabled nohover"
-          style={
-            Object {
-              "padding": "2px 4px",
-            }
-          }
+        <styled.li
+          className="ui-item"
+          id=""
+          nohover={false}
+          onBlur={[Function]}
+          onDoubleClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          style={Object {}}
         >
-          <Label
-            className="ui-title title titleDominant"
-            contentEditable={false}
-            direction="right"
-            disabled={true}
-            focus={false}
-            height=""
-            hiddenLeftButton={false}
-            hiddenRightButton={false}
-            href={
-              Object {
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
+          <li
+            className="ui-item sc-bxivhb dpuwnO"
             id=""
-            layout={5}
-            leftButton={null}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
             onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
             onDoubleClick={[Function]}
-            onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
             onMouseOut={[Function]}
-            onSelect={[Function]}
-            onUpdate={[Function]}
-            rightButton={null}
-            selected={false}
-            sizing="normal"
-            stacked={false}
-            style={
-              Object {
-                "padding": "2px 4px",
-              }
-            }
-            testing={false}
-            text="test title"
-            title="test title"
-            useedit={false}
-            visible={true}
-            widget={null}
-            width=""
+            style={Object {}}
           >
-            <span
-              className="ui-label label normal ui-title title titleDominant disabled nohover"
+            <Title
+              className="ui-listitem"
               contentEditable={false}
+              direction="right"
+              disabled={true}
+              focus={false}
+              height=""
+              hiddenLeftButton={false}
+              hiddenRightButton={false}
+              href={
+                Object {
+                  "selectHandler": [Function],
+                  "sizing": "normal",
+                }
+              }
+              id=""
+              layout={5}
+              leftButton={null}
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
               onBlur={[Function]}
+              onChange={[Function]}
               onClick={[Function]}
               onDoubleClick={[Function]}
+              onFocus={[Function]}
               onKeyDown={[Function]}
               onKeyPress={[Function]}
+              onMouseOut={[Function]}
+              onSelect={[Function]}
+              onUpdate={[Function]}
+              rightButton={null}
+              selected={false}
+              sizing="normal"
+              stacked={false}
               style={
                 Object {
                   "padding": "2px 4px",
                 }
               }
-              suppressContentEditableWarning={true}
+              testing={true}
+              title="test title"
+              useedit={false}
+              visible={true}
+              widget={null}
+              width=""
             >
-              test title
-            </span>
-          </Label>
-        </div>
-      </Title>
-    </li>
-  </Item>
+              <div
+                className="ui-title-bar titleBar normal ui-listitem disabled nohover"
+                style={
+                  Object {
+                    "padding": "2px 4px",
+                  }
+                }
+              >
+                <Label
+                  className="ui-title title titleDominant"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={true}
+                  focus={false}
+                  height=""
+                  hiddenLeftButton={false}
+                  hiddenRightButton={false}
+                  href={
+                    Object {
+                      "selectHandler": [Function],
+                      "sizing": "normal",
+                    }
+                  }
+                  id=""
+                  layout={5}
+                  leftButton={null}
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDoubleClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onMouseOut={[Function]}
+                  onSelect={[Function]}
+                  onUpdate={[Function]}
+                  rightButton={null}
+                  selected={false}
+                  sizing="normal"
+                  stacked={false}
+                  style={
+                    Object {
+                      "padding": "2px 4px",
+                    }
+                  }
+                  testing={true}
+                  text="test title"
+                  title="test title"
+                  useedit={false}
+                  visible={true}
+                  widget={null}
+                  width=""
+                >
+                  <span
+                    className="ui-label label normal ui-title title titleDominant disabled nohover"
+                    contentEditable={false}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    style={
+                      Object {
+                        "padding": "2px 4px",
+                      }
+                    }
+                    suppressContentEditableWarning={true}
+                  >
+                    test title
+                  </span>
+                </Label>
+              </div>
+            </Title>
+          </li>
+        </styled.li>
+      </ThemeProvider>
+    </Item>
+  </ThemeProvider>
 </ListItem>
 `;
 
@@ -267,194 +305,232 @@ exports[`Test making ListItem control invisible 1`] = `
   sizing="normal"
   stacked={false}
   style={Object {}}
-  testing={false}
+  testing={true}
   title="test title"
   useedit={false}
   visible={false}
   widget={null}
   width=""
 >
-  <Item
-    className="ui-listitem listItem normal invisible"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    hiddenLeftButton={false}
-    hiddenRightButton={false}
-    href={
+  <ThemeProvider
+    theme={
       Object {
-        "selectHandler": [Function],
-        "sizing": "normal",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "hoverColor": "#ffe11a",
       }
     }
-    id=""
-    layout={5}
-    leftButton={null}
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onMouseOut={[Function]}
-    onSelect={[Function]}
-    onUpdate={[Function]}
-    rightButton={null}
-    selected={false}
-    sizing="normal"
-    stacked={false}
-    style={Object {}}
-    testing={false}
-    title="test title"
-    useedit={false}
-    visible={false}
-    widget={null}
-    width=""
   >
-    <li
-      className="ui-item item normal ui-listitem listItem normal invisible invisible"
+    <Item
+      className="ui-listitem"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      href={
+        Object {
+          "selectHandler": [Function],
+          "sizing": "normal",
+        }
+      }
       id=""
+      layout={5}
+      leftButton={null}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
       onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
       onDoubleClick={[Function]}
+      onFocus={[Function]}
       onKeyDown={[Function]}
       onKeyPress={[Function]}
       onMouseOut={[Function]}
+      onSelect={[Function]}
+      onUpdate={[Function]}
+      rightButton={null}
+      selected={false}
+      sizing="normal"
+      stacked={false}
       style={Object {}}
+      testing={true}
+      title="test title"
+      useedit={false}
+      visible={false}
+      widget={null}
+      width=""
     >
-      <Title
-        className="itemTitle"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
+      <ThemeProvider
+        theme={
           Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
           }
         }
-        id=""
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={
-          Object {
-            "padding": "2px 4px",
-          }
-        }
-        testing={false}
-        title="test title"
-        useedit={false}
-        visible={false}
-        widget={null}
-        width=""
       >
-        <div
-          className="ui-title-bar titleBar ripple normal itemTitle invisible"
-          style={
-            Object {
-              "padding": "2px 4px",
-            }
-          }
+        <styled.li
+          className="ui-item"
+          id=""
+          nohover={false}
+          onBlur={[Function]}
+          onDoubleClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          style={Object {}}
         >
-          <Label
-            className="ui-title title titleDominant"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            hiddenLeftButton={false}
-            hiddenRightButton={false}
-            href={
-              Object {
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
+          <li
+            className="ui-item sc-bxivhb dpuwnO"
             id=""
-            layout={5}
-            leftButton={null}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
             onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
             onDoubleClick={[Function]}
-            onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyPress={[Function]}
             onMouseOut={[Function]}
-            onSelect={[Function]}
-            onUpdate={[Function]}
-            rightButton={null}
-            selected={false}
-            sizing="normal"
-            stacked={false}
-            style={
-              Object {
-                "padding": "2px 4px",
-              }
-            }
-            testing={false}
-            text="test title"
-            title="test title"
-            useedit={false}
-            visible={false}
-            widget={null}
-            width=""
+            style={Object {}}
           >
-            <span
-              className="ui-label label normal ui-title title titleDominant invisible"
+            <Title
+              className="ui-listitem"
               contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              hiddenLeftButton={false}
+              hiddenRightButton={false}
+              href={
+                Object {
+                  "selectHandler": [Function],
+                  "sizing": "normal",
+                }
+              }
+              id=""
+              layout={5}
+              leftButton={null}
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
               onBlur={[Function]}
+              onChange={[Function]}
               onClick={[Function]}
               onDoubleClick={[Function]}
+              onFocus={[Function]}
               onKeyDown={[Function]}
               onKeyPress={[Function]}
+              onMouseOut={[Function]}
+              onSelect={[Function]}
+              onUpdate={[Function]}
+              rightButton={null}
+              selected={false}
+              sizing="normal"
+              stacked={false}
               style={
                 Object {
                   "padding": "2px 4px",
                 }
               }
-              suppressContentEditableWarning={true}
+              testing={true}
+              title="test title"
+              useedit={false}
+              visible={false}
+              widget={null}
+              width=""
             >
-              test title
-            </span>
-          </Label>
-        </div>
-      </Title>
-    </li>
-  </Item>
+              <div
+                className="ui-title-bar titleBar ripple normal ui-listitem invisible"
+                style={
+                  Object {
+                    "padding": "2px 4px",
+                  }
+                }
+              >
+                <Label
+                  className="ui-title title titleDominant"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  hiddenLeftButton={false}
+                  hiddenRightButton={false}
+                  href={
+                    Object {
+                      "selectHandler": [Function],
+                      "sizing": "normal",
+                    }
+                  }
+                  id=""
+                  layout={5}
+                  leftButton={null}
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDoubleClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onMouseOut={[Function]}
+                  onSelect={[Function]}
+                  onUpdate={[Function]}
+                  rightButton={null}
+                  selected={false}
+                  sizing="normal"
+                  stacked={false}
+                  style={
+                    Object {
+                      "padding": "2px 4px",
+                    }
+                  }
+                  testing={true}
+                  text="test title"
+                  title="test title"
+                  useedit={false}
+                  visible={false}
+                  widget={null}
+                  width=""
+                >
+                  <span
+                    className="ui-label label normal ui-title title titleDominant invisible"
+                    contentEditable={false}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    style={
+                      Object {
+                        "padding": "2px 4px",
+                      }
+                    }
+                    suppressContentEditableWarning={true}
+                  >
+                    test title
+                  </span>
+                </Label>
+              </div>
+            </Title>
+          </li>
+        </styled.li>
+      </ThemeProvider>
+    </Item>
+  </ThemeProvider>
 </ListItem>
 `;
 
@@ -504,95 +580,121 @@ Object {
 `;
 
 exports[`Test the creation of a ListItem control with left & right title 1`] = `
-<Item
-  className="ui-listitem listItem normal"
-  contentEditable={false}
-  direction="right"
-  disabled={false}
-  focus={false}
-  height=""
-  hiddenLeftButton={false}
-  hiddenRightButton={false}
-  href={
+<ThemeProvider
+  theme={
     Object {
-      "selectHandler": [Function],
-      "sizing": "normal",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
     }
   }
-  id=""
-  layout={5}
-  leftButton={null}
-  location="none"
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onClick={[Function]}
-  onDoubleClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyPress={[Function]}
-  onMouseOut={[Function]}
-  onSelect={[Function]}
-  onUpdate={[Function]}
-  rightButton={null}
-  selected={false}
-  sizing="normal"
-  stacked={false}
-  style={Object {}}
-  testing={false}
-  title="test title left"
-  useedit={false}
-  visible={true}
-  widget="test title right"
-  width=""
-/>
+>
+  <Item
+    className="ui-listitem"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    href={
+      Object {
+        "selectHandler": [Function],
+        "sizing": "normal",
+      }
+    }
+    id=""
+    layout={5}
+    leftButton={null}
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    onSelect={[Function]}
+    onUpdate={[Function]}
+    rightButton={null}
+    selected={false}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    testing={true}
+    title="test title left"
+    useedit={false}
+    visible={true}
+    widget="test title right"
+    width=""
+  />
+</ThemeProvider>
 `;
 
 exports[`Test the creation of a ListItem control with simple title 1`] = `
-<Item
-  className="ui-listitem listItem normal"
-  contentEditable={false}
-  direction="right"
-  disabled={false}
-  focus={false}
-  height=""
-  hiddenLeftButton={false}
-  hiddenRightButton={false}
-  href={
+<ThemeProvider
+  theme={
     Object {
-      "selectHandler": [Function],
-      "sizing": "normal",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
     }
   }
-  id=""
-  layout={5}
-  leftButton={null}
-  location="none"
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onClick={[Function]}
-  onDoubleClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyPress={[Function]}
-  onMouseOut={[Function]}
-  onSelect={[Function]}
-  onUpdate={[Function]}
-  rightButton={null}
-  selected={true}
-  sizing="normal"
-  stacked={false}
-  style={Object {}}
-  testing={false}
-  title="test title"
-  useedit={false}
-  visible={true}
-  widget={null}
-  width=""
-/>
+>
+  <Item
+    className="ui-listitem"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    href={
+      Object {
+        "selectHandler": [Function],
+        "sizing": "normal",
+      }
+    }
+    id=""
+    layout={5}
+    leftButton={null}
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    onSelect={[Function]}
+    onUpdate={[Function]}
+    rightButton={null}
+    selected={true}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    testing={true}
+    title="test title"
+    useedit={false}
+    visible={true}
+    widget={null}
+    width=""
+  />
+</ThemeProvider>
 `;

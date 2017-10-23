@@ -26,6 +26,7 @@ test('Test the creation of a ListItem control with simple title', () => {
 		<ListItem
 			title="test title"
 			selected
+			testing
 		/>
 	);
 
@@ -38,6 +39,7 @@ test('Test the creation of a ListItem control with left & right title', () => {
 		<ListItem
 			title="test title left"
 			widget="test title right"
+			testing
 		/>
 	);
 
@@ -52,6 +54,7 @@ test('Test disabling of a ListItem control', () => {
 			disabled={true}
 			onClick={click}
 			title="test title"
+			testing
 		/>
 	);
 
@@ -65,7 +68,7 @@ test('Test disabling of a ListItem control', () => {
 test('Test making ListItem control invisible', () => {
 	const click = jest.fn();
 	const ctl = mount(
-		<ListItem title="test title" visible={false} />
+		<ListItem title="test title" visible={false} testing/>
 	);
 
 	assert(ctl);
@@ -81,6 +84,7 @@ test('Test clicking of the left button on the ListItem control', () => {
 		<ListItem
 			title="test title"
 			leftButton={<Button iconName="bath" onClick={click} />}
+			testing
 		/>
 	);
 
@@ -100,6 +104,7 @@ test('Test clicking of the right button on the ListItem control', () => {
 		<ListItem
 			title="test title"
 			rightButton={<Button iconName="bath" onClick={click} />}
+			testing
 		/>
 	);
 
@@ -119,6 +124,7 @@ test('Test clicking of the title bar area of the ListItem', async () => {
 		<ListItem
 			title="test title"
 			onClick={click}
+			testing
 		/>
 	);
 
@@ -144,6 +150,7 @@ test('Test double click of the title bar area of the ListItem', () => {
 		<ListItem
 			title="test title"
 			onClick={click}
+			testing
 		/>
 	);
 	const listItem = ctl.instance() as ListItem;

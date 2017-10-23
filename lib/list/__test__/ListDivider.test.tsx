@@ -14,7 +14,7 @@ test('Test retrieval of ListHeader props object', () => {
 
 test('Test the creation of a ListDivider control', () => {
 	const ctl = shallow(
-		<ListDivider color="blue" />
+		<ListDivider color="blue" testing/>
 	);
 
 	assert(ctl);

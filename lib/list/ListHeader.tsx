@@ -10,8 +10,9 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {ThemeProvider} from 'styled-components';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent, Sizing} from '../shared';
+import {BaseComponent, getTheme, Sizing, ThemeProps} from '../shared';
 
 export interface ListHeaderProps extends ItemProps {
 	href?: any;
@@ -22,7 +23,8 @@ export function getDefaultListHeaderProps(): ListHeaderProps {
 		getDefaultItemProps(), {
 			href: {
 				sizing: Sizing.normal
-			}
+			},
+			nohover: true
 		})
 	);
 }
@@ -32,24 +34,30 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
 
 	constructor(props: ListHeaderProps) {
-		super(props, require('./styles.css'));
+		super(props);
 
-		this._rootStyles.add([
-			'ui-list-header',
-			this.styles.listHeader
+		this._classes.add([
+			'ui-list-header'
 		]);
 
 		this.componentWillUpdate(props);
 	}
 
 	public render() {
+		const theme: ThemeProps = getTheme();
+
 		return (
-			<Item
-				{...this.props}
-				className={this._rootStyles.classnames}
-				sizing={this.props.href.sizing}
-				style={this.inlineStyles}
-			/>
+			<ThemeProvider theme={theme}>
+				<Item
+					{...this.props}
+					className={this.classes}
+					sizing={this.props.href.sizing}
+					style={{...this.inlineStyles,
+						color: theme.headerForegroundColor,
+						backgroundColor: theme.headerBackgroundColor
+					}}
+				/>
+			</ThemeProvider>
 		);
 	}
 }

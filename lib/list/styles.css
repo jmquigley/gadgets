@@ -2,30 +2,6 @@
 
 :local {
 
-	.list {
-	}
-
-	.list > ul, .list > .listHeader {
-		list-style: none;
-	}
-
-	.listAlternating > ul > li:nth-child(2n) {
-		background: #e6e6e6;
-	}
-
-	.listDivider {
-		background-color: inherit;
-	}
-
-	.listDivider > hr {
-		border: none;
-		height: 1px;
-		margin: 5px;
-	}
-
-	.listHeader {
-	}
-
 	.listFooter {
 		margin: -1px;
 		padding: 3px 3px 3px 1px;
@@ -33,9 +9,6 @@
 
 	.listFooter input {
 		padding: 2px;
-	}
-
-	.listItem {
 	}
 
 }

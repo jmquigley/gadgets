@@ -41,56 +41,70 @@ Object {
 `;
 
 exports[`Test the creation of a Item control 1`] = `
-<li
-  className="ui-item item normal"
-  id=""
-  onBlur={[Function]}
-  onDoubleClick={[Function]}
-  onKeyDown={[Function]}
-  onKeyPress={[Function]}
-  onMouseOut={[Function]}
-  style={Object {}}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
+    }
+  }
 >
-  <Title
-    className="itemTitle"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    hiddenLeftButton={false}
-    hiddenRightButton={false}
+  <styled.li
+    className="ui-item"
     id=""
-    layout={5}
-    leftButton={null}
-    location="none"
-    noedit={false}
     nohover={false}
-    noripple={false}
     onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[Function]}
     onDoubleClick={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onMouseOut={[Function]}
-    onUpdate={[Function]}
-    rightButton={null}
-    selected={false}
-    sizing="normal"
-    stacked={false}
-    style={
-      Object {
-        "padding": "2px 4px",
+    style={Object {}}
+  >
+    <Title
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      id=""
+      layout={5}
+      leftButton={null}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      rightButton={null}
+      selected={false}
+      sizing="normal"
+      stacked={false}
+      style={
+        Object {
+          "padding": "2px 4px",
+        }
       }
-    }
-    testing={false}
-    title="test title"
-    useedit={false}
-    visible={true}
-    widget="widget"
-    width=""
-  />
-</li>
+      testing={true}
+      title="test title"
+      useedit={false}
+      visible={true}
+      widget="widget"
+      width=""
+    />
+  </styled.li>
+</ThemeProvider>
 `;
