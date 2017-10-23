@@ -26,11 +26,15 @@ import {
 	Color,
 	Direction,
 	FontStyle,
+	getTheme,
+	getThemeList,
 	Justify,
 	Location,
+	setTheme,
 	Sizing,
 	SortOrder,
-	Styling
+	Styling,
+	Theme
 } from './lib/shared';
 import {Switch, SwitchType} from './lib/switch';
 import {Tab, TabContainer} from './lib/tabs';
@@ -72,6 +76,8 @@ export {
 	DynamicListItem,
 	Editor,
 	FontStyle,
+	getTheme,
+	getThemeList,
 	Icon,
 	Item,
 	Justify,
@@ -85,6 +91,7 @@ export {
 	OptionType,
 	Pager,
 	Select,
+	setTheme,
 	Sizing,
 	SortOrder,
 	Styling,
@@ -95,6 +102,7 @@ export {
 	TabContainer,
 	Tag,
 	TagList,
+	Theme,
 	Title,
 	TitleLayout,
 	Toast,

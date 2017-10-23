@@ -25,7 +25,9 @@ import {
 
 import {
 	getTheme,
-	setTheme
+	getThemeList,
+	setTheme,
+	Theme
 } from './themes';
 
 export {
@@ -39,6 +41,7 @@ export {
 	FontStyle,
 	getDefaultBaseProps,
 	getTheme,
+	getThemeList,
 	Justify,
 	Location,
 	setTheme,
@@ -46,5 +49,6 @@ export {
 	Sizing,
 	SortOrder,
 	Styles,
-	Styling
+	Styling,
+	Theme
 };

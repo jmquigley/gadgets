@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test retrieval of the current theme 1`] = `
+Object {
+  "backgroundColor": "#ffffff",
+  "borderColor": "#004358",
+  "color": "#000000",
+  "headerBackgroundColor": "#004358",
+  "headerForegroundColor": "#ffffff",
+  "hoverColor": "#ffe11a",
+}
+`;
+
+exports[`Test retrieving a bad theme (doesn't exist) 1`] = `
+Object {
+  "backgroundColor": "#ffffff",
+  "borderColor": "#004358",
+  "color": "#000000",
+  "headerBackgroundColor": "#004358",
+  "headerForegroundColor": "#ffffff",
+  "hoverColor": "#ffe11a",
+}
+`;
+
+exports[`Test retrieving the dark theme 1`] = `
+Object {
+  "backgroundColor": "#000000",
+  "borderColor": "#004358",
+  "color": "#ffffff",
+  "headerBackgroundColor": "#004358",
+  "headerForegroundColor": "#ffffff",
+  "hoverColor": "#ffe11a",
+}
+`;
+
+exports[`Test retrieving the light theme 1`] = `
+Object {
+  "backgroundColor": "#ffffff",
+  "borderColor": "#004358",
+  "color": "#000000",
+  "headerBackgroundColor": "#004358",
+  "headerForegroundColor": "#ffffff",
+  "hoverColor": "#ffe11a",
+}
+`;
+
+exports[`Test setting and retrieving a custom theme 1`] = `
+Object {
+  "backgroundColor": "#ffffff",
+  "borderColor": "#004358",
+  "color": "#000000",
+  "headerBackgroundColor": "#004358",
+  "headerForegroundColor": "#ffffff",
+  "hoverColor": "#ffe11a",
+}
+`;
