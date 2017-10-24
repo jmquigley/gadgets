@@ -55,12 +55,10 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
+import styled, {css} from 'styled-components';
 import {nilEvent} from 'util.toolbox';
 import {Label} from '../label';
-import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
-
-const styles = require('./styles.css');
+import {BaseComponent, BaseProps, fontStyle, getDefaultBaseProps} from '../shared';
 
 export enum TitleLayout {
 	quarter,
@@ -89,142 +87,175 @@ export function getDefaultTitleProps(): TitleProps {
 	);
 }
 
+export const TitleView: any = styled.div`
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: ${(props: TitleProps) => props.layout === TitleLayout.stacked ? 'column' : 'row'};
+	flex-grow: 1;
+`;
+
+export const TitleQuarterView: any = css`
+	text-align: left;
+	flex: 1;
+`;
+
+export const WidgetQuarterView: any = css`
+	text-align: right;
+	flex: 3;
+`;
+
+export const TitleEvenView: any = css`
+	text-align: left;
+	flex: 1;
+`;
+
+export const WidgetEvenView: any = css`
+	text-align: right;
+	flex: 1;
+`;
+
+export const TitleThreeQuarterView: any = css`
+	text-align: left;
+	flex: 3;
+`;
+
+export const WidgetThreeQuarterView: any = css`
+	text-align: right;
+	flex: 1;
+`;
+
+export const TitleThirdView: any = css`
+	text-align: left;
+	flex: 1;
+`;
+
+export const WidgetThirdView: any = css`
+	text-align: right;
+	flex: 2;
+`;
+
+export const TitleStackedView: any = css`
+	display: block;
+`;
+
+export const WidgetStackedView: any = css`
+	display: block;
+`;
+
+export const TitleDominantView: any = css`
+	text-align: left;
+	flex: 5;
+`;
+
+export const WidgetDominantView: any = css`
+	text-align: right;
+	flex: 1;
+`;
+
 export class Title extends BaseComponent<TitleProps, undefined> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
 
-	private static readonly _resetTitleClasses = [
-		styles.titleQuarter,
-		styles.titleEven,
-		styles.titleThreeQuarter,
-		styles.titleThird,
-		styles.titleStacked,
-		styles.titleDominant
-	];
-
-	private static readonly _resetWidgetClasses = [
-		styles.widgetQuarter,
-		styles.widgetEven,
-		styles.widgetThreeQuarter,
-		styles.widgetThird,
-		styles.widgetStacked,
-		styles.widgetDominant
-	];
-
-	private _titleClasses: ClassNames = new ClassNames();
-	private _widgetClasses: ClassNames = new ClassNames();
-
 	constructor(props: TitleProps) {
-		super(props, styles);
-
-		this._rootStyles.add('ui-title-bar');
-
-		this._titleClasses.add([
-			'ui-title',
-			this.styles.title
-		]);
-
-		this._widgetClasses.add([
-			'ui-title-widget',
-			this.styles.widget
-		]);
-
+		super(props);
+		this._classes.add('ui-title-bar');
 		this.componentWillUpdate(props);
 	}
 
 	public componentWillUpdate(nextProps: TitleProps) {
-
-		if (nextProps.layout !== this.props.layout) {
-			this._titleClasses.reset(Title._resetTitleClasses);
-			this._widgetClasses.reset(Title._resetWidgetClasses);
-		}
-
-		switch (nextProps.layout) {
-			case TitleLayout.quarter:
-				this._titleClasses.on(this.styles.titleQuarter);
-				this._widgetClasses.on(this.styles.widgetQuarter);
-				break;
-
-			case TitleLayout.even:
-			case TitleLayout.none:
-				this._titleClasses.on(this.styles.titleEven);
-				this._widgetClasses.on(this.styles.widgetEven);
-				break;
-
-			case TitleLayout.threequarter:
-				this._titleClasses.on(this.styles.titleThreeQuarter);
-				this._widgetClasses.on(this.styles.widgetThreeQuarter);
-				break;
-
-			case TitleLayout.third:
-				this._titleClasses.on(this.styles.titleThird);
-				this._widgetClasses.on(this.styles.widgetThird);
-				break;
-
-			case TitleLayout.stacked:
-				this._titleClasses.on(this.styles.titleStacked);
-				this._widgetClasses.on(this.styles.widgetStacked);
-				break;
-
-			case TitleLayout.dominant:
-			default:
-				this._titleClasses.on(this.styles.titleDominant);
-				this._widgetClasses.on(this.styles.widgetDominant);
-		}
-
-		this._rootStyles.onIfElse(nextProps.layout === TitleLayout.stacked)
-		(
-			this.styles.titleBarStacked
-		)(
-			this.styles.titleBar
-		);
-
-		this._rootStyles.onIf(!nextProps.noripple && !nextProps.disabled)(
+		this._classes.onIf(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
 		);
-
-		this.updateFontStyle(this._widgetClasses, nextProps, this.props);
 
 		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
 		let title: any = null;
+		let titleView: any = null;
+		let widget: any = null;
+		let widgetView: any = null;
+
+		switch (this.props.layout) {
+			case TitleLayout.quarter:
+				titleView = TitleQuarterView;
+				widgetView = WidgetQuarterView;
+				break;
+
+			case TitleLayout.threequarter:
+				titleView = TitleThreeQuarterView;
+				widgetView = WidgetThreeQuarterView;
+				break;
+
+			case TitleLayout.third:
+				titleView = TitleThirdView;
+				widgetView = WidgetThirdView;
+				break;
+
+			case TitleLayout.stacked:
+				titleView = TitleStackedView;
+				widgetView = WidgetStackedView;
+				break;
+
+			case TitleLayout.dominant:
+				titleView = TitleDominantView;
+				widgetView = WidgetDominantView;
+				break;
+
+			case TitleLayout.even:
+			default:
+				titleView = TitleEvenView;
+				widgetView = WidgetEvenView;
+				break;
+		}
+
+		const DynamicTitle = styled.div`
+			align-items: center;
+			${titleView}
+			${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
+		`;
+
+		const DynamicWidget = styled.div`
+			align-items: center;
+			${widgetView}
+			${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
+		`;
+
 		if (typeof this.props.title === 'string') {
 			title = (
-				<Label
-					{...this.props}
-					className={this._titleClasses.classnames}
-					text={this.props.title}
-				/>
+				<DynamicTitle {...this.props} className="ui-title">
+					<Label
+						className="ui-title"
+						{...this.props}
+						text={this.props.title}
+					/>
+				</DynamicTitle>
 			);
 		} else {
 			title = (
-				<div
-					className={this._titleClasses.classnames}
-				>
+				<DynamicTitle {...this.props} className="ui-title">
 					{this.props.title}
-				</div>
+				</DynamicTitle>
 			);
 		}
 
-		let widget: any = null;
 		if (this.props.layout !== TitleLayout.none && this.props.widget != null) {
 			widget = (
-				<div className={this._widgetClasses.classnames}>
+				<DynamicWidget {...this.props} className="ui-title-widget">
 					{this.props.widget}
-				</div>
+				</DynamicWidget>
 			);
 		}
 
 		return (
-			<div
-				className={this._rootStyles.classnames}
-				style={{...this.inlineStyles}}
+			<TitleView
+				className={this.classes}
+				layout={this.props.layout}
+				style={this.inlineStyles}
 			>
 				{title}
 				{widget}
-			</div>
+			</TitleView>
 		);
 	}
 }

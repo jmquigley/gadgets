@@ -24,56 +24,100 @@ exports[`Test creation of a Title control with bad layout 1`] = `
   widget={null}
   width=""
 >
-  <div
-    className="ui-title-bar titleBar ripple normal"
+  <styled.div
+    className="ui-title-bar ripple"
+    layout={9999}
     style={Object {}}
   >
-    <Label
-      className="ui-title title titleDominant"
-      contentEditable={false}
-      direction="right"
-      disabled={false}
-      focus={false}
-      height=""
-      id=""
-      layout={9999}
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClick={[Function]}
-      onDoubleClick={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      onUpdate={[Function]}
-      selected={false}
-      sizing="normal"
+    <div
+      className="ui-title-bar ripple sc-bdVaJa iPGSlL"
       style={Object {}}
-      testing={true}
-      text="Test label text"
-      title="Test label text"
-      useedit={false}
-      visible={true}
-      widget={null}
-      width=""
     >
-      <span
-        className="ui-label label normal ui-title title titleDominant"
+      <styled.div
+        className="ui-title"
         contentEditable={false}
-        onBlur={[Function]}
+        direction="right"
+        disabled={false}
+        focus={false}
+        height=""
+        id=""
+        layout={9999}
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
         onClick={[Function]}
-        onDoubleClick={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+        selected={false}
+        sizing="normal"
         style={Object {}}
-        suppressContentEditableWarning={true}
+        testing={true}
+        title="Test label text"
+        visible={true}
+        widget={null}
+        width=""
       >
-        Test label text
-      </span>
-    </Label>
-  </div>
+        <div
+          className="ui-title sc-fjdhpX jSXfnS"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          height=""
+          id=""
+          onClick={[Function]}
+          selected={false}
+          style={Object {}}
+          title="Test label text"
+          width=""
+        >
+          <Label
+            className=""
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            id=""
+            layout={9999}
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onUpdate={[Function]}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            text="Test label text"
+            title="Test label text"
+            useedit={false}
+            visible={true}
+            widget={null}
+            width=""
+          >
+            <span
+              className="ui-label label normal"
+              contentEditable={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              Test label text
+            </span>
+          </Label>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
 </Title>
 `;
 
@@ -101,19 +145,141 @@ exports[`Test creation of a Title control with bad layout 2`] = `
   widget={null}
   width=""
 >
-  <div
-    className="ui-title-bar titleBar ripple normal"
+  <styled.div
+    className="ui-title-bar ripple"
+    layout={9999}
     style={Object {}}
   >
+    <div
+      className="ui-title-bar ripple sc-bdVaJa iPGSlL"
+      style={Object {}}
+    >
+      <styled.div
+        className="ui-title"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        focus={false}
+        height=""
+        id=""
+        layout={9999}
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="Test label text"
+        visible={true}
+        widget={null}
+        width=""
+      >
+        <div
+          className="ui-title sc-fjdhpX jSXfnS"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          height=""
+          id=""
+          onClick={[Function]}
+          selected={false}
+          style={Object {}}
+          title="Test label text"
+          width=""
+        >
+          <Label
+            className=""
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            id=""
+            layout={9999}
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onUpdate={[Function]}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            text="Test label text"
+            title="Test label text"
+            useedit={false}
+            visible={true}
+            widget={null}
+            width=""
+          >
+            <span
+              className="ui-label label normal"
+              contentEditable={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              Test label text
+            </span>
+          </Label>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</Title>
+`;
+
+exports[`Test creation of a Title control with default props 1`] = `
+<styled.div
+  className="ui-title-bar ripple"
+  layout={5}
+  style={Object {}}
+>
+  <styled.div
+    className="ui-title"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    id=""
+    layout={5}
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    title="Test label text"
+    visible={true}
+    widget={null}
+    width=""
+  >
     <Label
-      className="ui-title title titleDominant"
+      className="test-class"
       contentEditable={false}
       direction="right"
       disabled={false}
       focus={false}
       height=""
       id=""
-      layout={9999}
+      layout={5}
       location="none"
       noedit={false}
       nohover={false}
@@ -135,71 +301,19 @@ exports[`Test creation of a Title control with bad layout 2`] = `
       visible={true}
       widget={null}
       width=""
-    >
-      <span
-        className="ui-label label normal ui-title title titleDominant"
-        contentEditable={false}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        style={Object {}}
-        suppressContentEditableWarning={true}
-      >
-        Test label text
-      </span>
-    </Label>
-  </div>
-</Title>
-`;
-
-exports[`Test creation of a Title control with default props 1`] = `
-<div
-  className="ui-title-bar titleBar ripple normal test-class"
-  style={Object {}}
->
-  <Label
-    className="ui-title title titleDominant"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    id=""
-    layout={5}
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onUpdate={[Function]}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    text="Test label text"
-    title="Test label text"
-    useedit={false}
-    visible={true}
-    widget={null}
-    width=""
-  />
-</div>
+    />
+  </styled.div>
+</styled.div>
 `;
 
 exports[`Test creation of a Title control with even layout 1`] = `
-<div
-  className="ui-title-bar titleBar ripple normal"
+<styled.div
+  className="ui-title-bar ripple"
+  layout={1}
   style={Object {}}
 >
-  <Label
-    className="ui-title title titleEven"
+  <styled.div
+    className="ui-title"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -211,39 +325,84 @@ exports[`Test creation of a Title control with even layout 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
     onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
-    text="Test label text"
     title="Test label text"
-    useedit={false}
     visible={true}
     widget="widget"
     width=""
-  />
-  <div
-    className="ui-title-widget widget widgetEven normal"
+  >
+    <Label
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      layout={1}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      text="Test label text"
+      title="Test label text"
+      useedit={false}
+      visible={true}
+      widget="widget"
+      width=""
+    />
+  </styled.div>
+  <styled.div
+    className="ui-title-widget"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    id=""
+    layout={1}
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    title="Test label text"
+    visible={true}
+    widget="widget"
+    width=""
   >
     widget
-  </div>
-</div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`Test creation of a Title control with no layout 1`] = `
-<div
-  className="ui-title-bar titleBar ripple normal"
+<styled.div
+  className="ui-title-bar ripple"
+  layout={6}
   style={Object {}}
 >
-  <Label
-    className="ui-title title titleEven"
+  <styled.div
+    className="ui-title"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -255,34 +414,59 @@ exports[`Test creation of a Title control with no layout 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
     onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
-    text="Test label text"
     title="Test label text"
-    useedit={false}
     visible={true}
     widget={null}
     width=""
-  />
-</div>
+  >
+    <Label
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      layout={6}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      text="Test label text"
+      title="Test label text"
+      useedit={false}
+      visible={true}
+      widget={null}
+      width=""
+    />
+  </styled.div>
+</styled.div>
 `;
 
 exports[`Test creation of a Title control with quarter layout 1`] = `
-<div
-  className="ui-title-bar titleBar ripple normal"
+<styled.div
+  className="ui-title-bar ripple"
+  layout={0}
   style={Object {}}
 >
-  <Label
-    className="ui-title title titleQuarter"
+  <styled.div
+    className="ui-title"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -294,39 +478,84 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
     onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
-    text="Test label text"
     title="Test label text"
-    useedit={false}
     visible={true}
     widget="widget"
     width=""
-  />
-  <div
-    className="ui-title-widget widget widgetQuarter normal"
+  >
+    <Label
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      layout={0}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      text="Test label text"
+      title="Test label text"
+      useedit={false}
+      visible={true}
+      widget="widget"
+      width=""
+    />
+  </styled.div>
+  <styled.div
+    className="ui-title-widget"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    id=""
+    layout={0}
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    title="Test label text"
+    visible={true}
+    widget="widget"
+    width=""
   >
     widget
-  </div>
-</div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`Test creation of a Title control with stacked layout 1`] = `
-<div
-  className="ui-title-bar titleBarStacked ripple normal"
+<styled.div
+  className="ui-title-bar ripple"
+  layout={4}
   style={Object {}}
 >
-  <Label
-    className="ui-title title titleStacked"
+  <styled.div
+    className="ui-title"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -338,39 +567,84 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
     onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
-    text="Test label text"
     title="Test label text"
-    useedit={false}
     visible={true}
     widget="widget"
     width=""
-  />
-  <div
-    className="ui-title-widget widget widgetStacked normal"
+  >
+    <Label
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      layout={4}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      text="Test label text"
+      title="Test label text"
+      useedit={false}
+      visible={true}
+      widget="widget"
+      width=""
+    />
+  </styled.div>
+  <styled.div
+    className="ui-title-widget"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    id=""
+    layout={4}
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    title="Test label text"
+    visible={true}
+    widget="widget"
+    width=""
   >
     widget
-  </div>
-</div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`Test creation of a Title control with thirds layout 1`] = `
-<div
-  className="ui-title-bar titleBar ripple normal"
+<styled.div
+  className="ui-title-bar ripple"
+  layout={3}
   style={Object {}}
 >
-  <Label
-    className="ui-title title titleThird"
+  <styled.div
+    className="ui-title"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -382,39 +656,84 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
     onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
-    text="Test label text"
     title="Test label text"
-    useedit={false}
     visible={true}
     widget="widget"
     width=""
-  />
-  <div
-    className="ui-title-widget widget widgetThird normal"
+  >
+    <Label
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      layout={3}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      text="Test label text"
+      title="Test label text"
+      useedit={false}
+      visible={true}
+      widget="widget"
+      width=""
+    />
+  </styled.div>
+  <styled.div
+    className="ui-title-widget"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    id=""
+    layout={3}
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    title="Test label text"
+    visible={true}
+    widget="widget"
+    width=""
   >
     widget
-  </div>
-</div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`Test creation of a Title control with threequarter layout 1`] = `
-<div
-  className="ui-title-bar titleBar ripple normal"
+<styled.div
+  className="ui-title-bar ripple"
+  layout={2}
   style={Object {}}
 >
-  <Label
-    className="ui-title title titleThreeQuarter"
+  <styled.div
+    className="ui-title"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -426,30 +745,74 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
     onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onUpdate={[Function]}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
-    text="Test label text"
     title="Test label text"
-    useedit={false}
     visible={true}
     widget="widget"
     width=""
-  />
-  <div
-    className="ui-title-widget widget widgetThreeQuarter normal"
+  >
+    <Label
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      layout={2}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onUpdate={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      text="Test label text"
+      title="Test label text"
+      useedit={false}
+      visible={true}
+      widget="widget"
+      width=""
+    />
+  </styled.div>
+  <styled.div
+    className="ui-title-widget"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    id=""
+    layout={2}
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    onClick={[Function]}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    title="Test label text"
+    visible={true}
+    widget="widget"
+    width=""
   >
     widget
-  </div>
-</div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`Test disabling the Title control 1`] = `
@@ -476,56 +839,100 @@ exports[`Test disabling the Title control 1`] = `
   widget={null}
   width=""
 >
-  <div
-    className="ui-title-bar titleBar normal disabled nohover"
+  <styled.div
+    className="ui-title-bar"
+    layout={5}
     style={Object {}}
   >
-    <Label
-      className="ui-title title titleDominant"
-      contentEditable={false}
-      direction="right"
-      disabled={true}
-      focus={false}
-      height=""
-      id=""
-      layout={5}
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClick={[Function]}
-      onDoubleClick={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      onUpdate={[Function]}
-      selected={false}
-      sizing="normal"
+    <div
+      className="ui-title-bar sc-bdVaJa iPGSlL"
       style={Object {}}
-      testing={true}
-      text="Test label text"
-      title="Test label text"
-      useedit={false}
-      visible={true}
-      widget={null}
-      width=""
     >
-      <span
-        className="ui-label label normal ui-title title titleDominant disabled nohover"
+      <styled.div
+        className="ui-title"
         contentEditable={false}
-        onBlur={[Function]}
+        direction="right"
+        disabled={true}
+        focus={false}
+        height=""
+        id=""
+        layout={5}
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
         onClick={[Function]}
-        onDoubleClick={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+        selected={false}
+        sizing="normal"
         style={Object {}}
-        suppressContentEditableWarning={true}
+        testing={true}
+        title="Test label text"
+        visible={true}
+        widget={null}
+        width=""
       >
-        Test label text
-      </span>
-    </Label>
-  </div>
+        <div
+          className="ui-title sc-cSHVUG jFbMhe"
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          height=""
+          id=""
+          onClick={[Function]}
+          selected={false}
+          style={Object {}}
+          title="Test label text"
+          width=""
+        >
+          <Label
+            className=""
+            contentEditable={false}
+            direction="right"
+            disabled={true}
+            focus={false}
+            height=""
+            id=""
+            layout={5}
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onUpdate={[Function]}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            text="Test label text"
+            title="Test label text"
+            useedit={false}
+            visible={true}
+            widget={null}
+            width=""
+          >
+            <span
+              className="ui-label label normal disabled nohover"
+              contentEditable={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              Test label text
+            </span>
+          </Label>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
 </Title>
 `;
 
@@ -553,56 +960,100 @@ exports[`Test making the Title control invisible 1`] = `
   widget={null}
   width=""
 >
-  <div
-    className="ui-title-bar titleBar ripple normal invisible"
+  <styled.div
+    className="ui-title-bar ripple"
+    layout={5}
     style={Object {}}
   >
-    <Label
-      className="ui-title title titleDominant"
-      contentEditable={false}
-      direction="right"
-      disabled={false}
-      focus={false}
-      height=""
-      id=""
-      layout={5}
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClick={[Function]}
-      onDoubleClick={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      onUpdate={[Function]}
-      selected={false}
-      sizing="normal"
+    <div
+      className="ui-title-bar ripple sc-bdVaJa iPGSlL"
       style={Object {}}
-      testing={true}
-      text="Test label text"
-      title="Test label text"
-      useedit={false}
-      visible={false}
-      widget={null}
-      width=""
     >
-      <span
-        className="ui-label label normal ui-title title titleDominant invisible"
+      <styled.div
+        className="ui-title"
         contentEditable={false}
-        onBlur={[Function]}
+        direction="right"
+        disabled={false}
+        focus={false}
+        height=""
+        id=""
+        layout={5}
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
         onClick={[Function]}
-        onDoubleClick={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+        selected={false}
+        sizing="normal"
         style={Object {}}
-        suppressContentEditableWarning={true}
+        testing={true}
+        title="Test label text"
+        visible={false}
+        widget={null}
+        width=""
       >
-        Test label text
-      </span>
-    </Label>
-  </div>
+        <div
+          className="ui-title sc-chPdSV gNboip"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          height=""
+          id=""
+          onClick={[Function]}
+          selected={false}
+          style={Object {}}
+          title="Test label text"
+          width=""
+        >
+          <Label
+            className=""
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            id=""
+            layout={5}
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onUpdate={[Function]}
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            text="Test label text"
+            title="Test label text"
+            useedit={false}
+            visible={false}
+            widget={null}
+            width=""
+          >
+            <span
+              className="ui-label label normal invisible"
+              contentEditable={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              Test label text
+            </span>
+          </Label>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
 </Title>
 `;
 

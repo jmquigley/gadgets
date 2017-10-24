@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test clicking of the AccordionItem header 1`] = `
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+}
+
 .c1 {
   cursor: default;
   display: -webkit-box;
@@ -35,6 +49,19 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 .c0 > .ui-item:hover {
   color: #ffe11a;
   background-color: #004358 !important;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  -webkit-flex: 5;
+  -ms-flex: 5;
+  flex: 5;
+  font-size: 1rem;
+  font-weight: inherit;
 }
 
 <AccordionItem
@@ -211,77 +238,156 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                   widget={null}
                   width=""
                 >
-                  <div
-                    className="ui-title-bar titleBar ripple normal"
+                  <styled.div
+                    className="ui-title-bar ripple"
+                    layout={5}
                     style={
                       Object {
                         "padding": "2px 4px",
                       }
                     }
                   >
-                    <Label
-                      className="ui-title title titleDominant"
-                      contentEditable={false}
-                      direction="right"
-                      disabled={false}
-                      focus={false}
-                      height=""
-                      hiddenLeftButton={false}
-                      hiddenRightButton={false}
-                      id=""
-                      initialToggle={false}
-                      layout={5}
-                      leftButton={null}
-                      location="none"
-                      nocollapse={false}
-                      noedit={false}
-                      nohover={false}
-                      noripple={false}
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      onMouseOut={[Function]}
-                      onUpdate={[Function]}
-                      rightButton={null}
-                      selected={false}
-                      sizing="normal"
-                      stacked={false}
+                    <div
+                      className="ui-title-bar ripple c2"
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
-                      testing={true}
-                      text="Test Title"
-                      title="Test Title"
-                      useedit={false}
-                      visible={true}
-                      widget={null}
-                      width=""
                     >
-                      <span
-                        className="ui-label label normal ui-title title titleDominant"
+                      <styled.div
+                        className="ui-title"
                         contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        focus={false}
+                        height=""
+                        hiddenLeftButton={false}
+                        hiddenRightButton={false}
+                        id=""
+                        initialToggle={false}
+                        layout={5}
+                        leftButton={null}
+                        location="none"
+                        nocollapse={false}
+                        noedit={false}
+                        nohover={false}
+                        noripple={false}
                         onBlur={[Function]}
+                        onChange={[Function]}
                         onClick={[Function]}
                         onDoubleClick={[Function]}
+                        onFocus={[Function]}
                         onKeyDown={[Function]}
                         onKeyPress={[Function]}
+                        onMouseOut={[Function]}
+                        onUpdate={[Function]}
+                        rightButton={null}
+                        selected={false}
+                        sizing="normal"
+                        stacked={false}
                         style={
                           Object {
                             "padding": "2px 4px",
                           }
                         }
-                        suppressContentEditableWarning={true}
+                        testing={true}
+                        title="Test Title"
+                        useedit={false}
+                        visible={true}
+                        widget={null}
+                        width=""
                       >
-                        Test Title
-                      </span>
-                    </Label>
-                  </div>
+                        <div
+                          className="ui-title c3"
+                          contentEditable={false}
+                          direction="right"
+                          disabled={false}
+                          height=""
+                          id=""
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          onMouseOut={[Function]}
+                          selected={false}
+                          style={
+                            Object {
+                              "padding": "2px 4px",
+                            }
+                          }
+                          title="Test Title"
+                          width=""
+                        >
+                          <Label
+                            className=""
+                            contentEditable={false}
+                            direction="right"
+                            disabled={false}
+                            focus={false}
+                            height=""
+                            hiddenLeftButton={false}
+                            hiddenRightButton={false}
+                            id=""
+                            initialToggle={false}
+                            layout={5}
+                            leftButton={null}
+                            location="none"
+                            nocollapse={false}
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            onMouseOut={[Function]}
+                            onUpdate={[Function]}
+                            rightButton={null}
+                            selected={false}
+                            sizing="normal"
+                            stacked={false}
+                            style={
+                              Object {
+                                "padding": "2px 4px",
+                              }
+                            }
+                            testing={true}
+                            text="Test Title"
+                            title="Test Title"
+                            useedit={false}
+                            visible={true}
+                            widget={null}
+                            width=""
+                          >
+                            <span
+                              className="ui-label label normal"
+                              contentEditable={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onDoubleClick={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyPress={[Function]}
+                              style={
+                                Object {
+                                  "padding": "2px 4px",
+                                }
+                              }
+                              suppressContentEditableWarning={true}
+                            >
+                              Test Title
+                            </span>
+                          </Label>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
                 </Title>
               </li>
             </styled.li>
@@ -294,6 +400,20 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 `;
 
 exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+}
+
 .c1 {
   cursor: default;
   display: -webkit-box;
@@ -328,6 +448,19 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 .c0 > .ui-item:hover {
   color: #ffe11a;
   background-color: #004358 !important;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  -webkit-flex: 5;
+  -ms-flex: 5;
+  flex: 5;
+  font-size: 1rem;
+  font-weight: inherit;
 }
 
 <AccordionItem
@@ -504,77 +637,156 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                   widget={null}
                   width=""
                 >
-                  <div
-                    className="ui-title-bar titleBar ripple normal"
+                  <styled.div
+                    className="ui-title-bar ripple"
+                    layout={5}
                     style={
                       Object {
                         "padding": "2px 4px",
                       }
                     }
                   >
-                    <Label
-                      className="ui-title title titleDominant"
-                      contentEditable={false}
-                      direction="right"
-                      disabled={false}
-                      focus={false}
-                      height=""
-                      hiddenLeftButton={false}
-                      hiddenRightButton={false}
-                      id=""
-                      initialToggle={false}
-                      layout={5}
-                      leftButton={null}
-                      location="none"
-                      nocollapse={true}
-                      noedit={false}
-                      nohover={false}
-                      noripple={false}
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      onMouseOut={[Function]}
-                      onUpdate={[Function]}
-                      rightButton={null}
-                      selected={false}
-                      sizing="normal"
-                      stacked={false}
+                    <div
+                      className="ui-title-bar ripple c2"
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
-                      testing={true}
-                      text="Test Title"
-                      title="Test Title"
-                      useedit={false}
-                      visible={true}
-                      widget={null}
-                      width=""
                     >
-                      <span
-                        className="ui-label label normal ui-title title titleDominant"
+                      <styled.div
+                        className="ui-title"
                         contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        focus={false}
+                        height=""
+                        hiddenLeftButton={false}
+                        hiddenRightButton={false}
+                        id=""
+                        initialToggle={false}
+                        layout={5}
+                        leftButton={null}
+                        location="none"
+                        nocollapse={true}
+                        noedit={false}
+                        nohover={false}
+                        noripple={false}
                         onBlur={[Function]}
+                        onChange={[Function]}
                         onClick={[Function]}
                         onDoubleClick={[Function]}
+                        onFocus={[Function]}
                         onKeyDown={[Function]}
                         onKeyPress={[Function]}
+                        onMouseOut={[Function]}
+                        onUpdate={[Function]}
+                        rightButton={null}
+                        selected={false}
+                        sizing="normal"
+                        stacked={false}
                         style={
                           Object {
                             "padding": "2px 4px",
                           }
                         }
-                        suppressContentEditableWarning={true}
+                        testing={true}
+                        title="Test Title"
+                        useedit={false}
+                        visible={true}
+                        widget={null}
+                        width=""
                       >
-                        Test Title
-                      </span>
-                    </Label>
-                  </div>
+                        <div
+                          className="ui-title c3"
+                          contentEditable={false}
+                          direction="right"
+                          disabled={false}
+                          height=""
+                          id=""
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          onMouseOut={[Function]}
+                          selected={false}
+                          style={
+                            Object {
+                              "padding": "2px 4px",
+                            }
+                          }
+                          title="Test Title"
+                          width=""
+                        >
+                          <Label
+                            className=""
+                            contentEditable={false}
+                            direction="right"
+                            disabled={false}
+                            focus={false}
+                            height=""
+                            hiddenLeftButton={false}
+                            hiddenRightButton={false}
+                            id=""
+                            initialToggle={false}
+                            layout={5}
+                            leftButton={null}
+                            location="none"
+                            nocollapse={true}
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            onMouseOut={[Function]}
+                            onUpdate={[Function]}
+                            rightButton={null}
+                            selected={false}
+                            sizing="normal"
+                            stacked={false}
+                            style={
+                              Object {
+                                "padding": "2px 4px",
+                              }
+                            }
+                            testing={true}
+                            text="Test Title"
+                            title="Test Title"
+                            useedit={false}
+                            visible={true}
+                            widget={null}
+                            width=""
+                          >
+                            <span
+                              className="ui-label label normal"
+                              contentEditable={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onDoubleClick={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyPress={[Function]}
+                              style={
+                                Object {
+                                  "padding": "2px 4px",
+                                }
+                              }
+                              suppressContentEditableWarning={true}
+                            >
+                              Test Title
+                            </span>
+                          </Label>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
                 </Title>
               </li>
             </styled.li>
