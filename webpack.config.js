@@ -16,8 +16,8 @@ const banner = new webpack.BannerPlugin({
 });
 
 const constants = new webpack.DefinePlugin({
-	GADGETS_VERSION: JSON.stringify(pkg.version)
-	// NODE_ENV: JSON.stringify("production")
+	GADGETS_VERSION: JSON.stringify(pkg.version),
+	NODE_ENV: JSON.stringify("production")
 });
 
 module.exports = {

@@ -1,4 +1,9 @@
+const debug = require('debug')('gadgets');
+
 require('./lib/shared/monkey');
+
+debug('env: %O', process.env);
+debug('exe: %s', process.env['NODE_ENV']);
 
 import {Accordion, AccordionItem} from './lib/accordion';
 import {Badge} from './lib/badge';

@@ -11,7 +11,7 @@ function validate(ctl: any) {
 	assert(ctl);
 	assert(!ctl.prop('disabled'));
 	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.ui-listitem').length, 2);
+	assert.equal(ctl.find('.ui-listitem').length, 3);
 }
 
 test('Test retrieval of ListItem props object', () => {
@@ -26,7 +26,6 @@ test('Test the creation of a ListItem control with simple title', () => {
 		<ListItem
 			title="test title"
 			selected
-			testing
 		/>
 	);
 
@@ -39,7 +38,6 @@ test('Test the creation of a ListItem control with left & right title', () => {
 		<ListItem
 			title="test title left"
 			widget="test title right"
-			testing
 		/>
 	);
 
@@ -54,27 +52,26 @@ test('Test disabling of a ListItem control', () => {
 			disabled={true}
 			onClick={click}
 			title="test title"
-			testing
 		/>
 	);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-item').simulate('click');
+	ctl.find('.ui-item').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test making ListItem control invisible', () => {
 	const click = jest.fn();
 	const ctl = mount(
-		<ListItem title="test title" visible={false} testing/>
+		<ListItem title="test title" visible={false} />
 	);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-item').simulate('click');
+	ctl.find('.ui-item').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
@@ -84,7 +81,6 @@ test('Test clicking of the left button on the ListItem control', () => {
 		<ListItem
 			title="test title"
 			leftButton={<Button iconName="bath" onClick={click} />}
-			testing
 		/>
 	);
 
@@ -104,7 +100,6 @@ test('Test clicking of the right button on the ListItem control', () => {
 		<ListItem
 			title="test title"
 			rightButton={<Button iconName="bath" onClick={click} />}
-			testing
 		/>
 	);
 
@@ -124,7 +119,6 @@ test('Test clicking of the title bar area of the ListItem', async () => {
 		<ListItem
 			title="test title"
 			onClick={click}
-			testing
 		/>
 	);
 
@@ -150,7 +144,6 @@ test('Test double click of the title bar area of the ListItem', () => {
 		<ListItem
 			title="test title"
 			onClick={click}
-			testing
 		/>
 	);
 	const listItem = ctl.instance() as ListItem;

@@ -107,8 +107,7 @@ export function getDefaultTabContainerProps(): TabContainerProps {
 			nonavigation: false,
 			onRemove: nilEvent,
 			onSelect: nilEvent,
-			tabWidth: 75,
-			testing: false
+			tabWidth: 75
 		})
 	);
 }

@@ -33,7 +33,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
           "width": "18px",
         }
       }
-      testing={false}
+      testing={true}
       visible={true}
       width=""
     />
@@ -74,7 +74,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
           "width": "18px",
         }
       }
-      testing={false}
+      testing={true}
       visible={true}
       width=""
     />
@@ -115,7 +115,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
           "width": "18px",
         }
       }
-      testing={false}
+      testing={true}
       visible={true}
       width=""
     />
@@ -156,7 +156,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
           "width": "24px",
         }
       }
-      testing={false}
+      testing={true}
       visible={true}
       width=""
     />
@@ -197,7 +197,7 @@ exports[`Test making the Toolbar invisible 1`] = `
           "width": "24px",
         }
       }
-      testing={false}
+      testing={true}
       visible={false}
       width=""
     />
@@ -222,7 +222,7 @@ Object {
   "selected": false,
   "sizing": "normal",
   "style": Object {},
-  "testing": false,
+  "testing": true,
   "visible": true,
   "width": "",
 }

@@ -17,7 +17,7 @@ test('Test retrieval of Toolbar props object', () => {
 [Justify.left, Justify.right, Justify.center].forEach((justify: Justify) => {
 	test(`Test creation of a Toolbar instance with ${Justify[justify]} justification`, () => {
 		const ctl = shallow(
-			<Toolbar justify={justify} sizing={Sizing.small} testing>
+			<Toolbar justify={justify} sizing={Sizing.small}>
 				<Button iconName="car" />
 				<div>blah</div>
 			</Toolbar>
@@ -30,7 +30,7 @@ test('Test retrieval of Toolbar props object', () => {
 
 test('Test disabling of a Toolbar instance', () => {
 	const ctl = shallow(
-		<Toolbar disabled testing>
+		<Toolbar disabled>
 			<Button iconName="car" />
 			<div>blah</div>
 		</Toolbar>
@@ -42,7 +42,7 @@ test('Test disabling of a Toolbar instance', () => {
 
 test('Test making the Toolbar invisible', () => {
 	const ctl = shallow(
-		<Toolbar visible={false} testing>
+		<Toolbar visible={false}>
 			<Button iconName="car" />
 			<div>blah</div>
 		</Toolbar>

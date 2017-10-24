@@ -17,7 +17,6 @@ test('Test the creation of a Item control', () => {
 		<Item
 			title="test title"
 			widget="widget"
-			testing
 		/>
 	);
 

@@ -14,6 +14,8 @@
 // ...
 //
 
+process.env['NODE_ENV'] = 'test';
+
 const debug = require('debug')('setupEnzyme');
 const Enzyme = require('enzyme');
 const Adapter = require('enzyme-adapter-react-16');

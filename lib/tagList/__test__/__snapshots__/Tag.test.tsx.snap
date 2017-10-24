@@ -28,7 +28,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
     selected={false}
     sizing="normal"
     style={Object {}}
-    testing={false}
+    testing={true}
     text="test tag"
     useedit={false}
     visible={true}
@@ -57,7 +57,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  testing={false}
+  testing={true}
   usedelete={true}
   visible={true}
   width=""
@@ -89,7 +89,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      testing={false}
+      testing={true}
       text="test tag"
       useedit={false}
       visible={true}
@@ -133,7 +133,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
           "color": "#d9534f",
         }
       }
-      testing={false}
+      testing={true}
       visible={false}
       width=""
     >
@@ -167,7 +167,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 "color": "#d9534f",
               }
             }
-            testing={false}
+            testing={true}
             visible={false}
             width=""
           >
@@ -199,7 +199,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 selected={false}
                 sizing="small"
                 style={Object {}}
-                testing={false}
+                testing={true}
                 visible={true}
                 width=""
               >
@@ -243,7 +243,7 @@ exports[`Test making Tag invisible 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  testing={false}
+  testing={true}
   usedelete={true}
   visible={false}
   width=""
@@ -275,7 +275,7 @@ exports[`Test making Tag invisible 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      testing={false}
+      testing={true}
       text="test tag"
       useedit={false}
       visible={false}
@@ -319,7 +319,7 @@ exports[`Test making Tag invisible 1`] = `
           "color": "#d9534f",
         }
       }
-      testing={false}
+      testing={true}
       visible={false}
       width=""
     >
@@ -353,7 +353,7 @@ exports[`Test making Tag invisible 1`] = `
                 "color": "#d9534f",
               }
             }
-            testing={false}
+            testing={true}
             visible={false}
             width=""
           >
@@ -385,7 +385,7 @@ exports[`Test making Tag invisible 1`] = `
                 selected={false}
                 sizing="small"
                 style={Object {}}
-                testing={false}
+                testing={true}
                 visible={true}
                 width=""
               >
@@ -429,7 +429,7 @@ Object {
   "selected": false,
   "sizing": "normal",
   "style": Object {},
-  "testing": false,
+  "testing": true,
   "usedelete": false,
   "visible": true,
   "width": "",

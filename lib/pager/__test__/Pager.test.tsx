@@ -21,7 +21,7 @@ test('Test retrieval of Pager props object', () => {
 });
 
 test('Test creation of a Pager control', () => {
-	const ctl = shallow(<Pager className="test-class" testing/>);
+	const ctl = shallow(<Pager className="test-class" />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
@@ -29,10 +29,7 @@ test('Test creation of a Pager control', () => {
 
 test('Test pager getPages method with front of list', () => {
 	const ctl = mount(
-		<Pager
-			testing
-			totalItems={299}
-		/>
+		<Pager totalItems={299} />
 	);
 
 	validate(ctl);
@@ -50,7 +47,6 @@ test('Test pager getPages method with 2nd to last in list', () => {
 	const ctl = mount(
 		<Pager
 			initialPage={11}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -70,7 +66,6 @@ test('Test Pager getPages method with last in the List', () => {
 	const ctl = mount(
 		<Pager
 			initialPage={12}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -90,7 +85,6 @@ test('Test Pager getPages method with invalid initial page (negative test)', () 
 	const ctl = mount(
 		<Pager
 			initialPage={-1}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -110,7 +104,6 @@ test('Test Pager getPages method with invalid pageSizes (negative test)', () => 
 	const ctl = mount(
 		<Pager
 			pageSizes={null}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -130,7 +123,6 @@ test('Test Pager getPages method with empty pageSizes (negative test)', () => {
 	const ctl = mount(
 		<Pager
 			pageSizes={[]}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -150,7 +142,6 @@ test('Test Pager getPages method with invalid totalItems (negative test)', () =>
 	const ctl = mount(
 		<Pager
 			pageSizes={[]}
-			testing
 			totalItems={0}
 		/>
 	);
@@ -172,7 +163,6 @@ test('Test selection of the second page in the control', () => {
 		<Pager
 			onSelect={select}
 			pageSizes={[10, 25, 100]}
-			testing
 			totalItems={3000}
 		/>
 	);
@@ -199,7 +189,6 @@ test('Test pressing the "<<" (first) button', () => {
 		<Pager
 			initialPage={2}
 			onSelect={select}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -229,7 +218,6 @@ test('Test pressing the "<" (previous) button', () => {
 		<Pager
 			initialPage={3}
 			onSelect={select}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -258,7 +246,6 @@ test('Test pressing the ">" (next) button', () => {
 	const ctl = mount(
 		<Pager
 			onSelect={select}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -287,7 +274,6 @@ test('Test pressing the ">>" (last) button', () => {
 	const ctl = mount(
 		<Pager
 			onSelect={select}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -318,7 +304,6 @@ test('Test selecting dialog "50" to change the page size', async () => {
 	const ctl = mount(
 		<Pager
 			onSelect={select}
-			testing
 			totalItems={299}
 		/>
 	);
@@ -364,7 +349,6 @@ test('Repeatedly create instance with different initial start for props test', (
 		const ctl = mount(
 			<Pager
 				initialPage={i}
-				testing
 				totalItems={299}
 			/>
 		);

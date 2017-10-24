@@ -126,6 +126,11 @@ export interface BaseProps {
 	width?: string;
 }
 
+export function isTest(): boolean {
+	const env: string = process.env['NODE_ENV'].toUpperCase() || 'production';
+	return (env === 'TEST' || env === 'TESTING');
+}
+
 const defaultBaseProps = {
 	className: '',
 	contentEditable: false,
@@ -141,7 +146,7 @@ const defaultBaseProps = {
 	selected: false,
 	sizing: Sizing.normal,
 	style: {},
-	testing: false,
+	testing: isTest(),
 	visible: true,
 	width: ''
 };

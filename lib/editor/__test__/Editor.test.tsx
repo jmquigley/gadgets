@@ -23,7 +23,7 @@ test('Test retrieval of the Editor props object', () => {
 
 test('Test creation of an Editor instance', () => {
 	const ctl = mount(
-		<Editor content="test content" testing />
+		<Editor content="test content" />
 	);
 
 	assert(ctl);

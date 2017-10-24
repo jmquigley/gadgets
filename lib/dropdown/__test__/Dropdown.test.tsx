@@ -25,7 +25,6 @@ test('Creation of the Dropdown control', () => {
 		<Dropdown
 			defaultVal="idstr2"
 			items={testData}
-			testing
 		/>
 	);
 
@@ -41,7 +40,6 @@ test('Disable the Dropdown control', () => {
 			disabled
 			items={testData}
 			onSelect={change}
-			testing
 		/>
 	);
 
@@ -57,7 +55,6 @@ test('Make the Dropdown control invisible', () => {
 		<Dropdown
 			defaultVal="idstr2"
 			items={testData}
-			testing
 			visible={false}
 		/>
 	);
@@ -73,7 +70,6 @@ test('Test the Dropdown click event', () => {
 			defaultVal="idstr1"
 			items={testData}
 			onSelect={change}
-			testing
 		/>
 	);
 

@@ -16,7 +16,7 @@ test('Test retrieval of Tabs props object', () => {
 
 test('Create an empty TabContainer instance', () => {
 	const ctl = mount(
-		<TabContainer testing/>
+		<TabContainer />
 	);
 
 	assert(ctl);
@@ -25,7 +25,7 @@ test('Create an empty TabContainer instance', () => {
 
 test('Test TabContainer retrieval functions', () => {
 	const ctl = mount(
-		<TabContainer testing>
+		<TabContainer>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>
@@ -58,7 +58,7 @@ test('Test TabContainer retrieval functions', () => {
 
 test('Test the creation of a TabContainer instance (top)', () => {
 	const ctl = shallow(
-		<TabContainer location={Location.top} testing>
+		<TabContainer location={Location.top}>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>
@@ -71,7 +71,7 @@ test('Test the creation of a TabContainer instance (top)', () => {
 
 test('Test the creation of a TabContainer instance (bottom)', () => {
 	const ctl = shallow(
-		<TabContainer location={Location.bottom} testing>
+		<TabContainer location={Location.bottom}>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>
@@ -84,7 +84,7 @@ test('Test the creation of a TabContainer instance (bottom)', () => {
 
 test('Test the creation of a TabContainer instance (left)', () => {
 	const ctl = shallow(
-		<TabContainer location={Location.left} testing>
+		<TabContainer location={Location.left}>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>
@@ -97,7 +97,7 @@ test('Test the creation of a TabContainer instance (left)', () => {
 
 test('Test the creation of a TabContainer instance (right)', () => {
 	const ctl = shallow(
-		<TabContainer location={Location.right} testing>
+		<TabContainer location={Location.right}>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>
@@ -110,7 +110,7 @@ test('Test the creation of a TabContainer instance (right)', () => {
 
 test('Test disabling the TabContainer instance', () => {
 	const ctl = mount(
-		<TabContainer disabled testing>
+		<TabContainer disabled>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>
@@ -123,7 +123,7 @@ test('Test disabling the TabContainer instance', () => {
 
 test('Test making the TabContainer invisible', () => {
 	const ctl = shallow(
-		<TabContainer visible={false} testing>
+		<TabContainer visible={false}>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>
@@ -137,7 +137,7 @@ test('Test making the TabContainer invisible', () => {
 test('Test selecting the first tab within the TabContainer', () => {
 	const select = sinon.spy();
 	const ctl = mount(
-		<TabContainer onSelect={select} testing>
+		<TabContainer onSelect={select}>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>
@@ -159,7 +159,7 @@ test('Test selecting the first tab within the TabContainer', () => {
 test('Test removing the first item from the TabContainer', () => {
 	const remove = sinon.spy();
 	const ctl = mount(
-		<TabContainer onRemove={remove} testing>
+		<TabContainer onRemove={remove}>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>
@@ -186,7 +186,7 @@ test('Test removing the first item from the TabContainer', () => {
 test('Test the TabContainer with the previous and next buttons', () => {
 	const select = sinon.spy();
 	const ctl = mount(
-		<TabContainer onSelect={select} testing>
+		<TabContainer onSelect={select}>
 			<Tab title="tab #1">#1</Tab>
 			<Tab title="tab #2">#2</Tab>
 			<Tab title="tab #3">#3</Tab>

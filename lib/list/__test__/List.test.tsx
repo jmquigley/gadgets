@@ -14,7 +14,7 @@ test('Test retrieval of List props object', () => {
 
 test('Test the creation of a List control container', () => {
 	const ctl = shallow(
-		<List alternating className="test-class" testing>
+		<List alternating className="test-class">
 			<li>some list item</li>
 		</List>
 	);
@@ -25,7 +25,7 @@ test('Test the creation of a List control container', () => {
 
 test('Test disabling of a List control', () => {
 	const ctl = shallow(
-		<List disabled={true} testing>
+		<List disabled={true} >
 			<li>some list item</li>
 		</List>
 	);
@@ -36,7 +36,7 @@ test('Test disabling of a List control', () => {
 
 test('Test making List control invisible', () => {
 	const ctl = shallow(
-		<List visible={false} testing>
+		<List visible={false}>
 			<li>some list item</li>
 		</List>
 	);
@@ -47,7 +47,7 @@ test('Test making List control invisible', () => {
 
 test('Test a list with ListItem and selection', () => {
 	const ctl = mount(
-		<List testing>
+		<List>
 			<ListItem title="Item #1" />
 			<ListItem title="Item #2" />
 		</List>
@@ -57,7 +57,7 @@ test('Test a list with ListItem and selection', () => {
 
 	assert(!ctl.prop('disabled'));
 	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.ui-list').length, 1);
+	assert.equal(ctl.find('.ui-list').length, 2);
 
 	const li1 = ctl.find(ListItem).first();
 	const li2 = ctl.find(ListItem).last();
