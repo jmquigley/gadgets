@@ -22,10 +22,11 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 	public static defaultProps: ListFooterProps = getDefaultListFooterProps();
 
 	constructor(props: ListFooterProps) {
-		super(props);
+		super(props, require('./styles.css'));
 
 		this._classes.add([
-			'ui-list-footer'
+			'ui-list-footer',
+			this.styles.listFooter
 		]);
 
 		this.componentWillUpdate(props);

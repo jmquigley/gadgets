@@ -1,23 +1,34 @@
-// const MinifyPlugin = require("babel-minify-webpack-plugin");
+const {getMode, isProduction} = require('util.env');
+const {leader} = require('util.leader');
+
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const NullPlugin = require('webpack-null-plugin');
 const path = require('path');
 const webpack = require('webpack');
 const pkg = require('./package.json');
 
+let MinifyPlugin = null;
+if (isProduction()) {
+	MinifyPlugin = require("babel-minify-webpack-plugin");
+}
+
 const banner = new webpack.BannerPlugin({
 	banner:
 		'Gadgets v' + pkg.version + '\n' +
+		'Mode: ' + getMode() + '\n' +
 		'https://www.npmjs.com/package/gadgets\n' +
 		'Copyright (c) 2017, James Quigley\n',
 	entryOnly: true
 });
 
+leader(banner.banner);
+
 const constants = new webpack.DefinePlugin({
 	GADGETS_VERSION: JSON.stringify(pkg.version),
-	NODE_ENV: JSON.stringify("production")
+	NODE_ENV: process.env.NODE_ENV
 });
 
 module.exports = {
@@ -128,7 +139,7 @@ module.exports = {
 			to: 'highlights',
 			flatten: true
 		}]),
+		MinifyPlugin ? new MinifyPlugin() : new NullPlugin()
 		// new BundleAnalyzerPlugin(),
-		// new MinifyPlugin()
 	]
 };

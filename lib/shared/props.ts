@@ -56,6 +56,7 @@
 'use strict';
 
 import {cloneDeep} from 'lodash';
+import {isTesting} from 'util.env';
 import {Sizing} from './sizing';
 
 export enum Color {
@@ -126,11 +127,6 @@ export interface BaseProps {
 	width?: string;
 }
 
-export function isTest(): boolean {
-	const mode: string = (process.env['NODE_ENV'] || 'DEVELOPMENT').toUpperCase();
-	return mode === 'TEST' || mode === 'TESTING';
-}
-
 const defaultBaseProps = {
 	className: '',
 	contentEditable: false,
@@ -146,7 +142,7 @@ const defaultBaseProps = {
 	selected: false,
 	sizing: Sizing.normal,
 	style: {},
-	testing: isTest(),
+	testing: isTesting(),
 	visible: true,
 	width: ''
 };

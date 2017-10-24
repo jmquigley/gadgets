@@ -18,23 +18,24 @@
 		"main": "./dist/bundle.js",
 		"types": "./index.d.ts",
 		"scripts": {
-				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run build:demo && yarn run docs && yarn test",
+				"all": "yarn install && yarn run install:deps && yarn run clean && yarn run lint && yarn run build && yarn run build:demo && yarn run docs && yarn test",
 				"build": "pkgwrap --build --webpack",
 				"build:demo": "cd demo && yarn run build",
 				"clean": "pkgwrap --clean",
 				"coverage": "pkgwrap --coverage --jest",
 				"demo": "yarn run all && yarn start",
 				"docs": "pkgwrap --docs",
+				"install:deps": "cross-env NODE_ENV=development yarn install",
 				"lint": "pkgwrap --lint",
-				"start": "electron demo/.",
-				"test": "pkgwrap --testing --jest",
+				"start": "cross-env NODE_ENV=production electron demo/.",
+				"test": "cross-env NODE_ENV=test pkgwrap --testing --jest",
 				"watch": "webpack --watch --progress",
 				"webpack": "webpack"
 		},
 		"dependencies": {
-				"debug": "^3.1.0",
+				"cross-env": "^5.1.0",
 				"util.join": "^0.0.14",
-				"util.pkgwrap": ">=0.0.71"
+				"util.pkgwrap": ">=0.0.72"
 		},
 		"devDependencies": {
 				"@types/debug": "^0.0.30",
@@ -69,6 +70,7 @@
 				"coveralls": "^3.0.0",
 				"css-loader": "^0.28.7",
 				"css-ripple-effect": "^1.0.5",
+				"debug": "^3.1.0",
 				"electron": "1.7.9",
 				"enzyme": "^3.1.0",
 				"enzyme-adapter-react-16": "^1.0.2",
@@ -113,13 +115,16 @@
 				"util.calc": "^0.0.3",
 				"util.classnames": "^0.0.11",
 				"util.ds": "^0.0.31",
+				"util.env": "^0.0.22",
 				"util.keys": "^0.0.8",
+				"util.leader": "^0.0.33",
 				"util.matches": "^0.0.4",
 				"util.promise": "^0.0.14",
 				"util.toolbox": "0.0.49",
 				"util.wait": "0.0.27",
 				"webpack": "^3.8.1",
-				"webpack-bundle-analyzer": "^2.9.0"
+				"webpack-bundle-analyzer": "^2.9.0",
+				"webpack-null-plugin": "^0.0.2"
 		},
 		"pkgwrap": {
 				"bail": true,
@@ -151,7 +156,7 @@
 				"moduleNameMapper": {
 						"\\.(css|style)$": "identity-obj-proxy"
 				},
-				"notify": true,
+				"notify": false,
 				"setupFiles": [
 						"<rootDir>/bin/workaround.js",
 						"<rootDir>/bin/setupEnzyme.js",
