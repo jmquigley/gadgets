@@ -127,8 +127,8 @@ export interface BaseProps {
 }
 
 export function isTest(): boolean {
-	const env: string = process.env['NODE_ENV'].toUpperCase() || 'production';
-	return (env === 'TEST' || env === 'TESTING');
+	const mode: string = (process.env['NODE_ENV'] || 'DEVELOPMENT').toUpperCase();
+	return mode === 'TEST' || mode === 'TESTING';
 }
 
 const defaultBaseProps = {

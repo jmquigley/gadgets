@@ -2,6 +2,8 @@ const debug = require('debug')('gadgets');
 
 require('./lib/shared/monkey');
 
+process.env['NODE_ENV'] = process.env['NODE_ENV'] || 'test';
+
 debug('env: %O', process.env);
 debug('exe: %s', process.env['NODE_ENV']);
 
