@@ -125,9 +125,10 @@ export interface BaseProps {
 	testing?: boolean;
 	visible?: boolean;
 	width?: string;
+	xcss?: any;
 }
 
-const defaultBaseProps = {
+const defaultBaseProps: BaseProps = {
 	className: '',
 	contentEditable: false,
 	direction: Direction.right,
@@ -144,7 +145,8 @@ const defaultBaseProps = {
 	style: {},
 	testing: isTesting(),
 	visible: true,
-	width: ''
+	width: '',
+	xcss: null
 };
 
 export function getDefaultBaseProps(): BaseProps {

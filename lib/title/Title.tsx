@@ -53,12 +53,20 @@
 
 'use strict';
 
+// const debug = require('debug')('Title');
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled, {css} from 'styled-components';
+import styled, {css, ThemeProvider} from 'styled-components';
 import {nilEvent} from 'util.toolbox';
 import {Label} from '../label';
-import {BaseComponent, BaseProps, fontStyle, getDefaultBaseProps} from '../shared';
+import {
+	BaseComponent,
+	BaseProps,
+	fontStyle,
+	getDefaultBaseProps,
+	getTheme
+} from '../shared';
 
 export enum TitleLayout {
 	quarter,
@@ -209,53 +217,59 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 				break;
 		}
 
-		const DynamicTitle = styled.div`
+		const StyledWidget: any = styled.div`
 			align-items: center;
-			${titleView}
+			${(props: TitleProps) => props.xcss && props.xcss}
 			${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
+
+			> span {
+			  display: block;
+			}
 		`;
 
-		const DynamicWidget = styled.div`
+		const StyledLabel: any = styled(Label)`
 			align-items: center;
-			${widgetView}
+			display: block;
+			${(props: TitleProps) => props.xcss && props.xcss}
 			${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
 		`;
 
 		if (typeof this.props.title === 'string') {
 			title = (
-				<DynamicTitle {...this.props} className="ui-title">
-					<Label
-						className="ui-title"
-						{...this.props}
-						text={this.props.title}
-					/>
-				</DynamicTitle>
+				<StyledLabel
+					{...this.props}
+					className="ui-title"
+					text={this.props.title}
+					xcss={titleView}
+				/>
 			);
 		} else {
 			title = (
-				<DynamicTitle {...this.props} className="ui-title">
+				<StyledWidget {...this.props} className="ui-title" xcss={titleView}>
 					{this.props.title}
-				</DynamicTitle>
+				</StyledWidget>
 			);
 		}
 
 		if (this.props.layout !== TitleLayout.none && this.props.widget != null) {
 			widget = (
-				<DynamicWidget {...this.props} className="ui-title-widget">
+				<StyledWidget {...this.props} className="ui-title-widget" xcss={widgetView}>
 					{this.props.widget}
-				</DynamicWidget>
+				</StyledWidget>
 			);
 		}
 
 		return (
-			<TitleView
-				className={this.classes}
-				layout={this.props.layout}
-				style={this.inlineStyles}
-			>
-				{title}
-				{widget}
-			</TitleView>
+			<ThemeProvider theme={getTheme()}>
+				<TitleView
+					className={this.classes}
+					layout={this.props.layout}
+					style={this.inlineStyles}
+				>
+					{title}
+					{widget}
+				</TitleView>
+			</ThemeProvider>
 		);
 	}
 }

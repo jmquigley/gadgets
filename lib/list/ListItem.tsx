@@ -7,6 +7,8 @@
 
 'use strict';
 
+const debug = require('debug')('ListItem');
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ThemeProvider} from 'styled-components';
@@ -42,7 +44,7 @@ export interface ListItemState {
 export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
-	private _delay = 200;
+	private _delay = 250;
 	private _preventClick: boolean = false;
 	private _timer: any = null;
 
@@ -62,8 +64,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 			'handleClick',
 			'handleDoubleClick',
 			'handleKeyDown',
-			'handleKeyPress',
-			'handleMouseOut'
+			'handleKeyPress'
 		);
 
 		this.componentWillUpdate(props);
@@ -87,20 +88,22 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.props.onBlur(e);
 	}
 
-	private handleClick() {
+	private handleClick(e: React.MouseEvent<HTMLLIElement>) {
 		// This timer will wait N seconds before respecting the single click
 		// It is a way to differentiate between single and double click events
 		// A double click is handled differently from the single
 		this._timer = setTimeout(() => {
 			if (!this._preventClick) {
 				this.props.href.selectHandler(this);
-				this.props.onClick();
+				this.props.onClick(e);
 				this.props.onSelect(this.props.title);
 			}
 		}, this._delay);
 	}
 
-	private handleDoubleClick() {
+	private handleDoubleClick(e: React.MouseEvent<HTMLLIElement>) {
+		debug('double click: %O', e);
+
 		// If a double click occurs, then sent a flag preventing the single click
 		// from firing after its timer expires
 		clearTimeout(this._timer);
@@ -124,9 +127,9 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.props.onKeyPress(e);
 	}
 
-	private handleMouseOut() {
-		this.deactivateEdit();
-	}
+	// private handleMouseOut() {
+	// 	this.deactivateEdit();
+	// }
 
 	public render() {
 		return (
@@ -140,7 +143,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 					onDoubleClick={this.handleDoubleClick}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
-					onMouseOut={this.handleMouseOut}
+					// onMouseOut={this.handleMouseOut}
 					sizing={this.props.href.sizing}
 					style={this.inlineStyles}
 				/>

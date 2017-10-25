@@ -89,6 +89,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 			for (const [idx, child] of children.entries()) {
 				this._children.push(React.cloneElement(child as any, {
 					id: nextProps.id || this._keys.at(idx),
+					key: nextProps.id || this._keys.at(idx),
 					href: {
 						selectHandler: this.selectHandler,
 						sizing: this.props.sizing

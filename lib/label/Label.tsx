@@ -49,6 +49,8 @@
 
 'use strict';
 
+const debug = require('debug')('Label');
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -154,6 +156,9 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
+		debug('doubleclick %O, props: %O', e, this.props);
+		e.stopPropagation();
+
 		if (!this.props.noedit && document != null && window != null) {
 			if ('caretRangeFromPoint' in document) {
 				const range = document.caretRangeFromPoint(e.clientX, e.clientY);
@@ -162,12 +167,17 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				window.setTimeout(() => {
 					sel.removeAllRanges();
 					sel.addRange(range);
-				}, 20);
+				}, 5);
 			}
+		} else {
+			debug(`can't edit label`);
 		}
+
+		debug('continue label double click: %O', this.props.noedit);
 
 		if (!this.props.noedit) {
 			this.setState({editable: true}, () => {
+				debug('label is editable');
 				this.props.onDoubleClick(e);
 			});
 		}

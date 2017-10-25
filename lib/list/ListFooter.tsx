@@ -4,8 +4,14 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent} from '../shared';
-import {getDefaultTitleProps, Title, TitleLayout, TitleProps} from '../title';
+import {ThemeProvider} from 'styled-components';
+import {BaseComponent, getTheme} from '../shared';
+import {
+	getDefaultTitleProps,
+	Title,
+	TitleLayout,
+	TitleProps
+} from '../title';
 
 export type ListFooterProps = TitleProps;
 
@@ -14,7 +20,8 @@ export function getDefaultListFooterProps(): TitleProps {
 		getDefaultTitleProps(), {
 			layout: TitleLayout.even,
 			title: ''
-		}));
+		})
+	);
 }
 
 export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
@@ -34,13 +41,15 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 
 	public render() {
 		return (
-			<Title
-				{...this.props}
-				className={this.classes}
-				noripple
-				style={this.inlineStyles}
-				title={this.props.title}
-			/>
+			<ThemeProvider theme={getTheme()}>
+				<Title
+					{...this.props}
+					className={this.classes}
+					noripple
+					style={this.inlineStyles}
+					title={this.props.title}
+				/>
+			</ThemeProvider>
 		);
 	}
 }
