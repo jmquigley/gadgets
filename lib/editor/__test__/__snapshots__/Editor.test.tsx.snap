@@ -31,6 +31,7 @@ exports[`Test creation of an Editor instance 1`] = `
   testing={true}
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-editor container"
@@ -67,6 +68,7 @@ exports[`Test creation of an Editor instance 1`] = `
       testing={true}
       visible={true}
       width=""
+      xcss={null}
     >
       <div
         className="ui-toolbar toolbar small ui-editor-toolbar toolbar"
@@ -103,6 +105,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button ripple small toolbarElement"
@@ -136,6 +139,7 @@ exports[`Test creation of an Editor instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-bold"
@@ -179,6 +183,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button ripple small toolbarElement"
@@ -212,6 +217,7 @@ exports[`Test creation of an Editor instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-italic"
@@ -255,6 +261,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button ripple small toolbarElement"
@@ -288,6 +295,7 @@ exports[`Test creation of an Editor instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-underline"
@@ -331,6 +339,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button ripple small toolbarElement"
@@ -364,6 +373,7 @@ exports[`Test creation of an Editor instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-strikethrough"
@@ -407,6 +417,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button ripple small toolbarElement"
@@ -440,6 +451,7 @@ exports[`Test creation of an Editor instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-code"
@@ -488,6 +500,7 @@ exports[`Test creation of an Editor instance 1`] = `
             triangleClasses={Array []}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button-dialog buttonDialog small toolbarElement"
@@ -524,6 +537,7 @@ exports[`Test creation of an Editor instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <div
                   className="ui-button button ripple small"
@@ -561,6 +575,7 @@ exports[`Test creation of an Editor instance 1`] = `
                     testing={true}
                     visible={true}
                     width=""
+                    xcss={null}
                   >
                     <styled.i
                       className="ui-icon fa fa-fw fa-header"
@@ -603,6 +618,7 @@ exports[`Test creation of an Editor instance 1`] = `
                     unselect={false}
                     visible={true}
                     width=""
+                    xcss={null}
                   >
                     <ThemeProvider
                       theme={
@@ -641,7 +657,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="0"
-                            key=".0"
+                            key="0"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -669,6 +685,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             visible={true}
                             widget={null}
                             width=""
+                            xcss={null}
                           >
                             <ThemeProvider
                               theme={
@@ -725,6 +742,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 visible={true}
                                 widget={null}
                                 width=""
+                                xcss={null}
                               >
                                 <ThemeProvider
                                   theme={
@@ -750,7 +768,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item sc-ifAKCX hTsxJQ"
+                                      className="ui-item sc-bZQynM bpnbyn"
                                       id="0"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -806,78 +824,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                         visible={true}
                                         widget={null}
                                         width=""
+                                        xcss={null}
                                       >
-                                        <styled.div
-                                          className="ui-title-bar ripple"
-                                          layout={5}
-                                          style={
+                                        <ThemeProvider
+                                          theme={
                                             Object {
-                                              "padding": "2px 4px",
+                                              "backgroundColor": "#ffffff",
+                                              "borderColor": "#004358",
+                                              "color": "#000000",
+                                              "headerBackgroundColor": "#004358",
+                                              "headerForegroundColor": "#ffffff",
+                                              "hoverColor": "#ffe11a",
                                             }
                                           }
                                         >
-                                          <div
-                                            className="ui-title-bar ripple sc-bxivhb doMVNq"
+                                          <styled.div
+                                            className="ui-title-bar ripple"
+                                            layout={5}
                                             style={
                                               Object {
                                                 "padding": "2px 4px",
                                               }
                                             }
                                           >
-                                            <styled.div
-                                              className="ui-title"
-                                              contentEditable={false}
-                                              direction="right"
-                                              disabled={false}
-                                              focus={false}
-                                              height=""
-                                              hiddenLeftButton={false}
-                                              hiddenRightButton={false}
-                                              href={
-                                                Object {
-                                                  "selectHandler": [Function],
-                                                  "sizing": "small",
-                                                }
-                                              }
-                                              id="0"
-                                              layout={5}
-                                              leftButton={null}
-                                              location="none"
-                                              noedit={false}
-                                              nohover={false}
-                                              noripple={false}
-                                              onBlur={[Function]}
-                                              onChange={[Function]}
-                                              onClick={[Function]}
-                                              onDoubleClick={[Function]}
-                                              onFocus={[Function]}
-                                              onKeyDown={[Function]}
-                                              onKeyPress={[Function]}
-                                              onMouseOut={[Function]}
-                                              onSelect={[Function]}
-                                              onUpdate={[Function]}
-                                              rightButton={null}
-                                              selected={false}
-                                              sizing="small"
-                                              stacked={false}
+                                            <div
+                                              className="ui-title-bar ripple sc-bxivhb doMVNq"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
-                                              testing={true}
-                                              title="h1"
-                                              useedit={false}
-                                              visible={true}
-                                              widget={null}
-                                              width=""
                                             >
-                                              <div
-                                                className="ui-title sc-chPdSV bxRTdN"
+                                              <Styled(Label)
+                                                className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
                                                 disabled={false}
+                                                focus={false}
                                                 height=""
+                                                hiddenLeftButton={false}
+                                                hiddenRightButton={false}
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
@@ -885,6 +871,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                                 id="0"
+                                                layout={5}
+                                                leftButton={null}
+                                                location="none"
+                                                noedit={false}
+                                                nohover={false}
+                                                noripple={false}
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
                                                 onClick={[Function]}
@@ -894,17 +886,34 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onUpdate={[Function]}
+                                                rightButton={null}
                                                 selected={false}
+                                                sizing="small"
+                                                stacked={false}
                                                 style={
                                                   Object {
                                                     "padding": "2px 4px",
                                                   }
                                                 }
+                                                testing={true}
+                                                text="h1"
                                                 title="h1"
+                                                useedit={false}
+                                                visible={true}
+                                                widget={null}
                                                 width=""
+                                                xcss={
+                                                  Array [
+                                                    "
+	text-align: left;
+	flex: 5;
+",
+                                                  ]
+                                                }
                                               >
                                                 <Label
-                                                  className="ui-listitem"
+                                                  className="ui-title sc-ifAKCX cfStlt"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -951,9 +960,17 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   visible={true}
                                                   widget={null}
                                                   width=""
+                                                  xcss={
+                                                    Array [
+                                                      "
+	text-align: left;
+	flex: 5;
+",
+                                                    ]
+                                                  }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-listitem"
+                                                    className="ui-label label small ui-title sc-ifAKCX cfStlt"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -970,10 +987,10 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h1
                                                   </span>
                                                 </Label>
-                                              </div>
-                                            </styled.div>
-                                          </div>
-                                        </styled.div>
+                                              </Styled(Label)>
+                                            </div>
+                                          </styled.div>
+                                        </ThemeProvider>
                                       </Title>
                                     </li>
                                   </styled.li>
@@ -997,7 +1014,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="1"
-                            key=".1"
+                            key="1"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -1025,6 +1042,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             visible={true}
                             widget={null}
                             width=""
+                            xcss={null}
                           >
                             <ThemeProvider
                               theme={
@@ -1081,6 +1099,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 visible={true}
                                 widget={null}
                                 width=""
+                                xcss={null}
                               >
                                 <ThemeProvider
                                   theme={
@@ -1106,7 +1125,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item sc-ifAKCX hTsxJQ"
+                                      className="ui-item sc-bZQynM bpnbyn"
                                       id="1"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -1162,78 +1181,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                         visible={true}
                                         widget={null}
                                         width=""
+                                        xcss={null}
                                       >
-                                        <styled.div
-                                          className="ui-title-bar ripple"
-                                          layout={5}
-                                          style={
+                                        <ThemeProvider
+                                          theme={
                                             Object {
-                                              "padding": "2px 4px",
+                                              "backgroundColor": "#ffffff",
+                                              "borderColor": "#004358",
+                                              "color": "#000000",
+                                              "headerBackgroundColor": "#004358",
+                                              "headerForegroundColor": "#ffffff",
+                                              "hoverColor": "#ffe11a",
                                             }
                                           }
                                         >
-                                          <div
-                                            className="ui-title-bar ripple sc-bxivhb doMVNq"
+                                          <styled.div
+                                            className="ui-title-bar ripple"
+                                            layout={5}
                                             style={
                                               Object {
                                                 "padding": "2px 4px",
                                               }
                                             }
                                           >
-                                            <styled.div
-                                              className="ui-title"
-                                              contentEditable={false}
-                                              direction="right"
-                                              disabled={false}
-                                              focus={false}
-                                              height=""
-                                              hiddenLeftButton={false}
-                                              hiddenRightButton={false}
-                                              href={
-                                                Object {
-                                                  "selectHandler": [Function],
-                                                  "sizing": "small",
-                                                }
-                                              }
-                                              id="1"
-                                              layout={5}
-                                              leftButton={null}
-                                              location="none"
-                                              noedit={false}
-                                              nohover={false}
-                                              noripple={false}
-                                              onBlur={[Function]}
-                                              onChange={[Function]}
-                                              onClick={[Function]}
-                                              onDoubleClick={[Function]}
-                                              onFocus={[Function]}
-                                              onKeyDown={[Function]}
-                                              onKeyPress={[Function]}
-                                              onMouseOut={[Function]}
-                                              onSelect={[Function]}
-                                              onUpdate={[Function]}
-                                              rightButton={null}
-                                              selected={false}
-                                              sizing="small"
-                                              stacked={false}
+                                            <div
+                                              className="ui-title-bar ripple sc-bxivhb doMVNq"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
-                                              testing={true}
-                                              title="h2"
-                                              useedit={false}
-                                              visible={true}
-                                              widget={null}
-                                              width=""
                                             >
-                                              <div
-                                                className="ui-title sc-kGXeez earYlF"
+                                              <Styled(Label)
+                                                className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
                                                 disabled={false}
+                                                focus={false}
                                                 height=""
+                                                hiddenLeftButton={false}
+                                                hiddenRightButton={false}
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
@@ -1241,6 +1228,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                                 id="1"
+                                                layout={5}
+                                                leftButton={null}
+                                                location="none"
+                                                noedit={false}
+                                                nohover={false}
+                                                noripple={false}
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
                                                 onClick={[Function]}
@@ -1250,17 +1243,34 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onUpdate={[Function]}
+                                                rightButton={null}
                                                 selected={false}
+                                                sizing="small"
+                                                stacked={false}
                                                 style={
                                                   Object {
                                                     "padding": "2px 4px",
                                                   }
                                                 }
+                                                testing={true}
+                                                text="h2"
                                                 title="h2"
+                                                useedit={false}
+                                                visible={true}
+                                                widget={null}
                                                 width=""
+                                                xcss={
+                                                  Array [
+                                                    "
+	text-align: left;
+	flex: 5;
+",
+                                                  ]
+                                                }
                                               >
                                                 <Label
-                                                  className="ui-listitem"
+                                                  className="ui-title sc-ifAKCX cfStlt"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -1307,9 +1317,17 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   visible={true}
                                                   widget={null}
                                                   width=""
+                                                  xcss={
+                                                    Array [
+                                                      "
+	text-align: left;
+	flex: 5;
+",
+                                                    ]
+                                                  }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-listitem"
+                                                    className="ui-label label small ui-title sc-ifAKCX cfStlt"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -1326,10 +1344,10 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h2
                                                   </span>
                                                 </Label>
-                                              </div>
-                                            </styled.div>
-                                          </div>
-                                        </styled.div>
+                                              </Styled(Label)>
+                                            </div>
+                                          </styled.div>
+                                        </ThemeProvider>
                                       </Title>
                                     </li>
                                   </styled.li>
@@ -1353,7 +1371,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="2"
-                            key=".2"
+                            key="2"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -1381,6 +1399,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             visible={true}
                             widget={null}
                             width=""
+                            xcss={null}
                           >
                             <ThemeProvider
                               theme={
@@ -1437,6 +1456,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 visible={true}
                                 widget={null}
                                 width=""
+                                xcss={null}
                               >
                                 <ThemeProvider
                                   theme={
@@ -1462,7 +1482,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item sc-ifAKCX hTsxJQ"
+                                      className="ui-item sc-bZQynM bpnbyn"
                                       id="2"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -1518,78 +1538,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                         visible={true}
                                         widget={null}
                                         width=""
+                                        xcss={null}
                                       >
-                                        <styled.div
-                                          className="ui-title-bar ripple"
-                                          layout={5}
-                                          style={
+                                        <ThemeProvider
+                                          theme={
                                             Object {
-                                              "padding": "2px 4px",
+                                              "backgroundColor": "#ffffff",
+                                              "borderColor": "#004358",
+                                              "color": "#000000",
+                                              "headerBackgroundColor": "#004358",
+                                              "headerForegroundColor": "#ffffff",
+                                              "hoverColor": "#ffe11a",
                                             }
                                           }
                                         >
-                                          <div
-                                            className="ui-title-bar ripple sc-bxivhb doMVNq"
+                                          <styled.div
+                                            className="ui-title-bar ripple"
+                                            layout={5}
                                             style={
                                               Object {
                                                 "padding": "2px 4px",
                                               }
                                             }
                                           >
-                                            <styled.div
-                                              className="ui-title"
-                                              contentEditable={false}
-                                              direction="right"
-                                              disabled={false}
-                                              focus={false}
-                                              height=""
-                                              hiddenLeftButton={false}
-                                              hiddenRightButton={false}
-                                              href={
-                                                Object {
-                                                  "selectHandler": [Function],
-                                                  "sizing": "small",
-                                                }
-                                              }
-                                              id="2"
-                                              layout={5}
-                                              leftButton={null}
-                                              location="none"
-                                              noedit={false}
-                                              nohover={false}
-                                              noripple={false}
-                                              onBlur={[Function]}
-                                              onChange={[Function]}
-                                              onClick={[Function]}
-                                              onDoubleClick={[Function]}
-                                              onFocus={[Function]}
-                                              onKeyDown={[Function]}
-                                              onKeyPress={[Function]}
-                                              onMouseOut={[Function]}
-                                              onSelect={[Function]}
-                                              onUpdate={[Function]}
-                                              rightButton={null}
-                                              selected={false}
-                                              sizing="small"
-                                              stacked={false}
+                                            <div
+                                              className="ui-title-bar ripple sc-bxivhb doMVNq"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
-                                              testing={true}
-                                              title="h3"
-                                              useedit={false}
-                                              visible={true}
-                                              widget={null}
-                                              width=""
                                             >
-                                              <div
-                                                className="ui-title sc-dxgOiQ bcolgM"
+                                              <Styled(Label)
+                                                className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
                                                 disabled={false}
+                                                focus={false}
                                                 height=""
+                                                hiddenLeftButton={false}
+                                                hiddenRightButton={false}
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
@@ -1597,6 +1585,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                                 id="2"
+                                                layout={5}
+                                                leftButton={null}
+                                                location="none"
+                                                noedit={false}
+                                                nohover={false}
+                                                noripple={false}
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
                                                 onClick={[Function]}
@@ -1606,17 +1600,34 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onUpdate={[Function]}
+                                                rightButton={null}
                                                 selected={false}
+                                                sizing="small"
+                                                stacked={false}
                                                 style={
                                                   Object {
                                                     "padding": "2px 4px",
                                                   }
                                                 }
+                                                testing={true}
+                                                text="h3"
                                                 title="h3"
+                                                useedit={false}
+                                                visible={true}
+                                                widget={null}
                                                 width=""
+                                                xcss={
+                                                  Array [
+                                                    "
+	text-align: left;
+	flex: 5;
+",
+                                                  ]
+                                                }
                                               >
                                                 <Label
-                                                  className="ui-listitem"
+                                                  className="ui-title sc-ifAKCX cfStlt"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -1663,9 +1674,17 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   visible={true}
                                                   widget={null}
                                                   width=""
+                                                  xcss={
+                                                    Array [
+                                                      "
+	text-align: left;
+	flex: 5;
+",
+                                                    ]
+                                                  }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-listitem"
+                                                    className="ui-label label small ui-title sc-ifAKCX cfStlt"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -1682,10 +1701,10 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h3
                                                   </span>
                                                 </Label>
-                                              </div>
-                                            </styled.div>
-                                          </div>
-                                        </styled.div>
+                                              </Styled(Label)>
+                                            </div>
+                                          </styled.div>
+                                        </ThemeProvider>
                                       </Title>
                                     </li>
                                   </styled.li>
@@ -1709,7 +1728,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="3"
-                            key=".3"
+                            key="3"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -1737,6 +1756,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             visible={true}
                             widget={null}
                             width=""
+                            xcss={null}
                           >
                             <ThemeProvider
                               theme={
@@ -1793,6 +1813,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 visible={true}
                                 widget={null}
                                 width=""
+                                xcss={null}
                               >
                                 <ThemeProvider
                                   theme={
@@ -1818,7 +1839,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item sc-ifAKCX hTsxJQ"
+                                      className="ui-item sc-bZQynM bpnbyn"
                                       id="3"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -1874,78 +1895,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                         visible={true}
                                         widget={null}
                                         width=""
+                                        xcss={null}
                                       >
-                                        <styled.div
-                                          className="ui-title-bar ripple"
-                                          layout={5}
-                                          style={
+                                        <ThemeProvider
+                                          theme={
                                             Object {
-                                              "padding": "2px 4px",
+                                              "backgroundColor": "#ffffff",
+                                              "borderColor": "#004358",
+                                              "color": "#000000",
+                                              "headerBackgroundColor": "#004358",
+                                              "headerForegroundColor": "#ffffff",
+                                              "hoverColor": "#ffe11a",
                                             }
                                           }
                                         >
-                                          <div
-                                            className="ui-title-bar ripple sc-bxivhb doMVNq"
+                                          <styled.div
+                                            className="ui-title-bar ripple"
+                                            layout={5}
                                             style={
                                               Object {
                                                 "padding": "2px 4px",
                                               }
                                             }
                                           >
-                                            <styled.div
-                                              className="ui-title"
-                                              contentEditable={false}
-                                              direction="right"
-                                              disabled={false}
-                                              focus={false}
-                                              height=""
-                                              hiddenLeftButton={false}
-                                              hiddenRightButton={false}
-                                              href={
-                                                Object {
-                                                  "selectHandler": [Function],
-                                                  "sizing": "small",
-                                                }
-                                              }
-                                              id="3"
-                                              layout={5}
-                                              leftButton={null}
-                                              location="none"
-                                              noedit={false}
-                                              nohover={false}
-                                              noripple={false}
-                                              onBlur={[Function]}
-                                              onChange={[Function]}
-                                              onClick={[Function]}
-                                              onDoubleClick={[Function]}
-                                              onFocus={[Function]}
-                                              onKeyDown={[Function]}
-                                              onKeyPress={[Function]}
-                                              onMouseOut={[Function]}
-                                              onSelect={[Function]}
-                                              onUpdate={[Function]}
-                                              rightButton={null}
-                                              selected={false}
-                                              sizing="small"
-                                              stacked={false}
+                                            <div
+                                              className="ui-title-bar ripple sc-bxivhb doMVNq"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
-                                              testing={true}
-                                              title="h4"
-                                              useedit={false}
-                                              visible={true}
-                                              widget={null}
-                                              width=""
                                             >
-                                              <div
-                                                className="ui-title sc-jKJlTe klNPiw"
+                                              <Styled(Label)
+                                                className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
                                                 disabled={false}
+                                                focus={false}
                                                 height=""
+                                                hiddenLeftButton={false}
+                                                hiddenRightButton={false}
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
@@ -1953,6 +1942,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                                 id="3"
+                                                layout={5}
+                                                leftButton={null}
+                                                location="none"
+                                                noedit={false}
+                                                nohover={false}
+                                                noripple={false}
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
                                                 onClick={[Function]}
@@ -1962,17 +1957,34 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onUpdate={[Function]}
+                                                rightButton={null}
                                                 selected={false}
+                                                sizing="small"
+                                                stacked={false}
                                                 style={
                                                   Object {
                                                     "padding": "2px 4px",
                                                   }
                                                 }
+                                                testing={true}
+                                                text="h4"
                                                 title="h4"
+                                                useedit={false}
+                                                visible={true}
+                                                widget={null}
                                                 width=""
+                                                xcss={
+                                                  Array [
+                                                    "
+	text-align: left;
+	flex: 5;
+",
+                                                  ]
+                                                }
                                               >
                                                 <Label
-                                                  className="ui-listitem"
+                                                  className="ui-title sc-ifAKCX cfStlt"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -2019,9 +2031,17 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   visible={true}
                                                   widget={null}
                                                   width=""
+                                                  xcss={
+                                                    Array [
+                                                      "
+	text-align: left;
+	flex: 5;
+",
+                                                    ]
+                                                  }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-listitem"
+                                                    className="ui-label label small ui-title sc-ifAKCX cfStlt"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -2038,10 +2058,10 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h4
                                                   </span>
                                                 </Label>
-                                              </div>
-                                            </styled.div>
-                                          </div>
-                                        </styled.div>
+                                              </Styled(Label)>
+                                            </div>
+                                          </styled.div>
+                                        </ThemeProvider>
                                       </Title>
                                     </li>
                                   </styled.li>
@@ -2065,7 +2085,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="4"
-                            key=".4"
+                            key="4"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -2093,6 +2113,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             visible={true}
                             widget={null}
                             width=""
+                            xcss={null}
                           >
                             <ThemeProvider
                               theme={
@@ -2149,6 +2170,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 visible={true}
                                 widget={null}
                                 width=""
+                                xcss={null}
                               >
                                 <ThemeProvider
                                   theme={
@@ -2174,7 +2196,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item sc-ifAKCX hTsxJQ"
+                                      className="ui-item sc-bZQynM bpnbyn"
                                       id="4"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -2230,78 +2252,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                         visible={true}
                                         widget={null}
                                         width=""
+                                        xcss={null}
                                       >
-                                        <styled.div
-                                          className="ui-title-bar ripple"
-                                          layout={5}
-                                          style={
+                                        <ThemeProvider
+                                          theme={
                                             Object {
-                                              "padding": "2px 4px",
+                                              "backgroundColor": "#ffffff",
+                                              "borderColor": "#004358",
+                                              "color": "#000000",
+                                              "headerBackgroundColor": "#004358",
+                                              "headerForegroundColor": "#ffffff",
+                                              "hoverColor": "#ffe11a",
                                             }
                                           }
                                         >
-                                          <div
-                                            className="ui-title-bar ripple sc-bxivhb doMVNq"
+                                          <styled.div
+                                            className="ui-title-bar ripple"
+                                            layout={5}
                                             style={
                                               Object {
                                                 "padding": "2px 4px",
                                               }
                                             }
                                           >
-                                            <styled.div
-                                              className="ui-title"
-                                              contentEditable={false}
-                                              direction="right"
-                                              disabled={false}
-                                              focus={false}
-                                              height=""
-                                              hiddenLeftButton={false}
-                                              hiddenRightButton={false}
-                                              href={
-                                                Object {
-                                                  "selectHandler": [Function],
-                                                  "sizing": "small",
-                                                }
-                                              }
-                                              id="4"
-                                              layout={5}
-                                              leftButton={null}
-                                              location="none"
-                                              noedit={false}
-                                              nohover={false}
-                                              noripple={false}
-                                              onBlur={[Function]}
-                                              onChange={[Function]}
-                                              onClick={[Function]}
-                                              onDoubleClick={[Function]}
-                                              onFocus={[Function]}
-                                              onKeyDown={[Function]}
-                                              onKeyPress={[Function]}
-                                              onMouseOut={[Function]}
-                                              onSelect={[Function]}
-                                              onUpdate={[Function]}
-                                              rightButton={null}
-                                              selected={false}
-                                              sizing="small"
-                                              stacked={false}
+                                            <div
+                                              className="ui-title-bar ripple sc-bxivhb doMVNq"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
-                                              testing={true}
-                                              title="h5"
-                                              useedit={false}
-                                              visible={true}
-                                              widget={null}
-                                              width=""
                                             >
-                                              <div
-                                                className="ui-title sc-hMqMXs bKKLLo"
+                                              <Styled(Label)
+                                                className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
                                                 disabled={false}
+                                                focus={false}
                                                 height=""
+                                                hiddenLeftButton={false}
+                                                hiddenRightButton={false}
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
@@ -2309,6 +2299,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                                 id="4"
+                                                layout={5}
+                                                leftButton={null}
+                                                location="none"
+                                                noedit={false}
+                                                nohover={false}
+                                                noripple={false}
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
                                                 onClick={[Function]}
@@ -2318,17 +2314,34 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onUpdate={[Function]}
+                                                rightButton={null}
                                                 selected={false}
+                                                sizing="small"
+                                                stacked={false}
                                                 style={
                                                   Object {
                                                     "padding": "2px 4px",
                                                   }
                                                 }
+                                                testing={true}
+                                                text="h5"
                                                 title="h5"
+                                                useedit={false}
+                                                visible={true}
+                                                widget={null}
                                                 width=""
+                                                xcss={
+                                                  Array [
+                                                    "
+	text-align: left;
+	flex: 5;
+",
+                                                  ]
+                                                }
                                               >
                                                 <Label
-                                                  className="ui-listitem"
+                                                  className="ui-title sc-ifAKCX cfStlt"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -2375,9 +2388,17 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   visible={true}
                                                   widget={null}
                                                   width=""
+                                                  xcss={
+                                                    Array [
+                                                      "
+	text-align: left;
+	flex: 5;
+",
+                                                    ]
+                                                  }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-listitem"
+                                                    className="ui-label label small ui-title sc-ifAKCX cfStlt"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -2394,10 +2415,10 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h5
                                                   </span>
                                                 </Label>
-                                              </div>
-                                            </styled.div>
-                                          </div>
-                                        </styled.div>
+                                              </Styled(Label)>
+                                            </div>
+                                          </styled.div>
+                                        </ThemeProvider>
                                       </Title>
                                     </li>
                                   </styled.li>
@@ -2421,7 +2442,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="5"
-                            key=".5"
+                            key="5"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -2449,6 +2470,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             visible={true}
                             widget={null}
                             width=""
+                            xcss={null}
                           >
                             <ThemeProvider
                               theme={
@@ -2505,6 +2527,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 visible={true}
                                 widget={null}
                                 width=""
+                                xcss={null}
                               >
                                 <ThemeProvider
                                   theme={
@@ -2530,7 +2553,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item sc-ifAKCX hTsxJQ"
+                                      className="ui-item sc-bZQynM bpnbyn"
                                       id="5"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -2586,78 +2609,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                         visible={true}
                                         widget={null}
                                         width=""
+                                        xcss={null}
                                       >
-                                        <styled.div
-                                          className="ui-title-bar ripple"
-                                          layout={5}
-                                          style={
+                                        <ThemeProvider
+                                          theme={
                                             Object {
-                                              "padding": "2px 4px",
+                                              "backgroundColor": "#ffffff",
+                                              "borderColor": "#004358",
+                                              "color": "#000000",
+                                              "headerBackgroundColor": "#004358",
+                                              "headerForegroundColor": "#ffffff",
+                                              "hoverColor": "#ffe11a",
                                             }
                                           }
                                         >
-                                          <div
-                                            className="ui-title-bar ripple sc-bxivhb doMVNq"
+                                          <styled.div
+                                            className="ui-title-bar ripple"
+                                            layout={5}
                                             style={
                                               Object {
                                                 "padding": "2px 4px",
                                               }
                                             }
                                           >
-                                            <styled.div
-                                              className="ui-title"
-                                              contentEditable={false}
-                                              direction="right"
-                                              disabled={false}
-                                              focus={false}
-                                              height=""
-                                              hiddenLeftButton={false}
-                                              hiddenRightButton={false}
-                                              href={
-                                                Object {
-                                                  "selectHandler": [Function],
-                                                  "sizing": "small",
-                                                }
-                                              }
-                                              id="5"
-                                              layout={5}
-                                              leftButton={null}
-                                              location="none"
-                                              noedit={false}
-                                              nohover={false}
-                                              noripple={false}
-                                              onBlur={[Function]}
-                                              onChange={[Function]}
-                                              onClick={[Function]}
-                                              onDoubleClick={[Function]}
-                                              onFocus={[Function]}
-                                              onKeyDown={[Function]}
-                                              onKeyPress={[Function]}
-                                              onMouseOut={[Function]}
-                                              onSelect={[Function]}
-                                              onUpdate={[Function]}
-                                              rightButton={null}
-                                              selected={false}
-                                              sizing="small"
-                                              stacked={false}
+                                            <div
+                                              className="ui-title-bar ripple sc-bxivhb doMVNq"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
-                                              testing={true}
-                                              title="h6"
-                                              useedit={false}
-                                              visible={true}
-                                              widget={null}
-                                              width=""
                                             >
-                                              <div
-                                                className="ui-title sc-kkGfuU gEvnme"
+                                              <Styled(Label)
+                                                className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
                                                 disabled={false}
+                                                focus={false}
                                                 height=""
+                                                hiddenLeftButton={false}
+                                                hiddenRightButton={false}
                                                 href={
                                                   Object {
                                                     "selectHandler": [Function],
@@ -2665,6 +2656,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                                 id="5"
+                                                layout={5}
+                                                leftButton={null}
+                                                location="none"
+                                                noedit={false}
+                                                nohover={false}
+                                                noripple={false}
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
                                                 onClick={[Function]}
@@ -2674,17 +2671,34 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 onKeyPress={[Function]}
                                                 onMouseOut={[Function]}
                                                 onSelect={[Function]}
+                                                onUpdate={[Function]}
+                                                rightButton={null}
                                                 selected={false}
+                                                sizing="small"
+                                                stacked={false}
                                                 style={
                                                   Object {
                                                     "padding": "2px 4px",
                                                   }
                                                 }
+                                                testing={true}
+                                                text="h6"
                                                 title="h6"
+                                                useedit={false}
+                                                visible={true}
+                                                widget={null}
                                                 width=""
+                                                xcss={
+                                                  Array [
+                                                    "
+	text-align: left;
+	flex: 5;
+",
+                                                  ]
+                                                }
                                               >
                                                 <Label
-                                                  className="ui-listitem"
+                                                  className="ui-title sc-ifAKCX cfStlt"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -2731,9 +2745,17 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   visible={true}
                                                   widget={null}
                                                   width=""
+                                                  xcss={
+                                                    Array [
+                                                      "
+	text-align: left;
+	flex: 5;
+",
+                                                    ]
+                                                  }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-listitem"
+                                                    className="ui-label label small ui-title sc-ifAKCX cfStlt"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -2750,10 +2772,10 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h6
                                                   </span>
                                                 </Label>
-                                              </div>
-                                            </styled.div>
-                                          </div>
-                                        </styled.div>
+                                              </Styled(Label)>
+                                            </div>
+                                          </styled.div>
+                                        </ThemeProvider>
                                       </Title>
                                     </li>
                                   </styled.li>
@@ -2793,6 +2815,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-divider divider small toolbarElement"
@@ -2835,6 +2858,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button ripple small toolbarElement"
@@ -2868,6 +2892,7 @@ exports[`Test creation of an Editor instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-undo"
@@ -2911,6 +2936,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button ripple small toolbarElement"
@@ -2944,6 +2970,7 @@ exports[`Test creation of an Editor instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-repeat"
@@ -2982,6 +3009,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-divider divider small toolbarElement"
@@ -3049,6 +3077,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <select
               className="ui-dropdown dropdown small toolbarElement"
@@ -3174,6 +3203,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <select
               className="ui-dropdown dropdown small toolbarElement"
@@ -3287,6 +3317,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-divider divider small toolbarElement"
@@ -3354,6 +3385,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <select
               className="ui-dropdown dropdown small toolbarElement"
@@ -3748,6 +3780,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <select
               className="ui-dropdown dropdown small toolbarElement"
@@ -4269,6 +4302,7 @@ exports[`Test creation of an Editor instance 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button ripple small toolbarElement"
@@ -4302,6 +4336,7 @@ exports[`Test creation of an Editor instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-refresh"
@@ -4356,5 +4391,6 @@ Object {
   "testing": true,
   "visible": true,
   "width": "",
+  "xcss": null,
 }
 `;

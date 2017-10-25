@@ -28,6 +28,7 @@ exports[`Test ButtonCircle click event 1`] = `
   testing={true}
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-button-circle buttonCircle normal"
@@ -62,6 +63,7 @@ exports[`Test ButtonCircle click event 1`] = `
         testing={true}
         visible={true}
         width=""
+        xcss={null}
       >
         <div
           className="ui-button button ripple normal normalBorder buttonCircleIcon"
@@ -94,6 +96,7 @@ exports[`Test ButtonCircle click event 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <styled.i
               className="ui-icon fa fa-fw fa-bomb"
@@ -147,6 +150,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
       testing={true}
       visible={true}
       width=""
+      xcss={null}
     />
   </div>
 </div>
@@ -180,6 +184,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   testing={true}
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-button-circle buttonCircle normal disabled nohover"
@@ -214,6 +219,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         testing={true}
         visible={true}
         width=""
+        xcss={null}
       >
         <div
           className="ui-button button normal normalBorder buttonCircleIcon disabled nohover"
@@ -246,6 +252,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <styled.i
               className="ui-icon fa fa-fw fa-bomb"
@@ -293,6 +300,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   testing={true}
   visible={false}
   width=""
+  xcss={null}
 >
   <div
     className="ui-button-circle buttonCircle normal invisible"
@@ -327,6 +335,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
         testing={true}
         visible={false}
         width=""
+        xcss={null}
       >
         <div
           className="ui-button button ripple normal normalBorder buttonCircleIcon invisible"
@@ -359,6 +368,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <styled.i
               className="ui-icon fa fa-fw fa-bomb"
@@ -404,5 +414,6 @@ Object {
   "testing": true,
   "visible": true,
   "width": "",
+  "xcss": null,
 }
 `;

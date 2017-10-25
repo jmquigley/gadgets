@@ -160,6 +160,23 @@ export const WidgetDominantView: any = css`
 	flex: 1;
 `;
 
+export const StyledLabel: any = styled(Label)`
+	align-items: center;
+	display: block;
+	${(props: TitleProps) => props.xcss && props.xcss}
+	${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
+`;
+
+const StyledWidget: any = styled.div`
+	align-items: center;
+	${(props: TitleProps) => props.xcss && props.xcss}
+	${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
+
+	> span {
+	  display: block;
+	}
+`;
+
 export class Title extends BaseComponent<TitleProps, undefined> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
@@ -216,23 +233,6 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 				widgetView = WidgetEvenView;
 				break;
 		}
-
-		const StyledWidget: any = styled.div`
-			align-items: center;
-			${(props: TitleProps) => props.xcss && props.xcss}
-			${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
-
-			> span {
-			  display: block;
-			}
-		`;
-
-		const StyledLabel: any = styled(Label)`
-			align-items: center;
-			display: block;
-			${(props: TitleProps) => props.xcss && props.xcss}
-			${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
-		`;
 
 		if (typeof this.props.title === 'string') {
 			title = (

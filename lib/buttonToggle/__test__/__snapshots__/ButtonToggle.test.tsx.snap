@@ -34,6 +34,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
   testing={true}
   visible={true}
   width=""
+  xcss={null}
 />
 `;
 
@@ -66,6 +67,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
   testing={true}
   visible={true}
   width=""
+  xcss={null}
 >
   <Button
     bgColorOff="inherit"
@@ -100,6 +102,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
     testing={true}
     visible={true}
     width=""
+    xcss={null}
   >
     <div
       className="ui-button button normal ui-button-toggle buttonToggle normal"
@@ -131,6 +134,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
         testing={true}
         visible={true}
         width=""
+        xcss={null}
       >
         <styled.i
           className="ui-icon fa fa-fw fa-star-o"
@@ -177,6 +181,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
   testing={true}
   visible={true}
   width=""
+  xcss={null}
 >
   <Button
     bgColorOff="inherit"
@@ -211,6 +216,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
     testing={true}
     visible={true}
     width=""
+    xcss={null}
   >
     <div
       className="ui-button button normal ui-button-toggle buttonToggle normal disabled nohover disabled nohover"
@@ -242,6 +248,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
         testing={true}
         visible={true}
         width=""
+        xcss={null}
       >
         <styled.i
           className="ui-icon fa fa-fw fa-bomb"
@@ -288,6 +295,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
   testing={true}
   visible={false}
   width=""
+  xcss={null}
 >
   <Button
     bgColorOff="inherit"
@@ -322,6 +330,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
     testing={true}
     visible={false}
     width=""
+    xcss={null}
   >
     <div
       className="ui-button button normal ui-button-toggle buttonToggle normal invisible invisible"
@@ -353,6 +362,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
         testing={true}
         visible={true}
         width=""
+        xcss={null}
       >
         <styled.i
           className="ui-icon fa fa-fw fa-bomb"
@@ -399,5 +409,6 @@ Object {
   "testing": true,
   "visible": true,
   "width": "",
+  "xcss": null,
 }
 `;

@@ -33,6 +33,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
     useedit={false}
     visible={true}
     width=""
+    xcss={null}
   />
 </div>
 `;
@@ -61,6 +62,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   usedelete={true}
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-tag tag tagNoHover normal disabled nohover"
@@ -94,6 +96,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       useedit={false}
       visible={true}
       width=""
+      xcss={null}
     >
       <span
         className="ui-label label normal disabled nohover"
@@ -136,6 +139,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       testing={true}
       visible={false}
       width=""
+      xcss={null}
     >
       <div
         className="ui-button-circle buttonCircle small tagDeleteButton middle invisible disabled nohover"
@@ -170,6 +174,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
             testing={true}
             visible={false}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button small smallBorder buttonCircleIcon invisible disabled nohover"
@@ -202,6 +207,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-times"
@@ -247,6 +253,7 @@ exports[`Test making Tag invisible 1`] = `
   usedelete={true}
   visible={false}
   width=""
+  xcss={null}
 >
   <div
     className="ui-tag tag tagNoHover normal invisible disabled nohover"
@@ -280,6 +287,7 @@ exports[`Test making Tag invisible 1`] = `
       useedit={false}
       visible={false}
       width=""
+      xcss={null}
     >
       <span
         className="ui-label label normal invisible disabled nohover"
@@ -322,6 +330,7 @@ exports[`Test making Tag invisible 1`] = `
       testing={true}
       visible={false}
       width=""
+      xcss={null}
     >
       <div
         className="ui-button-circle buttonCircle small tagDeleteButton middle invisible disabled nohover"
@@ -356,6 +365,7 @@ exports[`Test making Tag invisible 1`] = `
             testing={true}
             visible={false}
             width=""
+            xcss={null}
           >
             <div
               className="ui-button button small smallBorder buttonCircleIcon invisible disabled nohover"
@@ -388,6 +398,7 @@ exports[`Test making Tag invisible 1`] = `
                 testing={true}
                 visible={true}
                 width=""
+                xcss={null}
               >
                 <styled.i
                   className="ui-icon fa fa-fw fa-times"
@@ -433,5 +444,6 @@ Object {
   "usedelete": false,
   "visible": true,
   "width": "",
+  "xcss": null,
 }
 `;

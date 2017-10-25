@@ -44,6 +44,7 @@ exports[`Test disabling of a ListItem control 1`] = `
   visible={true}
   widget={null}
   width=""
+  xcss={null}
 >
   <ThemeProvider
     theme={
@@ -100,6 +101,7 @@ exports[`Test disabling of a ListItem control 1`] = `
       visible={true}
       widget={null}
       width=""
+      xcss={null}
     >
       <ThemeProvider
         theme={
@@ -125,7 +127,7 @@ exports[`Test disabling of a ListItem control 1`] = `
           style={Object {}}
         >
           <li
-            className="ui-item sc-ifAKCX hTsxJQ"
+            className="ui-item sc-bZQynM bpnbyn"
             id=""
             onBlur={[Function]}
             onDoubleClick={[Function]}
@@ -181,78 +183,46 @@ exports[`Test disabling of a ListItem control 1`] = `
               visible={true}
               widget={null}
               width=""
+              xcss={null}
             >
-              <styled.div
-                className="ui-title-bar"
-                layout={5}
-                style={
+              <ThemeProvider
+                theme={
                   Object {
-                    "padding": "2px 4px",
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#ffe11a",
                   }
                 }
               >
-                <div
-                  className="ui-title-bar sc-bxivhb doMVNq"
+                <styled.div
+                  className="ui-title-bar"
+                  layout={5}
                   style={
                     Object {
                       "padding": "2px 4px",
                     }
                   }
                 >
-                  <styled.div
-                    className="ui-title"
-                    contentEditable={false}
-                    direction="right"
-                    disabled={true}
-                    focus={false}
-                    height=""
-                    hiddenLeftButton={false}
-                    hiddenRightButton={false}
-                    href={
-                      Object {
-                        "selectHandler": [Function],
-                        "sizing": "normal",
-                      }
-                    }
-                    id=""
-                    layout={5}
-                    leftButton={null}
-                    location="none"
-                    noedit={false}
-                    nohover={false}
-                    noripple={false}
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onDoubleClick={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    onMouseOut={[Function]}
-                    onSelect={[Function]}
-                    onUpdate={[Function]}
-                    rightButton={null}
-                    selected={false}
-                    sizing="normal"
-                    stacked={false}
+                  <div
+                    className="ui-title-bar sc-bxivhb doMVNq"
                     style={
                       Object {
                         "padding": "2px 4px",
                       }
                     }
-                    testing={true}
-                    title="test title"
-                    useedit={false}
-                    visible={true}
-                    widget={null}
-                    width=""
                   >
-                    <div
-                      className="ui-title sc-gzVnrw guHxJf"
+                    <Styled(Label)
+                      className="ui-title"
                       contentEditable={false}
                       direction="right"
                       disabled={true}
+                      focus={false}
                       height=""
+                      hiddenLeftButton={false}
+                      hiddenRightButton={false}
                       href={
                         Object {
                           "selectHandler": [Function],
@@ -260,6 +230,12 @@ exports[`Test disabling of a ListItem control 1`] = `
                         }
                       }
                       id=""
+                      layout={5}
+                      leftButton={null}
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
                       onBlur={[Function]}
                       onChange={[Function]}
                       onClick={[Function]}
@@ -269,17 +245,34 @@ exports[`Test disabling of a ListItem control 1`] = `
                       onKeyPress={[Function]}
                       onMouseOut={[Function]}
                       onSelect={[Function]}
+                      onUpdate={[Function]}
+                      rightButton={null}
                       selected={false}
+                      sizing="normal"
+                      stacked={false}
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
+                      testing={true}
+                      text="test title"
                       title="test title"
+                      useedit={false}
+                      visible={true}
+                      widget={null}
                       width=""
+                      xcss={
+                        Array [
+                          "
+	text-align: left;
+	flex: 5;
+",
+                        ]
+                      }
                     >
                       <Label
-                        className="ui-listitem"
+                        className="ui-title sc-ifAKCX kdxUhk"
                         contentEditable={false}
                         direction="right"
                         disabled={true}
@@ -326,9 +319,17 @@ exports[`Test disabling of a ListItem control 1`] = `
                         visible={true}
                         widget={null}
                         width=""
+                        xcss={
+                          Array [
+                            "
+	text-align: left;
+	flex: 5;
+",
+                          ]
+                        }
                       >
                         <span
-                          className="ui-label label normal ui-listitem disabled nohover"
+                          className="ui-label label normal ui-title sc-ifAKCX kdxUhk disabled nohover"
                           contentEditable={false}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -345,10 +346,10 @@ exports[`Test disabling of a ListItem control 1`] = `
                           test title
                         </span>
                       </Label>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
+                    </Styled(Label)>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Title>
           </li>
         </styled.li>
@@ -402,6 +403,7 @@ exports[`Test making ListItem control invisible 1`] = `
   visible={false}
   widget={null}
   width=""
+  xcss={null}
 >
   <ThemeProvider
     theme={
@@ -458,6 +460,7 @@ exports[`Test making ListItem control invisible 1`] = `
       visible={false}
       widget={null}
       width=""
+      xcss={null}
     >
       <ThemeProvider
         theme={
@@ -483,7 +486,7 @@ exports[`Test making ListItem control invisible 1`] = `
           style={Object {}}
         >
           <li
-            className="ui-item sc-ifAKCX hTsxJQ"
+            className="ui-item sc-bZQynM bpnbyn"
             id=""
             onBlur={[Function]}
             onDoubleClick={[Function]}
@@ -539,78 +542,46 @@ exports[`Test making ListItem control invisible 1`] = `
               visible={false}
               widget={null}
               width=""
+              xcss={null}
             >
-              <styled.div
-                className="ui-title-bar ripple"
-                layout={5}
-                style={
+              <ThemeProvider
+                theme={
                   Object {
-                    "padding": "2px 4px",
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#ffe11a",
                   }
                 }
               >
-                <div
-                  className="ui-title-bar ripple sc-bxivhb doMVNq"
+                <styled.div
+                  className="ui-title-bar ripple"
+                  layout={5}
                   style={
                     Object {
                       "padding": "2px 4px",
                     }
                   }
                 >
-                  <styled.div
-                    className="ui-title"
-                    contentEditable={false}
-                    direction="right"
-                    disabled={false}
-                    focus={false}
-                    height=""
-                    hiddenLeftButton={false}
-                    hiddenRightButton={false}
-                    href={
-                      Object {
-                        "selectHandler": [Function],
-                        "sizing": "normal",
-                      }
-                    }
-                    id=""
-                    layout={5}
-                    leftButton={null}
-                    location="none"
-                    noedit={false}
-                    nohover={false}
-                    noripple={false}
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onDoubleClick={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    onMouseOut={[Function]}
-                    onSelect={[Function]}
-                    onUpdate={[Function]}
-                    rightButton={null}
-                    selected={false}
-                    sizing="normal"
-                    stacked={false}
+                  <div
+                    className="ui-title-bar ripple sc-bxivhb doMVNq"
                     style={
                       Object {
                         "padding": "2px 4px",
                       }
                     }
-                    testing={true}
-                    title="test title"
-                    useedit={false}
-                    visible={false}
-                    widget={null}
-                    width=""
                   >
-                    <div
-                      className="ui-title sc-dnqmqq ckIZaK"
+                    <Styled(Label)
+                      className="ui-title"
                       contentEditable={false}
                       direction="right"
                       disabled={false}
+                      focus={false}
                       height=""
+                      hiddenLeftButton={false}
+                      hiddenRightButton={false}
                       href={
                         Object {
                           "selectHandler": [Function],
@@ -618,6 +589,12 @@ exports[`Test making ListItem control invisible 1`] = `
                         }
                       }
                       id=""
+                      layout={5}
+                      leftButton={null}
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
                       onBlur={[Function]}
                       onChange={[Function]}
                       onClick={[Function]}
@@ -627,17 +604,34 @@ exports[`Test making ListItem control invisible 1`] = `
                       onKeyPress={[Function]}
                       onMouseOut={[Function]}
                       onSelect={[Function]}
+                      onUpdate={[Function]}
+                      rightButton={null}
                       selected={false}
+                      sizing="normal"
+                      stacked={false}
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
+                      testing={true}
+                      text="test title"
                       title="test title"
+                      useedit={false}
+                      visible={false}
+                      widget={null}
                       width=""
+                      xcss={
+                        Array [
+                          "
+	text-align: left;
+	flex: 5;
+",
+                        ]
+                      }
                     >
                       <Label
-                        className="ui-listitem"
+                        className="ui-title sc-ifAKCX kdxUhk"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -684,9 +678,17 @@ exports[`Test making ListItem control invisible 1`] = `
                         visible={false}
                         widget={null}
                         width=""
+                        xcss={
+                          Array [
+                            "
+	text-align: left;
+	flex: 5;
+",
+                          ]
+                        }
                       >
                         <span
-                          className="ui-label label normal ui-listitem invisible"
+                          className="ui-label label normal ui-title sc-ifAKCX kdxUhk invisible"
                           contentEditable={false}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -703,10 +705,10 @@ exports[`Test making ListItem control invisible 1`] = `
                           test title
                         </span>
                       </Label>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
+                    </Styled(Label)>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Title>
           </li>
         </styled.li>
@@ -758,6 +760,7 @@ Object {
   "visible": true,
   "widget": null,
   "width": "",
+  "xcss": null,
 }
 `;
 
@@ -817,6 +820,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
     visible={true}
     widget="test title right"
     width=""
+    xcss={null}
   />
 </ThemeProvider>
 `;
@@ -877,6 +881,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
     visible={true}
     widget={null}
     width=""
+    xcss={null}
   />
 </ThemeProvider>
 `;

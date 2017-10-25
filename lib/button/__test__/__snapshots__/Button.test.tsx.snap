@@ -22,6 +22,7 @@ exports[`Test Button click event 1`] = `
   testing={true}
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-button button ripple normal"
@@ -48,6 +49,7 @@ exports[`Test Button click event 1`] = `
       testing={true}
       visible={true}
       width=""
+      xcss={null}
     >
       <styled.i
         className="ui-icon fa fa-fw fa-bomb"
@@ -90,6 +92,7 @@ exports[`Test creation of a Button control 1`] = `
     testing={true}
     visible={true}
     width=""
+    xcss={null}
   />
 </div>
 `;
@@ -127,6 +130,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
     testing={true}
     visible={true}
     width=""
+    xcss={null}
   />
 </div>
 `;
@@ -153,6 +157,7 @@ exports[`Test disabling of a Button 1`] = `
   testing={true}
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-button button normal disabled nohover"
@@ -179,6 +184,7 @@ exports[`Test disabling of a Button 1`] = `
       testing={true}
       visible={true}
       width=""
+      xcss={null}
     >
       <styled.i
         className="ui-icon fa fa-fw fa-bomb"
@@ -217,6 +223,7 @@ exports[`Test making a Button invisible 1`] = `
   testing={true}
   visible={false}
   width=""
+  xcss={null}
 >
   <div
     className="ui-button button ripple normal invisible"
@@ -243,6 +250,7 @@ exports[`Test making a Button invisible 1`] = `
       testing={true}
       visible={true}
       width=""
+      xcss={null}
     >
       <styled.i
         className="ui-icon fa fa-fw fa-bomb"
@@ -281,5 +289,6 @@ Object {
   "testing": true,
   "visible": true,
   "width": "",
+  "xcss": null,
 }
 `;

@@ -46,6 +46,7 @@ exports[`Creation of the Option control 1`] = `
     text="test"
     visible={true}
     width=""
+    xcss={null}
   />
   <span>
     test
@@ -80,6 +81,7 @@ exports[`Test Option control click event 1`] = `
   text=""
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-option option normal"
@@ -126,6 +128,7 @@ exports[`Test Option control click event 1`] = `
       text=""
       visible={true}
       width=""
+      xcss={null}
     >
       <Button
         bgColorOff="inherit"
@@ -162,6 +165,7 @@ exports[`Test Option control click event 1`] = `
         text=""
         visible={true}
         width=""
+        xcss={null}
       >
         <div
           className="ui-button button normal ui-button-toggle buttonToggle normal optionButton nohover nohover"
@@ -193,6 +197,7 @@ exports[`Test Option control click event 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <styled.i
               className="ui-icon fa fa-fw fa-square-o"
@@ -239,6 +244,7 @@ exports[`Test disabling of the Option control 1`] = `
   text=""
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-option option normal disabled nohover"
@@ -285,6 +291,7 @@ exports[`Test disabling of the Option control 1`] = `
       text=""
       visible={true}
       width=""
+      xcss={null}
     >
       <Button
         bgColorOff="inherit"
@@ -321,6 +328,7 @@ exports[`Test disabling of the Option control 1`] = `
         text=""
         visible={true}
         width=""
+        xcss={null}
       >
         <div
           className="ui-button button normal ui-button-toggle buttonToggle normal optionButton disabled nohover disabled nohover"
@@ -352,6 +360,7 @@ exports[`Test disabling of the Option control 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <styled.i
               className="ui-icon fa fa-fw fa-square-o"
@@ -398,6 +407,7 @@ exports[`Test making the Option control invisible 1`] = `
   text=""
   visible={false}
   width=""
+  xcss={null}
 >
   <div
     className="ui-option option normal invisible"
@@ -444,6 +454,7 @@ exports[`Test making the Option control invisible 1`] = `
       text=""
       visible={false}
       width=""
+      xcss={null}
     >
       <Button
         bgColorOff="inherit"
@@ -480,6 +491,7 @@ exports[`Test making the Option control invisible 1`] = `
         text=""
         visible={false}
         width=""
+        xcss={null}
       >
         <div
           className="ui-button button normal ui-button-toggle buttonToggle normal optionButton invisible nohover invisible nohover"
@@ -511,6 +523,7 @@ exports[`Test making the Option control invisible 1`] = `
             testing={true}
             visible={true}
             width=""
+            xcss={null}
           >
             <styled.i
               className="ui-icon fa fa-fw fa-square-o"
@@ -555,5 +568,6 @@ Object {
   "text": "",
   "visible": true,
   "width": "",
+  "xcss": null,
 }
 `;

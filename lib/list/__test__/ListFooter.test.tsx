@@ -23,7 +23,7 @@ test('Test the creation of a ListFooter control with simple title', () => {
 	expect(ctl.prop('title')).toBe('test title');
 	expect(ctl.prop('disabled')).toBe(false);
 	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.find('.ui-list-footer').length).toBe(2);
+	expect(ctl.find('.ui-list-footer').length).toBe(1);
 });
 
 // TODO: test case for validating props object creator

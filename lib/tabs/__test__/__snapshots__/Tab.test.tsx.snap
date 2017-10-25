@@ -27,6 +27,7 @@ exports[`Test disabling of a Tab 1`] = `
   title="tab title"
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-tab tab normal disabled nohover"
@@ -65,50 +66,35 @@ exports[`Test disabling of a Tab 1`] = `
       visible={true}
       widget={false}
       width=""
+      xcss={null}
     >
-      <styled.div
-        className="ui-title-bar"
-        layout={5}
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <div
-          className="ui-title-bar sc-htpNat dDnVhK"
+        <styled.div
+          className="ui-title-bar"
+          layout={5}
           style={Object {}}
         >
-          <styled.div
-            className="ui-title"
-            contentEditable={false}
-            direction="right"
-            disabled={true}
-            focus={false}
-            height=""
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id=""
-            layout={5}
-            location="none"
-            noedit={true}
-            nohover={false}
-            noripple={true}
-            onClick={[Function]}
-            onClose={[Function]}
-            selected={false}
-            sizing="normal"
+          <div
+            className="ui-title-bar sc-htpNat dDnVhK"
             style={Object {}}
-            testing={true}
-            title="tab title"
-            visible={true}
-            widget={false}
-            width=""
           >
-            <div
-              className="ui-title sc-bxivhb cHuuHM"
+            <Styled(Label)
+              className="ui-title"
               contentEditable={false}
               direction="right"
               disabled={true}
+              focus={false}
               height=""
               href={
                 Object {
@@ -116,14 +102,33 @@ exports[`Test disabling of a Tab 1`] = `
                 }
               }
               id=""
+              layout={5}
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              onClose={[Function]}
               selected={false}
+              sizing="normal"
               style={Object {}}
+              testing={true}
+              text="tab title"
               title="tab title"
+              visible={true}
+              widget={false}
               width=""
+              xcss={
+                Array [
+                  "
+	text-align: left;
+	flex: 5;
+",
+                ]
+              }
             >
               <Label
-                className=""
+                className="ui-title sc-bxivhb dGlmbo"
                 contentEditable={false}
                 direction="right"
                 disabled={true}
@@ -158,9 +163,17 @@ exports[`Test disabling of a Tab 1`] = `
                 visible={true}
                 widget={false}
                 width=""
+                xcss={
+                  Array [
+                    "
+	text-align: left;
+	flex: 5;
+",
+                  ]
+                }
               >
                 <span
-                  className="ui-label label normal disabled nohover"
+                  className="ui-label label normal ui-title sc-bxivhb dGlmbo disabled nohover"
                   contentEditable={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -173,42 +186,13 @@ exports[`Test disabling of a Tab 1`] = `
                   tab title
                 </span>
               </Label>
-            </div>
-          </styled.div>
-          <styled.div
-            className="ui-title-widget"
-            contentEditable={false}
-            direction="right"
-            disabled={true}
-            focus={false}
-            height=""
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id=""
-            layout={5}
-            location="none"
-            noedit={true}
-            nohover={false}
-            noripple={true}
-            onClick={[Function]}
-            onClose={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            title="tab title"
-            visible={true}
-            widget={false}
-            width=""
-          >
-            <div
-              className="ui-title-widget sc-ifAKCX dLmsFK"
+            </Styled(Label)>
+            <styled.div
+              className="ui-title-widget"
               contentEditable={false}
               direction="right"
               disabled={true}
+              focus={false}
               height=""
               href={
                 Object {
@@ -216,15 +200,52 @@ exports[`Test disabling of a Tab 1`] = `
                 }
               }
               id=""
+              layout={5}
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              onClose={[Function]}
               selected={false}
+              sizing="normal"
               style={Object {}}
+              testing={true}
               title="tab title"
+              visible={true}
+              widget={false}
               width=""
-            />
-          </styled.div>
-        </div>
-      </styled.div>
+              xcss={
+                Array [
+                  "
+	text-align: right;
+	flex: 1;
+",
+                ]
+              }
+            >
+              <div
+                className="ui-title-widget sc-ifAKCX drMnEo"
+                contentEditable={false}
+                direction="right"
+                disabled={true}
+                height=""
+                href={
+                  Object {
+                    "selectHandler": [Function],
+                  }
+                }
+                id=""
+                onClick={[Function]}
+                selected={false}
+                style={Object {}}
+                title="tab title"
+                width=""
+              />
+            </styled.div>
+          </div>
+        </styled.div>
+      </ThemeProvider>
     </Title>
   </div>
 </Tab>
@@ -259,6 +280,7 @@ exports[`Test making a Tab invisible 1`] = `
   title="tab title"
   visible={false}
   width=""
+  xcss={null}
 >
   <div
     className="ui-tab tab tabBorderTop normal invisible"
@@ -328,91 +350,41 @@ exports[`Test making a Tab invisible 1`] = `
           title="tab title"
           visible={false}
           width=""
+          xcss={null}
         >
           Test content
         </Button>
       }
       width=""
+      xcss={null}
     >
-      <styled.div
-        className="ui-title-bar"
-        layout={5}
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <div
-          className="ui-title-bar sc-htpNat dDnVhK"
+        <styled.div
+          className="ui-title-bar"
+          layout={5}
           style={Object {}}
         >
-          <styled.div
-            className="ui-title"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            href={
-              Object {
-                "orientation": "top",
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
-            id=""
-            layout={5}
-            location="none"
-            noedit={true}
-            nohover={false}
-            noripple={true}
-            onClick={[Function]}
-            onClose={[Function]}
-            selected={false}
-            sizing="normal"
+          <div
+            className="ui-title-bar sc-htpNat dDnVhK"
             style={Object {}}
-            testing={true}
-            title="tab title"
-            visible={true}
-            widget={
-              <Button
-                className=""
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "orientation": "top",
-                    "selectHandler": [Function],
-                    "sizing": "normal",
-                  }
-                }
-                iconName="times"
-                iconStyle=""
-                id=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                onClick={[Function]}
-                onClose={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                title="tab title"
-                visible={false}
-                width=""
-              >
-                Test content
-              </Button>
-            }
-            width=""
           >
-            <div
-              className="ui-title sc-EHOje gIGXgQ"
+            <Styled(Label)
+              className="ui-title"
               contentEditable={false}
               direction="right"
               disabled={false}
+              focus={false}
               height=""
               href={
                 Object {
@@ -422,14 +394,68 @@ exports[`Test making a Tab invisible 1`] = `
                 }
               }
               id=""
+              layout={5}
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              onClose={[Function]}
               selected={false}
+              sizing="normal"
               style={Object {}}
+              testing={true}
+              text="tab title"
               title="tab title"
+              visible={true}
+              widget={
+                <Button
+                  className=""
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "orientation": "top",
+                      "selectHandler": [Function],
+                      "sizing": "normal",
+                    }
+                  }
+                  iconName="times"
+                  iconStyle=""
+                  id=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  title="tab title"
+                  visible={false}
+                  width=""
+                  xcss={null}
+                >
+                  Test content
+                </Button>
+              }
               width=""
+              xcss={
+                Array [
+                  "
+	text-align: left;
+	flex: 5;
+",
+                ]
+              }
             >
               <Label
-                className=""
+                className="ui-title sc-bxivhb dGlmbo"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -495,14 +521,23 @@ exports[`Test making a Tab invisible 1`] = `
                     title="tab title"
                     visible={false}
                     width=""
+                    xcss={null}
                   >
                     Test content
                   </Button>
                 }
                 width=""
+                xcss={
+                  Array [
+                    "
+	text-align: left;
+	flex: 5;
+",
+                  ]
+                }
               >
                 <span
-                  className="ui-label label normal"
+                  className="ui-label label normal ui-title sc-bxivhb dGlmbo"
                   contentEditable={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -515,78 +550,13 @@ exports[`Test making a Tab invisible 1`] = `
                   tab title
                 </span>
               </Label>
-            </div>
-          </styled.div>
-          <styled.div
-            className="ui-title-widget"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            href={
-              Object {
-                "orientation": "top",
-                "selectHandler": [Function],
-                "sizing": "normal",
-              }
-            }
-            id=""
-            layout={5}
-            location="none"
-            noedit={true}
-            nohover={false}
-            noripple={true}
-            onClick={[Function]}
-            onClose={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            title="tab title"
-            visible={true}
-            widget={
-              <Button
-                className=""
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "orientation": "top",
-                    "selectHandler": [Function],
-                    "sizing": "normal",
-                  }
-                }
-                iconName="times"
-                iconStyle=""
-                id=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                onClick={[Function]}
-                onClose={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                title="tab title"
-                visible={false}
-                width=""
-              >
-                Test content
-              </Button>
-            }
-            width=""
-          >
-            <div
-              className="ui-title-widget sc-bZQynM dfezaN"
+            </Styled(Label)>
+            <styled.div
+              className="ui-title-widget"
               contentEditable={false}
               direction="right"
               disabled={false}
+              focus={false}
               height=""
               href={
                 Object {
@@ -596,18 +566,70 @@ exports[`Test making a Tab invisible 1`] = `
                 }
               }
               id=""
+              layout={5}
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              onClose={[Function]}
               selected={false}
+              sizing="normal"
               style={Object {}}
+              testing={true}
               title="tab title"
+              visible={true}
+              widget={
+                <Button
+                  className=""
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "orientation": "top",
+                      "selectHandler": [Function],
+                      "sizing": "normal",
+                    }
+                  }
+                  iconName="times"
+                  iconStyle=""
+                  id=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  title="tab title"
+                  visible={false}
+                  width=""
+                  xcss={null}
+                >
+                  Test content
+                </Button>
+              }
               width=""
+              xcss={
+                Array [
+                  "
+	text-align: right;
+	flex: 1;
+",
+                ]
+              }
             >
-              <Button
-                className=""
+              <div
+                className="ui-title-widget sc-ifAKCX drMnEo"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
-                focus={false}
                 height=""
                 href={
                   Object {
@@ -616,66 +638,90 @@ exports[`Test making a Tab invisible 1`] = `
                     "sizing": "normal",
                   }
                 }
-                iconName="times"
-                iconStyle=""
                 id=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
                 onClick={[Function]}
-                onClose={[Function]}
                 selected={false}
-                sizing="normal"
                 style={Object {}}
-                testing={true}
                 title="tab title"
-                visible={false}
                 width=""
               >
-                <div
-                  className="ui-button button ripple normal invisible"
+                <Button
+                  className=""
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "orientation": "top",
+                      "selectHandler": [Function],
+                      "sizing": "normal",
+                    }
+                  }
+                  iconName="times"
+                  iconStyle=""
+                  id=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
                   onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
                   style={Object {}}
+                  testing={true}
+                  title="tab title"
+                  visible={false}
+                  width=""
+                  xcss={null}
                 >
-                  <Icon
-                    className="icon"
-                    contentEditable={false}
-                    direction="right"
-                    disabled={false}
-                    focus={false}
-                    height=""
-                    iconName="times"
-                    id=""
-                    imageFile=""
-                    location="none"
-                    noedit={false}
-                    nohover={false}
-                    noripple={false}
-                    selected={false}
-                    sizing="normal"
+                  <div
+                    className="ui-button button ripple normal invisible"
+                    onClick={[Function]}
                     style={Object {}}
-                    testing={true}
-                    visible={true}
-                    width=""
                   >
-                    <styled.i
-                      className="ui-icon fa fa-fw fa-times"
+                    <Icon
+                      className="icon"
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="times"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-times sc-bdVaJa ifzSmG"
+                      <styled.i
+                        className="ui-icon fa fa-fw fa-times"
+                        sizing="normal"
                         style={Object {}}
-                      />
-                    </styled.i>
-                  </Icon>
-                </div>
-              </Button>
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
+                      >
+                        <i
+                          className="ui-icon fa fa-fw fa-times sc-bdVaJa ifzSmG"
+                          style={Object {}}
+                        />
+                      </styled.i>
+                    </Icon>
+                  </div>
+                </Button>
+              </div>
+            </styled.div>
+          </div>
+        </styled.div>
+      </ThemeProvider>
     </Title>
   </div>
 </Tab>
@@ -708,6 +754,7 @@ Object {
   "title": "",
   "visible": true,
   "width": "",
+  "xcss": null,
 }
 `;
 
@@ -738,6 +785,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
   title="tab title"
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-tab tab normal"
@@ -803,87 +851,41 @@ exports[`Test the click handler in the Tab instance 1`] = `
           title="tab title"
           visible={true}
           width=""
+          xcss={null}
         >
           Test content
         </Button>
       }
       width=""
+      xcss={null}
     >
-      <styled.div
-        className="ui-title-bar"
-        layout={5}
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <div
-          className="ui-title-bar sc-htpNat dDnVhK"
+        <styled.div
+          className="ui-title-bar"
+          layout={5}
           style={Object {}}
         >
-          <styled.div
-            className="ui-title"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id=""
-            layout={5}
-            location="none"
-            noedit={true}
-            nohover={false}
-            noripple={true}
-            onClick={[Function]}
-            onClose={[Function]}
-            selected={false}
-            sizing="normal"
+          <div
+            className="ui-title-bar sc-htpNat dDnVhK"
             style={Object {}}
-            testing={true}
-            title="tab title"
-            visible={true}
-            widget={
-              <Button
-                className=""
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "selectHandler": [Function],
-                  }
-                }
-                iconName="times"
-                iconStyle=""
-                id=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                onClick={[Function]}
-                onClose={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                title="tab title"
-                visible={true}
-                width=""
-              >
-                Test content
-              </Button>
-            }
-            width=""
           >
-            <div
-              className="ui-title sc-gzVnrw guHxJf"
+            <Styled(Label)
+              className="ui-title"
               contentEditable={false}
               direction="right"
               disabled={false}
+              focus={false}
               height=""
               href={
                 Object {
@@ -891,14 +893,66 @@ exports[`Test the click handler in the Tab instance 1`] = `
                 }
               }
               id=""
+              layout={5}
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              onClose={[Function]}
               selected={false}
+              sizing="normal"
               style={Object {}}
+              testing={true}
+              text="tab title"
               title="tab title"
+              visible={true}
+              widget={
+                <Button
+                  className=""
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "selectHandler": [Function],
+                    }
+                  }
+                  iconName="times"
+                  iconStyle=""
+                  id=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  title="tab title"
+                  visible={true}
+                  width=""
+                  xcss={null}
+                >
+                  Test content
+                </Button>
+              }
               width=""
+              xcss={
+                Array [
+                  "
+	text-align: left;
+	flex: 5;
+",
+                ]
+              }
             >
               <Label
-                className=""
+                className="ui-title sc-bxivhb dGlmbo"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -960,14 +1014,23 @@ exports[`Test the click handler in the Tab instance 1`] = `
                     title="tab title"
                     visible={true}
                     width=""
+                    xcss={null}
                   >
                     Test content
                   </Button>
                 }
                 width=""
+                xcss={
+                  Array [
+                    "
+	text-align: left;
+	flex: 5;
+",
+                  ]
+                }
               >
                 <span
-                  className="ui-label label normal"
+                  className="ui-label label normal ui-title sc-bxivhb dGlmbo"
                   contentEditable={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -980,74 +1043,13 @@ exports[`Test the click handler in the Tab instance 1`] = `
                   tab title
                 </span>
               </Label>
-            </div>
-          </styled.div>
-          <styled.div
-            className="ui-title-widget"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id=""
-            layout={5}
-            location="none"
-            noedit={true}
-            nohover={false}
-            noripple={true}
-            onClick={[Function]}
-            onClose={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            title="tab title"
-            visible={true}
-            widget={
-              <Button
-                className=""
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "selectHandler": [Function],
-                  }
-                }
-                iconName="times"
-                iconStyle=""
-                id=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                onClick={[Function]}
-                onClose={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                title="tab title"
-                visible={true}
-                width=""
-              >
-                Test content
-              </Button>
-            }
-            width=""
-          >
-            <div
-              className="ui-title-widget sc-htoDjs bkZAxx"
+            </Styled(Label)>
+            <styled.div
+              className="ui-title-widget"
               contentEditable={false}
               direction="right"
               disabled={false}
+              focus={false}
               height=""
               href={
                 Object {
@@ -1055,84 +1057,156 @@ exports[`Test the click handler in the Tab instance 1`] = `
                 }
               }
               id=""
+              layout={5}
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              onClose={[Function]}
               selected={false}
+              sizing="normal"
               style={Object {}}
+              testing={true}
               title="tab title"
+              visible={true}
+              widget={
+                <Button
+                  className=""
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "selectHandler": [Function],
+                    }
+                  }
+                  iconName="times"
+                  iconStyle=""
+                  id=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  title="tab title"
+                  visible={true}
+                  width=""
+                  xcss={null}
+                >
+                  Test content
+                </Button>
+              }
               width=""
+              xcss={
+                Array [
+                  "
+	text-align: right;
+	flex: 1;
+",
+                ]
+              }
             >
-              <Button
-                className=""
+              <div
+                className="ui-title-widget sc-ifAKCX drMnEo"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
-                focus={false}
                 height=""
                 href={
                   Object {
                     "selectHandler": [Function],
                   }
                 }
-                iconName="times"
-                iconStyle=""
                 id=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
                 onClick={[Function]}
-                onClose={[Function]}
                 selected={false}
-                sizing="normal"
                 style={Object {}}
-                testing={true}
                 title="tab title"
-                visible={true}
                 width=""
               >
-                <div
-                  className="ui-button button ripple normal"
+                <Button
+                  className=""
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "selectHandler": [Function],
+                    }
+                  }
+                  iconName="times"
+                  iconStyle=""
+                  id=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
                   onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
                   style={Object {}}
+                  testing={true}
+                  title="tab title"
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <Icon
-                    className="icon"
-                    contentEditable={false}
-                    direction="right"
-                    disabled={false}
-                    focus={false}
-                    height=""
-                    iconName="times"
-                    id=""
-                    imageFile=""
-                    location="none"
-                    noedit={false}
-                    nohover={false}
-                    noripple={false}
-                    selected={false}
-                    sizing="normal"
+                  <div
+                    className="ui-button button ripple normal"
+                    onClick={[Function]}
                     style={Object {}}
-                    testing={true}
-                    visible={true}
-                    width=""
                   >
-                    <styled.i
-                      className="ui-icon fa fa-fw fa-times"
+                    <Icon
+                      className="icon"
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="times"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-times sc-bdVaJa ifzSmG"
+                      <styled.i
+                        className="ui-icon fa fa-fw fa-times"
+                        sizing="normal"
                         style={Object {}}
-                      />
-                    </styled.i>
-                  </Icon>
-                </div>
-              </Button>
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
+                      >
+                        <i
+                          className="ui-icon fa fa-fw fa-times sc-bdVaJa ifzSmG"
+                          style={Object {}}
+                        />
+                      </styled.i>
+                    </Icon>
+                  </div>
+                </Button>
+              </div>
+            </styled.div>
+          </div>
+        </styled.div>
+      </ThemeProvider>
     </Title>
   </div>
 </Tab>
@@ -1165,6 +1239,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
   title="tab title"
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-tab tab normal"
@@ -1230,87 +1305,41 @@ exports[`Test the close click handler on a Tab instance 1`] = `
           title="tab title"
           visible={true}
           width=""
+          xcss={null}
         >
           Test content
         </Button>
       }
       width=""
+      xcss={null}
     >
-      <styled.div
-        className="ui-title-bar"
-        layout={5}
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <div
-          className="ui-title-bar sc-htpNat dDnVhK"
+        <styled.div
+          className="ui-title-bar"
+          layout={5}
           style={Object {}}
         >
-          <styled.div
-            className="ui-title"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-              }
-            }
-            id=""
-            layout={5}
-            location="none"
-            noedit={true}
-            nohover={false}
-            noripple={true}
-            onClick={[Function]}
-            onClose={[Function]}
-            selected={false}
-            sizing="normal"
+          <div
+            className="ui-title-bar sc-htpNat dDnVhK"
             style={Object {}}
-            testing={true}
-            title="tab title"
-            visible={true}
-            widget={
-              <Button
-                className=""
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "hiddenTabHandler": [Function],
-                  }
-                }
-                iconName="times"
-                iconStyle=""
-                id=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                onClick={[Function]}
-                onClose={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                title="tab title"
-                visible={true}
-                width=""
-              >
-                Test content
-              </Button>
-            }
-            width=""
           >
-            <div
-              className="ui-title sc-dnqmqq ckIZaK"
+            <Styled(Label)
+              className="ui-title"
               contentEditable={false}
               direction="right"
               disabled={false}
+              focus={false}
               height=""
               href={
                 Object {
@@ -1318,14 +1347,66 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                 }
               }
               id=""
+              layout={5}
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              onClose={[Function]}
               selected={false}
+              sizing="normal"
               style={Object {}}
+              testing={true}
+              text="tab title"
               title="tab title"
+              visible={true}
+              widget={
+                <Button
+                  className=""
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "hiddenTabHandler": [Function],
+                    }
+                  }
+                  iconName="times"
+                  iconStyle=""
+                  id=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  title="tab title"
+                  visible={true}
+                  width=""
+                  xcss={null}
+                >
+                  Test content
+                </Button>
+              }
               width=""
+              xcss={
+                Array [
+                  "
+	text-align: left;
+	flex: 5;
+",
+                ]
+              }
             >
               <Label
-                className=""
+                className="ui-title sc-bxivhb dGlmbo"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -1387,14 +1468,23 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                     title="tab title"
                     visible={true}
                     width=""
+                    xcss={null}
                   >
                     Test content
                   </Button>
                 }
                 width=""
+                xcss={
+                  Array [
+                    "
+	text-align: left;
+	flex: 5;
+",
+                  ]
+                }
               >
                 <span
-                  className="ui-label label normal"
+                  className="ui-label label normal ui-title sc-bxivhb dGlmbo"
                   contentEditable={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -1407,74 +1497,13 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                   tab title
                 </span>
               </Label>
-            </div>
-          </styled.div>
-          <styled.div
-            className="ui-title-widget"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-              }
-            }
-            id=""
-            layout={5}
-            location="none"
-            noedit={true}
-            nohover={false}
-            noripple={true}
-            onClick={[Function]}
-            onClose={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            title="tab title"
-            visible={true}
-            widget={
-              <Button
-                className=""
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "hiddenTabHandler": [Function],
-                  }
-                }
-                iconName="times"
-                iconStyle=""
-                id=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                onClick={[Function]}
-                onClose={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                title="tab title"
-                visible={true}
-                width=""
-              >
-                Test content
-              </Button>
-            }
-            width=""
-          >
-            <div
-              className="ui-title-widget sc-iwsKbI hnexci"
+            </Styled(Label)>
+            <styled.div
+              className="ui-title-widget"
               contentEditable={false}
               direction="right"
               disabled={false}
+              focus={false}
               height=""
               href={
                 Object {
@@ -1482,84 +1511,156 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                 }
               }
               id=""
+              layout={5}
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              onClose={[Function]}
               selected={false}
+              sizing="normal"
               style={Object {}}
+              testing={true}
               title="tab title"
+              visible={true}
+              widget={
+                <Button
+                  className=""
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "hiddenTabHandler": [Function],
+                    }
+                  }
+                  iconName="times"
+                  iconStyle=""
+                  id=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  title="tab title"
+                  visible={true}
+                  width=""
+                  xcss={null}
+                >
+                  Test content
+                </Button>
+              }
               width=""
+              xcss={
+                Array [
+                  "
+	text-align: right;
+	flex: 1;
+",
+                ]
+              }
             >
-              <Button
-                className=""
+              <div
+                className="ui-title-widget sc-ifAKCX drMnEo"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
-                focus={false}
                 height=""
                 href={
                   Object {
                     "hiddenTabHandler": [Function],
                   }
                 }
-                iconName="times"
-                iconStyle=""
                 id=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
                 onClick={[Function]}
-                onClose={[Function]}
                 selected={false}
-                sizing="normal"
                 style={Object {}}
-                testing={true}
                 title="tab title"
-                visible={true}
                 width=""
               >
-                <div
-                  className="ui-button button ripple normal"
+                <Button
+                  className=""
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "hiddenTabHandler": [Function],
+                    }
+                  }
+                  iconName="times"
+                  iconStyle=""
+                  id=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
                   onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
                   style={Object {}}
+                  testing={true}
+                  title="tab title"
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <Icon
-                    className="icon"
-                    contentEditable={false}
-                    direction="right"
-                    disabled={false}
-                    focus={false}
-                    height=""
-                    iconName="times"
-                    id=""
-                    imageFile=""
-                    location="none"
-                    noedit={false}
-                    nohover={false}
-                    noripple={false}
-                    selected={false}
-                    sizing="normal"
+                  <div
+                    className="ui-button button ripple normal"
+                    onClick={[Function]}
                     style={Object {}}
-                    testing={true}
-                    visible={true}
-                    width=""
                   >
-                    <styled.i
-                      className="ui-icon fa fa-fw fa-times"
+                    <Icon
+                      className="icon"
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="times"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-times sc-bdVaJa ifzSmG"
+                      <styled.i
+                        className="ui-icon fa fa-fw fa-times"
+                        sizing="normal"
                         style={Object {}}
-                      />
-                    </styled.i>
-                  </Icon>
-                </div>
-              </Button>
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
+                      >
+                        <i
+                          className="ui-icon fa fa-fw fa-times sc-bdVaJa ifzSmG"
+                          style={Object {}}
+                        />
+                      </styled.i>
+                    </Icon>
+                  </div>
+                </Button>
+              </div>
+            </styled.div>
+          </div>
+        </styled.div>
+      </ThemeProvider>
     </Title>
   </div>
 </Tab>
@@ -1634,11 +1735,13 @@ exports[`Test the creation of a Tab instance 1`] = `
         title="tab title"
         visible={true}
         width=""
+        xcss={null}
       >
         Test content
       </Button>
     }
     width=""
+    xcss={null}
   >
     Test content
   </Title>

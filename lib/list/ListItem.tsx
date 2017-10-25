@@ -80,7 +80,9 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	 */
 	private deactivateEdit() {
 		this._preventClick = false;
-		this.setState({toggleRipple: false});
+		this.setState(() => (
+			{toggleRipple: false}
+		));
 	}
 
 	private handleBlur(e: React.FocusEvent<HTMLLIElement>) {

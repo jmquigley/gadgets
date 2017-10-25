@@ -49,8 +49,6 @@
 
 'use strict';
 
-const debug = require('debug')('Label');
-
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -107,9 +105,9 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		]);
 
 		this.state = {
-			editable: props.useedit,
-			previousText: props.text,
-			text: props.text
+			editable: this.props.useedit,
+			previousText: this.props.text,
+			text: this.props.text
 		};
 
 		this.bindCallbacks(
@@ -121,7 +119,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			'handleRef'
 		);
 
-		this.componentWillUpdate(props);
+		this.componentWillUpdate(this.props);
 	}
 
 	get label() {
@@ -135,11 +133,13 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	private handleBlur(e: React.FocusEvent<HTMLSpanElement>) {
-		this.handleChange(e.target as Element);
+		this.handleChange(e);
 		this.props.onBlur(e);
 	}
 
-	private handleChange(element: Element) {
+	private handleChange(e: React.FormEvent<HTMLSpanElement>) {
+		const element = (e.target as HTMLSpanElement);
+
 		if (this.state.editable) {
 			const val = element.innerHTML;
 			const previous = this.state.previousText;
@@ -156,8 +156,8 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
-		debug('doubleclick %O, props: %O', e, this.props);
 		e.stopPropagation();
+		e.preventDefault();
 
 		if (!this.props.noedit && document != null && window != null) {
 			if ('caretRangeFromPoint' in document) {
@@ -167,17 +167,12 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				window.setTimeout(() => {
 					sel.removeAllRanges();
 					sel.addRange(range);
-				}, 5);
+				}, 20);
 			}
-		} else {
-			debug(`can't edit label`);
 		}
-
-		debug('continue label double click: %O', this.props.noedit);
 
 		if (!this.props.noedit) {
 			this.setState({editable: true}, () => {
-				debug('label is editable');
 				this.props.onDoubleClick(e);
 			});
 		}
@@ -198,7 +193,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	private handleKeyPress(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === 'Enter') {
-			this.handleChange(e.target as Element);
+			this.handleChange(e);
 		}
 
 		this.props.onKeyPress(e);

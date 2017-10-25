@@ -11,7 +11,7 @@ function validate(ctl: any) {
 	assert(ctl);
 	assert(!ctl.prop('disabled'));
 	assert(ctl.prop('visible'));
-	assert.equal(ctl.find('.ui-listitem').length, 3);
+	assert.equal(ctl.find('.ui-listitem').length, 2);
 }
 
 test('Test retrieval of ListItem props object', () => {

@@ -15,6 +15,20 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   flex-grow: 1;
 }
 
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  text-align: left;
+  -webkit-flex: 5;
+  -ms-flex: 5;
+  flex: 5;
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
 .c1 {
   cursor: default;
   display: -webkit-box;
@@ -49,19 +63,6 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 .c0 > .ui-item:hover {
   color: #ffe11a;
   background-color: #004358 !important;
-}
-
-.c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: left;
-  -webkit-flex: 5;
-  -ms-flex: 5;
-  flex: 5;
-  font-size: 1rem;
-  font-weight: inherit;
 }
 
 <AccordionItem
@@ -102,6 +103,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   visible={true}
   widget={null}
   width=""
+  xcss={null}
 >
   <ThemeProvider
     theme={
@@ -161,6 +163,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
           visible={true}
           widget={null}
           width=""
+          xcss={null}
         >
           <ThemeProvider
             theme={
@@ -237,74 +240,55 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                   visible={true}
                   widget={null}
                   width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-title-bar ripple"
-                    layout={5}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "padding": "2px 4px",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "hoverColor": "#ffe11a",
                       }
                     }
                   >
-                    <div
-                      className="ui-title-bar ripple c2"
+                    <styled.div
+                      className="ui-title-bar ripple"
+                      layout={5}
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
                     >
-                      <styled.div
-                        className="ui-title"
-                        contentEditable={false}
-                        direction="right"
-                        disabled={false}
-                        focus={false}
-                        height=""
-                        hiddenLeftButton={false}
-                        hiddenRightButton={false}
-                        id=""
-                        initialToggle={false}
-                        layout={5}
-                        leftButton={null}
-                        location="none"
-                        nocollapse={false}
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onDoubleClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        onKeyPress={[Function]}
-                        onMouseOut={[Function]}
-                        onUpdate={[Function]}
-                        rightButton={null}
-                        selected={false}
-                        sizing="normal"
-                        stacked={false}
+                      <div
+                        className="ui-title-bar ripple c2"
                         style={
                           Object {
                             "padding": "2px 4px",
                           }
                         }
-                        testing={true}
-                        title="Test Title"
-                        useedit={false}
-                        visible={true}
-                        widget={null}
-                        width=""
                       >
-                        <div
-                          className="ui-title c3"
+                        <Styled(Label)
+                          className="ui-title"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
+                          focus={false}
                           height=""
+                          hiddenLeftButton={false}
+                          hiddenRightButton={false}
                           id=""
+                          initialToggle={false}
+                          layout={5}
+                          leftButton={null}
+                          location="none"
+                          nocollapse={false}
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
@@ -313,17 +297,34 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                           onKeyDown={[Function]}
                           onKeyPress={[Function]}
                           onMouseOut={[Function]}
+                          onUpdate={[Function]}
+                          rightButton={null}
                           selected={false}
+                          sizing="normal"
+                          stacked={false}
                           style={
                             Object {
                               "padding": "2px 4px",
                             }
                           }
+                          testing={true}
+                          text="Test Title"
                           title="Test Title"
+                          useedit={false}
+                          visible={true}
+                          widget={null}
                           width=""
+                          xcss={
+                            Array [
+                              "
+	text-align: left;
+	flex: 5;
+",
+                            ]
+                          }
                         >
                           <Label
-                            className=""
+                            className="ui-title c3"
                             contentEditable={false}
                             direction="right"
                             disabled={false}
@@ -365,9 +366,17 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                             visible={true}
                             widget={null}
                             width=""
+                            xcss={
+                              Array [
+                                "
+	text-align: left;
+	flex: 5;
+",
+                              ]
+                            }
                           >
                             <span
-                              className="ui-label label normal"
+                              className="ui-label label normal ui-title c3"
                               contentEditable={false}
                               onBlur={[Function]}
                               onClick={[Function]}
@@ -384,10 +393,10 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                               Test Title
                             </span>
                           </Label>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
+                        </Styled(Label)>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
                 </Title>
               </li>
             </styled.li>
@@ -412,6 +421,20 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
   flex-grow: 1;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  text-align: left;
+  -webkit-flex: 5;
+  -ms-flex: 5;
+  flex: 5;
+  font-size: 1rem;
+  font-weight: inherit;
 }
 
 .c1 {
@@ -448,19 +471,6 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 .c0 > .ui-item:hover {
   color: #ffe11a;
   background-color: #004358 !important;
-}
-
-.c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: left;
-  -webkit-flex: 5;
-  -ms-flex: 5;
-  flex: 5;
-  font-size: 1rem;
-  font-weight: inherit;
 }
 
 <AccordionItem
@@ -501,6 +511,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   visible={true}
   widget={null}
   width=""
+  xcss={null}
 >
   <ThemeProvider
     theme={
@@ -560,6 +571,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
           visible={true}
           widget={null}
           width=""
+          xcss={null}
         >
           <ThemeProvider
             theme={
@@ -636,74 +648,55 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                   visible={true}
                   widget={null}
                   width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-title-bar ripple"
-                    layout={5}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "padding": "2px 4px",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "hoverColor": "#ffe11a",
                       }
                     }
                   >
-                    <div
-                      className="ui-title-bar ripple c2"
+                    <styled.div
+                      className="ui-title-bar ripple"
+                      layout={5}
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
                     >
-                      <styled.div
-                        className="ui-title"
-                        contentEditable={false}
-                        direction="right"
-                        disabled={false}
-                        focus={false}
-                        height=""
-                        hiddenLeftButton={false}
-                        hiddenRightButton={false}
-                        id=""
-                        initialToggle={false}
-                        layout={5}
-                        leftButton={null}
-                        location="none"
-                        nocollapse={true}
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onDoubleClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        onKeyPress={[Function]}
-                        onMouseOut={[Function]}
-                        onUpdate={[Function]}
-                        rightButton={null}
-                        selected={false}
-                        sizing="normal"
-                        stacked={false}
+                      <div
+                        className="ui-title-bar ripple c2"
                         style={
                           Object {
                             "padding": "2px 4px",
                           }
                         }
-                        testing={true}
-                        title="Test Title"
-                        useedit={false}
-                        visible={true}
-                        widget={null}
-                        width=""
                       >
-                        <div
-                          className="ui-title c3"
+                        <Styled(Label)
+                          className="ui-title"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
+                          focus={false}
                           height=""
+                          hiddenLeftButton={false}
+                          hiddenRightButton={false}
                           id=""
+                          initialToggle={false}
+                          layout={5}
+                          leftButton={null}
+                          location="none"
+                          nocollapse={true}
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
@@ -712,17 +705,34 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                           onKeyDown={[Function]}
                           onKeyPress={[Function]}
                           onMouseOut={[Function]}
+                          onUpdate={[Function]}
+                          rightButton={null}
                           selected={false}
+                          sizing="normal"
+                          stacked={false}
                           style={
                             Object {
                               "padding": "2px 4px",
                             }
                           }
+                          testing={true}
+                          text="Test Title"
                           title="Test Title"
+                          useedit={false}
+                          visible={true}
+                          widget={null}
                           width=""
+                          xcss={
+                            Array [
+                              "
+	text-align: left;
+	flex: 5;
+",
+                            ]
+                          }
                         >
                           <Label
-                            className=""
+                            className="ui-title c3"
                             contentEditable={false}
                             direction="right"
                             disabled={false}
@@ -764,9 +774,17 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                             visible={true}
                             widget={null}
                             width=""
+                            xcss={
+                              Array [
+                                "
+	text-align: left;
+	flex: 5;
+",
+                              ]
+                            }
                           >
                             <span
-                              className="ui-label label normal"
+                              className="ui-label label normal ui-title c3"
                               contentEditable={false}
                               onBlur={[Function]}
                               onClick={[Function]}
@@ -783,10 +801,10 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                               Test Title
                             </span>
                           </Label>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
+                        </Styled(Label)>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
                 </Title>
               </li>
             </styled.li>
@@ -860,6 +878,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
       visible={false}
       widget={null}
       width=""
+      xcss={null}
     />
   </styled.ul>
 </ThemeProvider>
@@ -904,6 +923,7 @@ Object {
   "visible": true,
   "widget": null,
   "width": "",
+  "xcss": null,
 }
 `;
 
@@ -962,6 +982,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       visible={true}
       widget={null}
       width=""
+      xcss={null}
     />
   </styled.ul>
 </ThemeProvider>
@@ -1022,6 +1043,7 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       visible={true}
       widget={null}
       width=""
+      xcss={null}
     />
   </styled.ul>
 </ThemeProvider>

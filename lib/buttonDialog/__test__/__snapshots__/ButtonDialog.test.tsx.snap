@@ -32,6 +32,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
     testing={true}
     visible={true}
     width=""
+    xcss={null}
   />
   <div
     className="ui-dialog-popup test-class-dialog buttonDialogPopup dialogBottom buttonDialogHide"
@@ -68,6 +69,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       testing={true}
       visible={true}
       width=""
+      xcss={null}
     />
   </div>
 </div>
@@ -105,6 +107,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
     testing={true}
     visible={true}
     width=""
+    xcss={null}
   />
   <div
     className="ui-dialog-popup test-class-dialog buttonDialogPopup dialogTop buttonDialogHide"
@@ -141,6 +144,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       testing={true}
       visible={true}
       width=""
+      xcss={null}
     />
   </div>
 </div>
@@ -176,6 +180,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   triangleClasses={Array []}
   visible={false}
   width=""
+  xcss={null}
 >
   <div
     className="ui-button-dialog buttonDialog normal invisible"
@@ -208,6 +213,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       testing={true}
       visible={false}
       width=""
+      xcss={null}
     >
       <div
         className="ui-button button ripple normal invisible"
@@ -241,6 +247,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
           testing={true}
           visible={true}
           width=""
+          xcss={null}
         >
           <styled.i
             className="ui-icon fa fa-fw fa-bomb"
@@ -290,6 +297,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         testing={true}
         visible={true}
         width=""
+        xcss={null}
       >
         <svg
           className="ui-triangle triangle normalBox triangleUp normal dialogTriangleBottom buttonDialogHide"
@@ -357,6 +365,7 @@ Object {
   "triangleClasses": Array [],
   "visible": true,
   "width": "",
+  "xcss": null,
 }
 `;
 
@@ -390,6 +399,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   triangleClasses={Array []}
   visible={true}
   width=""
+  xcss={null}
 >
   <div
     className="ui-button-dialog buttonDialog normal disabled nohover"
@@ -422,6 +432,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
       testing={true}
       visible={true}
       width=""
+      xcss={null}
     >
       <div
         className="ui-button button normal disabled nohover"
@@ -455,6 +466,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
           testing={true}
           visible={true}
           width=""
+          xcss={null}
         >
           <styled.i
             className="ui-icon fa fa-fw fa-bomb"
@@ -504,6 +516,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         testing={true}
         visible={true}
         width=""
+        xcss={null}
       >
         <svg
           className="ui-triangle triangle normalBox triangleUp normal dialogTriangleBottom buttonDialogHide"
