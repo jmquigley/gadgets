@@ -4,7 +4,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ThemeProvider} from 'styled-components';
+import styled, {ThemeProvider} from 'styled-components';
 import {BaseComponent, getTheme} from '../shared';
 import {
 	getDefaultTitleProps,
@@ -24,27 +24,30 @@ export function getDefaultListFooterProps(): TitleProps {
 	);
 }
 
+export const ListFooterView: any = styled(Title)`
+	margin: -1px;
+	padding: 3px;
+
+	input {
+		padding: 2px;
+	}
+`;
+
 export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 
 	public static defaultProps: ListFooterProps = getDefaultListFooterProps();
 
 	constructor(props: ListFooterProps) {
 		super(props, require('./styles.css'));
-
-		this._classes.add([
-			'ui-list-footer',
-			this.styles.listFooter
-		]);
-
 		this.componentWillUpdate(props);
 	}
 
 	public render() {
 		return (
 			<ThemeProvider theme={getTheme()}>
-				<Title
+				<ListFooterView
 					{...this.props}
-					className={this.classes}
+					className="ui-list-footer"
 					noripple
 					style={this.inlineStyles}
 					title={this.props.title}

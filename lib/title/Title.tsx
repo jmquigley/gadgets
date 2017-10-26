@@ -160,22 +160,14 @@ export const WidgetDominantView: any = css`
 	flex: 1;
 `;
 
-export const StyledLabel: any = styled(Label)`
+const StyledWidget: any = styled.div`
 	align-items: center;
 	display: block;
 	${(props: TitleProps) => props.xcss && props.xcss}
 	${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
-const StyledWidget: any = styled.div`
-	align-items: center;
-	${(props: TitleProps) => props.xcss && props.xcss}
-	${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
-
-	> span {
-	  display: block;
-	}
-`;
+export const StyledLabel: any = StyledWidget.withComponent(Label);
 
 export class Title extends BaseComponent<TitleProps, undefined> {
 
@@ -184,7 +176,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 	constructor(props: TitleProps) {
 		super(props);
 		this._classes.add('ui-title-bar');
-		this.componentWillUpdate(props);
+		this.componentWillUpdate(this.props);
 	}
 
 	public componentWillUpdate(nextProps: TitleProps) {
@@ -245,7 +237,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 			);
 		} else {
 			title = (
-				<StyledWidget {...this.props} className="ui-title" xcss={titleView}>
+				<StyledWidget className="ui-title" xcss={titleView}>
 					{this.props.title}
 				</StyledWidget>
 			);

@@ -7,7 +7,7 @@
 
 'use strict';
 
-const debug = require('debug')('ListItem');
+// const debug = require('debug')('ListItem');
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -19,6 +19,7 @@ import {BaseComponent, getTheme, Sizing} from '../shared';
 export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
 	onBlur?: any;
+	onDoubleClick?: any;
 	onClick?: any;
 	onSelect?: any;
 }
@@ -32,6 +33,7 @@ export function getDefaultListItemProps(): ListItemProps {
 			},
 			onBlur: nilEvent,
 			onClick: nilEvent,
+			onDoubleClick: nilEvent,
 			onSelect: nilEvent
 		})
 	);
@@ -104,13 +106,13 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	}
 
 	private handleDoubleClick(e: React.MouseEvent<HTMLLIElement>) {
-		debug('double click: %O', e);
-
 		// If a double click occurs, then sent a flag preventing the single click
 		// from firing after its timer expires
 		clearTimeout(this._timer);
 		this._preventClick = true;
-		this.setState({toggleRipple: true});
+		this.setState({toggleRipple: true}, () => {
+			this.props.onDoubleClick(e);
+		});
 	}
 
 	private handleKeyDown(e: React.KeyboardEvent<HTMLLIElement>) {
@@ -128,10 +130,6 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 		this.props.onKeyPress(e);
 	}
-
-	// private handleMouseOut() {
-	// 	this.deactivateEdit();
-	// }
 
 	public render() {
 		return (

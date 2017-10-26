@@ -326,9 +326,14 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 
 		if ('className' in nextProps && this.props['className'] !== nextProps['className']) {
 			this._rootStyles.off(this.props['className']);
+			this._classes.off(this.props['className']);
 		}
 
 		this._rootStyles.onIf('className' in nextProps && nextProps['className'])(
+			nextProps['className']
+		);
+
+		this._classes.onIf('className' in nextProps && nextProps['className'])(
 			nextProps['className']
 		);
 
