@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test retrieval of ListFooter props object 1`] = `
+Object {
+  "className": "",
+  "contentEditable": false,
+  "direction": "right",
+  "disabled": false,
+  "focus": false,
+  "height": "",
+  "id": "",
+  "layout": 1,
+  "location": "none",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "onClick": [Function],
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "testing": true,
+  "title": "",
+  "visible": true,
+  "widget": null,
+  "width": "",
+  "xcss": null,
+}
+`;
+
+exports[`Test the creation of a ListFooter control with simple title 1`] = `
+<ListFooter
+  className=""
+  contentEditable={false}
+  direction="right"
+  disabled={false}
+  focus={false}
+  height=""
+  id=""
+  layout={1}
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  onClick={[Function]}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  title="test title"
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
+>
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "hoverColor": "#ffe11a",
+      }
+    }
+  >
+    <Styled(Title)
+      className="ui-list-footer"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      layout={1}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={true}
+      onClick={[Function]}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      title="test title"
+      visible={true}
+      widget={null}
+      width=""
+      xcss={null}
+    >
+      <Title
+        className="ui-list-footer sc-gzVnrw bYwGVv"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        focus={false}
+        height=""
+        id=""
+        layout={1}
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={true}
+        onClick={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="test title"
+        visible={true}
+        widget={null}
+        width=""
+        xcss={null}
+      >
+        <ThemeProvider
+          theme={
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#004358",
+              "color": "#000000",
+              "headerBackgroundColor": "#004358",
+              "headerForegroundColor": "#ffffff",
+              "hoverColor": "#ffe11a",
+            }
+          }
+        >
+          <styled.div
+            className="ui-title-bar ui-list-footer sc-gzVnrw bYwGVv"
+            layout={1}
+            style={Object {}}
+          >
+            <div
+              className="ui-title-bar ui-list-footer sc-gzVnrw bYwGVv sc-bwzfXH kCZjvx"
+              style={Object {}}
+            >
+              <Styled(Label)
+                className="ui-title"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                focus={false}
+                height=""
+                id=""
+                layout={1}
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={true}
+                onClick={[Function]}
+                selected={false}
+                sizing="normal"
+                style={Object {}}
+                testing={true}
+                text="test title"
+                title="test title"
+                visible={true}
+                widget={null}
+                width=""
+                xcss={
+                  Array [
+                    "
+	text-align: left;
+	flex: 1;
+",
+                  ]
+                }
+              >
+                <Label
+                  className="ui-title sc-bxivhb wjfHh"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  id=""
+                  layout={1}
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDoubleClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onUpdate={[Function]}
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  text="test title"
+                  title="test title"
+                  useedit={false}
+                  visible={true}
+                  widget={null}
+                  width=""
+                  xcss={
+                    Array [
+                      "
+	text-align: left;
+	flex: 1;
+",
+                    ]
+                  }
+                >
+                  <span
+                    className="ui-label label normal ui-title sc-bxivhb wjfHh"
+                    contentEditable={false}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                  >
+                    test title
+                  </span>
+                </Label>
+              </Styled(Label)>
+            </div>
+          </styled.div>
+        </ThemeProvider>
+      </Title>
+    </Styled(Title)>
+  </ThemeProvider>
+</ListFooter>
+`;

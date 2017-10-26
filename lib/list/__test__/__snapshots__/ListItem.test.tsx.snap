@@ -116,7 +116,7 @@ exports[`Test disabling of a ListItem control 1`] = `
         }
       >
         <styled.li
-          className="ui-item"
+          className="ui-item ui-listitem"
           id=""
           nohover={false}
           onBlur={[Function]}
@@ -127,7 +127,7 @@ exports[`Test disabling of a ListItem control 1`] = `
           style={Object {}}
         >
           <li
-            className="ui-item sc-bZQynM bpnbyn"
+            className="ui-item ui-listitem sc-bZQynM bpnbyn"
             id=""
             onBlur={[Function]}
             onDoubleClick={[Function]}
@@ -198,7 +198,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                 }
               >
                 <styled.div
-                  className="ui-title-bar"
+                  className="ui-title-bar ui-listitem"
                   layout={5}
                   style={
                     Object {
@@ -207,7 +207,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-bar sc-bxivhb doMVNq"
+                    className="ui-title-bar ui-listitem sc-bxivhb doMVNq"
                     style={
                       Object {
                         "padding": "2px 4px",
@@ -272,7 +272,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                       }
                     >
                       <Label
-                        className="ui-title sc-ifAKCX kdxUhk"
+                        className="ui-title sc-EHOje gTHlQM"
                         contentEditable={false}
                         direction="right"
                         disabled={true}
@@ -329,7 +329,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                         }
                       >
                         <span
-                          className="ui-label label normal ui-title sc-ifAKCX kdxUhk disabled nohover"
+                          className="ui-label label normal ui-title sc-EHOje gTHlQM disabled nohover"
                           contentEditable={false}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -475,7 +475,7 @@ exports[`Test making ListItem control invisible 1`] = `
         }
       >
         <styled.li
-          className="ui-item"
+          className="ui-item ui-listitem"
           id=""
           nohover={false}
           onBlur={[Function]}
@@ -486,7 +486,7 @@ exports[`Test making ListItem control invisible 1`] = `
           style={Object {}}
         >
           <li
-            className="ui-item sc-bZQynM bpnbyn"
+            className="ui-item ui-listitem sc-bZQynM bpnbyn"
             id=""
             onBlur={[Function]}
             onDoubleClick={[Function]}
@@ -557,7 +557,7 @@ exports[`Test making ListItem control invisible 1`] = `
                 }
               >
                 <styled.div
-                  className="ui-title-bar ripple"
+                  className="ui-title-bar ripple ui-listitem"
                   layout={5}
                   style={
                     Object {
@@ -566,7 +566,7 @@ exports[`Test making ListItem control invisible 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-bar ripple sc-bxivhb doMVNq"
+                    className="ui-title-bar ripple ui-listitem sc-bxivhb doMVNq"
                     style={
                       Object {
                         "padding": "2px 4px",
@@ -631,7 +631,7 @@ exports[`Test making ListItem control invisible 1`] = `
                       }
                     >
                       <Label
-                        className="ui-title sc-ifAKCX kdxUhk"
+                        className="ui-title sc-EHOje gTHlQM"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -688,7 +688,7 @@ exports[`Test making ListItem control invisible 1`] = `
                         }
                       >
                         <span
-                          className="ui-label label normal ui-title sc-ifAKCX kdxUhk invisible"
+                          className="ui-label label normal ui-title sc-EHOje gTHlQM invisible"
                           contentEditable={false}
                           onBlur={[Function]}
                           onClick={[Function]}
