@@ -1,6 +1,6 @@
 const debug = require('debug')('gadgets');
 
-require('./lib/shared/monkey');
+import 'util.string';
 
 process.env['NODE_ENV'] = process.env['NODE_ENV'] || 'production';
 

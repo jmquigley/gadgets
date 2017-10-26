@@ -53,8 +53,6 @@
 
 'use strict';
 
-// const debug = require('debug')('Title');
-
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import styled, {css, ThemeProvider} from 'styled-components';

@@ -41,7 +41,7 @@
  * - `focus: {boolean} (false)` - If true, then this control is given the focus
  * - `noedit: {boolean} (false)` - If true, then the control can't be edited
  * - `text: {string} ('')` - the text value associated with the label.
- * - `useedit: {string} ('')` - If true, then the control is initially placed in
+ * - `useedit: {boolean} (false)` - If true, then the control is initially placed in
  * edit mode.
  *
  * @module Label
@@ -51,7 +51,7 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import {nilEvent, sp} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
 
 export interface LabelProps extends BaseProps {
@@ -78,7 +78,7 @@ export function getDefaultLabelProps(): LabelProps {
 			onKeyDown: nilEvent,
 			onKeyPress: nilEvent,
 			onUpdate: nilEvent,
-			text: ' ',
+			text: sp,
 			useedit: false
 		})
 	);
@@ -132,6 +132,10 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
+	public componentDidUpdate() {
+		this.componentDidMount();
+	}
+
 	private handleBlur(e: React.FocusEvent<HTMLSpanElement>) {
 		this.handleChange(e);
 		this.props.onBlur(e);
@@ -156,8 +160,8 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
-		e.stopPropagation();
-		e.preventDefault();
+		// e.stopPropagation();
+		// e.preventDefault();
 
 		if (!this.props.noedit && document != null && window != null) {
 			if ('caretRangeFromPoint' in document) {
@@ -206,6 +210,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	public componentWillReceiveProps(nextProps: LabelProps) {
 		if (this.props.text !== nextProps.text) {
 			this.setState({
+				editable: nextProps.useedit,
 				text: nextProps.text
 			});
 		}

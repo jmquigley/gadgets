@@ -7578,6 +7578,12 @@ util.classnames@^0.0.11:
   dependencies:
     util.pkgwrap "0.0.68"
 
+util.constants@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/util.constants/-/util.constants-0.0.1.tgz#efe3ec0c188d8dea0d75bcf0c44813e8ef7d0a3c"
+  dependencies:
+    util.pkgwrap "0.0.72"
+
 util.ds@^0.0.31:
   version "0.0.31"
   resolved "https://registry.yarnpkg.com/util.ds/-/util.ds-0.0.31.tgz#d5bcf6af06155087bb9ae3fa2fd90a2da92da03f"
@@ -7716,6 +7722,14 @@ util.section@^0.0.7:
   dependencies:
     util.pkgwrap "0.0.71"
 
+util.string@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/util.string/-/util.string-0.0.1.tgz#83da159687c8852af542f37574503a4233f6e82a"
+  dependencies:
+    util.constants "^0.0.1"
+    util.pkgwrap "0.0.72"
+    xregexp "^3.2.0"
+
 util.toolbox@0.0.47, util.toolbox@^0.0.47:
   version "0.0.47"
   resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.47.tgz#0e2498c16c1892db8a36d017d147ce7f64fad036"
@@ -7725,7 +7739,16 @@ util.toolbox@0.0.47, util.toolbox@^0.0.47:
     util.rstrip "0.0.26"
     uuid "^3.1.0"
 
-util.toolbox@0.0.49, util.toolbox@^0.0.49:
+util.toolbox@0.0.50:
+  version "0.0.50"
+  resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.50.tgz#5ec593c8477637a99f54f65cc736762cfd49ded9"
+  dependencies:
+    fs-extra "^4.0.2"
+    util.pkgwrap "0.0.72"
+    util.rstrip "0.0.26"
+    uuid "^3.1.0"
+
+util.toolbox@^0.0.49:
   version "0.0.49"
   resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.49.tgz#be01b2c33f48df5ea9dab407c6bc48bb758fbbae"
   dependencies:

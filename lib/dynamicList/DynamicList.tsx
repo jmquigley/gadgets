@@ -87,7 +87,7 @@ import {cloneDeep, omit} from 'lodash';
 import * as React from 'react';
 import {sprintf} from 'sprintf-js';
 import {Keys} from 'util.keys';
-import {nil, nilEvent} from 'util.toolbox';
+import {nil, nilEvent, sp} from 'util.toolbox';
 import {Accordion, AccordionItem} from '../accordion';
 import {Button} from '../button';
 import {DialogBox, DialogBoxType} from '../dialogBox';
@@ -141,7 +141,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			onUpdate: nilEvent,
 			pageSizes: defaultPageSizes,
 			sortOrder: SortOrder.ascending,
-			title: ''
+			title: sp
 		})
 	);
 }
@@ -230,7 +230,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				onBlur={this.handleBlur}
 				onKeyDown={this.handleKeyDown}
 				onChange={this.handleNewItem}
-				title=""
+				title={sp}
 				useedit
 				widget={null}
 			/>
@@ -273,7 +273,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 					disabled
 					key={`fillerListItem-${i}`}
 					noedit
-					title="&nbsp;"
+					title={sp}
 				/>
 			);
 		}
@@ -366,7 +366,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * is complete
 	 */
 	private handleNewItem(title: string, widget: any = null, cb: any = nil) {
-		if (title.trim()) {
+		title = title.trimHTML();
+		if (title) {
 			this.setState({
 				items: Object.assign(this.state.items, {[title]: widget}),
 				showNew: false,
@@ -375,6 +376,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				this.props.onNew(title);
 				cb(title);
 			});
+		} else {
+			this.hideEdit();
 		}
 	}
 

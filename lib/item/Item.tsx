@@ -5,7 +5,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import styled, {ThemeProvider} from 'styled-components';
-import {nilEvent} from 'util.toolbox';
+import {nilEvent, sp} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
@@ -55,7 +55,7 @@ export function getDefaultItemProps(): ItemProps {
 			rightButton: null,
 			selected: false,
 			stacked: false,
-			title: '',
+			title: sp,
 			useedit: false,
 			widget: null
 		}));

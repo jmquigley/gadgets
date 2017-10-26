@@ -176,8 +176,9 @@ class App extends React.Component<AppProps, AppState> {
 		<Container id="accordionExample">
 			<Accordion>
 				<AccordionItem
-					rightButton={<Button iconName="plus" />}
+					noedit
 					leftButton={<Button iconName="bars" />}
+					rightButton={<Button iconName="plus" />}
 					title="Accordion #1 (click to expand)"
 				>
 					<List alternating>
