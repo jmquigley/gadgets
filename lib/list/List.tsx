@@ -88,8 +88,9 @@ export class List extends BaseComponent<ListProps, ListState> {
 			const children = React.Children.toArray(nextProps.children);
 			for (const [idx, child] of children.entries()) {
 				this._children.push(React.cloneElement(child as any, {
-					id: nextProps.id || this._keys.at(idx),
-					key: nextProps.id || this._keys.at(idx),
+					// only generate an id/key if one is not given with the props
+					id: child['props']['id'] || this._keys.at(idx),
+					key: child['key'] || this._keys.at(idx),
 					href: {
 						selectHandler: this.selectHandler,
 						sizing: this.props.sizing

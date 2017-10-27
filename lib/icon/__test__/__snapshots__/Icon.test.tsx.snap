@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of an Icon control with icon 1`] = `
-<styled.i
+<Icon__FontAwesome
   className="ui-icon fa fa-fw fa-star test-class"
   sizing="normal"
   style={
@@ -14,7 +14,7 @@ exports[`Test creation of an Icon control with icon 1`] = `
 `;
 
 exports[`Test creation of an Icon control with image 1`] = `
-<styled.img
+<Icon__Image
   className="ui-icon"
   sizing="normal"
   src="./test-icon-image.png"
@@ -51,7 +51,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   width=""
   xcss={null}
 >
-  <styled.i
+  <Icon__FontAwesome
     className="ui-icon fa fa-fw fa-bomb"
     sizing="normal"
     style={Object {}}
@@ -60,7 +60,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       className="ui-icon fa fa-fw fa-bomb c0"
       style={Object {}}
     />
-  </styled.i>
+  </Icon__FontAwesome>
 </Icon>
 `;
 
@@ -118,7 +118,7 @@ exports[`Test the disabling of the Icon control 1`] = `
   width=""
   xcss={null}
 >
-  <styled.i
+  <Icon__FontAwesome
     className="ui-icon fa fa-fw fa-bomb"
     sizing="normal"
     style={Object {}}
@@ -127,6 +127,6 @@ exports[`Test the disabling of the Icon control 1`] = `
       className="ui-icon fa fa-fw fa-bomb c0"
       style={Object {}}
     />
-  </styled.i>
+  </Icon__FontAwesome>
 </Icon>
 `;

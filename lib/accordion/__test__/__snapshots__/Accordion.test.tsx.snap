@@ -13,14 +13,14 @@ exports[`Test making the accordion control invisible 1`] = `
     }
   }
 >
-  <styled.ul
+  <Accordion__AccordionView
     className="ui-accordion test-class"
     style={Object {}}
   >
     <li>
       some list item
     </li>
-  </styled.ul>
+  </Accordion__AccordionView>
 </ThemeProvider>
 `;
 
@@ -61,14 +61,14 @@ exports[`Test the creation of a Accordion control container 1`] = `
     }
   }
 >
-  <styled.ul
+  <Accordion__AccordionView
     className="ui-accordion test-class"
     style={Object {}}
   >
     <li>
       some list item
     </li>
-  </styled.ul>
+  </Accordion__AccordionView>
 </ThemeProvider>
 `;
 
@@ -85,13 +85,13 @@ exports[`Test the disabling of the Accordion control container 1`] = `
     }
   }
 >
-  <styled.ul
+  <Accordion__AccordionView
     className="ui-accordion test-class"
     style={Object {}}
   >
     <li>
       some list item
     </li>
-  </styled.ul>
+  </Accordion__AccordionView>
 </ThemeProvider>
 `;

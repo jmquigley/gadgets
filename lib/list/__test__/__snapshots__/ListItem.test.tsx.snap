@@ -115,7 +115,7 @@ exports[`Test disabling of a ListItem control 1`] = `
           }
         }
       >
-        <styled.li
+        <Item__ItemView
           className="ui-item ui-listitem"
           id=""
           nohover={false}
@@ -127,7 +127,7 @@ exports[`Test disabling of a ListItem control 1`] = `
           style={Object {}}
         >
           <li
-            className="ui-item ui-listitem sc-bZQynM bpnbyn"
+            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
             id=""
             onBlur={[Function]}
             onDoubleClick={[Function]}
@@ -197,7 +197,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                   }
                 }
               >
-                <styled.div
+                <Title__TitleView
                   className="ui-title-bar ui-listitem"
                   layout={5}
                   style={
@@ -207,14 +207,14 @@ exports[`Test disabling of a ListItem control 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-bar ui-listitem sc-bxivhb doMVNq"
+                    className="ui-title-bar ui-listitem Title__TitleView-ddYmk gnejTR"
                     style={
                       Object {
                         "padding": "2px 4px",
                       }
                     }
                   >
-                    <Styled(Label)
+                    <Title__StyledWidget
                       className="ui-title"
                       contentEditable={false}
                       direction="right"
@@ -272,7 +272,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                       }
                     >
                       <Label
-                        className="ui-title sc-EHOje gTHlQM"
+                        className="ui-title Title__StyledWidget-dupbKD jEnzdX"
                         contentEditable={false}
                         direction="right"
                         disabled={true}
@@ -329,7 +329,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                         }
                       >
                         <span
-                          className="ui-label label normal ui-title sc-EHOje gTHlQM disabled nohover"
+                          className="ui-label label normal ui-title Title__StyledWidget-dupbKD jEnzdX disabled nohover"
                           contentEditable={false}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -346,13 +346,13 @@ exports[`Test disabling of a ListItem control 1`] = `
                           test title
                         </span>
                       </Label>
-                    </Styled(Label)>
+                    </Title__StyledWidget>
                   </div>
-                </styled.div>
+                </Title__TitleView>
               </ThemeProvider>
             </Title>
           </li>
-        </styled.li>
+        </Item__ItemView>
       </ThemeProvider>
     </Item>
   </ThemeProvider>
@@ -474,7 +474,7 @@ exports[`Test making ListItem control invisible 1`] = `
           }
         }
       >
-        <styled.li
+        <Item__ItemView
           className="ui-item ui-listitem"
           id=""
           nohover={false}
@@ -486,7 +486,7 @@ exports[`Test making ListItem control invisible 1`] = `
           style={Object {}}
         >
           <li
-            className="ui-item ui-listitem sc-bZQynM bpnbyn"
+            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
             id=""
             onBlur={[Function]}
             onDoubleClick={[Function]}
@@ -556,7 +556,7 @@ exports[`Test making ListItem control invisible 1`] = `
                   }
                 }
               >
-                <styled.div
+                <Title__TitleView
                   className="ui-title-bar ripple ui-listitem"
                   layout={5}
                   style={
@@ -566,14 +566,14 @@ exports[`Test making ListItem control invisible 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-bar ripple ui-listitem sc-bxivhb doMVNq"
+                    className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
                     style={
                       Object {
                         "padding": "2px 4px",
                       }
                     }
                   >
-                    <Styled(Label)
+                    <Title__StyledWidget
                       className="ui-title"
                       contentEditable={false}
                       direction="right"
@@ -631,7 +631,7 @@ exports[`Test making ListItem control invisible 1`] = `
                       }
                     >
                       <Label
-                        className="ui-title sc-EHOje gTHlQM"
+                        className="ui-title Title__StyledWidget-dupbKD jEnzdX"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -688,7 +688,7 @@ exports[`Test making ListItem control invisible 1`] = `
                         }
                       >
                         <span
-                          className="ui-label label normal ui-title sc-EHOje gTHlQM invisible"
+                          className="ui-label label normal ui-title Title__StyledWidget-dupbKD jEnzdX invisible"
                           contentEditable={false}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -705,13 +705,13 @@ exports[`Test making ListItem control invisible 1`] = `
                           test title
                         </span>
                       </Label>
-                    </Styled(Label)>
+                    </Title__StyledWidget>
                   </div>
-                </styled.div>
+                </Title__TitleView>
               </ThemeProvider>
             </Title>
           </li>
-        </styled.li>
+        </Item__ItemView>
       </ThemeProvider>
     </Item>
   </ThemeProvider>

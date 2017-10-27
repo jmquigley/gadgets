@@ -54,7 +54,7 @@ exports[`Test the creation of a Item control 1`] = `
     }
   }
 >
-  <styled.li
+  <Item__ItemView
     className="ui-item"
     id=""
     nohover={false}
@@ -107,6 +107,6 @@ exports[`Test the creation of a Item control 1`] = `
       width=""
       xcss={null}
     />
-  </styled.li>
+  </Item__ItemView>
 </ThemeProvider>
 `;

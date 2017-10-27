@@ -7,8 +7,6 @@
 
 'use strict';
 
-// const debug = require('debug')('ListItem');
-
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ThemeProvider} from 'styled-components';

@@ -141,16 +141,16 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <styled.i
+                <Icon__FontAwesome
                   className="ui-icon fa fa-fw fa-bold icon"
                   sizing="small"
                   style={Object {}}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-bold icon sc-bdVaJa gDsVnc"
+                    className="ui-icon fa fa-fw fa-bold icon Icon__FontAwesome-kBRBjz iQDhYj"
                     style={Object {}}
                   />
-                </styled.i>
+                </Icon__FontAwesome>
               </Icon>
             </div>
           </Button>
@@ -219,16 +219,16 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <styled.i
+                <Icon__FontAwesome
                   className="ui-icon fa fa-fw fa-italic icon"
                   sizing="small"
                   style={Object {}}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-italic icon sc-bdVaJa gDsVnc"
+                    className="ui-icon fa fa-fw fa-italic icon Icon__FontAwesome-kBRBjz iQDhYj"
                     style={Object {}}
                   />
-                </styled.i>
+                </Icon__FontAwesome>
               </Icon>
             </div>
           </Button>
@@ -297,16 +297,16 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <styled.i
+                <Icon__FontAwesome
                   className="ui-icon fa fa-fw fa-underline icon"
                   sizing="small"
                   style={Object {}}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-underline icon sc-bdVaJa gDsVnc"
+                    className="ui-icon fa fa-fw fa-underline icon Icon__FontAwesome-kBRBjz iQDhYj"
                     style={Object {}}
                   />
-                </styled.i>
+                </Icon__FontAwesome>
               </Icon>
             </div>
           </Button>
@@ -375,16 +375,16 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <styled.i
+                <Icon__FontAwesome
                   className="ui-icon fa fa-fw fa-strikethrough icon"
                   sizing="small"
                   style={Object {}}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-strikethrough icon sc-bdVaJa gDsVnc"
+                    className="ui-icon fa fa-fw fa-strikethrough icon Icon__FontAwesome-kBRBjz iQDhYj"
                     style={Object {}}
                   />
-                </styled.i>
+                </Icon__FontAwesome>
               </Icon>
             </div>
           </Button>
@@ -453,16 +453,16 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <styled.i
+                <Icon__FontAwesome
                   className="ui-icon fa fa-fw fa-code icon"
                   sizing="small"
                   style={Object {}}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-code icon sc-bdVaJa gDsVnc"
+                    className="ui-icon fa fa-fw fa-code icon Icon__FontAwesome-kBRBjz iQDhYj"
                     style={Object {}}
                   />
-                </styled.i>
+                </Icon__FontAwesome>
               </Icon>
             </div>
           </Button>
@@ -577,16 +577,16 @@ exports[`Test creation of an Editor instance 1`] = `
                     width=""
                     xcss={null}
                   >
-                    <styled.i
+                    <Icon__FontAwesome
                       className="ui-icon fa fa-fw fa-header icon"
                       sizing="small"
                       style={Object {}}
                     >
                       <i
-                        className="ui-icon fa fa-fw fa-header icon sc-bdVaJa gDsVnc"
+                        className="ui-icon fa fa-fw fa-header icon Icon__FontAwesome-kBRBjz iQDhYj"
                         style={Object {}}
                       />
-                    </styled.i>
+                    </Icon__FontAwesome>
                   </Icon>
                 </div>
               </Button>
@@ -632,13 +632,13 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       }
                     >
-                      <styled.ul
+                      <List__ListView
                         alternating={true}
                         className="ui-list"
                         style={Object {}}
                       >
                         <ul
-                          className="ui-list sc-htpNat vcbZT"
+                          className="ui-list List__ListView-hRfwaE gxImIu"
                           style={Object {}}
                         >
                           <ListItem
@@ -657,7 +657,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="0"
-                            key="0"
+                            key=".0"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -756,7 +756,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     }
                                   }
                                 >
-                                  <styled.li
+                                  <Item__ItemView
                                     className="ui-item ui-listitem"
                                     id="0"
                                     nohover={false}
@@ -768,7 +768,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item ui-listitem sc-bZQynM bpnbyn"
+                                      className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
                                       id="0"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -838,7 +838,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           }
                                         >
-                                          <styled.div
+                                          <Title__TitleView
                                             className="ui-title-bar ripple ui-listitem"
                                             layout={5}
                                             style={
@@ -848,14 +848,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           >
                                             <div
-                                              className="ui-title-bar ripple ui-listitem sc-bxivhb doMVNq"
+                                              className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
                                             >
-                                              <Styled(Label)
+                                              <Title__StyledWidget
                                                 className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
@@ -913,7 +913,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 }
                                               >
                                                 <Label
-                                                  className="ui-title sc-EHOje bnSULB"
+                                                  className="ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -970,7 +970,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-title sc-EHOje bnSULB"
+                                                    className="ui-label label small ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -987,13 +987,13 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h1
                                                   </span>
                                                 </Label>
-                                              </Styled(Label)>
+                                              </Title__StyledWidget>
                                             </div>
-                                          </styled.div>
+                                          </Title__TitleView>
                                         </ThemeProvider>
                                       </Title>
                                     </li>
-                                  </styled.li>
+                                  </Item__ItemView>
                                 </ThemeProvider>
                               </Item>
                             </ThemeProvider>
@@ -1014,7 +1014,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="1"
-                            key="1"
+                            key=".1"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -1113,7 +1113,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     }
                                   }
                                 >
-                                  <styled.li
+                                  <Item__ItemView
                                     className="ui-item ui-listitem"
                                     id="1"
                                     nohover={false}
@@ -1125,7 +1125,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item ui-listitem sc-bZQynM bpnbyn"
+                                      className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
                                       id="1"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -1195,7 +1195,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           }
                                         >
-                                          <styled.div
+                                          <Title__TitleView
                                             className="ui-title-bar ripple ui-listitem"
                                             layout={5}
                                             style={
@@ -1205,14 +1205,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           >
                                             <div
-                                              className="ui-title-bar ripple ui-listitem sc-bxivhb doMVNq"
+                                              className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
                                             >
-                                              <Styled(Label)
+                                              <Title__StyledWidget
                                                 className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
@@ -1270,7 +1270,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 }
                                               >
                                                 <Label
-                                                  className="ui-title sc-EHOje bnSULB"
+                                                  className="ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -1327,7 +1327,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-title sc-EHOje bnSULB"
+                                                    className="ui-label label small ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -1344,13 +1344,13 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h2
                                                   </span>
                                                 </Label>
-                                              </Styled(Label)>
+                                              </Title__StyledWidget>
                                             </div>
-                                          </styled.div>
+                                          </Title__TitleView>
                                         </ThemeProvider>
                                       </Title>
                                     </li>
-                                  </styled.li>
+                                  </Item__ItemView>
                                 </ThemeProvider>
                               </Item>
                             </ThemeProvider>
@@ -1371,7 +1371,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="2"
-                            key="2"
+                            key=".2"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -1470,7 +1470,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     }
                                   }
                                 >
-                                  <styled.li
+                                  <Item__ItemView
                                     className="ui-item ui-listitem"
                                     id="2"
                                     nohover={false}
@@ -1482,7 +1482,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item ui-listitem sc-bZQynM bpnbyn"
+                                      className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
                                       id="2"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -1552,7 +1552,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           }
                                         >
-                                          <styled.div
+                                          <Title__TitleView
                                             className="ui-title-bar ripple ui-listitem"
                                             layout={5}
                                             style={
@@ -1562,14 +1562,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           >
                                             <div
-                                              className="ui-title-bar ripple ui-listitem sc-bxivhb doMVNq"
+                                              className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
                                             >
-                                              <Styled(Label)
+                                              <Title__StyledWidget
                                                 className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
@@ -1627,7 +1627,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 }
                                               >
                                                 <Label
-                                                  className="ui-title sc-EHOje bnSULB"
+                                                  className="ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -1684,7 +1684,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-title sc-EHOje bnSULB"
+                                                    className="ui-label label small ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -1701,13 +1701,13 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h3
                                                   </span>
                                                 </Label>
-                                              </Styled(Label)>
+                                              </Title__StyledWidget>
                                             </div>
-                                          </styled.div>
+                                          </Title__TitleView>
                                         </ThemeProvider>
                                       </Title>
                                     </li>
-                                  </styled.li>
+                                  </Item__ItemView>
                                 </ThemeProvider>
                               </Item>
                             </ThemeProvider>
@@ -1728,7 +1728,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="3"
-                            key="3"
+                            key=".3"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -1827,7 +1827,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     }
                                   }
                                 >
-                                  <styled.li
+                                  <Item__ItemView
                                     className="ui-item ui-listitem"
                                     id="3"
                                     nohover={false}
@@ -1839,7 +1839,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item ui-listitem sc-bZQynM bpnbyn"
+                                      className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
                                       id="3"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -1909,7 +1909,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           }
                                         >
-                                          <styled.div
+                                          <Title__TitleView
                                             className="ui-title-bar ripple ui-listitem"
                                             layout={5}
                                             style={
@@ -1919,14 +1919,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           >
                                             <div
-                                              className="ui-title-bar ripple ui-listitem sc-bxivhb doMVNq"
+                                              className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
                                             >
-                                              <Styled(Label)
+                                              <Title__StyledWidget
                                                 className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
@@ -1984,7 +1984,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 }
                                               >
                                                 <Label
-                                                  className="ui-title sc-EHOje bnSULB"
+                                                  className="ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -2041,7 +2041,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-title sc-EHOje bnSULB"
+                                                    className="ui-label label small ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -2058,13 +2058,13 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h4
                                                   </span>
                                                 </Label>
-                                              </Styled(Label)>
+                                              </Title__StyledWidget>
                                             </div>
-                                          </styled.div>
+                                          </Title__TitleView>
                                         </ThemeProvider>
                                       </Title>
                                     </li>
-                                  </styled.li>
+                                  </Item__ItemView>
                                 </ThemeProvider>
                               </Item>
                             </ThemeProvider>
@@ -2085,7 +2085,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="4"
-                            key="4"
+                            key=".4"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -2184,7 +2184,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     }
                                   }
                                 >
-                                  <styled.li
+                                  <Item__ItemView
                                     className="ui-item ui-listitem"
                                     id="4"
                                     nohover={false}
@@ -2196,7 +2196,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item ui-listitem sc-bZQynM bpnbyn"
+                                      className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
                                       id="4"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -2266,7 +2266,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           }
                                         >
-                                          <styled.div
+                                          <Title__TitleView
                                             className="ui-title-bar ripple ui-listitem"
                                             layout={5}
                                             style={
@@ -2276,14 +2276,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           >
                                             <div
-                                              className="ui-title-bar ripple ui-listitem sc-bxivhb doMVNq"
+                                              className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
                                             >
-                                              <Styled(Label)
+                                              <Title__StyledWidget
                                                 className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
@@ -2341,7 +2341,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 }
                                               >
                                                 <Label
-                                                  className="ui-title sc-EHOje bnSULB"
+                                                  className="ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -2398,7 +2398,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-title sc-EHOje bnSULB"
+                                                    className="ui-label label small ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -2415,13 +2415,13 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h5
                                                   </span>
                                                 </Label>
-                                              </Styled(Label)>
+                                              </Title__StyledWidget>
                                             </div>
-                                          </styled.div>
+                                          </Title__TitleView>
                                         </ThemeProvider>
                                       </Title>
                                     </li>
-                                  </styled.li>
+                                  </Item__ItemView>
                                 </ThemeProvider>
                               </Item>
                             </ThemeProvider>
@@ -2442,7 +2442,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               }
                             }
                             id="5"
-                            key="5"
+                            key=".5"
                             layout={5}
                             leftButton={null}
                             location="none"
@@ -2541,7 +2541,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     }
                                   }
                                 >
-                                  <styled.li
+                                  <Item__ItemView
                                     className="ui-item ui-listitem"
                                     id="5"
                                     nohover={false}
@@ -2553,7 +2553,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     style={Object {}}
                                   >
                                     <li
-                                      className="ui-item ui-listitem sc-bZQynM bpnbyn"
+                                      className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
                                       id="5"
                                       onBlur={[Function]}
                                       onDoubleClick={[Function]}
@@ -2623,7 +2623,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           }
                                         >
-                                          <styled.div
+                                          <Title__TitleView
                                             className="ui-title-bar ripple ui-listitem"
                                             layout={5}
                                             style={
@@ -2633,14 +2633,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                             }
                                           >
                                             <div
-                                              className="ui-title-bar ripple ui-listitem sc-bxivhb doMVNq"
+                                              className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
                                               style={
                                                 Object {
                                                   "padding": "2px 4px",
                                                 }
                                               }
                                             >
-                                              <Styled(Label)
+                                              <Title__StyledWidget
                                                 className="ui-title"
                                                 contentEditable={false}
                                                 direction="right"
@@ -2698,7 +2698,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 }
                                               >
                                                 <Label
-                                                  className="ui-title sc-EHOje bnSULB"
+                                                  className="ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -2755,7 +2755,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 >
                                                   <span
-                                                    className="ui-label label small ui-title sc-EHOje bnSULB"
+                                                    className="ui-label label small ui-title Title__StyledWidget-dupbKD fcvEmy"
                                                     contentEditable={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
@@ -2772,19 +2772,19 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     h6
                                                   </span>
                                                 </Label>
-                                              </Styled(Label)>
+                                              </Title__StyledWidget>
                                             </div>
-                                          </styled.div>
+                                          </Title__TitleView>
                                         </ThemeProvider>
                                       </Title>
                                     </li>
-                                  </styled.li>
+                                  </Item__ItemView>
                                 </ThemeProvider>
                               </Item>
                             </ThemeProvider>
                           </ListItem>
                         </ul>
-                      </styled.ul>
+                      </List__ListView>
                     </ThemeProvider>
                   </List>
                 </div>
@@ -2894,16 +2894,16 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <styled.i
+                <Icon__FontAwesome
                   className="ui-icon fa fa-fw fa-undo icon"
                   sizing="small"
                   style={Object {}}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-undo icon sc-bdVaJa gDsVnc"
+                    className="ui-icon fa fa-fw fa-undo icon Icon__FontAwesome-kBRBjz iQDhYj"
                     style={Object {}}
                   />
-                </styled.i>
+                </Icon__FontAwesome>
               </Icon>
             </div>
           </Button>
@@ -2972,16 +2972,16 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <styled.i
+                <Icon__FontAwesome
                   className="ui-icon fa fa-fw fa-repeat icon"
                   sizing="small"
                   style={Object {}}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-repeat icon sc-bdVaJa gDsVnc"
+                    className="ui-icon fa fa-fw fa-repeat icon Icon__FontAwesome-kBRBjz iQDhYj"
                     style={Object {}}
                   />
-                </styled.i>
+                </Icon__FontAwesome>
               </Icon>
             </div>
           </Button>
@@ -4338,16 +4338,16 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <styled.i
+                <Icon__FontAwesome
                   className="ui-icon fa fa-fw fa-refresh icon"
                   sizing="small"
                   style={Object {}}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-refresh icon sc-bdVaJa gDsVnc"
+                    className="ui-icon fa fa-fw fa-refresh icon Icon__FontAwesome-kBRBjz iQDhYj"
                     style={Object {}}
                   />
-                </styled.i>
+                </Icon__FontAwesome>
               </Icon>
             </div>
           </Button>

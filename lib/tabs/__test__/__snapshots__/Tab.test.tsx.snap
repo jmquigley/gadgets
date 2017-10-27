@@ -80,16 +80,16 @@ exports[`Test disabling of a Tab 1`] = `
           }
         }
       >
-        <styled.div
+        <Title__TitleView
           className="ui-title-bar"
           layout={5}
           style={Object {}}
         >
           <div
-            className="ui-title-bar sc-htpNat dDnVhK"
+            className="ui-title-bar Title__TitleView-ddYmk gnejTR"
             style={Object {}}
           >
-            <Styled(Label)
+            <Title__StyledWidget
               className="ui-title"
               contentEditable={false}
               direction="right"
@@ -128,7 +128,7 @@ exports[`Test disabling of a Tab 1`] = `
               }
             >
               <Label
-                className="ui-title sc-ifAKCX kdxUhk"
+                className="ui-title Title__StyledWidget-dupbKD jEnzdX"
                 contentEditable={false}
                 direction="right"
                 disabled={true}
@@ -173,7 +173,7 @@ exports[`Test disabling of a Tab 1`] = `
                 }
               >
                 <span
-                  className="ui-label label normal ui-title sc-ifAKCX kdxUhk disabled nohover"
+                  className="ui-label label normal ui-title Title__StyledWidget-dupbKD jEnzdX disabled nohover"
                   contentEditable={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -186,8 +186,8 @@ exports[`Test disabling of a Tab 1`] = `
                   tab title
                 </span>
               </Label>
-            </Styled(Label)>
-            <styled.div
+            </Title__StyledWidget>
+            <Title__StyledWidget
               className="ui-title-widget"
               contentEditable={false}
               direction="right"
@@ -225,7 +225,7 @@ exports[`Test disabling of a Tab 1`] = `
               }
             >
               <div
-                className="ui-title-widget sc-bxivhb jZXaxZ"
+                className="ui-title-widget Title__StyledWidget-ieYmOL upBhX"
                 contentEditable={false}
                 direction="right"
                 disabled={true}
@@ -242,9 +242,9 @@ exports[`Test disabling of a Tab 1`] = `
                 title="tab title"
                 width=""
               />
-            </styled.div>
+            </Title__StyledWidget>
           </div>
-        </styled.div>
+        </Title__TitleView>
       </ThemeProvider>
     </Title>
   </div>
@@ -370,16 +370,16 @@ exports[`Test making a Tab invisible 1`] = `
           }
         }
       >
-        <styled.div
+        <Title__TitleView
           className="ui-title-bar"
           layout={5}
           style={Object {}}
         >
           <div
-            className="ui-title-bar sc-htpNat dDnVhK"
+            className="ui-title-bar Title__TitleView-ddYmk gnejTR"
             style={Object {}}
           >
-            <Styled(Label)
+            <Title__StyledWidget
               className="ui-title"
               contentEditable={false}
               direction="right"
@@ -455,7 +455,7 @@ exports[`Test making a Tab invisible 1`] = `
               }
             >
               <Label
-                className="ui-title sc-ifAKCX kdxUhk"
+                className="ui-title Title__StyledWidget-dupbKD jEnzdX"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -537,7 +537,7 @@ exports[`Test making a Tab invisible 1`] = `
                 }
               >
                 <span
-                  className="ui-label label normal ui-title sc-ifAKCX kdxUhk"
+                  className="ui-label label normal ui-title Title__StyledWidget-dupbKD jEnzdX"
                   contentEditable={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -550,8 +550,8 @@ exports[`Test making a Tab invisible 1`] = `
                   tab title
                 </span>
               </Label>
-            </Styled(Label)>
-            <styled.div
+            </Title__StyledWidget>
+            <Title__StyledWidget
               className="ui-title-widget"
               contentEditable={false}
               direction="right"
@@ -626,7 +626,7 @@ exports[`Test making a Tab invisible 1`] = `
               }
             >
               <div
-                className="ui-title-widget sc-bxivhb jZXaxZ"
+                className="ui-title-widget Title__StyledWidget-ieYmOL upBhX"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -704,23 +704,23 @@ exports[`Test making a Tab invisible 1`] = `
                       width=""
                       xcss={null}
                     >
-                      <styled.i
+                      <Icon__FontAwesome
                         className="ui-icon fa fa-fw fa-times icon"
                         sizing="normal"
                         style={Object {}}
                       >
                         <i
-                          className="ui-icon fa fa-fw fa-times icon sc-bdVaJa ifzSmG"
+                          className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
                           style={Object {}}
                         />
-                      </styled.i>
+                      </Icon__FontAwesome>
                     </Icon>
                   </div>
                 </Button>
               </div>
-            </styled.div>
+            </Title__StyledWidget>
           </div>
-        </styled.div>
+        </Title__TitleView>
       </ThemeProvider>
     </Title>
   </div>
@@ -871,16 +871,16 @@ exports[`Test the click handler in the Tab instance 1`] = `
           }
         }
       >
-        <styled.div
+        <Title__TitleView
           className="ui-title-bar"
           layout={5}
           style={Object {}}
         >
           <div
-            className="ui-title-bar sc-htpNat dDnVhK"
+            className="ui-title-bar Title__TitleView-ddYmk gnejTR"
             style={Object {}}
           >
-            <Styled(Label)
+            <Title__StyledWidget
               className="ui-title"
               contentEditable={false}
               direction="right"
@@ -952,7 +952,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
               }
             >
               <Label
-                className="ui-title sc-ifAKCX kdxUhk"
+                className="ui-title Title__StyledWidget-dupbKD jEnzdX"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -1030,7 +1030,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                 }
               >
                 <span
-                  className="ui-label label normal ui-title sc-ifAKCX kdxUhk"
+                  className="ui-label label normal ui-title Title__StyledWidget-dupbKD jEnzdX"
                   contentEditable={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -1043,8 +1043,8 @@ exports[`Test the click handler in the Tab instance 1`] = `
                   tab title
                 </span>
               </Label>
-            </Styled(Label)>
-            <styled.div
+            </Title__StyledWidget>
+            <Title__StyledWidget
               className="ui-title-widget"
               contentEditable={false}
               direction="right"
@@ -1115,7 +1115,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
               }
             >
               <div
-                className="ui-title-widget sc-bxivhb jZXaxZ"
+                className="ui-title-widget Title__StyledWidget-ieYmOL upBhX"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -1189,23 +1189,23 @@ exports[`Test the click handler in the Tab instance 1`] = `
                       width=""
                       xcss={null}
                     >
-                      <styled.i
+                      <Icon__FontAwesome
                         className="ui-icon fa fa-fw fa-times icon"
                         sizing="normal"
                         style={Object {}}
                       >
                         <i
-                          className="ui-icon fa fa-fw fa-times icon sc-bdVaJa ifzSmG"
+                          className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
                           style={Object {}}
                         />
-                      </styled.i>
+                      </Icon__FontAwesome>
                     </Icon>
                   </div>
                 </Button>
               </div>
-            </styled.div>
+            </Title__StyledWidget>
           </div>
-        </styled.div>
+        </Title__TitleView>
       </ThemeProvider>
     </Title>
   </div>
@@ -1325,16 +1325,16 @@ exports[`Test the close click handler on a Tab instance 1`] = `
           }
         }
       >
-        <styled.div
+        <Title__TitleView
           className="ui-title-bar"
           layout={5}
           style={Object {}}
         >
           <div
-            className="ui-title-bar sc-htpNat dDnVhK"
+            className="ui-title-bar Title__TitleView-ddYmk gnejTR"
             style={Object {}}
           >
-            <Styled(Label)
+            <Title__StyledWidget
               className="ui-title"
               contentEditable={false}
               direction="right"
@@ -1406,7 +1406,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
               }
             >
               <Label
-                className="ui-title sc-ifAKCX kdxUhk"
+                className="ui-title Title__StyledWidget-dupbKD jEnzdX"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -1484,7 +1484,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                 }
               >
                 <span
-                  className="ui-label label normal ui-title sc-ifAKCX kdxUhk"
+                  className="ui-label label normal ui-title Title__StyledWidget-dupbKD jEnzdX"
                   contentEditable={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -1497,8 +1497,8 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                   tab title
                 </span>
               </Label>
-            </Styled(Label)>
-            <styled.div
+            </Title__StyledWidget>
+            <Title__StyledWidget
               className="ui-title-widget"
               contentEditable={false}
               direction="right"
@@ -1569,7 +1569,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
               }
             >
               <div
-                className="ui-title-widget sc-bxivhb jZXaxZ"
+                className="ui-title-widget Title__StyledWidget-ieYmOL upBhX"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -1643,23 +1643,23 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                       width=""
                       xcss={null}
                     >
-                      <styled.i
+                      <Icon__FontAwesome
                         className="ui-icon fa fa-fw fa-times icon"
                         sizing="normal"
                         style={Object {}}
                       >
                         <i
-                          className="ui-icon fa fa-fw fa-times icon sc-bdVaJa ifzSmG"
+                          className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
                           style={Object {}}
                         />
-                      </styled.i>
+                      </Icon__FontAwesome>
                     </Icon>
                   </div>
                 </Button>
               </div>
-            </styled.div>
+            </Title__StyledWidget>
           </div>
-        </styled.div>
+        </Title__TitleView>
       </ThemeProvider>
     </Title>
   </div>

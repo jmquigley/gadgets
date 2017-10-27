@@ -81,7 +81,7 @@
 
 'use strict';
 
-// const debug = require('debug')('DynamicList');
+const debug = require('debug')('DynamicList');
 
 import {cloneDeep, omit} from 'lodash';
 import * as React from 'react';
@@ -369,6 +369,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private handleNewItem(title: string, widget: any = null, cb: any = nil) {
 		title = title.trimHTML();
 		if (title) {
+			debug('creating new item: %s', title);
 			this.setState({
 				items: Object.assign(this.state.items, {[title]: widget}),
 				showNew: false,
@@ -477,7 +478,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	public componentWillUpdate(nextProps: DynamicListProps, nextState: DynamicListState) {
-
 		for (const title in nextState.items) {
 			if (!(title in this._listItems)) {
 				const deletor = () => {
