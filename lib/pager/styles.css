@@ -7,6 +7,10 @@
 		width: 99%;
 	}
 
+	.pager > :global(.ui-textfield-container) {
+		flex-direction: unset;
+	}
+
 	.pagerButton {
 		flex: 1;
 		height: inherit;

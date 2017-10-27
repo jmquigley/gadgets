@@ -660,27 +660,31 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
       visible={true}
     >
       <div
-        className="ui-textfield textField normal tagListInput"
-        style={
-          Object {
-            "border": "none",
-            "minWidth": "2.5rem",
-          }
-        }
+        className="ui-textfield-container textFieldContainer"
       >
-        <input
-          className="textFieldInput"
-          disabled={false}
-          id=""
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          placeholder="new"
-          size={1}
-          style={Object {}}
-          type="text"
-        />
+        <div
+          className="ui-textfield textField normal tagListInput"
+          style={
+            Object {
+              "border": "none",
+              "minWidth": "2.5rem",
+            }
+          }
+        >
+          <input
+            className="textFieldInput"
+            disabled={false}
+            id=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            placeholder="new"
+            size={1}
+            style={Object {}}
+            type="text"
+          />
+        </div>
       </div>
     </TextField>
   </div>
@@ -1347,27 +1351,31 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
       visible={true}
     >
       <div
-        className="ui-textfield textField normal tagListInput"
-        style={
-          Object {
-            "border": "none",
-            "minWidth": "2.5rem",
-          }
-        }
+        className="ui-textfield-container textFieldContainer"
       >
-        <input
-          className="textFieldInput"
-          disabled={false}
-          id=""
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          placeholder="new"
-          size={1}
-          style={Object {}}
-          type="text"
-        />
+        <div
+          className="ui-textfield textField normal tagListInput"
+          style={
+            Object {
+              "border": "none",
+              "minWidth": "2.5rem",
+            }
+          }
+        >
+          <input
+            className="textFieldInput"
+            disabled={false}
+            id=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            placeholder="new"
+            size={1}
+            style={Object {}}
+            type="text"
+          />
+        </div>
       </div>
     </TextField>
   </div>
@@ -2642,27 +2650,31 @@ exports[`Remove a tag from a TagList 1`] = `
       visible={true}
     >
       <div
-        className="ui-textfield textField normal tagListInput"
-        style={
-          Object {
-            "border": "none",
-            "minWidth": "2.5rem",
-          }
-        }
+        className="ui-textfield-container textFieldContainer"
       >
-        <input
-          className="textFieldInput"
-          disabled={false}
-          id=""
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          placeholder="new"
-          size={1}
-          style={Object {}}
-          type="text"
-        />
+        <div
+          className="ui-textfield textField normal tagListInput"
+          style={
+            Object {
+              "border": "none",
+              "minWidth": "2.5rem",
+            }
+          }
+        >
+          <input
+            className="textFieldInput"
+            disabled={false}
+            id=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            placeholder="new"
+            size={1}
+            style={Object {}}
+            type="text"
+          />
+        </div>
       </div>
     </TextField>
   </div>
@@ -2817,27 +2829,31 @@ exports[`Test the change/blur events in TagList 1`] = `
       visible={true}
     >
       <div
-        className="ui-textfield textField normal tagListInput"
-        style={
-          Object {
-            "border": "none",
-            "minWidth": "2.5rem",
-          }
-        }
+        className="ui-textfield-container textFieldContainer"
       >
-        <input
-          className="textFieldInput"
-          disabled={false}
-          id=""
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          placeholder="new"
-          size={1}
-          style={Object {}}
-          type="text"
-        />
+        <div
+          className="ui-textfield textField normal tagListInput"
+          style={
+            Object {
+              "border": "none",
+              "minWidth": "2.5rem",
+            }
+          }
+        >
+          <input
+            className="textFieldInput"
+            disabled={false}
+            id=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            placeholder="new"
+            size={1}
+            style={Object {}}
+            type="text"
+          />
+        </div>
       </div>
     </TextField>
   </div>
@@ -3504,27 +3520,31 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
       visible={true}
     >
       <div
-        className="ui-textfield textField normal tagListInput"
-        style={
-          Object {
-            "border": "none",
-            "minWidth": "2.5rem",
-          }
-        }
+        className="ui-textfield-container textFieldContainer"
       >
-        <input
-          className="textFieldInput"
-          disabled={false}
-          id=""
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          placeholder="new"
-          size={1}
-          style={Object {}}
-          type="text"
-        />
+        <div
+          className="ui-textfield textField normal tagListInput"
+          style={
+            Object {
+              "border": "none",
+              "minWidth": "2.5rem",
+            }
+          }
+        >
+          <input
+            className="textFieldInput"
+            disabled={false}
+            id=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            placeholder="new"
+            size={1}
+            style={Object {}}
+            type="text"
+          />
+        </div>
       </div>
     </TextField>
   </div>

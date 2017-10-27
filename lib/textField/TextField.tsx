@@ -389,29 +389,31 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		}
 
 		return (
-			<div
-				className={this._rootStyles.classnames}
-				style={this.inlineStyles}
-			>
-				<input
-					{...props}
-					className={this._inputStyles.classnames}
-					onBlur={this.handleBlur}
-					onChange={this.handleChange}
-					onKeyDown={this.handleKeyDown}
-					onKeyPress={this.handleKeyPress}
-					ref={this.handleRef}
-				/>
-				{clearBtn}
+			<div className={`ui-textfield-container ${this.styles.textFieldContainer}`}>
+				<div
+					className={this._rootStyles.classnames}
+					style={this.inlineStyles}
+				>
+					<input
+						{...props}
+						className={this._inputStyles.classnames}
+						onBlur={this.handleBlur}
+						onChange={this.handleChange}
+						onKeyDown={this.handleKeyDown}
+						onKeyPress={this.handleKeyPress}
+						ref={this.handleRef}
+					/>
+					{clearBtn}
+				</div>
 				{this.props.usevalidation
 					?
-						<div className={this._messageStyles.classnames}>
-							{this.props.usevalidation ? '\u00a0' : null}
-							{this.state.message}
-						</div>
+					<div className={this._messageStyles.classnames}>
+						{this.props.usevalidation ? '\u00a0' : null}
+						{this.state.message}
+					</div>
 					:
-						null
-					}
+					null
+				}
 			</div>
 		);
 	}

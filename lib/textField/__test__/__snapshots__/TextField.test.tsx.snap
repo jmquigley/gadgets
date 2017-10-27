@@ -19,24 +19,28 @@ exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField normal"
-    style={
-      Object {
-        "border": "solid 1px silver",
-      }
-    }
+    className="ui-textfield-container textFieldContainer"
   >
-    <input
-      className="textFieldInput"
-      disabled={false}
-      id=""
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      style={Object {}}
-      type="text"
-    />
+    <div
+      className="ui-textfield textField normal"
+      style={
+        Object {
+          "border": "solid 1px silver",
+        }
+      }
+    >
+      <input
+        className="textFieldInput"
+        disabled={false}
+        id=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        type="text"
+      />
+    </div>
   </div>
 </TextField>
 `;
@@ -60,7 +64,38 @@ exports[`Test creating TextField and saving on blur 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField normal"
+    className="ui-textfield-container textFieldContainer"
+  >
+    <div
+      className="ui-textfield textField normal"
+      style={
+        Object {
+          "border": "solid 1px silver",
+        }
+      }
+    >
+      <input
+        className="textFieldInput"
+        disabled={false}
+        id=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        type="text"
+      />
+    </div>
+  </div>
+</TextField>
+`;
+
+exports[`Test creation of a TextField control 1`] = `
+<div
+  className="ui-textfield-container textFieldContainer"
+>
+  <div
+    className="ui-textfield textField normal test-class"
     style={
       Object {
         "border": "solid 1px silver",
@@ -79,29 +114,6 @@ exports[`Test creating TextField and saving on blur 1`] = `
       type="text"
     />
   </div>
-</TextField>
-`;
-
-exports[`Test creation of a TextField control 1`] = `
-<div
-  className="ui-textfield textField normal test-class"
-  style={
-    Object {
-      "border": "solid 1px silver",
-    }
-  }
->
-  <input
-    className="textFieldInput"
-    disabled={false}
-    id=""
-    onBlur={[Function]}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    style={Object {}}
-    type="text"
-  />
 </div>
 `;
 
@@ -124,24 +136,28 @@ exports[`Test creation of a TextField with email validation 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField normal"
-    style={
-      Object {
-        "border": "solid 1px silver",
-      }
-    }
+    className="ui-textfield-container textFieldContainer"
   >
-    <input
-      className="textFieldInput"
-      disabled={false}
-      id=""
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      style={Object {}}
-      type="email"
-    />
+    <div
+      className="ui-textfield textField normal"
+      style={
+        Object {
+          "border": "solid 1px silver",
+        }
+      }
+    >
+      <input
+        className="textFieldInput"
+        disabled={false}
+        id=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        type="email"
+      />
+    </div>
     <div
       className="textFieldMessage small"
     >
@@ -170,24 +186,28 @@ exports[`Test creation of a TextField with url validation 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField normal"
-    style={
-      Object {
-        "border": "solid 1px silver",
-      }
-    }
+    className="ui-textfield-container textFieldContainer"
   >
-    <input
-      className="textFieldInput"
-      disabled={false}
-      id=""
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      style={Object {}}
-      type="url"
-    />
+    <div
+      className="ui-textfield textField normal"
+      style={
+        Object {
+          "border": "solid 1px silver",
+        }
+      }
+    >
+      <input
+        className="textFieldInput"
+        disabled={false}
+        id=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        type="url"
+      />
+    </div>
     <div
       className="textFieldMessage small"
     >
@@ -219,27 +239,31 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField normal"
-    style={
-      Object {
-        "border": "solid 1px silver",
-      }
-    }
+    className="ui-textfield-container textFieldContainer"
   >
-    <input
-      className="textFieldInput"
-      disabled={false}
-      id=""
-      maxLength="10"
-      minLength="5"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      style={Object {}}
-      type="text"
-      value=""
-    />
+    <div
+      className="ui-textfield textField normal"
+      style={
+        Object {
+          "border": "solid 1px silver",
+        }
+      }
+    >
+      <input
+        className="textFieldInput"
+        disabled={false}
+        id=""
+        maxLength="10"
+        minLength="5"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        type="text"
+        value=""
+      />
+    </div>
     <div
       className="textFieldMessage small"
     >
@@ -268,24 +292,28 @@ exports[`Test disabling of a TextField control 1`] = `
   visible={true}
 >
   <div
-    className="ui-textfield textField normal disabled nohover"
-    style={
-      Object {
-        "border": "solid 1px silver",
-      }
-    }
+    className="ui-textfield-container textFieldContainer"
   >
-    <input
-      className="textFieldInput disabled"
-      disabled={true}
-      id=""
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      style={Object {}}
-      type="text"
-    />
+    <div
+      className="ui-textfield textField normal disabled nohover"
+      style={
+        Object {
+          "border": "solid 1px silver",
+        }
+      }
+    >
+      <input
+        className="textFieldInput disabled"
+        disabled={true}
+        id=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        type="text"
+      />
+    </div>
   </div>
 </TextField>
 `;
@@ -309,24 +337,28 @@ exports[`Test making the TextField invisible 1`] = `
   visible={false}
 >
   <div
-    className="ui-textfield textField normal invisible"
-    style={
-      Object {
-        "border": "solid 1px silver",
-      }
-    }
+    className="ui-textfield-container textFieldContainer"
   >
-    <input
-      className="textFieldInput"
-      disabled={false}
-      id=""
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      style={Object {}}
-      type="text"
-    />
+    <div
+      className="ui-textfield textField normal invisible"
+      style={
+        Object {
+          "border": "solid 1px silver",
+        }
+      }
+    >
+      <input
+        className="textFieldInput"
+        disabled={false}
+        id=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        type="text"
+      />
+    </div>
   </div>
 </TextField>
 `;
