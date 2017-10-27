@@ -90,11 +90,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 				this._children.push(React.cloneElement(child as any, {
 					// only generate an id/key if one is not given with the props
 					id: child['props']['id'] || this._keys.at(idx),
-					key: child['key'] || this._keys.at(idx),
-					href: {
-						selectHandler: this.selectHandler,
-						sizing: this.props.sizing
-					}
+					key: child['key'] || this._keys.at(idx)
 				}));
 			}
 		}
@@ -105,7 +101,11 @@ export class List extends BaseComponent<ListProps, ListState> {
 		const children = this._children.map(child => {
 			const selected = child['props'].id === selectedKey;
 			return React.cloneElement(child as any, {
-				selected: (this.props.unselect) ? false : selected
+				selected: (this.props.unselect) ? false : selected,
+				href: {
+					selectHandler: this.selectHandler,
+					sizing: this.props.sizing
+				}
 			});
 		});
 

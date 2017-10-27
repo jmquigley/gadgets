@@ -44,7 +44,7 @@ export interface ListItemState {
 export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
-	private _delay = 250;
+	private _delay = 250;  // double click delay
 	private _preventClick: boolean = false;
 	private _timer: any = null;
 

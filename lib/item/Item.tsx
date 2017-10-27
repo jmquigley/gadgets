@@ -2,6 +2,8 @@
 
 'use strict';
 
+// const debug = require('debug')('Item');
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import styled, {ThemeProvider} from 'styled-components';
@@ -79,6 +81,7 @@ export const ItemView: any = styled.li`
 export const ItemViewButton: any = styled.div`
 	display: inline-flex;
 	position: relative;
+	width: ${(props: ItemProps) => props.width || '2.0em'};
 
 	${(props: ItemProps) => props.sizing && fontStyle[props.sizing]};
 	${(props: ItemProps) => (props.hiddenRightButton || props.hiddenLeftButton) &&
@@ -97,7 +100,6 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 
 	public static defaultProps: ItemProps = getDefaultItemProps();
 
-	private _buttonScale: number = 0;
 	private _leftButton: any = null;
 	private _rightButton: any = null;
 	private _titlePadding: string = '';
@@ -109,22 +111,11 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 			'ui-item'
 		]);
 
-		this.bindCallbacks(
-			'computeButtonWidth'
-		);
-
-		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props);
-	}
-
-	private computeButtonWidth() {
-		const fontREM: number = Number(this.font().sizerem.replace('rem', ''));
-		const size = fontREM + (fontREM * this._buttonScale * 2);
-		return `${size}rem`;
+		this.componentWillReceiveProps(this.props);
 	}
 
 	public componentWillUpdate(nextProps: ItemProps) {
-
 		this._classes.onIf(nextProps.selected)(
 			'ui-selected'
 		);
@@ -133,26 +124,44 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 	}
 
 	public componentWillReceiveProps(nextProps: ItemProps) {
+		let width: string;
 
 		switch (nextProps.sizing) {
-			case Sizing.xsmall:
 			case Sizing.xxsmall:
 				this._titlePadding = '1px 2px';
-				this._buttonScale = 0.75;
+				width = '1.0em';
 				break;
 
-			case Sizing.large:
-			case Sizing.xlarge:
-			case Sizing.xxlarge:
-				this._titlePadding = '4px 8px';
-				this._buttonScale = 0.33;
+			case Sizing.xsmall:
+				this._titlePadding = '1px 2px';
+				width = '1.25em';
 				break;
 
 			case Sizing.small:
+				this._titlePadding = '2px 4px';
+				width = '2.0em';
+				break;
+
 			case Sizing.normal:
 			default:
 				this._titlePadding = '2px 4px';
-				this._buttonScale = 0.5;
+				width = '2.25em';
+				break;
+
+			case Sizing.large:
+				this._titlePadding = '4px 8px';
+				width = '3.0em';
+				break;
+
+			case Sizing.xlarge:
+				this._titlePadding = '4px 8px';
+				width = '3.5em';
+				break;
+
+			case Sizing.xxlarge:
+				this._titlePadding = '4px 8px';
+				width = '4.5em';
+				break;
 		}
 
 		if (nextProps.leftButton != null && !nextProps.disabled) {
@@ -160,7 +169,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 				<ItemViewButton
 					className="ui-item-button"
 					hiddenLeftButton={nextProps.hiddenLeftButton}
-					style={{width: this.computeButtonWidth()}}
+					width={width}
 				>
 					{React.cloneElement(nextProps.leftButton, {
 						sizing: nextProps.sizing
@@ -174,7 +183,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 				<ItemViewButton
 					className="ui-item-button"
 					hiddenRightButton={nextProps.hiddenRightButton}
-					style={{width: this.computeButtonWidth()}}
+					width={width}
 				>
 					{React.cloneElement(nextProps.rightButton, {
 						sizing: nextProps.sizing
