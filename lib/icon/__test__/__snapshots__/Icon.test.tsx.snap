@@ -1,25 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of an Icon control with icon 1`] = `
-<Icon__FontAwesome
-  className="ui-icon fa fa-fw fa-star test-class"
-  sizing="normal"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "backgroundColor": "blue",
-      "color": "red",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
     }
   }
-/>
+>
+  <Icon__FontAwesome
+    className="ui-icon fa fa-fw fa-star test-class"
+    sizing="normal"
+    style={
+      Object {
+        "backgroundColor": "blue",
+        "color": "red",
+      }
+    }
+  />
+</ThemeProvider>
 `;
 
 exports[`Test creation of an Icon control with image 1`] = `
-<Icon__Image
-  className="ui-icon"
-  sizing="normal"
-  src="./test-icon-image.png"
-  style={Object {}}
-/>
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#ffe11a",
+    }
+  }
+>
+  <Icon__Image
+    className="ui-icon"
+    sizing="normal"
+    src="./test-icon-image.png"
+    style={Object {}}
+  />
+</ThemeProvider>
 `;
 
 exports[`Test making the ButtonDialog invisible 1`] = `
@@ -51,16 +77,29 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   width=""
   xcss={null}
 >
-  <Icon__FontAwesome
-    className="ui-icon fa fa-fw fa-bomb"
-    sizing="normal"
-    style={Object {}}
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "hoverColor": "#ffe11a",
+      }
+    }
   >
-    <i
-      className="ui-icon fa fa-fw fa-bomb c0"
+    <Icon__FontAwesome
+      className="ui-icon fa fa-fw fa-bomb"
+      sizing="normal"
       style={Object {}}
-    />
-  </Icon__FontAwesome>
+    >
+      <i
+        className="ui-icon fa fa-fw fa-bomb c0"
+        style={Object {}}
+      />
+    </Icon__FontAwesome>
+  </ThemeProvider>
 </Icon>
 `;
 
@@ -118,15 +157,28 @@ exports[`Test the disabling of the Icon control 1`] = `
   width=""
   xcss={null}
 >
-  <Icon__FontAwesome
-    className="ui-icon fa fa-fw fa-bomb"
-    sizing="normal"
-    style={Object {}}
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "hoverColor": "#ffe11a",
+      }
+    }
   >
-    <i
-      className="ui-icon fa fa-fw fa-bomb c0"
+    <Icon__FontAwesome
+      className="ui-icon fa fa-fw fa-bomb"
+      sizing="normal"
       style={Object {}}
-    />
-  </Icon__FontAwesome>
+    >
+      <i
+        className="ui-icon fa fa-fw fa-bomb c0"
+        style={Object {}}
+      />
+    </Icon__FontAwesome>
+  </ThemeProvider>
 </Icon>
 `;

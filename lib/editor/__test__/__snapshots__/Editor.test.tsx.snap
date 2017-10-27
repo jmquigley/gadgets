@@ -141,16 +141,29 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-bold icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-bold icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-bold icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-bold icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>
@@ -219,16 +232,29 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-italic icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-italic icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-italic icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-italic icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>
@@ -297,16 +323,29 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-underline icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-underline icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-underline icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-underline icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>
@@ -375,16 +414,29 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-strikethrough icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-strikethrough icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-strikethrough icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-strikethrough icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>
@@ -453,16 +505,29 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-code icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-code icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-code icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-code icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>
@@ -577,16 +642,29 @@ exports[`Test creation of an Editor instance 1`] = `
                     width=""
                     xcss={null}
                   >
-                    <Icon__FontAwesome
-                      className="ui-icon fa fa-fw fa-header icon"
-                      sizing="small"
-                      style={Object {}}
+                    <ThemeProvider
+                      theme={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#004358",
+                          "color": "#000000",
+                          "headerBackgroundColor": "#004358",
+                          "headerForegroundColor": "#ffffff",
+                          "hoverColor": "#ffe11a",
+                        }
+                      }
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-header icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      <Icon__FontAwesome
+                        className="ui-icon fa fa-fw fa-header icon"
+                        sizing="small"
                         style={Object {}}
-                      />
-                    </Icon__FontAwesome>
+                      >
+                        <i
+                          className="ui-icon fa fa-fw fa-header icon Icon__FontAwesome-kBRBjz iQDhYj"
+                          style={Object {}}
+                        />
+                      </Icon__FontAwesome>
+                    </ThemeProvider>
                   </Icon>
                 </div>
               </Button>
@@ -2894,16 +2972,29 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-undo icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-undo icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-undo icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-undo icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>
@@ -2972,16 +3063,29 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-repeat icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-repeat icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-repeat icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-repeat icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>
@@ -4338,16 +4442,29 @@ exports[`Test creation of an Editor instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-refresh icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-refresh icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-refresh icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-refresh icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>

@@ -71,16 +71,29 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
       width=""
       xcss={null}
     >
-      <Icon__FontAwesome
-        className="ui-icon fa fa-fw fa-bomb"
-        sizing="normal"
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <i
-          className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz jFGZDN"
+        <Icon__FontAwesome
+          className="ui-icon fa fa-fw fa-bomb"
+          sizing="normal"
           style={Object {}}
-        />
-      </Icon__FontAwesome>
+        >
+          <i
+            className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz jFGZDN"
+            style={Object {}}
+          />
+        </Icon__FontAwesome>
+      </ThemeProvider>
     </Icon>
   </div>
 </ButtonText>
@@ -140,16 +153,29 @@ exports[`Test disabling of a ButtonText control 1`] = `
       width=""
       xcss={null}
     >
-      <Icon__FontAwesome
-        className="ui-icon fa fa-fw fa-bomb"
-        sizing="normal"
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <i
-          className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz jFGZDN"
+        <Icon__FontAwesome
+          className="ui-icon fa fa-fw fa-bomb"
+          sizing="normal"
           style={Object {}}
-        />
-      </Icon__FontAwesome>
+        >
+          <i
+            className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz jFGZDN"
+            style={Object {}}
+          />
+        </Icon__FontAwesome>
+      </ThemeProvider>
     </Icon>
     <div
       className="content right normal"
@@ -212,16 +238,29 @@ exports[`Test making a ButtonText control invisible 1`] = `
       width=""
       xcss={null}
     >
-      <Icon__FontAwesome
-        className="ui-icon fa fa-fw fa-bomb"
-        sizing="normal"
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <i
-          className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz jFGZDN"
+        <Icon__FontAwesome
+          className="ui-icon fa fa-fw fa-bomb"
+          sizing="normal"
           style={Object {}}
-        />
-      </Icon__FontAwesome>
+        >
+          <i
+            className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz jFGZDN"
+            style={Object {}}
+          />
+        </Icon__FontAwesome>
+      </ThemeProvider>
     </Icon>
     <div
       className="content right normal"

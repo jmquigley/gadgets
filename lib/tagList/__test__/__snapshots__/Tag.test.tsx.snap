@@ -209,16 +209,29 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-times icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-times icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>
@@ -400,16 +413,29 @@ exports[`Test making Tag invisible 1`] = `
                 width=""
                 xcss={null}
               >
-                <Icon__FontAwesome
-                  className="ui-icon fa fa-fw fa-times icon"
-                  sizing="small"
-                  style={Object {}}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "hoverColor": "#ffe11a",
+                    }
+                  }
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz iQDhYj"
+                  <Icon__FontAwesome
+                    className="ui-icon fa fa-fw fa-times icon"
+                    sizing="small"
                     style={Object {}}
-                  />
-                </Icon__FontAwesome>
+                  >
+                    <i
+                      className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz iQDhYj"
+                      style={Object {}}
+                    />
+                  </Icon__FontAwesome>
+                </ThemeProvider>
               </Icon>
             </div>
           </Button>

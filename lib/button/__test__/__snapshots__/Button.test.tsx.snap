@@ -51,16 +51,29 @@ exports[`Test Button click event 1`] = `
       width=""
       xcss={null}
     >
-      <Icon__FontAwesome
-        className="ui-icon fa fa-fw fa-bomb icon"
-        sizing="normal"
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <i
-          className="ui-icon fa fa-fw fa-bomb icon Icon__FontAwesome-kBRBjz jFGZDN"
+        <Icon__FontAwesome
+          className="ui-icon fa fa-fw fa-bomb icon"
+          sizing="normal"
           style={Object {}}
-        />
-      </Icon__FontAwesome>
+        >
+          <i
+            className="ui-icon fa fa-fw fa-bomb icon Icon__FontAwesome-kBRBjz jFGZDN"
+            style={Object {}}
+          />
+        </Icon__FontAwesome>
+      </ThemeProvider>
     </Icon>
   </div>
 </Button>
@@ -186,16 +199,29 @@ exports[`Test disabling of a Button 1`] = `
       width=""
       xcss={null}
     >
-      <Icon__FontAwesome
-        className="ui-icon fa fa-fw fa-bomb icon"
-        sizing="normal"
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <i
-          className="ui-icon fa fa-fw fa-bomb icon Icon__FontAwesome-kBRBjz jFGZDN"
+        <Icon__FontAwesome
+          className="ui-icon fa fa-fw fa-bomb icon"
+          sizing="normal"
           style={Object {}}
-        />
-      </Icon__FontAwesome>
+        >
+          <i
+            className="ui-icon fa fa-fw fa-bomb icon Icon__FontAwesome-kBRBjz jFGZDN"
+            style={Object {}}
+          />
+        </Icon__FontAwesome>
+      </ThemeProvider>
     </Icon>
   </div>
 </Button>
@@ -252,16 +278,29 @@ exports[`Test making a Button invisible 1`] = `
       width=""
       xcss={null}
     >
-      <Icon__FontAwesome
-        className="ui-icon fa fa-fw fa-bomb icon"
-        sizing="normal"
-        style={Object {}}
+      <ThemeProvider
+        theme={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#004358",
+            "color": "#000000",
+            "headerBackgroundColor": "#004358",
+            "headerForegroundColor": "#ffffff",
+            "hoverColor": "#ffe11a",
+          }
+        }
       >
-        <i
-          className="ui-icon fa fa-fw fa-bomb icon Icon__FontAwesome-kBRBjz jFGZDN"
+        <Icon__FontAwesome
+          className="ui-icon fa fa-fw fa-bomb icon"
+          sizing="normal"
           style={Object {}}
-        />
-      </Icon__FontAwesome>
+        >
+          <i
+            className="ui-icon fa fa-fw fa-bomb icon Icon__FontAwesome-kBRBjz jFGZDN"
+            style={Object {}}
+          />
+        </Icon__FontAwesome>
+      </ThemeProvider>
     </Icon>
   </div>
 </Button>

@@ -8,7 +8,7 @@
 [![NPM](https://img.shields.io/npm/v/gadgets.svg)](https://www.npmjs.com/package/gadgets)
 [![Coverage Status](https://coveralls.io/repos/github/jmquigley/gadgets/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/gadgets?branch=master)
 
-**This is a WIP experiment, don't use this right now.  It is volatile.**
+**This is a WIP experiment, don't use this right now.  It is volatile.  I'm using this to learn and practice react and some of the surrounding ecosystem**
 
 
 ## Installation

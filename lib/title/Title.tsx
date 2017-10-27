@@ -21,7 +21,10 @@
  * In `dominant` the title takes up 83% of the width (5/6)
  * In `none` the title takes up 100% of the width
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/title.png" width="60%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Sizing, Title, TitleLayout} from 'gadgets';
@@ -33,6 +36,7 @@
  * </Title>
  * ```
  *
+ * ## API
  * #### Events
  * N/A
  *

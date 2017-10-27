@@ -1,14 +1,17 @@
 /**
- * Generates elements that will be contained within the Accordion.  This
+ * Generates elements that will be contained within the `Accordion`.  This
  * will resolve to an `<li>` tag.  It represents each individual item
  * within the accordion.  It is the container for the content.  It can
  * also be thought of as a container for content.
  *
- * The `AccordionItem` represet a clickable header within this control.
+ * The `AccordionItem` represents a clickable header within this control.
  * It is derived from the ListItem/Item control, so it can have
  * buttons on the left/right side of title text.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/accordion.png" width="60%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Accordion, AccordionItem} from 'gadgets';

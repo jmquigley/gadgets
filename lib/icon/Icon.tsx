@@ -14,7 +14,10 @@
  * These are exposed through an enumeration named `Sizing` defined in the
  * global shared props.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/buttons-icons.png" width="60%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Icon, Sizing} from 'gadgets';
@@ -25,6 +28,7 @@
  * <Icon iconName="cab" color="red" backgroundColor="gray" />
  * ```
  *
+ * ## API
  * #### Events
  * None
  *
@@ -47,13 +51,14 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, {ThemeProvider} from 'styled-components';
 import {
 	BaseComponent,
 	BaseProps,
 	boxStyle,
 	fontStyle,
 	getDefaultBaseProps,
+	getTheme,
 	Sizing
 } from '../shared';
 
@@ -109,8 +114,10 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 	}
 
 	public render() {
+		let icon: any = null;
+
 		if (this.props.imageFile !== '') {
-			return (
+			icon = (
 				<Image
 					className={this.classes}
 					sizing={this.props.sizing}
@@ -119,7 +126,7 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 				/>
 			);
 		} else {
-			return (
+			icon = (
 				<FontAwesome
 					className={this.classes}
 					sizing={this.props.sizing}
@@ -127,5 +134,11 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 				/>
 			);
 		}
+
+		return (
+			<ThemeProvider theme={getTheme()}>
+				{icon}
+			</ThemeProvider>
+		);
 	}
 }
