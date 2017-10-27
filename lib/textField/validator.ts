@@ -1,6 +1,6 @@
 'use strict';
 
-import {regexEmail, regexURL} from 'util.toolbox';
+import {regexEmail, regexURL} from 'util.constants';
 
 export type ValidatorFn = (text: string, option?: any) => boolean;
 

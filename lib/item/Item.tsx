@@ -5,7 +5,8 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import styled, {ThemeProvider} from 'styled-components';
-import {nilEvent, sp} from 'util.toolbox';
+import {sp} from 'util.constants';
+import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,

@@ -86,8 +86,9 @@
 import {cloneDeep, omit} from 'lodash';
 import * as React from 'react';
 import {sprintf} from 'sprintf-js';
+import {sp} from 'util.constants';
 import {Keys} from 'util.keys';
-import {nil, nilEvent, sp} from 'util.toolbox';
+import {nil, nilEvent} from 'util.toolbox';
 import {Accordion, AccordionItem} from '../accordion';
 import {Button} from '../button';
 import {DialogBox, DialogBoxType} from '../dialogBox';
