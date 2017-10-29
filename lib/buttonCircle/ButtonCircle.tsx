@@ -40,10 +40,16 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
-import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent, Sizing} from '../shared';
+import {BaseButtonView, Button, ButtonProps, getDefaultButtonProps} from '../button';
+import {
+	BaseComponent,
+	borderStyle,
+	Color,
+	getTheme,
+	Sizing
+} from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface ButtonCircleProps extends ButtonProps {
 	onClick?: any;
@@ -56,53 +62,76 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 			onClick: nilEvent,
 			sizing: Sizing.normal,
 			style: {
-				backgroundColor: 'white',
-				borderColor: 'black',
-				color: 'black'
+				borderColor: Color.black
 			}
 		})
 	);
 }
 
+export const ButtonCircleContainerView: any = withProps<ButtonCircleProps, HTMLDivElement>(styled.div)`
+	${BaseButtonView}
+	height: unset;
+`;
+
+export const ButtonCircleInnerView: any = withProps<ButtonCircleProps, HTMLDivElement>(styled.div)`
+	border-radius: 4em;
+	display: inline-block;
+	height: ${props => props.height};
+	width: ${props => props.width};
+`;
+
+export const ButtonCircleView: any = withProps<ButtonCircleProps, HTMLDivElement>(styled(Button))`
+	border-radius: 4em;
+	padding: ${(props: ButtonCircleProps) => {
+		switch (props.sizing) {
+			case Sizing.xxsmall: return('0.05em 0.005em');
+			case Sizing.xsmall: return('0.08em 0.005em');
+			case Sizing.small: return('0.1em 0.005em');
+			case Sizing.large: return('0.175em 0');
+			case Sizing.xlarge: return('0.25em 0');
+			case Sizing.xxlarge: return('0.33em 0');
+
+			case Sizing.normal:
+			default:
+				return('0.125em 0');
+		}
+	}};
+
+	${(props: ButtonCircleProps) => props.sizing && borderStyle[props.sizing]}
+`;
+
 export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 
 	public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 
-	private _buttonStyles: ClassNames = new ClassNames();
-	private _containerStyles: ClassNames = new ClassNames();
-
 	constructor(props: ButtonCircleProps) {
-		super(props, require('./styles.css'), ButtonCircle.defaultProps.style);
+		super(props, {}, ButtonCircle.defaultProps.style);
 
-		this._buttonStyles.add([
-			this.borderStyle(),
-			this.styles.buttonCircleIcon
-		]);
-
-		this._containerStyles.add([
-			this.styles.buttonCircleContainer
-		]);
-
-		this._rootStyles.add([
-			'ui-button-circle',
-			this.styles.buttonCircle
+		this._classes.add([
+			'ui-button-circle'
 		]);
 
 		this.componentWillUpdate(props);
 	}
 
 	public render() {
+		const size: string = this.fontSizePX(this.props.sizing, 1.5);
+
 		return (
-			<div className={this._rootStyles.classnames}>
-				<div className={this._containerStyles.classnames}>
-					<Button
-						{...this.props}
-						className={this._buttonStyles.classnames}
-						iconName={this.props.iconName}
-						style={this.inlineStyles}
-					/>
-				</div>
-			</div>
+			<ThemeProvider theme={getTheme()}>
+				<ButtonCircleContainerView className={this.classes}>
+					<ButtonCircleInnerView
+						height={size}
+						width={size}
+					>
+						<ButtonCircleView
+							{...this.props}
+							iconName={this.props.iconName}
+							style={this.inlineStyles}
+						/>
+					</ButtonCircleInnerView>
+				</ButtonCircleContainerView>
+			</ThemeProvider>
 		);
 	}
 }

@@ -36,15 +36,18 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
+	DisabledCSS,
 	getDefaultBaseProps,
+	getTheme,
+	InvisibleCSS,
 	Sizing
 } from '../shared';
+import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
@@ -63,23 +66,41 @@ export function getDefaultButtonProps(): ButtonProps {
 	);
 }
 
+export const BaseButtonView: any = css`
+	align-items: center;
+	box-sizing: border-box;
+	cursor: default;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	line-height: inherit;
+	outline: none;
+	position: relative;
+	user-select: none;
+`;
+
+export const ButtonView: any = withProps<ButtonProps, HTMLDivElement>(styled.div)`
+	${BaseButtonView}
+
+	flex: 1;
+
+	&:not(.nohover):hover {
+		background-color: ${props => props.theme.hoverColor}  ${props => props.style.backgroundColor && '!important'};
+	}
+
+	${props => props.disabled && DisabledCSS}
+	${props => !props.visible && InvisibleCSS}
+`;
+
 export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	public static readonly defaultProps: ButtonProps = getDefaultButtonProps();
 
-	private _iconStyles: ClassNames = new ClassNames();
-
 	constructor(props: ButtonProps) {
-		super(props, require('./styles.css'), Button.defaultProps.style);
+		super(props, {}, Button.defaultProps.style);
 
-		this._iconStyles.add([
-			this.props.iconStyle,
-			this.styles.icon
-		]);
-
-		this._rootStyles.add([
-			'ui-button',
-			this.styles.button
+		this._classes.add([
+			'ui-button'
 		]);
 
 		this.bindCallbacks('handleClick');
@@ -96,7 +117,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ButtonProps) {
-		this._rootStyles.onIf(!nextProps.noripple && !nextProps.disabled)(
+		this._classes.onIf(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
 		);
 
@@ -105,17 +126,21 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	public render() {
 		return (
-			<div
-				className={this._rootStyles.classnames}
-				onClick={this.handleClick}
-				style={this.inlineStyles}
-			>
-				<Icon
-					className={this._iconStyles.classnames}
-					iconName={this.props.iconName}
-					sizing={this.props.sizing}
-				/>
-			</div>
+			<ThemeProvider theme={getTheme()}>
+				<ButtonView
+					disabled={this.props.disabled}
+					className={this.classes}
+					onClick={this.handleClick}
+					style={this.inlineStyles}
+					visible={this.props.visible}
+				>
+					<Icon
+						className={this.props.iconStyle}
+						iconName={this.props.iconName}
+						sizing={this.props.sizing}
+					/>
+				</ButtonView>
+			</ThemeProvider>
 		);
 	}
 }

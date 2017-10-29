@@ -7,7 +7,9 @@ import {
 	BaseProps,
 	Color,
 	Direction,
+	DisabledCSS,
 	getDefaultBaseProps,
+	InvisibleCSS,
 	Justify,
 	Location,
 	SortOrder,
@@ -15,6 +17,7 @@ import {
 } from './props';
 
 import {
+	borderStyle,
 	boxStyle,
 	fontStyle,
 	FontStyle,
@@ -34,15 +37,18 @@ import {
 export {
 	BaseComponent,
 	BaseProps,
+	borderStyle,
 	boxStyle,
 	Color,
 	defaultSize,
 	Direction,
+	DisabledCSS,
 	fontStyle,
 	FontStyle,
 	getDefaultBaseProps,
 	getTheme,
 	getThemeList,
+	InvisibleCSS,
 	Justify,
 	Location,
 	setTheme,

@@ -58,13 +58,15 @@
 import {cloneDeep} from 'lodash';
 import {isTesting} from 'util.env';
 import {Sizing} from './sizing';
+import {css} from './themed-components';
 
 export enum Color {
-	error = '#d9534f',
-	warning = '#f0ad4e',
-	success = '#5cb85c',
-	info = '#5bc0de',
 	black = '#000000',
+	error = '#d9534f',
+	info = '#5bc0de',
+	silver = '#c0c0c0',
+	success = '#5cb85c',
+	warning = '#f0ad4e',
 	white = '#ffffff'
 }
 
@@ -123,6 +125,7 @@ export interface BaseProps {
 	sizing?: Sizing;
 	style?: Styles;
 	testing?: boolean;
+	theme?: any;
 	visible?: boolean;
 	width?: string;
 	xcss?: any;
@@ -144,6 +147,7 @@ const defaultBaseProps: BaseProps = {
 	sizing: Sizing.normal,
 	style: {},
 	testing: isTesting(),
+	theme: {},
 	visible: true,
 	width: '',
 	xcss: null
@@ -152,3 +156,15 @@ const defaultBaseProps: BaseProps = {
 export function getDefaultBaseProps(): BaseProps {
 	return cloneDeep(defaultBaseProps);
 }
+
+export const DisabledCSS: any = css`
+	cursor: default;
+	opacity: 0.33;
+	overflow: hidden;
+	user-select: none;
+`;
+
+export const InvisibleCSS: any = css`
+	display: none !important;
+	width: 0 !important;
+`;

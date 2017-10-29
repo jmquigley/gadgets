@@ -78,6 +78,17 @@ export interface Styling {
 	rectStyle: string;
 }
 
+export const borderStyle: any = {
+	[Sizing.xxsmall]: css`border: solid 0.1em;`,
+	[Sizing.xsmall]: css`border: solid 0.1em;`,
+	[Sizing.small]: css`border: solid 0.125em;`,
+	[Sizing.medium]: css`border: solid 0.15em;`,
+	[Sizing.normal]: css`border: solid 0.15em;`,
+	[Sizing.large]: css`border: solid 0.2em;`,
+	[Sizing.xlarge]: css`border: solid 0.25em;`,
+	[Sizing.xxlarge]: css`border: solid 0.3em;`,
+	[Sizing.inherit]: css`border: inherit;`
+};
 export const boxStyle: any = {};
 export const fontStyle: any = {};
 

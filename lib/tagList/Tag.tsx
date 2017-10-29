@@ -34,6 +34,8 @@
 
 'use strict';
 
+// const debug = require('debug')('Tag');
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -45,6 +47,7 @@ import {
 	Color,
 	getDefaultBaseProps
 } from '../shared';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface TagProps extends BaseProps {
 	onClick?: any;
@@ -69,6 +72,16 @@ export function getDefaultTagProps(): TagProps {
 export interface TagState {
 	showDelete?: boolean;
 }
+
+export const StyledButtonCircle: any = styled(ButtonCircle)`
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+`;
+
+export const DeleteButtonView: any = withProps<TagProps, HTMLDivElement>(styled.div)`
+`;
 
 export class Tag extends BaseComponent<TagProps, TagState> {
 
@@ -132,10 +145,27 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	}
 
 	public render() {
-
 		this.tag = React.Children.map(this.props.children, (child: any) => {
 			return String(child);
 		}).join(' ');
+
+		let deleteButton: any = null;
+		if (this.props.usedelete) {
+			deleteButton = (
+					<StyledButtonCircle
+						disabled={this.props.disabled}
+						iconName="times"
+						onClick={this.handleOnClick}
+						sizing={this.prev().type}
+						style={{
+							backgroundColor: Color.white,
+							borderColor: Color.error,
+							color: Color.error
+						}}
+						visible={this.state.showDelete}
+					/>
+			);
+		}
 
 		return (
 			<div
@@ -149,21 +179,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 					text={this.tag}
 					visible={this.props.visible}
 				/>
-				{this.props.usedelete &&
-				<ButtonCircle
-					className={`${this.styles.tagDeleteButton} ${this.styles.middle}`}
-					disabled={this.props.disabled}
-					iconName="times"
-					onClick={this.handleOnClick}
-					sizing={this.prev().type}
-					style={{
-						backgroundColor: Color.white,
-						borderColor: Color.error,
-						color: Color.error
-					}}
-					visible={this.state.showDelete}
-				/>
-				}
+				{deleteButton}
 			</div>
 		);
 	}

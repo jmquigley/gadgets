@@ -350,6 +350,10 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 			this._rootStyles.on('nohover');
 		}
 
+		if ('nohover' in nextProps && nextProps['nohover']) {
+			this._classes.on('nohover');
+		}
+
 		if (!isEmpty(nextProps['style'])) {
 			this.inlineStyles = nextProps['style'];
 		}

@@ -92,13 +92,13 @@ export const AccordionItemView: any = styled.ul`
 	border-color: black;
 
 	> .ui-item, > .ui-item-button {
-		color: ${props => props.theme.headerForegroundColor || 'white'};
-		background-color: ${props => props.theme.headerBackgroundColor || 'black'};
+		color: ${(props: AccordionItemProps) => props.theme.headerForegroundColor || 'white'};
+		background-color: ${(props: AccordionItemProps) => props.theme.headerBackgroundColor || 'black'};
 	}
 
 	> .ui-item:hover {
-		color: #ffe11a;
-		background-color: ${props => props.theme.headerBackgroundColor || 'black'} !important;
+		color: ${(props: AccordionItemProps) => props.theme.hoverColor || 'silver'};
+		background-color: ${(props: AccordionItemProps) => props.theme.headerBackgroundColor || 'black'} !important;
 	}
 `;
 
