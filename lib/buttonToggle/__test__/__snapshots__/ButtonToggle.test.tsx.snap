@@ -32,6 +32,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
     }
   }
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -65,6 +66,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
   sizing="normal"
   style={Object {}}
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -100,67 +102,96 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
       }
     }
     testing={true}
+    theme={Object {}}
     visible={true}
     width=""
     xcss={null}
   >
-    <div
-      className="ui-button button normal ui-button-toggle buttonToggle normal"
-      onClick={[Function]}
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "inherit",
-          "color": "gray",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#004358",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "hoverColor": "#c0c0c0",
         }
       }
     >
-      <Icon
-        className="icon"
-        contentEditable={false}
-        direction="right"
+      <styled.div
+        className="ui-button ui-button-toggle buttonToggle normal"
         disabled={false}
-        focus={false}
-        height=""
-        iconName="star-o"
-        id=""
-        imageFile=""
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "gray",
+          }
+        }
         visible={true}
-        width=""
-        xcss={null}
       >
-        <ThemeProvider
-          theme={
+        <div
+          className="ui-button ui-button-toggle buttonToggle normal sc-bdVaJa ZVnQy"
+          disabled={false}
+          onClick={[Function]}
+          style={
             Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#004358",
-              "color": "#000000",
-              "headerBackgroundColor": "#004358",
-              "headerForegroundColor": "#ffffff",
-              "hoverColor": "#ffe11a",
+              "backgroundColor": "inherit",
+              "color": "gray",
             }
           }
         >
-          <Icon__FontAwesome
-            className="ui-icon fa fa-fw fa-star-o icon"
+          <Icon
+            className=""
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="star-o"
+            id=""
+            imageFile=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
             sizing="normal"
             style={Object {}}
+            testing={true}
+            theme={Object {}}
+            visible={true}
+            width=""
+            xcss={null}
           >
-            <i
-              className="ui-icon fa fa-fw fa-star-o icon Icon__FontAwesome-kBRBjz jFGZDN"
-              style={Object {}}
-            />
-          </Icon__FontAwesome>
-        </ThemeProvider>
-      </Icon>
-    </div>
+            <ThemeProvider
+              theme={
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#004358",
+                  "color": "#000000",
+                  "headerBackgroundColor": "#004358",
+                  "headerForegroundColor": "#ffffff",
+                  "hoverColor": "#c0c0c0",
+                }
+              }
+            >
+              <Icon__FontAwesome
+                className="ui-icon fa fa-fw fa-star-o"
+                sizing="normal"
+                style={Object {}}
+              >
+                <i
+                  className="ui-icon fa fa-fw fa-star-o Icon__FontAwesome-kBRBjz jFGZDN"
+                  style={Object {}}
+                />
+              </Icon__FontAwesome>
+            </ThemeProvider>
+          </Icon>
+        </div>
+      </styled.div>
+    </ThemeProvider>
   </Button>
 </ButtonToggle>
 `;
@@ -192,6 +223,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
   sizing="normal"
   style={Object {}}
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -227,67 +259,96 @@ exports[`Test disabling of a ButtonToggle 1`] = `
       }
     }
     testing={true}
+    theme={Object {}}
     visible={true}
     width=""
     xcss={null}
   >
-    <div
-      className="ui-button button normal ui-button-toggle buttonToggle normal disabled nohover disabled nohover"
-      onClick={[Function]}
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "inherit",
-          "color": "gray",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#004358",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "hoverColor": "#c0c0c0",
         }
       }
     >
-      <Icon
-        className="icon"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        iconName="bomb"
-        id=""
-        imageFile=""
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
+      <styled.div
+        className="ui-button ui-button-toggle buttonToggle normal disabled nohover"
+        disabled={true}
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "gray",
+          }
+        }
         visible={true}
-        width=""
-        xcss={null}
       >
-        <ThemeProvider
-          theme={
+        <div
+          className="ui-button ui-button-toggle buttonToggle normal disabled nohover sc-bdVaJa knPyKm"
+          disabled={true}
+          onClick={[Function]}
+          style={
             Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#004358",
-              "color": "#000000",
-              "headerBackgroundColor": "#004358",
-              "headerForegroundColor": "#ffffff",
-              "hoverColor": "#ffe11a",
+              "backgroundColor": "inherit",
+              "color": "gray",
             }
           }
         >
-          <Icon__FontAwesome
-            className="ui-icon fa fa-fw fa-bomb icon"
+          <Icon
+            className=""
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="bomb"
+            id=""
+            imageFile=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
             sizing="normal"
             style={Object {}}
+            testing={true}
+            theme={Object {}}
+            visible={true}
+            width=""
+            xcss={null}
           >
-            <i
-              className="ui-icon fa fa-fw fa-bomb icon Icon__FontAwesome-kBRBjz jFGZDN"
-              style={Object {}}
-            />
-          </Icon__FontAwesome>
-        </ThemeProvider>
-      </Icon>
-    </div>
+            <ThemeProvider
+              theme={
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#004358",
+                  "color": "#000000",
+                  "headerBackgroundColor": "#004358",
+                  "headerForegroundColor": "#ffffff",
+                  "hoverColor": "#c0c0c0",
+                }
+              }
+            >
+              <Icon__FontAwesome
+                className="ui-icon fa fa-fw fa-bomb"
+                sizing="normal"
+                style={Object {}}
+              >
+                <i
+                  className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz jFGZDN"
+                  style={Object {}}
+                />
+              </Icon__FontAwesome>
+            </ThemeProvider>
+          </Icon>
+        </div>
+      </styled.div>
+    </ThemeProvider>
   </Button>
 </ButtonToggle>
 `;
@@ -319,6 +380,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
   sizing="normal"
   style={Object {}}
   testing={true}
+  theme={Object {}}
   visible={false}
   width=""
   xcss={null}
@@ -354,67 +416,96 @@ exports[`Test making a ButtonToggle invisible 1`] = `
       }
     }
     testing={true}
+    theme={Object {}}
     visible={false}
     width=""
     xcss={null}
   >
-    <div
-      className="ui-button button normal ui-button-toggle buttonToggle normal invisible invisible"
-      onClick={[Function]}
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "inherit",
-          "color": "gray",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#004358",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "hoverColor": "#c0c0c0",
         }
       }
     >
-      <Icon
-        className="icon"
-        contentEditable={false}
-        direction="right"
+      <styled.div
+        className="ui-button ui-button-toggle buttonToggle normal invisible"
         disabled={false}
-        focus={false}
-        height=""
-        iconName="bomb"
-        id=""
-        imageFile=""
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        visible={true}
-        width=""
-        xcss={null}
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "inherit",
+            "color": "gray",
+          }
+        }
+        visible={false}
       >
-        <ThemeProvider
-          theme={
+        <div
+          className="ui-button ui-button-toggle buttonToggle normal invisible sc-bdVaJa fpHiRO"
+          disabled={false}
+          onClick={[Function]}
+          style={
             Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#004358",
-              "color": "#000000",
-              "headerBackgroundColor": "#004358",
-              "headerForegroundColor": "#ffffff",
-              "hoverColor": "#ffe11a",
+              "backgroundColor": "inherit",
+              "color": "gray",
             }
           }
         >
-          <Icon__FontAwesome
-            className="ui-icon fa fa-fw fa-bomb icon"
+          <Icon
+            className=""
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            focus={false}
+            height=""
+            iconName="bomb"
+            id=""
+            imageFile=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            selected={false}
             sizing="normal"
             style={Object {}}
+            testing={true}
+            theme={Object {}}
+            visible={true}
+            width=""
+            xcss={null}
           >
-            <i
-              className="ui-icon fa fa-fw fa-bomb icon Icon__FontAwesome-kBRBjz jFGZDN"
-              style={Object {}}
-            />
-          </Icon__FontAwesome>
-        </ThemeProvider>
-      </Icon>
-    </div>
+            <ThemeProvider
+              theme={
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#004358",
+                  "color": "#000000",
+                  "headerBackgroundColor": "#004358",
+                  "headerForegroundColor": "#ffffff",
+                  "hoverColor": "#c0c0c0",
+                }
+              }
+            >
+              <Icon__FontAwesome
+                className="ui-icon fa fa-fw fa-bomb"
+                sizing="normal"
+                style={Object {}}
+              >
+                <i
+                  className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz jFGZDN"
+                  style={Object {}}
+                />
+              </Icon__FontAwesome>
+            </ThemeProvider>
+          </Icon>
+        </div>
+      </styled.div>
+    </ThemeProvider>
   </Button>
 </ButtonToggle>
 `;
@@ -446,6 +537,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "testing": true,
+  "theme": Object {},
   "visible": true,
   "width": "",
   "xcss": null,

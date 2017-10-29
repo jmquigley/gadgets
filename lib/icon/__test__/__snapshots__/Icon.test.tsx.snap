@@ -9,7 +9,7 @@ exports[`Test creation of an Icon control with icon 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
-      "hoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
@@ -35,7 +35,7 @@ exports[`Test creation of an Icon control with image 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
-      "hoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
@@ -73,6 +73,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   sizing="normal"
   style={Object {}}
   testing={true}
+  theme={Object {}}
   visible={false}
   width=""
   xcss={null}
@@ -85,7 +86,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
-        "hoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
       }
     }
   >
@@ -122,6 +123,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "testing": true,
+  "theme": Object {},
   "visible": true,
   "width": "",
   "xcss": null,
@@ -153,6 +155,7 @@ exports[`Test the disabling of the Icon control 1`] = `
   sizing="normal"
   style={Object {}}
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -165,7 +168,7 @@ exports[`Test the disabling of the Icon control 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
-        "hoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
       }
     }
   >

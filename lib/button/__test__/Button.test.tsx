@@ -43,7 +43,7 @@ test('Test disabling of a Button', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
@@ -54,7 +54,7 @@ test('Test making a Button invisible', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
@@ -65,6 +65,6 @@ test('Test Button click event', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	expect(click).toHaveBeenCalled();
 });

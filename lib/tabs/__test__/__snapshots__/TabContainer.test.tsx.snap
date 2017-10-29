@@ -23,6 +23,7 @@ exports[`Create an empty TabContainer instance 1`] = `
   style={Object {}}
   tabWidth={75}
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -71,6 +72,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
   style={Object {}}
   tabWidth={75}
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -118,6 +120,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -147,6 +150,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width=""
@@ -179,6 +183,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width=""
@@ -211,6 +216,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width=""
@@ -259,6 +265,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width="75px"
@@ -292,6 +299,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width="75px"
@@ -325,6 +333,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width="75px"
@@ -335,6 +344,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
         ]
       }
       testing={true}
+      theme={Object {}}
       visible={true}
       width=""
       xcss={null}
@@ -370,6 +380,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -411,6 +422,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #1"
               visible={true}
               widget={
@@ -442,6 +454,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #1"
                   visible={true}
                   width="75px"
@@ -461,7 +474,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -502,6 +515,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #1"
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={
@@ -533,6 +547,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
@@ -585,6 +600,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #1"
+                        theme={Object {}}
                         title="tab #1"
                         useedit={false}
                         visible={true}
@@ -617,6 +633,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #1"
                             visible={true}
                             width="75px"
@@ -677,6 +694,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={
@@ -708,6 +726,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
@@ -775,63 +794,87 @@ exports[`Test TabContainer retrieval functions 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -868,6 +911,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -909,6 +953,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #2"
               visible={true}
               widget={
@@ -940,6 +985,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #2"
                   visible={true}
                   width="75px"
@@ -959,7 +1005,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -1000,6 +1046,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #2"
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={
@@ -1031,6 +1078,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
@@ -1083,6 +1131,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #2"
+                        theme={Object {}}
                         title="tab #2"
                         useedit={false}
                         visible={true}
@@ -1115,6 +1164,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #2"
                             visible={true}
                             width="75px"
@@ -1175,6 +1225,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={
@@ -1206,6 +1257,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
@@ -1273,63 +1325,87 @@ exports[`Test TabContainer retrieval functions 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -1366,6 +1442,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -1407,6 +1484,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #3"
               visible={true}
               widget={
@@ -1438,6 +1516,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #3"
                   visible={true}
                   width="75px"
@@ -1457,7 +1536,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -1498,6 +1577,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #3"
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={
@@ -1529,6 +1609,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
@@ -1581,6 +1662,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #3"
+                        theme={Object {}}
                         title="tab #3"
                         useedit={false}
                         visible={true}
@@ -1613,6 +1695,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #3"
                             visible={true}
                             width="75px"
@@ -1673,6 +1756,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={
@@ -1704,6 +1788,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
@@ -1771,63 +1856,87 @@ exports[`Test TabContainer retrieval functions 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -1861,6 +1970,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -1887,62 +1997,86 @@ exports[`Test TabContainer retrieval functions 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               visible={true}
               width=""
               xcss={null}
             >
-              <div
-                className="ui-button button ripple normal"
-                onClick={[Function]}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#c0c0c0",
+                  }
+                }
               >
-                <Icon
-                  className="icon"
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button ripple"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="chevron-left"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
+                  onClick={[Function]}
                   style={Object {}}
-                  testing={true}
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "hoverColor": "#ffe11a",
-                      }
-                    }
+                  <div
+                    className="ui-button ripple sc-bdVaJa sMRYP"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={Object {}}
                   >
-                    <Icon__FontAwesome
-                      className="ui-icon fa fa-fw fa-chevron-left icon"
+                    <Icon
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="chevron-left"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-chevron-left icon Icon__FontAwesome-kBRBjz jFGZDN"
-                        style={Object {}}
-                      />
-                    </Icon__FontAwesome>
-                  </ThemeProvider>
-                </Icon>
-              </div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <Icon__FontAwesome
+                          className="ui-icon fa fa-fw fa-chevron-left"
+                          sizing="normal"
+                          style={Object {}}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-chevron-left Icon__FontAwesome-kBRBjz jFGZDN"
+                            style={Object {}}
+                          />
+                        </Icon__FontAwesome>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Button>
             <Button
               className=""
@@ -1963,62 +2097,86 @@ exports[`Test TabContainer retrieval functions 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               visible={true}
               width=""
               xcss={null}
             >
-              <div
-                className="ui-button button ripple normal"
-                onClick={[Function]}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#c0c0c0",
+                  }
+                }
               >
-                <Icon
-                  className="icon"
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button ripple"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="chevron-right"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
+                  onClick={[Function]}
                   style={Object {}}
-                  testing={true}
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "hoverColor": "#ffe11a",
-                      }
-                    }
+                  <div
+                    className="ui-button ripple sc-bdVaJa sMRYP"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={Object {}}
                   >
-                    <Icon__FontAwesome
-                      className="ui-icon fa fa-fw fa-chevron-right icon"
+                    <Icon
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="chevron-right"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-chevron-right icon Icon__FontAwesome-kBRBjz jFGZDN"
-                        style={Object {}}
-                      />
-                    </Icon__FontAwesome>
-                  </ThemeProvider>
-                </Icon>
-              </div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <Icon__FontAwesome
+                          className="ui-icon fa fa-fw fa-chevron-right"
+                          sizing="normal"
+                          style={Object {}}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-chevron-right Icon__FontAwesome-kBRBjz jFGZDN"
+                            style={Object {}}
+                          />
+                        </Icon__FontAwesome>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Button>
           </div>
         </Component>
@@ -2062,6 +2220,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
   style={Object {}}
   tabWidth={75}
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -2109,6 +2268,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -2138,6 +2298,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width=""
@@ -2170,6 +2331,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width=""
@@ -2202,6 +2364,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width=""
@@ -2250,6 +2413,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width="75px"
@@ -2283,6 +2447,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width="75px"
@@ -2316,6 +2481,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width="75px"
@@ -2326,6 +2492,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
         ]
       }
       testing={true}
+      theme={Object {}}
       visible={true}
       width=""
       xcss={null}
@@ -2361,6 +2528,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -2402,6 +2570,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #1"
               visible={true}
               widget={false}
@@ -2416,7 +2585,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -2457,6 +2626,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #1"
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={false}
@@ -2504,6 +2674,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #1"
+                        theme={Object {}}
                         title="tab #1"
                         useedit={false}
                         visible={true}
@@ -2560,6 +2731,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={false}
@@ -2628,6 +2800,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -2669,6 +2842,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #2"
               visible={true}
               widget={false}
@@ -2683,7 +2857,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -2724,6 +2898,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #2"
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={false}
@@ -2771,6 +2946,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #2"
+                        theme={Object {}}
                         title="tab #2"
                         useedit={false}
                         visible={true}
@@ -2827,6 +3003,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={false}
@@ -2895,6 +3072,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -2936,6 +3114,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #3"
               visible={true}
               widget={false}
@@ -2950,7 +3129,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -2991,6 +3170,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #3"
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={false}
@@ -3038,6 +3218,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #3"
+                        theme={Object {}}
                         title="tab #3"
                         useedit={false}
                         visible={true}
@@ -3094,6 +3275,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={false}
@@ -3159,6 +3341,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -3222,6 +3405,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         style={Object {}}
         tabWidth={75}
         testing={true}
+        theme={Object {}}
         visible={false}
         width=""
         xcss={null}
@@ -3251,6 +3435,7 @@ exports[`Test making the TabContainer invisible 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width=""
@@ -3283,6 +3468,7 @@ exports[`Test making the TabContainer invisible 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width=""
@@ -3315,6 +3501,7 @@ exports[`Test making the TabContainer invisible 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width=""
@@ -3363,6 +3550,7 @@ exports[`Test making the TabContainer invisible 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -3396,6 +3584,7 @@ exports[`Test making the TabContainer invisible 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -3429,6 +3618,7 @@ exports[`Test making the TabContainer invisible 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -3439,6 +3629,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       ]
     }
     testing={true}
+    theme={Object {}}
     visible={false}
     width=""
     xcss={null}
@@ -3468,6 +3659,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #1"
       visible={true}
       width=""
@@ -3500,6 +3692,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #2"
       visible={true}
       width=""
@@ -3532,6 +3725,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #3"
       visible={true}
       width=""
@@ -3570,6 +3764,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
   style={Object {}}
   tabWidth={75}
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -3617,6 +3812,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -3646,6 +3842,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width=""
@@ -3678,6 +3875,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width=""
@@ -3710,6 +3908,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width=""
@@ -3758,6 +3957,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width="75px"
@@ -3791,6 +3991,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width="75px"
@@ -3824,6 +4025,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width="75px"
@@ -3834,6 +4036,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
         ]
       }
       testing={true}
+      theme={Object {}}
       visible={true}
       width=""
       xcss={null}
@@ -3869,6 +4072,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -3910,6 +4114,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #1"
               visible={true}
               widget={
@@ -3941,6 +4146,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #1"
                   visible={true}
                   width="75px"
@@ -3960,7 +4166,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -4001,6 +4207,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #1"
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={
@@ -4032,6 +4239,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
@@ -4084,6 +4292,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #1"
+                        theme={Object {}}
                         title="tab #1"
                         useedit={false}
                         visible={true}
@@ -4116,6 +4325,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #1"
                             visible={true}
                             width="75px"
@@ -4176,6 +4386,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={
@@ -4207,6 +4418,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
@@ -4274,63 +4486,87 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -4367,6 +4603,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -4408,6 +4645,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #2"
               visible={true}
               widget={
@@ -4439,6 +4677,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #2"
                   visible={true}
                   width="75px"
@@ -4458,7 +4697,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -4499,6 +4738,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #2"
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={
@@ -4530,6 +4770,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
@@ -4582,6 +4823,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #2"
+                        theme={Object {}}
                         title="tab #2"
                         useedit={false}
                         visible={true}
@@ -4614,6 +4856,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #2"
                             visible={true}
                             width="75px"
@@ -4674,6 +4917,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={
@@ -4705,6 +4949,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
@@ -4772,63 +5017,87 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -4865,6 +5134,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -4906,6 +5176,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #3"
               visible={true}
               widget={
@@ -4937,6 +5208,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #3"
                   visible={true}
                   width="75px"
@@ -4956,7 +5228,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -4997,6 +5269,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #3"
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={
@@ -5028,6 +5301,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
@@ -5080,6 +5354,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #3"
+                        theme={Object {}}
                         title="tab #3"
                         useedit={false}
                         visible={true}
@@ -5112,6 +5387,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #3"
                             visible={true}
                             width="75px"
@@ -5172,6 +5448,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={
@@ -5203,6 +5480,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
@@ -5270,63 +5548,87 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -5360,6 +5662,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -5386,62 +5689,86 @@ exports[`Test removing the first item from the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               visible={true}
               width=""
               xcss={null}
             >
-              <div
-                className="ui-button button ripple normal"
-                onClick={[Function]}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#c0c0c0",
+                  }
+                }
               >
-                <Icon
-                  className="icon"
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button ripple"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="chevron-left"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
+                  onClick={[Function]}
                   style={Object {}}
-                  testing={true}
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "hoverColor": "#ffe11a",
-                      }
-                    }
+                  <div
+                    className="ui-button ripple sc-bdVaJa sMRYP"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={Object {}}
                   >
-                    <Icon__FontAwesome
-                      className="ui-icon fa fa-fw fa-chevron-left icon"
+                    <Icon
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="chevron-left"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-chevron-left icon Icon__FontAwesome-kBRBjz jFGZDN"
-                        style={Object {}}
-                      />
-                    </Icon__FontAwesome>
-                  </ThemeProvider>
-                </Icon>
-              </div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <Icon__FontAwesome
+                          className="ui-icon fa fa-fw fa-chevron-left"
+                          sizing="normal"
+                          style={Object {}}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-chevron-left Icon__FontAwesome-kBRBjz jFGZDN"
+                            style={Object {}}
+                          />
+                        </Icon__FontAwesome>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Button>
             <Button
               className=""
@@ -5462,62 +5789,86 @@ exports[`Test removing the first item from the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               visible={true}
               width=""
               xcss={null}
             >
-              <div
-                className="ui-button button ripple normal"
-                onClick={[Function]}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#c0c0c0",
+                  }
+                }
               >
-                <Icon
-                  className="icon"
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button ripple"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="chevron-right"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
+                  onClick={[Function]}
                   style={Object {}}
-                  testing={true}
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "hoverColor": "#ffe11a",
-                      }
-                    }
+                  <div
+                    className="ui-button ripple sc-bdVaJa sMRYP"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={Object {}}
                   >
-                    <Icon__FontAwesome
-                      className="ui-icon fa fa-fw fa-chevron-right icon"
+                    <Icon
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="chevron-right"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-chevron-right icon Icon__FontAwesome-kBRBjz jFGZDN"
-                        style={Object {}}
-                      />
-                    </Icon__FontAwesome>
-                  </ThemeProvider>
-                </Icon>
-              </div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <Icon__FontAwesome
+                          className="ui-icon fa fa-fw fa-chevron-right"
+                          sizing="normal"
+                          style={Object {}}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-chevron-right Icon__FontAwesome-kBRBjz jFGZDN"
+                            style={Object {}}
+                          />
+                        </Icon__FontAwesome>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Button>
           </div>
         </Component>
@@ -5562,6 +5913,7 @@ Object {
   "style": Object {},
   "tabWidth": 75,
   "testing": true,
+  "theme": Object {},
   "visible": true,
   "width": "",
   "xcss": null,
@@ -5591,6 +5943,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
   style={Object {}}
   tabWidth={75}
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -5638,6 +5991,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -5667,6 +6021,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width=""
@@ -5699,6 +6054,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width=""
@@ -5731,6 +6087,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width=""
@@ -5779,6 +6136,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width="75px"
@@ -5812,6 +6170,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width="75px"
@@ -5845,6 +6204,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width="75px"
@@ -5855,6 +6215,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
         ]
       }
       testing={true}
+      theme={Object {}}
       visible={true}
       width=""
       xcss={null}
@@ -5890,6 +6251,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -5931,6 +6293,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #1"
               visible={true}
               widget={
@@ -5962,6 +6325,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #1"
                   visible={true}
                   width="75px"
@@ -5981,7 +6345,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -6022,6 +6386,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #1"
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={
@@ -6053,6 +6418,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
@@ -6105,6 +6471,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #1"
+                        theme={Object {}}
                         title="tab #1"
                         useedit={false}
                         visible={true}
@@ -6137,6 +6504,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #1"
                             visible={true}
                             width="75px"
@@ -6197,6 +6565,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={
@@ -6228,6 +6597,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
@@ -6295,63 +6665,87 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -6388,6 +6782,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -6429,6 +6824,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #2"
               visible={true}
               widget={
@@ -6460,6 +6856,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #2"
                   visible={true}
                   width="75px"
@@ -6479,7 +6876,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -6520,6 +6917,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #2"
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={
@@ -6551,6 +6949,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
@@ -6603,6 +7002,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #2"
+                        theme={Object {}}
                         title="tab #2"
                         useedit={false}
                         visible={true}
@@ -6635,6 +7035,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #2"
                             visible={true}
                             width="75px"
@@ -6695,6 +7096,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={
@@ -6726,6 +7128,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
@@ -6793,63 +7196,87 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -6886,6 +7313,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -6927,6 +7355,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #3"
               visible={true}
               widget={
@@ -6958,6 +7387,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #3"
                   visible={true}
                   width="75px"
@@ -6977,7 +7407,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -7018,6 +7448,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #3"
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={
@@ -7049,6 +7480,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
@@ -7101,6 +7533,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #3"
+                        theme={Object {}}
                         title="tab #3"
                         useedit={false}
                         visible={true}
@@ -7133,6 +7566,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #3"
                             visible={true}
                             width="75px"
@@ -7193,6 +7627,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={
@@ -7224,6 +7659,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
@@ -7291,63 +7727,87 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -7381,6 +7841,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -7407,62 +7868,86 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               visible={true}
               width=""
               xcss={null}
             >
-              <div
-                className="ui-button button ripple normal"
-                onClick={[Function]}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#c0c0c0",
+                  }
+                }
               >
-                <Icon
-                  className="icon"
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button ripple"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="chevron-left"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
+                  onClick={[Function]}
                   style={Object {}}
-                  testing={true}
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "hoverColor": "#ffe11a",
-                      }
-                    }
+                  <div
+                    className="ui-button ripple sc-bdVaJa sMRYP"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={Object {}}
                   >
-                    <Icon__FontAwesome
-                      className="ui-icon fa fa-fw fa-chevron-left icon"
+                    <Icon
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="chevron-left"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-chevron-left icon Icon__FontAwesome-kBRBjz jFGZDN"
-                        style={Object {}}
-                      />
-                    </Icon__FontAwesome>
-                  </ThemeProvider>
-                </Icon>
-              </div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <Icon__FontAwesome
+                          className="ui-icon fa fa-fw fa-chevron-left"
+                          sizing="normal"
+                          style={Object {}}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-chevron-left Icon__FontAwesome-kBRBjz jFGZDN"
+                            style={Object {}}
+                          />
+                        </Icon__FontAwesome>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Button>
             <Button
               className=""
@@ -7483,62 +7968,86 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               visible={true}
               width=""
               xcss={null}
             >
-              <div
-                className="ui-button button ripple normal"
-                onClick={[Function]}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#c0c0c0",
+                  }
+                }
               >
-                <Icon
-                  className="icon"
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button ripple"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="chevron-right"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
+                  onClick={[Function]}
                   style={Object {}}
-                  testing={true}
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "hoverColor": "#ffe11a",
-                      }
-                    }
+                  <div
+                    className="ui-button ripple sc-bdVaJa sMRYP"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={Object {}}
                   >
-                    <Icon__FontAwesome
-                      className="ui-icon fa fa-fw fa-chevron-right icon"
+                    <Icon
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="chevron-right"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-chevron-right icon Icon__FontAwesome-kBRBjz jFGZDN"
-                        style={Object {}}
-                      />
-                    </Icon__FontAwesome>
-                  </ThemeProvider>
-                </Icon>
-              </div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <Icon__FontAwesome
+                          className="ui-icon fa fa-fw fa-chevron-right"
+                          sizing="normal"
+                          style={Object {}}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-chevron-right Icon__FontAwesome-kBRBjz jFGZDN"
+                            style={Object {}}
+                          />
+                        </Icon__FontAwesome>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Button>
           </div>
         </Component>
@@ -7582,6 +8091,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
   style={Object {}}
   tabWidth={75}
   testing={true}
+  theme={Object {}}
   visible={true}
   width=""
   xcss={null}
@@ -7629,6 +8139,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -7658,6 +8169,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width=""
@@ -7690,6 +8202,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width=""
@@ -7722,6 +8235,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width=""
@@ -7770,6 +8284,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #1"
             visible={true}
             width="75px"
@@ -7803,6 +8318,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #2"
             visible={true}
             width="75px"
@@ -7836,6 +8352,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             sizing="normal"
             style={Object {}}
             testing={true}
+            theme={Object {}}
             title="tab #3"
             visible={true}
             width="75px"
@@ -7846,6 +8363,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
         ]
       }
       testing={true}
+      theme={Object {}}
       visible={true}
       width=""
       xcss={null}
@@ -7881,6 +8399,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -7922,6 +8441,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #1"
               visible={true}
               widget={
@@ -7953,6 +8473,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #1"
                   visible={true}
                   width="75px"
@@ -7972,7 +8493,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -8013,6 +8534,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #1"
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={
@@ -8044,6 +8566,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
@@ -8096,6 +8619,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #1"
+                        theme={Object {}}
                         title="tab #1"
                         useedit={false}
                         visible={true}
@@ -8128,6 +8652,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #1"
                             visible={true}
                             width="75px"
@@ -8188,6 +8713,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #1"
                       visible={true}
                       widget={
@@ -8219,6 +8745,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
@@ -8286,63 +8813,87 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #1"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -8379,6 +8930,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -8420,6 +8972,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #2"
               visible={true}
               widget={
@@ -8451,6 +9004,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #2"
                   visible={true}
                   width="75px"
@@ -8470,7 +9024,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -8511,6 +9065,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #2"
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={
@@ -8542,6 +9097,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
@@ -8594,6 +9150,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #2"
+                        theme={Object {}}
                         title="tab #2"
                         useedit={false}
                         visible={true}
@@ -8626,6 +9183,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #2"
                             visible={true}
                             width="75px"
@@ -8686,6 +9244,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #2"
                       visible={true}
                       widget={
@@ -8717,6 +9276,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
@@ -8784,63 +9344,87 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #2"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -8877,6 +9461,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -8918,6 +9503,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               title="tab #3"
               visible={true}
               widget={
@@ -8949,6 +9535,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  theme={Object {}}
                   title="tab #3"
                   visible={true}
                   width="75px"
@@ -8968,7 +9555,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
-                    "hoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
                   }
                 }
               >
@@ -9009,6 +9596,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       style={Object {}}
                       testing={true}
                       text="tab #3"
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={
@@ -9040,6 +9628,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
@@ -9092,6 +9681,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                         style={Object {}}
                         testing={true}
                         text="tab #3"
+                        theme={Object {}}
                         title="tab #3"
                         useedit={false}
                         visible={true}
@@ -9124,6 +9714,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             sizing="normal"
                             style={Object {}}
                             testing={true}
+                            theme={Object {}}
                             title="tab #3"
                             visible={true}
                             width="75px"
@@ -9184,6 +9775,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       sizing="normal"
                       style={Object {}}
                       testing={true}
+                      theme={Object {}}
                       title="tab #3"
                       visible={true}
                       widget={
@@ -9215,6 +9807,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
@@ -9282,63 +9875,87 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                           sizing="normal"
                           style={Object {}}
                           testing={true}
+                          theme={Object {}}
                           title="tab #3"
                           visible={true}
                           width="75px"
                           xcss={null}
                         >
-                          <div
-                            className="ui-button button ripple normal"
-                            onClick={[Function]}
-                            style={Object {}}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#004358",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "hoverColor": "#c0c0c0",
+                              }
+                            }
                           >
-                            <Icon
-                              className="icon"
-                              contentEditable={false}
-                              direction="right"
+                            <styled.div
+                              className="ui-button ripple"
                               disabled={false}
-                              focus={false}
-                              height=""
-                              iconName="times"
-                              id=""
-                              imageFile=""
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              selected={false}
-                              sizing="normal"
+                              onClick={[Function]}
                               style={Object {}}
-                              testing={true}
                               visible={true}
-                              width=""
-                              xcss={null}
                             >
-                              <ThemeProvider
-                                theme={
-                                  Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#004358",
-                                    "color": "#000000",
-                                    "headerBackgroundColor": "#004358",
-                                    "headerForegroundColor": "#ffffff",
-                                    "hoverColor": "#ffe11a",
-                                  }
-                                }
+                              <div
+                                className="ui-button ripple sc-bdVaJa sMRYP"
+                                disabled={false}
+                                onClick={[Function]}
+                                style={Object {}}
                               >
-                                <Icon__FontAwesome
-                                  className="ui-icon fa fa-fw fa-times icon"
+                                <Icon
+                                  className=""
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="normal"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
-                                  <i
-                                    className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz jFGZDN"
-                                    style={Object {}}
-                                  />
-                                </Icon__FontAwesome>
-                              </ThemeProvider>
-                            </Icon>
-                          </div>
+                                  <ThemeProvider
+                                    theme={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#004358",
+                                        "color": "#000000",
+                                        "headerBackgroundColor": "#004358",
+                                        "headerForegroundColor": "#ffffff",
+                                        "hoverColor": "#c0c0c0",
+                                      }
+                                    }
+                                  >
+                                    <Icon__FontAwesome
+                                      className="ui-icon fa fa-fw fa-times"
+                                      sizing="normal"
+                                      style={Object {}}
+                                    >
+                                      <i
+                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz jFGZDN"
+                                        style={Object {}}
+                                      />
+                                    </Icon__FontAwesome>
+                                  </ThemeProvider>
+                                </Icon>
+                              </div>
+                            </styled.div>
+                          </ThemeProvider>
                         </Button>
                       </div>
                     </Title__StyledWidget>
@@ -9372,6 +9989,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           style={Object {}}
           tabWidth={75}
           testing={true}
+          theme={Object {}}
           visible={true}
           width=""
           xcss={null}
@@ -9398,62 +10016,86 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               visible={true}
               width=""
               xcss={null}
             >
-              <div
-                className="ui-button button ripple normal"
-                onClick={[Function]}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#c0c0c0",
+                  }
+                }
               >
-                <Icon
-                  className="icon"
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button ripple"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="chevron-left"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
+                  onClick={[Function]}
                   style={Object {}}
-                  testing={true}
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "hoverColor": "#ffe11a",
-                      }
-                    }
+                  <div
+                    className="ui-button ripple sc-bdVaJa sMRYP"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={Object {}}
                   >
-                    <Icon__FontAwesome
-                      className="ui-icon fa fa-fw fa-chevron-left icon"
+                    <Icon
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="chevron-left"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-chevron-left icon Icon__FontAwesome-kBRBjz jFGZDN"
-                        style={Object {}}
-                      />
-                    </Icon__FontAwesome>
-                  </ThemeProvider>
-                </Icon>
-              </div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <Icon__FontAwesome
+                          className="ui-icon fa fa-fw fa-chevron-left"
+                          sizing="normal"
+                          style={Object {}}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-chevron-left Icon__FontAwesome-kBRBjz jFGZDN"
+                            style={Object {}}
+                          />
+                        </Icon__FontAwesome>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Button>
             <Button
               className=""
@@ -9474,62 +10116,86 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
               sizing="normal"
               style={Object {}}
               testing={true}
+              theme={Object {}}
               visible={true}
               width=""
               xcss={null}
             >
-              <div
-                className="ui-button button ripple normal"
-                onClick={[Function]}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "hoverColor": "#c0c0c0",
+                  }
+                }
               >
-                <Icon
-                  className="icon"
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button ripple"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="chevron-right"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
+                  onClick={[Function]}
                   style={Object {}}
-                  testing={true}
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "hoverColor": "#ffe11a",
-                      }
-                    }
+                  <div
+                    className="ui-button ripple sc-bdVaJa sMRYP"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={Object {}}
                   >
-                    <Icon__FontAwesome
-                      className="ui-icon fa fa-fw fa-chevron-right icon"
+                    <Icon
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="chevron-right"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-chevron-right icon Icon__FontAwesome-kBRBjz jFGZDN"
-                        style={Object {}}
-                      />
-                    </Icon__FontAwesome>
-                  </ThemeProvider>
-                </Icon>
-              </div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <Icon__FontAwesome
+                          className="ui-icon fa fa-fw fa-chevron-right"
+                          sizing="normal"
+                          style={Object {}}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-chevron-right Icon__FontAwesome-kBRBjz jFGZDN"
+                            style={Object {}}
+                          />
+                        </Icon__FontAwesome>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
             </Button>
           </div>
         </Component>
@@ -9598,6 +10264,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         style={Object {}}
         tabWidth={75}
         testing={true}
+        theme={Object {}}
         visible={true}
         width=""
         xcss={null}
@@ -9627,6 +10294,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width=""
@@ -9659,6 +10327,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width=""
@@ -9691,6 +10360,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width=""
@@ -9739,6 +10409,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -9772,6 +10443,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -9805,6 +10477,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -9815,6 +10488,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       ]
     }
     testing={true}
+    theme={Object {}}
     visible={true}
     width=""
     xcss={null}
@@ -9844,6 +10518,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #1"
       visible={true}
       width=""
@@ -9876,6 +10551,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #2"
       visible={true}
       width=""
@@ -9908,6 +10584,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #3"
       visible={true}
       width=""
@@ -9963,6 +10640,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         style={Object {}}
         tabWidth={75}
         testing={true}
+        theme={Object {}}
         visible={true}
         width=""
         xcss={null}
@@ -9992,6 +10670,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width=""
@@ -10024,6 +10703,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width=""
@@ -10056,6 +10736,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width=""
@@ -10108,6 +10789,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -10141,6 +10823,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -10174,6 +10857,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -10184,6 +10868,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       ]
     }
     testing={true}
+    theme={Object {}}
     visible={true}
     width=""
     xcss={null}
@@ -10213,6 +10898,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #1"
       visible={true}
       width=""
@@ -10245,6 +10931,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #2"
       visible={true}
       width=""
@@ -10277,6 +10964,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #3"
       visible={true}
       width=""
@@ -10340,6 +11028,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         style={Object {}}
         tabWidth={75}
         testing={true}
+        theme={Object {}}
         visible={true}
         width=""
         xcss={null}
@@ -10369,6 +11058,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width=""
@@ -10401,6 +11091,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width=""
@@ -10433,6 +11124,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width=""
@@ -10485,6 +11177,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -10518,6 +11211,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -10551,6 +11245,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -10561,6 +11256,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       ]
     }
     testing={true}
+    theme={Object {}}
     visible={true}
     width=""
     xcss={null}
@@ -10590,6 +11286,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #1"
       visible={true}
       width=""
@@ -10622,6 +11319,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #2"
       visible={true}
       width=""
@@ -10654,6 +11352,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #3"
       visible={true}
       width=""
@@ -10709,6 +11408,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         style={Object {}}
         tabWidth={75}
         testing={true}
+        theme={Object {}}
         visible={true}
         width=""
         xcss={null}
@@ -10738,6 +11438,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width=""
@@ -10770,6 +11471,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width=""
@@ -10802,6 +11504,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width=""
@@ -10850,6 +11553,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #1"
           visible={true}
           width="75px"
@@ -10883,6 +11587,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #2"
           visible={true}
           width="75px"
@@ -10916,6 +11621,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
+          theme={Object {}}
           title="tab #3"
           visible={true}
           width="75px"
@@ -10926,6 +11632,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       ]
     }
     testing={true}
+    theme={Object {}}
     visible={true}
     width=""
     xcss={null}
@@ -10955,6 +11662,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #1"
       visible={true}
       width=""
@@ -10987,6 +11695,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #2"
       visible={true}
       width=""
@@ -11019,6 +11728,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="tab #3"
       visible={true}
       width=""

@@ -35,6 +35,7 @@ Object {
   "stacked": false,
   "style": Object {},
   "testing": true,
+  "theme": Object {},
   "title": "​",
   "useedit": false,
   "visible": true,
@@ -53,12 +54,12 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
-      "hoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
   <Item
-    className="ui-list-header"
+    className="ui-list-header nohover"
     contentEditable={false}
     direction="right"
     disabled={false}
@@ -98,6 +99,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
       }
     }
     testing={true}
+    theme={Object {}}
     title="test title"
     useedit={false}
     visible={true}

@@ -15,7 +15,7 @@
  * global shared props.
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/buttons-icons.png" width="60%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/buttons-icons.png" width="70%" />
  *
  * ## Examples:
  *

@@ -52,7 +52,7 @@ test('Test the disabling of the ButtonDialog control', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	assert(!ctl.state('visible'));
 });
 
@@ -66,7 +66,7 @@ test('Test making the ButtonDialog invisible', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	assert(!ctl.state('visible'));
 });
 
@@ -84,7 +84,7 @@ test('Test the click event on a ButtonDialog control', () => {
 	assert(ctl.prop('visible'));
 	assert(ctl.contains(<p>Dialog test</p>));
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	assert(ctl.state('visible'));
 });
 
@@ -98,6 +98,6 @@ test('Test opening the button dialog window', () => {
 	assert(ctl);
 
 	assert(ctl.contains(<p>Dialog test</p>));
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	assert(ctl.state('visible'));
 });

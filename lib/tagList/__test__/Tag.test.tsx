@@ -31,7 +31,7 @@ test('Test disabling of the simple Tag instance', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	assert(!click.calledOnce);
 });
 
@@ -59,7 +59,7 @@ test('Test hiding/showing the delete button in Tag', () => {
 	assert(ctl);
 	ctl.find('.ui-tag').simulate('mouseOver');
 	assert(ctl.state('showDelete'));
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	assert(ondelete.calledOnce);
 	assert(ondelete.calledWith(tag));
 });

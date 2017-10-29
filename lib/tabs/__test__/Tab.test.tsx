@@ -73,7 +73,7 @@ test('Test the click handler in the Tab instance', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-label').simulate('click');
+	ctl.find('.ui-label').first().simulate('click');
 	assert(click.calledOnce);
 });
 
@@ -96,7 +96,7 @@ test('Test the close click handler on a Tab instance', () => {
 	expect(ctl).toMatchSnapshot();
 
 	assert(!ctl.state('hidden'));
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	assert(hiddenHandler.calledOnce);
 	assert(hiddenHandler.calledWith(ctl.instance()));
 

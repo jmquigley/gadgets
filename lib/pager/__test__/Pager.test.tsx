@@ -172,7 +172,7 @@ test('Test selection of the second page in the control', () => {
 	assert(pager);
 
 	// Number of button controls in this instance
-	assert.equal(ctl.find('.ui-button').length, 5);
+	assert.equal(ctl.find('.ui-button').length, 10);
 	assert.equal(ctl.find('.ui-button-text').length, 3);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
@@ -202,7 +202,7 @@ test('Test pressing the "<<" (first) button', () => {
 	assert.equal(pager.state.pageSize, 25);
 
 	// Number of button controls in this instance
-	assert.equal(ctl.find('.ui-button').length, 5);
+	assert.equal(ctl.find('.ui-button').length, 10);
 	assert.equal(ctl.find('.ui-button-text').length, 3);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
@@ -231,12 +231,12 @@ test('Test pressing the "<" (previous) button', () => {
 	assert.equal(pager.state.pageSize, 25);
 
 	// Number of button controls in this instance
-	assert.equal(ctl.find('.ui-button').length, 5);
+	assert.equal(ctl.find('.ui-button').length, 10);
 	assert.equal(ctl.find('.ui-button-text').length, 3);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
 	// Select the first button "<" move from 3 -> 2
-	ctl.find('.ui-button').at(1).simulate('click');
+	ctl.find('.ui-button').at(2).simulate('click');
 	expect(select).toHaveBeenCalled();
 	assert.equal(select.mock.calls[0][0], 2);
 });
@@ -259,12 +259,12 @@ test('Test pressing the ">" (next) button', () => {
 	assert.equal(pager.state.pageSize, 25);
 
 	// Number of button controls in this instance
-	assert.equal(ctl.find('.ui-button').length, 5);
+	assert.equal(ctl.find('.ui-button').length, 10);
 	assert.equal(ctl.find('.ui-button-text').length, 3);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
 	// Select the third button ">", move from 1 -> 2
-	ctl.find('.ui-button').at(2).simulate('click');
+	ctl.find('.ui-button').at(4).simulate('click');
 	expect(select).toHaveBeenCalled();
 	assert.equal(select.mock.calls[0][0], 2);
 });
@@ -287,12 +287,12 @@ test('Test pressing the ">>" (last) button', () => {
 	assert.equal(pager.state.pageSize, 25);
 
 	// Number of button controls in this instance
-	assert.equal(ctl.find('.ui-button').length, 5);
+	assert.equal(ctl.find('.ui-button').length, 10);
 	assert.equal(ctl.find('.ui-button-text').length, 3);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
 	// Select the fourth button ">>", move from 1 -> 12
-	ctl.find('.ui-button').at(3).simulate('click');
+	ctl.find('.ui-button').at(6).simulate('click');
 	expect(select).toHaveBeenCalled();
 	assert.equal(select.mock.calls[0][0], 12);
 });

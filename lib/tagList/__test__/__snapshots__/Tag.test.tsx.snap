@@ -30,6 +30,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
     style={Object {}}
     testing={true}
     text="test tag"
+    theme={Object {}}
     useedit={false}
     visible={true}
     width=""
@@ -59,6 +60,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   sizing="normal"
   style={Object {}}
   testing={true}
+  theme={Object {}}
   usedelete={true}
   visible={true}
   width=""
@@ -93,6 +95,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       style={Object {}}
       testing={true}
       text="test tag"
+      theme={Object {}}
       useedit={false}
       visible={true}
       width=""
@@ -112,22 +115,10 @@ exports[`Test disabling of the simple Tag instance 1`] = `
         test tag
       </span>
     </Label>
-    <ButtonCircle
-      className="tagDeleteButton middle"
-      contentEditable={false}
-      direction="right"
+    <Styled(ButtonCircle)
       disabled={true}
-      focus={false}
-      height=""
       iconName="times"
-      iconStyle=""
-      id=""
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
       onClick={[Function]}
-      selected={false}
       sizing="small"
       style={
         Object {
@@ -136,108 +127,221 @@ exports[`Test disabling of the simple Tag instance 1`] = `
           "color": "#d9534f",
         }
       }
-      testing={true}
       visible={false}
-      width=""
-      xcss={null}
     >
-      <div
-        className="ui-button-circle buttonCircle small tagDeleteButton middle invisible disabled nohover"
+      <ButtonCircle
+        className="sc-ifAKCX fYOzqy"
+        contentEditable={false}
+        direction="right"
+        disabled={true}
+        focus={false}
+        height=""
+        iconName="times"
+        iconStyle=""
+        id=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="small"
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#d9534f",
+            "color": "#d9534f",
+          }
+        }
+        testing={true}
+        theme={Object {}}
+        visible={false}
+        width=""
+        xcss={null}
       >
-        <div
-          className="buttonCircleContainer"
-        >
-          <Button
-            className="smallBorder buttonCircleIcon"
-            contentEditable={false}
-            direction="right"
-            disabled={true}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="small"
-            style={
-              Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#d9534f",
-                "color": "#d9534f",
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#004358",
+              "color": "#000000",
+              "headerBackgroundColor": "#004358",
+              "headerForegroundColor": "#ffffff",
+              "hoverColor": "#c0c0c0",
             }
-            testing={true}
-            visible={false}
-            width=""
-            xcss={null}
+          }
+        >
+          <styled.div
+            className="ui-button-circle sc-ifAKCX fYOzqy"
           >
             <div
-              className="ui-button button small smallBorder buttonCircleIcon invisible disabled nohover"
-              onClick={[Function]}
-              style={
-                Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#d9534f",
-                  "color": "#d9534f",
-                }
-              }
+              className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
             >
-              <Icon
-                className="icon"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                iconName="times"
-                id=""
-                imageFile=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                selected={false}
-                sizing="small"
-                style={Object {}}
-                testing={true}
-                visible={true}
-                width=""
-                xcss={null}
+              <styled.div
+                height="18px"
+                width="18px"
               >
-                <ThemeProvider
-                  theme={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#004358",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "hoverColor": "#ffe11a",
-                    }
-                  }
+                <div
+                  className="sc-htpNat cmTRcR"
+                  height="18px"
+                  width="18px"
                 >
-                  <Icon__FontAwesome
-                    className="ui-icon fa fa-fw fa-times icon"
+                  <Styled(Button)
+                    className="sc-ifAKCX fYOzqy"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={true}
+                    focus={false}
+                    height=""
+                    iconName="times"
+                    iconStyle=""
+                    id=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    onClick={[Function]}
+                    selected={false}
                     sizing="small"
-                    style={Object {}}
+                    style={
+                      Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#d9534f",
+                        "color": "#d9534f",
+                      }
+                    }
+                    testing={true}
+                    theme={Object {}}
+                    visible={false}
+                    width=""
+                    xcss={null}
                   >
-                    <i
-                      className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz iQDhYj"
-                      style={Object {}}
-                    />
-                  </Icon__FontAwesome>
-                </ThemeProvider>
-              </Icon>
+                    <Button
+                      className="sc-ifAKCX fYOzqy sc-bxivhb jtLOVG"
+                      contentEditable={false}
+                      direction="right"
+                      disabled={true}
+                      focus={false}
+                      height=""
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      onClick={[Function]}
+                      selected={false}
+                      sizing="small"
+                      style={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#d9534f",
+                          "color": "#d9534f",
+                        }
+                      }
+                      testing={true}
+                      theme={Object {}}
+                      visible={false}
+                      width=""
+                      xcss={null}
+                    >
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <styled.div
+                          className="ui-button sc-ifAKCX fYOzqy sc-bxivhb jtLOVG"
+                          disabled={true}
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#d9534f",
+                              "color": "#d9534f",
+                            }
+                          }
+                          visible={false}
+                        >
+                          <div
+                            className="ui-button sc-ifAKCX fYOzqy sc-bxivhb jtLOVG sc-bdVaJa kNcZka"
+                            disabled={true}
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#d9534f",
+                                "color": "#d9534f",
+                              }
+                            }
+                          >
+                            <Icon
+                              className=""
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="times"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
+                              sizing="small"
+                              style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
+                            >
+                              <ThemeProvider
+                                theme={
+                                  Object {
+                                    "backgroundColor": "#ffffff",
+                                    "borderColor": "#004358",
+                                    "color": "#000000",
+                                    "headerBackgroundColor": "#004358",
+                                    "headerForegroundColor": "#ffffff",
+                                    "hoverColor": "#c0c0c0",
+                                  }
+                                }
+                              >
+                                <Icon__FontAwesome
+                                  className="ui-icon fa fa-fw fa-times"
+                                  sizing="small"
+                                  style={Object {}}
+                                >
+                                  <i
+                                    className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz iQDhYj"
+                                    style={Object {}}
+                                  />
+                                </Icon__FontAwesome>
+                              </ThemeProvider>
+                            </Icon>
+                          </div>
+                        </styled.div>
+                      </ThemeProvider>
+                    </Button>
+                  </Styled(Button)>
+                </div>
+              </styled.div>
             </div>
-          </Button>
-        </div>
-      </div>
-    </ButtonCircle>
+          </styled.div>
+        </ThemeProvider>
+      </ButtonCircle>
+    </Styled(ButtonCircle)>
   </div>
 </Tag>
 `;
@@ -263,6 +367,7 @@ exports[`Test making Tag invisible 1`] = `
   sizing="normal"
   style={Object {}}
   testing={true}
+  theme={Object {}}
   usedelete={true}
   visible={false}
   width=""
@@ -297,6 +402,7 @@ exports[`Test making Tag invisible 1`] = `
       style={Object {}}
       testing={true}
       text="test tag"
+      theme={Object {}}
       useedit={false}
       visible={false}
       width=""
@@ -316,22 +422,10 @@ exports[`Test making Tag invisible 1`] = `
         test tag
       </span>
     </Label>
-    <ButtonCircle
-      className="tagDeleteButton middle"
-      contentEditable={false}
-      direction="right"
+    <Styled(ButtonCircle)
       disabled={true}
-      focus={false}
-      height=""
       iconName="times"
-      iconStyle=""
-      id=""
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
       onClick={[Function]}
-      selected={false}
       sizing="small"
       style={
         Object {
@@ -340,108 +434,221 @@ exports[`Test making Tag invisible 1`] = `
           "color": "#d9534f",
         }
       }
-      testing={true}
       visible={false}
-      width=""
-      xcss={null}
     >
-      <div
-        className="ui-button-circle buttonCircle small tagDeleteButton middle invisible disabled nohover"
+      <ButtonCircle
+        className="sc-ifAKCX fYOzqy"
+        contentEditable={false}
+        direction="right"
+        disabled={true}
+        focus={false}
+        height=""
+        iconName="times"
+        iconStyle=""
+        id=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        onClick={[Function]}
+        selected={false}
+        sizing="small"
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#d9534f",
+            "color": "#d9534f",
+          }
+        }
+        testing={true}
+        theme={Object {}}
+        visible={false}
+        width=""
+        xcss={null}
       >
-        <div
-          className="buttonCircleContainer"
-        >
-          <Button
-            className="smallBorder buttonCircleIcon"
-            contentEditable={false}
-            direction="right"
-            disabled={true}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="small"
-            style={
-              Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#d9534f",
-                "color": "#d9534f",
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#004358",
+              "color": "#000000",
+              "headerBackgroundColor": "#004358",
+              "headerForegroundColor": "#ffffff",
+              "hoverColor": "#c0c0c0",
             }
-            testing={true}
-            visible={false}
-            width=""
-            xcss={null}
+          }
+        >
+          <styled.div
+            className="ui-button-circle sc-ifAKCX fYOzqy"
           >
             <div
-              className="ui-button button small smallBorder buttonCircleIcon invisible disabled nohover"
-              onClick={[Function]}
-              style={
-                Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#d9534f",
-                  "color": "#d9534f",
-                }
-              }
+              className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
             >
-              <Icon
-                className="icon"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                iconName="times"
-                id=""
-                imageFile=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={false}
-                selected={false}
-                sizing="small"
-                style={Object {}}
-                testing={true}
-                visible={true}
-                width=""
-                xcss={null}
+              <styled.div
+                height="18px"
+                width="18px"
               >
-                <ThemeProvider
-                  theme={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#004358",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "hoverColor": "#ffe11a",
-                    }
-                  }
+                <div
+                  className="sc-htpNat cmTRcR"
+                  height="18px"
+                  width="18px"
                 >
-                  <Icon__FontAwesome
-                    className="ui-icon fa fa-fw fa-times icon"
+                  <Styled(Button)
+                    className="sc-ifAKCX fYOzqy"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={true}
+                    focus={false}
+                    height=""
+                    iconName="times"
+                    iconStyle=""
+                    id=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    onClick={[Function]}
+                    selected={false}
                     sizing="small"
-                    style={Object {}}
+                    style={
+                      Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#d9534f",
+                        "color": "#d9534f",
+                      }
+                    }
+                    testing={true}
+                    theme={Object {}}
+                    visible={false}
+                    width=""
+                    xcss={null}
                   >
-                    <i
-                      className="ui-icon fa fa-fw fa-times icon Icon__FontAwesome-kBRBjz iQDhYj"
-                      style={Object {}}
-                    />
-                  </Icon__FontAwesome>
-                </ThemeProvider>
-              </Icon>
+                    <Button
+                      className="sc-ifAKCX fYOzqy sc-bxivhb jtLOVG"
+                      contentEditable={false}
+                      direction="right"
+                      disabled={true}
+                      focus={false}
+                      height=""
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      onClick={[Function]}
+                      selected={false}
+                      sizing="small"
+                      style={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#d9534f",
+                          "color": "#d9534f",
+                        }
+                      }
+                      testing={true}
+                      theme={Object {}}
+                      visible={false}
+                      width=""
+                      xcss={null}
+                    >
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "hoverColor": "#c0c0c0",
+                          }
+                        }
+                      >
+                        <styled.div
+                          className="ui-button sc-ifAKCX fYOzqy sc-bxivhb jtLOVG"
+                          disabled={true}
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#d9534f",
+                              "color": "#d9534f",
+                            }
+                          }
+                          visible={false}
+                        >
+                          <div
+                            className="ui-button sc-ifAKCX fYOzqy sc-bxivhb jtLOVG sc-bdVaJa kNcZka"
+                            disabled={true}
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#d9534f",
+                                "color": "#d9534f",
+                              }
+                            }
+                          >
+                            <Icon
+                              className=""
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="times"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
+                              sizing="small"
+                              style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
+                            >
+                              <ThemeProvider
+                                theme={
+                                  Object {
+                                    "backgroundColor": "#ffffff",
+                                    "borderColor": "#004358",
+                                    "color": "#000000",
+                                    "headerBackgroundColor": "#004358",
+                                    "headerForegroundColor": "#ffffff",
+                                    "hoverColor": "#c0c0c0",
+                                  }
+                                }
+                              >
+                                <Icon__FontAwesome
+                                  className="ui-icon fa fa-fw fa-times"
+                                  sizing="small"
+                                  style={Object {}}
+                                >
+                                  <i
+                                    className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz iQDhYj"
+                                    style={Object {}}
+                                  />
+                                </Icon__FontAwesome>
+                              </ThemeProvider>
+                            </Icon>
+                          </div>
+                        </styled.div>
+                      </ThemeProvider>
+                    </Button>
+                  </Styled(Button)>
+                </div>
+              </styled.div>
             </div>
-          </Button>
-        </div>
-      </div>
-    </ButtonCircle>
+          </styled.div>
+        </ThemeProvider>
+      </ButtonCircle>
+    </Styled(ButtonCircle)>
   </div>
 </Tag>
 `;
@@ -467,6 +674,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "testing": true,
+  "theme": Object {},
   "usedelete": false,
   "visible": true,
   "width": "",

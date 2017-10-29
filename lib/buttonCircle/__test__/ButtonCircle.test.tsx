@@ -26,7 +26,7 @@ test('Test disabling of a ButtonCircle control', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
@@ -37,7 +37,7 @@ test('Test making a ButtonCircle control invisible', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
@@ -48,6 +48,6 @@ test('Test ButtonCircle click event', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button').simulate('click');
+	ctl.find('.ui-button').first().simulate('click');
 	expect(click).toHaveBeenCalled();
 });

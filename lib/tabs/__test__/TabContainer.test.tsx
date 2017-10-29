@@ -172,12 +172,12 @@ test('Test removing the first item from the TabContainer', () => {
 	assert(container);
 
 	assert(container.tabs.size === 3);
-	const firstTab = ctl.find('.ui-tab').first().find('.ui-button');
+	const firstTab = ctl.find('.ui-tab').first().find('.ui-button').first();
 	firstTab.simulate('click');
 	assert(remove.calledOnce);
 	assert(container.tabs.size === 2);
 
-	const lastTab = ctl.find('.ui-tab').last().find('.ui-button');
+	const lastTab = ctl.find('.ui-tab').last().find('.ui-button').first();
 	lastTab.simulate('click');
 	assert(remove.calledTwice);
 	assert(container.tabs.size === 1);

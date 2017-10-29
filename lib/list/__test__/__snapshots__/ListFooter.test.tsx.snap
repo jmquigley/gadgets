@@ -19,6 +19,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "testing": true,
+  "theme": Object {},
   "title": "",
   "visible": true,
   "widget": null,
@@ -46,6 +47,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
   sizing="normal"
   style={Object {}}
   testing={true}
+  theme={Object {}}
   title="test title"
   visible={true}
   widget={null}
@@ -60,7 +62,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
-        "hoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
       }
     }
   >
@@ -82,6 +84,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
+      theme={Object {}}
       title="test title"
       visible={true}
       widget={null}
@@ -106,6 +109,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
         sizing="normal"
         style={Object {}}
         testing={true}
+        theme={Object {}}
         title="test title"
         visible={true}
         widget={null}
@@ -120,7 +124,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
               "color": "#000000",
               "headerBackgroundColor": "#004358",
               "headerForegroundColor": "#ffffff",
-              "hoverColor": "#ffe11a",
+              "hoverColor": "#c0c0c0",
             }
           }
         >
@@ -152,6 +156,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                 style={Object {}}
                 testing={true}
                 text="test title"
+                theme={Object {}}
                 title="test title"
                 visible={true}
                 widget={null}
@@ -190,6 +195,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                   style={Object {}}
                   testing={true}
                   text="test title"
+                  theme={Object {}}
                   title="test title"
                   useedit={false}
                   visible={true}

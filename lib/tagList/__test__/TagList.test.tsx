@@ -129,10 +129,10 @@ test('Remove a tag from a TagList', () => {
 	expect(ctl).toMatchSnapshot();
 
 	assert.deepEqual(ctl.state('tags'), ['a', 'b', 'c']);
-	assert(ctl.find('.ui-button-circle').length === 3);
+	assert(ctl.find('.ui-button-circle').length === 6);
 
 	const btns = ctl.find('.ui-button');
-	assert(btns.length === 3);
+	assert(btns.length === 6);
 
 	// show the delete button that will be clicked
 	ctl.find('.ui-tag').at(0).simulate('mouseOver');
