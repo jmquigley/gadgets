@@ -3750,6 +3750,10 @@ exports[`Test creation of an Editor instance 1`] = `
                   "value": "markdown",
                 },
                 Object {
+                  "label": "Restructuredtext",
+                  "value": "restructuredtext",
+                },
+                Object {
                   "label": "Text",
                   "value": "text",
                 },
@@ -3811,6 +3815,12 @@ exports[`Test creation of an Editor instance 1`] = `
               </option>
               <option
                 key="2"
+                value="restructuredtext"
+              >
+                Restructuredtext
+              </option>
+              <option
+                key="3"
                 value="text"
               >
                 Text

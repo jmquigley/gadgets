@@ -58,9 +58,9 @@ export class Validator {
 		return this._success;
 	}
 
-	public validate: ValidatorFn = (text: string, option?: any): boolean => {
-		text = '';
-		option = '';
+	public validate: ValidatorFn = (text: string = '', option: any = ''): boolean => {
+		text = text;
+		option = option;
 		return true;
 	}
 }

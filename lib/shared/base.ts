@@ -317,7 +317,7 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	 */
 	public componentWillUpdate(nextProps?: P, nextState?: S) {
 
-		nextState = null;
+		nextState = nextState;
 
 		this.updateFontStyle(this._rootStyles, nextProps, this.props);
 		if ('sizing' in nextProps && this._sizing !== nextProps['sizing']) {
