@@ -38,7 +38,7 @@ test('Test disabling of a ButtonText control', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button-text').simulate('click');
+	ctl.find('.ui-button-text').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
@@ -49,7 +49,7 @@ test('Test making a ButtonText control invisible', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-button-text').simulate('click');
+	ctl.find('.ui-button-text').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 
@@ -69,8 +69,6 @@ test('Test button click in ButtonText control', () => {
 	assert(ctl.prop('visible'));
 	assert.equal(ctl.prop('text'), 'test text');
 
-	const btn = ctl.find('.ui-button-text');
-	assert.equal(btn.length, 1);
-	btn.simulate('click');
+	ctl.find('.ui-button-text').first().simulate('click');
 	expect(click).toHaveBeenCalled();
 });

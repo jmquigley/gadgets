@@ -173,12 +173,12 @@ test('Test selection of the second page in the control', () => {
 
 	// Number of button controls in this instance
 	assert.equal(ctl.find('.ui-button').length, 10);
-	assert.equal(ctl.find('.ui-button-text').length, 3);
+	assert.equal(ctl.find('.ui-button-text').length, 6);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
 	// Click the second page number.  Can't click the first one because
 	// it is already selected by default when the control is created
-	ctl.find('.ui-button-text').at(1).simulate('click');
+	ctl.find('.ui-button-text').at(2).simulate('click');
 	expect(select).toHaveBeenCalled();
 	assert.equal(select.mock.calls[0][0], 2);
 });
@@ -203,7 +203,7 @@ test('Test pressing the "<<" (first) button', () => {
 
 	// Number of button controls in this instance
 	assert.equal(ctl.find('.ui-button').length, 10);
-	assert.equal(ctl.find('.ui-button-text').length, 3);
+	assert.equal(ctl.find('.ui-button-text').length, 6);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
 	// Select the first button "<<" move from 2 -> 1
@@ -232,7 +232,7 @@ test('Test pressing the "<" (previous) button', () => {
 
 	// Number of button controls in this instance
 	assert.equal(ctl.find('.ui-button').length, 10);
-	assert.equal(ctl.find('.ui-button-text').length, 3);
+	assert.equal(ctl.find('.ui-button-text').length, 6);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
 	// Select the first button "<" move from 3 -> 2
@@ -260,7 +260,7 @@ test('Test pressing the ">" (next) button', () => {
 
 	// Number of button controls in this instance
 	assert.equal(ctl.find('.ui-button').length, 10);
-	assert.equal(ctl.find('.ui-button-text').length, 3);
+	assert.equal(ctl.find('.ui-button-text').length, 6);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
 	// Select the third button ">", move from 1 -> 2
@@ -288,7 +288,7 @@ test('Test pressing the ">>" (last) button', () => {
 
 	// Number of button controls in this instance
 	assert.equal(ctl.find('.ui-button').length, 10);
-	assert.equal(ctl.find('.ui-button-text').length, 3);
+	assert.equal(ctl.find('.ui-button-text').length, 6);
 	assert.equal(ctl.find('.ui-button-dialog').length, 1);
 
 	// Select the fourth button ">>", move from 1 -> 12

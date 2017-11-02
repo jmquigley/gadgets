@@ -45,12 +45,19 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
+import {BaseButtonView} from '../button';
 import {getDefaultIconProps, Icon, IconProps} from '../icon';
-import {BaseComponent, Justify, Sizing} from '../shared';
-
-const styles = require('./styles.css');
+import {
+	BaseComponent,
+	DisabledCSS,
+	fontStyle,
+	getTheme,
+	InvisibleCSS,
+	Justify,
+	Sizing
+} from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface ButtonTextProps extends IconProps {
 	justify?: Justify;
@@ -71,40 +78,50 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 	);
 }
 
+export const ButtonTextContent: any = withProps<ButtonTextProps, HTMLDivElement>(styled.div)`
+	flex: 1;
+	padding: 0 0.2em;
+	text-align: ${props => {
+		if (props.justify === Justify.center || props.noicon) {
+			return('center');
+		} else if (props.justify === Justify.left) {
+			return('right');
+		} else {
+			return('left');
+		}
+	}};
+	${props => props.sizing && fontStyle[props.sizing]};
+
+	span {
+		margin: 0 auto;
+		user-select: none;
+	}
+`;
+
+export const ButtonTextView: any = withProps<ButtonTextProps, HTMLDivElement>(styled.div)`
+	${BaseButtonView}
+
+	&:not(.nohover):hover {
+		background-color: ${props => props.theme.hoverColor} ${props => props.style.backgroundColor && '!important'};
+	}
+
+	${props => props.disabled && DisabledCSS}
+	${props => !props.visible && InvisibleCSS}
+`;
+
 export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 
 	public static readonly defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 
-	private static readonly _resetJustify = [
-		styles.right,
-		styles.center,
-		styles.left
-	];
-
-	private _contentStyles: ClassNames = new ClassNames();
-
 	constructor(props: ButtonTextProps) {
-		super(props, styles, ButtonText.defaultProps.style);
+		super(props, {}, ButtonText.defaultProps.style);
 
-		this._contentStyles.add([
-			this.styles.content
-		]);
-
-		this._rootStyles.add([
-			'ui-button-text',
-			this.styles.buttonText
+		this._classes.add([
+			'ui-button-text'
 		]);
 
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(props);
-	}
-
-	private buildContent() {
-		return(
-			<div className={this._contentStyles.classnames}>
-				{this.props.text}
-			</div>
-		);
 	}
 
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
@@ -115,23 +132,10 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ButtonTextProps) {
-
-		if (nextProps.justify !== this.props.justify) {
-			this._contentStyles.reset(ButtonText._resetJustify);
-		}
-
-		if (this.props.justify === Justify.center || this.props.noicon) {
-			this._contentStyles.on(this.styles.center);
-		} else if (this.props.justify === Justify.left) {
-			this._contentStyles.on(this.styles.left);
-		} else {
-			this._contentStyles.on(this.styles.right);
-		}
-
-		this.updateFontStyle(this._contentStyles, nextProps, this.props);
-
-		this._rootStyles.onIf(!nextProps.noripple && !nextProps.disabled)(
+		this._classes.onIfElse(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
+		)(
+			'nohover'
 		);
 
 		super.componentWillUpdate(nextProps);
@@ -141,10 +145,19 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		let leftButton = null;
 		let rightButton = null;
 
+		const content = (
+			<ButtonTextContent
+				justify={this.props.justify}
+				sizing={this.props.sizing}
+			>
+				{this.props.text}
+			</ButtonTextContent>
+		);
+
 		if (this.props.justify === Justify.right) {
-			rightButton = this.buildContent();
+			rightButton = content;
 		} else {
-			leftButton = this.buildContent();
+			leftButton = content;
 		}
 
 		let icon = null;
@@ -158,15 +171,19 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		}
 
 		return (
-			<div
-				className={this._rootStyles.classnames}
-				style={this.inlineStyles}
-				onClick={this.handleClick}
-			>
-				{leftButton}
-				{icon}
-				{rightButton}
-			</div>
+			<ThemeProvider theme={getTheme()}>
+				<ButtonTextView
+					disabled={this.props.disabled}
+					className={this.classes}
+					style={this.inlineStyles}
+					onClick={this.handleClick}
+					visible={this.props.visible}
+				>
+					{leftButton}
+					{icon}
+					{rightButton}
+				</ButtonTextView>
+			</ThemeProvider>
 		);
 	}
 }

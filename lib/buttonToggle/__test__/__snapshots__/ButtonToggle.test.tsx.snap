@@ -120,7 +120,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
       }
     >
       <styled.div
-        className="ui-button ui-button-toggle buttonToggle normal"
+        className="ui-button nohover ui-button-toggle buttonToggle normal"
         disabled={false}
         onClick={[Function]}
         style={
@@ -132,7 +132,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
         visible={true}
       >
         <div
-          className="ui-button ui-button-toggle buttonToggle normal sc-bdVaJa ZVnQy"
+          className="ui-button nohover ui-button-toggle buttonToggle normal sc-bdVaJa crSebe"
           disabled={false}
           onClick={[Function]}
           style={
@@ -277,7 +277,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
       }
     >
       <styled.div
-        className="ui-button ui-button-toggle buttonToggle normal disabled nohover"
+        className="ui-button nohover ui-button-toggle buttonToggle normal disabled nohover"
         disabled={true}
         onClick={[Function]}
         style={
@@ -289,7 +289,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
         visible={true}
       >
         <div
-          className="ui-button ui-button-toggle buttonToggle normal disabled nohover sc-bdVaJa knPyKm"
+          className="ui-button nohover ui-button-toggle buttonToggle normal disabled nohover sc-bdVaJa ljVASa"
           disabled={true}
           onClick={[Function]}
           style={
@@ -434,7 +434,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
       }
     >
       <styled.div
-        className="ui-button ui-button-toggle buttonToggle normal invisible"
+        className="ui-button nohover ui-button-toggle buttonToggle normal invisible"
         disabled={false}
         onClick={[Function]}
         style={
@@ -446,7 +446,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
         visible={false}
       >
         <div
-          className="ui-button ui-button-toggle buttonToggle normal invisible sc-bdVaJa fpHiRO"
+          className="ui-button nohover ui-button-toggle buttonToggle normal invisible sc-bdVaJa icpgwB"
           disabled={false}
           onClick={[Function]}
           style={

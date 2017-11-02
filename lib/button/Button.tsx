@@ -85,7 +85,7 @@ export const ButtonView: any = withProps<ButtonProps, HTMLDivElement>(styled.div
 	flex: 1;
 
 	&:not(.nohover):hover {
-		background-color: ${props => props.theme.hoverColor}  ${props => props.style.backgroundColor && '!important'};
+		background-color: ${props => props.theme.hoverColor} ${props => props.style.backgroundColor && '!important'};
 	}
 
 	${props => props.disabled && DisabledCSS}
@@ -99,10 +99,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	constructor(props: ButtonProps) {
 		super(props, {}, Button.defaultProps.style);
 
-		this._classes.add([
-			'ui-button'
-		]);
-
+		this._classes.add(['ui-button']);
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(this.props);
 	}
@@ -117,8 +114,10 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	}
 
 	public componentWillUpdate(nextProps: ButtonProps) {
-		this._classes.onIf(!nextProps.noripple && !nextProps.disabled)(
+		this._classes.onIfElse(!nextProps.noripple && !nextProps.disabled)(
 			'ripple'
+		)(
+			'nohover'
 		);
 
 		super.componentWillUpdate(nextProps);
