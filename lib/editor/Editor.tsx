@@ -7,7 +7,7 @@
  * - Asciidoc
  * - Markdown
  * - Plaintext
- * - Restruturedtext
+ * - Restructuredtext
  *
  * The modes available are dependent on the Quill module.
  *
