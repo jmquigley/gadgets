@@ -7,6 +7,7 @@
  * - Asciidoc
  * - Markdown
  * - Plaintext
+ * - Restruturedtext
  *
  * The modes available are dependent on the Quill module.
  *
@@ -122,9 +123,13 @@ import {
 	BaseComponent,
 	BaseProps,
 	Color,
+	DisabledCSS,
 	getDefaultBaseProps,
+	getTheme,
+	InvisibleCSS,
 	Sizing
 } from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 import {Toolbar} from '../toolbar';
 
 export interface QuillKeyBindings {
@@ -160,8 +165,35 @@ export function getDefaultEditorProps(): EditorProps {
 	);
 }
 
-export class Editor extends BaseComponent<EditorProps, undefined> {
+export const EditorContainer: any = withProps<EditorProps, HTMLDivElement>(styled.div)`
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	height: inherit;
+	min-width: 600px;
+	width: inherit;
+`;
 
+export const EditorView: any = withProps<EditorProps, HTMLDivElement>(styled.div)`
+	display: flex;
+	min-width: inherit;
+
+	> .ql-editor {
+		min-width: inherit;
+		padding: 5px;
+		width: 100%;
+	}
+
+	${props => props.disabled && DisabledCSS}
+	${props => !props.visible && InvisibleCSS}
+`;
+
+export const EditorToolbar: any = withProps<EditorProps, HTMLDivElement>(styled(Toolbar))`
+	margin-bottom: -1px;
+	min-width: inherit;
+`;
+
+export class Editor extends BaseComponent<EditorProps, undefined> {
 	private _custom: any;
 	private _editor: any;
 	private _editorKey: string = 'editor';
@@ -193,27 +225,16 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
 
 	constructor(props: EditorProps)	{
-		super(props, require('./styles.css'), Editor.defaultProps.style);
+		super(props, {}, Editor.defaultProps.style);
 
 		if (!this.props.testing) {
 			this._editorKey = `editor-${getUUID()}`;
 		}
 		debug('using editor key: %s', this._editorKey);
 
-		this._editorStyles.add([
-			'ui-editor-quill',
-			this.styles.editor
-		]);
-
-		this._rootStyles.add([
-			'ui-editor',
-			this.styles.container
-		]);
-
-		this._toolbarStyles.add([
-			'ui-editor-toolbar',
-			this.styles.toolbar
-		]);
+		this._classes.add(['ui-editor']);
+		this._editorStyles.add(['ui-editor-quill']);
+		this._toolbarStyles.add(['ui-editor-toolbar']);
 
 		this.bindCallbacks('handleSelect');
 
@@ -257,9 +278,10 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 
 	public componentWillUpdate(nextProps: EditorProps) {
 		this._editorStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
-			this.styles.disabled,
 			'nohover'
 		);
+
+		super.componentWillUpdate(nextProps);
 	}
 
 	public componentWillReceiveProps(nextProps: EditorProps) {
@@ -331,66 +353,73 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 
 	public render() {
 		return(
-			<div
-				className={this._rootStyles.classnames}
-				style={this.inlineStyles}
-			>
-				<Toolbar
-					{...this.props}
-					className={this._toolbarStyles.classnames}
-					sizing={Sizing.small}
+			<ThemeProvider theme={getTheme()}>
+				<EditorContainer
+					className={this.classes}
+					style={this.inlineStyles}
 				>
-					<Button iconName="bold" onClick={this._markup && this._markup.setBold} />
-					<Button iconName="italic" onClick={this._markup && this._markup.setItalic} />
-					<Button iconName="underline" onClick={this._markup && this._markup.setUnderline} />
-					<Button iconName="strikethrough" onClick={this._markup && this._markup.setStrikeThrough} />
-					<Button iconName="code" onClick={this._markup && this._markup.setMono} />
-					<ButtonDialog iconName="header" notriangle>
-						<List sizing={Sizing.small} alternating>
-							<ListItem title="h1" onSelect={this.handleSelect('1')} />
-							<ListItem title="h2" onSelect={this.handleSelect('2')} />
-							<ListItem title="h3" onSelect={this.handleSelect('3')} />
-							<ListItem title="h4" onSelect={this.handleSelect('4')} />
-							<ListItem title="h5" onSelect={this.handleSelect('5')} />
-							<ListItem title="h6" onSelect={this.handleSelect('6')} />
-						</List>
-					</ButtonDialog>
-					<Divider dividerType={DividerType.vertical} />
-					<Button iconName="undo" onClick={this._markup && this._markup.undo} />
-					<Button iconName="repeat" onClick={this._markup && this._markup.redo} />
-					<Divider dividerType={DividerType.vertical} />
-					<Dropdown
+					<EditorToolbar
 						{...this.props}
-						defaultVal={this.props.defaultFont}
-						items={this._fontList}
-						onSelect={this._markup && this._markup.setFont}
+						className={this._toolbarStyles.classnames}
+						sizing={Sizing.small}
+					>
+						<Button iconName="bold" onClick={this._markup && this._markup.setBold} />
+						<Button iconName="italic" onClick={this._markup && this._markup.setItalic} />
+						<Button iconName="underline" onClick={this._markup && this._markup.setUnderline} />
+						<Button iconName="strikethrough" onClick={this._markup && this._markup.setStrikeThrough} />
+						<Button iconName="code" onClick={this._markup && this._markup.setMono} />
+						<ButtonDialog iconName="header" notriangle>
+							<List sizing={Sizing.small} alternating>
+								<ListItem title="h1" onSelect={this.handleSelect('1')} />
+								<ListItem title="h2" onSelect={this.handleSelect('2')} />
+								<ListItem title="h3" onSelect={this.handleSelect('3')} />
+								<ListItem title="h4" onSelect={this.handleSelect('4')} />
+								<ListItem title="h5" onSelect={this.handleSelect('5')} />
+								<ListItem title="h6" onSelect={this.handleSelect('6')} />
+							</List>
+						</ButtonDialog>
+						<Divider dividerType={DividerType.vertical} />
+						<Button iconName="undo" onClick={this._markup && this._markup.undo} />
+						<Button iconName="repeat" onClick={this._markup && this._markup.redo} />
+						<Divider dividerType={DividerType.vertical} />
+						<Dropdown
+							{...this.props}
+							defaultVal={this.props.defaultFont}
+							items={this._fontList}
+							onSelect={this._markup && this._markup.setFont}
+						/>
+						<Dropdown
+							{...this.props}
+							defaultVal={this.props.defaultFontSize.toString()}
+							items={this._fontSizes}
+							onSelect={this._markup && this._markup.setFontSize}
+						/>
+						<Divider dividerType={DividerType.vertical} />
+						<Dropdown
+							{...this.props}
+							defaultVal={'markdown'}
+							items={this._modes}
+							onSelect={this._markup && this._markup.setMode}
+						/>
+						<Dropdown
+							{...this.props}
+							defaultVal={'solarized-light'}
+							items={this._highlights}
+							onSelect={this._markup && this._markup.setHighlight}
+							style={{
+								width: '6rem'
+							}}
+						/>
+						<Button iconName="refresh" onClick={this._markup && this._markup.refresh} />
+					</EditorToolbar>
+					<EditorView
+						className={this._editorStyles.classnames}
+						disabled={this.props.disabled}
+						id={this._editorKey}
+						visible={this.props.visible}
 					/>
-					<Dropdown
-						{...this.props}
-						defaultVal={this.props.defaultFontSize.toString()}
-						items={this._fontSizes}
-						onSelect={this._markup && this._markup.setFontSize}
-					/>
-					<Divider dividerType={DividerType.vertical} />
-					<Dropdown
-						{...this.props}
-						defaultVal={'markdown'}
-						items={this._modes}
-						onSelect={this._markup && this._markup.setMode}
-					/>
-					<Dropdown
-						{...this.props}
-						defaultVal={'solarized-light'}
-						items={this._highlights}
-						onSelect={this._markup && this._markup.setHighlight}
-						style={{
-							width: '6rem'
-						}}
-					/>
-					<Button iconName="refresh" onClick={this._markup && this._markup.refresh} />
-				</Toolbar>
-				<div id={this._editorKey} className={this._editorStyles.classnames} />
-			</div>
+				</EditorContainer>
+			</ThemeProvider>
 		);
 	}
 }
