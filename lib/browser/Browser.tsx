@@ -1,4 +1,53 @@
-// TODO: add documentation for Browser
+/**
+ * Creates a web browser instance using a [webview](https://electron.atom.io/docs/api/webview-tag/)
+ * tag.  This component allows the user to:
+ *
+ * - Navigate back/forward through pages
+ * - Programmatically change the URI reference
+ * - Retrieve the details (clip) the current page
+ *
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/browser.png" width="60%" />
+ *
+ * ## Examples:
+ *
+ * ```javascript
+ * import {Browser} from 'gadgets';
+ * import {List} from 'immutable';
+ *
+ * <Browser
+ *     home="http:/www.google.com"
+ *     onClip={(uri: string, content: string, dom: any, history: List) => {
+ *         debug(`uri: %s, content: '%s', dom: %O`, uri, content, dom);
+ *     }}
+ *     uri="http://www.example.com"
+ *     useparser
+ * />
+ * ```
+ *
+ * ## API
+ * #### Events
+ * - `onClip(uri: string, content: string, dom: any, history: List)` - When the user clicks
+ * the "clip" button this event is invoked.  It is given the current URI, the text of the
+ * page, the parsed dom for the page (if useparser is given) and the current link history
+ *
+ * #### Styles
+ * - `ui-browser` - placed on the root `<div>` of the control.  This wraps the toolbar
+ * and the browser content.
+ * - `ui-browser-content` - placed on the webview tag within the component.
+ *
+ * #### Properties
+ * - `home: {string} ('about:blank')` - The site visited when the user clicks on the
+ * "home" button in the toolbar.  If this is empty, then 'about:blank' is used.
+ * - `uri: {string} ('about:blank')` - The site the user selects to visit when the control
+ * is created. If this is empty, then the home directory is used.  If the home directory
+ * is empty, then the site is set to 'about:blank'
+ * - `useparser: {boolean} (false)` - If true, then the onClip() event will take the
+ * HTML string and parse it into its DOM elements.  By default this is false because it
+ * is a performance hit to parse it.
+ *
+ * @module Browser
+ */
 
 'use strict';
 
@@ -31,9 +80,9 @@ export interface BrowserState {
 export function getDefaultBrowserProps(): BrowserProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			home: '',
+			home: 'about:blank',
 			onClip: nilEvent,
-			uri: 'http://www.example.com',
+			uri: 'about:blank',
 			useparser: false
 		})
 	);
@@ -85,6 +134,8 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 
 	constructor(props: BrowserProps) {
 		super(props, {}, Browser.defaultProps.style);
+
+		this._classes.add(['ui-browser']);
 
 		const url = this.props.uri || this.props.home || '';
 		this.state = {
@@ -170,7 +221,12 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 						dom = parser.parseFromString(content, 'text/html');
 					}
 
-					this.props.onClip(this.state.uri, content, dom);
+					this.props.onClip(
+						this.state.uri,
+						content,
+						dom,
+						this.state.uriHistory
+					);
 				}
 			);
 		}
@@ -217,7 +273,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	public render() {
 		return(
 			<ThemeProvider theme={getTheme()}>
-				<BrowserContainer>
+				<BrowserContainer className={this.classes} >
 					<BrowserToolbar>
 						<Button iconName="arrow-left" onClick={this.handleBack} />
 						<Button iconName="arrow-right" onClick={this.handleForward} />

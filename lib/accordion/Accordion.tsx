@@ -74,9 +74,7 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 	constructor(props: AccordionProps) {
 		super(props, {}, Accordion.defaultProps.style);
 
-		this._classes.add([
-			'ui-accordion'
-		]);
+		this._classes.add(['ui-accordion']);
 
 		this.componentWillUpdate(props);
 	}

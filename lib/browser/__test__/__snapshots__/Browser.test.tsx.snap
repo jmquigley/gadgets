@@ -8,7 +8,7 @@ exports[`Test creation of a Browser instance 1`] = `
   disabled={false}
   focus={false}
   height=""
-  home=""
+  home="about:blank"
   id=""
   location="none"
   noedit={false}
@@ -20,7 +20,7 @@ exports[`Test creation of a Browser instance 1`] = `
   style={Object {}}
   testing={true}
   theme={Object {}}
-  uri="http://www.example.com"
+  uri="about:blank"
   url="http://example.com"
   useparser={false}
   visible={true}
@@ -39,9 +39,11 @@ exports[`Test creation of a Browser instance 1`] = `
       }
     }
   >
-    <styled.div>
+    <styled.div
+      className="ui-browser"
+    >
       <div
-        className="sc-bZQynM JUAQh"
+        className="ui-browser sc-bZQynM JUAQh"
       >
         <Styled(Toolbar)>
           <Toolbar
@@ -611,7 +613,7 @@ exports[`Test creation of a Browser instance 1`] = `
                       "height": "24px",
                     }
                   }
-                  value="http://www.example.com"
+                  value="about:blank"
                   visible={true}
                 >
                   <TextField
@@ -634,7 +636,7 @@ exports[`Test creation of a Browser instance 1`] = `
                     useclear={false}
                     usevalidation={false}
                     validators={Array []}
-                    value="http://www.example.com"
+                    value="about:blank"
                     visible={true}
                   >
                     <div
@@ -663,7 +665,7 @@ exports[`Test creation of a Browser instance 1`] = `
                             }
                           }
                           type="text"
-                          value="http://www.example.com"
+                          value="about:blank"
                         />
                       </div>
                     </div>
@@ -1156,7 +1158,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
   style={Object {}}
   testing={true}
   theme={Object {}}
-  uri="http://www.example.com"
+  uri="about:blank"
   url=""
   useparser={false}
   visible={true}
@@ -1175,9 +1177,11 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
       }
     }
   >
-    <styled.div>
+    <styled.div
+      className="ui-browser"
+    >
       <div
-        className="sc-bZQynM JUAQh"
+        className="ui-browser sc-bZQynM JUAQh"
       >
         <Styled(Toolbar)>
           <Toolbar
@@ -1747,7 +1751,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                       "height": "24px",
                     }
                   }
-                  value="http://www.example.com"
+                  value="about:blank"
                   visible={true}
                 >
                   <TextField
@@ -1770,7 +1774,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                     useclear={false}
                     usevalidation={false}
                     validators={Array []}
-                    value="http://www.example.com"
+                    value="about:blank"
                     visible={true}
                   >
                     <div
@@ -1799,7 +1803,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             }
                           }
                           type="text"
-                          value="http://www.example.com"
+                          value="about:blank"
                         />
                       </div>
                     </div>
@@ -2280,7 +2284,7 @@ Object {
   "disabled": false,
   "focus": false,
   "height": "",
-  "home": "",
+  "home": "about:blank",
   "id": "",
   "location": "none",
   "noedit": false,
@@ -2292,7 +2296,7 @@ Object {
   "style": Object {},
   "testing": true,
   "theme": Object {},
-  "uri": "http://www.example.com",
+  "uri": "about:blank",
   "useparser": false,
   "visible": true,
   "width": "",
