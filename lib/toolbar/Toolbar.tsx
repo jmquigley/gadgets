@@ -109,6 +109,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 		Divider.name,
 		Dropdown.name,
 		Option.name,
+		'StyledComponent',
 		Switch.name,
 		TextField.name
 	]);

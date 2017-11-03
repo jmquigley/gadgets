@@ -21,6 +21,7 @@ const {
 	Accordion,
 	AccordionItem,
 	Badge,
+	Browser,
 	Button,
 	ButtonCircle,
 	ButtonDialog,
@@ -298,6 +299,19 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 			</div>
+		</Container>
+	);
+
+	private buildBrowser = () => (
+		<Container>
+			<Browser
+				home="http:/www.google.com"
+				onClip={(uri: string, content: string, dom: any) => {
+					debug(`uri: %s, content: '%s', dom: %O`, uri, content, dom);
+				}}
+				uri=""
+				useparser
+			/>
 		</Container>
 	);
 
@@ -1658,6 +1672,9 @@ class App extends React.Component<AppProps, AppState> {
 				<h1>Badges</h1>
 				click on the buttons to increment the badges
 				{this.buildBadges()}
+
+				<h1>Browser</h1>
+				{this.buildBrowser()}
 
 				<h1>Buttons & Icons</h1>
 				{this.buildButtons()}

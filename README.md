@@ -109,7 +109,7 @@ This module represents the properties that are shared by every class in the proj
 TODO: create the Breadcrums control
 
 ### Browser
-TODO: create the Browser control.  This is a wrapped iframe with simple buttons for URL, refresh, back, etc.
+TODO: create the Browser control.  This is a wrapped webview with simple buttons for URL, refresh, back, etc.
 
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.
