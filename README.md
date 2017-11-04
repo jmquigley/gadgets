@@ -108,8 +108,8 @@ This module represents the properties that are shared by every class in the proj
 ### Breadcrumbs
 TODO: create the Breadcrums control
 
-### Browser
-TODO: create the Browser control.  This is a wrapped webview with simple buttons for URL, refresh, back, etc.
+### [Browser](docs/lib/browser/Browser.md)
+Creates a web browser instance using a [webview](https://electron.atom.io/docs/api/webview-tag/) tag
 
 ### [Button](docs/lib/button/Button.md)
 A typical button control widget.  This control only uses an icon and no text to represent the button.  The icons are [Font Awesome](http://fontawesome.io/) strings.  That library is built into this module, so any font available in the current release of that library is available.

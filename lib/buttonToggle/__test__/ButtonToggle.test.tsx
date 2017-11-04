@@ -1,22 +1,20 @@
 'use strict';
 
-import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import * as sinon from 'sinon';
 import {ButtonToggle, getDefaultButtonToggleProps} from '../index';
 
 test('Test retrieval of ButtonToggle props object', () => {
 	const props = getDefaultButtonToggleProps();
 
-	assert(props);
+	expect(props).toBeTruthy();
 	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a ButtonToggle control', () => {
 	const ctl = shallow(<ButtonToggle className="test-class"/>);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -28,34 +26,34 @@ test('Test creation of a ButtonToggle control with on/off icons', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
 test('Test disabling of a ButtonToggle', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(<ButtonToggle onClick={click} disabled={true} />);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button-toggle').first().simulate('click');
-	assert(!click.calledOnce);
+	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test making a ButtonToggle invisible', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(<ButtonToggle onClick={click} visible={false} />);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button-toggle').first().simulate('click');
-	assert(!click.calledOnce);
+	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test ButtonToggle click event', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<ButtonToggle
 			iconNameOn="star"
@@ -64,27 +62,28 @@ test('Test ButtonToggle click event', () => {
 		/>);
 	const btn = ctl.instance() as ButtonToggle;
 
-	assert(ctl);
-	assert(btn);
+	expect(ctl).toBeTruthy();
+	expect(btn).toBeTruthy();
 
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert.equal(ctl.prop('iconNameOn'), 'star');
-	assert.equal(ctl.prop('iconNameOff'), 'star-o');
+	expect(ctl.prop('iconName')).toBe('bomb');
+	expect(ctl.prop('iconName')).toBe('bomb');
+	expect(ctl.prop('iconNameOn')).toBe('star');
+	expect(ctl.prop('iconNameOff')).toBe('star-o');
 
-	assert(!ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
+	expect(ctl.prop('disabled')).toBe(false);
+	expect(ctl.prop('visible')).toBe(true);
 
-	assert(!btn.state.toggle);
+	expect(btn.state.toggle).toBe(false);
 	ctl.find('.ui-button-toggle').first().simulate('click');
-	assert(click.calledOnce);
-	assert(click.calledWith(true));
-	assert(btn.state.toggle);
-	assert.equal(btn.state.toggle, ctl.state('toggle'));
+	expect(click).toHaveBeenCalled();
+	expect(click).toHaveBeenCalledWith(true);
+
+	expect(btn.state.toggle).toBe(true);
+	expect(btn.state.toggle).toBe(ctl.state('toggle'));
 });
 
 test('Test the icon switch in a ButtonToggle click', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<ButtonToggle
 			iconNameOff="star-o"
@@ -93,17 +92,18 @@ test('Test the icon switch in a ButtonToggle click', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 
-	assert(!ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
-	assert.equal(ctl.prop('iconName'), 'bomb');
-	assert.equal(ctl.prop('iconNameOn'), 'star');
-	assert.equal(ctl.prop('iconNameOff'), 'star-o');
+	expect(ctl.prop('disabled')).toBe(false);
+	expect(ctl.prop('visible')).toBe(true);
+	expect(ctl.prop('iconName')).toBe('bomb');
+	expect(ctl.prop('iconNameOn')).toBe('star');
+	expect(ctl.prop('iconNameOff')).toBe('star-o');
 
-	assert(!ctl.state('toggle'));
+	expect(ctl.state('toggle')).toBe(false);
 	ctl.find('.ui-button-toggle').first().simulate('click');
-	assert(click.calledOnce);
-	assert(click.calledWith(true));
-	assert(ctl.state('toggle'));
+
+	expect(click).toHaveBeenCalled();
+	expect(click).toHaveBeenCalledWith(true);
+	expect(ctl.state('toggle')).toBe(true);
 });

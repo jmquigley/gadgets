@@ -45,9 +45,11 @@ exports[`Test creation of a Browser instance 1`] = `
       <div
         className="ui-browser sc-bZQynM JUAQh"
       >
-        <Styled(Toolbar)>
+        <Styled(Toolbar)
+          className="ui-browser-toolbar"
+        >
           <Toolbar
-            className="sc-htoDjs bZGSbT"
+            className="ui-browser-toolbar sc-htoDjs bZGSbT"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -69,7 +71,7 @@ exports[`Test creation of a Browser instance 1`] = `
             xcss={null}
           >
             <div
-              className="ui-toolbar toolbar normal sc-htoDjs bZGSbT"
+              className="ui-toolbar toolbar normal ui-browser-toolbar sc-htoDjs bZGSbT"
             >
               <div
                 className="ui-toolbar-group toolbarGroup left"
@@ -1183,9 +1185,11 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
       <div
         className="ui-browser sc-bZQynM JUAQh"
       >
-        <Styled(Toolbar)>
+        <Styled(Toolbar)
+          className="ui-browser-toolbar"
+        >
           <Toolbar
-            className="sc-htoDjs bZGSbT"
+            className="ui-browser-toolbar sc-htoDjs bZGSbT"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -1207,7 +1211,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
             xcss={null}
           >
             <div
-              className="ui-toolbar toolbar normal sc-htoDjs bZGSbT"
+              className="ui-toolbar toolbar normal ui-browser-toolbar sc-htoDjs bZGSbT"
             >
               <div
                 className="ui-toolbar-group toolbarGroup left"

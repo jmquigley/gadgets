@@ -35,6 +35,7 @@
  * - `ui-browser` - placed on the root `<div>` of the control.  This wraps the toolbar
  * and the browser content.
  * - `ui-browser-content` - placed on the webview tag within the component.
+ * - `ui-browser-toolbar` - placed on the root `<div>` around the toolbar control.
  *
  * #### Properties
  * - `home: {string} ('about:blank')` - The site visited when the user clicks on the
@@ -128,7 +129,7 @@ export const SearchTextField: any = withProps<BrowserProps, any>(styled(TextFiel
 export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 
 	private _webview: any = null;
-	private _browser: any = null;
+	private _browser: HTMLDivElement = null;
 
 	public static readonly defaultProps: BrowserProps = getDefaultBrowserProps();
 
@@ -155,6 +156,14 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 			'handleURLChange',
 			'handleURLKeyPress'
 		);
+	}
+
+	get browser(): any {
+		return this._browser;
+	}
+
+	get webview(): any {
+		return this._browser;
 	}
 
 	private handleBack() {
@@ -274,7 +283,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		return(
 			<ThemeProvider theme={getTheme()}>
 				<BrowserContainer className={this.classes} >
-					<BrowserToolbar>
+					<BrowserToolbar className="ui-browser-toolbar" >
 						<Button iconName="arrow-left" onClick={this.handleBack} />
 						<Button iconName="arrow-right" onClick={this.handleForward} />
 						<Button iconName="refresh" onClick={this.handleReload} />

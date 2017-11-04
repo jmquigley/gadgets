@@ -1,15 +1,13 @@
 'use strict';
 
-import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import * as sinon from 'sinon';
 import {getDefaultTagListProps, TagList} from '../index';
 
 test('Test retrieval of TagList props object', () => {
 	const props = getDefaultTagListProps();
 
-	assert(props);
+	expect(props).toBeTruthy();
 	expect(props).toMatchSnapshot();
 });
 
@@ -18,7 +16,7 @@ test('Test creation of a simple TagList instance', () => {
 		<TagList />
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -27,9 +25,9 @@ test('Create a new static TagList with 3 tags (a, b, c)', () => {
 		<TagList tags={['a', 'b', 'c']} />
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
-	assert.deepEqual(ctl.state('tags'), ['a', 'b', 'c']);
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c']));
 });
 
 test('Create a new static TagList with 3 tags (c, b, a) with no sorting', () => {
@@ -37,14 +35,14 @@ test('Create a new static TagList with 3 tags (c, b, a) with no sorting', () => 
 		<TagList nosort tags={['c', 'b', 'a']} />
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
-	assert.deepEqual(ctl.state('tags'), ['c', 'b', 'a']);
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['c', 'b', 'a']));
 });
 
 test('Create a new dynamic TagList by adding a new input', () => {
-	const keypress = sinon.spy();
-	const onnew = sinon.spy();
+	const keypress = jest.fn();
+	const onnew = jest.fn();
 	const ctl = mount(
 		<TagList
 			onKeyPress={keypress}
@@ -54,23 +52,26 @@ test('Create a new dynamic TagList by adding a new input', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 
 	const input = ctl.find('input');
-	assert(input);
+	expect(input).toBeTruthy();
 
-	assert.deepEqual(ctl.state('tags'), ['b', 'c', 'd']);
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['b', 'c', 'd']));
+
 	input.simulate('keyPress', {key: 'Enter', target: {value: 'a'}});
-	assert(keypress.calledOnce);
-	assert(onnew.calledOnce);
-	assert(onnew.calledWith('a'));
-	assert.deepEqual(ctl.state('tags'), ['a', 'b', 'c', 'd']);
+
+	expect(keypress).toHaveBeenCalled();
+	expect(onnew).toHaveBeenCalled();
+	expect(onnew).toHaveBeenCalledWith('a');
+
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c', 'd']));
 });
 
 test('Try to create a duplicate entry within a dynamic TagList', () => {
-	const keypress = sinon.spy();
-	const onnew = sinon.spy();
+	const keypress = jest.fn();
+	const onnew = jest.fn();
 	const ctl = mount(
 		<TagList
 			onKeyPress={keypress}
@@ -80,21 +81,22 @@ test('Try to create a duplicate entry within a dynamic TagList', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 
 	const input = ctl.find('input');
-	assert(input);
+	expect(input).toBeTruthy();
 
-	assert.deepEqual(ctl.state('tags'), ['b', 'c', 'd']);
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['b', 'c', 'd']));
 	input.simulate('keyPress', {key: 'Enter', target: {value: 'd'}});
-	assert(keypress.calledOnce);
-	assert(!onnew.calledOnce);
-	assert.deepEqual(ctl.state('tags'), ['b', 'c', 'd']);
+
+	expect(keypress).toHaveBeenCalled();
+	expect(onnew).not.toHaveBeenCalled();
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['b', 'c', 'd']));
 });
 
 test('Create a new dynamic TagList item and cancel creation with escape', () => {
-	const keydown = sinon.spy();
+	const keydown = jest.fn();
 	const ctl = mount(
 		<TagList
 			onKeyDown={keydown}
@@ -103,20 +105,20 @@ test('Create a new dynamic TagList item and cancel creation with escape', () => 
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 
 	const input = ctl.find('input');
-	assert(input);
+	expect(input).toBeTruthy();
 
-	assert.deepEqual(ctl.state('tags'), ['a', 'b', 'c']);
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c']));
 	input.simulate('keyDown', {key: 'Escape'});
-	assert(keydown.calledOnce);
-	assert.deepEqual(ctl.state('tags'), ['a', 'b', 'c']);
+	expect(keydown).toHaveBeenCalled();
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c']));
 });
 
 test('Remove a tag from a TagList', () => {
-	const ondelete = sinon.spy();
+	const ondelete = jest.fn();
 	const ctl = mount(
 		<TagList
 			onDelete={ondelete}
@@ -125,26 +127,27 @@ test('Remove a tag from a TagList', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 
-	assert.deepEqual(ctl.state('tags'), ['a', 'b', 'c']);
-	assert(ctl.find('.ui-button-circle').length === 6);
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c']));
+	expect(ctl.find('.ui-button-circle').length).toBe(6);
 
 	const btns = ctl.find('.ui-button');
-	assert(btns.length === 6);
+	expect(btns.length).toBe(6);
 
 	// show the delete button that will be clicked
 	ctl.find('.ui-tag').at(0).simulate('mouseOver');
 	btns.at(0).simulate('click');
-	assert(ondelete.calledOnce);
-	assert(ondelete.calledWith('a'));
-	assert.deepEqual(ctl.state('tags'), ['b', 'c']);
+
+	expect(ondelete).toHaveBeenCalled();
+	expect(ondelete).toHaveBeenCalledWith('a');
+	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['b', 'c']));
 });
 
 test('Test the change/blur events in TagList', () => {
-	const blur = sinon.spy();
-	const change = sinon.spy();
+	const blur = jest.fn();
+	const change = jest.fn();
 	const ctl = mount(
 		<TagList
 			onChange={change}
@@ -153,15 +156,15 @@ test('Test the change/blur events in TagList', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 
 	const input = ctl.find('input');
-	assert(input);
+	expect(input).toBeTruthy();
 
 	input.simulate('change', {target: {value: 'abc'}});
-	assert(ctl.state('inputTextSize') === 3);
+	expect(ctl.state('inputTextSize')).toBe(3);
 
 	input.simulate('blur', {target: {value: 'abc'}});
-	assert(ctl.state('inputTextSize') === 1);
+	expect(ctl.state('inputTextSize')).toBe(1);
 });

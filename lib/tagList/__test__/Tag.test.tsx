@@ -1,15 +1,13 @@
 'use strict';
 
-import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import * as sinon from 'sinon';
 import {getDefaultTagProps, Tag} from '../index';
 
 test('Test retrieval of Tag props object', () => {
 	const props = getDefaultTagProps();
 
-	assert(props);
+	expect(props).toBeTruthy();
 	expect(props).toMatchSnapshot();
 });
 
@@ -18,21 +16,21 @@ test('Test creation of a simple Tag instance', () => {
 		<Tag>test tag</Tag>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
 test('Test disabling of the simple Tag instance', () => {
-	const click = sinon.spy();
+	const click = jest.fn();
 	const ctl = mount(
 		<Tag disabled onClick={click} usedelete>test tag</Tag>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button').first().simulate('click');
-	assert(!click.calledOnce);
+	expect(click).not.toHaveBeenCalled();
 });
 
 test('Test making Tag invisible', () => {
@@ -40,13 +38,13 @@ test('Test making Tag invisible', () => {
 		<Tag disabled usedelete visible={false}>test tag</Tag>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
 test('Test hiding/showing the delete button in Tag', () => {
 	const tag: string = 'test tag';
-	const ondelete = sinon.spy();
+	const ondelete = jest.fn();
 	const ctl = mount(
 		<Tag
 			onDelete={ondelete}
@@ -56,12 +54,12 @@ test('Test hiding/showing the delete button in Tag', () => {
 		</Tag>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	ctl.find('.ui-tag').simulate('mouseOver');
-	assert(ctl.state('showDelete'));
+	expect(ctl.state('showDelete')).toBe(true);
 	ctl.find('.ui-button').first().simulate('click');
-	assert(ondelete.calledOnce);
-	assert(ondelete.calledWith(tag));
+	expect(ondelete).toHaveBeenCalled();
+	expect(ondelete).toHaveBeenCalledWith(tag);
 });
 
 test('Test the mouseout event to hide the Tag delete button', () => {
@@ -74,9 +72,9 @@ test('Test the mouseout event to hide the Tag delete button', () => {
 		</Tag>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	ctl.find('.ui-tag').simulate('mouseOver');
-	assert(ctl.state('showDelete'));
+	expect(ctl.state('showDelete')).toBe(true);
 	ctl.find('.ui-tag').simulate('mouseOut');
-	assert(!ctl.state('showDelete'));
+	expect(ctl.state('showDelete')).toBe(false);
 });

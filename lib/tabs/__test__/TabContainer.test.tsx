@@ -1,16 +1,14 @@
 'use strict';
 
-import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import * as sinon from 'sinon';
 import {Location} from '../../shared';
 import {getDefaultTabContainerProps, Tab, TabContainer} from '../index';
 
 test('Test retrieval of Tabs props object', () => {
 	const props = getDefaultTabContainerProps();
 
-	assert(props);
+	expect(props).toBeTruthy();
 	expect(props).toMatchSnapshot();
 });
 
@@ -19,7 +17,7 @@ test('Create an empty TabContainer instance', () => {
 		<TabContainer />
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -32,28 +30,28 @@ test('Test TabContainer retrieval functions', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 	const container = ctl.instance() as TabContainer;
-	assert(container);
+	expect(container).toBeTruthy();
 
 	const id: string = container.tabs.get(0).props['id'];
 	let tab;
 	let idx;
 
 	[tab, idx] = container._getTab(id);
-	assert.equal(idx, 0);
-	assert.equal(tab.props['id'], id);
+	expect(idx).toBe(0);
+	expect(tab.props['id']).toBe(id);
 
 	[tab, idx] = container._getTab('');
-	assert(tab == null);
-	assert(idx === -1);
+	expect(tab).toBeNull();
+	expect(idx).toBe(-1);
 
 	idx = container._getTabIdx(id);
-	assert(idx === 0);
+	expect(idx).toBe(0);
 
 	idx = container._getTabIdx('');
-	assert(idx === -1);
+	expect(idx).toBe(-1);
 });
 
 test('Test the creation of a TabContainer instance (top)', () => {
@@ -65,7 +63,7 @@ test('Test the creation of a TabContainer instance (top)', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -78,7 +76,7 @@ test('Test the creation of a TabContainer instance (bottom)', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -91,7 +89,7 @@ test('Test the creation of a TabContainer instance (left)', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -104,7 +102,7 @@ test('Test the creation of a TabContainer instance (right)', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -117,7 +115,7 @@ test('Test disabling the TabContainer instance', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -130,12 +128,12 @@ test('Test making the TabContainer invisible', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
 test('Test selecting the first tab within the TabContainer', () => {
-	const select = sinon.spy();
+	const select = jest.fn();
 	const ctl = mount(
 		<TabContainer onSelect={select}>
 			<Tab title="tab #1">#1</Tab>
@@ -144,20 +142,20 @@ test('Test selecting the first tab within the TabContainer', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 	const container = ctl.instance() as TabContainer;
-	assert(container);
+	expect(container).toBeTruthy();
 
-	assert(container.tabs.size === 3);
+	expect(container.tabs.size).toBe(3);
 	const firstTab = ctl.find('.ui-tab').first().find('.ui-label');
 	firstTab.simulate('click');
-	assert(select.calledOnce);
-	assert(container.tabs.size === 3);
+	expect(select).toHaveBeenCalled();
+	expect(container.tabs.size).toBe(3);
 });
 
 test('Test removing the first item from the TabContainer', () => {
-	const remove = sinon.spy();
+	const remove = jest.fn();
 	const ctl = mount(
 		<TabContainer onRemove={remove}>
 			<Tab title="tab #1">#1</Tab>
@@ -166,25 +164,25 @@ test('Test removing the first item from the TabContainer', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 	const container = ctl.instance() as TabContainer;
-	assert(container);
+	expect(container).toBeTruthy();
 
-	assert(container.tabs.size === 3);
+	expect(container.tabs.size).toBe(3);
 	const firstTab = ctl.find('.ui-tab').first().find('.ui-button').first();
 	firstTab.simulate('click');
-	assert(remove.calledOnce);
-	assert(container.tabs.size === 2);
+	expect(remove).toHaveBeenCalled();
+	expect(container.tabs.size).toBe(2);
 
 	const lastTab = ctl.find('.ui-tab').last().find('.ui-button').first();
 	lastTab.simulate('click');
-	assert(remove.calledTwice);
-	assert(container.tabs.size === 1);
+	expect(remove).toHaveBeenCalledTimes(2);
+	expect(container.tabs.size).toBe(1);
 });
 
 test('Test the TabContainer with the previous and next buttons', () => {
-	const select = sinon.spy();
+	const select = jest.fn();
 	const ctl = mount(
 		<TabContainer onSelect={select}>
 			<Tab title="tab #1">#1</Tab>
@@ -193,26 +191,26 @@ test('Test the TabContainer with the previous and next buttons', () => {
 		</TabContainer>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 	const container = ctl.instance() as TabContainer;
-	assert(container);
+	expect(container).toBeTruthy();
 
 	// Assert that the current tab is the first in the list
-	assert.equal(ctl.state('selectedTab'), container.tabs.get(0).props['id']);
+	expect(ctl.state('selectedTab')).toBe(container.tabs.get(0).props['id']);
 
 	const prevButton = ctl.find('.ui-tab-navigation').find('.ui-button').first();
-	assert(prevButton);
+	expect(prevButton).toBeTruthy();
 	const nextButton = ctl.find('.ui-tab-navigation').find('.ui-button').last();
-	assert(nextButton);
+	expect(nextButton).toBeTruthy();
 
 	// Click the "next" button and move from 1 -> 2
 	nextButton.simulate('click');
-	assert(select.calledOnce);
-	assert.equal(ctl.state('selectedTab'), container.tabs.get(1).props['id']);
+	expect(select).toHaveBeenCalled();
+	expect(ctl.state('selectedTab')).toBe(container.tabs.get(1).props['id']);
 
 	// Click the "previous" button and move from 2 -> 1
 	prevButton.simulate('click');
-	assert(select.calledTwice);
-	assert.equal(ctl.state('selectedTab'), container.tabs.get(0).props['id']);
+	expect(select).toHaveBeenCalledTimes(2);
+	expect(ctl.state('selectedTab')).toBe(container.tabs.get(0).props['id']);
 });

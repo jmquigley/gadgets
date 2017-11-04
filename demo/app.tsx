@@ -305,11 +305,11 @@ class App extends React.Component<AppProps, AppState> {
 	private buildBrowser = () => (
 		<Container>
 			<Browser
-				home="http:/www.google.com"
+				home="http://www.example.com"
 				onClip={(uri: string, content: string, dom: any) => {
 					debug(`uri: %s, content: '%s', dom: %O`, uri, content, dom);
 				}}
-				uri=""
+				uri="http://www.google.com"
 				useparser
 			/>
 		</Container>
