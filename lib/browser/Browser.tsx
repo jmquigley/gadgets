@@ -16,7 +16,7 @@
  * import {List} from 'immutable';
  *
  * <Browser
- *     home="http:/www.google.com"
+ *     home="http://www.google.com"
  *     onClip={(uri: string, content: string, dom: any, history: List) => {
  *         debug(`uri: %s, content: '%s', dom: %O`, uri, content, dom);
  *     }}
