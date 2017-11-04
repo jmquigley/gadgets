@@ -50,7 +50,8 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent} from '../shared';
+import {BaseComponent, getTheme} from '../shared';
+import {ThemeProvider} from '../shared/themed-components';
 
 export interface ButtonToggleProps extends ButtonProps {
 	bgColorOff?: string;
@@ -87,12 +88,9 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 	public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
 	constructor(props: ButtonToggleProps) {
-		super(props, require('./styles.css'));
+		super(props, {}, ButtonToggle.defaultProps.style);
 
-		this._rootStyles.add([
-			'ui-button-toggle',
-			this.styles.buttonToggle
-		]);
+		this._classes.add(['ui-button-toggle']);
 
 		this.state = {
 			toggle: props.initialToggle
@@ -129,14 +127,16 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 	public render() {
 		return (
-			<Button
-				{...this.props}
-				className={this._rootStyles.classnames}
-				iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
-				noripple
-				onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-				style={this.inlineStyles}
-			/>
+			<ThemeProvider theme={getTheme()}>
+				<Button
+					{...this.props}
+					className={this.classes}
+					iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
+					noripple
+					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+					style={this.inlineStyles}
+				/>
+			</ThemeProvider>
 		);
 	}
 }

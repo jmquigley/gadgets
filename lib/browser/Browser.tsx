@@ -158,14 +158,6 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		);
 	}
 
-	get browser(): any {
-		return this._browser;
-	}
-
-	get webview(): any {
-		return this._browser;
-	}
-
 	private handleBack() {
 		if (this._webview && this._webview.canGoBack()) {
 			this._webview.goBack();
