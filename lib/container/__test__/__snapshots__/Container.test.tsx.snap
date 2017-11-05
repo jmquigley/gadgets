@@ -1,36 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test adding custom className to Container control 1`] = `
-<section
-  className="ui-container container normal test-classname"
-  id="testid"
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
+    }
+  }
 >
-  <p>
-    Test Container
-  </p>
-</section>
+  <styled.div
+    className="ui-container test-classname"
+    id="testid"
+    style={Object {}}
+  >
+    <p>
+      Test Container
+    </p>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creation of a Container control 1`] = `
-<section
-  className="ui-container container normal"
-  id=""
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
+    }
+  }
 >
-  <p>
-    Test Container
-  </p>
-</section>
+  <styled.div
+    className="ui-container"
+    id=""
+    style={Object {}}
+  >
+    <p>
+      Test Container
+    </p>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creation of a Container control with an id value 1`] = `
-<section
-  className="ui-container container normal"
-  id="testid"
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
+    }
+  }
 >
-  <p>
-    Test Container
-  </p>
-</section>
+  <styled.div
+    className="ui-container"
+    id="testid"
+    style={Object {}}
+  >
+    <p>
+      Test Container
+    </p>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test retrieval of Container props object 1`] = `
