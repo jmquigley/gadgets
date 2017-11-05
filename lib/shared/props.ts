@@ -168,3 +168,74 @@ export const InvisibleCSS: any = css`
 	display: none !important;
 	width: 0 !important;
 `;
+
+export const locationStyle: any = {
+	[Location.none]: css``,
+	[Location.topLeft]: css`
+		top: 0;
+		left: 0;
+		transform: translateY(-50%);
+	`,
+	[Location.top]: css`
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	`,
+	[Location.topRight]: css`
+		top: 0;
+		right: 0;
+		transform: translateY(-50%);
+	`,
+	[Location.middleLeft]: css`
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	`,
+	[Location.middle]: css`
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	`,
+	[Location.middleRight]: css`
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	`,
+	[Location.bottomLeft]: css`
+		top: 100%;
+		left: 0;
+		transform: translateY(-50%);
+	`,
+	[Location.bottom]: css`
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	`,
+	[Location.bottomRight]: css`
+		top: 100%;
+		right: 0;
+		transform: translateY(-50%);
+	`,
+	[Location.right]: css`
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	`,
+	[Location.left]: css`
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	`
+};
+
+export const borderStyle: any = {
+	[Sizing.xxsmall]: css`border: solid 0.1em;`,
+	[Sizing.xsmall]: css`border: solid 0.1em;`,
+	[Sizing.small]: css`border: solid 0.125em;`,
+	[Sizing.medium]: css`border: solid 0.15em;`,
+	[Sizing.normal]: css`border: solid 0.15em;`,
+	[Sizing.large]: css`border: solid 0.2em;`,
+	[Sizing.xlarge]: css`border: solid 0.25em;`,
+	[Sizing.xxlarge]: css`border: solid 0.3em;`,
+	[Sizing.inherit]: css`border: inherit;`
+};

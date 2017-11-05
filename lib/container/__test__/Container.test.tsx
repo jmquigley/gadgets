@@ -1,6 +1,5 @@
 'use strict';
 
-import * as assert from 'assert';
 import {shallow} from 'enzyme';
 import * as React from 'react';
 import {Container, getDefaultContainerProps} from '../index';
@@ -8,7 +7,7 @@ import {Container, getDefaultContainerProps} from '../index';
 test('Test retrieval of Container props object', () => {
 	const props = getDefaultContainerProps();
 
-	assert(props);
+	expect(props).toBeTruthy();
 	expect(props).toMatchSnapshot();
 });
 
@@ -19,7 +18,7 @@ test('Test creation of a Container control', () => {
 		</Container>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -30,7 +29,7 @@ test('Test creation of a Container control with an id value', () => {
 		</Container>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -41,6 +40,6 @@ test('Test adding custom className to Container control', () => {
 		</Container>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });

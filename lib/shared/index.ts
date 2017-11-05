@@ -12,6 +12,7 @@ import {
 	InvisibleCSS,
 	Justify,
 	Location,
+	locationStyle,
 	SortOrder,
 	Styles
 } from './props';
@@ -51,6 +52,7 @@ export {
 	InvisibleCSS,
 	Justify,
 	Location,
+	locationStyle,
 	setTheme,
 	Sizes,
 	Sizing,

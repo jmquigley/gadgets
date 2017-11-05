@@ -1,44 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a Badge control 1`] = `
-<div
-  className="badgeContainer normal test-class"
->
-  Test Component
-  <div
-    className="ui-badge badge topRight normal"
-    onClick={[Function]}
-    style={
-      Object {
-        "backgroundColor": "blue",
-        "border": "solid 3px",
-        "color": "red",
-      }
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
+  }
+>
+  <styled.div
+    className="ui-badge-container"
   >
-    1
-  </div>
-</div>
+    Test Component
+    <styled.div
+      className="ui-badge test-class"
+      location="topRight"
+      onClick={[Function]}
+      sizing="normal"
+      style={
+        Object {
+          "backgroundColor": "blue",
+          "border": "solid 3px",
+          "color": "red",
+        }
+      }
+    >
+      1
+    </styled.div>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test making the Badge control invisible 1`] = `
-<div
-  className="badgeContainer normal invisible"
->
-  <div
-    className="ui-badge badge topRight normal"
-    onClick={[Function]}
-    style={
-      Object {
-        "backgroundColor": "white",
-        "border": "solid 3px",
-        "color": "red",
-      }
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
+  }
+>
+  <styled.div
+    className="ui-badge-container"
   >
-    0
-  </div>
-</div>
+    <styled.div
+      className="ui-badge"
+      location="topRight"
+      onClick={[Function]}
+      sizing="normal"
+      style={
+        Object {
+          "backgroundColor": "white",
+          "border": "solid 3px",
+          "color": "red",
+        }
+      }
+    >
+      0
+    </styled.div>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test retrieval of Badge props object 1`] = `
@@ -73,21 +103,36 @@ Object {
 `;
 
 exports[`Test the disabling of a Badge control 1`] = `
-<div
-  className="badgeContainer normal disabled nohover"
->
-  <div
-    className="ui-badge badge topRight normal"
-    onClick={[Function]}
-    style={
-      Object {
-        "backgroundColor": "white",
-        "border": "solid 3px",
-        "color": "red",
-      }
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
+  }
+>
+  <styled.div
+    className="ui-badge-container"
   >
-    0
-  </div>
-</div>
+    <styled.div
+      className="ui-badge"
+      location="topRight"
+      onClick={[Function]}
+      sizing="normal"
+      style={
+        Object {
+          "backgroundColor": "white",
+          "border": "solid 3px",
+          "color": "red",
+        }
+      }
+    >
+      0
+    </styled.div>
+  </styled.div>
+</ThemeProvider>
 `;

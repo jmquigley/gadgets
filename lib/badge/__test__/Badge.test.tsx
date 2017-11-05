@@ -1,6 +1,5 @@
 'use strict';
 
-import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {Badge, getDefaultBadgeProps} from '../index';
@@ -8,7 +7,7 @@ import {Badge, getDefaultBadgeProps} from '../index';
 test('Test retrieval of Badge props object', () => {
 	const props = getDefaultBadgeProps();
 
-	assert(props);
+	expect(props).toBeTruthy();
 	expect(props).toMatchSnapshot();
 });
 
@@ -27,21 +26,21 @@ test('Test creation of a Badge control', () => {
 		</Badge>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
 test('Test the disabling of a Badge control', () => {
 	const ctl = shallow(<Badge disabled />);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
 test('Test making the Badge control invisible', () => {
 	const ctl = shallow(<Badge visible={false} />);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -56,11 +55,11 @@ test('Test clicking a Badge counter control', () => {
 		</Badge>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 
-	assert(!ctl.prop('disabled'));
-	assert(ctl.prop('visible'));
+	expect(ctl.prop('disabled')).toBe(false);
+	expect(ctl.prop('visible')).toBe(true);
 
-	ctl.find('.ui-badge').simulate('click');
+	ctl.find('.ui-badge').first().simulate('click');
 	expect(click).toHaveBeenCalled();
 });

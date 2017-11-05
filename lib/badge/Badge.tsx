@@ -26,10 +26,12 @@
  * #### Styles
  * - `ui-badge` - Top level class on the `<div>` of the badge (not the
  * container)
+ * - `ui-badge-container` - This class is on the div that surrounds the
+ * badge and the child component that it decorates.
  *
  * #### Properties
- * - `counter: number (0)` - The number value displayed by the badge
- * - `suppress: boolean (false)` - If this is set to true, then numbers less
+ * - `counter: {number} (0)` - The number value displayed by the badge
+ * - `suppress: {boolean} (false)` - If this is set to true, then numbers less
  * than 1 are not shown, otherwise all values are shown.
  *
  * @module Badge
@@ -39,10 +41,17 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
-import {BaseComponent, BaseProps, Sizing} from '../shared';
+import {
+	BaseComponent,
+	BaseProps,
+	fontStyle,
+	getTheme,
+	locationStyle,
+	Sizing
+} from '../shared';
 import {getDefaultBaseProps, Location} from '../shared/props';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface BadgeProps extends BaseProps {
 	counter?: number;
@@ -67,26 +76,33 @@ export function getDefaultBadgeProps(): BadgeProps {
 	);
 }
 
+export const BadgeView: any = withProps<BadgeProps, HTMLDivElement>(styled.div)`
+	border-radius: 96px;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	user-select: none;
+	cursor: default;
+	padding: 0 7px;
+
+	${props => props.location && locationStyle[props.location]};
+	${props => props.sizing && fontStyle[props.sizing]};
+`;
+
+export const BadgeContainerView: any = withProps<BadgeProps, HTMLDivElement>(styled.div)`
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+`;
+
 export class Badge extends BaseComponent<BadgeProps, undefined> {
 
 	public static readonly defaultProps: BadgeProps = getDefaultBadgeProps();
 
-	private _badgeCN: ClassNames = new ClassNames();
-
 	constructor(props: BadgeProps) {
-		super(props, require('./styles.css'), Badge.defaultProps.style);
+		super(props, {}, Badge.defaultProps.style);
 
-		this._rootStyles.add([
-			this.styles.badgeContainer
-		]);
-
-		this._badgeCN.add([
-			'ui-badge',
-			this.styles.badge,
-			this.locationStyle,
-			this.fontStyle()
-		]);
-
+		this._classes.add(['ui-badge']);
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(props);
 	}
@@ -102,21 +118,25 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 			badge = null;
 		} else {
 			badge = (
-				<div
-					className={this._badgeCN.classnames}
+				<BadgeView
+					className={this.classes}
+					location={this.props.location}
 					onClick={this.handleClick}
+					sizing={this.props.sizing}
 					style={this.inlineStyles}
 				>
 					{this.props.counter}
-				</div>
+				</BadgeView>
 			);
 		}
 
 		return (
-			<div className={this._rootStyles.classnames}>
-				{this.props.children}
-				{badge}
-			</div>
+			<ThemeProvider theme={getTheme()} >
+				<BadgeContainerView className="ui-badge-container">
+					{this.props.children}
+					{badge}
+				</BadgeContainerView>
+			</ThemeProvider>
 		);
 	}
 }

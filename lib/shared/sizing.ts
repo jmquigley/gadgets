@@ -131,7 +131,6 @@ export class Sizes {
 
 			fontStyle[key] = css`
 				font-size: ${valSize / baseFontSize}rem;
-				font-weight: inherit;
 			`;
 
 			this._sizes[key] = {
