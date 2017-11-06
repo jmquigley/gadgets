@@ -9,12 +9,26 @@ exports[`Test creation of an Icon control with icon 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
     }
   }
 >
-  <Icon__FontAwesome
+  <styled.i
     className="ui-icon fa fa-fw fa-star test-class"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    iconName="star"
+    id=""
+    imageFile=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    selected={false}
     sizing="normal"
     style={
       Object {
@@ -22,6 +36,11 @@ exports[`Test creation of an Icon control with icon 1`] = `
         "color": "red",
       }
     }
+    testing={true}
+    theme={Object {}}
+    visible={true}
+    width=""
+    xcss={null}
   />
 </ThemeProvider>
 `;
@@ -35,15 +54,34 @@ exports[`Test creation of an Icon control with image 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
     }
   }
 >
-  <Icon__Image
+  <styled.img
     className="ui-icon"
+    contentEditable={false}
+    direction="right"
+    disabled={false}
+    focus={false}
+    height=""
+    iconName="bomb"
+    id=""
+    imageFile="./test-icon-image.png"
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    selected={false}
     sizing="normal"
     src="./test-icon-image.png"
     style={Object {}}
+    testing={true}
+    theme={Object {}}
+    visible={true}
+    width=""
+    xcss={null}
   />
 </ThemeProvider>
 `;
@@ -85,20 +123,46 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
   >
-    <Icon__FontAwesome
+    <styled.i
       className="ui-icon fa fa-fw fa-bomb"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="bomb"
+      id=""
+      imageFile=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      selected={false}
       sizing="normal"
       style={Object {}}
+      testing={true}
+      theme={Object {}}
+      visible={false}
+      width=""
+      xcss={null}
     >
       <i
         className="ui-icon fa fa-fw fa-bomb c0"
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        height=""
+        id=""
+        selected={false}
         style={Object {}}
+        width=""
       />
-    </Icon__FontAwesome>
+    </styled.i>
   </ThemeProvider>
 </Icon>
 `;
@@ -166,20 +230,46 @@ exports[`Test the disabling of the Icon control 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
   >
-    <Icon__FontAwesome
+    <styled.i
       className="ui-icon fa fa-fw fa-bomb"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      height=""
+      iconName="bomb"
+      id=""
+      imageFile=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      selected={false}
       sizing="normal"
       style={Object {}}
+      testing={true}
+      theme={Object {}}
+      visible={true}
+      width=""
+      xcss={null}
     >
       <i
         className="ui-icon fa fa-fw fa-bomb c0"
+        contentEditable={false}
+        direction="right"
+        disabled={true}
+        height=""
+        id=""
+        selected={false}
         style={Object {}}
+        width=""
       />
-    </Icon__FontAwesome>
+    </styled.i>
   </ThemeProvider>
 </Icon>
 `;

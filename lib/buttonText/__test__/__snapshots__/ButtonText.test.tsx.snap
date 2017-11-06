@@ -42,6 +42,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -60,7 +61,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
       visible={true}
     >
       <div
-        className="ui-button-text ripple test-class sc-htpNat jFqZUF"
+        className="ui-button-text ripple test-class sc-ifAKCX dpJtvw"
         disabled={false}
         onClick={[Function]}
         style={
@@ -76,7 +77,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
           sizing="normal"
         >
           <div
-            className="sc-bwzfXH kFYYMT"
+            className="sc-bxivhb fscWqC"
           >
             test text
           </div>
@@ -112,20 +113,46 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
                 "color": "#000000",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
               }
             }
           >
-            <Icon__FontAwesome
+            <styled.i
               className="ui-icon fa fa-fw fa-bomb"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName="bomb"
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
               sizing="normal"
               style={Object {}}
+              testing={true}
+              theme={Object {}}
+              visible={true}
+              width=""
+              xcss={null}
             >
               <i
-                className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz dGlSoR"
+                className="ui-icon fa fa-fw fa-bomb sc-bdVaJa iGRPLq"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                height=""
+                id=""
+                selected={false}
                 style={Object {}}
+                width=""
               />
-            </Icon__FontAwesome>
+            </styled.i>
           </ThemeProvider>
         </Icon>
       </div>
@@ -170,6 +197,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -182,7 +210,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
       visible={true}
     >
       <div
-        className="ui-button-text nohover sc-htpNat cRHVNF"
+        className="ui-button-text nohover sc-ifAKCX hXDCDQ"
         disabled={true}
         onClick={[Function]}
         style={Object {}}
@@ -218,20 +246,46 @@ exports[`Test disabling of a ButtonText control 1`] = `
                 "color": "#000000",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
               }
             }
           >
-            <Icon__FontAwesome
+            <styled.i
               className="ui-icon fa fa-fw fa-bomb"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName="bomb"
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
               sizing="normal"
               style={Object {}}
+              testing={true}
+              theme={Object {}}
+              visible={true}
+              width=""
+              xcss={null}
             >
               <i
-                className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz dGlSoR"
+                className="ui-icon fa fa-fw fa-bomb sc-bdVaJa iGRPLq"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                height=""
+                id=""
+                selected={false}
                 style={Object {}}
+                width=""
               />
-            </Icon__FontAwesome>
+            </styled.i>
           </ThemeProvider>
         </Icon>
         <styled.div
@@ -239,7 +293,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
           sizing="normal"
         >
           <div
-            className="sc-bwzfXH izqHUe"
+            className="sc-bxivhb klVWCC"
           />
         </styled.div>
       </div>
@@ -284,6 +338,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -296,7 +351,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
       visible={false}
     >
       <div
-        className="ui-button-text ripple sc-htpNat eQFPbH"
+        className="ui-button-text ripple sc-ifAKCX dtBMRg"
         disabled={false}
         onClick={[Function]}
         style={Object {}}
@@ -332,20 +387,46 @@ exports[`Test making a ButtonText control invisible 1`] = `
                 "color": "#000000",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
               }
             }
           >
-            <Icon__FontAwesome
+            <styled.i
               className="ui-icon fa fa-fw fa-bomb"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName="bomb"
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
               sizing="normal"
               style={Object {}}
+              testing={true}
+              theme={Object {}}
+              visible={true}
+              width=""
+              xcss={null}
             >
               <i
-                className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz dGlSoR"
+                className="ui-icon fa fa-fw fa-bomb sc-bdVaJa iGRPLq"
+                contentEditable={false}
+                direction="right"
+                disabled={false}
+                height=""
+                id=""
+                selected={false}
                 style={Object {}}
+                width=""
               />
-            </Icon__FontAwesome>
+            </styled.i>
           </ThemeProvider>
         </Icon>
         <styled.div
@@ -353,7 +434,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
           sizing="normal"
         >
           <div
-            className="sc-bwzfXH izqHUe"
+            className="sc-bxivhb klVWCC"
           />
         </styled.div>
       </div>

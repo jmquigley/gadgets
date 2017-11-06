@@ -78,6 +78,7 @@ exports[`Test disabling of a Tab 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
@@ -176,19 +177,46 @@ exports[`Test disabling of a Tab 1`] = `
                   ]
                 }
               >
-                <span
-                  className="ui-label label normal ui-title Title__StyledWidget-dupbKD dJeweB disabled nohover"
-                  contentEditable={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDoubleClick={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  suppressContentEditableWarning={true}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                    }
+                  }
                 >
-                  tab title
-                </span>
+                  <styled.span
+                    className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                    contentEditable={false}
+                    innerRef={[Function]}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                  >
+                    <span
+                      className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb fhJlEg"
+                      contentEditable={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      style={Object {}}
+                      suppressContentEditableWarning={true}
+                    >
+                      tab title
+                    </span>
+                  </styled.span>
+                </ThemeProvider>
               </Label>
             </Title__StyledWidget>
             <Title__StyledWidget
@@ -374,6 +402,7 @@ exports[`Test making a Tab invisible 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
@@ -548,19 +577,46 @@ exports[`Test making a Tab invisible 1`] = `
                   ]
                 }
               >
-                <span
-                  className="ui-label label normal ui-title Title__StyledWidget-dupbKD dJeweB"
-                  contentEditable={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDoubleClick={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  suppressContentEditableWarning={true}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                    }
+                  }
                 >
-                  tab title
-                </span>
+                  <styled.span
+                    className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                    contentEditable={false}
+                    innerRef={[Function]}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                  >
+                    <span
+                      className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb fhJlEg"
+                      contentEditable={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      style={Object {}}
+                      suppressContentEditableWarning={true}
+                    >
+                      tab title
+                    </span>
+                  </styled.span>
+                </ThemeProvider>
               </Label>
             </Title__StyledWidget>
             <Title__StyledWidget
@@ -700,6 +756,7 @@ exports[`Test making a Tab invisible 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -712,7 +769,7 @@ exports[`Test making a Tab invisible 1`] = `
                       visible={false}
                     >
                       <div
-                        className="ui-button ripple sc-bdVaJa fkCVxD"
+                        className="ui-button ripple sc-htpNat psfup"
                         disabled={false}
                         onClick={[Function]}
                         style={Object {}}
@@ -748,20 +805,46 @@ exports[`Test making a Tab invisible 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-times"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="times"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="normal"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz dGlSoR"
+                                className="ui-icon fa fa-fw fa-times sc-bdVaJa iGRPLq"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -922,6 +1005,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
@@ -1088,19 +1172,46 @@ exports[`Test the click handler in the Tab instance 1`] = `
                   ]
                 }
               >
-                <span
-                  className="ui-label label normal ui-title Title__StyledWidget-dupbKD dJeweB"
-                  contentEditable={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDoubleClick={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  suppressContentEditableWarning={true}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                    }
+                  }
                 >
-                  tab title
-                </span>
+                  <styled.span
+                    className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                    contentEditable={false}
+                    innerRef={[Function]}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                  >
+                    <span
+                      className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb fhJlEg"
+                      contentEditable={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      style={Object {}}
+                      suppressContentEditableWarning={true}
+                    >
+                      tab title
+                    </span>
+                  </styled.span>
+                </ThemeProvider>
               </Label>
             </Title__StyledWidget>
             <Title__StyledWidget
@@ -1232,6 +1343,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -1244,7 +1356,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={Object {}}
@@ -1280,20 +1392,46 @@ exports[`Test the click handler in the Tab instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-times"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="times"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="normal"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz dGlSoR"
+                                className="ui-icon fa fa-fw fa-times sc-bdVaJa iGRPLq"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -1422,6 +1560,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
@@ -1588,19 +1727,46 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                   ]
                 }
               >
-                <span
-                  className="ui-label label normal ui-title Title__StyledWidget-dupbKD dJeweB"
-                  contentEditable={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDoubleClick={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  suppressContentEditableWarning={true}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                    }
+                  }
                 >
-                  tab title
-                </span>
+                  <styled.span
+                    className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                    contentEditable={false}
+                    innerRef={[Function]}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                  >
+                    <span
+                      className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb fhJlEg"
+                      contentEditable={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      style={Object {}}
+                      suppressContentEditableWarning={true}
+                    >
+                      tab title
+                    </span>
+                  </styled.span>
+                </ThemeProvider>
               </Label>
             </Title__StyledWidget>
             <Title__StyledWidget
@@ -1732,6 +1898,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -1744,7 +1911,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={Object {}}
@@ -1780,20 +1947,46 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-times"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="times"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="normal"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz dGlSoR"
+                                className="ui-icon fa fa-fw fa-times sc-bdVaJa iGRPLq"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>

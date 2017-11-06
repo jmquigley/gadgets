@@ -40,8 +40,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled, {ThemeProvider} from 'styled-components';
 import {BaseComponent, BaseProps, getDefaultBaseProps, getTheme} from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface AccordionProps extends BaseProps {
 	children?: React.ReactNode;
@@ -55,7 +55,7 @@ export function getDefaultAccordionProps(): AccordionProps {
 	));
 }
 
-export const AccordionView: any = styled.ul`
+export const AccordionView: any = withProps<AccordionProps, HTMLUListElement>(styled.ul)`
 	border: solid 1px;
 	border-color: ${props => props.theme.borderColor || 'black'};
 	cursor: default;

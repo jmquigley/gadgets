@@ -55,6 +55,7 @@ exports[`Test disabling of a ListItem control 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -113,6 +114,7 @@ exports[`Test disabling of a ListItem control 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
@@ -196,6 +198,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
                   }
                 }
@@ -333,23 +336,54 @@ exports[`Test disabling of a ListItem control 1`] = `
                           ]
                         }
                       >
-                        <span
-                          className="ui-label label normal ui-title Title__StyledWidget-dupbKD dJeweB disabled nohover"
-                          contentEditable={false}
-                          onBlur={[Function]}
-                          onClick={[Function]}
-                          onDoubleClick={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyPress={[Function]}
-                          style={
+                        <ThemeProvider
+                          theme={
                             Object {
-                              "padding": "2px 4px",
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#004358",
+                              "color": "#000000",
+                              "headerBackgroundColor": "#004358",
+                              "headerForegroundColor": "#ffffff",
+                              "headerHoverColor": "#ffe11a",
+                              "hoverColor": "#c0c0c0",
                             }
                           }
-                          suppressContentEditableWarning={true}
                         >
-                          test title
-                        </span>
+                          <styled.span
+                            className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                            contentEditable={false}
+                            innerRef={[Function]}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            style={
+                              Object {
+                                "padding": "2px 4px",
+                              }
+                            }
+                            suppressContentEditableWarning={true}
+                          >
+                            <span
+                              className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb fhJlEg"
+                              contentEditable={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onDoubleClick={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyPress={[Function]}
+                              style={
+                                Object {
+                                  "padding": "2px 4px",
+                                }
+                              }
+                              suppressContentEditableWarning={true}
+                            >
+                              test title
+                            </span>
+                          </styled.span>
+                        </ThemeProvider>
                       </Label>
                     </Title__StyledWidget>
                   </div>
@@ -419,6 +453,7 @@ exports[`Test making ListItem control invisible 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -477,6 +512,7 @@ exports[`Test making ListItem control invisible 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
@@ -560,6 +596,7 @@ exports[`Test making ListItem control invisible 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
                   }
                 }
@@ -697,23 +734,54 @@ exports[`Test making ListItem control invisible 1`] = `
                           ]
                         }
                       >
-                        <span
-                          className="ui-label label normal ui-title Title__StyledWidget-dupbKD dJeweB invisible"
-                          contentEditable={false}
-                          onBlur={[Function]}
-                          onClick={[Function]}
-                          onDoubleClick={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyPress={[Function]}
-                          style={
+                        <ThemeProvider
+                          theme={
                             Object {
-                              "padding": "2px 4px",
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#004358",
+                              "color": "#000000",
+                              "headerBackgroundColor": "#004358",
+                              "headerForegroundColor": "#ffffff",
+                              "headerHoverColor": "#ffe11a",
+                              "hoverColor": "#c0c0c0",
                             }
                           }
-                          suppressContentEditableWarning={true}
                         >
-                          test title
-                        </span>
+                          <styled.span
+                            className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                            contentEditable={false}
+                            innerRef={[Function]}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            style={
+                              Object {
+                                "padding": "2px 4px",
+                              }
+                            }
+                            suppressContentEditableWarning={true}
+                          >
+                            <span
+                              className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb fhJlEg"
+                              contentEditable={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onDoubleClick={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyPress={[Function]}
+                              style={
+                                Object {
+                                  "padding": "2px 4px",
+                                }
+                              }
+                              suppressContentEditableWarning={true}
+                            >
+                              test title
+                            </span>
+                          </styled.span>
+                        </ThemeProvider>
                       </Label>
                     </Title__StyledWidget>
                   </div>
@@ -784,6 +852,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
     }
   }
@@ -846,6 +915,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
     }
   }

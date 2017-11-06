@@ -37,7 +37,7 @@ test('Test disabling of a Tab', () => {
 	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-label').simulate('click');
+	ctl.find('.ui-label').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 });
 

@@ -71,20 +71,46 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
       >
-        <Icon__FontAwesome
+        <styled.i
           className="ui-icon fa fa-fw fa-tags"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="tags"
+          id=""
+          imageFile=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          selected={false}
           sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={Object {}}
+          visible={true}
+          width=""
+          xcss={null}
         >
           <i
-            className="ui-icon fa fa-fw fa-tags Icon__FontAwesome-kBRBjz dGlSoR"
+            className="ui-icon fa fa-fw fa-tags sc-bdVaJa iGRPLq"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            selected={false}
             style={Object {}}
+            width=""
           />
-        </Icon__FontAwesome>
+        </styled.i>
       </ThemeProvider>
     </Icon>
     <Tag
@@ -149,19 +175,46 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            b
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                b
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -178,7 +231,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -215,27 +268,28 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -265,7 +319,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -302,12 +356,13 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -320,7 +375,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -362,20 +417,46 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -454,19 +535,46 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            c
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                c
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -483,7 +591,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -520,27 +628,28 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -570,7 +679,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -607,12 +716,13 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -625,7 +735,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -667,20 +777,46 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -759,19 +895,46 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            d
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                d
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -788,7 +951,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -825,27 +988,28 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -875,7 +1039,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -912,12 +1076,13 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -930,7 +1095,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -972,20 +1137,46 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -1125,20 +1316,46 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
       >
-        <Icon__FontAwesome
+        <styled.i
           className="ui-icon fa fa-fw fa-tags"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="tags"
+          id=""
+          imageFile=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          selected={false}
           sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={Object {}}
+          visible={true}
+          width=""
+          xcss={null}
         >
           <i
-            className="ui-icon fa fa-fw fa-tags Icon__FontAwesome-kBRBjz dGlSoR"
+            className="ui-icon fa fa-fw fa-tags sc-bdVaJa iGRPLq"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            selected={false}
             style={Object {}}
+            width=""
           />
-        </Icon__FontAwesome>
+        </styled.i>
       </ThemeProvider>
     </Icon>
     <Tag
@@ -1203,19 +1420,46 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            a
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                a
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -1232,7 +1476,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -1269,27 +1513,28 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -1319,7 +1564,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -1356,12 +1601,13 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -1374,7 +1620,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -1416,20 +1662,46 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -1508,19 +1780,46 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            b
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                b
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -1537,7 +1836,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -1574,27 +1873,28 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -1624,7 +1924,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -1661,12 +1961,13 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -1679,7 +1980,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -1721,20 +2022,46 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -1813,19 +2140,46 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            c
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                c
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -1842,7 +2196,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -1879,27 +2233,28 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -1929,7 +2284,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -1966,12 +2321,13 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -1984,7 +2340,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -2026,20 +2382,46 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -2179,20 +2561,46 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
       >
-        <Icon__FontAwesome
+        <styled.i
           className="ui-icon fa fa-fw fa-tags"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="tags"
+          id=""
+          imageFile=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          selected={false}
           sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={Object {}}
+          visible={true}
+          width=""
+          xcss={null}
         >
           <i
-            className="ui-icon fa fa-fw fa-tags Icon__FontAwesome-kBRBjz dGlSoR"
+            className="ui-icon fa fa-fw fa-tags sc-bdVaJa iGRPLq"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            selected={false}
             style={Object {}}
+            width=""
           />
-        </Icon__FontAwesome>
+        </styled.i>
       </ThemeProvider>
     </Icon>
     <Tag
@@ -2257,19 +2665,46 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            a
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                a
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
       </div>
     </Tag>
@@ -2335,19 +2770,46 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            b
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                b
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
       </div>
     </Tag>
@@ -2413,19 +2875,46 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            c
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                c
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
       </div>
     </Tag>
@@ -2504,20 +2993,46 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
       >
-        <Icon__FontAwesome
+        <styled.i
           className="ui-icon fa fa-fw fa-tags"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="tags"
+          id=""
+          imageFile=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          selected={false}
           sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={Object {}}
+          visible={true}
+          width=""
+          xcss={null}
         >
           <i
-            className="ui-icon fa fa-fw fa-tags Icon__FontAwesome-kBRBjz dGlSoR"
+            className="ui-icon fa fa-fw fa-tags sc-bdVaJa iGRPLq"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            selected={false}
             style={Object {}}
+            width=""
           />
-        </Icon__FontAwesome>
+        </styled.i>
       </ThemeProvider>
     </Icon>
     <Tag
@@ -2582,19 +3097,46 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            c
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                c
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
       </div>
     </Tag>
@@ -2660,19 +3202,46 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            b
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                b
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
       </div>
     </Tag>
@@ -2738,19 +3307,46 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            a
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                a
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
       </div>
     </Tag>
@@ -2829,20 +3425,46 @@ exports[`Remove a tag from a TagList 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
       >
-        <Icon__FontAwesome
+        <styled.i
           className="ui-icon fa fa-fw fa-tags"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="tags"
+          id=""
+          imageFile=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          selected={false}
           sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={Object {}}
+          visible={true}
+          width=""
+          xcss={null}
         >
           <i
-            className="ui-icon fa fa-fw fa-tags Icon__FontAwesome-kBRBjz dGlSoR"
+            className="ui-icon fa fa-fw fa-tags sc-bdVaJa iGRPLq"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            selected={false}
             style={Object {}}
+            width=""
           />
-        </Icon__FontAwesome>
+        </styled.i>
       </ThemeProvider>
     </Icon>
     <Tag
@@ -2907,19 +3529,46 @@ exports[`Remove a tag from a TagList 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            a
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                a
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -2936,7 +3585,7 @@ exports[`Remove a tag from a TagList 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -2973,27 +3622,28 @@ exports[`Remove a tag from a TagList 1`] = `
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -3023,7 +3673,7 @@ exports[`Remove a tag from a TagList 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -3060,12 +3710,13 @@ exports[`Remove a tag from a TagList 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -3078,7 +3729,7 @@ exports[`Remove a tag from a TagList 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -3120,20 +3771,46 @@ exports[`Remove a tag from a TagList 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -3212,19 +3889,46 @@ exports[`Remove a tag from a TagList 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            b
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                b
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -3241,7 +3945,7 @@ exports[`Remove a tag from a TagList 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -3278,27 +3982,28 @@ exports[`Remove a tag from a TagList 1`] = `
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -3328,7 +4033,7 @@ exports[`Remove a tag from a TagList 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -3365,12 +4070,13 @@ exports[`Remove a tag from a TagList 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -3383,7 +4089,7 @@ exports[`Remove a tag from a TagList 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -3425,20 +4131,46 @@ exports[`Remove a tag from a TagList 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -3517,19 +4249,46 @@ exports[`Remove a tag from a TagList 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            c
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                c
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -3546,7 +4305,7 @@ exports[`Remove a tag from a TagList 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -3583,27 +4342,28 @@ exports[`Remove a tag from a TagList 1`] = `
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -3633,7 +4393,7 @@ exports[`Remove a tag from a TagList 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -3670,12 +4430,13 @@ exports[`Remove a tag from a TagList 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -3688,7 +4449,7 @@ exports[`Remove a tag from a TagList 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -3730,20 +4491,46 @@ exports[`Remove a tag from a TagList 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -3940,20 +4727,46 @@ exports[`Test the change/blur events in TagList 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
       >
-        <Icon__FontAwesome
+        <styled.i
           className="ui-icon fa fa-fw fa-tags"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="tags"
+          id=""
+          imageFile=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          selected={false}
           sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={Object {}}
+          visible={true}
+          width=""
+          xcss={null}
         >
           <i
-            className="ui-icon fa fa-fw fa-tags Icon__FontAwesome-kBRBjz dGlSoR"
+            className="ui-icon fa fa-fw fa-tags sc-bdVaJa iGRPLq"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            selected={false}
             style={Object {}}
+            width=""
           />
-        </Icon__FontAwesome>
+        </styled.i>
       </ThemeProvider>
     </Icon>
     <TextField
@@ -4079,20 +4892,46 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
       >
-        <Icon__FontAwesome
+        <styled.i
           className="ui-icon fa fa-fw fa-tags"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="tags"
+          id=""
+          imageFile=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          selected={false}
           sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={Object {}}
+          visible={true}
+          width=""
+          xcss={null}
         >
           <i
-            className="ui-icon fa fa-fw fa-tags Icon__FontAwesome-kBRBjz dGlSoR"
+            className="ui-icon fa fa-fw fa-tags sc-bdVaJa iGRPLq"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            selected={false}
             style={Object {}}
+            width=""
           />
-        </Icon__FontAwesome>
+        </styled.i>
       </ThemeProvider>
     </Icon>
     <Tag
@@ -4157,19 +4996,46 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            b
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                b
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -4186,7 +5052,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -4223,27 +5089,28 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -4273,7 +5140,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -4310,12 +5177,13 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -4328,7 +5196,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -4370,20 +5238,46 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -4462,19 +5356,46 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            c
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                c
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -4491,7 +5412,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -4528,27 +5449,28 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -4578,7 +5500,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -4615,12 +5537,13 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -4633,7 +5556,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -4675,20 +5598,46 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>
@@ -4767,19 +5716,46 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
           width=""
           xcss={null}
         >
-          <span
-            className="ui-label label normal"
-            contentEditable={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            style={Object {}}
-            suppressContentEditableWarning={true}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+              }
+            }
           >
-            d
-          </span>
+            <styled.span
+              className="ui-label"
+              contentEditable={false}
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              style={Object {}}
+              suppressContentEditableWarning={true}
+            >
+              <span
+                className="ui-label sc-bZQynM iSxYLy"
+                contentEditable={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                suppressContentEditableWarning={true}
+              >
+                d
+              </span>
+            </styled.span>
+          </ThemeProvider>
         </Label>
         <Styled(ButtonCircle)
           disabled={false}
@@ -4796,7 +5772,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-ifAKCX fYOzqy"
+            className="sc-gzVnrw hOWSMb"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -4833,27 +5809,28 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                   "color": "#000000",
                   "headerBackgroundColor": "#004358",
                   "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-ifAKCX fYOzqy"
+                className="ui-button-circle sc-gzVnrw hOWSMb"
               >
                 <div
-                  className="ui-button-circle sc-ifAKCX fYOzqy sc-bwzfXH Rlnso"
+                  className="ui-button-circle sc-gzVnrw hOWSMb sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
                     width="18px"
                   >
                     <div
-                      className="sc-htpNat cmTRcR"
+                      className="sc-ifAKCX cmBzsA"
                       height="18px"
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-ifAKCX fYOzqy"
+                        className="sc-gzVnrw hOWSMb"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -4883,7 +5860,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                          className="sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={false}
@@ -4920,12 +5897,13 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX"
+                              className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf"
                               disabled={false}
                               onClick={[Function]}
                               style={
@@ -4938,7 +5916,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button ripple sc-ifAKCX fYOzqy sc-bxivhb fCnJYX sc-bdVaJa icpgwB"
+                                className="ui-button ripple sc-gzVnrw hOWSMb sc-EHOje YaMUf sc-htpNat obZDX"
                                 disabled={false}
                                 onClick={[Function]}
                                 style={
@@ -4980,20 +5958,46 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
                                   >
-                                    <Icon__FontAwesome
+                                    <styled.i
                                       className="ui-icon fa fa-fw fa-times"
+                                      contentEditable={false}
+                                      direction="right"
+                                      disabled={false}
+                                      focus={false}
+                                      height=""
+                                      iconName="times"
+                                      id=""
+                                      imageFile=""
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      selected={false}
                                       sizing="small"
                                       style={Object {}}
+                                      testing={true}
+                                      theme={Object {}}
+                                      visible={true}
+                                      width=""
+                                      xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times Icon__FontAwesome-kBRBjz ftTmck"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        contentEditable={false}
+                                        direction="right"
+                                        disabled={false}
+                                        height=""
+                                        id=""
+                                        selected={false}
                                         style={Object {}}
+                                        width=""
                                       />
-                                    </Icon__FontAwesome>
+                                    </styled.i>
                                   </ThemeProvider>
                                 </Icon>
                               </div>

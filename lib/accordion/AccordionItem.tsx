@@ -58,10 +58,10 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled, {ThemeProvider} from 'styled-components';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent, getTheme} from '../shared';
+import {BaseComponent, Color, getTheme} from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
@@ -87,18 +87,18 @@ export interface AccordionItemState {
 	toggle: boolean;
 }
 
-export const AccordionItemView: any = styled.ul`
+export const AccordionItemView: any = withProps<AccordionItemProps, HTMLUListElement>(styled.ul)`
 	border-bottom: solid 1px;
 	border-color: black;
 
 	> .ui-item, > .ui-item-button {
-		color: ${(props: AccordionItemProps) => props.theme.headerForegroundColor || 'white'};
-		background-color: ${(props: AccordionItemProps) => props.theme.headerBackgroundColor || 'black'};
+		color: ${props => props.theme.headerForegroundColor || Color.white};
+		background-color: ${props => props.theme.headerBackgroundColor || Color.black};
 	}
 
 	> .ui-item:hover {
-		color: ${(props: AccordionItemProps) => props.theme.hoverColor || 'silver'};
-		background-color: ${(props: AccordionItemProps) => props.theme.headerBackgroundColor || 'black'} !important;
+		color: ${props => props.theme.headerHoverColor || Color.silver};
+		background-color: ${props => props.theme.headerBackgroundColor || Color.black} !important;
 	}
 `;
 

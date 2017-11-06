@@ -37,6 +37,7 @@ exports[`Test ButtonCircle click event 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -45,14 +46,14 @@ exports[`Test ButtonCircle click event 1`] = `
       className="ui-button-circle"
     >
       <div
-        className="ui-button-circle sc-bwzfXH Rlnso"
+        className="ui-button-circle sc-bxivhb cLwPhR"
       >
         <styled.div
           height="24px"
           width="24px"
         >
           <div
-            className="sc-htpNat ddoEOV"
+            className="sc-ifAKCX hlqJwM"
             height="24px"
             width="24px"
           >
@@ -85,7 +86,7 @@ exports[`Test ButtonCircle click event 1`] = `
               xcss={null}
             >
               <Button
-                className="sc-bxivhb cGNTxG"
+                className="sc-EHOje cSsSXz"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -120,12 +121,13 @@ exports[`Test ButtonCircle click event 1`] = `
                       "color": "#000000",
                       "headerBackgroundColor": "#004358",
                       "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                     }
                   }
                 >
                   <styled.div
-                    className="ui-button ripple sc-bxivhb cGNTxG"
+                    className="ui-button ripple sc-EHOje cSsSXz"
                     disabled={false}
                     onClick={[Function]}
                     style={
@@ -136,7 +138,7 @@ exports[`Test ButtonCircle click event 1`] = `
                     visible={true}
                   >
                     <div
-                      className="ui-button ripple sc-bxivhb cGNTxG sc-bdVaJa lbXAqQ"
+                      className="ui-button ripple sc-EHOje cSsSXz sc-htpNat deJRSG"
                       disabled={false}
                       onClick={[Function]}
                       style={
@@ -176,20 +178,46 @@ exports[`Test ButtonCircle click event 1`] = `
                               "color": "#000000",
                               "headerBackgroundColor": "#004358",
                               "headerForegroundColor": "#ffffff",
+                              "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                             }
                           }
                         >
-                          <Icon__FontAwesome
+                          <styled.i
                             className="ui-icon fa fa-fw fa-bomb"
+                            contentEditable={false}
+                            direction="right"
+                            disabled={false}
+                            focus={false}
+                            height=""
+                            iconName="bomb"
+                            id=""
+                            imageFile=""
+                            location="none"
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            selected={false}
                             sizing="normal"
                             style={Object {}}
+                            testing={true}
+                            theme={Object {}}
+                            visible={true}
+                            width=""
+                            xcss={null}
                           >
                             <i
-                              className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz dGlSoR"
+                              className="ui-icon fa fa-fw fa-bomb sc-bdVaJa iGRPLq"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              height=""
+                              id=""
+                              selected={false}
                               style={Object {}}
+                              width=""
                             />
-                          </Icon__FontAwesome>
+                          </styled.i>
                         </ThemeProvider>
                       </Icon>
                     </div>
@@ -214,6 +242,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
     }
   }
@@ -295,6 +324,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -303,14 +333,14 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
       className="ui-button-circle"
     >
       <div
-        className="ui-button-circle sc-bwzfXH Rlnso"
+        className="ui-button-circle sc-bxivhb cLwPhR"
       >
         <styled.div
           height="24px"
           width="24px"
         >
           <div
-            className="sc-htpNat ddoEOV"
+            className="sc-ifAKCX hlqJwM"
             height="24px"
             width="24px"
           >
@@ -343,7 +373,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
               xcss={null}
             >
               <Button
-                className="sc-bxivhb cGNTxG"
+                className="sc-EHOje cSsSXz"
                 contentEditable={false}
                 direction="right"
                 disabled={true}
@@ -378,12 +408,13 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
                       "color": "#000000",
                       "headerBackgroundColor": "#004358",
                       "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                     }
                   }
                 >
                   <styled.div
-                    className="ui-button nohover sc-bxivhb cGNTxG"
+                    className="ui-button nohover sc-EHOje cSsSXz"
                     disabled={true}
                     onClick={[Function]}
                     style={
@@ -394,7 +425,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
                     visible={true}
                   >
                     <div
-                      className="ui-button nohover sc-bxivhb cGNTxG sc-bdVaJa gUXlLq"
+                      className="ui-button nohover sc-EHOje cSsSXz sc-htpNat jjHPcA"
                       disabled={true}
                       onClick={[Function]}
                       style={
@@ -434,20 +465,46 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
                               "color": "#000000",
                               "headerBackgroundColor": "#004358",
                               "headerForegroundColor": "#ffffff",
+                              "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                             }
                           }
                         >
-                          <Icon__FontAwesome
+                          <styled.i
                             className="ui-icon fa fa-fw fa-bomb"
+                            contentEditable={false}
+                            direction="right"
+                            disabled={false}
+                            focus={false}
+                            height=""
+                            iconName="bomb"
+                            id=""
+                            imageFile=""
+                            location="none"
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            selected={false}
                             sizing="normal"
                             style={Object {}}
+                            testing={true}
+                            theme={Object {}}
+                            visible={true}
+                            width=""
+                            xcss={null}
                           >
                             <i
-                              className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz dGlSoR"
+                              className="ui-icon fa fa-fw fa-bomb sc-bdVaJa iGRPLq"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              height=""
+                              id=""
+                              selected={false}
                               style={Object {}}
+                              width=""
                             />
-                          </Icon__FontAwesome>
+                          </styled.i>
                         </ThemeProvider>
                       </Icon>
                     </div>
@@ -500,6 +557,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -508,14 +566,14 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
       className="ui-button-circle"
     >
       <div
-        className="ui-button-circle sc-bwzfXH Rlnso"
+        className="ui-button-circle sc-bxivhb cLwPhR"
       >
         <styled.div
           height="24px"
           width="24px"
         >
           <div
-            className="sc-htpNat ddoEOV"
+            className="sc-ifAKCX hlqJwM"
             height="24px"
             width="24px"
           >
@@ -548,7 +606,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
               xcss={null}
             >
               <Button
-                className="sc-bxivhb cGNTxG"
+                className="sc-EHOje cSsSXz"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -583,12 +641,13 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
                       "color": "#000000",
                       "headerBackgroundColor": "#004358",
                       "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                     }
                   }
                 >
                   <styled.div
-                    className="ui-button ripple sc-bxivhb cGNTxG"
+                    className="ui-button ripple sc-EHOje cSsSXz"
                     disabled={false}
                     onClick={[Function]}
                     style={
@@ -599,7 +658,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
                     visible={false}
                   >
                     <div
-                      className="ui-button ripple sc-bxivhb cGNTxG sc-bdVaJa fkCVxD"
+                      className="ui-button ripple sc-EHOje cSsSXz sc-htpNat psfup"
                       disabled={false}
                       onClick={[Function]}
                       style={
@@ -639,20 +698,46 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
                               "color": "#000000",
                               "headerBackgroundColor": "#004358",
                               "headerForegroundColor": "#ffffff",
+                              "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                             }
                           }
                         >
-                          <Icon__FontAwesome
+                          <styled.i
                             className="ui-icon fa fa-fw fa-bomb"
+                            contentEditable={false}
+                            direction="right"
+                            disabled={false}
+                            focus={false}
+                            height=""
+                            iconName="bomb"
+                            id=""
+                            imageFile=""
+                            location="none"
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            selected={false}
                             sizing="normal"
                             style={Object {}}
+                            testing={true}
+                            theme={Object {}}
+                            visible={true}
+                            width=""
+                            xcss={null}
                           >
                             <i
-                              className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz dGlSoR"
+                              className="ui-icon fa fa-fw fa-bomb sc-bdVaJa iGRPLq"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              height=""
+                              id=""
+                              selected={false}
                               style={Object {}}
+                              width=""
                             />
-                          </Icon__FontAwesome>
+                          </styled.i>
                         </ThemeProvider>
                       </Icon>
                     </div>

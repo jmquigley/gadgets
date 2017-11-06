@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test clicking of the AccordionItem header 1`] = `
+.c4 {
+  background-color: inherit;
+}
+
 .c2 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -60,7 +64,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 }
 
 .c0 > .ui-item:hover {
-  color: #c0c0c0;
+  color: #ffe11a;
   background-color: #004358 !important;
 }
 
@@ -113,11 +117,12 @@ exports[`Test clicking of the AccordionItem header 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
   >
-    <AccordionItem__AccordionItemView
+    <styled.ul
       className="ui-accordionitem"
       style={Object {}}
     >
@@ -174,6 +179,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                 "color": "#000000",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
               }
             }
@@ -252,6 +258,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -379,23 +386,54 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                               ]
                             }
                           >
-                            <span
-                              className="ui-label label normal ui-title c3"
-                              contentEditable={false}
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onDoubleClick={[Function]}
-                              onKeyDown={[Function]}
-                              onKeyPress={[Function]}
-                              style={
+                            <ThemeProvider
+                              theme={
                                 Object {
-                                  "padding": "2px 4px",
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#004358",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
                                 }
                               }
-                              suppressContentEditableWarning={true}
                             >
-                              Test Title
-                            </span>
+                              <styled.span
+                                className="ui-label ui-title c3"
+                                contentEditable={false}
+                                innerRef={[Function]}
+                                onBlur={[Function]}
+                                onClick={[Function]}
+                                onDoubleClick={[Function]}
+                                onKeyDown={[Function]}
+                                onKeyPress={[Function]}
+                                style={
+                                  Object {
+                                    "padding": "2px 4px",
+                                  }
+                                }
+                                suppressContentEditableWarning={true}
+                              >
+                                <span
+                                  className="ui-label ui-title c3 c4"
+                                  contentEditable={false}
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onDoubleClick={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyPress={[Function]}
+                                  style={
+                                    Object {
+                                      "padding": "2px 4px",
+                                    }
+                                  }
+                                  suppressContentEditableWarning={true}
+                                >
+                                  Test Title
+                                </span>
+                              </styled.span>
+                            </ThemeProvider>
                           </Label>
                         </Title__StyledWidget>
                       </div>
@@ -407,12 +445,16 @@ exports[`Test clicking of the AccordionItem header 1`] = `
           </ThemeProvider>
         </Item>
       </ul>
-    </AccordionItem__AccordionItemView>
+    </styled.ul>
   </ThemeProvider>
 </AccordionItem>
 `;
 
 exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
+.c4 {
+  background-color: inherit;
+}
+
 .c2 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -472,7 +514,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 }
 
 .c0 > .ui-item:hover {
-  color: #c0c0c0;
+  color: #ffe11a;
   background-color: #004358 !important;
 }
 
@@ -525,11 +567,12 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
   >
-    <AccordionItem__AccordionItemView
+    <styled.ul
       className="ui-accordionitem"
       style={Object {}}
     >
@@ -586,6 +629,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                 "color": "#000000",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
               }
             }
@@ -664,6 +708,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -791,23 +836,54 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                               ]
                             }
                           >
-                            <span
-                              className="ui-label label normal ui-title c3"
-                              contentEditable={false}
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onDoubleClick={[Function]}
-                              onKeyDown={[Function]}
-                              onKeyPress={[Function]}
-                              style={
+                            <ThemeProvider
+                              theme={
                                 Object {
-                                  "padding": "2px 4px",
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#004358",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
                                 }
                               }
-                              suppressContentEditableWarning={true}
                             >
-                              Test Title
-                            </span>
+                              <styled.span
+                                className="ui-label ui-title c3"
+                                contentEditable={false}
+                                innerRef={[Function]}
+                                onBlur={[Function]}
+                                onClick={[Function]}
+                                onDoubleClick={[Function]}
+                                onKeyDown={[Function]}
+                                onKeyPress={[Function]}
+                                style={
+                                  Object {
+                                    "padding": "2px 4px",
+                                  }
+                                }
+                                suppressContentEditableWarning={true}
+                              >
+                                <span
+                                  className="ui-label ui-title c3 c4"
+                                  contentEditable={false}
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onDoubleClick={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyPress={[Function]}
+                                  style={
+                                    Object {
+                                      "padding": "2px 4px",
+                                    }
+                                  }
+                                  suppressContentEditableWarning={true}
+                                >
+                                  Test Title
+                                </span>
+                              </styled.span>
+                            </ThemeProvider>
                           </Label>
                         </Title__StyledWidget>
                       </div>
@@ -826,7 +902,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
           </div>
         </div>
       </ul>
-    </AccordionItem__AccordionItemView>
+    </styled.ul>
   </ThemeProvider>
 </AccordionItem>
 `;
@@ -840,11 +916,12 @@ exports[`Test making the AccordionItem invisible 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
     }
   }
 >
-  <AccordionItem__AccordionItemView
+  <styled.ul
     className="ui-accordionitem"
     style={Object {}}
   >
@@ -889,7 +966,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
       width=""
       xcss={null}
     />
-  </AccordionItem__AccordionItemView>
+  </styled.ul>
 </ThemeProvider>
 `;
 
@@ -946,11 +1023,12 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
     }
   }
 >
-  <AccordionItem__AccordionItemView
+  <styled.ul
     className="ui-accordionitem test-class"
     style={Object {}}
   >
@@ -995,7 +1073,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       width=""
       xcss={null}
     />
-  </AccordionItem__AccordionItemView>
+  </styled.ul>
 </ThemeProvider>
 `;
 
@@ -1008,11 +1086,12 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
     }
   }
 >
-  <AccordionItem__AccordionItemView
+  <styled.ul
     className="ui-accordionitem"
     style={Object {}}
   >
@@ -1057,6 +1136,6 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       width=""
       xcss={null}
     />
-  </AccordionItem__AccordionItemView>
+  </styled.ul>
 </ThemeProvider>
 `;

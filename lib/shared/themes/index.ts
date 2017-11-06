@@ -45,6 +45,7 @@ export interface ThemeProps {
 	color: string;
 	headerForegroundColor: string;
 	headerBackgroundColor: string;
+	headerHoverColor: string;
 	hoverColor: string;
 }
 

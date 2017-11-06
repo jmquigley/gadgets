@@ -31,9 +31,67 @@ exports[`Test a double click edit of the Label control 1`] = `
   width=""
   xcss={null}
 >
-  <span
-    className="ui-label label normal"
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+      }
+    }
+  >
+    <styled.span
+      className="ui-label"
+      contentEditable={false}
+      innerRef={[Function]}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      style={Object {}}
+      suppressContentEditableWarning={true}
+    >
+      <span
+        className="ui-label sc-bdVaJa fLbCIZ"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        suppressContentEditableWarning={true}
+      >
+        A
+      </span>
+    </styled.span>
+  </ThemeProvider>
+</Label>
+`;
+
+exports[`Test creation of a Label control 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+    }
+  }
+>
+  <styled.span
+    className="ui-label test-class"
     contentEditable={false}
+    innerRef={[Function]}
     onBlur={[Function]}
     onClick={[Function]}
     onDoubleClick={[Function]}
@@ -42,25 +100,9 @@ exports[`Test a double click edit of the Label control 1`] = `
     style={Object {}}
     suppressContentEditableWarning={true}
   >
-    A
-  </span>
-</Label>
-`;
-
-exports[`Test creation of a Label control 1`] = `
-<span
-  className="ui-label label normal test-class"
-  contentEditable={false}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onDoubleClick={[Function]}
-  onKeyDown={[Function]}
-  onKeyPress={[Function]}
-  style={Object {}}
-  suppressContentEditableWarning={true}
->
-  Test label text
-</span>
+    Test label text
+  </styled.span>
+</ThemeProvider>
 `;
 
 exports[`Test double click change to Label and blur to save 1`] = `
@@ -94,19 +136,46 @@ exports[`Test double click change to Label and blur to save 1`] = `
   width=""
   xcss={null}
 >
-  <span
-    className="ui-label label normal"
-    contentEditable={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    style={Object {}}
-    suppressContentEditableWarning={true}
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+      }
+    }
   >
-    A
-  </span>
+    <styled.span
+      className="ui-label"
+      contentEditable={false}
+      innerRef={[Function]}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      style={Object {}}
+      suppressContentEditableWarning={true}
+    >
+      <span
+        className="ui-label sc-bdVaJa fLbCIZ"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        suppressContentEditableWarning={true}
+      >
+        A
+      </span>
+    </styled.span>
+  </ThemeProvider>
 </Label>
 `;
 
@@ -141,19 +210,46 @@ exports[`Test making the Label control invisible 1`] = `
   width=""
   xcss={null}
 >
-  <span
-    className="ui-label label normal invisible"
-    contentEditable={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    style={Object {}}
-    suppressContentEditableWarning={true}
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+      }
+    }
   >
-    Test label text
-  </span>
+    <styled.span
+      className="ui-label"
+      contentEditable={false}
+      innerRef={[Function]}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      style={Object {}}
+      suppressContentEditableWarning={true}
+    >
+      <span
+        className="ui-label sc-bdVaJa fLbCIZ"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        suppressContentEditableWarning={true}
+      >
+        Test label text
+      </span>
+    </styled.span>
+  </ThemeProvider>
 </Label>
 `;
 
@@ -221,18 +317,45 @@ exports[`Test the disabling of the Label control 1`] = `
   width=""
   xcss={null}
 >
-  <span
-    className="ui-label label normal disabled nohover"
-    contentEditable={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    style={Object {}}
-    suppressContentEditableWarning={true}
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+      }
+    }
   >
-    Test label text
-  </span>
+    <styled.span
+      className="ui-label"
+      contentEditable={false}
+      innerRef={[Function]}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      style={Object {}}
+      suppressContentEditableWarning={true}
+    >
+      <span
+        className="ui-label sc-bdVaJa fLbCIZ"
+        contentEditable={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        style={Object {}}
+        suppressContentEditableWarning={true}
+      >
+        Test label text
+      </span>
+    </styled.span>
+  </ThemeProvider>
 </Label>
 `;

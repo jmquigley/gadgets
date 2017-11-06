@@ -65,7 +65,7 @@ test('Test clicking of the AccordionItem header', () => {
 
 	assert(!ctl.state('toggle'));
 	assert(!ctl.contains(child));
-	ctl.find('.ui-label').simulate('click');
+	ctl.find('.ui-label').first().simulate('click');
 	expect(click).toHaveBeenCalled();
 	assert(ctl.state('toggle'));
 	assert(ctl.contains(child));
@@ -90,7 +90,7 @@ test('Test clicking the AccordionItem header when setting nocollapse', () => {
 
 	assert(ctl.state('toggle'));
 	assert(ctl.contains(child));
-	ctl.find('.ui-label').simulate('click');
+	ctl.find('.ui-label').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
 	assert(ctl.state('toggle'));
 	assert(ctl.contains(child));

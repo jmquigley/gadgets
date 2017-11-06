@@ -9,6 +9,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
     }
   }
@@ -92,6 +93,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -140,6 +142,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
@@ -157,7 +160,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
           visible={true}
         >
           <div
-            className="ui-button nohover ui-button-toggle sc-bdVaJa crSebe"
+            className="ui-button nohover ui-button-toggle sc-htpNat eaVJAo"
             disabled={false}
             onClick={[Function]}
             style={
@@ -198,20 +201,46 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
                   }
                 }
               >
-                <Icon__FontAwesome
+                <styled.i
                   className="ui-icon fa fa-fw fa-star-o"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  iconName="star-o"
+                  id=""
+                  imageFile=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  selected={false}
                   sizing="normal"
                   style={Object {}}
+                  testing={true}
+                  theme={Object {}}
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-star-o Icon__FontAwesome-kBRBjz dGlSoR"
+                    className="ui-icon fa fa-fw fa-star-o sc-bdVaJa iGRPLq"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={false}
+                    height=""
+                    id=""
+                    selected={false}
                     style={Object {}}
+                    width=""
                   />
-                </Icon__FontAwesome>
+                </styled.i>
               </ThemeProvider>
             </Icon>
           </div>
@@ -262,6 +291,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -310,6 +340,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
@@ -327,7 +358,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
           visible={true}
         >
           <div
-            className="ui-button nohover ui-button-toggle sc-bdVaJa ljVASa"
+            className="ui-button nohover ui-button-toggle sc-htpNat cDPcSb"
             disabled={true}
             onClick={[Function]}
             style={
@@ -368,20 +399,46 @@ exports[`Test disabling of a ButtonToggle 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
                   }
                 }
               >
-                <Icon__FontAwesome
+                <styled.i
                   className="ui-icon fa fa-fw fa-bomb"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  iconName="bomb"
+                  id=""
+                  imageFile=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  selected={false}
                   sizing="normal"
                   style={Object {}}
+                  testing={true}
+                  theme={Object {}}
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz dGlSoR"
+                    className="ui-icon fa fa-fw fa-bomb sc-bdVaJa iGRPLq"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={false}
+                    height=""
+                    id=""
+                    selected={false}
                     style={Object {}}
+                    width=""
                   />
-                </Icon__FontAwesome>
+                </styled.i>
               </ThemeProvider>
             </Icon>
           </div>
@@ -432,6 +489,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -480,6 +538,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
             "color": "#000000",
             "headerBackgroundColor": "#004358",
             "headerForegroundColor": "#ffffff",
+            "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
           }
         }
@@ -497,7 +556,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
           visible={false}
         >
           <div
-            className="ui-button nohover ui-button-toggle sc-bdVaJa icpgwB"
+            className="ui-button nohover ui-button-toggle sc-htpNat obZDX"
             disabled={false}
             onClick={[Function]}
             style={
@@ -538,20 +597,46 @@ exports[`Test making a ButtonToggle invisible 1`] = `
                     "color": "#000000",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
                   }
                 }
               >
-                <Icon__FontAwesome
+                <styled.i
                   className="ui-icon fa fa-fw fa-bomb"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  focus={false}
+                  height=""
+                  iconName="bomb"
+                  id=""
+                  imageFile=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  selected={false}
                   sizing="normal"
                   style={Object {}}
+                  testing={true}
+                  theme={Object {}}
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
                   <i
-                    className="ui-icon fa fa-fw fa-bomb Icon__FontAwesome-kBRBjz dGlSoR"
+                    className="ui-icon fa fa-fw fa-bomb sc-bdVaJa iGRPLq"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={false}
+                    height=""
+                    id=""
+                    selected={false}
                     style={Object {}}
+                    width=""
                   />
-                </Icon__FontAwesome>
+                </styled.i>
               </ThemeProvider>
             </Icon>
           </div>

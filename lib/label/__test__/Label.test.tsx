@@ -66,7 +66,7 @@ test('Test a double click edit of the Label control', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	const label = ctl.find('.ui-label');
+	const label = ctl.find('.ui-label').first();
 	assert(label);
 	label.simulate('doubleClick');
 	expect(dblclick).toHaveBeenCalled();
@@ -101,7 +101,7 @@ test('Test cancelling a double click edit of the Label control', () => {
 		/>
 	);
 
-	const label = ctl.find('.ui-label');
+	const label = ctl.find('.ui-label').first();
 	label.simulate('doubleClick');
 	expect(dblclick).toHaveBeenCalled();
 
@@ -135,7 +135,7 @@ test('Test double click change to Label and blur to save', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	const label = ctl.find('.ui-label');
+	const label = ctl.find('.ui-label').first();
 	assert(label);
 	label.simulate('doubleClick');
 	expect(dblclick).toHaveBeenCalled();

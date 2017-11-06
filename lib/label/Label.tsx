@@ -53,7 +53,13 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {sp} from 'util.constants';
 import {nilEvent} from 'util.toolbox';
-import {BaseComponent, BaseProps, getDefaultBaseProps} from '../shared';
+import {
+	BaseComponent,
+	BaseProps,
+	getDefaultBaseProps,
+	getTheme
+} from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface LabelProps extends BaseProps {
 	noedit?: boolean;
@@ -91,6 +97,10 @@ export interface LabelState {
 	text: string;
 }
 
+export const LabelView: any = withProps<LabelProps, HTMLSpanElement>(styled.span)`
+	background-color: inherit;
+`;
+
 export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	public static readonly defaultProps: LabelProps = getDefaultLabelProps();
@@ -98,12 +108,9 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	private _label: any = null;
 
 	constructor(props: LabelProps) {
-		super(props, require('./styles.css'), Label.defaultProps.style);
+		super(props, {}, Label.defaultProps.style);
 
-		this._rootStyles.add([
-			'ui-label',
-			this.styles.label
-		]);
+		this._classes.add(['ui-label']);
 
 		this.state = {
 			editable: this.props.useedit,
@@ -219,20 +226,22 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	public render() {
 		return (
-			<span
-				className={this._rootStyles.classnames}
-				contentEditable={this.state.editable}
-				onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
-				onClick={this.props.onClick}
-				onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
-				onKeyDown={this.handleKeyDown}
-				onKeyPress={this.handleKeyPress}
-				ref={this.handleRef}
-				style={this.inlineStyles}
-				suppressContentEditableWarning
-			>
-				{this.state.text}
-			</span>
+			<ThemeProvider theme={getTheme()}>
+				<LabelView
+					className={this.classes}
+					contentEditable={this.state.editable}
+					onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
+					onClick={this.props.onClick}
+					onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
+					onKeyDown={this.handleKeyDown}
+					onKeyPress={this.handleKeyPress}
+					innerRef={this.handleRef}
+					style={this.inlineStyles}
+					suppressContentEditableWarning
+				>
+					{this.state.text}
+				</LabelView>
+			</ThemeProvider>
 		);
 	}
 }

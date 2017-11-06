@@ -148,7 +148,7 @@ test('Test selecting the first tab within the TabContainer', () => {
 	expect(container).toBeTruthy();
 
 	expect(container.tabs.size).toBe(3);
-	const firstTab = ctl.find('.ui-tab').first().find('.ui-label');
+	const firstTab = ctl.find('.ui-tab').first().find('.ui-label').first();
 	firstTab.simulate('click');
 	expect(select).toHaveBeenCalled();
 	expect(container.tabs.size).toBe(3);

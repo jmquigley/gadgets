@@ -42,6 +42,7 @@ exports[`Test creation of an Editor instance 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -51,7 +52,7 @@ exports[`Test creation of an Editor instance 1`] = `
       style={Object {}}
     >
       <div
-        className="ui-editor sc-htoDjs jxHNoJ"
+        className="ui-editor sc-gZMcBi hUMPZZ"
         style={Object {}}
       >
         <Styled(Toolbar)
@@ -88,7 +89,7 @@ exports[`Test creation of an Editor instance 1`] = `
           xcss={null}
         >
           <Toolbar
-            className="ui-editor-toolbar sc-iwsKbI gQGBuU"
+            className="ui-editor-toolbar sc-VigVT OMohP"
             content="test content"
             contentEditable={false}
             defaultFont="Fira Code"
@@ -122,7 +123,7 @@ exports[`Test creation of an Editor instance 1`] = `
             xcss={null}
           >
             <div
-              className="ui-toolbar toolbar small ui-editor-toolbar sc-iwsKbI gQGBuU"
+              className="ui-toolbar toolbar small ui-editor-toolbar sc-VigVT OMohP"
             >
               <div
                 className="ui-toolbar-group toolbarGroup left"
@@ -167,6 +168,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -186,7 +188,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple toolbarElement sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple toolbarElement sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={
@@ -229,20 +231,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-bold"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="bold"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="small"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-bold Icon__FontAwesome-kBRBjz ftTmck"
+                                className="ui-icon fa fa-fw fa-bold sc-bdVaJa eFoKEp"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -289,6 +317,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -308,7 +337,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple toolbarElement sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple toolbarElement sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={
@@ -351,20 +380,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-italic"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="italic"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="small"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-italic Icon__FontAwesome-kBRBjz ftTmck"
+                                className="ui-icon fa fa-fw fa-italic sc-bdVaJa eFoKEp"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -411,6 +466,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -430,7 +486,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple toolbarElement sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple toolbarElement sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={
@@ -473,20 +529,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-underline"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="underline"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="small"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-underline Icon__FontAwesome-kBRBjz ftTmck"
+                                className="ui-icon fa fa-fw fa-underline sc-bdVaJa eFoKEp"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -533,6 +615,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -552,7 +635,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple toolbarElement sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple toolbarElement sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={
@@ -595,20 +678,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-strikethrough"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="strikethrough"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="small"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-strikethrough Icon__FontAwesome-kBRBjz ftTmck"
+                                className="ui-icon fa fa-fw fa-strikethrough sc-bdVaJa eFoKEp"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -655,6 +764,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -674,7 +784,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple toolbarElement sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple toolbarElement sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={
@@ -717,20 +827,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-code"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="code"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="small"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-code Icon__FontAwesome-kBRBjz ftTmck"
+                                className="ui-icon fa fa-fw fa-code sc-bdVaJa eFoKEp"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -820,6 +956,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             "color": "#000000",
                             "headerBackgroundColor": "#004358",
                             "headerForegroundColor": "#ffffff",
+                            "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                           }
                         }
@@ -843,7 +980,7 @@ exports[`Test creation of an Editor instance 1`] = `
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-bdVaJa crSebe"
+                            className="ui-button ripple sc-htpNat eaVJAo"
                             disabled={false}
                             onClick={[Function]}
                             style={
@@ -890,20 +1027,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                     "color": "#000000",
                                     "headerBackgroundColor": "#004358",
                                     "headerForegroundColor": "#ffffff",
+                                    "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                   }
                                 }
                               >
-                                <Icon__FontAwesome
+                                <styled.i
                                   className="ui-icon fa fa-fw fa-header"
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="header"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
                                   sizing="small"
                                   style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
                                 >
                                   <i
-                                    className="ui-icon fa fa-fw fa-header Icon__FontAwesome-kBRBjz ftTmck"
+                                    className="ui-icon fa fa-fw fa-header sc-bdVaJa eFoKEp"
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    height=""
+                                    id=""
+                                    selected={false}
                                     style={Object {}}
+                                    width=""
                                   />
-                                </Icon__FontAwesome>
+                                </styled.i>
                               </ThemeProvider>
                             </Icon>
                           </div>
@@ -949,6 +1112,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
@@ -1017,6 +1181,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
@@ -1075,6 +1240,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "color": "#000000",
                                             "headerBackgroundColor": "#004358",
                                             "headerForegroundColor": "#ffffff",
+                                            "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
                                           }
                                         }
@@ -1158,6 +1324,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "color": "#000000",
                                                     "headerBackgroundColor": "#004358",
                                                     "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
                                                   }
                                                 }
@@ -1295,23 +1462,54 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           ]
                                                         }
                                                       >
-                                                        <span
-                                                          className="ui-label label small ui-title Title__StyledWidget-dupbKD chBjEu"
-                                                          contentEditable={false}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          onDoubleClick={[Function]}
-                                                          onKeyDown={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          style={
+                                                        <ThemeProvider
+                                                          theme={
                                                             Object {
-                                                              "padding": "2px 4px",
+                                                              "backgroundColor": "#ffffff",
+                                                              "borderColor": "#004358",
+                                                              "color": "#000000",
+                                                              "headerBackgroundColor": "#004358",
+                                                              "headerForegroundColor": "#ffffff",
+                                                              "headerHoverColor": "#ffe11a",
+                                                              "hoverColor": "#c0c0c0",
                                                             }
                                                           }
-                                                          suppressContentEditableWarning={true}
                                                         >
-                                                          h1
-                                                        </span>
+                                                          <styled.span
+                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            contentEditable={false}
+                                                            innerRef={[Function]}
+                                                            onBlur={[Function]}
+                                                            onClick={[Function]}
+                                                            onDoubleClick={[Function]}
+                                                            onKeyDown={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            style={
+                                                              Object {
+                                                                "padding": "2px 4px",
+                                                              }
+                                                            }
+                                                            suppressContentEditableWarning={true}
+                                                          >
+                                                            <span
+                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje iwztDn"
+                                                              contentEditable={false}
+                                                              onBlur={[Function]}
+                                                              onClick={[Function]}
+                                                              onDoubleClick={[Function]}
+                                                              onKeyDown={[Function]}
+                                                              onKeyPress={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "padding": "2px 4px",
+                                                                }
+                                                              }
+                                                              suppressContentEditableWarning={true}
+                                                            >
+                                                              h1
+                                                            </span>
+                                                          </styled.span>
+                                                        </ThemeProvider>
                                                       </Label>
                                                     </Title__StyledWidget>
                                                   </div>
@@ -1379,6 +1577,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
@@ -1437,6 +1636,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "color": "#000000",
                                             "headerBackgroundColor": "#004358",
                                             "headerForegroundColor": "#ffffff",
+                                            "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
                                           }
                                         }
@@ -1520,6 +1720,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "color": "#000000",
                                                     "headerBackgroundColor": "#004358",
                                                     "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
                                                   }
                                                 }
@@ -1657,23 +1858,54 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           ]
                                                         }
                                                       >
-                                                        <span
-                                                          className="ui-label label small ui-title Title__StyledWidget-dupbKD chBjEu"
-                                                          contentEditable={false}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          onDoubleClick={[Function]}
-                                                          onKeyDown={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          style={
+                                                        <ThemeProvider
+                                                          theme={
                                                             Object {
-                                                              "padding": "2px 4px",
+                                                              "backgroundColor": "#ffffff",
+                                                              "borderColor": "#004358",
+                                                              "color": "#000000",
+                                                              "headerBackgroundColor": "#004358",
+                                                              "headerForegroundColor": "#ffffff",
+                                                              "headerHoverColor": "#ffe11a",
+                                                              "hoverColor": "#c0c0c0",
                                                             }
                                                           }
-                                                          suppressContentEditableWarning={true}
                                                         >
-                                                          h2
-                                                        </span>
+                                                          <styled.span
+                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            contentEditable={false}
+                                                            innerRef={[Function]}
+                                                            onBlur={[Function]}
+                                                            onClick={[Function]}
+                                                            onDoubleClick={[Function]}
+                                                            onKeyDown={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            style={
+                                                              Object {
+                                                                "padding": "2px 4px",
+                                                              }
+                                                            }
+                                                            suppressContentEditableWarning={true}
+                                                          >
+                                                            <span
+                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje iwztDn"
+                                                              contentEditable={false}
+                                                              onBlur={[Function]}
+                                                              onClick={[Function]}
+                                                              onDoubleClick={[Function]}
+                                                              onKeyDown={[Function]}
+                                                              onKeyPress={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "padding": "2px 4px",
+                                                                }
+                                                              }
+                                                              suppressContentEditableWarning={true}
+                                                            >
+                                                              h2
+                                                            </span>
+                                                          </styled.span>
+                                                        </ThemeProvider>
                                                       </Label>
                                                     </Title__StyledWidget>
                                                   </div>
@@ -1741,6 +1973,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
@@ -1799,6 +2032,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "color": "#000000",
                                             "headerBackgroundColor": "#004358",
                                             "headerForegroundColor": "#ffffff",
+                                            "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
                                           }
                                         }
@@ -1882,6 +2116,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "color": "#000000",
                                                     "headerBackgroundColor": "#004358",
                                                     "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
                                                   }
                                                 }
@@ -2019,23 +2254,54 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           ]
                                                         }
                                                       >
-                                                        <span
-                                                          className="ui-label label small ui-title Title__StyledWidget-dupbKD chBjEu"
-                                                          contentEditable={false}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          onDoubleClick={[Function]}
-                                                          onKeyDown={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          style={
+                                                        <ThemeProvider
+                                                          theme={
                                                             Object {
-                                                              "padding": "2px 4px",
+                                                              "backgroundColor": "#ffffff",
+                                                              "borderColor": "#004358",
+                                                              "color": "#000000",
+                                                              "headerBackgroundColor": "#004358",
+                                                              "headerForegroundColor": "#ffffff",
+                                                              "headerHoverColor": "#ffe11a",
+                                                              "hoverColor": "#c0c0c0",
                                                             }
                                                           }
-                                                          suppressContentEditableWarning={true}
                                                         >
-                                                          h3
-                                                        </span>
+                                                          <styled.span
+                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            contentEditable={false}
+                                                            innerRef={[Function]}
+                                                            onBlur={[Function]}
+                                                            onClick={[Function]}
+                                                            onDoubleClick={[Function]}
+                                                            onKeyDown={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            style={
+                                                              Object {
+                                                                "padding": "2px 4px",
+                                                              }
+                                                            }
+                                                            suppressContentEditableWarning={true}
+                                                          >
+                                                            <span
+                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje iwztDn"
+                                                              contentEditable={false}
+                                                              onBlur={[Function]}
+                                                              onClick={[Function]}
+                                                              onDoubleClick={[Function]}
+                                                              onKeyDown={[Function]}
+                                                              onKeyPress={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "padding": "2px 4px",
+                                                                }
+                                                              }
+                                                              suppressContentEditableWarning={true}
+                                                            >
+                                                              h3
+                                                            </span>
+                                                          </styled.span>
+                                                        </ThemeProvider>
                                                       </Label>
                                                     </Title__StyledWidget>
                                                   </div>
@@ -2103,6 +2369,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
@@ -2161,6 +2428,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "color": "#000000",
                                             "headerBackgroundColor": "#004358",
                                             "headerForegroundColor": "#ffffff",
+                                            "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
                                           }
                                         }
@@ -2244,6 +2512,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "color": "#000000",
                                                     "headerBackgroundColor": "#004358",
                                                     "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
                                                   }
                                                 }
@@ -2381,23 +2650,54 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           ]
                                                         }
                                                       >
-                                                        <span
-                                                          className="ui-label label small ui-title Title__StyledWidget-dupbKD chBjEu"
-                                                          contentEditable={false}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          onDoubleClick={[Function]}
-                                                          onKeyDown={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          style={
+                                                        <ThemeProvider
+                                                          theme={
                                                             Object {
-                                                              "padding": "2px 4px",
+                                                              "backgroundColor": "#ffffff",
+                                                              "borderColor": "#004358",
+                                                              "color": "#000000",
+                                                              "headerBackgroundColor": "#004358",
+                                                              "headerForegroundColor": "#ffffff",
+                                                              "headerHoverColor": "#ffe11a",
+                                                              "hoverColor": "#c0c0c0",
                                                             }
                                                           }
-                                                          suppressContentEditableWarning={true}
                                                         >
-                                                          h4
-                                                        </span>
+                                                          <styled.span
+                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            contentEditable={false}
+                                                            innerRef={[Function]}
+                                                            onBlur={[Function]}
+                                                            onClick={[Function]}
+                                                            onDoubleClick={[Function]}
+                                                            onKeyDown={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            style={
+                                                              Object {
+                                                                "padding": "2px 4px",
+                                                              }
+                                                            }
+                                                            suppressContentEditableWarning={true}
+                                                          >
+                                                            <span
+                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje iwztDn"
+                                                              contentEditable={false}
+                                                              onBlur={[Function]}
+                                                              onClick={[Function]}
+                                                              onDoubleClick={[Function]}
+                                                              onKeyDown={[Function]}
+                                                              onKeyPress={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "padding": "2px 4px",
+                                                                }
+                                                              }
+                                                              suppressContentEditableWarning={true}
+                                                            >
+                                                              h4
+                                                            </span>
+                                                          </styled.span>
+                                                        </ThemeProvider>
                                                       </Label>
                                                     </Title__StyledWidget>
                                                   </div>
@@ -2465,6 +2765,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
@@ -2523,6 +2824,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "color": "#000000",
                                             "headerBackgroundColor": "#004358",
                                             "headerForegroundColor": "#ffffff",
+                                            "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
                                           }
                                         }
@@ -2606,6 +2908,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "color": "#000000",
                                                     "headerBackgroundColor": "#004358",
                                                     "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
                                                   }
                                                 }
@@ -2743,23 +3046,54 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           ]
                                                         }
                                                       >
-                                                        <span
-                                                          className="ui-label label small ui-title Title__StyledWidget-dupbKD chBjEu"
-                                                          contentEditable={false}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          onDoubleClick={[Function]}
-                                                          onKeyDown={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          style={
+                                                        <ThemeProvider
+                                                          theme={
                                                             Object {
-                                                              "padding": "2px 4px",
+                                                              "backgroundColor": "#ffffff",
+                                                              "borderColor": "#004358",
+                                                              "color": "#000000",
+                                                              "headerBackgroundColor": "#004358",
+                                                              "headerForegroundColor": "#ffffff",
+                                                              "headerHoverColor": "#ffe11a",
+                                                              "hoverColor": "#c0c0c0",
                                                             }
                                                           }
-                                                          suppressContentEditableWarning={true}
                                                         >
-                                                          h5
-                                                        </span>
+                                                          <styled.span
+                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            contentEditable={false}
+                                                            innerRef={[Function]}
+                                                            onBlur={[Function]}
+                                                            onClick={[Function]}
+                                                            onDoubleClick={[Function]}
+                                                            onKeyDown={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            style={
+                                                              Object {
+                                                                "padding": "2px 4px",
+                                                              }
+                                                            }
+                                                            suppressContentEditableWarning={true}
+                                                          >
+                                                            <span
+                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje iwztDn"
+                                                              contentEditable={false}
+                                                              onBlur={[Function]}
+                                                              onClick={[Function]}
+                                                              onDoubleClick={[Function]}
+                                                              onKeyDown={[Function]}
+                                                              onKeyPress={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "padding": "2px 4px",
+                                                                }
+                                                              }
+                                                              suppressContentEditableWarning={true}
+                                                            >
+                                                              h5
+                                                            </span>
+                                                          </styled.span>
+                                                        </ThemeProvider>
                                                       </Label>
                                                     </Title__StyledWidget>
                                                   </div>
@@ -2827,6 +3161,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "color": "#000000",
                                         "headerBackgroundColor": "#004358",
                                         "headerForegroundColor": "#ffffff",
+                                        "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                       }
                                     }
@@ -2885,6 +3220,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "color": "#000000",
                                             "headerBackgroundColor": "#004358",
                                             "headerForegroundColor": "#ffffff",
+                                            "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
                                           }
                                         }
@@ -2968,6 +3304,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "color": "#000000",
                                                     "headerBackgroundColor": "#004358",
                                                     "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
                                                   }
                                                 }
@@ -3105,23 +3442,54 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           ]
                                                         }
                                                       >
-                                                        <span
-                                                          className="ui-label label small ui-title Title__StyledWidget-dupbKD chBjEu"
-                                                          contentEditable={false}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          onDoubleClick={[Function]}
-                                                          onKeyDown={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          style={
+                                                        <ThemeProvider
+                                                          theme={
                                                             Object {
-                                                              "padding": "2px 4px",
+                                                              "backgroundColor": "#ffffff",
+                                                              "borderColor": "#004358",
+                                                              "color": "#000000",
+                                                              "headerBackgroundColor": "#004358",
+                                                              "headerForegroundColor": "#ffffff",
+                                                              "headerHoverColor": "#ffe11a",
+                                                              "hoverColor": "#c0c0c0",
                                                             }
                                                           }
-                                                          suppressContentEditableWarning={true}
                                                         >
-                                                          h6
-                                                        </span>
+                                                          <styled.span
+                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            contentEditable={false}
+                                                            innerRef={[Function]}
+                                                            onBlur={[Function]}
+                                                            onClick={[Function]}
+                                                            onDoubleClick={[Function]}
+                                                            onKeyDown={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            style={
+                                                              Object {
+                                                                "padding": "2px 4px",
+                                                              }
+                                                            }
+                                                            suppressContentEditableWarning={true}
+                                                          >
+                                                            <span
+                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje iwztDn"
+                                                              contentEditable={false}
+                                                              onBlur={[Function]}
+                                                              onClick={[Function]}
+                                                              onDoubleClick={[Function]}
+                                                              onKeyDown={[Function]}
+                                                              onKeyPress={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "padding": "2px 4px",
+                                                                }
+                                                              }
+                                                              suppressContentEditableWarning={true}
+                                                            >
+                                                              h6
+                                                            </span>
+                                                          </styled.span>
+                                                        </ThemeProvider>
                                                       </Label>
                                                     </Title__StyledWidget>
                                                   </div>
@@ -3177,16 +3545,27 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
                   >
                     <styled.div
                       className="ui-divider toolbarElement"
+                      style={
+                        Object {
+                          "height": "18px",
+                        }
+                      }
                       width="6px"
                     >
                       <div
-                        className="ui-divider toolbarElement sc-bwzfXH dDwALK"
+                        className="ui-divider toolbarElement sc-bxivhb eongNl"
+                        style={
+                          Object {
+                            "height": "18px",
+                          }
+                        }
                         width="6px"
                       >
                         |
@@ -3234,6 +3613,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -3253,7 +3633,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple toolbarElement sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple toolbarElement sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={
@@ -3296,20 +3676,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-undo"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="undo"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="small"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-undo Icon__FontAwesome-kBRBjz ftTmck"
+                                className="ui-icon fa fa-fw fa-undo sc-bdVaJa eFoKEp"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -3356,6 +3762,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -3375,7 +3782,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple toolbarElement sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple toolbarElement sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={
@@ -3418,20 +3825,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-repeat"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="repeat"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="small"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-repeat Icon__FontAwesome-kBRBjz ftTmck"
+                                className="ui-icon fa fa-fw fa-repeat sc-bdVaJa eFoKEp"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -3473,16 +3906,27 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
                   >
                     <styled.div
                       className="ui-divider toolbarElement"
+                      style={
+                        Object {
+                          "height": "18px",
+                        }
+                      }
                       width="6px"
                     >
                       <div
-                        className="ui-divider toolbarElement sc-bwzfXH dDwALK"
+                        className="ui-divider toolbarElement sc-bxivhb eongNl"
+                        style={
+                          Object {
+                            "height": "18px",
+                          }
+                        }
                         width="6px"
                       >
                         |
@@ -3555,6 +3999,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -3575,7 +4020,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       value="Fira Code"
                     >
                       <select
-                        className="ui-dropdown toolbarElement sc-htpNat ikajOM"
+                        className="ui-dropdown toolbarElement sc-ifAKCX jwBcLH"
                         disabled={false}
                         onChange={[Function]}
                         style={
@@ -3711,6 +4156,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -3731,7 +4177,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       value="12"
                     >
                       <select
-                        className="ui-dropdown toolbarElement sc-htpNat ikajOM"
+                        className="ui-dropdown toolbarElement sc-ifAKCX jwBcLH"
                         disabled={false}
                         onChange={[Function]}
                         style={
@@ -3855,16 +4301,27 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
                   >
                     <styled.div
                       className="ui-divider toolbarElement"
+                      style={
+                        Object {
+                          "height": "18px",
+                        }
+                      }
                       width="6px"
                     >
                       <div
-                        className="ui-divider toolbarElement sc-bwzfXH dDwALK"
+                        className="ui-divider toolbarElement sc-bxivhb eongNl"
+                        style={
+                          Object {
+                            "height": "18px",
+                          }
+                        }
                         width="6px"
                       >
                         |
@@ -3941,6 +4398,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -3961,7 +4419,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       value="markdown"
                     >
                       <select
-                        className="ui-dropdown toolbarElement sc-htpNat ikajOM"
+                        className="ui-dropdown toolbarElement sc-ifAKCX jwBcLH"
                         disabled={false}
                         onChange={[Function]}
                         style={
@@ -4372,6 +4830,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -4393,7 +4852,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       value="solarized-light"
                     >
                       <select
-                        className="ui-dropdown toolbarElement sc-htpNat ikajOM"
+                        className="ui-dropdown toolbarElement sc-ifAKCX jwBcLH"
                         disabled={false}
                         onChange={[Function]}
                         style={
@@ -4925,6 +5384,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                       }
                     }
@@ -4944,7 +5404,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       visible={true}
                     >
                       <div
-                        className="ui-button ripple toolbarElement sc-bdVaJa lbXAqQ"
+                        className="ui-button ripple toolbarElement sc-htpNat deJRSG"
                         disabled={false}
                         onClick={[Function]}
                         style={
@@ -4987,20 +5447,46 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "color": "#000000",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
                               }
                             }
                           >
-                            <Icon__FontAwesome
+                            <styled.i
                               className="ui-icon fa fa-fw fa-refresh"
+                              contentEditable={false}
+                              direction="right"
+                              disabled={false}
+                              focus={false}
+                              height=""
+                              iconName="refresh"
+                              id=""
+                              imageFile=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              selected={false}
                               sizing="small"
                               style={Object {}}
+                              testing={true}
+                              theme={Object {}}
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-refresh Icon__FontAwesome-kBRBjz ftTmck"
+                                className="ui-icon fa fa-fw fa-refresh sc-bdVaJa eFoKEp"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
                                 style={Object {}}
+                                width=""
                               />
-                            </Icon__FontAwesome>
+                            </styled.i>
                           </ThemeProvider>
                         </Icon>
                       </div>
@@ -5018,7 +5504,7 @@ exports[`Test creation of an Editor instance 1`] = `
           visible={true}
         >
           <div
-            className="ui-editor-quill sc-dnqmqq iwrMBo"
+            className="ui-editor-quill sc-gqjmRU iqoNno"
             disabled={false}
             id="editor"
           />

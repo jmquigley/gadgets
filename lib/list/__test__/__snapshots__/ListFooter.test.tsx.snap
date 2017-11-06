@@ -62,6 +62,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
       }
     }
@@ -124,6 +125,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
               "color": "#000000",
               "headerBackgroundColor": "#004358",
               "headerForegroundColor": "#ffffff",
+              "headerHoverColor": "#ffe11a",
               "hoverColor": "#c0c0c0",
             }
           }
@@ -210,19 +212,46 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                     ]
                   }
                 >
-                  <span
-                    className="ui-label label normal ui-title Title__StyledWidget-dupbKD bMWgzk"
-                    contentEditable={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDoubleClick={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    style={Object {}}
-                    suppressContentEditableWarning={true}
+                  <ThemeProvider
+                    theme={
+                      Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                      }
+                    }
                   >
-                    test title
-                  </span>
+                    <styled.span
+                      className="ui-label ui-title Title__StyledWidget-dupbKD bMWgzk"
+                      contentEditable={false}
+                      innerRef={[Function]}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      style={Object {}}
+                      suppressContentEditableWarning={true}
+                    >
+                      <span
+                        className="ui-label ui-title Title__StyledWidget-dupbKD bMWgzk sc-bdVaJa fLbCIZ"
+                        contentEditable={false}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        style={Object {}}
+                        suppressContentEditableWarning={true}
+                      >
+                        test title
+                      </span>
+                    </styled.span>
+                  </ThemeProvider>
                 </Label>
               </Title__StyledWidget>
             </div>

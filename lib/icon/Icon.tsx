@@ -51,7 +51,6 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled, {ThemeProvider} from 'styled-components';
 import {
 	BaseComponent,
 	BaseProps,
@@ -59,8 +58,10 @@ import {
 	fontStyle,
 	getDefaultBaseProps,
 	getTheme,
+	locationStyle,
 	Sizing
 } from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface IconProps extends BaseProps {
 	iconName?: string;
@@ -77,13 +78,15 @@ export function getDefaultIconProps(): IconProps {
 	);
 }
 
-export const FontAwesome: any = styled.i`
+export const FontAwesome: any = withProps<IconProps, HTMLElement>(styled.i)`
 	text-align: center;
-	${(props: IconProps) => props.sizing && fontStyle[props.sizing]}
+	${props => props.location && locationStyle[props.location]}
+	${props => props.sizing && fontStyle[props.sizing]}
 `;
 
-export const Image: any = styled.img`
-	${(props: IconProps) => props.sizing && boxStyle[props.sizing]}
+export const Image: any = withProps<IconProps, HTMLImageElement>(styled.img)`
+	${props => props.location && locationStyle[props.location]}
+	${props => props.sizing && boxStyle[props.sizing]}
 `;
 
 export class Icon extends BaseComponent<IconProps, undefined> {
@@ -95,7 +98,6 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 
 		this._classes.add([
 			'ui-icon',
-			this.locationStyle,
 			(props.imageFile === '') && 'fa',
 			(props.imageFile === '') && 'fa-fw',
 			(props.imageFile === '') && `fa-${props.iconName}`
@@ -119,8 +121,8 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		if (this.props.imageFile !== '') {
 			icon = (
 				<Image
+					{...this.props}
 					className={this.classes}
-					sizing={this.props.sizing}
 					src={this.props.imageFile}
 					style={this.inlineStyles}
 				/>
@@ -128,8 +130,8 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		} else {
 			icon = (
 				<FontAwesome
+					{...this.props}
 					className={this.classes}
-					sizing={this.props.sizing}
 					style={this.inlineStyles}
 				/>
 			);
