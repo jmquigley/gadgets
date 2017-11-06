@@ -1059,21 +1059,6 @@ class App extends React.Component<AppProps, AppState> {
 					sizing={Sizing.small}
 					/>
 			</div>
-
-			<div className="selectBox">
-				<Select
-					name="form-field-name"
-					value={this.state.selectOption}
-					options={selectOptions}
-					onChange={(val: any) => {
-							if (val != null) {
-								console.log(`Select click handler: ${JSON.stringify(val)}`);
-								this.setState({selectOption: val.value});
-							}
-					}}
-					sizing={Sizing.normal}
-					/>
-			</div>
 		</Container>
 	);
 

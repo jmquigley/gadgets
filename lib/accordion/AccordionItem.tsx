@@ -118,7 +118,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		};
 
 		this.bindCallbacks('handleClick');
-		this.componentWillUpdate(props);
+		this.componentWillUpdate(this.props);
 	}
 
 	private handleClick() {

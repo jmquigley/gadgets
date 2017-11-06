@@ -3,7 +3,10 @@
  * library.  This is used to ensure that base CSS classes are placed
  * on this instance.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/select.png" width="50%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Select} from 'gadgets';
@@ -29,6 +32,7 @@
  *     />
  * ```
  *
+ * ## API
  * #### Events & Properites
  * See the [online documentation](https://github.com/JedWatson/react-select/blob/master/README.md)
  * for this library for related events and properites.
@@ -43,7 +47,12 @@
 
 import * as React from 'react';
 import ReactSelect from 'react-select';
-import {BaseComponent, Sizing} from '../shared';
+import {BaseComponent, fontStyle, getTheme, Sizing} from '../shared';
+import styled, {ThemeProvider} from '../shared/themed-components';
+
+export const StyledReactSelect: any = styled(ReactSelect)`
+	${props => props['sizing'] && fontStyle[props['sizing']]}
+`;
 
 export class Select extends BaseComponent<any, any> {
 
@@ -54,19 +63,19 @@ export class Select extends BaseComponent<any, any> {
 	};
 
 	constructor(props: any) {
-		super(props, require('./styles.css'));
-
-		this._rootStyles.add([
-			'ui-select',
-			this.fontStyle()
-		]);
-
-		this.componentWillUpdate(props);
+		super(props, {}, Select.defaultProps.style);
+		this._classes.add(['ui-select']);
+		this.componentWillUpdate(this.props);
 	}
 
 	public render() {
 		return (
-			<ReactSelect {...this.props} className={this._rootStyles.classnames} />
+			<ThemeProvider theme={getTheme()} >
+				<StyledReactSelect
+					{...this.props}
+					className={this.classes}
+				/>
+			</ThemeProvider>
 		);
 	}
 }
