@@ -11,17 +11,6 @@
 		flex-direction: unset;
 	}
 
-	.pagerButton {
-		flex: 1;
-		height: inherit;
-		padding: 6px 0;
-		font-weight: 600;
-	}
-
-	.pagerButton:not(:global(.nohover)):hover {
-		background-color: silver !important;
-	}
-
 	.pagerInput {
 		flex: none;
 		width: 3em;

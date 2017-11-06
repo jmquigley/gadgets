@@ -59,8 +59,11 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
-	getDefaultBaseProps
+	fontStyle,
+	getDefaultBaseProps,
+	getTheme
 } from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface DropdownOption {
 	value: string;
@@ -87,6 +90,15 @@ export interface DropdownState {
 	currentValue: string;
 }
 
+export const DropdownView: any = withProps<DropdownProps, HTMLSelectElement>(styled.select)`
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+
+	${props => props.sizing && fontStyle[props.sizing]};
+`;
+
 export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 
 	private _keys: Keys;
@@ -95,18 +107,14 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	public static readonly defaultProps: DropdownProps = getDefaultDropdownProps();
 
 	constructor(props: DropdownProps) {
-		super(props, require('./styles.css'), Dropdown.defaultProps.style);
+		super(props, {}, Dropdown.defaultProps.style);
 
 		this.state = {
 			currentValue: this.props.defaultVal
 		};
 
 		this._keys = new Keys({testing: this.props.testing});
-
-		this._rootStyles.add([
-			'ui-dropdown',
-			this.styles.dropdown
-		]);
+		this._classes.add(['ui-dropdown']);
 
 		this.bindCallbacks(
 			'handleChange'
@@ -114,6 +122,15 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 
 		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props, this.state);
+	}
+
+	private handleChange(e: React.FormEvent<HTMLSelectElement>) {
+		const val: any = e.currentTarget.value;
+		this.setState({
+			currentValue: String(val)
+		}, () => {
+			this.props.onSelect(val);
+		});
 	}
 
 	public componentWillReceiveProps(nextProps: DropdownProps) {
@@ -134,26 +151,20 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 		));
 	}
 
-	private handleChange(e: React.FormEvent<HTMLSelectElement>) {
-		const val: any = e.currentTarget.value;
-		this.setState({
-			currentValue: String(val)
-		}, () => {
-			this.props.onSelect(val);
-		});
-	}
-
 	public render() {
 		return(
-			<select
-				className={this._rootStyles.classnames}
-				value={this.state.currentValue}
-				disabled={this.props.disabled}
-				onChange={this.props.disabled ? nilEvent : this.handleChange}
-				style={this.inlineStyles}
-			>
-				{this._options}
-			</select>
+			<ThemeProvider theme={getTheme()} >
+				<DropdownView
+					className={this.classes}
+					value={this.state.currentValue}
+					disabled={this.props.disabled}
+					onChange={this.props.disabled ? nilEvent : this.handleChange}
+					sizing={this.props.sizing}
+					style={this.inlineStyles}
+				>
+					{this._options}
+				</DropdownView>
+			</ThemeProvider>
 		);
 	}
 }

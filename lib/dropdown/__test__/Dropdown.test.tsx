@@ -45,7 +45,7 @@ test('Disable the Dropdown control', () => {
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
-	ctl.find('.ui-dropdown').simulate('change', {target: {value: 'idstr2'}});
+	ctl.find('.ui-dropdown').first().simulate('change', {target: {value: 'idstr2'}});
 	expect(change).not.toHaveBeenCalled();
 });
 
@@ -76,7 +76,7 @@ test('Test the Dropdown click event', () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-dropdown').simulate('change', {target: {value: 'idstr1'}});
+	ctl.find('.ui-dropdown').first().simulate('change', {target: {value: 'idstr1'}});
 	expect(change).toHaveBeenCalled();
 	assert.equal(change.mock.calls[0][0], 'idstr1');
 });

@@ -4,15 +4,14 @@ exports[`Test creation of a Pager control 1`] = `
 <div
   className="ui-pager pager normal test-class"
 >
-  <Button
-    className="pagerButton normalBox"
+  <Styled(Button)
+    className="test-class"
     contentEditable={false}
     direction="right"
     disabled={false}
     focus={false}
     height=""
     iconName="angle-double-left"
-    iconStyle=""
     id=""
     initialPage={1}
     initialPageSize={25}
@@ -43,15 +42,14 @@ exports[`Test creation of a Pager control 1`] = `
     width=""
     xcss={null}
   />
-  <Button
-    className="pagerButton normalBox"
+  <Styled(Button)
+    className="test-class"
     contentEditable={false}
     direction="right"
     disabled={false}
     focus={false}
     height=""
     iconName="angle-left"
-    iconStyle=""
     id=""
     initialPage={1}
     initialPageSize={25}
@@ -82,19 +80,17 @@ exports[`Test creation of a Pager control 1`] = `
     width=""
     xcss={null}
   />
-  <ButtonText
-    className="pagerButton normalBox ui-pager-selected"
+  <Styled(ButtonText)
+    className=" ui-pager-selected"
     contentEditable={false}
     direction="right"
     disabled={false}
     focus={false}
     height=""
-    iconName="bomb"
     id=""
-    imageFile=""
     initialPage={1}
     initialPageSize={25}
-    justify={1}
+    justify={2}
     key="1"
     location="none"
     noedit={false}
@@ -125,19 +121,17 @@ exports[`Test creation of a Pager control 1`] = `
     width=""
     xcss={null}
   />
-  <ButtonText
-    className="pagerButton normalBox"
+  <Styled(ButtonText)
+    className="test-class"
     contentEditable={false}
     direction="right"
     disabled={true}
     focus={false}
     height=""
-    iconName="bomb"
     id=""
-    imageFile=""
     initialPage={1}
     initialPageSize={25}
-    justify={1}
+    justify={2}
     key="4"
     location="none"
     noedit={false}
@@ -145,7 +139,6 @@ exports[`Test creation of a Pager control 1`] = `
     noicon={true}
     noripple={false}
     onChangePageSize={[Function]}
-    onClick={[Function]}
     onSelect={[Function]}
     onSort={null}
     pageSizes={
@@ -168,19 +161,17 @@ exports[`Test creation of a Pager control 1`] = `
     width=""
     xcss={null}
   />
-  <ButtonText
-    className="pagerButton normalBox"
+  <Styled(ButtonText)
+    className="test-class"
     contentEditable={false}
     direction="right"
     disabled={true}
     focus={false}
     height=""
-    iconName="bomb"
     id=""
-    imageFile=""
     initialPage={1}
     initialPageSize={25}
-    justify={1}
+    justify={2}
     key="5"
     location="none"
     noedit={false}
@@ -188,7 +179,6 @@ exports[`Test creation of a Pager control 1`] = `
     noicon={true}
     noripple={false}
     onChangePageSize={[Function]}
-    onClick={[Function]}
     onSelect={[Function]}
     onSort={null}
     pageSizes={
@@ -211,15 +201,14 @@ exports[`Test creation of a Pager control 1`] = `
     width=""
     xcss={null}
   />
-  <Button
-    className="pagerButton normalBox"
+  <Styled(Button)
+    className="test-class"
     contentEditable={false}
     direction="right"
     disabled={false}
     focus={false}
     height=""
     iconName="angle-right"
-    iconStyle=""
     id=""
     initialPage={1}
     initialPageSize={25}
@@ -250,15 +239,14 @@ exports[`Test creation of a Pager control 1`] = `
     width=""
     xcss={null}
   />
-  <Button
-    className="pagerButton normalBox"
+  <Styled(Button)
+    className="test-class"
     contentEditable={false}
     direction="right"
     disabled={false}
     focus={false}
     height=""
     iconName="angle-double-right"
-    iconStyle=""
     id=""
     initialPage={1}
     initialPageSize={25}

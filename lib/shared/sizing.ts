@@ -79,9 +79,9 @@ export interface Styling {
 }
 
 export const borderStyle: any = {
-	[Sizing.xxsmall]: css`border: solid 0.1em;`,
-	[Sizing.xsmall]: css`border: solid 0.1em;`,
-	[Sizing.small]: css`border: solid 0.125em;`,
+	[Sizing.xxsmall]: css`border: solid 0.05em;`,
+	[Sizing.xsmall]: css`border: solid 0.05em;`,
+	[Sizing.small]: css`border: solid 0.1em;`,
 	[Sizing.medium]: css`border: solid 0.15em;`,
 	[Sizing.normal]: css`border: solid 0.15em;`,
 	[Sizing.large]: css`border: solid 0.2em;`,

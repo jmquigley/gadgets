@@ -84,7 +84,7 @@ export const ButtonCircleView: any = withProps<ButtonCircleProps, HTMLDivElement
 	border-radius: 4em;
 	padding: ${(props: ButtonCircleProps) => {
 		switch (props.sizing) {
-			case Sizing.xxsmall: return('0.05em 0.005em');
+			case Sizing.xxsmall: return('0.2em 0.2em');
 			case Sizing.xsmall: return('0.08em 0.005em');
 			case Sizing.small: return('0.1em 0.005em');
 			case Sizing.large: return('0.175em 0');

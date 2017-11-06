@@ -82,7 +82,6 @@
 
 import {cloneDeep, isEqual, sortBy} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {Keys} from 'util.keys';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
@@ -94,10 +93,12 @@ import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
+	Justify,
 	Location,
 	Sizing,
 	SortOrder
 } from '../shared';
+import styled, {css, withProps} from '../shared/themed-components';
 import {TextField} from '../textField';
 
 export const defaultPageSize: number = 25;
@@ -138,6 +139,21 @@ export interface PagerState {
 	pageSize: number;
 }
 
+export const ButtonCSS: any = css`
+	flex: 1;
+	height: unset;
+	padding: 6px 0;
+	font-weight: 600;
+`;
+
+export const StyledButtonText: any = withProps<PagerProps, HTMLDivElement>(styled(ButtonText))`
+	${ButtonCSS}
+`;
+
+export const StyledButton: any = withProps<PagerProps, HTMLDivElement>(styled(Button))`
+	${ButtonCSS}
+`;
+
 export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	public static defaultProps: PagerProps = getDefaultPagerProps();
@@ -145,7 +161,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
 	private _buttons: any = [];
-	private _buttonStyles: ClassNames = new ClassNames();
 	private _dialog: any = null;
 	private _dialogKeys: Keys;
 	private _fillerKeys: Keys;
@@ -161,11 +176,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		this._dialogKeys = new Keys({testing: this.props.testing});
 		this._fillerKeys = new Keys({testing: this.props.testing});
-
-		this._buttonStyles.add([
-			this.styles.pagerButton,
-			this.boxStyle()
-		]);
 
 		this._rootStyles.add([
 			'ui-pager',
@@ -354,9 +364,9 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			if (page !== 0 && this._buttons[page] == null) {
 
 				this._buttons[page] = (
-					<ButtonText
+					<StyledButtonText
 						{...this.props}
-						className={this._buttonStyles.classnames}
+						justify={Justify.center}
 						key={String(page)}
 						noicon
 						onClick={this.handleSelect}
@@ -377,21 +387,20 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
-							className: this._buttonStyles.classnames + selected,
+							className: selected,
 							disabled: this.props.disabled
 						}));
 				} else {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
-							className: this._buttonStyles.classnames,
 							disabled: this.props.disabled
 						}));
 				}
 			} else {
 				this._buttonsDisplay.push(
-					<ButtonText
+					<StyledButtonText
 						{...this.props}
-						className={this._buttonStyles.classnames}
+						justify={Justify.center}
 						key={this._fillerKeys.at(this._fillerIdx++)}
 						noicon
 						disabled
@@ -660,34 +669,26 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		return (
 			<div className={this._rootStyles.classnames}>
-				<Button
+				<StyledButton
 					{...this.props}
-					className={this._buttonStyles.classnames}
 					iconName="angle-double-left"
 					onClick={this.moveToFront}
-					sizing={this.props.sizing}
 				/>
-				<Button
+				<StyledButton
 					{...this.props}
-					className={this._buttonStyles.classnames}
 					iconName="angle-left"
 					onClick={this.moveToPrevious}
-					sizing={this.props.sizing}
 				/>
 				{this._buttonsDisplay}
-				<Button
+				<StyledButton
 					{...this.props}
-					className={this._buttonStyles.classnames}
 					iconName="angle-right"
 					onClick={this.moveToNext}
-					sizing={this.props.sizing}
 				/>
-				<Button
+				<StyledButton
 					{...this.props}
-					className={this._buttonStyles.classnames}
 					iconName="angle-double-right"
 					onClick={this.moveToEnd}
-					sizing={this.props.sizing}
 				/>
 				<div className={this.styles.spacer} />
 				{this.props.useinput ?
