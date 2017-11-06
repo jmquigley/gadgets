@@ -10,33 +10,15 @@ exports[`Test creation of a Toast control 1`] = `
   >
     <span />
   </div>
-  <Button
-    className="button"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
+  <Styled(Button)
     iconName="times"
-    iconStyle=""
-    id=""
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
     onClick={[Function]}
-    selected={false}
     sizing="large"
     style={
       Object {
         "color": "white",
       }
     }
-    testing={true}
-    theme={Object {}}
-    visible={true}
-    width=""
-    xcss={null}
   />
 </div>
 `;

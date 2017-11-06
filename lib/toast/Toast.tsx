@@ -82,6 +82,7 @@ import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
+import styled from '../shared/themed-components';
 
 const styles = require('./styles.css');
 
@@ -123,6 +124,11 @@ export function getDefaultToastProps(): ToastProps {
 export interface ToastState {
 	visible: boolean;
 }
+
+export const StyledButton: any = styled(Button)`
+	flex: 1;
+	height: unset;
+`;
 
 export class Toast extends BaseComponent<ToastProps, ToastState> {
 
@@ -242,8 +248,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 				<div className={this._contentStyles.classnames}>
 					<span>{this.props.children}</span>
 				</div>
-				<Button
-					className={this.styles.button}
+				<StyledButton
 					iconName="times"
 					onClick={this.handleClose}
 					sizing={this._buttonSizing}

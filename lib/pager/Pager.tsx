@@ -98,7 +98,7 @@ import {
 	Sizing,
 	SortOrder
 } from '../shared';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 import {TextField} from '../textField';
 
 export const defaultPageSize: number = 25;
@@ -146,11 +146,11 @@ export const ButtonCSS: any = css`
 	font-weight: 600;
 `;
 
-export const StyledButtonText: any = withProps<PagerProps, HTMLDivElement>(styled(ButtonText))`
+export const StyledButtonText: any = styled(ButtonText)`
 	${ButtonCSS}
 `;
 
-export const StyledButton: any = withProps<PagerProps, HTMLDivElement>(styled(Button))`
+export const StyledButton: any = styled(Button)`
 	${ButtonCSS}
 `;
 
