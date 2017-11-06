@@ -43,13 +43,13 @@ exports[`Test creation of a Browser instance 1`] = `
       className="ui-browser"
     >
       <div
-        className="ui-browser sc-gzVnrw hXlKye"
+        className="ui-browser sc-htoDjs kmnDAe"
       >
         <Styled(Toolbar)
           className="ui-browser-toolbar"
         >
           <Toolbar
-            className="ui-browser-toolbar sc-dnqmqq kAnlkt"
+            className="ui-browser-toolbar sc-iwsKbI fqupgX"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -71,7 +71,7 @@ exports[`Test creation of a Browser instance 1`] = `
             xcss={null}
           >
             <div
-              className="ui-toolbar toolbar normal ui-browser-toolbar sc-dnqmqq kAnlkt"
+              className="ui-toolbar toolbar normal ui-browser-toolbar sc-iwsKbI fqupgX"
             >
               <div
                 className="ui-toolbar-group toolbarGroup left"
@@ -469,17 +469,30 @@ exports[`Test creation of a Browser instance 1`] = `
                   width=""
                   xcss={null}
                 >
-                  <div
-                    className="ui-divider divider normal toolbarElement"
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "height": "24px",
-                        "width": "8px",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "hoverColor": "#c0c0c0",
                       }
                     }
                   >
-                     
-                  </div>
+                    <styled.div
+                      className="ui-divider toolbarElement"
+                      width="8px"
+                    >
+                      <div
+                        className="ui-divider toolbarElement sc-bwzfXH jPPkeW"
+                        width="8px"
+                      >
+                         
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
                 </Divider>
                 <Button
                   className="toolbarElement"
@@ -619,7 +632,7 @@ exports[`Test creation of a Browser instance 1`] = `
                   visible={true}
                 >
                   <TextField
-                    className="toolbarElement sc-iwsKbI jiBwds"
+                    className="toolbarElement sc-gZMcBi dXopKb"
                     disabled={false}
                     id=""
                     noborder={false}
@@ -645,7 +658,7 @@ exports[`Test creation of a Browser instance 1`] = `
                       className="ui-textfield-container textFieldContainer"
                     >
                       <div
-                        className="ui-textfield textField normal toolbarElement sc-iwsKbI jiBwds"
+                        className="ui-textfield textField normal toolbarElement sc-gZMcBi dXopKb"
                         style={
                           Object {
                             "border": "solid 1px silver",
@@ -822,17 +835,30 @@ exports[`Test creation of a Browser instance 1`] = `
                   width=""
                   xcss={null}
                 >
-                  <div
-                    className="ui-divider divider normal toolbarElement"
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "height": "24px",
-                        "width": "8px",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "hoverColor": "#c0c0c0",
                       }
                     }
                   >
-                     
-                  </div>
+                    <styled.div
+                      className="ui-divider toolbarElement"
+                      width="8px"
+                    >
+                      <div
+                        className="ui-divider toolbarElement sc-bwzfXH jPPkeW"
+                        width="8px"
+                      >
+                         
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
                 </Divider>
                 <Styled(TextField)
                   className="toolbarElement"
@@ -851,7 +877,7 @@ exports[`Test creation of a Browser instance 1`] = `
                   visible={true}
                 >
                   <TextField
-                    className="toolbarElement sc-gZMcBi gXsQOQ"
+                    className="toolbarElement sc-gqjmRU hXqPub"
                     disabled={false}
                     id=""
                     noborder={false}
@@ -878,7 +904,7 @@ exports[`Test creation of a Browser instance 1`] = `
                       className="ui-textfield-container textFieldContainer"
                     >
                       <div
-                        className="ui-textfield textField normal toolbarElement sc-gZMcBi gXsQOQ"
+                        className="ui-textfield textField normal toolbarElement sc-gqjmRU hXqPub"
                         style={
                           Object {
                             "border": "solid 1px silver",
@@ -952,14 +978,14 @@ exports[`Test creation of a Browser instance 1`] = `
                                 className="ui-button-circle"
                               >
                                 <div
-                                  className="ui-button-circle sc-bwzfXH Rlnso"
+                                  className="ui-button-circle sc-htpNat dkplth"
                                 >
                                   <styled.div
                                     height="18px"
                                     width="18px"
                                   >
                                     <div
-                                      className="sc-htpNat cmTRcR"
+                                      className="sc-bxivhb hRZTSa"
                                       height="18px"
                                       width="18px"
                                     >
@@ -994,7 +1020,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         xcss={null}
                                       >
                                         <Button
-                                          className="sc-bxivhb fCnJYX"
+                                          className="sc-ifAKCX jFtsYz"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -1036,7 +1062,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                             }
                                           >
                                             <styled.div
-                                              className="ui-button ripple sc-bxivhb fCnJYX"
+                                              className="ui-button ripple sc-ifAKCX jFtsYz"
                                               disabled={false}
                                               onClick={[Function]}
                                               style={
@@ -1049,7 +1075,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                               visible={true}
                                             >
                                               <div
-                                                className="ui-button ripple sc-bxivhb fCnJYX sc-bdVaJa crSebe"
+                                                className="ui-button ripple sc-ifAKCX jFtsYz sc-bdVaJa crSebe"
                                                 disabled={false}
                                                 onClick={[Function]}
                                                 style={
@@ -1131,7 +1157,7 @@ exports[`Test creation of a Browser instance 1`] = `
           innerRef={[Function]}
         >
           <div
-            className="sc-htoDjs ctMbKA"
+            className="sc-dnqmqq jHoSLk"
           />
         </styled.div>
       </div>
@@ -1183,13 +1209,13 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
       className="ui-browser"
     >
       <div
-        className="ui-browser sc-gzVnrw hXlKye"
+        className="ui-browser sc-htoDjs kmnDAe"
       >
         <Styled(Toolbar)
           className="ui-browser-toolbar"
         >
           <Toolbar
-            className="ui-browser-toolbar sc-dnqmqq kAnlkt"
+            className="ui-browser-toolbar sc-iwsKbI fqupgX"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -1211,7 +1237,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
             xcss={null}
           >
             <div
-              className="ui-toolbar toolbar normal ui-browser-toolbar sc-dnqmqq kAnlkt"
+              className="ui-toolbar toolbar normal ui-browser-toolbar sc-iwsKbI fqupgX"
             >
               <div
                 className="ui-toolbar-group toolbarGroup left"
@@ -1609,17 +1635,30 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                   width=""
                   xcss={null}
                 >
-                  <div
-                    className="ui-divider divider normal toolbarElement"
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "height": "24px",
-                        "width": "8px",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "hoverColor": "#c0c0c0",
                       }
                     }
                   >
-                     
-                  </div>
+                    <styled.div
+                      className="ui-divider toolbarElement"
+                      width="8px"
+                    >
+                      <div
+                        className="ui-divider toolbarElement sc-bwzfXH jPPkeW"
+                        width="8px"
+                      >
+                         
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
                 </Divider>
                 <Button
                   className="toolbarElement"
@@ -1759,7 +1798,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                   visible={true}
                 >
                   <TextField
-                    className="toolbarElement sc-iwsKbI jiBwds"
+                    className="toolbarElement sc-gZMcBi dXopKb"
                     disabled={false}
                     id=""
                     noborder={false}
@@ -1785,7 +1824,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                       className="ui-textfield-container textFieldContainer"
                     >
                       <div
-                        className="ui-textfield textField normal toolbarElement sc-iwsKbI jiBwds"
+                        className="ui-textfield textField normal toolbarElement sc-gZMcBi dXopKb"
                         style={
                           Object {
                             "border": "solid 1px silver",
@@ -1962,17 +2001,30 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                   width=""
                   xcss={null}
                 >
-                  <div
-                    className="ui-divider divider normal toolbarElement"
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "height": "24px",
-                        "width": "8px",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "hoverColor": "#c0c0c0",
                       }
                     }
                   >
-                     
-                  </div>
+                    <styled.div
+                      className="ui-divider toolbarElement"
+                      width="8px"
+                    >
+                      <div
+                        className="ui-divider toolbarElement sc-bwzfXH jPPkeW"
+                        width="8px"
+                      >
+                         
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
                 </Divider>
                 <Styled(TextField)
                   className="toolbarElement"
@@ -1991,7 +2043,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                   visible={true}
                 >
                   <TextField
-                    className="toolbarElement sc-gZMcBi gXsQOQ"
+                    className="toolbarElement sc-gqjmRU hXqPub"
                     disabled={false}
                     id=""
                     noborder={false}
@@ -2018,7 +2070,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                       className="ui-textfield-container textFieldContainer"
                     >
                       <div
-                        className="ui-textfield textField normal toolbarElement sc-gZMcBi gXsQOQ"
+                        className="ui-textfield textField normal toolbarElement sc-gqjmRU hXqPub"
                         style={
                           Object {
                             "border": "solid 1px silver",
@@ -2092,14 +2144,14 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 className="ui-button-circle"
                               >
                                 <div
-                                  className="ui-button-circle sc-bwzfXH Rlnso"
+                                  className="ui-button-circle sc-htpNat dkplth"
                                 >
                                   <styled.div
                                     height="18px"
                                     width="18px"
                                   >
                                     <div
-                                      className="sc-htpNat cmTRcR"
+                                      className="sc-bxivhb hRZTSa"
                                       height="18px"
                                       width="18px"
                                     >
@@ -2134,7 +2186,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         xcss={null}
                                       >
                                         <Button
-                                          className="sc-bxivhb fCnJYX"
+                                          className="sc-ifAKCX jFtsYz"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -2176,7 +2228,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                             }
                                           >
                                             <styled.div
-                                              className="ui-button ripple sc-bxivhb fCnJYX"
+                                              className="ui-button ripple sc-ifAKCX jFtsYz"
                                               disabled={false}
                                               onClick={[Function]}
                                               style={
@@ -2189,7 +2241,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               visible={true}
                                             >
                                               <div
-                                                className="ui-button ripple sc-bxivhb fCnJYX sc-bdVaJa crSebe"
+                                                className="ui-button ripple sc-ifAKCX jFtsYz sc-bdVaJa crSebe"
                                                 disabled={false}
                                                 onClick={[Function]}
                                                 style={
@@ -2271,7 +2323,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
           innerRef={[Function]}
         >
           <div
-            className="sc-htoDjs ctMbKA"
+            className="sc-dnqmqq jHoSLk"
           />
         </styled.div>
       </div>

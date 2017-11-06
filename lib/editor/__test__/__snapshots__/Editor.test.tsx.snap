@@ -51,7 +51,7 @@ exports[`Test creation of an Editor instance 1`] = `
       style={Object {}}
     >
       <div
-        className="ui-editor sc-gzVnrw fbaosi"
+        className="ui-editor sc-htoDjs jxHNoJ"
         style={Object {}}
       >
         <Styled(Toolbar)
@@ -88,7 +88,7 @@ exports[`Test creation of an Editor instance 1`] = `
           xcss={null}
         >
           <Toolbar
-            className="ui-editor-toolbar sc-dnqmqq cZtiDF"
+            className="ui-editor-toolbar sc-iwsKbI gQGBuU"
             content="test content"
             contentEditable={false}
             defaultFont="Fira Code"
@@ -122,7 +122,7 @@ exports[`Test creation of an Editor instance 1`] = `
             xcss={null}
           >
             <div
-              className="ui-toolbar toolbar small ui-editor-toolbar sc-dnqmqq cZtiDF"
+              className="ui-toolbar toolbar small ui-editor-toolbar sc-iwsKbI gQGBuU"
             >
               <div
                 className="ui-toolbar-group toolbarGroup left"
@@ -3169,17 +3169,30 @@ exports[`Test creation of an Editor instance 1`] = `
                   width=""
                   xcss={null}
                 >
-                  <div
-                    className="ui-divider divider small toolbarElement"
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "height": "18px",
-                        "width": "6px",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "hoverColor": "#c0c0c0",
                       }
                     }
                   >
-                    |
-                  </div>
+                    <styled.div
+                      className="ui-divider toolbarElement"
+                      width="6px"
+                    >
+                      <div
+                        className="ui-divider toolbarElement sc-bwzfXH dDwALK"
+                        width="6px"
+                      >
+                        |
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
                 </Divider>
                 <Button
                   className="toolbarElement"
@@ -3452,17 +3465,30 @@ exports[`Test creation of an Editor instance 1`] = `
                   width=""
                   xcss={null}
                 >
-                  <div
-                    className="ui-divider divider small toolbarElement"
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "height": "18px",
-                        "width": "6px",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "hoverColor": "#c0c0c0",
                       }
                     }
                   >
-                    |
-                  </div>
+                    <styled.div
+                      className="ui-divider toolbarElement"
+                      width="6px"
+                    >
+                      <div
+                        className="ui-divider toolbarElement sc-bwzfXH dDwALK"
+                        width="6px"
+                      >
+                        |
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
                 </Divider>
                 <Dropdown
                   className="toolbarElement"
@@ -3549,7 +3575,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       value="Fira Code"
                     >
                       <select
-                        className="ui-dropdown toolbarElement sc-bwzfXH ftpFwP"
+                        className="ui-dropdown toolbarElement sc-htpNat ikajOM"
                         disabled={false}
                         onChange={[Function]}
                         style={
@@ -3705,7 +3731,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       value="12"
                     >
                       <select
-                        className="ui-dropdown toolbarElement sc-bwzfXH ftpFwP"
+                        className="ui-dropdown toolbarElement sc-htpNat ikajOM"
                         disabled={false}
                         onChange={[Function]}
                         style={
@@ -3821,17 +3847,30 @@ exports[`Test creation of an Editor instance 1`] = `
                   width=""
                   xcss={null}
                 >
-                  <div
-                    className="ui-divider divider small toolbarElement"
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "height": "18px",
-                        "width": "6px",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "hoverColor": "#c0c0c0",
                       }
                     }
                   >
-                    |
-                  </div>
+                    <styled.div
+                      className="ui-divider toolbarElement"
+                      width="6px"
+                    >
+                      <div
+                        className="ui-divider toolbarElement sc-bwzfXH dDwALK"
+                        width="6px"
+                      >
+                        |
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
                 </Divider>
                 <Dropdown
                   className="toolbarElement"
@@ -3922,7 +3961,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       value="markdown"
                     >
                       <select
-                        className="ui-dropdown toolbarElement sc-bwzfXH ftpFwP"
+                        className="ui-dropdown toolbarElement sc-htpNat ikajOM"
                         disabled={false}
                         onChange={[Function]}
                         style={
@@ -4354,7 +4393,7 @@ exports[`Test creation of an Editor instance 1`] = `
                       value="solarized-light"
                     >
                       <select
-                        className="ui-dropdown toolbarElement sc-bwzfXH ftpFwP"
+                        className="ui-dropdown toolbarElement sc-htpNat ikajOM"
                         disabled={false}
                         onChange={[Function]}
                         style={
@@ -4979,7 +5018,7 @@ exports[`Test creation of an Editor instance 1`] = `
           visible={true}
         >
           <div
-            className="ui-editor-quill sc-htoDjs fAOYZh"
+            className="ui-editor-quill sc-dnqmqq iwrMBo"
             disabled={false}
             id="editor"
           />

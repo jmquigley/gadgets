@@ -44,8 +44,11 @@ import * as React from 'react';
 import {
 	BaseComponent,
 	BaseProps,
-	getDefaultBaseProps
+	Color,
+	getDefaultBaseProps,
+	getTheme
 } from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export enum DividerType {
 	horizontal = '-',
@@ -65,33 +68,33 @@ export function getDefaultDividerProps(): DividerProps {
 	);
 }
 
+export const DividerView: any = withProps<DividerProps, HTMLDivElement>(styled.div)`
+	color: ${props => props.theme.borderColor || Color.silver};
+	display: inline-flex;
+	opacity: 0.25;
+	width: ${props => props.width || '1.0em'};
+`;
+
 export class Divider extends BaseComponent<DividerProps, undefined> {
 
 	public static readonly defaultProps: DividerProps = getDefaultDividerProps();
 
 	constructor(props: DividerProps) {
-		super(props, require('./styles.css'), Divider.defaultProps.style);
-
-		this._rootStyles.add([
-			'ui-divider',
-			this.styles.divider
-		]);
-
+		super(props, {}, Divider.defaultProps.style);
+		this._classes.add(['ui-divider']);
 		this.componentWillUpdate(this.props);
 	}
 
 	public render() {
-		this.inlineStyles = {
-			width: this.fontSizePX(this.props.sizing, 0.5)
-		};
-
 		return(
-			<div
-				className={this._rootStyles.classnames}
-				style={this.inlineStyles}
-			>
-			{this.props.dividerType}
-			</div>
+			<ThemeProvider theme={getTheme()} >
+				<DividerView
+					className={this.classes}
+					width={this.fontSizePX(this.props.sizing, 0.5)}
+				>
+					{this.props.dividerType}
+				</DividerView>
+			</ThemeProvider>
 		);
 	}
 }

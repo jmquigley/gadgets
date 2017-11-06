@@ -1,120 +1,201 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creating a Divider instance for size inherit 1`] = `
-<div
-  className="ui-divider divider inherit"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "width": "8px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
-   
-</div>
+  <styled.div
+    className="ui-divider"
+    width="8px"
+  >
+     
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creating a Divider instance for size large 1`] = `
-<div
-  className="ui-divider divider large"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "width": "12px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
-   
-</div>
+  <styled.div
+    className="ui-divider"
+    width="12px"
+  >
+     
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creating a Divider instance for size medium 1`] = `
-<div
-  className="ui-divider divider medium"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "width": "8px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
-   
-</div>
+  <styled.div
+    className="ui-divider"
+    width="8px"
+  >
+     
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creating a Divider instance for size normal 1`] = `
-<div
-  className="ui-divider divider normal"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "width": "8px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
-   
-</div>
+  <styled.div
+    className="ui-divider"
+    width="8px"
+  >
+     
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creating a Divider instance for size small 1`] = `
-<div
-  className="ui-divider divider small"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "width": "6px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
-   
-</div>
+  <styled.div
+    className="ui-divider"
+    width="6px"
+  >
+     
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creating a Divider instance for size xlarge 1`] = `
-<div
-  className="ui-divider divider xlarge"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "width": "16px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
-   
-</div>
+  <styled.div
+    className="ui-divider"
+    width="16px"
+  >
+     
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creating a Divider instance for size xsmall 1`] = `
-<div
-  className="ui-divider divider xsmall"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "width": "4px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
-   
-</div>
+  <styled.div
+    className="ui-divider"
+    width="4px"
+  >
+     
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creating a Divider instance for size xxlarge 1`] = `
-<div
-  className="ui-divider divider xxlarge"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "width": "24px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
-   
-</div>
+  <styled.div
+    className="ui-divider"
+    width="24px"
+  >
+     
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creating a Divider instance for size xxsmall 1`] = `
-<div
-  className="ui-divider divider xxsmall"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "width": "3px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "hoverColor": "#c0c0c0",
     }
   }
 >
-   
-</div>
+  <styled.div
+    className="ui-divider"
+    width="3px"
+  >
+     
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test retrieval of Divider props object 1`] = `
