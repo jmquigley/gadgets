@@ -6,6 +6,7 @@ import {
 import {
 	BaseProps,
 	Color,
+	ColorScheme,
 	Direction,
 	DisabledCSS,
 	getDefaultBaseProps,
@@ -41,6 +42,7 @@ export {
 	borderStyle,
 	boxStyle,
 	Color,
+	ColorScheme,
 	defaultSize,
 	Direction,
 	DisabledCSS,

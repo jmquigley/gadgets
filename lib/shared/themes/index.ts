@@ -47,6 +47,7 @@ export interface ThemeProps {
 	headerBackgroundColor: string;
 	headerHoverColor: string;
 	hoverColor: string;
+	optionHoverColor: string;
 }
 
 export enum Theme {

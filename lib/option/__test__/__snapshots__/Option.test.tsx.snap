@@ -1,58 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Creation of the Option control 1`] = `
-<div
-  className="ui-option option normal test-class"
-  onClick={[Function]}
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "backgroundColor": "inherit",
-      "color": "inherit",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "optionHoverColor": "#fd7400",
     }
   }
 >
-  <ButtonToggle
-    bgColorOff="inherit"
-    bgColorOn="inherit"
-    className="optionButton"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    fgColorOff="inherit"
-    fgColorOn="inherit"
-    focus={false}
-    height=""
-    iconName="bomb"
-    iconNameOff="square-o"
-    iconNameOn="check-square-o"
-    iconStyle=""
-    id=""
-    initialToggle={true}
-    location="none"
-    noedit={false}
-    nohover={true}
-    noripple={false}
+  <styled.div
+    className="ui-option test-class"
     onClick={[Function]}
-    optionType={0}
-    selected={true}
-    sizing="normal"
     style={
       Object {
         "backgroundColor": "inherit",
         "color": "inherit",
       }
     }
-    testing={true}
-    text="test"
-    theme={Object {}}
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <span>
-    test
-  </span>
-</div>
+  >
+    <ButtonToggle
+      bgColorOff="inherit"
+      bgColorOn="inherit"
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      fgColorOff="inherit"
+      fgColorOn="inherit"
+      focus={false}
+      height=""
+      iconName="bomb"
+      iconNameOff="square-o"
+      iconNameOn="check-square-o"
+      iconStyle=""
+      id=""
+      initialToggle={true}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onClick={[Function]}
+      optionType={0}
+      selected={true}
+      sizing="normal"
+      style={
+        Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
+        }
+      }
+      testing={true}
+      text="test"
+      theme={Object {}}
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <span>
+      test
+    </span>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test Option control click event 1`] = `
@@ -85,71 +100,44 @@ exports[`Test Option control click event 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-option option normal"
-    onClick={[Function]}
-    style={
+  <ThemeProvider
+    theme={
       Object {
-        "backgroundColor": "inherit",
-        "color": "inherit",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "optionHoverColor": "#fd7400",
       }
     }
   >
-    <ButtonToggle
-      bgColorOff="inherit"
-      bgColorOn="inherit"
-      className="optionButton"
-      contentEditable={false}
-      direction="right"
-      disabled={false}
-      fgColorOff="inherit"
-      fgColorOn="inherit"
-      focus={false}
-      height=""
-      iconName="bomb"
-      iconNameOff="square-o"
-      iconNameOn="check-square-o"
-      iconStyle=""
-      id=""
-      initialToggle={false}
-      location="none"
-      noedit={false}
-      nohover={true}
-      noripple={false}
+    <styled.div
+      className="ui-option"
       onClick={[Function]}
-      optionType={0}
-      selected={false}
-      sizing="normal"
       style={
         Object {
           "backgroundColor": "inherit",
           "color": "inherit",
         }
       }
-      testing={true}
-      text=""
-      theme={Object {}}
-      visible={true}
-      width=""
-      xcss={null}
     >
-      <ThemeProvider
-        theme={
+      <div
+        className="ui-option sc-bxivhb gocSVV"
+        onClick={[Function]}
+        style={
           Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#004358",
-            "color": "#000000",
-            "headerBackgroundColor": "#004358",
-            "headerForegroundColor": "#ffffff",
-            "headerHoverColor": "#ffe11a",
-            "hoverColor": "#c0c0c0",
+            "backgroundColor": "inherit",
+            "color": "inherit",
           }
         }
       >
-        <Button
+        <ButtonToggle
           bgColorOff="inherit"
           bgColorOn="inherit"
-          className="ui-button-toggle optionButton nohover"
+          className=""
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -157,7 +145,7 @@ exports[`Test Option control click event 1`] = `
           fgColorOn="inherit"
           focus={false}
           height=""
-          iconName="square-o"
+          iconName="bomb"
           iconNameOff="square-o"
           iconNameOn="check-square-o"
           iconStyle=""
@@ -165,8 +153,8 @@ exports[`Test Option control click event 1`] = `
           initialToggle={false}
           location="none"
           noedit={false}
-          nohover={true}
-          noripple={true}
+          nohover={false}
+          noripple={false}
           onClick={[Function]}
           optionType={0}
           selected={false}
@@ -194,70 +182,87 @@ exports[`Test Option control click event 1`] = `
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
+                "optionHoverColor": "#fd7400",
               }
             }
           >
-            <styled.div
-              className="ui-button nohover ui-button-toggle optionButton nohover"
+            <Button
+              bgColorOff="inherit"
+              bgColorOn="inherit"
+              className="ui-button-toggle"
+              contentEditable={false}
+              direction="right"
               disabled={false}
+              fgColorOff="inherit"
+              fgColorOn="inherit"
+              focus={false}
+              height=""
+              iconName="square-o"
+              iconNameOff="square-o"
+              iconNameOn="check-square-o"
+              iconStyle=""
+              id=""
+              initialToggle={false}
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              optionType={0}
+              selected={false}
+              sizing="normal"
               style={
                 Object {
                   "backgroundColor": "inherit",
                   "color": "inherit",
                 }
               }
+              testing={true}
+              text=""
+              theme={Object {}}
               visible={true}
+              width=""
+              xcss={null}
             >
-              <div
-                className="ui-button nohover ui-button-toggle optionButton nohover sc-htpNat eaVJAo"
-                disabled={false}
-                onClick={[Function]}
-                style={
+              <ThemeProvider
+                theme={
                   Object {
-                    "backgroundColor": "inherit",
-                    "color": "inherit",
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "optionHoverColor": "#fd7400",
                   }
                 }
               >
-                <Icon
-                  className=""
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button nohover ui-button-toggle"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="square-o"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
-                  style={Object {}}
-                  testing={true}
-                  theme={Object {}}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
+                    }
+                  }
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
+                  <div
+                    className="ui-button nohover ui-button-toggle sc-htpNat eaVJAo"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={
                       Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "headerHoverColor": "#ffe11a",
-                        "hoverColor": "#c0c0c0",
+                        "backgroundColor": "inherit",
+                        "color": "inherit",
                       }
                     }
                   >
-                    <styled.i
-                      className="ui-icon fa fa-fw fa-square-o"
+                    <Icon
+                      className=""
                       contentEditable={false}
                       direction="right"
                       disabled={false}
@@ -279,27 +284,66 @@ exports[`Test Option control click event 1`] = `
                       width=""
                       xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-square-o sc-bdVaJa iGRPLq"
-                        contentEditable={false}
-                        direction="right"
-                        disabled={false}
-                        height=""
-                        id=""
-                        selected={false}
-                        style={Object {}}
-                        width=""
-                      />
-                    </styled.i>
-                  </ThemeProvider>
-                </Icon>
-              </div>
-            </styled.div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "headerHoverColor": "#ffe11a",
+                            "hoverColor": "#c0c0c0",
+                            "optionHoverColor": "#fd7400",
+                          }
+                        }
+                      >
+                        <styled.i
+                          className="ui-icon fa fa-fw fa-square-o"
+                          contentEditable={false}
+                          direction="right"
+                          disabled={false}
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          selected={false}
+                          sizing="normal"
+                          style={Object {}}
+                          testing={true}
+                          theme={Object {}}
+                          visible={true}
+                          width=""
+                          xcss={null}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-square-o sc-bdVaJa iGRPLq"
+                            contentEditable={false}
+                            direction="right"
+                            disabled={false}
+                            height=""
+                            id=""
+                            selected={false}
+                            style={Object {}}
+                            width=""
+                          />
+                        </styled.i>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
+            </Button>
           </ThemeProvider>
-        </Button>
-      </ThemeProvider>
-    </ButtonToggle>
-  </div>
+        </ButtonToggle>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </Option>
 `;
 
@@ -333,71 +377,44 @@ exports[`Test disabling of the Option control 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-option option normal disabled nohover"
-    onClick={[Function]}
-    style={
+  <ThemeProvider
+    theme={
       Object {
-        "backgroundColor": "inherit",
-        "color": "inherit",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "optionHoverColor": "#fd7400",
       }
     }
   >
-    <ButtonToggle
-      bgColorOff="inherit"
-      bgColorOn="inherit"
-      className="optionButton"
-      contentEditable={false}
-      direction="right"
-      disabled={true}
-      fgColorOff="inherit"
-      fgColorOn="inherit"
-      focus={false}
-      height=""
-      iconName="bomb"
-      iconNameOff="square-o"
-      iconNameOn="check-square-o"
-      iconStyle=""
-      id=""
-      initialToggle={false}
-      location="none"
-      noedit={false}
-      nohover={true}
-      noripple={false}
+    <styled.div
+      className="ui-option"
       onClick={[Function]}
-      optionType={0}
-      selected={false}
-      sizing="normal"
       style={
         Object {
           "backgroundColor": "inherit",
           "color": "inherit",
         }
       }
-      testing={true}
-      text=""
-      theme={Object {}}
-      visible={true}
-      width=""
-      xcss={null}
     >
-      <ThemeProvider
-        theme={
+      <div
+        className="ui-option sc-bxivhb gocSVV"
+        onClick={[Function]}
+        style={
           Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#004358",
-            "color": "#000000",
-            "headerBackgroundColor": "#004358",
-            "headerForegroundColor": "#ffffff",
-            "headerHoverColor": "#ffe11a",
-            "hoverColor": "#c0c0c0",
+            "backgroundColor": "inherit",
+            "color": "inherit",
           }
         }
       >
-        <Button
+        <ButtonToggle
           bgColorOff="inherit"
           bgColorOn="inherit"
-          className="ui-button-toggle optionButton nohover"
+          className=""
           contentEditable={false}
           direction="right"
           disabled={true}
@@ -405,7 +422,7 @@ exports[`Test disabling of the Option control 1`] = `
           fgColorOn="inherit"
           focus={false}
           height=""
-          iconName="square-o"
+          iconName="bomb"
           iconNameOff="square-o"
           iconNameOn="check-square-o"
           iconStyle=""
@@ -413,8 +430,8 @@ exports[`Test disabling of the Option control 1`] = `
           initialToggle={false}
           location="none"
           noedit={false}
-          nohover={true}
-          noripple={true}
+          nohover={false}
+          noripple={false}
           onClick={[Function]}
           optionType={0}
           selected={false}
@@ -442,70 +459,87 @@ exports[`Test disabling of the Option control 1`] = `
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
+                "optionHoverColor": "#fd7400",
               }
             }
           >
-            <styled.div
-              className="ui-button nohover ui-button-toggle optionButton nohover"
+            <Button
+              bgColorOff="inherit"
+              bgColorOn="inherit"
+              className="ui-button-toggle"
+              contentEditable={false}
+              direction="right"
               disabled={true}
+              fgColorOff="inherit"
+              fgColorOn="inherit"
+              focus={false}
+              height=""
+              iconName="square-o"
+              iconNameOff="square-o"
+              iconNameOn="check-square-o"
+              iconStyle=""
+              id=""
+              initialToggle={false}
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              optionType={0}
+              selected={false}
+              sizing="normal"
               style={
                 Object {
                   "backgroundColor": "inherit",
                   "color": "inherit",
                 }
               }
+              testing={true}
+              text=""
+              theme={Object {}}
               visible={true}
+              width=""
+              xcss={null}
             >
-              <div
-                className="ui-button nohover ui-button-toggle optionButton nohover sc-htpNat cDPcSb"
-                disabled={true}
-                onClick={[Function]}
-                style={
+              <ThemeProvider
+                theme={
                   Object {
-                    "backgroundColor": "inherit",
-                    "color": "inherit",
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "optionHoverColor": "#fd7400",
                   }
                 }
               >
-                <Icon
-                  className=""
-                  contentEditable={false}
-                  direction="right"
-                  disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="square-o"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
-                  style={Object {}}
-                  testing={true}
-                  theme={Object {}}
+                <styled.div
+                  className="ui-button nohover ui-button-toggle"
+                  disabled={true}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
+                    }
+                  }
                   visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
+                  <div
+                    className="ui-button nohover ui-button-toggle sc-htpNat cDPcSb"
+                    disabled={true}
+                    onClick={[Function]}
+                    style={
                       Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "headerHoverColor": "#ffe11a",
-                        "hoverColor": "#c0c0c0",
+                        "backgroundColor": "inherit",
+                        "color": "inherit",
                       }
                     }
                   >
-                    <styled.i
-                      className="ui-icon fa fa-fw fa-square-o"
+                    <Icon
+                      className=""
                       contentEditable={false}
                       direction="right"
                       disabled={false}
@@ -527,27 +561,66 @@ exports[`Test disabling of the Option control 1`] = `
                       width=""
                       xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-square-o sc-bdVaJa iGRPLq"
-                        contentEditable={false}
-                        direction="right"
-                        disabled={false}
-                        height=""
-                        id=""
-                        selected={false}
-                        style={Object {}}
-                        width=""
-                      />
-                    </styled.i>
-                  </ThemeProvider>
-                </Icon>
-              </div>
-            </styled.div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "headerHoverColor": "#ffe11a",
+                            "hoverColor": "#c0c0c0",
+                            "optionHoverColor": "#fd7400",
+                          }
+                        }
+                      >
+                        <styled.i
+                          className="ui-icon fa fa-fw fa-square-o"
+                          contentEditable={false}
+                          direction="right"
+                          disabled={false}
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          selected={false}
+                          sizing="normal"
+                          style={Object {}}
+                          testing={true}
+                          theme={Object {}}
+                          visible={true}
+                          width=""
+                          xcss={null}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-square-o sc-bdVaJa iGRPLq"
+                            contentEditable={false}
+                            direction="right"
+                            disabled={false}
+                            height=""
+                            id=""
+                            selected={false}
+                            style={Object {}}
+                            width=""
+                          />
+                        </styled.i>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
+            </Button>
           </ThemeProvider>
-        </Button>
-      </ThemeProvider>
-    </ButtonToggle>
-  </div>
+        </ButtonToggle>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </Option>
 `;
 
@@ -581,71 +654,44 @@ exports[`Test making the Option control invisible 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-option option normal invisible"
-    onClick={[Function]}
-    style={
+  <ThemeProvider
+    theme={
       Object {
-        "backgroundColor": "inherit",
-        "color": "inherit",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "optionHoverColor": "#fd7400",
       }
     }
   >
-    <ButtonToggle
-      bgColorOff="inherit"
-      bgColorOn="inherit"
-      className="optionButton"
-      contentEditable={false}
-      direction="right"
-      disabled={false}
-      fgColorOff="inherit"
-      fgColorOn="inherit"
-      focus={false}
-      height=""
-      iconName="bomb"
-      iconNameOff="square-o"
-      iconNameOn="check-square-o"
-      iconStyle=""
-      id=""
-      initialToggle={false}
-      location="none"
-      noedit={false}
-      nohover={true}
-      noripple={false}
+    <styled.div
+      className="ui-option"
       onClick={[Function]}
-      optionType={0}
-      selected={false}
-      sizing="normal"
       style={
         Object {
           "backgroundColor": "inherit",
           "color": "inherit",
         }
       }
-      testing={true}
-      text=""
-      theme={Object {}}
-      visible={false}
-      width=""
-      xcss={null}
     >
-      <ThemeProvider
-        theme={
+      <div
+        className="ui-option sc-bxivhb gocSVV"
+        onClick={[Function]}
+        style={
           Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#004358",
-            "color": "#000000",
-            "headerBackgroundColor": "#004358",
-            "headerForegroundColor": "#ffffff",
-            "headerHoverColor": "#ffe11a",
-            "hoverColor": "#c0c0c0",
+            "backgroundColor": "inherit",
+            "color": "inherit",
           }
         }
       >
-        <Button
+        <ButtonToggle
           bgColorOff="inherit"
           bgColorOn="inherit"
-          className="ui-button-toggle optionButton nohover"
+          className=""
           contentEditable={false}
           direction="right"
           disabled={false}
@@ -653,7 +699,7 @@ exports[`Test making the Option control invisible 1`] = `
           fgColorOn="inherit"
           focus={false}
           height=""
-          iconName="square-o"
+          iconName="bomb"
           iconNameOff="square-o"
           iconNameOn="check-square-o"
           iconStyle=""
@@ -661,8 +707,8 @@ exports[`Test making the Option control invisible 1`] = `
           initialToggle={false}
           location="none"
           noedit={false}
-          nohover={true}
-          noripple={true}
+          nohover={false}
+          noripple={false}
           onClick={[Function]}
           optionType={0}
           selected={false}
@@ -690,70 +736,87 @@ exports[`Test making the Option control invisible 1`] = `
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
+                "optionHoverColor": "#fd7400",
               }
             }
           >
-            <styled.div
-              className="ui-button nohover ui-button-toggle optionButton nohover"
+            <Button
+              bgColorOff="inherit"
+              bgColorOn="inherit"
+              className="ui-button-toggle"
+              contentEditable={false}
+              direction="right"
               disabled={false}
+              fgColorOff="inherit"
+              fgColorOn="inherit"
+              focus={false}
+              height=""
+              iconName="square-o"
+              iconNameOff="square-o"
+              iconNameOn="check-square-o"
+              iconStyle=""
+              id=""
+              initialToggle={false}
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={true}
               onClick={[Function]}
+              optionType={0}
+              selected={false}
+              sizing="normal"
               style={
                 Object {
                   "backgroundColor": "inherit",
                   "color": "inherit",
                 }
               }
+              testing={true}
+              text=""
+              theme={Object {}}
               visible={false}
+              width=""
+              xcss={null}
             >
-              <div
-                className="ui-button nohover ui-button-toggle optionButton nohover sc-htpNat obZDX"
-                disabled={false}
-                onClick={[Function]}
-                style={
+              <ThemeProvider
+                theme={
                   Object {
-                    "backgroundColor": "inherit",
-                    "color": "inherit",
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#004358",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "optionHoverColor": "#fd7400",
                   }
                 }
               >
-                <Icon
-                  className=""
-                  contentEditable={false}
-                  direction="right"
+                <styled.div
+                  className="ui-button nohover ui-button-toggle"
                   disabled={false}
-                  focus={false}
-                  height=""
-                  iconName="square-o"
-                  id=""
-                  imageFile=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  selected={false}
-                  sizing="normal"
-                  style={Object {}}
-                  testing={true}
-                  theme={Object {}}
-                  visible={true}
-                  width=""
-                  xcss={null}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
+                    }
+                  }
+                  visible={false}
                 >
-                  <ThemeProvider
-                    theme={
+                  <div
+                    className="ui-button nohover ui-button-toggle sc-htpNat obZDX"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={
                       Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "headerHoverColor": "#ffe11a",
-                        "hoverColor": "#c0c0c0",
+                        "backgroundColor": "inherit",
+                        "color": "inherit",
                       }
                     }
                   >
-                    <styled.i
-                      className="ui-icon fa fa-fw fa-square-o"
+                    <Icon
+                      className=""
                       contentEditable={false}
                       direction="right"
                       disabled={false}
@@ -775,27 +838,66 @@ exports[`Test making the Option control invisible 1`] = `
                       width=""
                       xcss={null}
                     >
-                      <i
-                        className="ui-icon fa fa-fw fa-square-o sc-bdVaJa iGRPLq"
-                        contentEditable={false}
-                        direction="right"
-                        disabled={false}
-                        height=""
-                        id=""
-                        selected={false}
-                        style={Object {}}
-                        width=""
-                      />
-                    </styled.i>
-                  </ThemeProvider>
-                </Icon>
-              </div>
-            </styled.div>
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "headerHoverColor": "#ffe11a",
+                            "hoverColor": "#c0c0c0",
+                            "optionHoverColor": "#fd7400",
+                          }
+                        }
+                      >
+                        <styled.i
+                          className="ui-icon fa fa-fw fa-square-o"
+                          contentEditable={false}
+                          direction="right"
+                          disabled={false}
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          selected={false}
+                          sizing="normal"
+                          style={Object {}}
+                          testing={true}
+                          theme={Object {}}
+                          visible={true}
+                          width=""
+                          xcss={null}
+                        >
+                          <i
+                            className="ui-icon fa fa-fw fa-square-o sc-bdVaJa iGRPLq"
+                            contentEditable={false}
+                            direction="right"
+                            disabled={false}
+                            height=""
+                            id=""
+                            selected={false}
+                            style={Object {}}
+                            width=""
+                          />
+                        </styled.i>
+                      </ThemeProvider>
+                    </Icon>
+                  </div>
+                </styled.div>
+              </ThemeProvider>
+            </Button>
           </ThemeProvider>
-        </Button>
-      </ThemeProvider>
-    </ButtonToggle>
-  </div>
+        </ButtonToggle>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </Option>
 `;
 

@@ -10,7 +10,8 @@ const theme: ThemeProps = {
 	headerForegroundColor: Color.white,
 	headerBackgroundColor: '#004358',
 	headerHoverColor: '#ffe11a',
-	hoverColor: '#ffe11a'
+	hoverColor: '#ffe11a',
+	optionHoverColor: '#ffe11a'
 };
 
 export default theme;

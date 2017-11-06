@@ -59,8 +59,11 @@ import {ButtonToggle} from '../buttonToggle';
 import {
 	BaseComponent,
 	BaseProps,
-	getDefaultBaseProps
+	Color,
+	getDefaultBaseProps,
+	getTheme
 } from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export enum OptionType {
 	square,
@@ -96,6 +99,20 @@ export function getDefaultOptionProps(): OptionProps {
 		})
 	);
 }
+
+export const OptionView: any = withProps<OptionProps, HTMLDivElement>(styled.div)`
+	align-items: center;
+	cursor: default;
+	display: inline-flex;
+
+	> span {
+		padding: 0 0.2rem;
+	}
+
+	> span:hover {
+		color: ${props => props.theme.optionHoverColor || Color.silver};
+	}
+`;
 
 export class Option extends BaseComponent<OptionProps, undefined> {
 
@@ -146,13 +163,8 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 	public static readonly defaultProps: OptionProps = getDefaultOptionProps();
 
 	constructor(props: OptionProps) {
-		super(props, require('./styles.css'));
-
-		this._rootStyles.add([
-			'ui-option',
-			this.styles.option
-		]);
-
+		super(props, {}, Option.defaultProps.style);
+		this._classes.add(['ui-option']);
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(this.props);
 	}
@@ -165,29 +177,30 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 
 	public render() {
 		return(
-			<div
-				className={this._rootStyles.classnames}
-				onClick={this.handleClick}
-				style={this.inlineStyles}
-			>
-				<ButtonToggle
-					{...this.props}
-					bgColorOff={this.inlineStyles['backgroundColor']}
-					bgColorOn={this.inlineStyles['backgroundColor']}
-					className={this.styles.optionButton}
-					fgColorOff={this.inlineStyles['color']}
-					fgColorOn={this.inlineStyles['color']}
-					iconNameOn={this.icons[this.props.optionType].on}
-					iconNameOff={this.icons[this.props.optionType].off}
-					initialToggle={this.props.selected}
-					nohover
-					onClick={this.props.onClick}
-					ref={(btn: ButtonToggle) => {
-						this._btn = btn;
-					}}
-				/>
-				{(this.props.text) ? <span>{this.props.text}</span> : null}
-			</div>
+			<ThemeProvider theme={getTheme()} >
+				<OptionView
+					className={this.classes}
+					onClick={this.handleClick}
+					style={this.inlineStyles}
+				>
+					<ButtonToggle
+						{...this.props}
+						bgColorOff={this.inlineStyles['backgroundColor']}
+						bgColorOn={this.inlineStyles['backgroundColor']}
+						className={this.styles.optionButton}
+						fgColorOff={this.inlineStyles['color']}
+						fgColorOn={this.inlineStyles['color']}
+						iconNameOn={this.icons[this.props.optionType].on}
+						iconNameOff={this.icons[this.props.optionType].off}
+						initialToggle={this.props.selected}
+						onClick={this.props.onClick}
+						ref={(btn: ButtonToggle) => {
+							this._btn = btn;
+						}}
+					/>
+					{(this.props.text) ? <span>{this.props.text}</span> : null}
+				</OptionView>
+			</ThemeProvider>
 		);
 	}
 }

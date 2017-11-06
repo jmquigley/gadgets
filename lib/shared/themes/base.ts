@@ -1,16 +1,17 @@
 'use strict';
 
-import {Color} from '../props';
+import {Color, ColorScheme} from '../props';
 import {ThemeProps} from './index';
 
 const theme: ThemeProps = {
 	backgroundColor: Color.white,
-	borderColor: '#004358',
+	borderColor: ColorScheme.c1,
 	color: Color.black,
 	headerForegroundColor: Color.white,
-	headerBackgroundColor: '#004358',
-	headerHoverColor: '#ffe11a',
-	hoverColor: Color.silver
+	headerBackgroundColor: ColorScheme.c1,
+	headerHoverColor: ColorScheme.c4,
+	hoverColor: Color.silver,
+	optionHoverColor: ColorScheme.c5
 };
 
 export default theme;
