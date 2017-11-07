@@ -6,7 +6,7 @@
  * the slider.  The *outy* makes an oversized button outside of the slider.
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/switch.png" width="50%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/switch.png" width="40%" />
  *
  * ## Examples:
  *

@@ -8,7 +8,7 @@
  * signalling what occurred.
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="60%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="40%" />
  *
  * ## Examples:
  *

@@ -17,7 +17,7 @@
  * the user of the control to change the page size.
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/pager.png" width="50%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/pager.png" width="40%" />
  *
  * ## Examples:
  *

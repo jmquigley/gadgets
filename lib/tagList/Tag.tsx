@@ -4,7 +4,7 @@
  * would generally just be used within the `TagList`.
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="60%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="40%" />
  *
  * ## Examples:
  *
