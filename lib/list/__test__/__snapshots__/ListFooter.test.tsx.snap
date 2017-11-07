@@ -132,16 +132,19 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
             }
           }
         >
-          <Title__TitleView
+          <styled.div
             className="ui-title-bar ui-list-footer ListFooter__ListFooterView-kRwuUp bvEGnQ"
+            disabled={false}
             layout={1}
             style={Object {}}
+            visible={true}
           >
             <div
-              className="ui-title-bar ui-list-footer ListFooter__ListFooterView-kRwuUp bvEGnQ Title__TitleView-ddYmk gnejTR"
+              className="ui-title-bar ui-list-footer ListFooter__ListFooterView-kRwuUp bvEGnQ sc-bwzfXH geSqhw"
+              disabled={false}
               style={Object {}}
             >
-              <Title__StyledWidget
+              <Styled(Label)
                 className="ui-title"
                 contentEditable={false}
                 direction="right"
@@ -175,7 +178,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                 }
               >
                 <Label
-                  className="ui-title Title__StyledWidget-dupbKD bMWgzk"
+                  className="ui-title sc-bxivhb cbEtIQ"
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -229,7 +232,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                     }
                   >
                     <styled.span
-                      className="ui-label ui-title Title__StyledWidget-dupbKD bMWgzk"
+                      className="ui-label ui-title sc-bxivhb cbEtIQ"
                       contentEditable={false}
                       disabled={false}
                       innerRef={[Function]}
@@ -243,7 +246,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                       visible={true}
                     >
                       <span
-                        className="ui-label ui-title Title__StyledWidget-dupbKD bMWgzk sc-bdVaJa iXDktG"
+                        className="ui-label ui-title sc-bxivhb cbEtIQ sc-bdVaJa iXDktG"
                         contentEditable={false}
                         disabled={false}
                         onBlur={[Function]}
@@ -259,9 +262,9 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                     </styled.span>
                   </ThemeProvider>
                 </Label>
-              </Title__StyledWidget>
+              </Styled(Label)>
             </div>
-          </Title__TitleView>
+          </styled.div>
         </ThemeProvider>
       </Title>
     </ListFooter__ListFooterView>

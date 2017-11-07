@@ -5,7 +5,10 @@
  * types of buttons: *inny* and *outy*.  The *inny* places the button within
  * the slider.  The *outy* makes an oversized button outside of the slider.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/switch.png" width="50%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Switch, SwitchType} from 'gadgets';
@@ -18,6 +21,7 @@
  * />
  * ```
  *
+ * ## API
  * #### Events
  * - `onClick(toggle: boolean)` - invoked when the circular toggle button is
  * clicked.  The callback is given a boolean parameter.  When true, the button

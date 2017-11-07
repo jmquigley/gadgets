@@ -16,7 +16,10 @@
  * - url
  * - regex
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/textField.png" width="50%" />
+ *
+ * ## Examples:
  *
  * ##### Simple
  * ```javascript
@@ -63,6 +66,7 @@
  * ```
  * This will create a control with a custom alphanumeric validation routine.
  *
+ * ## API
  * #### Events
  * - `onBlur` - Invoked when focus on control is lost.
  * - `onChange` - Invoked each time a key is pressed.  The validation routine is

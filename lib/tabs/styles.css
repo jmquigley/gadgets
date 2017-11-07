@@ -2,114 +2,11 @@
 
 :local {
 
-	.tabBar {
-		display: flex;
-	}
-
 	.tabContainerHorizontal {
 	}
 
 	.tabContainerVertical {
 		display: flex;
 		flex-wrap: nowrap;
-	}
-
-	.tabBarHorizontal {
-		display: block;
-	}
-
-	.tabBarVertical {
-		display: inline-flex;
-		flex-direction: column;
-	}
-
-	.tabContentHorizontal {
-		border: solid 1px;
-		box-sizing: border-box;
-		min-height: 8em;
-		padding: 0 3px;
-	}
-
-	.tabContentVertical {
-		border: solid 1px;
-		box-sizing: border-box;
-		display: inline-flex;
-		min-height: 8em;
-		padding: 0 3px;
-		flex-grow: 1;
-	}
-
-	.tab {
-		display: inline-block;
-		cursor: default;
-		flex-grow: unset;
-	}
-
-	.tabBorderTop {
-		border-right: solid 1px #004358;
-		border-top: solid 1px #004358;
-	}
-
-	.tabBorderTop:first-child {
-		border-left: solid 1px #004358;
-	}
-
-	.tabBorderBottom {
-		border-right: solid 1px #004358;
-		border-bottom: solid 1px #004358;
-	}
-
-	.tabBorderBottom:first-child {
-		border-left: solid 1px #004358;
-	}
-
-	.tabBorderLeft {
-		border-left: solid 1px #004358;
-		border-bottom: solid 1px #004358;
-	}
-
-	.tabBorderLeft:first-child {
-		border-top: solid 1px #004358;
-	}
-
-	.tabBorderRight {
-		border-right: solid 1px #004358;
-		border-bottom: solid 1px #004358;
-	}
-
-	.tabBorderRight:first-child {
-		border-top: solid 1px #004358;
-	}
-
-	.navigation {
-		display: inline-block;
-		float: right;
-		align-self: center;
-	}
-
-	.navigation > :global(.ui-button) {
-		display: inline-block;
-		flex: unset;
-	}
-
-	.tab:hover :global(.ui-button) {
-		color: white;
-		background-color: silver;
-		display: flex;
-		opacity: 1.0;
-	}
-
-	.tab :global(.ui-button:hover) {
-		background-color: $error !important;
-	}
-
-	.tab :global(.ui-button)
-	{
-		display: none;
-		opacity: 0;
-
-		:global {
-			animation: fadeIn 0.5s;
-		}
 	}
 }

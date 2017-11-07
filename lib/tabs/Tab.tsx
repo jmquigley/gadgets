@@ -4,7 +4,10 @@
  * as a wrapper for some other content (the children within the control can
  * be any other object).
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tabs.png" width="50%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Tab, TabContainer} from 'gadgets';
@@ -24,6 +27,7 @@
  * The tab contents in this example hold a string, but could hold any other
  * valid HTML objects.
  *
+ * ## API
  * #### Events
  * - `onClick` - invoked when a tab is selected from the Container
  * - `onClose` - invoked when the close button is selected on the tab.  A
@@ -57,13 +61,17 @@ import {Button} from '../button';
 import {
 	BaseComponent,
 	BaseProps,
+	Color,
+	ColorScheme,
+	disabled,
 	getDefaultBaseProps,
+	getTheme,
+	invisible,
 	Location,
 	Sizing
 } from '../shared';
+import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 import {Title} from '../title';
-
-const styles = require('./styles.css');
 
 export interface TabProps extends BaseProps {
 	href?: any;
@@ -93,17 +101,83 @@ export interface TabState {
 	hidden: boolean;
 }
 
+export const TabBorderTop: any = css`
+	border-right: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	border-top: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+
+	&:first-child {
+		border-left: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	}
+`;
+
+export const TabBorderBottom: any = css`
+	border-right: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	border-bottom: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+
+	&:first-child {
+		border-left: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	}
+`;
+
+export const TabBorderLeft: any = css`
+	border-left: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	border-bottom: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+
+	&:first-child {
+		border-top: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	}
+`;
+
+export const TabBorderRight: any = css`
+	border-right: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	border-bottom: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+
+	&:first-child {
+		border-top: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	}
+`;
+
+export const TabView: any = withProps<TabProps, HTMLDivElement>(styled.div)`
+	display: inline-block;
+	cursor: default;
+	flex-grow: unset;
+
+	${props => props.xcss ? props.xcss : ''}
+
+	span:hover {
+		color: ${props => !props.disabled ? props.theme.headerHoverColor : 'unset'} !important;
+		background-color: ${props => !props.disabled ? props.theme.headerBackgroundColor : 'unset'} !important;
+	}
+
+	&:hover .ui-button {
+		color: ${props => props.theme.backgroundColor};
+		background-color: ${props => props.theme.hoverColor};
+		display: flex;
+		opacity: 1.0;
+	}
+
+	.ui-button:hover {
+		background-color: ${Color.error} !important;
+	}
+
+	.ui-button {
+		display: none;
+		opacity: 0;
+		animation: fadeIn 0.5s;
+	}
+
+	${props => disabled(props)}
+	${props => invisible(props)}
+`;
+
 export class Tab extends BaseComponent<TabProps, TabState> {
 
 	public static readonly defaultProps: TabProps = getDefaultTabProps();
 
 	constructor(props: TabProps) {
-		super(props, styles, Tab.defaultProps.style);
+		super(props, {}, Tab.defaultProps.style);
 
-		this._rootStyles.add([
-			'ui-tab',
-			this.styles.tab
-		]);
+		this._classes.add(['ui-tab']);
 
 		this.bindCallbacks(
 			'handleClick',
@@ -118,8 +192,10 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	}
 
 	private handleClick() {
-		this.props.href.selectHandler(this);
-		this.props.onClick();
+		if (!this.props.disabled && this.props.visible) {
+			this.props.href.selectHandler(this);
+			this.props.onClick();
+		}
 	}
 
 	private handleClose() {
@@ -131,14 +207,9 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 
 	public componentWillUpdate(nextProps: TabProps, nextState: TabState) {
 
-		this._rootStyles.onIf(nextProps.selected)(
+		this._classes.onIf(nextProps.selected)(
 			'ui-selected'
 		);
-
-		this._rootStyles.onIf(this.props.href.orientation === Location.top)(this.styles.tabBorderTop);
-		this._rootStyles.onIf(this.props.href.orientation === Location.bottom)(this.styles.tabBorderBottom);
-		this._rootStyles.onIf(this.props.href.orientation === Location.left)(this.styles.tabBorderLeft);
-		this._rootStyles.onIf(this.props.href.orientation === Location.right)(this.styles.tabBorderRight);
 
 		if (nextState.hidden) {
 			this.inlineStyles = {
@@ -157,28 +228,41 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	}
 
 	public render() {
+		let xcss: any = '';
+		switch (this.props.href.orientation) {
+			case Location.top: xcss = TabBorderTop; break;
+			case Location.bottom: xcss = TabBorderBottom; break;
+			case Location.left: xcss = TabBorderLeft; break;
+			case Location.right: xcss = TabBorderRight; break;
+		}
+
 		return (
-			<div
-				className={this._rootStyles.classnames}
-				style={this.inlineStyles}
-			>
-				<Title
-					{...this.props}
-					noedit
-					noripple
-					onClick={!this.props.disabled && this.props.visible ? this.handleClick : nilEvent}
-					title={this.props.title}
-					widget={
-						!this.props.disabled &&
-						<Button
-							{...this.props}
-							iconName="times"
-							onClick={this.handleClose}
-						/>
-					}
-					visible={!this.state.hidden}
-				/>
-			</div>
+			<ThemeProvider theme={getTheme()} >
+				<TabView
+					disabled={this.props.disabled}
+					className={this.classes}
+					style={this.inlineStyles}
+					visible={this.props.visible}
+					xcss={xcss}
+				>
+					<Title
+						{...this.props}
+						noedit
+						noripple
+						onClick={this.handleClick}
+						title={this.props.title}
+						widget={
+							!this.props.disabled &&
+							<Button
+								{...this.props}
+								iconName="times"
+								onClick={this.handleClose}
+							/>
+						}
+						visible={!this.state.hidden}
+					/>
+				</TabView>
+			</ThemeProvider>
 		);
 	}
 }

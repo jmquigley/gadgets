@@ -1,7 +1,10 @@
 /**
  * A typical tab control container.  This manages `Tab` elements within it.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tabs.png" width="50%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Tab, TabContainer} from 'gadgets';
@@ -32,6 +35,7 @@
  * This example sets the max number of tabs to 3, so the fourth would
  * be suppressed.
  *
+ * ## API
  * #### Events
  * - `onRemove(tab)` - When a tab is removed this event is invoked.  The
  * callback will receive the tab instance that was removed.
@@ -73,7 +77,6 @@ const debug = require('debug')('TabContainer');
 import {List} from 'immutable';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {Keys} from 'util.keys';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
@@ -81,11 +84,11 @@ import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
+	getTheme,
 	Location
 } from '../shared';
+import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 import {Tab} from './Tab';
-
-const styles = require('./styles.css');
 
 export interface TabContainerProps extends BaseProps {
 	children?: React.ReactNode;
@@ -116,64 +119,107 @@ export interface TabContainerState {
 	selectedTab?: string;
 }
 
+export const TabBarHorizontal: any = css`
+	display: block;
+`;
+
+export const TabBarVertical: any = css`
+	display: inline-flex;
+	flex-direction: column;
+`;
+
+export const TabBarView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
+	display: flex;
+	${props => props.xcss}
+`;
+
 export const TabBar = (props: any) => (
-	<div
-		className={props.className}
+	<TabBarView
+		className="ui-tab-bar"
 		style={props.style}
+		xcss={
+			props.location === Location.top || props.location === Location.bottom ?
+			TabBarHorizontal : TabBarVertical
+		}
 	>
 		{props.tabs}
 		{props.navigation}
-	</div>
+	</TabBarView>
 );
 
+export const TabContentHorizontal: any = css`
+	border: solid 1px;
+	box-sizing: border-box;
+	min-height: 8em;
+	padding: 0 3px;
+`;
+
+export const TabContentVertical: any = css`
+	border: solid 1px;
+	box-sizing: border-box;
+	display: inline-flex;
+	min-height: 8em;
+	padding: 0 3px;
+	flex-grow: 1;
+`;
+
+export const TabContentView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
+	${props => props.xcss || ''}
+`;
+
 export const TabContent = (props: any) => (
-	<div className={props.className} style={props.style}>
+	<TabContentView
+		className="ui-tab-content"
+		style={props.style}
+		xcss={
+			props.location === Location.top || props.location === Location.bottom ?
+			TabContentHorizontal : TabContentVertical
+		}
+	>
 		{props.content}
-	</div>
+	</TabContentView>
 );
+
+export const TabNavigationView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
+	display: inline-block;
+	float: right;
+	align-self: center;
+
+	> .ui-button {
+		display: inline-block;
+		flex: unset;
+	}
+`;
 
 export const TabNavigation = (props: any) => (
 	!props.nonavigation && !props.disabled && (
-		<div className={props.className}>
+		<TabNavigationView className="ui-tab-navigation">
 			<Button iconName="chevron-left" onClick={props.handleLeftClick}/>
 			<Button iconName="chevron-right" onClick={props.handleRightClick}/>
-		</div>
+		</TabNavigationView>
 	)
 );
+
+export const TabContainerView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
+	${props => ((props.location === Location.top || props.location === Location.bottom) ?
+		'' : 'display: flex; flex-wrap: nowrap;'
+	)}
+`;
 
 export class TabContainer extends BaseComponent<TabContainerProps, TabContainerState> {
 
 	private _containerWidth: number = 0;
 	private _keys: Keys;
-	private _tabBarStyles: ClassNames = new ClassNames();
 	private _tabContent: any = null;
-	private _tabContentStyles: ClassNames = new ClassNames();
-	private _tabNavStyles: ClassNames = new ClassNames();
 	private _tabs: any = List();
 
 	public static defaultProps: TabContainerProps = getDefaultTabContainerProps();
 
 	constructor(props: TabContainerProps) {
-		super(props, styles);
+		super(props, {}, TabContainer.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
-
-		this._rootStyles.add([
-			'ui-tab-container'
-		]);
-
-		this._tabBarStyles.add([
-			'ui-tab-bar'
-		]);
-
-		this._tabContentStyles.add([
-			'ui-tab-content'
-		]);
-
-		this._tabNavStyles.add([
-			'ui-tab-navigation',
-			this.styles.navigation
-		]);
+		this._classes.add(['ui-tab-container']);
 
 		// Initialize all of the tabs given to the container.  This will assign
 		// the id/key and remove any child that is not a Tab.
@@ -322,26 +368,6 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	}
 
 	public componentWillUpdate(nextProps: TabContainerProps, nextState: TabContainerState) {
-		const topbot: boolean = this.props.location === Location.top || this.props.location === Location.bottom;
-
-		this._rootStyles.onIfElse(topbot)(
-			this.styles.tabContainerHorizontal
-		)(
-			this.styles.tabContainerVertical
-		);
-
-		this._tabContentStyles.onIfElse(topbot)(
-			this.styles.tabContentHorizontal
-		)(
-			this.styles.tabContentVertical
-		);
-
-		this._tabBarStyles.onIfElse(topbot)(
-			this.styles.tabBarHorizontal
-		)(
-			this.styles.tabBarVertical
-		);
-
 		if (this._tabs.size > 0) {
 
 			// Add select and delete handlers to each of the tabs in the current
@@ -395,7 +421,6 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		const tabNavigation = (
 			<TabNavigation
 				{...this.props}
-				className={this._tabNavStyles.classnames}
 				handleLeftClick={this.handlePreviousTab}
 				handleRightClick={this.handleNextTab}
 				nonavigation={this.props.nonavigation}
@@ -405,7 +430,6 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		const tabBar = (
 			<TabBar
 				{...this.props}
-				className={this._tabBarStyles.classnames}
 				navigation={tabNavigation}
 				style={style}
 				tabs={this._tabs}
@@ -414,33 +438,39 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 		const tabContent = (
 			<TabContent
-				className={this._tabContentStyles.classnames}
+				{...this.props}
 				content={this._tabContent}
 			/>
 		);
 
 		if (this.props.location === Location.top || this.props.location === Location.left) {
 			body = (
-				<div
-					className={this._rootStyles.classnames}
+				<TabContainerView
+					{...this.props}
+					className={this.classes}
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
 					{this._tabs.size > 0 && tabBar}
 					{tabContent}
-				</div>
+				</TabContainerView>
 			);
 		} else {
 			body = (
-				<div
-					className={this._rootStyles.classnames}
+				<TabContainerView
+					{...this.props}
+					className={this.classes}
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
 					{tabContent}
 					{this._tabs.size > 0 && tabBar}
-				</div>
+				</TabContainerView>
 			);
 		}
 
-		return body;
+		return (
+			<ThemeProvider theme={getTheme()}>
+				{body}
+			</ThemeProvider>
+		);
 	}
 }

@@ -40,16 +40,19 @@ exports[`Test creation of a Title control with bad layout 1`] = `
       }
     }
   >
-    <Title__TitleView
+    <styled.div
       className="ui-title-bar ripple"
+      disabled={false}
       layout={9999}
       style={Object {}}
+      visible={true}
     >
       <div
-        className="ui-title-bar ripple Title__TitleView-ddYmk gnejTR"
+        className="ui-title-bar ripple sc-bwzfXH geSqhw"
+        disabled={false}
         style={Object {}}
       >
-        <Title__StyledWidget
+        <Styled(Label)
           className="ui-title"
           contentEditable={false}
           direction="right"
@@ -83,7 +86,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
           }
         >
           <Label
-            className="ui-title Title__StyledWidget-dupbKD bMWgzk"
+            className="ui-title sc-bxivhb cbEtIQ"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -137,7 +140,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
               }
             >
               <styled.span
-                className="ui-label ui-title Title__StyledWidget-dupbKD bMWgzk"
+                className="ui-label ui-title sc-bxivhb cbEtIQ"
                 contentEditable={false}
                 disabled={false}
                 innerRef={[Function]}
@@ -151,7 +154,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                 visible={true}
               >
                 <span
-                  className="ui-label ui-title Title__StyledWidget-dupbKD bMWgzk sc-bdVaJa iXDktG"
+                  className="ui-label ui-title sc-bxivhb cbEtIQ sc-bdVaJa iXDktG"
                   contentEditable={false}
                   disabled={false}
                   onBlur={[Function]}
@@ -167,9 +170,9 @@ exports[`Test creation of a Title control with bad layout 1`] = `
               </styled.span>
             </ThemeProvider>
           </Label>
-        </Title__StyledWidget>
+        </Styled(Label)>
       </div>
-    </Title__TitleView>
+    </styled.div>
   </ThemeProvider>
 </Title>
 `;
@@ -214,16 +217,19 @@ exports[`Test creation of a Title control with bad layout 2`] = `
       }
     }
   >
-    <Title__TitleView
+    <styled.div
       className="ui-title-bar ripple"
+      disabled={false}
       layout={9999}
       style={Object {}}
+      visible={true}
     >
       <div
-        className="ui-title-bar ripple Title__TitleView-ddYmk gnejTR"
+        className="ui-title-bar ripple sc-bwzfXH geSqhw"
+        disabled={false}
         style={Object {}}
       >
-        <Title__StyledWidget
+        <Styled(Label)
           className="ui-title"
           contentEditable={false}
           direction="right"
@@ -257,7 +263,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
           }
         >
           <Label
-            className="ui-title Title__StyledWidget-dupbKD bMWgzk"
+            className="ui-title sc-bxivhb cbEtIQ"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -311,7 +317,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
               }
             >
               <styled.span
-                className="ui-label ui-title Title__StyledWidget-dupbKD bMWgzk"
+                className="ui-label ui-title sc-bxivhb cbEtIQ"
                 contentEditable={false}
                 disabled={false}
                 innerRef={[Function]}
@@ -325,7 +331,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                 visible={true}
               >
                 <span
-                  className="ui-label ui-title Title__StyledWidget-dupbKD bMWgzk sc-bdVaJa iXDktG"
+                  className="ui-label ui-title sc-bxivhb cbEtIQ sc-bdVaJa iXDktG"
                   contentEditable={false}
                   disabled={false}
                   onBlur={[Function]}
@@ -341,9 +347,9 @@ exports[`Test creation of a Title control with bad layout 2`] = `
               </styled.span>
             </ThemeProvider>
           </Label>
-        </Title__StyledWidget>
+        </Styled(Label)>
       </div>
-    </Title__TitleView>
+    </styled.div>
   </ThemeProvider>
 </Title>
 `;
@@ -363,12 +369,14 @@ exports[`Test creation of a Title control with default props 1`] = `
     }
   }
 >
-  <Title__TitleView
+  <styled.div
     className="ui-title-bar ripple test-class"
+    disabled={false}
     layout={5}
     style={Object {}}
+    visible={true}
   >
-    <Title__StyledWidget
+    <Styled(Label)
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -401,7 +409,7 @@ exports[`Test creation of a Title control with default props 1`] = `
         ]
       }
     />
-  </Title__TitleView>
+  </styled.div>
 </ThemeProvider>
 `;
 
@@ -420,12 +428,14 @@ exports[`Test creation of a Title control with even layout 1`] = `
     }
   }
 >
-  <Title__TitleView
+  <styled.div
     className="ui-title-bar ripple"
+    disabled={false}
     layout={1}
     style={Object {}}
+    visible={true}
   >
-    <Title__StyledWidget
+    <Styled(Label)
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -458,7 +468,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
         ]
       }
     />
-    <Title__StyledWidget
+    <styled.div
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -491,8 +501,8 @@ exports[`Test creation of a Title control with even layout 1`] = `
       }
     >
       widget
-    </Title__StyledWidget>
-  </Title__TitleView>
+    </styled.div>
+  </styled.div>
 </ThemeProvider>
 `;
 
@@ -511,12 +521,14 @@ exports[`Test creation of a Title control with no layout 1`] = `
     }
   }
 >
-  <Title__TitleView
+  <styled.div
     className="ui-title-bar ripple"
+    disabled={false}
     layout={6}
     style={Object {}}
+    visible={true}
   >
-    <Title__StyledWidget
+    <Styled(Label)
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -549,7 +561,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
         ]
       }
     />
-  </Title__TitleView>
+  </styled.div>
 </ThemeProvider>
 `;
 
@@ -568,12 +580,14 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     }
   }
 >
-  <Title__TitleView
+  <styled.div
     className="ui-title-bar ripple"
+    disabled={false}
     layout={0}
     style={Object {}}
+    visible={true}
   >
-    <Title__StyledWidget
+    <Styled(Label)
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -606,7 +620,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
         ]
       }
     />
-    <Title__StyledWidget
+    <styled.div
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -639,8 +653,8 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       }
     >
       widget
-    </Title__StyledWidget>
-  </Title__TitleView>
+    </styled.div>
+  </styled.div>
 </ThemeProvider>
 `;
 
@@ -659,12 +673,14 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     }
   }
 >
-  <Title__TitleView
+  <styled.div
     className="ui-title-bar ripple"
+    disabled={false}
     layout={4}
     style={Object {}}
+    visible={true}
   >
-    <Title__StyledWidget
+    <Styled(Label)
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -696,7 +712,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
         ]
       }
     />
-    <Title__StyledWidget
+    <styled.div
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -728,8 +744,8 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       }
     >
       widget
-    </Title__StyledWidget>
-  </Title__TitleView>
+    </styled.div>
+  </styled.div>
 </ThemeProvider>
 `;
 
@@ -748,12 +764,14 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     }
   }
 >
-  <Title__TitleView
+  <styled.div
     className="ui-title-bar ripple"
+    disabled={false}
     layout={3}
     style={Object {}}
+    visible={true}
   >
-    <Title__StyledWidget
+    <Styled(Label)
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -786,7 +804,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
         ]
       }
     />
-    <Title__StyledWidget
+    <styled.div
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -819,8 +837,8 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       }
     >
       widget
-    </Title__StyledWidget>
-  </Title__TitleView>
+    </styled.div>
+  </styled.div>
 </ThemeProvider>
 `;
 
@@ -839,12 +857,14 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     }
   }
 >
-  <Title__TitleView
+  <styled.div
     className="ui-title-bar ripple"
+    disabled={false}
     layout={2}
     style={Object {}}
+    visible={true}
   >
-    <Title__StyledWidget
+    <Styled(Label)
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -877,7 +897,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
         ]
       }
     />
-    <Title__StyledWidget
+    <styled.div
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -910,8 +930,8 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       }
     >
       widget
-    </Title__StyledWidget>
-  </Title__TitleView>
+    </styled.div>
+  </styled.div>
 </ThemeProvider>
 `;
 
@@ -955,16 +975,19 @@ exports[`Test disabling the Title control 1`] = `
       }
     }
   >
-    <Title__TitleView
+    <styled.div
       className="ui-title-bar"
+      disabled={true}
       layout={5}
       style={Object {}}
+      visible={true}
     >
       <div
-        className="ui-title-bar Title__TitleView-ddYmk gnejTR"
+        className="ui-title-bar sc-bwzfXH gNnfOr"
+        disabled={true}
         style={Object {}}
       >
-        <Title__StyledWidget
+        <Styled(Label)
           className="ui-title"
           contentEditable={false}
           direction="right"
@@ -998,7 +1021,7 @@ exports[`Test disabling the Title control 1`] = `
           }
         >
           <Label
-            className="ui-title Title__StyledWidget-dupbKD dJeweB"
+            className="ui-title sc-bxivhb gnXhnZ"
             contentEditable={false}
             direction="right"
             disabled={true}
@@ -1052,7 +1075,7 @@ exports[`Test disabling the Title control 1`] = `
               }
             >
               <styled.span
-                className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                className="ui-label ui-title sc-bxivhb gnXhnZ"
                 contentEditable={false}
                 disabled={true}
                 innerRef={[Function]}
@@ -1066,7 +1089,7 @@ exports[`Test disabling the Title control 1`] = `
                 visible={true}
               >
                 <span
-                  className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bdVaJa hvSzpL"
+                  className="ui-label ui-title sc-bxivhb gnXhnZ sc-bdVaJa hvSzpL"
                   contentEditable={false}
                   disabled={true}
                   onBlur={[Function]}
@@ -1082,9 +1105,9 @@ exports[`Test disabling the Title control 1`] = `
               </styled.span>
             </ThemeProvider>
           </Label>
-        </Title__StyledWidget>
+        </Styled(Label)>
       </div>
-    </Title__TitleView>
+    </styled.div>
   </ThemeProvider>
 </Title>
 `;
@@ -1129,16 +1152,19 @@ exports[`Test making the Title control invisible 1`] = `
       }
     }
   >
-    <Title__TitleView
+    <styled.div
       className="ui-title-bar ripple"
+      disabled={false}
       layout={5}
       style={Object {}}
+      visible={false}
     >
       <div
-        className="ui-title-bar ripple Title__TitleView-ddYmk gnejTR"
+        className="ui-title-bar ripple sc-bwzfXH cTWvZa"
+        disabled={false}
         style={Object {}}
       >
-        <Title__StyledWidget
+        <Styled(Label)
           className="ui-title"
           contentEditable={false}
           direction="right"
@@ -1172,7 +1198,7 @@ exports[`Test making the Title control invisible 1`] = `
           }
         >
           <Label
-            className="ui-title Title__StyledWidget-dupbKD dJeweB"
+            className="ui-title sc-bxivhb gnXhnZ"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -1226,7 +1252,7 @@ exports[`Test making the Title control invisible 1`] = `
               }
             >
               <styled.span
-                className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                className="ui-label ui-title sc-bxivhb gnXhnZ"
                 contentEditable={false}
                 disabled={false}
                 innerRef={[Function]}
@@ -1240,7 +1266,7 @@ exports[`Test making the Title control invisible 1`] = `
                 visible={false}
               >
                 <span
-                  className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bdVaJa jiWYIE"
+                  className="ui-label ui-title sc-bxivhb gnXhnZ sc-bdVaJa jiWYIE"
                   contentEditable={false}
                   disabled={false}
                   onBlur={[Function]}
@@ -1256,9 +1282,9 @@ exports[`Test making the Title control invisible 1`] = `
               </styled.span>
             </ThemeProvider>
           </Label>
-        </Title__StyledWidget>
+        </Styled(Label)>
       </div>
-    </Title__TitleView>
+    </styled.div>
   </ThemeProvider>
 </Title>
 `;

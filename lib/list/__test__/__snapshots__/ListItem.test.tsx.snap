@@ -206,24 +206,27 @@ exports[`Test disabling of a ListItem control 1`] = `
                   }
                 }
               >
-                <Title__TitleView
+                <styled.div
                   className="ui-title-bar ui-listitem"
+                  disabled={true}
                   layout={5}
                   style={
                     Object {
                       "padding": "2px 4px",
                     }
                   }
+                  visible={true}
                 >
                   <div
-                    className="ui-title-bar ui-listitem Title__TitleView-ddYmk gnejTR"
+                    className="ui-title-bar ui-listitem sc-ifAKCX eeRPmE"
+                    disabled={true}
                     style={
                       Object {
                         "padding": "2px 4px",
                       }
                     }
                   >
-                    <Title__StyledWidget
+                    <Styled(Label)
                       className="ui-title"
                       contentEditable={false}
                       direction="right"
@@ -282,7 +285,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                       }
                     >
                       <Label
-                        className="ui-title Title__StyledWidget-dupbKD dJeweB"
+                        className="ui-title sc-bZQynM fXdSdE"
                         contentEditable={false}
                         direction="right"
                         disabled={true}
@@ -354,7 +357,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                           }
                         >
                           <styled.span
-                            className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                            className="ui-label ui-title sc-bZQynM fXdSdE"
                             contentEditable={false}
                             disabled={true}
                             innerRef={[Function]}
@@ -372,7 +375,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                             visible={true}
                           >
                             <span
-                              className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb ikJPSN"
+                              className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb ikJPSN"
                               contentEditable={false}
                               disabled={true}
                               onBlur={[Function]}
@@ -392,9 +395,9 @@ exports[`Test disabling of a ListItem control 1`] = `
                           </styled.span>
                         </ThemeProvider>
                       </Label>
-                    </Title__StyledWidget>
+                    </Styled(Label)>
                   </div>
-                </Title__TitleView>
+                </styled.div>
               </ThemeProvider>
             </Title>
           </li>
@@ -611,24 +614,27 @@ exports[`Test making ListItem control invisible 1`] = `
                   }
                 }
               >
-                <Title__TitleView
+                <styled.div
                   className="ui-title-bar ripple ui-listitem"
+                  disabled={false}
                   layout={5}
                   style={
                     Object {
                       "padding": "2px 4px",
                     }
                   }
+                  visible={false}
                 >
                   <div
-                    className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
+                    className="ui-title-bar ripple ui-listitem sc-ifAKCX tWjQL"
+                    disabled={false}
                     style={
                       Object {
                         "padding": "2px 4px",
                       }
                     }
                   >
-                    <Title__StyledWidget
+                    <Styled(Label)
                       className="ui-title"
                       contentEditable={false}
                       direction="right"
@@ -687,7 +693,7 @@ exports[`Test making ListItem control invisible 1`] = `
                       }
                     >
                       <Label
-                        className="ui-title Title__StyledWidget-dupbKD dJeweB"
+                        className="ui-title sc-bZQynM fXdSdE"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -759,7 +765,7 @@ exports[`Test making ListItem control invisible 1`] = `
                           }
                         >
                           <styled.span
-                            className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                            className="ui-label ui-title sc-bZQynM fXdSdE"
                             contentEditable={false}
                             disabled={false}
                             innerRef={[Function]}
@@ -777,7 +783,7 @@ exports[`Test making ListItem control invisible 1`] = `
                             visible={false}
                           >
                             <span
-                              className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb wTyHD"
+                              className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb wTyHD"
                               contentEditable={false}
                               disabled={false}
                               onBlur={[Function]}
@@ -797,9 +803,9 @@ exports[`Test making ListItem control invisible 1`] = `
                           </styled.span>
                         </ThemeProvider>
                       </Label>
-                    </Title__StyledWidget>
+                    </Styled(Label)>
                   </div>
-                </Title__TitleView>
+                </styled.div>
               </ThemeProvider>
             </Title>
           </li>

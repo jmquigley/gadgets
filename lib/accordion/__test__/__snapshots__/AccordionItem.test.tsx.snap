@@ -266,24 +266,27 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                       }
                     }
                   >
-                    <Title__TitleView
+                    <styled.div
                       className="ui-title-bar ripple"
+                      disabled={false}
                       layout={5}
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
+                      visible={true}
                     >
                       <div
                         className="ui-title-bar ripple c2"
+                        disabled={false}
                         style={
                           Object {
                             "padding": "2px 4px",
                           }
                         }
                       >
-                        <Title__StyledWidget
+                        <Styled(Label)
                           className="ui-title"
                           contentEditable={false}
                           direction="right"
@@ -442,9 +445,9 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                               </styled.span>
                             </ThemeProvider>
                           </Label>
-                        </Title__StyledWidget>
+                        </Styled(Label)>
                       </div>
-                    </Title__TitleView>
+                    </styled.div>
                   </ThemeProvider>
                 </Title>
               </li>
@@ -723,24 +726,27 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                       }
                     }
                   >
-                    <Title__TitleView
+                    <styled.div
                       className="ui-title-bar ripple"
+                      disabled={false}
                       layout={5}
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
+                      visible={true}
                     >
                       <div
                         className="ui-title-bar ripple c2"
+                        disabled={false}
                         style={
                           Object {
                             "padding": "2px 4px",
                           }
                         }
                       >
-                        <Title__StyledWidget
+                        <Styled(Label)
                           className="ui-title"
                           contentEditable={false}
                           direction="right"
@@ -899,9 +905,9 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                               </styled.span>
                             </ThemeProvider>
                           </Label>
-                        </Title__StyledWidget>
+                        </Styled(Label)>
                       </div>
-                    </Title__TitleView>
+                    </styled.div>
                   </ThemeProvider>
                 </Title>
               </li>

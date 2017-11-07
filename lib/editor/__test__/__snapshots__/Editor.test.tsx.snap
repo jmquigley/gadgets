@@ -53,7 +53,7 @@ exports[`Test creation of an Editor instance 1`] = `
       style={Object {}}
     >
       <div
-        className="ui-editor sc-fjdhpX hsQPFu"
+        className="ui-editor sc-kAzzGY kacNSP"
         style={Object {}}
       >
         <Styled(Toolbar)
@@ -90,7 +90,7 @@ exports[`Test creation of an Editor instance 1`] = `
           xcss={null}
         >
           <Toolbar
-            className="ui-editor-toolbar sc-cSHVUG hXMRjy"
+            className="ui-editor-toolbar sc-kgoBCf gTVrSf"
             content="test content"
             contentEditable={false}
             defaultFont="Fira Code"
@@ -124,7 +124,7 @@ exports[`Test creation of an Editor instance 1`] = `
             xcss={null}
           >
             <div
-              className="ui-toolbar toolbar small ui-editor-toolbar sc-cSHVUG hXMRjy"
+              className="ui-toolbar toolbar small ui-editor-toolbar sc-kgoBCf gTVrSf"
             >
               <div
                 className="ui-toolbar-group toolbarGroup left"
@@ -1346,24 +1346,27 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                               >
-                                                <Title__TitleView
+                                                <styled.div
                                                   className="ui-title-bar ripple ui-listitem"
+                                                  disabled={false}
                                                   layout={5}
                                                   style={
                                                     Object {
                                                       "padding": "2px 4px",
                                                     }
                                                   }
+                                                  visible={true}
                                                 >
                                                   <div
-                                                    className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
+                                                    className="ui-title-bar ripple ui-listitem sc-bZQynM ZBTkM"
+                                                    disabled={false}
                                                     style={
                                                       Object {
                                                         "padding": "2px 4px",
                                                       }
                                                     }
                                                   >
-                                                    <Title__StyledWidget
+                                                    <Styled(Label)
                                                       className="ui-title"
                                                       contentEditable={false}
                                                       direction="right"
@@ -1422,7 +1425,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     >
                                                       <Label
-                                                        className="ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                        className="ui-title sc-htoDjs eHdNtV"
                                                         contentEditable={false}
                                                         direction="right"
                                                         disabled={false}
@@ -1494,7 +1497,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           }
                                                         >
                                                           <styled.span
-                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            className="ui-label ui-title sc-htoDjs eHdNtV"
                                                             contentEditable={false}
                                                             disabled={false}
                                                             innerRef={[Function]}
@@ -1512,7 +1515,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             visible={true}
                                                           >
                                                             <span
-                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje fxKRbV"
+                                                              className="ui-label ui-title sc-htoDjs eHdNtV sc-EHOje fxKRbV"
                                                               contentEditable={false}
                                                               disabled={false}
                                                               onBlur={[Function]}
@@ -1532,9 +1535,9 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           </styled.span>
                                                         </ThemeProvider>
                                                       </Label>
-                                                    </Title__StyledWidget>
+                                                    </Styled(Label)>
                                                   </div>
-                                                </Title__TitleView>
+                                                </styled.div>
                                               </ThemeProvider>
                                             </Title>
                                           </li>
@@ -1749,24 +1752,27 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                               >
-                                                <Title__TitleView
+                                                <styled.div
                                                   className="ui-title-bar ripple ui-listitem"
+                                                  disabled={false}
                                                   layout={5}
                                                   style={
                                                     Object {
                                                       "padding": "2px 4px",
                                                     }
                                                   }
+                                                  visible={true}
                                                 >
                                                   <div
-                                                    className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
+                                                    className="ui-title-bar ripple ui-listitem sc-bZQynM ZBTkM"
+                                                    disabled={false}
                                                     style={
                                                       Object {
                                                         "padding": "2px 4px",
                                                       }
                                                     }
                                                   >
-                                                    <Title__StyledWidget
+                                                    <Styled(Label)
                                                       className="ui-title"
                                                       contentEditable={false}
                                                       direction="right"
@@ -1825,7 +1831,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     >
                                                       <Label
-                                                        className="ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                        className="ui-title sc-htoDjs eHdNtV"
                                                         contentEditable={false}
                                                         direction="right"
                                                         disabled={false}
@@ -1897,7 +1903,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           }
                                                         >
                                                           <styled.span
-                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            className="ui-label ui-title sc-htoDjs eHdNtV"
                                                             contentEditable={false}
                                                             disabled={false}
                                                             innerRef={[Function]}
@@ -1915,7 +1921,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             visible={true}
                                                           >
                                                             <span
-                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje fxKRbV"
+                                                              className="ui-label ui-title sc-htoDjs eHdNtV sc-EHOje fxKRbV"
                                                               contentEditable={false}
                                                               disabled={false}
                                                               onBlur={[Function]}
@@ -1935,9 +1941,9 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           </styled.span>
                                                         </ThemeProvider>
                                                       </Label>
-                                                    </Title__StyledWidget>
+                                                    </Styled(Label)>
                                                   </div>
-                                                </Title__TitleView>
+                                                </styled.div>
                                               </ThemeProvider>
                                             </Title>
                                           </li>
@@ -2152,24 +2158,27 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                               >
-                                                <Title__TitleView
+                                                <styled.div
                                                   className="ui-title-bar ripple ui-listitem"
+                                                  disabled={false}
                                                   layout={5}
                                                   style={
                                                     Object {
                                                       "padding": "2px 4px",
                                                     }
                                                   }
+                                                  visible={true}
                                                 >
                                                   <div
-                                                    className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
+                                                    className="ui-title-bar ripple ui-listitem sc-bZQynM ZBTkM"
+                                                    disabled={false}
                                                     style={
                                                       Object {
                                                         "padding": "2px 4px",
                                                       }
                                                     }
                                                   >
-                                                    <Title__StyledWidget
+                                                    <Styled(Label)
                                                       className="ui-title"
                                                       contentEditable={false}
                                                       direction="right"
@@ -2228,7 +2237,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     >
                                                       <Label
-                                                        className="ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                        className="ui-title sc-htoDjs eHdNtV"
                                                         contentEditable={false}
                                                         direction="right"
                                                         disabled={false}
@@ -2300,7 +2309,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           }
                                                         >
                                                           <styled.span
-                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            className="ui-label ui-title sc-htoDjs eHdNtV"
                                                             contentEditable={false}
                                                             disabled={false}
                                                             innerRef={[Function]}
@@ -2318,7 +2327,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             visible={true}
                                                           >
                                                             <span
-                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje fxKRbV"
+                                                              className="ui-label ui-title sc-htoDjs eHdNtV sc-EHOje fxKRbV"
                                                               contentEditable={false}
                                                               disabled={false}
                                                               onBlur={[Function]}
@@ -2338,9 +2347,9 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           </styled.span>
                                                         </ThemeProvider>
                                                       </Label>
-                                                    </Title__StyledWidget>
+                                                    </Styled(Label)>
                                                   </div>
-                                                </Title__TitleView>
+                                                </styled.div>
                                               </ThemeProvider>
                                             </Title>
                                           </li>
@@ -2555,24 +2564,27 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                               >
-                                                <Title__TitleView
+                                                <styled.div
                                                   className="ui-title-bar ripple ui-listitem"
+                                                  disabled={false}
                                                   layout={5}
                                                   style={
                                                     Object {
                                                       "padding": "2px 4px",
                                                     }
                                                   }
+                                                  visible={true}
                                                 >
                                                   <div
-                                                    className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
+                                                    className="ui-title-bar ripple ui-listitem sc-bZQynM ZBTkM"
+                                                    disabled={false}
                                                     style={
                                                       Object {
                                                         "padding": "2px 4px",
                                                       }
                                                     }
                                                   >
-                                                    <Title__StyledWidget
+                                                    <Styled(Label)
                                                       className="ui-title"
                                                       contentEditable={false}
                                                       direction="right"
@@ -2631,7 +2643,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     >
                                                       <Label
-                                                        className="ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                        className="ui-title sc-htoDjs eHdNtV"
                                                         contentEditable={false}
                                                         direction="right"
                                                         disabled={false}
@@ -2703,7 +2715,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           }
                                                         >
                                                           <styled.span
-                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            className="ui-label ui-title sc-htoDjs eHdNtV"
                                                             contentEditable={false}
                                                             disabled={false}
                                                             innerRef={[Function]}
@@ -2721,7 +2733,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             visible={true}
                                                           >
                                                             <span
-                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje fxKRbV"
+                                                              className="ui-label ui-title sc-htoDjs eHdNtV sc-EHOje fxKRbV"
                                                               contentEditable={false}
                                                               disabled={false}
                                                               onBlur={[Function]}
@@ -2741,9 +2753,9 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           </styled.span>
                                                         </ThemeProvider>
                                                       </Label>
-                                                    </Title__StyledWidget>
+                                                    </Styled(Label)>
                                                   </div>
-                                                </Title__TitleView>
+                                                </styled.div>
                                               </ThemeProvider>
                                             </Title>
                                           </li>
@@ -2958,24 +2970,27 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                               >
-                                                <Title__TitleView
+                                                <styled.div
                                                   className="ui-title-bar ripple ui-listitem"
+                                                  disabled={false}
                                                   layout={5}
                                                   style={
                                                     Object {
                                                       "padding": "2px 4px",
                                                     }
                                                   }
+                                                  visible={true}
                                                 >
                                                   <div
-                                                    className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
+                                                    className="ui-title-bar ripple ui-listitem sc-bZQynM ZBTkM"
+                                                    disabled={false}
                                                     style={
                                                       Object {
                                                         "padding": "2px 4px",
                                                       }
                                                     }
                                                   >
-                                                    <Title__StyledWidget
+                                                    <Styled(Label)
                                                       className="ui-title"
                                                       contentEditable={false}
                                                       direction="right"
@@ -3034,7 +3049,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     >
                                                       <Label
-                                                        className="ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                        className="ui-title sc-htoDjs eHdNtV"
                                                         contentEditable={false}
                                                         direction="right"
                                                         disabled={false}
@@ -3106,7 +3121,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           }
                                                         >
                                                           <styled.span
-                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            className="ui-label ui-title sc-htoDjs eHdNtV"
                                                             contentEditable={false}
                                                             disabled={false}
                                                             innerRef={[Function]}
@@ -3124,7 +3139,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             visible={true}
                                                           >
                                                             <span
-                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje fxKRbV"
+                                                              className="ui-label ui-title sc-htoDjs eHdNtV sc-EHOje fxKRbV"
                                                               contentEditable={false}
                                                               disabled={false}
                                                               onBlur={[Function]}
@@ -3144,9 +3159,9 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           </styled.span>
                                                         </ThemeProvider>
                                                       </Label>
-                                                    </Title__StyledWidget>
+                                                    </Styled(Label)>
                                                   </div>
-                                                </Title__TitleView>
+                                                </styled.div>
                                               </ThemeProvider>
                                             </Title>
                                           </li>
@@ -3361,24 +3376,27 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   }
                                                 }
                                               >
-                                                <Title__TitleView
+                                                <styled.div
                                                   className="ui-title-bar ripple ui-listitem"
+                                                  disabled={false}
                                                   layout={5}
                                                   style={
                                                     Object {
                                                       "padding": "2px 4px",
                                                     }
                                                   }
+                                                  visible={true}
                                                 >
                                                   <div
-                                                    className="ui-title-bar ripple ui-listitem Title__TitleView-ddYmk gnejTR"
+                                                    className="ui-title-bar ripple ui-listitem sc-bZQynM ZBTkM"
+                                                    disabled={false}
                                                     style={
                                                       Object {
                                                         "padding": "2px 4px",
                                                       }
                                                     }
                                                   >
-                                                    <Title__StyledWidget
+                                                    <Styled(Label)
                                                       className="ui-title"
                                                       contentEditable={false}
                                                       direction="right"
@@ -3437,7 +3455,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     >
                                                       <Label
-                                                        className="ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                        className="ui-title sc-htoDjs eHdNtV"
                                                         contentEditable={false}
                                                         direction="right"
                                                         disabled={false}
@@ -3509,7 +3527,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           }
                                                         >
                                                           <styled.span
-                                                            className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu"
+                                                            className="ui-label ui-title sc-htoDjs eHdNtV"
                                                             contentEditable={false}
                                                             disabled={false}
                                                             innerRef={[Function]}
@@ -3527,7 +3545,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             visible={true}
                                                           >
                                                             <span
-                                                              className="ui-label ui-title Title__StyledWidget-dupbKD chBjEu sc-EHOje fxKRbV"
+                                                              className="ui-label ui-title sc-htoDjs eHdNtV sc-EHOje fxKRbV"
                                                               contentEditable={false}
                                                               disabled={false}
                                                               onBlur={[Function]}
@@ -3547,9 +3565,9 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           </styled.span>
                                                         </ThemeProvider>
                                                       </Label>
-                                                    </Title__StyledWidget>
+                                                    </Styled(Label)>
                                                   </div>
-                                                </Title__TitleView>
+                                                </styled.div>
                                               </ThemeProvider>
                                             </Title>
                                           </li>
@@ -5573,7 +5591,7 @@ exports[`Test creation of an Editor instance 1`] = `
           visible={true}
         >
           <div
-            className="ui-editor-quill sc-jzJRlG iaJWAG"
+            className="ui-editor-quill sc-chPdSV fKAsme"
             disabled={false}
             id="editor"
           />

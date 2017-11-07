@@ -30,262 +30,294 @@ exports[`Test disabling of a Tab 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-tab tab normal disabled nohover"
-    style={
+  <ThemeProvider
+    theme={
       Object {
-        "minWidth": "75px",
-        "width": "",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "optionHoverColor": "#fd7400",
       }
     }
   >
-    <Title
-      className=""
-      contentEditable={false}
-      direction="right"
+    <styled.div
+      className="ui-tab"
       disabled={true}
-      focus={false}
-      height=""
-      href={
+      style={
         Object {
-          "selectHandler": [Function],
+          "minWidth": "75px",
+          "width": "",
         }
       }
-      id=""
-      layout={5}
-      location="none"
-      noedit={true}
-      nohover={false}
-      noripple={true}
-      onClick={[Function]}
-      onClose={[Function]}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={Object {}}
-      title="tab title"
       visible={true}
-      widget={false}
-      width=""
-      xcss={null}
+      xcss=""
     >
-      <ThemeProvider
-        theme={
+      <div
+        className="ui-tab sc-gzVnrw XQRuA"
+        disabled={true}
+        style={
           Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#004358",
-            "color": "#000000",
-            "headerBackgroundColor": "#004358",
-            "headerForegroundColor": "#ffffff",
-            "headerHoverColor": "#ffe11a",
-            "hoverColor": "#c0c0c0",
-            "optionHoverColor": "#fd7400",
+            "minWidth": "75px",
+            "width": "",
           }
         }
       >
-        <Title__TitleView
-          className="ui-title-bar"
+        <Title
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "selectHandler": [Function],
+            }
+          }
+          id=""
           layout={5}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={true}
+          onClick={[Function]}
+          onClose={[Function]}
+          selected={false}
+          sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="tab title"
+          visible={true}
+          widget={false}
+          width=""
+          xcss={null}
         >
-          <div
-            className="ui-title-bar Title__TitleView-ddYmk gnejTR"
-            style={Object {}}
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+                "optionHoverColor": "#fd7400",
+              }
+            }
           >
-            <Title__StyledWidget
-              className="ui-title"
-              contentEditable={false}
-              direction="right"
+            <styled.div
+              className="ui-title-bar"
               disabled={true}
-              focus={false}
-              height=""
-              href={
-                Object {
-                  "selectHandler": [Function],
-                }
-              }
-              id=""
               layout={5}
-              location="none"
-              noedit={true}
-              nohover={false}
-              noripple={true}
-              onClick={[Function]}
-              onClose={[Function]}
-              selected={false}
-              sizing="normal"
               style={Object {}}
-              testing={true}
-              text="tab title"
-              theme={Object {}}
-              title="tab title"
               visible={true}
-              widget={false}
-              width=""
-              xcss={
-                Array [
-                  "
-	text-align: left;
-	flex: 5;
-",
-                ]
-              }
             >
-              <Label
-                className="ui-title Title__StyledWidget-dupbKD dJeweB"
-                contentEditable={false}
-                direction="right"
+              <div
+                className="ui-title-bar sc-ifAKCX eeRPmE"
                 disabled={true}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "selectHandler": [Function],
-                  }
-                }
-                id=""
-                layout={5}
-                location="none"
-                noedit={true}
-                nohover={false}
-                noripple={true}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onClick={[Function]}
-                onClose={[Function]}
-                onDoubleClick={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onUpdate={[Function]}
-                selected={false}
-                sizing="normal"
                 style={Object {}}
-                testing={true}
-                text="tab title"
-                theme={Object {}}
-                title="tab title"
-                useedit={false}
-                visible={true}
-                widget={false}
-                width=""
-                xcss={
-                  Array [
-                    "
-	text-align: left;
-	flex: 5;
-",
-                  ]
-                }
               >
-                <ThemeProvider
-                  theme={
+                <Styled(Label)
+                  className="ui-title"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={true}
+                  focus={false}
+                  height=""
+                  href={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#004358",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "optionHoverColor": "#fd7400",
+                      "selectHandler": [Function],
                     }
                   }
+                  id=""
+                  layout={5}
+                  location="none"
+                  noedit={true}
+                  nohover={false}
+                  noripple={true}
+                  onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  text="tab title"
+                  theme={Object {}}
+                  title="tab title"
+                  visible={true}
+                  widget={false}
+                  width=""
+                  xcss={
+                    Array [
+                      "
+	text-align: left;
+	flex: 5;
+",
+                    ]
+                  }
                 >
-                  <styled.span
-                    className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
+                  <Label
+                    className="ui-title sc-bZQynM fXdSdE"
                     contentEditable={false}
+                    direction="right"
                     disabled={true}
-                    innerRef={[Function]}
+                    focus={false}
+                    height=""
+                    href={
+                      Object {
+                        "selectHandler": [Function],
+                      }
+                    }
+                    id=""
+                    layout={5}
+                    location="none"
+                    noedit={true}
+                    nohover={false}
+                    noripple={true}
                     onBlur={[Function]}
+                    onChange={[Function]}
                     onClick={[Function]}
+                    onClose={[Function]}
                     onDoubleClick={[Function]}
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
+                    onUpdate={[Function]}
+                    selected={false}
+                    sizing="normal"
                     style={Object {}}
-                    suppressContentEditableWarning={true}
+                    testing={true}
+                    text="tab title"
+                    theme={Object {}}
+                    title="tab title"
+                    useedit={false}
                     visible={true}
+                    widget={false}
+                    width=""
+                    xcss={
+                      Array [
+                        "
+	text-align: left;
+	flex: 5;
+",
+                      ]
+                    }
                   >
-                    <span
-                      className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb ikJPSN"
-                      contentEditable={false}
-                      disabled={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      style={Object {}}
-                      suppressContentEditableWarning={true}
+                    <ThemeProvider
+                      theme={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#004358",
+                          "color": "#000000",
+                          "headerBackgroundColor": "#004358",
+                          "headerForegroundColor": "#ffffff",
+                          "headerHoverColor": "#ffe11a",
+                          "hoverColor": "#c0c0c0",
+                          "optionHoverColor": "#fd7400",
+                        }
+                      }
                     >
-                      tab title
-                    </span>
-                  </styled.span>
-                </ThemeProvider>
-              </Label>
-            </Title__StyledWidget>
-            <Title__StyledWidget
-              className="ui-title-widget"
-              contentEditable={false}
-              direction="right"
-              disabled={true}
-              focus={false}
-              height=""
-              href={
-                Object {
-                  "selectHandler": [Function],
-                }
-              }
-              id=""
-              layout={5}
-              location="none"
-              noedit={true}
-              nohover={false}
-              noripple={true}
-              onClick={[Function]}
-              onClose={[Function]}
-              selected={false}
-              sizing="normal"
-              style={Object {}}
-              testing={true}
-              theme={Object {}}
-              title="tab title"
-              visible={true}
-              widget={false}
-              width=""
-              xcss={
-                Array [
-                  "
+                      <styled.span
+                        className="ui-label ui-title sc-bZQynM fXdSdE"
+                        contentEditable={false}
+                        disabled={true}
+                        innerRef={[Function]}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        style={Object {}}
+                        suppressContentEditableWarning={true}
+                        visible={true}
+                      >
+                        <span
+                          className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb ikJPSN"
+                          contentEditable={false}
+                          disabled={true}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          style={Object {}}
+                          suppressContentEditableWarning={true}
+                        >
+                          tab title
+                        </span>
+                      </styled.span>
+                    </ThemeProvider>
+                  </Label>
+                </Styled(Label)>
+                <styled.div
+                  className="ui-title-widget"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={true}
+                  focus={false}
+                  height=""
+                  href={
+                    Object {
+                      "selectHandler": [Function],
+                    }
+                  }
+                  id=""
+                  layout={5}
+                  location="none"
+                  noedit={true}
+                  nohover={false}
+                  noripple={true}
+                  onClick={[Function]}
+                  onClose={[Function]}
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  theme={Object {}}
+                  title="tab title"
+                  visible={true}
+                  widget={false}
+                  width=""
+                  xcss={
+                    Array [
+                      "
 	text-align: right;
 	flex: 1;
 ",
-                ]
-              }
-            >
-              <div
-                className="ui-title-widget Title__StyledWidget-ieYmOL jRWtFs"
-                contentEditable={false}
-                direction="right"
-                disabled={true}
-                height=""
-                href={
-                  Object {
-                    "selectHandler": [Function],
+                    ]
                   }
-                }
-                id=""
-                onClick={[Function]}
-                selected={false}
-                style={Object {}}
-                title="tab title"
-                width=""
-              />
-            </Title__StyledWidget>
-          </div>
-        </Title__TitleView>
-      </ThemeProvider>
-    </Title>
-  </div>
+                >
+                  <div
+                    className="ui-title-widget sc-EHOje bmfMZM"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={true}
+                    height=""
+                    href={
+                      Object {
+                        "selectHandler": [Function],
+                      }
+                    }
+                    id=""
+                    onClick={[Function]}
+                    selected={false}
+                    style={Object {}}
+                    title="tab title"
+                    width=""
+                  />
+                </styled.div>
+              </div>
+            </styled.div>
+          </ThemeProvider>
+        </Title>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </Tab>
 `;
 
@@ -321,46 +353,60 @@ exports[`Test making a Tab invisible 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-tab tab tabBorderTop normal invisible"
-    style={
+  <ThemeProvider
+    theme={
       Object {
-        "minWidth": "75px",
-        "width": "",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "optionHoverColor": "#fd7400",
       }
     }
   >
-    <Title
-      className=""
-      contentEditable={false}
-      direction="right"
+    <styled.div
+      className="ui-tab"
       disabled={false}
-      focus={false}
-      height=""
-      href={
+      style={
         Object {
-          "orientation": "top",
-          "selectHandler": [Function],
-          "sizing": "normal",
+          "minWidth": "75px",
+          "width": "",
         }
       }
-      id=""
-      layout={5}
-      location="none"
-      noedit={true}
-      nohover={false}
-      noripple={true}
-      onClick={[Function]}
-      onClose={[Function]}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={Object {}}
-      title="tab title"
-      visible={true}
-      widget={
-        <Button
+      visible={false}
+      xcss={
+        Array [
+          "
+	border-right: solid 1px ",
+          [Function],
+          ";
+	border-top: solid 1px ",
+          [Function],
+          ";
+
+	&:first-child {
+		border-left: solid 1px ",
+          [Function],
+          ";
+	}
+",
+        ]
+      }
+    >
+      <div
+        className="ui-tab sc-gzVnrw cEvXbj"
+        disabled={false}
+        style={
+          Object {
+            "minWidth": "75px",
+            "width": "",
+          }
+        }
+      >
+        <Title
           className=""
           contentEditable={false}
           direction="right"
@@ -374,13 +420,12 @@ exports[`Test making a Tab invisible 1`] = `
               "sizing": "normal",
             }
           }
-          iconName="times"
-          iconStyle=""
           id=""
+          layout={5}
           location="none"
-          noedit={false}
+          noedit={true}
           nohover={false}
-          noripple={false}
+          noripple={true}
           onClick={[Function]}
           onClose={[Function]}
           selected={false}
@@ -389,41 +434,10 @@ exports[`Test making a Tab invisible 1`] = `
           testing={true}
           theme={Object {}}
           title="tab title"
-          visible={false}
-          width=""
-          xcss={null}
-        >
-          Test content
-        </Button>
-      }
-      width=""
-      xcss={null}
-    >
-      <ThemeProvider
-        theme={
-          Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#004358",
-            "color": "#000000",
-            "headerBackgroundColor": "#004358",
-            "headerForegroundColor": "#ffffff",
-            "headerHoverColor": "#ffe11a",
-            "hoverColor": "#c0c0c0",
-            "optionHoverColor": "#fd7400",
-          }
-        }
-      >
-        <Title__TitleView
-          className="ui-title-bar"
-          layout={5}
-          style={Object {}}
-        >
-          <div
-            className="ui-title-bar Title__TitleView-ddYmk gnejTR"
-            style={Object {}}
-          >
-            <Title__StyledWidget
-              className="ui-title"
+          visible={true}
+          widget={
+            <Button
+              className=""
               contentEditable={false}
               direction="right"
               disabled={false}
@@ -436,25 +450,59 @@ exports[`Test making a Tab invisible 1`] = `
                   "sizing": "normal",
                 }
               }
+              iconName="times"
+              iconStyle=""
               id=""
-              layout={5}
               location="none"
-              noedit={true}
+              noedit={false}
               nohover={false}
-              noripple={true}
+              noripple={false}
               onClick={[Function]}
               onClose={[Function]}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
-              text="tab title"
               theme={Object {}}
               title="tab title"
+              visible={false}
+              width=""
+              xcss={null}
+            >
+              Test content
+            </Button>
+          }
+          width=""
+          xcss={null}
+        >
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+                "optionHoverColor": "#fd7400",
+              }
+            }
+          >
+            <styled.div
+              className="ui-title-bar"
+              disabled={false}
+              layout={5}
+              style={Object {}}
               visible={true}
-              widget={
-                <Button
-                  className=""
+            >
+              <div
+                className="ui-title-bar sc-ifAKCX fsmfqq"
+                disabled={false}
+                style={Object {}}
+              >
+                <Styled(Label)
+                  className="ui-title"
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -467,78 +515,71 @@ exports[`Test making a Tab invisible 1`] = `
                       "sizing": "normal",
                     }
                   }
-                  iconName="times"
-                  iconStyle=""
                   id=""
+                  layout={5}
                   location="none"
-                  noedit={false}
+                  noedit={true}
                   nohover={false}
-                  noripple={false}
+                  noripple={true}
                   onClick={[Function]}
                   onClose={[Function]}
                   selected={false}
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  text="tab title"
                   theme={Object {}}
                   title="tab title"
-                  visible={false}
+                  visible={true}
+                  widget={
+                    <Button
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      href={
+                        Object {
+                          "orientation": "top",
+                          "selectHandler": [Function],
+                          "sizing": "normal",
+                        }
+                      }
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      onClick={[Function]}
+                      onClose={[Function]}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      title="tab title"
+                      visible={false}
+                      width=""
+                      xcss={null}
+                    >
+                      Test content
+                    </Button>
+                  }
                   width=""
-                  xcss={null}
-                >
-                  Test content
-                </Button>
-              }
-              width=""
-              xcss={
-                Array [
-                  "
+                  xcss={
+                    Array [
+                      "
 	text-align: left;
 	flex: 5;
 ",
-                ]
-              }
-            >
-              <Label
-                className="ui-title Title__StyledWidget-dupbKD dJeweB"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "orientation": "top",
-                    "selectHandler": [Function],
-                    "sizing": "normal",
+                    ]
                   }
-                }
-                id=""
-                layout={5}
-                location="none"
-                noedit={true}
-                nohover={false}
-                noripple={true}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onClick={[Function]}
-                onClose={[Function]}
-                onDoubleClick={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onUpdate={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                text="tab title"
-                theme={Object {}}
-                title="tab title"
-                useedit={false}
-                visible={true}
-                widget={
-                  <Button
-                    className=""
+                >
+                  <Label
+                    className="ui-title sc-bZQynM fXdSdE"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -551,116 +592,124 @@ exports[`Test making a Tab invisible 1`] = `
                         "sizing": "normal",
                       }
                     }
-                    iconName="times"
-                    iconStyle=""
                     id=""
+                    layout={5}
                     location="none"
-                    noedit={false}
+                    noedit={true}
                     nohover={false}
-                    noripple={false}
+                    noripple={true}
+                    onBlur={[Function]}
+                    onChange={[Function]}
                     onClick={[Function]}
                     onClose={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    onUpdate={[Function]}
                     selected={false}
                     sizing="normal"
                     style={Object {}}
                     testing={true}
+                    text="tab title"
                     theme={Object {}}
                     title="tab title"
-                    visible={false}
+                    useedit={false}
+                    visible={true}
+                    widget={
+                      <Button
+                        className=""
+                        contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        focus={false}
+                        height=""
+                        href={
+                          Object {
+                            "orientation": "top",
+                            "selectHandler": [Function],
+                            "sizing": "normal",
+                          }
+                        }
+                        iconName="times"
+                        iconStyle=""
+                        id=""
+                        location="none"
+                        noedit={false}
+                        nohover={false}
+                        noripple={false}
+                        onClick={[Function]}
+                        onClose={[Function]}
+                        selected={false}
+                        sizing="normal"
+                        style={Object {}}
+                        testing={true}
+                        theme={Object {}}
+                        title="tab title"
+                        visible={false}
+                        width=""
+                        xcss={null}
+                      >
+                        Test content
+                      </Button>
+                    }
                     width=""
-                    xcss={null}
-                  >
-                    Test content
-                  </Button>
-                }
-                width=""
-                xcss={
-                  Array [
-                    "
+                    xcss={
+                      Array [
+                        "
 	text-align: left;
 	flex: 5;
 ",
-                  ]
-                }
-              >
-                <ThemeProvider
-                  theme={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#004358",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "optionHoverColor": "#fd7400",
+                      ]
                     }
-                  }
-                >
-                  <styled.span
-                    className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
-                    contentEditable={false}
-                    disabled={false}
-                    innerRef={[Function]}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDoubleClick={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    style={Object {}}
-                    suppressContentEditableWarning={true}
-                    visible={true}
                   >
-                    <span
-                      className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb iGCQps"
-                      contentEditable={false}
-                      disabled={false}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      style={Object {}}
-                      suppressContentEditableWarning={true}
+                    <ThemeProvider
+                      theme={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#004358",
+                          "color": "#000000",
+                          "headerBackgroundColor": "#004358",
+                          "headerForegroundColor": "#ffffff",
+                          "headerHoverColor": "#ffe11a",
+                          "hoverColor": "#c0c0c0",
+                          "optionHoverColor": "#fd7400",
+                        }
+                      }
                     >
-                      tab title
-                    </span>
-                  </styled.span>
-                </ThemeProvider>
-              </Label>
-            </Title__StyledWidget>
-            <Title__StyledWidget
-              className="ui-title-widget"
-              contentEditable={false}
-              direction="right"
-              disabled={false}
-              focus={false}
-              height=""
-              href={
-                Object {
-                  "orientation": "top",
-                  "selectHandler": [Function],
-                  "sizing": "normal",
-                }
-              }
-              id=""
-              layout={5}
-              location="none"
-              noedit={true}
-              nohover={false}
-              noripple={true}
-              onClick={[Function]}
-              onClose={[Function]}
-              selected={false}
-              sizing="normal"
-              style={Object {}}
-              testing={true}
-              theme={Object {}}
-              title="tab title"
-              visible={true}
-              widget={
-                <Button
-                  className=""
+                      <styled.span
+                        className="ui-label ui-title sc-bZQynM fXdSdE"
+                        contentEditable={false}
+                        disabled={false}
+                        innerRef={[Function]}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        style={Object {}}
+                        suppressContentEditableWarning={true}
+                        visible={true}
+                      >
+                        <span
+                          className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                          contentEditable={false}
+                          disabled={false}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          style={Object {}}
+                          suppressContentEditableWarning={true}
+                        >
+                          tab title
+                        </span>
+                      </styled.span>
+                    </ThemeProvider>
+                  </Label>
+                </Styled(Label)>
+                <styled.div
+                  className="ui-title-widget"
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -673,13 +722,12 @@ exports[`Test making a Tab invisible 1`] = `
                       "sizing": "normal",
                     }
                   }
-                  iconName="times"
-                  iconStyle=""
                   id=""
+                  layout={5}
                   location="none"
-                  noedit={false}
+                  noedit={true}
                   nohover={false}
-                  noripple={false}
+                  noripple={true}
                   onClick={[Function]}
                   onClose={[Function]}
                   selected={false}
@@ -688,142 +736,136 @@ exports[`Test making a Tab invisible 1`] = `
                   testing={true}
                   theme={Object {}}
                   title="tab title"
-                  visible={false}
+                  visible={true}
+                  widget={
+                    <Button
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      href={
+                        Object {
+                          "orientation": "top",
+                          "selectHandler": [Function],
+                          "sizing": "normal",
+                        }
+                      }
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      onClick={[Function]}
+                      onClose={[Function]}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      title="tab title"
+                      visible={false}
+                      width=""
+                      xcss={null}
+                    >
+                      Test content
+                    </Button>
+                  }
                   width=""
-                  xcss={null}
-                >
-                  Test content
-                </Button>
-              }
-              width=""
-              xcss={
-                Array [
-                  "
+                  xcss={
+                    Array [
+                      "
 	text-align: right;
 	flex: 1;
 ",
-                ]
-              }
-            >
-              <div
-                className="ui-title-widget Title__StyledWidget-ieYmOL jRWtFs"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                height=""
-                href={
-                  Object {
-                    "orientation": "top",
-                    "selectHandler": [Function],
-                    "sizing": "normal",
+                    ]
                   }
-                }
-                id=""
-                onClick={[Function]}
-                selected={false}
-                style={Object {}}
-                title="tab title"
-                width=""
-              >
-                <Button
-                  className=""
-                  contentEditable={false}
-                  direction="right"
-                  disabled={false}
-                  focus={false}
-                  height=""
-                  href={
-                    Object {
-                      "orientation": "top",
-                      "selectHandler": [Function],
-                      "sizing": "normal",
-                    }
-                  }
-                  iconName="times"
-                  iconStyle=""
-                  id=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  onClick={[Function]}
-                  onClose={[Function]}
-                  selected={false}
-                  sizing="normal"
-                  style={Object {}}
-                  testing={true}
-                  theme={Object {}}
-                  title="tab title"
-                  visible={false}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
+                  <div
+                    className="ui-title-widget sc-EHOje bmfMZM"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={false}
+                    height=""
+                    href={
                       Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "headerHoverColor": "#ffe11a",
-                        "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "orientation": "top",
+                        "selectHandler": [Function],
+                        "sizing": "normal",
                       }
                     }
+                    id=""
+                    onClick={[Function]}
+                    selected={false}
+                    style={Object {}}
+                    title="tab title"
+                    width=""
                   >
-                    <styled.div
-                      className="ui-button ripple"
+                    <Button
+                      className=""
+                      contentEditable={false}
+                      direction="right"
                       disabled={false}
+                      focus={false}
+                      height=""
+                      href={
+                        Object {
+                          "orientation": "top",
+                          "selectHandler": [Function],
+                          "sizing": "normal",
+                        }
+                      }
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
                       onClick={[Function]}
+                      onClose={[Function]}
+                      selected={false}
+                      sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      title="tab title"
                       visible={false}
+                      width=""
+                      xcss={null}
                     >
-                      <div
-                        className="ui-button ripple sc-htpNat psfup"
-                        disabled={false}
-                        onClick={[Function]}
-                        style={Object {}}
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "headerHoverColor": "#ffe11a",
+                            "hoverColor": "#c0c0c0",
+                            "optionHoverColor": "#fd7400",
+                          }
+                        }
                       >
-                        <Icon
-                          className=""
-                          contentEditable={false}
-                          direction="right"
+                        <styled.div
+                          className="ui-button ripple"
                           disabled={false}
-                          focus={false}
-                          height=""
-                          iconName="times"
-                          id=""
-                          imageFile=""
-                          location="none"
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          selected={false}
-                          sizing="normal"
+                          onClick={[Function]}
                           style={Object {}}
-                          testing={true}
-                          theme={Object {}}
-                          visible={true}
-                          width=""
-                          xcss={null}
+                          visible={false}
                         >
-                          <ThemeProvider
-                            theme={
-                              Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#004358",
-                                "color": "#000000",
-                                "headerBackgroundColor": "#004358",
-                                "headerForegroundColor": "#ffffff",
-                                "headerHoverColor": "#ffe11a",
-                                "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
-                              }
-                            }
+                          <div
+                            className="ui-button ripple sc-htpNat psfup"
+                            disabled={false}
+                            onClick={[Function]}
+                            style={Object {}}
                           >
-                            <styled.i
-                              className="ui-icon fa fa-fw fa-times"
+                            <Icon
+                              className=""
                               contentEditable={false}
                               direction="right"
                               disabled={false}
@@ -845,31 +887,70 @@ exports[`Test making a Tab invisible 1`] = `
                               width=""
                               xcss={null}
                             >
-                              <i
-                                className="ui-icon fa fa-fw fa-times sc-bdVaJa iGRPLq"
-                                contentEditable={false}
-                                direction="right"
-                                disabled={false}
-                                height=""
-                                id=""
-                                selected={false}
-                                style={Object {}}
-                                width=""
-                              />
-                            </styled.i>
-                          </ThemeProvider>
-                        </Icon>
-                      </div>
-                    </styled.div>
-                  </ThemeProvider>
-                </Button>
+                              <ThemeProvider
+                                theme={
+                                  Object {
+                                    "backgroundColor": "#ffffff",
+                                    "borderColor": "#004358",
+                                    "color": "#000000",
+                                    "headerBackgroundColor": "#004358",
+                                    "headerForegroundColor": "#ffffff",
+                                    "headerHoverColor": "#ffe11a",
+                                    "hoverColor": "#c0c0c0",
+                                    "optionHoverColor": "#fd7400",
+                                  }
+                                }
+                              >
+                                <styled.i
+                                  className="ui-icon fa fa-fw fa-times"
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
+                                  sizing="normal"
+                                  style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
+                                >
+                                  <i
+                                    className="ui-icon fa fa-fw fa-times sc-bdVaJa iGRPLq"
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    height=""
+                                    id=""
+                                    selected={false}
+                                    style={Object {}}
+                                    width=""
+                                  />
+                                </styled.i>
+                              </ThemeProvider>
+                            </Icon>
+                          </div>
+                        </styled.div>
+                      </ThemeProvider>
+                    </Button>
+                  </div>
+                </styled.div>
               </div>
-            </Title__StyledWidget>
-          </div>
-        </Title__TitleView>
-      </ThemeProvider>
-    </Title>
-  </div>
+            </styled.div>
+          </ThemeProvider>
+        </Title>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </Tab>
 `;
 
@@ -935,44 +1016,43 @@ exports[`Test the click handler in the Tab instance 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-tab tab normal"
-    style={
+  <ThemeProvider
+    theme={
       Object {
-        "minWidth": "75px",
-        "width": "",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "optionHoverColor": "#fd7400",
       }
     }
   >
-    <Title
-      className=""
-      contentEditable={false}
-      direction="right"
+    <styled.div
+      className="ui-tab"
       disabled={false}
-      focus={false}
-      height=""
-      href={
+      style={
         Object {
-          "selectHandler": [Function],
+          "minWidth": "75px",
+          "width": "",
         }
       }
-      id=""
-      layout={5}
-      location="none"
-      noedit={true}
-      nohover={false}
-      noripple={true}
-      onClick={[Function]}
-      onClose={[Function]}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={Object {}}
-      title="tab title"
       visible={true}
-      widget={
-        <Button
+      xcss=""
+    >
+      <div
+        className="ui-tab sc-gzVnrw hKWyBv"
+        disabled={false}
+        style={
+          Object {
+            "minWidth": "75px",
+            "width": "",
+          }
+        }
+      >
+        <Title
           className=""
           contentEditable={false}
           direction="right"
@@ -984,13 +1064,12 @@ exports[`Test the click handler in the Tab instance 1`] = `
               "selectHandler": [Function],
             }
           }
-          iconName="times"
-          iconStyle=""
           id=""
+          layout={5}
           location="none"
-          noedit={false}
+          noedit={true}
           nohover={false}
-          noripple={false}
+          noripple={true}
           onClick={[Function]}
           onClose={[Function]}
           selected={false}
@@ -1000,40 +1079,9 @@ exports[`Test the click handler in the Tab instance 1`] = `
           theme={Object {}}
           title="tab title"
           visible={true}
-          width=""
-          xcss={null}
-        >
-          Test content
-        </Button>
-      }
-      width=""
-      xcss={null}
-    >
-      <ThemeProvider
-        theme={
-          Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#004358",
-            "color": "#000000",
-            "headerBackgroundColor": "#004358",
-            "headerForegroundColor": "#ffffff",
-            "headerHoverColor": "#ffe11a",
-            "hoverColor": "#c0c0c0",
-            "optionHoverColor": "#fd7400",
-          }
-        }
-      >
-        <Title__TitleView
-          className="ui-title-bar"
-          layout={5}
-          style={Object {}}
-        >
-          <div
-            className="ui-title-bar Title__TitleView-ddYmk gnejTR"
-            style={Object {}}
-          >
-            <Title__StyledWidget
-              className="ui-title"
+          widget={
+            <Button
+              className=""
               contentEditable={false}
               direction="right"
               disabled={false}
@@ -1044,25 +1092,59 @@ exports[`Test the click handler in the Tab instance 1`] = `
                   "selectHandler": [Function],
                 }
               }
+              iconName="times"
+              iconStyle=""
               id=""
-              layout={5}
               location="none"
-              noedit={true}
+              noedit={false}
               nohover={false}
-              noripple={true}
+              noripple={false}
               onClick={[Function]}
               onClose={[Function]}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
-              text="tab title"
               theme={Object {}}
               title="tab title"
               visible={true}
-              widget={
-                <Button
-                  className=""
+              width=""
+              xcss={null}
+            >
+              Test content
+            </Button>
+          }
+          width=""
+          xcss={null}
+        >
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+                "optionHoverColor": "#fd7400",
+              }
+            }
+          >
+            <styled.div
+              className="ui-title-bar"
+              disabled={false}
+              layout={5}
+              style={Object {}}
+              visible={true}
+            >
+              <div
+                className="ui-title-bar sc-ifAKCX fsmfqq"
+                disabled={false}
+                style={Object {}}
+              >
+                <Styled(Label)
+                  className="ui-title"
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -1073,76 +1155,69 @@ exports[`Test the click handler in the Tab instance 1`] = `
                       "selectHandler": [Function],
                     }
                   }
-                  iconName="times"
-                  iconStyle=""
                   id=""
+                  layout={5}
                   location="none"
-                  noedit={false}
+                  noedit={true}
                   nohover={false}
-                  noripple={false}
+                  noripple={true}
                   onClick={[Function]}
                   onClose={[Function]}
                   selected={false}
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  text="tab title"
                   theme={Object {}}
                   title="tab title"
                   visible={true}
+                  widget={
+                    <Button
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      href={
+                        Object {
+                          "selectHandler": [Function],
+                        }
+                      }
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      onClick={[Function]}
+                      onClose={[Function]}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      title="tab title"
+                      visible={true}
+                      width=""
+                      xcss={null}
+                    >
+                      Test content
+                    </Button>
+                  }
                   width=""
-                  xcss={null}
-                >
-                  Test content
-                </Button>
-              }
-              width=""
-              xcss={
-                Array [
-                  "
+                  xcss={
+                    Array [
+                      "
 	text-align: left;
 	flex: 5;
 ",
-                ]
-              }
-            >
-              <Label
-                className="ui-title Title__StyledWidget-dupbKD dJeweB"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "selectHandler": [Function],
+                    ]
                   }
-                }
-                id=""
-                layout={5}
-                location="none"
-                noedit={true}
-                nohover={false}
-                noripple={true}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onClick={[Function]}
-                onClose={[Function]}
-                onDoubleClick={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onUpdate={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                text="tab title"
-                theme={Object {}}
-                title="tab title"
-                useedit={false}
-                visible={true}
-                widget={
-                  <Button
-                    className=""
+                >
+                  <Label
+                    className="ui-title sc-bZQynM fXdSdE"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -1153,114 +1228,122 @@ exports[`Test the click handler in the Tab instance 1`] = `
                         "selectHandler": [Function],
                       }
                     }
-                    iconName="times"
-                    iconStyle=""
                     id=""
+                    layout={5}
                     location="none"
-                    noedit={false}
+                    noedit={true}
                     nohover={false}
-                    noripple={false}
+                    noripple={true}
+                    onBlur={[Function]}
+                    onChange={[Function]}
                     onClick={[Function]}
                     onClose={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    onUpdate={[Function]}
                     selected={false}
                     sizing="normal"
                     style={Object {}}
                     testing={true}
+                    text="tab title"
                     theme={Object {}}
                     title="tab title"
+                    useedit={false}
                     visible={true}
+                    widget={
+                      <Button
+                        className=""
+                        contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        focus={false}
+                        height=""
+                        href={
+                          Object {
+                            "selectHandler": [Function],
+                          }
+                        }
+                        iconName="times"
+                        iconStyle=""
+                        id=""
+                        location="none"
+                        noedit={false}
+                        nohover={false}
+                        noripple={false}
+                        onClick={[Function]}
+                        onClose={[Function]}
+                        selected={false}
+                        sizing="normal"
+                        style={Object {}}
+                        testing={true}
+                        theme={Object {}}
+                        title="tab title"
+                        visible={true}
+                        width=""
+                        xcss={null}
+                      >
+                        Test content
+                      </Button>
+                    }
                     width=""
-                    xcss={null}
-                  >
-                    Test content
-                  </Button>
-                }
-                width=""
-                xcss={
-                  Array [
-                    "
+                    xcss={
+                      Array [
+                        "
 	text-align: left;
 	flex: 5;
 ",
-                  ]
-                }
-              >
-                <ThemeProvider
-                  theme={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#004358",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "optionHoverColor": "#fd7400",
+                      ]
                     }
-                  }
-                >
-                  <styled.span
-                    className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
-                    contentEditable={false}
-                    disabled={false}
-                    innerRef={[Function]}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDoubleClick={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    style={Object {}}
-                    suppressContentEditableWarning={true}
-                    visible={true}
                   >
-                    <span
-                      className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb iGCQps"
-                      contentEditable={false}
-                      disabled={false}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      style={Object {}}
-                      suppressContentEditableWarning={true}
+                    <ThemeProvider
+                      theme={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#004358",
+                          "color": "#000000",
+                          "headerBackgroundColor": "#004358",
+                          "headerForegroundColor": "#ffffff",
+                          "headerHoverColor": "#ffe11a",
+                          "hoverColor": "#c0c0c0",
+                          "optionHoverColor": "#fd7400",
+                        }
+                      }
                     >
-                      tab title
-                    </span>
-                  </styled.span>
-                </ThemeProvider>
-              </Label>
-            </Title__StyledWidget>
-            <Title__StyledWidget
-              className="ui-title-widget"
-              contentEditable={false}
-              direction="right"
-              disabled={false}
-              focus={false}
-              height=""
-              href={
-                Object {
-                  "selectHandler": [Function],
-                }
-              }
-              id=""
-              layout={5}
-              location="none"
-              noedit={true}
-              nohover={false}
-              noripple={true}
-              onClick={[Function]}
-              onClose={[Function]}
-              selected={false}
-              sizing="normal"
-              style={Object {}}
-              testing={true}
-              theme={Object {}}
-              title="tab title"
-              visible={true}
-              widget={
-                <Button
-                  className=""
+                      <styled.span
+                        className="ui-label ui-title sc-bZQynM fXdSdE"
+                        contentEditable={false}
+                        disabled={false}
+                        innerRef={[Function]}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        style={Object {}}
+                        suppressContentEditableWarning={true}
+                        visible={true}
+                      >
+                        <span
+                          className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                          contentEditable={false}
+                          disabled={false}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          style={Object {}}
+                          suppressContentEditableWarning={true}
+                        >
+                          tab title
+                        </span>
+                      </styled.span>
+                    </ThemeProvider>
+                  </Label>
+                </Styled(Label)>
+                <styled.div
+                  className="ui-title-widget"
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -1271,13 +1354,12 @@ exports[`Test the click handler in the Tab instance 1`] = `
                       "selectHandler": [Function],
                     }
                   }
-                  iconName="times"
-                  iconStyle=""
                   id=""
+                  layout={5}
                   location="none"
-                  noedit={false}
+                  noedit={true}
                   nohover={false}
-                  noripple={false}
+                  noripple={true}
                   onClick={[Function]}
                   onClose={[Function]}
                   selected={false}
@@ -1287,137 +1369,129 @@ exports[`Test the click handler in the Tab instance 1`] = `
                   theme={Object {}}
                   title="tab title"
                   visible={true}
+                  widget={
+                    <Button
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      href={
+                        Object {
+                          "selectHandler": [Function],
+                        }
+                      }
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      onClick={[Function]}
+                      onClose={[Function]}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      title="tab title"
+                      visible={true}
+                      width=""
+                      xcss={null}
+                    >
+                      Test content
+                    </Button>
+                  }
                   width=""
-                  xcss={null}
-                >
-                  Test content
-                </Button>
-              }
-              width=""
-              xcss={
-                Array [
-                  "
+                  xcss={
+                    Array [
+                      "
 	text-align: right;
 	flex: 1;
 ",
-                ]
-              }
-            >
-              <div
-                className="ui-title-widget Title__StyledWidget-ieYmOL jRWtFs"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                height=""
-                href={
-                  Object {
-                    "selectHandler": [Function],
+                    ]
                   }
-                }
-                id=""
-                onClick={[Function]}
-                selected={false}
-                style={Object {}}
-                title="tab title"
-                width=""
-              >
-                <Button
-                  className=""
-                  contentEditable={false}
-                  direction="right"
-                  disabled={false}
-                  focus={false}
-                  height=""
-                  href={
-                    Object {
-                      "selectHandler": [Function],
-                    }
-                  }
-                  iconName="times"
-                  iconStyle=""
-                  id=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  onClick={[Function]}
-                  onClose={[Function]}
-                  selected={false}
-                  sizing="normal"
-                  style={Object {}}
-                  testing={true}
-                  theme={Object {}}
-                  title="tab title"
-                  visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
+                  <div
+                    className="ui-title-widget sc-EHOje bmfMZM"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={false}
+                    height=""
+                    href={
                       Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "headerHoverColor": "#ffe11a",
-                        "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "selectHandler": [Function],
                       }
                     }
+                    id=""
+                    onClick={[Function]}
+                    selected={false}
+                    style={Object {}}
+                    title="tab title"
+                    width=""
                   >
-                    <styled.div
-                      className="ui-button ripple"
+                    <Button
+                      className=""
+                      contentEditable={false}
+                      direction="right"
                       disabled={false}
+                      focus={false}
+                      height=""
+                      href={
+                        Object {
+                          "selectHandler": [Function],
+                        }
+                      }
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
                       onClick={[Function]}
+                      onClose={[Function]}
+                      selected={false}
+                      sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      title="tab title"
                       visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <div
-                        className="ui-button ripple sc-htpNat deJRSG"
-                        disabled={false}
-                        onClick={[Function]}
-                        style={Object {}}
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "headerHoverColor": "#ffe11a",
+                            "hoverColor": "#c0c0c0",
+                            "optionHoverColor": "#fd7400",
+                          }
+                        }
                       >
-                        <Icon
-                          className=""
-                          contentEditable={false}
-                          direction="right"
+                        <styled.div
+                          className="ui-button ripple"
                           disabled={false}
-                          focus={false}
-                          height=""
-                          iconName="times"
-                          id=""
-                          imageFile=""
-                          location="none"
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          selected={false}
-                          sizing="normal"
+                          onClick={[Function]}
                           style={Object {}}
-                          testing={true}
-                          theme={Object {}}
                           visible={true}
-                          width=""
-                          xcss={null}
                         >
-                          <ThemeProvider
-                            theme={
-                              Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#004358",
-                                "color": "#000000",
-                                "headerBackgroundColor": "#004358",
-                                "headerForegroundColor": "#ffffff",
-                                "headerHoverColor": "#ffe11a",
-                                "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
-                              }
-                            }
+                          <div
+                            className="ui-button ripple sc-htpNat deJRSG"
+                            disabled={false}
+                            onClick={[Function]}
+                            style={Object {}}
                           >
-                            <styled.i
-                              className="ui-icon fa fa-fw fa-times"
+                            <Icon
+                              className=""
                               contentEditable={false}
                               direction="right"
                               disabled={false}
@@ -1439,31 +1513,70 @@ exports[`Test the click handler in the Tab instance 1`] = `
                               width=""
                               xcss={null}
                             >
-                              <i
-                                className="ui-icon fa fa-fw fa-times sc-bdVaJa iGRPLq"
-                                contentEditable={false}
-                                direction="right"
-                                disabled={false}
-                                height=""
-                                id=""
-                                selected={false}
-                                style={Object {}}
-                                width=""
-                              />
-                            </styled.i>
-                          </ThemeProvider>
-                        </Icon>
-                      </div>
-                    </styled.div>
-                  </ThemeProvider>
-                </Button>
+                              <ThemeProvider
+                                theme={
+                                  Object {
+                                    "backgroundColor": "#ffffff",
+                                    "borderColor": "#004358",
+                                    "color": "#000000",
+                                    "headerBackgroundColor": "#004358",
+                                    "headerForegroundColor": "#ffffff",
+                                    "headerHoverColor": "#ffe11a",
+                                    "hoverColor": "#c0c0c0",
+                                    "optionHoverColor": "#fd7400",
+                                  }
+                                }
+                              >
+                                <styled.i
+                                  className="ui-icon fa fa-fw fa-times"
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
+                                  sizing="normal"
+                                  style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
+                                >
+                                  <i
+                                    className="ui-icon fa fa-fw fa-times sc-bdVaJa iGRPLq"
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    height=""
+                                    id=""
+                                    selected={false}
+                                    style={Object {}}
+                                    width=""
+                                  />
+                                </styled.i>
+                              </ThemeProvider>
+                            </Icon>
+                          </div>
+                        </styled.div>
+                      </ThemeProvider>
+                    </Button>
+                  </div>
+                </styled.div>
               </div>
-            </Title__StyledWidget>
-          </div>
-        </Title__TitleView>
-      </ThemeProvider>
-    </Title>
-  </div>
+            </styled.div>
+          </ThemeProvider>
+        </Title>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </Tab>
 `;
 
@@ -1497,44 +1610,43 @@ exports[`Test the close click handler on a Tab instance 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-tab tab normal"
-    style={
+  <ThemeProvider
+    theme={
       Object {
-        "minWidth": "75px",
-        "width": "",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "optionHoverColor": "#fd7400",
       }
     }
   >
-    <Title
-      className=""
-      contentEditable={false}
-      direction="right"
+    <styled.div
+      className="ui-tab"
       disabled={false}
-      focus={false}
-      height=""
-      href={
+      style={
         Object {
-          "hiddenTabHandler": [Function],
+          "minWidth": "75px",
+          "width": "",
         }
       }
-      id=""
-      layout={5}
-      location="none"
-      noedit={true}
-      nohover={false}
-      noripple={true}
-      onClick={[Function]}
-      onClose={[Function]}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={Object {}}
-      title="tab title"
       visible={true}
-      widget={
-        <Button
+      xcss=""
+    >
+      <div
+        className="ui-tab sc-gzVnrw hKWyBv"
+        disabled={false}
+        style={
+          Object {
+            "minWidth": "75px",
+            "width": "",
+          }
+        }
+      >
+        <Title
           className=""
           contentEditable={false}
           direction="right"
@@ -1546,13 +1658,12 @@ exports[`Test the close click handler on a Tab instance 1`] = `
               "hiddenTabHandler": [Function],
             }
           }
-          iconName="times"
-          iconStyle=""
           id=""
+          layout={5}
           location="none"
-          noedit={false}
+          noedit={true}
           nohover={false}
-          noripple={false}
+          noripple={true}
           onClick={[Function]}
           onClose={[Function]}
           selected={false}
@@ -1562,40 +1673,9 @@ exports[`Test the close click handler on a Tab instance 1`] = `
           theme={Object {}}
           title="tab title"
           visible={true}
-          width=""
-          xcss={null}
-        >
-          Test content
-        </Button>
-      }
-      width=""
-      xcss={null}
-    >
-      <ThemeProvider
-        theme={
-          Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#004358",
-            "color": "#000000",
-            "headerBackgroundColor": "#004358",
-            "headerForegroundColor": "#ffffff",
-            "headerHoverColor": "#ffe11a",
-            "hoverColor": "#c0c0c0",
-            "optionHoverColor": "#fd7400",
-          }
-        }
-      >
-        <Title__TitleView
-          className="ui-title-bar"
-          layout={5}
-          style={Object {}}
-        >
-          <div
-            className="ui-title-bar Title__TitleView-ddYmk gnejTR"
-            style={Object {}}
-          >
-            <Title__StyledWidget
-              className="ui-title"
+          widget={
+            <Button
+              className=""
               contentEditable={false}
               direction="right"
               disabled={false}
@@ -1606,25 +1686,59 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                   "hiddenTabHandler": [Function],
                 }
               }
+              iconName="times"
+              iconStyle=""
               id=""
-              layout={5}
               location="none"
-              noedit={true}
+              noedit={false}
               nohover={false}
-              noripple={true}
+              noripple={false}
               onClick={[Function]}
               onClose={[Function]}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
-              text="tab title"
               theme={Object {}}
               title="tab title"
               visible={true}
-              widget={
-                <Button
-                  className=""
+              width=""
+              xcss={null}
+            >
+              Test content
+            </Button>
+          }
+          width=""
+          xcss={null}
+        >
+          <ThemeProvider
+            theme={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+                "optionHoverColor": "#fd7400",
+              }
+            }
+          >
+            <styled.div
+              className="ui-title-bar"
+              disabled={false}
+              layout={5}
+              style={Object {}}
+              visible={true}
+            >
+              <div
+                className="ui-title-bar sc-ifAKCX fsmfqq"
+                disabled={false}
+                style={Object {}}
+              >
+                <Styled(Label)
+                  className="ui-title"
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -1635,76 +1749,69 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                       "hiddenTabHandler": [Function],
                     }
                   }
-                  iconName="times"
-                  iconStyle=""
                   id=""
+                  layout={5}
                   location="none"
-                  noedit={false}
+                  noedit={true}
                   nohover={false}
-                  noripple={false}
+                  noripple={true}
                   onClick={[Function]}
                   onClose={[Function]}
                   selected={false}
                   sizing="normal"
                   style={Object {}}
                   testing={true}
+                  text="tab title"
                   theme={Object {}}
                   title="tab title"
                   visible={true}
+                  widget={
+                    <Button
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      href={
+                        Object {
+                          "hiddenTabHandler": [Function],
+                        }
+                      }
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      onClick={[Function]}
+                      onClose={[Function]}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      title="tab title"
+                      visible={true}
+                      width=""
+                      xcss={null}
+                    >
+                      Test content
+                    </Button>
+                  }
                   width=""
-                  xcss={null}
-                >
-                  Test content
-                </Button>
-              }
-              width=""
-              xcss={
-                Array [
-                  "
+                  xcss={
+                    Array [
+                      "
 	text-align: left;
 	flex: 5;
 ",
-                ]
-              }
-            >
-              <Label
-                className="ui-title Title__StyledWidget-dupbKD dJeweB"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                focus={false}
-                height=""
-                href={
-                  Object {
-                    "hiddenTabHandler": [Function],
+                    ]
                   }
-                }
-                id=""
-                layout={5}
-                location="none"
-                noedit={true}
-                nohover={false}
-                noripple={true}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onClick={[Function]}
-                onClose={[Function]}
-                onDoubleClick={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onUpdate={[Function]}
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                text="tab title"
-                theme={Object {}}
-                title="tab title"
-                useedit={false}
-                visible={true}
-                widget={
-                  <Button
-                    className=""
+                >
+                  <Label
+                    className="ui-title sc-bZQynM fXdSdE"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -1715,114 +1822,122 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                         "hiddenTabHandler": [Function],
                       }
                     }
-                    iconName="times"
-                    iconStyle=""
                     id=""
+                    layout={5}
                     location="none"
-                    noedit={false}
+                    noedit={true}
                     nohover={false}
-                    noripple={false}
+                    noripple={true}
+                    onBlur={[Function]}
+                    onChange={[Function]}
                     onClick={[Function]}
                     onClose={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    onUpdate={[Function]}
                     selected={false}
                     sizing="normal"
                     style={Object {}}
                     testing={true}
+                    text="tab title"
                     theme={Object {}}
                     title="tab title"
+                    useedit={false}
                     visible={true}
+                    widget={
+                      <Button
+                        className=""
+                        contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        focus={false}
+                        height=""
+                        href={
+                          Object {
+                            "hiddenTabHandler": [Function],
+                          }
+                        }
+                        iconName="times"
+                        iconStyle=""
+                        id=""
+                        location="none"
+                        noedit={false}
+                        nohover={false}
+                        noripple={false}
+                        onClick={[Function]}
+                        onClose={[Function]}
+                        selected={false}
+                        sizing="normal"
+                        style={Object {}}
+                        testing={true}
+                        theme={Object {}}
+                        title="tab title"
+                        visible={true}
+                        width=""
+                        xcss={null}
+                      >
+                        Test content
+                      </Button>
+                    }
                     width=""
-                    xcss={null}
-                  >
-                    Test content
-                  </Button>
-                }
-                width=""
-                xcss={
-                  Array [
-                    "
+                    xcss={
+                      Array [
+                        "
 	text-align: left;
 	flex: 5;
 ",
-                  ]
-                }
-              >
-                <ThemeProvider
-                  theme={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#004358",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "optionHoverColor": "#fd7400",
+                      ]
                     }
-                  }
-                >
-                  <styled.span
-                    className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
-                    contentEditable={false}
-                    disabled={false}
-                    innerRef={[Function]}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDoubleClick={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    style={Object {}}
-                    suppressContentEditableWarning={true}
-                    visible={true}
                   >
-                    <span
-                      className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb iGCQps"
-                      contentEditable={false}
-                      disabled={false}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      style={Object {}}
-                      suppressContentEditableWarning={true}
+                    <ThemeProvider
+                      theme={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#004358",
+                          "color": "#000000",
+                          "headerBackgroundColor": "#004358",
+                          "headerForegroundColor": "#ffffff",
+                          "headerHoverColor": "#ffe11a",
+                          "hoverColor": "#c0c0c0",
+                          "optionHoverColor": "#fd7400",
+                        }
+                      }
                     >
-                      tab title
-                    </span>
-                  </styled.span>
-                </ThemeProvider>
-              </Label>
-            </Title__StyledWidget>
-            <Title__StyledWidget
-              className="ui-title-widget"
-              contentEditable={false}
-              direction="right"
-              disabled={false}
-              focus={false}
-              height=""
-              href={
-                Object {
-                  "hiddenTabHandler": [Function],
-                }
-              }
-              id=""
-              layout={5}
-              location="none"
-              noedit={true}
-              nohover={false}
-              noripple={true}
-              onClick={[Function]}
-              onClose={[Function]}
-              selected={false}
-              sizing="normal"
-              style={Object {}}
-              testing={true}
-              theme={Object {}}
-              title="tab title"
-              visible={true}
-              widget={
-                <Button
-                  className=""
+                      <styled.span
+                        className="ui-label ui-title sc-bZQynM fXdSdE"
+                        contentEditable={false}
+                        disabled={false}
+                        innerRef={[Function]}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        style={Object {}}
+                        suppressContentEditableWarning={true}
+                        visible={true}
+                      >
+                        <span
+                          className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                          contentEditable={false}
+                          disabled={false}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          style={Object {}}
+                          suppressContentEditableWarning={true}
+                        >
+                          tab title
+                        </span>
+                      </styled.span>
+                    </ThemeProvider>
+                  </Label>
+                </Styled(Label)>
+                <styled.div
+                  className="ui-title-widget"
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -1833,13 +1948,12 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                       "hiddenTabHandler": [Function],
                     }
                   }
-                  iconName="times"
-                  iconStyle=""
                   id=""
+                  layout={5}
                   location="none"
-                  noedit={false}
+                  noedit={true}
                   nohover={false}
-                  noripple={false}
+                  noripple={true}
                   onClick={[Function]}
                   onClose={[Function]}
                   selected={false}
@@ -1849,137 +1963,129 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                   theme={Object {}}
                   title="tab title"
                   visible={true}
+                  widget={
+                    <Button
+                      className=""
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      href={
+                        Object {
+                          "hiddenTabHandler": [Function],
+                        }
+                      }
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      onClick={[Function]}
+                      onClose={[Function]}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      title="tab title"
+                      visible={true}
+                      width=""
+                      xcss={null}
+                    >
+                      Test content
+                    </Button>
+                  }
                   width=""
-                  xcss={null}
-                >
-                  Test content
-                </Button>
-              }
-              width=""
-              xcss={
-                Array [
-                  "
+                  xcss={
+                    Array [
+                      "
 	text-align: right;
 	flex: 1;
 ",
-                ]
-              }
-            >
-              <div
-                className="ui-title-widget Title__StyledWidget-ieYmOL jRWtFs"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                height=""
-                href={
-                  Object {
-                    "hiddenTabHandler": [Function],
+                    ]
                   }
-                }
-                id=""
-                onClick={[Function]}
-                selected={false}
-                style={Object {}}
-                title="tab title"
-                width=""
-              >
-                <Button
-                  className=""
-                  contentEditable={false}
-                  direction="right"
-                  disabled={false}
-                  focus={false}
-                  height=""
-                  href={
-                    Object {
-                      "hiddenTabHandler": [Function],
-                    }
-                  }
-                  iconName="times"
-                  iconStyle=""
-                  id=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  onClick={[Function]}
-                  onClose={[Function]}
-                  selected={false}
-                  sizing="normal"
-                  style={Object {}}
-                  testing={true}
-                  theme={Object {}}
-                  title="tab title"
-                  visible={true}
-                  width=""
-                  xcss={null}
                 >
-                  <ThemeProvider
-                    theme={
+                  <div
+                    className="ui-title-widget sc-EHOje bmfMZM"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={false}
+                    height=""
+                    href={
                       Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "headerHoverColor": "#ffe11a",
-                        "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "hiddenTabHandler": [Function],
                       }
                     }
+                    id=""
+                    onClick={[Function]}
+                    selected={false}
+                    style={Object {}}
+                    title="tab title"
+                    width=""
                   >
-                    <styled.div
-                      className="ui-button ripple"
+                    <Button
+                      className=""
+                      contentEditable={false}
+                      direction="right"
                       disabled={false}
+                      focus={false}
+                      height=""
+                      href={
+                        Object {
+                          "hiddenTabHandler": [Function],
+                        }
+                      }
+                      iconName="times"
+                      iconStyle=""
+                      id=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
                       onClick={[Function]}
+                      onClose={[Function]}
+                      selected={false}
+                      sizing="normal"
                       style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      title="tab title"
                       visible={true}
+                      width=""
+                      xcss={null}
                     >
-                      <div
-                        className="ui-button ripple sc-htpNat deJRSG"
-                        disabled={false}
-                        onClick={[Function]}
-                        style={Object {}}
+                      <ThemeProvider
+                        theme={
+                          Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#004358",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "headerHoverColor": "#ffe11a",
+                            "hoverColor": "#c0c0c0",
+                            "optionHoverColor": "#fd7400",
+                          }
+                        }
                       >
-                        <Icon
-                          className=""
-                          contentEditable={false}
-                          direction="right"
+                        <styled.div
+                          className="ui-button ripple"
                           disabled={false}
-                          focus={false}
-                          height=""
-                          iconName="times"
-                          id=""
-                          imageFile=""
-                          location="none"
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          selected={false}
-                          sizing="normal"
+                          onClick={[Function]}
                           style={Object {}}
-                          testing={true}
-                          theme={Object {}}
                           visible={true}
-                          width=""
-                          xcss={null}
                         >
-                          <ThemeProvider
-                            theme={
-                              Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#004358",
-                                "color": "#000000",
-                                "headerBackgroundColor": "#004358",
-                                "headerForegroundColor": "#ffffff",
-                                "headerHoverColor": "#ffe11a",
-                                "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
-                              }
-                            }
+                          <div
+                            className="ui-button ripple sc-htpNat deJRSG"
+                            disabled={false}
+                            onClick={[Function]}
+                            style={Object {}}
                           >
-                            <styled.i
-                              className="ui-icon fa fa-fw fa-times"
+                            <Icon
+                              className=""
                               contentEditable={false}
                               direction="right"
                               disabled={false}
@@ -2001,114 +2107,188 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                               width=""
                               xcss={null}
                             >
-                              <i
-                                className="ui-icon fa fa-fw fa-times sc-bdVaJa iGRPLq"
-                                contentEditable={false}
-                                direction="right"
-                                disabled={false}
-                                height=""
-                                id=""
-                                selected={false}
-                                style={Object {}}
-                                width=""
-                              />
-                            </styled.i>
-                          </ThemeProvider>
-                        </Icon>
-                      </div>
-                    </styled.div>
-                  </ThemeProvider>
-                </Button>
+                              <ThemeProvider
+                                theme={
+                                  Object {
+                                    "backgroundColor": "#ffffff",
+                                    "borderColor": "#004358",
+                                    "color": "#000000",
+                                    "headerBackgroundColor": "#004358",
+                                    "headerForegroundColor": "#ffffff",
+                                    "headerHoverColor": "#ffe11a",
+                                    "hoverColor": "#c0c0c0",
+                                    "optionHoverColor": "#fd7400",
+                                  }
+                                }
+                              >
+                                <styled.i
+                                  className="ui-icon fa fa-fw fa-times"
+                                  contentEditable={false}
+                                  direction="right"
+                                  disabled={false}
+                                  focus={false}
+                                  height=""
+                                  iconName="times"
+                                  id=""
+                                  imageFile=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  selected={false}
+                                  sizing="normal"
+                                  style={Object {}}
+                                  testing={true}
+                                  theme={Object {}}
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
+                                >
+                                  <i
+                                    className="ui-icon fa fa-fw fa-times sc-bdVaJa iGRPLq"
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    height=""
+                                    id=""
+                                    selected={false}
+                                    style={Object {}}
+                                    width=""
+                                  />
+                                </styled.i>
+                              </ThemeProvider>
+                            </Icon>
+                          </div>
+                        </styled.div>
+                      </ThemeProvider>
+                    </Button>
+                  </div>
+                </styled.div>
               </div>
-            </Title__StyledWidget>
-          </div>
-        </Title__TitleView>
-      </ThemeProvider>
-    </Title>
-  </div>
+            </styled.div>
+          </ThemeProvider>
+        </Title>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </Tab>
 `;
 
 exports[`Test the creation of a Tab instance 1`] = `
-<div
-  className="ui-tab tab ui-selected tabBorderTop normal"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "minWidth": "75px",
-      "width": "",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "optionHoverColor": "#fd7400",
     }
   }
 >
-  <Title
-    className=""
-    contentEditable={false}
-    direction="right"
+  <styled.div
+    className="ui-tab ui-selected"
     disabled={false}
-    focus={false}
-    height=""
-    href={
+    style={
       Object {
-        "orientation": "top",
-        "selectHandler": [Function],
-        "sizing": "normal",
+        "minWidth": "75px",
+        "width": "",
       }
     }
-    id=""
-    layout={5}
-    location="none"
-    noedit={true}
-    nohover={false}
-    noripple={true}
-    onClick={[Function]}
-    onClose={[Function]}
-    selected={true}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    title="tab title"
     visible={true}
-    widget={
-      <Button
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        href={
-          Object {
-            "orientation": "top",
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        iconName="times"
-        iconStyle=""
-        id=""
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onClick={[Function]}
-        onClose={[Function]}
-        selected={true}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="tab title"
-        visible={true}
-        width=""
-        xcss={null}
-      >
-        Test content
-      </Button>
+    xcss={
+      Array [
+        "
+	border-right: solid 1px ",
+        [Function],
+        ";
+	border-top: solid 1px ",
+        [Function],
+        ";
+
+	&:first-child {
+		border-left: solid 1px ",
+        [Function],
+        ";
+	}
+",
+      ]
     }
-    width=""
-    xcss={null}
   >
-    Test content
-  </Title>
-</div>
+    <Title
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      href={
+        Object {
+          "orientation": "top",
+          "selectHandler": [Function],
+          "sizing": "normal",
+        }
+      }
+      id=""
+      layout={5}
+      location="none"
+      noedit={true}
+      nohover={false}
+      noripple={true}
+      onClick={[Function]}
+      onClose={[Function]}
+      selected={true}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      title="tab title"
+      visible={true}
+      widget={
+        <Button
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          href={
+            Object {
+              "orientation": "top",
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          iconName="times"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          onClose={[Function]}
+          selected={true}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="tab title"
+          visible={true}
+          width=""
+          xcss={null}
+        >
+          Test content
+        </Button>
+      }
+      width=""
+      xcss={null}
+    >
+      Test content
+    </Title>
+  </styled.div>
+</ThemeProvider>
 `;

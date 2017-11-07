@@ -59,16 +59,18 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled, {css, ThemeProvider} from 'styled-components';
 import {nilEvent} from 'util.toolbox';
 import {Label} from '../label';
 import {
 	BaseComponent,
 	BaseProps,
+	disabled,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme
+	getTheme,
+	invisible
 } from '../shared';
+import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 
 export enum TitleLayout {
 	quarter,
@@ -97,11 +99,14 @@ export function getDefaultTitleProps(): TitleProps {
 	);
 }
 
-export const TitleView: any = styled.div`
+export const TitleView: any = withProps<TitleProps, HTMLDivElement>(styled.div)`
 	box-sizing: border-box;
 	display: flex;
-	flex-direction: ${(props: TitleProps) => props.layout === TitleLayout.stacked ? 'column' : 'row'};
+	flex-direction: ${props => props.layout === TitleLayout.stacked ? 'column' : 'row'};
 	flex-grow: 1;
+
+	${props => disabled(props)}
+	${props => invisible(props)}
 `;
 
 export const TitleQuarterView: any = css`
@@ -162,11 +167,12 @@ export const WidgetDominantView: any = css`
 	flex: 1;
 `;
 
-const StyledWidget: any = styled.div`
+const StyledWidget: any = withProps<TitleProps, HTMLDivElement>(styled.div)`
 	align-items: center;
 	display: block;
-	${(props: TitleProps) => props.xcss && props.xcss}
-	${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
+
+	${props => props.xcss && props.xcss}
+	${props => props.sizing && fontStyle[props.sizing]}
 `;
 
 export const StyledLabel: any = StyledWidget.withComponent(Label);
@@ -257,8 +263,10 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 			<ThemeProvider theme={getTheme()}>
 				<TitleView
 					className={this.classes}
+					disabled={this.props.disabled}
 					layout={this.props.layout}
 					style={this.inlineStyles}
+					visible={this.props.visible}
 				>
 					{title}
 					{widget}

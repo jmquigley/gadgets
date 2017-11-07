@@ -16,7 +16,10 @@
  * The right side of list contains a dialog button with `...`.  This allows
  * the user of the control to change the page size.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/pager.png" width="50%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Pager} from 'gadgets';
@@ -50,6 +53,7 @@
  * This control would also include a `TextField` that allows the user to jump
  * to a page by its number position.
  *
+ * ## API
  * #### Events
  * - `onChangePageSize(pageSize: number)` - when the page size of the control
  * is change in the dialog box this event is invoked with the new size.
