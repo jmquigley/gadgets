@@ -56,8 +56,10 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	disabled,
 	getDefaultBaseProps,
-	getTheme
+	getTheme,
+	invisible
 } from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
@@ -99,6 +101,9 @@ export interface LabelState {
 
 export const LabelView: any = withProps<LabelProps, HTMLSpanElement>(styled.span)`
 	background-color: inherit;
+
+	${props => disabled(props)}
+	${props => invisible(props)}
 `;
 
 export class Label extends BaseComponent<LabelProps, LabelState> {
@@ -230,14 +235,16 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				<LabelView
 					className={this.classes}
 					contentEditable={this.state.editable}
+					disabled={this.props.disabled}
+					innerRef={this.handleRef}
 					onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
 					onClick={this.props.onClick}
 					onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
-					innerRef={this.handleRef}
 					style={this.inlineStyles}
 					suppressContentEditableWarning
+					visible={this.props.visible}
 				>
 					{this.state.text}
 				</LabelView>

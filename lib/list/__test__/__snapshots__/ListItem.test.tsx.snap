@@ -356,6 +356,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                           <styled.span
                             className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
                             contentEditable={false}
+                            disabled={true}
                             innerRef={[Function]}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -368,10 +369,12 @@ exports[`Test disabling of a ListItem control 1`] = `
                               }
                             }
                             suppressContentEditableWarning={true}
+                            visible={true}
                           >
                             <span
-                              className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb fhJlEg"
+                              className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb ikJPSN"
                               contentEditable={false}
+                              disabled={true}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDoubleClick={[Function]}
@@ -758,6 +761,7 @@ exports[`Test making ListItem control invisible 1`] = `
                           <styled.span
                             className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB"
                             contentEditable={false}
+                            disabled={false}
                             innerRef={[Function]}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -770,10 +774,12 @@ exports[`Test making ListItem control invisible 1`] = `
                               }
                             }
                             suppressContentEditableWarning={true}
+                            visible={false}
                           >
                             <span
-                              className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb fhJlEg"
+                              className="ui-label ui-title Title__StyledWidget-dupbKD dJeweB sc-bxivhb wTyHD"
                               contentEditable={false}
+                              disabled={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDoubleClick={[Function]}

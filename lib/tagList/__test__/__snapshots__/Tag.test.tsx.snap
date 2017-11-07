@@ -118,6 +118,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
         <styled.span
           className="ui-label"
           contentEditable={false}
+          disabled={true}
           innerRef={[Function]}
           onBlur={[Function]}
           onClick={[Function]}
@@ -126,10 +127,12 @@ exports[`Test disabling of the simple Tag instance 1`] = `
           onKeyPress={[Function]}
           style={Object {}}
           suppressContentEditableWarning={true}
+          visible={true}
         >
           <span
-            className="ui-label sc-bZQynM iSxYLy"
+            className="ui-label sc-bZQynM jDlYnM"
             contentEditable={false}
+            disabled={true}
             onBlur={[Function]}
             onClick={[Function]}
             onDoubleClick={[Function]}
@@ -484,6 +487,7 @@ exports[`Test making Tag invisible 1`] = `
         <styled.span
           className="ui-label"
           contentEditable={false}
+          disabled={true}
           innerRef={[Function]}
           onBlur={[Function]}
           onClick={[Function]}
@@ -492,10 +496,12 @@ exports[`Test making Tag invisible 1`] = `
           onKeyPress={[Function]}
           style={Object {}}
           suppressContentEditableWarning={true}
+          visible={false}
         >
           <span
-            className="ui-label sc-bZQynM iSxYLy"
+            className="ui-label sc-bZQynM kpBUIv"
             contentEditable={false}
+            disabled={true}
             onBlur={[Function]}
             onClick={[Function]}
             onDoubleClick={[Function]}

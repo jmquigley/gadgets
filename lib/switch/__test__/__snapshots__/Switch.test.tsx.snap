@@ -1,57 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of an inny type Switch 1`] = `
-<div
-  className="ui-switch container normal"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "height": "20px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "optionHoverColor": "#fd7400",
     }
   }
 >
-  <div
-    className="ui-switch-slider slider normalRect ui-slider-on sliderOn"
-    onClick={[Function]}
+  <styled.div
+    className="ui-switch"
+    height="20px"
   >
-    <div
-      className="ui-switch-button buttonRightInny ripple"
+    <styled.div
+      className="ui-switch-slider ui-slider-on"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      initialToggle={true}
+      innyScale={0.6}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
       onClick={[Function]}
+      outyScale={1.25}
+      selected={false}
+      sizing="normal"
+      sliderScale={1.25}
       style={
         Object {
-          "height": "9.6px",
-          "width": "9.6px",
+          "backgroundColor": "#5cb85c",
         }
       }
-    />
-  </div>
-</div>
+      switchType={0}
+      testing={true}
+      theme={Object {}}
+      visible={true}
+      width=""
+      xcss={null}
+    >
+      <styled.div
+        className="ui-switch-button ripple"
+        height="9.6px"
+        onClick={[Function]}
+        style={
+          Object {
+            "left": "5%",
+          }
+        }
+        width="9.6px"
+      />
+    </styled.div>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creation of an outy type Switch 1`] = `
-<div
-  className="ui-switch container normal"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "height": "20px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "optionHoverColor": "#fd7400",
     }
   }
 >
-  <div
-    className="ui-switch-slider slider normalRect ui-slider-on sliderOn"
-    onClick={[Function]}
+  <styled.div
+    className="ui-switch"
+    height="20px"
   >
-    <div
-      className="ui-switch-button buttonRightOuty ripple"
+    <styled.div
+      className="ui-switch-slider ui-slider-on"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      initialToggle={true}
+      innyScale={0.6}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
       onClick={[Function]}
+      outyScale={1.25}
+      selected={false}
+      sizing="normal"
+      sliderScale={1.25}
       style={
         Object {
-          "height": "20px",
-          "width": "20px",
+          "backgroundColor": "#5cb85c",
         }
       }
-    />
-  </div>
-</div>
+      switchType={1}
+      testing={true}
+      theme={Object {}}
+      visible={true}
+      width=""
+      xcss={null}
+    >
+      <styled.div
+        className="ui-switch-button ripple"
+        height="20px"
+        onClick={[Function]}
+        style={
+          Object {
+            "left": "-15%",
+          }
+        }
+        width="20px"
+      />
+    </styled.div>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test disabling of the Switch control 1`] = `
@@ -64,13 +142,16 @@ exports[`Test disabling of the Switch control 1`] = `
   height=""
   id=""
   initialToggle={false}
+  innyScale={0.6}
   location="none"
   noedit={false}
   nohover={false}
   noripple={false}
   onClick={[Function]}
+  outyScale={1.25}
   selected={false}
   sizing="normal"
+  sliderScale={1.25}
   style={Object {}}
   switchType={1}
   testing={true}
@@ -79,30 +160,103 @@ exports[`Test disabling of the Switch control 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-switch container normal disabled nohover"
-    style={
+  <ThemeProvider
+    theme={
       Object {
-        "height": "20px",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "optionHoverColor": "#fd7400",
       }
     }
   >
-    <div
-      className="ui-switch-slider slider normalRect ui-slider-off sliderOff"
-      onClick={[Function]}
+    <styled.div
+      className="ui-switch"
+      height="20px"
     >
       <div
-        className="ui-switch-button buttonLeftOuty"
-        onClick={[Function]}
-        style={
-          Object {
-            "height": "20px",
-            "width": "20px",
+        className="ui-switch sc-htpNat byUckz"
+        height="20px"
+      >
+        <styled.div
+          className="ui-switch-slider ui-slider-off"
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          id=""
+          initialToggle={false}
+          innyScale={0.6}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          outyScale={1.25}
+          selected={false}
+          sizing="normal"
+          sliderScale={1.25}
+          style={
+            Object {
+              "backgroundColor": "#d9534f",
+            }
           }
-        }
-      />
-    </div>
-  </div>
+          switchType={1}
+          testing={true}
+          theme={Object {}}
+          visible={true}
+          width=""
+          xcss={null}
+        >
+          <div
+            className="ui-switch-slider ui-slider-off sc-bwzfXH lkYTZw"
+            contentEditable={false}
+            direction="right"
+            disabled={true}
+            height=""
+            id=""
+            onClick={[Function]}
+            selected={false}
+            style={
+              Object {
+                "backgroundColor": "#d9534f",
+              }
+            }
+            width=""
+          >
+            <styled.div
+              className="ui-switch-button"
+              height="20px"
+              onClick={[Function]}
+              style={
+                Object {
+                  "left": "45%",
+                }
+              }
+              width="20px"
+            >
+              <div
+                className="ui-switch-button sc-bdVaJa imgpYe"
+                height="20px"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "left": "45%",
+                  }
+                }
+                width="20px"
+              />
+            </styled.div>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </Switch>
 `;
 
@@ -116,13 +270,16 @@ exports[`Test making the Switch control invisible 1`] = `
   height=""
   id=""
   initialToggle={false}
+  innyScale={0.6}
   location="none"
   noedit={false}
   nohover={false}
   noripple={false}
   onClick={[Function]}
+  outyScale={1.25}
   selected={false}
   sizing="normal"
+  sliderScale={1.25}
   style={Object {}}
   switchType={1}
   testing={true}
@@ -131,30 +288,103 @@ exports[`Test making the Switch control invisible 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-switch container normal invisible"
-    style={
+  <ThemeProvider
+    theme={
       Object {
-        "height": "20px",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "optionHoverColor": "#fd7400",
       }
     }
   >
-    <div
-      className="ui-switch-slider slider normalRect ui-slider-off sliderOff"
-      onClick={[Function]}
+    <styled.div
+      className="ui-switch"
+      height="20px"
     >
       <div
-        className="ui-switch-button buttonLeftOuty ripple"
-        onClick={[Function]}
-        style={
-          Object {
-            "height": "20px",
-            "width": "20px",
+        className="ui-switch sc-htpNat byUckz"
+        height="20px"
+      >
+        <styled.div
+          className="ui-switch-slider ui-slider-off"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          id=""
+          initialToggle={false}
+          innyScale={0.6}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          outyScale={1.25}
+          selected={false}
+          sizing="normal"
+          sliderScale={1.25}
+          style={
+            Object {
+              "backgroundColor": "#d9534f",
+            }
           }
-        }
-      />
-    </div>
-  </div>
+          switchType={1}
+          testing={true}
+          theme={Object {}}
+          visible={false}
+          width=""
+          xcss={null}
+        >
+          <div
+            className="ui-switch-slider ui-slider-off sc-bwzfXH gkllVH"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            onClick={[Function]}
+            selected={false}
+            style={
+              Object {
+                "backgroundColor": "#d9534f",
+              }
+            }
+            width=""
+          >
+            <styled.div
+              className="ui-switch-button ripple"
+              height="20px"
+              onClick={[Function]}
+              style={
+                Object {
+                  "left": "45%",
+                }
+              }
+              width="20px"
+            >
+              <div
+                className="ui-switch-button ripple sc-bdVaJa imgpYe"
+                height="20px"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "left": "45%",
+                  }
+                }
+                width="20px"
+              />
+            </styled.div>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </Switch>
 `;
 
@@ -168,13 +398,16 @@ Object {
   "height": "",
   "id": "",
   "initialToggle": false,
+  "innyScale": 0.6,
   "location": "none",
   "noedit": false,
   "nohover": false,
   "noripple": false,
   "onClick": [Function],
+  "outyScale": 1.25,
   "selected": false,
   "sizing": "normal",
+  "sliderScale": 1.25,
   "style": Object {},
   "switchType": 1,
   "testing": true,
@@ -186,28 +419,67 @@ Object {
 `;
 
 exports[`Test the click handler on the Switch control 1`] = `
-<div
-  className="ui-switch container normal"
-  style={
+<ThemeProvider
+  theme={
     Object {
-      "height": "20px",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "optionHoverColor": "#fd7400",
     }
   }
 >
-  <div
-    className="ui-switch-slider slider normalRect ui-slider-off sliderOff"
-    onClick={[Function]}
+  <styled.div
+    className="ui-switch"
+    height="20px"
   >
-    <div
-      className="ui-switch-button buttonLeftOuty ripple"
+    <styled.div
+      className="ui-switch-slider ui-slider-off"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      initialToggle={false}
+      innyScale={0.6}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
       onClick={[Function]}
+      outyScale={1.25}
+      selected={false}
+      sizing="normal"
+      sliderScale={1.25}
       style={
         Object {
-          "height": "20px",
-          "width": "20px",
+          "backgroundColor": "#d9534f",
         }
       }
-    />
-  </div>
-</div>
+      switchType={1}
+      testing={true}
+      theme={Object {}}
+      visible={true}
+      width=""
+      xcss={null}
+    >
+      <styled.div
+        className="ui-switch-button ripple"
+        height="20px"
+        onClick={[Function]}
+        style={
+          Object {
+            "left": "45%",
+          }
+        }
+        width="20px"
+      />
+    </styled.div>
+  </styled.div>
+</ThemeProvider>
 `;

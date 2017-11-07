@@ -48,6 +48,7 @@ exports[`Test a double click edit of the Label control 1`] = `
     <styled.span
       className="ui-label"
       contentEditable={false}
+      disabled={false}
       innerRef={[Function]}
       onBlur={[Function]}
       onClick={[Function]}
@@ -56,10 +57,12 @@ exports[`Test a double click edit of the Label control 1`] = `
       onKeyPress={[Function]}
       style={Object {}}
       suppressContentEditableWarning={true}
+      visible={true}
     >
       <span
-        className="ui-label sc-bdVaJa fLbCIZ"
+        className="ui-label sc-bdVaJa iXDktG"
         contentEditable={false}
+        disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
@@ -93,6 +96,7 @@ exports[`Test creation of a Label control 1`] = `
   <styled.span
     className="ui-label test-class"
     contentEditable={false}
+    disabled={false}
     innerRef={[Function]}
     onBlur={[Function]}
     onClick={[Function]}
@@ -101,6 +105,7 @@ exports[`Test creation of a Label control 1`] = `
     onKeyPress={[Function]}
     style={Object {}}
     suppressContentEditableWarning={true}
+    visible={true}
   >
     Test label text
   </styled.span>
@@ -155,6 +160,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
     <styled.span
       className="ui-label"
       contentEditable={false}
+      disabled={false}
       innerRef={[Function]}
       onBlur={[Function]}
       onClick={[Function]}
@@ -163,10 +169,12 @@ exports[`Test double click change to Label and blur to save 1`] = `
       onKeyPress={[Function]}
       style={Object {}}
       suppressContentEditableWarning={true}
+      visible={true}
     >
       <span
-        className="ui-label sc-bdVaJa fLbCIZ"
+        className="ui-label sc-bdVaJa iXDktG"
         contentEditable={false}
+        disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
@@ -230,6 +238,7 @@ exports[`Test making the Label control invisible 1`] = `
     <styled.span
       className="ui-label"
       contentEditable={false}
+      disabled={false}
       innerRef={[Function]}
       onBlur={[Function]}
       onClick={[Function]}
@@ -238,10 +247,12 @@ exports[`Test making the Label control invisible 1`] = `
       onKeyPress={[Function]}
       style={Object {}}
       suppressContentEditableWarning={true}
+      visible={false}
     >
       <span
-        className="ui-label sc-bdVaJa fLbCIZ"
+        className="ui-label sc-bdVaJa jiWYIE"
         contentEditable={false}
+        disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
@@ -338,6 +349,7 @@ exports[`Test the disabling of the Label control 1`] = `
     <styled.span
       className="ui-label"
       contentEditable={false}
+      disabled={true}
       innerRef={[Function]}
       onBlur={[Function]}
       onClick={[Function]}
@@ -346,10 +358,12 @@ exports[`Test the disabling of the Label control 1`] = `
       onKeyPress={[Function]}
       style={Object {}}
       suppressContentEditableWarning={true}
+      visible={true}
     >
       <span
-        className="ui-label sc-bdVaJa fLbCIZ"
+        className="ui-label sc-bdVaJa hvSzpL"
         contentEditable={false}
+        disabled={true}
         onBlur={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}

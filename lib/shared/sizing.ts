@@ -91,11 +91,15 @@ export const borderStyle: any = {
 };
 export const boxStyle: any = {};
 export const fontStyle: any = {};
+export const rectStyle: any = {};
 
 export class Sizes {
 
 	public static readonly styles = require('./sizing.css');
+
 	private _sizes: any = {};
+	private readonly _rectWidth: number = 1.75;
+	private readonly _rectHeight: number = 0.80;
 
 	public static instance(baseFontSize: number): Sizes {
 		let tmp = instances.get(baseFontSize);
@@ -131,6 +135,11 @@ export class Sizes {
 
 			fontStyle[key] = css`
 				font-size: ${valSize / baseFontSize}rem;
+			`;
+
+			rectStyle[key] = css`
+				width: ${valSize * this._rectWidth}px;
+				height: ${valSize * this._rectHeight}px;
 			`;
 
 			this._sizes[key] = {

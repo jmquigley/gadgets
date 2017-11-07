@@ -172,10 +172,26 @@ export const DisabledCSS: any = css`
 	user-select: none;
 `;
 
+export function disabled(props: BaseProps) {
+	if (props && props.disabled != null && props.disabled) {
+		return DisabledCSS;
+	}
+
+	return '';
+}
+
 export const InvisibleCSS: any = css`
 	display: none !important;
 	width: 0 !important;
 `;
+
+export function invisible(props: BaseProps) {
+	if (props && props.visible != null && !props.visible) {
+		return InvisibleCSS;
+	}
+
+	return '';
+}
 
 export const locationStyle: any = {
 	[Location.none]: css``,
