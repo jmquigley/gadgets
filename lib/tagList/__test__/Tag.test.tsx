@@ -55,7 +55,7 @@ test('Test hiding/showing the delete button in Tag', () => {
 	);
 
 	expect(ctl).toBeTruthy();
-	ctl.find('.ui-tag').simulate('mouseOver');
+	ctl.find('.ui-tag').first().simulate('mouseOver');
 	expect(ctl.state('showDelete')).toBe(true);
 	ctl.find('.ui-button').first().simulate('click');
 	expect(ondelete).toHaveBeenCalled();
@@ -73,8 +73,8 @@ test('Test the mouseout event to hide the Tag delete button', () => {
 	);
 
 	expect(ctl).toBeTruthy();
-	ctl.find('.ui-tag').simulate('mouseOver');
+	ctl.find('.ui-tag').first().simulate('mouseOver');
 	expect(ctl.state('showDelete')).toBe(true);
-	ctl.find('.ui-tag').simulate('mouseOut');
+	ctl.find('.ui-tag').first().simulate('mouseOut');
 	expect(ctl.state('showDelete')).toBe(false);
 });

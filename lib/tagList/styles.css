@@ -10,17 +10,6 @@
 		margin-right: 5px;
 	}
 
-	.tag {
-		border: solid 1px silver;
-		border-radius: 3px;
-		cursor: default;
-		box-sizing: border-box;
-		display: inline;
-		margin: 0 1px;
-		padding: 0 3px;
-		position: relative;
-	}
-
 	.tagHover > span {
 		transition: opacity 0.25s ease-in-out;
 		opacity: 0.25;

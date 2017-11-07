@@ -34,8 +34,6 @@
 
 'use strict';
 
-// const debug = require('debug')('Tag');
-
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -45,9 +43,12 @@ import {
 	BaseComponent,
 	BaseProps,
 	Color,
-	getDefaultBaseProps
+	disabled,
+	getDefaultBaseProps,
+	getTheme,
+	invisible
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface TagProps extends BaseProps {
 	onClick?: any;
@@ -73,14 +74,27 @@ export interface TagState {
 	showDelete?: boolean;
 }
 
-export const StyledButtonCircle: any = styled(ButtonCircle)`
+export const DeleteButtonView: any = styled(ButtonCircle)`
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	transition: opacity 0.5s ease-in-out;
 `;
 
-export const DeleteButtonView: any = withProps<TagProps, HTMLDivElement>(styled.div)`
+export const TagView: any = withProps<TagProps, HTMLDivElement>(styled.div)`
+	border: solid 1px silver;
+	border-radius: 3px;
+	cursor: default;
+	box-sizing: border-box;
+	display: inline;
+	opacity: 1.0;
+	margin: 0 1px;
+	padding: 0 3px;
+	position: relative;
+
+	${props => disabled(props)}
+	${props => invisible(props)}
 `;
 
 export class Tag extends BaseComponent<TagProps, TagState> {
@@ -89,12 +103,8 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	public static readonly defaultProps: TagProps = getDefaultTagProps();
 
 	constructor(props: TagProps) {
-		super(props, require('./styles.css'));
-
-		this._rootStyles.add([
-			'ui-tag',
-			this.styles.tag
-		]);
+		super(props, {}, Tag.defaultProps.style);
+		this._classes.add(['ui-tag']);
 
 		this.state = {
 			showDelete: false
@@ -133,17 +143,6 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		this.props.onMouseOver();
 	}
 
-	public componentWillUpdate(nextProps: TagProps, nextState: TagState) {
-
-		this._rootStyles.onIfElse(nextState.showDelete && !this.props.disabled)(
-			this.styles.tagHover
-		)(
-			this.styles.tagNoHover
-		);
-
-		super.componentWillUpdate(nextProps);
-	}
-
 	public render() {
 		this.tag = React.Children.map(this.props.children, (child: any) => {
 			return String(child);
@@ -152,35 +151,39 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		let deleteButton: any = null;
 		if (this.props.usedelete) {
 			deleteButton = (
-					<StyledButtonCircle
-						disabled={this.props.disabled}
-						iconName="times"
-						onClick={this.handleOnClick}
-						sizing={this.prev().type}
-						style={{
-							backgroundColor: Color.white,
-							borderColor: Color.error,
-							color: Color.error
-						}}
-						visible={this.state.showDelete}
-					/>
+				<DeleteButtonView
+					disabled={this.props.disabled}
+					iconName="times"
+					onClick={this.handleOnClick}
+					sizing={this.prev().type}
+					style={{
+						backgroundColor: Color.white,
+						borderColor: Color.error,
+						color: Color.error,
+						opacity: this.state.showDelete ? '1.0' : '0.0'
+					}}
+					visible={this.props.visible}
+				/>
 			);
 		}
 
 		return (
-			<div
-				className={this._rootStyles.classnames}
-				onMouseOut={this.handleMouseOut}
-				onMouseOver={this.handleMouseOver}
-			>
-				<Label
-					disabled={this.props.disabled}
-					noedit
-					text={this.tag}
-					visible={this.props.visible}
-				/>
-				{deleteButton}
-			</div>
+			<ThemeProvider theme={getTheme()} >
+				<TagView
+					{...this.props}
+					className={this.classes}
+					onMouseOut={this.handleMouseOut}
+					onMouseOver={this.handleMouseOver}
+				>
+					<Label
+						disabled={this.props.disabled}
+						noedit
+						text={this.tag}
+						visible={this.props.visible}
+					/>
+					{deleteButton}
+				</TagView>
+			</ThemeProvider>
 		);
 	}
 }
