@@ -112,7 +112,7 @@ export const StyledIcon: any = styled(Icon)`
 `;
 
 export const StyledTextField: any = styled(TextField)`
-	margin-left: 3px;
+	margin-left: 2px;
 
 	> input {
 		border: none;

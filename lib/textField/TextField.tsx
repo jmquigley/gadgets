@@ -210,11 +210,10 @@ export const StyledInput: any = withProps<TextFieldProps, HTMLInputElement>(styl
 	box-sizing: border-box;
 	display: inline-flex;
 	font-size: inherit;
-	height: 100%;
 	min-height: 0;
 	min-width: 0;
 	outline: none;
-	padding: 2px 5px;
+	padding: 1px 5px;
 	width: 100%;
 
 	${props => disabled(props)}
@@ -387,7 +386,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	public componentWillReceiveProps(nextProps: TextFieldProps) {
 		if ('size' in nextProps) {
 			this.inlineStyles = {
-				minWidth: `${(nextProps.size / 2.0) + 2}rem`
+				minWidth: `${(nextProps.size / 2.0) + 3}rem`
 			};
 		}
 	}

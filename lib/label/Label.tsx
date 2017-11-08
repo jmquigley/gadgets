@@ -57,6 +57,7 @@ import {
 	BaseComponent,
 	BaseProps,
 	disabled,
+	fontStyle,
 	getDefaultBaseProps,
 	getTheme,
 	invisible
@@ -104,6 +105,7 @@ export const LabelView: any = withProps<LabelProps, HTMLSpanElement>(styled.span
 
 	${props => disabled(props)}
 	${props => invisible(props)}
+	${props => props.sizing && fontStyle[props.sizing]}
 `;
 
 export class Label extends BaseComponent<LabelProps, LabelState> {
@@ -242,6 +244,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 					onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
+					sizing={this.props.sizing}
 					style={this.inlineStyles}
 					suppressContentEditableWarning
 					visible={this.props.visible}

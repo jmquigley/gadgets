@@ -176,6 +176,10 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						style['margin'] = '0 1px 0 2px';
 						style['border'] = 'solid 1px silver';
 						break;
+
+					case 'StyledComponent':
+					case TextField.name:
+						delete style['height'];
 				}
 
 				const newChild = React.cloneElement(child as any, {

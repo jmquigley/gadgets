@@ -21,7 +21,7 @@ exports[`Create an empty TabContainer instance 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={75}
+  tabWidth={80}
   testing={true}
   theme={Object {}}
   visible={true}
@@ -67,7 +67,7 @@ exports[`Create an empty TabContainer instance 1`] = `
           "minWidth": "0px",
         }
       }
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}
@@ -111,7 +111,7 @@ exports[`Create an empty TabContainer instance 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -165,7 +165,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={75}
+  tabWidth={80}
   testing={true}
   theme={Object {}}
   visible={true}
@@ -208,10 +208,10 @@ exports[`Test TabContainer retrieval functions 1`] = `
       sizing="normal"
       style={
         Object {
-          "minWidth": "300px",
+          "minWidth": "320px",
         }
       }
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}
@@ -229,7 +229,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
         selected={false}
         style={
           Object {
-            "minWidth": "300px",
+            "minWidth": "320px",
           }
         }
         width=""
@@ -267,7 +267,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
               selected={false}
               sizing="normal"
               style={Object {}}
-              tabWidth={75}
+              tabWidth={80}
               testing={true}
               theme={Object {}}
               visible={true}
@@ -385,7 +385,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           tabs={
             Immutable.List [
               <Tab
@@ -417,7 +417,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #1
@@ -451,7 +451,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #2
@@ -485,7 +485,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #3
@@ -543,7 +543,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -566,8 +566,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -591,12 +591,12 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw jlYDxX"
+                      className="ui-tab ui-selected sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -662,13 +662,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             theme={Object {}}
                             title="tab #1"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #1
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -761,13 +761,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #1
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -847,13 +847,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       theme={Object {}}
                                       title="tab #1"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #1
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -888,12 +888,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -972,13 +973,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #1
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -1007,7 +1008,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                   selected={true}
                                   style={Object {}}
                                   title="tab #1"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -1040,7 +1041,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -1190,7 +1191,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -1213,8 +1214,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -1238,12 +1239,12 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw jlYDxX"
+                      className="ui-tab sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -1309,13 +1310,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             theme={Object {}}
                             title="tab #2"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #2
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -1408,13 +1409,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #2
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -1494,13 +1495,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       theme={Object {}}
                                       title="tab #2"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #2
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -1535,12 +1536,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -1619,13 +1621,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #2
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -1654,7 +1656,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #2"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -1687,7 +1689,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -1837,7 +1839,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -1860,8 +1862,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -1885,12 +1887,12 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw jlYDxX"
+                      className="ui-tab sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -1956,13 +1958,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             theme={Object {}}
                             title="tab #3"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #3
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -2055,13 +2057,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #3
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -2141,13 +2143,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       theme={Object {}}
                                       title="tab #3"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #3
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -2182,12 +2184,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -2266,13 +2269,13 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #3
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -2301,7 +2304,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #3"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -2334,7 +2337,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -2476,7 +2479,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 selected={false}
                 sizing="normal"
                 style={Object {}}
-                tabWidth={75}
+                tabWidth={80}
                 testing={true}
                 theme={Object {}}
                 visible={true}
@@ -2778,7 +2781,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -2834,7 +2837,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={75}
+  tabWidth={80}
   testing={true}
   theme={Object {}}
   visible={true}
@@ -2877,10 +2880,10 @@ exports[`Test disabling the TabContainer instance 1`] = `
       sizing="normal"
       style={
         Object {
-          "minWidth": "300px",
+          "minWidth": "320px",
         }
       }
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}
@@ -2898,7 +2901,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
         selected={false}
         style={
           Object {
-            "minWidth": "300px",
+            "minWidth": "320px",
           }
         }
         width=""
@@ -2936,7 +2939,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
               selected={false}
               sizing="normal"
               style={Object {}}
-              tabWidth={75}
+              tabWidth={80}
               testing={true}
               theme={Object {}}
               visible={true}
@@ -3054,7 +3057,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           tabs={
             Immutable.List [
               <Tab
@@ -3086,7 +3089,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #1
@@ -3120,7 +3123,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #2
@@ -3154,7 +3157,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #3
@@ -3212,7 +3215,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -3235,8 +3238,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     disabled={true}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -3260,12 +3263,12 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw hYLqiz"
+                      className="ui-tab ui-selected sc-gzVnrw hxVFFe"
                       disabled={true}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -3300,7 +3303,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                         title="tab #1"
                         visible={true}
                         widget={false}
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -3362,7 +3365,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 title="tab #1"
                                 visible={true}
                                 widget={false}
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -3411,7 +3414,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                   useedit={false}
                                   visible={true}
                                   widget={false}
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -3446,12 +3449,13 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb ikJPSN"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb kEoKec"
                                         contentEditable={false}
                                         disabled={true}
                                         onBlur={[Function]}
@@ -3499,7 +3503,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 title="tab #1"
                                 visible={true}
                                 widget={false}
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -3528,7 +3532,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                   selected={true}
                                   style={Object {}}
                                   title="tab #1"
-                                  width="75px"
+                                  width="80px"
                                 />
                               </styled.div>
                             </div>
@@ -3569,7 +3573,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -3592,8 +3596,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     disabled={true}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -3617,12 +3621,12 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw hYLqiz"
+                      className="ui-tab sc-gzVnrw hxVFFe"
                       disabled={true}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -3657,7 +3661,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                         title="tab #2"
                         visible={true}
                         widget={false}
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -3719,7 +3723,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 title="tab #2"
                                 visible={true}
                                 widget={false}
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -3768,7 +3772,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                   useedit={false}
                                   visible={true}
                                   widget={false}
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -3803,12 +3807,13 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb ikJPSN"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb kEoKec"
                                         contentEditable={false}
                                         disabled={true}
                                         onBlur={[Function]}
@@ -3856,7 +3861,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 title="tab #2"
                                 visible={true}
                                 widget={false}
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -3885,7 +3890,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #2"
-                                  width="75px"
+                                  width="80px"
                                 />
                               </styled.div>
                             </div>
@@ -3926,7 +3931,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -3949,8 +3954,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     disabled={true}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -3974,12 +3979,12 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw hYLqiz"
+                      className="ui-tab sc-gzVnrw hxVFFe"
                       disabled={true}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -4014,7 +4019,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                         title="tab #3"
                         visible={true}
                         widget={false}
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -4076,7 +4081,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 title="tab #3"
                                 visible={true}
                                 widget={false}
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -4125,7 +4130,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                   useedit={false}
                                   visible={true}
                                   widget={false}
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -4160,12 +4165,13 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb ikJPSN"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb kEoKec"
                                         contentEditable={false}
                                         disabled={true}
                                         onBlur={[Function]}
@@ -4213,7 +4219,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 title="tab #3"
                                 visible={true}
                                 widget={false}
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -4242,7 +4248,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #3"
-                                  width="75px"
+                                  width="80px"
                                 />
                               </styled.div>
                             </div>
@@ -4275,7 +4281,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 selected={false}
                 sizing="normal"
                 style={Object {}}
-                tabWidth={75}
+                tabWidth={80}
                 testing={true}
                 theme={Object {}}
                 visible={true}
@@ -4306,7 +4312,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -4376,10 +4382,10 @@ exports[`Test making the TabContainer invisible 1`] = `
     sizing="normal"
     style={
       Object {
-        "minWidth": "300px",
+        "minWidth": "320px",
       }
     }
-    tabWidth={75}
+    tabWidth={80}
     testing={true}
     theme={Object {}}
     visible={false}
@@ -4419,7 +4425,7 @@ exports[`Test making the TabContainer invisible 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={false}
@@ -4537,7 +4543,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={75}
+      tabWidth={80}
       tabs={
         Immutable.List [
           <Tab
@@ -4569,7 +4575,7 @@ exports[`Test making the TabContainer invisible 1`] = `
             theme={Object {}}
             title="tab #1"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #1
@@ -4603,7 +4609,7 @@ exports[`Test making the TabContainer invisible 1`] = `
             theme={Object {}}
             title="tab #2"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #2
@@ -4637,7 +4643,7 @@ exports[`Test making the TabContainer invisible 1`] = `
             theme={Object {}}
             title="tab #3"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #3
@@ -4771,7 +4777,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={false}
@@ -4903,7 +4909,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={75}
+  tabWidth={80}
   testing={true}
   theme={Object {}}
   visible={true}
@@ -4946,10 +4952,10 @@ exports[`Test removing the first item from the TabContainer 1`] = `
       sizing="normal"
       style={
         Object {
-          "minWidth": "300px",
+          "minWidth": "320px",
         }
       }
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}
@@ -4967,7 +4973,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
         selected={false}
         style={
           Object {
-            "minWidth": "300px",
+            "minWidth": "320px",
           }
         }
         width=""
@@ -5005,7 +5011,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
               selected={false}
               sizing="normal"
               style={Object {}}
-              tabWidth={75}
+              tabWidth={80}
               testing={true}
               theme={Object {}}
               visible={true}
@@ -5123,7 +5129,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           tabs={
             Immutable.List [
               <Tab
@@ -5155,7 +5161,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #1
@@ -5189,7 +5195,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #2
@@ -5223,7 +5229,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #3
@@ -5281,7 +5287,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -5304,8 +5310,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -5329,12 +5335,12 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw jlYDxX"
+                      className="ui-tab ui-selected sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -5400,13 +5406,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             theme={Object {}}
                             title="tab #1"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #1
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -5499,13 +5505,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #1
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -5585,13 +5591,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       theme={Object {}}
                                       title="tab #1"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #1
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -5626,12 +5632,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -5710,13 +5717,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #1
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -5745,7 +5752,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                   selected={true}
                                   style={Object {}}
                                   title="tab #1"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -5778,7 +5785,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -5928,7 +5935,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -5951,8 +5958,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -5976,12 +5983,12 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw jlYDxX"
+                      className="ui-tab sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -6047,13 +6054,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             theme={Object {}}
                             title="tab #2"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #2
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -6146,13 +6153,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #2
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -6232,13 +6239,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       theme={Object {}}
                                       title="tab #2"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #2
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -6273,12 +6280,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -6357,13 +6365,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #2
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -6392,7 +6400,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #2"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -6425,7 +6433,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -6575,7 +6583,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -6598,8 +6606,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -6623,12 +6631,12 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw jlYDxX"
+                      className="ui-tab sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -6694,13 +6702,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             theme={Object {}}
                             title="tab #3"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #3
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -6793,13 +6801,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #3
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -6879,13 +6887,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       theme={Object {}}
                                       title="tab #3"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #3
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -6920,12 +6928,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -7004,13 +7013,13 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #3
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -7039,7 +7048,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #3"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -7072,7 +7081,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -7214,7 +7223,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 selected={false}
                 sizing="normal"
                 style={Object {}}
-                tabWidth={75}
+                tabWidth={80}
                 testing={true}
                 theme={Object {}}
                 visible={true}
@@ -7516,7 +7525,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -7573,7 +7582,7 @@ Object {
   "selected": false,
   "sizing": "normal",
   "style": Object {},
-  "tabWidth": 75,
+  "tabWidth": 80,
   "testing": true,
   "theme": Object {},
   "visible": true,
@@ -7603,7 +7612,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={75}
+  tabWidth={80}
   testing={true}
   theme={Object {}}
   visible={true}
@@ -7646,10 +7655,10 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
       sizing="normal"
       style={
         Object {
-          "minWidth": "300px",
+          "minWidth": "320px",
         }
       }
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}
@@ -7667,7 +7676,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
         selected={false}
         style={
           Object {
-            "minWidth": "300px",
+            "minWidth": "320px",
           }
         }
         width=""
@@ -7705,7 +7714,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
               selected={false}
               sizing="normal"
               style={Object {}}
-              tabWidth={75}
+              tabWidth={80}
               testing={true}
               theme={Object {}}
               visible={true}
@@ -7823,7 +7832,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           tabs={
             Immutable.List [
               <Tab
@@ -7855,7 +7864,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #1
@@ -7889,7 +7898,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #2
@@ -7923,7 +7932,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #3
@@ -7981,7 +7990,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -8004,8 +8013,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -8029,12 +8038,12 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw jlYDxX"
+                      className="ui-tab ui-selected sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -8100,13 +8109,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             theme={Object {}}
                             title="tab #1"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #1
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -8199,13 +8208,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #1
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -8285,13 +8294,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       theme={Object {}}
                                       title="tab #1"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #1
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -8326,12 +8335,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -8410,13 +8420,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #1
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -8445,7 +8455,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                   selected={true}
                                   style={Object {}}
                                   title="tab #1"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -8478,7 +8488,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -8628,7 +8638,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -8651,8 +8661,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -8676,12 +8686,12 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw jlYDxX"
+                      className="ui-tab sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -8747,13 +8757,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             theme={Object {}}
                             title="tab #2"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #2
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -8846,13 +8856,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #2
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -8932,13 +8942,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       theme={Object {}}
                                       title="tab #2"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #2
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -8973,12 +8983,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -9057,13 +9068,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #2
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -9092,7 +9103,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #2"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -9125,7 +9136,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -9275,7 +9286,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -9298,8 +9309,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -9323,12 +9334,12 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw jlYDxX"
+                      className="ui-tab sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -9394,13 +9405,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             theme={Object {}}
                             title="tab #3"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #3
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -9493,13 +9504,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #3
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -9579,13 +9590,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       theme={Object {}}
                                       title="tab #3"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #3
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -9620,12 +9631,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -9704,13 +9716,13 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #3
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -9739,7 +9751,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #3"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -9772,7 +9784,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -9914,7 +9926,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 selected={false}
                 sizing="normal"
                 style={Object {}}
-                tabWidth={75}
+                tabWidth={80}
                 testing={true}
                 theme={Object {}}
                 visible={true}
@@ -10216,7 +10228,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -10272,7 +10284,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={75}
+  tabWidth={80}
   testing={true}
   theme={Object {}}
   visible={true}
@@ -10315,10 +10327,10 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
       sizing="normal"
       style={
         Object {
-          "minWidth": "300px",
+          "minWidth": "320px",
         }
       }
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}
@@ -10336,7 +10348,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
         selected={false}
         style={
           Object {
-            "minWidth": "300px",
+            "minWidth": "320px",
           }
         }
         width=""
@@ -10374,7 +10386,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
               selected={false}
               sizing="normal"
               style={Object {}}
-              tabWidth={75}
+              tabWidth={80}
               testing={true}
               theme={Object {}}
               visible={true}
@@ -10492,7 +10504,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           tabs={
             Immutable.List [
               <Tab
@@ -10524,7 +10536,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #1
@@ -10558,7 +10570,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #2
@@ -10592,7 +10604,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 #3
@@ -10650,7 +10662,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 theme={Object {}}
                 title="tab #1"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -10673,8 +10685,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -10698,12 +10710,12 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw jlYDxX"
+                      className="ui-tab ui-selected sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -10769,13 +10781,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             theme={Object {}}
                             title="tab #1"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #1
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -10868,13 +10880,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #1
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -10954,13 +10966,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       theme={Object {}}
                                       title="tab #1"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #1
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -10995,12 +11007,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -11079,13 +11092,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #1
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -11114,7 +11127,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                   selected={true}
                                   style={Object {}}
                                   title="tab #1"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -11147,7 +11160,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     theme={Object {}}
                                     title="tab #1"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -11297,7 +11310,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 theme={Object {}}
                 title="tab #2"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -11320,8 +11333,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -11345,12 +11358,12 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw jlYDxX"
+                      className="ui-tab sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -11416,13 +11429,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             theme={Object {}}
                             title="tab #2"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #2
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -11515,13 +11528,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #2
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -11601,13 +11614,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       theme={Object {}}
                                       title="tab #2"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #2
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -11642,12 +11655,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -11726,13 +11740,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #2
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -11761,7 +11775,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #2"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -11794,7 +11808,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     theme={Object {}}
                                     title="tab #2"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -11944,7 +11958,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 theme={Object {}}
                 title="tab #3"
                 visible={true}
-                width="75px"
+                width="80px"
                 xcss={null}
               >
                 <ThemeProvider
@@ -11967,8 +11981,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     disabled={false}
                     style={
                       Object {
-                        "minWidth": "75px",
-                        "width": "75px",
+                        "minWidth": "80px",
+                        "width": "80px",
                       }
                     }
                     visible={true}
@@ -11992,12 +12006,12 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw jlYDxX"
+                      className="ui-tab sc-gzVnrw bMiGxl"
                       disabled={false}
                       style={
                         Object {
-                          "minWidth": "75px",
-                          "width": "75px",
+                          "minWidth": "80px",
+                          "width": "80px",
                         }
                       }
                     >
@@ -12063,13 +12077,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             theme={Object {}}
                             title="tab #3"
                             visible={true}
-                            width="75px"
+                            width="80px"
                             xcss={null}
                           >
                             #3
                           </Button>
                         }
-                        width="75px"
+                        width="80px"
                         xcss={null}
                       >
                         <ThemeProvider
@@ -12162,13 +12176,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #3
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -12248,13 +12262,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       theme={Object {}}
                                       title="tab #3"
                                       visible={true}
-                                      width="75px"
+                                      width="80px"
                                       xcss={null}
                                     >
                                       #3
                                     </Button>
                                   }
-                                  width="75px"
+                                  width="80px"
                                   xcss={
                                     Array [
                                       "
@@ -12289,12 +12303,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       onDoubleClick={[Function]}
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
+                                      sizing="normal"
                                       style={Object {}}
                                       suppressContentEditableWarning={true}
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb iGCQps"
+                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -12373,13 +12388,13 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     #3
                                   </Button>
                                 }
-                                width="75px"
+                                width="80px"
                                 xcss={
                                   Array [
                                     "
@@ -12408,7 +12423,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                   selected={false}
                                   style={Object {}}
                                   title="tab #3"
-                                  width="75px"
+                                  width="80px"
                                 >
                                   <Button
                                     className=""
@@ -12441,7 +12456,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     theme={Object {}}
                                     title="tab #3"
                                     visible={true}
-                                    width="75px"
+                                    width="80px"
                                     xcss={null}
                                   >
                                     <ThemeProvider
@@ -12583,7 +12598,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 selected={false}
                 sizing="normal"
                 style={Object {}}
-                tabWidth={75}
+                tabWidth={80}
                 testing={true}
                 theme={Object {}}
                 visible={true}
@@ -12885,7 +12900,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -12957,10 +12972,10 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
     sizing="normal"
     style={
       Object {
-        "minWidth": "300px",
+        "minWidth": "320px",
       }
     }
-    tabWidth={75}
+    tabWidth={80}
     testing={true}
     theme={Object {}}
     visible={true}
@@ -12988,7 +13003,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}
@@ -13128,7 +13143,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -13246,7 +13261,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={75}
+      tabWidth={80}
       tabs={
         Immutable.List [
           <Tab
@@ -13278,7 +13293,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             theme={Object {}}
             title="tab #1"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #1
@@ -13312,7 +13327,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             theme={Object {}}
             title="tab #2"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #2
@@ -13346,7 +13361,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             theme={Object {}}
             title="tab #3"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #3
@@ -13500,10 +13515,10 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
     sizing="normal"
     style={
       Object {
-        "minWidth": "375px",
+        "minWidth": "400px",
       }
     }
-    tabWidth={75}
+    tabWidth={80}
     testing={true}
     theme={Object {}}
     visible={true}
@@ -13543,7 +13558,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -13662,10 +13677,10 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       sizing="normal"
       style={
         Object {
-          "width": "75px",
+          "width": "80px",
         }
       }
-      tabWidth={75}
+      tabWidth={80}
       tabs={
         Immutable.List [
           <Tab
@@ -13697,7 +13712,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             theme={Object {}}
             title="tab #1"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #1
@@ -13731,7 +13746,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             theme={Object {}}
             title="tab #2"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #2
@@ -13765,7 +13780,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             theme={Object {}}
             title="tab #3"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #3
@@ -13899,7 +13914,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}
@@ -14047,10 +14062,10 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
     sizing="normal"
     style={
       Object {
-        "minWidth": "375px",
+        "minWidth": "400px",
       }
     }
-    tabWidth={75}
+    tabWidth={80}
     testing={true}
     theme={Object {}}
     visible={true}
@@ -14078,7 +14093,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}
@@ -14218,7 +14233,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -14337,10 +14352,10 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       sizing="normal"
       style={
         Object {
-          "width": "75px",
+          "width": "80px",
         }
       }
-      tabWidth={75}
+      tabWidth={80}
       tabs={
         Immutable.List [
           <Tab
@@ -14372,7 +14387,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             theme={Object {}}
             title="tab #1"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #1
@@ -14406,7 +14421,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             theme={Object {}}
             title="tab #2"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #2
@@ -14440,7 +14455,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             theme={Object {}}
             title="tab #3"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #3
@@ -14594,10 +14609,10 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
     sizing="normal"
     style={
       Object {
-        "minWidth": "300px",
+        "minWidth": "320px",
       }
     }
-    tabWidth={75}
+    tabWidth={80}
     testing={true}
     theme={Object {}}
     visible={true}
@@ -14637,7 +14652,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={75}
+          tabWidth={80}
           testing={true}
           theme={Object {}}
           visible={true}
@@ -14755,7 +14770,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={75}
+      tabWidth={80}
       tabs={
         Immutable.List [
           <Tab
@@ -14787,7 +14802,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             theme={Object {}}
             title="tab #1"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #1
@@ -14821,7 +14836,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             theme={Object {}}
             title="tab #2"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #2
@@ -14855,7 +14870,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             theme={Object {}}
             title="tab #3"
             visible={true}
-            width="75px"
+            width="80px"
             xcss={null}
           >
             #3
@@ -14989,7 +15004,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={75}
+      tabWidth={80}
       testing={true}
       theme={Object {}}
       visible={true}

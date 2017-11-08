@@ -144,16 +144,20 @@ export const TabView: any = withProps<TabProps, HTMLDivElement>(styled.div)`
 
 	${props => props.xcss ? props.xcss : ''}
 
-	span:hover {
-		color: ${props => !props.disabled ? props.theme.headerHoverColor : 'unset'} !important;
-		background-color: ${props => !props.disabled ? props.theme.headerBackgroundColor : 'unset'} !important;
-	}
-
 	&:hover .ui-button {
 		color: ${props => props.theme.backgroundColor};
 		background-color: ${props => props.theme.hoverColor};
 		display: flex;
 		opacity: 1.0;
+	}
+
+	.ui-label {
+		padding-left: 4px;
+	}
+
+	.ui-label:hover {
+		color: ${props => !props.disabled ? props.theme.headerHoverColor : 'unset'} !important;
+		background-color: ${props => !props.disabled ? props.theme.headerBackgroundColor : 'unset'} !important;
 	}
 
 	.ui-button:hover {
@@ -219,7 +223,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 			};
 		} else {
 			this.inlineStyles = {
-				minWidth: '75px',
+				minWidth: '80px',
 				width: nextProps.width
 			};
 		}
