@@ -11,7 +11,8 @@ exports[`Test creation of a simple Tag instance 1`] = `
       "headerForegroundColor": "#ffffff",
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
-      "optionHoverColor": "#fd7400",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
   }
 >
@@ -112,7 +113,8 @@ exports[`Test disabling of the simple Tag instance 1`] = `
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
-        "optionHoverColor": "#fd7400",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
     }
   >
@@ -143,7 +145,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
       xcss={null}
     >
       <div
-        className="ui-tag sc-htoDjs goavDM"
+        className="ui-tag sc-VigVT BlGNT"
         contentEditable={false}
         direction="right"
         disabled={true}
@@ -196,7 +198,8 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
-                "optionHoverColor": "#fd7400",
+                "inputBorderColor": "#c0c0c0",
+                "transitionDelay": "0.5s",
               }
             }
           >
@@ -215,7 +218,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
               visible={true}
             >
               <span
-                className="ui-label sc-bZQynM jDlYnM"
+                className="ui-label sc-gZMcBi foBBXs"
                 contentEditable={false}
                 disabled={true}
                 onBlur={[Function]}
@@ -247,7 +250,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
           visible={true}
         >
           <ButtonCircle
-            className="sc-gzVnrw cDUdVL"
+            className="sc-gqjmRU fnaFDY"
             contentEditable={false}
             direction="right"
             disabled={true}
@@ -287,15 +290,16 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                   "headerForegroundColor": "#ffffff",
                   "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
-                  "optionHoverColor": "#fd7400",
+                  "inputBorderColor": "#c0c0c0",
+                  "transitionDelay": "0.5s",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-gzVnrw cDUdVL"
+                className="ui-button-circle sc-gqjmRU fnaFDY"
               >
                 <div
-                  className="ui-button-circle sc-gzVnrw cDUdVL sc-bxivhb cLwPhR"
+                  className="ui-button-circle sc-gqjmRU fnaFDY sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
@@ -307,7 +311,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-gzVnrw cDUdVL"
+                        className="sc-gqjmRU fnaFDY"
                         contentEditable={false}
                         direction="right"
                         disabled={true}
@@ -338,7 +342,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-gzVnrw cDUdVL sc-EHOje YaMUf"
+                          className="sc-gqjmRU fnaFDY sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={true}
@@ -378,12 +382,13 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button nohover sc-gzVnrw cDUdVL sc-EHOje YaMUf"
+                              className="ui-button nohover sc-gqjmRU fnaFDY sc-EHOje YaMUf"
                               disabled={true}
                               onClick={[Function]}
                               style={
@@ -397,7 +402,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                               visible={true}
                             >
                               <div
-                                className="ui-button nohover sc-gzVnrw cDUdVL sc-EHOje YaMUf sc-htpNat cDPcSb"
+                                className="ui-button nohover sc-gqjmRU fnaFDY sc-EHOje YaMUf sc-htpNat cDPcSb"
                                 disabled={true}
                                 onClick={[Function]}
                                 style={
@@ -442,7 +447,8 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                         "headerForegroundColor": "#ffffff",
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
-                                        "optionHoverColor": "#fd7400",
+                                        "inputBorderColor": "#c0c0c0",
+                                        "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
@@ -470,7 +476,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                       xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa ktSNSh"
                                         contentEditable={false}
                                         direction="right"
                                         disabled={false}
@@ -538,7 +544,8 @@ exports[`Test making Tag invisible 1`] = `
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
-        "optionHoverColor": "#fd7400",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
     }
   >
@@ -569,7 +576,7 @@ exports[`Test making Tag invisible 1`] = `
       xcss={null}
     >
       <div
-        className="ui-tag sc-htoDjs jWObwB"
+        className="ui-tag sc-VigVT YLulB"
         contentEditable={false}
         direction="right"
         disabled={true}
@@ -622,7 +629,8 @@ exports[`Test making Tag invisible 1`] = `
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
-                "optionHoverColor": "#fd7400",
+                "inputBorderColor": "#c0c0c0",
+                "transitionDelay": "0.5s",
               }
             }
           >
@@ -641,7 +649,7 @@ exports[`Test making Tag invisible 1`] = `
               visible={false}
             >
               <span
-                className="ui-label sc-bZQynM kpBUIv"
+                className="ui-label sc-gZMcBi eijtlG"
                 contentEditable={false}
                 disabled={true}
                 onBlur={[Function]}
@@ -673,7 +681,7 @@ exports[`Test making Tag invisible 1`] = `
           visible={false}
         >
           <ButtonCircle
-            className="sc-gzVnrw cDUdVL"
+            className="sc-gqjmRU fnaFDY"
             contentEditable={false}
             direction="right"
             disabled={true}
@@ -713,15 +721,16 @@ exports[`Test making Tag invisible 1`] = `
                   "headerForegroundColor": "#ffffff",
                   "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
-                  "optionHoverColor": "#fd7400",
+                  "inputBorderColor": "#c0c0c0",
+                  "transitionDelay": "0.5s",
                 }
               }
             >
               <styled.div
-                className="ui-button-circle sc-gzVnrw cDUdVL"
+                className="ui-button-circle sc-gqjmRU fnaFDY"
               >
                 <div
-                  className="ui-button-circle sc-gzVnrw cDUdVL sc-bxivhb cLwPhR"
+                  className="ui-button-circle sc-gqjmRU fnaFDY sc-bxivhb cLwPhR"
                 >
                   <styled.div
                     height="18px"
@@ -733,7 +742,7 @@ exports[`Test making Tag invisible 1`] = `
                       width="18px"
                     >
                       <Styled(Button)
-                        className="sc-gzVnrw cDUdVL"
+                        className="sc-gqjmRU fnaFDY"
                         contentEditable={false}
                         direction="right"
                         disabled={true}
@@ -764,7 +773,7 @@ exports[`Test making Tag invisible 1`] = `
                         xcss={null}
                       >
                         <Button
-                          className="sc-gzVnrw cDUdVL sc-EHOje YaMUf"
+                          className="sc-gqjmRU fnaFDY sc-EHOje YaMUf"
                           contentEditable={false}
                           direction="right"
                           disabled={true}
@@ -804,12 +813,13 @@ exports[`Test making Tag invisible 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
                             <styled.div
-                              className="ui-button nohover sc-gzVnrw cDUdVL sc-EHOje YaMUf"
+                              className="ui-button nohover sc-gqjmRU fnaFDY sc-EHOje YaMUf"
                               disabled={true}
                               onClick={[Function]}
                               style={
@@ -823,7 +833,7 @@ exports[`Test making Tag invisible 1`] = `
                               visible={false}
                             >
                               <div
-                                className="ui-button nohover sc-gzVnrw cDUdVL sc-EHOje YaMUf sc-htpNat dgWPqA"
+                                className="ui-button nohover sc-gqjmRU fnaFDY sc-EHOje YaMUf sc-htpNat dgWPqA"
                                 disabled={true}
                                 onClick={[Function]}
                                 style={
@@ -868,7 +878,8 @@ exports[`Test making Tag invisible 1`] = `
                                         "headerForegroundColor": "#ffffff",
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
-                                        "optionHoverColor": "#fd7400",
+                                        "inputBorderColor": "#c0c0c0",
+                                        "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
@@ -896,7 +907,7 @@ exports[`Test making Tag invisible 1`] = `
                                       xcss={null}
                                     >
                                       <i
-                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa eFoKEp"
+                                        className="ui-icon fa fa-fw fa-times sc-bdVaJa ktSNSh"
                                         contentEditable={false}
                                         direction="right"
                                         disabled={false}

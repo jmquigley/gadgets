@@ -44,7 +44,8 @@ exports[`Test creation of an Editor instance 1`] = `
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
-        "optionHoverColor": "#fd7400",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
     }
   >
@@ -53,7 +54,7 @@ exports[`Test creation of an Editor instance 1`] = `
       style={Object {}}
     >
       <div
-        className="ui-editor sc-kAzzGY kacNSP"
+        className="ui-editor sc-jKJlTe gfWvjc"
         style={Object {}}
       >
         <Styled(Toolbar)
@@ -90,7 +91,7 @@ exports[`Test creation of an Editor instance 1`] = `
           xcss={null}
         >
           <Toolbar
-            className="ui-editor-toolbar sc-kgoBCf gTVrSf"
+            className="ui-editor-toolbar sc-hMqMXs VlWiw"
             content="test content"
             contentEditable={false}
             defaultFont="Fira Code"
@@ -124,7 +125,7 @@ exports[`Test creation of an Editor instance 1`] = `
             xcss={null}
           >
             <div
-              className="ui-toolbar toolbar small ui-editor-toolbar sc-kgoBCf gTVrSf"
+              className="ui-toolbar toolbar small ui-editor-toolbar sc-hMqMXs VlWiw"
             >
               <div
                 className="ui-toolbar-group toolbarGroup left"
@@ -171,7 +172,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -235,7 +237,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
@@ -263,7 +266,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-bold sc-bdVaJa eFoKEp"
+                                className="ui-icon fa fa-fw fa-bold sc-bdVaJa ktSNSh"
                                 contentEditable={false}
                                 direction="right"
                                 disabled={false}
@@ -322,7 +325,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -386,7 +390,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
@@ -414,7 +419,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-italic sc-bdVaJa eFoKEp"
+                                className="ui-icon fa fa-fw fa-italic sc-bdVaJa ktSNSh"
                                 contentEditable={false}
                                 direction="right"
                                 disabled={false}
@@ -473,7 +478,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -537,7 +543,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
@@ -565,7 +572,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-underline sc-bdVaJa eFoKEp"
+                                className="ui-icon fa fa-fw fa-underline sc-bdVaJa ktSNSh"
                                 contentEditable={false}
                                 direction="right"
                                 disabled={false}
@@ -624,7 +631,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -688,7 +696,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
@@ -716,7 +725,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-strikethrough sc-bdVaJa eFoKEp"
+                                className="ui-icon fa fa-fw fa-strikethrough sc-bdVaJa ktSNSh"
                                 contentEditable={false}
                                 direction="right"
                                 disabled={false}
@@ -775,7 +784,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -839,7 +849,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
@@ -867,7 +878,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-code sc-bdVaJa eFoKEp"
+                                className="ui-icon fa fa-fw fa-code sc-bdVaJa ktSNSh"
                                 contentEditable={false}
                                 direction="right"
                                 disabled={false}
@@ -969,7 +980,8 @@ exports[`Test creation of an Editor instance 1`] = `
                             "headerForegroundColor": "#ffffff",
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
-                            "optionHoverColor": "#fd7400",
+                            "inputBorderColor": "#c0c0c0",
+                            "transitionDelay": "0.5s",
                           }
                         }
                       >
@@ -1041,7 +1053,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                     "headerForegroundColor": "#ffffff",
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
-                                    "optionHoverColor": "#fd7400",
+                                    "inputBorderColor": "#c0c0c0",
+                                    "transitionDelay": "0.5s",
                                   }
                                 }
                               >
@@ -1069,7 +1082,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                   xcss={null}
                                 >
                                   <i
-                                    className="ui-icon fa fa-fw fa-header sc-bdVaJa eFoKEp"
+                                    className="ui-icon fa fa-fw fa-header sc-bdVaJa ktSNSh"
                                     contentEditable={false}
                                     direction="right"
                                     disabled={false}
@@ -1127,7 +1140,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
@@ -1197,7 +1211,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "headerForegroundColor": "#ffffff",
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
-                                        "optionHoverColor": "#fd7400",
+                                        "inputBorderColor": "#c0c0c0",
+                                        "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
@@ -1257,11 +1272,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "headerForegroundColor": "#ffffff",
                                             "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
-                                            "optionHoverColor": "#fd7400",
+                                            "inputBorderColor": "#c0c0c0",
+                                            "transitionDelay": "0.5s",
                                           }
                                         }
                                       >
-                                        <Item__ItemView
+                                        <styled.li
                                           className="ui-item ui-listitem"
                                           id="0"
                                           nohover={false}
@@ -1273,7 +1289,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                           style={Object {}}
                                         >
                                           <li
-                                            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
+                                            className="ui-item ui-listitem sc-dnqmqq fPXEDE"
                                             id="0"
                                             onBlur={[Function]}
                                             onDoubleClick={[Function]}
@@ -1342,7 +1358,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "headerForegroundColor": "#ffffff",
                                                     "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
-                                                    "optionHoverColor": "#fd7400",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "transitionDelay": "0.5s",
                                                   }
                                                 }
                                               >
@@ -1492,7 +1509,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerForegroundColor": "#ffffff",
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
-                                                              "optionHoverColor": "#fd7400",
+                                                              "inputBorderColor": "#c0c0c0",
+                                                              "transitionDelay": "0.5s",
                                                             }
                                                           }
                                                         >
@@ -1541,7 +1559,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               </ThemeProvider>
                                             </Title>
                                           </li>
-                                        </Item__ItemView>
+                                        </styled.li>
                                       </ThemeProvider>
                                     </Item>
                                   </ThemeProvider>
@@ -1603,7 +1621,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "headerForegroundColor": "#ffffff",
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
-                                        "optionHoverColor": "#fd7400",
+                                        "inputBorderColor": "#c0c0c0",
+                                        "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
@@ -1663,11 +1682,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "headerForegroundColor": "#ffffff",
                                             "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
-                                            "optionHoverColor": "#fd7400",
+                                            "inputBorderColor": "#c0c0c0",
+                                            "transitionDelay": "0.5s",
                                           }
                                         }
                                       >
-                                        <Item__ItemView
+                                        <styled.li
                                           className="ui-item ui-listitem"
                                           id="1"
                                           nohover={false}
@@ -1679,7 +1699,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                           style={Object {}}
                                         >
                                           <li
-                                            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
+                                            className="ui-item ui-listitem sc-dnqmqq fPXEDE"
                                             id="1"
                                             onBlur={[Function]}
                                             onDoubleClick={[Function]}
@@ -1748,7 +1768,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "headerForegroundColor": "#ffffff",
                                                     "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
-                                                    "optionHoverColor": "#fd7400",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "transitionDelay": "0.5s",
                                                   }
                                                 }
                                               >
@@ -1898,7 +1919,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerForegroundColor": "#ffffff",
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
-                                                              "optionHoverColor": "#fd7400",
+                                                              "inputBorderColor": "#c0c0c0",
+                                                              "transitionDelay": "0.5s",
                                                             }
                                                           }
                                                         >
@@ -1947,7 +1969,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               </ThemeProvider>
                                             </Title>
                                           </li>
-                                        </Item__ItemView>
+                                        </styled.li>
                                       </ThemeProvider>
                                     </Item>
                                   </ThemeProvider>
@@ -2009,7 +2031,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "headerForegroundColor": "#ffffff",
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
-                                        "optionHoverColor": "#fd7400",
+                                        "inputBorderColor": "#c0c0c0",
+                                        "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
@@ -2069,11 +2092,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "headerForegroundColor": "#ffffff",
                                             "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
-                                            "optionHoverColor": "#fd7400",
+                                            "inputBorderColor": "#c0c0c0",
+                                            "transitionDelay": "0.5s",
                                           }
                                         }
                                       >
-                                        <Item__ItemView
+                                        <styled.li
                                           className="ui-item ui-listitem"
                                           id="2"
                                           nohover={false}
@@ -2085,7 +2109,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                           style={Object {}}
                                         >
                                           <li
-                                            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
+                                            className="ui-item ui-listitem sc-dnqmqq fPXEDE"
                                             id="2"
                                             onBlur={[Function]}
                                             onDoubleClick={[Function]}
@@ -2154,7 +2178,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "headerForegroundColor": "#ffffff",
                                                     "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
-                                                    "optionHoverColor": "#fd7400",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "transitionDelay": "0.5s",
                                                   }
                                                 }
                                               >
@@ -2304,7 +2329,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerForegroundColor": "#ffffff",
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
-                                                              "optionHoverColor": "#fd7400",
+                                                              "inputBorderColor": "#c0c0c0",
+                                                              "transitionDelay": "0.5s",
                                                             }
                                                           }
                                                         >
@@ -2353,7 +2379,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               </ThemeProvider>
                                             </Title>
                                           </li>
-                                        </Item__ItemView>
+                                        </styled.li>
                                       </ThemeProvider>
                                     </Item>
                                   </ThemeProvider>
@@ -2415,7 +2441,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "headerForegroundColor": "#ffffff",
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
-                                        "optionHoverColor": "#fd7400",
+                                        "inputBorderColor": "#c0c0c0",
+                                        "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
@@ -2475,11 +2502,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "headerForegroundColor": "#ffffff",
                                             "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
-                                            "optionHoverColor": "#fd7400",
+                                            "inputBorderColor": "#c0c0c0",
+                                            "transitionDelay": "0.5s",
                                           }
                                         }
                                       >
-                                        <Item__ItemView
+                                        <styled.li
                                           className="ui-item ui-listitem"
                                           id="3"
                                           nohover={false}
@@ -2491,7 +2519,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                           style={Object {}}
                                         >
                                           <li
-                                            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
+                                            className="ui-item ui-listitem sc-dnqmqq fPXEDE"
                                             id="3"
                                             onBlur={[Function]}
                                             onDoubleClick={[Function]}
@@ -2560,7 +2588,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "headerForegroundColor": "#ffffff",
                                                     "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
-                                                    "optionHoverColor": "#fd7400",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "transitionDelay": "0.5s",
                                                   }
                                                 }
                                               >
@@ -2710,7 +2739,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerForegroundColor": "#ffffff",
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
-                                                              "optionHoverColor": "#fd7400",
+                                                              "inputBorderColor": "#c0c0c0",
+                                                              "transitionDelay": "0.5s",
                                                             }
                                                           }
                                                         >
@@ -2759,7 +2789,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               </ThemeProvider>
                                             </Title>
                                           </li>
-                                        </Item__ItemView>
+                                        </styled.li>
                                       </ThemeProvider>
                                     </Item>
                                   </ThemeProvider>
@@ -2821,7 +2851,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "headerForegroundColor": "#ffffff",
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
-                                        "optionHoverColor": "#fd7400",
+                                        "inputBorderColor": "#c0c0c0",
+                                        "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
@@ -2881,11 +2912,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "headerForegroundColor": "#ffffff",
                                             "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
-                                            "optionHoverColor": "#fd7400",
+                                            "inputBorderColor": "#c0c0c0",
+                                            "transitionDelay": "0.5s",
                                           }
                                         }
                                       >
-                                        <Item__ItemView
+                                        <styled.li
                                           className="ui-item ui-listitem"
                                           id="4"
                                           nohover={false}
@@ -2897,7 +2929,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                           style={Object {}}
                                         >
                                           <li
-                                            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
+                                            className="ui-item ui-listitem sc-dnqmqq fPXEDE"
                                             id="4"
                                             onBlur={[Function]}
                                             onDoubleClick={[Function]}
@@ -2966,7 +2998,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "headerForegroundColor": "#ffffff",
                                                     "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
-                                                    "optionHoverColor": "#fd7400",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "transitionDelay": "0.5s",
                                                   }
                                                 }
                                               >
@@ -3116,7 +3149,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerForegroundColor": "#ffffff",
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
-                                                              "optionHoverColor": "#fd7400",
+                                                              "inputBorderColor": "#c0c0c0",
+                                                              "transitionDelay": "0.5s",
                                                             }
                                                           }
                                                         >
@@ -3165,7 +3199,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               </ThemeProvider>
                                             </Title>
                                           </li>
-                                        </Item__ItemView>
+                                        </styled.li>
                                       </ThemeProvider>
                                     </Item>
                                   </ThemeProvider>
@@ -3227,7 +3261,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                         "headerForegroundColor": "#ffffff",
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
-                                        "optionHoverColor": "#fd7400",
+                                        "inputBorderColor": "#c0c0c0",
+                                        "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
@@ -3287,11 +3322,12 @@ exports[`Test creation of an Editor instance 1`] = `
                                             "headerForegroundColor": "#ffffff",
                                             "headerHoverColor": "#ffe11a",
                                             "hoverColor": "#c0c0c0",
-                                            "optionHoverColor": "#fd7400",
+                                            "inputBorderColor": "#c0c0c0",
+                                            "transitionDelay": "0.5s",
                                           }
                                         }
                                       >
-                                        <Item__ItemView
+                                        <styled.li
                                           className="ui-item ui-listitem"
                                           id="5"
                                           nohover={false}
@@ -3303,7 +3339,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                           style={Object {}}
                                         >
                                           <li
-                                            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
+                                            className="ui-item ui-listitem sc-dnqmqq fPXEDE"
                                             id="5"
                                             onBlur={[Function]}
                                             onDoubleClick={[Function]}
@@ -3372,7 +3408,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     "headerForegroundColor": "#ffffff",
                                                     "headerHoverColor": "#ffe11a",
                                                     "hoverColor": "#c0c0c0",
-                                                    "optionHoverColor": "#fd7400",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "transitionDelay": "0.5s",
                                                   }
                                                 }
                                               >
@@ -3522,7 +3559,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerForegroundColor": "#ffffff",
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
-                                                              "optionHoverColor": "#fd7400",
+                                                              "inputBorderColor": "#c0c0c0",
+                                                              "transitionDelay": "0.5s",
                                                             }
                                                           }
                                                         >
@@ -3571,7 +3609,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               </ThemeProvider>
                                             </Title>
                                           </li>
-                                        </Item__ItemView>
+                                        </styled.li>
                                       </ThemeProvider>
                                     </Item>
                                   </ThemeProvider>
@@ -3621,7 +3659,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -3690,7 +3729,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -3754,7 +3794,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
@@ -3782,7 +3823,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-undo sc-bdVaJa eFoKEp"
+                                className="ui-icon fa fa-fw fa-undo sc-bdVaJa ktSNSh"
                                 contentEditable={false}
                                 direction="right"
                                 disabled={false}
@@ -3841,7 +3882,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -3905,7 +3947,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
@@ -3933,7 +3976,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-repeat sc-bdVaJa eFoKEp"
+                                className="ui-icon fa fa-fw fa-repeat sc-bdVaJa ktSNSh"
                                 contentEditable={false}
                                 direction="right"
                                 disabled={false}
@@ -3987,7 +4030,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -4081,7 +4125,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -4239,7 +4284,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -4385,7 +4431,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -4483,7 +4530,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -4916,7 +4964,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -5471,7 +5520,8 @@ exports[`Test creation of an Editor instance 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -5535,7 +5585,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
                                 "hoverColor": "#c0c0c0",
-                                "optionHoverColor": "#fd7400",
+                                "inputBorderColor": "#c0c0c0",
+                                "transitionDelay": "0.5s",
                               }
                             }
                           >
@@ -5563,7 +5614,7 @@ exports[`Test creation of an Editor instance 1`] = `
                               xcss={null}
                             >
                               <i
-                                className="ui-icon fa fa-fw fa-refresh sc-bdVaJa eFoKEp"
+                                className="ui-icon fa fa-fw fa-refresh sc-bdVaJa ktSNSh"
                                 contentEditable={false}
                                 direction="right"
                                 disabled={false}
@@ -5591,7 +5642,7 @@ exports[`Test creation of an Editor instance 1`] = `
           visible={true}
         >
           <div
-            className="ui-editor-quill sc-chPdSV fKAsme"
+            className="ui-editor-quill sc-eNQAEJ dRfFgB"
             disabled={false}
             id="editor"
           />

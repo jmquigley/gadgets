@@ -18,30 +18,69 @@ exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
   validators={Array []}
   visible={true}
 >
-  <div
-    className="ui-textfield-container textFieldContainer"
-  >
-    <div
-      className="ui-textfield textField normal"
-      style={
-        Object {
-          "border": "solid 1px silver",
-        }
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
+    }
+  >
+    <styled.div
+      className="ui-textfield-container"
+      style={Object {}}
     >
-      <input
-        className="textFieldInput"
-        disabled={false}
-        id=""
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+      <div
+        className="ui-textfield-container sc-dnqmqq efWnFk"
         style={Object {}}
-        type="text"
-      />
-    </div>
-  </div>
+      >
+        <styled.div
+          className="ui-textfield"
+          disabled={false}
+          noborder={false}
+          visible={true}
+        >
+          <div
+            className="ui-textfield sc-iwsKbI drrfKT"
+            disabled={false}
+          >
+            <styled.input
+              disabled={false}
+              id=""
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              sizing="normal"
+              style={Object {}}
+              type="text"
+              visible={true}
+            >
+              <input
+                className="sc-htoDjs fgOHaF"
+                disabled={false}
+                id=""
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                type="text"
+              />
+            </styled.input>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </TextField>
 `;
 
@@ -63,58 +102,115 @@ exports[`Test creating TextField and saving on blur 1`] = `
   validators={Array []}
   visible={true}
 >
-  <div
-    className="ui-textfield-container textFieldContainer"
-  >
-    <div
-      className="ui-textfield textField normal"
-      style={
-        Object {
-          "border": "solid 1px silver",
-        }
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
+    }
+  >
+    <styled.div
+      className="ui-textfield-container"
+      style={Object {}}
     >
-      <input
-        className="textFieldInput"
-        disabled={false}
-        id=""
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+      <div
+        className="ui-textfield-container sc-dnqmqq efWnFk"
         style={Object {}}
-        type="text"
-      />
-    </div>
-  </div>
+      >
+        <styled.div
+          className="ui-textfield"
+          disabled={false}
+          noborder={false}
+          visible={true}
+        >
+          <div
+            className="ui-textfield sc-iwsKbI drrfKT"
+            disabled={false}
+          >
+            <styled.input
+              disabled={false}
+              id=""
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              sizing="normal"
+              style={Object {}}
+              type="text"
+              visible={true}
+            >
+              <input
+                className="sc-htoDjs fgOHaF"
+                disabled={false}
+                id=""
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                type="text"
+              />
+            </styled.input>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </TextField>
 `;
 
 exports[`Test creation of a TextField control 1`] = `
-<div
-  className="ui-textfield-container textFieldContainer"
->
-  <div
-    className="ui-textfield textField normal test-class"
-    style={
-      Object {
-        "border": "solid 1px silver",
-      }
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
+  }
+>
+  <styled.div
+    className="ui-textfield-container"
+    style={Object {}}
   >
-    <input
-      className="textFieldInput"
+    <styled.div
+      className="ui-textfield test-class"
       disabled={false}
-      id=""
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      style={Object {}}
-      type="text"
-    />
-  </div>
-</div>
+      noborder={false}
+      visible={true}
+    >
+      <styled.input
+        className="test-class"
+        disabled={false}
+        id=""
+        innerRef={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        sizing="normal"
+        style={Object {}}
+        type="text"
+        visible={true}
+      />
+    </styled.div>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creation of a TextField with email validation 1`] = `
@@ -135,35 +231,83 @@ exports[`Test creation of a TextField with email validation 1`] = `
   validators={Array []}
   visible={true}
 >
-  <div
-    className="ui-textfield-container textFieldContainer"
-  >
-    <div
-      className="ui-textfield textField normal"
-      style={
-        Object {
-          "border": "solid 1px silver",
-        }
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
+    }
+  >
+    <styled.div
+      className="ui-textfield-container"
+      style={Object {}}
     >
-      <input
-        className="textFieldInput"
-        disabled={false}
-        id=""
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+      <div
+        className="ui-textfield-container sc-dnqmqq efWnFk"
         style={Object {}}
-        type="email"
-      />
-    </div>
-    <div
-      className="textFieldMessage small"
-    >
-       
-    </div>
-  </div>
+      >
+        <styled.div
+          className="ui-textfield"
+          disabled={false}
+          noborder={false}
+          visible={true}
+        >
+          <div
+            className="ui-textfield sc-iwsKbI drrfKT"
+            disabled={false}
+          >
+            <styled.input
+              disabled={false}
+              id=""
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              sizing="normal"
+              style={Object {}}
+              type="email"
+              visible={true}
+            >
+              <input
+                className="sc-htoDjs fgOHaF"
+                disabled={false}
+                id=""
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                type="email"
+              />
+            </styled.input>
+          </div>
+        </styled.div>
+        <styled.div
+          className="ui-textfield-validation-message"
+          disabled={false}
+          messageType={0}
+          sizing="small"
+          visible={true}
+        >
+          <div
+            className="ui-textfield-validation-message sc-gzVnrw fpmiFb"
+            disabled={false}
+          >
+            ​
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </TextField>
 `;
 
@@ -185,35 +329,83 @@ exports[`Test creation of a TextField with url validation 1`] = `
   validators={Array []}
   visible={true}
 >
-  <div
-    className="ui-textfield-container textFieldContainer"
-  >
-    <div
-      className="ui-textfield textField normal"
-      style={
-        Object {
-          "border": "solid 1px silver",
-        }
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
+    }
+  >
+    <styled.div
+      className="ui-textfield-container"
+      style={Object {}}
     >
-      <input
-        className="textFieldInput"
-        disabled={false}
-        id=""
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+      <div
+        className="ui-textfield-container sc-dnqmqq efWnFk"
         style={Object {}}
-        type="url"
-      />
-    </div>
-    <div
-      className="textFieldMessage small"
-    >
-       
-    </div>
-  </div>
+      >
+        <styled.div
+          className="ui-textfield"
+          disabled={false}
+          noborder={false}
+          visible={true}
+        >
+          <div
+            className="ui-textfield sc-iwsKbI drrfKT"
+            disabled={false}
+          >
+            <styled.input
+              disabled={false}
+              id=""
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              sizing="normal"
+              style={Object {}}
+              type="url"
+              visible={true}
+            >
+              <input
+                className="sc-htoDjs fgOHaF"
+                disabled={false}
+                id=""
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                type="url"
+              />
+            </styled.input>
+          </div>
+        </styled.div>
+        <styled.div
+          className="ui-textfield-validation-message"
+          disabled={false}
+          messageType={0}
+          sizing="small"
+          visible={true}
+        >
+          <div
+            className="ui-textfield-validation-message sc-gzVnrw fpmiFb"
+            disabled={false}
+          >
+            ​
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </TextField>
 `;
 
@@ -238,38 +430,89 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
   value=""
   visible={true}
 >
-  <div
-    className="ui-textfield-container textFieldContainer"
-  >
-    <div
-      className="ui-textfield textField normal"
-      style={
-        Object {
-          "border": "solid 1px silver",
-        }
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
+    }
+  >
+    <styled.div
+      className="ui-textfield-container"
+      style={Object {}}
     >
-      <input
-        className="textFieldInput"
-        disabled={false}
-        id=""
-        maxLength="10"
-        minLength="5"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+      <div
+        className="ui-textfield-container sc-dnqmqq efWnFk"
         style={Object {}}
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      className="textFieldMessage small"
-    >
-       
-    </div>
-  </div>
+      >
+        <styled.div
+          className="ui-textfield"
+          disabled={false}
+          noborder={false}
+          visible={true}
+        >
+          <div
+            className="ui-textfield sc-iwsKbI drrfKT"
+            disabled={false}
+          >
+            <styled.input
+              disabled={false}
+              id=""
+              innerRef={[Function]}
+              maxLength="10"
+              minLength="5"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              sizing="normal"
+              style={Object {}}
+              type="text"
+              value=""
+              visible={true}
+            >
+              <input
+                className="sc-htoDjs fgOHaF"
+                disabled={false}
+                id=""
+                maxLength="10"
+                minLength="5"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                type="text"
+                value=""
+              />
+            </styled.input>
+          </div>
+        </styled.div>
+        <styled.div
+          className="ui-textfield-validation-message"
+          disabled={false}
+          messageType={0}
+          sizing="small"
+          visible={true}
+        >
+          <div
+            className="ui-textfield-validation-message sc-gzVnrw fpmiFb"
+            disabled={false}
+          >
+            ​
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </TextField>
 `;
 
@@ -291,30 +534,69 @@ exports[`Test disabling of a TextField control 1`] = `
   validators={Array []}
   visible={true}
 >
-  <div
-    className="ui-textfield-container textFieldContainer"
-  >
-    <div
-      className="ui-textfield textField normal disabled nohover"
-      style={
-        Object {
-          "border": "solid 1px silver",
-        }
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
+    }
+  >
+    <styled.div
+      className="ui-textfield-container"
+      style={Object {}}
     >
-      <input
-        className="textFieldInput disabled"
-        disabled={true}
-        id=""
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+      <div
+        className="ui-textfield-container sc-dnqmqq efWnFk"
         style={Object {}}
-        type="text"
-      />
-    </div>
-  </div>
+      >
+        <styled.div
+          className="ui-textfield"
+          disabled={true}
+          noborder={false}
+          visible={true}
+        >
+          <div
+            className="ui-textfield sc-iwsKbI uObwk"
+            disabled={true}
+          >
+            <styled.input
+              disabled={true}
+              id=""
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              sizing="normal"
+              style={Object {}}
+              type="text"
+              visible={true}
+            >
+              <input
+                className="sc-htoDjs jZeXuL"
+                disabled={true}
+                id=""
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                type="text"
+              />
+            </styled.input>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </TextField>
 `;
 
@@ -336,30 +618,69 @@ exports[`Test making the TextField invisible 1`] = `
   validators={Array []}
   visible={false}
 >
-  <div
-    className="ui-textfield-container textFieldContainer"
-  >
-    <div
-      className="ui-textfield textField normal invisible"
-      style={
-        Object {
-          "border": "solid 1px silver",
-        }
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
+    }
+  >
+    <styled.div
+      className="ui-textfield-container"
+      style={Object {}}
     >
-      <input
-        className="textFieldInput"
-        disabled={false}
-        id=""
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
+      <div
+        className="ui-textfield-container sc-dnqmqq efWnFk"
         style={Object {}}
-        type="text"
-      />
-    </div>
-  </div>
+      >
+        <styled.div
+          className="ui-textfield"
+          disabled={false}
+          noborder={false}
+          visible={false}
+        >
+          <div
+            className="ui-textfield sc-iwsKbI drrfKT"
+            disabled={false}
+          >
+            <styled.input
+              disabled={false}
+              id=""
+              innerRef={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              sizing="normal"
+              style={Object {}}
+              type="text"
+              visible={false}
+            >
+              <input
+                className="sc-htoDjs WInOW"
+                disabled={false}
+                id=""
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                style={Object {}}
+                type="text"
+              />
+            </styled.input>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </TextField>
 `;
 

@@ -1272,6 +1272,9 @@ class App extends React.Component<AppProps, AppState> {
 			<h3>Disabled TextField</h3>
 			<TextField type="text" placeholder="disabled" disabled /><br />
 
+			<h3>Disabled TextFiled with search</h3>
+			<TextField type="text" placeholder="disabled" disabled useclear/><br />
+
 			<h3>Sizing</h3>
 			<TextField type="text" size="10" sizing={Sizing.xxsmall} placeholder="xxsmall" /><br/><br/>
 			<TextField type="text" size="10" sizing={Sizing.xsmall} placeholder="xsmall" /><br/><br/>

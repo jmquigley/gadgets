@@ -55,9 +55,11 @@ import {
 	BaseComponent,
 	BaseProps,
 	boxStyle,
+	disabled,
 	fontStyle,
 	getDefaultBaseProps,
 	getTheme,
+	invisible,
 	locationStyle,
 	Sizing
 } from '../shared';
@@ -82,11 +84,15 @@ export const FontAwesome: any = withProps<IconProps, HTMLElement>(styled.i)`
 	text-align: center;
 	${props => props.location && locationStyle[props.location]}
 	${props => props.sizing && fontStyle[props.sizing]}
+	${props => disabled(props)}
+	${props => invisible(props)}
 `;
 
 export const Image: any = withProps<IconProps, HTMLImageElement>(styled.img)`
 	${props => props.location && locationStyle[props.location]}
 	${props => props.sizing && boxStyle[props.sizing]}
+	${props => disabled(props)}
+	${props => invisible(props)}
 `;
 
 export class Icon extends BaseComponent<IconProps, undefined> {

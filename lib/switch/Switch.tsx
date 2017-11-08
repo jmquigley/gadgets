@@ -109,7 +109,7 @@ export const StyledButton: any = withProps<SwitchProps, HTMLDivElement>(styled.d
 	display: inline-block;
 	position: absolute;
 	top: 50%;
-	transition: all 0.5s ease;
+	transition: all ${props => props.theme.transitionDelay} ease;
 	transform: translateY(-50%);
 
 	width: ${(props: SwitchProps) => props.width || '1.0em'};

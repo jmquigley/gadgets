@@ -11,7 +11,8 @@ exports[`Test creation of an Icon control with icon 1`] = `
       "headerForegroundColor": "#ffffff",
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
-      "optionHoverColor": "#fd7400",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
   }
 >
@@ -57,7 +58,8 @@ exports[`Test creation of an Icon control with image 1`] = `
       "headerForegroundColor": "#ffffff",
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
-      "optionHoverColor": "#fd7400",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
   }
 >
@@ -92,6 +94,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
 .c0 {
   text-align: center;
   font-size: 1rem;
+  display: none !important;
+  width: 0 !important;
 }
 
 <Icon
@@ -127,7 +131,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
-        "optionHoverColor": "#fd7400",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
     }
   >
@@ -200,6 +205,13 @@ exports[`Test the disabling of the Icon control 1`] = `
 .c0 {
   text-align: center;
   font-size: 1rem;
+  cursor: default;
+  opacity: 0.33;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <Icon
@@ -235,7 +247,8 @@ exports[`Test the disabling of the Icon control 1`] = `
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
-        "optionHoverColor": "#fd7400",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
     }
   >

@@ -6,7 +6,6 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled, {ThemeProvider} from 'styled-components';
 import {sp} from 'util.constants';
 import {nilEvent} from 'util.toolbox';
 import {
@@ -17,6 +16,7 @@ import {
 	getTheme,
 	Sizing
 } from '../shared';
+import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 import {Title, TitleLayout, TitleProps} from '../title';
 
 export interface ItemProps extends BaseProps, TitleProps {
@@ -64,11 +64,17 @@ export function getDefaultItemProps(): ItemProps {
 		}));
 }
 
-export const ItemView: any = styled.li`
+export const HiddenButton: any = css`
+	display: none;
+	opacity: 0;
+	animation: fadeIn ${props => props.theme.transitionDelay};
+`;
+
+export const ItemView: any = withProps<ItemProps, HTMLLIElement>(styled.li)`
 	cursor: default;
 	display: flex;
 
-	${(props: ItemProps) => (!props.nohover) &&
+	${props => (!props.nohover) &&
 		'&:hover {background-color: #bedb39 !important;}'
 	}
 
@@ -78,15 +84,13 @@ export const ItemView: any = styled.li`
 	}
 `;
 
-export const ItemViewButton: any = styled.div`
+export const ItemViewButton: any = withProps<ItemProps, HTMLDivElement>(styled.div)`
 	display: inline-flex;
 	position: relative;
 	width: ${(props: ItemProps) => props.width || '2.0em'};
 
-	${(props: ItemProps) => props.sizing && fontStyle[props.sizing]};
-	${(props: ItemProps) => (props.hiddenRightButton || props.hiddenLeftButton) &&
-		'display: none; opacity: 0; animation: fadeIn 0.5s;'
-	}
+	${props => props.sizing && fontStyle[props.sizing]};
+	${props => (props.hiddenRightButton || props.hiddenLeftButton) && HiddenButton}
 
 	> i, > .ui-button-circle {
 		position: absolute;

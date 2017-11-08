@@ -57,7 +57,8 @@ exports[`Test disabling of a ListItem control 1`] = `
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
-        "optionHoverColor": "#fd7400",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
     }
   >
@@ -117,11 +118,12 @@ exports[`Test disabling of a ListItem control 1`] = `
             "headerForegroundColor": "#ffffff",
             "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
-            "optionHoverColor": "#fd7400",
+            "inputBorderColor": "#c0c0c0",
+            "transitionDelay": "0.5s",
           }
         }
       >
-        <Item__ItemView
+        <styled.li
           className="ui-item ui-listitem"
           id=""
           nohover={false}
@@ -133,7 +135,7 @@ exports[`Test disabling of a ListItem control 1`] = `
           style={Object {}}
         >
           <li
-            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
+            className="ui-item ui-listitem sc-gzVnrw EboAO"
             id=""
             onBlur={[Function]}
             onDoubleClick={[Function]}
@@ -202,7 +204,8 @@ exports[`Test disabling of a ListItem control 1`] = `
                     "headerForegroundColor": "#ffffff",
                     "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
-                    "optionHoverColor": "#fd7400",
+                    "inputBorderColor": "#c0c0c0",
+                    "transitionDelay": "0.5s",
                   }
                 }
               >
@@ -352,7 +355,8 @@ exports[`Test disabling of a ListItem control 1`] = `
                               "headerForegroundColor": "#ffffff",
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
-                              "optionHoverColor": "#fd7400",
+                              "inputBorderColor": "#c0c0c0",
+                              "transitionDelay": "0.5s",
                             }
                           }
                         >
@@ -401,7 +405,7 @@ exports[`Test disabling of a ListItem control 1`] = `
               </ThemeProvider>
             </Title>
           </li>
-        </Item__ItemView>
+        </styled.li>
       </ThemeProvider>
     </Item>
   </ThemeProvider>
@@ -465,7 +469,8 @@ exports[`Test making ListItem control invisible 1`] = `
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
-        "optionHoverColor": "#fd7400",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
     }
   >
@@ -525,11 +530,12 @@ exports[`Test making ListItem control invisible 1`] = `
             "headerForegroundColor": "#ffffff",
             "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
-            "optionHoverColor": "#fd7400",
+            "inputBorderColor": "#c0c0c0",
+            "transitionDelay": "0.5s",
           }
         }
       >
-        <Item__ItemView
+        <styled.li
           className="ui-item ui-listitem"
           id=""
           nohover={false}
@@ -541,7 +547,7 @@ exports[`Test making ListItem control invisible 1`] = `
           style={Object {}}
         >
           <li
-            className="ui-item ui-listitem Item__ItemView-iUFHZv dtkOyZ"
+            className="ui-item ui-listitem sc-gzVnrw EboAO"
             id=""
             onBlur={[Function]}
             onDoubleClick={[Function]}
@@ -610,7 +616,8 @@ exports[`Test making ListItem control invisible 1`] = `
                     "headerForegroundColor": "#ffffff",
                     "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
-                    "optionHoverColor": "#fd7400",
+                    "inputBorderColor": "#c0c0c0",
+                    "transitionDelay": "0.5s",
                   }
                 }
               >
@@ -760,7 +767,8 @@ exports[`Test making ListItem control invisible 1`] = `
                               "headerForegroundColor": "#ffffff",
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
-                              "optionHoverColor": "#fd7400",
+                              "inputBorderColor": "#c0c0c0",
+                              "transitionDelay": "0.5s",
                             }
                           }
                         >
@@ -809,7 +817,7 @@ exports[`Test making ListItem control invisible 1`] = `
               </ThemeProvider>
             </Title>
           </li>
-        </Item__ItemView>
+        </styled.li>
       </ThemeProvider>
     </Item>
   </ThemeProvider>
@@ -874,7 +882,8 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
       "headerForegroundColor": "#ffffff",
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
-      "optionHoverColor": "#fd7400",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
   }
 >
@@ -938,7 +947,8 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
       "headerForegroundColor": "#ffffff",
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
-      "optionHoverColor": "#fd7400",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
   }
 >

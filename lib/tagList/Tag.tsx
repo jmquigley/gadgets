@@ -79,7 +79,7 @@ export const DeleteButtonView: any = styled(ButtonCircle)`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	transition: opacity 0.5s ease-in-out;
+	transition: opacity ${props => props.theme.transitionDelay} ease-in-out;
 `;
 
 export const TagView: any = withProps<TagProps, HTMLDivElement>(styled.div)`

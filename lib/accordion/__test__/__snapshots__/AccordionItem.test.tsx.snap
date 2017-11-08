@@ -119,7 +119,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
-        "optionHoverColor": "#fd7400",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
     }
   >
@@ -182,11 +183,12 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
-                "optionHoverColor": "#fd7400",
+                "inputBorderColor": "#c0c0c0",
+                "transitionDelay": "0.5s",
               }
             }
           >
-            <Item__ItemView
+            <styled.li
               className="ui-item"
               id=""
               nohover={false}
@@ -262,7 +264,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -402,7 +405,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                   "headerForegroundColor": "#ffffff",
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
-                                  "optionHoverColor": "#fd7400",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "transitionDelay": "0.5s",
                                 }
                               }
                             >
@@ -451,7 +455,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                   </ThemeProvider>
                 </Title>
               </li>
-            </Item__ItemView>
+            </styled.li>
           </ThemeProvider>
         </Item>
       </ul>
@@ -579,7 +583,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
-        "optionHoverColor": "#fd7400",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
     }
   >
@@ -642,11 +647,12 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
-                "optionHoverColor": "#fd7400",
+                "inputBorderColor": "#c0c0c0",
+                "transitionDelay": "0.5s",
               }
             }
           >
-            <Item__ItemView
+            <styled.li
               className="ui-item"
               id=""
               nohover={false}
@@ -722,7 +728,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                         "headerForegroundColor": "#ffffff",
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
-                        "optionHoverColor": "#fd7400",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
                       }
                     }
                   >
@@ -862,7 +869,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                   "headerForegroundColor": "#ffffff",
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
-                                  "optionHoverColor": "#fd7400",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "transitionDelay": "0.5s",
                                 }
                               }
                             >
@@ -911,7 +919,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                   </ThemeProvider>
                 </Title>
               </li>
-            </Item__ItemView>
+            </styled.li>
           </ThemeProvider>
         </Item>
         <div
@@ -938,7 +946,8 @@ exports[`Test making the AccordionItem invisible 1`] = `
       "headerForegroundColor": "#ffffff",
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
-      "optionHoverColor": "#fd7400",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
   }
 >
@@ -1046,7 +1055,8 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       "headerForegroundColor": "#ffffff",
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
-      "optionHoverColor": "#fd7400",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
   }
 >
@@ -1110,7 +1120,8 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       "headerForegroundColor": "#ffffff",
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
-      "optionHoverColor": "#fd7400",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
   }
 >

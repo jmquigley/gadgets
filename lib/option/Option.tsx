@@ -110,7 +110,7 @@ export const OptionView: any = withProps<OptionProps, HTMLDivElement>(styled.div
 	}
 
 	> span:hover {
-		color: ${props => props.theme.optionHoverColor || Color.silver};
+		background-color: ${props => props.theme.hoverColor || Color.silver};
 	}
 `;
 

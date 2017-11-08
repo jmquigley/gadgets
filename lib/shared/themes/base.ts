@@ -11,7 +11,8 @@ const theme: ThemeProps = {
 	headerBackgroundColor: ColorScheme.c1,
 	headerHoverColor: ColorScheme.c4,
 	hoverColor: Color.silver,
-	optionHoverColor: ColorScheme.c5
+	inputBorderColor: Color.silver,
+	transitionDelay: '0.5s'
 };
 
 export default theme;

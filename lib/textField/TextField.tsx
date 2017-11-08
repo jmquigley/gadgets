@@ -17,7 +17,7 @@
  * - regex
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/textField.png" width="50%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/textField.png" width="60%" />
  *
  * ## Examples:
  *
@@ -81,6 +81,8 @@
  *
  * #### Styles
  * - `ui-textfield` - Placed on the `<div>` used to wrap the `<input>` field.
+ * - `ui-textfield-validation-message` - Placed on the `<div>` used to wrap the
+ * validation message when the input contains validation code.
  *
  * #### Properties
  * - `disabled: {boolean} (false)` - When true, the control is disabled
@@ -108,10 +110,19 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
+import {sp} from 'util.constants';
 import {nilEvent} from 'util.toolbox';
 import {ButtonCircle} from '../buttonCircle';
-import {BaseComponent, Color, Sizing} from '../shared';
+import {
+	BaseComponent,
+	Color,
+	disabled,
+	fontStyle,
+	getTheme,
+	invisible,
+	Sizing
+} from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 import {
 	validateEmail,
 	validateMaxLength,
@@ -119,6 +130,12 @@ import {
 	validateURL,
 	Validator
 } from './validator';
+
+export enum MessageType {
+	none,
+	error,
+	success
+}
 
 export interface TextFieldProps extends Partial<HTMLInputElement> {
 	disabled?: boolean;
@@ -160,46 +177,84 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 
 export interface TextFieldState {
 	message: string;
+	messageType: MessageType;
 	previousText: string;
 	valid: boolean;
 }
 
 const textTypes: any[] = ['text', 'email', 'search', 'password', 'tel', 'url'];
 
+export const ClearButtonView: any = withProps<TextFieldProps, HTMLDivElement>(styled.div)`
+	display: inline-flex;
+	margin: 0 2px;
+	opacity: 0;
+	padding: 1px 0;
+	transition: opacity ${props => props.theme.transitionDelay} ease-in-out;
+
+	${props => fontStyle[props.sizing]}
+`;
+
+export const MessageView: any = withProps<any, HTMLDivElement>(styled.div)`
+	background-color: unset;
+	border-color: unset;
+	color: ${props => props['messageType'] !== MessageType.success ? Color.error : Color.success};
+	display: block;
+
+	${props => disabled(props)}
+	${props => fontStyle[props['sizing']]}
+	${props => invisible(props)}
+`;
+
+export const StyledInput: any = withProps<TextFieldProps, HTMLInputElement>(styled.input)`
+	border: none;
+	box-sizing: border-box;
+	display: inline-flex;
+	font-size: inherit;
+	height: 100%;
+	min-height: 0;
+	min-width: 0;
+	outline: none;
+	padding: 2px 5px;
+	width: 100%;
+
+	${props => disabled(props)}
+	${props => fontStyle[props['sizing']]}
+	${props => invisible(props)}
+`;
+
+export const TextfieldContainerView: any = withProps<TextFieldProps, HTMLDivElement>(styled.div)`
+	display: inline-flex;
+	flex-direction: column;
+`;
+
+export const TextFieldView: any = withProps<TextFieldProps, HTMLDivElement>(styled.div)`
+	border: ${
+		props => props.noborder ? 'none' : 'solid 1px ' + props.theme.inputBorderColor
+	};
+	display: inherit;
+	padding: 1px 0;
+
+	&:hover .ui-textfield-clear-button {
+		opacity: ${props => !props.disabled ? '1.0;' : '0.0'};
+	}
+`;
+
 export class TextField extends BaseComponent<any, TextFieldState> {
 
 	public static readonly defaultProps: TextFieldProps = getDefaultTextFieldProps();
 
-	private _clearStyles: ClassNames = new ClassNames();
 	private _input: HTMLInputElement = null;
-	private _inputStyles: ClassNames = new ClassNames();
-	private _messageStyles: ClassNames = new ClassNames();
 	private _validators: Validator[] = null;
 	private _value: string = '';
 
 	constructor(props: TextFieldProps) {
-		super(props, require('./styles.css'), TextField.defaultProps.style);
+		super(props, {}, TextField.defaultProps.style);
 
-		this._inputStyles.add([
-			this.styles.textFieldInput
-		]);
-
-		this._messageStyles.add([
-			this.styles.textFieldMessage
-		]);
-
-		this._rootStyles.add([
-			'ui-textfield',
-			this.styles.textField
-		]);
-
-		this._clearStyles.add([
-			'ui-textfield-clear-button',
-			this.styles.clearButton
-		]);
+		this._classes.add(['ui-textfield']);
 
 		this.state = {
 			message: '',
+			messageType: MessageType.none,
 			previousText: props.value || '',
 			valid: true
 		};
@@ -235,7 +290,8 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			'handleRef'
 		);
 
-		this.componentWillUpdate(props);
+		this.componentWillReceiveProps(this.props);
+		this.componentWillUpdate(this.props);
 	}
 
 	get input(): any {
@@ -301,18 +357,17 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	private validate(value: string): boolean {
 		let ret: boolean = true;
 		let message: string = '';
+		let messageType: MessageType = MessageType.none;
 
 		if (value !== '' && this.props.usevalidation) {
 			ret = this._validators.every((it: Validator) => {
 
 				if (it.validate(value)) {
 					message = it.success;
-					this._messageStyles.on(this.styles.success);
-					this._messageStyles.off(this.styles.error);
+					messageType = MessageType.success;
 				} else {
 					message = it.failure;
-					this._messageStyles.off(this.styles.success);
-					this._messageStyles.on(this.styles.error);
+					messageType = MessageType.error;
 					return false;
 				}
 
@@ -322,42 +377,19 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 		this.setState({
 			message: message,
+			messageType: messageType,
 			valid: ret
 		});
 
 		return ret;
 	}
 
-	public componentWillUpdate(nextProps: any) {
-
+	public componentWillReceiveProps(nextProps: TextFieldProps) {
 		if ('size' in nextProps) {
 			this.inlineStyles = {
 				minWidth: `${(nextProps.size / 2.0) + 2}rem`
 			};
 		}
-
-		if (this.props.sizing !== nextProps['sizing']) {
-			this._messageStyles.off(this.fontStyle(this.props.sizing));
-			this._clearStyles.off(this.fontStyle(this.props.sizing));
-		}
-		this._messageStyles.on(this.prev().font.style);
-		this._clearStyles.on(this.fontStyle());
-
-		this._inputStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
-			this.styles.disabled
-		);
-
-		this._messageStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
-			this.styles.disabled
-		);
-
-		if (this.props.noborder) {
-			this.inlineStyles = {border: 'none'};
-		} else {
-			this.inlineStyles = {border: 'solid 1px silver'};
-		}
-
-		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
@@ -377,8 +409,12 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		let clearBtn: any = null;
 		if (this.props.useclear) {
 			clearBtn = (
-				<div className={this._clearStyles.classnames}>
+				<ClearButtonView
+					className="ui-textfield-clear-button"
+					sizing={this.prev().type}
+				>
 					<ButtonCircle
+						disabled={props.disabled}
 						iconName="times"
 						onClick={this.handleClearButton}
 						sizing={this.prev().type}
@@ -387,38 +423,52 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 							borderColor: Color.error,
 							color: Color.error
 						}}
+						visible={visible}
 					/>
-				</div>
+				</ClearButtonView>
 			);
 		}
 
 		return (
-			<div className={`ui-textfield-container ${this.styles.textFieldContainer}`}>
-				<div
-					className={this._rootStyles.classnames}
+			<ThemeProvider theme={getTheme()} >
+				<TextfieldContainerView
+					className="ui-textfield-container"
 					style={this.inlineStyles}
 				>
-					<input
-						{...props}
-						className={this._inputStyles.classnames}
-						onBlur={this.handleBlur}
-						onChange={this.handleChange}
-						onKeyDown={this.handleKeyDown}
-						onKeyPress={this.handleKeyPress}
-						ref={this.handleRef}
-					/>
-					{clearBtn}
-				</div>
-				{this.props.usevalidation
-					?
-					<div className={this._messageStyles.classnames}>
-						{this.props.usevalidation ? '\u00a0' : null}
-						{this.state.message}
-					</div>
+					<TextFieldView
+						disabled={props.disabled}
+						className={this.classes}
+						noborder={this.props.noborder}
+						visible={visible}
+					>
+						<StyledInput
+							{...props}
+							innerRef={this.handleRef}
+							onBlur={this.handleBlur}
+							onChange={this.handleChange}
+							onKeyDown={this.handleKeyDown}
+							onKeyPress={this.handleKeyPress}
+							sizing={sizing}
+							visible={visible}
+						/>
+						{clearBtn}
+					</TextFieldView>
+					{this.props.usevalidation ?
+						<MessageView
+							className="ui-textfield-validation-message"
+							disabled={props.disabled}
+							messageType={this.state.messageType}
+							sizing={this.prev().type}
+							visible={visible}
+						>
+							{this.props.usevalidation ? sp : null}
+							{this.state.message}
+						</MessageView>
 					:
-					null
-				}
-			</div>
+						null
+					}
+				</TextfieldContainerView>
+			</ThemeProvider>
 		);
 	}
 }

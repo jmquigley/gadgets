@@ -65,8 +65,12 @@ import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
-	getDefaultBaseProps
+	disabled,
+	getDefaultBaseProps,
+	getTheme,
+	invisible
 } from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 import {TextField} from '../textField';
 import {Tag} from './Tag';
 
@@ -103,13 +107,37 @@ export interface TagListState {
 	tags?: string[];
 }
 
+export const StyledIcon: any = styled(Icon)`
+	margin-right: 5px;
+`;
+
+export const StyledTextField: any = styled(TextField)`
+	margin-left: 3px;
+
+	> input {
+		border: none;
+
+		&::-webkit-input-placeholder {
+			color: silver;
+			opacity: 0.5;
+		}
+	}
+`;
+
+export const TagListView: any = withProps<TagListProps, HTMLDivElement>(styled.div)`
+	display: inline;
+
+	${props => disabled(props)}
+	${props => invisible(props)}
+`;
+
 export class TagList extends BaseComponent<TagListProps, TagListState> {
 
 	private tags: SortedList<string> | List<string>;
 	public static readonly defaultProps: TagListProps = getDefaultTagListProps();
 
 	constructor(props: TagListProps) {
-		super(props, require('./styles.css'));
+		super(props, {}, TagList.defaultProps.style);
 
 		if (props.nosort) {
 			this.tags = new List<string>(props.tags);
@@ -117,10 +145,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 			this.tags = new SortedList<string>(props.tags);
 		}
 
-		this._rootStyles.add([
-			'ui-taglist',
-			this.styles.tagList
-		]);
+		this._classes.add(['ui-taglist']);
 
 		this.state = {
 			inputTextSize: 1,
@@ -210,24 +235,30 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		});
 
 		return (
-			<div className={this._rootStyles.classnames}>
-				<Icon iconName="tags" />
-				{tags}
-				{this.props.useinput &&
-				<TextField
-					className={this.styles.tagListInput}
-					disabled={this.props.disabled}
-					noborder
-					onBlur={this.handleBlur}
-					onChange={this.handleChange}
-					onKeyDown={this.handleKeyDown}
-					onKeyPress={this.handleKeyPress}
-					placeholder="new"
-					size={this.state.inputTextSize}
-					visible={this.props.visible}
-				/>
-				}
-			</div>
+			<ThemeProvider theme={getTheme()} >
+				<TagListView className={this.classes}>
+					<StyledIcon
+						disabled={this.props.disabled}
+						iconName="tags"
+						visible={this.props.visible}
+					/>
+					{tags}
+					{this.props.useinput &&
+					<StyledTextField
+						className={this.styles.tagListInput}
+						disabled={this.props.disabled}
+						noborder
+						onBlur={this.handleBlur}
+						onChange={this.handleChange}
+						onKeyDown={this.handleKeyDown}
+						onKeyPress={this.handleKeyPress}
+						placeholder="new"
+						size={this.state.inputTextSize}
+						visible={this.props.visible}
+					/>
+					}
+				</TagListView>
+			</ThemeProvider>
 		);
 	}
 }

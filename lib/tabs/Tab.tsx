@@ -163,7 +163,7 @@ export const TabView: any = withProps<TabProps, HTMLDivElement>(styled.div)`
 	.ui-button {
 		display: none;
 		opacity: 0;
-		animation: fadeIn 0.5s;
+		animation: fadeIn ${props => props.theme.transitionDelay};
 	}
 
 	${props => disabled(props)}
