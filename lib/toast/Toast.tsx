@@ -1,7 +1,10 @@
 /**
  * A popup that contains a message on the top or bottom of that container.
  * The message will disapper after N seconds.  Contains an X button to remove
- * sooner if the user desires.  It contains four basic modes:
+ * sooner if the user desires.  A toast can also be persistent and then it
+ * will only disappear when the user clicks the close button.
+ *
+ * It contains four basic modes:
  *
  * - info
  * - warning
@@ -12,7 +15,10 @@
  * position of "relative".  The control relies on absolute positioning so the
  * parent needs to be relative for it to work.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/toast.png" width="50%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Toast, ToastLevel, ToastType} from 'gadgets';
@@ -38,6 +44,7 @@
  * </Toast>
  * ```
  *
+ * ## API
  * #### Events
  * - `onClick()` - If the user clicks the close button this event is invoked.
  * - `onClose()` - when the message is closed or disappers this callback is
@@ -78,13 +85,17 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
-import {BaseComponent, BaseProps, getDefaultBaseProps, Sizing} from '../shared';
-import styled from '../shared/themed-components';
-
-const styles = require('./styles.css');
+import {
+	BaseComponent,
+	BaseProps,
+	Color,
+	fontStyle,
+	getDefaultBaseProps,
+	getTheme
+} from '../shared';
+import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 
 export enum ToastLevel {
 	info,
@@ -125,37 +136,82 @@ export interface ToastState {
 	visible: boolean;
 }
 
+export const ContentView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
+	align-items: center;
+	display: flex;
+	flex: 6;
+	padding: 12px 15px;
+
+	span {
+		display: inline-flex;
+		user-select: auto;
+	}
+
+	${props => fontStyle[props.sizing]}
+`;
+
+export const Error: any = css`
+	border-color: ${Color.error};
+	background-color: ${Color.error};
+`;
+
+export const Info: any = css`
+	border-color: ${Color.info};
+	background-color: ${Color.info};
+`;
+
+export const Warning: any = css`
+	border-color: ${Color.warning};
+	background-color: ${Color.warning};
+`;
+
+export const Hide: any = css`
+	opacity: 0;
+	z-index: -1;
+	animation: fadeOut 1.0s;
+`;
+
 export const StyledButton: any = styled(Button)`
 	flex: 1;
 	height: unset;
+`;
+
+export const ToastView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
+	bottom: ${props => props.bottom ? '0' : 'uset'};
+	color: white;
+	display: flex;
+	left: 50%;
+	margin: 0 auto;
+	opacity: 1.0;
+	position: absolute;
+	top: ${props => props.bottom ? 'unset' : '0'};
+	transform: translateX(-50%);
+	width: 70%;
+	z-index: auto;
+
+	${props => {
+		switch (props.level) {
+			case ToastLevel.warning: return Warning;
+			case ToastLevel.error: return Error;
+			case ToastLevel.info:
+			default:
+				return Info;
+		}
+	}};
+
+	${props => props.xcss}
 `;
 
 export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public static readonly defaultProps: ToastProps = getDefaultToastProps();
 
-	private static readonly _resetMessageLevels = [
-		styles.info,
-		styles.warning,
-		styles.error
-	];
-
-	private _buttonSizing: Sizing;
-	private _contentStyles: ClassNames = new ClassNames();
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
-		super(props, styles, Toast.defaultProps.style);
+		super(props, {}, Toast.defaultProps.style);
 
-		this._rootStyles.add([
-			'ui-toast',
-			this.styles.toast
-		]);
-
-		this._contentStyles.add([
-			'ui-toast-content',
-			this.styles.content
-		]);
+		this._classes.add(['ui-toast']);
 
 		this.state = {
 			visible: props.show
@@ -203,60 +259,32 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		}
 	}
 
-	public componentWillUpdate(nextProps: ToastProps, nextState: ToastState) {
-
-		this._buttonSizing = this.next(nextProps.sizing).type;
-
-		if (nextProps.level !== this.props.level) {
-			this._rootStyles.reset(Toast._resetMessageLevels);
-		}
-
-		switch (nextProps.level) {
-			case ToastLevel.info:
-				this._rootStyles.on(this.styles.info);
-				break;
-
-			case ToastLevel.warning:
-				this._rootStyles.on(this.styles.warning);
-				break;
-
-			case ToastLevel.error:
-				this._rootStyles.on(this.styles.error);
-				break;
-		}
-
-		this._rootStyles.onIfElse(nextProps.bottom)(
-			this.styles.toastBottom
-		)(
-			this.styles.toastTop
-		);
-
-		this._rootStyles.onIf(!nextState.visible)(
-			this.styles.hide
-		);
-
-		this.updateFontStyle(this._contentStyles, nextProps, this.props);
-		super.componentWillUpdate(nextProps, nextState);
-	}
-
 	public render() {
 		return (
-			<div
-				className={this._rootStyles.classnames}
-				style={this.inlineStyles}
-			>
-				<div className={this._contentStyles.classnames}>
-					<span>{this.props.children}</span>
-				</div>
-				<StyledButton
-					iconName="times"
-					onClick={this.handleClose}
-					sizing={this._buttonSizing}
-					style={{
-						color: 'white'
-					}}
-				/>
-			</div>
+			<ThemeProvider theme={getTheme()} >
+				<ToastView
+					bottom={this.props.bottom}
+					className={this.classes}
+					level={this.props.level}
+					style={this.inlineStyles}
+					xcss={!this.state.visible && Hide}
+				>
+					<ContentView
+						className="ui-toast-content"
+						sizing={this.props.sizing}
+					>
+						<span>{this.props.children}</span>
+					</ContentView>
+					<StyledButton
+						iconName="times"
+						onClick={this.handleClose}
+						sizing={this.next(this.props.sizing).type}
+						style={{
+							color: 'white'
+						}}
+					/>
+				</ToastView>
+			</ThemeProvider>
 		);
 	}
 }

@@ -1,26 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a Toast control 1`] = `
-<div
-  className="ui-toast toast info toastTop normal test-class"
-  style={Object {}}
->
-  <div
-    className="ui-toast-content content normal"
-  >
-    <span />
-  </div>
-  <Styled(Button)
-    iconName="times"
-    onClick={[Function]}
-    sizing="large"
-    style={
-      Object {
-        "color": "white",
-      }
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
-  />
-</div>
+  }
+>
+  <styled.div
+    bottom={false}
+    className="ui-toast test-class"
+    level={0}
+    style={Object {}}
+    xcss={false}
+  >
+    <styled.div
+      className="ui-toast-content"
+      sizing="normal"
+    >
+      <span />
+    </styled.div>
+    <Styled(Button)
+      iconName="times"
+      onClick={[Function]}
+      sizing="large"
+      style={
+        Object {
+          "color": "white",
+        }
+      }
+    />
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test retrieval of Toast props object 1`] = `
