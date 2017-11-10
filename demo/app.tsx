@@ -929,6 +929,9 @@ class App extends React.Component<AppProps, AppState> {
 			<Option text="colored" optionType={OptionType.square} style={{color: 'yellow', backgroundColor: 'black'}} /><br/>
 			<br/>
 
+			<Option disabled text="disabled" optionType={OptionType.square} /><br/>
+			<br/>
+
 			<Option text="xxsmall" sizing={Sizing.xxsmall} /><br/>
 			<Option text="xsmall" sizing={Sizing.xsmall} /><br/>
 			<Option text="small" sizing={Sizing.small} /><br/>

@@ -116,7 +116,7 @@ import {ClassNames} from 'util.classnames';
 import {getUUID, nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
-import {Divider, DividerType} from '../divider';
+import {Divider} from '../divider';
 import {Dropdown, DropdownOption} from '../dropdown';
 import {List, ListItem} from '../list';
 import {
@@ -170,7 +170,7 @@ export const EditorContainer: any = withProps<EditorProps, HTMLDivElement>(style
 	display: flex;
 	flex-direction: column;
 	height: inherit;
-	min-width: 600px;
+	min-width: 625px;
 	width: inherit;
 `;
 
@@ -378,10 +378,10 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 								<ListItem title="h6" onSelect={this.handleSelect('6')} />
 							</List>
 						</ButtonDialog>
-						<Divider dividerType={DividerType.vertical} />
+						<Divider />
 						<Button iconName="undo" onClick={this._markup && this._markup.undo} />
 						<Button iconName="repeat" onClick={this._markup && this._markup.redo} />
-						<Divider dividerType={DividerType.vertical} />
+						<Divider />
 						<Dropdown
 							{...this.props}
 							defaultVal={this.props.defaultFont}
@@ -394,7 +394,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 							items={this._fontSizes}
 							onSelect={this._markup && this._markup.setFontSize}
 						/>
-						<Divider dividerType={DividerType.vertical} />
+						<Divider />
 						<Dropdown
 							{...this.props}
 							defaultVal={'markdown'}

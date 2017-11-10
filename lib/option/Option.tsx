@@ -60,8 +60,10 @@ import {
 	BaseComponent,
 	BaseProps,
 	Color,
+	disabled,
 	getDefaultBaseProps,
-	getTheme
+	getTheme,
+	invisible
 } from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
@@ -110,8 +112,11 @@ export const OptionView: any = withProps<OptionProps, HTMLDivElement>(styled.div
 	}
 
 	> span:hover {
-		background-color: ${props => props.theme.hoverColor || Color.silver};
+		background-color: ${props => props.disabled ? 'unset' : props.theme.hoverColor || Color.silver};
 	}
+
+	${props => disabled(props)}
+	${props => invisible(props)}
 `;
 
 export class Option extends BaseComponent<OptionProps, undefined> {
@@ -179,9 +184,11 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 		return(
 			<ThemeProvider theme={getTheme()} >
 				<OptionView
+					disabled={this.props.disabled}
 					className={this.classes}
 					onClick={this.handleClick}
 					style={this.inlineStyles}
+					visible={this.props.visible}
 				>
 					<ButtonToggle
 						{...this.props}

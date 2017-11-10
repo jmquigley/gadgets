@@ -93,7 +93,7 @@ export class Divider extends BaseComponent<DividerProps, undefined> {
 				<DividerView
 					className={this.classes}
 					style={this.inlineStyles}
-					width={this.fontSizePX(this.props.sizing, 0.5)}
+					width={this.fontSizePX(this.props.sizing, 0.25)}
 				>
 					{this.props.dividerType}
 				</DividerView>

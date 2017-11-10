@@ -41,10 +41,10 @@ import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
-	DisabledCSS,
+	disabled,
 	getDefaultBaseProps,
 	getTheme,
-	InvisibleCSS,
+	invisible,
 	Sizing
 } from '../shared';
 import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
@@ -88,8 +88,8 @@ export const ButtonView: any = withProps<ButtonProps, HTMLDivElement>(styled.div
 		background-color: ${props => props.theme.hoverColor} ${props => props.style.backgroundColor && '!important'};
 	}
 
-	${props => props.disabled && DisabledCSS}
-	${props => !props.visible && InvisibleCSS}
+	${props => disabled(props)}
+	${props => invisible(props)}
 `;
 
 export class Button extends BaseComponent<ButtonProps, undefined> {

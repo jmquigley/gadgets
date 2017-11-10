@@ -5,6 +5,7 @@
 	.pager {
 		display: inline-flex;
 		width: 99%;
+        height: 100%;
 	}
 
 	.pager > :global(.ui-textfield-container) {
@@ -16,16 +17,9 @@
 		width: 3em;
 	}
 
-	.spacer {
-		display: inline-block;
-		width: 0.25em;
-		height: inherit;
-		flex: none;
-	}
-
 	.pagerDialog {
 		flex: none;
-		height: inherit;
+		height: unset;
 		width: 7%;
 	}
 

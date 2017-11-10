@@ -91,6 +91,7 @@ import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
 import {ButtonText} from '../buttonText';
+import {Divider} from '../divider';
 import {Icon} from '../icon';
 import {List, ListDivider, ListItem} from '../list';
 import {
@@ -694,7 +695,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					iconName="angle-double-right"
 					onClick={this.moveToEnd}
 				/>
-				<div className={this.styles.spacer} />
+				<Divider />
 				{this.props.useinput ?
 				<TextField
 					className={this.styles.pagerInput}
@@ -712,7 +713,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				:
 					null
 				}
-				<div className={this.styles.spacer} />
+				<Divider />
 				<ButtonDialog
 					{...this.props}
 					className={this.styles.pagerDialog}

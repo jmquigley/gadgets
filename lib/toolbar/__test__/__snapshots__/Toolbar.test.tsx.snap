@@ -23,7 +23,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
       className="ui-toolbar-group"
       justify={2}
     >
-      <div
+      <styled.div
         key="0"
         style={
           Object {
@@ -59,7 +59,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
           width=""
           xcss={null}
         />
-      </div>
+      </styled.div>
     </styled.div>
   </styled.div>
 </ThemeProvider>
@@ -88,7 +88,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
       className="ui-toolbar-group"
       justify={0}
     >
-      <div
+      <styled.div
         key="0"
         style={
           Object {
@@ -124,7 +124,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
           width=""
           xcss={null}
         />
-      </div>
+      </styled.div>
     </styled.div>
   </styled.div>
 </ThemeProvider>
@@ -153,7 +153,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
       className="ui-toolbar-group"
       justify={1}
     >
-      <div
+      <styled.div
         key="0"
         style={
           Object {
@@ -189,7 +189,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
           width=""
           xcss={null}
         />
-      </div>
+      </styled.div>
     </styled.div>
   </styled.div>
 </ThemeProvider>
@@ -218,7 +218,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
       className="ui-toolbar-group"
       justify={0}
     >
-      <div
+      <styled.div
         key="0"
         style={
           Object {
@@ -254,7 +254,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
           width=""
           xcss={null}
         />
-      </div>
+      </styled.div>
     </styled.div>
   </styled.div>
 </ThemeProvider>
@@ -283,7 +283,7 @@ exports[`Test making the Toolbar invisible 1`] = `
       className="ui-toolbar-group"
       justify={0}
     >
-      <div
+      <styled.div
         key="0"
         style={
           Object {
@@ -319,7 +319,7 @@ exports[`Test making the Toolbar invisible 1`] = `
           width=""
           xcss={null}
         />
-      </div>
+      </styled.div>
     </styled.div>
   </styled.div>
 </ThemeProvider>

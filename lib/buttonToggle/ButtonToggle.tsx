@@ -101,11 +101,13 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 	}
 
 	public handleClick() {
-		this.setState({
-			toggle: !this.state.toggle
-		}, () => {
-			this.props.onClick(this.state.toggle);
-		});
+		if (!this.props.disabled && this.props.visible) {
+			this.setState({
+				toggle: !this.state.toggle
+			}, () => {
+				this.props.onClick(this.state.toggle);
+			});
+		}
 	}
 
 	public componentWillUpdate(nextProps: ButtonToggleProps, nextState: ButtonToggleState) {
@@ -133,7 +135,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 					className={this.classes}
 					iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
 					noripple
-					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+					onClick={this.handleClick}
 					style={this.inlineStyles}
 				/>
 			</ThemeProvider>

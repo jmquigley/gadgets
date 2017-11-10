@@ -18,6 +18,7 @@ exports[`Creation of the Option control 1`] = `
 >
   <styled.div
     className="ui-option test-class"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -25,6 +26,7 @@ exports[`Creation of the Option control 1`] = `
         "color": "inherit",
       }
     }
+    visible={true}
   >
     <ButtonToggle
       bgColorOff="inherit"
@@ -118,6 +120,7 @@ exports[`Test Option control click event 1`] = `
   >
     <styled.div
       className="ui-option"
+      disabled={false}
       onClick={[Function]}
       style={
         Object {
@@ -125,9 +128,11 @@ exports[`Test Option control click event 1`] = `
           "color": "inherit",
         }
       }
+      visible={true}
     >
       <div
-        className="ui-option sc-bxivhb gPXVlt"
+        className="ui-option sc-bxivhb jWadyl"
+        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -399,6 +404,7 @@ exports[`Test disabling of the Option control 1`] = `
   >
     <styled.div
       className="ui-option"
+      disabled={true}
       onClick={[Function]}
       style={
         Object {
@@ -406,9 +412,11 @@ exports[`Test disabling of the Option control 1`] = `
           "color": "inherit",
         }
       }
+      visible={true}
     >
       <div
-        className="ui-option sc-bxivhb gPXVlt"
+        className="ui-option sc-bxivhb fYpOfz"
+        disabled={true}
         onClick={[Function]}
         style={
           Object {
@@ -680,6 +688,7 @@ exports[`Test making the Option control invisible 1`] = `
   >
     <styled.div
       className="ui-option"
+      disabled={false}
       onClick={[Function]}
       style={
         Object {
@@ -687,9 +696,11 @@ exports[`Test making the Option control invisible 1`] = `
           "color": "inherit",
         }
       }
+      visible={false}
     >
       <div
-        className="ui-option sc-bxivhb gPXVlt"
+        className="ui-option sc-bxivhb cNLsAc"
+        disabled={false}
         onClick={[Function]}
         style={
           Object {

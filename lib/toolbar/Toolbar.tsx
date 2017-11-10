@@ -95,7 +95,7 @@ export const ToolbarView: any = withProps<ToolbarProps, HTMLDivElement>(styled.d
 	padding: 3px 2px;
 `;
 
-export const ToolbarContainerView: any  = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
+export const ToolbarContainerView: any = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
 	align-items: center;
 	display: flex;
 	padding: 2px 0 1px 0;
@@ -107,6 +107,10 @@ export const ToolbarContainerView: any  = withProps<ToolbarProps, HTMLDivElement
 			default: return('');
 		}
 	}}
+`;
+
+export const ToolbarElementView: any = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
+	box-sizing: border-box;
 `;
 
 export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
@@ -160,7 +164,8 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						break;
 
 					case Switch.name:
-						style['margin'] = '0 4px';
+						style['padding-top'] = '0.1em';
+						style['margin'] = '0 6px';
 						break;
 
 					case 'StyledComponent':
@@ -179,7 +184,14 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 					visible: this.props.visible
 				});
 
-				components.push(<div key={this._keys.at(idx)} style={style}>{newChild}</div>);
+				components.push(
+					<ToolbarElementView
+						key={this._keys.at(idx)}
+						style={style}
+					>
+						{newChild}
+					</ToolbarElementView>
+				);
 			}
 		});
 
