@@ -55,7 +55,6 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ClassNames} from 'util.classnames';
 import {BinaryTree} from 'util.ds';
 import {Keys} from 'util.keys';
 import {Button} from '../button';
@@ -70,12 +69,12 @@ import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
+	getTheme,
 	Justify
 } from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 import {Switch} from '../switch';
 import {TextField} from '../textField';
-
-const styles = require('./styles.css');
 
 export interface ToolbarProps extends BaseProps {
 	justify?: Justify;
@@ -89,17 +88,32 @@ export function getDefaultToolbarProps(): ToolbarProps {
 	);
 }
 
+export const ToolbarView: any = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
+	border: solid 1px silver;
+	box-sizing: border-box;
+	display: flex;
+	padding: 3px 2px;
+`;
+
+export const ToolbarContainerView: any  = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
+	align-items: center;
+	display: flex;
+	padding: 2px 0 1px 0;
+
+	${props => {
+		switch (props.justify) {
+			case Justify.center: return ('margin: auto;');
+			case Justify.right: return ('margin-left: auto;');
+			default: return('');
+		}
+	}}
+`;
+
 export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 
 	public static readonly defaultProps: ToolbarProps = getDefaultToolbarProps();
 
-	private _groupStyles: ClassNames = new ClassNames();
 	private _keys: Keys;
-	private static readonly _resetJustify = [
-		styles.right,
-		styles.center,
-		styles.left
-	];
 	private static readonly _whitelist = new BinaryTree([
 		Button.name,
 		ButtonCircle.name,
@@ -115,45 +129,12 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 	]);
 
 	constructor(props: ToolbarProps) {
-		super(props, styles);
+		super(props, {}, Toolbar.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
-
-		this._groupStyles.add([
-			'ui-toolbar-group',
-			this.styles.toolbarGroup
-		]);
-
-		this._rootStyles.add([
-			'ui-toolbar',
-			this.styles.toolbar
-		]);
+		this._classes.add(['ui-toolbar']);
 
 		this.componentWillUpdate(this.props);
-	}
-
-	public componentWillUpdate(nextProps: ToolbarProps) {
-
-		if (nextProps.justify !== this.props.justify) {
-			this._groupStyles.reset(Toolbar._resetJustify);
-		}
-
-		switch (nextProps.justify) {
-			case Justify.right:
-				this._groupStyles.on(this.styles.right);
-				break;
-
-			case Justify.center:
-				this._groupStyles.on(this.styles.center);
-				break;
-
-			case Justify.left:
-			default:
-				this._groupStyles.on(this.styles.left);
-				break;
-		}
-
-		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
@@ -162,7 +143,9 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 		React.Children.forEach(this.props.children, (child: any, idx: number) => {
 			if (Toolbar._whitelist.contains(child['type'].name)) {
 				const style = Object.assign({}, child['props'].style, {
-					height: this.fontSizePX(this.props.sizing, 1.5)
+					display: 'flex',
+					height: this.fontSizePX(this.props.sizing, 1.5),
+					margin: '0 2px'
 				});
 
 				switch (child['type'].name) {
@@ -173,8 +156,11 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						style['width'] = this.fontSizePX(this.props.sizing, 1.5);
 
 					case ButtonText.name:
-						style['margin'] = '0 1px 0 2px';
 						style['border'] = 'solid 1px silver';
+						break;
+
+					case Switch.name:
+						style['margin'] = '0 4px';
 						break;
 
 					case 'StyledComponent':
@@ -182,25 +168,32 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						delete style['height'];
 				}
 
+				if (child['type'].name === ButtonCircle.name) {
+					delete style['border'];
+				}
+
 				const newChild = React.cloneElement(child as any, {
-					className: this.styles.toolbarElement,
+					className: 'ui-toolbar-element',
 					disabled: this.props.disabled,
-					key: this._keys.at(idx),
 					sizing: this.props.sizing,
-					style: style,
 					visible: this.props.visible
 				});
 
-				components.push(newChild);
+				components.push(<div key={this._keys.at(idx)} style={style}>{newChild}</div>);
 			}
 		});
 
 		return(
-			<div className={this._rootStyles.classnames}>
-				<div className={this._groupStyles.classnames}>
-					{components}
-				</div>
-			</div>
+			<ThemeProvider theme={getTheme()} >
+				<ToolbarView className={this.classes}>
+					<ToolbarContainerView
+						className="ui-toolbar-group"
+						justify={this.props.justify}
+					>
+						{components}
+					</ToolbarContainerView>
+				</ToolbarView>
+			</ThemeProvider>
 		);
 	}
 }

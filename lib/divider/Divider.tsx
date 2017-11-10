@@ -69,8 +69,10 @@ export function getDefaultDividerProps(): DividerProps {
 }
 
 export const DividerView: any = withProps<DividerProps, HTMLDivElement>(styled.div)`
+	align-items: center;
 	color: ${props => props.theme.borderColor || Color.silver};
 	display: inline-flex;
+	justify-content: center;
 	opacity: 0.25;
 	width: ${props => props.width || '1.0em'};
 `;
