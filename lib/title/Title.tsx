@@ -26,15 +26,24 @@
  *
  * ## Examples:
  *
+ * #### Title as a string
  * ```javascript
  * import {Sizing, Title, TitleLayout} from 'gadgets';
  * <Title
  *     widget="widget"
  *     layout={TitleLayout.stacked}
  *     sizing={Sizing.small}>
- *     title string
+ *     title="string"
  * </Title>
  * ```
+ *
+ * #### Title as an object
+ * <Title
+ *     widget="widget"
+ *     layout={TitleLayout.stacked}
+ *     sizing={Sizing.small}>
+ *     title="string"
+ * </Title>
  *
  * ## API
  * #### Events

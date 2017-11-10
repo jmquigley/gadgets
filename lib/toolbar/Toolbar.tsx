@@ -168,8 +168,8 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						style['margin'] = '0 6px';
 						break;
 
-					case 'StyledComponent':
 					case TextField.name:
+					case 'StyledComponent':
 						delete style['height'];
 				}
 

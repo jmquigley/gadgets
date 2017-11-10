@@ -63,6 +63,7 @@ import {Divider} from '../divider';
 import {BaseComponent, BaseProps, getDefaultBaseProps, getTheme} from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 import {TextField} from '../textField';
+import {Title, TitleLayout} from '../title';
 import {Toolbar} from '../toolbar';
 
 export interface BrowserProps extends BaseProps {
@@ -95,6 +96,18 @@ export const BrowserContainer: any = withProps<BrowserProps, HTMLDivElement>(sty
 	flex-direction: column;
 	min-height: 500px;
 	min-width: 600px;
+
+	.ui-title-bar {
+		flex-grow: unset;
+		border: solid 1px ${props => props.theme.borderColor};
+		border-bottom: none;
+	}
+
+	.ui-title-widget {
+		display: flex;
+		justify-content: flex-end;
+		padding: 0 10px;
+	}
 `;
 
 export const BrowserContent: any = withProps<BrowserProps, HTMLIFrameElement>(styled.div)`
@@ -108,17 +121,16 @@ export const BrowserContent: any = withProps<BrowserProps, HTMLIFrameElement>(st
 `;
 
 export const BrowserToolbar: any = withProps<BrowserProps, HTMLDivElement>(styled(Toolbar))`
-	border: solid 1px ${props => props.theme.borderColor};
-	border-bottom: none;
+	border: none;
 `;
 
 export const URLTextField: any = withProps<BrowserProps, any>(styled(TextField))`
-	width: 17em;
+	width: 20em;
 `;
 
 export const SearchTextField: any = withProps<BrowserProps, any>(styled(TextField))`
 	border-radius: 45px;
-	width: 9em;
+	width: 12em;
 
 	input {
 		border-radius: inherit;
@@ -275,26 +287,34 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		return(
 			<ThemeProvider theme={getTheme()}>
 				<BrowserContainer className={this.classes} >
-					<BrowserToolbar className="ui-browser-toolbar" >
-						<Button iconName="arrow-left" onClick={this.handleBack} />
-						<Button iconName="arrow-right" onClick={this.handleForward} />
-						<Button iconName="refresh" onClick={this.handleReload} />
-						<Divider />
-						<Button iconName="home" onClick={this.handleHome} />
-						<URLTextField
-							onChange={this.handleURLChange}
-							onKeyPress={this.handleURLKeyPress}
-							value={this.state.uri}
-						/>
-						<Button iconName="camera-retro" onClick={this.handleSnapshot} />
-						<Divider />
-						<SearchTextField
-							onChange={this.handleSearch}
-							placeholder="search"
-							useclear
-							value={this.state.search}
-						/>
-					</BrowserToolbar>
+					<Title
+						layout={TitleLayout.threequarter}
+						nohover
+						noripple
+						title={
+							<BrowserToolbar className="ui-browser-toolbar" >
+								<Button iconName="arrow-left" onClick={this.handleBack} />
+								<Button iconName="arrow-right" onClick={this.handleForward} />
+								<Button iconName="refresh" onClick={this.handleReload} />
+								<Divider />
+								<Button iconName="home" onClick={this.handleHome} />
+								<URLTextField
+									onChange={this.handleURLChange}
+									onKeyPress={this.handleURLKeyPress}
+									value={this.state.uri}
+								/>
+								<Button iconName="camera-retro" onClick={this.handleSnapshot} />
+							</BrowserToolbar>
+						}
+						widget={
+							<SearchTextField
+								onChange={this.handleSearch}
+								placeholder="search"
+								useclear
+								value={this.state.search}
+							/>
+						}
+					/>
 					<BrowserContent
 						innerRef={this.handleRef}
 					/>
