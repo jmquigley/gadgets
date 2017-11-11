@@ -134,6 +134,7 @@ export interface BaseProps {
 	style?: Styles;
 	testing?: boolean;
 	theme?: any;
+	tooltip?: string;
 	visible?: boolean;
 	width?: string;
 	xcss?: any;
@@ -156,6 +157,7 @@ const defaultBaseProps: BaseProps = {
 	style: {},
 	testing: isTesting(),
 	theme: {},
+	tooltip: '',
 	visible: true,
 	width: '',
 	xcss: null

@@ -1,5 +1,6 @@
 import {
 	BaseComponent,
+	baseZIndex,
 	defaultSize
 } from './base';
 
@@ -42,6 +43,7 @@ import {
 export {
 	BaseComponent,
 	BaseProps,
+	baseZIndex,
 	borderStyle,
 	boxStyle,
 	Color,

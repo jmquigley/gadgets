@@ -55,6 +55,7 @@ import {FontStyle, Sizes, Sizing, Styling} from './sizing';
 
 const gstyles = require('./styles.css');
 
+export const baseZIndex: number = 9999;
 export const defaultSize: number = 16;
 
 export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {

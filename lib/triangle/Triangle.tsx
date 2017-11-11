@@ -76,12 +76,9 @@ export function getDefaultTriangleProps(): TriangleProps {
 export const SVGView: any = styled.svg`
 	transform: ${(props: TriangleProps) => {
 		switch (props.direction) {
-			case Direction.right:
-				return('rotate(90deg)');
-			case Direction.down:
-				return('rotate(180deg)');
-			case Direction.left:
-				return('rotate(270deg)');
+			case Direction.right: return('rotate(90deg)');
+			case Direction.down: return('rotate(180deg)');
+			case Direction.left: return('rotate(270deg)');
 			case Direction.up:
 			default:
 				return('rotate(0deg)');

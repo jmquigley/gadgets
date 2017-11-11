@@ -1547,46 +1547,46 @@ class App extends React.Component<AppProps, AppState> {
 			<h3>Simple</h3>
 			Hover over each square to see the Tooltip.<br/><br/><br/>
 			<div id="tooltipContainer">
-				<div className="tooltipCell topLeft">
+				<div id="tt-topLeft" className="tooltipCell topLeft">
 					topLeft
-					<Tooltip location={Location.topLeft}>{randomText}</Tooltip>
+					<Tooltip location={Location.topLeft} parent="tt-topLeft">{randomText}</Tooltip>
 				</div>
 
-				<div className="tooltipCell top">
+				<div id="tt-top" className="tooltipCell top">
 					top
-					<Tooltip location={Location.top}>{randomText}</Tooltip>
+					<Tooltip location={Location.top} parent="tt-top">{randomText}</Tooltip>
 				</div>
 
-				<div className="tooltipCell topRight">
+				<div id="tt-topRight" className="tooltipCell topRight">
 					topRight
-					<Tooltip location={Location.topRight}>{randomText}</Tooltip>
+					<Tooltip location={Location.topRight} parent="tt-topRight">{randomText}</Tooltip>
 				</div>
 
-				<div className="tooltipCell middleLeft">
+				<div id="tt-middleLeft" className="tooltipCell middleLeft">
 					middleLeft
-					<Tooltip location={Location.middleLeft}>{randomText}</Tooltip>
+					<Tooltip location={Location.middleLeft} parent="tt-middleLeft">{randomText}</Tooltip>
 				</div>
 
 				<div className="tooltipCell middle inactive">N/A</div>
 
-				<div className="tooltipCell middleRight">
+				<div id="tt-middleRight" className="tooltipCell middleRight">
 					middleRight
-					<Tooltip location={Location.middleRight}>{randomText}</Tooltip>
+					<Tooltip location={Location.middleRight} parent="tt-middleRight">{randomText}</Tooltip>
 				</div>
 
-				<div className="tooltipCell bottomLeft">
+				<div id="tt-bottomLeft" className="tooltipCell bottomLeft">
 					bottomLeft
-					<Tooltip location={Location.bottomLeft}>{randomText}</Tooltip>
+					<Tooltip location={Location.bottomLeft} parent="tt-bottomLeft">{randomText}</Tooltip>
 				</div>
 
-				<div className="tooltipCell bottom">
+				<div id="tt-bottom" className="tooltipCell bottom">
 					bottom
-					<Tooltip location={Location.bottom}>{randomText}</Tooltip>
+					<Tooltip location={Location.bottom} parent="tt-bottom">{randomText}</Tooltip>
 				</div>
 
-				<div className="tooltipCell bottomRight">
+				<div id="tt-bottomRight" className="tooltipCell bottomRight">
 					bottomRight
-					<Tooltip location={Location.bottomRight}>{randomText}</Tooltip>
+					<Tooltip location={Location.bottomRight} parent="tt-bottomRight">{randomText}</Tooltip>
 				</div>
 			</div>
 
@@ -1595,6 +1595,7 @@ class App extends React.Component<AppProps, AppState> {
 			<div id="tooltipStyleExample">
 				<Tooltip
 					location={Location.middleRight}
+					parent="tooltipStyleExample"
 					style={{
 						color: '#fd7400',
 						backgroundColor: '#004358'

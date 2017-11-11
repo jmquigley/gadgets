@@ -194,20 +194,6 @@ section {
 	background-color: gray;
 }
 
-#tooltipContainer .topLeft:hover > .ui-tooltip,
-#tooltipContainer .top:hover > .ui-tooltip,
-#tooltipContainer .topRight:hover > .ui-tooltip,
-#tooltipContainer .middleLeft:hover > .ui-tooltip,
-#tooltipContainer .middleRight:hover > .ui-tooltip,
-#tooltipContainer .bottomLeft:hover > .ui-tooltip,
-#tooltipContainer .bottom:hover > .ui-tooltip,
-#tooltipContainer .bottomRight:hover > .ui-tooltip,
-#tooltipStyleExample:hover > .ui-tooltip
-{
-	opacity: 1.0;
-	/* 	z-index: 99999; */
-}
-
 #tooltipStyleExample {
 	display: flex;
 	position: relative;
