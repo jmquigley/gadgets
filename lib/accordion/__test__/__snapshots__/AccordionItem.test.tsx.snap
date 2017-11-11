@@ -15,8 +15,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -486,8 +486,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 

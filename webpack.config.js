@@ -53,7 +53,6 @@ module.exports = {
 		extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
 		alias: {
 			"immutable": path.resolve(__dirname, 'node_modules', 'immutable', 'dist', 'immutable.min.js'),
-			"jquery": path.resolve(__dirname, 'node_modules', 'jquery', 'dist', 'jquery.min.js'),
 			"lodash": path.resolve(__dirname, 'node_modules', 'lodash', 'lodash.min.js'),
 			"quill": path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.min.js'),
 			"react$": path.resolve(__dirname, 'node_modules', 'react', 'umd', 'react.production.min.js'),
@@ -127,12 +126,6 @@ module.exports = {
 		constants,
 		new CircularDependencyPlugin({failOnError: true}),
 		new ExtractTextPlugin({filename: "styles.css"}),
-		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery",
-			"window.jQuery": "jquery",
-			"window.$": "jquery"
-		}),
 		new webpack.optimize.ModuleConcatenationPlugin(),
 		new CopyWebpackPlugin([{
 			from: 'node_modules/quill-markup/public/highlights/**/*.css',
