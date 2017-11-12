@@ -40,6 +40,8 @@ exports[`Create an empty TabContainer instance 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -77,7 +79,7 @@ exports[`Create an empty TabContainer instance 1`] = `
       xcss={null}
     >
       <div
-        className="ui-tab-container sc-gZMcBi blvbTe"
+        className="ui-tab-container sc-jTzLTM inIIxK"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -136,7 +138,7 @@ exports[`Create an empty TabContainer instance 1`] = `
             }
           >
             <div
-              className="ui-tab-content sc-dnqmqq crzACo"
+              className="ui-tab-content sc-gqjmRU fpAAsq"
               style={Object {}}
             />
           </styled.div>
@@ -187,6 +189,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -224,7 +228,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
       xcss={null}
     >
       <div
-        className="ui-tab-container sc-gZMcBi blvbTe"
+        className="ui-tab-container sc-jTzLTM inIIxK"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -523,7 +527,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             }
           >
             <div
-              className="ui-tab-bar sc-htoDjs exSalX"
+              className="ui-tab-bar sc-gZMcBi frIXce"
               style={Object {}}
             >
               <Tab
@@ -571,6 +575,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -605,7 +611,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw bMiGxl"
+                      className="ui-tab ui-selected sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -698,6 +704,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -710,7 +718,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -796,7 +804,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -894,12 +902,14 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -914,7 +924,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -1012,7 +1022,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -1078,6 +1088,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -1085,13 +1097,15 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="0"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="0"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -1130,6 +1144,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -1231,6 +1247,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -1265,7 +1283,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw bMiGxl"
+                      className="ui-tab sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -1358,6 +1376,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -1370,7 +1390,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -1456,7 +1476,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -1554,12 +1574,14 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -1574,7 +1596,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -1672,7 +1694,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -1738,6 +1760,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -1745,13 +1769,15 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="1"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="1"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -1790,6 +1816,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -1891,6 +1919,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -1925,7 +1955,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw bMiGxl"
+                      className="ui-tab sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -2018,6 +2048,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -2030,7 +2062,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -2116,7 +2148,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -2214,12 +2246,14 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -2234,7 +2268,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -2332,7 +2366,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -2398,6 +2432,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -2405,13 +2441,15 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="2"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="2"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -2450,6 +2488,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -2540,7 +2580,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                   className="ui-tab-navigation"
                 >
                   <div
-                    className="ui-tab-navigation sc-iwsKbI dirZfA"
+                    className="ui-tab-navigation sc-VigVT elMmxa"
                   >
                     <Button
                       className=""
@@ -2578,6 +2618,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -2585,13 +2627,15 @@ exports[`Test TabContainer retrieval functions 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -2630,6 +2674,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -2712,6 +2758,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -2719,13 +2767,15 @@ exports[`Test TabContainer retrieval functions 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -2764,6 +2814,8 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -2860,7 +2912,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
             }
           >
             <div
-              className="ui-tab-content sc-dnqmqq crzACo"
+              className="ui-tab-content sc-gqjmRU fpAAsq"
               style={Object {}}
             >
               #1
@@ -2913,6 +2965,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -2950,7 +3004,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
       xcss={null}
     >
       <div
-        className="ui-tab-container sc-gZMcBi blvbTe"
+        className="ui-tab-container sc-jTzLTM inIIxK"
         contentEditable={false}
         direction="right"
         disabled={true}
@@ -3249,7 +3303,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             }
           >
             <div
-              className="ui-tab-bar sc-htoDjs exSalX"
+              className="ui-tab-bar sc-gZMcBi frIXce"
               style={Object {}}
             >
               <Tab
@@ -3297,6 +3351,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -3331,7 +3387,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw hxVFFe"
+                      className="ui-tab ui-selected sc-iwsKbI iTQglT"
                       disabled={true}
                       style={
                         Object {
@@ -3386,6 +3442,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -3398,7 +3456,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX eeRPmE"
+                              className="ui-title-bar sc-gzVnrw dbBGkD"
                               disabled={true}
                               style={Object {}}
                             >
@@ -3446,7 +3504,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={true}
@@ -3506,12 +3564,14 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={true}
                                       innerRef={[Function]}
@@ -3526,7 +3586,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb kEoKec"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM dutPGe"
                                         contentEditable={false}
                                         disabled={true}
                                         onBlur={[Function]}
@@ -3586,7 +3646,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={true}
@@ -3660,6 +3720,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -3694,7 +3756,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw hxVFFe"
+                      className="ui-tab sc-iwsKbI iTQglT"
                       disabled={true}
                       style={
                         Object {
@@ -3749,6 +3811,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -3761,7 +3825,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX eeRPmE"
+                              className="ui-title-bar sc-gzVnrw dbBGkD"
                               disabled={true}
                               style={Object {}}
                             >
@@ -3809,7 +3873,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={true}
@@ -3869,12 +3933,14 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={true}
                                       innerRef={[Function]}
@@ -3889,7 +3955,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb kEoKec"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM dutPGe"
                                         contentEditable={false}
                                         disabled={true}
                                         onBlur={[Function]}
@@ -3949,7 +4015,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={true}
@@ -4023,6 +4089,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -4057,7 +4125,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw hxVFFe"
+                      className="ui-tab sc-iwsKbI iTQglT"
                       disabled={true}
                       style={
                         Object {
@@ -4112,6 +4180,8 @@ exports[`Test disabling the TabContainer instance 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -4124,7 +4194,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX eeRPmE"
+                              className="ui-title-bar sc-gzVnrw dbBGkD"
                               disabled={true}
                               style={Object {}}
                             >
@@ -4172,7 +4242,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={true}
@@ -4232,12 +4302,14 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={true}
                                       innerRef={[Function]}
@@ -4252,7 +4324,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb kEoKec"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM dutPGe"
                                         contentEditable={false}
                                         disabled={true}
                                         onBlur={[Function]}
@@ -4312,7 +4384,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={true}
@@ -4418,7 +4490,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
             }
           >
             <div
-              className="ui-tab-content sc-dnqmqq crzACo"
+              className="ui-tab-content sc-gqjmRU fpAAsq"
               style={Object {}}
             />
           </styled.div>
@@ -4441,6 +4513,8 @@ exports[`Test making the TabContainer invisible 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }
@@ -5028,6 +5102,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -5065,7 +5141,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
       xcss={null}
     >
       <div
-        className="ui-tab-container sc-gZMcBi blvbTe"
+        className="ui-tab-container sc-jTzLTM inIIxK"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -5364,7 +5440,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             }
           >
             <div
-              className="ui-tab-bar sc-htoDjs exSalX"
+              className="ui-tab-bar sc-gZMcBi frIXce"
               style={Object {}}
             >
               <Tab
@@ -5412,6 +5488,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -5446,7 +5524,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw bMiGxl"
+                      className="ui-tab ui-selected sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -5539,6 +5617,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -5551,7 +5631,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -5637,7 +5717,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -5735,12 +5815,14 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -5755,7 +5837,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -5853,7 +5935,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -5919,6 +6001,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -5926,13 +6010,15 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="0"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="0"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -5971,6 +6057,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -6072,6 +6160,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -6106,7 +6196,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw bMiGxl"
+                      className="ui-tab sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -6199,6 +6289,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -6211,7 +6303,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -6297,7 +6389,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -6395,12 +6487,14 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -6415,7 +6509,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -6513,7 +6607,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -6579,6 +6673,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -6586,13 +6682,15 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="1"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="1"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -6631,6 +6729,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -6732,6 +6832,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -6766,7 +6868,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw bMiGxl"
+                      className="ui-tab sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -6859,6 +6961,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -6871,7 +6975,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -6957,7 +7061,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -7055,12 +7159,14 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -7075,7 +7181,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -7173,7 +7279,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -7239,6 +7345,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -7246,13 +7354,15 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="2"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="2"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -7291,6 +7401,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -7381,7 +7493,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                   className="ui-tab-navigation"
                 >
                   <div
-                    className="ui-tab-navigation sc-iwsKbI dirZfA"
+                    className="ui-tab-navigation sc-VigVT elMmxa"
                   >
                     <Button
                       className=""
@@ -7419,6 +7531,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -7426,13 +7540,15 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -7471,6 +7587,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -7553,6 +7671,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -7560,13 +7680,15 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -7605,6 +7727,8 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -7701,7 +7825,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
             }
           >
             <div
-              className="ui-tab-content sc-dnqmqq crzACo"
+              className="ui-tab-content sc-gqjmRU fpAAsq"
               style={Object {}}
             >
               #1
@@ -7786,6 +7910,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -7823,7 +7949,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
       xcss={null}
     >
       <div
-        className="ui-tab-container sc-gZMcBi blvbTe"
+        className="ui-tab-container sc-jTzLTM inIIxK"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -8122,7 +8248,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             }
           >
             <div
-              className="ui-tab-bar sc-htoDjs exSalX"
+              className="ui-tab-bar sc-gZMcBi frIXce"
               style={Object {}}
             >
               <Tab
@@ -8170,6 +8296,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -8204,7 +8332,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw bMiGxl"
+                      className="ui-tab ui-selected sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -8297,6 +8425,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -8309,7 +8439,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -8395,7 +8525,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -8493,12 +8623,14 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -8513,7 +8645,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -8611,7 +8743,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -8677,6 +8809,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -8684,13 +8818,15 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="0"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="0"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -8729,6 +8865,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -8830,6 +8968,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -8864,7 +9004,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw bMiGxl"
+                      className="ui-tab sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -8957,6 +9097,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -8969,7 +9111,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -9055,7 +9197,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -9153,12 +9295,14 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -9173,7 +9317,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -9271,7 +9415,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -9337,6 +9481,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -9344,13 +9490,15 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="1"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="1"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -9389,6 +9537,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -9490,6 +9640,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -9524,7 +9676,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw bMiGxl"
+                      className="ui-tab sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -9617,6 +9769,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -9629,7 +9783,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -9715,7 +9869,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -9813,12 +9967,14 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -9833,7 +9989,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -9931,7 +10087,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -9997,6 +10153,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -10004,13 +10162,15 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="2"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="2"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -10049,6 +10209,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -10139,7 +10301,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                   className="ui-tab-navigation"
                 >
                   <div
-                    className="ui-tab-navigation sc-iwsKbI dirZfA"
+                    className="ui-tab-navigation sc-VigVT elMmxa"
                   >
                     <Button
                       className=""
@@ -10177,6 +10339,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -10184,13 +10348,15 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -10229,6 +10395,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -10311,6 +10479,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -10318,13 +10488,15 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -10363,6 +10535,8 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -10459,7 +10633,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
             }
           >
             <div
-              className="ui-tab-content sc-dnqmqq crzACo"
+              className="ui-tab-content sc-gqjmRU fpAAsq"
               style={Object {}}
             >
               #1
@@ -10512,6 +10686,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -10549,7 +10725,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
       xcss={null}
     >
       <div
-        className="ui-tab-container sc-gZMcBi blvbTe"
+        className="ui-tab-container sc-jTzLTM inIIxK"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -10848,7 +11024,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             }
           >
             <div
-              className="ui-tab-bar sc-htoDjs exSalX"
+              className="ui-tab-bar sc-gZMcBi frIXce"
               style={Object {}}
             >
               <Tab
@@ -10896,6 +11072,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -10930,7 +11108,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab ui-selected sc-gzVnrw bMiGxl"
+                      className="ui-tab ui-selected sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -11023,6 +11201,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -11035,7 +11215,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -11121,7 +11301,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -11219,12 +11399,14 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -11239,7 +11421,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -11337,7 +11519,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -11403,6 +11585,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -11410,13 +11594,15 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="0"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="0"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -11455,6 +11641,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -11556,6 +11744,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -11590,7 +11780,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw bMiGxl"
+                      className="ui-tab sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -11683,6 +11873,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -11695,7 +11887,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -11781,7 +11973,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -11879,12 +12071,14 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -11899,7 +12093,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -11997,7 +12191,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -12063,6 +12257,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -12070,13 +12266,15 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="1"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="1"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -12115,6 +12313,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -12216,6 +12416,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
@@ -12250,7 +12452,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     }
                   >
                     <div
-                      className="ui-tab sc-gzVnrw bMiGxl"
+                      className="ui-tab sc-iwsKbI hUrMnN"
                       disabled={false}
                       style={
                         Object {
@@ -12343,6 +12545,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -12355,7 +12559,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             visible={true}
                           >
                             <div
-                              className="ui-title-bar sc-ifAKCX fsmfqq"
+                              className="ui-title-bar sc-gzVnrw jmCWlU"
                               disabled={false}
                               style={Object {}}
                             >
@@ -12441,7 +12645,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <Label
-                                  className="ui-title sc-bZQynM fXdSdE"
+                                  className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -12539,12 +12743,14 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                         "headerHoverColor": "#ffe11a",
                                         "hoverColor": "#c0c0c0",
                                         "inputBorderColor": "#c0c0c0",
+                                        "tooltipBackgroundColor": "gray",
+                                        "tooltipForegroundColor": "white",
                                         "transitionDelay": "0.5s",
                                       }
                                     }
                                   >
                                     <styled.span
-                                      className="ui-label ui-title sc-bZQynM fXdSdE"
+                                      className="ui-label ui-title sc-dnqmqq gbybiH"
                                       contentEditable={false}
                                       disabled={false}
                                       innerRef={[Function]}
@@ -12559,7 +12765,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       visible={true}
                                     >
                                       <span
-                                        className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                                        className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                                         contentEditable={false}
                                         disabled={false}
                                         onBlur={[Function]}
@@ -12657,7 +12863,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <div
-                                  className="ui-title-widget sc-EHOje bmfMZM"
+                                  className="ui-title-widget sc-htoDjs iXvauZ"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -12723,6 +12929,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -12730,13 +12938,15 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id="2"
                                         onClick={[Function]}
                                         style={Object {}}
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat deJRSG"
+                                          className="ui-button ripple sc-EHOje cuwkqf"
                                           disabled={false}
+                                          id="2"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -12775,6 +12985,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -12865,7 +13077,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                   className="ui-tab-navigation"
                 >
                   <div
-                    className="ui-tab-navigation sc-iwsKbI dirZfA"
+                    className="ui-tab-navigation sc-VigVT elMmxa"
                   >
                     <Button
                       className=""
@@ -12903,6 +13115,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -12910,13 +13124,15 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -12955,6 +13171,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -13037,6 +13255,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -13044,13 +13264,15 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -13089,6 +13311,8 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -13185,7 +13409,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
             }
           >
             <div
-              className="ui-tab-content sc-dnqmqq crzACo"
+              className="ui-tab-content sc-gqjmRU fpAAsq"
               style={Object {}}
             >
               #1
@@ -13210,6 +13434,8 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }
@@ -13769,6 +13995,8 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }
@@ -14332,6 +14560,8 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }
@@ -14895,6 +15125,8 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }

@@ -46,6 +46,8 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -64,7 +66,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
       visible={true}
     >
       <div
-        className="ui-button-text ripple test-class sc-ifAKCX dpJtvw"
+        className="ui-button-text ripple test-class sc-gzVnrw hRoouw"
         disabled={false}
         onClick={[Function]}
         style={
@@ -80,7 +82,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
           sizing="normal"
         >
           <div
-            className="sc-bxivhb fscWqC"
+            className="sc-bZQynM fzRQIP"
           >
             test text
           </div>
@@ -120,6 +122,8 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -208,6 +212,8 @@ exports[`Test disabling of a ButtonText control 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -220,7 +226,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
       visible={true}
     >
       <div
-        className="ui-button-text nohover sc-ifAKCX hXDCDQ"
+        className="ui-button-text nohover sc-gzVnrw jQFKPl"
         disabled={true}
         onClick={[Function]}
         style={Object {}}
@@ -260,6 +266,8 @@ exports[`Test disabling of a ButtonText control 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -307,7 +315,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
           sizing="normal"
         >
           <div
-            className="sc-bxivhb klVWCC"
+            className="sc-bZQynM dGKNUn"
           />
         </styled.div>
       </div>
@@ -356,6 +364,8 @@ exports[`Test making a ButtonText control invisible 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -368,7 +378,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
       visible={false}
     >
       <div
-        className="ui-button-text ripple sc-ifAKCX dtBMRg"
+        className="ui-button-text ripple sc-gzVnrw GSiof"
         disabled={false}
         onClick={[Function]}
         style={Object {}}
@@ -408,6 +418,8 @@ exports[`Test making a ButtonText control invisible 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -455,7 +467,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
           sizing="normal"
         >
           <div
-            className="sc-bxivhb klVWCC"
+            className="sc-bZQynM dGKNUn"
           />
         </styled.div>
       </div>

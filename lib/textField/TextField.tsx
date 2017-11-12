@@ -122,6 +122,7 @@ import {
 	invisible,
 	Sizing
 } from '../shared';
+import {tooltip} from '../shared/helpers';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 import {
 	validateEmail,
@@ -148,6 +149,7 @@ export interface TextFieldProps extends Partial<HTMLInputElement> {
 	onValidation?: any;
 	sizing?: Sizing;
 	style?: any;
+	tooltip?: string;
 	type?: string;
 	useclear?: boolean;
 	usevalidation?: boolean;
@@ -167,6 +169,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		onValidation: nilEvent,
 		sizing: Sizing.normal,
 		style: {},
+		tooltip: '',
 		type: 'text',
 		useclear: false,
 		usevalidation: false,
@@ -224,6 +227,7 @@ export const StyledInput: any = withProps<TextFieldProps, HTMLInputElement>(styl
 export const TextfieldContainerView: any = withProps<TextFieldProps, HTMLDivElement>(styled.div)`
 	display: inline-flex;
 	flex-direction: column;
+	position: relative;
 `;
 
 export const TextFieldView: any = withProps<TextFieldProps, HTMLDivElement>(styled.div)`
@@ -392,7 +396,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	}
 
 	public render() {
-
 		// Strip out props that the input control cannot recognize or use
 		const {
 			noborder,
@@ -432,6 +435,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			<ThemeProvider theme={getTheme()} >
 				<TextfieldContainerView
 					className="ui-textfield-container"
+					id={this.props.id}
 					style={this.inlineStyles}
 				>
 					<TextFieldView
@@ -466,6 +470,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					:
 						null
 					}
+				{tooltip(this.props)}
 				</TextfieldContainerView>
 			</ThemeProvider>
 		);

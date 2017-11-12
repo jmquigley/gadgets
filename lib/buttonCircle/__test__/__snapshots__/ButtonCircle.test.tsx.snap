@@ -41,6 +41,8 @@ exports[`Test ButtonCircle click event 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -49,14 +51,14 @@ exports[`Test ButtonCircle click event 1`] = `
       className="ui-button-circle"
     >
       <div
-        className="ui-button-circle sc-bxivhb cLwPhR"
+        className="ui-button-circle sc-bZQynM ibONTS"
       >
         <styled.div
           height="24px"
           width="24px"
         >
           <div
-            className="sc-ifAKCX hlqJwM"
+            className="sc-gzVnrw bIUoWq"
             height="24px"
             width="24px"
           >
@@ -90,7 +92,7 @@ exports[`Test ButtonCircle click event 1`] = `
               xcss={null}
             >
               <Button
-                className="sc-EHOje cSsSXz"
+                className="sc-htoDjs dXEIgP"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -129,13 +131,16 @@ exports[`Test ButtonCircle click event 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
                 >
                   <styled.div
-                    className="ui-button ripple sc-EHOje cSsSXz"
+                    className="ui-button ripple sc-htoDjs dXEIgP"
                     disabled={false}
+                    id=""
                     onClick={[Function]}
                     style={
                       Object {
@@ -145,8 +150,9 @@ exports[`Test ButtonCircle click event 1`] = `
                     visible={true}
                   >
                     <div
-                      className="ui-button ripple sc-EHOje cSsSXz sc-htpNat deJRSG"
+                      className="ui-button ripple sc-htoDjs dXEIgP sc-EHOje cuwkqf"
                       disabled={false}
+                      id=""
                       onClick={[Function]}
                       style={
                         Object {
@@ -189,6 +195,8 @@ exports[`Test ButtonCircle click event 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -256,6 +264,8 @@ exports[`Test creation of a ButtonCircle control 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }
@@ -342,6 +352,8 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -350,14 +362,14 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
       className="ui-button-circle"
     >
       <div
-        className="ui-button-circle sc-bxivhb cLwPhR"
+        className="ui-button-circle sc-bZQynM ibONTS"
       >
         <styled.div
           height="24px"
           width="24px"
         >
           <div
-            className="sc-ifAKCX hlqJwM"
+            className="sc-gzVnrw bIUoWq"
             height="24px"
             width="24px"
           >
@@ -391,7 +403,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
               xcss={null}
             >
               <Button
-                className="sc-EHOje cSsSXz"
+                className="sc-htoDjs dXEIgP"
                 contentEditable={false}
                 direction="right"
                 disabled={true}
@@ -430,13 +442,16 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
                 >
                   <styled.div
-                    className="ui-button nohover sc-EHOje cSsSXz"
+                    className="ui-button nohover sc-htoDjs dXEIgP"
                     disabled={true}
+                    id=""
                     onClick={[Function]}
                     style={
                       Object {
@@ -446,8 +461,9 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
                     visible={true}
                   >
                     <div
-                      className="ui-button nohover sc-EHOje cSsSXz sc-htpNat jjHPcA"
+                      className="ui-button nohover sc-htoDjs dXEIgP sc-EHOje daEhF"
                       disabled={true}
+                      id=""
                       onClick={[Function]}
                       style={
                         Object {
@@ -490,6 +506,8 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
@@ -586,6 +604,8 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -594,14 +614,14 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
       className="ui-button-circle"
     >
       <div
-        className="ui-button-circle sc-bxivhb cLwPhR"
+        className="ui-button-circle sc-bZQynM ibONTS"
       >
         <styled.div
           height="24px"
           width="24px"
         >
           <div
-            className="sc-ifAKCX hlqJwM"
+            className="sc-gzVnrw bIUoWq"
             height="24px"
             width="24px"
           >
@@ -635,7 +655,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
               xcss={null}
             >
               <Button
-                className="sc-EHOje cSsSXz"
+                className="sc-htoDjs dXEIgP"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -674,13 +694,16 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
                 >
                   <styled.div
-                    className="ui-button ripple sc-EHOje cSsSXz"
+                    className="ui-button ripple sc-htoDjs dXEIgP"
                     disabled={false}
+                    id=""
                     onClick={[Function]}
                     style={
                       Object {
@@ -690,8 +713,9 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
                     visible={false}
                   >
                     <div
-                      className="ui-button ripple sc-EHOje cSsSXz sc-htpNat psfup"
+                      className="ui-button ripple sc-htoDjs dXEIgP sc-EHOje iMCaTv"
                       disabled={false}
+                      id=""
                       onClick={[Function]}
                       style={
                         Object {
@@ -734,6 +758,8 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }

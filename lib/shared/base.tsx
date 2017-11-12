@@ -68,8 +68,8 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	private _sizing: Sizing = null;
 
 	// The style object applied (generally) to the root of a component
-	protected _rootStyles: ClassNames = new ClassNames();
 	protected _classes: ClassNames = new ClassNames();
+	protected _rootStyles: ClassNames = new ClassNames();
 
 	constructor(props: P, styles: Styles = {}, defaultInlineStyles: Styles = {}, defaultFontSize: number = defaultSize) {
 		super(props);

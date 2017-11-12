@@ -46,6 +46,8 @@ exports[`Test creation of an Editor instance 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -55,7 +57,7 @@ exports[`Test creation of an Editor instance 1`] = `
       style={Object {}}
     >
       <div
-        className="ui-editor sc-brqgnP jUBoqG"
+        className="ui-editor sc-jDwBTQ dRLTxR"
         style={Object {}}
       >
         <Styled(Toolbar)
@@ -93,7 +95,7 @@ exports[`Test creation of an Editor instance 1`] = `
           xcss={null}
         >
           <Toolbar
-            className="ui-editor-toolbar sc-jAaTju jIjtOo"
+            className="ui-editor-toolbar sc-iRbamj dwzdtg"
             content="test content"
             contentEditable={false}
             defaultFont="Fira Code"
@@ -138,22 +140,24 @@ exports[`Test creation of an Editor instance 1`] = `
                   "headerHoverColor": "#ffe11a",
                   "hoverColor": "#c0c0c0",
                   "inputBorderColor": "#c0c0c0",
+                  "tooltipBackgroundColor": "gray",
+                  "tooltipForegroundColor": "white",
                   "transitionDelay": "0.5s",
                 }
               }
             >
               <styled.div
-                className="ui-toolbar ui-editor-toolbar sc-jAaTju jIjtOo"
+                className="ui-toolbar ui-editor-toolbar sc-iRbamj dwzdtg"
               >
                 <div
-                  className="ui-toolbar ui-editor-toolbar sc-jAaTju jIjtOo sc-eHgmQL bXSzAM"
+                  className="ui-toolbar ui-editor-toolbar sc-iRbamj dwzdtg sc-brqgnP khMCBa"
                 >
                   <styled.div
                     className="ui-toolbar-group"
                     justify={0}
                   >
                     <div
-                      className="ui-toolbar-group sc-cvbbAY bDNfFF"
+                      className="ui-toolbar-group sc-cMljjf FXzWA"
                     >
                       <styled.div
                         key="0"
@@ -168,7 +172,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "border": "solid 1px silver",
@@ -215,6 +219,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -222,13 +228,15 @@ exports[`Test creation of an Editor instance 1`] = `
                               <styled.div
                                 className="ui-button ripple ui-toolbar-element"
                                 disabled={false}
+                                id=""
                                 onClick={[Function]}
                                 style={Object {}}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                  className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                   disabled={false}
+                                  id=""
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -267,6 +275,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -296,7 +306,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         xcss={null}
                                       >
                                         <i
-                                          className="ui-icon fa fa-fw fa-bold sc-bdVaJa ktSNSh"
+                                          className="ui-icon fa fa-fw fa-bold sc-bxivhb kNmbBE"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -328,7 +338,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "border": "solid 1px silver",
@@ -375,6 +385,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -382,13 +394,15 @@ exports[`Test creation of an Editor instance 1`] = `
                               <styled.div
                                 className="ui-button ripple ui-toolbar-element"
                                 disabled={false}
+                                id=""
                                 onClick={[Function]}
                                 style={Object {}}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                  className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                   disabled={false}
+                                  id=""
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -427,6 +441,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -456,7 +472,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         xcss={null}
                                       >
                                         <i
-                                          className="ui-icon fa fa-fw fa-italic sc-bdVaJa ktSNSh"
+                                          className="ui-icon fa fa-fw fa-italic sc-bxivhb kNmbBE"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -488,7 +504,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "border": "solid 1px silver",
@@ -535,6 +551,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -542,13 +560,15 @@ exports[`Test creation of an Editor instance 1`] = `
                               <styled.div
                                 className="ui-button ripple ui-toolbar-element"
                                 disabled={false}
+                                id=""
                                 onClick={[Function]}
                                 style={Object {}}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                  className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                   disabled={false}
+                                  id=""
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -587,6 +607,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -616,7 +638,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         xcss={null}
                                       >
                                         <i
-                                          className="ui-icon fa fa-fw fa-underline sc-bdVaJa ktSNSh"
+                                          className="ui-icon fa fa-fw fa-underline sc-bxivhb kNmbBE"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -648,7 +670,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "border": "solid 1px silver",
@@ -695,6 +717,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -702,13 +726,15 @@ exports[`Test creation of an Editor instance 1`] = `
                               <styled.div
                                 className="ui-button ripple ui-toolbar-element"
                                 disabled={false}
+                                id=""
                                 onClick={[Function]}
                                 style={Object {}}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                  className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                   disabled={false}
+                                  id=""
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -747,6 +773,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -776,7 +804,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         xcss={null}
                                       >
                                         <i
-                                          className="ui-icon fa fa-fw fa-strikethrough sc-bdVaJa ktSNSh"
+                                          className="ui-icon fa fa-fw fa-strikethrough sc-bxivhb kNmbBE"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -808,7 +836,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "border": "solid 1px silver",
@@ -855,6 +883,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -862,13 +892,15 @@ exports[`Test creation of an Editor instance 1`] = `
                               <styled.div
                                 className="ui-button ripple ui-toolbar-element"
                                 disabled={false}
+                                id=""
                                 onClick={[Function]}
                                 style={Object {}}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                  className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                   disabled={false}
+                                  id=""
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -907,6 +939,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -936,7 +970,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         xcss={null}
                                       >
                                         <i
-                                          className="ui-icon fa fa-fw fa-code sc-bdVaJa ktSNSh"
+                                          className="ui-icon fa fa-fw fa-code sc-bxivhb kNmbBE"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -970,7 +1004,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "backgroundColor": "inherit",
@@ -1027,6 +1061,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -1035,7 +1071,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 className="ui-button-dialog ui-toolbar-element"
                               >
                                 <div
-                                  className="ui-button-dialog ui-toolbar-element sc-EHOje hgeHxC"
+                                  className="ui-button-dialog ui-toolbar-element sc-htoDjs jlTQqf"
                                 >
                                   <Button
                                     className=""
@@ -1080,6 +1116,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -1087,6 +1125,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                       <styled.div
                                         className="ui-button ripple"
                                         disabled={false}
+                                        id=""
                                         onClick={[Function]}
                                         style={
                                           Object {
@@ -1099,8 +1138,9 @@ exports[`Test creation of an Editor instance 1`] = `
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-htpNat eaVJAo"
+                                          className="ui-button ripple sc-EHOje fNVjak"
                                           disabled={false}
+                                          id=""
                                           onClick={[Function]}
                                           style={
                                             Object {
@@ -1146,6 +1186,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -1175,7 +1217,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 xcss={null}
                                               >
                                                 <i
-                                                  className="ui-icon fa fa-fw fa-header sc-bdVaJa ktSNSh"
+                                                  className="ui-icon fa fa-fw fa-header sc-bxivhb kNmbBE"
                                                   contentEditable={false}
                                                   direction="right"
                                                   disabled={false}
@@ -1199,7 +1241,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     visible={false}
                                   >
                                     <div
-                                      className="ui-dialog-popup sc-ifAKCX flWXbT"
+                                      className="ui-dialog-popup sc-gzVnrw fhWeba"
                                       onClick={[Function]}
                                     >
                                       <styled.div
@@ -1207,7 +1249,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         visible={false}
                                       >
                                         <div
-                                          className="sc-bxivhb dzOJmh"
+                                          className="sc-bZQynM bhDRc"
                                         >
                                           <List
                                             alternating={true}
@@ -1245,6 +1287,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   "headerHoverColor": "#ffe11a",
                                                   "hoverColor": "#c0c0c0",
                                                   "inputBorderColor": "#c0c0c0",
+                                                  "tooltipBackgroundColor": "gray",
+                                                  "tooltipForegroundColor": "white",
                                                   "transitionDelay": "0.5s",
                                                 }
                                               }
@@ -1255,7 +1299,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 style={Object {}}
                                               >
                                                 <ul
-                                                  className="ui-list sc-dnqmqq eQVdDT"
+                                                  className="ui-list sc-gqjmRU hPUyqf"
                                                   style={Object {}}
                                                 >
                                                   <ListItem
@@ -1317,6 +1361,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           "headerHoverColor": "#ffe11a",
                                                           "hoverColor": "#c0c0c0",
                                                           "inputBorderColor": "#c0c0c0",
+                                                          "tooltipBackgroundColor": "gray",
+                                                          "tooltipForegroundColor": "white",
                                                           "transitionDelay": "0.5s",
                                                         }
                                                       }
@@ -1379,6 +1425,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
                                                               "inputBorderColor": "#c0c0c0",
+                                                              "tooltipBackgroundColor": "gray",
+                                                              "tooltipForegroundColor": "white",
                                                               "transitionDelay": "0.5s",
                                                             }
                                                           }
@@ -1395,7 +1443,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <li
-                                                              className="ui-item ui-listitem sc-jTzLTM ixAHEm"
+                                                              className="ui-item ui-listitem sc-cSHVUG kxkOaD"
                                                               id="0"
                                                               onBlur={[Function]}
                                                               onDoubleClick={[Function]}
@@ -1466,6 +1514,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                       "headerHoverColor": "#ffe11a",
                                                                       "hoverColor": "#c0c0c0",
                                                                       "inputBorderColor": "#c0c0c0",
+                                                                      "tooltipBackgroundColor": "gray",
+                                                                      "tooltipForegroundColor": "white",
                                                                       "transitionDelay": "0.5s",
                                                                     }
                                                                   }
@@ -1482,7 +1532,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                     visible={true}
                                                                   >
                                                                     <div
-                                                                      className="ui-title-bar ripple ui-listitem sc-gZMcBi jFJlln"
+                                                                      className="ui-title-bar ripple ui-listitem sc-jTzLTM eSIgPD"
                                                                       disabled={false}
                                                                       style={
                                                                         Object {
@@ -1550,7 +1600,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         }
                                                                       >
                                                                         <Label
-                                                                          className="ui-title sc-VigVT lbvHKY"
+                                                                          className="ui-title sc-jzJRlG bEUFiG"
                                                                           contentEditable={false}
                                                                           direction="right"
                                                                           disabled={false}
@@ -1619,12 +1669,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                                 "headerHoverColor": "#ffe11a",
                                                                                 "hoverColor": "#c0c0c0",
                                                                                 "inputBorderColor": "#c0c0c0",
+                                                                                "tooltipBackgroundColor": "gray",
+                                                                                "tooltipForegroundColor": "white",
                                                                                 "transitionDelay": "0.5s",
                                                                               }
                                                                             }
                                                                           >
                                                                             <styled.span
-                                                                              className="ui-label ui-title sc-VigVT lbvHKY"
+                                                                              className="ui-label ui-title sc-jzJRlG bEUFiG"
                                                                               contentEditable={false}
                                                                               disabled={false}
                                                                               innerRef={[Function]}
@@ -1643,7 +1695,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                               visible={true}
                                                                             >
                                                                               <span
-                                                                                className="ui-label ui-title sc-VigVT lbvHKY sc-iwsKbI idtxFR"
+                                                                                className="ui-label ui-title sc-jzJRlG bEUFiG sc-VigVT kCVEgX"
                                                                                 contentEditable={false}
                                                                                 disabled={false}
                                                                                 onBlur={[Function]}
@@ -1733,6 +1785,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           "headerHoverColor": "#ffe11a",
                                                           "hoverColor": "#c0c0c0",
                                                           "inputBorderColor": "#c0c0c0",
+                                                          "tooltipBackgroundColor": "gray",
+                                                          "tooltipForegroundColor": "white",
                                                           "transitionDelay": "0.5s",
                                                         }
                                                       }
@@ -1795,6 +1849,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
                                                               "inputBorderColor": "#c0c0c0",
+                                                              "tooltipBackgroundColor": "gray",
+                                                              "tooltipForegroundColor": "white",
                                                               "transitionDelay": "0.5s",
                                                             }
                                                           }
@@ -1811,7 +1867,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <li
-                                                              className="ui-item ui-listitem sc-jTzLTM ixAHEm"
+                                                              className="ui-item ui-listitem sc-cSHVUG kxkOaD"
                                                               id="1"
                                                               onBlur={[Function]}
                                                               onDoubleClick={[Function]}
@@ -1882,6 +1938,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                       "headerHoverColor": "#ffe11a",
                                                                       "hoverColor": "#c0c0c0",
                                                                       "inputBorderColor": "#c0c0c0",
+                                                                      "tooltipBackgroundColor": "gray",
+                                                                      "tooltipForegroundColor": "white",
                                                                       "transitionDelay": "0.5s",
                                                                     }
                                                                   }
@@ -1898,7 +1956,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                     visible={true}
                                                                   >
                                                                     <div
-                                                                      className="ui-title-bar ripple ui-listitem sc-gZMcBi jFJlln"
+                                                                      className="ui-title-bar ripple ui-listitem sc-jTzLTM eSIgPD"
                                                                       disabled={false}
                                                                       style={
                                                                         Object {
@@ -1966,7 +2024,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         }
                                                                       >
                                                                         <Label
-                                                                          className="ui-title sc-VigVT lbvHKY"
+                                                                          className="ui-title sc-jzJRlG bEUFiG"
                                                                           contentEditable={false}
                                                                           direction="right"
                                                                           disabled={false}
@@ -2035,12 +2093,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                                 "headerHoverColor": "#ffe11a",
                                                                                 "hoverColor": "#c0c0c0",
                                                                                 "inputBorderColor": "#c0c0c0",
+                                                                                "tooltipBackgroundColor": "gray",
+                                                                                "tooltipForegroundColor": "white",
                                                                                 "transitionDelay": "0.5s",
                                                                               }
                                                                             }
                                                                           >
                                                                             <styled.span
-                                                                              className="ui-label ui-title sc-VigVT lbvHKY"
+                                                                              className="ui-label ui-title sc-jzJRlG bEUFiG"
                                                                               contentEditable={false}
                                                                               disabled={false}
                                                                               innerRef={[Function]}
@@ -2059,7 +2119,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                               visible={true}
                                                                             >
                                                                               <span
-                                                                                className="ui-label ui-title sc-VigVT lbvHKY sc-iwsKbI idtxFR"
+                                                                                className="ui-label ui-title sc-jzJRlG bEUFiG sc-VigVT kCVEgX"
                                                                                 contentEditable={false}
                                                                                 disabled={false}
                                                                                 onBlur={[Function]}
@@ -2149,6 +2209,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           "headerHoverColor": "#ffe11a",
                                                           "hoverColor": "#c0c0c0",
                                                           "inputBorderColor": "#c0c0c0",
+                                                          "tooltipBackgroundColor": "gray",
+                                                          "tooltipForegroundColor": "white",
                                                           "transitionDelay": "0.5s",
                                                         }
                                                       }
@@ -2211,6 +2273,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
                                                               "inputBorderColor": "#c0c0c0",
+                                                              "tooltipBackgroundColor": "gray",
+                                                              "tooltipForegroundColor": "white",
                                                               "transitionDelay": "0.5s",
                                                             }
                                                           }
@@ -2227,7 +2291,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <li
-                                                              className="ui-item ui-listitem sc-jTzLTM ixAHEm"
+                                                              className="ui-item ui-listitem sc-cSHVUG kxkOaD"
                                                               id="2"
                                                               onBlur={[Function]}
                                                               onDoubleClick={[Function]}
@@ -2298,6 +2362,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                       "headerHoverColor": "#ffe11a",
                                                                       "hoverColor": "#c0c0c0",
                                                                       "inputBorderColor": "#c0c0c0",
+                                                                      "tooltipBackgroundColor": "gray",
+                                                                      "tooltipForegroundColor": "white",
                                                                       "transitionDelay": "0.5s",
                                                                     }
                                                                   }
@@ -2314,7 +2380,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                     visible={true}
                                                                   >
                                                                     <div
-                                                                      className="ui-title-bar ripple ui-listitem sc-gZMcBi jFJlln"
+                                                                      className="ui-title-bar ripple ui-listitem sc-jTzLTM eSIgPD"
                                                                       disabled={false}
                                                                       style={
                                                                         Object {
@@ -2382,7 +2448,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         }
                                                                       >
                                                                         <Label
-                                                                          className="ui-title sc-VigVT lbvHKY"
+                                                                          className="ui-title sc-jzJRlG bEUFiG"
                                                                           contentEditable={false}
                                                                           direction="right"
                                                                           disabled={false}
@@ -2451,12 +2517,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                                 "headerHoverColor": "#ffe11a",
                                                                                 "hoverColor": "#c0c0c0",
                                                                                 "inputBorderColor": "#c0c0c0",
+                                                                                "tooltipBackgroundColor": "gray",
+                                                                                "tooltipForegroundColor": "white",
                                                                                 "transitionDelay": "0.5s",
                                                                               }
                                                                             }
                                                                           >
                                                                             <styled.span
-                                                                              className="ui-label ui-title sc-VigVT lbvHKY"
+                                                                              className="ui-label ui-title sc-jzJRlG bEUFiG"
                                                                               contentEditable={false}
                                                                               disabled={false}
                                                                               innerRef={[Function]}
@@ -2475,7 +2543,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                               visible={true}
                                                                             >
                                                                               <span
-                                                                                className="ui-label ui-title sc-VigVT lbvHKY sc-iwsKbI idtxFR"
+                                                                                className="ui-label ui-title sc-jzJRlG bEUFiG sc-VigVT kCVEgX"
                                                                                 contentEditable={false}
                                                                                 disabled={false}
                                                                                 onBlur={[Function]}
@@ -2565,6 +2633,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           "headerHoverColor": "#ffe11a",
                                                           "hoverColor": "#c0c0c0",
                                                           "inputBorderColor": "#c0c0c0",
+                                                          "tooltipBackgroundColor": "gray",
+                                                          "tooltipForegroundColor": "white",
                                                           "transitionDelay": "0.5s",
                                                         }
                                                       }
@@ -2627,6 +2697,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
                                                               "inputBorderColor": "#c0c0c0",
+                                                              "tooltipBackgroundColor": "gray",
+                                                              "tooltipForegroundColor": "white",
                                                               "transitionDelay": "0.5s",
                                                             }
                                                           }
@@ -2643,7 +2715,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <li
-                                                              className="ui-item ui-listitem sc-jTzLTM ixAHEm"
+                                                              className="ui-item ui-listitem sc-cSHVUG kxkOaD"
                                                               id="3"
                                                               onBlur={[Function]}
                                                               onDoubleClick={[Function]}
@@ -2714,6 +2786,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                       "headerHoverColor": "#ffe11a",
                                                                       "hoverColor": "#c0c0c0",
                                                                       "inputBorderColor": "#c0c0c0",
+                                                                      "tooltipBackgroundColor": "gray",
+                                                                      "tooltipForegroundColor": "white",
                                                                       "transitionDelay": "0.5s",
                                                                     }
                                                                   }
@@ -2730,7 +2804,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                     visible={true}
                                                                   >
                                                                     <div
-                                                                      className="ui-title-bar ripple ui-listitem sc-gZMcBi jFJlln"
+                                                                      className="ui-title-bar ripple ui-listitem sc-jTzLTM eSIgPD"
                                                                       disabled={false}
                                                                       style={
                                                                         Object {
@@ -2798,7 +2872,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         }
                                                                       >
                                                                         <Label
-                                                                          className="ui-title sc-VigVT lbvHKY"
+                                                                          className="ui-title sc-jzJRlG bEUFiG"
                                                                           contentEditable={false}
                                                                           direction="right"
                                                                           disabled={false}
@@ -2867,12 +2941,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                                 "headerHoverColor": "#ffe11a",
                                                                                 "hoverColor": "#c0c0c0",
                                                                                 "inputBorderColor": "#c0c0c0",
+                                                                                "tooltipBackgroundColor": "gray",
+                                                                                "tooltipForegroundColor": "white",
                                                                                 "transitionDelay": "0.5s",
                                                                               }
                                                                             }
                                                                           >
                                                                             <styled.span
-                                                                              className="ui-label ui-title sc-VigVT lbvHKY"
+                                                                              className="ui-label ui-title sc-jzJRlG bEUFiG"
                                                                               contentEditable={false}
                                                                               disabled={false}
                                                                               innerRef={[Function]}
@@ -2891,7 +2967,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                               visible={true}
                                                                             >
                                                                               <span
-                                                                                className="ui-label ui-title sc-VigVT lbvHKY sc-iwsKbI idtxFR"
+                                                                                className="ui-label ui-title sc-jzJRlG bEUFiG sc-VigVT kCVEgX"
                                                                                 contentEditable={false}
                                                                                 disabled={false}
                                                                                 onBlur={[Function]}
@@ -2981,6 +3057,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           "headerHoverColor": "#ffe11a",
                                                           "hoverColor": "#c0c0c0",
                                                           "inputBorderColor": "#c0c0c0",
+                                                          "tooltipBackgroundColor": "gray",
+                                                          "tooltipForegroundColor": "white",
                                                           "transitionDelay": "0.5s",
                                                         }
                                                       }
@@ -3043,6 +3121,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
                                                               "inputBorderColor": "#c0c0c0",
+                                                              "tooltipBackgroundColor": "gray",
+                                                              "tooltipForegroundColor": "white",
                                                               "transitionDelay": "0.5s",
                                                             }
                                                           }
@@ -3059,7 +3139,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <li
-                                                              className="ui-item ui-listitem sc-jTzLTM ixAHEm"
+                                                              className="ui-item ui-listitem sc-cSHVUG kxkOaD"
                                                               id="4"
                                                               onBlur={[Function]}
                                                               onDoubleClick={[Function]}
@@ -3130,6 +3210,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                       "headerHoverColor": "#ffe11a",
                                                                       "hoverColor": "#c0c0c0",
                                                                       "inputBorderColor": "#c0c0c0",
+                                                                      "tooltipBackgroundColor": "gray",
+                                                                      "tooltipForegroundColor": "white",
                                                                       "transitionDelay": "0.5s",
                                                                     }
                                                                   }
@@ -3146,7 +3228,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                     visible={true}
                                                                   >
                                                                     <div
-                                                                      className="ui-title-bar ripple ui-listitem sc-gZMcBi jFJlln"
+                                                                      className="ui-title-bar ripple ui-listitem sc-jTzLTM eSIgPD"
                                                                       disabled={false}
                                                                       style={
                                                                         Object {
@@ -3214,7 +3296,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         }
                                                                       >
                                                                         <Label
-                                                                          className="ui-title sc-VigVT lbvHKY"
+                                                                          className="ui-title sc-jzJRlG bEUFiG"
                                                                           contentEditable={false}
                                                                           direction="right"
                                                                           disabled={false}
@@ -3283,12 +3365,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                                 "headerHoverColor": "#ffe11a",
                                                                                 "hoverColor": "#c0c0c0",
                                                                                 "inputBorderColor": "#c0c0c0",
+                                                                                "tooltipBackgroundColor": "gray",
+                                                                                "tooltipForegroundColor": "white",
                                                                                 "transitionDelay": "0.5s",
                                                                               }
                                                                             }
                                                                           >
                                                                             <styled.span
-                                                                              className="ui-label ui-title sc-VigVT lbvHKY"
+                                                                              className="ui-label ui-title sc-jzJRlG bEUFiG"
                                                                               contentEditable={false}
                                                                               disabled={false}
                                                                               innerRef={[Function]}
@@ -3307,7 +3391,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                               visible={true}
                                                                             >
                                                                               <span
-                                                                                className="ui-label ui-title sc-VigVT lbvHKY sc-iwsKbI idtxFR"
+                                                                                className="ui-label ui-title sc-jzJRlG bEUFiG sc-VigVT kCVEgX"
                                                                                 contentEditable={false}
                                                                                 disabled={false}
                                                                                 onBlur={[Function]}
@@ -3397,6 +3481,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                           "headerHoverColor": "#ffe11a",
                                                           "hoverColor": "#c0c0c0",
                                                           "inputBorderColor": "#c0c0c0",
+                                                          "tooltipBackgroundColor": "gray",
+                                                          "tooltipForegroundColor": "white",
                                                           "transitionDelay": "0.5s",
                                                         }
                                                       }
@@ -3459,6 +3545,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                               "headerHoverColor": "#ffe11a",
                                                               "hoverColor": "#c0c0c0",
                                                               "inputBorderColor": "#c0c0c0",
+                                                              "tooltipBackgroundColor": "gray",
+                                                              "tooltipForegroundColor": "white",
                                                               "transitionDelay": "0.5s",
                                                             }
                                                           }
@@ -3475,7 +3563,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <li
-                                                              className="ui-item ui-listitem sc-jTzLTM ixAHEm"
+                                                              className="ui-item ui-listitem sc-cSHVUG kxkOaD"
                                                               id="5"
                                                               onBlur={[Function]}
                                                               onDoubleClick={[Function]}
@@ -3546,6 +3634,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                       "headerHoverColor": "#ffe11a",
                                                                       "hoverColor": "#c0c0c0",
                                                                       "inputBorderColor": "#c0c0c0",
+                                                                      "tooltipBackgroundColor": "gray",
+                                                                      "tooltipForegroundColor": "white",
                                                                       "transitionDelay": "0.5s",
                                                                     }
                                                                   }
@@ -3562,7 +3652,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                     visible={true}
                                                                   >
                                                                     <div
-                                                                      className="ui-title-bar ripple ui-listitem sc-gZMcBi jFJlln"
+                                                                      className="ui-title-bar ripple ui-listitem sc-jTzLTM eSIgPD"
                                                                       disabled={false}
                                                                       style={
                                                                         Object {
@@ -3630,7 +3720,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         }
                                                                       >
                                                                         <Label
-                                                                          className="ui-title sc-VigVT lbvHKY"
+                                                                          className="ui-title sc-jzJRlG bEUFiG"
                                                                           contentEditable={false}
                                                                           direction="right"
                                                                           disabled={false}
@@ -3699,12 +3789,14 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                                 "headerHoverColor": "#ffe11a",
                                                                                 "hoverColor": "#c0c0c0",
                                                                                 "inputBorderColor": "#c0c0c0",
+                                                                                "tooltipBackgroundColor": "gray",
+                                                                                "tooltipForegroundColor": "white",
                                                                                 "transitionDelay": "0.5s",
                                                                               }
                                                                             }
                                                                           >
                                                                             <styled.span
-                                                                              className="ui-label ui-title sc-VigVT lbvHKY"
+                                                                              className="ui-label ui-title sc-jzJRlG bEUFiG"
                                                                               contentEditable={false}
                                                                               disabled={false}
                                                                               innerRef={[Function]}
@@ -3723,7 +3815,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                               visible={true}
                                                                             >
                                                                               <span
-                                                                                className="ui-label ui-title sc-VigVT lbvHKY sc-iwsKbI idtxFR"
+                                                                                className="ui-label ui-title sc-jzJRlG bEUFiG sc-VigVT kCVEgX"
                                                                                 contentEditable={false}
                                                                                 disabled={false}
                                                                                 onBlur={[Function]}
@@ -3779,7 +3871,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "display": "flex",
@@ -3822,6 +3914,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -3832,7 +3926,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 width="3px"
                               >
                                 <div
-                                  className="ui-divider ui-toolbar-element sc-gzVnrw qlsSM"
+                                  className="ui-divider ui-toolbar-element sc-iwsKbI gojLJl"
                                   style={Object {}}
                                   width="3px"
                                 >
@@ -3856,7 +3950,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "border": "solid 1px silver",
@@ -3903,6 +3997,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -3910,13 +4006,15 @@ exports[`Test creation of an Editor instance 1`] = `
                               <styled.div
                                 className="ui-button ripple ui-toolbar-element"
                                 disabled={false}
+                                id=""
                                 onClick={[Function]}
                                 style={Object {}}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                  className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                   disabled={false}
+                                  id=""
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -3955,6 +4053,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -3984,7 +4084,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         xcss={null}
                                       >
                                         <i
-                                          className="ui-icon fa fa-fw fa-undo sc-bdVaJa ktSNSh"
+                                          className="ui-icon fa fa-fw fa-undo sc-bxivhb kNmbBE"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -4016,7 +4116,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "border": "solid 1px silver",
@@ -4063,6 +4163,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -4070,13 +4172,15 @@ exports[`Test creation of an Editor instance 1`] = `
                               <styled.div
                                 className="ui-button ripple ui-toolbar-element"
                                 disabled={false}
+                                id=""
                                 onClick={[Function]}
                                 style={Object {}}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                  className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                   disabled={false}
+                                  id=""
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -4115,6 +4219,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -4144,7 +4250,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         xcss={null}
                                       >
                                         <i
-                                          className="ui-icon fa fa-fw fa-repeat sc-bdVaJa ktSNSh"
+                                          className="ui-icon fa fa-fw fa-repeat sc-bxivhb kNmbBE"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -4174,7 +4280,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "display": "flex",
@@ -4217,6 +4323,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -4227,7 +4335,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 width="3px"
                               >
                                 <div
-                                  className="ui-divider ui-toolbar-element sc-gzVnrw qlsSM"
+                                  className="ui-divider ui-toolbar-element sc-iwsKbI gojLJl"
                                   style={Object {}}
                                   width="3px"
                                 >
@@ -4249,7 +4357,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "display": "flex",
@@ -4322,6 +4430,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -4341,7 +4451,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 value="Fira Code"
                               >
                                 <select
-                                  className="ui-dropdown ui-toolbar-element sc-htoDjs kAPxsg"
+                                  className="ui-dropdown ui-toolbar-element sc-gZMcBi jfnPyX"
                                   disabled={false}
                                   onChange={[Function]}
                                   style={
@@ -4388,7 +4498,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "display": "flex",
@@ -4497,6 +4607,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -4516,7 +4628,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 value="12"
                               >
                                 <select
-                                  className="ui-dropdown ui-toolbar-element sc-htoDjs kAPxsg"
+                                  className="ui-dropdown ui-toolbar-element sc-gZMcBi jfnPyX"
                                   disabled={false}
                                   onChange={[Function]}
                                   style={
@@ -4617,7 +4729,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "display": "flex",
@@ -4660,6 +4772,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -4670,7 +4784,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 width="3px"
                               >
                                 <div
-                                  className="ui-divider ui-toolbar-element sc-gzVnrw qlsSM"
+                                  className="ui-divider ui-toolbar-element sc-iwsKbI gojLJl"
                                   style={Object {}}
                                   width="3px"
                                 >
@@ -4692,7 +4806,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "display": "flex",
@@ -4769,6 +4883,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -4788,7 +4904,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 value="markdown"
                               >
                                 <select
-                                  className="ui-dropdown ui-toolbar-element sc-htoDjs kAPxsg"
+                                  className="ui-dropdown ui-toolbar-element sc-gZMcBi jfnPyX"
                                   disabled={false}
                                   onChange={[Function]}
                                   style={
@@ -4842,7 +4958,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "display": "flex",
@@ -5224,6 +5340,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -5244,7 +5362,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                 value="solarized-light"
                               >
                                 <select
-                                  className="ui-dropdown ui-toolbar-element sc-htoDjs kAPxsg"
+                                  className="ui-dropdown ui-toolbar-element sc-gZMcBi jfnPyX"
                                   disabled={false}
                                   onChange={[Function]}
                                   style={
@@ -5750,7 +5868,7 @@ exports[`Test creation of an Editor instance 1`] = `
                         }
                       >
                         <div
-                          className="sc-jWBwVP bTTULL"
+                          className="sc-jAaTju cIBquf"
                           style={
                             Object {
                               "border": "solid 1px silver",
@@ -5797,6 +5915,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "tooltipBackgroundColor": "gray",
+                                  "tooltipForegroundColor": "white",
                                   "transitionDelay": "0.5s",
                                 }
                               }
@@ -5804,13 +5924,15 @@ exports[`Test creation of an Editor instance 1`] = `
                               <styled.div
                                 className="ui-button ripple ui-toolbar-element"
                                 disabled={false}
+                                id=""
                                 onClick={[Function]}
                                 style={Object {}}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                  className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                   disabled={false}
+                                  id=""
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -5849,6 +5971,8 @@ exports[`Test creation of an Editor instance 1`] = `
                                           "headerHoverColor": "#ffe11a",
                                           "hoverColor": "#c0c0c0",
                                           "inputBorderColor": "#c0c0c0",
+                                          "tooltipBackgroundColor": "gray",
+                                          "tooltipForegroundColor": "white",
                                           "transitionDelay": "0.5s",
                                         }
                                       }
@@ -5878,7 +6002,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         xcss={null}
                                       >
                                         <i
-                                          className="ui-icon fa fa-fw fa-refresh sc-bdVaJa ktSNSh"
+                                          className="ui-icon fa fa-fw fa-refresh sc-bxivhb kNmbBE"
                                           contentEditable={false}
                                           direction="right"
                                           disabled={false}
@@ -5911,7 +6035,7 @@ exports[`Test creation of an Editor instance 1`] = `
           visible={true}
         >
           <div
-            className="ui-editor-quill sc-cMljjf fLUKFV"
+            className="ui-editor-quill sc-gPEVay bHxGDW"
             disabled={false}
             id="editor"
           />

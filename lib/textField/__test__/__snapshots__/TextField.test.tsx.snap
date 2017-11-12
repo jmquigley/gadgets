@@ -12,6 +12,7 @@ exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
   onValidation={[Function]}
   sizing="normal"
   style={Object {}}
+  tooltip=""
   type="text"
   useclear={false}
   usevalidation={false}
@@ -29,16 +30,20 @@ exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
   >
     <styled.div
       className="ui-textfield-container"
+      id=""
       style={Object {}}
     >
       <div
-        className="ui-textfield-container sc-dnqmqq efWnFk"
+        className="ui-textfield-container sc-gqjmRU kxbhDp"
+        id=""
         style={Object {}}
       >
         <styled.div
@@ -48,7 +53,7 @@ exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
           visible={true}
         >
           <div
-            className="ui-textfield sc-iwsKbI drrfKT"
+            className="ui-textfield sc-VigVT eMcEmF"
             disabled={false}
           >
             <styled.input
@@ -61,11 +66,12 @@ exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
               onKeyPress={[Function]}
               sizing="normal"
               style={Object {}}
+              tooltip=""
               type="text"
               visible={true}
             >
               <input
-                className="sc-htoDjs WlwqH"
+                className="sc-gZMcBi fnEBAm"
                 disabled={false}
                 id=""
                 onBlur={[Function]}
@@ -96,6 +102,7 @@ exports[`Test creating TextField and saving on blur 1`] = `
   onValidation={[Function]}
   sizing="normal"
   style={Object {}}
+  tooltip=""
   type="text"
   useclear={false}
   usevalidation={false}
@@ -113,16 +120,20 @@ exports[`Test creating TextField and saving on blur 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
   >
     <styled.div
       className="ui-textfield-container"
+      id=""
       style={Object {}}
     >
       <div
-        className="ui-textfield-container sc-dnqmqq efWnFk"
+        className="ui-textfield-container sc-gqjmRU kxbhDp"
+        id=""
         style={Object {}}
       >
         <styled.div
@@ -132,7 +143,7 @@ exports[`Test creating TextField and saving on blur 1`] = `
           visible={true}
         >
           <div
-            className="ui-textfield sc-iwsKbI drrfKT"
+            className="ui-textfield sc-VigVT eMcEmF"
             disabled={false}
           >
             <styled.input
@@ -145,11 +156,12 @@ exports[`Test creating TextField and saving on blur 1`] = `
               onKeyPress={[Function]}
               sizing="normal"
               style={Object {}}
+              tooltip=""
               type="text"
               visible={true}
             >
               <input
-                className="sc-htoDjs WlwqH"
+                className="sc-gZMcBi fnEBAm"
                 disabled={false}
                 id=""
                 onBlur={[Function]}
@@ -180,12 +192,15 @@ exports[`Test creation of a TextField control 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }
 >
   <styled.div
     className="ui-textfield-container"
+    id=""
     style={Object {}}
   >
     <styled.div
@@ -205,6 +220,7 @@ exports[`Test creation of a TextField control 1`] = `
         onKeyPress={[Function]}
         sizing="normal"
         style={Object {}}
+        tooltip=""
         type="text"
         visible={true}
       />
@@ -225,6 +241,7 @@ exports[`Test creation of a TextField with email validation 1`] = `
   onValidation={[Function]}
   sizing="normal"
   style={Object {}}
+  tooltip=""
   type="email"
   useclear={false}
   usevalidation={true}
@@ -242,16 +259,20 @@ exports[`Test creation of a TextField with email validation 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
   >
     <styled.div
       className="ui-textfield-container"
+      id=""
       style={Object {}}
     >
       <div
-        className="ui-textfield-container sc-dnqmqq efWnFk"
+        className="ui-textfield-container sc-gqjmRU kxbhDp"
+        id=""
         style={Object {}}
       >
         <styled.div
@@ -261,7 +282,7 @@ exports[`Test creation of a TextField with email validation 1`] = `
           visible={true}
         >
           <div
-            className="ui-textfield sc-iwsKbI drrfKT"
+            className="ui-textfield sc-VigVT eMcEmF"
             disabled={false}
           >
             <styled.input
@@ -274,11 +295,12 @@ exports[`Test creation of a TextField with email validation 1`] = `
               onKeyPress={[Function]}
               sizing="normal"
               style={Object {}}
+              tooltip=""
               type="email"
               visible={true}
             >
               <input
-                className="sc-htoDjs WlwqH"
+                className="sc-gZMcBi fnEBAm"
                 disabled={false}
                 id=""
                 onBlur={[Function]}
@@ -299,7 +321,7 @@ exports[`Test creation of a TextField with email validation 1`] = `
           visible={true}
         >
           <div
-            className="ui-textfield-validation-message sc-gzVnrw fpmiFb"
+            className="ui-textfield-validation-message sc-iwsKbI fzfHna"
             disabled={false}
           >
             ​
@@ -323,6 +345,7 @@ exports[`Test creation of a TextField with url validation 1`] = `
   onValidation={[Function]}
   sizing="normal"
   style={Object {}}
+  tooltip=""
   type="url"
   useclear={false}
   usevalidation={true}
@@ -340,16 +363,20 @@ exports[`Test creation of a TextField with url validation 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
   >
     <styled.div
       className="ui-textfield-container"
+      id=""
       style={Object {}}
     >
       <div
-        className="ui-textfield-container sc-dnqmqq efWnFk"
+        className="ui-textfield-container sc-gqjmRU kxbhDp"
+        id=""
         style={Object {}}
       >
         <styled.div
@@ -359,7 +386,7 @@ exports[`Test creation of a TextField with url validation 1`] = `
           visible={true}
         >
           <div
-            className="ui-textfield sc-iwsKbI drrfKT"
+            className="ui-textfield sc-VigVT eMcEmF"
             disabled={false}
           >
             <styled.input
@@ -372,11 +399,12 @@ exports[`Test creation of a TextField with url validation 1`] = `
               onKeyPress={[Function]}
               sizing="normal"
               style={Object {}}
+              tooltip=""
               type="url"
               visible={true}
             >
               <input
-                className="sc-htoDjs WlwqH"
+                className="sc-gZMcBi fnEBAm"
                 disabled={false}
                 id=""
                 onBlur={[Function]}
@@ -397,7 +425,7 @@ exports[`Test creation of a TextField with url validation 1`] = `
           visible={true}
         >
           <div
-            className="ui-textfield-validation-message sc-gzVnrw fpmiFb"
+            className="ui-textfield-validation-message sc-iwsKbI fzfHna"
             disabled={false}
           >
             ​
@@ -423,6 +451,7 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
   onValidation={[Function]}
   sizing="normal"
   style={Object {}}
+  tooltip=""
   type="text"
   useclear={false}
   usevalidation={true}
@@ -441,16 +470,20 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
   >
     <styled.div
       className="ui-textfield-container"
+      id=""
       style={Object {}}
     >
       <div
-        className="ui-textfield-container sc-dnqmqq efWnFk"
+        className="ui-textfield-container sc-gqjmRU kxbhDp"
+        id=""
         style={Object {}}
       >
         <styled.div
@@ -460,7 +493,7 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
           visible={true}
         >
           <div
-            className="ui-textfield sc-iwsKbI drrfKT"
+            className="ui-textfield sc-VigVT eMcEmF"
             disabled={false}
           >
             <styled.input
@@ -475,12 +508,13 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
               onKeyPress={[Function]}
               sizing="normal"
               style={Object {}}
+              tooltip=""
               type="text"
               value=""
               visible={true}
             >
               <input
-                className="sc-htoDjs WlwqH"
+                className="sc-gZMcBi fnEBAm"
                 disabled={false}
                 id=""
                 maxLength="10"
@@ -504,7 +538,7 @@ exports[`Test creation of a textfield with min/max validation 1`] = `
           visible={true}
         >
           <div
-            className="ui-textfield-validation-message sc-gzVnrw fpmiFb"
+            className="ui-textfield-validation-message sc-iwsKbI fzfHna"
             disabled={false}
           >
             ​
@@ -528,6 +562,7 @@ exports[`Test disabling of a TextField control 1`] = `
   onValidation={[Function]}
   sizing="normal"
   style={Object {}}
+  tooltip=""
   type="text"
   useclear={false}
   usevalidation={false}
@@ -545,16 +580,20 @@ exports[`Test disabling of a TextField control 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
   >
     <styled.div
       className="ui-textfield-container"
+      id=""
       style={Object {}}
     >
       <div
-        className="ui-textfield-container sc-dnqmqq efWnFk"
+        className="ui-textfield-container sc-gqjmRU kxbhDp"
+        id=""
         style={Object {}}
       >
         <styled.div
@@ -564,7 +603,7 @@ exports[`Test disabling of a TextField control 1`] = `
           visible={true}
         >
           <div
-            className="ui-textfield sc-iwsKbI uObwk"
+            className="ui-textfield sc-VigVT gdIXPe"
             disabled={true}
           >
             <styled.input
@@ -577,11 +616,12 @@ exports[`Test disabling of a TextField control 1`] = `
               onKeyPress={[Function]}
               sizing="normal"
               style={Object {}}
+              tooltip=""
               type="text"
               visible={true}
             >
               <input
-                className="sc-htoDjs ggPgMD"
+                className="sc-gZMcBi jCpWPK"
                 disabled={true}
                 id=""
                 onBlur={[Function]}
@@ -612,6 +652,7 @@ exports[`Test making the TextField invisible 1`] = `
   onValidation={[Function]}
   sizing="normal"
   style={Object {}}
+  tooltip=""
   type="text"
   useclear={false}
   usevalidation={false}
@@ -629,16 +670,20 @@ exports[`Test making the TextField invisible 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
   >
     <styled.div
       className="ui-textfield-container"
+      id=""
       style={Object {}}
     >
       <div
-        className="ui-textfield-container sc-dnqmqq efWnFk"
+        className="ui-textfield-container sc-gqjmRU kxbhDp"
+        id=""
         style={Object {}}
       >
         <styled.div
@@ -648,7 +693,7 @@ exports[`Test making the TextField invisible 1`] = `
           visible={false}
         >
           <div
-            className="ui-textfield sc-iwsKbI drrfKT"
+            className="ui-textfield sc-VigVT eMcEmF"
             disabled={false}
           >
             <styled.input
@@ -661,11 +706,12 @@ exports[`Test making the TextField invisible 1`] = `
               onKeyPress={[Function]}
               sizing="normal"
               style={Object {}}
+              tooltip=""
               type="text"
               visible={false}
             >
               <input
-                className="sc-htoDjs dMCsYf"
+                className="sc-gZMcBi bOiJhC"
                 disabled={false}
                 id=""
                 onBlur={[Function]}
@@ -696,6 +742,7 @@ Object {
   "onValidation": [Function],
   "sizing": "normal",
   "style": Object {},
+  "tooltip": "",
   "type": "text",
   "useclear": false,
   "usevalidation": false,

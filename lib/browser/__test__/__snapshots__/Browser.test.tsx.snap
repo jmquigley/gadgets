@@ -39,6 +39,8 @@ exports[`Test creation of a Browser instance 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -47,7 +49,7 @@ exports[`Test creation of a Browser instance 1`] = `
       className="ui-browser"
     >
       <div
-        className="ui-browser sc-iAyFgw idpHGd"
+        className="ui-browser sc-cvbbAY inDaSx"
       >
         <Title
           className=""
@@ -251,6 +253,8 @@ exports[`Test creation of a Browser instance 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -263,7 +267,7 @@ exports[`Test creation of a Browser instance 1`] = `
               visible={true}
             >
               <div
-                className="ui-title-bar nohover sc-VigVT iMMAvw"
+                className="ui-title-bar nohover sc-jzJRlG keWPod"
                 disabled={false}
                 style={Object {}}
               >
@@ -279,13 +283,13 @@ exports[`Test creation of a Browser instance 1`] = `
                   }
                 >
                   <div
-                    className="ui-title sc-jTzLTM bidAGd"
+                    className="ui-title sc-cSHVUG fDxhNb"
                   >
                     <Styled(Toolbar)
                       className="ui-browser-toolbar"
                     >
                       <Toolbar
-                        className="ui-browser-toolbar sc-eHgmQL gIBMba"
+                        className="ui-browser-toolbar sc-brqgnP nWcfc"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -318,22 +322,24 @@ exports[`Test creation of a Browser instance 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
                         >
                           <styled.div
-                            className="ui-toolbar ui-browser-toolbar sc-eHgmQL gIBMba"
+                            className="ui-toolbar ui-browser-toolbar sc-brqgnP nWcfc"
                           >
                             <div
-                              className="ui-toolbar ui-browser-toolbar sc-eHgmQL gIBMba sc-hMqMXs bELPpG"
+                              className="ui-toolbar ui-browser-toolbar sc-brqgnP nWcfc sc-iAyFgw iNHOoo"
                             >
                               <styled.div
                                 className="ui-toolbar-group"
                                 justify={0}
                               >
                                 <div
-                                  className="ui-toolbar-group sc-kEYyzF bRpFJQ"
+                                  className="ui-toolbar-group sc-hSdWYo irpwka"
                                 >
                                   <styled.div
                                     key="0"
@@ -348,7 +354,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -395,6 +401,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -402,13 +410,15 @@ exports[`Test creation of a Browser instance 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -447,6 +457,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -508,7 +520,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -555,6 +567,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -562,13 +576,15 @@ exports[`Test creation of a Browser instance 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -607,6 +623,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -668,7 +686,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -715,6 +733,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -722,13 +742,15 @@ exports[`Test creation of a Browser instance 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -767,6 +789,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -826,7 +850,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "display": "flex",
@@ -869,6 +893,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -879,7 +905,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                             width="4px"
                                           >
                                             <div
-                                              className="ui-divider ui-toolbar-element sc-bxivhb ibJUpR"
+                                              className="ui-divider ui-toolbar-element sc-bZQynM dwKYnu"
                                               style={Object {}}
                                               width="4px"
                                             >
@@ -903,7 +929,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -950,6 +976,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -957,13 +985,15 @@ exports[`Test creation of a Browser instance 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -1002,6 +1032,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -1060,7 +1092,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "display": "flex",
@@ -1078,7 +1110,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         visible={true}
                                       >
                                         <TextField
-                                          className="ui-toolbar-element sc-cvbbAY kdZQkV"
+                                          className="ui-toolbar-element sc-cMljjf lfhSnQ"
                                           disabled={false}
                                           id=""
                                           noborder={false}
@@ -1089,6 +1121,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                           onValidation={[Function]}
                                           sizing="normal"
                                           style={Object {}}
+                                          tooltip=""
                                           type="text"
                                           useclear={false}
                                           usevalidation={false}
@@ -1107,30 +1140,34 @@ exports[`Test creation of a Browser instance 1`] = `
                                                 "headerHoverColor": "#ffe11a",
                                                 "hoverColor": "#c0c0c0",
                                                 "inputBorderColor": "#c0c0c0",
+                                                "tooltipBackgroundColor": "gray",
+                                                "tooltipForegroundColor": "white",
                                                 "transitionDelay": "0.5s",
                                               }
                                             }
                                           >
                                             <styled.div
                                               className="ui-textfield-container"
+                                              id=""
                                               style={Object {}}
                                             >
                                               <div
-                                                className="ui-textfield-container sc-iwsKbI bhEiVw"
+                                                className="ui-textfield-container sc-VigVT hBlZaS"
+                                                id=""
                                                 style={Object {}}
                                               >
                                                 <styled.div
-                                                  className="ui-textfield ui-toolbar-element sc-cvbbAY kdZQkV"
+                                                  className="ui-textfield ui-toolbar-element sc-cMljjf lfhSnQ"
                                                   disabled={false}
                                                   noborder={false}
                                                   visible={true}
                                                 >
                                                   <div
-                                                    className="ui-textfield ui-toolbar-element sc-cvbbAY kdZQkV sc-gZMcBi jzPdHZ"
+                                                    className="ui-textfield ui-toolbar-element sc-cMljjf lfhSnQ sc-jTzLTM kZlAoV"
                                                     disabled={false}
                                                   >
                                                     <styled.input
-                                                      className="ui-toolbar-element sc-cvbbAY kdZQkV"
+                                                      className="ui-toolbar-element sc-cMljjf lfhSnQ"
                                                       disabled={false}
                                                       id=""
                                                       innerRef={[Function]}
@@ -1140,12 +1177,13 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       onKeyPress={[Function]}
                                                       sizing="normal"
                                                       style={Object {}}
+                                                      tooltip=""
                                                       type="text"
                                                       value="about:blank"
                                                       visible={true}
                                                     >
                                                       <input
-                                                        className="ui-toolbar-element sc-cvbbAY kdZQkV sc-dnqmqq jqFCdf"
+                                                        className="ui-toolbar-element sc-cMljjf lfhSnQ sc-gqjmRU hUmRSn"
                                                         disabled={false}
                                                         id=""
                                                         onBlur={[Function]}
@@ -1179,7 +1217,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -1226,6 +1264,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -1233,13 +1273,15 @@ exports[`Test creation of a Browser instance 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -1278,6 +1320,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -1534,7 +1578,7 @@ exports[`Test creation of a Browser instance 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-widget sc-jTzLTM kxCRlM"
+                    className="ui-title-widget sc-cSHVUG ehAjVh"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -1711,7 +1755,7 @@ exports[`Test creation of a Browser instance 1`] = `
                       value=""
                     >
                       <TextField
-                        className="sc-jWBwVP iXabWA"
+                        className="sc-jAaTju pYEpN"
                         disabled={false}
                         id=""
                         noborder={false}
@@ -1723,6 +1767,7 @@ exports[`Test creation of a Browser instance 1`] = `
                         placeholder="search"
                         sizing="normal"
                         style={Object {}}
+                        tooltip=""
                         type="text"
                         useclear={true}
                         usevalidation={false}
@@ -1741,30 +1786,34 @@ exports[`Test creation of a Browser instance 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
                         >
                           <styled.div
                             className="ui-textfield-container"
+                            id=""
                             style={Object {}}
                           >
                             <div
-                              className="ui-textfield-container sc-iwsKbI bhEiVw"
+                              className="ui-textfield-container sc-VigVT hBlZaS"
+                              id=""
                               style={Object {}}
                             >
                               <styled.div
-                                className="ui-textfield sc-jWBwVP iXabWA"
+                                className="ui-textfield sc-jAaTju pYEpN"
                                 disabled={false}
                                 noborder={false}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-textfield sc-jWBwVP iXabWA sc-gZMcBi jzPdHZ"
+                                  className="ui-textfield sc-jAaTju pYEpN sc-jTzLTM kZlAoV"
                                   disabled={false}
                                 >
                                   <styled.input
-                                    className="sc-jWBwVP iXabWA"
+                                    className="sc-jAaTju pYEpN"
                                     disabled={false}
                                     id=""
                                     innerRef={[Function]}
@@ -1775,12 +1824,13 @@ exports[`Test creation of a Browser instance 1`] = `
                                     placeholder="search"
                                     sizing="normal"
                                     style={Object {}}
+                                    tooltip=""
                                     type="text"
                                     value=""
                                     visible={true}
                                   >
                                     <input
-                                      className="sc-jWBwVP iXabWA sc-dnqmqq jqFCdf"
+                                      className="sc-jAaTju pYEpN sc-gqjmRU hUmRSn"
                                       disabled={false}
                                       id=""
                                       onBlur={[Function]}
@@ -1798,7 +1848,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                     sizing="small"
                                   >
                                     <div
-                                      className="ui-textfield-clear-button sc-gzVnrw bkvPnl"
+                                      className="ui-textfield-clear-button sc-iwsKbI fcqYRY"
                                     >
                                       <ButtonCircle
                                         className=""
@@ -1842,6 +1892,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -1850,14 +1902,14 @@ exports[`Test creation of a Browser instance 1`] = `
                                             className="ui-button-circle"
                                           >
                                             <div
-                                              className="ui-button-circle sc-ifAKCX dfJdLb"
+                                              className="ui-button-circle sc-gzVnrw jHUoAu"
                                             >
                                               <styled.div
                                                 height="18px"
                                                 width="18px"
                                               >
                                                 <div
-                                                  className="sc-EHOje gISpok"
+                                                  className="sc-htoDjs QyFw"
                                                   height="18px"
                                                   width="18px"
                                                 >
@@ -1893,7 +1945,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                     xcss={null}
                                                   >
                                                     <Button
-                                                      className="sc-bZQynM kfaxWp"
+                                                      className="sc-dnqmqq dtsZzm"
                                                       contentEditable={false}
                                                       direction="right"
                                                       disabled={false}
@@ -1934,13 +1986,16 @@ exports[`Test creation of a Browser instance 1`] = `
                                                             "headerHoverColor": "#ffe11a",
                                                             "hoverColor": "#c0c0c0",
                                                             "inputBorderColor": "#c0c0c0",
+                                                            "tooltipBackgroundColor": "gray",
+                                                            "tooltipForegroundColor": "white",
                                                             "transitionDelay": "0.5s",
                                                           }
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-bZQynM kfaxWp"
+                                                          className="ui-button ripple sc-dnqmqq dtsZzm"
                                                           disabled={false}
+                                                          id=""
                                                           onClick={[Function]}
                                                           style={
                                                             Object {
@@ -1952,8 +2007,9 @@ exports[`Test creation of a Browser instance 1`] = `
                                                           visible={true}
                                                         >
                                                           <div
-                                                            className="ui-button ripple sc-bZQynM kfaxWp sc-htpNat eaVJAo"
+                                                            className="ui-button ripple sc-dnqmqq dtsZzm sc-EHOje fNVjak"
                                                             disabled={false}
+                                                            id=""
                                                             onClick={[Function]}
                                                             style={
                                                               Object {
@@ -1998,6 +2054,8 @@ exports[`Test creation of a Browser instance 1`] = `
                                                                     "headerHoverColor": "#ffe11a",
                                                                     "hoverColor": "#c0c0c0",
                                                                     "inputBorderColor": "#c0c0c0",
+                                                                    "tooltipBackgroundColor": "gray",
+                                                                    "tooltipForegroundColor": "white",
                                                                     "transitionDelay": "0.5s",
                                                                   }
                                                                 }
@@ -2070,7 +2128,7 @@ exports[`Test creation of a Browser instance 1`] = `
           innerRef={[Function]}
         >
           <div
-            className="sc-hSdWYo gabYEm"
+            className="sc-jWBwVP hoqcNF"
           />
         </styled.div>
       </div>
@@ -2118,6 +2176,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -2126,7 +2186,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
       className="ui-browser"
     >
       <div
-        className="ui-browser sc-iAyFgw idpHGd"
+        className="ui-browser sc-cvbbAY inDaSx"
       >
         <Title
           className=""
@@ -2330,6 +2390,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -2342,7 +2404,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
               visible={true}
             >
               <div
-                className="ui-title-bar nohover sc-VigVT iMMAvw"
+                className="ui-title-bar nohover sc-jzJRlG keWPod"
                 disabled={false}
                 style={Object {}}
               >
@@ -2358,13 +2420,13 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                   }
                 >
                   <div
-                    className="ui-title sc-jTzLTM bidAGd"
+                    className="ui-title sc-cSHVUG fDxhNb"
                   >
                     <Styled(Toolbar)
                       className="ui-browser-toolbar"
                     >
                       <Toolbar
-                        className="ui-browser-toolbar sc-eHgmQL gIBMba"
+                        className="ui-browser-toolbar sc-brqgnP nWcfc"
                         contentEditable={false}
                         direction="right"
                         disabled={false}
@@ -2397,22 +2459,24 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
                         >
                           <styled.div
-                            className="ui-toolbar ui-browser-toolbar sc-eHgmQL gIBMba"
+                            className="ui-toolbar ui-browser-toolbar sc-brqgnP nWcfc"
                           >
                             <div
-                              className="ui-toolbar ui-browser-toolbar sc-eHgmQL gIBMba sc-hMqMXs bELPpG"
+                              className="ui-toolbar ui-browser-toolbar sc-brqgnP nWcfc sc-iAyFgw iNHOoo"
                             >
                               <styled.div
                                 className="ui-toolbar-group"
                                 justify={0}
                               >
                                 <div
-                                  className="ui-toolbar-group sc-kEYyzF bRpFJQ"
+                                  className="ui-toolbar-group sc-hSdWYo irpwka"
                                 >
                                   <styled.div
                                     key="0"
@@ -2427,7 +2491,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -2474,6 +2538,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -2481,13 +2547,15 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -2526,6 +2594,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -2587,7 +2657,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -2634,6 +2704,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -2641,13 +2713,15 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -2686,6 +2760,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -2747,7 +2823,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -2794,6 +2870,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -2801,13 +2879,15 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -2846,6 +2926,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -2905,7 +2987,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "display": "flex",
@@ -2948,6 +3030,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -2958,7 +3042,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                             width="4px"
                                           >
                                             <div
-                                              className="ui-divider ui-toolbar-element sc-bxivhb ibJUpR"
+                                              className="ui-divider ui-toolbar-element sc-bZQynM dwKYnu"
                                               style={Object {}}
                                               width="4px"
                                             >
@@ -2982,7 +3066,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -3029,6 +3113,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -3036,13 +3122,15 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -3081,6 +3169,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -3139,7 +3229,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "display": "flex",
@@ -3157,7 +3247,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         visible={true}
                                       >
                                         <TextField
-                                          className="ui-toolbar-element sc-cvbbAY kdZQkV"
+                                          className="ui-toolbar-element sc-cMljjf lfhSnQ"
                                           disabled={false}
                                           id=""
                                           noborder={false}
@@ -3168,6 +3258,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                           onValidation={[Function]}
                                           sizing="normal"
                                           style={Object {}}
+                                          tooltip=""
                                           type="text"
                                           useclear={false}
                                           usevalidation={false}
@@ -3186,30 +3277,34 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                 "headerHoverColor": "#ffe11a",
                                                 "hoverColor": "#c0c0c0",
                                                 "inputBorderColor": "#c0c0c0",
+                                                "tooltipBackgroundColor": "gray",
+                                                "tooltipForegroundColor": "white",
                                                 "transitionDelay": "0.5s",
                                               }
                                             }
                                           >
                                             <styled.div
                                               className="ui-textfield-container"
+                                              id=""
                                               style={Object {}}
                                             >
                                               <div
-                                                className="ui-textfield-container sc-iwsKbI bhEiVw"
+                                                className="ui-textfield-container sc-VigVT hBlZaS"
+                                                id=""
                                                 style={Object {}}
                                               >
                                                 <styled.div
-                                                  className="ui-textfield ui-toolbar-element sc-cvbbAY kdZQkV"
+                                                  className="ui-textfield ui-toolbar-element sc-cMljjf lfhSnQ"
                                                   disabled={false}
                                                   noborder={false}
                                                   visible={true}
                                                 >
                                                   <div
-                                                    className="ui-textfield ui-toolbar-element sc-cvbbAY kdZQkV sc-gZMcBi jzPdHZ"
+                                                    className="ui-textfield ui-toolbar-element sc-cMljjf lfhSnQ sc-jTzLTM kZlAoV"
                                                     disabled={false}
                                                   >
                                                     <styled.input
-                                                      className="ui-toolbar-element sc-cvbbAY kdZQkV"
+                                                      className="ui-toolbar-element sc-cMljjf lfhSnQ"
                                                       disabled={false}
                                                       id=""
                                                       innerRef={[Function]}
@@ -3219,12 +3314,13 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       onKeyPress={[Function]}
                                                       sizing="normal"
                                                       style={Object {}}
+                                                      tooltip=""
                                                       type="text"
                                                       value="about:blank"
                                                       visible={true}
                                                     >
                                                       <input
-                                                        className="ui-toolbar-element sc-cvbbAY kdZQkV sc-dnqmqq jqFCdf"
+                                                        className="ui-toolbar-element sc-cMljjf lfhSnQ sc-gqjmRU hUmRSn"
                                                         disabled={false}
                                                         id=""
                                                         onBlur={[Function]}
@@ -3258,7 +3354,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                     }
                                   >
                                     <div
-                                      className="sc-kkGfuU yKCZS"
+                                      className="sc-eHgmQL kpfMkr"
                                       style={
                                         Object {
                                           "border": "solid 1px silver",
@@ -3305,6 +3401,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -3312,13 +3410,15 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                           <styled.div
                                             className="ui-button ripple ui-toolbar-element"
                                             disabled={false}
+                                            id=""
                                             onClick={[Function]}
                                             style={Object {}}
                                             visible={true}
                                           >
                                             <div
-                                              className="ui-button ripple ui-toolbar-element sc-htpNat deJRSG"
+                                              className="ui-button ripple ui-toolbar-element sc-EHOje cuwkqf"
                                               disabled={false}
+                                              id=""
                                               onClick={[Function]}
                                               style={Object {}}
                                             >
@@ -3357,6 +3457,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       "headerHoverColor": "#ffe11a",
                                                       "hoverColor": "#c0c0c0",
                                                       "inputBorderColor": "#c0c0c0",
+                                                      "tooltipBackgroundColor": "gray",
+                                                      "tooltipForegroundColor": "white",
                                                       "transitionDelay": "0.5s",
                                                     }
                                                   }
@@ -3613,7 +3715,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-widget sc-jTzLTM kxCRlM"
+                    className="ui-title-widget sc-cSHVUG ehAjVh"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -3790,7 +3892,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                       value=""
                     >
                       <TextField
-                        className="sc-jWBwVP iXabWA"
+                        className="sc-jAaTju pYEpN"
                         disabled={false}
                         id=""
                         noborder={false}
@@ -3802,6 +3904,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                         placeholder="search"
                         sizing="normal"
                         style={Object {}}
+                        tooltip=""
                         type="text"
                         useclear={true}
                         usevalidation={false}
@@ -3820,30 +3923,34 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               "headerHoverColor": "#ffe11a",
                               "hoverColor": "#c0c0c0",
                               "inputBorderColor": "#c0c0c0",
+                              "tooltipBackgroundColor": "gray",
+                              "tooltipForegroundColor": "white",
                               "transitionDelay": "0.5s",
                             }
                           }
                         >
                           <styled.div
                             className="ui-textfield-container"
+                            id=""
                             style={Object {}}
                           >
                             <div
-                              className="ui-textfield-container sc-iwsKbI bhEiVw"
+                              className="ui-textfield-container sc-VigVT hBlZaS"
+                              id=""
                               style={Object {}}
                             >
                               <styled.div
-                                className="ui-textfield sc-jWBwVP iXabWA"
+                                className="ui-textfield sc-jAaTju pYEpN"
                                 disabled={false}
                                 noborder={false}
                                 visible={true}
                               >
                                 <div
-                                  className="ui-textfield sc-jWBwVP iXabWA sc-gZMcBi jzPdHZ"
+                                  className="ui-textfield sc-jAaTju pYEpN sc-jTzLTM kZlAoV"
                                   disabled={false}
                                 >
                                   <styled.input
-                                    className="sc-jWBwVP iXabWA"
+                                    className="sc-jAaTju pYEpN"
                                     disabled={false}
                                     id=""
                                     innerRef={[Function]}
@@ -3854,12 +3961,13 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                     placeholder="search"
                                     sizing="normal"
                                     style={Object {}}
+                                    tooltip=""
                                     type="text"
                                     value=""
                                     visible={true}
                                   >
                                     <input
-                                      className="sc-jWBwVP iXabWA sc-dnqmqq jqFCdf"
+                                      className="sc-jAaTju pYEpN sc-gqjmRU hUmRSn"
                                       disabled={false}
                                       id=""
                                       onBlur={[Function]}
@@ -3877,7 +3985,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                     sizing="small"
                                   >
                                     <div
-                                      className="ui-textfield-clear-button sc-gzVnrw bkvPnl"
+                                      className="ui-textfield-clear-button sc-iwsKbI fcqYRY"
                                     >
                                       <ButtonCircle
                                         className=""
@@ -3921,6 +4029,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               "headerHoverColor": "#ffe11a",
                                               "hoverColor": "#c0c0c0",
                                               "inputBorderColor": "#c0c0c0",
+                                              "tooltipBackgroundColor": "gray",
+                                              "tooltipForegroundColor": "white",
                                               "transitionDelay": "0.5s",
                                             }
                                           }
@@ -3929,14 +4039,14 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                             className="ui-button-circle"
                                           >
                                             <div
-                                              className="ui-button-circle sc-ifAKCX dfJdLb"
+                                              className="ui-button-circle sc-gzVnrw jHUoAu"
                                             >
                                               <styled.div
                                                 height="18px"
                                                 width="18px"
                                               >
                                                 <div
-                                                  className="sc-EHOje gISpok"
+                                                  className="sc-htoDjs QyFw"
                                                   height="18px"
                                                   width="18px"
                                                 >
@@ -3972,7 +4082,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                     xcss={null}
                                                   >
                                                     <Button
-                                                      className="sc-bZQynM kfaxWp"
+                                                      className="sc-dnqmqq dtsZzm"
                                                       contentEditable={false}
                                                       direction="right"
                                                       disabled={false}
@@ -4013,13 +4123,16 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                             "headerHoverColor": "#ffe11a",
                                                             "hoverColor": "#c0c0c0",
                                                             "inputBorderColor": "#c0c0c0",
+                                                            "tooltipBackgroundColor": "gray",
+                                                            "tooltipForegroundColor": "white",
                                                             "transitionDelay": "0.5s",
                                                           }
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-bZQynM kfaxWp"
+                                                          className="ui-button ripple sc-dnqmqq dtsZzm"
                                                           disabled={false}
+                                                          id=""
                                                           onClick={[Function]}
                                                           style={
                                                             Object {
@@ -4031,8 +4144,9 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                           visible={true}
                                                         >
                                                           <div
-                                                            className="ui-button ripple sc-bZQynM kfaxWp sc-htpNat eaVJAo"
+                                                            className="ui-button ripple sc-dnqmqq dtsZzm sc-EHOje fNVjak"
                                                             disabled={false}
+                                                            id=""
                                                             onClick={[Function]}
                                                             style={
                                                               Object {
@@ -4077,6 +4191,8 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                                     "headerHoverColor": "#ffe11a",
                                                                     "hoverColor": "#c0c0c0",
                                                                     "inputBorderColor": "#c0c0c0",
+                                                                    "tooltipBackgroundColor": "gray",
+                                                                    "tooltipForegroundColor": "white",
                                                                     "transitionDelay": "0.5s",
                                                                   }
                                                                 }
@@ -4149,7 +4265,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
           innerRef={[Function]}
         >
           <div
-            className="sc-hSdWYo gabYEm"
+            className="sc-jWBwVP hoqcNF"
           />
         </styled.div>
       </div>

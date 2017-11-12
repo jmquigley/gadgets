@@ -47,6 +47,7 @@ import {
 	invisible,
 	Sizing
 } from '../shared';
+import {tooltip} from '../shared/helpers';
 import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface ButtonProps extends BaseProps {
@@ -75,6 +76,7 @@ export const BaseButtonView: any = css`
 	justify-content: center;
 	line-height: inherit;
 	outline: none;
+	overflow: visible;
 	position: relative;
 	user-select: none;
 `;
@@ -127,8 +129,9 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		return (
 			<ThemeProvider theme={getTheme()}>
 				<ButtonView
-					disabled={this.props.disabled}
 					className={this.classes}
+					disabled={this.props.disabled}
+					id={this.props.id}
 					onClick={this.handleClick}
 					style={this.inlineStyles}
 					visible={this.props.visible}
@@ -138,6 +141,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 						iconName={this.props.iconName}
 						sizing={this.props.sizing}
 					/>
+					{tooltip(this.props)}
 				</ButtonView>
 			</ThemeProvider>
 		);

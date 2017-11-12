@@ -358,7 +358,7 @@ class App extends React.Component<AppProps, AppState> {
 						<td><Button iconName="motorcycle" sizing={Sizing.xxsmall}/></td>
 						<td><Button iconName="motorcycle" sizing={Sizing.xsmall}/></td>
 						<td><Button iconName="motorcycle" sizing={Sizing.small}/></td>
-						<td><Button iconName="motorcycle" sizing={Sizing.normal}/></td>
+						<td><Button id="btn-normal" iconName="motorcycle" sizing={Sizing.normal} tooltip="normal"/></td>
 						<td><Button iconName="motorcycle" sizing={Sizing.large}/></td>
 						<td><Button iconName="motorcycle" sizing={Sizing.xlarge}/></td>
 						<td><Button iconName="motorcycle" sizing={Sizing.xxlarge}/></td>
@@ -1225,25 +1225,27 @@ class App extends React.Component<AppProps, AppState> {
 
 			<h3>Validation of Max (10) & Min (5) Length</h3>
 			<TextField
-				placeholder="validation"
-				minLength="5"
+				id="tf-validation"
 				maxLength="10"
+				minLength="5"
+				placeholder="validation"
+				tooltip="Enter text with length greather than 5 and less than 10"
 				usevalidation
-				/>
+			/>
 
 			<h3>Validation of Email</h3>
 			<TextField
 				placeholder="email validation"
 				type="email"
 				usevalidation
-				/>
+			/>
 
 			<h3>Validation of URL</h3>
 			<TextField
 				placeholder="url validation"
 				type="url"
 				usevalidation
-				/>
+			/>
 
 			<h3>Validation with custom alphanumeric</h3>
 			<TextField

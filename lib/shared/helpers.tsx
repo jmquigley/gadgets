@@ -1,5 +1,7 @@
 'use strict';
 
+import {Tooltip} from '../tooltip';
+
 /**
  * Takes a variable name and an object and places that name and associated
  * object into the global node space.  If the object is alread in the
@@ -20,4 +22,28 @@ export function globalize(name: string, pkg: any, replace: boolean = false) {
 	}
 
 	return ref;
+}
+
+/**
+ * Creates a tooltip object for use within a control.  It will check the given
+ * props for a tooltip string.  If it has one, it will create the object and
+ * return it.  If it doesn't have it, then NULL is returned.
+ * @param props {any} and object representing the props used to generate the
+ * tooltip.
+ * @return {Tooltip} a new Tooltip reference if there is a given tooltip string
+ * otherwise null is returned.
+ */
+export function tooltip(props: any) {
+	if (props['tooltip'] !== '') {
+		return (
+			<Tooltip
+				{...props}
+				parent={props['id']}
+			>
+				{props['tooltip']}
+			</Tooltip>
+		);
+	}
+
+	return null;
 }

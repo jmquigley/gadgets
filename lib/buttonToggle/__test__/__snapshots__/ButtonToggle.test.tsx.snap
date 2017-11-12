@@ -12,6 +12,8 @@ exports[`Test creation of a ButtonToggle control 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }
@@ -100,6 +102,8 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -152,6 +156,8 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
             "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
             "inputBorderColor": "#c0c0c0",
+            "tooltipBackgroundColor": "gray",
+            "tooltipForegroundColor": "white",
             "transitionDelay": "0.5s",
           }
         }
@@ -159,6 +165,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
         <styled.div
           className="ui-button nohover ui-button-toggle"
           disabled={false}
+          id=""
           onClick={[Function]}
           style={
             Object {
@@ -169,8 +176,9 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
           visible={true}
         >
           <div
-            className="ui-button nohover ui-button-toggle sc-htpNat eaVJAo"
+            className="ui-button nohover ui-button-toggle sc-EHOje fNVjak"
             disabled={false}
+            id=""
             onClick={[Function]}
             style={
               Object {
@@ -214,6 +222,8 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
                     "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
                     "inputBorderColor": "#c0c0c0",
+                    "tooltipBackgroundColor": "gray",
+                    "tooltipForegroundColor": "white",
                     "transitionDelay": "0.5s",
                   }
                 }
@@ -308,6 +318,8 @@ exports[`Test disabling of a ButtonToggle 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -360,6 +372,8 @@ exports[`Test disabling of a ButtonToggle 1`] = `
             "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
             "inputBorderColor": "#c0c0c0",
+            "tooltipBackgroundColor": "gray",
+            "tooltipForegroundColor": "white",
             "transitionDelay": "0.5s",
           }
         }
@@ -367,6 +381,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
         <styled.div
           className="ui-button nohover ui-button-toggle"
           disabled={true}
+          id=""
           onClick={[Function]}
           style={
             Object {
@@ -377,8 +392,9 @@ exports[`Test disabling of a ButtonToggle 1`] = `
           visible={true}
         >
           <div
-            className="ui-button nohover ui-button-toggle sc-htpNat cDPcSb"
+            className="ui-button nohover ui-button-toggle sc-EHOje drKCiD"
             disabled={true}
+            id=""
             onClick={[Function]}
             style={
               Object {
@@ -422,6 +438,8 @@ exports[`Test disabling of a ButtonToggle 1`] = `
                     "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
                     "inputBorderColor": "#c0c0c0",
+                    "tooltipBackgroundColor": "gray",
+                    "tooltipForegroundColor": "white",
                     "transitionDelay": "0.5s",
                   }
                 }
@@ -516,6 +534,8 @@ exports[`Test making a ButtonToggle invisible 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -568,6 +588,8 @@ exports[`Test making a ButtonToggle invisible 1`] = `
             "headerHoverColor": "#ffe11a",
             "hoverColor": "#c0c0c0",
             "inputBorderColor": "#c0c0c0",
+            "tooltipBackgroundColor": "gray",
+            "tooltipForegroundColor": "white",
             "transitionDelay": "0.5s",
           }
         }
@@ -575,6 +597,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
         <styled.div
           className="ui-button nohover ui-button-toggle"
           disabled={false}
+          id=""
           onClick={[Function]}
           style={
             Object {
@@ -585,8 +608,9 @@ exports[`Test making a ButtonToggle invisible 1`] = `
           visible={false}
         >
           <div
-            className="ui-button nohover ui-button-toggle sc-htpNat obZDX"
+            className="ui-button nohover ui-button-toggle sc-EHOje cuKWcl"
             disabled={false}
+            id=""
             onClick={[Function]}
             style={
               Object {
@@ -630,6 +654,8 @@ exports[`Test making a ButtonToggle invisible 1`] = `
                     "headerHoverColor": "#ffe11a",
                     "hoverColor": "#c0c0c0",
                     "inputBorderColor": "#c0c0c0",
+                    "tooltipBackgroundColor": "gray",
+                    "tooltipForegroundColor": "white",
                     "transitionDelay": "0.5s",
                   }
                 }

@@ -42,6 +42,8 @@ exports[`Test disabling of a Tab 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -59,7 +61,7 @@ exports[`Test disabling of a Tab 1`] = `
       xcss=""
     >
       <div
-        className="ui-tab sc-gzVnrw fPbJoR"
+        className="ui-tab sc-iwsKbI kCinFJ"
         disabled={true}
         style={
           Object {
@@ -111,6 +113,8 @@ exports[`Test disabling of a Tab 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -123,7 +127,7 @@ exports[`Test disabling of a Tab 1`] = `
               visible={true}
             >
               <div
-                className="ui-title-bar sc-ifAKCX eeRPmE"
+                className="ui-title-bar sc-gzVnrw dbBGkD"
                 disabled={true}
                 style={Object {}}
               >
@@ -168,7 +172,7 @@ exports[`Test disabling of a Tab 1`] = `
                   }
                 >
                   <Label
-                    className="ui-title sc-bZQynM fXdSdE"
+                    className="ui-title sc-dnqmqq gbybiH"
                     contentEditable={false}
                     direction="right"
                     disabled={true}
@@ -225,12 +229,14 @@ exports[`Test disabling of a Tab 1`] = `
                           "headerHoverColor": "#ffe11a",
                           "hoverColor": "#c0c0c0",
                           "inputBorderColor": "#c0c0c0",
+                          "tooltipBackgroundColor": "gray",
+                          "tooltipForegroundColor": "white",
                           "transitionDelay": "0.5s",
                         }
                       }
                     >
                       <styled.span
-                        className="ui-label ui-title sc-bZQynM fXdSdE"
+                        className="ui-label ui-title sc-dnqmqq gbybiH"
                         contentEditable={false}
                         disabled={true}
                         innerRef={[Function]}
@@ -245,7 +251,7 @@ exports[`Test disabling of a Tab 1`] = `
                         visible={true}
                       >
                         <span
-                          className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb kEoKec"
+                          className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM dutPGe"
                           contentEditable={false}
                           disabled={true}
                           onBlur={[Function]}
@@ -302,7 +308,7 @@ exports[`Test disabling of a Tab 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-widget sc-EHOje bmfMZM"
+                    className="ui-title-widget sc-htoDjs iXvauZ"
                     contentEditable={false}
                     direction="right"
                     disabled={true}
@@ -374,6 +380,8 @@ exports[`Test making a Tab invisible 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -408,7 +416,7 @@ exports[`Test making a Tab invisible 1`] = `
       }
     >
       <div
-        className="ui-tab sc-gzVnrw ETHYp"
+        className="ui-tab sc-iwsKbI dgIoXq"
         disabled={false}
         style={
           Object {
@@ -499,6 +507,8 @@ exports[`Test making a Tab invisible 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -511,7 +521,7 @@ exports[`Test making a Tab invisible 1`] = `
               visible={true}
             >
               <div
-                className="ui-title-bar sc-ifAKCX fsmfqq"
+                className="ui-title-bar sc-gzVnrw jmCWlU"
                 disabled={false}
                 style={Object {}}
               >
@@ -595,7 +605,7 @@ exports[`Test making a Tab invisible 1`] = `
                   }
                 >
                   <Label
-                    className="ui-title sc-bZQynM fXdSdE"
+                    className="ui-title sc-dnqmqq gbybiH"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -691,12 +701,14 @@ exports[`Test making a Tab invisible 1`] = `
                           "headerHoverColor": "#ffe11a",
                           "hoverColor": "#c0c0c0",
                           "inputBorderColor": "#c0c0c0",
+                          "tooltipBackgroundColor": "gray",
+                          "tooltipForegroundColor": "white",
                           "transitionDelay": "0.5s",
                         }
                       }
                     >
                       <styled.span
-                        className="ui-label ui-title sc-bZQynM fXdSdE"
+                        className="ui-label ui-title sc-dnqmqq gbybiH"
                         contentEditable={false}
                         disabled={false}
                         innerRef={[Function]}
@@ -711,7 +723,7 @@ exports[`Test making a Tab invisible 1`] = `
                         visible={true}
                       >
                         <span
-                          className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                          className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                           contentEditable={false}
                           disabled={false}
                           onBlur={[Function]}
@@ -807,7 +819,7 @@ exports[`Test making a Tab invisible 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-widget sc-EHOje bmfMZM"
+                    className="ui-title-widget sc-htoDjs iXvauZ"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -871,6 +883,8 @@ exports[`Test making a Tab invisible 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -878,13 +892,15 @@ exports[`Test making a Tab invisible 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={false}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat psfup"
+                            className="ui-button ripple sc-EHOje iMCaTv"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -923,6 +939,8 @@ exports[`Test making a Tab invisible 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -1056,6 +1074,8 @@ exports[`Test the click handler in the Tab instance 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -1073,7 +1093,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
       xcss=""
     >
       <div
-        className="ui-tab sc-gzVnrw ijZlox"
+        className="ui-tab sc-iwsKbI jjGbGn"
         disabled={false}
         style={
           Object {
@@ -1160,6 +1180,8 @@ exports[`Test the click handler in the Tab instance 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -1172,7 +1194,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
               visible={true}
             >
               <div
-                className="ui-title-bar sc-ifAKCX fsmfqq"
+                className="ui-title-bar sc-gzVnrw jmCWlU"
                 disabled={false}
                 style={Object {}}
               >
@@ -1252,7 +1274,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                   }
                 >
                   <Label
-                    className="ui-title sc-bZQynM fXdSdE"
+                    className="ui-title sc-dnqmqq gbybiH"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -1344,12 +1366,14 @@ exports[`Test the click handler in the Tab instance 1`] = `
                           "headerHoverColor": "#ffe11a",
                           "hoverColor": "#c0c0c0",
                           "inputBorderColor": "#c0c0c0",
+                          "tooltipBackgroundColor": "gray",
+                          "tooltipForegroundColor": "white",
                           "transitionDelay": "0.5s",
                         }
                       }
                     >
                       <styled.span
-                        className="ui-label ui-title sc-bZQynM fXdSdE"
+                        className="ui-label ui-title sc-dnqmqq gbybiH"
                         contentEditable={false}
                         disabled={false}
                         innerRef={[Function]}
@@ -1364,7 +1388,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                         visible={true}
                       >
                         <span
-                          className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                          className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                           contentEditable={false}
                           disabled={false}
                           onBlur={[Function]}
@@ -1456,7 +1480,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-widget sc-EHOje bmfMZM"
+                    className="ui-title-widget sc-htoDjs iXvauZ"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -1516,6 +1540,8 @@ exports[`Test the click handler in the Tab instance 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -1523,13 +1549,15 @@ exports[`Test the click handler in the Tab instance 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1568,6 +1596,8 @@ exports[`Test the click handler in the Tab instance 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -1668,6 +1698,8 @@ exports[`Test the close click handler on a Tab instance 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -1685,7 +1717,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
       xcss=""
     >
       <div
-        className="ui-tab sc-gzVnrw ijZlox"
+        className="ui-tab sc-iwsKbI jjGbGn"
         disabled={false}
         style={
           Object {
@@ -1772,6 +1804,8 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -1784,7 +1818,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
               visible={true}
             >
               <div
-                className="ui-title-bar sc-ifAKCX fsmfqq"
+                className="ui-title-bar sc-gzVnrw jmCWlU"
                 disabled={false}
                 style={Object {}}
               >
@@ -1864,7 +1898,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                   }
                 >
                   <Label
-                    className="ui-title sc-bZQynM fXdSdE"
+                    className="ui-title sc-dnqmqq gbybiH"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -1956,12 +1990,14 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                           "headerHoverColor": "#ffe11a",
                           "hoverColor": "#c0c0c0",
                           "inputBorderColor": "#c0c0c0",
+                          "tooltipBackgroundColor": "gray",
+                          "tooltipForegroundColor": "white",
                           "transitionDelay": "0.5s",
                         }
                       }
                     >
                       <styled.span
-                        className="ui-label ui-title sc-bZQynM fXdSdE"
+                        className="ui-label ui-title sc-dnqmqq gbybiH"
                         contentEditable={false}
                         disabled={false}
                         innerRef={[Function]}
@@ -1976,7 +2012,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                         visible={true}
                       >
                         <span
-                          className="ui-label ui-title sc-bZQynM fXdSdE sc-bxivhb cTXvCi"
+                          className="ui-label ui-title sc-dnqmqq gbybiH sc-bZQynM gWaAFB"
                           contentEditable={false}
                           disabled={false}
                           onBlur={[Function]}
@@ -2068,7 +2104,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                   }
                 >
                   <div
-                    className="ui-title-widget sc-EHOje bmfMZM"
+                    className="ui-title-widget sc-htoDjs iXvauZ"
                     contentEditable={false}
                     direction="right"
                     disabled={false}
@@ -2128,6 +2164,8 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                             "headerHoverColor": "#ffe11a",
                             "hoverColor": "#c0c0c0",
                             "inputBorderColor": "#c0c0c0",
+                            "tooltipBackgroundColor": "gray",
+                            "tooltipForegroundColor": "white",
                             "transitionDelay": "0.5s",
                           }
                         }
@@ -2135,13 +2173,15 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                         <styled.div
                           className="ui-button ripple"
                           disabled={false}
+                          id=""
                           onClick={[Function]}
                           style={Object {}}
                           visible={true}
                         >
                           <div
-                            className="ui-button ripple sc-htpNat deJRSG"
+                            className="ui-button ripple sc-EHOje cuwkqf"
                             disabled={false}
+                            id=""
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -2180,6 +2220,8 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                                     "headerHoverColor": "#ffe11a",
                                     "hoverColor": "#c0c0c0",
                                     "inputBorderColor": "#c0c0c0",
+                                    "tooltipBackgroundColor": "gray",
+                                    "tooltipForegroundColor": "white",
                                     "transitionDelay": "0.5s",
                                   }
                                 }
@@ -2250,6 +2292,8 @@ exports[`Test the creation of a Tab instance 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }

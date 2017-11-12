@@ -48,6 +48,8 @@ export interface ThemeProps {
 	headerHoverColor: string;
 	hoverColor: string;
 	inputBorderColor: string;
+	tooltipBackgroundColor: string;
+	tooltipForegroundColor: string;
 	transitionDelay: string;
 }
 

@@ -54,8 +54,7 @@ import {
 	fontStyle,
 	getDefaultBaseProps,
 	getTheme,
-	Location,
-	Sizing
+	Location
 } from '../shared';
 import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 import {Triangle} from '../triangle';
@@ -65,14 +64,15 @@ export interface TooltipProps extends BaseProps {
 }
 
 export function getDefaultTooltipProps(): TooltipProps {
+	const theme = getTheme();
+
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			location: Location.middleRight,
+			location: Location.topRight,
 			parent: null,
-			sizing: Sizing.inherit,
 			style: {
-				color: 'white',
-				backgroundColor: 'gray'
+				color: theme.tooltipForegroundColor,
+				backgroundColor: theme.tooltipBackgroundColor
 			}
 		})
 	);
@@ -201,16 +201,16 @@ export const StyledTriangle: any = withProps<TooltipProps, HTMLElement>(styled(T
 	${props => {
 		switch (props.location) {
 			case Location.topLeft: return TriangleTopLeft;
-			case Location.top: return TriangleTop;
 			case Location.topRight: return TriangleTopRight;
 			case Location.middleLeft: return TriangleMiddleLeft;
+			case Location.middle:
+			case Location.middleRight: return TriangleMiddleRight;
 			case Location.bottomLeft: return TriangleBottomLeft;
 			case Location.bottom: return TriangleBottom;
 			case Location.bottomRight: return TriangleBottomRight;
 
-			case Location.middle:
-			case Location.middleRight:
-			default: return TriangleMiddleRight;
+			default:
+			case Location.top: return TriangleTop;
 		}
 	}};
 `;
@@ -233,16 +233,16 @@ export const TooltipView: any = withProps<TooltipProps, HTMLDivElement>(styled.d
 	${props => {
 		switch (props.location) {
 			case Location.topLeft: return TopLeft;
-			case Location.top: return Top;
 			case Location.topRight: return TopRight;
 			case Location.middleLeft: return MiddleLeft;
+			case Location.middle:
+			case Location.middleRight: return Middle;
 			case Location.bottomLeft: return BottomLeft;
 			case Location.bottom: return Bottom;
 			case Location.bottomRight: return BottomRight;
 
-			case Location.middle:
-			case Location.middleRight:
-			default: return Middle;
+			default:
+			case Location.top: return Top;
 		}
 	}};
 
@@ -325,7 +325,8 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 				>
 					<TootipContentView
 						className="ui-tooltip-content"
-						style={this.props.style}
+						sizing={this.prev(this.props.sizing).type}
+						style={this.inlineStyles}
 					>
 						{this.props.children}
 					</TootipContentView>
@@ -333,8 +334,8 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 						location={this.props.location}
 						direction={direction}
 						style={{
-							fill: this.props.style['backgroundColor'],
-							stroke: this.props.style['backgroundColor']
+							fill: this.inlineStyles['backgroundColor'],
+							stroke: this.inlineStyles['backgroundColor']
 						}}
 					/>
 				</TooltipView>

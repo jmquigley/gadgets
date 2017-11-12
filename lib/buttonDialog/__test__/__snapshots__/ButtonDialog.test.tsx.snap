@@ -12,6 +12,8 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }
@@ -96,6 +98,8 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
       "transitionDelay": "0.5s",
     }
   }
@@ -213,6 +217,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -221,7 +227,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       className="ui-button-dialog"
     >
       <div
-        className="ui-button-dialog sc-EHOje hgeHxC"
+        className="ui-button-dialog sc-htoDjs jlTQqf"
       >
         <Button
           className=""
@@ -266,6 +272,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -273,6 +281,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
             <styled.div
               className="ui-button ripple"
               disabled={false}
+              id=""
               onClick={[Function]}
               style={
                 Object {
@@ -285,8 +294,9 @@ exports[`Test making the ButtonDialog invisible 1`] = `
               visible={false}
             >
               <div
-                className="ui-button ripple sc-htpNat obZDX"
+                className="ui-button ripple sc-EHOje cuKWcl"
                 disabled={false}
+                id=""
                 onClick={[Function]}
                 style={
                   Object {
@@ -332,6 +342,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                         "inputBorderColor": "#c0c0c0",
+                        "tooltipBackgroundColor": "gray",
+                        "tooltipForegroundColor": "white",
                         "transitionDelay": "0.5s",
                       }
                     }
@@ -385,7 +397,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
           visible={false}
         >
           <div
-            className="ui-dialog-popup sc-ifAKCX flWXbT"
+            className="ui-dialog-popup sc-gzVnrw fhWeba"
             onClick={[Function]}
           >
             <styled.div
@@ -393,7 +405,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
               visible={false}
             >
               <div
-                className="sc-bxivhb cQXLOg"
+                className="sc-bZQynM jTYGHg"
               >
                 <p>
                   Dialog test
@@ -415,7 +427,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
               visible={false}
             >
               <Triangle
-                className="sc-bZQynM gQorj"
+                className="sc-dnqmqq eWzkPV"
                 contentEditable={false}
                 direction="up"
                 disabled={false}
@@ -453,12 +465,14 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
                 >
                   <Triangle__SVGView
-                    className="ui-triangle sc-bZQynM gQorj"
+                    className="ui-triangle sc-dnqmqq eWzkPV"
                     contentEditable={false}
                     direction="up"
                     disabled={false}
@@ -491,7 +505,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="ui-triangle sc-bZQynM gQorj Triangle__SVGView-bGJaTC kCZOgc"
+                      className="ui-triangle sc-dnqmqq eWzkPV Triangle__SVGView-bGJaTC kCZOgc"
                       contentEditable={false}
                       direction="up"
                       disabled={false}
@@ -620,6 +634,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "tooltipBackgroundColor": "gray",
+        "tooltipForegroundColor": "white",
         "transitionDelay": "0.5s",
       }
     }
@@ -628,7 +644,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
       className="ui-button-dialog"
     >
       <div
-        className="ui-button-dialog sc-EHOje hgeHxC"
+        className="ui-button-dialog sc-htoDjs jlTQqf"
       >
         <Button
           className=""
@@ -673,6 +689,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "tooltipBackgroundColor": "gray",
+                "tooltipForegroundColor": "white",
                 "transitionDelay": "0.5s",
               }
             }
@@ -680,6 +698,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
             <styled.div
               className="ui-button nohover"
               disabled={true}
+              id=""
               onClick={[Function]}
               style={
                 Object {
@@ -692,8 +711,9 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
               visible={true}
             >
               <div
-                className="ui-button nohover sc-htpNat cDPcSb"
+                className="ui-button nohover sc-EHOje drKCiD"
                 disabled={true}
+                id=""
                 onClick={[Function]}
                 style={
                   Object {
@@ -739,6 +759,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                         "inputBorderColor": "#c0c0c0",
+                        "tooltipBackgroundColor": "gray",
+                        "tooltipForegroundColor": "white",
                         "transitionDelay": "0.5s",
                       }
                     }
@@ -792,7 +814,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
           visible={false}
         >
           <div
-            className="ui-dialog-popup sc-ifAKCX flWXbT"
+            className="ui-dialog-popup sc-gzVnrw fhWeba"
             onClick={[Function]}
           >
             <styled.div
@@ -800,7 +822,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
               visible={false}
             >
               <div
-                className="sc-bxivhb cQXLOg"
+                className="sc-bZQynM jTYGHg"
               >
                 <p>
                   Dialog test
@@ -822,7 +844,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
               visible={false}
             >
               <Triangle
-                className="sc-bZQynM gQorj"
+                className="sc-dnqmqq eWzkPV"
                 contentEditable={false}
                 direction="up"
                 disabled={false}
@@ -860,12 +882,14 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "tooltipBackgroundColor": "gray",
+                      "tooltipForegroundColor": "white",
                       "transitionDelay": "0.5s",
                     }
                   }
                 >
                   <Triangle__SVGView
-                    className="ui-triangle sc-bZQynM gQorj"
+                    className="ui-triangle sc-dnqmqq eWzkPV"
                     contentEditable={false}
                     direction="up"
                     disabled={false}
@@ -898,7 +922,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="ui-triangle sc-bZQynM gQorj Triangle__SVGView-bGJaTC kCZOgc"
+                      className="ui-triangle sc-dnqmqq eWzkPV Triangle__SVGView-bGJaTC kCZOgc"
                       contentEditable={false}
                       direction="up"
                       disabled={false}
