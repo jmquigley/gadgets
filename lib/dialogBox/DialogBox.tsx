@@ -76,9 +76,11 @@ import {
 	BaseProps,
 	Color,
 	getDefaultBaseProps,
+	getTheme,
 	Justify,
 	Sizing
 } from '../shared';
+import styled, {ThemeProvider} from '../shared/themed-components';
 
 export enum DialogBoxType {
 	error = 'error',
@@ -116,6 +118,48 @@ export interface DialogBoxState {
 	showModal?: boolean;
 }
 
+export const ButtonBar: any = styled.div`
+	display: flex;
+`;
+
+export const DialogBoxIconView: any = styled.div`
+	flex: none;
+`;
+
+export const DialogBoxMessageContainerView: any = styled.div`
+	flex: 1;
+	max-width: 250px;
+	padding-left: 15px;
+`;
+
+export const DialogBoxMessageView: any = styled.div`
+	margin-bottom: 1.0em;
+
+	+ p {
+		margin-bottom: 0.5em;
+	}
+`;
+
+export const DialogBoxView: any = styled.div`
+	display: flex;
+`;
+
+export const Spacer: any = styled.div`
+	flex: 1;
+`;
+
+export const StyledButtonText: any = styled(ButtonText)`
+	border: solid 1px gray;
+	display: inline-flex;
+	flex: none;
+	height: 2em;
+	width: 5em;
+`;
+
+export const StyledIcon: any = styled(Icon)`
+	flex: none;
+`;
+
 export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 	public static defaultProps: DialogBoxProps = getDefaultDialogBoxProps();
@@ -135,26 +179,24 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	private _icon: any = {};
 
 	constructor(props: DialogBoxProps) {
-		super(props, require('./styles.css'));
+		super(props, {}, DialogBox.defaultProps.style);
 
-		this._rootStyles.add([
-			'ui-dialogbox',
-			this.styles.dialogBox
-		]);
+		this._classes.add(['ui-dialogbox']);
 
 		this.state = {
-			showModal: props.show
+			showModal: this.props.show
 		};
 
-		this.handleClose = this.handleClose.bind(this);
-		this.handleNo = this.handleNo.bind(this);
-		this.handleOpen = this.handleOpen.bind(this);
-		this.handleYes = this.handleYes.bind(this);
+		this.bindCallbacks(
+			'handleClose',
+			'handleNo',
+			'handleOpen',
+			'handleYes'
+		);
 
 		this._icon = {
 			error: (
-				<Icon
-					className={this.styles.dialogBoxIcon}
+				<StyledIcon
 					iconName="times-circle"
 					sizing={Sizing.xxlarge}
 					style={{
@@ -163,8 +205,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 				/>
 			),
 			warning: (
-				<Icon
-					className={this.styles.dialogBoxIcon}
+				<StyledIcon
 					iconName="exclamation-circle"
 					sizing={Sizing.xxlarge}
 					style={{
@@ -173,8 +214,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 				/>
 			),
 			success: (
-				<Icon
-					className={this.styles.dialogBoxIcon}
+				<StyledIcon
 					iconName="check-circle"
 					sizing={Sizing.xxlarge}
 					style={{
@@ -183,8 +223,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 				/>
 			),
 			info: (
-				<Icon
-					className={this.styles.dialogBoxIcon}
+				<StyledIcon
 					iconName="info-circle"
 					sizing={Sizing.xxlarge}
 					style={{
@@ -193,8 +232,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 				/>
 			),
 			custom: (
-				<Icon
-					className={this.styles.dialogBoxIcon}
+				<StyledIcon
 					iconName={this.props.iconName}
 					sizing={Sizing.xxlarge}
 					style={this.props.style}
@@ -202,12 +240,12 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 			)
 		};
 
-		this.componentWillUpdate(props);
+		this.componentWillUpdate(this.props);
 	}
 
 	get message(): string {
 		const message: string[] = [];
-		for (const line of this.props.message.split(/\r\n|\n|\r/)) {
+		for (const line of this.props.message.splitNL()) {
 			message.push('<p>');
 			message.push(line);
 			message.push('</p>');
@@ -222,8 +260,9 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	}
 
 	private handleNo() {
-		this.setState({showModal: false});
-		this.props.onSelection(false);
+		this.setState({showModal: false}, () => {
+			this.props.onSelection(false);
+		});
 	}
 
 	private handleOpen() {
@@ -231,8 +270,9 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	}
 
 	private handleYes() {
-		this.setState({showModal: false});
-		this.props.onSelection(true);
+		this.setState({showModal: false}, () => {
+			this.props.onSelection(true);
+		});
 	}
 
 	public componentWillReceiveProps(nextProps: DialogBoxProps) {
@@ -243,48 +283,46 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 	public render() {
 		return (
-			<ReactModal
-				contentLabel="DialogBox"
-				isOpen={this.state.showModal}
-				onAfterOpen={this.handleOpen}
-				onRequestClose={this.handleClose}
-				shouldCloseOnOverlayClick={false}
-				style={this._customStyle}
-			>
-				<div className={this._rootStyles.classnames}>
+			<ThemeProvider theme={getTheme()}>
+				<ReactModal
+					contentLabel="DialogBox"
+					isOpen={this.state.showModal}
+					onAfterOpen={this.handleOpen}
+					onRequestClose={this.handleClose}
+					shouldCloseOnOverlayClick={false}
+					style={this._customStyle}
+				>
+					<DialogBoxView className={this.classes}>
+						<DialogBoxIconView>
+							{this._icon[this.props.dialogType]}
+						</DialogBoxIconView>
 
-					<div className={this.styles.dialogBoxIcon}>
-						{this._icon[this.props.dialogType]}
-					</div>
-
-					<div className={this.styles.dialogBoxMessageContainer}>
-						<div
-							className={this.styles.dialogBoxMessage}
-							dangerouslySetInnerHTML={{__html: this.message}}
-						/>
-						<div className={this.styles.buttonBar}>
-							<ButtonText
-								className={this.styles.dialogBoxButton}
-								justify={Justify.center}
-								noicon
-								onClick={this.handleYes}
-								sizing={this.props.sizing}
-								text="Yes"
+						<DialogBoxMessageContainerView>
+							<DialogBoxMessageView
+								className={this.styles.dialogBoxMessage}
+								dangerouslySetInnerHTML={{__html: this.message}}
 							/>
-							<div className={this.styles.spacer} />
-							<ButtonText
-								className={this.styles.dialogBoxButton}
-								justify={Justify.center}
-								noicon
-								onClick={this.handleNo}
-								sizing={this.props.sizing}
-								text="No"
-							/>
-						</div>
-					</div>
-				</div>
-
-			</ReactModal>
+							<ButtonBar>
+								<StyledButtonText
+									justify={Justify.center}
+									noicon
+									onClick={this.handleYes}
+									sizing={this.props.sizing}
+									text="Yes"
+								/>
+								<Spacer />
+								<StyledButtonText
+									justify={Justify.center}
+									noicon
+									onClick={this.handleNo}
+									sizing={this.props.sizing}
+									text="No"
+								/>
+							</ButtonBar>
+						</DialogBoxMessageContainerView>
+					</DialogBoxView>
+				</ReactModal>
+			</ThemeProvider>
 		);
 	}
 }

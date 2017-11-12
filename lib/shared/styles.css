@@ -9,6 +9,14 @@ $error: #d9534f;
 $info: #5bc0de;
 $warning: #f0ad4e;
 
+/*
+   This removes the ability to scroll the window BEHIND the modal
+*/
+
+.ReactModal__Body--open {
+	overflow-y: hidden;
+}
+
 @define-extend baseButton {
 	align-items: center;
 	box-sizing: border-box;
