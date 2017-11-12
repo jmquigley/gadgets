@@ -71,7 +71,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
       }
     }
   >
-    <ListFooter__ListFooterView
+    <Styled(Title)
       className="ui-list-footer"
       contentEditable={false}
       direction="right"
@@ -98,7 +98,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
       xcss={null}
     >
       <Title
-        className="ui-list-footer ListFooter__ListFooterView-kRwuUp bvEGnQ"
+        className="ui-list-footer sc-htoDjs evXOsE"
         contentEditable={false}
         direction="right"
         disabled={false}
@@ -139,14 +139,14 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
           }
         >
           <styled.div
-            className="ui-title-bar ui-list-footer ListFooter__ListFooterView-kRwuUp bvEGnQ"
+            className="ui-title-bar ui-list-footer sc-htoDjs evXOsE"
             disabled={false}
             layout={1}
             style={Object {}}
             visible={true}
           >
             <div
-              className="ui-title-bar ui-list-footer ListFooter__ListFooterView-kRwuUp bvEGnQ sc-bwzfXH geSqhw"
+              className="ui-title-bar ui-list-footer sc-htoDjs evXOsE sc-htpNat kRNhtA"
               disabled={false}
               style={Object {}}
             >
@@ -185,7 +185,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                 }
               >
                 <Label
-                  className="ui-title sc-bxivhb cbEtIQ"
+                  className="ui-title sc-ifAKCX iOwpyB"
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -241,7 +241,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                     }
                   >
                     <styled.span
-                      className="ui-label ui-title sc-bxivhb cbEtIQ"
+                      className="ui-label ui-title sc-ifAKCX iOwpyB"
                       contentEditable={false}
                       disabled={false}
                       innerRef={[Function]}
@@ -256,7 +256,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                       visible={true}
                     >
                       <span
-                        className="ui-label ui-title sc-bxivhb cbEtIQ sc-bdVaJa hVJBlF"
+                        className="ui-label ui-title sc-ifAKCX iOwpyB sc-bwzfXH cEurMc"
                         contentEditable={false}
                         disabled={false}
                         onBlur={[Function]}
@@ -277,7 +277,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
           </styled.div>
         </ThemeProvider>
       </Title>
-    </ListFooter__ListFooterView>
+    </Styled(Title)>
   </ThemeProvider>
 </ListFooter>
 `;

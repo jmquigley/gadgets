@@ -16,7 +16,7 @@ exports[`Test disabling of a List control 1`] = `
     }
   }
 >
-  <List__ListView
+  <styled.ul
     alternating={false}
     className="ui-list"
     style={Object {}}
@@ -34,7 +34,7 @@ exports[`Test disabling of a List control 1`] = `
     >
       some list item
     </li>
-  </List__ListView>
+  </styled.ul>
 </ThemeProvider>
 `;
 
@@ -54,7 +54,7 @@ exports[`Test making List control invisible 1`] = `
     }
   }
 >
-  <List__ListView
+  <styled.ul
     alternating={false}
     className="ui-list"
     style={Object {}}
@@ -72,7 +72,7 @@ exports[`Test making List control invisible 1`] = `
     >
       some list item
     </li>
-  </List__ListView>
+  </styled.ul>
 </ThemeProvider>
 `;
 
@@ -121,7 +121,7 @@ exports[`Test the creation of a List control container 1`] = `
     }
   }
 >
-  <List__ListView
+  <styled.ul
     alternating={true}
     className="ui-list test-class"
     style={Object {}}
@@ -139,6 +139,6 @@ exports[`Test the creation of a List control container 1`] = `
     >
       some list item
     </li>
-  </List__ListView>
+  </styled.ul>
 </ThemeProvider>
 `;

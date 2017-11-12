@@ -9,10 +9,10 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ThemeProvider} from 'styled-components';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent, getTheme, Sizing} from '../shared';
+import {ThemeProvider} from '../shared/themed-components';
 
 export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
@@ -49,11 +49,9 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
-		super(props);
+		super(props, {}, ListItem.defaultProps.style);
 
-		this._classes.add([
-			'ui-listitem'
-		]);
+		this._classes.add(['ui-listitem']);
 
 		this.state = {
 			toggleRipple: false
@@ -91,16 +89,18 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	}
 
 	private handleClick(e: React.MouseEvent<HTMLLIElement>) {
-		// This timer will wait N seconds before respecting the single click
-		// It is a way to differentiate between single and double click events
-		// A double click is handled differently from the single
-		this._timer = setTimeout(() => {
-			if (!this._preventClick) {
-				this.props.href.selectHandler(this);
-				this.props.onClick(e);
-				this.props.onSelect(this.props.title);
-			}
-		}, this._delay);
+		if (!this.props.disabled && this.props.visible) {
+			// This timer will wait N seconds before respecting the single click
+			// It is a way to differentiate between single and double click events
+			// A double click is handled differently from the single
+			this._timer = setTimeout(() => {
+				if (!this._preventClick) {
+					this.props.href.selectHandler(this);
+					this.props.onClick(e);
+					this.props.onSelect(this.props.title);
+				}
+			}, this._delay);
+		}
 	}
 
 	private handleDoubleClick(e: React.MouseEvent<HTMLLIElement>) {
@@ -137,7 +137,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 					className={this.classes}
 					noripple={this.state.toggleRipple || this.props.noripple}
 					onBlur={this.handleBlur}
-					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+					onClick={this.handleClick}
 					onDoubleClick={this.handleDoubleClick}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}

@@ -10,9 +10,9 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {ThemeProvider} from 'styled-components';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {BaseComponent, getTheme, Sizing, ThemeProps} from '../shared';
+import {ThemeProvider} from '../shared/themed-components';
 
 export interface ListHeaderProps extends ItemProps {
 	href?: any;
@@ -34,13 +34,9 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
 
 	constructor(props: ListHeaderProps) {
-		super(props);
-
-		this._classes.add([
-			'ui-list-header'
-		]);
-
-		this.componentWillUpdate(props);
+		super(props, {}, ListHeader.defaultProps.style);
+		this._classes.add(['ui-list-header']);
+		this.componentWillUpdate(this.props);
 	}
 
 	public render() {

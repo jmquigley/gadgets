@@ -4,8 +4,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled, {ThemeProvider} from 'styled-components';
 import {BaseComponent, getTheme} from '../shared';
+import styled, {ThemeProvider} from '../shared/themed-components';
 import {
 	getDefaultTitleProps,
 	Title,
@@ -38,7 +38,7 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 	public static defaultProps: ListFooterProps = getDefaultListFooterProps();
 
 	constructor(props: ListFooterProps) {
-		super(props, require('./styles.css'));
+		super(props, {}, ListFooter.defaultProps.style);
 		this.componentWillUpdate(props);
 	}
 

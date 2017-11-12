@@ -9,10 +9,10 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled, {ThemeProvider} from 'styled-components';
 import {Keys} from 'util.keys';
 import {nilEvent} from 'util.toolbox';
 import {BaseComponent, BaseProps, getDefaultBaseProps, getTheme} from '../shared';
+import styled, {ThemeProvider} from '../shared/themed-components';
 import {ListItem} from './index';
 
 export interface ListProps extends BaseProps {
@@ -53,13 +53,10 @@ export class List extends BaseComponent<ListProps, ListState> {
 	public static defaultProps: ListProps = getDefaultListProps();
 
 	constructor(props: ListProps) {
-		super(props, require('./styles.css'));
+		super(props, {}, List.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
-
-		this._classes.add([
-			'ui-list'
-		]);
+		this._classes.add(['ui-list']);
 
 		this.state = {
 			selectedItem: null
