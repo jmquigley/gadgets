@@ -1,69 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a ButtonDialog control 1`] = `
-<div
-  className="ui-button-dialog buttonDialog normal test-class"
->
-  <Button
-    className=""
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="bomb"
-    iconStyle=""
-    id=""
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onClick={[Function]}
-    selected={false}
-    sizing="normal"
-    style={
-      Object {
-        "backgroundColor": "inherit",
-        "color": "inherit",
-        "fill": "white",
-        "stroke": "black",
-      }
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <div
-    className="ui-dialog-popup test-class-dialog buttonDialogPopup dialogBottom buttonDialogHide"
-    onClick={[Function]}
+  }
+>
+  <styled.div
+    className="ui-button-dialog test-class"
   >
-    <div
-      className="buttonDialogContent"
-    >
-      <p>
-        Dialog test
-      </p>
-    </div>
-    <Triangle
-      className="dialogTriangleBottom buttonDialogHide"
+    <Button
+      className=""
       contentEditable={false}
-      direction="up"
+      direction="right"
       disabled={false}
       focus={false}
       height=""
+      iconName="bomb"
+      iconStyle=""
       id=""
       location="none"
-      nobase={true}
       noedit={false}
       nohover={false}
       noripple={false}
+      onClick={[Function]}
       selected={false}
       sizing="normal"
       style={
         Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
           "fill": "white",
           "stroke": "black",
         }
@@ -75,74 +51,79 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       width=""
       xcss={null}
     />
-  </div>
-</div>
+    <styled.div
+      className="ui-dialog-popup test-class-dialog"
+      location="bottom"
+      onClick={[Function]}
+      visible={false}
+    >
+      <styled.div
+        sizing="normal"
+        visible={false}
+      >
+        <p>
+          Dialog test
+        </p>
+      </styled.div>
+      <Styled(Triangle)
+        className=""
+        direction="up"
+        location="bottom"
+        nobase={true}
+        sizing="normal"
+        style={
+          Object {
+            "fill": undefined,
+            "stroke": undefined,
+          }
+        }
+        visible={false}
+      />
+    </styled.div>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test creation of a ButtonDialog control on top 1`] = `
-<div
-  className="ui-button-dialog buttonDialog normal test-class"
->
-  <Button
-    className=""
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="bomb"
-    iconStyle=""
-    id=""
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onClick={[Function]}
-    selected={false}
-    sizing="normal"
-    style={
-      Object {
-        "backgroundColor": "inherit",
-        "color": "inherit",
-        "fill": "white",
-        "stroke": "black",
-      }
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "transitionDelay": "0.5s",
     }
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <div
-    className="ui-dialog-popup test-class-dialog buttonDialogPopup dialogTop buttonDialogHide"
-    onClick={[Function]}
+  }
+>
+  <styled.div
+    className="ui-button-dialog test-class"
   >
-    <div
-      className="buttonDialogContent"
-    >
-      <p>
-        Dialog test
-      </p>
-    </div>
-    <Triangle
-      className="dialogTriangleTop buttonDialogHide"
+    <Button
+      className=""
       contentEditable={false}
-      direction="down"
+      direction="right"
       disabled={false}
       focus={false}
       height=""
+      iconName="bomb"
+      iconStyle=""
       id=""
       location="none"
-      nobase={true}
       noedit={false}
       nohover={false}
       noripple={false}
+      onClick={[Function]}
       selected={false}
       sizing="normal"
       style={
         Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
           "fill": "white",
           "stroke": "black",
         }
@@ -154,8 +135,37 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       width=""
       xcss={null}
     />
-  </div>
-</div>
+    <styled.div
+      className="ui-dialog-popup test-class-dialog"
+      location="top"
+      onClick={[Function]}
+      visible={false}
+    >
+      <styled.div
+        sizing="normal"
+        visible={false}
+      >
+        <p>
+          Dialog test
+        </p>
+      </styled.div>
+      <Styled(Triangle)
+        className=""
+        direction="down"
+        location="top"
+        nobase={true}
+        sizing="normal"
+        style={
+          Object {
+            "fill": undefined,
+            "stroke": undefined,
+          }
+        }
+        visible={false}
+      />
+    </styled.div>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test making the ButtonDialog invisible 1`] = `
@@ -192,60 +202,44 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-button-dialog buttonDialog normal invisible"
-  >
-    <Button
-      className=""
-      contentEditable={false}
-      direction="right"
-      disabled={false}
-      focus={false}
-      height=""
-      iconName="bomb"
-      iconStyle=""
-      id=""
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      onClick={[Function]}
-      selected={false}
-      sizing="normal"
-      style={
-        Object {
-          "backgroundColor": "inherit",
-          "color": "inherit",
-          "fill": "white",
-          "stroke": "black",
-        }
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
-      testing={true}
-      theme={Object {}}
-      tooltip=""
-      visible={false}
-      width=""
-      xcss={null}
+    }
+  >
+    <styled.div
+      className="ui-button-dialog"
     >
-      <ThemeProvider
-        theme={
-          Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#004358",
-            "color": "#000000",
-            "headerBackgroundColor": "#004358",
-            "headerForegroundColor": "#ffffff",
-            "headerHoverColor": "#ffe11a",
-            "hoverColor": "#c0c0c0",
-            "inputBorderColor": "#c0c0c0",
-            "transitionDelay": "0.5s",
-          }
-        }
+      <div
+        className="ui-button-dialog sc-EHOje hgeHxC"
       >
-        <styled.div
-          className="ui-button ripple"
+        <Button
+          className=""
+          contentEditable={false}
+          direction="right"
           disabled={false}
+          focus={false}
+          height=""
+          iconName="bomb"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
           onClick={[Function]}
+          selected={false}
+          sizing="normal"
           style={
             Object {
               "backgroundColor": "inherit",
@@ -254,62 +248,57 @@ exports[`Test making the ButtonDialog invisible 1`] = `
               "stroke": "black",
             }
           }
+          testing={true}
+          theme={Object {}}
+          tooltip=""
           visible={false}
+          width=""
+          xcss={null}
         >
-          <div
-            className="ui-button ripple sc-htpNat obZDX"
-            disabled={false}
-            onClick={[Function]}
-            style={
+          <ThemeProvider
+            theme={
               Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-                "fill": "white",
-                "stroke": "black",
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+                "inputBorderColor": "#c0c0c0",
+                "transitionDelay": "0.5s",
               }
             }
           >
-            <Icon
-              className=""
-              contentEditable={false}
-              direction="right"
+            <styled.div
+              className="ui-button ripple"
               disabled={false}
-              focus={false}
-              height=""
-              iconName="bomb"
-              id=""
-              imageFile=""
-              location="none"
-              noedit={false}
-              nohover={false}
-              noripple={false}
-              selected={false}
-              sizing="normal"
-              style={Object {}}
-              testing={true}
-              theme={Object {}}
-              tooltip=""
-              visible={true}
-              width=""
-              xcss={null}
+              onClick={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "inherit",
+                  "color": "inherit",
+                  "fill": "white",
+                  "stroke": "black",
+                }
+              }
+              visible={false}
             >
-              <ThemeProvider
-                theme={
+              <div
+                className="ui-button ripple sc-htpNat obZDX"
+                disabled={false}
+                onClick={[Function]}
+                style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "borderColor": "#004358",
-                    "color": "#000000",
-                    "headerBackgroundColor": "#004358",
-                    "headerForegroundColor": "#ffffff",
-                    "headerHoverColor": "#ffe11a",
-                    "hoverColor": "#c0c0c0",
-                    "inputBorderColor": "#c0c0c0",
-                    "transitionDelay": "0.5s",
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                    "fill": "white",
+                    "stroke": "black",
                   }
                 }
               >
-                <styled.i
-                  className="ui-icon fa fa-fw fa-bomb"
+                <Icon
+                  className=""
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -332,155 +321,223 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                   width=""
                   xcss={null}
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-bomb sc-bdVaJa rkmGs"
-                    contentEditable={false}
-                    direction="right"
-                    disabled={false}
-                    height=""
-                    id=""
-                    selected={false}
-                    style={Object {}}
-                    width=""
-                  />
-                </styled.i>
-              </ThemeProvider>
-            </Icon>
-          </div>
-        </styled.div>
-      </ThemeProvider>
-    </Button>
-    <div
-      className="ui-dialog-popup buttonDialogPopup dialogBottom buttonDialogHide"
-      onClick={[Function]}
-    >
-      <div
-        className="buttonDialogContent"
-      >
-        <p>
-          Dialog test
-        </p>
-      </div>
-      <Triangle
-        className="dialogTriangleBottom buttonDialogHide"
-        contentEditable={false}
-        direction="up"
-        disabled={false}
-        focus={false}
-        height=""
-        id=""
-        location="none"
-        nobase={true}
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        selected={false}
-        sizing="normal"
-        style={
-          Object {
-            "fill": "white",
-            "stroke": "black",
-          }
-        }
-        testing={true}
-        theme={Object {}}
-        tooltip=""
-        visible={true}
-        width=""
-        xcss={null}
-      >
-        <ThemeProvider
-          theme={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#004358",
-              "color": "#000000",
-              "headerBackgroundColor": "#004358",
-              "headerForegroundColor": "#ffffff",
-              "headerHoverColor": "#ffe11a",
-              "hoverColor": "#c0c0c0",
-              "inputBorderColor": "#c0c0c0",
-              "transitionDelay": "0.5s",
-            }
-          }
+                  <ThemeProvider
+                    theme={
+                      Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
+                      }
+                    }
+                  >
+                    <styled.i
+                      className="ui-icon fa fa-fw fa-bomb"
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="bomb"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      tooltip=""
+                      visible={true}
+                      width=""
+                      xcss={null}
+                    >
+                      <i
+                        className="ui-icon fa fa-fw fa-bomb sc-bdVaJa rkmGs"
+                        contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        height=""
+                        id=""
+                        selected={false}
+                        style={Object {}}
+                        width=""
+                      />
+                    </styled.i>
+                  </ThemeProvider>
+                </Icon>
+              </div>
+            </styled.div>
+          </ThemeProvider>
+        </Button>
+        <styled.div
+          className="ui-dialog-popup"
+          location="bottom"
+          onClick={[Function]}
+          visible={false}
         >
-          <Triangle__SVGView
-            className="ui-triangle dialogTriangleBottom buttonDialogHide"
-            contentEditable={false}
-            direction="up"
-            disabled={false}
-            focus={false}
-            height=""
-            id=""
-            location="none"
-            nobase={true}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            preserveAspectRatio="xMidYMid meet"
-            selected={false}
-            sizing="normal"
-            style={
-              Object {
-                "fill": "white",
-                "stokeWidth": "2px",
-                "stroke": "black",
-              }
-            }
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            version="1.1"
-            viewBox="0 0 40 40"
-            visible={true}
-            width=""
-            xcss={null}
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="ui-dialog-popup sc-ifAKCX flWXbT"
+            onClick={[Function]}
           >
-            <svg
-              className="ui-triangle dialogTriangleBottom buttonDialogHide Triangle__SVGView-bGJaTC kCZOgc"
-              contentEditable={false}
+            <styled.div
+              sizing="normal"
+              visible={false}
+            >
+              <div
+                className="sc-bxivhb cQXLOg"
+              >
+                <p>
+                  Dialog test
+                </p>
+              </div>
+            </styled.div>
+            <Styled(Triangle)
+              className=""
               direction="up"
-              disabled={false}
-              height=""
-              id=""
-              preserveAspectRatio="xMidYMid meet"
-              selected={false}
+              location="bottom"
+              nobase={true}
+              sizing="normal"
               style={
                 Object {
-                  "fill": "white",
-                  "stokeWidth": "2px",
-                  "stroke": "black",
+                  "fill": undefined,
+                  "stroke": undefined,
                 }
               }
-              version="1.1"
-              viewBox="0 0 40 40"
-              width=""
-              xmlns="http://www.w3.org/2000/svg"
+              visible={false}
             >
-              <polygon
-                points="-3,35, 20,10 43,35"
+              <Triangle
+                className="sc-bZQynM gQorj"
+                contentEditable={false}
+                direction="up"
+                disabled={false}
+                focus={false}
+                height=""
+                id=""
+                location="bottom"
+                nobase={true}
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="normal"
                 style={
                   Object {
-                    "stroke": "none",
+                    "fill": undefined,
+                    "stroke": undefined,
                   }
                 }
-              />
-              <polygon
-                points="-3,35, 20,10 43,35, 20,10"
-                style={
-                  Object {
-                    "strokeLinecap": "square",
-                    "strokeWidth": undefined,
+                testing={true}
+                theme={Object {}}
+                tooltip=""
+                visible={false}
+                width=""
+                xcss={null}
+              >
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "transitionDelay": "0.5s",
+                    }
                   }
-                }
-              />
-            </svg>
-          </Triangle__SVGView>
-        </ThemeProvider>
-      </Triangle>
-    </div>
-  </div>
+                >
+                  <Triangle__SVGView
+                    className="ui-triangle sc-bZQynM gQorj"
+                    contentEditable={false}
+                    direction="up"
+                    disabled={false}
+                    focus={false}
+                    height=""
+                    id=""
+                    location="bottom"
+                    nobase={true}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="normal"
+                    style={
+                      Object {
+                        "fill": undefined,
+                        "stokeWidth": "2px",
+                        "stroke": undefined,
+                      }
+                    }
+                    testing={true}
+                    theme={Object {}}
+                    tooltip=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={false}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bZQynM gQorj Triangle__SVGView-bGJaTC kCZOgc"
+                      contentEditable={false}
+                      direction="up"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": undefined,
+                          "stokeWidth": "2px",
+                          "stroke": undefined,
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="-3,35, 20,10 43,35"
+                        style={
+                          Object {
+                            "stroke": "none",
+                          }
+                        }
+                      />
+                      <polygon
+                        points="-3,35, 20,10 43,35, 20,10"
+                        style={
+                          Object {
+                            "strokeLinecap": "square",
+                            "strokeWidth": undefined,
+                          }
+                        }
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Triangle>
+            </Styled(Triangle)>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </ButtonDialog>
 `;
 
@@ -552,60 +609,44 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   width=""
   xcss={null}
 >
-  <div
-    className="ui-button-dialog buttonDialog normal disabled nohover"
-  >
-    <Button
-      className=""
-      contentEditable={false}
-      direction="right"
-      disabled={true}
-      focus={false}
-      height=""
-      iconName="bomb"
-      iconStyle=""
-      id=""
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      onClick={[Function]}
-      selected={false}
-      sizing="normal"
-      style={
-        Object {
-          "backgroundColor": "inherit",
-          "color": "inherit",
-          "fill": "white",
-          "stroke": "black",
-        }
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#004358",
+        "color": "#000000",
+        "headerBackgroundColor": "#004358",
+        "headerForegroundColor": "#ffffff",
+        "headerHoverColor": "#ffe11a",
+        "hoverColor": "#c0c0c0",
+        "inputBorderColor": "#c0c0c0",
+        "transitionDelay": "0.5s",
       }
-      testing={true}
-      theme={Object {}}
-      tooltip=""
-      visible={true}
-      width=""
-      xcss={null}
+    }
+  >
+    <styled.div
+      className="ui-button-dialog"
     >
-      <ThemeProvider
-        theme={
-          Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#004358",
-            "color": "#000000",
-            "headerBackgroundColor": "#004358",
-            "headerForegroundColor": "#ffffff",
-            "headerHoverColor": "#ffe11a",
-            "hoverColor": "#c0c0c0",
-            "inputBorderColor": "#c0c0c0",
-            "transitionDelay": "0.5s",
-          }
-        }
+      <div
+        className="ui-button-dialog sc-EHOje hgeHxC"
       >
-        <styled.div
-          className="ui-button nohover"
+        <Button
+          className=""
+          contentEditable={false}
+          direction="right"
           disabled={true}
+          focus={false}
+          height=""
+          iconName="bomb"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
           onClick={[Function]}
+          selected={false}
+          sizing="normal"
           style={
             Object {
               "backgroundColor": "inherit",
@@ -614,62 +655,57 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
               "stroke": "black",
             }
           }
+          testing={true}
+          theme={Object {}}
+          tooltip=""
           visible={true}
+          width=""
+          xcss={null}
         >
-          <div
-            className="ui-button nohover sc-htpNat cDPcSb"
-            disabled={true}
-            onClick={[Function]}
-            style={
+          <ThemeProvider
+            theme={
               Object {
-                "backgroundColor": "inherit",
-                "color": "inherit",
-                "fill": "white",
-                "stroke": "black",
+                "backgroundColor": "#ffffff",
+                "borderColor": "#004358",
+                "color": "#000000",
+                "headerBackgroundColor": "#004358",
+                "headerForegroundColor": "#ffffff",
+                "headerHoverColor": "#ffe11a",
+                "hoverColor": "#c0c0c0",
+                "inputBorderColor": "#c0c0c0",
+                "transitionDelay": "0.5s",
               }
             }
           >
-            <Icon
-              className=""
-              contentEditable={false}
-              direction="right"
-              disabled={false}
-              focus={false}
-              height=""
-              iconName="bomb"
-              id=""
-              imageFile=""
-              location="none"
-              noedit={false}
-              nohover={false}
-              noripple={false}
-              selected={false}
-              sizing="normal"
-              style={Object {}}
-              testing={true}
-              theme={Object {}}
-              tooltip=""
+            <styled.div
+              className="ui-button nohover"
+              disabled={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "inherit",
+                  "color": "inherit",
+                  "fill": "white",
+                  "stroke": "black",
+                }
+              }
               visible={true}
-              width=""
-              xcss={null}
             >
-              <ThemeProvider
-                theme={
+              <div
+                className="ui-button nohover sc-htpNat cDPcSb"
+                disabled={true}
+                onClick={[Function]}
+                style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "borderColor": "#004358",
-                    "color": "#000000",
-                    "headerBackgroundColor": "#004358",
-                    "headerForegroundColor": "#ffffff",
-                    "headerHoverColor": "#ffe11a",
-                    "hoverColor": "#c0c0c0",
-                    "inputBorderColor": "#c0c0c0",
-                    "transitionDelay": "0.5s",
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                    "fill": "white",
+                    "stroke": "black",
                   }
                 }
               >
-                <styled.i
-                  className="ui-icon fa fa-fw fa-bomb"
+                <Icon
+                  className=""
                   contentEditable={false}
                   direction="right"
                   disabled={false}
@@ -692,154 +728,222 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                   width=""
                   xcss={null}
                 >
-                  <i
-                    className="ui-icon fa fa-fw fa-bomb sc-bdVaJa rkmGs"
-                    contentEditable={false}
-                    direction="right"
-                    disabled={false}
-                    height=""
-                    id=""
-                    selected={false}
-                    style={Object {}}
-                    width=""
-                  />
-                </styled.i>
-              </ThemeProvider>
-            </Icon>
-          </div>
-        </styled.div>
-      </ThemeProvider>
-    </Button>
-    <div
-      className="ui-dialog-popup buttonDialogPopup dialogBottom buttonDialogHide"
-      onClick={[Function]}
-    >
-      <div
-        className="buttonDialogContent"
-      >
-        <p>
-          Dialog test
-        </p>
-      </div>
-      <Triangle
-        className="dialogTriangleBottom buttonDialogHide"
-        contentEditable={false}
-        direction="up"
-        disabled={false}
-        focus={false}
-        height=""
-        id=""
-        location="none"
-        nobase={true}
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        selected={false}
-        sizing="normal"
-        style={
-          Object {
-            "fill": "white",
-            "stroke": "black",
-          }
-        }
-        testing={true}
-        theme={Object {}}
-        tooltip=""
-        visible={true}
-        width=""
-        xcss={null}
-      >
-        <ThemeProvider
-          theme={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#004358",
-              "color": "#000000",
-              "headerBackgroundColor": "#004358",
-              "headerForegroundColor": "#ffffff",
-              "headerHoverColor": "#ffe11a",
-              "hoverColor": "#c0c0c0",
-              "inputBorderColor": "#c0c0c0",
-              "transitionDelay": "0.5s",
-            }
-          }
+                  <ThemeProvider
+                    theme={
+                      Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#004358",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "transitionDelay": "0.5s",
+                      }
+                    }
+                  >
+                    <styled.i
+                      className="ui-icon fa fa-fw fa-bomb"
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      focus={false}
+                      height=""
+                      iconName="bomb"
+                      id=""
+                      imageFile=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={Object {}}
+                      tooltip=""
+                      visible={true}
+                      width=""
+                      xcss={null}
+                    >
+                      <i
+                        className="ui-icon fa fa-fw fa-bomb sc-bdVaJa rkmGs"
+                        contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        height=""
+                        id=""
+                        selected={false}
+                        style={Object {}}
+                        width=""
+                      />
+                    </styled.i>
+                  </ThemeProvider>
+                </Icon>
+              </div>
+            </styled.div>
+          </ThemeProvider>
+        </Button>
+        <styled.div
+          className="ui-dialog-popup"
+          location="bottom"
+          onClick={[Function]}
+          visible={false}
         >
-          <Triangle__SVGView
-            className="ui-triangle dialogTriangleBottom buttonDialogHide"
-            contentEditable={false}
-            direction="up"
-            disabled={false}
-            focus={false}
-            height=""
-            id=""
-            location="none"
-            nobase={true}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            preserveAspectRatio="xMidYMid meet"
-            selected={false}
-            sizing="normal"
-            style={
-              Object {
-                "fill": "white",
-                "stokeWidth": "2px",
-                "stroke": "black",
-              }
-            }
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            version="1.1"
-            viewBox="0 0 40 40"
-            visible={true}
-            width=""
-            xcss={null}
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="ui-dialog-popup sc-ifAKCX flWXbT"
+            onClick={[Function]}
           >
-            <svg
-              className="ui-triangle dialogTriangleBottom buttonDialogHide Triangle__SVGView-bGJaTC kCZOgc"
-              contentEditable={false}
+            <styled.div
+              sizing="normal"
+              visible={false}
+            >
+              <div
+                className="sc-bxivhb cQXLOg"
+              >
+                <p>
+                  Dialog test
+                </p>
+              </div>
+            </styled.div>
+            <Styled(Triangle)
+              className=""
               direction="up"
-              disabled={false}
-              height=""
-              id=""
-              preserveAspectRatio="xMidYMid meet"
-              selected={false}
+              location="bottom"
+              nobase={true}
+              sizing="normal"
               style={
                 Object {
-                  "fill": "white",
-                  "stokeWidth": "2px",
-                  "stroke": "black",
+                  "fill": undefined,
+                  "stroke": undefined,
                 }
               }
-              version="1.1"
-              viewBox="0 0 40 40"
-              width=""
-              xmlns="http://www.w3.org/2000/svg"
+              visible={false}
             >
-              <polygon
-                points="-3,35, 20,10 43,35"
+              <Triangle
+                className="sc-bZQynM gQorj"
+                contentEditable={false}
+                direction="up"
+                disabled={false}
+                focus={false}
+                height=""
+                id=""
+                location="bottom"
+                nobase={true}
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                selected={false}
+                sizing="normal"
                 style={
                   Object {
-                    "stroke": "none",
+                    "fill": undefined,
+                    "stroke": undefined,
                   }
                 }
-              />
-              <polygon
-                points="-3,35, 20,10 43,35, 20,10"
-                style={
-                  Object {
-                    "strokeLinecap": "square",
-                    "strokeWidth": undefined,
+                testing={true}
+                theme={Object {}}
+                tooltip=""
+                visible={false}
+                width=""
+                xcss={null}
+              >
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#004358",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "transitionDelay": "0.5s",
+                    }
                   }
-                }
-              />
-            </svg>
-          </Triangle__SVGView>
-        </ThemeProvider>
-      </Triangle>
-    </div>
-  </div>
+                >
+                  <Triangle__SVGView
+                    className="ui-triangle sc-bZQynM gQorj"
+                    contentEditable={false}
+                    direction="up"
+                    disabled={false}
+                    focus={false}
+                    height=""
+                    id=""
+                    location="bottom"
+                    nobase={true}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="normal"
+                    style={
+                      Object {
+                        "fill": undefined,
+                        "stokeWidth": "2px",
+                        "stroke": undefined,
+                      }
+                    }
+                    testing={true}
+                    theme={Object {}}
+                    tooltip=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={false}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bZQynM gQorj Triangle__SVGView-bGJaTC kCZOgc"
+                      contentEditable={false}
+                      direction="up"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": undefined,
+                          "stokeWidth": "2px",
+                          "stroke": undefined,
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="-3,35, 20,10 43,35"
+                        style={
+                          Object {
+                            "stroke": "none",
+                          }
+                        }
+                      />
+                      <polygon
+                        points="-3,35, 20,10 43,35, 20,10"
+                        style={
+                          Object {
+                            "strokeLinecap": "square",
+                            "strokeWidth": undefined,
+                          }
+                        }
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Triangle>
+            </Styled(Triangle)>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </ThemeProvider>
 </ButtonDialog>
 `;

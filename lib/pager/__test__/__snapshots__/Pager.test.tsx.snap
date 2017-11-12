@@ -330,16 +330,14 @@ exports[`Test creation of a Pager control 1`] = `
     width=""
     xcss={null}
   />
-  <ButtonDialog
-    className="pagerDialog"
+  <Styled(ButtonDialog)
+    className="test-class"
     contentEditable={false}
-    dialogClasses={Array []}
     direction="right"
     disabled={false}
     focus={false}
     height=""
     iconName="ellipsis-v"
-    iconStyle=""
     id=""
     initialPage={1}
     initialPageSize={25}
@@ -349,7 +347,6 @@ exports[`Test creation of a Pager control 1`] = `
     noripple={false}
     notriangle={true}
     onChangePageSize={[Function]}
-    onClick={[Function]}
     onSelect={[Function]}
     onSort={null}
     pageSizes={
@@ -367,7 +364,6 @@ exports[`Test creation of a Pager control 1`] = `
     theme={Object {}}
     tooltip=""
     totalItems={0}
-    triangleClasses={Array []}
     useinput={false}
     visible={true}
     width=""
@@ -1140,7 +1136,7 @@ exports[`Test creation of a Pager control 1`] = `
         xcss={null}
       />
     </List>
-  </ButtonDialog>
+  </Styled(ButtonDialog)>
 </div>
 `;
 

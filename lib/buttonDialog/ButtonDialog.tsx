@@ -41,7 +41,16 @@ import * as React from 'react';
 import {ClassNames} from 'util.classnames';
 import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent, Direction, Location, Sizing} from '../shared';
+import {
+	BaseComponent,
+	baseZIndex,
+	Direction,
+	fontStyle,
+	getTheme,
+	Location,
+	Sizing
+} from '../shared';
+import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 import {Triangle} from '../triangle';
 
 export interface ButtonDialogProps extends ButtonProps {
@@ -71,6 +80,61 @@ export interface ButtonDialogState {
 	visible: boolean;
 }
 
+export const ButtonDialogContent: any = withProps<ButtonDialogProps, HTMLDivElement>(styled.div)`
+	display: ${props => props.visible ? 'block' : 'none'};
+	min-width: 100px;
+	min-height: 100%;
+	z-index: calc(${baseZIndex} + 1);
+
+	${props => props.sizing && fontStyle[props.sizing]}
+`;
+
+export const ButtonDialogPopup: any = withProps<ButtonDialogProps, HTMLDivElement>(styled.div)`
+	display: ${props => props.visible ? 'block' : 'none'};
+	position: absolute;
+	z-index: ${baseZIndex};
+
+	${props => props.location === Location.top ? DialogTop : DialogBottom}
+`;
+
+export const ButtonDialogView: any = withProps<ButtonDialogProps, HTMLDivElement>(styled.div)`
+	box-sizing: border-box;
+	display: flex;
+	height: inherit;
+	position: relative;
+	width: inherit;
+`;
+
+export const DialogBottom: any = css`
+	left: 0;
+	top: 108%;
+`;
+
+export const DialogTop: any = css`
+	bottom: 108%;
+	right: 0;
+`;
+
+export const StyledTriangle: any = withProps<ButtonDialogProps, HTMLElement>(styled(Triangle))`
+	display: ${props => props.visible ? 'block' : 'none'};
+
+	${props => props.location === Location.top ? TriangleTop : TriangleBottom}
+`;
+
+export const TriangleBottom: any = css`
+	position: absolute;
+	top: -13px;
+	left: 2%;
+	z-index: calc(${baseZIndex} + 2);
+`;
+
+export const TriangleTop: any = css`
+	position: absolute;
+	bottom: -13px;
+	right: 2%;
+	z-index: calc(${baseZIndex} + 2);
+`;
+
 export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogState> {
 
 	public static readonly defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
@@ -79,18 +143,14 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	private _triangleStyles: ClassNames = new ClassNames();
 
 	constructor(props: ButtonDialogProps) {
-		super(props, require('./styles.css'), ButtonDialog.defaultProps.style);
+		super(props, {}, ButtonDialog.defaultProps.style);
 
 		this._dialogStyles.add([
 			'ui-dialog-popup',
-			...props.dialogClasses.slice(),
-			this.styles.buttonDialogPopup
+			...props.dialogClasses.slice()
 		]);
 
-		this._rootStyles.add([
-			'ui-button-dialog',
-			this.styles.buttonDialog
-		]);
+		this._classes.add(['ui-button-dialog']);
 
 		this._triangleStyles.add([
 			...props.triangleClasses.slice()
@@ -106,15 +166,17 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			'handleKeyDown'
 		);
 
-		this.componentWillUpdate(props, this.state);
+		this.componentWillUpdate(this.props, this.state);
 	}
 
 	private handleClick() {
-		this.setState({
-			visible: !this.state.visible
-		});
-
-		this.props.onClick();
+		if (!this.props.disabled) {
+			this.setState({
+				visible: !this.state.visible
+			}, () => {
+				this.props.onClick();
+			});
+		}
 	}
 
 	private handleDialogClick() {
@@ -141,32 +203,8 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		window.removeEventListener('click', this.handleDialogClick);
 	}
 
-	public componentWillUpdate(nextProps: ButtonDialogProps, nextState: ButtonDialogState) {
+	public render() {
 		const ils = this.inlineStyles;
-
-		this._dialogStyles.onIfElse(nextProps.location === Location.top)(
-			this.styles.dialogTop
-		)(
-			this.styles.dialogBottom
-		);
-
-		this._triangleStyles.onIfElse(nextProps.location === Location.top)(
-			this.styles.dialogTriangleTop
-		)(
-			this.styles.dialogTriangleBottom
-		);
-
-		this._dialogStyles.onIfElse(nextState.visible)(
-			this.styles.buttonDialogShow
-		)(
-			this.styles.buttonDialogHide
-		);
-
-		this._triangleStyles.onIfElse(nextState.visible)(
-			this.styles.buttonDialogShow
-		)(
-			this.styles.buttonDialogHide
-		);
 
 		if (ils['color'] !== 'inherit') {
 			this.inlineStyles = {stroke: ils['color']};
@@ -180,47 +218,50 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			this.inlineStyles = {fill: 'white'};
 		}
 
-		super.componentWillUpdate(nextProps);
-	}
-
-	public render() {
-		const ils = this.inlineStyles;
-
 		return (
-			<div
-				className={this._rootStyles.classnames}
-			>
-				<Button
-					disabled={this.props.disabled}
-					iconName={this.props.iconName}
-					onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
-					sizing={this.props.sizing}
-					style={this.inlineStyles}
-					visible={this.props.visible}
-				/>
-				<div
-					className={this._dialogStyles.classnames}
-					onClick={this.handleDialogClick}
+			<ThemeProvider theme={getTheme()}>
+				<ButtonDialogView
+					className={this.classes}
 				>
-					<div className={this.styles.buttonDialogContent}>
-						{this.props.children}
-					</div>
-					{this.props.notriangle ?
-					null
-					:
-					<Triangle
-						className={this._triangleStyles.classnames}
-						direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
-						nobase
-						sizing={Sizing.normal}
-						style={{
-							fill: ils['fill'],
-							stroke: ils['stroke']
-						}}
+					<Button
+						disabled={this.props.disabled}
+						iconName={this.props.iconName}
+						onClick={this.handleClick}
+						sizing={this.props.sizing}
+						style={this.inlineStyles}
+						visible={this.props.visible}
 					/>
-					}
-				</div>
-			</div>
+					<ButtonDialogPopup
+						className={this._dialogStyles.classnames}
+						location={this.props.location}
+						onClick={this.handleDialogClick}
+						visible={this.state.visible}
+					>
+						<ButtonDialogContent
+							sizing={this.props.sizing}
+							visible={this.state.visible}
+						>
+							{this.props.children}
+						</ButtonDialogContent>
+						{this.props.notriangle ?
+						null
+						:
+						<StyledTriangle
+							className={this._triangleStyles.classnames}
+							direction={(this.props.location === Location.top) ? Direction.down : Direction.up}
+							location={this.props.location}
+							nobase
+							sizing={Sizing.normal}
+							style={{
+								fill: ils['fill'],
+								stroke: ils['stroke']
+							}}
+							visible={this.state.visible}
+						/>
+						}
+					</ButtonDialogPopup>
+				</ButtonDialogView>
+			</ThemeProvider>
 		);
 	}
 }

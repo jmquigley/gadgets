@@ -151,6 +151,12 @@ export const ButtonCSS: any = css`
 	font-weight: 600;
 `;
 
+export const StyledButtonDialog: any = styled(ButtonDialog)`
+	flex: none;
+	height: unset;
+	width: 7%;
+`;
+
 export const StyledButtonText: any = styled(ButtonText)`
 	${ButtonCSS}
 `;
@@ -714,16 +720,15 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					null
 				}
 				<Divider />
-				<ButtonDialog
+				<StyledButtonDialog
 					{...this.props}
-					className={this.styles.pagerDialog}
 					iconName="ellipsis-v"
 					location={Location.top}
 					notriangle
 					sizing={this.props.sizing}
 				>
 					{this._dialog}
-				</ButtonDialog>
+				</StyledButtonDialog>
 			</div>
 		);
 	}

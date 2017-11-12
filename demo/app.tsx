@@ -8,8 +8,6 @@ import {getUUID} from 'util.toolbox';
 
 const debug = require('debug')('app');
 
-(window as any).$ = (window as any).jQuery = require('jquery');
-
 //
 // This is not how the components would typically be included within an
 // electron app.  This is kind of a "hack" to allow the demo app and the
