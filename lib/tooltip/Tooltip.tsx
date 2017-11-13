@@ -7,6 +7,10 @@
  * is invoked on the parent component the tooltip is displayed.  When
  * the *mouseleave* event occurs the tooltip is hidden.
  *
+ * Note that the tooltip is set by position *absolute*.  The container
+ * that will hold the `Tooltip` component must be position *relative*
+ * or the  component will be placed as absolute from the beginning of the
+ * document.
  *
  * #### Examples:
  *
@@ -42,8 +46,6 @@
 
 'use strict';
 
-// const debug = require('debug')('Tooltip');
-
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {
@@ -68,7 +70,7 @@ export function getDefaultTooltipProps(): TooltipProps {
 
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			location: Location.topRight,
+			location: Location.top,
 			parent: null,
 			style: {
 				color: theme.tooltipForegroundColor,
@@ -83,71 +85,71 @@ export interface TooltipState {
 }
 
 export const Bottom: any = css`
-	top: 125%;
+	top: 100%;
 	left: 50%;
 	transform: translateX(-50%);
 `;
 
 export const BottomLeft: any = css`
-	top: 125%;
+	top: 100%;
 	left: 25%;
 	transform: translateX(-50%);
 `;
 
 export const BottomRight: any = css`
-	top: 125%;
+	top: 100%;
 	left: 75%;
 	transform: translateX(-50%);
 `;
 
 export const MiddleLeft: any = css`
 	top: 50%;
-	right: 112%;
+	right: 100%;
 	transform: translateY(-50%);
 `;
 
 export const Middle: any = css`
 	top: 50%;
-	left: 112%;
+	left: 100%;
 	transform: translateY(-50%);
 `;
 export const MiddleRight: any = Middle;
 
 export const Top: any = css`
-	bottom: 125%;
+	bottom: 100%;
 	left: 50%;
 	transform: translateX(-50%);
 `;
 
 export const TopLeft: any = css`
-	bottom: 125%;
+	bottom: 100%;
 	left: 25%;
 	transform: translateX(-50%);
 `;
 
 export const TopRight: any = css`
-	bottom: 125%;
+	bottom: 100%;
 	left: 75%;
 	transform: translateX(-50%);
 `;
 
 export const TriangleBottom: any = `
 	position: absolute;
-	top: -12px;
+	top: -0.75em;
 	left: 50%;
 	transform: translateX(-50%);
 `;
 
 export const TriangleBottomLeft: any = css`
 	position: absolute;
-	top: -12px;
+	top: -0.75em;
 	left: 75%;
 	transform: translateX(-50%);
 `;
 
 export const TriangleBottomRight: any = css`
 	position: absolute;
-	top: -12px;
+	top: -0.75em;
 	left: 25%;
 	transform: translateX(-50%);
 `;
@@ -155,34 +157,34 @@ export const TriangleBottomRight: any = css`
 export const TriangleMiddleLeft: any = css`
 	position: absolute;
 	top: 50%;
-	right: -12px;
+	right: -0.75em;
 	transform: translateY(-50%) rotate(90deg);
 `;
 
 export const TriangleMiddleRight: any = css`
 	position: absolute;
 	top: 50%;
-	left: -12px;
+	left: -0.75em;
 	transform: translateY(-50%) rotate(270deg);
 `;
 
 export const TriangleTop: any = css`
 	position: absolute;
-	bottom: -12px;
+	bottom: -0.75em;
 	left: 50%;
 	transform: translateX(-50%) rotate(180deg);
 `;
 
 export const TriangleTopLeft: any = css`
 	position: absolute;
-	bottom: -12px;
+	bottom: -0.75em;
 	left: 75%;
 	transform: translateX(-50%) rotate(180deg);
 `;
 
 export const TriangleTopRight: any = css`
 	position: absolute;
-	bottom: -12px;
+	bottom: -0.75em;
 	left: 25%;
 	transform: translateX(-50%) rotate(180deg);
 `;
@@ -223,12 +225,12 @@ export const TooltipView: any = withProps<TooltipProps, HTMLDivElement>(styled.d
 	border-radius: 10px;
 	flex:none;
 	line-height: initial;
-	padding: 3px 10px;
+	padding: 0.5em 1.0em;
 	pointer-events: none;
 	position: absolute;
 	text-align: initial;
 	transition: opacity 0.75s ease;
-	width: calc(100% + 50px);
+	width: ${props => props.width};
 
 	${props => {
 		switch (props.location) {
@@ -247,6 +249,7 @@ export const TooltipView: any = withProps<TooltipProps, HTMLDivElement>(styled.d
 	}};
 
 	${props => props.visible ? Show : Hide}
+	${props => props.sizing && fontStyle[props.sizing]}
 `;
 
 export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
@@ -315,24 +318,34 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 				break;
 		}
 
+		let tooltip = '';
+		if (this.props.children) {
+			tooltip = React.Children.map(this.props.children, (child: any) => {
+				return String(child);
+			}).join(' ');
+		}
+
 		return (
 			<ThemeProvider theme={getTheme()} >
 				<TooltipView
 					className={this.classes}
 					location={this.props.location}
+					sizing={this.prev(this.props.sizing).type}
 					style={this.inlineStyles}
 					visible={this.state.show}
+					width={tooltip.length < 25 ? 'unset' : '10em'}
 				>
 					<TootipContentView
 						className="ui-tooltip-content"
 						sizing={this.prev(this.props.sizing).type}
 						style={this.inlineStyles}
 					>
-						{this.props.children}
+						{tooltip}
 					</TootipContentView>
 					<StyledTriangle
 						location={this.props.location}
 						direction={direction}
+						sizing={this.prev(this.props.sizing).type}
 						style={{
 							fill: this.inlineStyles['backgroundColor'],
 							stroke: this.inlineStyles['backgroundColor']

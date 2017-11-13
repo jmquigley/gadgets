@@ -1,6 +1,6 @@
 /**
  * The base class for all components in the library.  This enables each module
- * to guarantee certain variable will be present through inheritance.  These
+ * to guarantee certain variables will be present through inheritance.  These
  * variables include:
  *
  * - `classes` - an array of CSS classnames that will be used on the root
@@ -50,7 +50,8 @@ import {isEmpty} from 'lodash';
 import * as React from 'react';
 import {calc} from 'util.calc';
 import {ClassNames} from 'util.classnames';
-import {Styles} from './props';
+import {getUUID} from 'util.toolbox';
+import {BaseProps, Styles} from './props';
 import {FontStyle, Sizes, Sizing, Styling} from './sizing';
 
 const gstyles = require('./styles.css');
@@ -58,9 +59,9 @@ const gstyles = require('./styles.css');
 export const baseZIndex: number = 9999;
 export const defaultSize: number = 16;
 
-export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
+export abstract class BaseComponent<P extends BaseProps, S> extends React.PureComponent<P, S> {
 
-	// private _className: string = '';
+	private _id: string;
 	private _inlineStyles: Map<string, string> = Map({});
 	private _locationStyle: string = '';
 	private _styles: any  = {};  // css modules styles per module
@@ -74,24 +75,31 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 	constructor(props: P, styles: Styles = {}, defaultInlineStyles: Styles = {}, defaultFontSize: number = defaultSize) {
 		super(props);
 
+		// If an id value is not given as a prop, then generate a unique id.  If the
+		// component is under test, then 0 is used for the UUID value (to make it
+		// predictable
+		if (this.props.id) {
+			this._id = this.props.id;
+		} else {
+			this._id = this.constructor.name + '-' + (this.props.testing ? '0' : getUUID());
+		}
+
 		this._styles = styles;
 		this._sizes = Sizes.instance(defaultFontSize);
-
-		if ('sizing' in this.props) {
-			this._sizing = this.props['sizing'];
-		} else {
-			this._sizing = Sizing.normal;
-		}
-
-		if ('location' in this.props) {
-			this._locationStyle = this.styles[this.props['location']];
-		}
-
-		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props['style']);
+		this._sizing = this.props.sizing;
+		this._locationStyle = this.styles[this.props.location];
+		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props.style);
 	}
 
 	get classes(): string {
 		return this._classes.classnames;
+	}
+
+	/**
+	 * @return {string} the unique id value that was generated for this component
+	 */
+	get id(): string {
+		return this._id;
 	}
 
 	get inlineStyles(): any {
@@ -321,42 +329,42 @@ export abstract class BaseComponent<P, S> extends React.PureComponent<P, S> {
 		nextState = nextState;
 
 		this.updateFontStyle(this._rootStyles, nextProps, this.props);
-		if ('sizing' in nextProps && this._sizing !== nextProps['sizing']) {
-			this._sizing = nextProps['sizing'];
+		if (this._sizing !== nextProps.sizing) {
+			this._sizing = nextProps.sizing;
 		}
 
-		if ('className' in nextProps && this.props['className'] !== nextProps['className']) {
-			this._rootStyles.off(this.props['className']);
-			this._classes.off(this.props['className']);
+		if (this.props.className !== nextProps.className) {
+			this._rootStyles.off(this.props.className);
+			this._classes.off(this.props.className);
 		}
 
-		this._rootStyles.onIf('className' in nextProps && nextProps['className'])(
+		this._rootStyles.onIf(nextProps.className != null)(
 			nextProps['className']
 		);
 
-		this._classes.onIf('className' in nextProps && nextProps['className'])(
+		this._classes.onIf(nextProps.className != null)(
 			nextProps['className']
 		);
 
-		this._rootStyles.onIf('visible' in nextProps && !nextProps['visible'])(
+		this._rootStyles.onIf(!nextProps.visible)(
 			this.styles.invisible
 		);
 
-		this._rootStyles.onIf('disabled' in nextProps && nextProps['disabled'])(
+		this._rootStyles.onIf(nextProps.disabled)(
 			gstyles.disabled,
 			'nohover'
 		);
 
-		if ('nohover' in nextProps && nextProps['nohover']) {
+		if (nextProps.nohover) {
 			this._rootStyles.on('nohover');
 		}
 
-		if ('nohover' in nextProps && nextProps['nohover']) {
+		if (nextProps.nohover) {
 			this._classes.on('nohover');
 		}
 
-		if (!isEmpty(nextProps['style'])) {
-			this.inlineStyles = nextProps['style'];
+		if (!isEmpty(nextProps.style)) {
+			this.inlineStyles = nextProps.style;
 		}
 	}
 }

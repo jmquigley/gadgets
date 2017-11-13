@@ -8,7 +8,7 @@
  * Items are placed into an array of structures of type `DropdownOption`.
  * Each option contains a value (the id)  and the dispay label.  This strucure
  * is used to build the `<option>` list under the `<select>`.  The user then
- * selects an optoin from this list.  The selection invoks an `onSelect`
+ * selects an option from this list.  The selection invoks an `onSelect`
  * callback.
  *
  * ## Screen:
@@ -63,6 +63,7 @@ import {
 	getDefaultBaseProps,
 	getTheme
 } from '../shared';
+import {tooltip} from '../shared/helpers';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface DropdownOption {
@@ -90,13 +91,18 @@ export interface DropdownState {
 	currentValue: string;
 }
 
-export const DropdownView: any = withProps<DropdownProps, HTMLSelectElement>(styled.select)`
+export const DropdownContainerView: any = withProps<DropdownProps, HTMLDivElement>(styled.div)`
+	position: relative;
+	${props => props.sizing && fontStyle[props.sizing]};
+`;
+
+export const DropdownView: any = styled.select`
 	-webkit-appearance: none;
 	-webkit-border-radius: 0px;
 	background-position: 100% 50%;
 	background-repeat: no-repeat;
-
-	${props => props.sizing && fontStyle[props.sizing]};
+	font-size: inherit;
+	height: 100%;
 `;
 
 export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
@@ -154,16 +160,22 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	public render() {
 		return(
 			<ThemeProvider theme={getTheme()} >
-				<DropdownView
-					className={this.classes}
-					value={this.state.currentValue}
-					disabled={this.props.disabled}
-					onChange={this.props.disabled ? nilEvent : this.handleChange}
+				<DropdownContainerView
+					className="ui-dropdown-container"
 					sizing={this.props.sizing}
-					style={this.inlineStyles}
 				>
-					{this._options}
-				</DropdownView>
+					<DropdownView
+						className={this.classes}
+						disabled={this.props.disabled}
+						id={this.id}
+						onChange={this.props.disabled ? nilEvent : this.handleChange}
+						style={this.inlineStyles}
+						value={this.state.currentValue}
+					>
+						{this._options}
+					</DropdownView>
+					{tooltip(this.id, this.props)}
+				</DropdownContainerView>
 			</ThemeProvider>
 		);
 	}

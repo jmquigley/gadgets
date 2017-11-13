@@ -18,39 +18,44 @@ exports[`Creation of the Dropdown control 1`] = `
     }
   }
 >
-  <styled.select
-    className="ui-dropdown"
-    disabled={false}
-    onChange={[Function]}
+  <styled.div
+    className="ui-dropdown-container"
     sizing="normal"
-    style={
-      Object {
-        "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
-        "paddingLeft": "3.2px",
-        "paddingRight": "16px",
-      }
-    }
-    value="idstr2"
   >
-    <option
-      key="0"
-      value="idstr1"
-    >
-      lstr1
-    </option>
-    <option
-      key="1"
+    <styled.select
+      className="ui-dropdown"
+      disabled={false}
+      id="Dropdown-0"
+      onChange={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+          "paddingLeft": "3.2px",
+          "paddingRight": "16px",
+        }
+      }
       value="idstr2"
     >
-      lstr2
-    </option>
-    <option
-      key="2"
-      value="idstr3"
-    >
-      lstr3
-    </option>
-  </styled.select>
+      <option
+        key="0"
+        value="idstr1"
+      >
+        lstr1
+      </option>
+      <option
+        key="1"
+        value="idstr2"
+      >
+        lstr2
+      </option>
+      <option
+        key="2"
+        value="idstr3"
+      >
+        lstr3
+      </option>
+    </styled.select>
+  </styled.div>
 </ThemeProvider>
 `;
 
@@ -113,53 +118,63 @@ exports[`Disable the Dropdown control 1`] = `
       }
     }
   >
-    <styled.select
-      className="ui-dropdown"
-      disabled={true}
-      onChange={[Function]}
+    <styled.div
+      className="ui-dropdown-container"
       sizing="normal"
-      style={
-        Object {
-          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
-          "paddingLeft": "3.2px",
-          "paddingRight": "16px",
-        }
-      }
-      value="idstr2"
     >
-      <select
-        className="ui-dropdown sc-bdVaJa fzFFjD"
-        disabled={true}
-        onChange={[Function]}
-        style={
-          Object {
-            "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
-            "paddingLeft": "3.2px",
-            "paddingRight": "16px",
-          }
-        }
-        value="idstr2"
+      <div
+        className="ui-dropdown-container sc-bxivhb HZSMo"
       >
-        <option
-          key="0"
-          value="idstr1"
-        >
-          lstr1
-        </option>
-        <option
-          key="1"
+        <styled.select
+          className="ui-dropdown"
+          disabled={true}
+          id="Dropdown-0"
+          onChange={[Function]}
+          style={
+            Object {
+              "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+              "paddingLeft": "3.2px",
+              "paddingRight": "16px",
+            }
+          }
           value="idstr2"
         >
-          lstr2
-        </option>
-        <option
-          key="2"
-          value="idstr3"
-        >
-          lstr3
-        </option>
-      </select>
-    </styled.select>
+          <select
+            className="ui-dropdown sc-ifAKCX csqWUV"
+            disabled={true}
+            id="Dropdown-0"
+            onChange={[Function]}
+            style={
+              Object {
+                "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                "paddingLeft": "3.2px",
+                "paddingRight": "16px",
+              }
+            }
+            value="idstr2"
+          >
+            <option
+              key="0"
+              value="idstr1"
+            >
+              lstr1
+            </option>
+            <option
+              key="1"
+              value="idstr2"
+            >
+              lstr2
+            </option>
+            <option
+              key="2"
+              value="idstr3"
+            >
+              lstr3
+            </option>
+          </select>
+        </styled.select>
+      </div>
+    </styled.div>
   </ThemeProvider>
 </Dropdown>
 `;
@@ -182,39 +197,44 @@ exports[`Make the Dropdown control invisible 1`] = `
     }
   }
 >
-  <styled.select
-    className="ui-dropdown"
-    disabled={false}
-    onChange={[Function]}
+  <styled.div
+    className="ui-dropdown-container"
     sizing="normal"
-    style={
-      Object {
-        "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
-        "paddingLeft": "3.2px",
-        "paddingRight": "16px",
-      }
-    }
-    value="idstr2"
   >
-    <option
-      key="0"
-      value="idstr1"
-    >
-      lstr1
-    </option>
-    <option
-      key="1"
+    <styled.select
+      className="ui-dropdown"
+      disabled={false}
+      id="Dropdown-0"
+      onChange={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+          "paddingLeft": "3.2px",
+          "paddingRight": "16px",
+        }
+      }
       value="idstr2"
     >
-      lstr2
-    </option>
-    <option
-      key="2"
-      value="idstr3"
-    >
-      lstr3
-    </option>
-  </styled.select>
+      <option
+        key="0"
+        value="idstr1"
+      >
+        lstr1
+      </option>
+      <option
+        key="1"
+        value="idstr2"
+      >
+        lstr2
+      </option>
+      <option
+        key="2"
+        value="idstr3"
+      >
+        lstr3
+      </option>
+    </styled.select>
+  </styled.div>
 </ThemeProvider>
 `;
 
@@ -305,53 +325,63 @@ exports[`Test the Dropdown click event 1`] = `
       }
     }
   >
-    <styled.select
-      className="ui-dropdown"
-      disabled={false}
-      onChange={[Function]}
+    <styled.div
+      className="ui-dropdown-container"
       sizing="normal"
-      style={
-        Object {
-          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
-          "paddingLeft": "3.2px",
-          "paddingRight": "16px",
-        }
-      }
-      value="idstr1"
     >
-      <select
-        className="ui-dropdown sc-bdVaJa fzFFjD"
-        disabled={false}
-        onChange={[Function]}
-        style={
-          Object {
-            "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
-            "paddingLeft": "3.2px",
-            "paddingRight": "16px",
-          }
-        }
-        value="idstr1"
+      <div
+        className="ui-dropdown-container sc-bxivhb HZSMo"
       >
-        <option
-          key="0"
+        <styled.select
+          className="ui-dropdown"
+          disabled={false}
+          id="Dropdown-0"
+          onChange={[Function]}
+          style={
+            Object {
+              "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+              "paddingLeft": "3.2px",
+              "paddingRight": "16px",
+            }
+          }
           value="idstr1"
         >
-          lstr1
-        </option>
-        <option
-          key="1"
-          value="idstr2"
-        >
-          lstr2
-        </option>
-        <option
-          key="2"
-          value="idstr3"
-        >
-          lstr3
-        </option>
-      </select>
-    </styled.select>
+          <select
+            className="ui-dropdown sc-ifAKCX csqWUV"
+            disabled={false}
+            id="Dropdown-0"
+            onChange={[Function]}
+            style={
+              Object {
+                "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                "paddingLeft": "3.2px",
+                "paddingRight": "16px",
+              }
+            }
+            value="idstr1"
+          >
+            <option
+              key="0"
+              value="idstr1"
+            >
+              lstr1
+            </option>
+            <option
+              key="1"
+              value="idstr2"
+            >
+              lstr2
+            </option>
+            <option
+              key="2"
+              value="idstr3"
+            >
+              lstr3
+            </option>
+          </select>
+        </styled.select>
+      </div>
+    </styled.div>
   </ThemeProvider>
 </Dropdown>
 `;

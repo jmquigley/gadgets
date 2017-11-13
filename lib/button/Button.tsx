@@ -79,6 +79,7 @@ export const BaseButtonView: any = css`
 	overflow: visible;
 	position: relative;
 	user-select: none;
+	width: 100%;
 `;
 
 export const ButtonView: any = withProps<ButtonProps, HTMLDivElement>(styled.div)`
@@ -131,7 +132,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 				<ButtonView
 					className={this.classes}
 					disabled={this.props.disabled}
-					id={this.props.id}
+					id={this.id}
 					onClick={this.handleClick}
 					style={this.inlineStyles}
 					visible={this.props.visible}
@@ -141,7 +142,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 						iconName={this.props.iconName}
 						sizing={this.props.sizing}
 					/>
-					{tooltip(this.props)}
+				{tooltip(this.id, this.props)}
 				</ButtonView>
 			</ThemeProvider>
 		);

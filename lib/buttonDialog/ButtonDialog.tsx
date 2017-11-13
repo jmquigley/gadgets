@@ -50,6 +50,7 @@ import {
 	Location,
 	Sizing
 } from '../shared';
+import {tooltip} from '../shared/helpers';
 import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 import {Triangle} from '../triangle';
 
@@ -222,6 +223,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			<ThemeProvider theme={getTheme()}>
 				<ButtonDialogView
 					className={this.classes}
+					id={this.id}
 				>
 					<Button
 						disabled={this.props.disabled}
@@ -260,6 +262,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 						/>
 						}
 					</ButtonDialogPopup>
+					{tooltip(this.id, this.props)}
 				</ButtonDialogView>
 			</ThemeProvider>
 		);

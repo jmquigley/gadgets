@@ -113,7 +113,7 @@ import {cloneDeep} from 'lodash';
 import {Markup, MarkupMode} from 'quill-markup';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
-import {getUUID, nilEvent} from 'util.toolbox';
+import { nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {ButtonDialog} from '../buttonDialog';
 import {Divider} from '../divider';
@@ -196,7 +196,6 @@ export const EditorToolbar: any = withProps<EditorProps, HTMLDivElement>(styled(
 export class Editor extends BaseComponent<EditorProps, undefined> {
 	private _custom: any;
 	private _editor: any;
-	private _editorKey: string = 'editor';
 	private _fontList: DropdownOption[] = [];
 	private _fontSizes: DropdownOption[] = [];
 	private _highlights: DropdownOption[] = [];
@@ -227,10 +226,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	constructor(props: EditorProps)	{
 		super(props, {}, Editor.defaultProps.style);
 
-		if (!this.props.testing) {
-			this._editorKey = `editor-${getUUID()}`;
-		}
-		debug('using editor key: %s', this._editorKey);
+		debug('Editor key: "%s"', this.id);
 
 		this._classes.add(['ui-editor']);
 		this._editorStyles.add(['ui-editor-quill']);
@@ -300,14 +296,13 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	}
 
 	public componentDidMount() {
-		debug('componentDidMount()');
 
 		// The quill editor must be added after the component has mounted
 		// because the DOM element used for replacement is not available
 		// until the first render call.
 
 		Quill.register('modules/markup', Markup);
-		this._editor = new Quill(`#${this._editorKey}`, {
+		this._editor = new Quill(`#${this.id}`, {
 			modules: {
 				history: {
 					delay: 2000,
@@ -363,12 +358,36 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 						className={this._toolbarStyles.classnames}
 						sizing={Sizing.small}
 					>
-						<Button iconName="bold" onClick={this._markup && this._markup.setBold} />
-						<Button iconName="italic" onClick={this._markup && this._markup.setItalic} />
-						<Button iconName="underline" onClick={this._markup && this._markup.setUnderline} />
-						<Button iconName="strikethrough" onClick={this._markup && this._markup.setStrikeThrough} />
-						<Button iconName="code" onClick={this._markup && this._markup.setMono} />
-						<ButtonDialog iconName="header" notriangle>
+						<Button
+							iconName="bold"
+							onClick={this._markup && this._markup.setBold}
+							tooltip="bold"
+						/>
+						<Button
+							iconName="italic"
+							onClick={this._markup && this._markup.setItalic}
+							tooltip="italic"
+						/>
+						<Button
+							iconName="underline"
+							onClick={this._markup && this._markup.setUnderline}
+							tooltip="underline"
+						/>
+						<Button
+							iconName="strikethrough"
+							onClick={this._markup && this._markup.setStrikeThrough}
+							tooltip="strike through"
+						/>
+						<Button
+							iconName="code"
+							onClick={this._markup && this._markup.setMono}
+							tooltip="code"
+						/>
+						<ButtonDialog
+							iconName="header"
+							notriangle
+							tooltip="header"
+						>
 							<List sizing={Sizing.small} alternating>
 								<ListItem title="h1" onSelect={this.handleSelect('1')} />
 								<ListItem title="h2" onSelect={this.handleSelect('2')} />
@@ -379,20 +398,30 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 							</List>
 						</ButtonDialog>
 						<Divider />
-						<Button iconName="undo" onClick={this._markup && this._markup.undo} />
-						<Button iconName="repeat" onClick={this._markup && this._markup.redo} />
+						<Button
+							iconName="undo"
+							onClick={this._markup && this._markup.undo}
+							tooltip="undo"
+						/>
+						<Button
+							iconName="repeat"
+							onClick={this._markup && this._markup.redo}
+							tooltip="redo"
+						/>
 						<Divider />
 						<Dropdown
 							{...this.props}
 							defaultVal={this.props.defaultFont}
 							items={this._fontList}
 							onSelect={this._markup && this._markup.setFont}
+							tooltip="font"
 						/>
 						<Dropdown
 							{...this.props}
 							defaultVal={this.props.defaultFontSize.toString()}
 							items={this._fontSizes}
 							onSelect={this._markup && this._markup.setFontSize}
+							tooltip="font size"
 						/>
 						<Divider />
 						<Dropdown
@@ -400,6 +429,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 							defaultVal={'markdown'}
 							items={this._modes}
 							onSelect={this._markup && this._markup.setMode}
+							tooltip="mode"
 						/>
 						<Dropdown
 							{...this.props}
@@ -409,13 +439,18 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 							style={{
 								width: '6rem'
 							}}
+							tooltip="syntax highlighting"
 						/>
-						<Button iconName="refresh" onClick={this._markup && this._markup.refresh} />
+						<Button
+							iconName="refresh"
+							onClick={this._markup && this._markup.refresh}
+							tooltip="refresh"
+						/>
 					</EditorToolbar>
 					<EditorView
 						className={this._editorStyles.classnames}
 						disabled={this.props.disabled}
-						id={this._editorKey}
+						id={this.id}
 						visible={this.props.visible}
 					/>
 				</EditorContainer>

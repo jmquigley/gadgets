@@ -1,5 +1,6 @@
 'use strict';
 
+import * as React from 'react';
 import {Tooltip} from '../tooltip';
 
 /**
@@ -33,12 +34,12 @@ export function globalize(name: string, pkg: any, replace: boolean = false) {
  * @return {Tooltip} a new Tooltip reference if there is a given tooltip string
  * otherwise null is returned.
  */
-export function tooltip(props: any) {
+export function tooltip(id: string, props: any) {
 	if (props['tooltip'] !== '') {
 		return (
 			<Tooltip
-				{...props}
-				parent={props['id']}
+				parent={id}
+				sizing={props['sizing']}
 			>
 				{props['tooltip']}
 			</Tooltip>

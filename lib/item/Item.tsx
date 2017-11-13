@@ -110,11 +110,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 
 	constructor(props: ItemProps) {
 		super(props);
-
-		this._classes.add([
-			'ui-item'
-		]);
-
+		this._classes.add(['ui-item']);
 		this.componentWillUpdate(this.props);
 		this.componentWillReceiveProps(this.props);
 	}

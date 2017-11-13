@@ -101,13 +101,18 @@ section {
 }
 
 #buttonTable th, #buttonTable td {
-	min-width: 80px;
 	height: 80px;
+	min-width: 80px;
+    overflow: visible;
+}
+
+#buttonTable td > div {
+    overflow: visible !important;
 }
 
 #buttonTable .tblIcons td i, #buttonTable .tblIcons td img {
-	position: relative;
 	left: 50%;
+	position: relative;
 	transform: translateX(-50%);
 }
 

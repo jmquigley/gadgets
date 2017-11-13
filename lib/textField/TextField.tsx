@@ -111,6 +111,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {sp} from 'util.constants';
+import {isTesting} from 'util.env';
 import {nilEvent} from 'util.toolbox';
 import {ButtonCircle} from '../buttonCircle';
 import {
@@ -150,6 +151,7 @@ export interface TextFieldProps extends Partial<HTMLInputElement> {
 	sizing?: Sizing;
 	style?: any;
 	tooltip?: string;
+	testing?: boolean;
 	type?: string;
 	useclear?: boolean;
 	usevalidation?: boolean;
@@ -169,6 +171,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		onValidation: nilEvent,
 		sizing: Sizing.normal,
 		style: {},
+		testing: isTesting(),
 		tooltip: '',
 		type: 'text',
 		useclear: false,
@@ -435,7 +438,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			<ThemeProvider theme={getTheme()} >
 				<TextfieldContainerView
 					className="ui-textfield-container"
-					id={this.props.id}
+					id={this.id}
 					style={this.inlineStyles}
 				>
 					<TextFieldView
@@ -470,7 +473,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					:
 						null
 					}
-				{tooltip(this.props)}
+				{tooltip(this.id, this.props)}
 				</TextfieldContainerView>
 			</ThemeProvider>
 		);
