@@ -1,1322 +1,115 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a DynamicList control 1`] = `
-<Accordion
-  className="ui-dynamiclist dynamicList normal test-class"
-  contentEditable={false}
-  direction="right"
-  disabled={false}
-  focus={false}
-  height=""
-  id=""
-  location="none"
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  selected={false}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  theme={Object {}}
-  tooltip=""
-  visible={true}
-  width=""
-  xcss={null}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
+      "transitionDelay": "0.5s",
+    }
+  }
 >
-  <AccordionItem
-    className=""
+  <Accordion
+    className="ui-dynamiclist test-class"
     contentEditable={false}
     direction="right"
     disabled={false}
     focus={false}
     height=""
-    hiddenLeftButton={false}
-    hiddenRightButton={false}
     id=""
-    initialToggle={true}
-    layout={5}
-    leftButton={null}
     location="none"
-    nocollapse={false}
-    noedit={true}
+    noedit={false}
     nohover={false}
     noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onMouseOut={[Function]}
-    onUpdate={[Function]}
-    rightButton={
-      <Button
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        iconName="plus"
-        iconStyle=""
-        id=""
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        tooltip=""
-        visible={true}
-        width=""
-        xcss={null}
-      />
-    }
     selected={false}
     sizing="normal"
-    stacked={false}
     style={Object {}}
     testing={true}
     theme={Object {}}
-    title="​ - (0 items)"
     tooltip=""
-    useedit={false}
     visible={true}
-    widget={null}
     width=""
     xcss={null}
   >
-    <List
-      alternating={true}
+    <AccordionItem
       className=""
       contentEditable={false}
       direction="right"
       disabled={false}
       focus={false}
       height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
       id=""
+      initialToggle={true}
+      layout={5}
+      leftButton={null}
       location="none"
-      noedit={false}
+      nocollapse={false}
+      noedit={true}
       nohover={false}
       noripple={false}
-      onAdd={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      rightButton={
+        <Button
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="plus"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          tooltip=""
+          visible={true}
+          width=""
+          xcss={null}
+        />
+      }
       selected={false}
       sizing="normal"
+      stacked={false}
       style={Object {}}
       testing={true}
       theme={Object {}}
+      title="​ - (0 items)"
       tooltip=""
-      unselect={false}
+      useedit={false}
       visible={true}
+      widget={null}
       width=""
       xcss={null}
     >
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-0"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-1"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-2"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-3"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-4"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-5"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-6"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-7"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-8"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-9"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-10"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-11"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-12"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-13"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-14"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-15"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-16"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-17"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-18"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-19"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-20"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-21"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-22"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-23"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-24"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListFooter
+      <List
+        alternating={true}
         className=""
         contentEditable={false}
         direction="right"
@@ -1324,2518 +117,3608 @@ exports[`Test creation of a DynamicList control 1`] = `
         focus={false}
         height=""
         id=""
-        key="0"
-        layout={3}
         location="none"
         noedit={false}
         nohover={false}
         noripple={false}
-        onClick={[Function]}
+        onAdd={[Function]}
         selected={false}
         sizing="normal"
         style={Object {}}
         testing={true}
         theme={Object {}}
-        title={
-          <TextField
-            disabled={false}
-            id=""
-            noborder={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onValidation={[Function]}
-            placeholder="search"
-            sizing="normal"
-            style={
-              Object {
-                "display": "flex",
-              }
-            }
-            testing={true}
-            tooltip=""
-            type="text"
-            useclear={true}
-            usevalidation={false}
-            validators={Array []}
-            value=""
-            visible={true}
-          />
-        }
         tooltip=""
+        unselect={false}
         visible={true}
-        widget={
-          <Pager
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            id=""
-            initialPage={1}
-            initialPageSize={25}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onChangePageSize={[Function]}
-            onSelect={[Function]}
-            onSort={[Function]}
-            pageSizes={
-              Array [
-                25,
-                50,
-                100,
-              ]
-            }
-            pagesToDisplay={3}
-            selected={false}
-            sizing="small"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            totalItems={0}
-            useinput={true}
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
         width=""
         xcss={null}
-      />
-    </List>
-  </AccordionItem>
-  <DialogBox
-    className=""
-    contentEditable={false}
-    dialogType="warning"
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="bomb"
-    id=""
-    location="none"
-    message="Are you sure you want to delete ?"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onClose={[Function]}
-    onOpen={[Function]}
-    onSelection={[Function]}
-    selected={false}
-    show={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    visible={true}
-    width=""
-    xcss={null}
-  />
-</Accordion>
+      >
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-0"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-1"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-2"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-3"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-4"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-5"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-6"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-7"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-8"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-9"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-10"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-11"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-12"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-13"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-14"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-15"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-16"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-17"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-18"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-19"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-20"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-21"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-22"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-23"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-24"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListFooter
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          id=""
+          key="0"
+          layout={3}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title={
+            <TextField
+              disabled={false}
+              id=""
+              noborder={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onValidation={[Function]}
+              placeholder="search"
+              sizing="normal"
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+              testing={true}
+              tooltip=""
+              type="text"
+              useclear={true}
+              usevalidation={false}
+              validators={Array []}
+              value=""
+              visible={true}
+            />
+          }
+          tooltip=""
+          visible={true}
+          widget={
+            <Pager
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              id=""
+              initialPage={1}
+              initialPageSize={25}
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              onChangePageSize={[Function]}
+              onSelect={[Function]}
+              onSort={[Function]}
+              pageSizes={
+                Array [
+                  25,
+                  50,
+                  100,
+                ]
+              }
+              pagesToDisplay={3}
+              selected={false}
+              sizing="small"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              totalItems={0}
+              useinput={true}
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          width=""
+          xcss={null}
+        />
+      </List>
+    </AccordionItem>
+    <DialogBox
+      className=""
+      contentEditable={false}
+      dialogType="warning"
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="bomb"
+      id=""
+      location="none"
+      message="Are you sure you want to delete ?"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onClose={[Function]}
+      onOpen={[Function]}
+      onSelection={[Function]}
+      selected={false}
+      show={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      tooltip=""
+      visible={true}
+      width=""
+      xcss={null}
+    />
+  </Accordion>
+</ThemeProvider>
 `;
 
 exports[`Test creation of a DynamicList with 3 items 1`] = `
-<Accordion
-  className="ui-dynamiclist dynamicList normal"
-  contentEditable={false}
-  direction="right"
-  disabled={false}
-  focus={false}
-  height=""
-  id=""
-  location="none"
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  selected={false}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  theme={Object {}}
-  tooltip=""
-  visible={true}
-  width=""
-  xcss={null}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
+      "transitionDelay": "0.5s",
+    }
+  }
 >
-  <AccordionItem
-    className=""
+  <Accordion
+    className="ui-dynamiclist"
     contentEditable={false}
     direction="right"
     disabled={false}
     focus={false}
     height=""
-    hiddenLeftButton={false}
-    hiddenRightButton={false}
     id=""
-    initialToggle={true}
-    layout={5}
-    leftButton={null}
     location="none"
-    nocollapse={true}
-    noedit={true}
-    nohover={true}
-    noripple={true}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onMouseOut={[Function]}
-    onUpdate={[Function]}
-    rightButton={
-      <Button
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        iconName="plus"
-        iconStyle=""
-        id=""
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        tooltip=""
-        visible={true}
-        width=""
-        xcss={null}
-      />
-    }
+    noedit={false}
+    nohover={false}
+    noripple={false}
     selected={false}
     sizing="normal"
-    stacked={false}
     style={Object {}}
     testing={true}
     theme={Object {}}
-    title="Test List Title - (3 items)"
     tooltip=""
-    useedit={false}
     visible={true}
-    widget={null}
     width=""
     xcss={null}
   >
-    <List
-      alternating={true}
+    <AccordionItem
       className=""
       contentEditable={false}
       direction="right"
       disabled={false}
       focus={false}
       height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      id=""
+      initialToggle={true}
+      layout={5}
+      leftButton={null}
+      location="none"
+      nocollapse={true}
+      noedit={true}
+      nohover={true}
+      noripple={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      rightButton={
+        <Button
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="plus"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          tooltip=""
+          visible={true}
+          width=""
+          xcss={null}
+        />
+      }
+      selected={false}
+      sizing="normal"
+      stacked={false}
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      title="Test List Title - (3 items)"
+      tooltip=""
+      useedit={false}
+      visible={true}
+      widget={null}
+      width=""
+      xcss={null}
+    >
+      <List
+        alternating={true}
+        className=""
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        focus={false}
+        height=""
+        id=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        onAdd={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        theme={Object {}}
+        tooltip=""
+        unselect={false}
+        visible={true}
+        width=""
+        xcss={null}
+      >
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={true}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id="title1"
+          key="title1"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={
+            <Styled(Button)
+              iconName="times"
+              onClick={[Function]}
+            />
+          }
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="title1"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget="widget1"
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={true}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id="title2"
+          key="title2"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={
+            <Styled(Button)
+              iconName="times"
+              onClick={[Function]}
+            />
+          }
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="title2"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget="widget2"
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={true}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id="title3"
+          key="title3"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={
+            <Styled(Button)
+              iconName="times"
+              onClick={[Function]}
+            />
+          }
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="title3"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget="widget3"
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-0"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-1"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-2"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-3"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-4"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-5"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-6"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListFooter
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          id=""
+          key="0"
+          layout={3}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title={
+            <TextField
+              disabled={false}
+              id=""
+              noborder={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onValidation={[Function]}
+              placeholder="search"
+              sizing="normal"
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+              testing={true}
+              tooltip=""
+              type="text"
+              useclear={true}
+              usevalidation={false}
+              validators={Array []}
+              value=""
+              visible={true}
+            />
+          }
+          tooltip=""
+          visible={true}
+          widget={
+            <Pager
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              id=""
+              initialPage={1}
+              initialPageSize={10}
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              onChangePageSize={[Function]}
+              onSelect={[Function]}
+              onSort={[Function]}
+              pageSizes={
+                Array [
+                  10,
+                  20,
+                  30,
+                ]
+              }
+              pagesToDisplay={3}
+              selected={false}
+              sizing="small"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              totalItems={3}
+              useinput={true}
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          width=""
+          xcss={null}
+        />
+      </List>
+    </AccordionItem>
+    <DialogBox
+      className=""
+      contentEditable={false}
+      dialogType="warning"
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="bomb"
       id=""
       location="none"
+      message="Are you sure you want to delete ?"
       noedit={false}
       nohover={false}
       noripple={false}
-      onAdd={[Function]}
+      onClose={[Function]}
+      onOpen={[Function]}
+      onSelection={[Function]}
       selected={false}
+      show={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={Object {}}
       tooltip=""
-      unselect={false}
       visible={true}
       width=""
       xcss={null}
-    >
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={true}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id="title1"
-        key="title1"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={
-          <Button
-            className="dynamicListDeleteButton"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="title1"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget="widget1"
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={true}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id="title2"
-        key="title2"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={
-          <Button
-            className="dynamicListDeleteButton"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="title2"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget="widget2"
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={true}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id="title3"
-        key="title3"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={
-          <Button
-            className="dynamicListDeleteButton"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="title3"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget="widget3"
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-0"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-1"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-2"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-3"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-4"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-5"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-6"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListFooter
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        id=""
-        key="0"
-        layout={3}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title={
-          <TextField
-            disabled={false}
-            id=""
-            noborder={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onValidation={[Function]}
-            placeholder="search"
-            sizing="normal"
-            style={
-              Object {
-                "display": "flex",
-              }
-            }
-            testing={true}
-            tooltip=""
-            type="text"
-            useclear={true}
-            usevalidation={false}
-            validators={Array []}
-            value=""
-            visible={true}
-          />
-        }
-        tooltip=""
-        visible={true}
-        widget={
-          <Pager
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            id=""
-            initialPage={1}
-            initialPageSize={10}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onChangePageSize={[Function]}
-            onSelect={[Function]}
-            onSort={[Function]}
-            pageSizes={
-              Array [
-                10,
-                20,
-                30,
-              ]
-            }
-            pagesToDisplay={3}
-            selected={false}
-            sizing="small"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            totalItems={3}
-            useinput={true}
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        width=""
-        xcss={null}
-      />
-    </List>
-  </AccordionItem>
-  <DialogBox
-    className=""
-    contentEditable={false}
-    dialogType="warning"
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="bomb"
-    id=""
-    location="none"
-    message="Are you sure you want to delete ?"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onClose={[Function]}
-    onOpen={[Function]}
-    onSelection={[Function]}
-    selected={false}
-    show={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    visible={true}
-    width=""
-    xcss={null}
-  />
-</Accordion>
+    />
+  </Accordion>
+</ThemeProvider>
 `;
 
 exports[`Test disabling of a Dynamic List control 1`] = `
-<Accordion
-  className="ui-dynamiclist dynamicList normal disabled nohover"
-  contentEditable={false}
-  direction="right"
-  disabled={false}
-  focus={false}
-  height=""
-  id=""
-  location="none"
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  selected={false}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  theme={Object {}}
-  tooltip=""
-  visible={true}
-  width=""
-  xcss={null}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
+      "transitionDelay": "0.5s",
+    }
+  }
 >
-  <AccordionItem
-    className=""
+  <Accordion
+    className="ui-dynamiclist"
     contentEditable={false}
     direction="right"
     disabled={false}
     focus={false}
     height=""
-    hiddenLeftButton={false}
-    hiddenRightButton={false}
     id=""
-    initialToggle={true}
-    layout={5}
-    leftButton={null}
     location="none"
-    nocollapse={false}
-    noedit={true}
+    noedit={false}
     nohover={false}
     noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onMouseOut={[Function]}
-    onUpdate={[Function]}
-    rightButton={
-      <Button
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        iconName="plus"
-        iconStyle=""
-        id=""
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        tooltip=""
-        visible={true}
-        width=""
-        xcss={null}
-      />
-    }
     selected={false}
     sizing="normal"
-    stacked={false}
     style={Object {}}
     testing={true}
     theme={Object {}}
-    title="​ - (3 items)"
     tooltip=""
-    useedit={false}
     visible={true}
-    widget={null}
     width=""
     xcss={null}
   >
-    <List
-      alternating={true}
+    <AccordionItem
       className=""
       contentEditable={false}
       direction="right"
       disabled={false}
       focus={false}
       height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      id=""
+      initialToggle={true}
+      layout={5}
+      leftButton={null}
+      location="none"
+      nocollapse={false}
+      noedit={true}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      rightButton={
+        <Button
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="plus"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          tooltip=""
+          visible={true}
+          width=""
+          xcss={null}
+        />
+      }
+      selected={false}
+      sizing="normal"
+      stacked={false}
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      title="​ - (3 items)"
+      tooltip=""
+      useedit={false}
+      visible={true}
+      widget={null}
+      width=""
+      xcss={null}
+    >
+      <List
+        alternating={true}
+        className=""
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        focus={false}
+        height=""
+        id=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        onAdd={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        theme={Object {}}
+        tooltip=""
+        unselect={false}
+        visible={true}
+        width=""
+        xcss={null}
+      >
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={true}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id="title1"
+          key="title1"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={
+            <Styled(Button)
+              iconName="times"
+              onClick={[Function]}
+            />
+          }
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="title1"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget="widget1"
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={true}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id="title2"
+          key="title2"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={
+            <Styled(Button)
+              iconName="times"
+              onClick={[Function]}
+            />
+          }
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="title2"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget="widget2"
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={true}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id="title3"
+          key="title3"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={
+            <Styled(Button)
+              iconName="times"
+              onClick={[Function]}
+            />
+          }
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="title3"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget="widget3"
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-0"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-1"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-2"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-3"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-4"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-5"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-6"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListFooter
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          id=""
+          key="0"
+          layout={3}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title={
+            <TextField
+              disabled={false}
+              id=""
+              noborder={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onValidation={[Function]}
+              placeholder="search"
+              sizing="normal"
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+              testing={true}
+              tooltip=""
+              type="text"
+              useclear={true}
+              usevalidation={false}
+              validators={Array []}
+              value=""
+              visible={true}
+            />
+          }
+          tooltip=""
+          visible={true}
+          widget={
+            <Pager
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              id=""
+              initialPage={1}
+              initialPageSize={10}
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              onChangePageSize={[Function]}
+              onSelect={[Function]}
+              onSort={[Function]}
+              pageSizes={
+                Array [
+                  10,
+                  20,
+                  30,
+                ]
+              }
+              pagesToDisplay={3}
+              selected={false}
+              sizing="small"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              totalItems={3}
+              useinput={true}
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          width=""
+          xcss={null}
+        />
+      </List>
+    </AccordionItem>
+    <DialogBox
+      className=""
+      contentEditable={false}
+      dialogType="warning"
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="bomb"
       id=""
       location="none"
+      message="Are you sure you want to delete ?"
       noedit={false}
       nohover={false}
       noripple={false}
-      onAdd={[Function]}
+      onClose={[Function]}
+      onOpen={[Function]}
+      onSelection={[Function]}
       selected={false}
+      show={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={Object {}}
       tooltip=""
-      unselect={false}
       visible={true}
       width=""
       xcss={null}
-    >
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={true}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id="title1"
-        key="title1"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={
-          <Button
-            className="dynamicListDeleteButton"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="title1"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget="widget1"
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={true}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id="title2"
-        key="title2"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={
-          <Button
-            className="dynamicListDeleteButton"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="title2"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget="widget2"
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={true}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id="title3"
-        key="title3"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={
-          <Button
-            className="dynamicListDeleteButton"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="title3"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget="widget3"
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-0"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-1"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-2"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-3"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-4"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-5"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-6"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListFooter
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        id=""
-        key="0"
-        layout={3}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title={
-          <TextField
-            disabled={false}
-            id=""
-            noborder={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onValidation={[Function]}
-            placeholder="search"
-            sizing="normal"
-            style={
-              Object {
-                "display": "flex",
-              }
-            }
-            testing={true}
-            tooltip=""
-            type="text"
-            useclear={true}
-            usevalidation={false}
-            validators={Array []}
-            value=""
-            visible={true}
-          />
-        }
-        tooltip=""
-        visible={true}
-        widget={
-          <Pager
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            id=""
-            initialPage={1}
-            initialPageSize={10}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onChangePageSize={[Function]}
-            onSelect={[Function]}
-            onSort={[Function]}
-            pageSizes={
-              Array [
-                10,
-                20,
-                30,
-              ]
-            }
-            pagesToDisplay={3}
-            selected={false}
-            sizing="small"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            totalItems={3}
-            useinput={true}
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        width=""
-        xcss={null}
-      />
-    </List>
-  </AccordionItem>
-  <DialogBox
-    className=""
-    contentEditable={false}
-    dialogType="warning"
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="bomb"
-    id=""
-    location="none"
-    message="Are you sure you want to delete ?"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onClose={[Function]}
-    onOpen={[Function]}
-    onSelection={[Function]}
-    selected={false}
-    show={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    visible={true}
-    width=""
-    xcss={null}
-  />
-</Accordion>
+    />
+  </Accordion>
+</ThemeProvider>
 `;
 
 exports[`Test making a Dynamic List invisible 1`] = `
-<Accordion
-  className="ui-dynamiclist dynamicList normal invisible"
-  contentEditable={false}
-  direction="right"
-  disabled={false}
-  focus={false}
-  height=""
-  id=""
-  location="none"
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  selected={false}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  theme={Object {}}
-  tooltip=""
-  visible={true}
-  width=""
-  xcss={null}
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
+      "transitionDelay": "0.5s",
+    }
+  }
 >
-  <AccordionItem
-    className=""
+  <Accordion
+    className="ui-dynamiclist"
     contentEditable={false}
     direction="right"
     disabled={false}
     focus={false}
     height=""
-    hiddenLeftButton={false}
-    hiddenRightButton={false}
     id=""
-    initialToggle={true}
-    layout={5}
-    leftButton={null}
     location="none"
-    nocollapse={false}
-    noedit={true}
+    noedit={false}
     nohover={false}
     noripple={false}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[Function]}
-    onDoubleClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onMouseOut={[Function]}
-    onUpdate={[Function]}
-    rightButton={
-      <Button
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        iconName="plus"
-        iconStyle=""
-        id=""
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        tooltip=""
-        visible={true}
-        width=""
-        xcss={null}
-      />
-    }
     selected={false}
     sizing="normal"
-    stacked={false}
     style={Object {}}
     testing={true}
     theme={Object {}}
-    title="​ - (3 items)"
     tooltip=""
-    useedit={false}
     visible={true}
-    widget={null}
     width=""
     xcss={null}
   >
-    <List
-      alternating={true}
+    <AccordionItem
       className=""
       contentEditable={false}
       direction="right"
       disabled={false}
       focus={false}
       height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      id=""
+      initialToggle={true}
+      layout={5}
+      leftButton={null}
+      location="none"
+      nocollapse={false}
+      noedit={true}
+      nohover={false}
+      noripple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      rightButton={
+        <Button
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          iconName="plus"
+          iconStyle=""
+          id=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          tooltip=""
+          visible={true}
+          width=""
+          xcss={null}
+        />
+      }
+      selected={false}
+      sizing="normal"
+      stacked={false}
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      title="​ - (3 items)"
+      tooltip=""
+      useedit={false}
+      visible={true}
+      widget={null}
+      width=""
+      xcss={null}
+    >
+      <List
+        alternating={true}
+        className=""
+        contentEditable={false}
+        direction="right"
+        disabled={false}
+        focus={false}
+        height=""
+        id=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        onAdd={[Function]}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        theme={Object {}}
+        tooltip=""
+        unselect={false}
+        visible={true}
+        width=""
+        xcss={null}
+      >
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={true}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id="title1"
+          key="title1"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={
+            <Styled(Button)
+              iconName="times"
+              onClick={[Function]}
+            />
+          }
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="title1"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget="widget1"
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={true}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id="title2"
+          key="title2"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={
+            <Styled(Button)
+              iconName="times"
+              onClick={[Function]}
+            />
+          }
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="title2"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget="widget2"
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={true}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id="title3"
+          key="title3"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={
+            <Styled(Button)
+              iconName="times"
+              onClick={[Function]}
+            />
+          }
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="title3"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget="widget3"
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-0"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-1"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-2"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-3"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-4"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-5"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          key="fillerListItem-6"
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListFooter
+          className=""
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          id=""
+          key="0"
+          layout={3}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onClick={[Function]}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title={
+            <TextField
+              disabled={false}
+              id=""
+              noborder={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onValidation={[Function]}
+              placeholder="search"
+              sizing="normal"
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+              testing={true}
+              tooltip=""
+              type="text"
+              useclear={true}
+              usevalidation={false}
+              validators={Array []}
+              value=""
+              visible={true}
+            />
+          }
+          tooltip=""
+          visible={true}
+          widget={
+            <Pager
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              id=""
+              initialPage={1}
+              initialPageSize={10}
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              onChangePageSize={[Function]}
+              onSelect={[Function]}
+              onSort={[Function]}
+              pageSizes={
+                Array [
+                  10,
+                  20,
+                  30,
+                ]
+              }
+              pagesToDisplay={3}
+              selected={false}
+              sizing="small"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              totalItems={3}
+              useinput={true}
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          width=""
+          xcss={null}
+        />
+      </List>
+    </AccordionItem>
+    <DialogBox
+      className=""
+      contentEditable={false}
+      dialogType="warning"
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="bomb"
       id=""
       location="none"
+      message="Are you sure you want to delete ?"
       noedit={false}
       nohover={false}
       noripple={false}
-      onAdd={[Function]}
+      onClose={[Function]}
+      onOpen={[Function]}
+      onSelection={[Function]}
       selected={false}
+      show={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={Object {}}
       tooltip=""
-      unselect={false}
       visible={true}
       width=""
       xcss={null}
-    >
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={true}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id="title1"
-        key="title1"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={
-          <Button
-            className="dynamicListDeleteButton"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="title1"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget="widget1"
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={true}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id="title2"
-        key="title2"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={
-          <Button
-            className="dynamicListDeleteButton"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="title2"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget="widget2"
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={true}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id="title3"
-        key="title3"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={
-          <Button
-            className="dynamicListDeleteButton"
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="times"
-            iconStyle=""
-            id=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onClick={[Function]}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="title3"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget="widget3"
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-0"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-1"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-2"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-3"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-4"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-5"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={true}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        key="fillerListItem-6"
-        layout={5}
-        leftButton={null}
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="​"
-        tooltip=""
-        useedit={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListFooter
-        className=""
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        id=""
-        key="0"
-        layout={3}
-        location="none"
-        noedit={false}
-        nohover={false}
-        noripple={false}
-        onClick={[Function]}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title={
-          <TextField
-            disabled={false}
-            id=""
-            noborder={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onValidation={[Function]}
-            placeholder="search"
-            sizing="normal"
-            style={
-              Object {
-                "display": "flex",
-              }
-            }
-            testing={true}
-            tooltip=""
-            type="text"
-            useclear={true}
-            usevalidation={false}
-            validators={Array []}
-            value=""
-            visible={true}
-          />
-        }
-        tooltip=""
-        visible={true}
-        widget={
-          <Pager
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            id=""
-            initialPage={1}
-            initialPageSize={10}
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            onChangePageSize={[Function]}
-            onSelect={[Function]}
-            onSort={[Function]}
-            pageSizes={
-              Array [
-                10,
-                20,
-                30,
-              ]
-            }
-            pagesToDisplay={3}
-            selected={false}
-            sizing="small"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            totalItems={3}
-            useinput={true}
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        width=""
-        xcss={null}
-      />
-    </List>
-  </AccordionItem>
-  <DialogBox
-    className=""
-    contentEditable={false}
-    dialogType="warning"
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="bomb"
-    id=""
-    location="none"
-    message="Are you sure you want to delete ?"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onClose={[Function]}
-    onOpen={[Function]}
-    onSelection={[Function]}
-    selected={false}
-    show={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    visible={true}
-    width=""
-    xcss={null}
-  />
-</Accordion>
+    />
+  </Accordion>
+</ThemeProvider>
 `;
 
 exports[`Test retrieval of DynamicList props object 1`] = `

@@ -97,10 +97,13 @@ import {defaultPageSizes, Pager} from '../pager';
 import {
 	BaseComponent,
 	BaseProps,
+	Color,
 	getDefaultBaseProps,
+	getTheme,
 	Sizing,
 	SortOrder
 } from '../shared';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 import {TextField} from '../textField';
 import {TitleLayout} from '../title';
 
@@ -159,6 +162,15 @@ export interface DynamicListState {
 	totalItems?: number;
 }
 
+export const StyledDeleteButton: any = withProps<DynamicList, HTMLElement>(styled(Button))`
+	color: white;
+	background-color: silver;
+
+	&:not(.nohover):hover {
+		background-color: ${Color.error} !important;
+	}
+`;
+
 export class DynamicList extends BaseComponent<DynamicListProps, DynamicListState> {
 
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
@@ -181,17 +193,14 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private _startSearch: boolean = true;
 
 	constructor(props: DynamicListProps) {
-		super(props, require('./styles.css'));
+		super(props, {}, DynamicList.defaultProps.theme);
 
 		this._fillerKeys = new Keys({testing: this.props.testing});
 
 		this._footerID = this._fillerKeys.at(this._fillerIdx++);
 		this._pagerID = this._fillerKeys.at(this._fillerIdx++);
 
-		this._rootStyles.add([
-			'ui-dynamiclist',
-			this.styles.dynamicList
-		]);
+		this._classes.add(['ui-dynamiclist']);
 
 		this._count = Object.keys(props.items).length;
 
@@ -497,8 +506,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						onSelect={this.handleSelect}
 						onUpdate={this.handleUpdate}
 						rightButton={
-							<Button
-								className={this.styles.dynamicListDeleteButton}
+							<StyledDeleteButton
 								iconName="times"
 								onClick={deletor}
 							/>
@@ -570,33 +578,35 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	public render() {
 		return (
-			<Accordion className={this._rootStyles.classnames}>
-				<AccordionItem
-					initialToggle={this.state.initialToggle}
-					nocollapse={this.props.nocollapse}
-					noedit
-					nohover={this.props.nocollapse}
-					noripple={this.props.nocollapse}
-					onClick={this.handleTitleClick}
-					rightButton={
-						<Button
-							iconName="plus"
-							onClick={this.createNewItem}
-						/>
-					}
-					title={this.buildTitle()}
-				>
-					<List alternating>
-						{this.buildListItems()}
-					</List>
-				</AccordionItem>
-				<DialogBox
-					dialogType={DialogBoxType.warning}
-					message={sprintf(this._baseMessage, this._qDelete)}
-					onSelection={this.handleDeleteConfirm}
-					show={this.state.showConfirm}
-				/>
-			</Accordion>
+			<ThemeProvider theme={getTheme()}>
+				<Accordion className={this.classes}>
+					<AccordionItem
+						initialToggle={this.state.initialToggle}
+						nocollapse={this.props.nocollapse}
+						noedit
+						nohover={this.props.nocollapse}
+						noripple={this.props.nocollapse}
+						onClick={this.handleTitleClick}
+						rightButton={
+							<Button
+								iconName="plus"
+								onClick={this.createNewItem}
+							/>
+						}
+						title={this.buildTitle()}
+					>
+						<List alternating>
+							{this.buildListItems()}
+						</List>
+					</AccordionItem>
+					<DialogBox
+						dialogType={DialogBoxType.warning}
+						message={sprintf(this._baseMessage, this._qDelete)}
+						onSelection={this.handleDeleteConfirm}
+						show={this.state.showConfirm}
+					/>
+				</Accordion>
+			</ThemeProvider>
 		);
 	}
 }
