@@ -257,7 +257,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 	public static readonly defaultProps: TooltipProps = getDefaultTooltipProps();
 
 	constructor(props: TooltipProps) {
-		super(props, {}, Tooltip.defaultProps.style);
+		super(props, Tooltip.defaultProps.style);
 
 		this.state = {
 			show: false

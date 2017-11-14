@@ -199,7 +199,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _pageSizes: number[] = cloneDeep(defaultPageSizes);
 
 	constructor(props: PagerProps) {
-		super(props, {}, Pager.defaultProps.style);
+		super(props, Pager.defaultProps.style);
 
 		this._dialogKeys = new Keys({testing: this.props.testing});
 		this._fillerKeys = new Keys({testing: this.props.testing});
@@ -710,7 +710,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					<Divider />
 					{this.props.useinput ?
 					<StyledTextField
-						className={this.styles.pagerInput}
 						disabled={this.props.disabled}
 						min="1"
 						max={String(this._lastPage)}

@@ -47,7 +47,7 @@
 
 const debug = require('debug')('sizing');
 
-import {css} from 'styled-components';
+import {css} from './themed-components';
 
 const instances = new Map();
 
@@ -95,8 +95,6 @@ export const rectStyle: any = {};
 
 export class Sizes {
 
-	public static readonly styles = require('./sizing.css');
-
 	private _sizes: any = {};
 	private readonly _rectWidth: number = 1.75;
 	private readonly _rectHeight: number = 0.80;
@@ -104,6 +102,7 @@ export class Sizes {
 	public static instance(baseFontSize: number): Sizes {
 		let tmp = instances.get(baseFontSize);
 		if (!tmp) {
+			debug('Creating new base font sizing: %d', baseFontSize);
 			tmp = new Sizes(baseFontSize);
 			instances.set(baseFontSize, tmp);
 		}
@@ -144,22 +143,19 @@ export class Sizes {
 
 			this._sizes[key] = {
 				type: key,
-				borderStyle: Sizes.styles[`${key}Border`],
-				boxStyle: Sizes.styles[`${key}Box`],
-				rectStyle: Sizes.styles[`${key}Rect`],
 				font: {
 					size: valSize,
 					sizerem: `${valSize / baseFontSize}rem`,
-					sizepx: `${valSize}px`,
-					style: Sizes.styles[key]
+					sizepx: `${valSize}px`
 				}
 			};
 		}
 
-		debug('Sizing: %O, boxStyle: %O, fontStyle: %O',
+		debug('Sizing: %O, boxStyle: %O, fontStyle: %O, rectStyle: %O',
 			this._sizes,
 			boxStyle,
-			fontStyle
+			fontStyle,
+			rectStyle
 		);
 	}
 

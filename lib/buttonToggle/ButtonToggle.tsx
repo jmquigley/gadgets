@@ -88,7 +88,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 	public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
 	constructor(props: ButtonToggleProps) {
-		super(props, {}, ButtonToggle.defaultProps.style);
+		super(props, ButtonToggle.defaultProps.style);
 
 		this._classes.add(['ui-button-toggle']);
 

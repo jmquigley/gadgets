@@ -49,7 +49,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
-		super(props, {}, ListItem.defaultProps.style);
+		super(props, ListItem.defaultProps.style);
 
 		this._classes.add(['ui-listitem']);
 

@@ -113,7 +113,7 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	public static readonly defaultProps: DropdownProps = getDefaultDropdownProps();
 
 	constructor(props: DropdownProps) {
-		super(props, {}, Dropdown.defaultProps.style);
+		super(props, Dropdown.defaultProps.style);
 
 		this.state = {
 			currentValue: this.props.defaultVal

@@ -137,7 +137,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	public static readonly defaultProps: TagListProps = getDefaultTagListProps();
 
 	constructor(props: TagListProps) {
-		super(props, {}, TagList.defaultProps.style);
+		super(props, TagList.defaultProps.style);
 
 		if (props.nosort) {
 			this.tags = new List<string>(props.tags);
@@ -245,7 +245,6 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 					{tags}
 					{this.props.useinput &&
 					<StyledTextField
-						className={this.styles.tagListInput}
 						disabled={this.props.disabled}
 						noborder
 						onBlur={this.handleBlur}

@@ -181,7 +181,7 @@ export const TabContent = (props: any) => (
 );
 
 export const TabNavigationView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
-	display: inline-block;
+	display: flex;
 	float: right;
 	align-self: center;
 
@@ -216,7 +216,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	public static defaultProps: TabContainerProps = getDefaultTabContainerProps();
 
 	constructor(props: TabContainerProps) {
-		super(props, {}, TabContainer.defaultProps.style);
+		super(props, TabContainer.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
 		this._classes.add(['ui-tab-container']);

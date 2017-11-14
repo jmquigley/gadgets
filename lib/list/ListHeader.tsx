@@ -34,7 +34,8 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
 
 	constructor(props: ListHeaderProps) {
-		super(props, {}, ListHeader.defaultProps.style);
+		super(props, ListHeader.defaultProps.style);
+
 		this._classes.add(['ui-list-header']);
 		this.componentWillUpdate(this.props);
 	}

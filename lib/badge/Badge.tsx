@@ -100,7 +100,7 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	public static readonly defaultProps: BadgeProps = getDefaultBadgeProps();
 
 	constructor(props: BadgeProps) {
-		super(props, {}, Badge.defaultProps.style);
+		super(props, Badge.defaultProps.style);
 
 		this._classes.add(['ui-badge']);
 		this.bindCallbacks('handleClick');

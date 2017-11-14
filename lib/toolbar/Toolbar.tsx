@@ -133,7 +133,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 	]);
 
 	constructor(props: ToolbarProps) {
-		super(props, {}, Toolbar.defaultProps.style);
+		super(props, Toolbar.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
 		this._classes.add(['ui-toolbar']);

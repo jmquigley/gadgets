@@ -146,7 +146,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	public static readonly defaultProps: BrowserProps = getDefaultBrowserProps();
 
 	constructor(props: BrowserProps) {
-		super(props, {}, Browser.defaultProps.style);
+		super(props, Browser.defaultProps.style);
 
 		this._classes.add(['ui-browser']);
 

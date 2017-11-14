@@ -179,7 +179,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	private _icon: any = {};
 
 	constructor(props: DialogBoxProps) {
-		super(props, {}, DialogBox.defaultProps.style);
+		super(props, DialogBox.defaultProps.style);
 
 		this._classes.add(['ui-dialogbox']);
 
@@ -299,7 +299,6 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 						<DialogBoxMessageContainerView>
 							<DialogBoxMessageView
-								className={this.styles.dialogBoxMessage}
 								dangerouslySetInnerHTML={{__html: this.message}}
 							/>
 							<ButtonBar>

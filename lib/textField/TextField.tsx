@@ -254,7 +254,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	private _value: string = '';
 
 	constructor(props: TextFieldProps) {
-		super(props, {}, TextField.defaultProps.style);
+		super(props, TextField.defaultProps.style);
 
 		this._classes.add(['ui-textfield']);
 

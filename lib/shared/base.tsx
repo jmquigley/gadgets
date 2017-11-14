@@ -54,7 +54,7 @@ import {getUUID} from 'util.toolbox';
 import {BaseProps, Styles} from './props';
 import {FontStyle, Sizes, Sizing, Styling} from './sizing';
 
-const gstyles = require('./styles.css');
+require('./styles.css');
 
 export const baseZIndex: number = 9999;
 export const defaultSize: number = 16;
@@ -63,16 +63,13 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 	private _id: string;
 	private _inlineStyles: Map<string, string> = Map({});
-	private _locationStyle: string = '';
-	private _styles: any  = {};  // css modules styles per module
 	private _sizes: Sizes = null;
 	private _sizing: Sizing = null;
 
 	// The style object applied (generally) to the root of a component
 	protected _classes: ClassNames = new ClassNames();
-	protected _rootStyles: ClassNames = new ClassNames();
 
-	constructor(props: P, styles: Styles = {}, defaultInlineStyles: Styles = {}, defaultFontSize: number = defaultSize) {
+	constructor(props: P, defaultInlineStyles: Styles = {}, defaultFontSize: number = defaultSize) {
 		super(props);
 
 		// If an id value is not given as a prop, then generate a unique id.  If the
@@ -84,10 +81,8 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 			this._id = this.constructor.name + '-' + (this.props.testing ? '0' : getUUID());
 		}
 
-		this._styles = styles;
 		this._sizes = Sizes.instance(defaultFontSize);
 		this._sizing = this.props.sizing;
-		this._locationStyle = this.styles[this.props.location];
 		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props.style);
 	}
 
@@ -114,20 +109,12 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		}
 	}
 
-	get locationStyle() {
-		return this._locationStyle;
-	}
-
 	get sizes(): Sizes {
 		return this._sizes;
 	}
 
 	get sizing(): Sizing {
 		return this._sizing;
-	}
-
-	get styles(): any {
-		return this._styles;
 	}
 
 	/**
@@ -154,28 +141,6 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		});
 	}
 
-	/**
-	 * Retrieves border styles based on the given sizing value in the base
-	 * class.
-	 * @param sizing {Sizing} an optional parameter that allows for overriding
-	 * the default sizing when the class is created.
-	 * @returns a string that represents the local CSS module style
-	 */
-	protected borderStyle(sizing: Sizing = this.sizing) {
-		return this.sizes[sizing].borderStyle;
-	}
-
-	/**
-	 * Retrieves styles that define the width/height of a box base on the
-	 * given Sizing.
-	 * @param sizing {Sizing} an optional parameter that allows for overriding
-	 * the default sizing when the class is created.
-	 * @returns a string that represents the local CSS module style
-	 */
-	protected boxStyle(sizing: Sizing = this.sizing): string {
-		return this.sizes[sizing].boxStyle;
-	}
-
 	protected font(sizing: Sizing = this.sizing): FontStyle {
 		return this.sizes[sizing].font;
 	}
@@ -186,10 +151,6 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 	protected fontSizePX(sizing: Sizing = this.sizing, scale: number = 1.0): string {
 		return calc(this.sizes[sizing].font.sizepx, `* ${scale}`);
-	}
-
-	protected fontStyle(sizing: Sizing = this.sizing): string {
-		return this.sizes[sizing].font.style;
 	}
 
 	/**
@@ -246,17 +207,6 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		}
 	}
 
-	/**
-	 * Retrieves styles that define the width/height of a rectangle base on the
-	 * given Sizing.
-	 * @param sizing {Sizing} an optional parameter that allows for overriding
-	 * the default sizing when the class is created.
-	 * @returns a string that represents the local CSS module style
-	 */
-	protected rectStyle(sizing: Sizing = this.sizing): string {
-		return this.sizes[sizing].rectStyle;
-	}
-
 	protected styling(sizing: Sizing = this.sizing): Styling {
 		return this.sizes[sizing];
 	}
@@ -269,44 +219,6 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	 */
 	protected type(sizing: Sizing = this.sizing): Sizing {
 		return this.sizes[sizing].type;
-	}
-
-	/**
-	 * Compares the sizing parameter between two props objects.  If they differ
-	 * then unset the previous version of the boxStyle in props and set it
-	 * to the size contained in nextProps.
-	 * @param classes {ClassNames} the styles object to toggle
-	 * @param nextProps {P} the next set of props that may be changing
-	 * @param props {P} a reference to the current (or previous) props
-	 * @return {ClassNames} a reference to the original input classes
-	 */
-	protected updateBoxStyle(classes: ClassNames, nextProps: P, props: P) {
-		if (props['sizing'] !== nextProps['sizing']) {
-			classes.off(this.boxStyle(this.props['sizing']));
-		}
-		classes.onIf('sizing' in nextProps)(
-			this.boxStyle(nextProps['sizing'])
-		);
-		return classes;
-	}
-
-	/**
-	 * Compares the sizing parameter between two props objects.  If they differ
-	 * then unset the previous version of the fontStyle in props and set it
-	 * to the size contained in nextProps.
-	 * @param classes {ClassNames} the styles object to toggle
-	 * @param nextProps {P} the next set of props that may be changing
-	 * @param props {P} a reference to the current (or previous) props
-	 * @return {ClassNames} a reference to the original input classes
-	 */
-	protected updateFontStyle(classes: ClassNames, nextProps: P, props: P) {
-		if (props['sizing'] !== nextProps['sizing']) {
-			classes.off(this.fontStyle(this.props['sizing']));
-		}
-		classes.onIf('sizing' in nextProps)(
-			this.fontStyle(nextProps['sizing'])
-		);
-		return classes;
 	}
 
 	/**
@@ -328,36 +240,17 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 		nextState = nextState;
 
-		this.updateFontStyle(this._rootStyles, nextProps, this.props);
 		if (this._sizing !== nextProps.sizing) {
 			this._sizing = nextProps.sizing;
 		}
 
 		if (this.props.className !== nextProps.className) {
-			this._rootStyles.off(this.props.className);
 			this._classes.off(this.props.className);
 		}
-
-		this._rootStyles.onIf(nextProps.className != null)(
-			nextProps['className']
-		);
 
 		this._classes.onIf(nextProps.className != null)(
 			nextProps['className']
 		);
-
-		this._rootStyles.onIf(!nextProps.visible)(
-			this.styles.invisible
-		);
-
-		this._rootStyles.onIf(nextProps.disabled)(
-			gstyles.disabled,
-			'nohover'
-		);
-
-		if (nextProps.nohover) {
-			this._rootStyles.on('nohover');
-		}
 
 		if (nextProps.nohover) {
 			this._classes.on('nohover');

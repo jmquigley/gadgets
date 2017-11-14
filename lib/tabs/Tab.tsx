@@ -179,7 +179,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	public static readonly defaultProps: TabProps = getDefaultTabProps();
 
 	constructor(props: TabProps) {
-		super(props, {}, Tab.defaultProps.style);
+		super(props, Tab.defaultProps.style);
 
 		this._classes.add(['ui-tab']);
 

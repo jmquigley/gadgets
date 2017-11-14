@@ -193,7 +193,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private _startSearch: boolean = true;
 
 	constructor(props: DynamicListProps) {
-		super(props, {}, DynamicList.defaultProps.theme);
+		super(props, DynamicList.defaultProps.theme);
 
 		this._fillerKeys = new Keys({testing: this.props.testing});
 

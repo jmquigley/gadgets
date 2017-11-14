@@ -224,7 +224,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
 
 	constructor(props: EditorProps)	{
-		super(props, {}, Editor.defaultProps.style);
+		super(props, Editor.defaultProps.style);
 
 		debug('Editor key: "%s"', this.id);
 

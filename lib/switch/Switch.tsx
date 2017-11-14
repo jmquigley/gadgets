@@ -145,7 +145,7 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 	public static defaultProps: SwitchProps = getDefaultSwitchProps();
 
 	constructor(props: SwitchProps) {
-		super(props, {}, Switch.defaultProps.style);
+		super(props, Switch.defaultProps.style);
 
 		this._classes.add(['ui-switch']);
 		this._sliderStyles.add(['ui-switch-slider']);

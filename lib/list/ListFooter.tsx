@@ -38,7 +38,8 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 	public static defaultProps: ListFooterProps = getDefaultListFooterProps();
 
 	constructor(props: ListFooterProps) {
-		super(props, {}, ListFooter.defaultProps.style);
+		super(props, ListFooter.defaultProps.style);
+
 		this.componentWillUpdate(props);
 	}
 

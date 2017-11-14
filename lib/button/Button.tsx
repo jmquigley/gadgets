@@ -100,7 +100,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	public static readonly defaultProps: ButtonProps = getDefaultButtonProps();
 
 	constructor(props: ButtonProps) {
-		super(props, {}, Button.defaultProps.style);
+		super(props, Button.defaultProps.style);
 
 		this._classes.add(['ui-button']);
 		this.bindCallbacks('handleClick');

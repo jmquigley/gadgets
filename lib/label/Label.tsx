@@ -115,7 +115,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	private _label: any = null;
 
 	constructor(props: LabelProps) {
-		super(props, {}, Label.defaultProps.style);
+		super(props, Label.defaultProps.style);
 
 		this._classes.add(['ui-label']);
 

@@ -53,7 +53,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 	public static defaultProps: ListProps = getDefaultListProps();
 
 	constructor(props: ListProps) {
-		super(props, {}, List.defaultProps.style);
+		super(props, List.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
 		this._classes.add(['ui-list']);

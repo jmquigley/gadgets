@@ -103,7 +103,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	public static readonly defaultProps: TagProps = getDefaultTagProps();
 
 	constructor(props: TagProps) {
-		super(props, {}, Tag.defaultProps.style);
+		super(props, Tag.defaultProps.style);
 		this._classes.add(['ui-tag']);
 
 		this.state = {

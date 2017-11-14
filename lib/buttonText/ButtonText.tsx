@@ -114,7 +114,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 	public static readonly defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 
 	constructor(props: ButtonTextProps) {
-		super(props, {}, ButtonText.defaultProps.style);
+		super(props, ButtonText.defaultProps.style);
 
 		this._classes.add([
 			'ui-button-text'

@@ -82,7 +82,8 @@ export class Divider extends BaseComponent<DividerProps, undefined> {
 	public static readonly defaultProps: DividerProps = getDefaultDividerProps();
 
 	constructor(props: DividerProps) {
-		super(props, {}, Divider.defaultProps.style);
+		super(props, Divider.defaultProps.style);
+
 		this._classes.add(['ui-divider']);
 		this.componentWillUpdate(this.props);
 	}

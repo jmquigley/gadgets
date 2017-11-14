@@ -144,7 +144,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	private _triangleStyles: ClassNames = new ClassNames();
 
 	constructor(props: ButtonDialogProps) {
-		super(props, {}, ButtonDialog.defaultProps.style);
+		super(props, ButtonDialog.defaultProps.style);
 
 		this._dialogStyles.add([
 			'ui-dialog-popup',

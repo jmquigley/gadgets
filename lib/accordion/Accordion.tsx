@@ -72,10 +72,9 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
 
 	constructor(props: AccordionProps) {
-		super(props, {}, Accordion.defaultProps.style);
+		super(props, Accordion.defaultProps.style);
 
 		this._classes.add(['ui-accordion']);
-
 		this.componentWillUpdate(props);
 	}
 

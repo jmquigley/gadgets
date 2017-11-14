@@ -168,7 +168,8 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 	public static readonly defaultProps: OptionProps = getDefaultOptionProps();
 
 	constructor(props: OptionProps) {
-		super(props, {}, Option.defaultProps.style);
+		super(props, Option.defaultProps.style);
+
 		this._classes.add(['ui-option']);
 		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(this.props);
@@ -194,7 +195,6 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 						{...this.props}
 						bgColorOff={this.inlineStyles['backgroundColor']}
 						bgColorOn={this.inlineStyles['backgroundColor']}
-						className={this.styles.optionButton}
 						fgColorOff={this.inlineStyles['color']}
 						fgColorOn={this.inlineStyles['color']}
 						iconNameOn={this.icons[this.props.optionType].on}

@@ -209,7 +209,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
-		super(props, {}, Toast.defaultProps.style);
+		super(props, Toast.defaultProps.style);
 
 		this._classes.add(['ui-toast']);
 
