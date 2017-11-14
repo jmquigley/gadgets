@@ -48,9 +48,9 @@ https://electron.atom.io/) and has been tested to work with the most recent vers
 
 ### Requirements
 
-- [Electron](https://electron.atom.io/) v1.6.10+
+- [Electron](https://electron.atom.io/) v1.7+
 - [Node](https://nodejs.org/en/) v7.8+
-- [React](https://facebook.github.io/react/) v16.0.0+
+- [React](https://facebook.github.io/react/) v16.1.1+
 
 
 ## Usage

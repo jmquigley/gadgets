@@ -80,6 +80,7 @@ export const DeleteButtonView: any = styled(ButtonCircle)`
 	left: 50%;
 	transform: translate(-50%, -50%);
 	transition: opacity ${props => props.theme.transitionDelay} ease-in-out;
+	width: unset;
 `;
 
 export const TagView: any = withProps<TagProps, HTMLDivElement>(styled.div)`
@@ -129,18 +130,18 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 
 	private handleMouseOut() {
 		if (this.props.usedelete && !this.props.disabled) {
-			this.setState({showDelete: false});
+			this.setState({showDelete: false}, () => {
+				this.props.onMouseOut();
+			});
 		}
-
-		this.props.onMouseOut();
 	}
 
 	private handleMouseOver() {
 		if (this.props.usedelete && !this.props.disabled) {
-			this.setState({showDelete: true});
+			this.setState({showDelete: true}, () => {
+				this.props.onMouseOver();
+			});
 		}
-
-		this.props.onMouseOver();
 	}
 
 	public render() {

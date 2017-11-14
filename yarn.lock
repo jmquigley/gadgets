@@ -17,9 +17,9 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
-"@types/fs-extra@^4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-4.0.4.tgz#72947e108f2cbeda5ab288a927399fdf6d02bd42"
+"@types/fs-extra@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-4.0.5.tgz#8aa6033c0e87c653b09a6711686916864b48ec9e"
   dependencies:
     "@types/node" "*"
 
@@ -675,9 +675,9 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-css-modules-transform@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/babel-plugin-css-modules-transform/-/babel-plugin-css-modules-transform-1.2.7.tgz#56bcc8ee2665bed8fe59dd8733767911b905bae3"
+babel-plugin-css-modules-transform@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/babel-plugin-css-modules-transform/-/babel-plugin-css-modules-transform-1.2.8.tgz#ee966ca152ebfc31e199af3787d1e960b33d494d"
   dependencies:
     css-modules-require-hook "^4.0.6"
     mkdirp "^0.5.1"
@@ -6191,9 +6191,9 @@ rc@^1.1.2, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.1.0:
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.1.0.tgz#ab6fd2a285096f388aeba51919a573d06c9bdde4"
+react-dom@^16.1.1:
+  version "16.1.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.1.1.tgz#b2e331b6d752faf1a2d31399969399a41d8d45f8"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -6222,7 +6222,7 @@ react-select@1.0.0-rc.10:
     prop-types "^15.5.8"
     react-input-autosize "^2.0.1"
 
-react-test-renderer@^16.0.0-0, react-test-renderer@^16.1.0:
+react-test-renderer@^16.0.0-0:
   version "16.1.0"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.1.0.tgz#33a1d3ce896311e0dd1547649b1456ffa7fda415"
   dependencies:
@@ -6230,9 +6230,17 @@ react-test-renderer@^16.0.0-0, react-test-renderer@^16.1.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react@^16.1.0:
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.1.0.tgz#1c2bdac3c17fe7ee9282fa35aca6cc36387903e1"
+react-test-renderer@^16.1.1:
+  version "16.1.1"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.1.1.tgz#a05184688d564be799f212449262525d1e350537"
+  dependencies:
+    fbjs "^0.8.16"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
+react@^16.1.1:
+  version "16.1.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.1.1.tgz#d5c4ef795507e3012282dd51261ff9c0e824fe1f"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
