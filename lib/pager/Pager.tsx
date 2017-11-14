@@ -98,12 +98,13 @@ import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
+	getTheme,
 	Justify,
 	Location,
 	Sizing,
 	SortOrder
 } from '../shared';
-import styled, {css} from '../shared/themed-components';
+import styled, {css, ThemeProvider} from '../shared/themed-components';
 import {TextField} from '../textField';
 
 export const defaultPageSize: number = 25;
@@ -683,57 +684,59 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.createDialog(this.props, this.state);
 
 		return (
-			<PagerView className={this.classes}>
-				<StyledButton
-					{...this.props}
-					iconName="angle-double-left"
-					onClick={this.moveToFront}
-				/>
-				<StyledButton
-					{...this.props}
-					iconName="angle-left"
-					onClick={this.moveToPrevious}
-				/>
-				{this._buttonsDisplay}
-				<StyledButton
-					{...this.props}
-					iconName="angle-right"
-					onClick={this.moveToNext}
-				/>
-				<StyledButton
-					{...this.props}
-					iconName="angle-double-right"
-					onClick={this.moveToEnd}
-				/>
-				<Divider />
-				{this.props.useinput ?
-				<StyledTextField
-					className={this.styles.pagerInput}
-					disabled={this.props.disabled}
-					min="1"
-					max={String(this._lastPage)}
-					onBlur={this.handleBlur}
-					onChange={this.handleChange}
-					onKeyPress={this.handleKeyPress}
-					placeholder={String(this.currentPage)}
-					sizing={this.props.sizing}
-					type="number"
-					value={this.currentPage}
-				/>
-				:
-					null
-				}
-				<Divider />
-				<StyledButtonDialog
-					{...this.props}
-					iconName="ellipsis-v"
-					location={Location.top}
-					notriangle
-					sizing={this.props.sizing}
-				>
-					{this._dialog}
-				</StyledButtonDialog>
-			</PagerView>
+			<ThemeProvider theme={getTheme()}>
+				<PagerView className={this.classes}>
+					<StyledButton
+						{...this.props}
+						iconName="angle-double-left"
+						onClick={this.moveToFront}
+					/>
+					<StyledButton
+						{...this.props}
+						iconName="angle-left"
+						onClick={this.moveToPrevious}
+					/>
+					{this._buttonsDisplay}
+					<StyledButton
+						{...this.props}
+						iconName="angle-right"
+						onClick={this.moveToNext}
+					/>
+					<StyledButton
+						{...this.props}
+						iconName="angle-double-right"
+						onClick={this.moveToEnd}
+					/>
+					<Divider />
+					{this.props.useinput ?
+					<StyledTextField
+						className={this.styles.pagerInput}
+						disabled={this.props.disabled}
+						min="1"
+						max={String(this._lastPage)}
+						onBlur={this.handleBlur}
+						onChange={this.handleChange}
+						onKeyPress={this.handleKeyPress}
+						placeholder={String(this.currentPage)}
+						sizing={this.props.sizing}
+						type="number"
+						value={this.currentPage}
+					/>
+					:
+						null
+					}
+					<Divider />
+					<StyledButtonDialog
+						{...this.props}
+						iconName="ellipsis-v"
+						location={Location.top}
+						notriangle
+						sizing={this.props.sizing}
+					>
+						{this._dialog}
+					</StyledButtonDialog>
+				</PagerView>
+			</ThemeProvider>
 		);
 	}
 }

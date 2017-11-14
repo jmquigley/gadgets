@@ -1,380 +1,312 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a Pager control 1`] = `
-<styled.div
-  className="ui-pager test-class"
+<ThemeProvider
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#004358",
+      "color": "#000000",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "tooltipBackgroundColor": "gray",
+      "tooltipForegroundColor": "white",
+      "transitionDelay": "0.5s",
+    }
+  }
 >
-  <Styled(Button)
-    className="test-class"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="angle-double-left"
-    id=""
-    initialPage={1}
-    initialPageSize={25}
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onChangePageSize={[Function]}
-    onClick={[Function]}
-    onSelect={[Function]}
-    onSort={null}
-    pageSizes={
-      Array [
-        25,
-        50,
-        100,
-      ]
-    }
-    pagesToDisplay={3}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    totalItems={0}
-    useinput={false}
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <Styled(Button)
-    className="test-class"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="angle-left"
-    id=""
-    initialPage={1}
-    initialPageSize={25}
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onChangePageSize={[Function]}
-    onClick={[Function]}
-    onSelect={[Function]}
-    onSort={null}
-    pageSizes={
-      Array [
-        25,
-        50,
-        100,
-      ]
-    }
-    pagesToDisplay={3}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    totalItems={0}
-    useinput={false}
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <Styled(ButtonText)
-    className=" ui-pager-selected"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    id=""
-    initialPage={1}
-    initialPageSize={25}
-    justify={2}
-    key="1"
-    location="none"
-    noedit={false}
-    nohover={false}
-    noicon={true}
-    noripple={false}
-    onChangePageSize={[Function]}
-    onClick={[Function]}
-    onSelect={[Function]}
-    onSort={null}
-    pageSizes={
-      Array [
-        25,
-        50,
-        100,
-      ]
-    }
-    pagesToDisplay={3}
-    selected={false}
-    sizing="small"
-    style={Object {}}
-    testing={true}
-    text="1"
-    theme={Object {}}
-    tooltip=""
-    totalItems={0}
-    useinput={false}
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <Styled(ButtonText)
-    className="test-class"
-    contentEditable={false}
-    direction="right"
-    disabled={true}
-    focus={false}
-    height=""
-    id=""
-    initialPage={1}
-    initialPageSize={25}
-    justify={2}
-    key="4"
-    location="none"
-    noedit={false}
-    nohover={false}
-    noicon={true}
-    noripple={false}
-    onChangePageSize={[Function]}
-    onSelect={[Function]}
-    onSort={null}
-    pageSizes={
-      Array [
-        25,
-        50,
-        100,
-      ]
-    }
-    pagesToDisplay={3}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    text=""
-    theme={Object {}}
-    tooltip=""
-    totalItems={0}
-    useinput={false}
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <Styled(ButtonText)
-    className="test-class"
-    contentEditable={false}
-    direction="right"
-    disabled={true}
-    focus={false}
-    height=""
-    id=""
-    initialPage={1}
-    initialPageSize={25}
-    justify={2}
-    key="5"
-    location="none"
-    noedit={false}
-    nohover={false}
-    noicon={true}
-    noripple={false}
-    onChangePageSize={[Function]}
-    onSelect={[Function]}
-    onSort={null}
-    pageSizes={
-      Array [
-        25,
-        50,
-        100,
-      ]
-    }
-    pagesToDisplay={3}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    text=""
-    theme={Object {}}
-    tooltip=""
-    totalItems={0}
-    useinput={false}
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <Styled(Button)
-    className="test-class"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="angle-right"
-    id=""
-    initialPage={1}
-    initialPageSize={25}
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onChangePageSize={[Function]}
-    onClick={[Function]}
-    onSelect={[Function]}
-    onSort={null}
-    pageSizes={
-      Array [
-        25,
-        50,
-        100,
-      ]
-    }
-    pagesToDisplay={3}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    totalItems={0}
-    useinput={false}
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <Styled(Button)
-    className="test-class"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="angle-double-right"
-    id=""
-    initialPage={1}
-    initialPageSize={25}
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    onChangePageSize={[Function]}
-    onClick={[Function]}
-    onSelect={[Function]}
-    onSort={null}
-    pageSizes={
-      Array [
-        25,
-        50,
-        100,
-      ]
-    }
-    pagesToDisplay={3}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    totalItems={0}
-    useinput={false}
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <Divider
-    className=""
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    dividerType=" "
-    focus={false}
-    height=""
-    id=""
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <Divider
-    className=""
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    dividerType=" "
-    focus={false}
-    height=""
-    id=""
-    location="none"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    visible={true}
-    width=""
-    xcss={null}
-  />
-  <Styled(ButtonDialog)
-    className="test-class"
-    contentEditable={false}
-    direction="right"
-    disabled={false}
-    focus={false}
-    height=""
-    iconName="ellipsis-v"
-    id=""
-    initialPage={1}
-    initialPageSize={25}
-    location="top"
-    noedit={false}
-    nohover={false}
-    noripple={false}
-    notriangle={true}
-    onChangePageSize={[Function]}
-    onSelect={[Function]}
-    onSort={null}
-    pageSizes={
-      Array [
-        25,
-        50,
-        100,
-      ]
-    }
-    pagesToDisplay={3}
-    selected={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    theme={Object {}}
-    tooltip=""
-    totalItems={0}
-    useinput={false}
-    visible={true}
-    width=""
-    xcss={null}
+  <styled.div
+    className="ui-pager test-class"
   >
-    <List
-      alternating={false}
+    <Styled(Button)
+      className="test-class"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="angle-double-left"
+      id=""
+      initialPage={1}
+      initialPageSize={25}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onChangePageSize={[Function]}
+      onClick={[Function]}
+      onSelect={[Function]}
+      onSort={null}
+      pageSizes={
+        Array [
+          25,
+          50,
+          100,
+        ]
+      }
+      pagesToDisplay={3}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      tooltip=""
+      totalItems={0}
+      useinput={false}
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <Styled(Button)
+      className="test-class"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="angle-left"
+      id=""
+      initialPage={1}
+      initialPageSize={25}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onChangePageSize={[Function]}
+      onClick={[Function]}
+      onSelect={[Function]}
+      onSort={null}
+      pageSizes={
+        Array [
+          25,
+          50,
+          100,
+        ]
+      }
+      pagesToDisplay={3}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      tooltip=""
+      totalItems={0}
+      useinput={false}
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <Styled(ButtonText)
+      className=" ui-pager-selected"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      id=""
+      initialPage={1}
+      initialPageSize={25}
+      justify={2}
+      key="1"
+      location="none"
+      noedit={false}
+      nohover={false}
+      noicon={true}
+      noripple={false}
+      onChangePageSize={[Function]}
+      onClick={[Function]}
+      onSelect={[Function]}
+      onSort={null}
+      pageSizes={
+        Array [
+          25,
+          50,
+          100,
+        ]
+      }
+      pagesToDisplay={3}
+      selected={false}
+      sizing="small"
+      style={Object {}}
+      testing={true}
+      text="1"
+      theme={Object {}}
+      tooltip=""
+      totalItems={0}
+      useinput={false}
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <Styled(ButtonText)
+      className="test-class"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      height=""
+      id=""
+      initialPage={1}
+      initialPageSize={25}
+      justify={2}
+      key="4"
+      location="none"
+      noedit={false}
+      nohover={false}
+      noicon={true}
+      noripple={false}
+      onChangePageSize={[Function]}
+      onSelect={[Function]}
+      onSort={null}
+      pageSizes={
+        Array [
+          25,
+          50,
+          100,
+        ]
+      }
+      pagesToDisplay={3}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      text=""
+      theme={Object {}}
+      tooltip=""
+      totalItems={0}
+      useinput={false}
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <Styled(ButtonText)
+      className="test-class"
+      contentEditable={false}
+      direction="right"
+      disabled={true}
+      focus={false}
+      height=""
+      id=""
+      initialPage={1}
+      initialPageSize={25}
+      justify={2}
+      key="5"
+      location="none"
+      noedit={false}
+      nohover={false}
+      noicon={true}
+      noripple={false}
+      onChangePageSize={[Function]}
+      onSelect={[Function]}
+      onSort={null}
+      pageSizes={
+        Array [
+          25,
+          50,
+          100,
+        ]
+      }
+      pagesToDisplay={3}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      text=""
+      theme={Object {}}
+      tooltip=""
+      totalItems={0}
+      useinput={false}
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <Styled(Button)
+      className="test-class"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="angle-right"
+      id=""
+      initialPage={1}
+      initialPageSize={25}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onChangePageSize={[Function]}
+      onClick={[Function]}
+      onSelect={[Function]}
+      onSort={null}
+      pageSizes={
+        Array [
+          25,
+          50,
+          100,
+        ]
+      }
+      pagesToDisplay={3}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      tooltip=""
+      totalItems={0}
+      useinput={false}
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <Styled(Button)
+      className="test-class"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="angle-double-right"
+      id=""
+      initialPage={1}
+      initialPageSize={25}
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      onChangePageSize={[Function]}
+      onClick={[Function]}
+      onSelect={[Function]}
+      onSort={null}
+      pageSizes={
+        Array [
+          25,
+          50,
+          100,
+        ]
+      }
+      pagesToDisplay={3}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      tooltip=""
+      totalItems={0}
+      useinput={false}
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <Divider
       className=""
       contentEditable={false}
       direction="right"
       disabled={false}
+      dividerType=" "
       focus={false}
       height=""
       id=""
@@ -382,762 +314,848 @@ exports[`Test creation of a Pager control 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
-      onAdd={[Function]}
       selected={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={Object {}}
       tooltip=""
-      unselect={false}
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <Divider
+      className=""
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      dividerType=" "
+      focus={false}
+      height=""
+      id=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      tooltip=""
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <Styled(ButtonDialog)
+      className="test-class"
+      contentEditable={false}
+      direction="right"
+      disabled={false}
+      focus={false}
+      height=""
+      iconName="ellipsis-v"
+      id=""
+      initialPage={1}
+      initialPageSize={25}
+      location="top"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      notriangle={true}
+      onChangePageSize={[Function]}
+      onSelect={[Function]}
+      onSort={null}
+      pageSizes={
+        Array [
+          25,
+          50,
+          100,
+        ]
+      }
+      pagesToDisplay={3}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={Object {}}
+      tooltip=""
+      totalItems={0}
+      useinput={false}
       visible={true}
       width=""
       xcss={null}
     >
-      <ListItem
-        className="test-class"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        initialPage={1}
-        initialPageSize={25}
-        key="4"
-        layout={5}
-        leftButton={
-          <Icon
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName=""
-            id=""
-            imageFile=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangePageSize={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onSort={null}
-        onUpdate={[Function]}
-        pageSizes={
-          Array [
-            25,
-            50,
-            100,
-          ]
-        }
-        pagesToDisplay={3}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="First"
-        tooltip=""
-        totalItems={0}
-        useedit={false}
-        useinput={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className="test-class"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        initialPage={1}
-        initialPageSize={25}
-        key="5"
-        layout={5}
-        leftButton={
-          <Icon
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName=""
-            id=""
-            imageFile=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangePageSize={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onSort={null}
-        onUpdate={[Function]}
-        pageSizes={
-          Array [
-            25,
-            50,
-            100,
-          ]
-        }
-        pagesToDisplay={3}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="Last"
-        tooltip=""
-        totalItems={0}
-        useedit={false}
-        useinput={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className="test-class"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        initialPage={1}
-        initialPageSize={25}
-        key="6"
-        layout={5}
-        leftButton={
-          <Icon
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName=""
-            id=""
-            imageFile=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangePageSize={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onSort={null}
-        onUpdate={[Function]}
-        pageSizes={
-          Array [
-            25,
-            50,
-            100,
-          ]
-        }
-        pagesToDisplay={3}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="Next"
-        tooltip=""
-        totalItems={0}
-        useedit={false}
-        useinput={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className="test-class"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        initialPage={1}
-        initialPageSize={25}
-        key="7"
-        layout={5}
-        leftButton={
-          <Icon
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName=""
-            id=""
-            imageFile=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangePageSize={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onSort={null}
-        onUpdate={[Function]}
-        pageSizes={
-          Array [
-            25,
-            50,
-            100,
-          ]
-        }
-        pagesToDisplay={3}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="Previous"
-        tooltip=""
-        totalItems={0}
-        useedit={false}
-        useinput={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListDivider
+      <List
+        alternating={false}
         className=""
-        color="lightgray"
         contentEditable={false}
         direction="right"
         disabled={false}
         focus={false}
         height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
         id=""
-        layout={5}
-        leftButton={null}
         location="none"
         noedit={false}
         nohover={false}
         noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onUpdate={[Function]}
-        rightButton={null}
+        onAdd={[Function]}
         selected={false}
         sizing="normal"
-        stacked={false}
         style={Object {}}
         testing={true}
         theme={Object {}}
-        title="​"
         tooltip=""
-        useedit={false}
+        unselect={false}
         visible={true}
-        widget={null}
         width=""
         xcss={null}
-      />
-      <ListItem
-        className="test-class"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
-          }
-        }
-        id=""
-        initialPage={1}
-        initialPageSize={25}
-        key="0"
-        layout={5}
-        leftButton={
-          <Icon
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName="check"
-            id=""
-            imageFile=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            selected={false}
-            sizing="normal"
-            style={
-              Object {
-                "color": "green",
-              }
+      >
+        <ListItem
+          className="test-class"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
             }
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangePageSize={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onSort={null}
-        onUpdate={[Function]}
-        pageSizes={
-          Array [
-            25,
-            50,
-            100,
-          ]
-        }
-        pagesToDisplay={3}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="25"
-        tooltip=""
-        totalItems={0}
-        useedit={false}
-        useinput={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className="test-class"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
           }
-        }
-        id=""
-        initialPage={1}
-        initialPageSize={25}
-        key="1"
-        layout={5}
-        leftButton={
-          <Icon
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName=""
-            id=""
-            imageFile=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangePageSize={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onSort={null}
-        onUpdate={[Function]}
-        pageSizes={
-          Array [
-            25,
-            50,
-            100,
-          ]
-        }
-        pagesToDisplay={3}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="50"
-        tooltip=""
-        totalItems={0}
-        useedit={false}
-        useinput={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className="test-class"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
+          id=""
+          initialPage={1}
+          initialPageSize={25}
+          key="4"
+          layout={5}
+          leftButton={
+            <Icon
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName=""
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              visible={true}
+              width=""
+              xcss={null}
+            />
           }
-        }
-        id=""
-        initialPage={1}
-        initialPageSize={25}
-        key="2"
-        layout={5}
-        leftButton={
-          <Icon
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName=""
-            id=""
-            imageFile=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangePageSize={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onSort={null}
-        onUpdate={[Function]}
-        pageSizes={
-          Array [
-            25,
-            50,
-            100,
-          ]
-        }
-        pagesToDisplay={3}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="100"
-        tooltip=""
-        totalItems={0}
-        useedit={false}
-        useinput={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-      <ListItem
-        className="test-class"
-        contentEditable={false}
-        direction="right"
-        disabled={false}
-        focus={false}
-        height=""
-        hiddenLeftButton={false}
-        hiddenRightButton={false}
-        href={
-          Object {
-            "selectHandler": [Function],
-            "sizing": "normal",
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangePageSize={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onSort={null}
+          onUpdate={[Function]}
+          pageSizes={
+            Array [
+              25,
+              50,
+              100,
+            ]
           }
-        }
-        id=""
-        initialPage={1}
-        initialPageSize={25}
-        key="3"
-        layout={5}
-        leftButton={
-          <Icon
-            className=""
-            contentEditable={false}
-            direction="right"
-            disabled={false}
-            focus={false}
-            height=""
-            iconName=""
-            id=""
-            imageFile=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={Object {}}
-            tooltip=""
-            visible={true}
-            width=""
-            xcss={null}
-          />
-        }
-        location="none"
-        noedit={true}
-        nohover={false}
-        noripple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangePageSize={[Function]}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyPress={[Function]}
-        onMouseOut={[Function]}
-        onSelect={[Function]}
-        onSort={null}
-        onUpdate={[Function]}
-        pageSizes={
-          Array [
-            25,
-            50,
-            100,
-          ]
-        }
-        pagesToDisplay={3}
-        rightButton={null}
-        selected={false}
-        sizing="normal"
-        stacked={false}
-        style={Object {}}
-        testing={true}
-        theme={Object {}}
-        title="all"
-        tooltip=""
-        totalItems={0}
-        useedit={false}
-        useinput={false}
-        visible={true}
-        widget={null}
-        width=""
-        xcss={null}
-      />
-    </List>
-  </Styled(ButtonDialog)>
-</styled.div>
+          pagesToDisplay={3}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="First"
+          tooltip=""
+          totalItems={0}
+          useedit={false}
+          useinput={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className="test-class"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          initialPage={1}
+          initialPageSize={25}
+          key="5"
+          layout={5}
+          leftButton={
+            <Icon
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName=""
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangePageSize={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onSort={null}
+          onUpdate={[Function]}
+          pageSizes={
+            Array [
+              25,
+              50,
+              100,
+            ]
+          }
+          pagesToDisplay={3}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="Last"
+          tooltip=""
+          totalItems={0}
+          useedit={false}
+          useinput={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className="test-class"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          initialPage={1}
+          initialPageSize={25}
+          key="6"
+          layout={5}
+          leftButton={
+            <Icon
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName=""
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangePageSize={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onSort={null}
+          onUpdate={[Function]}
+          pageSizes={
+            Array [
+              25,
+              50,
+              100,
+            ]
+          }
+          pagesToDisplay={3}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="Next"
+          tooltip=""
+          totalItems={0}
+          useedit={false}
+          useinput={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className="test-class"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          initialPage={1}
+          initialPageSize={25}
+          key="7"
+          layout={5}
+          leftButton={
+            <Icon
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName=""
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangePageSize={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onSort={null}
+          onUpdate={[Function]}
+          pageSizes={
+            Array [
+              25,
+              50,
+              100,
+            ]
+          }
+          pagesToDisplay={3}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="Previous"
+          tooltip=""
+          totalItems={0}
+          useedit={false}
+          useinput={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListDivider
+          className=""
+          color="lightgray"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          id=""
+          layout={5}
+          leftButton={null}
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onUpdate={[Function]}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="​"
+          tooltip=""
+          useedit={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className="test-class"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          initialPage={1}
+          initialPageSize={25}
+          key="0"
+          layout={5}
+          leftButton={
+            <Icon
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName="check"
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangePageSize={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onSort={null}
+          onUpdate={[Function]}
+          pageSizes={
+            Array [
+              25,
+              50,
+              100,
+            ]
+          }
+          pagesToDisplay={3}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="25"
+          tooltip=""
+          totalItems={0}
+          useedit={false}
+          useinput={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className="test-class"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          initialPage={1}
+          initialPageSize={25}
+          key="1"
+          layout={5}
+          leftButton={
+            <Icon
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName=""
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangePageSize={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onSort={null}
+          onUpdate={[Function]}
+          pageSizes={
+            Array [
+              25,
+              50,
+              100,
+            ]
+          }
+          pagesToDisplay={3}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="50"
+          tooltip=""
+          totalItems={0}
+          useedit={false}
+          useinput={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className="test-class"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          initialPage={1}
+          initialPageSize={25}
+          key="2"
+          layout={5}
+          leftButton={
+            <Icon
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName=""
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangePageSize={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onSort={null}
+          onUpdate={[Function]}
+          pageSizes={
+            Array [
+              25,
+              50,
+              100,
+            ]
+          }
+          pagesToDisplay={3}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="100"
+          tooltip=""
+          totalItems={0}
+          useedit={false}
+          useinput={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+        <ListItem
+          className="test-class"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          focus={false}
+          height=""
+          hiddenLeftButton={false}
+          hiddenRightButton={false}
+          href={
+            Object {
+              "selectHandler": [Function],
+              "sizing": "normal",
+            }
+          }
+          id=""
+          initialPage={1}
+          initialPageSize={25}
+          key="3"
+          layout={5}
+          leftButton={
+            <Icon
+              className=""
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              focus={false}
+              height=""
+              iconName=""
+              id=""
+              imageFile=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={Object {}}
+              tooltip=""
+              visible={true}
+              width=""
+              xcss={null}
+            />
+          }
+          location="none"
+          noedit={true}
+          nohover={false}
+          noripple={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangePageSize={[Function]}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onMouseOut={[Function]}
+          onSelect={[Function]}
+          onSort={null}
+          onUpdate={[Function]}
+          pageSizes={
+            Array [
+              25,
+              50,
+              100,
+            ]
+          }
+          pagesToDisplay={3}
+          rightButton={null}
+          selected={false}
+          sizing="normal"
+          stacked={false}
+          style={Object {}}
+          testing={true}
+          theme={Object {}}
+          title="all"
+          tooltip=""
+          totalItems={0}
+          useedit={false}
+          useinput={false}
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
+        />
+      </List>
+    </Styled(ButtonDialog)>
+  </styled.div>
+</ThemeProvider>
 `;
 
 exports[`Test retrieval of Pager props object 1`] = `
