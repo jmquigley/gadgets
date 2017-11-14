@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a Pager control 1`] = `
-<div
-  className="ui-pager pager normal test-class"
+<styled.div
+  className="ui-pager test-class"
 >
   <Styled(Button)
     className="test-class"
@@ -1137,7 +1137,7 @@ exports[`Test creation of a Pager control 1`] = `
       />
     </List>
   </Styled(ButtonDialog)>
-</div>
+</styled.div>
 `;
 
 exports[`Test retrieval of Pager props object 1`] = `

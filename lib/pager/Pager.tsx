@@ -151,6 +151,16 @@ export const ButtonCSS: any = css`
 	font-weight: 600;
 `;
 
+export const PagerView: any = styled.div`
+	display: inline-flex;
+	height: 100%;
+	width: 99%;
+
+	.ui-textfield-container {
+		flex-direction: unset;
+	}
+`;
+
 export const StyledButtonDialog: any = styled(ButtonDialog)`
 	flex: none;
 	height: unset;
@@ -163,6 +173,11 @@ export const StyledButtonText: any = styled(ButtonText)`
 
 export const StyledButton: any = styled(Button)`
 	${ButtonCSS}
+`;
+
+export const StyledTextField: any = styled(TextField)`
+	flex: none;
+	width: 3em;
 `;
 
 export class Pager extends BaseComponent<PagerProps, PagerState> {
@@ -183,18 +198,15 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _pageSizes: number[] = cloneDeep(defaultPageSizes);
 
 	constructor(props: PagerProps) {
-		super(props, require('./styles.css'));
+		super(props, {}, Pager.defaultProps.style);
 
 		this._dialogKeys = new Keys({testing: this.props.testing});
 		this._fillerKeys = new Keys({testing: this.props.testing});
 
-		this._rootStyles.add([
-			'ui-pager',
-			this.styles.pager
-		]);
+		this._classes.add(['ui-pager']);
 
-		this.pageSizes = props.pageSizes;
-		this.computeInitialPages(props.initialPageSize);
+		this.pageSizes = this.props.pageSizes;
+		this.computeInitialPages(this.props.initialPageSize);
 
 		this.state = {
 			currentPage: this.initialPage,
@@ -438,11 +450,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={
-						nextState.currentSort === SortOrder.ascending
-						?
-						this._iconCheck
-						:
-						this._iconBlank
+						nextState.currentSort === SortOrder.ascending ?	this._iconCheck	: this._iconBlank
 					}
 					noedit
 					onSelect={this.handleSortAscending}
@@ -455,11 +463,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={
-						nextState.currentSort === SortOrder.descending
-						?
-						this._iconCheck
-						:
-						this._iconBlank
+						nextState.currentSort === SortOrder.descending ? this._iconCheck : this._iconBlank
 					}
 					noedit
 					onSelect={this.handleSortDescending}
@@ -679,7 +683,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.createDialog(this.props, this.state);
 
 		return (
-			<div className={this._rootStyles.classnames}>
+			<PagerView className={this.classes}>
 				<StyledButton
 					{...this.props}
 					iconName="angle-double-left"
@@ -703,7 +707,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				/>
 				<Divider />
 				{this.props.useinput ?
-				<TextField
+				<StyledTextField
 					className={this.styles.pagerInput}
 					disabled={this.props.disabled}
 					min="1"
@@ -729,7 +733,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				>
 					{this._dialog}
 				</StyledButtonDialog>
-			</div>
+			</PagerView>
 		);
 	}
 }
