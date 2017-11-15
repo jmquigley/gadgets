@@ -1,5 +1,7 @@
 'use strict';
 
+// const debug = require('debug')('helpers');
+
 import * as React from 'react';
 import {Tooltip} from '../tooltip';
 
@@ -35,7 +37,7 @@ export function globalize(name: string, pkg: any, replace: boolean = false) {
  * otherwise null is returned.
  */
 export function tooltip(id: string, props: any) {
-	if (props['tooltip'] !== '') {
+	if (props['tooltip']) {
 		return (
 			<Tooltip
 				parent={id}

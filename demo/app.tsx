@@ -304,8 +304,12 @@ class App extends React.Component<AppProps, AppState> {
 		<Container>
 			<Browser
 				home="http://www.example.com"
-				onClip={(uri: string, content: string, dom: any) => {
-					debug(`uri: %s, content: '%s', dom: %O`, uri, content, dom);
+				notooltips
+				onClip={(uri: string, content: string, dom: any, history: any) => {
+					debug(`uri: %s, content: '%s', dom: %O, history: %O`, uri, content, dom, history);
+				}}
+				onOpen={(uri: string, history: any) => {
+					debug(`uri: %s, history: %O`, uri, history);
 				}}
 				uri="http://www.google.com"
 				useparser

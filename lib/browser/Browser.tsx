@@ -20,6 +20,9 @@
  *     onClip={(uri: string, content: string, dom: any, history: List) => {
  *         debug(`uri: %s, content: '%s', dom: %O`, uri, content, dom);
  *     }}
+ *     onOpen={(uri: string, history: any) => {
+ *         debug(`uri: %s, history: %O`, uri, history);
+ *     }}
  *     uri="http://www.example.com"
  *     useparser
  * />
@@ -30,6 +33,8 @@
  * - `onClip(uri: string, content: string, dom: any, history: List)` - When the user clicks
  * the "clip" button this event is invoked.  It is given the current URI, the text of the
  * page, the parsed dom for the page (if useparser is given) and the current link history
+ * - `onOpen(uri: string, history: List)` - When a page is opened in the browser this
+ * callback is invoked with the name of the URI that was opened.
  *
  * #### Styles
  * - `ui-browser` - placed on the root `<div>` of the control.  This wraps the toolbar
@@ -40,6 +45,8 @@
  * #### Properties
  * - `home: {string} ('about:blank')` - The site visited when the user clicks on the
  * "home" button in the toolbar.  If this is empty, then 'about:blank' is used.
+ * - `notooltips: {boolean} (false)` - When set to true the tooltips will be suppresed.
+ * They are shown by default.
  * - `uri: {string} ('about:blank')` - The site the user selects to visit when the control
  * is created. If this is empty, then the home directory is used.  If the home directory
  * is empty, then the site is set to 'about:blank'
@@ -68,7 +75,9 @@ import {Toolbar} from '../toolbar';
 
 export interface BrowserProps extends BaseProps {
 	home?: string;
+	notooltips?: boolean;
 	onClip?: any;
+	onOpen?: any;
 	uri?: string;
 	useparser?: boolean;
 }
@@ -83,7 +92,9 @@ export function getDefaultBrowserProps(): BrowserProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			home: 'about:blank',
+			notooltips: false,
 			onClip: nilEvent,
+			onOpen: nilEvent,
 			uri: 'about:blank',
 			useparser: false
 		})
@@ -287,6 +298,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		if (this._webview) {
 			debug('Loading URI: %s for webview: %O', this.state.uri, this._webview);
 			this._webview.src = this.state.uri;
+			this.props.onOpen(this.state.uri, this.state.uriHistory);
 		}
 	}
 
@@ -308,30 +320,60 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 				<BrowserContainer className={this.classes} >
 					<BrowserToolbar className="ui-browser-toolbar">
 						<BrowserToolbarButtons>
-							<Button iconName="arrow-left" onClick={this.handleBack} />
-							<Button iconName="arrow-right" onClick={this.handleForward} />
-							<Button iconName="refresh" onClick={this.handleReload} />
+							<Button
+								iconName="arrow-left"
+								onClick={this.handleBack}
+								tooltip={this.props.notooltips ? '' : 'back'}
+							/>
+							<Button
+								iconName="arrow-right"
+								onClick={this.handleForward}
+								tooltip={this.props.notooltips ? '' : 'forward'}
+							/>
+							<Button
+								iconName="refresh"
+								onClick={this.handleReload}
+								tooltip={this.props.notooltips ? '' : 'refresh'}
+							/>
 							<Divider />
-							<Button iconName="home" onClick={this.handleHome} />
+							<Button
+								iconName="home"
+								onClick={this.handleHome}
+								tooltip={this.props.notooltips ? '' : 'home'}
+							/>
 						</BrowserToolbarButtons>
 						<BrowserToolbarURL>
 							<URLTextField
 								onChange={this.handleURLChange}
 								onKeyPress={this.handleURLKeyPress}
+								tooltip={this.props.notooltips ? '' : 'website URL'}
 								value={this.state.uri}
 							/>
 						</BrowserToolbarURL>
 						<BrowserToolbarSearch>
-							<ButtonDialog iconName="chevron-down">history</ButtonDialog>
-							<Button iconName="camera-retro" onClick={this.handleSnapshot} />
+							<ButtonDialog
+								iconName="chevron-down"
+								tooltip={this.props.notooltips ? '' : 'history'}
+							>
+								history
+							</ButtonDialog>
+							<Button
+								iconName="camera-retro"
+								onClick={this.handleSnapshot}
+								tooltip={this.props.notooltips ? '' : 'clip webpage'}
+							/>
 							<Divider />
 							<SearchTextField
 								onChange={this.handleSearch}
 								placeholder="search"
+								tooltip={this.props.notooltips ? '' : 'search text on page'}
 								useclear
 								value={this.state.search}
 							/>
-							<Button iconName="step-forward" />
+							<Button
+								iconName="step-forward"
+								tooltip={this.props.notooltips ? '' : 'continue search'}
+							/>
 						</BrowserToolbarSearch>
 					</BrowserToolbar>
 					<BrowserContent
