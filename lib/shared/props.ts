@@ -59,6 +59,7 @@ import {cloneDeep} from 'lodash';
 import {isTesting} from 'util.env';
 import {Sizing} from './sizing';
 import {css} from './themed-components';
+import {ThemeProps} from './themes';
 
 export enum ColorScheme {
 	c1 = '#004358',
@@ -133,7 +134,7 @@ export interface BaseProps {
 	sizing?: Sizing;
 	style?: Styles;
 	testing?: boolean;
-	theme?: any;
+	theme?: ThemeProps;
 	tooltip?: string;
 	visible?: boolean;
 	width?: string;
@@ -156,7 +157,7 @@ const defaultBaseProps: BaseProps = {
 	sizing: Sizing.normal,
 	style: {},
 	testing: isTesting(),
-	theme: {},
+	theme: null,
 	tooltip: '',
 	visible: true,
 	width: '',

@@ -5,7 +5,7 @@ exports[`Test creation of an inny type Switch 1`] = `
   theme={
     Object {
       "backgroundColor": "#ffffff",
-      "borderColor": "#004358",
+      "borderColor": "#c0c0c0",
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
@@ -48,7 +48,7 @@ exports[`Test creation of an inny type Switch 1`] = `
       }
       switchType={0}
       testing={true}
-      theme={Object {}}
+      theme={null}
       tooltip=""
       visible={true}
       width=""
@@ -75,7 +75,7 @@ exports[`Test creation of an outy type Switch 1`] = `
   theme={
     Object {
       "backgroundColor": "#ffffff",
-      "borderColor": "#004358",
+      "borderColor": "#c0c0c0",
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
@@ -118,7 +118,7 @@ exports[`Test creation of an outy type Switch 1`] = `
       }
       switchType={1}
       testing={true}
-      theme={Object {}}
+      theme={null}
       tooltip=""
       visible={true}
       width=""
@@ -163,7 +163,7 @@ exports[`Test disabling of the Switch control 1`] = `
   style={Object {}}
   switchType={1}
   testing={true}
-  theme={Object {}}
+  theme={null}
   tooltip=""
   visible={true}
   width=""
@@ -173,7 +173,7 @@ exports[`Test disabling of the Switch control 1`] = `
     theme={
       Object {
         "backgroundColor": "#ffffff",
-        "borderColor": "#004358",
+        "borderColor": "#c0c0c0",
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
@@ -220,7 +220,7 @@ exports[`Test disabling of the Switch control 1`] = `
           }
           switchType={1}
           testing={true}
-          theme={Object {}}
+          theme={null}
           tooltip=""
           visible={true}
           width=""
@@ -296,7 +296,7 @@ exports[`Test making the Switch control invisible 1`] = `
   style={Object {}}
   switchType={1}
   testing={true}
-  theme={Object {}}
+  theme={null}
   tooltip=""
   visible={false}
   width=""
@@ -306,7 +306,7 @@ exports[`Test making the Switch control invisible 1`] = `
     theme={
       Object {
         "backgroundColor": "#ffffff",
-        "borderColor": "#004358",
+        "borderColor": "#c0c0c0",
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
@@ -353,7 +353,7 @@ exports[`Test making the Switch control invisible 1`] = `
           }
           switchType={1}
           testing={true}
-          theme={Object {}}
+          theme={null}
           tooltip=""
           visible={false}
           width=""
@@ -429,7 +429,7 @@ Object {
   "style": Object {},
   "switchType": 1,
   "testing": true,
-  "theme": Object {},
+  "theme": null,
   "tooltip": "",
   "visible": true,
   "width": "",
@@ -442,7 +442,7 @@ exports[`Test the click handler on the Switch control 1`] = `
   theme={
     Object {
       "backgroundColor": "#ffffff",
-      "borderColor": "#004358",
+      "borderColor": "#c0c0c0",
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
@@ -485,7 +485,7 @@ exports[`Test the click handler on the Switch control 1`] = `
       }
       switchType={1}
       testing={true}
-      theme={Object {}}
+      theme={null}
       tooltip=""
       visible={true}
       width=""

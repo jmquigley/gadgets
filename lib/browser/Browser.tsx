@@ -59,11 +59,11 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
+import {ButtonDialog} from '../buttonDialog';
 import {Divider} from '../divider';
 import {BaseComponent, BaseProps, getDefaultBaseProps, getTheme} from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 import {TextField} from '../textField';
-import {Title, TitleLayout} from '../title';
 import {Toolbar} from '../toolbar';
 
 export interface BrowserProps extends BaseProps {
@@ -120,15 +120,34 @@ export const BrowserContent: any = withProps<BrowserProps, HTMLIFrameElement>(st
 	}
 `;
 
-export const BrowserToolbar: any = withProps<BrowserProps, HTMLDivElement>(styled(Toolbar))`
+export const BrowserToolbar: any = withProps<BrowserProps, HTMLDivElement>(styled.div)`
+	border: solid 1px ${props => props.theme.borderColor};
+	margin-bottom: -1px;
+	display: flex;
+`;
+
+export const BrowserToolbarButtons: any = styled(Toolbar)`
 	border: none;
 `;
 
-export const URLTextField: any = withProps<BrowserProps, any>(styled(TextField))`
-	width: 20em;
+export const BrowserToolbarURL: any = styled.div`
+	display: flex;
+	flex-grow: 1;
+
+	.ui-textfield-container {
+		justify-content: center;
+		width: 100%;
+	}
 `;
 
-export const SearchTextField: any = withProps<BrowserProps, any>(styled(TextField))`
+export const BrowserToolbarSearch: any = styled(Toolbar)`
+	border: none;
+`;
+
+export const URLTextField: any = styled(TextField)`
+`;
+
+export const SearchTextField: any = styled(TextField)`
 	border-radius: 45px;
 	width: 12em;
 
@@ -287,35 +306,36 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		return(
 			<ThemeProvider theme={getTheme()}>
 				<BrowserContainer className={this.classes} >
-					<Title
-						layout={TitleLayout.threequarter}
-						nohover
-						noripple
-						title={
-							<BrowserToolbar className="ui-browser-toolbar" >
-								<Button iconName="arrow-left" onClick={this.handleBack} />
-								<Button iconName="arrow-right" onClick={this.handleForward} />
-								<Button iconName="refresh" onClick={this.handleReload} />
-								<Divider />
-								<Button iconName="home" onClick={this.handleHome} />
-								<URLTextField
-									onChange={this.handleURLChange}
-									onKeyPress={this.handleURLKeyPress}
-									value={this.state.uri}
-								/>
-								<Button iconName="camera-retro" onClick={this.handleSnapshot} />
-							</BrowserToolbar>
-						}
-						widget={
+					<BrowserToolbar className="ui-browser-toolbar">
+						<BrowserToolbarButtons>
+							<Button iconName="arrow-left" onClick={this.handleBack} />
+							<Button iconName="arrow-right" onClick={this.handleForward} />
+							<Button iconName="refresh" onClick={this.handleReload} />
+							<Divider />
+							<Button iconName="home" onClick={this.handleHome} />
+						</BrowserToolbarButtons>
+						<BrowserToolbarURL>
+							<URLTextField
+								onChange={this.handleURLChange}
+								onKeyPress={this.handleURLKeyPress}
+								value={this.state.uri}
+							/>
+						</BrowserToolbarURL>
+						<BrowserToolbarSearch>
+							<ButtonDialog iconName="chevron-down">history</ButtonDialog>
+							<Button iconName="camera-retro" onClick={this.handleSnapshot} />
+							<Divider />
 							<SearchTextField
 								onChange={this.handleSearch}
 								placeholder="search"
 								useclear
 								value={this.state.search}
 							/>
-						}
-					/>
+							<Button iconName="step-forward" />
+						</BrowserToolbarSearch>
+					</BrowserToolbar>
 					<BrowserContent
+						className="ui-browser-content"
 						innerRef={this.handleRef}
 					/>
 				</BrowserContainer>

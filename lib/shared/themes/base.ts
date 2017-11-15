@@ -5,7 +5,7 @@ import {ThemeProps} from './index';
 
 const theme: ThemeProps = {
 	backgroundColor: Color.white,
-	borderColor: ColorScheme.c1,
+	borderColor: Color.silver,
 	color: Color.black,
 	headerForegroundColor: Color.white,
 	headerBackgroundColor: ColorScheme.c1,

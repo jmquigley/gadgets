@@ -104,7 +104,7 @@ import {
 	Sizing,
 	SortOrder
 } from '../shared';
-import styled, {css, ThemeProvider} from '../shared/themed-components';
+import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 import {TextField} from '../textField';
 
 export const defaultPageSize: number = 25;
@@ -162,7 +162,8 @@ export const PagerView: any = styled.div`
 	}
 `;
 
-export const StyledButtonDialog: any = styled(ButtonDialog)`
+export const StyledButtonDialog: any = withProps<PagerProps, HTMLElement>(styled(ButtonDialog))`
+	border: solid 1px ${props => props.theme.borderColor};
 	flex: none;
 	height: unset;
 	width: 7%;

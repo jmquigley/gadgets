@@ -19,7 +19,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "testing": true,
-  "theme": Object {},
+  "theme": null,
   "title": "",
   "tooltip": "",
   "visible": true,
@@ -48,7 +48,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
   sizing="normal"
   style={Object {}}
   testing={true}
-  theme={Object {}}
+  theme={null}
   title="test title"
   tooltip=""
   visible={true}
@@ -60,7 +60,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
     theme={
       Object {
         "backgroundColor": "#ffffff",
-        "borderColor": "#004358",
+        "borderColor": "#c0c0c0",
         "color": "#000000",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
@@ -91,7 +91,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
       sizing="normal"
       style={Object {}}
       testing={true}
-      theme={Object {}}
+      theme={null}
       title="test title"
       tooltip=""
       visible={true}
@@ -117,7 +117,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
         sizing="normal"
         style={Object {}}
         testing={true}
-        theme={Object {}}
+        theme={null}
         title="test title"
         tooltip=""
         visible={true}
@@ -129,7 +129,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
           theme={
             Object {
               "backgroundColor": "#ffffff",
-              "borderColor": "#004358",
+              "borderColor": "#c0c0c0",
               "color": "#000000",
               "headerBackgroundColor": "#004358",
               "headerForegroundColor": "#ffffff",
@@ -173,7 +173,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                 style={Object {}}
                 testing={true}
                 text="test title"
-                theme={Object {}}
+                theme={null}
                 title="test title"
                 tooltip=""
                 visible={true}
@@ -213,7 +213,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                   style={Object {}}
                   testing={true}
                   text="test title"
-                  theme={Object {}}
+                  theme={null}
                   title="test title"
                   tooltip=""
                   useedit={false}
@@ -233,7 +233,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                     theme={
                       Object {
                         "backgroundColor": "#ffffff",
-                        "borderColor": "#004358",
+                        "borderColor": "#c0c0c0",
                         "color": "#000000",
                         "headerBackgroundColor": "#004358",
                         "headerForegroundColor": "#ffffff",

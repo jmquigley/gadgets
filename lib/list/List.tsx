@@ -38,6 +38,7 @@ export interface ListState {
 }
 
 export const ListView: any = styled.ul`
+	border: solid 1px ${props => props.theme.borderColor};
 	list-style: none;
 
 	${(props: ListProps) => props.alternating &&

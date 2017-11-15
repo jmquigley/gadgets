@@ -89,7 +89,7 @@ export interface AccordionItemState {
 
 export const AccordionItemView: any = withProps<AccordionItemProps, HTMLUListElement>(styled.ul)`
 	border-bottom: solid 1px;
-	border-color: black;
+	border-color: ${props => props.theme.borderColor};
 
 	> .ui-item, > .ui-item-button {
 		color: ${props => props.theme.headerForegroundColor || Color.white};

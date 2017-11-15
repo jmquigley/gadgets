@@ -5,7 +5,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
   theme={
     Object {
       "backgroundColor": "#ffffff",
-      "borderColor": "#004358",
+      "borderColor": "#c0c0c0",
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
@@ -56,7 +56,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
           sizing="small"
           style={Object {}}
           testing={true}
-          theme={Object {}}
+          theme={null}
           tooltip=""
           visible={true}
           width=""
@@ -73,7 +73,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
   theme={
     Object {
       "backgroundColor": "#ffffff",
-      "borderColor": "#004358",
+      "borderColor": "#c0c0c0",
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
@@ -124,7 +124,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
           sizing="small"
           style={Object {}}
           testing={true}
-          theme={Object {}}
+          theme={null}
           tooltip=""
           visible={true}
           width=""
@@ -141,7 +141,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
   theme={
     Object {
       "backgroundColor": "#ffffff",
-      "borderColor": "#004358",
+      "borderColor": "#c0c0c0",
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
@@ -192,7 +192,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
           sizing="small"
           style={Object {}}
           testing={true}
-          theme={Object {}}
+          theme={null}
           tooltip=""
           visible={true}
           width=""
@@ -209,7 +209,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
   theme={
     Object {
       "backgroundColor": "#ffffff",
-      "borderColor": "#004358",
+      "borderColor": "#c0c0c0",
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
@@ -260,7 +260,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
-          theme={Object {}}
+          theme={null}
           tooltip=""
           visible={true}
           width=""
@@ -277,7 +277,7 @@ exports[`Test making the Toolbar invisible 1`] = `
   theme={
     Object {
       "backgroundColor": "#ffffff",
-      "borderColor": "#004358",
+      "borderColor": "#c0c0c0",
       "color": "#000000",
       "headerBackgroundColor": "#004358",
       "headerForegroundColor": "#ffffff",
@@ -328,7 +328,7 @@ exports[`Test making the Toolbar invisible 1`] = `
           sizing="normal"
           style={Object {}}
           testing={true}
-          theme={Object {}}
+          theme={null}
           tooltip=""
           visible={false}
           width=""
@@ -358,7 +358,7 @@ Object {
   "sizing": "normal",
   "style": Object {},
   "testing": true,
-  "theme": Object {},
+  "theme": null,
   "tooltip": "",
   "visible": true,
   "width": "",
