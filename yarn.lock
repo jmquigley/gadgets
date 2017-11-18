@@ -210,15 +210,6 @@ app-root-path@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-2.0.1.tgz#cd62dcf8e4fd5a417efc664d2e5b10653c651b46"
 
-app-usage-stats@^0.5.0:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/app-usage-stats/-/app-usage-stats-0.5.1.tgz#6547c5db9bab0aa5f5b2c560eacc8af20d0ab13b"
-  dependencies:
-    array-back "^1.0.4"
-    home-path "^1.0.3"
-    test-value "^2.1.0"
-    usage-stats "^0.9.0"
-
 append-transform@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/append-transform/-/append-transform-0.4.0.tgz#d76ebf8ca94d276e247a36bad44a4b74ab611991"
@@ -2014,7 +2005,7 @@ create-react-class@^15.5.2:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-cross-env@^5.1.0, cross-env@^5.1.1:
+cross-env@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.1.1.tgz#b6d8ab97f304c0f71dae7277b75fe424c08dfa74"
   dependencies:
@@ -2288,10 +2279,6 @@ default-require-extensions@^1.0.0:
   resolved "https://registry.yarnpkg.com/default-require-extensions/-/default-require-extensions-1.0.0.tgz#f37ea15d3e13ffd9b437d33e1a75b5fb97874cb8"
   dependencies:
     strip-bom "^2.0.0"
-
-defer-promise@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/defer-promise/-/defer-promise-1.0.1.tgz#1ca6ffeddbcef1715dd7aae25c7616f9ae22932f"
 
 define-properties@^1.1.2:
   version "1.1.2"
@@ -3121,7 +3108,7 @@ fs-extra@^0.30.0:
     path-is-absolute "^1.0.0"
     rimraf "^2.2.8"
 
-fs-extra@^4.0.1, fs-extra@^4.0.2:
+fs-extra@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.2.tgz#f91704c53d1b461f893452b0c307d9997647ab6b"
   dependencies:
@@ -3456,7 +3443,7 @@ home-or-tmp@^2.0.0:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.1"
 
-home-path@^1.0.1, home-path@^1.0.3, home-path@^1.0.5:
+home-path@^1.0.1:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/home-path/-/home-path-1.0.5.tgz#788b29815b12d53bacf575648476e6f9041d133f"
 
@@ -4226,19 +4213,6 @@ jsdoc-parse@^3.0.0:
     sort-array "^1.1.1"
     test-value "^2.1.0"
 
-jsdoc-to-markdown@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/jsdoc-to-markdown/-/jsdoc-to-markdown-3.0.1.tgz#115962a20ec345d7dbe8327056bf7e965687a92f"
-  dependencies:
-    array-back "^2.0.0"
-    command-line-tool "^0.7.0"
-    config-master "^3.1.0"
-    dmd "^3.0.6"
-    jsdoc-api "^3.0.0"
-    jsdoc-parse "^3.0.0"
-    jsdoc2md-stats "^2.0.1"
-    walk-back "^3.0.0"
-
 jsdoc-to-markdown@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/jsdoc-to-markdown/-/jsdoc-to-markdown-3.0.2.tgz#3649f14e30efd8d62ec9accd3191f901bb88e215"
@@ -4251,13 +4225,7 @@ jsdoc-to-markdown@^3.0.2:
     jsdoc-parse "^3.0.0"
     walk-back "^3.0.0"
 
-jsdoc2md-stats@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/jsdoc2md-stats/-/jsdoc2md-stats-2.0.1.tgz#bd8343734cfe69ea8050a17931251293f0d9047b"
-  dependencies:
-    app-usage-stats "^0.5.0"
-
-jsdoc@^3.5.4, jsdoc@^3.5.5:
+jsdoc@^3.5.5:
   version "3.5.5"
   resolved "https://registry.yarnpkg.com/jsdoc/-/jsdoc-3.5.5.tgz#484521b126e81904d632ff83ec9aaa096708fa4d"
   dependencies:
@@ -4377,7 +4345,7 @@ kind-of@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.0.tgz#3606e9e2fa960e7ddaa8898c03804e47e5d66644"
 
-klaw-sync@^3.0.0, klaw-sync@^3.0.2:
+klaw-sync@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/klaw-sync/-/klaw-sync-3.0.2.tgz#bf3a5ca463af5aec007201dbe8be7088ef29d067"
   dependencies:
@@ -6151,26 +6119,26 @@ quill-delta@^3.6.2:
     extend "^3.0.1"
     fast-diff "1.1.2"
 
-quill-markup@^0.0.20:
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/quill-markup/-/quill-markup-0.0.20.tgz#1270461a55c758b1f171d6700ee4a14e2f11030d"
+quill-markup@^0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/quill-markup/-/quill-markup-0.0.21.tgz#c0dd97ca4419604bed4c4e720aaa7b8c9f1d0c26"
   dependencies:
     ccount "^1.0.2"
     hash.js "^1.1.3"
     highlight.js "^9.12.0"
     lodash "^4.17.4"
     parchment "^1.1.2"
-    quill "^1.3.3"
-    util.ds "^0.0.31"
-    util.fontlist "^0.0.4"
-    util.join "^0.0.14"
-    util.matches "^0.0.4"
-    util.pkgwrap "0.0.72"
-    util.rstrip "^0.0.26"
-    util.section "^0.0.7"
+    quill "^1.3.4"
+    util.ds "^0.0.33"
+    util.fontlist "^0.0.5"
+    util.join "^0.0.15"
+    util.matches "^0.0.5"
+    util.pkgwrap "0.0.73"
+    util.rstrip "^0.0.28"
+    util.section "^0.0.8"
     xregexp "^3.2.0"
 
-quill@^1.3.3, quill@^1.3.4:
+quill@^1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/quill/-/quill-1.3.4.tgz#59812332e33f715725e9599aac29413e3543048b"
   dependencies:
@@ -6485,16 +6453,6 @@ repeating@^2.0.0:
   resolved "https://registry.yarnpkg.com/repeating/-/repeating-2.0.1.tgz#5214c53a926d3552707527fbab415dbc08d06dda"
   dependencies:
     is-finite "^1.0.0"
-
-req-then@^0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/req-then/-/req-then-0.6.4.tgz#9f9c04626afd311ae01d727846a0a1075c0e1965"
-  dependencies:
-    array-back "^2.0.0"
-    defer-promise "^1.0.1"
-    lodash.pick "^4.4.0"
-    stream-read-all "^0.1.0"
-    typical "^2.6.1"
 
 request@2.81.0:
   version "2.81.0"
@@ -6970,10 +6928,6 @@ stream-http@^2.3.1:
     readable-stream "^2.2.6"
     to-arraybuffer "^1.0.0"
     xtend "^4.0.0"
-
-stream-read-all@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/stream-read-all/-/stream-read-all-0.1.2.tgz#748718e89281fff6b0742918233415a6900387e1"
 
 stream-via@^1.0.4:
   version "1.0.4"
@@ -7504,17 +7458,6 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
-usage-stats@^0.9.0:
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/usage-stats/-/usage-stats-0.9.4.tgz#ff06ba51d824faa1982f48a055dea8495a249077"
-  dependencies:
-    array-back "^2.0.0"
-    home-path "^1.0.5"
-    mkdirp2 "^1.0.3"
-    req-then "^0.6.4"
-    typical "^2.6.1"
-    uuid "^3.1.0"
-
 use@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/use/-/use-2.0.2.tgz#ae28a0d72f93bf22422a18a2e379993112dec8e8"
@@ -7558,14 +7501,6 @@ util.constants@^0.0.3:
   dependencies:
     util.pkgwrap "0.0.73"
 
-util.ds@^0.0.31:
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/util.ds/-/util.ds-0.0.31.tgz#d5bcf6af06155087bb9ae3fa2fd90a2da92da03f"
-  dependencies:
-    fs-extra "^4.0.2"
-    sprintf-js "^1.1.1"
-    util.pkgwrap "0.0.68"
-
 util.ds@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/util.ds/-/util.ds-0.0.33.tgz#8a95c74f2824ad195f6404f723308e1db8a1f50a"
@@ -7584,18 +7519,11 @@ util.env@^0.0.23:
     util.pkgwrap "0.0.73"
     util.rstrip "0.0.28"
 
-util.fontlist@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/util.fontlist/-/util.fontlist-0.0.4.tgz#56879c928003fd426ab5bdd5c78d1b40ec04f215"
+util.fontlist@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/util.fontlist/-/util.fontlist-0.0.5.tgz#a2099ff60a6f7f1c5de5e2a7676a35db388f3b88"
   dependencies:
-    util.pkgwrap "0.0.72"
-
-util.home@0.0.19:
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/util.home/-/util.home-0.0.19.tgz#68233019565d2f77ac08e3c82758518bbff1c062"
-  dependencies:
-    util.pkgwrap "0.0.68"
-    util.toolbox "0.0.47"
+    util.pkgwrap "0.0.73"
 
 util.home@0.0.20:
   version "0.0.20"
@@ -7603,13 +7531,6 @@ util.home@0.0.20:
   dependencies:
     util.pkgwrap "0.0.73"
     util.toolbox "0.0.53"
-
-util.join@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/util.join/-/util.join-0.0.14.tgz#6cbd3f24d22bda54ebc2a6c2b8f99f3618b7e047"
-  dependencies:
-    util.home "0.0.19"
-    util.pkgwrap "0.0.68"
 
 util.join@^0.0.15:
   version "0.0.15"
@@ -7633,64 +7554,11 @@ util.leader@^0.0.34:
     lodash "^4.17.4"
     util.pkgwrap "0.0.73"
 
-util.matches@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/util.matches/-/util.matches-0.0.4.tgz#ab46e2a084f51130fa289c959d3632a2afea6a66"
-  dependencies:
-    util.pkgwrap "0.0.68"
-
 util.matches@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/util.matches/-/util.matches-0.0.5.tgz#64aeedac99854ef7f6b27a52fd6df4982a508f30"
   dependencies:
     util.pkgwrap "0.0.73"
-
-util.pkgwrap@0.0.68:
-  version "0.0.68"
-  resolved "https://registry.yarnpkg.com/util.pkgwrap/-/util.pkgwrap-0.0.68.tgz#e258de014366ed04ee488072afcf1c0ccd5777d4"
-  dependencies:
-    expand-home-dir "github:jmquigley/expand-home-dir"
-    fs-extra "^4.0.1"
-    globby "^6.1.0"
-    jsdoc "^3.5.4"
-    jsdoc-to-markdown "^3.0.0"
-    klaw-sync "^3.0.0"
-    lodash "^4.17.4"
-    rimraf "^2.6.1"
-    workerpool "^2.2.4"
-    yargs "^8.0.2"
-
-util.pkgwrap@0.0.71:
-  version "0.0.71"
-  resolved "https://registry.yarnpkg.com/util.pkgwrap/-/util.pkgwrap-0.0.71.tgz#b35f0b8ebba1615e861ddc6a0aae1e5131183d25"
-  dependencies:
-    expand-home-dir "github:jmquigley/expand-home-dir"
-    fs-extra "^4.0.1"
-    globby "^6.1.0"
-    jsdoc "^3.5.4"
-    jsdoc-to-markdown "^3.0.0"
-    klaw-sync "^3.0.0"
-    lodash "^4.17.4"
-    rimraf "^2.6.1"
-    workerpool "^2.2.4"
-    yargs "^8.0.2"
-
-util.pkgwrap@0.0.72:
-  version "0.0.72"
-  resolved "https://registry.yarnpkg.com/util.pkgwrap/-/util.pkgwrap-0.0.72.tgz#a0edb43cf176d01bdb543a06cccf02ce0f55cec9"
-  dependencies:
-    cpx "^1.5.0"
-    cross-env "^5.1.0"
-    expand-home-dir "github:jmquigley/expand-home-dir"
-    fs-extra "^4.0.2"
-    globby "^6.1.0"
-    jsdoc "^3.5.5"
-    jsdoc-to-markdown "^3.0.0"
-    klaw-sync "^3.0.2"
-    lodash "^4.17.4"
-    rimraf "^2.6.2"
-    workerpool "^2.3.0"
-    yargs "^10.0.3"
 
 util.pkgwrap@0.0.73, util.pkgwrap@>=0.0.73:
   version "0.0.73"
@@ -7715,23 +7583,17 @@ util.promise@^0.0.15:
   dependencies:
     util.pkgwrap "0.0.73"
 
-util.rstrip@0.0.26, util.rstrip@^0.0.26:
-  version "0.0.26"
-  resolved "https://registry.yarnpkg.com/util.rstrip/-/util.rstrip-0.0.26.tgz#09e0e3cd90d71622dc985bab08e2b6d66b42e99e"
-  dependencies:
-    util.pkgwrap "0.0.68"
-
-util.rstrip@0.0.28:
+util.rstrip@0.0.28, util.rstrip@^0.0.28:
   version "0.0.28"
   resolved "https://registry.yarnpkg.com/util.rstrip/-/util.rstrip-0.0.28.tgz#f4d7261025027dc18a81b33817b111699090c133"
   dependencies:
     util.pkgwrap "0.0.73"
 
-util.section@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/util.section/-/util.section-0.0.7.tgz#ff3fad93aad6444917a6ca5a6dbf0e8c96549be7"
+util.section@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/util.section/-/util.section-0.0.8.tgz#82678f03ff4d7ad89d5e2873135f8c4ff705cbb5"
   dependencies:
-    util.pkgwrap "0.0.71"
+    util.pkgwrap "0.0.73"
 
 util.string@^0.0.4:
   version "0.0.4"
@@ -7740,15 +7602,6 @@ util.string@^0.0.4:
     util.constants "^0.0.3"
     util.pkgwrap "0.0.73"
     xregexp "^3.2.0"
-
-util.toolbox@0.0.47:
-  version "0.0.47"
-  resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.47.tgz#0e2498c16c1892db8a36d017d147ce7f64fad036"
-  dependencies:
-    fs-extra "^4.0.1"
-    util.pkgwrap "0.0.68"
-    util.rstrip "0.0.26"
-    uuid "^3.1.0"
 
 util.toolbox@0.0.53, util.toolbox@^0.0.53:
   version "0.0.53"
@@ -7977,7 +7830,7 @@ worker-farm@^1.3.1:
     errno "^0.1.4"
     xtend "^4.0.1"
 
-workerpool@^2.2.4, workerpool@^2.3.0:
+workerpool@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/workerpool/-/workerpool-2.3.0.tgz#86c5cbe946b55e7dc9d12b1936c8801a6e2d744d"
   dependencies:
