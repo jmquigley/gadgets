@@ -42,7 +42,8 @@ import {
 	Sizing,
 	SortOrder,
 	Styling,
-	Theme
+	Theme,
+	ThemeProps
 } from './lib/shared';
 import {Switch, SwitchType} from './lib/switch';
 import {Tab, TabContainer} from './lib/tabs';
@@ -57,6 +58,16 @@ import {Toast, ToastLevel, ToastType} from './lib/toast';
 import {Toolbar} from './lib/toolbar';
 import {Tooltip} from './lib/tooltip';
 import {Triangle} from './lib/triangle';
+
+// Themed component classes
+import styled, {
+	css,
+	injectGlobal,
+	keyframes,
+	ThemeProvider,
+	withProps,
+	withTheme
+} from './lib/shared/themed-components';
 
 const pkg = require('./package.json');
 const version = `v${JSON.stringify(pkg.version)}`;
@@ -75,6 +86,7 @@ export {
 	ButtonText,
 	Color,
 	Container,
+	css,
 	DialogBox,
 	DialogBoxType,
 	Direction,
@@ -88,8 +100,10 @@ export {
 	getTheme,
 	getThemeList,
 	Icon,
+	injectGlobal,
 	Item,
 	Justify,
+	keyframes,
 	Label,
 	List,
 	ListDivider,
@@ -103,6 +117,7 @@ export {
 	setTheme,
 	Sizing,
 	SortOrder,
+	styled,
 	Styling,
 	Switch,
 	SwitchType,
@@ -112,6 +127,8 @@ export {
 	Tag,
 	TagList,
 	Theme,
+	ThemeProps,
+	ThemeProvider,
 	Title,
 	TitleLayout,
 	Toast,
@@ -122,5 +139,7 @@ export {
 	Triangle,
 	version,
 	Validator,
-	ValidatorFn
+	ValidatorFn,
+	withProps,
+	withTheme
 };
