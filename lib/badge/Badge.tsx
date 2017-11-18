@@ -64,6 +64,7 @@ export function getDefaultBadgeProps(): BadgeProps {
 		getDefaultBaseProps(), {
 			counter: 0,
 			location: Location.topRight,
+			obj: 'Badge',
 			onClick: nilEvent,
 			sizing: Sizing.normal,
 			style: {

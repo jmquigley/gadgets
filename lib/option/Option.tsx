@@ -90,6 +90,7 @@ export interface OptionProps extends BaseProps {
 export function getDefaultOptionProps(): OptionProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
+			obj: 'Option',
 			onClick: nilEvent,
 			optionType: OptionType.square,
 			selected: false,

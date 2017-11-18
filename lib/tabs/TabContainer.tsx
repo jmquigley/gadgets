@@ -108,6 +108,7 @@ export function getDefaultTabContainerProps(): TabContainerProps {
 			maxTabs: 5,
 			noclose: false,
 			nonavigation: false,
+			obj: 'TabContainer',
 			onRemove: nilEvent,
 			onSelect: nilEvent,
 			tabWidth: 80

@@ -63,6 +63,7 @@ export function getDefaultTriangleProps(): TriangleProps {
 		getDefaultBaseProps(), {
 			direction: Direction.up,
 			nobase: false,
+			obj: 'Triangle',
 			sizing: Sizing.normal,
 			style: {
 				fill: 'black',

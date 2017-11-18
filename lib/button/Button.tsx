@@ -62,6 +62,7 @@ export function getDefaultButtonProps(): ButtonProps {
 			iconName: 'bomb',
 			iconStyle: '',
 			onClick: nilEvent,
+			obj: 'Button',
 			sizing: Sizing.normal
 		})
 	);

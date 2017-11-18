@@ -29,6 +29,7 @@ export function getDefaultListItemProps(): ListItemProps {
 				selectHandler: nilEvent,
 				sizing: Sizing.normal
 			},
+			obj: 'ListItem',
 			onBlur: nilEvent,
 			onClick: nilEvent,
 			onDoubleClick: nilEvent,

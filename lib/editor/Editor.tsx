@@ -154,6 +154,7 @@ export function getDefaultEditorProps(): EditorProps {
 			content: '',
 			defaultFont: 'Fira Code',
 			defaultFontSize: 12,
+			obj: 'Editor',
 			onChange: nilEvent,
 			onClick: nilEvent,
 			onClickLink: nilEvent,

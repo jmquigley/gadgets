@@ -71,6 +71,7 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 		getDefaultIconProps(), {
 			justify: Justify.right,
 			noicon: false,
+			obj: 'ButtonText',
 			onClick: nilEvent,
 			sizing: Sizing.normal,
 			text: ''

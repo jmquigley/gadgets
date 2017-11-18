@@ -125,6 +125,7 @@ export function getDefaultToastProps(): ToastProps {
 			bottom: false,
 			duration: 3,
 			level: ToastLevel.info,
+			obj: 'Toast',
 			onClick: nilEvent,
 			onClose: nilEvent,
 			show: true,

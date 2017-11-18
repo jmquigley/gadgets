@@ -63,7 +63,8 @@ export interface DividerProps extends BaseProps {
 export function getDefaultDividerProps(): DividerProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			dividerType: DividerType.none
+			dividerType: DividerType.none,
+			obj: 'Divider'
 		})
 	);
 }

@@ -18,14 +18,13 @@
 		"main": "./dist/bundle.js",
 		"types": "./index.d.ts",
 		"scripts": {
-				"all": "yarn install && yarn run install:deps && yarn run clean && yarn run lint && yarn run build && yarn run build:demo && yarn run docs && yarn test",
+				"all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run build:demo && yarn run docs && yarn test",
 				"build": "pkgwrap --build --webpack",
 				"build:demo": "cd demo && yarn run build",
 				"clean": "pkgwrap --clean",
 				"coverage": "pkgwrap --coverage --jest",
 				"demo": "yarn run all && yarn start",
 				"docs": "pkgwrap --docs",
-				"install:deps": "cross-env NODE_ENV=development yarn install",
 				"lint": "pkgwrap --lint",
 				"start": "cross-env NODE_ENV=production electron demo/.",
 				"test": "cross-env NODE_ENV=test pkgwrap --testing --jest",
@@ -33,11 +32,6 @@
 				"webpack": "webpack"
 		},
 		"dependencies": {
-				"cross-env": "^5.1.1",
-				"util.join": "^0.0.15",
-				"util.pkgwrap": ">=0.0.73"
-		},
-		"devDependencies": {
 				"@types/debug": "^0.0.30",
 				"@types/enzyme": "^3.1.4",
 				"@types/fs-extra": "^4.0.5",
@@ -66,6 +60,7 @@
 				"circular-dependency-plugin": "^4.2.1",
 				"copy-webpack-plugin": "^4.2.1",
 				"coveralls": "^3.0.0",
+				"cross-env": "^5.1.1",
 				"css-loader": "^0.28.7",
 				"css-ripple-effect": "^1.0.5",
 				"debug": "^3.1.0",
@@ -113,9 +108,11 @@
 				"util.constants": "^0.0.3",
 				"util.ds": "^0.0.33",
 				"util.env": "^0.0.23",
+				"util.join": "^0.0.15",
 				"util.keys": "^0.0.9",
 				"util.leader": "^0.0.34",
 				"util.matches": "^0.0.5",
+				"util.pkgwrap": ">=0.0.73",
 				"util.promise": "^0.0.15",
 				"util.string": "^0.0.4",
 				"util.toolbox": "0.0.53",

@@ -39,7 +39,8 @@ export interface ListDividerProps extends ItemProps {
 export function getDefaultListDividerProps(): ListDividerProps {
 	return cloneDeep(Object.assign({},
 		getDefaultItemProps(), {
-			color: 'lightgray'
+			color: 'lightgray',
+			obj: 'ListDivider'
 		})
 	);
 }

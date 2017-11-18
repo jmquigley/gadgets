@@ -67,6 +67,7 @@ export function getDefaultButtonDialogProps(): ButtonDialogProps {
 			dialogClasses: [],
 			location: Location.bottom,
 			notriangle: false,
+			obj: 'ButtonDialog',
 			onClick: nilEvent,
 			style: {
 				backgroundColor: 'inherit',

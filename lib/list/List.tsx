@@ -27,6 +27,7 @@ export function getDefaultListProps(): ListProps {
 		getDefaultBaseProps(), {
 			alternating: false,
 			children: null,
+			obj: 'List',
 			onAdd: nilEvent,
 			unselect: false
 		})

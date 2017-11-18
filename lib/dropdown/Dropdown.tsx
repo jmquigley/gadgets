@@ -82,6 +82,7 @@ export function getDefaultDropdownProps(): DropdownProps {
 		getDefaultBaseProps(), {
 			initialItem: '',
 			items: [],
+			obj: 'Dropdown',
 			onSelect: nilEvent
 		})
 	);

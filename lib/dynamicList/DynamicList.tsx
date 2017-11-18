@@ -135,6 +135,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			items: {},
 			layout: TitleLayout.dominant,
 			nocollapse: false,
+			obj: 'DynamicList',
 			onBlur: nilEvent,
 			onClick: nilEvent,
 			onDelete: nilEvent,

@@ -24,7 +24,8 @@ export function getDefaultListHeaderProps(): ListHeaderProps {
 			href: {
 				sizing: Sizing.normal
 			},
-			nohover: true
+			nohover: true,
+			obj: 'ListHeader'
 		})
 	);
 }

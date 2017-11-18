@@ -130,6 +130,7 @@ export interface BaseProps {
 	noedit?: boolean;
 	nohover?: boolean;
 	noripple?: boolean;
+	obj?: string;
 	selected?: boolean;
 	sizing?: Sizing;
 	style?: Styles;
@@ -153,6 +154,7 @@ const defaultBaseProps: BaseProps = {
 	noedit: false,
 	nohover: false,
 	noripple: false,
+	obj: 'Unknown',
 	selected: false,
 	sizing: Sizing.normal,
 	style: {},

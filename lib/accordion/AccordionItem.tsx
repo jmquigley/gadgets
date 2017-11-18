@@ -77,6 +77,7 @@ export function getDefaultAccordionItemProps(): AccordionItemProps {
 			initialToggle: false,
 			leftButton: null,
 			nocollapse: false,
+			obj: 'AccordionItem',
 			onClick: nilEvent,
 			rightButton: null
 		})

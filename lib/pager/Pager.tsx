@@ -127,6 +127,7 @@ export function getDefaultPagerProps(): PagerProps {
 		getDefaultBaseProps(), {
 			initialPage: 1,
 			initialPageSize: defaultPageSize,
+			obj: 'Pager',
 			onChangePageSize: nilEvent,
 			onSelect: nilEvent,
 			onSort: null,

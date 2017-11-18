@@ -58,6 +58,7 @@ export class Select extends BaseComponent<any, any> {
 
 	public static defaultProps: any = {
 		disabled: false,
+		obj: 'Select',
 		visible: true,
 		sizing: Sizing.normal
 	};

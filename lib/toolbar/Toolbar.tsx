@@ -83,7 +83,8 @@ export interface ToolbarProps extends BaseProps {
 export function getDefaultToolbarProps(): ToolbarProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			justify: Justify.left
+			justify: Justify.left,
+			obj: 'Toolbar'
 		})
 	);
 }
@@ -95,7 +96,7 @@ export const ToolbarView: any = withProps<ToolbarProps, HTMLDivElement>(styled.d
 	padding: 3px 2px;
 `;
 
-export const ToolbarContainerView: any = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
+export const ToolbarGroupView: any = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
 	align-items: center;
 	display: flex;
 	padding: 2px 0 1px 0;
@@ -143,6 +144,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 
 	public render() {
 		const components: any = [];
+		const theme: any = getTheme();
 
 		React.Children.forEach(this.props.children, (child: any, idx: number) => {
 			if (Toolbar._whitelist.contains(child['type'].name)) {
@@ -152,28 +154,29 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 					margin: '0 2px'
 				});
 
-				switch (child['type'].name) {
-					case Button.name:
-					case ButtonCircle.name:
-					case ButtonDialog.name:
-					case ButtonToggle.name:
+				switch (child['props'].obj) {
+					case 'Button':
+					case 'ButtonCircle':
+					case 'ButtonDialog':
+					case 'ButtonToggle':
 						style['width'] = this.fontSizePX(this.props.sizing, 1.5);
 
-					case ButtonText.name:
-						style['border'] = 'solid 1px silver';
+					case 'ButtonText':
+						style['border'] = `solid 1px ${theme.borderColor}`,
+						delete style['width'];
 						break;
 
-					case Switch.name:
+					case 'Switch':
 						style['padding-top'] = '0.1em';
 						style['margin'] = '0 6px';
 						break;
 
-					case TextField.name:
-					case 'StyledComponent':
+					case 'TextField':
 						delete style['height'];
+						break;
 				}
 
-				if (child['type'].name === ButtonCircle.name) {
+				if (child['props'].obj === 'ButtonCircle') {
 					delete style['border'];
 				}
 
@@ -196,14 +199,14 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 		});
 
 		return(
-			<ThemeProvider theme={getTheme()} >
+			<ThemeProvider theme={theme} >
 				<ToolbarView className={this.classes}>
-					<ToolbarContainerView
+					<ToolbarGroupView
 						className="ui-toolbar-group"
 						justify={this.props.justify}
 					>
 						{components}
-					</ToolbarContainerView>
+					</ToolbarGroupView>
 				</ToolbarView>
 			</ThemeProvider>
 		);

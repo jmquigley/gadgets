@@ -15,6 +15,7 @@ exports[`Test creation of a Browser instance 1`] = `
   nohover={false}
   noripple={false}
   notooltips={false}
+  obj="Browser"
   onClip={[Function]}
   onOpen={[Function]}
   selected={false}
@@ -73,6 +74,7 @@ exports[`Test creation of a Browser instance 1`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                obj="Toolbar"
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -117,11 +119,10 @@ exports[`Test creation of a Browser instance 1`] = `
                             key="0"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -129,11 +130,10 @@ exports[`Test creation of a Browser instance 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -151,6 +151,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -208,6 +209,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -249,6 +251,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -285,6 +288,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -387,6 +391,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -432,6 +437,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -495,11 +501,10 @@ exports[`Test creation of a Browser instance 1`] = `
                             key="1"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -507,11 +512,10 @@ exports[`Test creation of a Browser instance 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -529,6 +533,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -586,6 +591,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -627,6 +633,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -663,6 +670,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -765,6 +773,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -810,6 +819,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -873,11 +883,10 @@ exports[`Test creation of a Browser instance 1`] = `
                             key="2"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -885,11 +894,10 @@ exports[`Test creation of a Browser instance 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -907,6 +915,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -964,6 +973,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -1005,6 +1015,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -1041,6 +1052,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -1143,6 +1155,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -1188,6 +1201,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -1280,6 +1294,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Divider"
                                 selected={false}
                                 sizing="normal"
                                 style={Object {}}
@@ -1328,11 +1343,10 @@ exports[`Test creation of a Browser instance 1`] = `
                             key="4"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -1340,11 +1354,10 @@ exports[`Test creation of a Browser instance 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -1362,6 +1375,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -1419,6 +1433,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -1460,6 +1475,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -1496,6 +1512,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -1598,6 +1615,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -1643,6 +1661,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -1724,6 +1743,7 @@ exports[`Test creation of a Browser instance 1`] = `
                     disabled={false}
                     id=""
                     noborder={false}
+                    obj="TextField"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onKeyDown={[Function]}
@@ -1782,6 +1802,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 disabled={false}
                                 id=""
                                 innerRef={[Function]}
+                                obj="TextField"
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onKeyDown={[Function]}
@@ -1821,6 +1842,7 @@ exports[`Test creation of a Browser instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Tooltip"
                             parent="TextField-0"
                             selected={false}
                             sizing="normal"
@@ -1923,6 +1945,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                       noedit={false}
                                       nohover={false}
                                       noripple={false}
+                                      obj="Triangle"
                                       selected={false}
                                       sizing="small"
                                       style={
@@ -1968,6 +1991,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                           noedit={false}
                                           nohover={false}
                                           noripple={false}
+                                          obj="Triangle"
                                           preserveAspectRatio="xMidYMid meet"
                                           selected={false}
                                           sizing="small"
@@ -2042,6 +2066,7 @@ exports[`Test creation of a Browser instance 1`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                obj="Toolbar"
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -2087,12 +2112,11 @@ exports[`Test creation of a Browser instance 1`] = `
                             style={
                               Object {
                                 "backgroundColor": "inherit",
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "color": "inherit",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -2101,12 +2125,11 @@ exports[`Test creation of a Browser instance 1`] = `
                               style={
                                 Object {
                                   "backgroundColor": "inherit",
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "color": "inherit",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -2126,6 +2149,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 nohover={false}
                                 noripple={false}
                                 notriangle={false}
+                                obj="ButtonDialog"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -2182,6 +2206,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Button"
                                         onClick={[Function]}
                                         selected={false}
                                         sizing="normal"
@@ -2260,6 +2285,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                 noedit={false}
                                                 nohover={false}
                                                 noripple={false}
+                                                obj="Icon"
                                                 selected={false}
                                                 sizing="normal"
                                                 style={Object {}}
@@ -2301,6 +2327,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="Icon"
                                                     selected={false}
                                                     sizing="normal"
                                                     style={Object {}}
@@ -2376,6 +2403,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="normal"
                                               style={
@@ -2421,6 +2449,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="normal"
@@ -2498,6 +2527,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="ButtonDialog-0"
                                         selected={false}
                                         sizing="normal"
@@ -2600,6 +2630,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -2645,6 +2676,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -2708,11 +2740,10 @@ exports[`Test creation of a Browser instance 1`] = `
                             key="1"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -2720,11 +2751,10 @@ exports[`Test creation of a Browser instance 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -2742,6 +2772,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -2799,6 +2830,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -2840,6 +2872,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -2876,6 +2909,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -2978,6 +3012,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -3023,6 +3058,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -3115,6 +3151,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Divider"
                                 selected={false}
                                 sizing="normal"
                                 style={Object {}}
@@ -3164,6 +3201,7 @@ exports[`Test creation of a Browser instance 1`] = `
                             style={
                               Object {
                                 "display": "flex",
+                                "height": "24px",
                                 "margin": "0 2px",
                               }
                             }
@@ -3173,6 +3211,7 @@ exports[`Test creation of a Browser instance 1`] = `
                               style={
                                 Object {
                                   "display": "flex",
+                                  "height": "24px",
                                   "margin": "0 2px",
                                 }
                               }
@@ -3193,6 +3232,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                   disabled={false}
                                   id=""
                                   noborder={false}
+                                  obj="TextField"
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onKeyDown={[Function]}
@@ -3252,6 +3292,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                               disabled={false}
                                               id=""
                                               innerRef={[Function]}
+                                              obj="TextField"
                                               onBlur={[Function]}
                                               onChange={[Function]}
                                               onKeyDown={[Function]}
@@ -3300,6 +3341,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="ButtonCircle"
                                                   onClick={[Function]}
                                                   selected={false}
                                                   sizing="small"
@@ -3363,6 +3405,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                               noedit={false}
                                                               nohover={false}
                                                               noripple={false}
+                                                              obj="ButtonCircle"
                                                               onClick={[Function]}
                                                               selected={false}
                                                               sizing="small"
@@ -3394,6 +3437,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                                 noedit={false}
                                                                 nohover={false}
                                                                 noripple={false}
+                                                                obj="ButtonCircle"
                                                                 onClick={[Function]}
                                                                 selected={false}
                                                                 sizing="small"
@@ -3469,6 +3513,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                                         noedit={false}
                                                                         nohover={false}
                                                                         noripple={false}
+                                                                        obj="Icon"
                                                                         selected={false}
                                                                         sizing="small"
                                                                         style={Object {}}
@@ -3510,6 +3555,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                                             noedit={false}
                                                                             nohover={false}
                                                                             noripple={false}
+                                                                            obj="Icon"
                                                                             selected={false}
                                                                             sizing="small"
                                                                             style={Object {}}
@@ -3561,6 +3607,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                           noedit={false}
                                           nohover={false}
                                           noripple={false}
+                                          obj="Tooltip"
                                           parent="TextField-0"
                                           selected={false}
                                           sizing="normal"
@@ -3663,6 +3710,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="Triangle"
                                                     selected={false}
                                                     sizing="small"
                                                     style={
@@ -3708,6 +3756,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                         noedit={false}
                                                         nohover={false}
                                                         noripple={false}
+                                                        obj="Triangle"
                                                         preserveAspectRatio="xMidYMid meet"
                                                         selected={false}
                                                         sizing="small"
@@ -3772,11 +3821,10 @@ exports[`Test creation of a Browser instance 1`] = `
                             key="4"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -3784,11 +3832,10 @@ exports[`Test creation of a Browser instance 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -3806,6 +3853,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -3863,6 +3911,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -3904,6 +3953,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -3940,6 +3990,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -4042,6 +4093,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -4087,6 +4139,7 @@ exports[`Test creation of a Browser instance 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -4184,6 +4237,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
   nohover={false}
   noripple={false}
   notooltips={false}
+  obj="Browser"
   onClip={[Function]}
   onOpen={[Function]}
   selected={false}
@@ -4242,6 +4296,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                obj="Toolbar"
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -4286,11 +4341,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             key="0"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -4298,11 +4352,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -4320,6 +4373,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -4377,6 +4431,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -4418,6 +4473,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -4454,6 +4510,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -4556,6 +4613,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -4601,6 +4659,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -4664,11 +4723,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             key="1"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -4676,11 +4734,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -4698,6 +4755,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -4755,6 +4813,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -4796,6 +4855,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -4832,6 +4892,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -4934,6 +4995,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -4979,6 +5041,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -5042,11 +5105,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             key="2"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -5054,11 +5116,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -5076,6 +5137,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -5133,6 +5195,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -5174,6 +5237,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -5210,6 +5274,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -5312,6 +5377,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -5357,6 +5423,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -5449,6 +5516,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Divider"
                                 selected={false}
                                 sizing="normal"
                                 style={Object {}}
@@ -5497,11 +5565,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             key="4"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -5509,11 +5576,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -5531,6 +5597,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -5588,6 +5655,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -5629,6 +5697,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -5665,6 +5734,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -5767,6 +5837,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -5812,6 +5883,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -5893,6 +5965,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                     disabled={false}
                     id=""
                     noborder={false}
+                    obj="TextField"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onKeyDown={[Function]}
@@ -5951,6 +6024,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 disabled={false}
                                 id=""
                                 innerRef={[Function]}
+                                obj="TextField"
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onKeyDown={[Function]}
@@ -5990,6 +6064,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Tooltip"
                             parent="TextField-0"
                             selected={false}
                             sizing="normal"
@@ -6092,6 +6167,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                       noedit={false}
                                       nohover={false}
                                       noripple={false}
+                                      obj="Triangle"
                                       selected={false}
                                       sizing="small"
                                       style={
@@ -6137,6 +6213,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                           noedit={false}
                                           nohover={false}
                                           noripple={false}
+                                          obj="Triangle"
                                           preserveAspectRatio="xMidYMid meet"
                                           selected={false}
                                           sizing="small"
@@ -6211,6 +6288,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                obj="Toolbar"
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -6256,12 +6334,11 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             style={
                               Object {
                                 "backgroundColor": "inherit",
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "color": "inherit",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -6270,12 +6347,11 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               style={
                                 Object {
                                   "backgroundColor": "inherit",
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "color": "inherit",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -6295,6 +6371,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 nohover={false}
                                 noripple={false}
                                 notriangle={false}
+                                obj="ButtonDialog"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -6351,6 +6428,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Button"
                                         onClick={[Function]}
                                         selected={false}
                                         sizing="normal"
@@ -6429,6 +6507,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                 noedit={false}
                                                 nohover={false}
                                                 noripple={false}
+                                                obj="Icon"
                                                 selected={false}
                                                 sizing="normal"
                                                 style={Object {}}
@@ -6470,6 +6549,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="Icon"
                                                     selected={false}
                                                     sizing="normal"
                                                     style={Object {}}
@@ -6545,6 +6625,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="normal"
                                               style={
@@ -6590,6 +6671,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="normal"
@@ -6667,6 +6749,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="ButtonDialog-0"
                                         selected={false}
                                         sizing="normal"
@@ -6769,6 +6852,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -6814,6 +6898,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -6877,11 +6962,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             key="1"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -6889,11 +6973,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -6911,6 +6994,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -6968,6 +7052,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -7009,6 +7094,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -7045,6 +7131,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -7147,6 +7234,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -7192,6 +7280,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -7284,6 +7373,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Divider"
                                 selected={false}
                                 sizing="normal"
                                 style={Object {}}
@@ -7333,6 +7423,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             style={
                               Object {
                                 "display": "flex",
+                                "height": "24px",
                                 "margin": "0 2px",
                               }
                             }
@@ -7342,6 +7433,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               style={
                                 Object {
                                   "display": "flex",
+                                  "height": "24px",
                                   "margin": "0 2px",
                                 }
                               }
@@ -7362,6 +7454,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                   disabled={false}
                                   id=""
                                   noborder={false}
+                                  obj="TextField"
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onKeyDown={[Function]}
@@ -7421,6 +7514,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                               disabled={false}
                                               id=""
                                               innerRef={[Function]}
+                                              obj="TextField"
                                               onBlur={[Function]}
                                               onChange={[Function]}
                                               onKeyDown={[Function]}
@@ -7469,6 +7563,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="ButtonCircle"
                                                   onClick={[Function]}
                                                   selected={false}
                                                   sizing="small"
@@ -7532,6 +7627,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                               noedit={false}
                                                               nohover={false}
                                                               noripple={false}
+                                                              obj="ButtonCircle"
                                                               onClick={[Function]}
                                                               selected={false}
                                                               sizing="small"
@@ -7563,6 +7659,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                                 noedit={false}
                                                                 nohover={false}
                                                                 noripple={false}
+                                                                obj="ButtonCircle"
                                                                 onClick={[Function]}
                                                                 selected={false}
                                                                 sizing="small"
@@ -7638,6 +7735,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                                         noedit={false}
                                                                         nohover={false}
                                                                         noripple={false}
+                                                                        obj="Icon"
                                                                         selected={false}
                                                                         sizing="small"
                                                                         style={Object {}}
@@ -7679,6 +7777,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                                             noedit={false}
                                                                             nohover={false}
                                                                             noripple={false}
+                                                                            obj="Icon"
                                                                             selected={false}
                                                                             sizing="small"
                                                                             style={Object {}}
@@ -7730,6 +7829,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                           noedit={false}
                                           nohover={false}
                                           noripple={false}
+                                          obj="Tooltip"
                                           parent="TextField-0"
                                           selected={false}
                                           sizing="normal"
@@ -7832,6 +7932,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="Triangle"
                                                     selected={false}
                                                     sizing="small"
                                                     style={
@@ -7877,6 +7978,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                         noedit={false}
                                                         nohover={false}
                                                         noripple={false}
+                                                        obj="Triangle"
                                                         preserveAspectRatio="xMidYMid meet"
                                                         selected={false}
                                                         sizing="small"
@@ -7941,11 +8043,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                             key="4"
                             style={
                               Object {
-                                "border": "solid 1px silver",
+                                "border": "solid 1px #c0c0c0",
                                 "display": "flex",
                                 "height": "24px",
                                 "margin": "0 2px",
-                                "width": "24px",
                               }
                             }
                           >
@@ -7953,11 +8054,10 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                               className="sc-kkGfuU yKCZS"
                               style={
                                 Object {
-                                  "border": "solid 1px silver",
+                                  "border": "solid 1px #c0c0c0",
                                   "display": "flex",
                                   "height": "24px",
                                   "margin": "0 2px",
-                                  "width": "24px",
                                 }
                               }
                             >
@@ -7975,6 +8075,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                obj="Button"
                                 onClick={[Function]}
                                 selected={false}
                                 sizing="normal"
@@ -8032,6 +8133,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="normal"
                                         style={Object {}}
@@ -8073,6 +8175,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="normal"
                                             style={Object {}}
@@ -8109,6 +8212,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Tooltip"
                                         parent="Button-0"
                                         selected={false}
                                         sizing="normal"
@@ -8211,6 +8315,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   selected={false}
                                                   sizing="small"
                                                   style={
@@ -8256,6 +8361,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
                                                       noedit={false}
                                                       nohover={false}
                                                       noripple={false}
+                                                      obj="Triangle"
                                                       preserveAspectRatio="xMidYMid meet"
                                                       selected={false}
                                                       sizing="small"
@@ -8353,6 +8459,7 @@ Object {
   "nohover": false,
   "noripple": false,
   "notooltips": false,
+  "obj": "Browser",
   "onClip": [Function],
   "onOpen": [Function],
   "selected": false,

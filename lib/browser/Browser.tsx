@@ -93,6 +93,7 @@ export function getDefaultBrowserProps(): BrowserProps {
 		getDefaultBaseProps(), {
 			home: 'about:blank',
 			notooltips: false,
+			obj: 'Browser',
 			onClip: nilEvent,
 			onOpen: nilEvent,
 			uri: 'about:blank',

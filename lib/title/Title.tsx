@@ -102,6 +102,7 @@ export function getDefaultTitleProps(): TitleProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			layout: TitleLayout.dominant,
+			obj: 'Title',
 			onClick: nilEvent,
 			widget: null
 		})

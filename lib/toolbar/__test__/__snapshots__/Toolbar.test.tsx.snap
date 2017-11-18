@@ -29,11 +29,10 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
         key="0"
         style={
           Object {
-            "border": "solid 1px silver",
+            "border": "solid 1px #c0c0c0",
             "display": "flex",
             "height": "18px",
             "margin": "0 2px",
-            "width": "18px",
           }
         }
       >
@@ -51,6 +50,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
           noedit={false}
           nohover={false}
           noripple={false}
+          obj="Button"
           onClick={[Function]}
           selected={false}
           sizing="small"
@@ -97,11 +97,10 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
         key="0"
         style={
           Object {
-            "border": "solid 1px silver",
+            "border": "solid 1px #c0c0c0",
             "display": "flex",
             "height": "18px",
             "margin": "0 2px",
-            "width": "18px",
           }
         }
       >
@@ -119,6 +118,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
           noedit={false}
           nohover={false}
           noripple={false}
+          obj="Button"
           onClick={[Function]}
           selected={false}
           sizing="small"
@@ -165,11 +165,10 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
         key="0"
         style={
           Object {
-            "border": "solid 1px silver",
+            "border": "solid 1px #c0c0c0",
             "display": "flex",
             "height": "18px",
             "margin": "0 2px",
-            "width": "18px",
           }
         }
       >
@@ -187,6 +186,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
           noedit={false}
           nohover={false}
           noripple={false}
+          obj="Button"
           onClick={[Function]}
           selected={false}
           sizing="small"
@@ -233,11 +233,10 @@ exports[`Test disabling of a Toolbar instance 1`] = `
         key="0"
         style={
           Object {
-            "border": "solid 1px silver",
+            "border": "solid 1px #c0c0c0",
             "display": "flex",
             "height": "24px",
             "margin": "0 2px",
-            "width": "24px",
           }
         }
       >
@@ -255,6 +254,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
           noedit={false}
           nohover={false}
           noripple={false}
+          obj="Button"
           onClick={[Function]}
           selected={false}
           sizing="normal"
@@ -301,11 +301,10 @@ exports[`Test making the Toolbar invisible 1`] = `
         key="0"
         style={
           Object {
-            "border": "solid 1px silver",
+            "border": "solid 1px #c0c0c0",
             "display": "flex",
             "height": "24px",
             "margin": "0 2px",
-            "width": "24px",
           }
         }
       >
@@ -323,6 +322,7 @@ exports[`Test making the Toolbar invisible 1`] = `
           noedit={false}
           nohover={false}
           noripple={false}
+          obj="Button"
           onClick={[Function]}
           selected={false}
           sizing="normal"
@@ -354,6 +354,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "obj": "Toolbar",
   "selected": false,
   "sizing": "normal",
   "style": Object {},

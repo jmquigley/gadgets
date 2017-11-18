@@ -123,7 +123,10 @@ module.exports = {
 	plugins: [
 		banner,
 		constants,
-		new CircularDependencyPlugin({failOnError: true}),
+		new CircularDependencyPlugin({
+			exclude: /node_modules/,
+			failOnError: true
+		}),
 		new ExtractTextPlugin({filename: "styles.css"}),
 		new webpack.optimize.ModuleConcatenationPlugin(),
 		new CopyWebpackPlugin([{

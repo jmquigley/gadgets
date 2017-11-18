@@ -75,6 +75,7 @@ export function getDefaultIconProps(): IconProps {
 		getDefaultBaseProps(), {
 			iconName: 'bomb',
 			imageFile: '',
+			obj: 'Icon',
 			sizing: Sizing.normal
 		})
 	);

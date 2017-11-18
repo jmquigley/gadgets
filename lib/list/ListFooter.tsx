@@ -19,6 +19,7 @@ export function getDefaultListFooterProps(): TitleProps {
 	return cloneDeep(Object.assign({},
 		getDefaultTitleProps(), {
 			layout: TitleLayout.even,
+			obj: 'ListFooter',
 			title: ''
 		})
 	);

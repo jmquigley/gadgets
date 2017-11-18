@@ -89,6 +89,7 @@ export function getDefaultSwitchProps(): SwitchProps {
 		getDefaultBaseProps(), {
 			initialToggle: false,
 			innyScale: 0.6,
+			obj: 'Switch',
 			onClick: nilEvent,
 			outyScale: 1.25,
 			sliderScale: 1.25,

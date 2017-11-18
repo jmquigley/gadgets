@@ -59,6 +59,7 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 	return cloneDeep(Object.assign({},
 		getDefaultButtonProps(), {
 			iconName: 'bomb',
+			obj: 'ButtonCircle',
 			onClick: nilEvent,
 			sizing: Sizing.normal,
 			style: {

@@ -71,6 +71,7 @@ export function getDefaultTooltipProps(): TooltipProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			location: Location.top,
+			obj: 'Tooltip',
 			parent: null,
 			style: {
 				color: theme.tooltipForegroundColor,

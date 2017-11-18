@@ -106,6 +106,7 @@ export function getDefaultDialogBoxProps(): DialogBoxProps {
 			dialogType: DialogBoxType.info,
 			iconName: 'bomb',
 			message: '',
+			obj: 'DialogBox',
 			onClose: nilEvent,
 			onOpen: nilEvent,
 			onSelection: nilEvent,

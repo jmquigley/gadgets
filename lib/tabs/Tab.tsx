@@ -89,6 +89,7 @@ export function getDefaultTabProps(): TabProps {
 				sizing: Sizing.normal,
 				orientation: Location.top
 			},
+			obj: 'Tab',
 			onClick: nilEvent,
 			onClose: nilEvent,
 			selected: false,

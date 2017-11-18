@@ -46,6 +46,7 @@ export function getDefaultItemProps(): ItemProps {
 			hiddenRightButton: false,
 			layout: TitleLayout.dominant,
 			leftButton: null,
+			obj: 'Item',
 			onBlur: nilEvent,
 			onChange: nilEvent,
 			onClick: nilEvent,

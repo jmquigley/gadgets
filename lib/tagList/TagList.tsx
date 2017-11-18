@@ -90,6 +90,7 @@ export function getDefaultTagListProps(): TagListProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			nosort: false,
+			obj: 'TagList',
 			onBlur: nilEvent,
 			onChange: nilEvent,
 			onDelete: nilEvent,

@@ -74,6 +74,7 @@ export function getDefaultButtonToggleProps(): ButtonToggleProps {
 			initialToggle: false,
 			iconNameOff: 'bomb',
 			iconNameOn: 'bomb',
+			obj: 'ButtonToggle',
 			onClick: nilEvent
 		})
 	);

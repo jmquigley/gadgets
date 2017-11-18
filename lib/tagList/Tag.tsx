@@ -61,6 +61,7 @@ export interface TagProps extends BaseProps {
 export function getDefaultTagProps(): TagProps {
 	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
+			obj: 'Tag',
 			onClick: nilEvent,
 			onDelete: nilEvent,
 			onMouseOut: nilEvent,

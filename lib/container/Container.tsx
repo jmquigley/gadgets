@@ -44,7 +44,8 @@ export interface ContainerProps extends BaseProps {
 export function getDefaultContainerProps(): ContainerProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			children: null
+			children: null,
+			obj: 'Container'
 		})
 	);
 }

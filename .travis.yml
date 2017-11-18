@@ -3,6 +3,9 @@ dist: trusty
 cache: yarn
 sudo: required
 
+env:
+    - NODE_ENV=production
+
 node_js:
     - '7'
     - '8'

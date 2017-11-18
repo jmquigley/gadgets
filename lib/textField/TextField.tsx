@@ -164,6 +164,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		disabled: false,
 		id: '',
 		noborder: false,
+		obj: 'TextField',
 		onBlur: nilEvent,
 		onChange: nilEvent,
 		onKeyDown: nilEvent,

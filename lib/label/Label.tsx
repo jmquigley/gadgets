@@ -81,6 +81,7 @@ export function getDefaultLabelProps(): LabelProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			noedit: false,
+			obj: 'Label',
 			onBlur: nilEvent,
 			onChange: nilEvent,
 			onClick: nilEvent,

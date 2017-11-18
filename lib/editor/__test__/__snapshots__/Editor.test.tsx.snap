@@ -16,6 +16,7 @@ exports[`Test creation of an Editor instance 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  obj="Editor"
   onChange={[Function]}
   onClick={[Function]}
   onClickLink={[Function]}
@@ -75,6 +76,7 @@ exports[`Test creation of an Editor instance 1`] = `
           noedit={false}
           nohover={false}
           noripple={false}
+          obj="Editor"
           onChange={[Function]}
           onClick={[Function]}
           onClickLink={[Function]}
@@ -110,6 +112,7 @@ exports[`Test creation of an Editor instance 1`] = `
             noedit={false}
             nohover={false}
             noripple={false}
+            obj="Editor"
             onChange={[Function]}
             onClick={[Function]}
             onClickLink={[Function]}
@@ -163,11 +166,10 @@ exports[`Test creation of an Editor instance 1`] = `
                         key="0"
                         style={
                           Object {
-                            "border": "solid 1px silver",
+                            "border": "solid 1px #c0c0c0",
                             "display": "flex",
                             "height": "18px",
                             "margin": "0 2px",
-                            "width": "18px",
                           }
                         }
                       >
@@ -175,11 +177,10 @@ exports[`Test creation of an Editor instance 1`] = `
                           className="sc-jDwBTQ hCjDFO"
                           style={
                             Object {
-                              "border": "solid 1px silver",
+                              "border": "solid 1px #c0c0c0",
                               "display": "flex",
                               "height": "18px",
                               "margin": "0 2px",
-                              "width": "18px",
                             }
                           }
                         >
@@ -197,6 +198,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Button"
                             onClick={[Function]}
                             selected={false}
                             sizing="small"
@@ -254,6 +256,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Icon"
                                     selected={false}
                                     sizing="small"
                                     style={Object {}}
@@ -295,6 +298,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="small"
                                         style={Object {}}
@@ -331,6 +335,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Button-0"
                                     selected={false}
                                     sizing="small"
@@ -433,6 +438,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -478,6 +484,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -541,11 +548,10 @@ exports[`Test creation of an Editor instance 1`] = `
                         key="1"
                         style={
                           Object {
-                            "border": "solid 1px silver",
+                            "border": "solid 1px #c0c0c0",
                             "display": "flex",
                             "height": "18px",
                             "margin": "0 2px",
-                            "width": "18px",
                           }
                         }
                       >
@@ -553,11 +559,10 @@ exports[`Test creation of an Editor instance 1`] = `
                           className="sc-jDwBTQ hCjDFO"
                           style={
                             Object {
-                              "border": "solid 1px silver",
+                              "border": "solid 1px #c0c0c0",
                               "display": "flex",
                               "height": "18px",
                               "margin": "0 2px",
-                              "width": "18px",
                             }
                           }
                         >
@@ -575,6 +580,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Button"
                             onClick={[Function]}
                             selected={false}
                             sizing="small"
@@ -632,6 +638,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Icon"
                                     selected={false}
                                     sizing="small"
                                     style={Object {}}
@@ -673,6 +680,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="small"
                                         style={Object {}}
@@ -709,6 +717,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Button-0"
                                     selected={false}
                                     sizing="small"
@@ -811,6 +820,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -856,6 +866,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -919,11 +930,10 @@ exports[`Test creation of an Editor instance 1`] = `
                         key="2"
                         style={
                           Object {
-                            "border": "solid 1px silver",
+                            "border": "solid 1px #c0c0c0",
                             "display": "flex",
                             "height": "18px",
                             "margin": "0 2px",
-                            "width": "18px",
                           }
                         }
                       >
@@ -931,11 +941,10 @@ exports[`Test creation of an Editor instance 1`] = `
                           className="sc-jDwBTQ hCjDFO"
                           style={
                             Object {
-                              "border": "solid 1px silver",
+                              "border": "solid 1px #c0c0c0",
                               "display": "flex",
                               "height": "18px",
                               "margin": "0 2px",
-                              "width": "18px",
                             }
                           }
                         >
@@ -953,6 +962,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Button"
                             onClick={[Function]}
                             selected={false}
                             sizing="small"
@@ -1010,6 +1020,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Icon"
                                     selected={false}
                                     sizing="small"
                                     style={Object {}}
@@ -1051,6 +1062,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="small"
                                         style={Object {}}
@@ -1087,6 +1099,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Button-0"
                                     selected={false}
                                     sizing="small"
@@ -1189,6 +1202,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -1234,6 +1248,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -1297,11 +1312,10 @@ exports[`Test creation of an Editor instance 1`] = `
                         key="3"
                         style={
                           Object {
-                            "border": "solid 1px silver",
+                            "border": "solid 1px #c0c0c0",
                             "display": "flex",
                             "height": "18px",
                             "margin": "0 2px",
-                            "width": "18px",
                           }
                         }
                       >
@@ -1309,11 +1323,10 @@ exports[`Test creation of an Editor instance 1`] = `
                           className="sc-jDwBTQ hCjDFO"
                           style={
                             Object {
-                              "border": "solid 1px silver",
+                              "border": "solid 1px #c0c0c0",
                               "display": "flex",
                               "height": "18px",
                               "margin": "0 2px",
-                              "width": "18px",
                             }
                           }
                         >
@@ -1331,6 +1344,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Button"
                             onClick={[Function]}
                             selected={false}
                             sizing="small"
@@ -1388,6 +1402,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Icon"
                                     selected={false}
                                     sizing="small"
                                     style={Object {}}
@@ -1429,6 +1444,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="small"
                                         style={Object {}}
@@ -1465,6 +1481,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Button-0"
                                     selected={false}
                                     sizing="small"
@@ -1567,6 +1584,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -1612,6 +1630,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -1675,11 +1694,10 @@ exports[`Test creation of an Editor instance 1`] = `
                         key="4"
                         style={
                           Object {
-                            "border": "solid 1px silver",
+                            "border": "solid 1px #c0c0c0",
                             "display": "flex",
                             "height": "18px",
                             "margin": "0 2px",
-                            "width": "18px",
                           }
                         }
                       >
@@ -1687,11 +1705,10 @@ exports[`Test creation of an Editor instance 1`] = `
                           className="sc-jDwBTQ hCjDFO"
                           style={
                             Object {
-                              "border": "solid 1px silver",
+                              "border": "solid 1px #c0c0c0",
                               "display": "flex",
                               "height": "18px",
                               "margin": "0 2px",
-                              "width": "18px",
                             }
                           }
                         >
@@ -1709,6 +1726,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Button"
                             onClick={[Function]}
                             selected={false}
                             sizing="small"
@@ -1766,6 +1784,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Icon"
                                     selected={false}
                                     sizing="small"
                                     style={Object {}}
@@ -1807,6 +1826,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="small"
                                         style={Object {}}
@@ -1843,6 +1863,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Button-0"
                                     selected={false}
                                     sizing="small"
@@ -1945,6 +1966,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -1990,6 +2012,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -2054,12 +2077,11 @@ exports[`Test creation of an Editor instance 1`] = `
                         style={
                           Object {
                             "backgroundColor": "inherit",
-                            "border": "solid 1px silver",
+                            "border": "solid 1px #c0c0c0",
                             "color": "inherit",
                             "display": "flex",
                             "height": "18px",
                             "margin": "0 2px",
-                            "width": "18px",
                           }
                         }
                       >
@@ -2068,12 +2090,11 @@ exports[`Test creation of an Editor instance 1`] = `
                           style={
                             Object {
                               "backgroundColor": "inherit",
-                              "border": "solid 1px silver",
+                              "border": "solid 1px #c0c0c0",
                               "color": "inherit",
                               "display": "flex",
                               "height": "18px",
                               "margin": "0 2px",
-                              "width": "18px",
                             }
                           }
                         >
@@ -2093,6 +2114,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             nohover={false}
                             noripple={false}
                             notriangle={true}
+                            obj="ButtonDialog"
                             onClick={[Function]}
                             selected={false}
                             sizing="small"
@@ -2149,6 +2171,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Button"
                                     onClick={[Function]}
                                     selected={false}
                                     sizing="small"
@@ -2227,6 +2250,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="Icon"
                                             selected={false}
                                             sizing="small"
                                             style={Object {}}
@@ -2268,6 +2292,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                 noedit={false}
                                                 nohover={false}
                                                 noripple={false}
+                                                obj="Icon"
                                                 selected={false}
                                                 sizing="small"
                                                 style={Object {}}
@@ -2326,6 +2351,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            obj="List"
                                             onAdd={[Function]}
                                             selected={false}
                                             sizing="small"
@@ -2387,6 +2413,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="ListItem"
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
                                                     onClick={[Function]}
@@ -2451,6 +2478,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                         noedit={false}
                                                         nohover={false}
                                                         noripple={false}
+                                                        obj="ListItem"
                                                         onBlur={[Function]}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
@@ -2536,6 +2564,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                 noedit={false}
                                                                 nohover={false}
                                                                 noripple={false}
+                                                                obj="ListItem"
                                                                 onBlur={[Function]}
                                                                 onChange={[Function]}
                                                                 onClick={[Function]}
@@ -2624,6 +2653,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         noedit={false}
                                                                         nohover={false}
                                                                         noripple={false}
+                                                                        obj="ListItem"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onClick={[Function]}
@@ -2683,6 +2713,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                           noedit={false}
                                                                           nohover={false}
                                                                           noripple={false}
+                                                                          obj="ListItem"
                                                                           onBlur={[Function]}
                                                                           onChange={[Function]}
                                                                           onClick={[Function]}
@@ -2811,6 +2842,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="ListItem"
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
                                                     onClick={[Function]}
@@ -2875,6 +2907,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                         noedit={false}
                                                         nohover={false}
                                                         noripple={false}
+                                                        obj="ListItem"
                                                         onBlur={[Function]}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
@@ -2960,6 +2993,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                 noedit={false}
                                                                 nohover={false}
                                                                 noripple={false}
+                                                                obj="ListItem"
                                                                 onBlur={[Function]}
                                                                 onChange={[Function]}
                                                                 onClick={[Function]}
@@ -3048,6 +3082,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         noedit={false}
                                                                         nohover={false}
                                                                         noripple={false}
+                                                                        obj="ListItem"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onClick={[Function]}
@@ -3107,6 +3142,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                           noedit={false}
                                                                           nohover={false}
                                                                           noripple={false}
+                                                                          obj="ListItem"
                                                                           onBlur={[Function]}
                                                                           onChange={[Function]}
                                                                           onClick={[Function]}
@@ -3235,6 +3271,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="ListItem"
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
                                                     onClick={[Function]}
@@ -3299,6 +3336,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                         noedit={false}
                                                         nohover={false}
                                                         noripple={false}
+                                                        obj="ListItem"
                                                         onBlur={[Function]}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
@@ -3384,6 +3422,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                 noedit={false}
                                                                 nohover={false}
                                                                 noripple={false}
+                                                                obj="ListItem"
                                                                 onBlur={[Function]}
                                                                 onChange={[Function]}
                                                                 onClick={[Function]}
@@ -3472,6 +3511,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         noedit={false}
                                                                         nohover={false}
                                                                         noripple={false}
+                                                                        obj="ListItem"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onClick={[Function]}
@@ -3531,6 +3571,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                           noedit={false}
                                                                           nohover={false}
                                                                           noripple={false}
+                                                                          obj="ListItem"
                                                                           onBlur={[Function]}
                                                                           onChange={[Function]}
                                                                           onClick={[Function]}
@@ -3659,6 +3700,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="ListItem"
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
                                                     onClick={[Function]}
@@ -3723,6 +3765,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                         noedit={false}
                                                         nohover={false}
                                                         noripple={false}
+                                                        obj="ListItem"
                                                         onBlur={[Function]}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
@@ -3808,6 +3851,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                 noedit={false}
                                                                 nohover={false}
                                                                 noripple={false}
+                                                                obj="ListItem"
                                                                 onBlur={[Function]}
                                                                 onChange={[Function]}
                                                                 onClick={[Function]}
@@ -3896,6 +3940,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         noedit={false}
                                                                         nohover={false}
                                                                         noripple={false}
+                                                                        obj="ListItem"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onClick={[Function]}
@@ -3955,6 +4000,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                           noedit={false}
                                                                           nohover={false}
                                                                           noripple={false}
+                                                                          obj="ListItem"
                                                                           onBlur={[Function]}
                                                                           onChange={[Function]}
                                                                           onClick={[Function]}
@@ -4083,6 +4129,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="ListItem"
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
                                                     onClick={[Function]}
@@ -4147,6 +4194,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                         noedit={false}
                                                         nohover={false}
                                                         noripple={false}
+                                                        obj="ListItem"
                                                         onBlur={[Function]}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
@@ -4232,6 +4280,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                 noedit={false}
                                                                 nohover={false}
                                                                 noripple={false}
+                                                                obj="ListItem"
                                                                 onBlur={[Function]}
                                                                 onChange={[Function]}
                                                                 onClick={[Function]}
@@ -4320,6 +4369,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         noedit={false}
                                                                         nohover={false}
                                                                         noripple={false}
+                                                                        obj="ListItem"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onClick={[Function]}
@@ -4379,6 +4429,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                           noedit={false}
                                                                           nohover={false}
                                                                           noripple={false}
+                                                                          obj="ListItem"
                                                                           onBlur={[Function]}
                                                                           onChange={[Function]}
                                                                           onClick={[Function]}
@@ -4507,6 +4558,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     noedit={false}
                                                     nohover={false}
                                                     noripple={false}
+                                                    obj="ListItem"
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
                                                     onClick={[Function]}
@@ -4571,6 +4623,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                         noedit={false}
                                                         nohover={false}
                                                         noripple={false}
+                                                        obj="ListItem"
                                                         onBlur={[Function]}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
@@ -4656,6 +4709,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                 noedit={false}
                                                                 nohover={false}
                                                                 noripple={false}
+                                                                obj="ListItem"
                                                                 onBlur={[Function]}
                                                                 onChange={[Function]}
                                                                 onClick={[Function]}
@@ -4744,6 +4798,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                         noedit={false}
                                                                         nohover={false}
                                                                         noripple={false}
+                                                                        obj="ListItem"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onClick={[Function]}
@@ -4803,6 +4858,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                                           noedit={false}
                                                                           nohover={false}
                                                                           noripple={false}
+                                                                          obj="ListItem"
                                                                           onBlur={[Function]}
                                                                           onChange={[Function]}
                                                                           onClick={[Function]}
@@ -4928,6 +4984,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="ButtonDialog-0"
                                     selected={false}
                                     sizing="small"
@@ -5030,6 +5087,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -5075,6 +5133,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -5167,6 +5226,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Divider"
                             selected={false}
                             sizing="small"
                             style={Object {}}
@@ -5215,11 +5275,10 @@ exports[`Test creation of an Editor instance 1`] = `
                         key="7"
                         style={
                           Object {
-                            "border": "solid 1px silver",
+                            "border": "solid 1px #c0c0c0",
                             "display": "flex",
                             "height": "18px",
                             "margin": "0 2px",
-                            "width": "18px",
                           }
                         }
                       >
@@ -5227,11 +5286,10 @@ exports[`Test creation of an Editor instance 1`] = `
                           className="sc-jDwBTQ hCjDFO"
                           style={
                             Object {
-                              "border": "solid 1px silver",
+                              "border": "solid 1px #c0c0c0",
                               "display": "flex",
                               "height": "18px",
                               "margin": "0 2px",
-                              "width": "18px",
                             }
                           }
                         >
@@ -5249,6 +5307,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Button"
                             onClick={[Function]}
                             selected={false}
                             sizing="small"
@@ -5306,6 +5365,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Icon"
                                     selected={false}
                                     sizing="small"
                                     style={Object {}}
@@ -5347,6 +5407,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="small"
                                         style={Object {}}
@@ -5383,6 +5444,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Button-0"
                                     selected={false}
                                     sizing="small"
@@ -5485,6 +5547,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -5530,6 +5593,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -5593,11 +5657,10 @@ exports[`Test creation of an Editor instance 1`] = `
                         key="8"
                         style={
                           Object {
-                            "border": "solid 1px silver",
+                            "border": "solid 1px #c0c0c0",
                             "display": "flex",
                             "height": "18px",
                             "margin": "0 2px",
-                            "width": "18px",
                           }
                         }
                       >
@@ -5605,11 +5668,10 @@ exports[`Test creation of an Editor instance 1`] = `
                           className="sc-jDwBTQ hCjDFO"
                           style={
                             Object {
-                              "border": "solid 1px silver",
+                              "border": "solid 1px #c0c0c0",
                               "display": "flex",
                               "height": "18px",
                               "margin": "0 2px",
-                              "width": "18px",
                             }
                           }
                         >
@@ -5627,6 +5689,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Button"
                             onClick={[Function]}
                             selected={false}
                             sizing="small"
@@ -5684,6 +5747,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Icon"
                                     selected={false}
                                     sizing="small"
                                     style={Object {}}
@@ -5725,6 +5789,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="small"
                                         style={Object {}}
@@ -5761,6 +5826,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Button-0"
                                     selected={false}
                                     sizing="small"
@@ -5863,6 +5929,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -5908,6 +5975,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -6000,6 +6068,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Divider"
                             selected={false}
                             sizing="small"
                             style={Object {}}
@@ -6097,6 +6166,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Editor"
                             onChange={[Function]}
                             onClick={[Function]}
                             onClickLink={[Function]}
@@ -6201,6 +6271,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Dropdown-0"
                                     selected={false}
                                     sizing="small"
@@ -6303,6 +6374,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -6348,6 +6420,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -6496,6 +6569,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Editor"
                             onChange={[Function]}
                             onClick={[Function]}
                             onClickLink={[Function]}
@@ -6654,6 +6728,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Dropdown-0"
                                     selected={false}
                                     sizing="small"
@@ -6756,6 +6831,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -6801,6 +6877,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -6893,6 +6970,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Divider"
                             selected={false}
                             sizing="small"
                             style={Object {}}
@@ -6994,6 +7072,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Editor"
                             onChange={[Function]}
                             onClick={[Function]}
                             onClickLink={[Function]}
@@ -7104,6 +7183,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Dropdown-0"
                                     selected={false}
                                     sizing="small"
@@ -7206,6 +7286,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -7251,6 +7332,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -7669,6 +7751,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Editor"
                             onChange={[Function]}
                             onClick={[Function]}
                             onClickLink={[Function]}
@@ -8235,6 +8318,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Dropdown-0"
                                     selected={false}
                                     sizing="small"
@@ -8337,6 +8421,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -8382,6 +8467,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -8445,11 +8531,10 @@ exports[`Test creation of an Editor instance 1`] = `
                         key="15"
                         style={
                           Object {
-                            "border": "solid 1px silver",
+                            "border": "solid 1px #c0c0c0",
                             "display": "flex",
                             "height": "18px",
                             "margin": "0 2px",
-                            "width": "18px",
                           }
                         }
                       >
@@ -8457,11 +8542,10 @@ exports[`Test creation of an Editor instance 1`] = `
                           className="sc-jDwBTQ hCjDFO"
                           style={
                             Object {
-                              "border": "solid 1px silver",
+                              "border": "solid 1px #c0c0c0",
                               "display": "flex",
                               "height": "18px",
                               "margin": "0 2px",
-                              "width": "18px",
                             }
                           }
                         >
@@ -8479,6 +8563,7 @@ exports[`Test creation of an Editor instance 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            obj="Button"
                             onClick={[Function]}
                             selected={false}
                             sizing="small"
@@ -8536,6 +8621,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Icon"
                                     selected={false}
                                     sizing="small"
                                     style={Object {}}
@@ -8577,6 +8663,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        obj="Icon"
                                         selected={false}
                                         sizing="small"
                                         style={Object {}}
@@ -8613,6 +8700,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
+                                    obj="Tooltip"
                                     parent="Button-0"
                                     selected={false}
                                     sizing="small"
@@ -8715,6 +8803,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                               noedit={false}
                                               nohover={false}
                                               noripple={false}
+                                              obj="Triangle"
                                               selected={false}
                                               sizing="xsmall"
                                               style={
@@ -8760,6 +8849,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                   noedit={false}
                                                   nohover={false}
                                                   noripple={false}
+                                                  obj="Triangle"
                                                   preserveAspectRatio="xMidYMid meet"
                                                   selected={false}
                                                   sizing="xsmall"
@@ -8860,6 +8950,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "obj": "Editor",
   "onChange": [Function],
   "onClick": [Function],
   "onClickLink": [Function],
