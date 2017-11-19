@@ -72,8 +72,10 @@ export enum ColorScheme {
 export enum Color {
 	black = '#000000',
 	error = '#d9534f',
+	gray = '#808080',
 	info = '#5bc0de',
 	silver = '#c0c0c0',
+	slategray = '#708090',
 	success = '#5cb85c',
 	warning = '#f0ad4e',
 	white = '#ffffff'

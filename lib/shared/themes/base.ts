@@ -12,8 +12,8 @@ const theme: ThemeProps = {
 	headerHoverColor: ColorScheme.c4,
 	hoverColor: Color.silver,
 	inputBorderColor: Color.silver,
-	tooltipBackgroundColor: 'gray',
-	tooltipForegroundColor: 'white',
+	tooltipBackgroundColor: Color.slategray,
+	tooltipForegroundColor: Color.white,
 	transitionDelay: '0.5s'
 };
 

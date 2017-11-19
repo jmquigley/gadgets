@@ -54,7 +54,7 @@ import {
 	ValidatorFn
 } from './lib/textField';
 import {Title, TitleLayout} from './lib/title';
-import {Toast, ToastLevel, ToastType} from './lib/toast';
+import {Toast, ToastLevel} from './lib/toast';
 import {Toolbar} from './lib/toolbar';
 import {Tooltip} from './lib/tooltip';
 import {Triangle} from './lib/triangle';
@@ -133,7 +133,6 @@ export {
 	TitleLayout,
 	Toast,
 	ToastLevel,
-	ToastType,
 	Toolbar,
 	Tooltip,
 	Triangle,

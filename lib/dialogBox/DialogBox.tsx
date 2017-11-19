@@ -61,10 +61,9 @@
 
 'use strict';
 
-const debug = require('debug')('DialogBox');
-const ReactModal = require('react-modal');
+// const debug = require('debug')('DialogBox');
 
-debug('%O', ReactModal);
+const ReactModal = require('react-modal');
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -74,6 +73,7 @@ import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
+	baseZIndex,
 	Color,
 	getDefaultBaseProps,
 	getTheme,
@@ -143,6 +143,8 @@ export const DialogBoxMessageView: any = styled.div`
 
 export const DialogBoxView: any = styled.div`
 	display: flex;
+	overflow: hidden;
+	z-index: ${baseZIndex + 1};
 `;
 
 export const Spacer: any = styled.div`

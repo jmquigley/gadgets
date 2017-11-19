@@ -11,11 +11,31 @@
  * - Incrementally search for items
  * - List is divided into pages for performance
  *
+ * This is not a typical control.  It is a composite control that manages
+ * its own state.  Typically one would inject all data via props, but this
+ * control does not do that.  It takes an initial list of input to create
+ * the list, but then it manages the data from that point.  This means that
+ * as data is added to the control it notifies add/delete behavior via
+ * callbacks (onNew/onDelete).  This presents a challenge in that it's a
+ * push UI control.  Let's say an item is added to the list and the callback
+ * is invoked.  The receiver of the callback must do something with this
+ * data.  Lets say what the user does with the data fails.  Now the control
+ * and the external data are out of sync.  The control may show the data
+ * but the external process didnt' save it.  That poses a problem; how to
+ * show errors.
+ *
+ * The control handles this item above with two exposed calls: `handleError`
+ * and `handleDelete`.  The `handleError` takes a string error message.  When
+ * called a `Toast` will appear with an error message and it will decay.
+ * the `handleDelete` can be called to remove the item.  This is done via a
+ * *ref* to the control.
+ *
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/dynamicList.png" width="60%" />
  *
  * ## Examples:
  *
+ * #### Simple
  * ```javascript
  * import {DynamicList} from 'gadgets';
  *
@@ -37,6 +57,25 @@
  *     pageSizes={[10, 20, 30]}
  *     title="Dynamic List Test"
  * />
+ * ```
+ *
+ * #### With Error Handling
+ * ```javascript
+ * import {DynamicList} from 'gadgets';
+ *
+ * const dlref: any = null;
+ * <DynamicList
+ *     items={{
+ *         title1: widget1
+ *         title2: widget2
+ *         title1: widget3
+ *     }}
+ *     pageSizes={[10, 20, 30]}
+ *     ref={ref => dlref = ref}
+ *     title="Dynamic List Test"
+ * />
+ *
+ * dlref.handleError('Show this error message');
  * ```
  *
  * ## API
@@ -103,9 +142,10 @@ import {
 	Sizing,
 	SortOrder
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {ThemeProvider} from '../shared/themed-components';
 import {TextField} from '../textField';
 import {TitleLayout} from '../title';
+import {Toast, ToastLevel} from '../toast';
 
 export interface DynamicListItem {
 	[key: string]: any;
@@ -152,18 +192,24 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 }
 
 export interface DynamicListState {
+	errorMessage?: string;
 	initialToggle?: boolean;
 	items?: DynamicListItem;
 	page?: number;
 	pageSize?: number;
 	search?: string;
 	showConfirm?: boolean;
+	showError?: boolean;
 	showNew?: boolean;
 	sortOrder?: SortOrder;
 	totalItems?: number;
 }
 
-export const StyledDeleteButton: any = withProps<DynamicList, HTMLElement>(styled(Button))`
+export const DynamicListContainer: any = styled.div`
+	position: relative;
+`;
+
+export const StyledDeleteButton: any = styled(Button)`
 	color: white;
 	background-color: silver;
 
@@ -200,20 +246,20 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 		this._footerID = this._fillerKeys.at(this._fillerIdx++);
 		this._pagerID = this._fillerKeys.at(this._fillerIdx++);
-
 		this._classes.add(['ui-dynamiclist']);
-
-		this._count = Object.keys(props.items).length;
+		this._count = Object.keys(this.props.items).length;
 
 		this.state = {
+			errorMessage: '',
 			initialToggle: true,
-			items: Object.assign({}, props.items),
+			items: Object.assign({}, this.props.items),
 			page: 1,
-			pageSize: props.pageSizes[0],
+			pageSize: this.props.pageSizes[0],
 			search: '',
 			showConfirm: false,
+			showError: false,
 			showNew: false,
-			sortOrder: props.sortOrder,
+			sortOrder: this.props.sortOrder,
 			totalItems: this._count
 		};
 
@@ -222,6 +268,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			'handleBlur',
 			'handleDelete',
 			'handleDeleteConfirm',
+			'handleError',
+			'handleErrorClose',
 			'handleKeyDown',
 			'handleNewItem',
 			'handleNewPageSize',
@@ -247,7 +295,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			/>
 		);
 
-		this.componentWillUpdate(props, this.state);
+		this.componentWillUpdate(this.props, this.state);
 	}
 
 	get emptyListItem() {
@@ -340,7 +388,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * @param cb {Function} a callback function that is executed when the
 	 * delete state event update completes.
 	 */
-	private handleDelete(title: string, cb: any = nil) {
+	public handleDelete(title: string, cb: any = nil) {
 		if (title in this.state.items) {
 			delete this._listItems[title];
 
@@ -360,6 +408,19 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 		this._qDelete = '';
 		this.setState({showConfirm: false});
+	}
+
+	public handleError(message: string, cb: any = nil) {
+		this.setState({
+			errorMessage: message,
+			showError: true
+		}, cb(message));
+	}
+
+	private handleErrorClose() {
+		this.setState({
+			showError: false
+		});
 	}
 
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
@@ -580,33 +641,42 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	public render() {
 		return (
 			<ThemeProvider theme={getTheme()}>
-				<Accordion className={this.classes}>
-					<AccordionItem
-						initialToggle={this.state.initialToggle}
-						nocollapse={this.props.nocollapse}
-						noedit
-						nohover={this.props.nocollapse}
-						noripple={this.props.nocollapse}
-						onClick={this.handleTitleClick}
-						rightButton={
-							<Button
-								iconName="plus"
-								onClick={this.createNewItem}
-							/>
-						}
-						title={this.buildTitle()}
+				<DynamicListContainer>
+					<Toast
+						level={ToastLevel.error}
+						onClose={this.handleErrorClose}
+						show={this.state.showError}
 					>
-						<List alternating>
-							{this.buildListItems()}
-						</List>
-					</AccordionItem>
-					<DialogBox
-						dialogType={DialogBoxType.warning}
-						message={sprintf(this._baseMessage, this._qDelete)}
-						onSelection={this.handleDeleteConfirm}
-						show={this.state.showConfirm}
-					/>
-				</Accordion>
+						{this.state.errorMessage}
+					</Toast>
+					<Accordion className={this.classes}>
+						<AccordionItem
+							initialToggle={this.state.initialToggle}
+							nocollapse={this.props.nocollapse}
+							noedit
+							nohover={this.props.nocollapse}
+							noripple={this.props.nocollapse}
+							onClick={this.handleTitleClick}
+							rightButton={
+								<Button
+									iconName="plus"
+									onClick={this.createNewItem}
+								/>
+							}
+							title={this.buildTitle()}
+						>
+							<List alternating>
+								{this.buildListItems()}
+							</List>
+						</AccordionItem>
+						<DialogBox
+							dialogType={DialogBoxType.warning}
+							message={sprintf(this._baseMessage, this._qDelete)}
+							onSelection={this.handleDeleteConfirm}
+							show={this.state.showConfirm}
+						/>
+					</Accordion>
+				</DynamicListContainer>
 			</ThemeProvider>
 		);
 	}

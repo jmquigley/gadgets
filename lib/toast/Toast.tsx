@@ -21,24 +21,27 @@
  * ## Examples:
  *
  * ```javascript
- * import {Toast, ToastLevel, ToastType} from 'gadgets';
+ * import {Toast, ToastLevel} from 'gadgets';
  *
  * <Toast
+ *     decay={true}
  *     level={ToastLevel.info}
- *     type={ToastType.persistent}>
+ * >
  *     This is a sample info message
  * </Toast>
  * ```
  *
  * ```javascript
- * import {Toast, ToastLevel, ToastType} from 'gadgets';
+ * import {Toast, ToastLevel} from 'gadgets';
  *
  * <Toast
+ *     decay={false}
  *     level={ToastLevel.custom}
- *     backgroundColor="#7fbf3f"
- *     color="magenta"
- *     borderColor="#3fbfbf"
- *     type={ToastType.persistent}
+ *     style={{
+ *         backgroundColor="#7fbf3f"
+ *         borderColor="#3fbfbf"
+ *         color="magenta"
+ *     }}
  * >
  *     This is a sample custom message
  * </Toast>
@@ -54,29 +57,21 @@
  * - `ui-toast` - second level style placed on the content `<div>`.
  *
  * #### Properties
- * - `backgroundColor: string` - When using a custom type this will be the CSS
- * background color for the message.
- * - `borderColor: string` - When using a custom type this will be the CSS
- * color of the border around the message.
- * - `color: string` - When using a custom type this will be the color of the
- * message text.
- * - `bottom: boolean` - If this is true, then the message will be drawn at the
- * bottom of the container where the message generated, otherwise the message
- * is written to the top of the container.
- * - `duration: number` - The number of seconds the message will appear when
+ * - `bottom {boolean} (false)` - If this is true, then the message will be
+ * drawn at the bottom of the container where the message generated,
+ * otherwise the message is written to the top of the container.
+ * - `decay {boolean} (true)` - There are two types of Toast messages: decay and
+ * persistent.  The decay type, when this property is true, will automatically
+ * disapper after *duration*  seconds.  The persistent type will stay within
+ * the container until the user presses the close button (X).
+ * - `duration {number} (3)` - The number of seconds the message will appear when
  * using a message type of *decay* (see type below). e.g. "5" = five seconds.
- * - `level: ToastLevel` - The logging level of message that will be printed.
- * This works like log4js levels and contains four basic types: info, warning,
- * error, and custom.  Each type has a special color scheme associated with it
- * (info is blue, warning is yellow, error is red).  An enumeration named
- * `ToastLevel` holds the value for each type (ToastLevel.info, ToastLevel.warning,
- * ToastLevel.error, ToastLevel.custom).
- * - `type: ToastType` - There are two types of Toast messages: decay and
- * persistent.  The decay type will automatically disapper after *duration*
- * seconds.  The persistent type will stay within the container until the user
- * presses the close button (X).  The default type is *decay*.  An enumeration
- * named `ToastType` holds the value for each type (ToastType.decay,
- * ToastType.persistent).
+ * - `level {ToastLevel} (ToastLevel.info)` - The logging level of message that
+ * will be printed.  This works like log4js levels and contains four basic
+ * types: info, warning, error, and custom.  Each type has a special color scheme
+ * associated with it (info is blue, warning is yellow, error is red).  An enumeration
+ * named `ToastLevel` holds the value for each type (ToastLevel.info,
+ * ToastLevel.warning, ToastLevel.error, ToastLevel.custom).
  *
  * @module Toast
  */
@@ -90,6 +85,7 @@ import {Button} from '../button';
 import {
 	BaseComponent,
 	BaseProps,
+	baseZIndex,
 	Color,
 	fontStyle,
 	getDefaultBaseProps,
@@ -104,18 +100,13 @@ export enum ToastLevel {
 	custom
 }
 
-export enum ToastType {
-	persistent,
-	decay
-}
-
 export interface ToastProps extends BaseProps {
 	bottom?: boolean;
+	decay?: boolean;
 	duration?: number;
 	level?: ToastLevel;
 	onClick?: any;
 	onClose?: any;
-	type?: ToastType;
 	show?: boolean;
 }
 
@@ -123,13 +114,13 @@ export function getDefaultToastProps(): ToastProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			bottom: false,
+			decay: true,
 			duration: 3,
 			level: ToastLevel.info,
 			obj: 'Toast',
 			onClick: nilEvent,
 			onClose: nilEvent,
-			show: true,
-			type: ToastType.decay
+			show: true
 		}));
 }
 
@@ -169,7 +160,7 @@ export const Warning: any = css`
 export const Hide: any = css`
 	opacity: 0;
 	z-index: -1;
-	animation: fadeOut 1.0s;
+	animation: fadeOut ${props => props.theme.transitionDelay};
 `;
 
 export const StyledButton: any = styled(Button)`
@@ -178,7 +169,7 @@ export const StyledButton: any = styled(Button)`
 `;
 
 export const ToastView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
-	bottom: ${props => props.bottom ? '0' : 'uset'};
+	bottom: ${props => props.bottom ? '0' : 'unset'};
 	color: white;
 	display: flex;
 	left: 50%;
@@ -188,7 +179,7 @@ export const ToastView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
 	top: ${props => props.bottom ? 'unset' : '0'};
 	transform: translateX(-50%);
 	width: 70%;
-	z-index: auto;
+	z-index: ${baseZIndex};
 
 	${props => {
 		switch (props.level) {
@@ -212,10 +203,10 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	constructor(props: ToastProps) {
 		super(props, Toast.defaultProps.style);
 
-		this._classes.add(['ui-toast']);
+		this._classes.add('ui-toast');
 
 		this.state = {
-			visible: props.show
+			visible: this.props.show
 		};
 
 		this.bindCallbacks(
@@ -224,7 +215,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		);
 
 		this.handleDecay();
-		this.componentWillUpdate(props, this.state);
+		this.componentWillUpdate(this.props, this.state);
 	}
 
 	private handleClose() {
@@ -241,7 +232,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	}
 
 	private handleDecay() {
-		if (this.props.type === ToastType.decay && this.state.visible) {
+		if (this.props.decay && this.state.visible) {
 			this._timer = setTimeout(() => {
 				this.handleClose();
 			}, this.props.duration * 1000);

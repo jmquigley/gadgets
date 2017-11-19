@@ -12,8 +12,8 @@ exports[`Test creation of a Toast control 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
-      "tooltipBackgroundColor": "gray",
-      "tooltipForegroundColor": "white",
+      "tooltipBackgroundColor": "#708090",
+      "tooltipForegroundColor": "#ffffff",
       "transitionDelay": "0.5s",
     }
   }
@@ -50,6 +50,7 @@ Object {
   "bottom": false,
   "className": "",
   "contentEditable": false,
+  "decay": true,
   "direction": "right",
   "disabled": false,
   "duration": 3,
@@ -71,7 +72,6 @@ Object {
   "testing": true,
   "theme": null,
   "tooltip": "",
-  "type": 1,
   "visible": true,
   "width": "",
   "xcss": null,

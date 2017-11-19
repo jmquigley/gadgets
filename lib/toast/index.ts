@@ -2,14 +2,12 @@ import {
 	getDefaultToastProps,
 	Toast,
 	ToastLevel,
-	ToastProps,
-	ToastType
+	ToastProps
 } from './Toast';
 
 export {
 	getDefaultToastProps,
 	Toast,
 	ToastLevel,
-	ToastProps,
-	ToastType
+	ToastProps
 };

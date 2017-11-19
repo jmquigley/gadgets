@@ -58,7 +58,6 @@ const {
 	TitleLayout,
 	Toast,
 	ToastLevel,
-	ToastType,
 	Toolbar,
 	Tooltip,
 	Triangle,
@@ -716,25 +715,39 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
-	private buildDynamicList = () => (
-		<Container id="dynamicListExample">
-			<DynamicList
-				items={dynamicItems}
-				layout={TitleLayout.dominant}
-				onDelete={(title: string) => {
-					console.log(`Deleting item from list: ${title}`);
-				}}
-				onNew={(title: string) => {
-					console.log(`Adding new item to list: ${title}`);
-				}}
-				onSelect={(title: string) => {
-					console.log(`Selected item: ${title}`);
-				}}
-				pageSizes={[10, 20, 30]}
-				title="Dynamic List Test"
-			/>
+	private buildDynamicList = () => {
+		let dlref: any = null;
+
+		return (
+			<Container id="dynamicListExample">
+				<DynamicList
+					items={dynamicItems}
+					layout={TitleLayout.dominant}
+					onDelete={(title: string) => {
+						console.log(`Deleting item from list: ${title}`);
+					}}
+					onNew={(title: string) => {
+						console.log(`Adding new item to list: ${title}`);
+					}}
+					onSelect={(title: string) => {
+						console.log(`Selected item: ${title}`);
+					}}
+					pageSizes={[10, 20, 30]}
+					ref={(dl: any) => dlref = dl}
+					title="Dynamic List Test"
+				/>
+				<br />
+				<div className="toastBox">
+					<Button iconName="bomb"
+						onClick={() => {
+							dlref.handleError('Dynamic List Error Message Test');
+						}}
+					/>
+					<p>Click to show error message test</p>
+				</div>
 		</Container>
-	);
+		);
+	}
 
 	private buildEditor = () => (
 		<Container id="editorExample">
@@ -1390,8 +1403,8 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<Toast
+					decay={false}
 					level={ToastLevel.info}
-					type={ToastType.persistent}
 					show={this.state.toastVisible4}
 					onClose={() => this.setState({toastVisible4: false})}>
 					This is a sample info message
@@ -1411,10 +1424,11 @@ class App extends React.Component<AppProps, AppState> {
 
 				<Toast
 					bottom
+					decay={false}
 					level={ToastLevel.error}
-					type={ToastType.persistent}
 					show={this.state.toastVisible5}
-					onClose={() => this.setState({toastVisible5: false})}>
+					onClose={() => this.setState({toastVisible5: false})}
+				>
 					This is a sample error message on the bottom
 				</Toast>
 			</div>
@@ -1431,6 +1445,7 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<Toast
+					decay={false}
 					level={ToastLevel.custom}
 					onClose={() => this.setState({toastVisible6: false})}
 					sizing={Sizing.small}
@@ -1439,7 +1454,6 @@ class App extends React.Component<AppProps, AppState> {
 						borderColor: '#3fbfbf',
 						color: 'magenta'
 					}}
-					type={ToastType.persistent}
 					show={this.state.toastVisible6}
 				>
 					This is a sample custom message

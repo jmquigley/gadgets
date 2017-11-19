@@ -134,6 +134,43 @@ export const TabBarView: any = withProps<TabContainerProps, HTMLDivElement>(styl
 	${props => props.xcss}
 `;
 
+export const TabContainerView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
+	${props => ((props.location === Location.top || props.location === Location.bottom) ?
+		'' : 'display: flex; flex-wrap: nowrap;'
+	)}
+`;
+
+export const TabContentHorizontal: any = css`
+	border: solid 1px ${props => props.theme.borderColor};
+	box-sizing: border-box;
+	min-height: 8em;
+	padding: 0 3px;
+`;
+
+export const TabContentVertical: any = css`
+	border: solid 1px ${props => props.theme.borderColor};
+	box-sizing: border-box;
+	display: inline-flex;
+	min-height: 8em;
+	padding: 0 3px;
+	flex-grow: 1;
+`;
+
+export const TabContentView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
+	${props => props.xcss || ''}
+`;
+
+export const TabNavigationView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
+	align-self: center;
+	display: flex;
+	float: right;
+
+	> .ui-button {
+		display: inline-block;
+		flex: unset;
+	}
+`;
+
 export const TabBar = (props: any) => (
 	<TabBarView
 		className="ui-tab-bar"
@@ -148,26 +185,6 @@ export const TabBar = (props: any) => (
 	</TabBarView>
 );
 
-export const TabContentHorizontal: any = css`
-	border: solid 1px;
-	box-sizing: border-box;
-	min-height: 8em;
-	padding: 0 3px;
-`;
-
-export const TabContentVertical: any = css`
-	border: solid 1px;
-	box-sizing: border-box;
-	display: inline-flex;
-	min-height: 8em;
-	padding: 0 3px;
-	flex-grow: 1;
-`;
-
-export const TabContentView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
-	${props => props.xcss || ''}
-`;
-
 export const TabContent = (props: any) => (
 	<TabContentView
 		className="ui-tab-content"
@@ -181,17 +198,6 @@ export const TabContent = (props: any) => (
 	</TabContentView>
 );
 
-export const TabNavigationView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
-	display: flex;
-	float: right;
-	align-self: center;
-
-	> .ui-button {
-		display: inline-block;
-		flex: unset;
-	}
-`;
-
 export const TabNavigation = (props: any) => (
 	!props.nonavigation && !props.disabled && (
 		<TabNavigationView className="ui-tab-navigation">
@@ -200,12 +206,6 @@ export const TabNavigation = (props: any) => (
 		</TabNavigationView>
 	)
 );
-
-export const TabContainerView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
-	${props => ((props.location === Location.top || props.location === Location.bottom) ?
-		'' : 'display: flex; flex-wrap: nowrap;'
-	)}
-`;
 
 export class TabContainer extends BaseComponent<TabContainerProps, TabContainerState> {
 
@@ -220,7 +220,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		super(props, TabContainer.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
-		this._classes.add(['ui-tab-container']);
+		this._classes.add('ui-tab-container');
 
 		// Initialize all of the tabs given to the container.  This will assign
 		// the id/key and remove any child that is not a Tab.
