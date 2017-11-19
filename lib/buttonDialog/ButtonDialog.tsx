@@ -83,6 +83,9 @@ export interface ButtonDialogState {
 }
 
 export const ButtonDialogContent: any = withProps<ButtonDialogProps, HTMLDivElement>(styled.div)`
+	background-color: ${props => props.theme.backgroundColor};
+	border: solid 1px ${props => props.theme.borderColor};
+	color: ${props => props.theme.color};
 	display: ${props => props.visible ? 'block' : 'none'};
 	min-width: 100px;
 	min-height: 100%;
@@ -207,21 +210,22 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 	public render() {
 		const ils = this.inlineStyles;
+		const theme = getTheme();
 
 		if (ils['color'] !== 'inherit') {
 			this.inlineStyles = {stroke: ils['color']};
 		} else {
-			this.inlineStyles = {stroke: 'black'};
+			this.inlineStyles = {stroke: theme.borderColor};
 		}
 
 		if (ils['backgroundColor'] !== 'inherit') {
 			this.inlineStyles = {fill: ils['backgroundColor']};
 		} else {
-			this.inlineStyles = {fill: 'white'};
+			this.inlineStyles = {fill: theme.backgroundColor};
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<ThemeProvider theme={theme}>
 				<ButtonDialogView
 					className={this.classes}
 					id={this.id}

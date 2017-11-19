@@ -153,6 +153,10 @@ export const ButtonCSS: any = css`
 	font-weight: 600;
 `;
 
+export const DialogListView: any = styled(List)`
+	border: unset;
+`;
+
 export const PagerView: any = styled.div`
 	display: inline-flex;
 	height: 100%;
@@ -160,6 +164,10 @@ export const PagerView: any = styled.div`
 
 	.ui-textfield-container {
 		flex-direction: unset;
+	}
+
+	> .ui-button:first-child {
+		border-left: solid 1px ${props => props.theme.borderColor};
 	}
 `;
 
@@ -170,12 +178,20 @@ export const StyledButtonDialog: any = withProps<PagerProps, HTMLElement>(styled
 	width: 7%;
 `;
 
-export const StyledButtonText: any = styled(ButtonText)`
+export const StyledButtonText: any = withProps<PagerProps, HTMLElement>(styled(ButtonText))`
 	${ButtonCSS}
+	background-color: ${props => props.selected ? props.theme.selectedBackgroundColor : props.theme.backgroundColor};
+	border-top: solid 1px ${props => props.theme.borderColor};
+	border-bottom: solid 1px ${props => props.theme.borderColor};
+	border-right: solid 1px ${props => props.theme.borderColor};
+	color: ${props => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
 `;
 
-export const StyledButton: any = styled(Button)`
+export const StyledButton: any = withProps<PagerProps, HTMLElement>(styled(Button))`
 	${ButtonCSS}
+	border-top: solid 1px ${props => props.theme.borderColor};
+	border-bottom: solid 1px ${props => props.theme.borderColor};
+	border-right: solid 1px ${props => props.theme.borderColor};
 `;
 
 export const StyledTextField: any = styled(TextField)`
@@ -414,12 +430,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
 							className: selected,
-							disabled: this.props.disabled
+							disabled: this.props.disabled,
+							selected: true
 						}));
 				} else {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
-							disabled: this.props.disabled
+							disabled: this.props.disabled,
+							selected: false
 						}));
 				}
 			} else {
@@ -512,7 +530,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		);
 
 		this._dialog = (
-			<List sizing={nextProps.sizing}>
+			<DialogListView sizing={nextProps.sizing}>
 				{sortOptions}
 				<ListItem
 					{...nextProps}
@@ -548,7 +566,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				/>
 				<ListDivider />
 				{items}
-			</List>
+			</DialogListView>
 		);
 	}
 

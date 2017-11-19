@@ -57,8 +57,6 @@ export function getDefaultAccordionProps(): AccordionProps {
 }
 
 export const AccordionView: any = withProps<AccordionProps, HTMLUListElement>(styled.ul)`
-	border: solid 1px;
-	border-color: ${props => props.theme.borderColor || 'black'};
 	cursor: default;
 	list-style: none;
 	min-width: 300px;

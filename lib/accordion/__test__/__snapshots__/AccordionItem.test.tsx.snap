@@ -34,6 +34,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 }
 
 .c1 {
+  background-color: #ffffff;
+  color: #000000;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -42,7 +44,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 }
 
 .c1:hover {
-  background-color: #bedb39 !important;
+  background-color: #c0c0c0 !important;
 }
 
 .c1:hover .ui-item-button {
@@ -51,11 +53,6 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   opacity: 1.0;
-}
-
-.c0 {
-  border-bottom: solid 1px;
-  border-color: #c0c0c0;
 }
 
 .c0 > .ui-item,
@@ -123,6 +120,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "selectedBackgroundColor": "#1f8a70",
+        "selectedForegroundColor": "#ffe11a",
         "tooltipBackgroundColor": "#708090",
         "tooltipForegroundColor": "#ffffff",
         "transitionDelay": "0.5s",
@@ -191,6 +190,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "selectedBackgroundColor": "#1f8a70",
+                "selectedForegroundColor": "#ffe11a",
                 "tooltipBackgroundColor": "#708090",
                 "tooltipForegroundColor": "#ffffff",
                 "transitionDelay": "0.5s",
@@ -206,6 +207,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
               onKeyDown={[Function]}
               onKeyPress={[Function]}
               onMouseOut={[Function]}
+              selected={false}
               style={Object {}}
             >
               <li
@@ -216,6 +218,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                 onKeyDown={[Function]}
                 onKeyPress={[Function]}
                 onMouseOut={[Function]}
+                selected={false}
                 style={Object {}}
               >
                 <Title
@@ -276,6 +279,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                         "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
                         "tooltipBackgroundColor": "#708090",
                         "tooltipForegroundColor": "#ffffff",
                         "transitionDelay": "0.5s",
@@ -423,6 +428,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
                                   "tooltipBackgroundColor": "#708090",
                                   "tooltipForegroundColor": "#ffffff",
                                   "transitionDelay": "0.5s",
@@ -518,6 +525,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 }
 
 .c1 {
+  background-color: #ffffff;
+  color: #000000;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -526,7 +535,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 }
 
 .c1:hover {
-  background-color: #bedb39 !important;
+  background-color: #c0c0c0 !important;
 }
 
 .c1:hover .ui-item-button {
@@ -535,11 +544,6 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   opacity: 1.0;
-}
-
-.c0 {
-  border-bottom: solid 1px;
-  border-color: #c0c0c0;
 }
 
 .c0 > .ui-item,
@@ -607,6 +611,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "selectedBackgroundColor": "#1f8a70",
+        "selectedForegroundColor": "#ffe11a",
         "tooltipBackgroundColor": "#708090",
         "tooltipForegroundColor": "#ffffff",
         "transitionDelay": "0.5s",
@@ -675,6 +681,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "selectedBackgroundColor": "#1f8a70",
+                "selectedForegroundColor": "#ffe11a",
                 "tooltipBackgroundColor": "#708090",
                 "tooltipForegroundColor": "#ffffff",
                 "transitionDelay": "0.5s",
@@ -690,6 +698,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
               onKeyDown={[Function]}
               onKeyPress={[Function]}
               onMouseOut={[Function]}
+              selected={false}
               style={Object {}}
             >
               <li
@@ -700,6 +709,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                 onKeyDown={[Function]}
                 onKeyPress={[Function]}
                 onMouseOut={[Function]}
+                selected={false}
                 style={Object {}}
               >
                 <Title
@@ -760,6 +770,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                         "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
                         "tooltipBackgroundColor": "#708090",
                         "tooltipForegroundColor": "#ffffff",
                         "transitionDelay": "0.5s",
@@ -907,6 +919,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                   "headerHoverColor": "#ffe11a",
                                   "hoverColor": "#c0c0c0",
                                   "inputBorderColor": "#c0c0c0",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
                                   "tooltipBackgroundColor": "#708090",
                                   "tooltipForegroundColor": "#ffffff",
                                   "transitionDelay": "0.5s",
@@ -987,6 +1001,8 @@ exports[`Test making the AccordionItem invisible 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "selectedBackgroundColor": "#1f8a70",
+      "selectedForegroundColor": "#ffe11a",
       "tooltipBackgroundColor": "#708090",
       "tooltipForegroundColor": "#ffffff",
       "transitionDelay": "0.5s",
@@ -1102,6 +1118,8 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "selectedBackgroundColor": "#1f8a70",
+      "selectedForegroundColor": "#ffe11a",
       "tooltipBackgroundColor": "#708090",
       "tooltipForegroundColor": "#ffffff",
       "transitionDelay": "0.5s",
@@ -1171,6 +1189,8 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "selectedBackgroundColor": "#1f8a70",
+      "selectedForegroundColor": "#ffe11a",
       "tooltipBackgroundColor": "#708090",
       "tooltipForegroundColor": "#ffffff",
       "transitionDelay": "0.5s",

@@ -211,56 +211,24 @@ section {
 
  */
 
-.ui-list {
-}
-
 .ui-list-header {
 	background-color: #004358;
 	color: white;
 }
 
-.ui-selected {
-	background-color: #1f8a70 !important;
-}
+/* .ui-dialog-popup { */
+/* 	color: black; */
+/* 	background-color: white; */
+/* 	border: solid 1px #004358; */
+/* } */
 
-.ui-selected .ui-title, .ui-selected .ui-title-widget {
-	color: white !important;
-}
-
-.ui-dialog-popup {
-	color: black;
-	background-color: white;
-	border: solid 1px #004358;
-}
-
-.ui-dialog-popup > .ui-triangle {
-	fill: white !important;
-	/* stroke: #004358 !important; */
-}
-
-.ui-editor {
-}
+/* .ui-dialog-popup > .ui-triangle { */
+/* 	fill: white !important; */
+/* 	/\* stroke: #004358 !important; *\/ */
+/* } */
 
 .ui-select .Select-control {
 	border-color: #004358;
-}
-
-.ui-pager > .ui-button, .ui-pager > .ui-button-text {
-	border-top: solid 1px #004358;
-	border-bottom: solid 1px #004358;
-	border-right: solid 1px #004358;
-}
-
-.ui-pager > .ui-button:first-child {
-	border-left: solid 1px #004358;
-}
-
-.ui-pager-selected {
-	color: #ffe11a;
-	background-color: #004358;
-}
-
-.ui-tab-container {
 }
 
 .ui-tab-content {

@@ -12,6 +12,8 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "selectedBackgroundColor": "#1f8a70",
+      "selectedForegroundColor": "#ffe11a",
       "tooltipBackgroundColor": "#708090",
       "tooltipForegroundColor": "#ffffff",
       "transitionDelay": "0.5s",
@@ -44,8 +46,8 @@ exports[`Test creation of a ButtonDialog control 1`] = `
         Object {
           "backgroundColor": "inherit",
           "color": "inherit",
-          "fill": "white",
-          "stroke": "black",
+          "fill": "#ffffff",
+          "stroke": "#c0c0c0",
         }
       }
       testing={true}
@@ -100,6 +102,8 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       "headerHoverColor": "#ffe11a",
       "hoverColor": "#c0c0c0",
       "inputBorderColor": "#c0c0c0",
+      "selectedBackgroundColor": "#1f8a70",
+      "selectedForegroundColor": "#ffe11a",
       "tooltipBackgroundColor": "#708090",
       "tooltipForegroundColor": "#ffffff",
       "transitionDelay": "0.5s",
@@ -132,8 +136,8 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
         Object {
           "backgroundColor": "inherit",
           "color": "inherit",
-          "fill": "white",
-          "stroke": "black",
+          "fill": "#ffffff",
+          "stroke": "#c0c0c0",
         }
       }
       testing={true}
@@ -222,6 +226,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "selectedBackgroundColor": "#1f8a70",
+        "selectedForegroundColor": "#ffe11a",
         "tooltipBackgroundColor": "#708090",
         "tooltipForegroundColor": "#ffffff",
         "transitionDelay": "0.5s",
@@ -258,8 +264,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
             Object {
               "backgroundColor": "inherit",
               "color": "inherit",
-              "fill": "white",
-              "stroke": "black",
+              "fill": "#ffffff",
+              "stroke": "#c0c0c0",
             }
           }
           testing={true}
@@ -280,6 +286,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "selectedBackgroundColor": "#1f8a70",
+                "selectedForegroundColor": "#ffe11a",
                 "tooltipBackgroundColor": "#708090",
                 "tooltipForegroundColor": "#ffffff",
                 "transitionDelay": "0.5s",
@@ -295,8 +303,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                 Object {
                   "backgroundColor": "inherit",
                   "color": "inherit",
-                  "fill": "white",
-                  "stroke": "black",
+                  "fill": "#ffffff",
+                  "stroke": "#c0c0c0",
                 }
               }
               visible={false}
@@ -310,8 +318,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                   Object {
                     "backgroundColor": "inherit",
                     "color": "inherit",
-                    "fill": "white",
-                    "stroke": "black",
+                    "fill": "#ffffff",
+                    "stroke": "#c0c0c0",
                   }
                 }
               >
@@ -351,6 +359,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                         "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
                         "tooltipBackgroundColor": "#708090",
                         "tooltipForegroundColor": "#ffffff",
                         "transitionDelay": "0.5s",
@@ -415,7 +425,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
               visible={false}
             >
               <div
-                className="sc-bZQynM jTYGHg"
+                className="sc-bZQynM hYjOL"
               >
                 <p>
                   Dialog test
@@ -476,6 +486,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
                       "tooltipBackgroundColor": "#708090",
                       "tooltipForegroundColor": "#ffffff",
                       "transitionDelay": "0.5s",
@@ -648,6 +660,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         "headerHoverColor": "#ffe11a",
         "hoverColor": "#c0c0c0",
         "inputBorderColor": "#c0c0c0",
+        "selectedBackgroundColor": "#1f8a70",
+        "selectedForegroundColor": "#ffe11a",
         "tooltipBackgroundColor": "#708090",
         "tooltipForegroundColor": "#ffffff",
         "transitionDelay": "0.5s",
@@ -684,8 +698,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
             Object {
               "backgroundColor": "inherit",
               "color": "inherit",
-              "fill": "white",
-              "stroke": "black",
+              "fill": "#ffffff",
+              "stroke": "#c0c0c0",
             }
           }
           testing={true}
@@ -706,6 +720,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                 "headerHoverColor": "#ffe11a",
                 "hoverColor": "#c0c0c0",
                 "inputBorderColor": "#c0c0c0",
+                "selectedBackgroundColor": "#1f8a70",
+                "selectedForegroundColor": "#ffe11a",
                 "tooltipBackgroundColor": "#708090",
                 "tooltipForegroundColor": "#ffffff",
                 "transitionDelay": "0.5s",
@@ -721,8 +737,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                 Object {
                   "backgroundColor": "inherit",
                   "color": "inherit",
-                  "fill": "white",
-                  "stroke": "black",
+                  "fill": "#ffffff",
+                  "stroke": "#c0c0c0",
                 }
               }
               visible={true}
@@ -736,8 +752,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                   Object {
                     "backgroundColor": "inherit",
                     "color": "inherit",
-                    "fill": "white",
-                    "stroke": "black",
+                    "fill": "#ffffff",
+                    "stroke": "#c0c0c0",
                   }
                 }
               >
@@ -777,6 +793,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                         "headerHoverColor": "#ffe11a",
                         "hoverColor": "#c0c0c0",
                         "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
                         "tooltipBackgroundColor": "#708090",
                         "tooltipForegroundColor": "#ffffff",
                         "transitionDelay": "0.5s",
@@ -841,7 +859,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
               visible={false}
             >
               <div
-                className="sc-bZQynM jTYGHg"
+                className="sc-bZQynM hYjOL"
               >
                 <p>
                   Dialog test
@@ -902,6 +920,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                       "headerHoverColor": "#ffe11a",
                       "hoverColor": "#c0c0c0",
                       "inputBorderColor": "#c0c0c0",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
                       "tooltipBackgroundColor": "#708090",
                       "tooltipForegroundColor": "#ffffff",
                       "transitionDelay": "0.5s",

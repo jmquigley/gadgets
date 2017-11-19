@@ -139,8 +139,10 @@ export const TabBorderRight: any = css`
 `;
 
 export const TabView: any = withProps<TabProps, HTMLDivElement>(styled.div)`
-	display: inline-block;
+	background-color: ${props => props.selected ? props.theme.selectedBackgroundColor : props.theme.backgroundColor};
+	color: ${props => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
 	cursor: default;
+	display: inline-block;
 	flex-grow: unset;
 
 	${props => props.xcss ? props.xcss : ''}
@@ -246,6 +248,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 				<TabView
 					disabled={this.props.disabled}
 					className={this.classes}
+					selected={this.props.selected}
 					style={this.inlineStyles}
 					visible={this.props.visible}
 					xcss={xcss}

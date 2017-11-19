@@ -72,11 +72,13 @@ export const HiddenButton: any = css`
 `;
 
 export const ItemView: any = withProps<ItemProps, HTMLLIElement>(styled.li)`
+	background-color: ${props => props.selected ? props.theme.selectedBackgroundColor + ' !important' : props.theme.backgroundColor};
+	color: ${props => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
 	cursor: default;
 	display: flex;
 
 	${props => (!props.nohover) &&
-		'&:hover {background-color: #bedb39 !important;}'
+		'&:hover {background-color: ' + props.theme.hoverColor + ' !important;}'
 	}
 
 	&:hover .ui-item-button {
@@ -206,6 +208,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 					onKeyDown={this.props.onKeyDown}
 					onKeyPress={this.props.onKeyPress}
 					onMouseOut={this.props.onMouseOut}
+					selected={this.props.selected}
 					style={this.inlineStyles}
 				>
 					{this._leftButton}
