@@ -20,7 +20,9 @@ exports[`Test creation of a DynamicList control 1`] = `
     }
   }
 >
-  <styled.div>
+  <styled.div
+    className="ui-dynamiclist-container"
+  >
     <Toast
       bottom={false}
       className=""
@@ -1546,7 +1548,9 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
     }
   }
 >
-  <styled.div>
+  <styled.div
+    className="ui-dynamiclist-container"
+  >
     <Toast
       bottom={false}
       className=""
@@ -2352,7 +2356,9 @@ exports[`Test disabling of a Dynamic List control 1`] = `
     }
   }
 >
-  <styled.div>
+  <styled.div
+    className="ui-dynamiclist-container"
+  >
     <Toast
       bottom={false}
       className=""
@@ -3158,7 +3164,9 @@ exports[`Test making a Dynamic List invisible 1`] = `
     }
   }
 >
-  <styled.div>
+  <styled.div
+    className="ui-dynamiclist-container"
+  >
     <Toast
       bottom={false}
       className=""

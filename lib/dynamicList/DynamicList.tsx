@@ -96,8 +96,10 @@
  * callback
  *
  * #### Styles
- * - `ui-dynamiclist` - applied to the top level `div` accordion
- * control that holds the list.
+ * - `ui-dynamiclist` - applied to the `div` accordion control that holds the
+ * list.
+ * - `ui-dynamiclist-container` - applied to the top level container `div` that
+ * surrounds the list and the *toast* for error message handling.
  *
  * #### Properties
  * - `items: DynamicListItem ({}}` - An object that holds unique title and
@@ -206,6 +208,7 @@ export interface DynamicListState {
 }
 
 export const DynamicListContainer: any = styled.div`
+	min-width: 200px;
 	position: relative;
 `;
 
@@ -641,7 +644,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	public render() {
 		return (
 			<ThemeProvider theme={getTheme()}>
-				<DynamicListContainer>
+				<DynamicListContainer className="ui-dynamiclist-container">
 					<Toast
 						level={ToastLevel.error}
 						onClose={this.handleErrorClose}

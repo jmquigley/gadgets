@@ -59,7 +59,6 @@ export function getDefaultAccordionProps(): AccordionProps {
 export const AccordionView: any = withProps<AccordionProps, HTMLUListElement>(styled.ul)`
 	cursor: default;
 	list-style: none;
-	min-width: 300px;
 
 	&:last-child {
 		border-bottom: 0;
