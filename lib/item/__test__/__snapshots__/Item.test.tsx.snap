@@ -6,6 +6,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "errorMessage": "",
   "focus": false,
   "height": "",
   "hiddenLeftButton": false,
@@ -81,6 +82,7 @@ exports[`Test the creation of a Item control 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      errorMessage=""
       focus={false}
       height=""
       hiddenLeftButton={false}

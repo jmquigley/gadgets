@@ -6,6 +6,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "errorMessage": "",
   "focus": false,
   "height": "",
   "hiddenLeftButton": false,
@@ -72,6 +73,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    errorMessage=""
     focus={false}
     height=""
     hiddenLeftButton={false}

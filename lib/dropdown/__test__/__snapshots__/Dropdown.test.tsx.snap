@@ -68,6 +68,7 @@ exports[`Disable the Dropdown control 1`] = `
   defaultVal="idstr2"
   direction="right"
   disabled={true}
+  errorMessage=""
   focus={false}
   height=""
   id=""
@@ -251,6 +252,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "errorMessage": "",
   "focus": false,
   "height": "",
   "id": "",
@@ -281,6 +283,7 @@ exports[`Test the Dropdown click event 1`] = `
   defaultVal="idstr1"
   direction="right"
   disabled={false}
+  errorMessage=""
   focus={false}
   height=""
   id=""

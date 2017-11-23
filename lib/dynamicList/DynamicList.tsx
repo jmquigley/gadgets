@@ -11,25 +11,6 @@
  * - Incrementally search for items
  * - List is divided into pages for performance
  *
- * This is not a typical control.  It is a composite control that manages
- * its own state.  Typically one would inject all data via props, but this
- * control does not do that.  It takes an initial list of input to create
- * the list, but then it manages the data from that point.  This means that
- * as data is added to the control it notifies add/delete behavior via
- * callbacks (onNew/onDelete).  This presents a challenge in that it's a
- * push UI control.  Let's say an item is added to the list and the callback
- * is invoked.  The receiver of the callback must do something with this
- * data.  Lets say what the user does with the data fails.  Now the control
- * and the external data are out of sync.  The control may show the data
- * but the external process didnt' save it.  That poses a problem; how to
- * show errors.
- *
- * The control handles this item above with two exposed calls: `handleError`
- * and `handleDelete`.  The `handleError` takes a string error message.  When
- * called a `Toast` will appear with an error message and it will decay.
- * the `handleDelete` can be called to remove the item.  This is done via a
- * *ref* to the control.
- *
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/dynamicList.png" width="60%" />
  *
@@ -40,6 +21,7 @@
  * import {DynamicList} from 'gadgets';
  *
  * <DynamicList
+ *     errorMessage="Error message"
  *     items={{
  *         title1: widget1
  *         title2: widget2
@@ -48,6 +30,9 @@
  *     onDelete={(title: string) => {
  *         console.log(`Deleting item from list: ${title}`);
  *     }}
+ *     onError({message: string} => {
+ *         console.log(message);
+ *     })
  *     onNew={(title: string) => {
  *         console.log(`Adding new item to list: ${title}`);
  *     }}
@@ -84,6 +69,8 @@
  * - `onClick` - Invoked when a list item is clicked.
  * - `onDelete(title: string)` - This event is executed when an item is removed
  * from the list.
+ * - `onError(message: string)` - when an error message is written to the
+ * component this callback is invoked.
  * - `onFocus` - Invoked when a list item is clicked.
  * - `onNew(title: string)` - This event is executed when an item is added to
  * the list.  The title of the new item is a parameter to the callback
@@ -102,6 +89,9 @@
  * surrounds the list and the *toast* for error message handling.
  *
  * #### Properties
+ * - `errorMessage: {string} ('')` - A message the will be temporarily displayed
+ * within the control.  When this message is first set it will be shown and
+ * then decay.  It will then invoke the onError callback.
  * - `items: DynamicListItem ({}}` - An object that holds unique title and
  * widgets in the format `{[title]: widget}`.  Each item in the Object
  * represents a list item.  This is used to seed the control at creation.
@@ -161,6 +151,7 @@ export interface DynamicListProps extends BaseProps {
 	onBlur?: any;
 	onClick?: any;
 	onDelete?: any;
+	onError?: any;
 	onFocus?: any;
 	onNew?: any;
 	onSelect?: any;
@@ -182,6 +173,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			onBlur: nilEvent,
 			onClick: nilEvent,
 			onDelete: nilEvent,
+			onError: nilEvent,
 			onFocus: nilEvent,
 			onNew: nilEvent,
 			onSelect: nilEvent,
@@ -418,7 +410,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * @param cb {Function} a callback function that is executed when the
 	 * delete state event update completes.
 	 */
-	public handleDelete(title: string, cb: any = nil) {
+	private handleDelete(title: string, cb: any = nil) {
 		if (this.state.items.has(title)) {
 			delete this._listItems[title];
 			debug('removing item: %s', title);
@@ -441,11 +433,13 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.setState({showConfirm: false});
 	}
 
-	public handleError(message: string, cb: any = nil) {
+	private handleError(message: string) {
 		this.setState({
 			errorMessage: message,
 			showError: true
-		}, cb(message));
+		}, () => {
+			this.props.onError(message);
+		});
 	}
 
 	private handleErrorClose() {
@@ -596,6 +590,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			this.setState({
 				items: items
 			});
+		}
+
+		if (nextProps.errorMessage !== '') {
+			this.handleError(nextProps.errorMessage);
 		}
 	}
 

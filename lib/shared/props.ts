@@ -125,6 +125,7 @@ export interface BaseProps {
 	contentEditable?: boolean;
 	direction?: Direction;
 	disabled?: boolean;
+	errorMessage?: string;
 	focus?: boolean;
 	height?: string;
 	id?: string;
@@ -149,6 +150,7 @@ const defaultBaseProps: BaseProps = {
 	contentEditable: false,
 	direction: Direction.right,
 	disabled: false,
+	errorMessage: '',
 	focus: false,
 	height: '',
 	id: '',

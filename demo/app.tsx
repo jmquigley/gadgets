@@ -132,6 +132,7 @@ interface AppState {
 	dialogSuccess: boolean;
 	dialogInfo: boolean;
 	dialogCustom: boolean;
+	dynamicListError: string;
 	items: any;
 	toastVisible1: boolean;
 	toastVisible2: boolean;
@@ -158,6 +159,7 @@ class App extends React.Component<AppProps, AppState> {
 			dialogSuccess: false,
 			dialogInfo: false,
 			dialogCustom: false,
+			dynamicListError: '',
 			items: dynamicItems,
 			toastVisible1: true,
 			toastVisible2: true,
@@ -717,12 +719,10 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
-	private buildDynamicList = () => {
-		let dlref: any = null;
-
-		return (
+	private buildDynamicList = () => (
 			<Container id="dynamicListExample">
 				<DynamicList
+					errorMessage={this.state.dynamicListError}
 					items={this.state.items}
 					layout={TitleLayout.dominant}
 					onDelete={(title: string) => {
@@ -732,20 +732,25 @@ class App extends React.Component<AppProps, AppState> {
 							items: items
 						});
 					}}
+					onError={() => {
+						this.setState({dynamicListError: ''});
+					}}
 					onNew={(title: string) => {
 						this.setState({
 							items: {...this.state.items, [title]: 'w0'}
 						});
 					}}
 					pageSizes={[10, 20, 30]}
-					ref={(dl: any) => dlref = dl}
 					title="Dynamic List Test"
 				/>
 				<br />
+
 				<div className="toastBox">
 					<Button iconName="bomb"
 						onClick={() => {
-							dlref.handleError('Dynamic List Error Message Test');
+							this.setState({
+								dynamicListError: 'Dynamic List Error Message Test'
+							})
 						}}
 					/>
 					<p>Click to show error message test</p>
@@ -769,8 +774,7 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 		</Container>
-		);
-	}
+	);
 
 	private buildEditor = () => (
 		<Container id="editorExample">

@@ -6,6 +6,7 @@ exports[`Test a double click edit of the Label control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  errorMessage=""
   focus={true}
   height=""
   id=""
@@ -132,6 +133,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  errorMessage=""
   focus={true}
   height=""
   id=""
@@ -218,6 +220,7 @@ exports[`Test making the Label control invisible 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  errorMessage=""
   focus={false}
   height=""
   id=""
@@ -304,6 +307,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "errorMessage": "",
   "focus": false,
   "height": "",
   "id": "",
@@ -339,6 +343,7 @@ exports[`Test the disabling of the Label control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={true}
+  errorMessage=""
   focus={false}
   height=""
   id=""

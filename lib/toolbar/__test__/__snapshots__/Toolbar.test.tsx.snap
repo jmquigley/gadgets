@@ -43,6 +43,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
           contentEditable={false}
           direction="right"
           disabled={false}
+          errorMessage=""
           focus={false}
           height=""
           iconName="car"
@@ -113,6 +114,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
           contentEditable={false}
           direction="right"
           disabled={false}
+          errorMessage=""
           focus={false}
           height=""
           iconName="car"
@@ -183,6 +185,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
           contentEditable={false}
           direction="right"
           disabled={false}
+          errorMessage=""
           focus={false}
           height=""
           iconName="car"
@@ -253,6 +256,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
           contentEditable={false}
           direction="right"
           disabled={true}
+          errorMessage=""
           focus={false}
           height=""
           iconName="car"
@@ -323,6 +327,7 @@ exports[`Test making the Toolbar invisible 1`] = `
           contentEditable={false}
           direction="right"
           disabled={false}
+          errorMessage=""
           focus={false}
           height=""
           iconName="car"
@@ -356,6 +361,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "errorMessage": "",
   "focus": false,
   "height": "",
   "id": "",

@@ -25,6 +25,7 @@ exports[`Test creation of an Icon control with icon 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    errorMessage=""
     focus={false}
     height=""
     iconName="star"
@@ -78,6 +79,7 @@ exports[`Test creation of an Icon control with image 1`] = `
     contentEditable={false}
     direction="right"
     disabled={false}
+    errorMessage=""
     focus={false}
     height=""
     iconName="bomb"
@@ -115,6 +117,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  errorMessage=""
   focus={false}
   height=""
   iconName="bomb"
@@ -159,6 +162,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      errorMessage=""
       focus={false}
       height=""
       iconName="bomb"
@@ -201,6 +205,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "errorMessage": "",
   "focus": false,
   "height": "",
   "iconName": "bomb",
@@ -241,6 +246,7 @@ exports[`Test the disabling of the Icon control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={true}
+  errorMessage=""
   focus={false}
   height=""
   iconName="bomb"
@@ -285,6 +291,7 @@ exports[`Test the disabling of the Icon control 1`] = `
       contentEditable={false}
       direction="right"
       disabled={true}
+      errorMessage=""
       focus={false}
       height=""
       iconName="bomb"

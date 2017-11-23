@@ -52,7 +52,7 @@ export function getDefaultContainerProps(): ContainerProps {
 
 export const ContainerView: any = withProps<ContainerProps, HTMLDivElement>(styled.div)`
 	padding: 0;
-	margin: 2px 1px 2px 1px;
+	margin: 2px 0;
 `;
 
 export class Container extends BaseComponent<ContainerProps, undefined> {

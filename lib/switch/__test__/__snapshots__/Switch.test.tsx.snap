@@ -29,6 +29,7 @@ exports[`Test creation of an inny type Switch 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      errorMessage=""
       focus={false}
       height=""
       id=""
@@ -102,6 +103,7 @@ exports[`Test creation of an outy type Switch 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      errorMessage=""
       focus={false}
       height=""
       id=""
@@ -152,6 +154,7 @@ exports[`Test disabling of the Switch control 1`] = `
   contentEditable={false}
   direction="right"
   disabled={true}
+  errorMessage=""
   focus={false}
   height=""
   id=""
@@ -208,6 +211,7 @@ exports[`Test disabling of the Switch control 1`] = `
           contentEditable={false}
           direction="right"
           disabled={true}
+          errorMessage=""
           focus={false}
           height=""
           id=""
@@ -289,6 +293,7 @@ exports[`Test making the Switch control invisible 1`] = `
   contentEditable={false}
   direction="right"
   disabled={false}
+  errorMessage=""
   focus={false}
   height=""
   id=""
@@ -345,6 +350,7 @@ exports[`Test making the Switch control invisible 1`] = `
           contentEditable={false}
           direction="right"
           disabled={false}
+          errorMessage=""
           focus={false}
           height=""
           id=""
@@ -426,6 +432,7 @@ Object {
   "contentEditable": false,
   "direction": "right",
   "disabled": false,
+  "errorMessage": "",
   "focus": false,
   "height": "",
   "id": "",
@@ -481,6 +488,7 @@ exports[`Test the click handler on the Switch control 1`] = `
       contentEditable={false}
       direction="right"
       disabled={false}
+      errorMessage=""
       focus={false}
       height=""
       id=""
