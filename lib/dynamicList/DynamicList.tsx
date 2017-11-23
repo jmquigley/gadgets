@@ -124,7 +124,8 @@
 
 const debug = require('debug')('DynamicList');
 
-import {cloneDeep, omit} from 'lodash';
+import {Map} from 'immutable';
+import * as _ from 'lodash';
 import * as React from 'react';
 import {sprintf} from 'sprintf-js';
 import {sp} from 'util.constants';
@@ -171,7 +172,7 @@ export interface DynamicListProps extends BaseProps {
 }
 
 export function getDefaultDynamicListProps(): DynamicListProps {
-	return cloneDeep(Object.assign(
+	return _.cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			collapsable: false,
 			items: {},
@@ -196,7 +197,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 export interface DynamicListState {
 	errorMessage?: string;
 	initialToggle?: boolean;
-	items?: DynamicListItem;
+	items?: Map<string, any>;
 	page?: number;
 	pageSize?: number;
 	search?: string;
@@ -255,7 +256,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.state = {
 			errorMessage: '',
 			initialToggle: true,
-			items: Object.assign({}, this.props.items),
+			items: Map(Object.assign({}, this.props.items)),
 			page: 1,
 			pageSize: this.props.pageSizes[0],
 			search: '',
@@ -267,6 +268,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		};
 
 		this.bindCallbacks(
+			'createListItem',
 			'createNewItem',
 			'handleBlur',
 			'handleDelete',
@@ -282,7 +284,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			'handleSort',
 			'handleTitleClick',
 			'handleUpdate',
-			'hideEdit'
+			'hideEdit',
+			'listItemDeletor'
 		);
 
 		this._emptyListItem = (
@@ -367,6 +370,30 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		return Math.ceil(idx / this.state.pageSize);
 	}
 
+	private createListItem(title: string, widget: any) {
+		return (
+			<ListItem
+				id={title}
+				key={title}
+				hiddenRightButton
+				layout={this.props.layout}
+				onClick={this.props.onClick}
+				onBlur={this.handleBlur}
+				onFocus={this.props.onFocus}
+				onSelect={this.handleSelect}
+				onUpdate={this.handleUpdate}
+				rightButton={
+					<StyledDeleteButton
+						iconName="times"
+						onClick={this.listItemDeletor(title)}
+					/>
+				}
+				title={title}
+				widget={widget}
+			/>
+		);
+	}
+
 	/**
 	 * Sets the control into a new item mode.  This will show the input control
 	 * and wait for user input.
@@ -392,11 +419,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * delete state event update completes.
 	 */
 	public handleDelete(title: string, cb: any = nil) {
-		if (title in this.state.items) {
+		if (this.state.items.has(title)) {
 			delete this._listItems[title];
+			debug('removing item: %s', title);
 
 			this.setState({
-				items: omit(this.state.items, title),
+				items: this.state.items.delete(title),
 				totalItems: this.state.totalItems - 1
 			}, () => {
 				this.props.onDelete(title);
@@ -445,7 +473,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		if (title) {
 			debug('creating new item: %s', title);
 			this.setState({
-				items: Object.assign(this.state.items, {[title]: widget}),
+				items: this.state.items.set(title, widget),
 				showNew: false,
 				totalItems: this.state.totalItems + 1
 			}, () => {
@@ -507,6 +535,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private handleSelect(title: string) {
 		if (this._selection !== title) {
 			this._selection = title;
+			debug('selected item: %s', title);
 			this.props.onSelect(title);
 		} else {
 			this._selection = '';
@@ -529,7 +558,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	private handleUpdate(previous: string, title: string) {
 		if (title !== previous) {
-			this.handleNewItem(title, this.state.items[previous], () => {
+			this.handleNewItem(title, this.state.items.get(previous), () => {
 				this.handleDelete(previous, () => {
 					this.props.onUpdate(previous, title);
 				});
@@ -543,45 +572,37 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		});
 	}
 
+	private listItemDeletor(title: string) {
+		return () => {
+			this._qDelete = title;
+			this.setState({showConfirm: true});
+		};
+	}
+
 	public componentWillReceiveProps(nextProps: DynamicListProps) {
 		if (nextProps.sortOrder !== this.state.sortOrder) {
 			this.setState({
 				sortOrder: nextProps.sortOrder
 			});
 		}
+
+		let items = this.state.items;
+
+		for (const [key, value] of Object.entries(nextProps.items)) {
+			items = items.set(key, value);
+		}
+
+		if (items !== this.state.items) {
+			this.setState({
+				items: items
+			});
+		}
 	}
 
 	public componentWillUpdate(nextProps: DynamicListProps, nextState: DynamicListState) {
-		for (const title in nextState.items) {
-			if (!(title in this._listItems)) {
-				const deletor = () => {
-					this._qDelete = title;
-					this.setState({showConfirm: true});
-				};
-
-				this._listItems[title] = (
-					<ListItem
-						id={title}
-						key={title}
-						hiddenRightButton
-						layout={this.props.layout}
-						onClick={this.props.onClick}
-						onBlur={this.handleBlur}
-						onFocus={this.props.onFocus}
-						onSelect={this.handleSelect}
-						onUpdate={this.handleUpdate}
-						rightButton={
-							<StyledDeleteButton
-								iconName="times"
-								onClick={deletor}
-							/>
-						}
-						title={title}
-						widget={nextState.items[title]}
-					/>
-				);
-			}
-		}
+		nextState.items.map((widget: any, title: string) => {
+			this._listItems[title] = this.createListItem(title, widget);
+		});
 
 		// Compute which items should be in the current list
 		const start: number = ((nextState.page - 1) * nextState.pageSize);

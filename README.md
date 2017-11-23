@@ -229,5 +229,7 @@ TODO: create a Treeview control
 ### [Triangle](docs/lib/triangle/Triangle.md)
 Uses SVG to draw a triangle within the container.
 
+
 ## Styles
-All of the color and font size CSS values are controlled through global selectors.  The CSS modules within the code are only used to control layout.  By default these are not set with colors to allow for customization.  The demo application contains [styles.css](https://github.com/jmquigley/gadgets/blob/master/demo/styles.css) that show each of the global styles and how they are used.  They are also documented within each of components above.
+
+The library contains an external style sheet that must be included.  It is located in `node_modules/gadgets/dist/styles.css`.  This library also uses [highlight.js](https://highlightjs.org/).  If the `Editor` control is used, then the highlight CSS files need to be included as well.  They are located in `node_modules/gadgets/dist/highlights/*.css`.  These should be copied to the root of the site/app (with something like the [Copy Webpack Plugin](https://github.com/webpack-contrib/copy-webpack-plugin)).

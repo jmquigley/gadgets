@@ -132,6 +132,7 @@ interface AppState {
 	dialogSuccess: boolean;
 	dialogInfo: boolean;
 	dialogCustom: boolean;
+	items: any;
 	toastVisible1: boolean;
 	toastVisible2: boolean;
 	toastVisible3: boolean;
@@ -157,6 +158,7 @@ class App extends React.Component<AppProps, AppState> {
 			dialogSuccess: false,
 			dialogInfo: false,
 			dialogCustom: false,
+			items: dynamicItems,
 			toastVisible1: true,
 			toastVisible2: true,
 			toastVisible3: true,
@@ -721,16 +723,19 @@ class App extends React.Component<AppProps, AppState> {
 		return (
 			<Container id="dynamicListExample">
 				<DynamicList
-					items={dynamicItems}
+					items={this.state.items}
 					layout={TitleLayout.dominant}
 					onDelete={(title: string) => {
-						console.log(`Deleting item from list: ${title}`);
+						const items = {...this.state.items};
+						delete items[title];
+						this.setState({
+							items: items
+						});
 					}}
 					onNew={(title: string) => {
-						console.log(`Adding new item to list: ${title}`);
-					}}
-					onSelect={(title: string) => {
-						console.log(`Selected item: ${title}`);
+						this.setState({
+							items: {...this.state.items, [title]: 'w0'}
+						});
 					}}
 					pageSizes={[10, 20, 30]}
 					ref={(dl: any) => dlref = dl}
@@ -745,6 +750,24 @@ class App extends React.Component<AppProps, AppState> {
 					/>
 					<p>Click to show error message test</p>
 				</div>
+
+				<div className="toastBox">
+					<Button iconName="bomb"
+						onClick={() => {
+							let dynamicItems = {}
+
+							for (const [title, widget] of Object.entries(this.state.items)) {
+								dynamicItems[title] = widget.replace('w', 'a');
+							}
+
+							this.setState({
+								items: dynamicItems
+							});
+						}}
+					/>
+					<p>Click to change list of widget items (change w to a)</p>
+				</div>
+
 		</Container>
 		);
 	}
