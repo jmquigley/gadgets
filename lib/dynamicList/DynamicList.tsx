@@ -246,7 +246,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 		this._footerID = this._fillerKeys.at(this._fillerIdx++);
 		this._pagerID = this._fillerKeys.at(this._fillerIdx++);
-		this._classes.add(['ui-dynamiclist']);
+		this._classes.add('ui-dynamiclist');
 		this._count = Object.keys(this.props.items).length;
 
 		this.state = {
@@ -464,9 +464,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		if (title) {
 			debug('creating new item: %s, %O', title, widget);
 			this.setState({
-				items: this.state.items.set(title, widget),
-				showNew: false,
-				totalItems: this.state.totalItems + 1
+				showNew: false
 			}, () => {
 				this.props.onNew(title, widget);
 				cb(title);
