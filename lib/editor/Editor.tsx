@@ -389,7 +389,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 							notriangle
 							tooltip="header"
 						>
-							<List sizing={Sizing.small} alternating>
+							<List sizing={Sizing.small} alternating noselect>
 								<ListItem title="h1" onSelect={this.handleSelect('1')} />
 								<ListItem title="h2" onSelect={this.handleSelect('2')} />
 								<ListItem title="h3" onSelect={this.handleSelect('3')} />

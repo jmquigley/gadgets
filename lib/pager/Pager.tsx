@@ -530,7 +530,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		);
 
 		this._dialog = (
-			<DialogListView sizing={nextProps.sizing}>
+			<DialogListView sizing={nextProps.sizing} noselect>
 				{sortOptions}
 				<ListItem
 					{...nextProps}

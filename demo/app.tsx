@@ -141,6 +141,7 @@ interface AppState {
 	toastVisible5: boolean;
 	toastVisible6: boolean;
 	selectOption: string;
+	selectToggle: boolean;
 	sizingOption: string;
 }
 
@@ -168,6 +169,7 @@ class App extends React.Component<AppProps, AppState> {
 			toastVisible5: true,
 			toastVisible6: true,
 			selectOption: selectOptions[0].value,
+			selectToggle: false,
 			sizingOption: sizingOptions[3].value
 		};
 
@@ -725,6 +727,7 @@ class App extends React.Component<AppProps, AppState> {
 					errorMessage={this.state.dynamicListError}
 					items={this.state.items}
 					layout={TitleLayout.dominant}
+					noselect={this.state.selectToggle}
 					onDelete={(title: string) => {
 						const items = {...this.state.items};
 						delete items[title];
@@ -735,9 +738,9 @@ class App extends React.Component<AppProps, AppState> {
 					onError={() => {
 						this.setState({dynamicListError: ''});
 					}}
-					onNew={(title: string) => {
+					onNew={(title: string, widget: any) => {
 						this.setState({
-							items: {...this.state.items, [title]: 'w0'}
+							items: {...this.state.items, [title]: widget}
 						});
 					}}
 					pageSizes={[10, 20, 30]}
@@ -762,7 +765,7 @@ class App extends React.Component<AppProps, AppState> {
 							let dynamicItems = {}
 
 							for (const [title, widget] of Object.entries(this.state.items)) {
-								dynamicItems[title] = widget.replace('w', 'a');
+								dynamicItems[title] = widget ? widget.replace('w', 'a') : 'a0';
 							}
 
 							this.setState({
@@ -772,7 +775,14 @@ class App extends React.Component<AppProps, AppState> {
 					/>
 					<p>Click to change list of widget items (change w to a)</p>
 				</div>
-
+				<Option
+					onClick={(toggle: boolean) => {
+						this.setState({
+							selectToggle: toggle
+						})
+					}}
+					text="Toggle selection mode (on turns off selection)"
+				/>
 		</Container>
 	);
 

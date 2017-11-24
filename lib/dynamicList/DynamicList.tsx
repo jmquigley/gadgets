@@ -100,6 +100,8 @@
  * - `nocollapse: boolean (false)` - Determines if the list can be
  * "rolled up" when the header is clicked.  The default behavior is to
  * allow.  IF this is set to false, then the list can't be collapsed.
+ * - `noselect {boolean} (false)` - when true the selection highlight is
+ * disabled and removed.
  * - `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
  * can be used by the pager.  It is used against the total items to
  * determine the total number of pages in the control display.
@@ -148,6 +150,7 @@ export interface DynamicListProps extends BaseProps {
 	items?: DynamicListItem;
 	layout?: TitleLayout;
 	nocollapse?: boolean;
+	noselect?: boolean;
 	onBlur?: any;
 	onClick?: any;
 	onDelete?: any;
@@ -169,6 +172,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 			items: {},
 			layout: TitleLayout.dominant,
 			nocollapse: false,
+			noselect: false,
 			obj: 'DynamicList',
 			onBlur: nilEvent,
 			onClick: nilEvent,
@@ -246,14 +250,14 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this._count = Object.keys(this.props.items).length;
 
 		this.state = {
-			errorMessage: '',
+			errorMessage: this.props.errorMessage,
 			initialToggle: true,
 			items: Map(Object.assign({}, this.props.items)),
 			page: 1,
 			pageSize: this.props.pageSizes[0],
 			search: '',
 			showConfirm: false,
-			showError: false,
+			showError: this.props.errorMessage !== '',
 			showNew: false,
 			sortOrder: this.props.sortOrder,
 			totalItems: this._count
@@ -265,7 +269,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			'handleBlur',
 			'handleDelete',
 			'handleDeleteConfirm',
-			'handleError',
 			'handleErrorClose',
 			'handleKeyDown',
 			'handleNewItem',
@@ -433,18 +436,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.setState({showConfirm: false});
 	}
 
-	private handleError(message: string) {
-		this.setState({
-			errorMessage: message,
-			showError: true
-		}, () => {
-			this.props.onError(message);
-		});
-	}
-
 	private handleErrorClose() {
+		this.pruneListItems();
 		this.setState({
 			showError: false
+		}, () => {
+			this.props.onError(this.state.errorMessage);
 		});
 	}
 
@@ -465,13 +462,13 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private handleNewItem(title: string, widget: any = null, cb: any = nil) {
 		title = title.trimHTML();
 		if (title) {
-			debug('creating new item: %s', title);
+			debug('creating new item: %s, %O', title, widget);
 			this.setState({
 				items: this.state.items.set(title, widget),
 				showNew: false,
 				totalItems: this.state.totalItems + 1
 			}, () => {
-				this.props.onNew(title);
+				this.props.onNew(title, widget);
 				cb(title);
 			});
 		} else {
@@ -554,6 +551,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		if (title !== previous) {
 			this.handleNewItem(title, this.state.items.get(previous), () => {
 				this.handleDelete(previous, () => {
+					debug('updated "%s" to "%s"', previous, title);
 					this.props.onUpdate(previous, title);
 				});
 			});
@@ -573,11 +571,31 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		};
 	}
 
+	/**
+	 * Errors can cause the state and the internal list items to become
+	 * out of sync.  This will scan the internal list and ensure they
+	 * are in the state list.  If they are not, then they are removed.
+	 */
+	private pruneListItems() {
+		let redraw: boolean = false;
+
+		for (const title of Object.keys(this._listItems)) {
+			if (!this.state.items.has(title)) {
+				delete this._listItems[title];
+				redraw = true;
+			}
+		}
+
+		if (redraw) {
+			this.forceUpdate();
+		}
+	}
+
 	public componentWillReceiveProps(nextProps: DynamicListProps) {
+		const newState: any = {};
+
 		if (nextProps.sortOrder !== this.state.sortOrder) {
-			this.setState({
-				sortOrder: nextProps.sortOrder
-			});
+			newState['sortOrder'] = nextProps.sortOrder;
 		}
 
 		let items = this.state.items;
@@ -587,14 +605,15 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 
 		if (items !== this.state.items) {
-			this.setState({
-				items: items
-			});
+			newState['items'] = items;
 		}
 
 		if (nextProps.errorMessage !== '') {
-			this.handleError(nextProps.errorMessage);
+			newState['errorMessage'] = nextProps.errorMessage;
+			newState['showError'] = true;
 		}
+
+		this.setState(newState);
 	}
 
 	public componentWillUpdate(nextProps: DynamicListProps, nextState: DynamicListState) {
@@ -687,7 +706,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 							}
 							title={this.buildTitle()}
 						>
-							<List alternating>
+							<List alternating noselect={this.props.noselect}>
 								{this.buildListItems()}
 							</List>
 						</AccordionItem>

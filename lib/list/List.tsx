@@ -18,8 +18,8 @@ import {ListItem} from './index';
 export interface ListProps extends BaseProps {
 	alternating?: boolean;
 	children?: React.ReactNode;
+	noselect?: boolean;
 	onAdd?: any;
-	unselect?: boolean;
 }
 
 export function getDefaultListProps(): ListProps {
@@ -27,9 +27,9 @@ export function getDefaultListProps(): ListProps {
 		getDefaultBaseProps(), {
 			alternating: false,
 			children: null,
+			noselect: false,
 			obj: 'List',
-			onAdd: nilEvent,
-			unselect: false
+			onAdd: nilEvent
 		})
 	);
 }
@@ -100,7 +100,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 		const children = this._children.map(child => {
 			const selected = child['props'].id === selectedKey;
 			return React.cloneElement(child as any, {
-				selected: (this.props.unselect) ? false : selected,
+				selected: !this.props.noselect && selected,
 				href: {
 					selectHandler: this.selectHandler,
 					sizing: this.props.sizing
