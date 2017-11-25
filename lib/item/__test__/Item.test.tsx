@@ -1,6 +1,5 @@
 'use strict';
 
-import * as assert from 'assert';
 import {shallow} from 'enzyme';
 import * as React from 'react';
 import {getDefaultItemProps, Item} from '../index';
@@ -8,7 +7,7 @@ import {getDefaultItemProps, Item} from '../index';
 test('Test retrieval of Item props object', () => {
 	const props = getDefaultItemProps();
 
-	assert(props);
+	expect(props).toBeTruthy();
 	expect(props).toMatchSnapshot();
 });
 
@@ -20,7 +19,7 @@ test('Test the creation of a Item control', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
