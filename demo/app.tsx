@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import * as _ from 'lodash';
 import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 import {render} from 'react-dom';
@@ -741,6 +742,12 @@ class App extends React.Component<AppProps, AppState> {
 					onNew={(title: string, widget: any) => {
 						this.setState({
 							items: {...this.state.items, [title]: widget}
+						});
+					}}
+					onUpdate={(previous: string, title: string) => {
+						const widget = this.state.items[previous];
+						this.setState({
+							items: _.omit({...this.state.items, [title]: widget}, previous)
 						});
 					}}
 					pageSizes={[10, 20, 30]}

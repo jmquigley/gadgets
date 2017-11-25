@@ -546,13 +546,19 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	private handleUpdate(previous: string, title: string) {
+		title = title.trimHTML();
 		if (title !== previous) {
-			this.handleNewItem(title, this.state.items.get(previous), () => {
-				this.handleDelete(previous, () => {
-					debug('updated "%s" to "%s"', previous, title);
-					this.props.onUpdate(previous, title);
-				});
+			debug('updating item "%s" to "%s"', previous, title);
+			this.setState({
+				items: this.state.items.delete(previous),
+				showNew: false,
+				totalItems: this.state.totalItems - 1
+			}, () => {
+				delete this._listItems[previous];
+				this.props.onUpdate(previous, title);
 			});
+		} else {
+			this.hideEdit();
 		}
 	}
 
