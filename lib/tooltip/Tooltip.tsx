@@ -46,6 +46,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {
@@ -260,18 +261,23 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 	constructor(props: TooltipProps) {
 		super(props, Tooltip.defaultProps.style);
 
+		this._classes.add('ui-tooltip');
+
 		this.state = {
 			show: false
 		};
 
-		this._classes.add(['ui-tooltip']);
-
-		this.bindCallbacks(
-			'handleMouseEnter',
-			'handleMouseLeave'
-		);
-
 		this.componentWillUpdate(this.props, this.state);
+	}
+
+	@autobind
+	private handleMouseEnter() {
+		this.setState({show: true});
+	}
+
+	@autobind
+	private handleMouseLeave() {
+		this.setState({show: false});
 	}
 
 	public componentDidMount() {
@@ -288,14 +294,6 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 			parent.removeEventListener('mouseenter', this.handleMouseEnter);
 			parent.removeEventListener('mouseleave', this.handleMouseLeave);
 		}
-	}
-
-	private handleMouseEnter() {
-		this.setState({show: true});
-	}
-
-	private handleMouseLeave() {
-		this.setState({show: false});
 	}
 
 	public render() {

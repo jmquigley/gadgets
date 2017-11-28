@@ -117,30 +117,6 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		return this._sizing;
 	}
 
-	/**
-	 * Many components must bind their callbacks to the original instance.  In
-	 * the constructor for each React component many `.bind` calls are made.
-	 * This function will take N parameter strings, that represent the names of
-	 * the callback functions and will bind them to `this`.
-	 *
-	 * #### Example:
-	 * ```
-	 * this.bindCallbacks('handleChange', 'handleClick', 'handleFocus');
-	 * ```
-	 *
-	 * This example would bind the three given callbacks (handleChange,
-	 * handlClick, and handleFocus) to the instance's `this` pointer.
-	 *
-	 * @param methods {any} a variable list of string parameters that
-	 * represent the name of a callback method that will be bound to `this`
-	 * instance.
-	 */
-	protected bindCallbacks(...methods: string[]) {
-		methods.forEach((method: string) => {
-			this[method] = this[method].bind(this);
-		});
-	}
-
 	protected font(sizing: Sizing = this.sizing): FontStyle {
 		return this.sizes[sizing].font;
 	}

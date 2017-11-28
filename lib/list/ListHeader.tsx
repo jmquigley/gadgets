@@ -37,7 +37,7 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 	constructor(props: ListHeaderProps) {
 		super(props, ListHeader.defaultProps.style);
 
-		this._classes.add(['ui-list-header']);
+		this._classes.add('ui-list-header');
 		this.componentWillUpdate(this.props);
 	}
 
@@ -50,10 +50,7 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 					{...this.props}
 					className={this.classes}
 					sizing={this.props.href.sizing}
-					style={{...this.inlineStyles,
-						color: theme.headerForegroundColor,
-						backgroundColor: theme.headerBackgroundColor
-					}}
+					style={this.inlineStyles}
 				/>
 			</ThemeProvider>
 		);

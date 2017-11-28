@@ -61,7 +61,8 @@ export class Container extends BaseComponent<ContainerProps, undefined> {
 
 	constructor(props: ContainerProps) {
 		super(props);
-		this._classes.add(['ui-container']);
+
+		this._classes.add('ui-container');
 		this.componentWillUpdate(props);
 	}
 

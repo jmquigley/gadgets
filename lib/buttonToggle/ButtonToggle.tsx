@@ -46,6 +46,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -91,16 +92,16 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 	constructor(props: ButtonToggleProps) {
 		super(props, ButtonToggle.defaultProps.style);
 
-		this._classes.add(['ui-button-toggle']);
+		this._classes.add('ui-button-toggle');
 
 		this.state = {
 			toggle: props.initialToggle
 		};
 
-		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(this.props, this.state);
 	}
 
+	@autobind
 	public handleClick() {
 		if (!this.props.disabled && this.props.visible) {
 			this.setState({

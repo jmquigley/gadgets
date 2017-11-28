@@ -65,7 +65,7 @@ export class Select extends BaseComponent<any, any> {
 
 	constructor(props: any) {
 		super(props, {}, Select.defaultProps.style);
-		this._classes.add(['ui-select']);
+		this._classes.add('ui-select');
 		this.componentWillUpdate(this.props);
 	}
 

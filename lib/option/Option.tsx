@@ -52,6 +52,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -171,11 +172,11 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 	constructor(props: OptionProps) {
 		super(props, Option.defaultProps.style);
 
-		this._classes.add(['ui-option']);
-		this.bindCallbacks('handleClick');
+		this._classes.add('ui-option');
 		this.componentWillUpdate(this.props);
 	}
 
+	@autobind
 	private handleClick() {
 		if (this._btn) {
 			this._btn.handleClick();

@@ -57,14 +57,6 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {BinaryTree} from 'util.ds';
 import {Keys} from 'util.keys';
-import {Button} from '../button';
-import {ButtonCircle} from '../buttonCircle';
-import {ButtonDialog} from '../buttonDialog';
-import {ButtonText} from '../buttonText';
-import {ButtonToggle} from '../buttonToggle';
-import {Divider} from '../divider';
-import {Dropdown} from '../dropdown';
-import {Option} from '../option';
 import {
 	BaseComponent,
 	BaseProps,
@@ -73,8 +65,6 @@ import {
 	Justify
 } from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
-import {Switch} from '../switch';
-import {TextField} from '../textField';
 
 export interface ToolbarProps extends BaseProps {
 	justify?: Justify;
@@ -120,24 +110,23 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 
 	private _keys: Keys;
 	private static readonly _whitelist = new BinaryTree([
-		Button.name,
-		ButtonCircle.name,
-		ButtonDialog.name,
-		ButtonText.name,
-		ButtonToggle.name,
-		Divider.name,
-		Dropdown.name,
-		Option.name,
-		'StyledComponent',
-		Switch.name,
-		TextField.name
+		'Button',
+		'ButtonCircle',
+		'ButtonDialog',
+		'ButtonText',
+		'ButtonToggle',
+		'Divider',
+		'Dropdown',
+		'Option',
+		'Switch',
+		'TextField'
 	]);
 
 	constructor(props: ToolbarProps) {
 		super(props, Toolbar.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
-		this._classes.add(['ui-toolbar']);
+		this._classes.add('ui-toolbar');
 
 		this.componentWillUpdate(this.props);
 	}

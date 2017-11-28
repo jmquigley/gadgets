@@ -54,6 +54,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
@@ -148,18 +149,18 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 	constructor(props: SwitchProps) {
 		super(props, Switch.defaultProps.style);
 
-		this._classes.add(['ui-switch']);
-		this._sliderStyles.add(['ui-switch-slider']);
-		this._buttonStyles.add(['ui-switch-button']);
+		this._classes.add('ui-switch');
+		this._sliderStyles.add('ui-switch-slider');
+		this._buttonStyles.add('ui-switch-button');
 
 		this.state = {
 			toggle: this.props.initialToggle
 		};
 
-		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(this.props, this.state);
 	}
 
+	@autobind
 	private handleClick() {
 		if (!this.props.disabled && this.props.visible) {
 			this.setState({toggle: !this.state.toggle}, () => {

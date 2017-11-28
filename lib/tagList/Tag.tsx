@@ -34,6 +34,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -106,21 +107,16 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 
 	constructor(props: TagProps) {
 		super(props, Tag.defaultProps.style);
-		this._classes.add(['ui-tag']);
+		this._classes.add('ui-tag');
 
 		this.state = {
 			showDelete: false
 		};
 
-		this.bindCallbacks(
-			'handleOnClick',
-			'handleMouseOut',
-			'handleMouseOver'
-		);
-
 		this.componentWillUpdate(props, this.state);
 	}
 
+	@autobind
 	private handleOnClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (this.props.usedelete && !this.props.disabled) {
 			this.props.onDelete(this.tag);
@@ -129,6 +125,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		this.props.onClick(e);
 	}
 
+	@autobind
 	private handleMouseOut() {
 		if (this.props.usedelete && !this.props.disabled) {
 			this.setState({showDelete: false}, () => {
@@ -137,6 +134,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		}
 	}
 
+	@autobind
 	private handleMouseOver() {
 		if (this.props.usedelete && !this.props.disabled) {
 			this.setState({showDelete: true}, () => {

@@ -78,6 +78,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -209,15 +210,11 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 			visible: this.props.show
 		};
 
-		this.bindCallbacks(
-			'handleClose',
-			'handleDecay'
-		);
-
 		this.handleDecay();
 		this.componentWillUpdate(this.props, this.state);
 	}
 
+	@autobind
 	private handleClose() {
 		if (this._timer) {
 			clearTimeout(this._timer);
@@ -231,6 +228,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		});
 	}
 
+	@autobind
 	private handleDecay() {
 		if (this.props.decay && this.state.visible) {
 			this._timer = setTimeout(() => {

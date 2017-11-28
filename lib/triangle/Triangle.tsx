@@ -95,11 +95,7 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 
 	constructor(props: TriangleProps) {
 		super(props, Triangle.defaultProps.style);
-
-		this._classes.add([
-			'ui-triangle'
-		]);
-
+		this._classes.add('ui-triangle');
 		this.componentWillUpdate(props);
 	}
 

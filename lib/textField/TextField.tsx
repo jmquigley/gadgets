@@ -108,6 +108,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {sp} from 'util.constants';
@@ -257,7 +258,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	constructor(props: TextFieldProps) {
 		super(props, TextField.defaultProps.style);
 
-		this._classes.add(['ui-textfield']);
+		this._classes.add('ui-textfield');
 
 		this.state = {
 			message: '',
@@ -288,15 +289,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			}
 		}
 
-		this.bindCallbacks(
-			'handleBlur',
-			'handleChange',
-			'handleClearButton',
-			'handleKeyDown',
-			'handleKeyPress',
-			'handleRef'
-		);
-
 		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props);
 	}
@@ -309,17 +301,20 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		return this._value;
 	}
 
+	@autobind
 	private handleBlur(e: React.FocusEvent<HTMLInputElement>) {
 		this.commit(e.target as HTMLInputElement);
 		this.props.onBlur(e);
 	}
 
+	@autobind
 	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		this._value = (e.target as HTMLInputElement).value;
 		this.validate(this._value);
 		this.props.onChange(e);
 	}
 
+	@autobind
 	private handleClearButton() {
 		this.setState({
 			message: '',
@@ -331,6 +326,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		});
 	}
 
+	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === 'Escape') {
 			(e.target as HTMLInputElement).value = this.state.previousText;
@@ -341,6 +337,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		this.props.onKeyDown(e);
 	}
 
+	@autobind
 	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === 'Enter') {
 			this.commit(e.target as HTMLInputElement);
@@ -349,6 +346,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		this.props.onKeyPress(e);
 	}
 
+	@autobind
 	private handleRef(ele: HTMLInputElement) {
 		this._input = ele;
 	}

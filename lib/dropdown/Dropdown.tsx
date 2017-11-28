@@ -51,6 +51,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {calc} from 'util.calc';
@@ -121,16 +122,13 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 		};
 
 		this._keys = new Keys({testing: this.props.testing});
-		this._classes.add(['ui-dropdown']);
-
-		this.bindCallbacks(
-			'handleChange'
-		);
+		this._classes.add('ui-dropdown');
 
 		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props, this.state);
 	}
 
+	@autobind
 	private handleChange(e: React.FormEvent<HTMLSelectElement>) {
 		const val: any = e.currentTarget.value;
 		this.setState({

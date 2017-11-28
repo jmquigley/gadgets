@@ -49,6 +49,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {sp} from 'util.constants';
@@ -118,22 +119,13 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	constructor(props: LabelProps) {
 		super(props, Label.defaultProps.style);
 
-		this._classes.add(['ui-label']);
+		this._classes.add('ui-label');
 
 		this.state = {
 			editable: this.props.useedit,
 			previousText: this.props.text,
 			text: this.props.text
 		};
-
-		this.bindCallbacks(
-			'handleBlur',
-			'handleChange',
-			'handleDoubleClick',
-			'handleKeyDown',
-			'handleKeyPress',
-			'handleRef'
-		);
 
 		this.componentWillUpdate(this.props);
 	}
@@ -142,21 +134,13 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		return this._label;
 	}
 
-	public componentDidMount() {
-		if (this.props.focus) {
-			this._label.focus();
-		}
-	}
-
-	public componentDidUpdate() {
-		this.componentDidMount();
-	}
-
+	@autobind
 	private handleBlur(e: React.FocusEvent<HTMLSpanElement>) {
 		this.handleChange(e);
 		this.props.onBlur(e);
 	}
 
+	@autobind
 	private handleChange(e: React.FormEvent<HTMLSpanElement>) {
 		const element = (e.target as HTMLSpanElement);
 
@@ -175,6 +159,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
+	@autobind
 	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
 		e.stopPropagation();
 		e.preventDefault();
@@ -198,6 +183,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		}
 	}
 
+	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === 'Escape') {
 			this.setState({
@@ -211,6 +197,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.props.onKeyDown(e);
 	}
 
+	@autobind
 	private handleKeyPress(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === 'Enter') {
 			this.handleChange(e);
@@ -219,8 +206,19 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.props.onKeyPress(e);
 	}
 
+	@autobind
 	private handleRef(label: any) {
 		this._label = label;
+	}
+
+	public componentDidMount() {
+		if (this.props.focus) {
+			this._label.focus();
+		}
+	}
+
+	public componentDidUpdate() {
+		this.componentDidMount();
 	}
 
 	public componentWillReceiveProps(nextProps: LabelProps) {

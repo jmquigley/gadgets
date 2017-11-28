@@ -39,6 +39,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -103,11 +104,11 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	constructor(props: BadgeProps) {
 		super(props, Badge.defaultProps.style);
 
-		this._classes.add(['ui-badge']);
-		this.bindCallbacks('handleClick');
+		this._classes.add('ui-badge');
 		this.componentWillUpdate(props);
 	}
 
+	@autobind
 	private handleClick() {
 		this.props.onClick(this.props.counter);
 	}

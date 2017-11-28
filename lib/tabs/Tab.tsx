@@ -54,6 +54,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -184,12 +185,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	constructor(props: TabProps) {
 		super(props, Tab.defaultProps.style);
 
-		this._classes.add(['ui-tab']);
-
-		this.bindCallbacks(
-			'handleClick',
-			'handleClose'
-		);
+		this._classes.add('ui-tab');
 
 		this.state = {
 			hidden: false
@@ -198,6 +194,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		this.componentWillUpdate(this.props, this.state);
 	}
 
+	@autobind
 	private handleClick() {
 		if (!this.props.disabled && this.props.visible) {
 			this.props.href.selectHandler(this);
@@ -205,6 +202,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		}
 	}
 
+	@autobind
 	private handleClose() {
 		this.setState({hidden: true}, () => {
 			this.props.href.hiddenTabHandler(this);

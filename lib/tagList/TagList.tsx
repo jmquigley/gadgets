@@ -57,6 +57,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {List, SortedList} from 'util.ds';
@@ -146,20 +147,12 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 			this.tags = new SortedList<string>(props.tags);
 		}
 
-		this._classes.add(['ui-taglist']);
+		this._classes.add('ui-taglist');
 
 		this.state = {
 			inputTextSize: 1,
 			tags: this.tags.array
 		};
-
-		this.bindCallbacks(
-			'handleBlur',
-			'handleChange',
-			'handleDelete',
-			'handleKeyDown',
-			'handleKeyPress'
-		);
 
 		this.componentWillUpdate(props);
 	}
@@ -169,11 +162,13 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		e.value = '';
 	}
 
+	@autobind
 	private handleBlur(e: React.FocusEvent<HTMLInputElement>) {
 		this.clearInput(e.target as HTMLInputElement);
 		this.props.onBlur(e);
 	}
 
+	@autobind
 	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		this.setState({
 			inputTextSize: (e.target as HTMLInputElement).value.length
@@ -182,6 +177,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		this.props.onChange(e);
 	}
 
+	@autobind
 	private handleDelete(tag: string) {
 		this.tags.remove(tag);
 		this.setState({
@@ -191,6 +187,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		});
 	}
 
+	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === 'Escape') {
 			this.clearInput(e.target as HTMLInputElement);
@@ -199,6 +196,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		this.props.onKeyDown(e);
 	}
 
+	@autobind
 	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === 'Enter') {
 			const target = e.target as HTMLInputElement;
@@ -220,7 +218,6 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	}
 
 	public render() {
-
 		const tags = this.state.tags.map((tag: string) => {
 			return (
 				<Tag

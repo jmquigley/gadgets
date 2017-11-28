@@ -34,6 +34,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -103,11 +104,11 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 	constructor(props: ButtonProps) {
 		super(props, Button.defaultProps.style);
 
-		this._classes.add(['ui-button']);
-		this.bindCallbacks('handleClick');
+		this._classes.add('ui-button');
 		this.componentWillUpdate(this.props);
 	}
 
+	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (!this.props.disabled
 			&& this.props.visible

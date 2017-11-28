@@ -39,6 +39,9 @@
  *     onSelect={(title: string) => {
  *         console.log(`Selected item: ${title}`);
  *     }}
+ *     onUpdate={(previous: string, title: string) =>
+ *         console.log(`previous: ${previous}, title: ${title}`);
+ *     }}
  *     pageSizes={[10, 20, 30]}
  *     title="Dynamic List Test"
  * />
@@ -116,6 +119,7 @@
 
 const debug = require('debug')('DynamicList');
 
+import autobind from 'autobind-decorator';
 import {Map} from 'immutable';
 import * as _ from 'lodash';
 import * as React from 'react';
@@ -263,26 +267,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			totalItems: this._count
 		};
 
-		this.bindCallbacks(
-			'createListItem',
-			'createNewItem',
-			'handleBlur',
-			'handleDelete',
-			'handleDeleteConfirm',
-			'handleErrorClose',
-			'handleKeyDown',
-			'handleNewItem',
-			'handleNewPageSize',
-			'handlePageChange',
-			'handleSearch',
-			'handleSelect',
-			'handleSort',
-			'handleTitleClick',
-			'handleUpdate',
-			'hideEdit',
-			'listItemDeletor'
-		);
-
 		this._emptyListItem = (
 			<ListItem
 				focus
@@ -365,6 +349,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		return Math.ceil(idx / this.state.pageSize);
 	}
 
+	@autobind
 	private createListItem(title: string, widget: any) {
 		return (
 			<ListItem
@@ -393,6 +378,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * Sets the control into a new item mode.  This will show the input control
 	 * and wait for user input.
 	 */
+	@autobind
 	private createNewItem() {
 		this.setState({
 			initialToggle: true,
@@ -400,6 +386,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		});
 	}
 
+	@autobind
 	private handleBlur(e?: any) {
 		this.hideEdit();
 		this.props.onBlur(e);
@@ -413,6 +400,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * @param cb {Function} a callback function that is executed when the
 	 * delete state event update completes.
 	 */
+	@autobind
 	private handleDelete(title: string, cb: any = nil) {
 		if (this.state.items.has(title)) {
 			delete this._listItems[title];
@@ -428,6 +416,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
+	@autobind
 	private handleDeleteConfirm(selection: boolean) {
 		if (selection) {
 			this.handleDelete(this._qDelete);
@@ -436,6 +425,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.setState({showConfirm: false});
 	}
 
+	@autobind
 	private handleErrorClose() {
 		this.pruneListItems();
 		this.setState({
@@ -445,6 +435,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		});
 	}
 
+	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
 		if (e.key === 'Escape') {
 			this.hideEdit();
@@ -459,6 +450,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * @param cb {Function} a callback function that is executed when the update
 	 * is complete
 	 */
+	@autobind
 	private handleNewItem(title: string, widget: any = null, cb: any = nil) {
 		title = title.trimHTML();
 		if (title) {
@@ -474,6 +466,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
+	@autobind
 	private handleNewPageSize(pageSize: number) {
 		if (pageSize !== this.state.pageSize) {
 			this.setState({
@@ -482,6 +475,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
+	@autobind
 	private handlePageChange(page: number) {
 		if (page !== this.state.page) {
 			this._previousPage = this.state.page;
@@ -491,6 +485,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
+	@autobind
 	private handleSearch(e: React.FormEvent<HTMLSelectElement>) {
 		const val: string = (e.target as HTMLSelectElement).value;
 
@@ -521,6 +516,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		});
 	}
 
+	@autobind
 	private handleSelect(title: string) {
 		if (this._selection !== title) {
 			this._selection = title;
@@ -531,6 +527,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
+	@autobind
 	private handleSort(sortOrder: SortOrder) {
 		if (sortOrder === SortOrder.ascending) {
 			this.setState({sortOrder: SortOrder.ascending});
@@ -541,10 +538,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this.props.onSort(sortOrder);
 	}
 
+	@autobind
 	private handleTitleClick(toggleState: boolean) {
 		this.setState({initialToggle: toggleState});
 	}
 
+	@autobind
 	private handleUpdate(previous: string, title: string) {
 		title = title.trimHTML();
 		if (title !== previous) {
@@ -562,12 +561,14 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 	}
 
+	@autobind
 	private hideEdit() {
 		this.setState({
 			showNew: false
 		});
 	}
 
+	@autobind
 	private listItemDeletor(title: string) {
 		return () => {
 			this._qDelete = title;

@@ -56,6 +56,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -107,18 +108,16 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	constructor(props: AccordionItemProps) {
 		super(props);
 
-		this._classes.add([
-			'ui-accordionitem'
-		]);
+		this._classes.add('ui-accordionitem');
 
 		this.state = {
 			toggle: (props.nocollapse) ? true : props.initialToggle
 		};
 
-		this.bindCallbacks('handleClick');
 		this.componentWillUpdate(this.props);
 	}
 
+	@autobind
 	private handleClick() {
 		if (!this.props.nocollapse) {
 			this.setState({

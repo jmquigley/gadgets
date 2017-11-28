@@ -61,6 +61,7 @@
 
 const debug = require('debug')('Browser');
 
+import autobind from 'autobind-decorator';
 import {List} from 'immutable';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -179,40 +180,31 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	constructor(props: BrowserProps) {
 		super(props, Browser.defaultProps.style);
 
-		this._classes.add(['ui-browser']);
-
+		this._classes.add('ui-browser');
 		const url = this.props.uri || this.props.home || '';
+
 		this.state = {
 			search: '',
 			uri: url,
 			uriHistory: List(url)
 		};
-
-		this.bindCallbacks(
-			'handleBack',
-			'handleForward',
-			'handleHome',
-			'handleRef',
-			'handleReload',
-			'handleSearch',
-			'handleSnapshot',
-			'handleURLChange',
-			'handleURLKeyPress'
-		);
 	}
 
+	@autobind
 	private handleBack() {
 		if (this._webview && this._webview.canGoBack()) {
 			this._webview.goBack();
 		}
 	}
 
+	@autobind
 	private handleForward() {
 		if (this._webview && this._webview.canGoForward()) {
 			this._webview.goForward();
 		}
 	}
 
+	@autobind
 	private handleHome() {
 		if (this._webview && this.props.home) {
 			this.setState({
@@ -223,16 +215,19 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		}
 	}
 
+	@autobind
 	private handleRef(ref: any) {
 		this._browser = ref;
 	}
 
+	@autobind
 	private handleReload() {
 		if (this._webview) {
 			this._webview.reload();
 		}
 	}
 
+	@autobind
 	private handleSearch(e: React.FormEvent<HTMLInputElement>) {
 		const value: string = (e.target as HTMLInputElement).value;
 		this.setState({
@@ -248,6 +243,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		});
 	}
 
+	@autobind
 	private handleSnapshot() {
 		if (this._webview) {
 			this._webview.executeJavaScript(
@@ -276,12 +272,14 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		}
 	}
 
+	@autobind
 	private handleURLChange(e: React.FormEvent<HTMLInputElement>) {
 		this.setState({
 			uri: (e.target as HTMLInputElement).value
 		});
 	}
 
+	@autobind
 	private handleURLKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === 'Enter') {
 			const value: string = (e.target as HTMLInputElement).value;

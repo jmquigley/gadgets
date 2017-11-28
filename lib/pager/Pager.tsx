@@ -84,6 +84,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep, isEqual, sortBy} from 'lodash';
 import * as React from 'react';
 import {Keys} from 'util.keys';
@@ -222,7 +223,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this._dialogKeys = new Keys({testing: this.props.testing});
 		this._fillerKeys = new Keys({testing: this.props.testing});
 
-		this._classes.add(['ui-pager']);
+		this._classes.add('ui-pager');
 
 		this.pageSizes = this.props.pageSizes;
 		this.computeInitialPages(this.props.initialPageSize);
@@ -232,21 +233,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			currentSort: SortOrder.ascending,
 			pageSize: this.initialPageSize
 		};
-
-		this.bindCallbacks(
-			'handleBlur',
-			'handleChange',
-			'handleDialogSelect',
-			'handleKeyPress',
-			'handleSelect',
-			'handleSortAscending',
-			'handleSortDescending',
-			'moveToEnd',
-			'moveToFront',
-			'moveToNext',
-			'moveToPrevious',
-			'rebuildButtons'
-		);
 
 		this._iconBlank = (
 			<Icon
@@ -570,14 +556,17 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		);
 	}
 
+	@autobind
 	private handleBlur(e: React.FocusEvent<HTMLInputElement>) {
 		this.currentPage = Number((e.target as HTMLInputElement).value);
 	}
 
+	@autobind
 	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		this.currentPage = Number((e.target as HTMLInputElement).value);
 	}
 
+	@autobind
 	private handleDialogSelect(text: string) {
 		let size: number;
 
@@ -601,12 +590,14 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		});
 	}
 
+	@autobind
 	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === 'Enter') {
 			this.currentPage = Number((e.target as HTMLInputElement).value);
 		}
 	}
 
+	@autobind
 	private handleSelect(newPage: number) {
 
 		// This is a workaround check.  The createButtons function creates a series
@@ -626,34 +617,40 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 	}
 
+	@autobind
 	private handleSortAscending() {
 		this.setState({currentSort: SortOrder.ascending});
 		this.props.onSort(SortOrder.ascending);
 	}
 
+	@autobind
 	private handleSortDescending() {
 		this.setState({currentSort: SortOrder.descending});
 		this.props.onSort(SortOrder.descending);
 	}
 
+	@autobind
 	private moveToEnd() {
 		if (this.currentPage !== this._lastPage) {
 			this.currentPage = this.lastPage;
 		}
 	}
 
+	@autobind
 	private moveToFront() {
 		if (this.currentPage !== 1) {
 			this.currentPage = 1;
 		}
 	}
 
+	@autobind
 	private moveToNext() {
 		if (this.currentPage !== this.lastPage) {
 			this.currentPage = this.currentPage + 1;
 		}
 	}
 
+	@autobind
 	private moveToPrevious() {
 		if (this.currentPage !== 1) {
 			this.currentPage = this.currentPage - 1;
@@ -682,6 +679,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * Without this forced update the buttons will not be redrawn until the
 	 * next click on the control.
 	 */
+	@autobind
 	private rebuildButtons() {
 		this.computeInitialPages(this.pageSize);
 		this.forceUpdate();

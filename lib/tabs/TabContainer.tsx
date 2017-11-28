@@ -74,6 +74,7 @@
 
 const debug = require('debug')('TabContainer');
 
+import autobind from 'autobind-decorator';
 import {List} from 'immutable';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -249,13 +250,6 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			selectedTab: this._tabs.size > 0 ? this._tabs.get(0).props['id'] : null
 		};
 
-		this.bindCallbacks(
-			'handleNextTab',
-			'handlePreviousTab',
-			'hiddenTabHandler',
-			'selectHandler'
-		);
-
 		this.componentWillUpdate(this.props, this.state);
 	}
 
@@ -284,6 +278,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		return this._tabs;
 	}
 
+	@autobind
 	private handlePreviousTab() {
 		const idx: number = this.currentIdx;
 
@@ -292,6 +287,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		}
 	}
 
+	@autobind
 	private handleNextTab() {
 		const idx: number = this.currentIdx;
 
@@ -300,6 +296,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		}
 	}
 
+	@autobind
 	private hiddenTabHandler(tab: Tab) {
 		// Get the id of the tab that was removed.
 		// try to get the one to the left first.  If that doesn't exist
@@ -319,6 +316,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		this.props.onRemove(tab);
 	}
 
+	@autobind
 	private selectHandler(tab: Tab) {
 		const [previous, idx] = this._getTab(this.state.selectedTab);
 

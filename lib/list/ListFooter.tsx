@@ -41,6 +41,7 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 	constructor(props: ListFooterProps) {
 		super(props, ListFooter.defaultProps.style);
 
+		this._classes.add('ui-list-header');
 		this.componentWillUpdate(props);
 	}
 
@@ -49,7 +50,7 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 			<ThemeProvider theme={getTheme()}>
 				<ListFooterView
 					{...this.props}
-					className="ui-list-footer"
+					className={this.classes}
 					noripple
 					style={this.inlineStyles}
 					title={this.props.title}

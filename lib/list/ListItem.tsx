@@ -7,6 +7,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -52,19 +53,11 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	constructor(props: ListItemProps) {
 		super(props, ListItem.defaultProps.style);
 
-		this._classes.add(['ui-listitem']);
+		this._classes.add('ui-listitem');
 
 		this.state = {
 			toggleRipple: false
 		};
-
-		this.bindCallbacks(
-			'handleBlur',
-			'handleClick',
-			'handleDoubleClick',
-			'handleKeyDown',
-			'handleKeyPress'
-		);
 
 		this.componentWillUpdate(props);
 	}
@@ -84,11 +77,13 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		));
 	}
 
+	@autobind
 	private handleBlur(e: React.FocusEvent<HTMLLIElement>) {
 		this.deactivateEdit();
 		this.props.onBlur(e);
 	}
 
+	@autobind
 	private handleClick(e: React.MouseEvent<HTMLLIElement>) {
 		if (!this.props.disabled && this.props.visible) {
 			// This timer will wait N seconds before respecting the single click
@@ -104,6 +99,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		}
 	}
 
+	@autobind
 	private handleDoubleClick(e: React.MouseEvent<HTMLLIElement>) {
 		// If a double click occurs, then sent a flag preventing the single click
 		// from firing after its timer expires
@@ -114,6 +110,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		});
 	}
 
+	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLLIElement>) {
 		if (e.key === 'Escape') {
 			this.deactivateEdit();
@@ -122,6 +119,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.props.onKeyDown(e);
 	}
 
+	@autobind
 	private handleKeyPress(e: React.KeyboardEvent<HTMLLIElement>) {
 		if (e.key === 'Enter') {
 			this.deactivateEdit();

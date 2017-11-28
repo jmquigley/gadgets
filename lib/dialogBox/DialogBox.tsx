@@ -65,6 +65,7 @@
 
 const ReactModal = require('react-modal');
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -184,18 +185,11 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	constructor(props: DialogBoxProps) {
 		super(props, DialogBox.defaultProps.style);
 
-		this._classes.add(['ui-dialogbox']);
+		this._classes.add('ui-dialogbox');
 
 		this.state = {
 			showModal: this.props.show
 		};
-
-		this.bindCallbacks(
-			'handleClose',
-			'handleNo',
-			'handleOpen',
-			'handleYes'
-		);
 
 		this._icon = {
 			error: (
@@ -257,21 +251,25 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		return message.join('');
 	}
 
+	@autobind
 	private handleClose() {
 		this.handleNo();
 		this.props.onClose();
 	}
 
+	@autobind
 	private handleNo() {
 		this.setState({showModal: false}, () => {
 			this.props.onSelection(false);
 		});
 	}
 
+	@autobind
 	private handleOpen() {
 		this.props.onOpen();
 	}
 
+	@autobind
 	private handleYes() {
 		this.setState({showModal: false}, () => {
 			this.props.onSelection(true);

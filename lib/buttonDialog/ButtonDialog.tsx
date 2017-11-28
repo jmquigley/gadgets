@@ -36,6 +36,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {ClassNames} from 'util.classnames';
@@ -155,7 +156,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			...props.dialogClasses.slice()
 		]);
 
-		this._classes.add(['ui-button-dialog']);
+		this._classes.add('ui-button-dialog');
 
 		this._triangleStyles.add([
 			...props.triangleClasses.slice()
@@ -165,15 +166,10 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 			visible: false
 		};
 
-		this.bindCallbacks(
-			'handleClick',
-			'handleDialogClick',
-			'handleKeyDown'
-		);
-
 		this.componentWillUpdate(this.props, this.state);
 	}
 
+	@autobind
 	private handleClick() {
 		if (!this.props.disabled) {
 			this.setState({
@@ -184,12 +180,14 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		}
 	}
 
+	@autobind
 	private handleDialogClick() {
 		this.setState({
 			visible: false
 		});
 	}
 
+	@autobind
 	private handleKeyDown(e: any) {
 		if (e.key === 'Escape') {
 			this.setState({

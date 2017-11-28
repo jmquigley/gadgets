@@ -108,10 +108,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 	constructor(props: ButtonCircleProps) {
 		super(props, ButtonCircle.defaultProps.style);
 
-		this._classes.add([
-			'ui-button-circle'
-		]);
-
+		this._classes.add('ui-button-circle');
 		this.componentWillUpdate(this.props);
 	}
 

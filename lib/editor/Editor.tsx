@@ -109,6 +109,7 @@ import {globalize} from '../shared/helpers';
 globalize('hljs', require('highlight.js'));
 const Quill = globalize('Quill', require('quill'));
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import {Markup, MarkupMode} from 'quill-markup';
 import * as React from 'react';
@@ -229,11 +230,9 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 
 		debug('Editor key: "%s"', this.id);
 
-		this._classes.add(['ui-editor']);
-		this._editorStyles.add(['ui-editor-quill']);
-		this._toolbarStyles.add(['ui-editor-toolbar']);
-
-		this.bindCallbacks('handleSelect');
+		this._classes.add('ui-editor');
+		this._editorStyles.add('ui-editor-quill');
+		this._toolbarStyles.add('ui-editor-toolbar');
 
 		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props);
@@ -267,6 +266,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 		));
 	}
 
+	@autobind
 	private handleSelect(level: string) {
 		return () => {
 			this._markup.setHeader(level);

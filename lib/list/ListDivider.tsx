@@ -62,7 +62,7 @@ export class ListDivider extends BaseComponent<ListDividerProps, undefined> {
 	constructor(props: ListDividerProps) {
 		super(props, ListDivider.defaultProps.style);
 
-		this._classes.add(['ui-list-divider']);
+		this._classes.add('ui-list-divider');
 		this.componentWillUpdate(this.props);
 	}
 

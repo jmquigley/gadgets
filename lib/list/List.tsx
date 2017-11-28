@@ -7,6 +7,7 @@
 
 'use strict';
 
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Keys} from 'util.keys';
@@ -58,18 +59,17 @@ export class List extends BaseComponent<ListProps, ListState> {
 		super(props, List.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
-		this._classes.add(['ui-list']);
+		this._classes.add('ui-list');
 
 		this.state = {
 			selectedItem: null
 		};
 
-		this.bindCallbacks('selectHandler');
-
 		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props);
 	}
 
+	@autobind
 	private selectHandler(item: ListItem) {
 		if (this.state.selectedItem != null
 			&& item.props.id === this.state.selectedItem.props.id) {
