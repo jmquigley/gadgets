@@ -67,7 +67,6 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
-import {ButtonDialog} from '../buttonDialog';
 import {Divider} from '../divider';
 import {BaseComponent, BaseProps, getDefaultBaseProps, getTheme} from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
@@ -180,9 +179,9 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	constructor(props: BrowserProps) {
 		super(props, Browser.defaultProps.style);
 
-		this._classes.add('ui-browser');
-		const url = this.props.uri || this.props.home || '';
+		this._classes.add(['ui-browser']);
 
+		const url = this.props.uri || this.props.home || '';
 		this.state = {
 			search: '',
 			uri: url,
@@ -350,12 +349,6 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 							/>
 						</BrowserToolbarURL>
 						<BrowserToolbarSearch>
-							<ButtonDialog
-								iconName="chevron-down"
-								tooltip={this.props.notooltips ? '' : 'history'}
-							>
-								history
-							</ButtonDialog>
 							<Button
 								iconName="camera-retro"
 								onClick={this.handleSnapshot}

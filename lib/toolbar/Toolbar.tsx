@@ -118,6 +118,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 		'Divider',
 		'Dropdown',
 		'Option',
+		'StyledComponent',
 		'Switch',
 		'TextField'
 	]);
@@ -161,6 +162,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						break;
 
 					case 'TextField':
+					case 'StyledComponent':
 						delete style['height'];
 						break;
 				}
