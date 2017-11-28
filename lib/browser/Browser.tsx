@@ -5,6 +5,7 @@
  * - Navigate back/forward through pages
  * - Programmatically change the URI reference
  * - Retrieve the details (clip) the current page
+ * - Perform a text search within the page with forward/backward navigation
  *
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/browser.png" width="60%" />
@@ -215,6 +216,24 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	}
 
 	@autobind
+	private handleNextSearch() {
+		if (this._webview) {
+			if (this.state.search) {
+				this._webview.findInPage(this.state.search, {forward: true, findNext: true});
+			}
+		}
+	}
+
+	@autobind
+	private handlePreviousSearch() {
+		if (this._webview) {
+			if (this.state.search) {
+				this._webview.findInPage(this.state.search, {forward: false, findNext: true});
+			}
+		}
+	}
+
+	@autobind
 	private handleRef(ref: any) {
 		this._browser = ref;
 	}
@@ -222,6 +241,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	@autobind
 	private handleReload() {
 		if (this._webview) {
+			this.handleSearch({target: {value: ''}} as any);
 			this._webview.reload();
 		}
 	}
@@ -234,7 +254,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		}, () => {
 			if (this._webview) {
 				if (value) {
-					this._webview.findInPage(value);
+					this._webview.findInPage(value, {findNext: false});
 				} else {
 					this._webview.stopFindInPage('clearSelection');
 				}
@@ -363,8 +383,14 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 								value={this.state.search}
 							/>
 							<Button
+								iconName="step-backward"
+								onClick={this.handlePreviousSearch}
+								tooltip={this.props.notooltips ? '' : 'search backward'}
+							/>
+							<Button
 								iconName="step-forward"
-								tooltip={this.props.notooltips ? '' : 'continue search'}
+								onClick={this.handleNextSearch}
+								tooltip={this.props.notooltips ? '' : 'search forward'}
 							/>
 						</BrowserToolbarSearch>
 					</BrowserToolbar>
