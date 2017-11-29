@@ -4,12 +4,9 @@
 		"license": "MIT",
 		"main": "main.js",
 		"scripts": {
-				"build": "yarn install && yarn run copy:highlights && yarn run build:main && yarn run build:app",
+				"build": "yarn run copy:highlights && yarn run build:main && yarn run build:app",
 				"build:main": "../node_modules/.bin/tsc -p .",
 				"build:app": "../node_modules/.bin/babel app.jsx -o app.js",
 				"copy:highlights": "cpx --clean ../dist/highlights/**/*.css highlights/"
-		},
-		"devDependencies": {
-				"cpx": "^1.5.0"
 		}
 }
