@@ -159,7 +159,7 @@
 				"verbose": false
 		},
 		"scripts": {
-				"all": "yarn install && yarn prepublishOnly && yarn prepack",
+				"all": "yarn install && cross-env NODE_ENV=production yarn run build && yarn test && yarn run docs",
 				"build": "yarn clean && yarn run lint && pkgwrap --build --webpack && yarn run build:demo",
 				"build:demo": "cd demo && yarn run build",
 				"clean": "pkgwrap --clean",
@@ -167,8 +167,7 @@
 				"demo": "yarn run all && yarn start",
 				"docs": "pkgwrap --docs",
 				"lint": "pkgwrap --lint",
-				"prepublishOnly": "yarn run clean && cross-env NODE_ENV=production yarn run build && yarn run docs",
-				"prepack": "yarn test",
+				"prepublishOnly": "yarn run all",
 				"start": "cross-env NODE_ENV=production electron demo/.",
 				"test": "cross-env NODE_ENV=test pkgwrap --testing --jest",
 				"watch": "webpack --watch --progress",
