@@ -137,7 +137,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 		const theme: any = getTheme();
 
 		React.Children.forEach(this.props.children, (child: any, idx: number) => {
-			if (Toolbar._whitelist.contains(child['type'].name)) {
+			if (Toolbar._whitelist.contains(child['props'].obj)) {
 				const style = Object.assign({}, child['props'].style, {
 					display: 'flex',
 					height: this.fontSizePX(this.props.sizing, 1.5),

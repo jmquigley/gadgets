@@ -111,14 +111,14 @@
 		"pkgwrap": {
 				"bail": true,
 				"cleanup": [
+						"docs",
+						"bin/**/*.d.ts",
+						"bin/**/*.js",
 						"index.d.ts",
 						"index.js",
-						"bin/**/*.js",
-						"bin/**/*.d.ts",
-						"docs",
+						"lib/**/*.d.ts",
 						"lib/**/*.js",
-						"lib/**/*.jsx",
-						"lib/**/*.d.ts"
+						"lib/**/*.jsx"
 				]
 		},
 		"jest": {
@@ -159,7 +159,7 @@
 				"verbose": false
 		},
 		"scripts": {
-				"all": "yarn install && cross-env NODE_ENV=production yarn run build && yarn test && yarn run docs",
+				"all": "yarn install && cross-env NODE_ENV=production yarn run build && yarn run docs && yarn test",
 				"build": "yarn clean && yarn run lint && pkgwrap --build --webpack && yarn run build:demo",
 				"build:demo": "cd demo && yarn run build",
 				"clean": "pkgwrap --clean",
