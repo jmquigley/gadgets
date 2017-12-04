@@ -6335,6 +6335,826 @@ exports[`Test creation of an Editor instance 1`] = `
                         </div>
                       </styled.div>
                       <styled.div
+                        key="10"
+                        style={
+                          Object {
+                            "display": "flex",
+                            "height": "18px",
+                            "margin": "0 2px",
+                          }
+                        }
+                      >
+                        <div
+                          className="sc-ckVGcZ gxvsaQ"
+                          style={
+                            Object {
+                              "display": "flex",
+                              "height": "18px",
+                              "margin": "0 2px",
+                            }
+                          }
+                        >
+                          <Dropdown
+                            className="ui-toolbar-element"
+                            contentEditable={false}
+                            defaultVal="Fira Code"
+                            direction="right"
+                            disabled={false}
+                            errorMessage=""
+                            focus={false}
+                            height=""
+                            id=""
+                            initialItem=""
+                            items={
+                              Array [
+                                Object {
+                                  "label": "Fira Code",
+                                  "value": "Fira Code",
+                                },
+                                Object {
+                                  "label": "Inconsolata",
+                                  "value": "Inconsolata",
+                                },
+                                Object {
+                                  "label": "Source Code Pro",
+                                  "value": "Source Code Pro",
+                                },
+                              ]
+                            }
+                            location="none"
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            obj="Dropdown"
+                            onSelect={[Function]}
+                            selected={false}
+                            sizing="small"
+                            style={Object {}}
+                            testing={true}
+                            theme={null}
+                            tooltip="font"
+                            visible={true}
+                            width=""
+                            xcss={null}
+                          >
+                            <ThemeProvider
+                              theme={
+                                Object {
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#c0c0c0",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
+                                  "tooltipBackgroundColor": "#708090",
+                                  "tooltipForegroundColor": "#ffffff",
+                                  "transitionDelay": "0.5s",
+                                }
+                              }
+                            >
+                              <styled.div
+                                className="ui-dropdown-container"
+                                sizing="small"
+                              >
+                                <div
+                                  className="ui-dropdown-container sc-gZMcBi uExIL"
+                                >
+                                  <styled.select
+                                    className="ui-dropdown ui-toolbar-element"
+                                    disabled={false}
+                                    id="Dropdown-0"
+                                    onChange={[Function]}
+                                    style={
+                                      Object {
+                                        "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                                        "paddingLeft": "2.4000000000000004px",
+                                        "paddingRight": "12px",
+                                      }
+                                    }
+                                    value="Fira Code"
+                                  >
+                                    <select
+                                      className="ui-dropdown ui-toolbar-element sc-gqjmRU iPmDOp"
+                                      disabled={false}
+                                      id="Dropdown-0"
+                                      onChange={[Function]}
+                                      style={
+                                        Object {
+                                          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                                          "paddingLeft": "2.4000000000000004px",
+                                          "paddingRight": "12px",
+                                        }
+                                      }
+                                      value="Fira Code"
+                                    >
+                                      <option
+                                        key="0"
+                                        value="Fira Code"
+                                      >
+                                        Fira Code
+                                      </option>
+                                      <option
+                                        key="1"
+                                        value="Inconsolata"
+                                      >
+                                        Inconsolata
+                                      </option>
+                                      <option
+                                        key="2"
+                                        value="Source Code Pro"
+                                      >
+                                        Source Code Pro
+                                      </option>
+                                    </select>
+                                  </styled.select>
+                                  <Tooltip
+                                    className=""
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    errorMessage=""
+                                    focus={false}
+                                    height=""
+                                    id=""
+                                    location="top"
+                                    noedit={false}
+                                    nohover={false}
+                                    noripple={false}
+                                    obj="Tooltip"
+                                    parent="Dropdown-0"
+                                    selected={false}
+                                    sizing="small"
+                                    style={
+                                      Object {
+                                        "backgroundColor": "#708090",
+                                        "color": "#ffffff",
+                                      }
+                                    }
+                                    testing={true}
+                                    theme={null}
+                                    tooltip=""
+                                    visible={true}
+                                    width=""
+                                    xcss={null}
+                                  >
+                                    <ThemeProvider
+                                      theme={
+                                        Object {
+                                          "backgroundColor": "#ffffff",
+                                          "borderColor": "#c0c0c0",
+                                          "color": "#000000",
+                                          "headerBackgroundColor": "#004358",
+                                          "headerForegroundColor": "#ffffff",
+                                          "headerHoverColor": "#ffe11a",
+                                          "hoverColor": "#c0c0c0",
+                                          "inputBorderColor": "#c0c0c0",
+                                          "selectedBackgroundColor": "#1f8a70",
+                                          "selectedForegroundColor": "#ffe11a",
+                                          "tooltipBackgroundColor": "#708090",
+                                          "tooltipForegroundColor": "#ffffff",
+                                          "transitionDelay": "0.5s",
+                                        }
+                                      }
+                                    >
+                                      <styled.div
+                                        className="ui-tooltip"
+                                        location="top"
+                                        sizing="xsmall"
+                                        style={
+                                          Object {
+                                            "backgroundColor": "#708090",
+                                            "color": "#ffffff",
+                                          }
+                                        }
+                                        visible={false}
+                                        width="unset"
+                                      >
+                                        <div
+                                          className="ui-tooltip sc-htpNat cTwgSx"
+                                          style={
+                                            Object {
+                                              "backgroundColor": "#708090",
+                                              "color": "#ffffff",
+                                            }
+                                          }
+                                          width="unset"
+                                        >
+                                          <styled.span
+                                            className="ui-tooltip-content"
+                                            sizing="xsmall"
+                                            style={
+                                              Object {
+                                                "backgroundColor": "#708090",
+                                                "color": "#ffffff",
+                                              }
+                                            }
+                                          >
+                                            <span
+                                              className="ui-tooltip-content sc-bwzfXH lcHZFn"
+                                              style={
+                                                Object {
+                                                  "backgroundColor": "#708090",
+                                                  "color": "#ffffff",
+                                                }
+                                              }
+                                            >
+                                              font
+                                            </span>
+                                          </styled.span>
+                                          <Styled(Triangle)
+                                            direction="down"
+                                            location="top"
+                                            sizing="xsmall"
+                                            style={
+                                              Object {
+                                                "fill": "#708090",
+                                                "stroke": "#708090",
+                                              }
+                                            }
+                                          >
+                                            <Triangle
+                                              className="sc-bdVaJa hkeXep"
+                                              contentEditable={false}
+                                              direction="down"
+                                              disabled={false}
+                                              errorMessage=""
+                                              focus={false}
+                                              height=""
+                                              id=""
+                                              location="top"
+                                              nobase={false}
+                                              noedit={false}
+                                              nohover={false}
+                                              noripple={false}
+                                              obj="Triangle"
+                                              selected={false}
+                                              sizing="xsmall"
+                                              style={
+                                                Object {
+                                                  "fill": "#708090",
+                                                  "stroke": "#708090",
+                                                }
+                                              }
+                                              testing={true}
+                                              theme={null}
+                                              tooltip=""
+                                              visible={true}
+                                              width=""
+                                              xcss={null}
+                                            >
+                                              <ThemeProvider
+                                                theme={
+                                                  Object {
+                                                    "backgroundColor": "#ffffff",
+                                                    "borderColor": "#c0c0c0",
+                                                    "color": "#000000",
+                                                    "headerBackgroundColor": "#004358",
+                                                    "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
+                                                    "hoverColor": "#c0c0c0",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "selectedBackgroundColor": "#1f8a70",
+                                                    "selectedForegroundColor": "#ffe11a",
+                                                    "tooltipBackgroundColor": "#708090",
+                                                    "tooltipForegroundColor": "#ffffff",
+                                                    "transitionDelay": "0.5s",
+                                                  }
+                                                }
+                                              >
+                                                <Triangle__SVGView
+                                                  className="ui-triangle sc-bdVaJa hkeXep"
+                                                  contentEditable={false}
+                                                  direction="down"
+                                                  disabled={false}
+                                                  errorMessage=""
+                                                  focus={false}
+                                                  height=""
+                                                  id=""
+                                                  location="top"
+                                                  nobase={false}
+                                                  noedit={false}
+                                                  nohover={false}
+                                                  noripple={false}
+                                                  obj="Triangle"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  selected={false}
+                                                  sizing="xsmall"
+                                                  style={
+                                                    Object {
+                                                      "fill": "#708090",
+                                                      "stokeWidth": "2px",
+                                                      "stroke": "#708090",
+                                                    }
+                                                  }
+                                                  testing={true}
+                                                  theme={null}
+                                                  tooltip=""
+                                                  version="1.1"
+                                                  viewBox="0 0 40 40"
+                                                  visible={true}
+                                                  width=""
+                                                  xcss={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <svg
+                                                    className="ui-triangle sc-bdVaJa hkeXep Triangle__SVGView-bGJaTC dKKhze"
+                                                    contentEditable={false}
+                                                    direction="down"
+                                                    disabled={false}
+                                                    height=""
+                                                    id=""
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    selected={false}
+                                                    style={
+                                                      Object {
+                                                        "fill": "#708090",
+                                                        "stokeWidth": "2px",
+                                                        "stroke": "#708090",
+                                                      }
+                                                    }
+                                                    version="1.1"
+                                                    viewBox="0 0 40 40"
+                                                    width=""
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <polygon
+                                                      points="0,35, 20,10 40,35"
+                                                    />
+                                                  </svg>
+                                                </Triangle__SVGView>
+                                              </ThemeProvider>
+                                            </Triangle>
+                                          </Styled(Triangle)>
+                                        </div>
+                                      </styled.div>
+                                    </ThemeProvider>
+                                  </Tooltip>
+                                </div>
+                              </styled.div>
+                            </ThemeProvider>
+                          </Dropdown>
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        key="11"
+                        style={
+                          Object {
+                            "display": "flex",
+                            "height": "18px",
+                            "margin": "0 2px",
+                          }
+                        }
+                      >
+                        <div
+                          className="sc-ckVGcZ gxvsaQ"
+                          style={
+                            Object {
+                              "display": "flex",
+                              "height": "18px",
+                              "margin": "0 2px",
+                            }
+                          }
+                        >
+                          <Dropdown
+                            className="ui-toolbar-element"
+                            contentEditable={false}
+                            defaultVal="12"
+                            direction="right"
+                            disabled={false}
+                            errorMessage=""
+                            focus={false}
+                            height=""
+                            id=""
+                            initialItem=""
+                            items={
+                              Array [
+                                Object {
+                                  "label": "8",
+                                  "value": "8",
+                                },
+                                Object {
+                                  "label": "9",
+                                  "value": "9",
+                                },
+                                Object {
+                                  "label": "10",
+                                  "value": "10",
+                                },
+                                Object {
+                                  "label": "11",
+                                  "value": "11",
+                                },
+                                Object {
+                                  "label": "12",
+                                  "value": "12",
+                                },
+                                Object {
+                                  "label": "13",
+                                  "value": "13",
+                                },
+                                Object {
+                                  "label": "14",
+                                  "value": "14",
+                                },
+                                Object {
+                                  "label": "16",
+                                  "value": "16",
+                                },
+                                Object {
+                                  "label": "20",
+                                  "value": "20",
+                                },
+                                Object {
+                                  "label": "24",
+                                  "value": "24",
+                                },
+                                Object {
+                                  "label": "32",
+                                  "value": "32",
+                                },
+                                Object {
+                                  "label": "48",
+                                  "value": "48",
+                                },
+                              ]
+                            }
+                            location="none"
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            obj="Dropdown"
+                            onSelect={[Function]}
+                            selected={false}
+                            sizing="small"
+                            style={Object {}}
+                            testing={true}
+                            theme={null}
+                            tooltip="font size"
+                            visible={true}
+                            width=""
+                            xcss={null}
+                          >
+                            <ThemeProvider
+                              theme={
+                                Object {
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#c0c0c0",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
+                                  "tooltipBackgroundColor": "#708090",
+                                  "tooltipForegroundColor": "#ffffff",
+                                  "transitionDelay": "0.5s",
+                                }
+                              }
+                            >
+                              <styled.div
+                                className="ui-dropdown-container"
+                                sizing="small"
+                              >
+                                <div
+                                  className="ui-dropdown-container sc-gZMcBi uExIL"
+                                >
+                                  <styled.select
+                                    className="ui-dropdown ui-toolbar-element"
+                                    disabled={false}
+                                    id="Dropdown-0"
+                                    onChange={[Function]}
+                                    style={
+                                      Object {
+                                        "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                                        "paddingLeft": "2.4000000000000004px",
+                                        "paddingRight": "12px",
+                                      }
+                                    }
+                                    value="12"
+                                  >
+                                    <select
+                                      className="ui-dropdown ui-toolbar-element sc-gqjmRU iPmDOp"
+                                      disabled={false}
+                                      id="Dropdown-0"
+                                      onChange={[Function]}
+                                      style={
+                                        Object {
+                                          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                                          "paddingLeft": "2.4000000000000004px",
+                                          "paddingRight": "12px",
+                                        }
+                                      }
+                                      value="12"
+                                    >
+                                      <option
+                                        key="0"
+                                        value="8"
+                                      >
+                                        8
+                                      </option>
+                                      <option
+                                        key="1"
+                                        value="9"
+                                      >
+                                        9
+                                      </option>
+                                      <option
+                                        key="2"
+                                        value="10"
+                                      >
+                                        10
+                                      </option>
+                                      <option
+                                        key="3"
+                                        value="11"
+                                      >
+                                        11
+                                      </option>
+                                      <option
+                                        key="4"
+                                        value="12"
+                                      >
+                                        12
+                                      </option>
+                                      <option
+                                        key="5"
+                                        value="13"
+                                      >
+                                        13
+                                      </option>
+                                      <option
+                                        key="6"
+                                        value="14"
+                                      >
+                                        14
+                                      </option>
+                                      <option
+                                        key="7"
+                                        value="16"
+                                      >
+                                        16
+                                      </option>
+                                      <option
+                                        key="8"
+                                        value="20"
+                                      >
+                                        20
+                                      </option>
+                                      <option
+                                        key="9"
+                                        value="24"
+                                      >
+                                        24
+                                      </option>
+                                      <option
+                                        key="10"
+                                        value="32"
+                                      >
+                                        32
+                                      </option>
+                                      <option
+                                        key="11"
+                                        value="48"
+                                      >
+                                        48
+                                      </option>
+                                    </select>
+                                  </styled.select>
+                                  <Tooltip
+                                    className=""
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    errorMessage=""
+                                    focus={false}
+                                    height=""
+                                    id=""
+                                    location="top"
+                                    noedit={false}
+                                    nohover={false}
+                                    noripple={false}
+                                    obj="Tooltip"
+                                    parent="Dropdown-0"
+                                    selected={false}
+                                    sizing="small"
+                                    style={
+                                      Object {
+                                        "backgroundColor": "#708090",
+                                        "color": "#ffffff",
+                                      }
+                                    }
+                                    testing={true}
+                                    theme={null}
+                                    tooltip=""
+                                    visible={true}
+                                    width=""
+                                    xcss={null}
+                                  >
+                                    <ThemeProvider
+                                      theme={
+                                        Object {
+                                          "backgroundColor": "#ffffff",
+                                          "borderColor": "#c0c0c0",
+                                          "color": "#000000",
+                                          "headerBackgroundColor": "#004358",
+                                          "headerForegroundColor": "#ffffff",
+                                          "headerHoverColor": "#ffe11a",
+                                          "hoverColor": "#c0c0c0",
+                                          "inputBorderColor": "#c0c0c0",
+                                          "selectedBackgroundColor": "#1f8a70",
+                                          "selectedForegroundColor": "#ffe11a",
+                                          "tooltipBackgroundColor": "#708090",
+                                          "tooltipForegroundColor": "#ffffff",
+                                          "transitionDelay": "0.5s",
+                                        }
+                                      }
+                                    >
+                                      <styled.div
+                                        className="ui-tooltip"
+                                        location="top"
+                                        sizing="xsmall"
+                                        style={
+                                          Object {
+                                            "backgroundColor": "#708090",
+                                            "color": "#ffffff",
+                                          }
+                                        }
+                                        visible={false}
+                                        width="unset"
+                                      >
+                                        <div
+                                          className="ui-tooltip sc-htpNat cTwgSx"
+                                          style={
+                                            Object {
+                                              "backgroundColor": "#708090",
+                                              "color": "#ffffff",
+                                            }
+                                          }
+                                          width="unset"
+                                        >
+                                          <styled.span
+                                            className="ui-tooltip-content"
+                                            sizing="xsmall"
+                                            style={
+                                              Object {
+                                                "backgroundColor": "#708090",
+                                                "color": "#ffffff",
+                                              }
+                                            }
+                                          >
+                                            <span
+                                              className="ui-tooltip-content sc-bwzfXH lcHZFn"
+                                              style={
+                                                Object {
+                                                  "backgroundColor": "#708090",
+                                                  "color": "#ffffff",
+                                                }
+                                              }
+                                            >
+                                              font size
+                                            </span>
+                                          </styled.span>
+                                          <Styled(Triangle)
+                                            direction="down"
+                                            location="top"
+                                            sizing="xsmall"
+                                            style={
+                                              Object {
+                                                "fill": "#708090",
+                                                "stroke": "#708090",
+                                              }
+                                            }
+                                          >
+                                            <Triangle
+                                              className="sc-bdVaJa hkeXep"
+                                              contentEditable={false}
+                                              direction="down"
+                                              disabled={false}
+                                              errorMessage=""
+                                              focus={false}
+                                              height=""
+                                              id=""
+                                              location="top"
+                                              nobase={false}
+                                              noedit={false}
+                                              nohover={false}
+                                              noripple={false}
+                                              obj="Triangle"
+                                              selected={false}
+                                              sizing="xsmall"
+                                              style={
+                                                Object {
+                                                  "fill": "#708090",
+                                                  "stroke": "#708090",
+                                                }
+                                              }
+                                              testing={true}
+                                              theme={null}
+                                              tooltip=""
+                                              visible={true}
+                                              width=""
+                                              xcss={null}
+                                            >
+                                              <ThemeProvider
+                                                theme={
+                                                  Object {
+                                                    "backgroundColor": "#ffffff",
+                                                    "borderColor": "#c0c0c0",
+                                                    "color": "#000000",
+                                                    "headerBackgroundColor": "#004358",
+                                                    "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
+                                                    "hoverColor": "#c0c0c0",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "selectedBackgroundColor": "#1f8a70",
+                                                    "selectedForegroundColor": "#ffe11a",
+                                                    "tooltipBackgroundColor": "#708090",
+                                                    "tooltipForegroundColor": "#ffffff",
+                                                    "transitionDelay": "0.5s",
+                                                  }
+                                                }
+                                              >
+                                                <Triangle__SVGView
+                                                  className="ui-triangle sc-bdVaJa hkeXep"
+                                                  contentEditable={false}
+                                                  direction="down"
+                                                  disabled={false}
+                                                  errorMessage=""
+                                                  focus={false}
+                                                  height=""
+                                                  id=""
+                                                  location="top"
+                                                  nobase={false}
+                                                  noedit={false}
+                                                  nohover={false}
+                                                  noripple={false}
+                                                  obj="Triangle"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  selected={false}
+                                                  sizing="xsmall"
+                                                  style={
+                                                    Object {
+                                                      "fill": "#708090",
+                                                      "stokeWidth": "2px",
+                                                      "stroke": "#708090",
+                                                    }
+                                                  }
+                                                  testing={true}
+                                                  theme={null}
+                                                  tooltip=""
+                                                  version="1.1"
+                                                  viewBox="0 0 40 40"
+                                                  visible={true}
+                                                  width=""
+                                                  xcss={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <svg
+                                                    className="ui-triangle sc-bdVaJa hkeXep Triangle__SVGView-bGJaTC dKKhze"
+                                                    contentEditable={false}
+                                                    direction="down"
+                                                    disabled={false}
+                                                    height=""
+                                                    id=""
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    selected={false}
+                                                    style={
+                                                      Object {
+                                                        "fill": "#708090",
+                                                        "stokeWidth": "2px",
+                                                        "stroke": "#708090",
+                                                      }
+                                                    }
+                                                    version="1.1"
+                                                    viewBox="0 0 40 40"
+                                                    width=""
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <polygon
+                                                      points="0,35, 20,10 40,35"
+                                                    />
+                                                  </svg>
+                                                </Triangle__SVGView>
+                                              </ThemeProvider>
+                                            </Triangle>
+                                          </Styled(Triangle)>
+                                        </div>
+                                      </styled.div>
+                                    </ThemeProvider>
+                                  </Tooltip>
+                                </div>
+                              </styled.div>
+                            </ThemeProvider>
+                          </Dropdown>
+                        </div>
+                      </styled.div>
+                      <styled.div
                         key="12"
                         style={
                           Object {
@@ -6413,6 +7233,1514 @@ exports[`Test creation of an Editor instance 1`] = `
                               </styled.div>
                             </ThemeProvider>
                           </Divider>
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        key="13"
+                        style={
+                          Object {
+                            "display": "flex",
+                            "height": "18px",
+                            "margin": "0 2px",
+                          }
+                        }
+                      >
+                        <div
+                          className="sc-ckVGcZ gxvsaQ"
+                          style={
+                            Object {
+                              "display": "flex",
+                              "height": "18px",
+                              "margin": "0 2px",
+                            }
+                          }
+                        >
+                          <Dropdown
+                            className="ui-toolbar-element"
+                            contentEditable={false}
+                            defaultVal="markdown"
+                            direction="right"
+                            disabled={false}
+                            errorMessage=""
+                            focus={false}
+                            height=""
+                            id=""
+                            initialItem=""
+                            items={
+                              Array [
+                                Object {
+                                  "label": "Asciidoc",
+                                  "value": "asciidoc",
+                                },
+                                Object {
+                                  "label": "Markdown",
+                                  "value": "markdown",
+                                },
+                                Object {
+                                  "label": "Restructuredtext",
+                                  "value": "restructuredtext",
+                                },
+                                Object {
+                                  "label": "Text",
+                                  "value": "text",
+                                },
+                              ]
+                            }
+                            location="none"
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            obj="Dropdown"
+                            onSelect={[Function]}
+                            selected={false}
+                            sizing="small"
+                            style={Object {}}
+                            testing={true}
+                            theme={null}
+                            tooltip="mode"
+                            visible={true}
+                            width=""
+                            xcss={null}
+                          >
+                            <ThemeProvider
+                              theme={
+                                Object {
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#c0c0c0",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
+                                  "tooltipBackgroundColor": "#708090",
+                                  "tooltipForegroundColor": "#ffffff",
+                                  "transitionDelay": "0.5s",
+                                }
+                              }
+                            >
+                              <styled.div
+                                className="ui-dropdown-container"
+                                sizing="small"
+                              >
+                                <div
+                                  className="ui-dropdown-container sc-gZMcBi uExIL"
+                                >
+                                  <styled.select
+                                    className="ui-dropdown ui-toolbar-element"
+                                    disabled={false}
+                                    id="Dropdown-0"
+                                    onChange={[Function]}
+                                    style={
+                                      Object {
+                                        "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                                        "paddingLeft": "2.4000000000000004px",
+                                        "paddingRight": "12px",
+                                      }
+                                    }
+                                    value="markdown"
+                                  >
+                                    <select
+                                      className="ui-dropdown ui-toolbar-element sc-gqjmRU iPmDOp"
+                                      disabled={false}
+                                      id="Dropdown-0"
+                                      onChange={[Function]}
+                                      style={
+                                        Object {
+                                          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                                          "paddingLeft": "2.4000000000000004px",
+                                          "paddingRight": "12px",
+                                        }
+                                      }
+                                      value="markdown"
+                                    >
+                                      <option
+                                        key="0"
+                                        value="asciidoc"
+                                      >
+                                        Asciidoc
+                                      </option>
+                                      <option
+                                        key="1"
+                                        value="markdown"
+                                      >
+                                        Markdown
+                                      </option>
+                                      <option
+                                        key="2"
+                                        value="restructuredtext"
+                                      >
+                                        Restructuredtext
+                                      </option>
+                                      <option
+                                        key="3"
+                                        value="text"
+                                      >
+                                        Text
+                                      </option>
+                                    </select>
+                                  </styled.select>
+                                  <Tooltip
+                                    className=""
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    errorMessage=""
+                                    focus={false}
+                                    height=""
+                                    id=""
+                                    location="top"
+                                    noedit={false}
+                                    nohover={false}
+                                    noripple={false}
+                                    obj="Tooltip"
+                                    parent="Dropdown-0"
+                                    selected={false}
+                                    sizing="small"
+                                    style={
+                                      Object {
+                                        "backgroundColor": "#708090",
+                                        "color": "#ffffff",
+                                      }
+                                    }
+                                    testing={true}
+                                    theme={null}
+                                    tooltip=""
+                                    visible={true}
+                                    width=""
+                                    xcss={null}
+                                  >
+                                    <ThemeProvider
+                                      theme={
+                                        Object {
+                                          "backgroundColor": "#ffffff",
+                                          "borderColor": "#c0c0c0",
+                                          "color": "#000000",
+                                          "headerBackgroundColor": "#004358",
+                                          "headerForegroundColor": "#ffffff",
+                                          "headerHoverColor": "#ffe11a",
+                                          "hoverColor": "#c0c0c0",
+                                          "inputBorderColor": "#c0c0c0",
+                                          "selectedBackgroundColor": "#1f8a70",
+                                          "selectedForegroundColor": "#ffe11a",
+                                          "tooltipBackgroundColor": "#708090",
+                                          "tooltipForegroundColor": "#ffffff",
+                                          "transitionDelay": "0.5s",
+                                        }
+                                      }
+                                    >
+                                      <styled.div
+                                        className="ui-tooltip"
+                                        location="top"
+                                        sizing="xsmall"
+                                        style={
+                                          Object {
+                                            "backgroundColor": "#708090",
+                                            "color": "#ffffff",
+                                          }
+                                        }
+                                        visible={false}
+                                        width="unset"
+                                      >
+                                        <div
+                                          className="ui-tooltip sc-htpNat cTwgSx"
+                                          style={
+                                            Object {
+                                              "backgroundColor": "#708090",
+                                              "color": "#ffffff",
+                                            }
+                                          }
+                                          width="unset"
+                                        >
+                                          <styled.span
+                                            className="ui-tooltip-content"
+                                            sizing="xsmall"
+                                            style={
+                                              Object {
+                                                "backgroundColor": "#708090",
+                                                "color": "#ffffff",
+                                              }
+                                            }
+                                          >
+                                            <span
+                                              className="ui-tooltip-content sc-bwzfXH lcHZFn"
+                                              style={
+                                                Object {
+                                                  "backgroundColor": "#708090",
+                                                  "color": "#ffffff",
+                                                }
+                                              }
+                                            >
+                                              mode
+                                            </span>
+                                          </styled.span>
+                                          <Styled(Triangle)
+                                            direction="down"
+                                            location="top"
+                                            sizing="xsmall"
+                                            style={
+                                              Object {
+                                                "fill": "#708090",
+                                                "stroke": "#708090",
+                                              }
+                                            }
+                                          >
+                                            <Triangle
+                                              className="sc-bdVaJa hkeXep"
+                                              contentEditable={false}
+                                              direction="down"
+                                              disabled={false}
+                                              errorMessage=""
+                                              focus={false}
+                                              height=""
+                                              id=""
+                                              location="top"
+                                              nobase={false}
+                                              noedit={false}
+                                              nohover={false}
+                                              noripple={false}
+                                              obj="Triangle"
+                                              selected={false}
+                                              sizing="xsmall"
+                                              style={
+                                                Object {
+                                                  "fill": "#708090",
+                                                  "stroke": "#708090",
+                                                }
+                                              }
+                                              testing={true}
+                                              theme={null}
+                                              tooltip=""
+                                              visible={true}
+                                              width=""
+                                              xcss={null}
+                                            >
+                                              <ThemeProvider
+                                                theme={
+                                                  Object {
+                                                    "backgroundColor": "#ffffff",
+                                                    "borderColor": "#c0c0c0",
+                                                    "color": "#000000",
+                                                    "headerBackgroundColor": "#004358",
+                                                    "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
+                                                    "hoverColor": "#c0c0c0",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "selectedBackgroundColor": "#1f8a70",
+                                                    "selectedForegroundColor": "#ffe11a",
+                                                    "tooltipBackgroundColor": "#708090",
+                                                    "tooltipForegroundColor": "#ffffff",
+                                                    "transitionDelay": "0.5s",
+                                                  }
+                                                }
+                                              >
+                                                <Triangle__SVGView
+                                                  className="ui-triangle sc-bdVaJa hkeXep"
+                                                  contentEditable={false}
+                                                  direction="down"
+                                                  disabled={false}
+                                                  errorMessage=""
+                                                  focus={false}
+                                                  height=""
+                                                  id=""
+                                                  location="top"
+                                                  nobase={false}
+                                                  noedit={false}
+                                                  nohover={false}
+                                                  noripple={false}
+                                                  obj="Triangle"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  selected={false}
+                                                  sizing="xsmall"
+                                                  style={
+                                                    Object {
+                                                      "fill": "#708090",
+                                                      "stokeWidth": "2px",
+                                                      "stroke": "#708090",
+                                                    }
+                                                  }
+                                                  testing={true}
+                                                  theme={null}
+                                                  tooltip=""
+                                                  version="1.1"
+                                                  viewBox="0 0 40 40"
+                                                  visible={true}
+                                                  width=""
+                                                  xcss={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <svg
+                                                    className="ui-triangle sc-bdVaJa hkeXep Triangle__SVGView-bGJaTC dKKhze"
+                                                    contentEditable={false}
+                                                    direction="down"
+                                                    disabled={false}
+                                                    height=""
+                                                    id=""
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    selected={false}
+                                                    style={
+                                                      Object {
+                                                        "fill": "#708090",
+                                                        "stokeWidth": "2px",
+                                                        "stroke": "#708090",
+                                                      }
+                                                    }
+                                                    version="1.1"
+                                                    viewBox="0 0 40 40"
+                                                    width=""
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <polygon
+                                                      points="0,35, 20,10 40,35"
+                                                    />
+                                                  </svg>
+                                                </Triangle__SVGView>
+                                              </ThemeProvider>
+                                            </Triangle>
+                                          </Styled(Triangle)>
+                                        </div>
+                                      </styled.div>
+                                    </ThemeProvider>
+                                  </Tooltip>
+                                </div>
+                              </styled.div>
+                            </ThemeProvider>
+                          </Dropdown>
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        key="14"
+                        style={
+                          Object {
+                            "display": "flex",
+                            "height": "18px",
+                            "margin": "0 2px",
+                            "width": "6rem",
+                          }
+                        }
+                      >
+                        <div
+                          className="sc-ckVGcZ gxvsaQ"
+                          style={
+                            Object {
+                              "display": "flex",
+                              "height": "18px",
+                              "margin": "0 2px",
+                              "width": "6rem",
+                            }
+                          }
+                        >
+                          <Dropdown
+                            className="ui-toolbar-element"
+                            contentEditable={false}
+                            defaultVal="solarized-light"
+                            direction="right"
+                            disabled={false}
+                            errorMessage=""
+                            focus={false}
+                            height=""
+                            id=""
+                            initialItem=""
+                            items={
+                              Array [
+                                Object {
+                                  "label": "Agate",
+                                  "value": "agate",
+                                },
+                                Object {
+                                  "label": "Androidstudio",
+                                  "value": "androidstudio",
+                                },
+                                Object {
+                                  "label": "Arduino light",
+                                  "value": "arduino-light",
+                                },
+                                Object {
+                                  "label": "Arta",
+                                  "value": "arta",
+                                },
+                                Object {
+                                  "label": "Ascetic",
+                                  "value": "ascetic",
+                                },
+                                Object {
+                                  "label": "Atelier cave dark",
+                                  "value": "atelier-cave-dark",
+                                },
+                                Object {
+                                  "label": "Atelier cave light",
+                                  "value": "atelier-cave-light",
+                                },
+                                Object {
+                                  "label": "Atelier dune dark",
+                                  "value": "atelier-dune-dark",
+                                },
+                                Object {
+                                  "label": "Atelier dune light",
+                                  "value": "atelier-dune-light",
+                                },
+                                Object {
+                                  "label": "Atelier estuary dark",
+                                  "value": "atelier-estuary-dark",
+                                },
+                                Object {
+                                  "label": "Atelier estuary light",
+                                  "value": "atelier-estuary-light",
+                                },
+                                Object {
+                                  "label": "Atelier forest dark",
+                                  "value": "atelier-forest-dark",
+                                },
+                                Object {
+                                  "label": "Atelier forest light",
+                                  "value": "atelier-forest-light",
+                                },
+                                Object {
+                                  "label": "Atelier heath dark",
+                                  "value": "atelier-heath-dark",
+                                },
+                                Object {
+                                  "label": "Atelier heath light",
+                                  "value": "atelier-heath-light",
+                                },
+                                Object {
+                                  "label": "Atelier lakeside dark",
+                                  "value": "atelier-lakeside-dark",
+                                },
+                                Object {
+                                  "label": "Atelier lakeside light",
+                                  "value": "atelier-lakeside-light",
+                                },
+                                Object {
+                                  "label": "Atelier plateau dark",
+                                  "value": "atelier-plateau-dark",
+                                },
+                                Object {
+                                  "label": "Atelier plateau light",
+                                  "value": "atelier-plateau-light",
+                                },
+                                Object {
+                                  "label": "Atelier savanna dark",
+                                  "value": "atelier-savanna-dark",
+                                },
+                                Object {
+                                  "label": "Atelier savanna light",
+                                  "value": "atelier-savanna-light",
+                                },
+                                Object {
+                                  "label": "Atelier seaside dark",
+                                  "value": "atelier-seaside-dark",
+                                },
+                                Object {
+                                  "label": "Atelier seaside light",
+                                  "value": "atelier-seaside-light",
+                                },
+                                Object {
+                                  "label": "Atelier sulphurpool dark",
+                                  "value": "atelier-sulphurpool-dark",
+                                },
+                                Object {
+                                  "label": "Atelier sulphurpool light",
+                                  "value": "atelier-sulphurpool-light",
+                                },
+                                Object {
+                                  "label": "Atom one dark",
+                                  "value": "atom-one-dark",
+                                },
+                                Object {
+                                  "label": "Atom one light",
+                                  "value": "atom-one-light",
+                                },
+                                Object {
+                                  "label": "Brown paper",
+                                  "value": "brown-paper",
+                                },
+                                Object {
+                                  "label": "Codepen embed",
+                                  "value": "codepen-embed",
+                                },
+                                Object {
+                                  "label": "Color brewer",
+                                  "value": "color-brewer",
+                                },
+                                Object {
+                                  "label": "Darcula",
+                                  "value": "darcula",
+                                },
+                                Object {
+                                  "label": "Dark",
+                                  "value": "dark",
+                                },
+                                Object {
+                                  "label": "Darkula",
+                                  "value": "darkula",
+                                },
+                                Object {
+                                  "label": "Default",
+                                  "value": "default",
+                                },
+                                Object {
+                                  "label": "Docco",
+                                  "value": "docco",
+                                },
+                                Object {
+                                  "label": "Dracula",
+                                  "value": "dracula",
+                                },
+                                Object {
+                                  "label": "Far",
+                                  "value": "far",
+                                },
+                                Object {
+                                  "label": "Foundation",
+                                  "value": "foundation",
+                                },
+                                Object {
+                                  "label": "Github gist",
+                                  "value": "github-gist",
+                                },
+                                Object {
+                                  "label": "Github",
+                                  "value": "github",
+                                },
+                                Object {
+                                  "label": "Googlecode",
+                                  "value": "googlecode",
+                                },
+                                Object {
+                                  "label": "Grayscale",
+                                  "value": "grayscale",
+                                },
+                                Object {
+                                  "label": "Gruvbox dark",
+                                  "value": "gruvbox-dark",
+                                },
+                                Object {
+                                  "label": "Gruvbox light",
+                                  "value": "gruvbox-light",
+                                },
+                                Object {
+                                  "label": "Hopscotch",
+                                  "value": "hopscotch",
+                                },
+                                Object {
+                                  "label": "Hybrid",
+                                  "value": "hybrid",
+                                },
+                                Object {
+                                  "label": "Idea",
+                                  "value": "idea",
+                                },
+                                Object {
+                                  "label": "Ir black",
+                                  "value": "ir-black",
+                                },
+                                Object {
+                                  "label": "Kimbie dark",
+                                  "value": "kimbie.dark",
+                                },
+                                Object {
+                                  "label": "Kimbie light",
+                                  "value": "kimbie.light",
+                                },
+                                Object {
+                                  "label": "Magula",
+                                  "value": "magula",
+                                },
+                                Object {
+                                  "label": "Mono blue",
+                                  "value": "mono-blue",
+                                },
+                                Object {
+                                  "label": "Monokai sublime",
+                                  "value": "monokai-sublime",
+                                },
+                                Object {
+                                  "label": "Monokai",
+                                  "value": "monokai",
+                                },
+                                Object {
+                                  "label": "Obsidian",
+                                  "value": "obsidian",
+                                },
+                                Object {
+                                  "label": "Ocean",
+                                  "value": "ocean",
+                                },
+                                Object {
+                                  "label": "Paraiso dark",
+                                  "value": "paraiso-dark",
+                                },
+                                Object {
+                                  "label": "Paraiso light",
+                                  "value": "paraiso-light",
+                                },
+                                Object {
+                                  "label": "Pojoaque",
+                                  "value": "pojoaque",
+                                },
+                                Object {
+                                  "label": "Purebasic",
+                                  "value": "purebasic",
+                                },
+                                Object {
+                                  "label": "Qtcreator_dark",
+                                  "value": "qtcreator_dark",
+                                },
+                                Object {
+                                  "label": "Qtcreator_light",
+                                  "value": "qtcreator_light",
+                                },
+                                Object {
+                                  "label": "Railscasts",
+                                  "value": "railscasts",
+                                },
+                                Object {
+                                  "label": "Rainbow",
+                                  "value": "rainbow",
+                                },
+                                Object {
+                                  "label": "Routeros",
+                                  "value": "routeros",
+                                },
+                                Object {
+                                  "label": "School book",
+                                  "value": "school-book",
+                                },
+                                Object {
+                                  "label": "Solarized dark",
+                                  "value": "solarized-dark",
+                                },
+                                Object {
+                                  "label": "Solarized light",
+                                  "value": "solarized-light",
+                                },
+                                Object {
+                                  "label": "Sunburst",
+                                  "value": "sunburst",
+                                },
+                                Object {
+                                  "label": "Tomorrow night blue",
+                                  "value": "tomorrow-night-blue",
+                                },
+                                Object {
+                                  "label": "Tomorrow night bright",
+                                  "value": "tomorrow-night-bright",
+                                },
+                                Object {
+                                  "label": "Tomorrow night eighties",
+                                  "value": "tomorrow-night-eighties",
+                                },
+                                Object {
+                                  "label": "Tomorrow night",
+                                  "value": "tomorrow-night",
+                                },
+                                Object {
+                                  "label": "Tomorrow",
+                                  "value": "tomorrow",
+                                },
+                                Object {
+                                  "label": "Vs",
+                                  "value": "vs",
+                                },
+                                Object {
+                                  "label": "Vs2015",
+                                  "value": "vs2015",
+                                },
+                                Object {
+                                  "label": "Xcode",
+                                  "value": "xcode",
+                                },
+                                Object {
+                                  "label": "Xt256",
+                                  "value": "xt256",
+                                },
+                                Object {
+                                  "label": "Zenburn",
+                                  "value": "zenburn",
+                                },
+                              ]
+                            }
+                            location="none"
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            obj="Dropdown"
+                            onSelect={[Function]}
+                            selected={false}
+                            sizing="small"
+                            style={
+                              Object {
+                                "width": "6rem",
+                              }
+                            }
+                            testing={true}
+                            theme={null}
+                            tooltip="syntax highlighting"
+                            visible={true}
+                            width=""
+                            xcss={null}
+                          >
+                            <ThemeProvider
+                              theme={
+                                Object {
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#c0c0c0",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
+                                  "tooltipBackgroundColor": "#708090",
+                                  "tooltipForegroundColor": "#ffffff",
+                                  "transitionDelay": "0.5s",
+                                }
+                              }
+                            >
+                              <styled.div
+                                className="ui-dropdown-container"
+                                sizing="small"
+                              >
+                                <div
+                                  className="ui-dropdown-container sc-gZMcBi uExIL"
+                                >
+                                  <styled.select
+                                    className="ui-dropdown ui-toolbar-element"
+                                    disabled={false}
+                                    id="Dropdown-0"
+                                    onChange={[Function]}
+                                    style={
+                                      Object {
+                                        "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                                        "paddingLeft": "2.4000000000000004px",
+                                        "paddingRight": "12px",
+                                        "width": "6rem",
+                                      }
+                                    }
+                                    value="solarized-light"
+                                  >
+                                    <select
+                                      className="ui-dropdown ui-toolbar-element sc-gqjmRU iPmDOp"
+                                      disabled={false}
+                                      id="Dropdown-0"
+                                      onChange={[Function]}
+                                      style={
+                                        Object {
+                                          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12px' height='12px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                                          "paddingLeft": "2.4000000000000004px",
+                                          "paddingRight": "12px",
+                                          "width": "6rem",
+                                        }
+                                      }
+                                      value="solarized-light"
+                                    >
+                                      <option
+                                        key="0"
+                                        value="agate"
+                                      >
+                                        Agate
+                                      </option>
+                                      <option
+                                        key="1"
+                                        value="androidstudio"
+                                      >
+                                        Androidstudio
+                                      </option>
+                                      <option
+                                        key="2"
+                                        value="arduino-light"
+                                      >
+                                        Arduino light
+                                      </option>
+                                      <option
+                                        key="3"
+                                        value="arta"
+                                      >
+                                        Arta
+                                      </option>
+                                      <option
+                                        key="4"
+                                        value="ascetic"
+                                      >
+                                        Ascetic
+                                      </option>
+                                      <option
+                                        key="5"
+                                        value="atelier-cave-dark"
+                                      >
+                                        Atelier cave dark
+                                      </option>
+                                      <option
+                                        key="6"
+                                        value="atelier-cave-light"
+                                      >
+                                        Atelier cave light
+                                      </option>
+                                      <option
+                                        key="7"
+                                        value="atelier-dune-dark"
+                                      >
+                                        Atelier dune dark
+                                      </option>
+                                      <option
+                                        key="8"
+                                        value="atelier-dune-light"
+                                      >
+                                        Atelier dune light
+                                      </option>
+                                      <option
+                                        key="9"
+                                        value="atelier-estuary-dark"
+                                      >
+                                        Atelier estuary dark
+                                      </option>
+                                      <option
+                                        key="10"
+                                        value="atelier-estuary-light"
+                                      >
+                                        Atelier estuary light
+                                      </option>
+                                      <option
+                                        key="11"
+                                        value="atelier-forest-dark"
+                                      >
+                                        Atelier forest dark
+                                      </option>
+                                      <option
+                                        key="12"
+                                        value="atelier-forest-light"
+                                      >
+                                        Atelier forest light
+                                      </option>
+                                      <option
+                                        key="13"
+                                        value="atelier-heath-dark"
+                                      >
+                                        Atelier heath dark
+                                      </option>
+                                      <option
+                                        key="14"
+                                        value="atelier-heath-light"
+                                      >
+                                        Atelier heath light
+                                      </option>
+                                      <option
+                                        key="15"
+                                        value="atelier-lakeside-dark"
+                                      >
+                                        Atelier lakeside dark
+                                      </option>
+                                      <option
+                                        key="16"
+                                        value="atelier-lakeside-light"
+                                      >
+                                        Atelier lakeside light
+                                      </option>
+                                      <option
+                                        key="17"
+                                        value="atelier-plateau-dark"
+                                      >
+                                        Atelier plateau dark
+                                      </option>
+                                      <option
+                                        key="18"
+                                        value="atelier-plateau-light"
+                                      >
+                                        Atelier plateau light
+                                      </option>
+                                      <option
+                                        key="19"
+                                        value="atelier-savanna-dark"
+                                      >
+                                        Atelier savanna dark
+                                      </option>
+                                      <option
+                                        key="20"
+                                        value="atelier-savanna-light"
+                                      >
+                                        Atelier savanna light
+                                      </option>
+                                      <option
+                                        key="21"
+                                        value="atelier-seaside-dark"
+                                      >
+                                        Atelier seaside dark
+                                      </option>
+                                      <option
+                                        key="22"
+                                        value="atelier-seaside-light"
+                                      >
+                                        Atelier seaside light
+                                      </option>
+                                      <option
+                                        key="23"
+                                        value="atelier-sulphurpool-dark"
+                                      >
+                                        Atelier sulphurpool dark
+                                      </option>
+                                      <option
+                                        key="24"
+                                        value="atelier-sulphurpool-light"
+                                      >
+                                        Atelier sulphurpool light
+                                      </option>
+                                      <option
+                                        key="25"
+                                        value="atom-one-dark"
+                                      >
+                                        Atom one dark
+                                      </option>
+                                      <option
+                                        key="26"
+                                        value="atom-one-light"
+                                      >
+                                        Atom one light
+                                      </option>
+                                      <option
+                                        key="27"
+                                        value="brown-paper"
+                                      >
+                                        Brown paper
+                                      </option>
+                                      <option
+                                        key="28"
+                                        value="codepen-embed"
+                                      >
+                                        Codepen embed
+                                      </option>
+                                      <option
+                                        key="29"
+                                        value="color-brewer"
+                                      >
+                                        Color brewer
+                                      </option>
+                                      <option
+                                        key="30"
+                                        value="darcula"
+                                      >
+                                        Darcula
+                                      </option>
+                                      <option
+                                        key="31"
+                                        value="dark"
+                                      >
+                                        Dark
+                                      </option>
+                                      <option
+                                        key="32"
+                                        value="darkula"
+                                      >
+                                        Darkula
+                                      </option>
+                                      <option
+                                        key="33"
+                                        value="default"
+                                      >
+                                        Default
+                                      </option>
+                                      <option
+                                        key="34"
+                                        value="docco"
+                                      >
+                                        Docco
+                                      </option>
+                                      <option
+                                        key="35"
+                                        value="dracula"
+                                      >
+                                        Dracula
+                                      </option>
+                                      <option
+                                        key="36"
+                                        value="far"
+                                      >
+                                        Far
+                                      </option>
+                                      <option
+                                        key="37"
+                                        value="foundation"
+                                      >
+                                        Foundation
+                                      </option>
+                                      <option
+                                        key="38"
+                                        value="github-gist"
+                                      >
+                                        Github gist
+                                      </option>
+                                      <option
+                                        key="39"
+                                        value="github"
+                                      >
+                                        Github
+                                      </option>
+                                      <option
+                                        key="40"
+                                        value="googlecode"
+                                      >
+                                        Googlecode
+                                      </option>
+                                      <option
+                                        key="41"
+                                        value="grayscale"
+                                      >
+                                        Grayscale
+                                      </option>
+                                      <option
+                                        key="42"
+                                        value="gruvbox-dark"
+                                      >
+                                        Gruvbox dark
+                                      </option>
+                                      <option
+                                        key="43"
+                                        value="gruvbox-light"
+                                      >
+                                        Gruvbox light
+                                      </option>
+                                      <option
+                                        key="44"
+                                        value="hopscotch"
+                                      >
+                                        Hopscotch
+                                      </option>
+                                      <option
+                                        key="45"
+                                        value="hybrid"
+                                      >
+                                        Hybrid
+                                      </option>
+                                      <option
+                                        key="46"
+                                        value="idea"
+                                      >
+                                        Idea
+                                      </option>
+                                      <option
+                                        key="47"
+                                        value="ir-black"
+                                      >
+                                        Ir black
+                                      </option>
+                                      <option
+                                        key="48"
+                                        value="kimbie.dark"
+                                      >
+                                        Kimbie dark
+                                      </option>
+                                      <option
+                                        key="49"
+                                        value="kimbie.light"
+                                      >
+                                        Kimbie light
+                                      </option>
+                                      <option
+                                        key="50"
+                                        value="magula"
+                                      >
+                                        Magula
+                                      </option>
+                                      <option
+                                        key="51"
+                                        value="mono-blue"
+                                      >
+                                        Mono blue
+                                      </option>
+                                      <option
+                                        key="52"
+                                        value="monokai-sublime"
+                                      >
+                                        Monokai sublime
+                                      </option>
+                                      <option
+                                        key="53"
+                                        value="monokai"
+                                      >
+                                        Monokai
+                                      </option>
+                                      <option
+                                        key="54"
+                                        value="obsidian"
+                                      >
+                                        Obsidian
+                                      </option>
+                                      <option
+                                        key="55"
+                                        value="ocean"
+                                      >
+                                        Ocean
+                                      </option>
+                                      <option
+                                        key="56"
+                                        value="paraiso-dark"
+                                      >
+                                        Paraiso dark
+                                      </option>
+                                      <option
+                                        key="57"
+                                        value="paraiso-light"
+                                      >
+                                        Paraiso light
+                                      </option>
+                                      <option
+                                        key="58"
+                                        value="pojoaque"
+                                      >
+                                        Pojoaque
+                                      </option>
+                                      <option
+                                        key="59"
+                                        value="purebasic"
+                                      >
+                                        Purebasic
+                                      </option>
+                                      <option
+                                        key="60"
+                                        value="qtcreator_dark"
+                                      >
+                                        Qtcreator_dark
+                                      </option>
+                                      <option
+                                        key="61"
+                                        value="qtcreator_light"
+                                      >
+                                        Qtcreator_light
+                                      </option>
+                                      <option
+                                        key="62"
+                                        value="railscasts"
+                                      >
+                                        Railscasts
+                                      </option>
+                                      <option
+                                        key="63"
+                                        value="rainbow"
+                                      >
+                                        Rainbow
+                                      </option>
+                                      <option
+                                        key="64"
+                                        value="routeros"
+                                      >
+                                        Routeros
+                                      </option>
+                                      <option
+                                        key="65"
+                                        value="school-book"
+                                      >
+                                        School book
+                                      </option>
+                                      <option
+                                        key="66"
+                                        value="solarized-dark"
+                                      >
+                                        Solarized dark
+                                      </option>
+                                      <option
+                                        key="67"
+                                        value="solarized-light"
+                                      >
+                                        Solarized light
+                                      </option>
+                                      <option
+                                        key="68"
+                                        value="sunburst"
+                                      >
+                                        Sunburst
+                                      </option>
+                                      <option
+                                        key="69"
+                                        value="tomorrow-night-blue"
+                                      >
+                                        Tomorrow night blue
+                                      </option>
+                                      <option
+                                        key="70"
+                                        value="tomorrow-night-bright"
+                                      >
+                                        Tomorrow night bright
+                                      </option>
+                                      <option
+                                        key="71"
+                                        value="tomorrow-night-eighties"
+                                      >
+                                        Tomorrow night eighties
+                                      </option>
+                                      <option
+                                        key="72"
+                                        value="tomorrow-night"
+                                      >
+                                        Tomorrow night
+                                      </option>
+                                      <option
+                                        key="73"
+                                        value="tomorrow"
+                                      >
+                                        Tomorrow
+                                      </option>
+                                      <option
+                                        key="74"
+                                        value="vs"
+                                      >
+                                        Vs
+                                      </option>
+                                      <option
+                                        key="75"
+                                        value="vs2015"
+                                      >
+                                        Vs2015
+                                      </option>
+                                      <option
+                                        key="76"
+                                        value="xcode"
+                                      >
+                                        Xcode
+                                      </option>
+                                      <option
+                                        key="77"
+                                        value="xt256"
+                                      >
+                                        Xt256
+                                      </option>
+                                      <option
+                                        key="78"
+                                        value="zenburn"
+                                      >
+                                        Zenburn
+                                      </option>
+                                    </select>
+                                  </styled.select>
+                                  <Tooltip
+                                    className=""
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    errorMessage=""
+                                    focus={false}
+                                    height=""
+                                    id=""
+                                    location="top"
+                                    noedit={false}
+                                    nohover={false}
+                                    noripple={false}
+                                    obj="Tooltip"
+                                    parent="Dropdown-0"
+                                    selected={false}
+                                    sizing="small"
+                                    style={
+                                      Object {
+                                        "backgroundColor": "#708090",
+                                        "color": "#ffffff",
+                                      }
+                                    }
+                                    testing={true}
+                                    theme={null}
+                                    tooltip=""
+                                    visible={true}
+                                    width=""
+                                    xcss={null}
+                                  >
+                                    <ThemeProvider
+                                      theme={
+                                        Object {
+                                          "backgroundColor": "#ffffff",
+                                          "borderColor": "#c0c0c0",
+                                          "color": "#000000",
+                                          "headerBackgroundColor": "#004358",
+                                          "headerForegroundColor": "#ffffff",
+                                          "headerHoverColor": "#ffe11a",
+                                          "hoverColor": "#c0c0c0",
+                                          "inputBorderColor": "#c0c0c0",
+                                          "selectedBackgroundColor": "#1f8a70",
+                                          "selectedForegroundColor": "#ffe11a",
+                                          "tooltipBackgroundColor": "#708090",
+                                          "tooltipForegroundColor": "#ffffff",
+                                          "transitionDelay": "0.5s",
+                                        }
+                                      }
+                                    >
+                                      <styled.div
+                                        className="ui-tooltip"
+                                        location="top"
+                                        sizing="xsmall"
+                                        style={
+                                          Object {
+                                            "backgroundColor": "#708090",
+                                            "color": "#ffffff",
+                                          }
+                                        }
+                                        visible={false}
+                                        width="unset"
+                                      >
+                                        <div
+                                          className="ui-tooltip sc-htpNat cTwgSx"
+                                          style={
+                                            Object {
+                                              "backgroundColor": "#708090",
+                                              "color": "#ffffff",
+                                            }
+                                          }
+                                          width="unset"
+                                        >
+                                          <styled.span
+                                            className="ui-tooltip-content"
+                                            sizing="xsmall"
+                                            style={
+                                              Object {
+                                                "backgroundColor": "#708090",
+                                                "color": "#ffffff",
+                                              }
+                                            }
+                                          >
+                                            <span
+                                              className="ui-tooltip-content sc-bwzfXH lcHZFn"
+                                              style={
+                                                Object {
+                                                  "backgroundColor": "#708090",
+                                                  "color": "#ffffff",
+                                                }
+                                              }
+                                            >
+                                              syntax highlighting
+                                            </span>
+                                          </styled.span>
+                                          <Styled(Triangle)
+                                            direction="down"
+                                            location="top"
+                                            sizing="xsmall"
+                                            style={
+                                              Object {
+                                                "fill": "#708090",
+                                                "stroke": "#708090",
+                                              }
+                                            }
+                                          >
+                                            <Triangle
+                                              className="sc-bdVaJa hkeXep"
+                                              contentEditable={false}
+                                              direction="down"
+                                              disabled={false}
+                                              errorMessage=""
+                                              focus={false}
+                                              height=""
+                                              id=""
+                                              location="top"
+                                              nobase={false}
+                                              noedit={false}
+                                              nohover={false}
+                                              noripple={false}
+                                              obj="Triangle"
+                                              selected={false}
+                                              sizing="xsmall"
+                                              style={
+                                                Object {
+                                                  "fill": "#708090",
+                                                  "stroke": "#708090",
+                                                }
+                                              }
+                                              testing={true}
+                                              theme={null}
+                                              tooltip=""
+                                              visible={true}
+                                              width=""
+                                              xcss={null}
+                                            >
+                                              <ThemeProvider
+                                                theme={
+                                                  Object {
+                                                    "backgroundColor": "#ffffff",
+                                                    "borderColor": "#c0c0c0",
+                                                    "color": "#000000",
+                                                    "headerBackgroundColor": "#004358",
+                                                    "headerForegroundColor": "#ffffff",
+                                                    "headerHoverColor": "#ffe11a",
+                                                    "hoverColor": "#c0c0c0",
+                                                    "inputBorderColor": "#c0c0c0",
+                                                    "selectedBackgroundColor": "#1f8a70",
+                                                    "selectedForegroundColor": "#ffe11a",
+                                                    "tooltipBackgroundColor": "#708090",
+                                                    "tooltipForegroundColor": "#ffffff",
+                                                    "transitionDelay": "0.5s",
+                                                  }
+                                                }
+                                              >
+                                                <Triangle__SVGView
+                                                  className="ui-triangle sc-bdVaJa hkeXep"
+                                                  contentEditable={false}
+                                                  direction="down"
+                                                  disabled={false}
+                                                  errorMessage=""
+                                                  focus={false}
+                                                  height=""
+                                                  id=""
+                                                  location="top"
+                                                  nobase={false}
+                                                  noedit={false}
+                                                  nohover={false}
+                                                  noripple={false}
+                                                  obj="Triangle"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  selected={false}
+                                                  sizing="xsmall"
+                                                  style={
+                                                    Object {
+                                                      "fill": "#708090",
+                                                      "stokeWidth": "2px",
+                                                      "stroke": "#708090",
+                                                    }
+                                                  }
+                                                  testing={true}
+                                                  theme={null}
+                                                  tooltip=""
+                                                  version="1.1"
+                                                  viewBox="0 0 40 40"
+                                                  visible={true}
+                                                  width=""
+                                                  xcss={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <svg
+                                                    className="ui-triangle sc-bdVaJa hkeXep Triangle__SVGView-bGJaTC dKKhze"
+                                                    contentEditable={false}
+                                                    direction="down"
+                                                    disabled={false}
+                                                    height=""
+                                                    id=""
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    selected={false}
+                                                    style={
+                                                      Object {
+                                                        "fill": "#708090",
+                                                        "stokeWidth": "2px",
+                                                        "stroke": "#708090",
+                                                      }
+                                                    }
+                                                    version="1.1"
+                                                    viewBox="0 0 40 40"
+                                                    width=""
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <polygon
+                                                      points="0,35, 20,10 40,35"
+                                                    />
+                                                  </svg>
+                                                </Triangle__SVGView>
+                                              </ThemeProvider>
+                                            </Triangle>
+                                          </Styled(Triangle)>
+                                        </div>
+                                      </styled.div>
+                                    </ThemeProvider>
+                                  </Tooltip>
+                                </div>
+                              </styled.div>
+                            </ThemeProvider>
+                          </Dropdown>
                         </div>
                       </styled.div>
                       <styled.div

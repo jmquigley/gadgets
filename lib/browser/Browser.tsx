@@ -376,6 +376,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 							/>
 							<Divider />
 							<SearchTextField
+								obj="TextField"
 								onChange={this.handleSearch}
 								placeholder="search"
 								tooltip={this.props.notooltips ? '' : 'search text on page'}

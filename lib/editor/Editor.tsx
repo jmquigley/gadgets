@@ -411,14 +411,12 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 						/>
 						<Divider />
 						<Dropdown
-							{...this.props}
 							defaultVal={this.props.defaultFont}
 							items={this._fontList}
 							onSelect={this._markup && this._markup.setFont}
 							tooltip="font"
 						/>
 						<Dropdown
-							{...this.props}
 							defaultVal={this.props.defaultFontSize.toString()}
 							items={this._fontSizes}
 							onSelect={this._markup && this._markup.setFontSize}
@@ -426,14 +424,12 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 						/>
 						<Divider />
 						<Dropdown
-							{...this.props}
 							defaultVal={'markdown'}
 							items={this._modes}
 							onSelect={this._markup && this._markup.setMode}
 							tooltip="mode"
 						/>
 						<Dropdown
-							{...this.props}
 							defaultVal={'solarized-light'}
 							items={this._highlights}
 							onSelect={this._markup && this._markup.setHighlight}
