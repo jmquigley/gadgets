@@ -110,7 +110,7 @@ test('Test setting an error message', async () => {
 	// callback.  The Toast control within doesn't fade and make the
 	// call for ~2 seconds.
 
-	await waitPromise(4)
+	await waitPromise(7)
 		.then(() => {
 			expect(errfn).toHaveBeenCalled();
 			expect(errfn).toHaveBeenCalledWith(errmsg);

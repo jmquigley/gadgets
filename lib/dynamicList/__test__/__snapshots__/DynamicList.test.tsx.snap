@@ -30,7 +30,7 @@ exports[`Test creation of a DynamicList control 1`] = `
       decay={true}
       direction="right"
       disabled={false}
-      duration={3}
+      duration={5}
       errorMessage=""
       focus={false}
       height=""
@@ -45,7 +45,7 @@ exports[`Test creation of a DynamicList control 1`] = `
       onClose={[Function]}
       selected={false}
       show={false}
-      sizing="normal"
+      sizing="small"
       style={Object {}}
       testing={true}
       theme={null}
@@ -1591,7 +1591,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
       decay={true}
       direction="right"
       disabled={false}
-      duration={3}
+      duration={5}
       errorMessage=""
       focus={false}
       height=""
@@ -1606,7 +1606,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
       onClose={[Function]}
       selected={false}
       show={false}
-      sizing="normal"
+      sizing="small"
       style={Object {}}
       testing={true}
       theme={null}
@@ -2417,7 +2417,7 @@ exports[`Test disabling of a Dynamic List control 1`] = `
       decay={true}
       direction="right"
       disabled={false}
-      duration={3}
+      duration={5}
       errorMessage=""
       focus={false}
       height=""
@@ -2432,7 +2432,7 @@ exports[`Test disabling of a Dynamic List control 1`] = `
       onClose={[Function]}
       selected={false}
       show={false}
-      sizing="normal"
+      sizing="small"
       style={Object {}}
       testing={true}
       theme={null}
@@ -3243,7 +3243,7 @@ exports[`Test making a Dynamic List invisible 1`] = `
       decay={true}
       direction="right"
       disabled={false}
-      duration={3}
+      duration={5}
       errorMessage=""
       focus={false}
       height=""
@@ -3258,7 +3258,7 @@ exports[`Test making a Dynamic List invisible 1`] = `
       onClose={[Function]}
       selected={false}
       show={false}
-      sizing="normal"
+      sizing="small"
       style={Object {}}
       testing={true}
       theme={null}
@@ -4173,7 +4173,7 @@ exports[`Test setting an error message 1`] = `
           decay={true}
           direction="right"
           disabled={false}
-          duration={3}
+          duration={5}
           errorMessage=""
           focus={false}
           height=""
@@ -4188,7 +4188,7 @@ exports[`Test setting an error message 1`] = `
           onClose={[Function]}
           selected={false}
           show={true}
-          sizing="normal"
+          sizing="small"
           style={Object {}}
           testing={true}
           theme={null}
@@ -4221,18 +4221,27 @@ exports[`Test setting an error message 1`] = `
               className="ui-toast"
               level={2}
               style={Object {}}
-              xcss={false}
+              xcss={
+                Array [
+                  "
+	opacity: 1.0;
+	z-index: ",
+                  "9999",
+                  ";
+",
+                ]
+              }
             >
               <div
-                className="ui-toast sc-fBuWsC lcFeev"
+                className="ui-toast sc-fBuWsC bgrOJj"
                 style={Object {}}
               >
                 <styled.div
                   className="ui-toast-content"
-                  sizing="normal"
+                  sizing="small"
                 >
                   <div
-                    className="ui-toast-content sc-hzDkRC cdTIvN"
+                    className="ui-toast-content sc-hzDkRC aZLlr"
                   >
                     <span>
                       Test error message
@@ -4242,7 +4251,7 @@ exports[`Test setting an error message 1`] = `
                 <Styled(Button)
                   iconName="times"
                   onClick={[Function]}
-                  sizing="large"
+                  sizing="normal"
                   style={
                     Object {
                       "color": "white",
@@ -4267,7 +4276,7 @@ exports[`Test setting an error message 1`] = `
                     obj="Button"
                     onClick={[Function]}
                     selected={false}
-                    sizing="large"
+                    sizing="normal"
                     style={
                       Object {
                         "color": "white",
@@ -4339,7 +4348,7 @@ exports[`Test setting an error message 1`] = `
                             noripple={false}
                             obj="Icon"
                             selected={false}
-                            sizing="large"
+                            sizing="normal"
                             style={Object {}}
                             testing={true}
                             theme={null}
@@ -4384,7 +4393,7 @@ exports[`Test setting an error message 1`] = `
                                 noripple={false}
                                 obj="Icon"
                                 selected={false}
-                                sizing="large"
+                                sizing="normal"
                                 style={Object {}}
                                 testing={true}
                                 theme={null}
@@ -4394,7 +4403,7 @@ exports[`Test setting an error message 1`] = `
                                 xcss={null}
                               >
                                 <i
-                                  className="ui-icon fa fa-fw fa-times sc-htoDjs dNPMQB"
+                                  className="ui-icon fa fa-fw fa-times sc-htoDjs bEFNnO"
                                   contentEditable={false}
                                   direction="right"
                                   disabled={false}
@@ -21290,7 +21299,7 @@ exports[`Test setting the control to noselect 1`] = `
       decay={true}
       direction="right"
       disabled={false}
-      duration={3}
+      duration={5}
       errorMessage=""
       focus={false}
       height=""
@@ -21305,7 +21314,7 @@ exports[`Test setting the control to noselect 1`] = `
       onClose={[Function]}
       selected={false}
       show={false}
-      sizing="normal"
+      sizing="small"
       style={Object {}}
       testing={true}
       theme={null}

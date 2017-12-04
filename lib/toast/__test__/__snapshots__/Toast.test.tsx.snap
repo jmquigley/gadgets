@@ -25,7 +25,17 @@ exports[`Test creation of a Toast control 1`] = `
     className="ui-toast test-class"
     level={0}
     style={Object {}}
-    xcss={false}
+    xcss={
+      Array [
+        "
+	opacity: 0;
+	z-index: -1;
+	animation: fadeOut ",
+        [Function],
+        ";
+",
+      ]
+    }
   >
     <styled.div
       className="ui-toast-content"
@@ -69,7 +79,7 @@ Object {
   "onClick": [Function],
   "onClose": [Function],
   "selected": false,
-  "show": true,
+  "show": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,

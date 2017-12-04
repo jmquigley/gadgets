@@ -409,8 +409,8 @@ autoprefixer@^6.3.1:
     postcss-value-parser "^3.2.3"
 
 autoprefixer@^7.1.1:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.2.0.tgz#6bf29695ad19da447bba2b5737660e1e23eac72d"
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.2.1.tgz#906b1447a0e6a9e13b371f7909bc4e36da5a5a79"
   dependencies:
     browserslist "^2.9.1"
     caniuse-lite "^1.0.30000777"
@@ -1609,12 +1609,12 @@ caniuse-api@^2.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000777"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000777.tgz#2e19adba63bdd7c501df637a862adead7f4bc054"
+  version "1.0.30000778"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000778.tgz#167c60e9542a2aa60537c446fb3881d853a3072a"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000770, caniuse-lite@^1.0.30000777:
-  version "1.0.30000777"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000777.tgz#31c18a4a8cd49782ebb305c8e8a93e6b3b3e4f13"
+  version "1.0.30000778"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000778.tgz#f1e7cb8b13b1f6744402291d75f0bcd4c3160369"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -6310,8 +6310,8 @@ react-input-autosize@^2.1.0:
     prop-types "^15.5.8"
 
 react-modal@^3.1.6:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.6.tgz#82e63f1ec86b80e242518250d066ee37fa035f8a"
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.7.tgz#21feb937c95cd722bf2d375cada751fdc8189c0e"
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.5.10"
@@ -7571,11 +7571,11 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
-util.calc@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/util.calc/-/util.calc-0.0.6.tgz#33e5eac6d900f1a8f886a0701924d78e1bcff985"
+util.calc@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/util.calc/-/util.calc-0.0.7.tgz#55eb4a5c0d3898855683aa08880d8f8221b9117b"
   dependencies:
-    util.string "^0.0.7"
+    util.constants "^0.0.8"
     util.toolbox "^0.0.56"
 
 util.chdir@0.0.33:
@@ -7591,6 +7591,10 @@ util.classnames@^0.0.15:
 util.constants@^0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/util.constants/-/util.constants-0.0.7.tgz#e0a979b9009eb36eba7119c952ff4b1037e24122"
+
+util.constants@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/util.constants/-/util.constants-0.0.8.tgz#57f36fb329a8d5148e3b5f543654d6294d4560f8"
 
 util.ds@^0.0.35:
   version "0.0.35"

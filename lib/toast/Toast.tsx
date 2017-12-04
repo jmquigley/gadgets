@@ -78,9 +78,12 @@
 
 'use strict';
 
+// const debug = require('debug')('Toast');
+
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
+import {calc} from 'util.calc';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {
@@ -121,7 +124,7 @@ export function getDefaultToastProps(): ToastProps {
 			obj: 'Toast',
 			onClick: nilEvent,
 			onClose: nilEvent,
-			show: true
+			show: false
 		}));
 }
 
@@ -161,7 +164,12 @@ export const Warning: any = css`
 export const Hide: any = css`
 	opacity: 0;
 	z-index: -1;
-	animation: fadeOut ${props => props.theme.transitionDelay};
+	animation: fadeOut ${props => calc(props.theme.transitionDelay, '* 2')};
+`;
+
+export const Show: any = css`
+	opacity: 1.0;
+	z-index: ${baseZIndex};
 `;
 
 export const StyledButton: any = styled(Button)`
@@ -175,12 +183,10 @@ export const ToastView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
 	display: flex;
 	left: 50%;
 	margin: 0 auto;
-	opacity: 1.0;
 	position: absolute;
 	top: ${props => props.bottom ? 'unset' : '0'};
 	transform: translateX(-50%);
 	width: 70%;
-	z-index: ${baseZIndex};
 
 	${props => {
 		switch (props.level) {
@@ -257,7 +263,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 					className={this.classes}
 					level={this.props.level}
 					style={this.inlineStyles}
-					xcss={!this.state.visible && Hide}
+					xcss={this.state.visible ? Show : Hide}
 				>
 					<ContentView
 						className="ui-toast-content"

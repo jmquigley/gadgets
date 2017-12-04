@@ -51,7 +51,7 @@
 
 'use strict';
 
-const debug = require('debug')('Toolbar');
+// const debug = require('debug')('Toolbar');
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -137,8 +137,6 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 		const theme: any = getTheme();
 
 		React.Children.forEach(this.props.children, (child: any, idx: number) => {
-			debug('-> child: %O', child);
-
 			if (Toolbar._whitelist.contains(child['props'].obj)) {
 				const style = Object.assign({}, child['props'].style, {
 					display: 'flex',
@@ -188,8 +186,6 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						{newChild}
 					</ToolbarElementView>
 				);
-			} else {
-				debug('excluding toolbar element: %O', child);
 			}
 		});
 

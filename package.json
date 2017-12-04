@@ -90,9 +90,9 @@
 				"typescript": "^2.6.2",
 				"typescript-babel-jest": "^1.0.5",
 				"url-loader": "^0.6.2",
-				"util.calc": "^0.0.6",
+				"util.calc": "^0.0.7",
 				"util.classnames": "^0.0.15",
-				"util.constants": "^0.0.7",
+				"util.constants": "^0.0.8",
 				"util.ds": "^0.0.35",
 				"util.env": "^0.0.25",
 				"util.join": "^0.0.17",
@@ -144,6 +144,7 @@
 						"<rootDir>/bin/setupEnzyme.js",
 						"<rootDir>/bin/setupDOM.js"
 				],
+				"setupTestFrameworkScriptFile": "<rootDir>/bin/setupJest.js",
 				"snapshotSerializers": [
 						"enzyme-to-json/serializer"
 				],

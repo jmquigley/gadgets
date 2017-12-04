@@ -173,6 +173,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 	return _.cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			collapsable: false,
+			errorMessage: '',
 			items: {},
 			layout: TitleLayout.dominant,
 			nocollapse: false,
@@ -229,6 +230,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private readonly _baseMessage: string = 'Are you sure you want to delete %s?';
 	private _count: number = 0;
 	private _emptyListItem: any = null;
+	private _errorMessageDuration: number = 5;
 	private _fillerKeys: Keys;
 	private _fillerIdx: number = 0;
 	private _footer: any = null;
@@ -689,9 +691,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			<ThemeProvider theme={getTheme()}>
 				<DynamicListContainer className="ui-dynamiclist-container">
 					<Toast
+						decay={true}
+						duration={this._errorMessageDuration}
 						level={ToastLevel.error}
 						onClose={this.handleErrorClose}
 						show={this.state.showError}
+						sizing={this.prev(this.props.sizing).type}
 					>
 						{this.state.errorMessage}
 					</Toast>
