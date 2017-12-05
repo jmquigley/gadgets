@@ -48,22 +48,25 @@
  * ```
  *
  * #### With Error Handling
+ * This will display an error message at the top of the list and then automatically
+ * fade away after 5 seconds.
+ *
  * ```javascript
  * import {DynamicList} from 'gadgets';
  *
  * const dlref: any = null;
  * <DynamicList
+ *     errorMessage="Show this error message"
+ *     errorMessageDuration={3}
  *     items={{
  *         title1: widget1
  *         title2: widget2
  *         title1: widget3
  *     }}
+ *     onError={(message: string) => console.log(message)}
  *     pageSizes={[10, 20, 30]}
- *     ref={ref => dlref = ref}
  *     title="Dynamic List Test"
  * />
- *
- * dlref.handleError('Show this error message');
  * ```
  *
  * ## API
@@ -95,6 +98,9 @@
  * - `errorMessage: {string} ('')` - A message the will be temporarily displayed
  * within the control.  When this message is first set it will be shown and
  * then decay.  It will then invoke the onError callback.
+ * - `errorMessageDuration: {number} (5)` - the time in seconds that the
+ * error message string will be shown within the control before fading away.
+ * Set to five seconds by default.
  * - `items: DynamicListItem ({}}` - An object that holds unique title and
  * widgets in the format `{[title]: widget}`.  Each item in the Object
  * represents a list item.  This is used to seed the control at creation.
@@ -151,6 +157,7 @@ export interface DynamicListItem {
 }
 
 export interface DynamicListProps extends BaseProps {
+	errorMessageDuration?: number;
 	items?: DynamicListItem;
 	layout?: TitleLayout;
 	nocollapse?: boolean;
@@ -174,6 +181,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 		getDefaultBaseProps(), {
 			collapsable: false,
 			errorMessage: '',
+			errorMessageDuration: 5,
 			items: {},
 			layout: TitleLayout.dominant,
 			nocollapse: false,
@@ -230,7 +238,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private readonly _baseMessage: string = 'Are you sure you want to delete %s?';
 	private _count: number = 0;
 	private _emptyListItem: any = null;
-	private _errorMessageDuration: number = 5;
 	private _fillerKeys: Keys;
 	private _fillerIdx: number = 0;
 	private _footer: any = null;
@@ -692,7 +699,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				<DynamicListContainer className="ui-dynamiclist-container">
 					<Toast
 						decay={true}
-						duration={this._errorMessageDuration}
+						duration={this.props.errorMessageDuration}
 						level={ToastLevel.error}
 						onClose={this.handleErrorClose}
 						show={this.state.showError}

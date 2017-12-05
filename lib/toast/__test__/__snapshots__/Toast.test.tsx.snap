@@ -23,16 +23,18 @@ exports[`Test creation of a Toast control 1`] = `
   <styled.div
     bottom={false}
     className="ui-toast test-class"
+    disabled={false}
     level={0}
     style={Object {}}
+    visible={false}
     xcss={
       Array [
         "
-	opacity: 0;
-	z-index: -1;
 	animation: fadeOut ",
         [Function],
         ";
+	opacity: 0;
+	z-index: -1;
 ",
       ]
     }

@@ -4047,6 +4047,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "errorMessage": "",
+  "errorMessageDuration": 5,
   "focus": false,
   "height": "",
   "id": "",
@@ -4095,6 +4096,7 @@ exports[`Test setting an error message 1`] = `
   direction="right"
   disabled={false}
   errorMessage="Test error message"
+  errorMessageDuration={5}
   focus={false}
   height=""
   id=""
@@ -4219,8 +4221,10 @@ exports[`Test setting an error message 1`] = `
             <styled.div
               bottom={false}
               className="ui-toast"
+              disabled={false}
               level={2}
               style={Object {}}
+              visible={false}
               xcss={
                 Array [
                   "
@@ -4233,7 +4237,8 @@ exports[`Test setting an error message 1`] = `
               }
             >
               <div
-                className="ui-toast sc-fBuWsC bgrOJj"
+                className="ui-toast sc-fBuWsC eGYqjZ"
+                disabled={false}
                 style={Object {}}
               >
                 <styled.div

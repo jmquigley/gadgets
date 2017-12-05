@@ -15,6 +15,9 @@
  * position of "relative".  The control relies on absolute positioning so the
  * parent needs to be relative for it to work.
  *
+ * Note that the "visible" property is handled internally.  The *show* property
+ * is used to display the message within the `Toast`.
+ *
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/toast.png" width="50%" />
  *
@@ -26,6 +29,8 @@
  * <Toast
  *     decay={true}
  *     level={ToastLevel.info}
+ *     onClose={() => console.log('closed toast message')}
+ *     show={true}
  * >
  *     This is a sample info message
  * </Toast>
@@ -37,6 +42,7 @@
  * <Toast
  *     decay={false}
  *     level={ToastLevel.custom}
+ *     show={true}
  *     style={{
  *         backgroundColor="#7fbf3f"
  *         borderColor="#3fbfbf"
@@ -72,6 +78,8 @@
  * associated with it (info is blue, warning is yellow, error is red).  An enumeration
  * named `ToastLevel` holds the value for each type (ToastLevel.info,
  * ToastLevel.warning, ToastLevel.error, ToastLevel.custom).
+ * - `show {boolean} (false)` - when set to true, the toast message is shown within
+ * the container for the duration of its delay.  When false it is not shown.
  *
  * @module Toast
  */
@@ -91,9 +99,11 @@ import {
 	BaseProps,
 	baseZIndex,
 	Color,
+	disabled,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme
+	getTheme,
+	invisible
 } from '../shared';
 import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 
@@ -162,9 +172,9 @@ export const Warning: any = css`
 `;
 
 export const Hide: any = css`
+	animation: fadeOut ${props => calc(props.theme.transitionDelay, '* 2')};
 	opacity: 0;
 	z-index: -1;
-	animation: fadeOut ${props => calc(props.theme.transitionDelay, '* 2')};
 `;
 
 export const Show: any = css`
@@ -199,12 +209,15 @@ export const ToastView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
 	}};
 
 	${props => props.xcss}
+	${props => disabled(props)}
+	${props => invisible(props)}
 `;
 
 export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public static readonly defaultProps: ToastProps = getDefaultToastProps();
 
+	private _initialVisibility: boolean = false;
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
@@ -255,15 +268,28 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		}
 	}
 
+	public componentDidMount() {
+		// The initial visibility of the control is set to invisible
+		// This prevents a "flicker" when the component is first created
+		// where it is shown within it's parent before it is initially
+		// hidden due to use of dynamic styling.  If the display is not
+		// set to "none" then the control will be visible for a split
+		// second before the dynamic stying is applied to hide it.
+
+		this._initialVisibility = true;
+	}
+
 	public render() {
 		return (
 			<ThemeProvider theme={getTheme()} >
 				<ToastView
 					bottom={this.props.bottom}
 					className={this.classes}
+					disabled={this.props.disabled}
 					level={this.props.level}
 					style={this.inlineStyles}
 					xcss={this.state.visible ? Show : Hide}
+					visible={this._initialVisibility}
 				>
 					<ContentView
 						className="ui-toast-content"
