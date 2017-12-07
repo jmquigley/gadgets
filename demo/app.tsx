@@ -97,7 +97,10 @@ const randomText = loremIpsum({units: 'sentences', count: 2, random: null});
 
 let dynamicItems = {};
 for (let i = 1; i <= 2000; i++) {
-	dynamicItems[`item ${sprintf('%04d', i)}`] = `w${i}`;
+	dynamicItems[`item ${sprintf('%04d', i)}`] = {
+		left: <Option optionType={OptionType.star} />,
+		right: `w${i}`
+	};
 }
 
 // Build global test data for Select control
@@ -740,6 +743,13 @@ class App extends React.Component<AppProps, AppState> {
 						this.setState({dynamicListError: ''});
 					}}
 					onNew={(title: string, widget: any) => {
+						if (widget == null) {
+							widget = {
+								left: <Option optionType={OptionType.star} />,
+								right: `w0`
+							};
+						}
+
 						this.setState({
 							items: {...this.state.items, [title]: widget}
 						});
@@ -771,8 +781,18 @@ class App extends React.Component<AppProps, AppState> {
 						onClick={() => {
 							let dynamicItems = {}
 
-							for (const [title, widget] of Object.entries(this.state.items)) {
-								dynamicItems[title] = widget ? widget.replace('w', 'a') : 'a0';
+							for (let [title, widget] of Object.entries(this.state.items)) {
+
+								if (widget == null) {
+									widget = {
+										left: <Option optionType={OptionType.star} />,
+										right: 'a0'
+									};
+								} else {
+									widget['right'] = widget['right'].replace('w', 'a');
+								}
+
+								dynamicItems[title] = widget;
 							}
 
 							this.setState({

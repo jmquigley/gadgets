@@ -10,6 +10,7 @@
  * - Sort the list in ascending/descending order
  * - Incrementally search for items
  * - List is divided into pages for performance
+ * - A right or left widget can be added to each list item
  *
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/dynamicList.png" width="60%" />
@@ -23,9 +24,9 @@
  * <DynamicList
  *     errorMessage="Error message"
  *     items={{
- *         title1: widget1
- *         title2: widget2
- *         title1: widget3
+ *         title1: {left: widget1, right: widget1}
+ *         title2: {left: widget2, right: widget2}
+ *         title1: {left: widget3, right: widget3}
  *     }}
  *     onDelete={(title: string) => {
  *         console.log(`Deleting item from list: ${title}`);
@@ -54,14 +55,13 @@
  * ```javascript
  * import {DynamicList} from 'gadgets';
  *
- * const dlref: any = null;
  * <DynamicList
  *     errorMessage="Show this error message"
  *     errorMessageDuration={3}
  *     items={{
- *         title1: widget1
- *         title2: widget2
- *         title1: widget3
+ *         title1: {right: widget1}
+ *         title2: {right: widget2}
+ *         title1: {right: widget3}
  *     }}
  *     onError={(message: string) => console.log(message)}
  *     pageSizes={[10, 20, 30]}
@@ -102,8 +102,9 @@
  * error message string will be shown within the control before fading away.
  * Set to five seconds by default.
  * - `items: DynamicListItem ({}}` - An object that holds unique title and
- * widgets in the format `{[title]: widget}`.  Each item in the Object
- * represents a list item.  This is used to seed the control at creation.
+ * widgets in the format `{[title]: {left: widget, right: widget}`.  Each item in
+ * the object represents a list item.  A widget, like a button or Option, can
+ * be used as supporting widgets in the list.
  * - `layout: TitleLayout (TitleLayout.dominant)` - How the title/widget
  * will be displayed in the list item (seee the Title control).
  * - `nocollapse: boolean (false)` - Determines if the list can be
@@ -359,13 +360,25 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	@autobind
-	private createListItem(title: string, widget: any) {
+	private createListItem(title: string, widgets: any) {
+
+		let right: any = null;
+		if ('right' in widgets) {
+			right = widgets['right'];
+		}
+
+		let left: any = null;
+		if ('left' in widgets) {
+			left = widgets['left'];
+		}
+
 		return (
 			<ListItem
 				id={title}
 				key={title}
 				hiddenRightButton
 				layout={this.props.layout}
+				leftButton={left}
 				onClick={this.props.onClick}
 				onBlur={this.handleBlur}
 				onFocus={this.props.onFocus}
@@ -378,7 +391,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 					/>
 				}
 				title={title}
-				widget={widget}
+				widget={right}
 			/>
 		);
 	}
@@ -631,8 +644,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	public componentWillUpdate(nextProps: DynamicListProps, nextState: DynamicListState) {
-		nextState.items.map((widget: any, title: string) => {
-			this._listItems[title] = this.createListItem(title, widget);
+		nextState.items.map((widgets: any, title: string) => {
+			this._listItems[title] = this.createListItem(title, widgets);
 		});
 
 		// Compute which items should be in the current list

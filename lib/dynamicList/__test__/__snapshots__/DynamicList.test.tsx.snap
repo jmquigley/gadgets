@@ -4102,9 +4102,15 @@ exports[`Test setting an error message 1`] = `
   id=""
   items={
     Object {
-      "title1": "widget1",
-      "title2": "widget2",
-      "title3": "widget3",
+      "title1": Object {
+        "right": "widget1",
+      },
+      "title2": Object {
+        "right": "widget2",
+      },
+      "title3": Object {
+        "right": "widget3",
+      },
     }
   }
   layout={5}

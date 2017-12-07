@@ -23,9 +23,9 @@ test('Test creation of a DynamicList with 3 items', () => {
 	const ctl = shallow(
 		<DynamicList
 			items={{
-				title1: 'widget1',
-				title2: 'widget2',
-				title3: 'widget3'
+				title1: {right: 'widget1'},
+				title2: {right: 'widget2'},
+				title3: {right: 'widget3'}
 			}}
 			nocollapse
 			pageSizes={[10, 20, 30]}
@@ -40,9 +40,9 @@ test('Test disabling of a Dynamic List control', () => {
 	const ctl = shallow(
 		<DynamicList
 			items={{
-				title1: 'widget1',
-				title2: 'widget2',
-				title3: 'widget3'
+				title1: {right: 'widget1'},
+				title2: {right: 'widget2'},
+				title3: {right: 'widget3'}
 			}}
 			pageSizes={[10, 20, 30]}
 			disabled
@@ -57,9 +57,9 @@ test('Test making a Dynamic List invisible', () => {
 	const ctl = shallow(
 		<DynamicList
 			items={{
-				title1: 'widget1',
-				title2: 'widget2',
-				title3: 'widget3'
+				title1: {right: 'widget1'},
+				title2: {right: 'widget2'},
+				title3: {right: 'widget3'}
 			}}
 			pageSizes={[10, 20, 30]}
 			visible={false}
@@ -74,9 +74,9 @@ test('Test setting the control to noselect', () => {
 	const ctl = shallow(
 		<DynamicList
 			items={{
-				title1: 'widget1',
-				title2: 'widget2',
-				title3: 'widget3'
+				title1: {right: 'widget1'},
+				title2: {right: 'widget2'},
+				title3: {right: 'widget3'}
 			}}
 			noselect
 			pageSizes={[10, 20, 30]}
@@ -94,9 +94,9 @@ test('Test setting an error message', async () => {
 		<DynamicList
 			errorMessage={errmsg}
 			items={{
-				title1: 'widget1',
-				title2: 'widget2',
-				title3: 'widget3'
+				title1: {right: 'widget1'},
+				title2: {right: 'widget2'},
+				title3: {right: 'widget3'}
 			}}
 			onError={errfn}
 			pageSizes={[10, 20, 30]}
