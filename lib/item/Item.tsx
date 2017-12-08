@@ -101,6 +101,10 @@ export const ItemViewButton: any = withProps<ItemProps, HTMLDivElement>(styled.d
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+
+	> .ui-option {
+		width: 100%;
+	}
 `;
 
 export class Item extends BaseComponent<ItemProps, undefined> {

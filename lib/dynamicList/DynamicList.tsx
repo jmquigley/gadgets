@@ -127,7 +127,6 @@
 const debug = require('debug')('DynamicList');
 
 import autobind from 'autobind-decorator';
-import {Map} from 'immutable';
 import * as _ from 'lodash';
 import * as React from 'react';
 import {sprintf} from 'sprintf-js';
@@ -207,7 +206,6 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 export interface DynamicListState {
 	errorMessage?: string;
 	initialToggle?: boolean;
-	items?: Map<string, any>;
 	page?: number;
 	pageSize?: number;
 	search?: string;
@@ -236,8 +234,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
 
-	private readonly _baseMessage: string = 'Are you sure you want to delete %s?';
-	private _count: number = 0;
+	private readonly _baseMessage: string = 'Are you sure you want to delete "%s"?';
 	private _emptyListItem: any = null;
 	private _fillerKeys: Keys;
 	private _fillerIdx: number = 0;
@@ -261,12 +258,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this._footerID = this._fillerKeys.at(this._fillerIdx++);
 		this._pagerID = this._fillerKeys.at(this._fillerIdx++);
 		this._classes.add('ui-dynamiclist');
-		this._count = Object.keys(this.props.items).length;
 
 		this.state = {
 			errorMessage: this.props.errorMessage,
 			initialToggle: true,
-			items: Map(Object.assign({}, this.props.items)),
 			page: 1,
 			pageSize: this.props.pageSizes[0],
 			search: '',
@@ -274,7 +269,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			showError: this.props.errorMessage !== '',
 			showNew: false,
 			sortOrder: this.props.sortOrder,
-			totalItems: this._count
+			totalItems: Object.keys(this.props.items).length
 		};
 
 		this._emptyListItem = (
@@ -338,7 +333,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	}
 
 	private buildTitle() {
-		return `${this.props.title} - (${this._count} items)`;
+		return `${this.props.title} - (${this.state.totalItems} items)`;
 	}
 
 	/**
@@ -424,12 +419,11 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 */
 	@autobind
 	private handleDelete(title: string, cb: any = nil) {
-		if (this.state.items.has(title)) {
+		if (title in this._listItems) {
 			delete this._listItems[title];
 			debug('removing item: %s', title);
 
 			this.setState({
-				items: this.state.items.delete(title),
 				totalItems: this.state.totalItems - 1
 			}, () => {
 				this.props.onDelete(title);
@@ -449,7 +443,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	@autobind
 	private handleErrorClose() {
-		this.pruneListItems();
 		this.setState({
 			showError: false
 		}, () => {
@@ -478,7 +471,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		if (title) {
 			debug('creating new item: %s, %O', title, widget);
 			this.setState({
-				showNew: false
+				showNew: false,
+				totalItems: this.state.totalItems + 1
 			}, () => {
 				this.props.onNew(title, widget);
 				cb(title);
@@ -570,12 +564,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		title = title.trimHTML();
 		if (title !== previous) {
 			debug('updating item "%s" to "%s"', previous, title);
+			delete this._listItems[previous];
+
 			this.setState({
-				items: this.state.items.delete(previous),
 				showNew: false,
 				totalItems: this.state.totalItems - 1
 			}, () => {
-				delete this._listItems[previous];
 				this.props.onUpdate(previous, title);
 			});
 		} else {
@@ -598,26 +592,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		};
 	}
 
-	/**
-	 * Errors can cause the state and the internal list items to become
-	 * out of sync.  This will scan the internal list and ensure they
-	 * are in the state list.  If they are not, then they are removed.
-	 */
-	private pruneListItems() {
-		let redraw: boolean = false;
-
-		for (const title of Object.keys(this._listItems)) {
-			if (!this.state.items.has(title)) {
-				delete this._listItems[title];
-				redraw = true;
-			}
-		}
-
-		if (redraw) {
-			this.forceUpdate();
-		}
-	}
-
 	public componentWillReceiveProps(nextProps: DynamicListProps) {
 		const newState: any = {};
 
@@ -625,29 +599,23 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			newState['sortOrder'] = nextProps.sortOrder;
 		}
 
-		let items = this.state.items;
-
-		for (const [key, value] of Object.entries(nextProps.items)) {
-			items = items.set(key, value);
-		}
-
-		if (items !== this.state.items) {
-			newState['items'] = items;
-		}
-
 		if (nextProps.errorMessage !== '') {
 			newState['errorMessage'] = nextProps.errorMessage;
 			newState['showError'] = true;
+		}
+
+		// Scan the incoming props and create a ListItem for new items
+		// or update existing
+		newState['totalItems'] = 0;
+		for (const [title, widgets] of Object.entries(nextProps.items)) {
+			this._listItems[title] = this.createListItem(title, widgets);
+			newState['totalItems']++;
 		}
 
 		this.setState(newState);
 	}
 
 	public componentWillUpdate(nextProps: DynamicListProps, nextState: DynamicListState) {
-		nextState.items.map((widgets: any, title: string) => {
-			this._listItems[title] = this.createListItem(title, widgets);
-		});
-
 		// Compute which items should be in the current list
 		const start: number = ((nextState.page - 1) * nextState.pageSize);
 		const end: number = start + nextState.pageSize;
@@ -659,8 +627,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		} else {
 			this._keys = Object.keys(this._listItems).sort();
 		}
-
-		this._count = this._keys.length;
 
 		if (nextState.sortOrder === SortOrder.descending) {
 			this._keys = this._keys.reverse();
