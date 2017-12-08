@@ -144,7 +144,6 @@ import {
 	Color,
 	getDefaultBaseProps,
 	getTheme,
-	Sizing,
 	SortOrder
 } from '../shared';
 import styled, {ThemeProvider} from '../shared/themed-components';
@@ -245,7 +244,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private _pager: any = null;
 	private _pagerID: string;
 	private _previousPage: number = 1;
-	private _previousSize: Sizing = this.prev().type;
 	private _qDelete: string = '';
 	private _selection: string = '';
 	private _startSearch: boolean = true;
@@ -286,22 +284,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		);
 
 		this.componentWillUpdate(this.props, this.state);
-	}
-
-	get emptyListItem() {
-		return this._emptyListItem;
-	}
-
-	get footer() {
-		return this._footer;
-	}
-
-	get pager() {
-		return this._pager;
-	}
-
-	get previousSize() {
-		return this._previousSize;
 	}
 
 	private buildListItems() {
@@ -644,7 +626,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				onSelect={this.handlePageChange}
 				onSort={this.handleSort}
 				pageSizes={nextProps.pageSizes}
-				sizing={this.previousSize}
+				sizing={this.prev(this.props.sizing).type}
 				testing={this.props.testing}
 				totalItems={nextState.totalItems}
 				useinput
