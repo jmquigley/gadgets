@@ -45,6 +45,7 @@ import {
 	Theme,
 	ThemeProps
 } from './lib/shared';
+import {Slider} from './lib/slider';
 import {Switch, SwitchType} from './lib/switch';
 import {Tab, TabContainer} from './lib/tabs';
 import {Tag, TagList} from './lib/tagList';
@@ -116,6 +117,7 @@ export {
 	Select,
 	setTheme,
 	Sizing,
+	Slider,
 	SortOrder,
 	styled,
 	Styling,

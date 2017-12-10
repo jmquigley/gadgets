@@ -48,6 +48,7 @@ const {
 	Pager,
 	Select,
 	Sizing,
+	Slider,
 	SortOrder,
 	Switch,
 	SwitchType,
@@ -1144,6 +1145,12 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	private buildSlider = () => (
+		<Container id="sliderExample">
+			<Slider />
+		</Container>
+	);
+
 	private buildSwitch = () => (
 		<Container id="switchExample">
 
@@ -1782,6 +1789,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Select</h1>
 				{this.buildSelect()}
+
+				<h1>Slider</h1>
+				{this.buildSlider()}
 
 				<h1>Switch</h1>
 				{this.buildSwitch()}

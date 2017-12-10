@@ -140,6 +140,7 @@ export interface BaseProps {
 	focus?: boolean;
 	height?: string;
 	id?: string;
+	left?: string;
 	location?: Location;
 	noedit?: boolean;
 	nohover?: boolean;
@@ -151,6 +152,7 @@ export interface BaseProps {
 	testing?: boolean;
 	theme?: ThemeProps;
 	tooltip?: string;
+	top?: string;
 	visible?: boolean;
 	width?: string;
 	xcss?: any;
@@ -165,6 +167,7 @@ const defaultBaseProps: BaseProps = {
 	focus: false,
 	height: '',
 	id: '',
+	left: '',
 	location: Location.none,
 	noedit: false,
 	nohover: false,
@@ -176,6 +179,7 @@ const defaultBaseProps: BaseProps = {
 	testing: isTesting(),
 	theme: null,
 	tooltip: '',
+	top: '',
 	visible: true,
 	width: '',
 	xcss: null
