@@ -1147,7 +1147,10 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildSlider = () => (
 		<Container id="sliderExample">
-			<Slider />
+			<Slider
+				onSelect={(val: any) => debug('slider select: %o', val)}
+				scale={2}
+			/>
 		</Container>
 	);
 
