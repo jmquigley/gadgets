@@ -148,6 +148,7 @@ interface AppState {
 	selectOption: string;
 	selectToggle: boolean;
 	sizingOption: string;
+	sliderToggle: boolean;
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -175,7 +176,8 @@ class App extends React.Component<AppProps, AppState> {
 			toastVisible6: true,
 			selectOption: selectOptions[0].value,
 			selectToggle: false,
-			sizingOption: sizingOptions[3].value
+			sizingOption: sizingOptions[3].value,
+			sliderToggle: false
 		};
 
 		/* (window as any).state = this.state;*/
@@ -1147,11 +1149,59 @@ class App extends React.Component<AppProps, AppState> {
 
 	private buildSlider = () => (
 		<Container id="sliderExample">
+
+			<h3>Normal slider control, range 0 - 100, toggle snap</h3>
 			<Slider
-				labels={['label']}
+				onSelect={(val: any) => debug('slider select: %o', val)}
+				scale={2}
+				snap={this.state.sliderToggle}
+				ticks={5}
+			/>
+
+			<Option
+				onClick={(toggle: boolean) => {
+					this.setState({
+						sliderToggle: toggle
+					});
+				}}
+				text="Toggle snap mode on/off"
+			/>
+			<br/><br/>
+
+			<h3>Normal slider, no ticks, range 0 - 100</h3>
+			<Slider
 				onSelect={(val: any) => debug('slider select: %o', val)}
 				scale={2}
 			/>
+			<br/>
+
+			<h3>Disabled slider</h3>
+			<Slider
+				disabled
+				onSelect={(val: any) => debug('slider select: %o', val)}
+				scale={2}
+				ticks={5}
+			/>
+			<br/>
+
+			<h3>xxsmall</h3>
+			<Slider scale={3} sizing={Sizing.xxsmall} ticks={3} />
+
+			<h3>xsmall</h3>
+			<Slider scale={3} sizing={Sizing.xsmall} ticks={3} />
+
+			<h3>small</h3>
+			<Slider scale={3} sizing={Sizing.small} ticks={3} />
+
+			<h3>large</h3>
+			<Slider scale={3} sizing={Sizing.large} ticks={3} />
+
+			<h3>xlarge</h3>
+			<Slider scale={3} sizing={Sizing.xlarge} ticks={3} />
+
+			<h3>xxlarge</h3>
+			<Slider scale={3} sizing={Sizing.xxlarge} ticks={3} />
+
 		</Container>
 	);
 

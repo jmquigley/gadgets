@@ -105,9 +105,6 @@ A counter widget that annotates (overlays) another widget.
 ### [BaseProps](docs/lib/shared/props.md)
 This module represents the properties that are shared by every class in the project.  This includes properties such as color, id, disabled, etc.
 
-### Breadcrumbs
-TODO: create the Breadcrums control
-
 ### [Browser](docs/lib/browser/Browser.md)
 Creates a web browser instance using a [webview](https://electron.atom.io/docs/api/webview-tag/) tag
 
@@ -147,12 +144,6 @@ A specialized List control that can be manipulated by the user.  They can add/re
 ### [Editor](docs/lib/editor/Editor.md)
 A multi-line text editor control.  It uses a custom [markup module](https://github.com/jmquigley/quill-markup) under the [Quill](https://quilljs.com/) editor/api.
 
-### Gauge
-TODO: create the gague control
-
-### History
-TODO: create a History selection control
-
 ### [Icon](docs/lib/icon/Icon.md)
 Displays a graphical icon within the current container.
 
@@ -186,8 +177,8 @@ TODO: create the Rating control
 ### [Select](docs/lib/select/Select.md)
 A dropdown combo box control.  This uses the [react-select](https://www.npmjs.com/package/react-select) library from NPM maintained by Jed Watson. See the [README](https://github.com/JedWatson/react-select/blob/master/README.md) of this project for events and properties used.
 
-### Slider
-TODO: create the Slider control
+### [Slider](docs/lib/switch/Slider.md)
+The Slider control creates a horizontal line overlapped by a chevron that can be moved along this horizontal line.
 
 ### Spinner
 A text control with an up/down arrow that will increment a counter.
