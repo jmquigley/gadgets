@@ -132,6 +132,7 @@ export interface Styles {
 }
 
 export interface BaseProps {
+	bottom?: string;
 	className?: string;
 	contentEditable?: boolean;
 	direction?: Direction;
@@ -160,6 +161,7 @@ export interface BaseProps {
 }
 
 const defaultBaseProps: BaseProps = {
+	bottom: '',
 	className: '',
 	contentEditable: false,
 	direction: Direction.right,

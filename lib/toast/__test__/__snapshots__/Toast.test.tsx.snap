@@ -21,11 +21,11 @@ exports[`Test creation of a Toast control 1`] = `
   }
 >
   <styled.div
-    bottom={false}
     className="ui-toast test-class"
     disabled={false}
     level={0}
     style={Object {}}
+    usebottom={false}
     visible={false}
     xcss={
       Array [
@@ -61,7 +61,7 @@ exports[`Test creation of a Toast control 1`] = `
 
 exports[`Test retrieval of Toast props object 1`] = `
 Object {
-  "bottom": false,
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "decay": true,
@@ -90,6 +90,7 @@ Object {
   "theme": null,
   "tooltip": "",
   "top": "",
+  "usebottom": false,
   "visible": true,
   "width": "",
   "xcss": null,

@@ -25,6 +25,7 @@ exports[`Test creation of an inny type Switch 1`] = `
     height="20px"
   >
     <styled.div
+      bottom=""
       className="ui-switch-slider ui-slider-on"
       contentEditable={false}
       direction="right"
@@ -102,6 +103,7 @@ exports[`Test creation of an outy type Switch 1`] = `
     height="20px"
   >
     <styled.div
+      bottom=""
       className="ui-switch-slider ui-slider-on"
       contentEditable={false}
       direction="right"
@@ -156,6 +158,7 @@ exports[`Test creation of an outy type Switch 1`] = `
 
 exports[`Test disabling of the Switch control 1`] = `
 <Switch
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -216,6 +219,7 @@ exports[`Test disabling of the Switch control 1`] = `
         height="20px"
       >
         <styled.div
+          bottom=""
           className="ui-switch-slider ui-slider-off"
           contentEditable={false}
           direction="right"
@@ -301,6 +305,7 @@ exports[`Test disabling of the Switch control 1`] = `
 
 exports[`Test making the Switch control invisible 1`] = `
 <Switch
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -361,6 +366,7 @@ exports[`Test making the Switch control invisible 1`] = `
         height="20px"
       >
         <styled.div
+          bottom=""
           className="ui-switch-slider ui-slider-off"
           contentEditable={false}
           direction="right"
@@ -446,6 +452,7 @@ exports[`Test making the Switch control invisible 1`] = `
 
 exports[`Test retrieval of the Switch props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",
@@ -505,6 +512,7 @@ exports[`Test the click handler on the Switch control 1`] = `
     height="20px"
   >
     <styled.div
+      bottom=""
       className="ui-switch-slider ui-slider-off"
       contentEditable={false}
       direction="right"

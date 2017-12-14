@@ -2,6 +2,7 @@
 
 exports[`Test a double click edit of the Label control 1`] = `
 <Label
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -132,6 +133,7 @@ exports[`Test creation of a Label control 1`] = `
 
 exports[`Test double click change to Label and blur to save 1`] = `
 <Label
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -222,6 +224,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
 
 exports[`Test making the Label control invisible 1`] = `
 <Label
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -312,6 +315,7 @@ exports[`Test making the Label control invisible 1`] = `
 
 exports[`Test retrieval of default Label props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",
@@ -351,6 +355,7 @@ Object {
 
 exports[`Test the disabling of the Label control 1`] = `
 <Label
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"

@@ -2,6 +2,7 @@
 
 exports[`Test disabling of a ListItem control 1`] = `
 <ListItem
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -73,6 +74,7 @@ exports[`Test disabling of a ListItem control 1`] = `
     }
   >
     <Item
+      bottom=""
       className="ui-listitem"
       contentEditable={false}
       direction="right"
@@ -167,6 +169,7 @@ exports[`Test disabling of a ListItem control 1`] = `
             style={Object {}}
           >
             <Title
+              bottom=""
               className="ui-listitem"
               contentEditable={false}
               direction="right"
@@ -262,6 +265,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                     }
                   >
                     <Styled(Label)
+                      bottom=""
                       className="ui-title"
                       contentEditable={false}
                       direction="right"
@@ -326,6 +330,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                       }
                     >
                       <Label
+                        bottom=""
                         className="ui-title sc-iwsKbI eCIUBQ"
                         contentEditable={false}
                         direction="right"
@@ -463,6 +468,7 @@ exports[`Test disabling of a ListItem control 1`] = `
 
 exports[`Test making ListItem control invisible 1`] = `
 <ListItem
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -534,6 +540,7 @@ exports[`Test making ListItem control invisible 1`] = `
     }
   >
     <Item
+      bottom=""
       className="ui-listitem"
       contentEditable={false}
       direction="right"
@@ -628,6 +635,7 @@ exports[`Test making ListItem control invisible 1`] = `
             style={Object {}}
           >
             <Title
+              bottom=""
               className="ui-listitem"
               contentEditable={false}
               direction="right"
@@ -723,6 +731,7 @@ exports[`Test making ListItem control invisible 1`] = `
                     }
                   >
                     <Styled(Label)
+                      bottom=""
                       className="ui-title"
                       contentEditable={false}
                       direction="right"
@@ -787,6 +796,7 @@ exports[`Test making ListItem control invisible 1`] = `
                       }
                     >
                       <Label
+                        bottom=""
                         className="ui-title sc-iwsKbI eCIUBQ"
                         contentEditable={false}
                         direction="right"
@@ -924,6 +934,7 @@ exports[`Test making ListItem control invisible 1`] = `
 
 exports[`Test retrieval of ListItem props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",
@@ -996,6 +1007,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   }
 >
   <Item
+    bottom=""
     className="ui-listitem"
     contentEditable={false}
     direction="right"
@@ -1071,6 +1083,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   }
 >
   <Item
+    bottom=""
     className="ui-listitem"
     contentEditable={false}
     direction="right"

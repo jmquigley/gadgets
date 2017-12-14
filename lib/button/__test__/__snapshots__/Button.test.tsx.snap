@@ -2,6 +2,7 @@
 
 exports[`Test Button click event 1`] = `
 <Button
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -66,6 +67,7 @@ exports[`Test Button click event 1`] = `
         style={Object {}}
       >
         <Icon
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -114,6 +116,7 @@ exports[`Test Button click event 1`] = `
             }
           >
             <styled.i
+              bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
               direction="right"
@@ -191,6 +194,7 @@ exports[`Test creation of a Button control 1`] = `
     visible={true}
   >
     <Icon
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -259,6 +263,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
     visible={true}
   >
     <Icon
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -293,6 +298,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
 
 exports[`Test disabling of a Button 1`] = `
 <Button
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -357,6 +363,7 @@ exports[`Test disabling of a Button 1`] = `
         style={Object {}}
       >
         <Icon
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -405,6 +412,7 @@ exports[`Test disabling of a Button 1`] = `
             }
           >
             <styled.i
+              bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
               direction="right"
@@ -455,6 +463,7 @@ exports[`Test disabling of a Button 1`] = `
 
 exports[`Test making a Button invisible 1`] = `
 <Button
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -519,6 +528,7 @@ exports[`Test making a Button invisible 1`] = `
         style={Object {}}
       >
         <Icon
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -567,6 +577,7 @@ exports[`Test making a Button invisible 1`] = `
             }
           >
             <styled.i
+              bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
               direction="right"
@@ -617,6 +628,7 @@ exports[`Test making a Button invisible 1`] = `
 
 exports[`Test retrieval of Button props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",

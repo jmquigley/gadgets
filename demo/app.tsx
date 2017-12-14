@@ -1148,6 +1148,7 @@ class App extends React.Component<AppProps, AppState> {
 	private buildSlider = () => (
 		<Container id="sliderExample">
 			<Slider
+				labels={['label']}
 				onSelect={(val: any) => debug('slider select: %o', val)}
 				scale={2}
 			/>
@@ -1497,11 +1498,11 @@ class App extends React.Component<AppProps, AppState> {
 				</div>
 
 				<Toast
-					bottom
 					decay={false}
 					level={ToastLevel.error}
-					show={this.state.toastVisible5}
 					onClose={() => this.setState({toastVisible5: false})}
+					show={this.state.toastVisible5}
+					usebottom
 				>
 					This is a sample error message on the bottom
 				</Toast>

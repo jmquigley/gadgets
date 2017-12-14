@@ -2,6 +2,7 @@
 
 exports[`Test ButtonCircle click event 1`] = `
 <ButtonCircle
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -70,6 +71,7 @@ exports[`Test ButtonCircle click event 1`] = `
             width="24px"
           >
             <Styled(Button)
+              bottom=""
               className=""
               contentEditable={false}
               direction="right"
@@ -104,6 +106,7 @@ exports[`Test ButtonCircle click event 1`] = `
               xcss={null}
             >
               <Button
+                bottom=""
                 className="sc-htoDjs dXEIgP"
                 contentEditable={false}
                 direction="right"
@@ -180,6 +183,7 @@ exports[`Test ButtonCircle click event 1`] = `
                       }
                     >
                       <Icon
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -228,6 +232,7 @@ exports[`Test ButtonCircle click event 1`] = `
                           }
                         >
                           <styled.i
+                            bottom=""
                             className="ui-icon fa fa-fw fa-bomb"
                             contentEditable={false}
                             direction="right"
@@ -311,6 +316,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
       width="24px"
     >
       <Styled(Button)
+        bottom=""
         className="test-class"
         contentEditable={false}
         direction="right"
@@ -351,6 +357,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
 
 exports[`Test disabling of a ButtonCircle control 1`] = `
 <ButtonCircle
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -419,6 +426,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
             width="24px"
           >
             <Styled(Button)
+              bottom=""
               className=""
               contentEditable={false}
               direction="right"
@@ -453,6 +461,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
               xcss={null}
             >
               <Button
+                bottom=""
                 className="sc-htoDjs dXEIgP"
                 contentEditable={false}
                 direction="right"
@@ -529,6 +538,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
                       }
                     >
                       <Icon
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -577,6 +587,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
                           }
                         >
                           <styled.i
+                            bottom=""
                             className="ui-icon fa fa-fw fa-bomb"
                             contentEditable={false}
                             direction="right"
@@ -634,6 +645,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
 
 exports[`Test making a ButtonCircle control invisible 1`] = `
 <ButtonCircle
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -702,6 +714,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
             width="24px"
           >
             <Styled(Button)
+              bottom=""
               className=""
               contentEditable={false}
               direction="right"
@@ -736,6 +749,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
               xcss={null}
             >
               <Button
+                bottom=""
                 className="sc-htoDjs dXEIgP"
                 contentEditable={false}
                 direction="right"
@@ -812,6 +826,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
                       }
                     >
                       <Icon
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -860,6 +875,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
                           }
                         >
                           <styled.i
+                            bottom=""
                             className="ui-icon fa fa-fw fa-bomb"
                             contentEditable={false}
                             direction="right"
@@ -917,6 +933,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
 
 exports[`Test retrieval of ButtonCircle props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",

@@ -21,6 +21,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
   }
 >
   <styled.div
+    bottom=""
     className="ui-tag"
     contentEditable={false}
     direction="right"
@@ -53,6 +54,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
     xcss={null}
   >
     <Label
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -94,6 +96,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
 
 exports[`Test disabling of the simple Tag instance 1`] = `
 <Tag
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -145,6 +148,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
     }
   >
     <styled.div
+      bottom=""
       className="ui-tag"
       contentEditable={false}
       direction="right"
@@ -191,6 +195,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
         width=""
       >
         <Label
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -293,6 +298,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
           visible={true}
         >
           <ButtonCircle
+            bottom=""
             className="sc-fjdhpX dmcXUf"
             contentEditable={false}
             direction="right"
@@ -364,6 +370,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                       width="18px"
                     >
                       <Styled(Button)
+                        bottom=""
                         className="sc-fjdhpX dmcXUf"
                         contentEditable={false}
                         direction="right"
@@ -401,6 +408,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                         xcss={null}
                       >
                         <Button
+                          bottom=""
                           className="sc-fjdhpX dmcXUf sc-htoDjs eTCIvM"
                           contentEditable={false}
                           direction="right"
@@ -486,6 +494,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                 }
                               >
                                 <Icon
+                                  bottom=""
                                   className=""
                                   contentEditable={false}
                                   direction="right"
@@ -534,6 +543,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                     }
                                   >
                                     <styled.i
+                                      bottom=""
                                       className="ui-icon fa fa-fw fa-times"
                                       contentEditable={false}
                                       direction="right"
@@ -596,6 +606,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
 
 exports[`Test making Tag invisible 1`] = `
 <Tag
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -647,6 +658,7 @@ exports[`Test making Tag invisible 1`] = `
     }
   >
     <styled.div
+      bottom=""
       className="ui-tag"
       contentEditable={false}
       direction="right"
@@ -693,6 +705,7 @@ exports[`Test making Tag invisible 1`] = `
         width=""
       >
         <Label
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -795,6 +808,7 @@ exports[`Test making Tag invisible 1`] = `
           visible={false}
         >
           <ButtonCircle
+            bottom=""
             className="sc-fjdhpX dmcXUf"
             contentEditable={false}
             direction="right"
@@ -866,6 +880,7 @@ exports[`Test making Tag invisible 1`] = `
                       width="18px"
                     >
                       <Styled(Button)
+                        bottom=""
                         className="sc-fjdhpX dmcXUf"
                         contentEditable={false}
                         direction="right"
@@ -903,6 +918,7 @@ exports[`Test making Tag invisible 1`] = `
                         xcss={null}
                       >
                         <Button
+                          bottom=""
                           className="sc-fjdhpX dmcXUf sc-htoDjs eTCIvM"
                           contentEditable={false}
                           direction="right"
@@ -988,6 +1004,7 @@ exports[`Test making Tag invisible 1`] = `
                                 }
                               >
                                 <Icon
+                                  bottom=""
                                   className=""
                                   contentEditable={false}
                                   direction="right"
@@ -1036,6 +1053,7 @@ exports[`Test making Tag invisible 1`] = `
                                     }
                                   >
                                     <styled.i
+                                      bottom=""
                                       className="ui-icon fa fa-fw fa-times"
                                       contentEditable={false}
                                       direction="right"
@@ -1098,6 +1116,7 @@ exports[`Test making Tag invisible 1`] = `
 
 exports[`Test retrieval of Tag props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",

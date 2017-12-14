@@ -2,6 +2,7 @@
 
 exports[`Test creation of a Title control with bad layout 1`] = `
 <Title
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -64,6 +65,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
         style={Object {}}
       >
         <Styled(Label)
+          bottom=""
           className="ui-title"
           contentEditable={false}
           direction="right"
@@ -103,6 +105,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
           }
         >
           <Label
+            bottom=""
             className="ui-title sc-bxivhb cbEtIQ"
             contentEditable={false}
             direction="right"
@@ -208,6 +211,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
 
 exports[`Test creation of a Title control with bad layout 2`] = `
 <Title
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -270,6 +274,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
         style={Object {}}
       >
         <Styled(Label)
+          bottom=""
           className="ui-title"
           contentEditable={false}
           direction="right"
@@ -309,6 +314,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
           }
         >
           <Label
+            bottom=""
             className="ui-title sc-bxivhb cbEtIQ"
             contentEditable={false}
             direction="right"
@@ -440,6 +446,7 @@ exports[`Test creation of a Title control with default props 1`] = `
     visible={true}
   >
     <Styled(Label)
+      bottom=""
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -510,6 +517,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
     visible={true}
   >
     <Styled(Label)
+      bottom=""
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -549,6 +557,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
       }
     />
     <styled.div
+      bottom=""
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -620,6 +629,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
     visible={true}
   >
     <Styled(Label)
+      bottom=""
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -690,6 +700,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     visible={true}
   >
     <Styled(Label)
+      bottom=""
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -729,6 +740,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       }
     />
     <styled.div
+      bottom=""
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -800,6 +812,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     visible={true}
   >
     <Styled(Label)
+      bottom=""
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -838,6 +851,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       }
     />
     <styled.div
+      bottom=""
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -908,6 +922,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     visible={true}
   >
     <Styled(Label)
+      bottom=""
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -947,6 +962,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       }
     />
     <styled.div
+      bottom=""
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -1018,6 +1034,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     visible={true}
   >
     <Styled(Label)
+      bottom=""
       className="ui-title"
       contentEditable={false}
       direction="right"
@@ -1057,6 +1074,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       }
     />
     <styled.div
+      bottom=""
       className="ui-title-widget"
       contentEditable={false}
       direction="right"
@@ -1102,6 +1120,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
 
 exports[`Test disabling the Title control 1`] = `
 <Title
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -1164,6 +1183,7 @@ exports[`Test disabling the Title control 1`] = `
         style={Object {}}
       >
         <Styled(Label)
+          bottom=""
           className="ui-title"
           contentEditable={false}
           direction="right"
@@ -1203,6 +1223,7 @@ exports[`Test disabling the Title control 1`] = `
           }
         >
           <Label
+            bottom=""
             className="ui-title sc-bxivhb gnXhnZ"
             contentEditable={false}
             direction="right"
@@ -1308,6 +1329,7 @@ exports[`Test disabling the Title control 1`] = `
 
 exports[`Test making the Title control invisible 1`] = `
 <Title
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -1370,6 +1392,7 @@ exports[`Test making the Title control invisible 1`] = `
         style={Object {}}
       >
         <Styled(Label)
+          bottom=""
           className="ui-title"
           contentEditable={false}
           direction="right"
@@ -1409,6 +1432,7 @@ exports[`Test making the Title control invisible 1`] = `
           }
         >
           <Label
+            bottom=""
             className="ui-title sc-bxivhb gnXhnZ"
             contentEditable={false}
             direction="right"
@@ -1514,6 +1538,7 @@ exports[`Test making the Title control invisible 1`] = `
 
 exports[`Test retrieval of Title props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",

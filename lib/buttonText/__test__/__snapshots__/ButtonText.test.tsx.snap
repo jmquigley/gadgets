@@ -2,6 +2,7 @@
 
 exports[`Test creation of a ButtonText control to the left 1`] = `
 <ButtonText
+  bottom=""
   className="test-class"
   contentEditable={false}
   direction="right"
@@ -95,6 +96,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
           </div>
         </styled.div>
         <Icon
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -143,6 +145,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
             }
           >
             <styled.i
+              bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
               direction="right"
@@ -193,6 +196,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
 
 exports[`Test disabling of a ButtonText control 1`] = `
 <ButtonText
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -258,6 +262,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
         style={Object {}}
       >
         <Icon
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -306,6 +311,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
             }
           >
             <styled.i
+              bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
               direction="right"
@@ -364,6 +370,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
 
 exports[`Test making a ButtonText control invisible 1`] = `
 <ButtonText
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -429,6 +436,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
         style={Object {}}
       >
         <Icon
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -477,6 +485,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
             }
           >
             <styled.i
+              bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
               direction="right"
@@ -535,6 +544,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
 
 exports[`Test retrieval of ButtonText props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",

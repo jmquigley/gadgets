@@ -31,9 +31,9 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-1.1.0.tgz#93b1be91f63c184450385272c47b6496fd028e02"
 
-"@types/fs-extra@^4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-4.0.5.tgz#8aa6033c0e87c653b09a6711686916864b48ec9e"
+"@types/fs-extra@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.0.0.tgz#d3e225b35eb5c6d3a5a782c28219df365c781413"
   dependencies:
     "@types/node" "*"
 
@@ -45,9 +45,9 @@
   version "21.1.8"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-21.1.8.tgz#d497213725684f1e5a37900b17a47c9c018f1a97"
 
-"@types/lodash@^4.14.88":
-  version "4.14.88"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.88.tgz#97eaf2dc668f33ed8e511a5b627035f4ea20b0f5"
+"@types/lodash@^4.14.89":
+  version "4.14.89"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.89.tgz#dd2114403d653a45c3d2f0cae1599949b99a5a3a"
 
 "@types/lorem-ipsum@^1.0.2":
   version "1.0.2"
@@ -63,13 +63,13 @@
   version "7.0.48"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.48.tgz#24bfdc0aa82e8f6dbd017159c58094a2e06d0abb"
 
-"@types/node@^8.0.57":
-  version "8.0.57"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.57.tgz#e5d8b4dc112763e35cfc51988f4f38da3c486d99"
+"@types/node@^8.5.1":
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.1.tgz#4ec3020bcdfe2abffeef9ba3fbf26fca097514b5"
 
-"@types/quill@^1.3.4":
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/@types/quill/-/quill-1.3.4.tgz#709dd2f35739da18b0a29275b0143cd1fb172d3a"
+"@types/quill@^1.3.5":
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/@types/quill/-/quill-1.3.5.tgz#0109281352e08aa686160633a86c99d468d961a4"
   dependencies:
     parchment "^1.1.2"
 
@@ -80,9 +80,9 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react-select@^1.0.59":
-  version "1.0.59"
-  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-1.0.59.tgz#791022e5b2c7cd5c86301949ea5e4cc94a55bc66"
+"@types/react-select@^1.0.60":
+  version "1.0.60"
+  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-1.0.60.tgz#28943313563f3d30892a86220a851307dd15b818"
   dependencies:
     "@types/react" "*"
 
@@ -90,9 +90,9 @@
   version "16.0.26"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.26.tgz#ccc243302d2a4b4a02923ddc1263599d957d3174"
 
-"@types/react@^16.0.28":
-  version "16.0.28"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.28.tgz#eb0b31272528da8f20477ec27569c4f767315b33"
+"@types/react@^16.0.30":
+  version "16.0.30"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.30.tgz#cca9b180160004df574519c3d7c559fb181d545f"
 
 "@types/sprintf-js@^1.1.0":
   version "1.1.0"
@@ -1626,9 +1626,9 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000770, caniuse-lite@^1.0.30000777:
   version "1.0.30000778"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000778.tgz#f1e7cb8b13b1f6744402291d75f0bcd4c3160369"
 
-caniuse-lite@^1.0.30000780:
-  version "1.0.30000780"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000780.tgz#1f9095f2efd4940e0ba6c5992ab7a9b64cc35ba4"
+caniuse-lite@^1.0.30000783:
+  version "1.0.30000783"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000783.tgz#9b5499fb1b503d2345d12aa6b8612852f4276ffd"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -6141,7 +6141,11 @@ private@^0.1.6, private@^0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
 
-process-nextick-args@^1.0.7, process-nextick-args@~1.0.6:
+process-nextick-args@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
+
+process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
 
@@ -6327,9 +6331,9 @@ react-input-autosize@^2.1.0:
   dependencies:
     prop-types "^15.5.8"
 
-react-modal@^3.1.7:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.7.tgz#21feb937c95cd722bf2d375cada751fdc8189c0e"
+react-modal@^3.1.8:
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.8.tgz#7d6b1958f44828babd2a1ce826c28fa40d026b0f"
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.5.10"
@@ -7589,9 +7593,9 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
-util.calc@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/util.calc/-/util.calc-0.0.7.tgz#55eb4a5c0d3898855683aa08880d8f8221b9117b"
+util.calc@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/util.calc/-/util.calc-0.0.8.tgz#f6b662ffa2a4252b4f67e43f5c1b47535b976380"
   dependencies:
     util.constants "^0.0.8"
     util.toolbox "^0.0.56"

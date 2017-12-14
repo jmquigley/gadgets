@@ -2,6 +2,7 @@
 
 exports[`Test retrieval of ListHeader props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",
@@ -72,6 +73,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   }
 >
   <Item
+    bottom=""
     className="ui-list-header nohover"
     contentEditable={false}
     direction="right"

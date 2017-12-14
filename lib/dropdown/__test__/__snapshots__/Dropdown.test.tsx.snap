@@ -63,6 +63,7 @@ exports[`Creation of the Dropdown control 1`] = `
 
 exports[`Disable the Dropdown control 1`] = `
 <Dropdown
+  bottom=""
   className=""
   contentEditable={false}
   defaultVal="idstr2"
@@ -251,6 +252,7 @@ exports[`Make the Dropdown control invisible 1`] = `
 
 exports[`Test retrieval of Dropdown props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",
@@ -284,6 +286,7 @@ Object {
 
 exports[`Test the Dropdown click event 1`] = `
 <Dropdown
+  bottom=""
   className=""
   contentEditable={false}
   defaultVal="idstr1"

@@ -21,6 +21,7 @@ exports[`Test creation of an Icon control with icon 1`] = `
   }
 >
   <styled.i
+    bottom=""
     className="ui-icon fa fa-fw fa-star test-class"
     contentEditable={false}
     direction="right"
@@ -78,6 +79,7 @@ exports[`Test creation of an Icon control with image 1`] = `
   }
 >
   <styled.img
+    bottom=""
     className="ui-icon"
     contentEditable={false}
     direction="right"
@@ -119,6 +121,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
 }
 
 <Icon
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -167,6 +170,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
     }
   >
     <styled.i
+      bottom=""
       className="ui-icon fa fa-fw fa-bomb"
       contentEditable={false}
       direction="right"
@@ -213,6 +217,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
 
 exports[`Test retrieval of the Icon props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "right",
@@ -257,6 +262,7 @@ exports[`Test the disabling of the Icon control 1`] = `
 }
 
 <Icon
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -305,6 +311,7 @@ exports[`Test the disabling of the Icon control 1`] = `
     }
   >
     <styled.i
+      bottom=""
       className="ui-icon fa fa-fw fa-bomb"
       contentEditable={false}
       direction="right"

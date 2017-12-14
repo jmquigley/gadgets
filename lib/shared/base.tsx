@@ -61,6 +61,7 @@ export const defaultSize: number = 16;
 
 export abstract class BaseComponent<P extends BaseProps, S> extends React.PureComponent<P, S> {
 
+	private _defaultSize: number;
 	private _id: string;
 	private _inlineStyles: Map<string, string> = Map({});
 	private _sizes: Sizes = null;
@@ -71,6 +72,8 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 	constructor(props: P, defaultInlineStyles: Styles = {}, defaultFontSize: number = defaultSize) {
 		super(props);
+
+		this._defaultSize = defaultSize;
 
 		// If an id value is not given as a prop, then generate a unique id.  If the
 		// component is under test, then 0 is used for the UUID value (to make it
@@ -88,6 +91,10 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 	get classes(): string {
 		return this._classes.classnames;
+	}
+
+	get defaultSize(): number {
+		return this._defaultSize;
 	}
 
 	/**

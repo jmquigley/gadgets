@@ -25,6 +25,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
     id="ButtonDialog-0"
   >
     <Button
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -119,6 +120,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
     id="ButtonDialog-0"
   >
     <Button
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -190,6 +192,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
 
 exports[`Test making the ButtonDialog invisible 1`] = `
 <ButtonDialog
+  bottom=""
   className=""
   contentEditable={false}
   dialogClasses={Array []}
@@ -255,6 +258,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         id="ButtonDialog-0"
       >
         <Button
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -340,6 +344,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                 }
               >
                 <Icon
+                  bottom=""
                   className=""
                   contentEditable={false}
                   direction="right"
@@ -388,6 +393,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                     }
                   >
                     <styled.i
+                      bottom=""
                       className="ui-icon fa fa-fw fa-bomb"
                       contentEditable={false}
                       direction="right"
@@ -471,6 +477,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
               visible={false}
             >
               <Triangle
+                bottom=""
                 className="sc-dnqmqq eWzkPV"
                 contentEditable={false}
                 direction="up"
@@ -523,6 +530,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                   }
                 >
                   <Triangle__SVGView
+                    bottom=""
                     className="ui-triangle sc-dnqmqq eWzkPV"
                     contentEditable={false}
                     direction="up"
@@ -613,6 +621,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
 
 exports[`Test retrieval of ButtonDialog props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "dialogClasses": Array [],
@@ -652,6 +661,7 @@ Object {
 
 exports[`Test the disabling of the ButtonDialog control 1`] = `
 <ButtonDialog
+  bottom=""
   className=""
   contentEditable={false}
   dialogClasses={Array []}
@@ -717,6 +727,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
         id="ButtonDialog-0"
       >
         <Button
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -802,6 +813,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                 }
               >
                 <Icon
+                  bottom=""
                   className=""
                   contentEditable={false}
                   direction="right"
@@ -850,6 +862,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                     }
                   >
                     <styled.i
+                      bottom=""
                       className="ui-icon fa fa-fw fa-bomb"
                       contentEditable={false}
                       direction="right"
@@ -933,6 +946,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
               visible={false}
             >
               <Triangle
+                bottom=""
                 className="sc-dnqmqq eWzkPV"
                 contentEditable={false}
                 direction="up"
@@ -985,6 +999,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                   }
                 >
                   <Triangle__SVGView
+                    bottom=""
                     className="ui-triangle sc-dnqmqq eWzkPV"
                     contentEditable={false}
                     direction="up"

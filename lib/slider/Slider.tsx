@@ -2,7 +2,7 @@
 
 'use strict';
 
-const debug = require('debug')('Slider');
+// const debug = require('debug')('Slider');
 
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
@@ -31,7 +31,6 @@ export interface SliderProps extends BaseProps {
 export function getDefaultSliderProps(): SliderProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			labels: [],
 			left: '0',
 			max: 100,
 			min: 0,
@@ -50,14 +49,18 @@ export interface SliderState {
 
 export const SliderBar: any = withProps<SliderProps, HTMLDivElement>(styled.div)`
 	border: solid 1px ${props => props.theme.borderColor};
-	display: flex;
 	height: ${props => props.height || '8'}px;
-	width: inherit;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: ${props => props.width || '100'}px;
 `;
 
 export const SliderContainer: any = withProps<SliderProps, HTMLDivElement>(styled.div)`
 	border: solid 1px red;
-	padding: ${props => props.padding}px;
+	height: ${props => props.height}px;
+	padding: ${props => props.padding || '0'};
 	position: relative;
 	width: ${props => props.width || '100'}px;
 `;
@@ -73,6 +76,15 @@ export const SliderElement: any = withProps<SliderProps, HTMLDivElement>(styled.
 	${props => props.sizing && boxStyle[props.sizing]}
 `;
 
+export const SliderTick: any = withProps<SliderProps, HTMLDivElement>(styled.div)`
+    background-color: ${props => props.theme.borderColor};
+    height: 0.1875rem;
+    left: ${props => props.left || 0}rem;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+`;
+
 export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 	public static readonly defaultProps: SliderProps = getDefaultSliderProps();
@@ -80,6 +92,8 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	private _borderSize: number = 1;
 	private _box: any;
 	private _container: any;
+	private _heightAdjust: number = 0;
+	private _offset: number = 1 / this.defaultSize;
 	private _sliderSize: any;
 	private _width: number = 0;
 
@@ -92,8 +106,16 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 		this._sliderSize = this.fontSize();
 
+		if (this.hasLabels) {
+			this._heightAdjust = this._sliderSize;
+		}
+
 		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props);
+	}
+
+	get hasLabels(): boolean {
+		return this.props.labels.length > 0;
 	}
 
 	get max(): number {
@@ -113,15 +135,13 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 	@autobind
 	private handleMouseMove(e: any) {
-		let xVal = e.pageX - this._box.left - this._sliderSize * 0.5;
+		let xVal = e.pageX - this._box.left;
 
 		if (xVal > this.max) {
 			xVal = this.max;
 		} else if (xVal < this.min) {
 			xVal = 0;
 		}
-
-		debug('handleMouseMove => pageX: %d, xVal: %d', e.pageX, xVal);
 
 		this.setState({
 			x: xVal
@@ -132,8 +152,6 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 	@autobind
 	private handleMouseUp(e: any) {
-		debug('handleMouseUp: %O', e);
-
 		this.props.onSelect(Math.round(this.state.x / this.props.scale));
 
 		document.removeEventListener('mousemove', this.handleMouseMove);
@@ -149,7 +167,6 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 	public componentDidMount() {
 		this._box = this._container.getBoundingClientRect();
-		debug('box: %O', this._box);
 	}
 
 	public componentWillReceiveProps(nextProps: SliderProps) {
@@ -161,20 +178,27 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 			<ThemeProvider theme={getTheme()}>
 				<SliderContainer
 					className="ui-slider-container"
-					innerRef={this.refContainer}
-					padding={(this._sliderSize * 0.5) + this._borderSize}
-					width={this._width}
+					height={this._sliderSize + this._borderSize * 4}
+					padding={`0 0 ${this._heightAdjust}px 0`}
+					width={this._width + this._sliderSize + (this._borderSize * 4)}
 				>
 					<SliderBar
 						className="ui-slider-bar"
 						height={this._sliderSize * 0.25}
-					/>
-					<SliderElement
-						className="ui-slider"
-						left={this.state.x}
-						onMouseDown={this.handleMouseDown}
-						sizing={this.props.sizing}
-					/>
+						innerRef={this.refContainer}
+						width={this._width}
+					>
+						<SliderTick
+							className="ui-slider-tick"
+							left={-this._offset}
+						/>
+						<SliderElement
+							className="ui-slider"
+							left={this.state.x - (this._sliderSize * 0.5) - this._borderSize}
+							onMouseDown={this.handleMouseDown}
+							sizing={this.props.sizing}
+						/>
+					</SliderBar>
 				</SliderContainer>
 			</ThemeProvider>
 		);

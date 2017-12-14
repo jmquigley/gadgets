@@ -2,6 +2,7 @@
 
 exports[`Create an empty TabContainer instance 1`] = `
 <TabContainer
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -54,6 +55,7 @@ exports[`Create an empty TabContainer instance 1`] = `
     }
   >
     <styled.div
+      bottom=""
       className="ui-tab-container"
       contentEditable={false}
       direction="right"
@@ -107,6 +109,7 @@ exports[`Create an empty TabContainer instance 1`] = `
         width=""
       >
         <Component
+          bottom=""
           className=""
           content={null}
           contentEditable={false}
@@ -170,6 +173,7 @@ exports[`Create an empty TabContainer instance 1`] = `
 
 exports[`Test TabContainer retrieval functions 1`] = `
 <TabContainer
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -222,6 +226,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
     }
   >
     <styled.div
+      bottom=""
       className="ui-tab-container"
       contentEditable={false}
       direction="right"
@@ -275,6 +280,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
         width=""
       >
         <Component
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -288,6 +294,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           maxTabs={5}
           navigation={
             <Unknown
+              bottom=""
               className=""
               contentEditable={false}
               direction="right"
@@ -323,6 +330,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
               xcss={null}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -362,6 +370,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 #1
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -401,6 +410,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 #2
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -457,6 +467,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           tabs={
             Immutable.List [
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -497,6 +508,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 #1
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -537,6 +549,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 #2
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -602,6 +615,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
               style={Object {}}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -701,6 +715,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -738,6 +753,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -815,6 +831,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -853,6 +870,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -906,6 +924,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -951,6 +970,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -1056,6 +1076,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -1093,6 +1114,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -1167,6 +1189,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -1241,6 +1264,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -1289,6 +1313,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -1346,6 +1371,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -1445,6 +1471,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -1482,6 +1509,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -1559,6 +1587,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -1597,6 +1626,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -1650,6 +1680,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -1695,6 +1726,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -1800,6 +1832,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -1837,6 +1870,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -1911,6 +1945,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -1985,6 +2020,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -2033,6 +2069,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -2090,6 +2127,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -2189,6 +2227,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -2226,6 +2265,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -2303,6 +2343,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -2341,6 +2382,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -2394,6 +2436,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -2439,6 +2482,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -2544,6 +2588,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -2581,6 +2626,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -2655,6 +2701,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -2729,6 +2776,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -2777,6 +2825,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -2834,6 +2883,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                 </ThemeProvider>
               </Tab>
               <Component
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -2875,6 +2925,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                     className="ui-tab-navigation sc-jTzLTM fSWicL"
                   >
                     <Button
+                      bottom=""
                       className=""
                       contentEditable={false}
                       direction="right"
@@ -2939,6 +2990,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             style={Object {}}
                           >
                             <Icon
+                              bottom=""
                               className=""
                               contentEditable={false}
                               direction="right"
@@ -2987,6 +3039,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <styled.i
+                                  bottom=""
                                   className="ui-icon fa fa-fw fa-chevron-left"
                                   contentEditable={false}
                                   direction="right"
@@ -3034,6 +3087,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                       </ThemeProvider>
                     </Button>
                     <Button
+                      bottom=""
                       className=""
                       contentEditable={false}
                       direction="right"
@@ -3098,6 +3152,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                             style={Object {}}
                           >
                             <Icon
+                              bottom=""
                               className=""
                               contentEditable={false}
                               direction="right"
@@ -3146,6 +3201,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                 }
                               >
                                 <styled.i
+                                  bottom=""
                                   className="ui-icon fa fa-fw fa-chevron-right"
                                   contentEditable={false}
                                   direction="right"
@@ -3199,6 +3255,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
           </styled.div>
         </Component>
         <Component
+          bottom=""
           className=""
           content="#1"
           contentEditable={false}
@@ -3264,6 +3321,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
 
 exports[`Test disabling the TabContainer instance 1`] = `
 <TabContainer
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -3316,6 +3374,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
     }
   >
     <styled.div
+      bottom=""
       className="ui-tab-container"
       contentEditable={false}
       direction="right"
@@ -3369,6 +3428,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
         width=""
       >
         <Component
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -3382,6 +3442,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           maxTabs={5}
           navigation={
             <Unknown
+              bottom=""
               className=""
               contentEditable={false}
               direction="right"
@@ -3417,6 +3478,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
               xcss={null}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -3456,6 +3518,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 #1
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -3495,6 +3558,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 #2
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -3551,6 +3615,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           tabs={
             Immutable.List [
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -3591,6 +3656,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 #1
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -3631,6 +3697,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 #2
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -3696,6 +3763,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
               style={Object {}}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -3795,6 +3863,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -3866,6 +3935,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -3914,6 +3984,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -4021,6 +4092,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -4098,6 +4170,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -4197,6 +4270,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -4268,6 +4342,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -4316,6 +4391,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -4423,6 +4499,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -4500,6 +4577,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -4599,6 +4677,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -4670,6 +4749,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -4718,6 +4798,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -4825,6 +4906,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -4902,6 +4984,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                 </ThemeProvider>
               </Tab>
               <Component
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -4940,6 +5023,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
           </styled.div>
         </Component>
         <Component
+          bottom=""
           className=""
           content={null}
           contentEditable={false}
@@ -5022,6 +5106,7 @@ exports[`Test making the TabContainer invisible 1`] = `
   }
 >
   <styled.div
+    bottom=""
     className="ui-tab-container"
     contentEditable={false}
     direction="right"
@@ -5059,6 +5144,7 @@ exports[`Test making the TabContainer invisible 1`] = `
     xcss={null}
   >
     <Component
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -5072,6 +5158,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       maxTabs={5}
       navigation={
         <Unknown
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -5107,6 +5194,7 @@ exports[`Test making the TabContainer invisible 1`] = `
           xcss={null}
         >
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -5146,6 +5234,7 @@ exports[`Test making the TabContainer invisible 1`] = `
             #1
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -5185,6 +5274,7 @@ exports[`Test making the TabContainer invisible 1`] = `
             #2
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -5241,6 +5331,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -5281,6 +5372,7 @@ exports[`Test making the TabContainer invisible 1`] = `
             #1
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -5321,6 +5413,7 @@ exports[`Test making the TabContainer invisible 1`] = `
             #2
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -5371,6 +5464,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -5410,6 +5504,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -5449,6 +5544,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -5489,6 +5585,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       </Tab>
     </Component>
     <Component
+      bottom=""
       className=""
       content="#1"
       contentEditable={false}
@@ -5523,6 +5620,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -5562,6 +5660,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -5601,6 +5700,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -5646,6 +5746,7 @@ exports[`Test making the TabContainer invisible 1`] = `
 
 exports[`Test removing the first item from the TabContainer 1`] = `
 <TabContainer
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -5698,6 +5799,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
     }
   >
     <styled.div
+      bottom=""
       className="ui-tab-container"
       contentEditable={false}
       direction="right"
@@ -5751,6 +5853,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
         width=""
       >
         <Component
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -5764,6 +5867,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           maxTabs={5}
           navigation={
             <Unknown
+              bottom=""
               className=""
               contentEditable={false}
               direction="right"
@@ -5799,6 +5903,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
               xcss={null}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -5838,6 +5943,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 #1
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -5877,6 +5983,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 #2
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -5933,6 +6040,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           tabs={
             Immutable.List [
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -5973,6 +6081,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 #1
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -6013,6 +6122,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 #2
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -6078,6 +6188,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
               style={Object {}}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -6177,6 +6288,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -6214,6 +6326,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -6291,6 +6404,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -6329,6 +6443,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -6382,6 +6497,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -6427,6 +6543,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -6532,6 +6649,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -6569,6 +6687,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -6643,6 +6762,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -6717,6 +6837,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -6765,6 +6886,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -6822,6 +6944,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -6921,6 +7044,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -6958,6 +7082,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -7035,6 +7160,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -7073,6 +7199,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -7126,6 +7253,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -7171,6 +7299,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -7276,6 +7405,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -7313,6 +7443,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -7387,6 +7518,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -7461,6 +7593,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -7509,6 +7642,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -7566,6 +7700,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -7665,6 +7800,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -7702,6 +7838,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -7779,6 +7916,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -7817,6 +7955,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -7870,6 +8009,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -7915,6 +8055,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -8020,6 +8161,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -8057,6 +8199,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -8131,6 +8274,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -8205,6 +8349,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -8253,6 +8398,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -8310,6 +8456,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                 </ThemeProvider>
               </Tab>
               <Component
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -8351,6 +8498,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                     className="ui-tab-navigation sc-jTzLTM fSWicL"
                   >
                     <Button
+                      bottom=""
                       className=""
                       contentEditable={false}
                       direction="right"
@@ -8415,6 +8563,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             style={Object {}}
                           >
                             <Icon
+                              bottom=""
                               className=""
                               contentEditable={false}
                               direction="right"
@@ -8463,6 +8612,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <styled.i
+                                  bottom=""
                                   className="ui-icon fa fa-fw fa-chevron-left"
                                   contentEditable={false}
                                   direction="right"
@@ -8510,6 +8660,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                       </ThemeProvider>
                     </Button>
                     <Button
+                      bottom=""
                       className=""
                       contentEditable={false}
                       direction="right"
@@ -8574,6 +8725,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                             style={Object {}}
                           >
                             <Icon
+                              bottom=""
                               className=""
                               contentEditable={false}
                               direction="right"
@@ -8622,6 +8774,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                 }
                               >
                                 <styled.i
+                                  bottom=""
                                   className="ui-icon fa fa-fw fa-chevron-right"
                                   contentEditable={false}
                                   direction="right"
@@ -8675,6 +8828,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
           </styled.div>
         </Component>
         <Component
+          bottom=""
           className=""
           content="#1"
           contentEditable={false}
@@ -8740,6 +8894,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
 
 exports[`Test retrieval of Tabs props object 1`] = `
 Object {
+  "bottom": "",
   "children": null,
   "className": "",
   "contentEditable": false,
@@ -8777,6 +8932,7 @@ Object {
 
 exports[`Test selecting the first tab within the TabContainer 1`] = `
 <TabContainer
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -8829,6 +8985,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
     }
   >
     <styled.div
+      bottom=""
       className="ui-tab-container"
       contentEditable={false}
       direction="right"
@@ -8882,6 +9039,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
         width=""
       >
         <Component
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -8895,6 +9053,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           maxTabs={5}
           navigation={
             <Unknown
+              bottom=""
               className=""
               contentEditable={false}
               direction="right"
@@ -8930,6 +9089,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
               xcss={null}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -8969,6 +9129,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 #1
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -9008,6 +9169,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 #2
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -9064,6 +9226,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           tabs={
             Immutable.List [
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -9104,6 +9267,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 #1
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -9144,6 +9308,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 #2
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -9209,6 +9374,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
               style={Object {}}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -9308,6 +9474,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -9345,6 +9512,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -9422,6 +9590,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -9460,6 +9629,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -9513,6 +9683,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -9558,6 +9729,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -9663,6 +9835,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -9700,6 +9873,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -9774,6 +9948,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -9848,6 +10023,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -9896,6 +10072,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -9953,6 +10130,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -10052,6 +10230,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -10089,6 +10268,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -10166,6 +10346,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -10204,6 +10385,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -10257,6 +10439,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -10302,6 +10485,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -10407,6 +10591,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -10444,6 +10629,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -10518,6 +10704,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -10592,6 +10779,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -10640,6 +10828,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -10697,6 +10886,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -10796,6 +10986,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -10833,6 +11024,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -10910,6 +11102,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -10948,6 +11141,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -11001,6 +11195,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -11046,6 +11241,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -11151,6 +11347,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -11188,6 +11385,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -11262,6 +11460,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -11336,6 +11535,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -11384,6 +11584,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -11441,6 +11642,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                 </ThemeProvider>
               </Tab>
               <Component
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -11482,6 +11684,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                     className="ui-tab-navigation sc-jTzLTM fSWicL"
                   >
                     <Button
+                      bottom=""
                       className=""
                       contentEditable={false}
                       direction="right"
@@ -11546,6 +11749,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             style={Object {}}
                           >
                             <Icon
+                              bottom=""
                               className=""
                               contentEditable={false}
                               direction="right"
@@ -11594,6 +11798,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <styled.i
+                                  bottom=""
                                   className="ui-icon fa fa-fw fa-chevron-left"
                                   contentEditable={false}
                                   direction="right"
@@ -11641,6 +11846,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                       </ThemeProvider>
                     </Button>
                     <Button
+                      bottom=""
                       className=""
                       contentEditable={false}
                       direction="right"
@@ -11705,6 +11911,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                             style={Object {}}
                           >
                             <Icon
+                              bottom=""
                               className=""
                               contentEditable={false}
                               direction="right"
@@ -11753,6 +11960,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                 }
                               >
                                 <styled.i
+                                  bottom=""
                                   className="ui-icon fa fa-fw fa-chevron-right"
                                   contentEditable={false}
                                   direction="right"
@@ -11806,6 +12014,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
           </styled.div>
         </Component>
         <Component
+          bottom=""
           className=""
           content="#1"
           contentEditable={false}
@@ -11871,6 +12080,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
 
 exports[`Test the TabContainer with the previous and next buttons 1`] = `
 <TabContainer
+  bottom=""
   className=""
   contentEditable={false}
   direction="right"
@@ -11923,6 +12133,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
     }
   >
     <styled.div
+      bottom=""
       className="ui-tab-container"
       contentEditable={false}
       direction="right"
@@ -11976,6 +12187,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
         width=""
       >
         <Component
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -11989,6 +12201,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           maxTabs={5}
           navigation={
             <Unknown
+              bottom=""
               className=""
               contentEditable={false}
               direction="right"
@@ -12024,6 +12237,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
               xcss={null}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -12063,6 +12277,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 #1
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -12102,6 +12317,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 #2
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -12158,6 +12374,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           tabs={
             Immutable.List [
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -12198,6 +12415,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 #1
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -12238,6 +12456,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 #2
               </Tab>,
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -12303,6 +12522,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
               style={Object {}}
             >
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -12402,6 +12622,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -12439,6 +12660,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -12516,6 +12738,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -12554,6 +12777,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -12607,6 +12831,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -12652,6 +12877,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -12757,6 +12983,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -12794,6 +13021,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -12868,6 +13096,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -12942,6 +13171,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -12990,6 +13220,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -13047,6 +13278,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -13146,6 +13378,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -13183,6 +13416,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -13260,6 +13494,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -13298,6 +13533,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -13351,6 +13587,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -13396,6 +13633,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -13501,6 +13739,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -13538,6 +13777,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -13612,6 +13852,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -13686,6 +13927,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -13734,6 +13976,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -13791,6 +14034,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 </ThemeProvider>
               </Tab>
               <Tab
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -13890,6 +14134,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       }
                     >
                       <Title
+                        bottom=""
                         className=""
                         contentEditable={false}
                         direction="right"
@@ -13927,6 +14172,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                         visible={true}
                         widget={
                           <Button
+                            bottom=""
                             className=""
                             contentEditable={false}
                             direction="right"
@@ -14004,6 +14250,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
+                                bottom=""
                                 className="ui-title"
                                 contentEditable={false}
                                 direction="right"
@@ -14042,6 +14289,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -14095,6 +14343,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <Label
+                                  bottom=""
                                   className="ui-title sc-dnqmqq gbybiH"
                                   contentEditable={false}
                                   direction="right"
@@ -14140,6 +14389,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                   visible={true}
                                   widget={
                                     <Button
+                                      bottom=""
                                       className=""
                                       contentEditable={false}
                                       direction="right"
@@ -14245,6 +14495,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 </Label>
                               </Styled(Label)>
                               <styled.div
+                                bottom=""
                                 className="ui-title-widget"
                                 contentEditable={false}
                                 direction="right"
@@ -14282,6 +14533,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 visible={true}
                                 widget={
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -14356,6 +14608,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                   width="80px"
                                 >
                                   <Button
+                                    bottom=""
                                     className=""
                                     contentEditable={false}
                                     direction="right"
@@ -14430,6 +14683,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                           style={Object {}}
                                         >
                                           <Icon
+                                            bottom=""
                                             className=""
                                             contentEditable={false}
                                             direction="right"
@@ -14478,6 +14732,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                               }
                                             >
                                               <styled.i
+                                                bottom=""
                                                 className="ui-icon fa fa-fw fa-times"
                                                 contentEditable={false}
                                                 direction="right"
@@ -14535,6 +14790,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                 </ThemeProvider>
               </Tab>
               <Component
+                bottom=""
                 className=""
                 contentEditable={false}
                 direction="right"
@@ -14576,6 +14832,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                     className="ui-tab-navigation sc-jTzLTM fSWicL"
                   >
                     <Button
+                      bottom=""
                       className=""
                       contentEditable={false}
                       direction="right"
@@ -14640,6 +14897,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             style={Object {}}
                           >
                             <Icon
+                              bottom=""
                               className=""
                               contentEditable={false}
                               direction="right"
@@ -14688,6 +14946,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <styled.i
+                                  bottom=""
                                   className="ui-icon fa fa-fw fa-chevron-left"
                                   contentEditable={false}
                                   direction="right"
@@ -14735,6 +14994,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                       </ThemeProvider>
                     </Button>
                     <Button
+                      bottom=""
                       className=""
                       contentEditable={false}
                       direction="right"
@@ -14799,6 +15059,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                             style={Object {}}
                           >
                             <Icon
+                              bottom=""
                               className=""
                               contentEditable={false}
                               direction="right"
@@ -14847,6 +15108,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                 }
                               >
                                 <styled.i
+                                  bottom=""
                                   className="ui-icon fa fa-fw fa-chevron-right"
                                   contentEditable={false}
                                   direction="right"
@@ -14900,6 +15162,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
           </styled.div>
         </Component>
         <Component
+          bottom=""
           className=""
           content="#1"
           contentEditable={false}
@@ -14984,6 +15247,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
   }
 >
   <styled.div
+    bottom=""
     className="ui-tab-container"
     contentEditable={false}
     direction="right"
@@ -15021,6 +15285,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
     xcss={null}
   >
     <Component
+      bottom=""
       className=""
       content="#1"
       contentEditable={false}
@@ -15055,6 +15320,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -15094,6 +15360,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -15133,6 +15400,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -15173,6 +15441,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       </Tab>
     </Component>
     <Component
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -15186,6 +15455,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       maxTabs={5}
       navigation={
         <Unknown
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -15221,6 +15491,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           xcss={null}
         >
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15260,6 +15531,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             #1
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15299,6 +15571,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             #2
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15355,6 +15628,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15395,6 +15669,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             #1
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15435,6 +15710,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             #2
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15485,6 +15761,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -15524,6 +15801,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -15563,6 +15841,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -15627,6 +15906,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
   }
 >
   <styled.div
+    bottom=""
     className="ui-tab-container"
     contentEditable={false}
     direction="right"
@@ -15664,6 +15944,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
     xcss={null}
   >
     <Component
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -15677,6 +15958,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       maxTabs={5}
       navigation={
         <Unknown
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -15712,6 +15994,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           xcss={null}
         >
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15751,6 +16034,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             #1
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15790,6 +16074,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             #2
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15850,6 +16135,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15890,6 +16176,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             #1
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15930,6 +16217,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             #2
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -15980,6 +16268,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16019,6 +16308,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16058,6 +16348,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16098,6 +16389,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       </Tab>
     </Component>
     <Component
+      bottom=""
       className=""
       content="#1"
       contentEditable={false}
@@ -16132,6 +16424,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16171,6 +16464,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16210,6 +16504,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16274,6 +16569,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
   }
 >
   <styled.div
+    bottom=""
     className="ui-tab-container"
     contentEditable={false}
     direction="right"
@@ -16311,6 +16607,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
     xcss={null}
   >
     <Component
+      bottom=""
       className=""
       content="#1"
       contentEditable={false}
@@ -16345,6 +16642,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16384,6 +16682,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16423,6 +16722,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16463,6 +16763,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       </Tab>
     </Component>
     <Component
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -16476,6 +16777,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       maxTabs={5}
       navigation={
         <Unknown
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -16511,6 +16813,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           xcss={null}
         >
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -16550,6 +16853,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             #1
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -16589,6 +16893,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             #2
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -16649,6 +16954,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -16689,6 +16995,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             #1
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -16729,6 +17036,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             #2
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -16779,6 +17087,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16818,6 +17127,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16857,6 +17167,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -16921,6 +17232,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
   }
 >
   <styled.div
+    bottom=""
     className="ui-tab-container"
     contentEditable={false}
     direction="right"
@@ -16958,6 +17270,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
     xcss={null}
   >
     <Component
+      bottom=""
       className=""
       contentEditable={false}
       direction="right"
@@ -16971,6 +17284,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       maxTabs={5}
       navigation={
         <Unknown
+          bottom=""
           className=""
           contentEditable={false}
           direction="right"
@@ -17006,6 +17320,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           xcss={null}
         >
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -17045,6 +17360,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             #1
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -17084,6 +17400,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             #2
           </Tab>
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -17140,6 +17457,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -17180,6 +17498,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             #1
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -17220,6 +17539,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             #2
           </Tab>,
           <Tab
+            bottom=""
             className=""
             contentEditable={false}
             direction="right"
@@ -17270,6 +17590,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -17309,6 +17630,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -17348,6 +17670,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -17388,6 +17711,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       </Tab>
     </Component>
     <Component
+      bottom=""
       className=""
       content="#1"
       contentEditable={false}
@@ -17422,6 +17746,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       xcss={null}
     >
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -17461,6 +17786,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         #1
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"
@@ -17500,6 +17826,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         #2
       </Tab>
       <Tab
+        bottom=""
         className=""
         contentEditable={false}
         direction="right"

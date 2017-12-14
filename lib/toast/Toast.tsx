@@ -63,7 +63,7 @@
  * - `ui-toast` - second level style placed on the content `<div>`.
  *
  * #### Properties
- * - `bottom {boolean} (false)` - If this is true, then the message will be
+ * - `usebottom {boolean} (false)` - If this is true, then the message will be
  * drawn at the bottom of the container where the message generated,
  * otherwise the message is written to the top of the container.
  * - `decay {boolean} (true)` - There are two types of Toast messages: decay and
@@ -115,7 +115,7 @@ export enum ToastLevel {
 }
 
 export interface ToastProps extends BaseProps {
-	bottom?: boolean;
+	usebottom?: boolean;
 	decay?: boolean;
 	duration?: number;
 	level?: ToastLevel;
@@ -127,7 +127,7 @@ export interface ToastProps extends BaseProps {
 export function getDefaultToastProps(): ToastProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			bottom: false,
+			usebottom: false,
 			decay: true,
 			duration: 3,
 			level: ToastLevel.info,
@@ -188,13 +188,13 @@ export const StyledButton: any = styled(Button)`
 `;
 
 export const ToastView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
-	bottom: ${props => props.bottom ? '0' : 'unset'};
+	bottom: ${props => props.usebottom ? '0' : 'unset'};
 	color: white;
 	display: flex;
 	left: 50%;
 	margin: 0 auto;
 	position: absolute;
-	top: ${props => props.bottom ? 'unset' : '0'};
+	top: ${props => props.usebottom ? 'unset' : '0'};
 	transform: translateX(-50%);
 	width: 70%;
 
@@ -283,7 +283,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		return (
 			<ThemeProvider theme={getTheme()} >
 				<ToastView
-					bottom={this.props.bottom}
+					usebottom={this.props.usebottom}
 					className={this.classes}
 					disabled={this.props.disabled}
 					level={this.props.level}

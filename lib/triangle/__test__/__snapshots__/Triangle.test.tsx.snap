@@ -2,6 +2,7 @@
 
 exports[`Create a triangle in bottom direction 1`] = `
 <Triangle
+  bottom=""
   className="test-class"
   contentEditable={false}
   direction="bottom"
@@ -54,6 +55,7 @@ exports[`Create a triangle in bottom direction 1`] = `
     }
   >
     <Triangle__SVGView
+      bottom=""
       className="ui-triangle test-class"
       contentEditable={false}
       direction="bottom"
@@ -123,6 +125,7 @@ exports[`Create a triangle in bottom direction 1`] = `
 
 exports[`Create a triangle in down direction 1`] = `
 <Triangle
+  bottom=""
   className="test-class"
   contentEditable={false}
   direction="down"
@@ -175,6 +178,7 @@ exports[`Create a triangle in down direction 1`] = `
     }
   >
     <Triangle__SVGView
+      bottom=""
       className="ui-triangle test-class"
       contentEditable={false}
       direction="down"
@@ -244,6 +248,7 @@ exports[`Create a triangle in down direction 1`] = `
 
 exports[`Create a triangle in left direction 1`] = `
 <Triangle
+  bottom=""
   className="test-class"
   contentEditable={false}
   direction="left"
@@ -296,6 +301,7 @@ exports[`Create a triangle in left direction 1`] = `
     }
   >
     <Triangle__SVGView
+      bottom=""
       className="ui-triangle test-class"
       contentEditable={false}
       direction="left"
@@ -365,6 +371,7 @@ exports[`Create a triangle in left direction 1`] = `
 
 exports[`Create a triangle in right direction 1`] = `
 <Triangle
+  bottom=""
   className="test-class"
   contentEditable={false}
   direction="right"
@@ -417,6 +424,7 @@ exports[`Create a triangle in right direction 1`] = `
     }
   >
     <Triangle__SVGView
+      bottom=""
       className="ui-triangle test-class"
       contentEditable={false}
       direction="right"
@@ -486,6 +494,7 @@ exports[`Create a triangle in right direction 1`] = `
 
 exports[`Create a triangle in top direction 1`] = `
 <Triangle
+  bottom=""
   className="test-class"
   contentEditable={false}
   direction="top"
@@ -538,6 +547,7 @@ exports[`Create a triangle in top direction 1`] = `
     }
   >
     <Triangle__SVGView
+      bottom=""
       className="ui-triangle test-class"
       contentEditable={false}
       direction="top"
@@ -607,6 +617,7 @@ exports[`Create a triangle in top direction 1`] = `
 
 exports[`Create a triangle in up direction 1`] = `
 <Triangle
+  bottom=""
   className="test-class"
   contentEditable={false}
   direction="up"
@@ -659,6 +670,7 @@ exports[`Create a triangle in up direction 1`] = `
     }
   >
     <Triangle__SVGView
+      bottom=""
       className="ui-triangle test-class"
       contentEditable={false}
       direction="up"
@@ -747,6 +759,7 @@ exports[`Test creation of a Triangle control 1`] = `
   }
 >
   <Triangle__SVGView
+    bottom=""
     className="ui-triangle test-class"
     contentEditable={false}
     direction="up"
@@ -793,6 +806,7 @@ exports[`Test creation of a Triangle control 1`] = `
 
 exports[`Test retrieval of Triangle props object 1`] = `
 Object {
+  "bottom": "",
   "className": "",
   "contentEditable": false,
   "direction": "up",
