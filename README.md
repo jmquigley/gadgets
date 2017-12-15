@@ -177,7 +177,7 @@ TODO: create the Rating control
 ### [Select](docs/lib/select/Select.md)
 A dropdown combo box control.  This uses the [react-select](https://www.npmjs.com/package/react-select) library from NPM maintained by Jed Watson. See the [README](https://github.com/JedWatson/react-select/blob/master/README.md) of this project for events and properties used.
 
-### [Slider](docs/lib/switch/Slider.md)
+### [Slider](docs/lib/slider/Slider.md)
 The Slider control creates a horizontal line overlapped by a chevron that can be moved along this horizontal line.
 
 ### Spinner
