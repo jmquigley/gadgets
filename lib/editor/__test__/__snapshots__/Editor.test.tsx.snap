@@ -2650,7 +2650,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     }
                                                     id="0"
-                                                    key=".0"
+                                                    key="0/.0"
                                                     layout={5}
                                                     left=""
                                                     leftButton={null}
@@ -2672,7 +2672,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     padding=""
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={Object {}}
                                                     testing={true}
@@ -3114,7 +3114,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     }
                                                     id="1"
-                                                    key=".1"
+                                                    key="1/.1"
                                                     layout={5}
                                                     left=""
                                                     leftButton={null}
@@ -3136,7 +3136,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     padding=""
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={Object {}}
                                                     testing={true}
@@ -3578,7 +3578,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     }
                                                     id="2"
-                                                    key=".2"
+                                                    key="2/.2"
                                                     layout={5}
                                                     left=""
                                                     leftButton={null}
@@ -3600,7 +3600,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     padding=""
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={Object {}}
                                                     testing={true}
@@ -4042,7 +4042,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     }
                                                     id="3"
-                                                    key=".3"
+                                                    key="3/.3"
                                                     layout={5}
                                                     left=""
                                                     leftButton={null}
@@ -4064,7 +4064,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     padding=""
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={Object {}}
                                                     testing={true}
@@ -4506,7 +4506,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     }
                                                     id="4"
-                                                    key=".4"
+                                                    key="4/.4"
                                                     layout={5}
                                                     left=""
                                                     leftButton={null}
@@ -4528,7 +4528,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     padding=""
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={Object {}}
                                                     testing={true}
@@ -4970,7 +4970,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                       }
                                                     }
                                                     id="5"
-                                                    key=".5"
+                                                    key="5/.5"
                                                     layout={5}
                                                     left=""
                                                     leftButton={null}
@@ -4992,7 +4992,7 @@ exports[`Test creation of an Editor instance 1`] = `
                                                     padding=""
                                                     rightButton={null}
                                                     selected={false}
-                                                    sizing="normal"
+                                                    sizing="small"
                                                     stacked={false}
                                                     style={Object {}}
                                                     testing={true}
@@ -9599,6 +9599,7 @@ exports[`Test creation of an Editor instance 1`] = `
 exports[`Test retrieval of the Editor props object 1`] = `
 Object {
   "bottom": "",
+  "children": null,
   "className": "",
   "content": "",
   "contentEditable": false,

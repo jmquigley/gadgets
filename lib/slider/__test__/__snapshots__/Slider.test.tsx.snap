@@ -18,7 +18,7 @@ exports[`Test creation of a simple Slider control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
-  obj="Unknown"
+  obj="Slider"
   onSelect={[Function]}
   padding=""
   scale={2}
@@ -56,14 +56,14 @@ exports[`Test creation of a simple Slider control 1`] = `
     }
   >
     <styled.div
-      className="ui-slider-container"
+      className="ui-slider"
       disabled={false}
       height={20}
       visible={true}
       width={118}
     >
       <div
-        className="ui-slider-container sc-bwzfXH iCcNGB"
+        className="ui-slider sc-bwzfXH iCcNGB"
         disabled={false}
         height={20}
         width={118}
@@ -146,13 +146,13 @@ exports[`Test creation of a simple Slider control 1`] = `
               />
             </styled.div>
             <styled.div
-              className="ui-slider"
+              className="ui-slider-element"
               left={-9}
               onMouseDown={[Function]}
               sizing="normal"
             >
               <div
-                className="ui-slider sc-htpNat hoEHcg"
+                className="ui-slider-element sc-htpNat hoEHcg"
                 onMouseDown={[Function]}
               />
             </styled.div>
@@ -182,7 +182,7 @@ exports[`Test disabling a Slider control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
-  obj="Unknown"
+  obj="Slider"
   onSelect={[Function]}
   padding=""
   scale={2}
@@ -220,14 +220,14 @@ exports[`Test disabling a Slider control 1`] = `
     }
   >
     <styled.div
-      className="ui-slider-container"
+      className="ui-slider"
       disabled={true}
       height={20}
       visible={true}
       width={220}
     >
       <div
-        className="ui-slider-container sc-bwzfXH hGZlps"
+        className="ui-slider sc-bwzfXH hGZlps"
         disabled={true}
         height={20}
         width={220}
@@ -299,13 +299,13 @@ exports[`Test disabling a Slider control 1`] = `
               />
             </styled.div>
             <styled.div
-              className="ui-slider"
+              className="ui-slider-element"
               left={-9}
               onMouseDown={[Function]}
               sizing="normal"
             >
               <div
-                className="ui-slider sc-htpNat hoEHcg"
+                className="ui-slider-element sc-htpNat hoEHcg"
                 onMouseDown={[Function]}
               />
             </styled.div>
@@ -320,6 +320,7 @@ exports[`Test disabling a Slider control 1`] = `
 exports[`Test retrieval of Slider props object 1`] = `
 Object {
   "bottom": "",
+  "children": null,
   "className": "",
   "contentEditable": false,
   "direction": "right",
@@ -335,7 +336,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
-  "obj": "Unknown",
+  "obj": "Slider",
   "onSelect": [Function],
   "padding": "",
   "scale": 1,
@@ -373,7 +374,7 @@ exports[`Test with bad min/max values 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
-  obj="Unknown"
+  obj="Slider"
   onSelect={[Function]}
   padding=""
   scale={1}
@@ -411,14 +412,14 @@ exports[`Test with bad min/max values 1`] = `
     }
   >
     <styled.div
-      className="ui-slider-container"
+      className="ui-slider"
       disabled={false}
       height={20}
       visible={true}
       width={21}
     >
       <div
-        className="ui-slider-container sc-bwzfXH ivWvTU"
+        className="ui-slider sc-bwzfXH ivWvTU"
         disabled={false}
         height={20}
         width={21}
@@ -435,13 +436,13 @@ exports[`Test with bad min/max values 1`] = `
             width={1}
           >
             <styled.div
-              className="ui-slider"
+              className="ui-slider-element"
               left={-9}
               onMouseDown={[Function]}
               sizing="normal"
             >
               <div
-                className="ui-slider sc-htpNat hoEHcg"
+                className="ui-slider-element sc-htpNat hoEHcg"
                 onMouseDown={[Function]}
               />
             </styled.div>

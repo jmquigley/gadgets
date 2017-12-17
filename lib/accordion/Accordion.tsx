@@ -40,8 +40,13 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent, BaseProps, getDefaultBaseProps, getTheme} from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import {
+	BaseComponent,
+	BaseProps,
+	fontStyle,
+	getDefaultBaseProps
+} from '../shared';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface AccordionProps extends BaseProps {
 	children?: React.ReactNode;
@@ -50,42 +55,49 @@ export interface AccordionProps extends BaseProps {
 export function getDefaultAccordionProps(): AccordionProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
-			children: null,
 			obj: 'Accordion'
 		}
 	));
 }
 
-export const AccordionView: any = withProps<AccordionProps, HTMLUListElement>(styled.ul)`
+export const AccordionView: any =  withProps<AccordionProps, HTMLUListElement>(styled.ul)`
 	cursor: default;
 	list-style: none;
 
 	&:last-child {
 		border-bottom: 0;
 	}
+
+	${props => props.sizing && fontStyle[props.sizing]};
 `;
 
 export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
+	private _children: any;
 
 	constructor(props: AccordionProps) {
 		super(props, Accordion.defaultProps.style);
 
 		this._classes.add('ui-accordion');
+		this._children = this.props.children;
+
 		this.componentWillUpdate(props);
+	}
+
+	public componentWillReceiveProps(nextProps: AccordionProps) {
+		this._children = this.resizeChildren(this.props, nextProps);
 	}
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()}>
-				<AccordionView
-					className={this.classes}
-					style={this.inlineStyles}
-				>
-					{this.props.children}
-				</AccordionView>
-			</ThemeProvider>
+			<AccordionView
+				className={this.classes}
+				sizing={this.props.sizing}
+				style={this.inlineStyles}
+			>
+				{this._children}
+			</AccordionView>
 		);
 	}
 }

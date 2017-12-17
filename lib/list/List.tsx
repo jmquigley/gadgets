@@ -50,7 +50,7 @@ export const ListView: any = styled.ul`
 
 export class List extends BaseComponent<ListProps, ListState> {
 
-	private _children: any[] = [];
+	private _children: any;
 	private _keys: Keys;
 
 	public static defaultProps: ListProps = getDefaultListProps();
@@ -60,6 +60,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 		this._keys = new Keys({testing: this.props.testing});
 		this._classes.add('ui-list');
+		this._children = this.props.children;
 
 		this.state = {
 			selectedItem: null
@@ -83,15 +84,14 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 	public componentWillReceiveProps(nextProps: ListProps) {
 		if (nextProps.children) {
-			this._children = [];
-			const children = React.Children.toArray(nextProps.children);
-			for (const [idx, child] of children.entries()) {
-				this._children.push(React.cloneElement(child as any, {
+			this._children = React.Children.map(nextProps.children, (child: any, idx: number) => (
+				React.cloneElement(child, {
 					// only generate an id/key if one is not given with the props
 					id: child['props']['id'] || this._keys.at(idx),
-					key: child['key'] || this._keys.at(idx)
-				}));
-			}
+					key: child['key'] || this._keys.at(idx),
+					sizing: nextProps.sizing
+				})
+			));
 		}
 	}
 

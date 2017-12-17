@@ -21,6 +21,9 @@
  * #### Properties
  * - `children: React.ReactNode (null)` - The child components that exist
  * within the Container.
+ * - `title: {string} ('')` - if a title is given, then an `<h1>` block is
+ * created in front of the section with the given title.  By default there is
+ * no title.
  *
  * @module Container
  */
@@ -32,25 +35,26 @@ import * as React from 'react';
 import {
 	BaseComponent,
 	BaseProps,
-	getDefaultBaseProps,
-	getTheme
+	getDefaultBaseProps
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface ContainerProps extends BaseProps {
 	children?: React.ReactNode;
+	title?: string;
 }
 
 export function getDefaultContainerProps(): ContainerProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			children: null,
-			obj: 'Container'
+			obj: 'Container',
+			title: ''
 		})
 	);
 }
 
-export const ContainerView: any = withProps<ContainerProps, HTMLDivElement>(styled.div)`
+export const ContainerView: any = styled.div`
 	padding: 0;
 	margin: 2px 0;
 `;
@@ -67,16 +71,25 @@ export class Container extends BaseComponent<ContainerProps, undefined> {
 	}
 
 	public render() {
+		let title: any = null;
+		if (this.props.title) {
+			title = (
+				<h1 key={this.props.title}>
+					{this.props.title}
+				</h1>
+			);
+		}
+
 		return (
-			<ThemeProvider theme={getTheme()} >
-				<ContainerView
-					className={this.classes}
-					id={this.props.id}
-					style={this.inlineStyles}
-				>
-					{this.props.children}
-				</ContainerView>
-			</ThemeProvider>
+			<ContainerView
+				className={this.classes}
+				key={this.props.id}
+				id={this.props.id}
+				style={this.inlineStyles}
+			>
+				{title}
+				{this.props.children}
+			</ContainerView>
 		);
 	}
 }

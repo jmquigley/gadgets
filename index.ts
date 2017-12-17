@@ -25,7 +25,7 @@ import {Icon} from './lib/icon';
 import {Item} from './lib/item';
 import {Label} from './lib/label';
 import {List, ListDivider, ListHeader, ListItem} from './lib/list';
-import {Option, OptionType} from './lib/option';
+import {Option, OptionGroup, OptionType} from './lib/option';
 import {Pager} from './lib/pager';
 import {Select} from './lib/select';
 import {
@@ -112,6 +112,7 @@ export {
 	ListItem,
 	Location,
 	Option,
+	OptionGroup,
 	OptionType,
 	Pager,
 	Select,

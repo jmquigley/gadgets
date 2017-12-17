@@ -1,3 +1,4 @@
+import autobind from 'autobind-decorator';
 import * as fs from 'fs';
 import * as _ from 'lodash';
 import * as loremIpsum from 'lorem-ipsum';
@@ -6,6 +7,13 @@ import {render} from 'react-dom';
 import {sprintf} from 'sprintf-js';
 import {join} from 'util.join';
 import {getUUID} from 'util.toolbox';
+
+import DemoAccordion from './src/DemoAccordion';
+import DemoBadge from './src/DemoBadge';
+import DemoBrowser from './src/DemoBrowser';
+import DemoButtons from './src/DemoButtons';
+import DemoDialogBox from './src/DemoDialogBox';
+import DemoDropdown from './src/DemoDropdown';
 
 const debug = require('debug')('app');
 
@@ -17,18 +25,12 @@ const debug = require('debug')('app');
 //
 
 const {
-	Accordion,
-	AccordionItem,
-	Badge,
-	Browser,
 	Button,
 	ButtonCircle,
 	ButtonDialog,
 	ButtonText,
 	ButtonToggle,
 	Container,
-	DialogBox,
-	DialogBoxType,
 	Direction,
 	Divider,
 	DividerType,
@@ -44,6 +46,7 @@ const {
 	ListItem,
 	Location,
 	Option,
+	OptionGroup,
 	OptionType,
 	Pager,
 	Select,
@@ -127,16 +130,8 @@ interface AppProps {
 }
 
 interface AppState {
-	counter1?: number;
-	counter2?: number;
-	counter3?: number;
-	counter4?: number;
-	counter5?: number;
-	dialogError: boolean;
-	dialogWarning: boolean;
-	dialogSuccess: boolean;
-	dialogInfo: boolean;
-	dialogCustom: boolean;
+	sizing: any;
+
 	dynamicListError: string;
 	items: any;
 	toastVisible1: boolean;
@@ -156,16 +151,8 @@ class App extends React.Component<AppProps, AppState> {
 	constructor(props: AppProps) {
 		super(props);
 		this.state = {
-			counter1: 0,
-			counter2: 1,
-			counter3: 99,
-			counter4: 1,
-			counter5: -5,
-			dialogError: false,
-			dialogWarning: false,
-			dialogSuccess: false,
-			dialogInfo: false,
-			dialogCustom: false,
+			sizing: Sizing.normal,
+
 			dynamicListError: '',
 			items: dynamicItems,
 			toastVisible1: true,
@@ -183,550 +170,14 @@ class App extends React.Component<AppProps, AppState> {
 		/* (window as any).state = this.state;*/
 	}
 
-	private buildAccordion = () => (
-		<Container id="accordionExample">
-			<Accordion>
-				<AccordionItem
-					noedit
-					leftButton={<Button iconName="bars" />}
-					rightButton={<Button iconName="plus" />}
-					title="Accordion #1 (click to expand)"
-				>
-					<List alternating>
-						{items}
-					</List>
-				</AccordionItem>
-
-				<AccordionItem title="Accordion #2">
-					Accordion Items #2
-				</AccordionItem>
-
-				<AccordionItem
-					title="Accordion #3">
-					Accordion Items #3
-				</AccordionItem>
-
-				<AccordionItem title="Accordion #4 (disabled)" disabled>
-					Accordion Items #4 (disabled)
-				</AccordionItem>
-
-				<AccordionItem
-					title="Accordion #5 (no button)"
-					showButton={false}>
-					Accordion Items #5 (no button)
-				</AccordionItem>
-			</Accordion>
-		</Container>
-	);
-
-	private buildBadges = () => (
-		<Container id="badgeExample">
-
-			<div id="simple-buttons">
-				<div className="box">
-					<p>top right (suppress)</p>
-					<Badge
-						counter={this.state.counter1}
-						suppress
-					>
-						<div className="boxButtons">
-							<Button onClick={() => {
-									this.setState({
-										counter1: this.state.counter1 + 1
-									});
-							}}/>
-						</div>
-					</Badge>
-				</div>
-
-				<div className="box">
-					<p>top left<br/>&nbsp;</p>
-					<Badge
-						counter={this.state.counter2}
-						location={Location.topLeft}
-						onClick={(counter: number) => {
-								console.log(`Badge counter click: ${counter}`);
-						}}>
-						<div className="boxButtons">
-							<Button onClick={() => {
-									this.setState({
-										counter2: this.state.counter2 + 1
-									});
-							}}/>
-						</div>
-					</Badge>
-				</div>
-
-				<div className="box">
-					<p>bottom right</p>
-					<Badge
-						counter={this.state.counter3}
-						location={Location.bottomRight}
-						style={{color: 'green'}}
-					>
-						<div className="boxButtons">
-							<Button onClick={() => {
-									this.setState({
-										counter3: this.state.counter3 + 1
-									});
-							}}/>
-						</div>
-					</Badge>
-				</div>
-
-				<div className="box">
-					<p>bottom left</p>
-					<Badge
-						counter={this.state.counter4}
-						location={Location.bottomLeft}
-						style={{color: 'magenta'}}
-					>
-						<div className="boxButtons">
-							<Button onClick={() => {
-									this.setState({
-										counter4: this.state.counter4 + 1
-									});
-							}}/>
-						</div>
-					</Badge>
-				</div>
-
-				<div className="box">
-					<p>bottom (negative)</p>
-					<Badge
-						counter={this.state.counter5}
-						location={Location.bottom}
-						style={{color: 'blue'}}
-					>
-						<div className="boxButtons">
-							<Button onClick={() => {
-									this.setState({
-										counter5: this.state.counter5 + 1
-									});
-							}}/>
-						</div>
-					</Badge>
-				</div>
-
-			</div>
-		</Container>
-	);
-
-	private buildBrowser = () => (
-		<Container>
-			<Browser
-				home="http://www.example.com"
-				notooltips
-				onClip={(uri: string, content: string, dom: any, history: any) => {
-					debug(`uri: %s, content: '%s', dom: %O, history: %O`, uri, content, dom, history);
-				}}
-				onOpen={(uri: string, history: any) => {
-					debug(`uri: %s, history: %O`, uri, history);
-				}}
-				uri="http://www.google.com"
-				useparser
-			/>
-		</Container>
-	);
-
-	private buildButtons = () => (
-		<Container>
-			<table id="buttonTable">
-				<thead>
-					<tr>
-						<th></th>
-						<th>xxsmall</th>
-						<th>xsmall</th>
-						<th>small</th>
-						<th>normal<br/>medium</th>
-						<th>large</th>
-						<th>xlarge</th>
-						<th>xxlarge</th>
-						<th>disabled</th>
-						<th>custom</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr className="tblIcons">
-						<th>Icon</th>
-						<td><Icon iconName="handshake-o" sizing={Sizing.xxsmall}/></td>
-						<td><Icon iconName="handshake-o" sizing={Sizing.xsmall}/></td>
-						<td><Icon iconName="handshake-o" sizing={Sizing.small}/></td>
-						<td><Icon iconName="handshake-o" sizing={Sizing.normal}/></td>
-						<td><Icon iconName="handshake-o" sizing={Sizing.large}/></td>
-						<td><Icon iconName="handshake-o" sizing={Sizing.xlarge}/></td>
-						<td><Icon iconName="handshake-o" sizing={Sizing.xxlarge}/></td>
-						<td><Icon iconName="handshake-o" sizing={Sizing.normal} disabled={true}/></td>
-						<td><Icon iconName="handshake-o" sizing={Sizing.normal} style={{color: "red", backgroundColor: "blue"}}/></td>
-					</tr><tr className="tblIcons">
-						<th>Icon Images</th>
-						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xxsmall}/></td>
-						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xsmall}/></td>
-						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.small}/></td>
-						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.normal}/></td>
-						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.large}/></td>
-						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xlarge}/></td>
-						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xxlarge}/></td>
-						<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.normal} disabled={true}/></td>
-						<td><span style={{display: "table", margin: "0 auto"}}>N/A</span></td>
-					</tr><tr>
-						<th>Button</th>
-						<td><Button iconName="motorcycle" sizing={Sizing.xxsmall}/></td>
-						<td><Button iconName="motorcycle" sizing={Sizing.xsmall}/></td>
-						<td><Button iconName="motorcycle" sizing={Sizing.small}/></td>
-						<td><Button id="btn-normal" iconName="motorcycle" sizing={Sizing.normal} tooltip="normal"/></td>
-						<td><Button iconName="motorcycle" sizing={Sizing.large}/></td>
-						<td><Button iconName="motorcycle" sizing={Sizing.xlarge}/></td>
-						<td><Button iconName="motorcycle" sizing={Sizing.xxlarge}/></td>
-						<td><Button iconName="motorcycle" sizing={Sizing.normal} disabled={true}/></td>
-						<td><Button iconName="motorcycle" sizing={Sizing.normal} style={{color: "yellow", backgroundColor: "green"}}/></td>
-					</tr><tr>
-						<th>ButtonCircle</th>
-						<td><ButtonCircle iconName="times" sizing={Sizing.xxsmall}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.xsmall}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.small}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.normal}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.large}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.xlarge}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.xxlarge}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonCircle iconName="times" sizing={Sizing.normal} style={{color: "green", backgroundColor: "orange", borderColor: "green"}}/></td>
-					</tr><tr>
-						<th>ButtonDialog</th>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.xxsmall}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.xsmall}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.small}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.normal}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.large}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.xlarge}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.xxlarge}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.normal} disabled={true}>dialog</ButtonDialog></td>
-						<td><ButtonDialog iconName="bars" sizing={Sizing.normal} style={{color: "white", backgroundColor: "teal"}}>dialog</ButtonDialog></td>
-					</tr><tr>
-						<th>ButtonToggle</th>
-						<td><ButtonToggle
-							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							sizing={Sizing.xxsmall}
-							/>
-						</td>
-						<td><ButtonToggle
-							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							sizing={Sizing.xsmall}
-							/>
-						</td>
-						<td><ButtonToggle
-							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							sizing={Sizing.small}
-							/>
-						</td>
-						<td><ButtonToggle
-							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							sizing={Sizing.normal}
-							/>
-						</td>
-						<td><ButtonToggle
-							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							sizing={Sizing.large}
-							/>
-						</td>
-						<td><ButtonToggle
-							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							sizing={Sizing.xlarge}
-							/>
-						</td>
-						<td><ButtonToggle
-							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							sizing={Sizing.xxlarge}
-							/>
-						</td>
-						<td><ButtonToggle
-							iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358"
-							sizing={Sizing.normal}
-							disabled={true}
-							/>
-						</td>
-						<td><ButtonToggle
-							iconNameOn="star" iconNameOff="star-o"
-							fgColorOn="red" fgColorOff="black"
-							bgColorOn="black" bgColorOff="red"
-							sizing={Sizing.normal}
-							/>
-						</td>
-					</tr><tr>
-						<th>ButtonText<br/>(Right)</th>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xxsmall}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xsmall}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.small}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.large}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xlarge}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal} style={{ color: "white", backgroundColor: "blue"}}/></td>
-					</tr><tr>
-						<th>ButtonText<br/>(Left)</th>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xxsmall}/></td>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xsmall}/></td>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.small}/></td>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal}/></td>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.large}/></td>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xlarge}/></td>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal} style={{color: "white", backgroundColor: "red"}}/></td>
-					</tr><tr>
-						<th>ButtonText<br/>(Center)</th>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xxsmall}/></td>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xsmall}/></td>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.small}/></td>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal}/></td>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.large}/></td>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xlarge}/></td>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xxlarge}/></td>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal} disabled={true}/></td>
-						<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal} style={{color: "white", backgroundColor: "red"}}/></td>
-					</tr>
-				</tbody>
-			</table>
-		</Container>
-	);
-
-	private buildDialogBox = () => (
-		<Container id="dialogBoxExample">
-
-			<div id="simple-buttons">
-				<div className="box">
-					<ButtonText
-						noicon
-						onClick={() => this.setState({dialogError: true})}
-						style={{
-							backgroundColor: "#d9534f"
-						}}
-						text="Show Error Dialog"
-					/>
-					<DialogBox
-						dialogType={DialogBoxType.error}
-						message={"This is a sample error dialog message\n" + randomText}
-						onSelection={(flag: boolean) => {
-							console.log(`Dialog selection: ${flag}`);
-							this.setState({dialogError: false});
-						}}
-						show={this.state.dialogError}
-					/>
-				</div>
-
-				<div className="box">
-					<ButtonText
-						noicon
-						onClick={() => this.setState({dialogWarning: true})}
-						style={{
-							backgroundColor: "#f0ad4e"
-						}}
-						text="Show Warning Dialog"
-					/>
-					<DialogBox
-						dialogType={DialogBoxType.warning}
-						message={"This is a sample warning dialog message\n" + randomText}
-						onSelection={(flag: boolean) => {
-							console.log(`Dialog selection: ${flag}`);
-							this.setState({dialogWarning: false});
-						}}
-						show={this.state.dialogWarning}
-					/>
-				</div>
-
-				<div className="box">
-					<ButtonText
-						noicon
-						onClick={() => this.setState({dialogSuccess: true})}
-						style={{
-							backgroundColor: "#5cb85c"
-						}}
-						text="Show Success Dialog"
-					/>
-					<DialogBox
-						dialogType={DialogBoxType.success}
-						message={"This is a sample success dialog message\n" + randomText}
-						onSelection={(flag: boolean) => {
-							console.log(`Dialog selection: ${flag}`);
-							this.setState({dialogSuccess: false});
-						}}
-						show={this.state.dialogSuccess}
-					/>
-				</div>
-
-				<div className="box">
-					<ButtonText
-						noicon
-						onClick={() => this.setState({dialogInfo: true})}
-						style={{
-							backgroundColor: "#5bc0de"
-						}}
-						text="Show Info Dialog"
-					/>
-					<DialogBox
-						dialogType={DialogBoxType.info}
-						message={"This is a sample info dialog message\n" + randomText}
-						onSelection={(flag: boolean) => {
-							console.log(`Dialog selection: ${flag}`);
-							this.setState({dialogInfo: false});
-						}}
-						show={this.state.dialogInfo}
-					/>
-				</div>
-
-				<div className="box">
-					<ButtonText
-						noicon
-						onClick={() => this.setState({dialogCustom: true})}
-						style={{
-							backgroundColor: "magenta"
-						}}
-						text="Show Custom Dialog"
-					/>
-					<DialogBox
-						dialogType={DialogBoxType.custom}
-						iconName="car"
-						message={"This is a sample custom dialog message\n" + randomText}
-						onSelection={(flag: boolean) => {
-							console.log(`Dialog selection: ${flag}`);
-							this.setState({dialogCustom: false});
-						}}
-						show={this.state.dialogCustom}
-						style={{
-							color: 'magenta'
-						}}
-					/>
-				</div>
-
-			</div>
-		</Container>
-	);
-
-	private buildDropdown = () => (
-		<Container id="dropdownExample">
-
-			<h3>xxsmall</h3>
-			<Dropdown
-				defaultVal="idstr2"
-				items={[
-					{val: 'idstr1', label: 'lstr1'},
-					{val: 'idstr2', label: 'lstr2'},
-					{val: 'idstr3', label: 'lstr3'}
-				]}
-				onSelect={(val: string) => {
-					debug('dropdown selected: %s', val);
-				}}
-				sizing={Sizing.xxsmall}
-			/>
-			<br />
-
-			<h3>xsmall</h3>
-			<Dropdown
-				defaultVal="idstr2"
-				items={[
-					{val: 'idstr1', label: 'lstr1'},
-					{val: 'idstr2', label: 'lstr2'},
-					{val: 'idstr3', label: 'lstr3'}
-				]}
-				onSelect={(val: string) => {
-					debug('dropdown selected: %s', val);
-				}}
-				sizing={Sizing.xsmall}
-			/>
-			<br />
-
-			<h3>small</h3>
-			<Dropdown
-				defaultVal="idstr2"
-				items={[
-					{val: 'idstr1', label: 'lstr1'},
-					{val: 'idstr2', label: 'lstr2'},
-					{val: 'idstr3', label: 'lstr3'}
-				]}
-				onSelect={(val: string) => {
-					debug('dropdown selected: %s', val);
-				}}
-				sizing={Sizing.small}
-			/>
-			<br />
-
-			<h3>normal</h3>
-			<Dropdown
-				defaultVal="idstr2"
-				items={[
-					{val: 'idstr1', label: 'lstr1'},
-					{val: 'idstr2', label: 'lstr2'},
-					{val: 'idstr3', label: 'lstr3'}
-				]}
-				onSelect={(val: string) => {
-					debug('dropdown selected: %s', val);
-				}}
-			/>
-			<br />
-
-			<h3>large</h3>
-			<Dropdown
-				defaultVal="idstr2"
-				items={[
-					{val: 'idstr1', label: 'lstr1'},
-					{val: 'idstr2', label: 'lstr2'},
-					{val: 'idstr3', label: 'lstr3'}
-				]}
-				onSelect={(val: string) => {
-					debug('dropdown selected: %s', val);
-				}}
-				sizing={Sizing.large}
-			/>
-			<br />
-
-			<h3>xlarge</h3>
-			<Dropdown
-				defaultVal="idstr2"
-				items={[
-					{val: 'idstr1', label: 'lstr1'},
-					{val: 'idstr2', label: 'lstr2'},
-					{val: 'idstr3', label: 'lstr3'}
-				]}
-				onSelect={(val: string) => {
-					debug('dropdown selected: %s', val);
-				}}
-				sizing={Sizing.xlarge}
-			/>
-			<br />
-
-			<h3>xxlarge</h3>
-			<Dropdown
-				defaultVal="idstr2"
-				items={[
-					{val: 'idstr1', label: 'lstr1'},
-					{val: 'idstr2', label: 'lstr2'},
-					{val: 'idstr3', label: 'lstr3'}
-				]}
-				onSelect={(val: string) => {
-					debug('dropdown selected: %s', val);
-				}}
-				sizing={Sizing.xxlarge}
-			/>
-			<br />
-
-			<h3>disabled</h3>
-			<Dropdown
-				defaultVal="idstr2"
-				disabled
-				items={[
-					{val: 'idstr1', label: 'lstr1'},
-					{val: 'idstr2', label: 'lstr2'},
-					{val: 'idstr3', label: 'lstr3'}
-				]}
-				onSelect={(val: string) => {
-					debug('dropdown selected: %s', val);
-				}}
-			/>
-			<br />
-
-		</Container>
-	);
+	@autobind
+	private buildDynamicListHandleSelection(toggle: boolean, title: string) {
+		this.setState({
+		   selectToggle: toggle
+		}), () => {
+			debug('%s to %o, %O', title, toggle, this.state);
+		};
+	}
 
 	private buildDynamicList = () => (
 			<Container id="dynamicListExample">
@@ -806,11 +257,7 @@ class App extends React.Component<AppProps, AppState> {
 					<p>Click to change list of widget items (change w to a)</p>
 				</div>
 				<Option
-					onClick={(toggle: boolean) => {
-						this.setState({
-							selectToggle: toggle
-						})
-					}}
+					onClick={this.buildDynamicListHandleSelection}
 					text="Toggle selection mode (on turns off selection)"
 				/>
 		</Container>
@@ -958,13 +405,16 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	@autobind
+	private buildOptionHandleClick(val: boolean, text: string) {
+		debug('clicked option, flag: %o, text: %o', val, text);
+	}
+
 	private buildOption = () => (
 		<Container id="optionExample">
 			<Option optionType={OptionType.square} />
 			<Option
-				onClick={(val: boolean) => {
-					debug('clicked option, flag: %o', val);
-				}}
+				onClick={this.buildOptionHandleClick}
 				optionType={OptionType.square}
 				selected
 				text="square"
@@ -1023,7 +473,23 @@ class App extends React.Component<AppProps, AppState> {
 			<Option text="xxlarge" sizing={Sizing.xxlarge} /><br/>
 
 		</Container>
-	)
+	);
+
+	private buildOptionGroup = () => (
+		<Container id="optionGroupExample">
+			<OptionGroup
+ 				default="option1"
+				onSelect={(text: string, toggle: boolean) => debug('option group item: %o, %o', text, toggle)}
+				options={[
+					'option1',
+					'option2',
+					'option3',
+					'option4 this is a longer string'
+				]}
+				title="test options"
+			/>
+		</Container>
+	);
 
 	private buildPager = () => (
 		<Container id="pagerExample">
@@ -1147,30 +613,40 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	@autobind
+	private buildSliderHandleSelection(toggle: boolean, title: string) {
+		this.setState({
+		   sliderToggle: toggle
+		}), () => {
+			debug('%s to %o, %O', title, toggle, this.state);
+		};
+	}
+
+	@autobind
+	private handleSliderDebug(val: any) {
+		debug('slider select: %o', val);
+	}
+
 	private buildSlider = () => (
 		<Container id="sliderExample">
 
 			<h3>Normal slider control, range 0 - 100, toggle snap</h3>
 			<Slider
-				onSelect={(val: any) => debug('slider select: %o', val)}
+				onSelect={this.handleSliderDebug}
 				scale={2}
 				snap={this.state.sliderToggle}
 				ticks={5}
 			/>
 
 			<Option
-				onClick={(toggle: boolean) => {
-					this.setState({
-						sliderToggle: toggle
-					});
-				}}
+				onClick={this.buildSliderHandleSelection}
 				text="Toggle snap mode on/off"
 			/>
 			<br/><br/>
 
 			<h3>Normal slider, no ticks, range 0 - 100</h3>
 			<Slider
-				onSelect={(val: any) => debug('slider select: %o', val)}
+				onSelect={this.handleSliderDebug}
 				scale={2}
 			/>
 			<br/>
@@ -1178,7 +654,7 @@ class App extends React.Component<AppProps, AppState> {
 			<h3>Disabled slider</h3>
 			<Slider
 				disabled
-				onSelect={(val: any) => debug('slider select: %o', val)}
+				onSelect={this.handleSliderDebug}
 				scale={2}
 				ticks={5}
 			/>
@@ -1797,28 +1273,37 @@ class App extends React.Component<AppProps, AppState> {
 		</Container>
 	);
 
+	@autobind handleSizingChange(value: any) {
+		debug('Setting app size to: %o', value);
+		this.setState({
+			sizing: value
+		});
+	}
+
 	render() {
 		return (
 			<div id="app">
 
-				<h1>Accordion</h1>
-				{this.buildAccordion()}
+				{/* <Dropdown
+					defaultVal="normal"
+					items={[
+					{ value: Sizing.xxsmall, label: 'xxsmall' },
+					{ value: Sizing.xsmall, label: 'xsmall' },
+					{ value: Sizing.small, label: 'small' },
+					{ value: Sizing.normal, label: 'normal' },
+					{ value: Sizing.large, label: 'large' },
+					{ value: Sizing.xlarge, label: 'xlarge' },
+					{ value: Sizing.xxlarge, label: 'xxlarge' }
+					]}
+					onSelect={this.handleSizingChange}
+					/> */}
 
-				<h1>Badges</h1>
-				click on the buttons to increment the badges
-				{this.buildBadges()}
-
-				<h1>Browser</h1>
-				{this.buildBrowser()}
-
-				<h1>Buttons & Icons</h1>
-				{this.buildButtons()}
-
-				<h1>Dialog Box</h1>
-				{this.buildDialogBox()}
-
-				<h1>Dropdown</h1>
-				{this.buildDropdown()}
+				<DemoAccordion sizing={this.state.sizing} />
+				<DemoBadge />
+				<DemoBrowser />
+				<DemoButtons />
+				<DemoDialogBox />
+				<DemoDropdown />
 
 				<h1>Dynamic List</h1>
 				{this.buildDynamicList()}
@@ -1837,6 +1322,9 @@ class App extends React.Component<AppProps, AppState> {
 
 				<h1>Option</h1>
 				{this.buildOption()}
+
+				<h1>OptionGroup</h1>
+				{this.buildOptionGroup()}
 
 				<h1>Pager</h1>
 				{this.buildPager()}

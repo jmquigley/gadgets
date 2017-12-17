@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test creation of a Toast control 1`] = `
+exports[`Creation of the OptionGroup control 1`] = `
 <ThemeProvider
   theme={
     Object {
@@ -21,77 +21,71 @@ exports[`Test creation of a Toast control 1`] = `
   }
 >
   <styled.div
-    className="ui-toast test-class"
-    disabled={false}
-    level={0}
-    style={Object {}}
-    usebottom={false}
-    visible={false}
-    xcss={
-      Array [
-        "
-	animation: fadeOut ",
-        [Function],
-        ";
-	opacity: 0;
-	z-index: -1;
-",
-      ]
-    }
+    className="ui-option-group test-class"
   >
-    <styled.div
-      className="ui-toast-content"
-      sizing="normal"
-    >
-      <span />
-    </styled.div>
-    <Styled(Button)
-      iconName="times"
+    <Styled(Title)
+      className="ui-option-group-title"
+      layout={6}
+      noedit={true}
+      noripple={true}
+      title="test options"
+    />
+    <Styled(Option)
+      key="option1"
       onClick={[Function]}
-      sizing="large"
-      style={
-        Object {
-          "color": "white",
-        }
-      }
+      optionType={0}
+      selected={true}
+      text="option1"
+    />
+    <Styled(Option)
+      key="option2"
+      onClick={[Function]}
+      optionType={0}
+      selected={false}
+      text="option2"
+    />
+    <Styled(Option)
+      key="option3"
+      onClick={[Function]}
+      optionType={0}
+      selected={false}
+      text="option3"
     />
   </styled.div>
 </ThemeProvider>
 `;
 
-exports[`Test retrieval of Toast props object 1`] = `
+exports[`Test retrieval of OptionGroup props object 1`] = `
 Object {
   "bottom": "",
   "children": null,
   "className": "",
   "contentEditable": false,
-  "decay": true,
+  "default": "",
   "direction": "right",
   "disabled": false,
-  "duration": 3,
   "errorMessage": "",
   "focus": false,
   "height": "",
   "id": "",
   "left": "",
-  "level": 0,
   "location": "none",
   "noedit": false,
   "nohover": false,
   "noripple": false,
-  "obj": "Toast",
-  "onClick": [Function],
-  "onClose": [Function],
+  "obj": "OptionGroup",
+  "onSelect": [Function],
+  "optionType": 0,
+  "options": Array [],
   "padding": "",
   "selected": false,
-  "show": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
+  "title": "",
   "tooltip": "",
   "top": "",
-  "usebottom": false,
   "visible": true,
   "width": "",
   "xcss": null,

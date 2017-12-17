@@ -12,7 +12,6 @@ body {
 h1 {
 	background-color: #bedb39;
 	font-size: 1.75em;
-	margin: 30px 0 10px 0;
 	padding: 10px 5px;
 }
 
@@ -35,17 +34,6 @@ section {
 
 #app {
 	padding: 10px;
-}
-
-#accordionExample,
-#dynamicListExample,
-#listExample1,
-#listExample2,
-#selectExample,
-#titleExample,
-#toastExample
-{
-	width: 80%;
 }
 
 #dialogBoxExample {
@@ -214,6 +202,14 @@ section {
    Global UI color settings for components
 
  */
+
+.ui-accordion {
+    width: 80%;
+}
+
+.ui-container {
+   	margin: 30px 0 10px 0 !important;
+}
 
 .ui-select .Select-control {
 	border-color: #004358;

@@ -34,17 +34,19 @@
  * button is in the off position
  * - `fgColorOn: string ('black')` - the foreground color when the
  * button is in the on position
- * - `initialToggle: boolean (false)` - The initial on (true) or
- * off (false) state of the button.
  * - `iconNameOff: string ('bomb')` - the name of the font awesome icon
  * associated with the button when it is off.
  * - `iconNameOn: string ('bomb')` - the name of the font awesome icon
  * associated with the button when it is on.
+ * - `selected: boolean (false)` - Sets the state of the button to
+ * on (true) or off (false) state of the button.
  *
  * @module ButtonToggle
  */
 
 'use strict';
+
+// const debug = require('debug')('ButtonToggle');
 
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
@@ -59,7 +61,6 @@ export interface ButtonToggleProps extends ButtonProps {
 	bgColorOn?: string;
 	fgColorOff?: string;
 	fgColorOn?: string;
-	initialToggle?: boolean;
 	iconNameOff?: string;      // font awesome string
 	iconNameOn?: string;       // font awesome string
 	onClick?: any;
@@ -72,11 +73,11 @@ export function getDefaultButtonToggleProps(): ButtonToggleProps {
 			bgColorOn: 'inherit',
 			fgColorOff: 'gray',
 			fgColorOn: 'black',
-			initialToggle: false,
 			iconNameOff: 'bomb',
 			iconNameOn: 'bomb',
 			obj: 'ButtonToggle',
-			onClick: nilEvent
+			onClick: nilEvent,
+			selected: false
 		})
 	);
 }
@@ -95,7 +96,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		this._classes.add('ui-button-toggle');
 
 		this.state = {
-			toggle: props.initialToggle
+			toggle: this.props.selected
 		};
 
 		this.componentWillUpdate(this.props, this.state);
@@ -127,6 +128,12 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		}
 
 		super.componentWillUpdate(nextProps, nextState);
+	}
+
+	public componentWillReceiveProps(nextProps: ButtonToggleProps) {
+		if (this.props.selected !== nextProps.selected && this.state.toggle !== nextProps.selected) {
+			this.setState({toggle: nextProps.selected});
+		}
 	}
 
 	public render() {

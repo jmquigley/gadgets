@@ -22,7 +22,7 @@
  * ```javascript
  * import {Option, OptionType} from 'gadgets';
  * <Option
- *     onClick={someFunction}
+ *     onClick={(val: boolean, text: string) => debug('val: %o, text: %o', val, text)}
  *     optionType={OptionType.square}
  *     selected
  *     text="lorem ipsum"
@@ -31,11 +31,11 @@
  *
  * ## API
  * #### Events
- * - `onClick(toggle: boolean)` - When the option is clicked, then the button
- * display is chagned (toggled).  The callback returns the current state of
- * the toggle.  When the button is "clear", it is off and "false" is sent to
- * the callback.  When the button is "checked", it is on and true is sent to
- * the callback.
+ * - `onClick(toggle: boolean, text: string)` - When the option is clicked, then
+ * the button display is changed (toggled).  The callback returns the current state of
+ * the toggle and the text label associated with the option.  When the button is "clear",
+ * it is off and "false" is sent to the callback.  When the button is "checked", it is
+ * on and true is sent to the callback.
  *
  * #### Styles
  * - `ui-option` - Style applied to the root `<div>` of the control.
@@ -51,6 +51,8 @@
  */
 
 'use strict';
+
+// const debug = require('debug')('Option');
 
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
@@ -104,6 +106,10 @@ export function getDefaultOptionProps(): OptionProps {
 	);
 }
 
+export interface OptionState {
+	selected?: boolean;
+}
+
 export const OptionView: any = withProps<OptionProps, HTMLDivElement>(styled.div)`
 	align-items: center;
 	cursor: default;
@@ -121,7 +127,16 @@ export const OptionView: any = withProps<OptionProps, HTMLDivElement>(styled.div
 	${props => invisible(props)}
 `;
 
-export class Option extends BaseComponent<OptionProps, undefined> {
+export const StyledButtonToggle: any = styled(ButtonToggle)`
+	display: inline;
+	flex: unset;
+	width: unset;
+`;
+
+export const StyledTitle: any = styled.span`
+`;
+
+export class Option extends BaseComponent<OptionProps, OptionState> {
 
 	private readonly icons: any = {
 		[OptionType.square]: {
@@ -166,13 +181,18 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 		}
 	};
 
-	private _btn: ButtonToggle;
 	public static readonly defaultProps: OptionProps = getDefaultOptionProps();
+	private _btn: ButtonToggle;
 
 	constructor(props: OptionProps) {
 		super(props, Option.defaultProps.style);
 
 		this._classes.add('ui-option');
+
+		this.state = {
+			selected: (typeof this.props.selected !== 'undefined') ? this.props.selected : false
+		};
+
 		this.componentWillUpdate(this.props);
 	}
 
@@ -180,6 +200,24 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 	private handleClick() {
 		if (this._btn) {
 			this._btn.handleClick();
+		}
+	}
+
+	@autobind
+	private handleToggleClick(toggle: boolean) {
+		this.props.onClick(toggle, this.props.text);
+	}
+
+	@autobind
+	private handleRef(btn: ButtonToggle) {
+		this._btn = btn;
+	}
+
+	public componentWillReceiveProps(nextProps: OptionProps) {
+		if (this.props.selected !== nextProps.selected && this.state.selected !== nextProps.selected) {
+			this.setState({
+				selected: nextProps.selected
+			});
 		}
 	}
 
@@ -193,7 +231,7 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 					style={this.inlineStyles}
 					visible={this.props.visible}
 				>
-					<ButtonToggle
+					<StyledButtonToggle
 						{...this.props}
 						bgColorOff={this.inlineStyles['backgroundColor']}
 						bgColorOn={this.inlineStyles['backgroundColor']}
@@ -202,10 +240,9 @@ export class Option extends BaseComponent<OptionProps, undefined> {
 						iconNameOn={this.icons[this.props.optionType].on}
 						iconNameOff={this.icons[this.props.optionType].off}
 						initialToggle={this.props.selected}
-						onClick={this.props.onClick}
-						ref={(btn: ButtonToggle) => {
-							this._btn = btn;
-						}}
+						innerRef={this.handleRef}
+						onClick={this.handleToggleClick}
+						selected={this.state.selected}
 					/>
 					{(this.props.text) ? <span>{this.props.text}</span> : null}
 				</OptionView>

@@ -33,10 +33,10 @@
  * callback is invoked and given the index where the chevron "landed"
  *
  * #### Styles
- * - `ui-slider-container` - The `div` around the whole control (the root)
+ * - `ui-slider` - The `div` around the whole control (the root)
  * - `ui-slider-bar` - The `div` that makes up the central bar that the chevron
  * will slide over.
- * - `ui-slider` - the `div` that represents the draggable chevron
+ * - `ui-slider-element` - the `div` that represents the draggable chevron
  * - `ui-slider-tick` - when tick marks are displayed on the control, this class
  * is attached to each.  The ticks are a `div` container
  *
@@ -92,6 +92,7 @@ export function getDefaultSliderProps(): SliderProps {
 		getDefaultBaseProps(), {
 			max: 100,
 			min: 0,
+			obj: 'Slider',
 			onSelect: nilEvent,
 			scale: 1,
 			snap: false,
@@ -159,6 +160,8 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 	constructor(props: SliderProps) {
 		super(props, Slider.defaultProps.style);
+
+		this._classes.add('ui-slider');
 
 		this._tickKeys = new Keys({testing: this.props.testing});
 		this.state = {
@@ -281,7 +284,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		return(
 			<ThemeProvider theme={getTheme()}>
 				<SliderContainer
-					className="ui-slider-container"
+					className={this.classes}
 					disabled={this.props.disabled}
 					height={this._sliderSize + (this._borderSize * 4)}
 					visible={this.props.visible}
@@ -295,7 +298,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 					>
 						{this.buildTicks()}
 						<SliderElement
-							className="ui-slider"
+							className="ui-slider-element"
 							left={this.state.x - (this._sliderSize * 0.5) - this._borderSize}
 							onMouseDown={this.handleMouseDown}
 							sizing={this.props.sizing}

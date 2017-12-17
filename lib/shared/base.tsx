@@ -43,7 +43,7 @@
 
 'use strict';
 
-// const debug = require('debug')('base');
+const debug = require('debug')('base');
 
 import {Map} from 'immutable';
 import {isEmpty} from 'lodash';
@@ -202,6 +202,28 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	 */
 	protected type(sizing: Sizing = this.sizing): Sizing {
 		return this.sizes[sizing].type;
+	}
+
+	/**
+	 * Checks the previous and incoming props for sizing changes.  If the control
+	 * has children, then they are each updated with the sizing change.
+	 * @param props {P} the previous properties on the component
+	 * @param nextPrpos {P} the new properties for the component
+	 * @return {any} a new set of children if the size has changed.  If the props
+	 * do not have chilren, then NULL is returned.
+	 */
+	protected resizeChildren(props: P, nextProps: P): any {
+		if (props.children && nextProps.children) {
+			if (props.sizing !== nextProps.sizing) {
+				debug('Children prop sizing change');
+				return React.Children.map(nextProps.children, (child: any) => (
+					React.cloneElement(child, {sizing: nextProps.sizing})
+				));
+			}
+		}
+
+		debug('no children props to resize: props: %O, nextProps: %O', props, nextProps);
+		return nextProps.children;
 	}
 
 	/**

@@ -53,9 +53,7 @@ module.exports = {
 		alias: {
 			"immutable": path.resolve(__dirname, 'node_modules', 'immutable', 'dist', 'immutable.min.js'),
 			"lodash": path.resolve(__dirname, 'node_modules', 'lodash', 'lodash.min.js'),
-			"quill": path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.min.js'),
-			"react$": path.resolve(__dirname, 'node_modules', 'react', 'umd', 'react.production.min.js'),
-			"react-dom$": path.resolve(__dirname, 'node_modules', 'react-dom', 'umd', 'react-dom.production.min.js')
+			"quill": path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.min.js')
 		}
 	},
 	externals: {
