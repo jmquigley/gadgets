@@ -15,6 +15,10 @@ import DemoLabels from './src/DemoLabels';
 import DemoListItem from './src/DemoListItem';
 import DemoOption from './src/DemoOption';
 import DemoOptionGroup from './src/DemoOptionGroup';
+import DemoPager from './src/DemoPager';
+import DemoSelect from './src/DemoSelect';
+import DemoSlider from './src/DemoSlider';
+import DemoSwitch from './src/DemoSwitch';
 
 const debug = require('debug')('app');
 
@@ -40,13 +44,8 @@ const {
 	Location,
 	Option,
 	OptionType,
-	Pager,
-	Select,
 	Sizing,
-	Slider,
-	SortOrder,
 	Switch,
-	SwitchType,
 	Tab,
 	TabContainer,
 	TagList,
@@ -64,13 +63,6 @@ const {
 const randomText = loremIpsum({units: 'sentences', count: 2, random: null});
 
 // Build global test data for Select control
-const selectOptions = [
-	{ value: 'one', label: 'One' },
-	{ value: 'two', label: 'Two' },
-	{ value: 'three', label: 'Three' },
-	{ value: 'four', label: 'Four' },
-	{ value: 'five', label: 'Five' }
-];
 
 interface AppState {
 	sizing: any;
@@ -81,8 +73,6 @@ interface AppState {
 	toastVisible4: boolean;
 	toastVisible5: boolean;
 	toastVisible6: boolean;
-	selectOption: string;
-	sliderToggle: boolean;
 }
 
 class App extends React.Component<any, AppState> {
@@ -97,260 +87,11 @@ class App extends React.Component<any, AppState> {
 			toastVisible3: true,
 			toastVisible4: true,
 			toastVisible5: true,
-			toastVisible6: true,
-			selectOption: selectOptions[0].value,
-			sliderToggle: false
+			toastVisible6: true
 		};
 
 		/* (window as any).state = this.state;*/
 	}
-
-	private buildPager = () => (
-		<Container id="pagerExample">
-
-			<h3>small</h3>
-			<div className="pagerBox">
-				<Pager
-					initialPage="1"
-					totalItems="299"
-					sizing={Sizing.small}
-					onSelect={
-						(page: number) => {
-							console.log(`Clicked on page: ${page}`);
-						}
-					}
-				/>
-			</div>
-
-			<h3>normal</h3>
-			<div className="pagerBox">
-				<Pager
-					initialPage="1"
-					totalItems="299"
-					sizing={Sizing.normal}
-					onSelect={
-						(page: number) => {
-							console.log(`Clicked on page: ${page}`);
-						}
-					}
-				/>
-			</div>
-
-			<h3>large</h3>
-			<div className="pagerBox">
-				<Pager
-					initialPage="1"
-					totalItems="299"
-					sizing={Sizing.large}
-					onSelect={
-						(page: number) => {
-							console.log(`Clicked on page: ${page}`);
-						}
-					}
-					useinputs
-				/>
-			</div>
-
-			<h3>xlarge</h3>
-			<div className="pagerBox">
-				<Pager
-					initialPage="1"
-					totalItems="299"
-					sizing={Sizing.xlarge}
-					onSelect={
-						(page: number) => {
-							console.log(`Clicked on page: ${page}`);
-						}
-					}
-				/>
-			</div>
-
-			<h3>normal, large range, with sort</h3>
-			<div className="pagerBox">
-				<Pager
-					initialPage="1"
-					pagesToDisplay="5"
-					totalItems="30000"
-					pageSizes={[25, 50, 100, 500, 1000]}
-					onSelect={
-						(page: number) => {
-							console.log(`Clicked on page: ${page}`);
-						}
-					}
-					onSort={
-						(sortOrder: any) => {
-							if (sortOrder === SortOrder.ascending) {
-								console.log(`Sorting pager in ascending`);
-							} else {
-								console.log(`Sorting pager in descending`);
-							}
-						}
-					}
-					useinput
-				/>
-			</div>
-
-			<h3>normal, disabled</h3>
-			<div className="pagerBox">
-				<Pager
-					disabled={true}
-					initialPage="1"
-					totalItems="299"
-					sizing={Sizing.normal}
-					onSelect={
-						(page: number) => {
-							console.log(`Clicked on page: ${page}`);
-						}
-					}
-				/>
-			</div>
-
-		</Container>
-	);
-
-	private buildSelect = () => (
-		<Container id="selectExample">
-			<div className="selectBox">
-				<Select
-					name="form-field-name"
-					value={this.state.selectOption}
-					options={selectOptions}
-					onChange={(val: any) => {
-							if (val != null) {
-								console.log(`Select click handler: ${JSON.stringify(val)}`);
-								this.setState({selectOption: val.value});
-							}
-					}}
-					sizing={Sizing.small}
-					/>
-			</div>
-		</Container>
-	);
-
-	@autobind
-	private buildSliderHandleSelection(toggle: boolean, title: string) {
-		this.setState({
-		   sliderToggle: toggle
-		}), () => {
-			debug('%s to %o, %O', title, toggle, this.state);
-		};
-	}
-
-	@autobind
-	private handleSliderDebug(val: any) {
-		debug('slider select: %o', val);
-	}
-
-	private buildSlider = () => (
-		<Container id="sliderExample">
-
-			<h3>Normal slider control, range 0 - 100, toggle snap</h3>
-			<Slider
-				onSelect={this.handleSliderDebug}
-				scale={2}
-				snap={this.state.sliderToggle}
-				ticks={5}
-			/>
-
-			<Option
-				onClick={this.buildSliderHandleSelection}
-				text="Toggle snap mode on/off"
-			/>
-			<br/><br/>
-
-			<h3>Normal slider, no ticks, range 0 - 100</h3>
-			<Slider
-				onSelect={this.handleSliderDebug}
-				scale={2}
-			/>
-			<br/>
-
-			<h3>Disabled slider</h3>
-			<Slider
-				disabled
-				onSelect={this.handleSliderDebug}
-				scale={2}
-				ticks={5}
-			/>
-			<br/>
-
-			<h3>xxsmall</h3>
-			<Slider scale={3} sizing={Sizing.xxsmall} ticks={3} />
-
-			<h3>xsmall</h3>
-			<Slider scale={3} sizing={Sizing.xsmall} ticks={3} />
-
-			<h3>small</h3>
-			<Slider scale={3} sizing={Sizing.small} ticks={3} />
-
-			<h3>large</h3>
-			<Slider scale={3} sizing={Sizing.large} ticks={3} />
-
-			<h3>xlarge</h3>
-			<Slider scale={3} sizing={Sizing.xlarge} ticks={3} />
-
-			<h3>xxlarge</h3>
-			<Slider scale={3} sizing={Sizing.xxlarge} ticks={3} />
-
-		</Container>
-	);
-
-	private buildSwitch = () => (
-		<Container id="switchExample">
-
-			<h3>xxsmall</h3>
-			<Switch sizing={Sizing.xxsmall}/>
-			<Switch initialToggle={true} sizing={Sizing.xxsmall} switchType={SwitchType.inny}/>
-			<br />
-
-			<h3>xsmall</h3>
-			<Switch sizing={Sizing.xsmall}/>
-			<Switch initialToggle={true} sizing={Sizing.xsmall} switchType={SwitchType.inny}/>
-			<br />
-
-			<h3>small</h3>
-			<Switch sizing={Sizing.small}/>
-			<Switch initialToggle={true} sizing={Sizing.small} switchType={SwitchType.inny}/>
-			<br />
-
-			<h3>normal</h3>
-			<Switch
-				onClick={(toggle: boolean) => {
-					debug(`Switch toggle (outy): ${toggle ? 'on' : 'off'}`);
-				}}
-				switchType={SwitchType.outy}
-			/>
-			<Switch
-				initialToggle={true}
-				onClick={(toggle: boolean) => {
-					debug(`Switch toggle (inny): ${toggle ? 'on' : 'off'}`);
-				}}
-				switchType={SwitchType.inny}
-			/>
-			<br />
-
-			<h3>large</h3>
-			<Switch sizing={Sizing.large}/>
-			<Switch initialToggle={true} sizing={Sizing.large} switchType={SwitchType.inny}/>
-			<br />
-
-			<h3>xlarge</h3>
-			<Switch sizing={Sizing.xlarge}/>
-			<Switch initialToggle={true} sizing={Sizing.xlarge} switchType={SwitchType.inny}/>
-			<br />
-
-			<h3>xxlarge</h3>
-			<Switch sizing={Sizing.xxlarge}/>
-			<Switch initialToggle={true} sizing={Sizing.xxlarge} switchType={SwitchType.inny}/>
-			<br />
-
-			<h3>normal, disabled</h3>
-			<Switch disabled/>
-			<Switch initialToggle={true} disabled switchType={SwitchType.inny}/>
-			<br />
-
-		</Container>
-	);
 
 	private buildTabs = () => {
 
@@ -929,18 +670,10 @@ class App extends React.Component<any, AppState> {
 				<DemoListItem sizing={this.state.sizing} />
 				<DemoOption sizing={this.state.sizing} />
 				<DemoOptionGroup sizing={this.state.sizing} />
-
-				<h1>Pager</h1>
-				{this.buildPager()}
-
-				<h1>Select</h1>
-				{this.buildSelect()}
-
-				<h1>Slider</h1>
-				{this.buildSlider()}
-
-				<h1>Switch</h1>
-				{this.buildSwitch()}
+				<DemoPager sizing={this.state.sizing} />
+				<DemoSelect sizing={this.state.sizing} />
+				<DemoSlider sizing={this.state.sizing} />
+				<DemoSwitch sizing={this.state.sizing} />
 
 				<h1>Tabs</h1>
 				{this.buildTabs()}
