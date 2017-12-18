@@ -6,12 +6,12 @@ import autobind from 'autobind-decorator';
 import * as React from 'react';
 
 const {
+	Break,
 	Container,
-	Dropdown,
-	Sizing
+	Dropdown
 } = require('../../dist/bundle');
 
-export default class DemoBadge extends React.Component<any, undefined> {
+export default class DemoDropdown extends React.Component<any, undefined> {
 
 	private items: any = [
 		{value: 'idstr1', label: 'lstr1'},
@@ -32,67 +32,15 @@ export default class DemoBadge extends React.Component<any, undefined> {
 	public render() {
 		return(
 			<Container id="dropdownExample" title="Dropdown">
-				<h3>xxsmall</h3>
-				<Dropdown
-					defaultVal="idstr2"
-					items={this.items}
-					onSelect={this.handleDebugDropdown}
-					sizing={Sizing.xxsmall}
-				/>
-				<br />
 
-				<h3>xsmall</h3>
+				<h3>Simple Dropdown</h3>
 				<Dropdown
 					defaultVal="idstr2"
 					items={this.items}
 					onSelect={this.handleDebugDropdown}
-					sizing={Sizing.xsmall}
+					sizing={this.props['sizing']}
 				/>
-				<br />
-
-				<h3>small</h3>
-				<Dropdown
-					defaultVal="idstr2"
-					items={this.items}
-					onSelect={this.handleDebugDropdown}
-					sizing={Sizing.small}
-				/>
-				<br />
-
-				<h3>normal</h3>
-				<Dropdown
-					defaultVal="idstr2"
-					items={this.items}
-					onSelect={this.handleDebugDropdown}
-				/>
-				<br />
-
-				<h3>large</h3>
-				<Dropdown
-					defaultVal="idstr2"
-					items={this.items}
-					onSelect={this.handleDebugDropdown}
-					sizing={Sizing.large}
-				/>
-				<br />
-
-				<h3>xlarge</h3>
-				<Dropdown
-					defaultVal="idstr2"
-					items={this.items}
-					onSelect={this.handleDebugDropdown}
-					sizing={Sizing.xlarge}
-				/>
-				<br />
-
-				<h3>xxlarge</h3>
-				<Dropdown
-					defaultVal="idstr2"
-					items={this.items}
-					onSelect={this.handleDebugDropdown}
-					sizing={Sizing.xxlarge}
-				/>
-				<br />
+				<Break sizing={this.props['sizing']} />
 
 				<h3>disabled</h3>
 				<Dropdown
@@ -100,8 +48,9 @@ export default class DemoBadge extends React.Component<any, undefined> {
 					disabled
 					items={this.items}
 					onSelect={this.handleDebugDropdown}
+					sizing={this.props['sizing']}
 				/>
-				<br />
+				<Break sizing={this.props['sizing']} />
 
 			</Container>
 		);

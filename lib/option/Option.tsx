@@ -69,6 +69,7 @@ import {
 	invisible
 } from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import {Title, TitleLayout} from '../title';
 
 export enum OptionType {
 	square,
@@ -133,8 +134,7 @@ export const StyledButtonToggle: any = styled(ButtonToggle)`
 	width: unset;
 `;
 
-export const StyledTitle: any = styled.span`
-`;
+export const StyledTitle: any = styled(Title)``;
 
 export class Option extends BaseComponent<OptionProps, OptionState> {
 
@@ -222,6 +222,17 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 	}
 
 	public render() {
+		let title: any = null;
+		if (this.props.text) {
+			title = (
+				<StyledTitle
+					layout={TitleLayout.none}
+					sizing={this.props.sizing}
+					title={this.props.text}
+				/>
+			);
+		}
+
 		return(
 			<ThemeProvider theme={getTheme()} >
 				<OptionView
@@ -244,7 +255,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 						onClick={this.handleToggleClick}
 						selected={this.state.selected}
 					/>
-					{(this.props.text) ? <span>{this.props.text}</span> : null}
+					{title}
 				</OptionView>
 			</ThemeProvider>
 		);

@@ -67,7 +67,6 @@ import {BaseComponent, Color, getTheme} from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface AccordionItemProps extends ItemProps {
-	children?: React.ReactNode;
 	initialToggle?: boolean;
 	leftButton?: any;
 	nocollapse?: boolean;
@@ -108,13 +107,10 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
-	private _children: any;
-
 	constructor(props: AccordionItemProps) {
 		super(props);
 
 		this._classes.add('ui-accordionitem');
-		this._children = this.props.children;
 
 		this.state = {
 			toggle: (props.nocollapse) ? true : props.initialToggle
@@ -148,10 +144,10 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		const theme = getTheme();
 		let content = null;
 
-		if ((this._children != null) && (this.state.toggle)) {
+		if ((this.props.children != null) && (this.state.toggle)) {
 			content = (
 				<div className="ui-accordion-content">
-					{this._children}
+					{this.props.children}
 				</div>
 			);
 		}

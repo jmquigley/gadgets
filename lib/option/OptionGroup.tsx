@@ -12,10 +12,12 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	fontStyle,
 	getDefaultBaseProps,
-	getTheme
+	getTheme,
+	Sizing
 } from '../shared';
-import styled, {ThemeProvider} from '../shared/themed-components';
+import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 import {Title, TitleLayout} from '../title';
 import {Option, OptionType} from './Option';
 
@@ -44,13 +46,28 @@ export function getDefaultOptionGroupProps(): OptionGroupProps {
 	);
 }
 
-export const StyledOptionGroup: any = styled.div`
+export const StyledOptionGroup: any = withProps<OptionGroupProps, HTMLDivElement>(styled.div)`
 	border: solid 1px ${props => props.theme.borderColor};
 	display: inline-flex;
 	flex-direction: column;
-	margin: 0.75rem 0 0 0;
-	padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+	margin: ${(props: OptionGroupProps) => {
+		switch (props.sizing) {
+			case Sizing.xxsmall: return('0.25rem 0 0 0');
+			case Sizing.xsmall: return('0.4rem 0 0 0');
+			case Sizing.small: return('0.6rem 0 0 0');
+			case Sizing.large: return('1.2rem 0 0 0');
+			case Sizing.xlarge: return('1.5rem 0 0 0');
+			case Sizing.xxlarge: return('2.5rem 0 0 0');
+
+			case Sizing.normal:
+			default:
+				return('0.75rem 0 0 0');
+		}
+	}};
+	padding: 0.5rem;
 	position: relative;
+
+	${props => props.sizing && fontStyle[props.sizing]}
 `;
 
 export const StyledOption: any = styled(Option)`
@@ -61,7 +78,20 @@ export const StyledTitle: any = styled(Title)`
 	left: 0.5rem;
 	padding: 0 0.33rem;
 	position: absolute;
-	top: -0.75rem;
+	top: -${(props: OptionGroupProps) => {
+		switch (props.sizing) {
+			case Sizing.xxsmall: return('0.25rem');
+			case Sizing.xsmall: return('0.4rem');
+			case Sizing.small: return('0.6rem');
+			case Sizing.large: return('1.2rem');
+			case Sizing.xlarge: return('1.5rem');
+			case Sizing.xxlarge: return('2.5rem');
+
+			case Sizing.normal:
+			default:
+				return('0.75rem');
+		}
+	}};
 `;
 
 export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupState> {
@@ -72,7 +102,6 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 		super(props, OptionGroup.defaultProps.style);
 
 		this._classes.add('ui-option-group');
-
 		this.state = {
 			options: this.handleOptions(this.props.options, this.props.default)
 		};
@@ -90,6 +119,7 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 					onClick={this.handleSelection}
 					optionType={this.props.optionType}
 					selected={toggle}
+					sizing={this.props.sizing}
 					text={text}
 				/>
 			);
@@ -130,12 +160,14 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 			<ThemeProvider theme={getTheme()}>
 				<StyledOptionGroup
 					className={this.classes}
+					sizing={this.props.sizing}
 				>
 					<StyledTitle
 						className="ui-option-group-title"
 						layout={TitleLayout.none}
 						noedit
 						noripple
+						sizing={this.props.sizing}
 						title={this.props.title}
 					/>
 					{this.buildOptionList()}

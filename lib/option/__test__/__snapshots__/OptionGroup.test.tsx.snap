@@ -22,12 +22,14 @@ exports[`Creation of the OptionGroup control 1`] = `
 >
   <styled.div
     className="ui-option-group test-class"
+    sizing="normal"
   >
     <Styled(Title)
       className="ui-option-group-title"
       layout={6}
       noedit={true}
       noripple={true}
+      sizing="normal"
       title="test options"
     />
     <Styled(Option)
@@ -35,6 +37,7 @@ exports[`Creation of the OptionGroup control 1`] = `
       onClick={[Function]}
       optionType={0}
       selected={true}
+      sizing="normal"
       text="option1"
     />
     <Styled(Option)
@@ -42,6 +45,7 @@ exports[`Creation of the OptionGroup control 1`] = `
       onClick={[Function]}
       optionType={0}
       selected={false}
+      sizing="normal"
       text="option2"
     />
     <Styled(Option)
@@ -49,6 +53,7 @@ exports[`Creation of the OptionGroup control 1`] = `
       onClick={[Function]}
       optionType={0}
       selected={false}
+      sizing="normal"
       text="option3"
     />
   </styled.div>

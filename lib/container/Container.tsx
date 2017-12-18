@@ -35,9 +35,10 @@ import * as React from 'react';
 import {
 	BaseComponent,
 	BaseProps,
+	fontStyle,
 	getDefaultBaseProps
 } from '../shared';
-import styled from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface ContainerProps extends BaseProps {
 	children?: React.ReactNode;
@@ -54,9 +55,11 @@ export function getDefaultContainerProps(): ContainerProps {
 	);
 }
 
-export const ContainerView: any = styled.div`
+export const ContainerView: any = withProps<ContainerProps, HTMLDivElement>(styled.div)`
 	padding: 0;
 	margin: 2px 0;
+
+	${props => props.sizing && fontStyle[props.sizing]}
 `;
 
 export class Container extends BaseComponent<ContainerProps, undefined> {
@@ -85,6 +88,7 @@ export class Container extends BaseComponent<ContainerProps, undefined> {
 				className={this.classes}
 				key={this.props.id}
 				id={this.props.id}
+				sizing={this.props.sizing}
 				style={this.inlineStyles}
 			>
 				{title}

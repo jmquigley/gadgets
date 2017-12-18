@@ -95,7 +95,7 @@ export const ItemViewButton: any = withProps<ItemProps, HTMLDivElement>(styled.d
 	${props => props.sizing && fontStyle[props.sizing]};
 	${props => (props.hiddenRightButton || props.hiddenLeftButton) && HiddenButton}
 
-	> i, > .ui-button-circle {
+	> i, > .ui-button-circle, > .ui-option {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -103,7 +103,8 @@ export const ItemViewButton: any = withProps<ItemProps, HTMLDivElement>(styled.d
 	}
 
 	> .ui-option {
-		width: 100%;
+		display: inline-flex;
+		flex: 1;
 	}
 `;
 

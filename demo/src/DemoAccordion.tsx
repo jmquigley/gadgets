@@ -23,8 +23,6 @@ export default class DemoAccordion extends React.Component<any, undefined> {
 	}
 
 	public render() {
-		debug('render: %O', this.props);
-
 		return (
 			<Container id="accordionExample" title="Accordion">
 				<Accordion sizing={this.props['sizing']}>

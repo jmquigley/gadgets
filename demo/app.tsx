@@ -1,12 +1,7 @@
 import autobind from 'autobind-decorator';
-import * as fs from 'fs';
-import * as _ from 'lodash';
 import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 import {render} from 'react-dom';
-import {sprintf} from 'sprintf-js';
-import {join} from 'util.join';
-import {getUUID} from 'util.toolbox';
 
 import DemoAccordion from './src/DemoAccordion';
 import DemoBadge from './src/DemoBadge';
@@ -14,6 +9,12 @@ import DemoBrowser from './src/DemoBrowser';
 import DemoButtons from './src/DemoButtons';
 import DemoDialogBox from './src/DemoDialogBox';
 import DemoDropdown from './src/DemoDropdown';
+import DemoDynamicList from './src/DemoDynamicList';
+import DemoEditor from './src/DemoEditor';
+import DemoLabels from './src/DemoLabels';
+import DemoListItem from './src/DemoListItem';
+import DemoOption from './src/DemoOption';
+import DemoOptionGroup from './src/DemoOptionGroup';
 
 const debug = require('debug')('app');
 
@@ -35,18 +36,9 @@ const {
 	Divider,
 	DividerType,
 	Dropdown,
-	DynamicList,
-	Editor,
-	Icon,
 	Justify,
-	Label,
-	List,
-	ListDivider,
-	ListHeader,
-	ListItem,
 	Location,
 	Option,
-	OptionGroup,
 	OptionType,
 	Pager,
 	Select,
@@ -69,43 +61,7 @@ const {
 	Validator
 } = require('../dist/bundle');
 
-debug('cwd: %s', process.cwd());
-const markdown: string = fs.readFileSync(join(process.cwd(), 'demo', 'samples', 'markdown.md'), 'utf8');
-
-// Build global testing data for List Item controls
-let maxItems: number = 5;
-let listItems: string[] = [];
-let uuids: string[] = [];
-for (let i=0; i<maxItems; i++) {
-	listItems.push(`Accordion List Item ${i}`);
-	uuids.push(getUUID());
-}
-
-function createItems() {
-	return listItems.map((item, idx) => {
-		return (
-			<ListItem
-				id={uuids[idx]}
-				key={uuids[idx]}
-				title={item}
-				widget={getUUID(true).substring(0,5)}
-				leftButton={<Button />}
-				rightButton={<Button iconName="paper-plane-o" />}
-			/>
-		);
-	});
-}
-
-const items = createItems();
 const randomText = loremIpsum({units: 'sentences', count: 2, random: null});
-
-let dynamicItems = {};
-for (let i = 1; i <= 2000; i++) {
-	dynamicItems[`item ${sprintf('%04d', i)}`] = {
-		left: <Option optionType={OptionType.star} />,
-		right: `w${i}`
-	};
-}
 
 // Build global test data for Select control
 const selectOptions = [
@@ -116,24 +72,9 @@ const selectOptions = [
 	{ value: 'five', label: 'Five' }
 ];
 
-const sizingOptions = [
-	{ value: Sizing.xxsmall, label: 'xxsmall' },
-	{ value: Sizing.xsmall, label: 'xsmall' },
-	{ value: Sizing.small, label: 'small' },
-	{ value: Sizing.normal, label: 'normal' },
-	{ value: Sizing.large, label: 'large' },
-	{ value: Sizing.xlarge, label: 'xlarge' },
-	{ value: Sizing.xxlarge, label: 'xxlarge' }
-];
-
-interface AppProps {
-}
-
 interface AppState {
 	sizing: any;
 
-	dynamicListError: string;
-	items: any;
 	toastVisible1: boolean;
 	toastVisible2: boolean;
 	toastVisible3: boolean;
@@ -141,20 +82,16 @@ interface AppState {
 	toastVisible5: boolean;
 	toastVisible6: boolean;
 	selectOption: string;
-	selectToggle: boolean;
-	sizingOption: string;
 	sliderToggle: boolean;
 }
 
-class App extends React.Component<AppProps, AppState> {
+class App extends React.Component<any, AppState> {
 
-	constructor(props: AppProps) {
+	constructor(props: any) {
 		super(props);
 		this.state = {
 			sizing: Sizing.normal,
 
-			dynamicListError: '',
-			items: dynamicItems,
 			toastVisible1: true,
 			toastVisible2: true,
 			toastVisible3: true,
@@ -162,334 +99,11 @@ class App extends React.Component<AppProps, AppState> {
 			toastVisible5: true,
 			toastVisible6: true,
 			selectOption: selectOptions[0].value,
-			selectToggle: false,
-			sizingOption: sizingOptions[3].value,
 			sliderToggle: false
 		};
 
 		/* (window as any).state = this.state;*/
 	}
-
-	@autobind
-	private buildDynamicListHandleSelection(toggle: boolean, title: string) {
-		this.setState({
-		   selectToggle: toggle
-		}), () => {
-			debug('%s to %o, %O', title, toggle, this.state);
-		};
-	}
-
-	private buildDynamicList = () => (
-			<Container id="dynamicListExample">
-				<DynamicList
-					errorMessage={this.state.dynamicListError}
-					items={this.state.items}
-					layout={TitleLayout.dominant}
-					noselect={this.state.selectToggle}
-					onDelete={(title: string) => {
-						const items = {...this.state.items};
-						delete items[title];
-						this.setState({
-							items: items
-						});
-					}}
-					onError={() => {
-						this.setState({dynamicListError: ''});
-					}}
-					onNew={(title: string, widget: any) => {
-						if (widget == null) {
-							widget = {
-								left: <Option optionType={OptionType.star} />,
-								right: `w0`
-							};
-						}
-
-						this.setState({
-							items: {...this.state.items, [title]: widget}
-						});
-					}}
-					onUpdate={(previous: string, title: string) => {
-						const widget = this.state.items[previous];
-						this.setState({
-							items: _.omit({...this.state.items, [title]: widget}, previous)
-						});
-					}}
-					pageSizes={[10, 20, 30]}
-					title="Dynamic List Test"
-				/>
-				<br />
-
-				<div className="toastBox">
-					<Button iconName="bomb"
-						onClick={() => {
-							this.setState({
-								dynamicListError: 'Dynamic List Error Message Test'
-							})
-						}}
-					/>
-					<p>Click to show error message test</p>
-				</div>
-
-				<div className="toastBox">
-					<Button iconName="bomb"
-						onClick={() => {
-							let dynamicItems = {}
-
-							for (let [title, widget] of Object.entries(this.state.items)) {
-
-								if (widget == null) {
-									widget = {
-										left: <Option optionType={OptionType.star} />,
-										right: 'a0'
-									};
-								} else {
-									widget['right'] = widget['right'].replace('w', 'a');
-								}
-
-								dynamicItems[title] = widget;
-							}
-
-							this.setState({
-								items: dynamicItems
-							});
-						}}
-					/>
-					<p>Click to change list of widget items (change w to a)</p>
-				</div>
-				<Option
-					onClick={this.buildDynamicListHandleSelection}
-					text="Toggle selection mode (on turns off selection)"
-				/>
-		</Container>
-	);
-
-	private buildEditor = () => (
-		<Container id="editorExample">
-			<Editor content={markdown} scheme={{bold: "red"}} />
-		</Container>
-	);
-
-	private buildLabels = () => (
-		<Container id="labelExample">
-			<div id="simple-labels">
-				<p><Label text="Test Label #1 (double click to edit)" /></p>
-				<p><Label disabled text="Test Label #2 (disabled)" /></p>
-				<p><Label className="demoLabel" text="Test Label #3 Styled" /></p>
-				<p><Label text="Text Label #4 (no edit)" noedit /></p>
-				<p><Label
-						style={{
-							color: 'white',
-							backgroundColor: 'blue'
-						}}
-						text="Text Label #5 (inline style)"
-					/>
-				</p>
-
-				<Label text="xxsmall" sizing={Sizing.xxsmall} /><br/>
-				<Label text="xsmall" sizing={Sizing.xsmall} /><br/>
-				<Label text="small" sizing={Sizing.small} /><br/>
-				<Label text="normal" sizing={Sizing.normal} /><br/>
-				<Label text="large" sizing={Sizing.large} /><br/>
-				<Label text="xlarge" sizing={Sizing.xlarge} /><br/>
-				<Label text="xxlarge" sizing={Sizing.xxlarge} /><br/>
-
-			</div>
-		</Container>
-	);
-
-	private buildListItemWithHeader = () => (
-		<Container id="listExample1">
-
-			<Dropdown
-				defaultVal="normal"
-				items={sizingOptions}
-				onSelect={(val: any) => {
-					if (val != null) {
-						debug('select sizing: %o', val);
-						this.setState({sizingOption: val});
-					}
-				}}
-			/>
-			<br /><br/>
-
-			<List alternating sizing={this.state.sizingOption}>
-				<ListHeader
-					leftButton={<ButtonDialog iconName="bars"><div>header dialog</div><br/></ButtonDialog>}
-					noedit
-					rightButton={<Button iconName="plus" />}
-					title={`Demo List Header (${this.state.sizingOption})`}
-					/>
-				<ListItem
-					title="List Item 1" widget="12"
-					leftButton={<Button iconName="podcast"/>}
-					rightButton={<Button iconName="paper-plane-o"/>}
-					/>
-				<ListItem
-					title="List Item 2 (with icon)"
-					widget="13"
-					leftButton={<Icon iconName="bolt" />}
-					rightButton={<Button />}
-					/>
-				<ListItem
-					title="List Item 3 (with hidden icon)"
-					widget="14"
-					leftButton={<Icon iconName="car" />}
-					hiddenLeftButton
-					/>
-				<ListDivider />
-				<ListItem
-					title="List Item 4a (hide/show)" widget="15"
-					leftButton={<Button />}
-					hiddenLeftButton
-					rightButton={
-						<ButtonCircle
-							iconName="times"
-							style={{
-								color: 'red',
-								borderColor: 'red'
-							}}
-						/>
-					}
-					hiddenRightButton
-					/>
-				<ListItem
-					title="List Item 4b (hide/show)" widget="15"
-					hiddenLeftButton
-					leftButton={
-						<ButtonDialog iconName="wrench">Test Dialog Button</ButtonDialog>
-					}
-					hiddenRightButton
-					rightButton={
-						<Button iconName="times" style={{color: 'red'}} />
-					}
-					/>
-				<ListItem title="List Item 5" />
-				<ListItem
-					title="List Item 6 (Toggle)" widget="15"
-					rightButton={
-						<ButtonToggle iconNameOn="star" iconNameOff="star-o" fgColorOn="#ffe11a" fgColorOff="#004358" />
-					}
-					/>
-				<ListItem title="List Item 7 (disabled)" disabled />
-				<ListItem
-					title="List Item 8 (disabled w/ buttons)"
-					disabled
-					rightButton={
-						<Button />
-					}
-					/>
-				<ListItem
-					title="List Item 9 (stacked)"
-					widget="stacked bottom widget"
-					stacked
-					rightButton={<Button />}
-					/>
-				<ListItem
-					noripple
-					title="List Item 10 (noripple edit)"
-					/>
-				<ListItem
-					noripple
-					noedit
-					title="List Item 11 (noedit)"
-					/>
-				</List>
-		</Container>
-	);
-
-	private buildListItemWithoutHeader = () => (
-		<Container id="listExample2">
-			<List alternating>
-				{items}
-			</List>
-		</Container>
-	);
-
-	@autobind
-	private buildOptionHandleClick(val: boolean, text: string) {
-		debug('clicked option, flag: %o, text: %o', val, text);
-	}
-
-	private buildOption = () => (
-		<Container id="optionExample">
-			<Option optionType={OptionType.square} />
-			<Option
-				onClick={this.buildOptionHandleClick}
-				optionType={OptionType.square}
-				selected
-				text="square"
-			/>
-			<br/>
-
-			<Option type={OptionType.squareFilled} />
-			<Option selected text="squareFilled" optionType={OptionType.squareFilled} />
-			<br/>
-
-			<Option type={OptionType.squareReverse} />
-			<Option selected text="squareReverse" optionType={OptionType.squareReverse} />
-			<br/>
-
-			<Option type={OptionType.circle} />
-			<Option selected text="circle" optionType={OptionType.circle} />
-			<br/>
-
-			<Option type={OptionType.circleFilled} />
-			<Option selected text="circleFilled" optionType={OptionType.circleFilled} />
-			<br/>
-
-			<Option type={OptionType.circleReverse} />
-			<Option selected text="circleReverse" optionType={OptionType.circleReverse} />
-			<br/>
-
-			<Option type={OptionType.times} />
-			<Option selected text="times" optionType={OptionType.times} />
-			<br/>
-
-			<Option type={OptionType.timesReverse} />
-			<Option selected text="timesReverse" optionType={OptionType.timesReverse} />
-			<br/>
-
-			<Option type={OptionType.dot} />
-			<Option selected text="dot" optionType={OptionType.dot} />
-			<br/>
-
-			<Option type={OptionType.star} />
-			<Option selected text="star" optionType={OptionType.star} /><br/>
-			<br/>
-
-			<Option text="colored" optionType={OptionType.square} style={{color: 'blue'}} /><br/>
-			<Option text="colored" optionType={OptionType.square} style={{color: 'yellow', backgroundColor: 'black'}} /><br/>
-			<br/>
-
-			<Option disabled text="disabled" optionType={OptionType.square} /><br/>
-			<br/>
-
-			<Option text="xxsmall" sizing={Sizing.xxsmall} /><br/>
-			<Option text="xsmall" sizing={Sizing.xsmall} /><br/>
-			<Option text="small" sizing={Sizing.small} /><br/>
-			<Option text="normal" sizing={Sizing.normal} /><br/>
-			<Option text="large" sizing={Sizing.large} /><br/>
-			<Option text="xlarge" sizing={Sizing.xlarge} /><br/>
-			<Option text="xxlarge" sizing={Sizing.xxlarge} /><br/>
-
-		</Container>
-	);
-
-	private buildOptionGroup = () => (
-		<Container id="optionGroupExample">
-			<OptionGroup
- 				default="option1"
-				onSelect={(text: string, toggle: boolean) => debug('option group item: %o, %o', text, toggle)}
-				options={[
-					'option1',
-					'option2',
-					'option3',
-					'option4 this is a longer string'
-				]}
-				title="test options"
-			/>
-		</Container>
-	);
 
 	private buildPager = () => (
 		<Container id="pagerExample">
@@ -1284,47 +898,37 @@ class App extends React.Component<AppProps, AppState> {
 		return (
 			<div id="app">
 
-				{/* <Dropdown
+				<p>
+				Use this dropdown to change the Sizing of the components below (if the control supports it).
+				The default sizing for the library is "normal".
+				</p>
+
+				<Dropdown
 					defaultVal="normal"
 					items={[
-					{ value: Sizing.xxsmall, label: 'xxsmall' },
-					{ value: Sizing.xsmall, label: 'xsmall' },
-					{ value: Sizing.small, label: 'small' },
-					{ value: Sizing.normal, label: 'normal' },
-					{ value: Sizing.large, label: 'large' },
-					{ value: Sizing.xlarge, label: 'xlarge' },
-					{ value: Sizing.xxlarge, label: 'xxlarge' }
+						{ value: Sizing.xxsmall, label: 'xxsmall' },
+						{ value: Sizing.xsmall, label: 'xsmall' },
+						{ value: Sizing.small, label: 'small' },
+						{ value: Sizing.normal, label: 'normal' },
+						{ value: Sizing.large, label: 'large' },
+						{ value: Sizing.xlarge, label: 'xlarge' },
+						{ value: Sizing.xxlarge, label: 'xxlarge' }
 					]}
 					onSelect={this.handleSizingChange}
-					/> */}
+				/>
 
-				<DemoAccordion sizing={this.state.sizing} />
+				<DemoAccordion />
 				<DemoBadge />
 				<DemoBrowser />
 				<DemoButtons />
 				<DemoDialogBox />
-				<DemoDropdown />
-
-				<h1>Dynamic List</h1>
-				{this.buildDynamicList()}
-
-				<h1>Editor</h1>
-				{this.buildEditor()}
-
-				<h1>Labels</h1>
-				{this.buildLabels()}
-
-				<h1>List/ListItem (with header)</h1>
-				{this.buildListItemWithHeader()}
-
-				<h1>List/ListItem (without header)</h1>
-				{this.buildListItemWithoutHeader()}
-
-				<h1>Option</h1>
-				{this.buildOption()}
-
-				<h1>OptionGroup</h1>
-				{this.buildOptionGroup()}
+				<DemoDropdown sizing={this.state.sizing} />
+				<DemoDynamicList />
+				<DemoEditor />
+				<DemoLabels sizing={this.state.sizing} />
+				<DemoListItem sizing={this.state.sizing} />
+				<DemoOption sizing={this.state.sizing} />
+				<DemoOptionGroup sizing={this.state.sizing} />
 
 				<h1>Pager</h1>
 				{this.buildPager()}

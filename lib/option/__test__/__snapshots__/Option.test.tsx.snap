@@ -76,9 +76,11 @@ exports[`Creation of the Option control 1`] = `
       width=""
       xcss={null}
     />
-    <span>
-      test
-    </span>
+    <Styled(Title)
+      layout={6}
+      sizing="normal"
+      title="test"
+    />
   </styled.div>
 </ThemeProvider>
 `;
@@ -152,7 +154,7 @@ exports[`Test Option control click event 1`] = `
       visible={true}
     >
       <div
-        className="ui-option sc-bZQynM iQWwnP"
+        className="ui-option sc-iwsKbI iJAIoS"
         disabled={false}
         onClick={[Function]}
         style={
@@ -210,7 +212,7 @@ exports[`Test Option control click event 1`] = `
             bgColorOff="inherit"
             bgColorOn="inherit"
             bottom=""
-            className="sc-gzVnrw dlCWnD"
+            className="sc-gZMcBi MLDaV"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -274,7 +276,7 @@ exports[`Test Option control click event 1`] = `
                 bgColorOff="inherit"
                 bgColorOn="inherit"
                 bottom=""
-                className="ui-button-toggle sc-gzVnrw dlCWnD"
+                className="ui-button-toggle sc-gZMcBi MLDaV"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -335,7 +337,7 @@ exports[`Test Option control click event 1`] = `
                   }
                 >
                   <styled.div
-                    className="ui-button nohover ui-button-toggle sc-gzVnrw dlCWnD"
+                    className="ui-button nohover ui-button-toggle sc-gZMcBi MLDaV"
                     disabled={false}
                     id="Button-0"
                     onClick={[Function]}
@@ -348,7 +350,7 @@ exports[`Test Option control click event 1`] = `
                     visible={true}
                   >
                     <div
-                      className="ui-button nohover ui-button-toggle sc-gzVnrw dlCWnD sc-EHOje gEttMR"
+                      className="ui-button nohover ui-button-toggle sc-gZMcBi MLDaV sc-EHOje gEttMR"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -534,7 +536,7 @@ exports[`Test disabling of the Option control 1`] = `
       visible={true}
     >
       <div
-        className="ui-option sc-bZQynM kypabQ"
+        className="ui-option sc-iwsKbI jCaEow"
         disabled={true}
         onClick={[Function]}
         style={
@@ -592,7 +594,7 @@ exports[`Test disabling of the Option control 1`] = `
             bgColorOff="inherit"
             bgColorOn="inherit"
             bottom=""
-            className="sc-gzVnrw dlCWnD"
+            className="sc-gZMcBi MLDaV"
             contentEditable={false}
             direction="right"
             disabled={true}
@@ -656,7 +658,7 @@ exports[`Test disabling of the Option control 1`] = `
                 bgColorOff="inherit"
                 bgColorOn="inherit"
                 bottom=""
-                className="ui-button-toggle sc-gzVnrw dlCWnD"
+                className="ui-button-toggle sc-gZMcBi MLDaV"
                 contentEditable={false}
                 direction="right"
                 disabled={true}
@@ -717,7 +719,7 @@ exports[`Test disabling of the Option control 1`] = `
                   }
                 >
                   <styled.div
-                    className="ui-button nohover ui-button-toggle sc-gzVnrw dlCWnD"
+                    className="ui-button nohover ui-button-toggle sc-gZMcBi MLDaV"
                     disabled={true}
                     id="Button-0"
                     onClick={[Function]}
@@ -730,7 +732,7 @@ exports[`Test disabling of the Option control 1`] = `
                     visible={true}
                   >
                     <div
-                      className="ui-button nohover ui-button-toggle sc-gzVnrw dlCWnD sc-EHOje kiuasi"
+                      className="ui-button nohover ui-button-toggle sc-gZMcBi MLDaV sc-EHOje kiuasi"
                       disabled={true}
                       id="Button-0"
                       onClick={[Function]}
@@ -916,7 +918,7 @@ exports[`Test making the Option control invisible 1`] = `
       visible={false}
     >
       <div
-        className="ui-option sc-bZQynM dbpAPT"
+        className="ui-option sc-iwsKbI iGpfkF"
         disabled={false}
         onClick={[Function]}
         style={
@@ -974,7 +976,7 @@ exports[`Test making the Option control invisible 1`] = `
             bgColorOff="inherit"
             bgColorOn="inherit"
             bottom=""
-            className="sc-gzVnrw dlCWnD"
+            className="sc-gZMcBi MLDaV"
             contentEditable={false}
             direction="right"
             disabled={false}
@@ -1038,7 +1040,7 @@ exports[`Test making the Option control invisible 1`] = `
                 bgColorOff="inherit"
                 bgColorOn="inherit"
                 bottom=""
-                className="ui-button-toggle sc-gzVnrw dlCWnD"
+                className="ui-button-toggle sc-gZMcBi MLDaV"
                 contentEditable={false}
                 direction="right"
                 disabled={false}
@@ -1099,7 +1101,7 @@ exports[`Test making the Option control invisible 1`] = `
                   }
                 >
                   <styled.div
-                    className="ui-button nohover ui-button-toggle sc-gzVnrw dlCWnD"
+                    className="ui-button nohover ui-button-toggle sc-gZMcBi MLDaV"
                     disabled={false}
                     id="Button-0"
                     onClick={[Function]}
@@ -1112,7 +1114,7 @@ exports[`Test making the Option control invisible 1`] = `
                     visible={false}
                   >
                     <div
-                      className="ui-button nohover ui-button-toggle sc-gzVnrw dlCWnD sc-EHOje dsqkWk"
+                      className="ui-button nohover ui-button-toggle sc-gZMcBi MLDaV sc-EHOje dsqkWk"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}

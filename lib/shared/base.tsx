@@ -43,7 +43,7 @@
 
 'use strict';
 
-const debug = require('debug')('base');
+// const debug = require('debug')('base');
 
 import {Map} from 'immutable';
 import {isEmpty} from 'lodash';
@@ -136,6 +136,10 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		return calc(this.sizes[sizing].font.sizepx, `* ${scale}`);
 	}
 
+	protected fontSizeREM(sizing: Sizing = this.sizing, scale: number = 1.0): string {
+		return calc(this.sizes[sizing].font.sizerem, `* ${scale}`);
+	}
+
 	/**
 	 * Takes the given base Sizing and determines what the next size
 	 * in the list would be.  e.g. if current size is *normal*, then
@@ -215,14 +219,14 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	protected resizeChildren(props: P, nextProps: P): any {
 		if (props.children && nextProps.children) {
 			if (props.sizing !== nextProps.sizing) {
-				debug('Children prop sizing change');
+				// debug('Children prop sizing change');
 				return React.Children.map(nextProps.children, (child: any) => (
 					React.cloneElement(child, {sizing: nextProps.sizing})
 				));
 			}
 		}
 
-		debug('no children props to resize: props: %O, nextProps: %O', props, nextProps);
+		// debug('no children props to resize: props: %O, nextProps: %O', props, nextProps);
 		return nextProps.children;
 	}
 

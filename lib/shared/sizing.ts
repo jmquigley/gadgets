@@ -92,6 +92,7 @@ export const borderStyle: any = {
 export const boxStyle: any = {};
 export const fontStyle: any = {};
 export const rectStyle: any = {};
+export const lineHeightStyle: any = {};
 
 export class Sizes {
 
@@ -134,6 +135,10 @@ export class Sizes {
 
 			fontStyle[key] = css`
 				font-size: ${valSize / baseFontSize}rem;
+			`;
+
+			lineHeightStyle[key] = css`
+				line-height: ${valSize / baseFontSize}rem;
 			`;
 
 			rectStyle[key] = css`

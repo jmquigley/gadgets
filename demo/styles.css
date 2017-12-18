@@ -101,7 +101,9 @@ section {
 }
 
 #editorExample {
-	height: 500px;
+    display: flex;
+    flex-direction: column;
+	height: 600px;
 }
 
 #simple-icons .box .ui-icon,
@@ -202,10 +204,6 @@ section {
    Global UI color settings for components
 
  */
-
-.ui-accordion {
-    width: 80%;
-}
 
 .ui-container {
    	margin: 30px 0 10px 0 !important;
