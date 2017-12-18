@@ -42,10 +42,14 @@ export default class DemoDynamicList extends React.Component<any, DemoDynamicLis
 			items: this._dynamicItems,
 			selectToggle: false
 		};
+
+		debug('created dynamicList with state: %O', this.state);
 	}
 
 	@autobind
 	private handleDelete(title: string) {
+		debug('handleDelete => title: %s', title);
+
 		const items = {...this.state.items};
 		delete items[title];
 		this.setState({
@@ -55,11 +59,13 @@ export default class DemoDynamicList extends React.Component<any, DemoDynamicLis
 
 	@autobind
 	private handleErrorReset() {
+		debug('handleErrorReset');
 		this.setState({dynamicListError: ''});
 	}
 
 	@autobind
 	private handleNew(title: string, widget: any) {
+		debug('handleNew => title: %s, widget: %O', title, widget);
 		if (widget == null) {
 			widget = {
 				left: <Option optionType={OptionType.star} />,
@@ -74,6 +80,7 @@ export default class DemoDynamicList extends React.Component<any, DemoDynamicLis
 
 	@autobind
 	private handleUpdate(previous: string, title: string) {
+		debug('handleUpdate => previous: %s, title: %s', previous, title);
 		const widget = this.state.items[previous];
 		this.setState({
 			items: _.omit({...this.state.items, [title]: widget}, previous)
@@ -82,6 +89,7 @@ export default class DemoDynamicList extends React.Component<any, DemoDynamicLis
 
 	@autobind
 	private showErrorMessage() {
+		debug('showErrorMessage');
 		this.setState({
 			dynamicListError: 'Dynamic List Error Message Test'
 		});

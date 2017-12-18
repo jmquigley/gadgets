@@ -257,6 +257,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		this._pagerID = this._fillerKeys.at(this._fillerIdx++);
 		this._classes.add('ui-dynamiclist');
 
+		for (const [title, widgets] of Object.entries(this.props.items)) {
+			this._listItems[title] = this.createListItem(title, widgets);
+		}
+
 		this.state = {
 			errorMessage: this.props.errorMessage,
 			initialToggle: true,
@@ -267,7 +271,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			showError: this.props.errorMessage !== '',
 			showNew: false,
 			sortOrder: this.props.sortOrder,
-			totalItems: Object.keys(this.props.items).length
+			totalItems: Object.keys(this._listItems).length
 		};
 
 		this._emptyListItem = (
@@ -591,7 +595,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		newState['totalItems'] = 0;
 		for (const [title, widgets] of Object.entries(nextProps.items)) {
 			this._listItems[title] = this.createListItem(title, widgets);
-			newState['totalItems']++;
+			newState['totalitems']++;
 		}
 
 		this.setState(newState);
@@ -684,7 +688,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 							}
 							title={this.buildTitle()}
 						>
-							<List alternating noselect={this.props.noselect}>
+							<List
+								alternating
+								noselect={this.props.noselect}
+							>
 								{this.buildListItems()}
 							</List>
 						</AccordionItem>
