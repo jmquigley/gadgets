@@ -91,7 +91,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   obj="AccordionItem"
   onBlur={[Function]}
   onChange={[Function]}
-  onClick={[Function]}
+  onClick={[MockFunction]}
   onDoubleClick={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -584,6 +584,10 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   background-color: #004358 !important;
 }
 
+.c5 {
+  font-size: 1rem;
+}
+
 <AccordionItem
   bottom=""
   className=""
@@ -608,7 +612,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   obj="AccordionItem"
   onBlur={[Function]}
   onChange={[Function]}
-  onClick={[Function]}
+  onClick={[MockFunction]}
   onDoubleClick={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -1028,13 +1032,18 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
             </styled.li>
           </ThemeProvider>
         </Item>
-        <div
+        <styled.div
           className="ui-accordion-content"
+          sizing="normal"
         >
-          <div>
-            child content
+          <div
+            className="ui-accordion-content c5"
+          >
+            <div>
+              child content
+            </div>
           </div>
-        </div>
+        </styled.div>
       </ul>
     </styled.ul>
   </ThemeProvider>
