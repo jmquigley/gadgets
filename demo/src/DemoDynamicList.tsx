@@ -120,6 +120,7 @@ export default class DemoDynamicList extends React.Component<any, DemoDynamicLis
 
 	@autobind
 	private handleToggleSelection(toggle: boolean, title: string) {
+
 		debug('handleToggleSelection => %s to %o, %O', title, toggle, this.state);
 		this.setState({
 			selectToggle: toggle

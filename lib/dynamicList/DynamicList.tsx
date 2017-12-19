@@ -595,7 +595,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		newState['totalItems'] = 0;
 		for (const [title, widgets] of Object.entries(nextProps.items)) {
 			this._listItems[title] = this.createListItem(title, widgets);
-			newState['totalitems']++;
+			newState['totalItems']++;
 		}
 
 		this.setState(newState);

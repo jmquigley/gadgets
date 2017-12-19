@@ -220,9 +220,13 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		if (props.children && nextProps.children) {
 			if (props.sizing !== nextProps.sizing) {
 				// debug('Children prop sizing change');
-				return React.Children.map(nextProps.children, (child: any) => (
-					React.cloneElement(child, {sizing: nextProps.sizing})
-				));
+				return React.Children.map(nextProps.children, (child: any) => {
+					if (child.props && 'sizing' in child.props) {
+						return React.cloneElement(child, {sizing: nextProps.sizing});
+					} else {
+						return child;
+					}
+				});
 			}
 		}
 

@@ -38,6 +38,8 @@
 
 'use strict';
 
+// const debug = require('debug')('Accordion');
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {
@@ -48,9 +50,7 @@ import {
 } from '../shared';
 import styled, {withProps} from '../shared/themed-components';
 
-export interface AccordionProps extends BaseProps {
-	children?: React.ReactNode;
-}
+export type AccordionProps = BaseProps;
 
 export function getDefaultAccordionProps(): AccordionProps {
 	return cloneDeep(Object.assign({},
@@ -74,19 +74,13 @@ export const AccordionView: any =  withProps<AccordionProps, HTMLUListElement>(s
 export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
-	private _children: any;
 
 	constructor(props: AccordionProps) {
 		super(props, Accordion.defaultProps.style);
 
 		this._classes.add('ui-accordion');
-		this._children = this.props.children;
 
 		this.componentWillUpdate(props);
-	}
-
-	public componentWillReceiveProps(nextProps: AccordionProps) {
-		this._children = this.resizeChildren(this.props, nextProps);
 	}
 
 	public render() {
@@ -96,7 +90,7 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 				sizing={this.props.sizing}
 				style={this.inlineStyles}
 			>
-				{this._children}
+				{this.props.children}
 			</AccordionView>
 		);
 	}

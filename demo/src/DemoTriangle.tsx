@@ -24,7 +24,7 @@ export default class DemoTriangle extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="triangleExample" title="triangle">
+			<Container id="triangleExample" title="Triangle">
 
 				<h3>Default</h3>
 				<Triangle sizing={this.props['sizing']} direction={Direction.up} />

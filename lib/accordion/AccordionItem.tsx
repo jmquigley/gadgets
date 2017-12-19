@@ -56,14 +56,19 @@
 
 'use strict';
 
-const debug = require('debug')('AccordionItem');
+// const debug = require('debug')('AccordionItem');
 
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent, Color, getTheme} from '../shared';
+import {
+	BaseComponent,
+	Color,
+	fontStyle,
+	getTheme
+} from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
 
 export interface AccordionItemProps extends ItemProps {
@@ -103,6 +108,10 @@ export const AccordionItemView: any = withProps<AccordionItemProps, HTMLUListEle
 	}
 `;
 
+export const AccordionContentView: any = withProps<AccordionItemProps, HTMLDivElement>(styled.div)`
+	${props => props.sizing && fontStyle[props.sizing]};
+`;
+
 export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionItemState> {
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
@@ -116,7 +125,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 			toggle: (props.nocollapse) ? true : props.initialToggle
 		};
 
-		this.componentWillUpdate(this.props);
+		this.componentWillUpdate(this.props, this.state);
 	}
 
 	@autobind
@@ -136,19 +145,18 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 	}
 
-	public componentDidCatch(error, info) {
-		debug('Error: %O, Info: %O', error, info);
-	}
-
 	public render() {
 		const theme = getTheme();
 		let content = null;
 
 		if ((this.props.children != null) && (this.state.toggle)) {
 			content = (
-				<div className="ui-accordion-content">
+				<AccordionContentView
+					className="ui-accordion-content"
+					sizing={this.props.sizing}
+				>
 					{this.props.children}
-				</div>
+				</AccordionContentView>
 			);
 		}
 
