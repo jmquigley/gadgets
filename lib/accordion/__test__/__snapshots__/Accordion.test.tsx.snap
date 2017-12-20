@@ -2,11 +2,15 @@
 
 exports[`Test making the accordion control invisible 1`] = `
 <styled.ul
-  className="ui-accordion test-class"
+  className="ui-accordion"
   sizing="normal"
   style={Object {}}
 >
-  <li>
+  <li
+    disabled={false}
+    key=".0"
+    sizing="normal"
+  >
     some list item
   </li>
 </styled.ul>
@@ -47,11 +51,15 @@ Object {
 
 exports[`Test the creation of a Accordion control container 1`] = `
 <styled.ul
-  className="ui-accordion test-class"
+  className="ui-accordion"
   sizing="normal"
   style={Object {}}
 >
-  <li>
+  <li
+    disabled={false}
+    key=".0"
+    sizing="normal"
+  >
     some list item
   </li>
 </styled.ul>
@@ -59,11 +67,15 @@ exports[`Test the creation of a Accordion control container 1`] = `
 
 exports[`Test the disabling of the Accordion control container 1`] = `
 <styled.ul
-  className="ui-accordion test-class"
+  className="ui-accordion"
   sizing="normal"
   style={Object {}}
 >
-  <li>
+  <li
+    disabled={true}
+    key=".0"
+    sizing="normal"
+  >
     some list item
   </li>
 </styled.ul>

@@ -25,7 +25,7 @@ export default class DemoAccordion extends React.Component<any, undefined> {
 	public render() {
 		return (
 			<Container id="accordionExample" title="Accordion">
-				<Accordion sizing={this.props['sizing']}>
+				<Accordion sizing={this.props['sizing']} disabled={this.props['disabled']}>
 					<AccordionItem
 						leftButton={<Button iconName="bars" />}
 						noedit

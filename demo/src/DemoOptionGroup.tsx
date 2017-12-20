@@ -25,8 +25,10 @@ export default class DemoOptionGroup extends React.Component<any, undefined> {
 	public render() {
 		return (
 			<Container id="optionGroupExample" title="OptionGroup">
+
 				<OptionGroup
 					default="option1"
+					disabled={this.props['disabled']}
 					onSelect={this.handleSelect}
 					options={[
 						'option1',
@@ -37,6 +39,7 @@ export default class DemoOptionGroup extends React.Component<any, undefined> {
 					sizing={this.props['sizing']}
 					title="test options"
 				/>
+
 			</Container>
 		);
 	}

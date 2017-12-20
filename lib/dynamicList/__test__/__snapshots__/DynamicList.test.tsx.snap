@@ -4932,12 +4932,12 @@ exports[`Test setting an error message 1`] = `
           xcss={null}
         >
           <styled.ul
-            className="ui-accordion ui-dynamiclist"
+            className="ui-accordion"
             sizing="normal"
             style={Object {}}
           >
             <ul
-              className="ui-accordion ui-dynamiclist sc-bdVaJa iKGfFL"
+              className="ui-accordion sc-bdVaJa iKGfFL"
               style={Object {}}
             >
               <AccordionItem
@@ -4954,6 +4954,7 @@ exports[`Test setting an error message 1`] = `
                 hiddenRightButton={false}
                 id=""
                 initialToggle={true}
+                key=".0"
                 layout={5}
                 left=""
                 leftButton={null}
@@ -22816,6 +22817,7 @@ exports[`Test setting an error message 1`] = `
                 height=""
                 iconName="bomb"
                 id=""
+                key=".1"
                 left=""
                 location="none"
                 message="Are you sure you want to delete \\"\\"?"

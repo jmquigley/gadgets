@@ -74,13 +74,24 @@ export const AccordionView: any =  withProps<AccordionProps, HTMLUListElement>(s
 export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
+	private _children;
 
 	constructor(props: AccordionProps) {
 		super(props, Accordion.defaultProps.style);
 
 		this._classes.add('ui-accordion');
+		this._children = this.props.children;
 
 		this.componentWillUpdate(props);
+	}
+
+	public componentWillUpdate(nextProps: AccordionProps) {
+		this._children = React.Children.map(nextProps.children, (child: any) => {
+			return React.cloneElement(child, {
+				sizing: nextProps.sizing,
+				disabled: nextProps.disabled
+			});
+		});
 	}
 
 	public render() {
@@ -90,7 +101,7 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 				sizing={this.props.sizing}
 				style={this.inlineStyles}
 			>
-				{this.props.children}
+				{this._children}
 			</AccordionView>
 		);
 	}

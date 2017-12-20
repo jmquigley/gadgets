@@ -12,8 +12,7 @@ const {
 	ButtonText,
 	Container,
 	Icon,
-	Justify,
-	Sizing
+	Justify
 } = require('../../dist/bundle');
 
 export default class DemoButtons extends React.Component<any, undefined> {
@@ -27,18 +26,18 @@ export default class DemoButtons extends React.Component<any, undefined> {
 		return (
 			<tr className="tblIcons">
 				<th>Icon</th>
-				<td><Icon iconName="handshake-o" sizing={Sizing.xxsmall}/></td>
-				<td><Icon iconName="handshake-o" sizing={Sizing.xsmall}/></td>
-				<td><Icon iconName="handshake-o" sizing={Sizing.small}/></td>
-				<td><Icon iconName="handshake-o" sizing={Sizing.normal}/></td>
-				<td><Icon iconName="handshake-o" sizing={Sizing.large}/></td>
-				<td><Icon iconName="handshake-o" sizing={Sizing.xlarge}/></td>
-				<td><Icon iconName="handshake-o" sizing={Sizing.xxlarge}/></td>
-				<td><Icon iconName="handshake-o" sizing={Sizing.normal} disabled={true}/></td>
 				<td>
 					<Icon
+						disabled={this.props['disabled']}
 						iconName="handshake-o"
-						sizing={Sizing.normal}
+						sizing={this.props['sizing']}
+					/>
+				</td>
+				<td>
+					<Icon
+						disabled={this.props['disabled']}
+						iconName="handshake-o"
+						sizing={this.props['sizing']}
 						style={{color: 'red', backgroundColor: 'blue'}}
 					/>
 				</td>
@@ -50,15 +49,15 @@ export default class DemoButtons extends React.Component<any, undefined> {
 		return (
 			<tr className="tblIcons">
 				<th>Icon Images</th>
-				<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xxsmall}/></td>
-				<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xsmall}/></td>
-				<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.small}/></td>
-				<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.normal}/></td>
-				<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.large}/></td>
-				<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xlarge}/></td>
-				<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.xxlarge}/></td>
-				<td><Icon imageFile="./test-icon-image.png" sizing={Sizing.normal} disabled={true}/></td>
-				<td><span style={{display: 'table', margin: '0 auto'}}>N/A</span></td>
+				<td>
+					<Icon
+						disabled={this.props['disabled']}
+						imageFile="./test-icon-image.png"
+						sizing={this.props['sizing']}
+					/>
+				</td>
+				<td>
+					<span style={{display: 'table', margin: '0 auto'}}>N/A</span></td>
 			</tr>
 		);
 	}
@@ -67,18 +66,18 @@ export default class DemoButtons extends React.Component<any, undefined> {
 		return(
 			<tr>
 				<th>Button</th>
-				<td><Button iconName="motorcycle" sizing={Sizing.xxsmall}/></td>
-				<td><Button iconName="motorcycle" sizing={Sizing.xsmall}/></td>
-				<td><Button iconName="motorcycle" sizing={Sizing.small}/></td>
-				<td><Button id="btn-normal" iconName="motorcycle" sizing={Sizing.normal} tooltip="normal"/></td>
-				<td><Button iconName="motorcycle" sizing={Sizing.large}/></td>
-				<td><Button iconName="motorcycle" sizing={Sizing.xlarge}/></td>
-				<td><Button iconName="motorcycle" sizing={Sizing.xxlarge}/></td>
-				<td><Button iconName="motorcycle" sizing={Sizing.normal} disabled={true}/></td>
 				<td>
 					<Button
+						disabled={this.props['disabled']}
 						iconName="motorcycle"
-						sizing={Sizing.normal}
+						sizing={this.props['sizing']}
+					/>
+				</td>
+				<td>
+					<Button
+						disabled={this.props['disabled']}
+						iconName="motorcycle"
+						sizing={this.props['sizing']}
 						style={{color: 'yellow', backgroundColor: 'green'}}
 					/>
 				</td>
@@ -90,18 +89,18 @@ export default class DemoButtons extends React.Component<any, undefined> {
 		return(
 			<tr>
 				<th>ButtonCircle</th>
-				<td><ButtonCircle iconName="times" sizing={Sizing.xxsmall}/></td>
-				<td><ButtonCircle iconName="times" sizing={Sizing.xsmall}/></td>
-				<td><ButtonCircle iconName="times" sizing={Sizing.small}/></td>
-				<td><ButtonCircle iconName="times" sizing={Sizing.normal}/></td>
-				<td><ButtonCircle iconName="times" sizing={Sizing.large}/></td>
-				<td><ButtonCircle iconName="times" sizing={Sizing.xlarge}/></td>
-				<td><ButtonCircle iconName="times" sizing={Sizing.xxlarge}/></td>
-				<td><ButtonCircle iconName="times" sizing={Sizing.normal} disabled={true}/></td>
 				<td>
 					<ButtonCircle
+						disabled={this.props['disabled']}
 						iconName="times"
-						sizing={Sizing.normal}
+						sizing={this.props['sizing']}
+					/>
+				</td>
+				<td>
+					<ButtonCircle
+						disabled={this.props['disabled']}
+						iconName="times"
+						sizing={this.props['sizing']}
 						style={{color: 'green', backgroundColor: 'orange', borderColor: 'green'}}
 					/>
 				</td>
@@ -113,18 +112,20 @@ export default class DemoButtons extends React.Component<any, undefined> {
 		return(
 			<tr>
 				<th>ButtonDialog</th>
-				<td><ButtonDialog iconName="bars" sizing={Sizing.xxsmall}>dialog</ButtonDialog></td>
-				<td><ButtonDialog iconName="bars" sizing={Sizing.xsmall}>dialog</ButtonDialog></td>
-				<td><ButtonDialog iconName="bars" sizing={Sizing.small}>dialog</ButtonDialog></td>
-				<td><ButtonDialog iconName="bars" sizing={Sizing.normal}>dialog</ButtonDialog></td>
-				<td><ButtonDialog iconName="bars" sizing={Sizing.large}>dialog</ButtonDialog></td>
-				<td><ButtonDialog iconName="bars" sizing={Sizing.xlarge}>dialog</ButtonDialog></td>
-				<td><ButtonDialog iconName="bars" sizing={Sizing.xxlarge}>dialog</ButtonDialog></td>
-				<td><ButtonDialog iconName="bars" sizing={Sizing.normal} disabled={true}>dialog</ButtonDialog></td>
 				<td>
 					<ButtonDialog
+						disabled={this.props['disabled']}
 						iconName="bars"
-						sizing={Sizing.normal}
+						sizing={this.props['sizing']}
+					>
+						dialog
+					</ButtonDialog>
+				</td>
+				<td>
+					<ButtonDialog
+						disabled={this.props['disabled']}
+						iconName="bars"
+						sizing={this.props['sizing']}
 						style={{color: 'white', backgroundColor: 'teal'}}
 					>
 						dialog
@@ -140,86 +141,24 @@ export default class DemoButtons extends React.Component<any, undefined> {
 				<th>ButtonToggle</th>
 				<td>
 					<ButtonToggle
-						iconNameOn="star"
+						disabled={this.props['disabled']}
 						iconNameOff="star-o"
-						fgColorOn="#ffe11a"
+						iconNameOn="star"
 						fgColorOff="#004358"
-						sizing={Sizing.xxsmall}
+						fgColorOn="#ffe11a"
+						sizing={this.props['sizing']}
 					/>
 				</td>
 				<td>
 					<ButtonToggle
-						iconNameOn="star"
-						iconNameOff="star-o"
-						fgColorOn="#ffe11a"
-						fgColorOff="#004358"
-						sizing={Sizing.xsmall}
-					/>
-				</td>
-				<td>
-					<ButtonToggle
-						iconNameOn="star"
-						iconNameOff="star-o"
-						fgColorOn="#ffe11a"
-						fgColorOff="#004358"
-						sizing={Sizing.small}
-					/>
-				</td>
-				<td>
-					<ButtonToggle
-						iconNameOn="star"
-						iconNameOff="star-o"
-						fgColorOn="#ffe11a"
-						fgColorOff="#004358"
-						sizing={Sizing.normal}
-					/>
-				</td>
-				<td>
-					<ButtonToggle
-						iconNameOn="star"
-						iconNameOff="star-o"
-						fgColorOn="#ffe11a"
-						fgColorOff="#004358"
-						sizing={Sizing.large}
-					/>
-				</td>
-				<td>
-					<ButtonToggle
-						iconNameOn="star"
-						iconNameOff="star-o"
-						fgColorOn="#ffe11a"
-						fgColorOff="#004358"
-						sizing={Sizing.xlarge}
-					/>
-				</td>
-				<td>
-					<ButtonToggle
-						iconNameOn="star"
-						iconNameOff="star-o"
-						fgColorOn="#ffe11a"
-						fgColorOff="#004358"
-						sizing={Sizing.xxlarge}
-					/>
-				</td>
-				<td>
-					<ButtonToggle
-						iconNameOn="star"
-						iconNameOff="star-o"
-						fgColorOn="#ffe11a"
-						fgColorOff="#004358"
-						sizing={Sizing.normal}
-						disabled={true}
-					/>
-				</td>
-				<td>
-					<ButtonToggle
-						iconNameOn="star"
-						iconNameOff="star-o"
+						bgColorOff="red"
+						bgColorOn="black"
+						disabled={this.props['disabled']}
 						fgColorOn="red"
 						fgColorOff="black"
-						bgColorOn="black"
-						bgColorOff="red"
-						sizing={Sizing.normal}
+						iconNameOff="star-o"
+						iconNameOn="star"
+						sizing={this.props['sizing']}
 					/>
 				</td>
 			</tr>
@@ -230,20 +169,21 @@ export default class DemoButtons extends React.Component<any, undefined> {
 		return(
 			<tr>
 				<th>ButtonText<br/>(Right)</th>
-				<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xxsmall}/></td>
-				<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xsmall}/></td>
-				<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.small}/></td>
-				<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal}/></td>
-				<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.large}/></td>
-				<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xlarge}/></td>
-				<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
-				<td><ButtonText text="Text" iconName="paper-plane" sizing={Sizing.normal} disabled={true}/></td>
 				<td>
 					<ButtonText
-						text="Text"
+						disabled={this.props['disabled']}
 						iconName="paper-plane"
-						sizing={Sizing.normal}
+						sizing={this.props['sizing']}
+						text="Text"
+					/>
+				</td>
+				<td>
+					<ButtonText
+						disabled={this.props['disabled']}
+						iconName="paper-plane"
+						sizing={this.props['sizing']}
 						style={{ color: 'white', backgroundColor: 'blue'}}
+						text="Text"
 					/>
 				</td>
 			</tr>
@@ -254,29 +194,23 @@ export default class DemoButtons extends React.Component<any, undefined> {
 		return(
 			<tr>
 				<th>ButtonText<br/>(Left)</th>
-				<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xxsmall}/></td>
-				<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xsmall}/></td>
-				<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.small}/></td>
-				<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.normal}/></td>
-				<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.large}/></td>
-				<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xlarge}/></td>
-				<td><ButtonText text="Text" justify={Justify.left} iconName="paper-plane" sizing={Sizing.xxlarge}/></td>
 				<td>
 					<ButtonText
-						disabled={true}
+						disabled={this.props['disabled']}
 						iconName="paper-plane"
 						justify={Justify.left}
-						sizing={Sizing.normal}
+						sizing={this.props['sizing']}
 						text="Text"
 					/>
 				</td>
 				<td>
 					<ButtonText
-						text="Text"
-						justify={Justify.left}
+						disabled={this.props['disabled']}
 						iconName="paper-plane"
-						sizing={Sizing.normal}
+						justify={Justify.left}
+						sizing={this.props['sizing']}
 						style={{color: 'white', backgroundColor: 'red'}}
+						text="Text"
 					/>
 				</td>
 			</tr>
@@ -287,19 +221,20 @@ export default class DemoButtons extends React.Component<any, undefined> {
 		return(
 			<tr>
 				<th>ButtonText<br/>(Center)</th>
-				<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xxsmall}/></td>
-				<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xsmall}/></td>
-				<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.small}/></td>
-				<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal}/></td>
-				<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.large}/></td>
-				<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xlarge}/></td>
-				<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.xxlarge}/></td>
-				<td><ButtonText text="Text" justify={Justify.center} sizing={Sizing.normal} disabled={true}/></td>
 				<td>
 					<ButtonText
+						disabled={this.props['disabled']}
 						text="Text"
 						justify={Justify.center}
-						sizing={Sizing.normal}
+						sizing={this.props['sizing']}
+					/>
+				</td>
+				<td>
+					<ButtonText
+						disabled={this.props['disabled']}
+						text="Text"
+						justify={Justify.center}
+						sizing={this.props['sizing']}
 						style={{color: 'white', backgroundColor: 'red'}}
 					/>
 				</td>
@@ -314,15 +249,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 					<thead>
 						<tr>
 							<th />
-							<th>xxsmall</th>
-							<th>xsmall</th>
-							<th>small</th>
-							<th>normal<br/>medium</th>
-							<th>large</th>
-							<th>xlarge</th>
-							<th>xxlarge</th>
-							<th>disabled</th>
-							<th>custom</th>
+							<th>Default</th>
+							<th>Custom</th>
 						</tr>
 					</thead>
 					<tbody>

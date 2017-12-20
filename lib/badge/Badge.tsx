@@ -39,6 +39,8 @@
 
 'use strict';
 
+// const debug = require('debug')('Badge');
+
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -46,8 +48,10 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	disabled,
 	fontStyle,
 	getTheme,
+	invisible,
 	locationStyle,
 	Sizing
 } from '../shared';
@@ -80,21 +84,23 @@ export function getDefaultBadgeProps(): BadgeProps {
 
 export const BadgeView: any = withProps<BadgeProps, HTMLDivElement>(styled.div)`
 	border-radius: 96px;
+	cursor: default;
 	font-weight: bold;
+	padding: 0 7px;
 	position: absolute;
 	text-align: center;
 	user-select: none;
-	cursor: default;
-	padding: 0 7px;
 
 	${props => props.location && locationStyle[props.location]};
 	${props => props.sizing && fontStyle[props.sizing]};
+	${props => disabled(props)}
+	${props => invisible(props)}
 `;
 
 export const BadgeContainerView: any = withProps<BadgeProps, HTMLDivElement>(styled.div)`
+	box-sizing: border-box;
 	display: block;
 	position: relative;
-	box-sizing: border-box;
 `;
 
 export class Badge extends BaseComponent<BadgeProps, undefined> {
@@ -109,8 +115,13 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 	}
 
 	@autobind
-	private handleClick() {
-		this.props.onClick(this.props.counter);
+	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
+		e.preventDefault();
+		if (!this.props.disabled
+			&& this.props.visible
+			&& this.props.onClick != null) {
+			this.props.onClick(this.props.counter);
+		}
 	}
 
 	public render() {
@@ -122,10 +133,12 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 			badge = (
 				<BadgeView
 					className={this.classes}
+					disabled={this.props.disabled}
 					location={this.props.location}
 					onClick={this.handleClick}
 					sizing={this.props.sizing}
 					style={this.inlineStyles}
+					visible={this.props.visible}
 				>
 					{this.props.counter}
 				</BadgeView>

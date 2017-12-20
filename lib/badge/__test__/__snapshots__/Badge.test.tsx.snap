@@ -26,6 +26,7 @@ exports[`Test creation of a Badge control 1`] = `
     Test Component
     <styled.div
       className="ui-badge test-class"
+      disabled={false}
       location="topRight"
       onClick={[Function]}
       sizing="normal"
@@ -36,6 +37,7 @@ exports[`Test creation of a Badge control 1`] = `
           "color": "red",
         }
       }
+      visible={true}
     >
       1
     </styled.div>
@@ -68,6 +70,7 @@ exports[`Test making the Badge control invisible 1`] = `
   >
     <styled.div
       className="ui-badge"
+      disabled={false}
       location="topRight"
       onClick={[Function]}
       sizing="normal"
@@ -78,6 +81,7 @@ exports[`Test making the Badge control invisible 1`] = `
           "color": "red",
         }
       }
+      visible={false}
     >
       0
     </styled.div>
@@ -150,6 +154,7 @@ exports[`Test the disabling of a Badge control 1`] = `
   >
     <styled.div
       className="ui-badge"
+      disabled={true}
       location="topRight"
       onClick={[Function]}
       sizing="normal"
@@ -160,6 +165,7 @@ exports[`Test the disabling of a Badge control 1`] = `
           "color": "red",
         }
       }
+      visible={true}
     >
       0
     </styled.div>

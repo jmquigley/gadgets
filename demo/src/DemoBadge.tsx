@@ -72,7 +72,9 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 					<div className="box">
 						<p>top right (suppress)</p>
 						<Badge
+							disabled={this.props['disabled']}
 							counter={this.state.counter1}
+							sizing={this.props['sizing']}
 							suppress
 						>
 							<div className="boxButtons">
@@ -84,9 +86,11 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 					<div className="box">
 						<p>top left<br/>&nbsp;</p>
 						<Badge
+							disabled={this.props['disabled']}
 							counter={this.state.counter2}
 							location={Location.topLeft}
 							onClick={this.handleDebugCounter}
+							sizing={this.props['sizing']}
 						>
 							<div className="boxButtons">
 								<Button onClick={this.handleCounter2} />
@@ -97,8 +101,10 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 					<div className="box">
 						<p>bottom right</p>
 						<Badge
+							disabled={this.props['disabled']}
 							counter={this.state.counter3}
 							location={Location.bottomRight}
+							sizing={this.props['sizing']}
 							style={{color: 'green'}}
 						>
 							<div className="boxButtons">
@@ -110,8 +116,10 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 					<div className="box">
 						<p>bottom left</p>
 						<Badge
+							disabled={this.props['disabled']}
 							counter={this.state.counter4}
 							location={Location.bottomLeft}
+							sizing={this.props['sizing']}
 							style={{color: 'magenta'}}
 						>
 							<div className="boxButtons">
@@ -123,8 +131,10 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 					<div className="box">
 						<p>bottom (negative)</p>
 						<Badge
+							disabled={this.props['disabled']}
 							counter={this.state.counter5}
 							location={Location.bottom}
+							sizing={this.props['sizing']}
 							style={{color: 'blue'}}
 						>
 							<div className="boxButtons">

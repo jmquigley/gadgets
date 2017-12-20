@@ -31,6 +31,7 @@ export default class DemoOption extends React.Component<any, undefined> {
 		for (const key of ev.getNames(OptionType)) {
 			options.push(
 				<Option
+					disabled={this.props['disabled']}
 					onClick={this.handleClick}
 					sizing={this.props['sizing']}
 					type={OptionType[key]}
@@ -39,6 +40,7 @@ export default class DemoOption extends React.Component<any, undefined> {
 
 			options.push(
 				<Option
+					disabled={this.props['disabled']}
 					initialToggle={true}
 					onClick={this.handleClick}
 					optionType={OptionType[key]}
@@ -56,17 +58,7 @@ export default class DemoOption extends React.Component<any, undefined> {
 	public render() {
 		return (
 			<Container id="optionExample" title="Option">
-
 				{this.buildOptions()}
-
-				<Option
-					disabled
-					optionType={OptionType.square}
-					sizing={this.props['sizing']}
-					text="disabled"
-				/>
-				<br/>
-
 			</Container>
 		);
 	}

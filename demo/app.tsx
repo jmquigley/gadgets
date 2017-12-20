@@ -38,10 +38,12 @@ const debug = require('debug')('app');
 
 const {
 	Dropdown,
+	Option,
 	Sizing
 } = require('../dist/bundle');
 
 interface AppState {
+	disabled: boolean;
 	sizing: any;
 }
 
@@ -50,16 +52,23 @@ class App extends React.Component<any, AppState> {
 	constructor(props: any) {
 		super(props);
 		this.state = {
+			disabled: false,
 			sizing: Sizing.normal
 		};
 
 		/* (window as any).state = this.state;*/
 	}
 
-	@autobind handleSizingChange(value: any) {
+	@autobind
+	private handleSizingChange(value: any) {
 		debug('Setting app size to: %o', value);
-		this.setState({
-			sizing: value
+		this.setState({sizing: value});
+	}
+
+	@autobind
+	private handleToggleDisable(value: boolean) {
+		this.setState({disabled: !this.state.disabled}, () => {
+			debug('Setting disable flag to %o', value);
 		});
 	}
 
@@ -85,31 +94,43 @@ class App extends React.Component<any, AppState> {
 					]}
 					onSelect={this.handleSizingChange}
 				/>
+				<br/>
 
-				<DemoAccordion sizing={this.state.sizing} />
-				<DemoBadge sizing={this.state.sizing} />
+				<p>
+				Use this checkbox to disable all controls
+				</p>
+
+				<Option
+					initialToggle={false}
+					onClick={this.handleToggleDisable}
+					text="disabled"
+				/>
+				<br/>
+
+				<DemoAccordion sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoBadge sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoBrowser />
-				<DemoButtons sizing={this.state.sizing} />
-				<DemoDialogBox sizing={this.state.sizing} />
-				<DemoDropdown sizing={this.state.sizing} />
-				<DemoDynamicList />
-				<DemoEditor />
-				<DemoLabels sizing={this.state.sizing} />
-				<DemoListItem sizing={this.state.sizing} />
-				<DemoOption sizing={this.state.sizing} />
-				<DemoOptionGroup sizing={this.state.sizing} />
-				<DemoPager sizing={this.state.sizing} />
-				<DemoSelect sizing={this.state.sizing} />
-				<DemoSlider sizing={this.state.sizing} />
-				<DemoSwitch sizing={this.state.sizing} />
-				<DemoTabs sizing={this.state.sizing} />
-				<DemoTagList sizing={this.state.sizing} />
-				<DemoTextField sizing={this.state.sizing} />
-				<DemoTitle sizing={this.state.sizing} />
-				<DemoToast sizing={this.state.sizing} />
-				<DemoToolbar sizing={this.state.sizing} />
-				<DemoTooltip sizing={this.state.sizing} />
-				<DemoTriangle sizing={this.state.sizing} />
+				<DemoButtons sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoDialogBox sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoDropdown sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoDynamicList disabled={this.state.disabled} />
+				<DemoEditor disabled={this.state.disabled} />
+				<DemoLabels sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoListItem sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoOption sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoOptionGroup sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoPager sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoSelect sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoSlider sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoSwitch sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoTabs sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoTagList sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoTextField sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoTitle sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoToast sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoToolbar sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoTooltip sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoTriangle sizing={this.state.sizing} disabled={this.state.disabled} />
 
 			</div>
 		);

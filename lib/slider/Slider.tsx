@@ -62,7 +62,7 @@
 // const debug = require('debug')('Slider');
 
 import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
+import {cloneDeep, debounce} from 'lodash';
 import * as React from 'react';
 import {Keys} from 'util.keys';
 import {closestNumber, nilEvent} from 'util.toolbox';
@@ -150,11 +150,13 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 	public static readonly defaultProps: SliderProps = getDefaultSliderProps();
 
-	private _tickKeys: Keys;
 	private _borderSize: number = 1;
 	private _box: any;
 	private _container: any;
+	private _mouseDelay: number = 5;
+	private _mouseMove: any = null;
 	private _sliderSize: any;
+	private _tickKeys: Keys;
 	private _ticks: number[] = [];
 	private _width: number = 0;
 
@@ -169,6 +171,8 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		};
 
 		this._sliderSize = this.fontSize();
+
+		this._mouseMove = debounce(this.handleMouseMove, this._mouseDelay);
 
 		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props);
@@ -206,7 +210,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	@autobind
 	private handleMouseDown(e: any) {
 		if (!this.props.disabled) {
-			document.addEventListener('mousemove', this.handleMouseMove);
+			document.addEventListener('mousemove', this._mouseMove);
 			document.addEventListener('mouseup', this.handleMouseUp);
 			e.preventDefault();
 		}
@@ -238,7 +242,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		if (!this.props.disabled) {
 			this.props.onSelect(Math.round(this.state.x / this.props.scale));
 
-			document.removeEventListener('mousemove', this.handleMouseMove);
+			document.removeEventListener('mousemove', this._mouseMove);
 			document.removeEventListener('mouseup', this.handleMouseUp);
 
 			e.preventDefault();
