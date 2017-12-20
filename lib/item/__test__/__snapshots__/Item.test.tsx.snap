@@ -6,6 +6,7 @@ Object {
   "children": null,
   "className": "",
   "contentEditable": false,
+  "controlled": true,
   "direction": "right",
   "disabled": false,
   "errorMessage": "",
@@ -86,6 +87,7 @@ exports[`Test the creation of a Item control 1`] = `
       bottom=""
       className=""
       contentEditable={false}
+      controlled={true}
       direction="right"
       disabled={false}
       errorMessage=""

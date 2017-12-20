@@ -5,6 +5,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   bottom=""
   className="test-class"
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={false}
   errorMessage=""
@@ -99,6 +100,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
           bottom=""
           className=""
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -148,6 +150,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
               bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
+              controlled={true}
               direction="right"
               disabled={false}
               errorMessage=""
@@ -199,6 +202,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={true}
   errorMessage=""
@@ -265,6 +269,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
           bottom=""
           className=""
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -314,6 +319,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
               bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
+              controlled={true}
               direction="right"
               disabled={false}
               errorMessage=""
@@ -373,6 +379,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={false}
   errorMessage=""
@@ -439,6 +446,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
           bottom=""
           className=""
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -488,6 +496,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
               bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
+              controlled={true}
               direction="right"
               disabled={false}
               errorMessage=""
@@ -548,6 +557,7 @@ Object {
   "children": null,
   "className": "",
   "contentEditable": false,
+  "controlled": true,
   "direction": "right",
   "disabled": false,
   "errorMessage": "",

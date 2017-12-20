@@ -66,6 +66,7 @@ exports[`Disable the Dropdown control 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   defaultVal="idstr2"
   direction="right"
   disabled={true}
@@ -256,6 +257,7 @@ Object {
   "children": null,
   "className": "",
   "contentEditable": false,
+  "controlled": true,
   "direction": "right",
   "disabled": false,
   "errorMessage": "",
@@ -290,6 +292,7 @@ exports[`Test the Dropdown click event 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   defaultVal="idstr1"
   direction="right"
   disabled={false}

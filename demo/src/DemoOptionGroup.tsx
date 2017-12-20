@@ -18,8 +18,8 @@ export default class DemoOptionGroup extends React.Component<any, undefined> {
 	}
 
 	@autobind
-	private handleSelect(text: string, toggle: boolean) {
-		debug('option group item: %o, %o', text, toggle);
+	private handleSelect(text: string) {
+		debug('option group item: %o', text);
 	}
 
 	public render() {

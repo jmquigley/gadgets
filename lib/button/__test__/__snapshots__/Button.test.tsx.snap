@@ -5,6 +5,7 @@ exports[`Test Button click event 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={false}
   errorMessage=""
@@ -70,6 +71,7 @@ exports[`Test Button click event 1`] = `
           bottom=""
           className=""
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -119,6 +121,7 @@ exports[`Test Button click event 1`] = `
               bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
+              controlled={true}
               direction="right"
               disabled={false}
               errorMessage=""
@@ -197,6 +200,7 @@ exports[`Test creation of a Button control 1`] = `
       bottom=""
       className=""
       contentEditable={false}
+      controlled={true}
       direction="right"
       disabled={false}
       errorMessage=""
@@ -266,6 +270,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
       bottom=""
       className=""
       contentEditable={false}
+      controlled={true}
       direction="right"
       disabled={false}
       errorMessage=""
@@ -301,6 +306,7 @@ exports[`Test disabling of a Button 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={true}
   errorMessage=""
@@ -366,6 +372,7 @@ exports[`Test disabling of a Button 1`] = `
           bottom=""
           className=""
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -415,6 +422,7 @@ exports[`Test disabling of a Button 1`] = `
               bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
+              controlled={true}
               direction="right"
               disabled={false}
               errorMessage=""
@@ -466,6 +474,7 @@ exports[`Test making a Button invisible 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={false}
   errorMessage=""
@@ -531,6 +540,7 @@ exports[`Test making a Button invisible 1`] = `
           bottom=""
           className=""
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -580,6 +590,7 @@ exports[`Test making a Button invisible 1`] = `
               bottom=""
               className="ui-icon fa fa-fw fa-bomb"
               contentEditable={false}
+              controlled={true}
               direction="right"
               disabled={false}
               errorMessage=""
@@ -632,6 +643,7 @@ Object {
   "children": null,
   "className": "",
   "contentEditable": false,
+  "controlled": true,
   "direction": "right",
   "disabled": false,
   "errorMessage": "",

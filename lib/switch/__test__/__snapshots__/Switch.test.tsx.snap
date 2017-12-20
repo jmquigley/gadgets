@@ -28,6 +28,7 @@ exports[`Test creation of an inny type Switch 1`] = `
       bottom=""
       className="ui-switch-slider ui-slider-on"
       contentEditable={false}
+      controlled={true}
       direction="right"
       disabled={false}
       errorMessage=""
@@ -106,6 +107,7 @@ exports[`Test creation of an outy type Switch 1`] = `
       bottom=""
       className="ui-switch-slider ui-slider-on"
       contentEditable={false}
+      controlled={true}
       direction="right"
       disabled={false}
       errorMessage=""
@@ -161,6 +163,7 @@ exports[`Test disabling of the Switch control 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={true}
   errorMessage=""
@@ -222,6 +225,7 @@ exports[`Test disabling of the Switch control 1`] = `
           bottom=""
           className="ui-switch-slider ui-slider-off"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={true}
           errorMessage=""
@@ -308,6 +312,7 @@ exports[`Test making the Switch control invisible 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={false}
   errorMessage=""
@@ -369,6 +374,7 @@ exports[`Test making the Switch control invisible 1`] = `
           bottom=""
           className="ui-switch-slider ui-slider-off"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -456,6 +462,7 @@ Object {
   "children": null,
   "className": "",
   "contentEditable": false,
+  "controlled": true,
   "direction": "right",
   "disabled": false,
   "errorMessage": "",
@@ -516,6 +523,7 @@ exports[`Test the click handler on the Switch control 1`] = `
       bottom=""
       className="ui-switch-slider ui-slider-off"
       contentEditable={false}
+      controlled={true}
       direction="right"
       disabled={false}
       errorMessage=""

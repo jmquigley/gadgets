@@ -41,6 +41,9 @@
  * - `ui-option` - Style applied to the root `<div>` of the control.
  *
  * #### Properties
+ * - `initialToggle: {boolean} (false)` - the initial state of the button
+ * This is different than selected, as it is only used when the button
+ * is created.  It is ignored after creation (where selected is not)
  * - `optionType: {OptionType} (OptionType.square)` - An enumerated type that will
  * determine what icons will be displayed.  They are listed above.
  * - `selected: {boolean} (false)` - determines the initial state of the
@@ -64,6 +67,7 @@ import {
 	BaseProps,
 	Color,
 	disabled,
+	fontStyle,
 	getDefaultBaseProps,
 	getTheme,
 	invisible
@@ -85,6 +89,7 @@ export enum OptionType {
 }
 
 export interface OptionProps extends BaseProps {
+	initialToggle?: boolean;
 	onClick?: any;
 	optionType?: OptionType;
 	selected?: boolean;
@@ -94,6 +99,7 @@ export interface OptionProps extends BaseProps {
 export function getDefaultOptionProps(): OptionProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
+			initialToggle: false,
 			obj: 'Option',
 			onClick: nilEvent,
 			optionType: OptionType.square,
@@ -124,6 +130,7 @@ export const OptionView: any = withProps<OptionProps, HTMLDivElement>(styled.div
 		background-color: ${props => props.disabled ? 'unset' : props.theme.hoverColor || Color.silver};
 	}
 
+	${props => props.sizing && fontStyle[props.sizing]}
 	${props => disabled(props)}
 	${props => invisible(props)}
 `;
@@ -182,7 +189,6 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 	};
 
 	public static readonly defaultProps: OptionProps = getDefaultOptionProps();
-	private _btn: ButtonToggle;
 
 	constructor(props: OptionProps) {
 		super(props, Option.defaultProps.style);
@@ -190,7 +196,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		this._classes.add('ui-option');
 
 		this.state = {
-			selected: (typeof this.props.selected !== 'undefined') ? this.props.selected : false
+			selected: this.props.initialToggle
 		};
 
 		this.componentWillUpdate(this.props);
@@ -198,26 +204,20 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 
 	@autobind
 	private handleClick() {
-		if (this._btn) {
-			this._btn.handleClick();
+		if (!this.props.disabled && this.props.visible && this.props.controlled) {
+			this.setState({
+				selected: !this.state.selected
+			}, () => {
+				this.props.onClick(this.state.selected, this.props.text);
+			});
+		} else {
+			this.props.onClick(this.state.selected, this.props.text);
 		}
 	}
 
-	@autobind
-	private handleToggleClick(toggle: boolean) {
-		this.props.onClick(toggle, this.props.text);
-	}
-
-	@autobind
-	private handleRef(btn: ButtonToggle) {
-		this._btn = btn;
-	}
-
 	public componentWillReceiveProps(nextProps: OptionProps) {
-		if (this.props.selected !== nextProps.selected && this.state.selected !== nextProps.selected) {
-			this.setState({
-				selected: nextProps.selected
-			});
+		if (!nextProps.controlled) {
+			this.setState({selected: nextProps.selected});
 		}
 	}
 
@@ -227,6 +227,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 			title = (
 				<StyledTitle
 					layout={TitleLayout.none}
+					noedit
 					sizing={this.props.sizing}
 					title={this.props.text}
 				/>
@@ -239,6 +240,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 					disabled={this.props.disabled}
 					className={this.classes}
 					onClick={this.handleClick}
+					sizing={this.props.sizing}
 					style={this.inlineStyles}
 					visible={this.props.visible}
 				>
@@ -246,13 +248,13 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 						{...this.props}
 						bgColorOff={this.inlineStyles['backgroundColor']}
 						bgColorOn={this.inlineStyles['backgroundColor']}
+						controlled={false}
 						fgColorOff={this.inlineStyles['color']}
 						fgColorOn={this.inlineStyles['color']}
 						iconNameOn={this.icons[this.props.optionType].on}
 						iconNameOff={this.icons[this.props.optionType].off}
-						initialToggle={this.props.selected}
-						innerRef={this.handleRef}
-						onClick={this.handleToggleClick}
+						initialToggle={this.props.initialToggle}
+						onClick={this.handleClick}
 						selected={this.state.selected}
 					/>
 					{title}

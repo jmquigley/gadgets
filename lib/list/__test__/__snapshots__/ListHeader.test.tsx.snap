@@ -6,6 +6,7 @@ Object {
   "children": null,
   "className": "",
   "contentEditable": false,
+  "controlled": true,
   "direction": "right",
   "disabled": false,
   "errorMessage": "",
@@ -77,6 +78,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     bottom=""
     className="ui-list-header nohover"
     contentEditable={false}
+    controlled={true}
     direction="right"
     disabled={false}
     errorMessage=""

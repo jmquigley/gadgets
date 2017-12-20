@@ -5,6 +5,7 @@ exports[`Test creation of a simple Slider control 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={false}
   errorMessage=""
@@ -169,6 +170,7 @@ exports[`Test disabling a Slider control 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={true}
   errorMessage=""
@@ -323,6 +325,7 @@ Object {
   "children": null,
   "className": "",
   "contentEditable": false,
+  "controlled": true,
   "direction": "right",
   "disabled": false,
   "errorMessage": "",
@@ -361,6 +364,7 @@ exports[`Test with bad min/max values 1`] = `
   bottom=""
   className=""
   contentEditable={false}
+  controlled={true}
   direction="right"
   disabled={false}
   errorMessage=""

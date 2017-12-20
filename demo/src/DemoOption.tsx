@@ -39,9 +39,9 @@ export default class DemoOption extends React.Component<any, undefined> {
 
 			options.push(
 				<Option
+					initialToggle={true}
 					onClick={this.handleClick}
 					optionType={OptionType[key]}
-					selected
 					sizing={this.props['sizing']}
 					text={key}
 				/>

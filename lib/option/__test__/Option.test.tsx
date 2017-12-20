@@ -1,7 +1,9 @@
 'use strict';
 
+import {EnumValues as ev} from 'enum-values';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
+import {Sizing} from '../../shared';
 import {getDefaultOptionProps, Option, OptionType} from '../index';
 
 test('Test retrieval of Option props object', () => {
@@ -11,19 +13,20 @@ test('Test retrieval of Option props object', () => {
 	expect(props).toMatchSnapshot();
 });
 
-test('Creation of the Option control', () => {
-	const ctl = shallow(
-		<Option
-			className="test-class"
-			optionType={OptionType.square}
-			selected
-			text="test"
-		/>
-	);
+for (const sizing of ev.getNames(Sizing)) {
+	test(`Creation of the Option control (${sizing})`, () => {
+		const ctl = mount(
+			<Option
+				className="test-class"
+				sizing={sizing}
+				text="test"
+			/>
+		);
 
-	expect(ctl).toBeTruthy();
-	expect(ctl).toMatchSnapshot();
-});
+		expect(ctl).toBeTruthy();
+		expect(ctl).toMatchSnapshot();
+	});
+}
 
 test('Test disabling of the Option control', () => {
 	const click = jest.fn();

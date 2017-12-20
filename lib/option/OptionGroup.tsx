@@ -115,6 +115,8 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 		for (const [text, toggle] of this.state.options.entries()) {
 			options.push(
 				<StyledOption
+					controlled={false}
+					initialToggle={toggle}
 					key={text}
 					onClick={this.handleSelection}
 					optionType={this.props.optionType}
@@ -130,20 +132,17 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 
 	@autobind
 	private handleSelection(toggle: boolean, text: string) {
-		if (this.state.options.get(text)) {
-			this.forceUpdate();
-		} else {
-			this.setState({
-				options: this.handleOptions(this.props.options, text)
-			}, () => {
-				this.props.onSelect(text, toggle);
-			});
-		}
+		toggle = toggle;
+		this.setState({
+			options: this.handleOptions(this.props.options, text)
+		}, () => {
+			this.props.onSelect(text);
+		});
 	}
 
 	@autobind
 	private handleOptions(labels: string[], selected: string) {
-		let options: OrderedMap<string, boolean> = (this.state && 'options' in this.state) ? this.state.options : OrderedMap();
+		let options: OrderedMap<string, boolean> = OrderedMap();
 		for (const label of labels) {
 			options = options.set(label, label === selected);
 		}

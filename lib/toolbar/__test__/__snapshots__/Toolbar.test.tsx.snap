@@ -42,6 +42,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
           bottom=""
           className="ui-toolbar-element"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -117,6 +118,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
           bottom=""
           className="ui-toolbar-element"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -192,6 +194,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
           bottom=""
           className="ui-toolbar-element"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -267,6 +270,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
           bottom=""
           className="ui-toolbar-element"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={true}
           errorMessage=""
@@ -342,6 +346,7 @@ exports[`Test making the Toolbar invisible 1`] = `
           bottom=""
           className="ui-toolbar-element"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
           errorMessage=""
@@ -381,6 +386,7 @@ Object {
   "children": null,
   "className": "",
   "contentEditable": false,
+  "controlled": true,
   "direction": "right",
   "disabled": false,
   "errorMessage": "",
