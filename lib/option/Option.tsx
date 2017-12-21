@@ -66,7 +66,6 @@ import {
 	BaseComponent,
 	BaseProps,
 	Color,
-	disabled,
 	fontStyle,
 	getDefaultBaseProps,
 	getTheme,
@@ -131,7 +130,6 @@ export const OptionView: any = withProps<OptionProps, HTMLDivElement>(styled.div
 	}
 
 	${props => props.sizing && fontStyle[props.sizing]}
-	${props => disabled(props)}
 	${props => invisible(props)}
 `;
 
@@ -204,14 +202,16 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 
 	@autobind
 	private handleClick() {
-		if (!this.props.disabled && this.props.visible && this.props.controlled) {
-			this.setState({
-				selected: !this.state.selected
-			}, () => {
+		if (!this.props.disabled && this.props.visible) {
+			if (this.props.controlled) {
+				this.setState({
+					selected: !this.state.selected
+				}, () => {
+					this.props.onClick(this.state.selected, this.props.text);
+				});
+			} else {
 				this.props.onClick(this.state.selected, this.props.text);
-			});
-		} else {
-			this.props.onClick(this.state.selected, this.props.text);
+			}
 		}
 	}
 
@@ -226,6 +226,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		if (this.props.text) {
 			title = (
 				<StyledTitle
+					disabled={this.props.disabled}
 					layout={TitleLayout.none}
 					noedit
 					sizing={this.props.sizing}
@@ -237,7 +238,6 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		return(
 			<ThemeProvider theme={getTheme()} >
 				<OptionView
-					disabled={this.props.disabled}
 					className={this.classes}
 					onClick={this.handleClick}
 					sizing={this.props.sizing}

@@ -15,6 +15,7 @@ import {
 	fontStyle,
 	getDefaultBaseProps,
 	getTheme,
+	invisible,
 	Sizing
 } from '../shared';
 import styled, {ThemeProvider, withProps} from '../shared/themed-components';
@@ -55,19 +56,20 @@ export const StyledOptionGroup: any = withProps<OptionGroupProps, HTMLDivElement
 			case Sizing.xxsmall: return('0.25rem 0 0 0');
 			case Sizing.xsmall: return('0.4rem 0 0 0');
 			case Sizing.small: return('0.6rem 0 0 0');
-			case Sizing.large: return('1.2rem 0 0 0');
-			case Sizing.xlarge: return('1.5rem 0 0 0');
+			case Sizing.large: return('1.3rem 0 0 0');
+			case Sizing.xlarge: return('1.7rem 0 0 0');
 			case Sizing.xxlarge: return('2.5rem 0 0 0');
 
 			case Sizing.normal:
 			default:
-				return('0.75rem 0 0 0');
+				return('0.8rem 0 0 0');
 		}
 	}};
-	padding: 0.5rem;
+	padding: 0.6rem;
 	position: relative;
 
 	${props => props.sizing && fontStyle[props.sizing]}
+	${props => invisible(props)}
 `;
 
 export const StyledOption: any = styled(Option)`
@@ -75,7 +77,7 @@ export const StyledOption: any = styled(Option)`
 
 export const StyledTitle: any = styled(Title)`
 	background-color: ${props => props.theme.backgroundColor};
-	left: 0.5rem;
+	left: 0.3rem;
 	padding: 0 0.33rem;
 	position: absolute;
 	top: -${(props: OptionGroupProps) => {
@@ -83,13 +85,13 @@ export const StyledTitle: any = styled(Title)`
 			case Sizing.xxsmall: return('0.25rem');
 			case Sizing.xsmall: return('0.4rem');
 			case Sizing.small: return('0.6rem');
-			case Sizing.large: return('1.2rem');
-			case Sizing.xlarge: return('1.5rem');
+			case Sizing.large: return('1.3rem');
+			case Sizing.xlarge: return('1.7rem');
 			case Sizing.xxlarge: return('2.5rem');
 
 			case Sizing.normal:
 			default:
-				return('0.75rem');
+				return('0.80rem');
 		}
 	}};
 `;
@@ -116,6 +118,7 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 			options.push(
 				<StyledOption
 					controlled={false}
+					disabled={this.props.disabled}
 					initialToggle={toggle}
 					key={text}
 					onClick={this.handleSelection}
@@ -132,12 +135,14 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 
 	@autobind
 	private handleSelection(toggle: boolean, text: string) {
-		toggle = toggle;
-		this.setState({
-			options: this.handleOptions(this.props.options, text)
-		}, () => {
-			this.props.onSelect(text);
-		});
+		if (!this.props.disabled && this.props.visible) {
+			toggle = toggle;
+			this.setState({
+				options: this.handleOptions(this.props.options, text)
+			}, () => {
+				this.props.onSelect(text);
+			});
+		}
 	}
 
 	@autobind
