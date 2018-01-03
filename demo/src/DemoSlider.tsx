@@ -45,6 +45,7 @@ export default class DemoSlider extends React.Component<any, DemoSliderState> {
 			<Container id="sliderExample" title="Slider">
 				<h3>Normal slider control, range 0 - 100, toggle snap</h3>
 				<Slider
+					disabled={this.props['disabled']}
 					onSelect={this.handleSelect}
 					scale={2}
 					sizing={this.props['sizing']}
@@ -53,6 +54,7 @@ export default class DemoSlider extends React.Component<any, DemoSliderState> {
 				/>
 
 				<Option
+					disabled={this.props['disabled']}
 					onClick={this.handleSnap}
 					text="Toggle snap mode on/off"
 				/>
@@ -60,21 +62,11 @@ export default class DemoSlider extends React.Component<any, DemoSliderState> {
 
 				<h3>Normal slider, no ticks, range 0 - 100</h3>
 				<Slider
+					disabled={this.props['disabled']}
 					onSelect={this.handleSelect}
 					scale={2}
 					sizing={this.props['sizing']}
 				/>
-				<Break sizing={this.props['sizing']} />
-
-				<h3>Disabled slider</h3>
-				<Slider
-					disabled
-					onSelect={this.handleSelect}
-					scale={2}
-					sizing={this.props['sizing']}
-					ticks={5}
-				/>
-				<Break sizing={this.props['sizing']}/>
 
 			</Container>
 		);

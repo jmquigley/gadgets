@@ -42,9 +42,8 @@
  * the parent to the child.  It includes the following attributes:
  *   - `selectHandler` - a function reference back to the container that is
  *     invoked to tell the container that this tab was selected.
- *   - `sizing` - the size of the parent
- *   - `orientation` - the location in the container component where the
- *     tab will be drawn (top, bottom, left, right)
+ * - `orientation` - the location in the container component where the
+ * tab will be drawn (top, bottom, left, right)
  * - `selected: {boolean} (false)` - if this is set to true, then the tab
  * will show as selected.
  * - `title: {string} ('')` - the text that will be shown on the tab.
@@ -68,8 +67,7 @@ import {
 	getDefaultBaseProps,
 	getTheme,
 	invisible,
-	Location,
-	Sizing
+	Location
 } from '../shared';
 import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
 import {Title} from '../title';
@@ -78,6 +76,7 @@ export interface TabProps extends BaseProps {
 	href?: any;
 	onClick?: any;
 	onClose?: any;
+	orientation?: Location;
 	selected?: boolean;
 	title?: string;
 }
@@ -86,13 +85,12 @@ export function getDefaultTabProps(): TabProps {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseProps(), {
 			href: {
-				selectHandler: nilEvent,
-				sizing: Sizing.normal,
-				orientation: Location.top
+				selectHandler: nilEvent
 			},
 			obj: 'Tab',
 			onClick: nilEvent,
 			onClose: nilEvent,
+			orientation: Location.top,
 			selected: false,
 			title: ''
 		})
@@ -234,7 +232,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 
 	public render() {
 		let xcss: any = '';
-		switch (this.props.href.orientation) {
+		switch (this.props.orientation) {
 			case Location.top: xcss = TabBorderTop; break;
 			case Location.bottom: xcss = TabBorderBottom; break;
 			case Location.left: xcss = TabBorderLeft; break;
@@ -247,6 +245,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 					disabled={this.props.disabled}
 					className={this.classes}
 					selected={this.props.selected}
+					sizing={this.props.sizing}
 					style={this.inlineStyles}
 					visible={this.props.visible}
 					xcss={xcss}

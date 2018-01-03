@@ -6,6 +6,7 @@ import autobind from 'autobind-decorator';
 import * as React from 'react';
 
 const {
+	Break,
 	Container,
 	Pager,
 	SortOrder
@@ -38,16 +39,19 @@ export default class DemoPager extends React.Component<any, undefined> {
 				<h3>simple pager</h3>
 				<div className="pagerBox">
 					<Pager
+						disabled={this.props['disabled']}
 						initialPage="1"
 						totalItems="299"
 						sizing={this.props['sizing']}
 						onSelect={this.handleSelect}
 					/>
 				</div>
+				<Break sizing={this.props['sizing']} />
 
 				<h3>normal, large range, with sort</h3>
 				<div className="pagerBox">
 					<Pager
+						disabled={this.props['disabled']}
 						initialPage="1"
 						onSelect={this.handleSelect}
 						onSort={this.handleSort}
@@ -58,17 +62,7 @@ export default class DemoPager extends React.Component<any, undefined> {
 						useinput
 					/>
 				</div>
-
-				<h3>normal, disabled</h3>
-				<div className="pagerBox">
-					<Pager
-						disabled
-						initialPage="1"
-						onSelect={this.handleSelect}
-						sizing={this.props['sizing']}
-						totalItems="299"
-					/>
-				</div>
+				<Break sizing={this.props['sizing']} />
 
 			</Container>
 		);

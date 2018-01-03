@@ -29,6 +29,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 			<Container id="switchExample" title="Switch">
 				<h3>Inny</h3>
 				<Switch
+					disabled={this.props['disabled']}
 					initialToggle={true}
 					onClick={this.handleClick}
 					sizing={this.props['sizing']}
@@ -38,21 +39,12 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 
 				<h3>Outy</h3>
 				<Switch
+					disabled={this.props['disabled']}
 					initialToggle={true}
 					onClick={this.handleClick}
 					sizing={this.props['sizing']}
 					switchType={SwitchType.outy}
 				/>
-				<Break sizing={this.props['sizing']} />
-
-				<h3>normal, disabled</h3>
-				<Switch
-					disabled
-					onClick={this.handleClick}
-					sizing={this.props['sizing']}
-				/>
-				<Break sizing={this.props['sizing']} />
-
 			</Container>
 		);
 	}

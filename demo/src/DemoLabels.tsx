@@ -21,19 +21,31 @@ export default class DemoLabels extends React.Component<any, undefined> {
 		return (
 			<Container id="labelExample" title="Labels">
 				<div id="simple-labels">
-					<Label text="Test Label #1 (double click to edit)" sizing={this.props['sizing']} />
-					<Break sizing={this.props['sizing']} />
-
-					<Label disabled text="Test Label #2 (disabled)" sizing={this.props['sizing']} />
-					<Break sizing={this.props['sizing']} />
-
-					<Label className="demoLabel" text="Test Label #3 Styled" sizing={this.props['sizing']} />
-					<Break sizing={this.props['sizing']} />
-
-					<Label text="Text Label #4 (no edit)" noedit sizing={this.props['sizing']} /><br/>
+					<Label
+						disabled={this.props['disabled']}
+						sizing={this.props['sizing']}
+						text="Test Label #1 (double click to edit)"
+					/>
 					<Break sizing={this.props['sizing']} />
 
 					<Label
+						className="demoLabel"
+						disabled={this.props['disabled']}
+						text="Test Label #3 Styled"
+						sizing={this.props['sizing']}
+					/>
+					<Break sizing={this.props['sizing']} />
+
+					<Label
+						disabled={this.props['disabled']}
+						noedit
+						sizing={this.props['sizing']}
+						text="Text Label #4 (no edit)"
+					/>
+					<Break sizing={this.props['sizing']} />
+
+					<Label
+						disabled={this.props['disabled']}
 						sizing={this.props['sizing']}
 						style={{
 							color: 'white',
@@ -41,7 +53,6 @@ export default class DemoLabels extends React.Component<any, undefined> {
 						}}
 						text="Text Label #5 (inline style)"
 					/>
-					<Break sizing={this.props['sizing']} />
 				</div>
 			</Container>
 		);

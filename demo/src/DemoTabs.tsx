@@ -42,7 +42,11 @@ export default class DemoTabs extends React.Component<any, undefined> {
 		return (
 			<Container id="tabControl" title="Tabs">
 				<h3>Top</h3>
-				<TabContainer maxTabs={5} sizing={this.props['sizing']}>
+				<TabContainer
+					disabled={this.props['disabled']}
+					maxTabs={5}
+					sizing={this.props['sizing']}
+				>
 					<Tab title="tab #1" onClose={this.handleClose}>#1<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #2" onClose={this.handleClose}>#2<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #3" onClose={this.handleClose}>#3<br/><br/>{this.randomText}</Tab>
@@ -53,7 +57,12 @@ export default class DemoTabs extends React.Component<any, undefined> {
 				<Break sizing={this.props['sizing']} />
 
 				<h3>Left</h3>
-				<TabContainer maxTabs={3} location={Location.left} sizing={this.props['sizing']}>
+				<TabContainer
+					disabled={this.props['disabled']}
+					location={Location.left}
+					maxTabs={3}
+					sizing={this.props['sizing']}
+				>
 					<Tab title="tab #1" onClose={this.handleClose}>#1<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #2" onClose={this.handleClose}>#2<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #3" onClose={this.handleClose}>#3<br/><br/>{this.randomText}</Tab>
@@ -62,7 +71,13 @@ export default class DemoTabs extends React.Component<any, undefined> {
 				<Break sizing={this.props['sizing']}/>
 
 				<h3>Bottom (no navigation)</h3>
-				<TabContainer maxTabs={3} location={Location.bottom} nonavigation sizing={this.props['sizing']}>
+				<TabContainer
+					disabled={this.props['disabled']}
+					location={Location.bottom}
+					maxTabs={3}
+					nonavigation
+					sizing={this.props['sizing']}
+				>
 					<Tab title="tab #1" onClose={this.handleClose}>#1<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #2" onClose={this.handleClose}>#2<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #3" onClose={this.handleClose}>#3<br/><br/>{this.randomText}</Tab>
@@ -72,8 +87,9 @@ export default class DemoTabs extends React.Component<any, undefined> {
 
 				<h3>Right (no navigation, onSelect)</h3>
 				<TabContainer
-					maxTabs={3}
+					disabled={this.props['disabled']}
 					location={Location.right}
+					maxTabs={3}
 					nonavigation
 					onRemove={this.handleRemove}
 					onSelect={this.handleSelect}
@@ -88,17 +104,12 @@ export default class DemoTabs extends React.Component<any, undefined> {
 				<Break sizing={this.props['sizing']} />
 
 				<h3>Disabled Tab within container</h3>
-				<TabContainer location={Location.bottom} sizing={this.props['sizing']}>
+				<TabContainer
+					disabled={this.props['disabled']}
+					location={Location.bottom}
+					sizing={this.props['sizing']}
+				>
 					<Tab title="tab #1" onClose={this.handleClose} disabled>#1<br/><br/>{this.randomText}</Tab>
-					<Tab title="tab #2" onClose={this.handleClose}>#2<br/><br/>{this.randomText}</Tab>
-					<Tab title="tab #3" onClose={this.handleClose}>#3<br/><br/>{this.randomText}</Tab>
-					<Tab title="tab #4" onClose={this.handleClose}>#4<br/><br/>{this.randomText}</Tab>
-				</TabContainer>
-				<Break sizing={this.props['sizing']}/>
-
-				<h3>Disabled Container</h3>
-				<TabContainer disabled location={Location.bottom} sizing={this.props['sizing']}>
-					<Tab title="tab #1" onClose={this.handleClose}>#1<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #2" onClose={this.handleClose}>#2<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #3" onClose={this.handleClose}>#3<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #4" onClose={this.handleClose}>#4<br/><br/>{this.randomText}</Tab>

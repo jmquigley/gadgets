@@ -144,6 +144,7 @@ import {
 	Color,
 	getDefaultBaseProps,
 	getTheme,
+	Sizing,
 	SortOrder
 } from '../shared';
 import styled, {ThemeProvider} from '../shared/themed-components';
@@ -630,8 +631,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				onSelect={this.handlePageChange}
 				onSort={this.handleSort}
 				pageSizes={nextProps.pageSizes}
-				sizing={this.prev(this.props.sizing).type}
-				testing={this.props.testing}
+				sizing={Sizing.small}
+				testing={nextProps.testing}
 				totalItems={nextState.totalItems}
 				useinput
 			/>

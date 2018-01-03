@@ -202,7 +202,7 @@ export function getDefaultBaseProps(): BaseProps {
 
 export const DisabledCSS: any = css`
 	cursor: default;
-	opacity: 0.33;
+	opacity: 0.5;
 	user-select: none;
 `;
 

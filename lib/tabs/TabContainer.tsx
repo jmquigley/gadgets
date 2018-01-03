@@ -233,6 +233,10 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 
 				if (child['type'] === Tab && (child['props']['visible'] && !child['props']['disabled'])) {
 					this._tabs = this._tabs.set(pos, React.cloneElement(child as any, {
+						href: {
+							hiddenTabHandler: this.hiddenTabHandler,
+							selectHandler: this.selectHandler
+						},
 						id: this._keys.at(pos),
 						key: this._keys.at(pos)
 					}));
@@ -369,9 +373,6 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	public componentWillUpdate(nextProps: TabContainerProps, nextState: TabContainerState) {
 		if (this._tabs.size > 0) {
 
-			// Add select and delete handlers to each of the tabs in the current
-			// tab array.  Also ensure that the correct tab width is set.
-
 			for (const [idx, child] of this._tabs.entries()) {
 				const selected = nextState.selectedTab === child.props['id'];
 
@@ -380,13 +381,9 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 				}
 
 				this._tabs = this._tabs.set(idx, React.cloneElement(child as any, {
-					disabled: this.props.disabled,
-					href: {
-						hiddenTabHandler: this.hiddenTabHandler,
-						orientation: nextProps.location,
-						selectHandler: this.selectHandler,
-						sizing: nextProps.sizing
-					},
+					disabled: nextProps.disabled,
+					orientation: nextProps.location,
+					sizing: nextProps.sizing,
 					selected: selected,
 					width: `${nextProps.tabWidth}px`
 				}));

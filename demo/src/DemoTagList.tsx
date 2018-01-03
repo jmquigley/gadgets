@@ -23,6 +23,7 @@ export default class DemoTagList extends React.Component<any, undefined> {
 
 				<h3>Static</h3>
 				<TagList
+					disabled={this.props['disabled']}
 					sizing={this.props['sizing']}
 					tags={['one', 'two', 'three']}
 				/>
@@ -30,6 +31,7 @@ export default class DemoTagList extends React.Component<any, undefined> {
 
 				<h3>Changeable (no sorting)</h3>
 				<TagList
+					disabled={this.props['disabled']}
 					nosort
 					sizing={this.props['sizing']}
 					tags={['aaa', 'ccc', 'bbb']}
@@ -39,17 +41,9 @@ export default class DemoTagList extends React.Component<any, undefined> {
 
 				<h3>Changeable (sorted)</h3>
 				<TagList
+					disabled={this.props['disabled']}
 					sizing={this.props['sizing']}
 					tags={['aaa', 'ccc', 'bbb']}
-					useinput
-				/>
-				<Break sizing={this.props['sizing']} />
-
-				<h3>Disabled</h3>
-				<TagList
-					disabled
-					sizing={this.props['sizing']}
-					tags={['one', 'two', 'three']}
 					useinput
 				/>
 

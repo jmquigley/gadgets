@@ -150,7 +150,7 @@ export interface PagerState {
 export const ButtonCSS: any = css`
 	flex: 1;
 	height: unset;
-	padding: 6px 0;
+	padding: 3px 0;
 	font-weight: 600;
 `;
 
@@ -176,7 +176,7 @@ export const StyledButtonDialog: any = withProps<PagerProps, HTMLElement>(styled
 	border: solid 1px ${props => props.theme.borderColor};
 	flex: none;
 	height: unset;
-	width: 7%;
+	width: 1rem;
 `;
 
 export const StyledButtonText: any = withProps<PagerProps, HTMLElement>(styled(ButtonText))`
@@ -197,7 +197,7 @@ export const StyledButton: any = withProps<PagerProps, HTMLElement>(styled(Butto
 
 export const StyledTextField: any = styled(TextField)`
 	flex: none;
-	width: 3em;
+	width: 2.5rem;
 `;
 
 export class Pager extends BaseComponent<PagerProps, PagerState> {
@@ -398,7 +398,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						key={String(page)}
 						noicon
 						onClick={this.handleSelect}
-						sizing={this.prev(this.props.sizing).type}
+						sizing={this.props.sizing}
 						text={String(page)}
 					/>
 				);
@@ -417,13 +417,15 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						React.cloneElement(this._buttons[page], {
 							className: selected,
 							disabled: this.props.disabled,
-							selected: true
+							selected: true,
+							sizing: this.props.sizing
 						}));
 				} else {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
 							disabled: this.props.disabled,
-							selected: false
+							selected: false,
+							sizing: this.props.sizing
 						}));
 				}
 			} else {

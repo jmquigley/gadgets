@@ -36,16 +36,12 @@ section {
 	padding: 10px;
 }
 
-#dialogBoxExample {
-	width: 33%;
-}
-
-#textfieldExample {
-	width: 50%;
+#dialogBoxExample, textfieldExample {
+	width: 100%;
 }
 
 #simple-buttons, #simple-icons {
-	display: flex;
+	display: inline-flex;
 }
 
 .box {

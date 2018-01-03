@@ -156,8 +156,8 @@ A container element that holds a list of other elements.  The `List` resolves to
 ### [Option](docs/lib/option/Option.md)
 A checkbox/radio button control.  This is just a specialized form of ButtonToggle.
 
-### OptionGroup
-TODO: create the OptionGroup control (radio button like grouping)
+### [OptionGroup](docs/lib/option/OptionGroup.md)
+A grouping of Option conmponents.
 
 ### [Pager](docs/lib/pager/Pager.md)
 A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.
