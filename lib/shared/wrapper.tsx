@@ -2,7 +2,7 @@
 
 'use strict';
 
-const debug = require('debug')('Wrapper');
+// const debug = require('debug')('Wrapper');
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -42,7 +42,6 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 
 	constructor(props: WrapperProps) {
 		super(props, Wrapper.defaultProps.style);
-		debug('Initializing error handler for %s', this.props.obj);
 
 		this._classes.add('ui-error');
 		this.state = {

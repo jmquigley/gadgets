@@ -44,12 +44,12 @@ import {
 	BaseProps,
 	disabled,
 	getDefaultBaseProps,
-	getTheme,
 	invisible,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
 import {tooltip} from '../shared/helpers';
-import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {css, withProps} from '../shared/themed-components';
 
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
@@ -130,7 +130,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<ButtonView
 					className={this.classes}
 					disabled={this.props.disabled}
@@ -146,7 +146,7 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 					/>
 				{tooltip(this.id, this.props)}
 				</ButtonView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

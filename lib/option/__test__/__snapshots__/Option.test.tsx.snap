@@ -235,40 +235,75 @@ exports[`Creation of the Option control (inherit) 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle test-class sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="inherit"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text="test"
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -278,105 +313,119 @@ exports[`Creation of the Option control (inherit) 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="inherit"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="inherit"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="inherit"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="inherit"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -839,40 +888,75 @@ exports[`Creation of the Option control (large) 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle test-class sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="large"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text="test"
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -882,105 +966,119 @@ exports[`Creation of the Option control (large) 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="large"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="large"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="large"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH gURurf"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="large"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH gURurf"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -1443,40 +1541,75 @@ exports[`Creation of the Option control (medium) 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle test-class sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="medium"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text="test"
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -1486,105 +1619,119 @@ exports[`Creation of the Option control (medium) 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="medium"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="medium"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="medium"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="medium"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -2047,40 +2194,75 @@ exports[`Creation of the Option control (normal) 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle test-class sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="normal"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text="test"
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -2090,105 +2272,119 @@ exports[`Creation of the Option control (normal) 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="normal"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="normal"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="normal"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="normal"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -2651,40 +2847,75 @@ exports[`Creation of the Option control (small) 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle test-class sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="small"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text="test"
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -2694,105 +2925,119 @@ exports[`Creation of the Option control (small) 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="small"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="small"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="small"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH xVJTk"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="small"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH xVJTk"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -3255,40 +3500,75 @@ exports[`Creation of the Option control (xlarge) 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle test-class sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="xlarge"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text="test"
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -3298,105 +3578,119 @@ exports[`Creation of the Option control (xlarge) 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="xlarge"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="xlarge"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="xlarge"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hdZWWv"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="xlarge"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hdZWWv"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -3859,40 +4153,75 @@ exports[`Creation of the Option control (xsmall) 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle test-class sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="xsmall"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text="test"
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -3902,105 +4231,119 @@ exports[`Creation of the Option control (xsmall) 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="xsmall"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="xsmall"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="xsmall"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH bnDqxr"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="xsmall"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH bnDqxr"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -4463,40 +4806,75 @@ exports[`Creation of the Option control (xxlarge) 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle test-class sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="xxlarge"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text="test"
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -4506,105 +4884,119 @@ exports[`Creation of the Option control (xxlarge) 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="xxlarge"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="xxlarge"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="xxlarge"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH cFIngR"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="xxlarge"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH cFIngR"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -5067,40 +5459,75 @@ exports[`Creation of the Option control (xxsmall) 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle test-class sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="xxsmall"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text="test"
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -5110,105 +5537,119 @@ exports[`Creation of the Option control (xxsmall) 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle test-class sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="xxsmall"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="xxsmall"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="xxsmall"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hXvUKd"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="xxsmall"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hXvUKd"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -5671,40 +6112,75 @@ exports[`Test Option control click event 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="normal"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text=""
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -5714,105 +6190,119 @@ exports[`Test Option control click event 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE sc-bZQynM cCZJpy"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="normal"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="normal"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="normal"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="normal"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -6058,40 +6548,75 @@ exports[`Test disabling of the Option control 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={true}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="normal"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text=""
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE"
-                    disabled={true}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={true}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE sc-bZQynM kuuPdU"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE"
                       disabled={true}
                       id="Button-0"
                       onClick={[Function]}
@@ -6101,105 +6626,119 @@ exports[`Test disabling of the Option control 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={true}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
-                        disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="normal"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                      <div
+                        className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE sc-bZQynM kuuPdU"
+                        disabled={true}
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="normal"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="normal"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="normal"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
@@ -6445,40 +6984,75 @@ exports[`Test making the Option control invisible 1`] = `
                 width=""
                 xcss={null}
               >
-                <ThemeProvider
-                  theme={
+                <Wrapper
+                  bgColorOff="inherit"
+                  bgColorOn="inherit"
+                  bottom=""
+                  className="ui-button-toggle sc-gqjmRU gacPjE"
+                  contentEditable={false}
+                  controlled={false}
+                  direction="right"
+                  disabled={false}
+                  errorMessage=""
+                  fgColorOff="inherit"
+                  fgColorOn="inherit"
+                  focus={false}
+                  height=""
+                  iconName="square-o"
+                  iconNameOff="square-o"
+                  iconNameOn="check-square-o"
+                  iconStyle=""
+                  id=""
+                  initialToggle={false}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={true}
+                  obj="Option"
+                  onClick={[Function]}
+                  onError={[Function]}
+                  optionType={0}
+                  padding=""
+                  reset={false}
+                  selected={false}
+                  sizing="normal"
+                  style={
                     Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
+                      "backgroundColor": "inherit",
+                      "color": "inherit",
                     }
                   }
+                  testing={true}
+                  text=""
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={false}
+                  width=""
+                  xcss={null}
                 >
-                  <styled.div
-                    className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE"
-                    disabled={false}
-                    id="Button-0"
-                    onClick={[Function]}
-                    style={
+                  <ThemeProvider
+                    theme={
                       Object {
-                        "backgroundColor": "inherit",
-                        "color": "inherit",
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#c0c0c0",
+                        "color": "#000000",
+                        "headerBackgroundColor": "#004358",
+                        "headerForegroundColor": "#ffffff",
+                        "headerHoverColor": "#ffe11a",
+                        "hoverColor": "#c0c0c0",
+                        "inputBorderColor": "#c0c0c0",
+                        "selectedBackgroundColor": "#1f8a70",
+                        "selectedForegroundColor": "#ffe11a",
+                        "tooltipBackgroundColor": "#708090",
+                        "tooltipForegroundColor": "#ffffff",
+                        "transitionDelay": "0.5s",
                       }
                     }
-                    visible={false}
                   >
-                    <div
-                      className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE sc-bZQynM gWynPW"
+                    <styled.div
+                      className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE"
                       disabled={false}
                       id="Button-0"
                       onClick={[Function]}
@@ -6488,105 +7062,119 @@ exports[`Test making the Option control invisible 1`] = `
                           "color": "inherit",
                         }
                       }
+                      visible={false}
                     >
-                      <Icon
-                        bottom=""
-                        className=""
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
+                      <div
+                        className="ui-button nohover ui-button-toggle sc-gqjmRU gacPjE sc-bZQynM gWynPW"
                         disabled={false}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="square-o"
-                        id=""
-                        imageFile=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="Icon"
-                        padding=""
-                        selected={false}
-                        sizing="normal"
-                        style={Object {}}
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
-                      >
-                        <ThemeProvider
-                          theme={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#c0c0c0",
-                              "color": "#000000",
-                              "headerBackgroundColor": "#004358",
-                              "headerForegroundColor": "#ffffff",
-                              "headerHoverColor": "#ffe11a",
-                              "hoverColor": "#c0c0c0",
-                              "inputBorderColor": "#c0c0c0",
-                              "selectedBackgroundColor": "#1f8a70",
-                              "selectedForegroundColor": "#ffe11a",
-                              "tooltipBackgroundColor": "#708090",
-                              "tooltipForegroundColor": "#ffffff",
-                              "transitionDelay": "0.5s",
-                            }
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
                           }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="square-o"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="normal"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
                         >
-                          <styled.i
-                            bottom=""
-                            className="ui-icon fa fa-fw fa-square-o"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
-                            disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            iconName="square-o"
-                            id=""
-                            imageFile=""
-                            left=""
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="Icon"
-                            padding=""
-                            selected={false}
-                            sizing="normal"
-                            style={Object {}}
-                            testing={true}
-                            theme={null}
-                            tooltip=""
-                            top=""
-                            visible={true}
-                            width=""
-                            xcss={null}
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
                           >
-                            <i
-                              className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                            <styled.i
+                              bottom=""
+                              className="ui-icon fa fa-fw fa-square-o"
                               contentEditable={false}
+                              controlled={true}
                               direction="right"
                               disabled={false}
+                              errorMessage=""
+                              focus={false}
                               height=""
+                              iconName="square-o"
                               id=""
+                              imageFile=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Icon"
+                              padding=""
                               selected={false}
+                              sizing="normal"
                               style={Object {}}
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
                               width=""
-                            />
-                          </styled.i>
-                        </ThemeProvider>
-                      </Icon>
-                    </div>
-                  </styled.div>
-                </ThemeProvider>
+                              xcss={null}
+                            >
+                              <i
+                                className="ui-icon fa fa-fw fa-square-o sc-bwzfXH hBOHvv"
+                                contentEditable={false}
+                                direction="right"
+                                disabled={false}
+                                height=""
+                                id=""
+                                selected={false}
+                                style={Object {}}
+                                width=""
+                              />
+                            </styled.i>
+                          </ThemeProvider>
+                        </Icon>
+                      </div>
+                    </styled.div>
+                  </ThemeProvider>
+                </Wrapper>
               </Button>
             </ThemeProvider>
           </ButtonToggle>
