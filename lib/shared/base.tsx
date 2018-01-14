@@ -53,6 +53,7 @@ import {ClassNames} from 'util.classnames';
 import {getUUID} from 'util.toolbox';
 import {BaseProps, Styles} from './props';
 import {FontStyle, Sizes, Sizing, Styling} from './sizing';
+import {getTheme, ThemeProps} from './themes';
 
 require('./styles.css');
 
@@ -66,6 +67,7 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	private _inlineStyles: Map<string, string> = Map({});
 	private _sizes: Sizes = null;
 	private _sizing: Sizing = null;
+	private _theme: ThemeProps = null;
 
 	// The style object applied (generally) to the root of a component
 	protected _classes: ClassNames = new ClassNames();
@@ -86,6 +88,7 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 		this._sizes = Sizes.instance(defaultFontSize);
 		this._sizing = this.props.sizing;
+		this._theme = getTheme();
 		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props.style);
 	}
 
@@ -122,6 +125,10 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 	get sizing(): Sizing {
 		return this._sizing;
+	}
+
+	get theme(): ThemeProps {
+		return this._theme;
 	}
 
 	protected font(sizing: Sizing = this.sizing): FontStyle {

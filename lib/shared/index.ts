@@ -5,6 +5,11 @@ import {
 } from './base';
 
 import {
+	Wrapper,
+	WrapperProps
+} from './wrapper';
+
+import {
 	BaseProps,
 	Color,
 	ColorScheme,
@@ -72,5 +77,7 @@ export {
 	Styles,
 	Styling,
 	Theme,
-	ThemeProps
+	ThemeProps,
+	Wrapper,
+	WrapperProps
 };

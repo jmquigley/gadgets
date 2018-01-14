@@ -44,7 +44,8 @@ import {
 	SortOrder,
 	Styling,
 	Theme,
-	ThemeProps
+	ThemeProps,
+	Wrapper
 } from './lib/shared';
 import {Slider} from './lib/slider';
 import {Switch, SwitchType} from './lib/switch';
@@ -145,5 +146,6 @@ export {
 	Validator,
 	ValidatorFn,
 	withProps,
-	withTheme
+	withTheme,
+	Wrapper
 };

@@ -81,7 +81,7 @@ let currentTheme: Theme = Theme.base;
  * selected and set within this module.
  * @return {ThemeProps} the key/value object that contains CSS settings
  */
-export function getTheme(theme: Theme = currentTheme) {
+export function getTheme(theme: Theme = currentTheme): ThemeProps {
 	if (theme in Theme) {
 		return themes[theme];
 	} else {

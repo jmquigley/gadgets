@@ -10,6 +10,7 @@ import DemoDialogBox from './src/DemoDialogBox';
 import DemoDropdown from './src/DemoDropdown';
 import DemoDynamicList from './src/DemoDynamicList';
 import DemoEditor from './src/DemoEditor';
+import DemoErrorHandler from './src/DemoErrorHandler';
 import DemoLabels from './src/DemoLabels';
 import DemoListItem from './src/DemoListItem';
 import DemoOption from './src/DemoOption';
@@ -115,6 +116,7 @@ class App extends React.Component<any, AppState> {
 				<DemoDropdown sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoDynamicList disabled={this.state.disabled} />
 				<DemoEditor disabled={this.state.disabled} />
+				<DemoErrorHandler sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoLabels sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoListItem sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoOption sizing={this.state.sizing} disabled={this.state.disabled} />
