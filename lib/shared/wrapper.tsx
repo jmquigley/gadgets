@@ -46,6 +46,8 @@
  * #### Properties
  * - `children: {React.ReactNode} (null)` - The underlying components that are
  * surrounded by this wrapper.
+ * - `err: {any} (null)` - A custom react component that can be used as the
+ * error output.  This is used to override the default error output.
  * - `reset: {boolean} (false)` - After a component is wrapped, and an error is
  * thrown, the state of *error* will be permanent within the component.  Passing
  * reset as a prop to the wrapper allows the Error condition to be reset.  This
@@ -131,8 +133,9 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 
 	public render() {
 		if (this.state.errorInfo && !this.props.disabled) {
-			return (
-				<ThemeProvider theme={this.theme}>
+			let errobj: any = this.props.err;
+			if (errobj == null) {
+				errobj = (
 					<WrapperView className={this.classes}>
 						<span className="ui-error-message">Error in component '{this.props.obj}'</span>
 						<details className="ui-error-stack" style={{ whiteSpace: 'pre-wrap' }}>
@@ -141,6 +144,12 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 							{this.state.errorInfo.componentStack}
 						</details>
 					</WrapperView>
+				);
+			}
+
+			return (
+				<ThemeProvider theme={this.theme}>
+					{errobj}
 				</ThemeProvider>
 			);
 		}

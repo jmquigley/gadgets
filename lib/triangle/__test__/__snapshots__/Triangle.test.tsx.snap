@@ -8,6 +8,7 @@ exports[`Create a triangle in bottom direction 1`] = `
   controlled={true}
   direction="bottom"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -36,74 +37,87 @@ exports[`Create a triangle in bottom direction 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className="test-class"
+    contentEditable={false}
+    controlled={true}
+    direction="bottom"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="none"
+    nobase={false}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Triangle"
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="large"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "fill": "red",
+        "stroke": "green",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <Triangle__SVGView
-      bottom=""
-      className="ui-triangle test-class"
-      contentEditable={false}
-      controlled={true}
-      direction="bottom"
-      disabled={false}
-      errorMessage=""
-      focus={false}
-      height=""
-      id=""
-      left=""
-      location="none"
-      nobase={false}
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Triangle"
-      padding=""
-      preserveAspectRatio="xMidYMid meet"
-      selected={false}
-      sizing="large"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "fill": "red",
-          "stokeWidth": "2px",
-          "stroke": "green",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      version="1.1"
-      viewBox="0 0 40 40"
-      visible={true}
-      width=""
-      xcss={null}
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        className="ui-triangle test-class Triangle__SVGView-iDjlpJ kgcoNS"
+      <Triangle__SVGView
+        bottom=""
+        className="ui-triangle test-class"
         contentEditable={false}
+        controlled={true}
         direction="bottom"
         disabled={false}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
         id=""
+        left=""
+        location="none"
+        nobase={false}
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Triangle"
+        padding=""
         preserveAspectRatio="xMidYMid meet"
         selected={false}
+        sizing="large"
         style={
           Object {
             "fill": "red",
@@ -111,17 +125,45 @@ exports[`Create a triangle in bottom direction 1`] = `
             "stroke": "green",
           }
         }
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
         version="1.1"
         viewBox="0 0 40 40"
+        visible={true}
         width=""
+        xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="0,35, 20,10 40,35"
-        />
-      </svg>
-    </Triangle__SVGView>
-  </ThemeProvider>
+        <svg
+          className="ui-triangle test-class Triangle__SVGView-iDjlpJ kgcoNS"
+          contentEditable={false}
+          direction="bottom"
+          disabled={false}
+          height=""
+          id=""
+          preserveAspectRatio="xMidYMid meet"
+          selected={false}
+          style={
+            Object {
+              "fill": "red",
+              "stokeWidth": "2px",
+              "stroke": "green",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 40 40"
+          width=""
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="0,35, 20,10 40,35"
+          />
+        </svg>
+      </Triangle__SVGView>
+    </ThemeProvider>
+  </Wrapper>
 </Triangle>
 `;
 
@@ -133,6 +175,7 @@ exports[`Create a triangle in down direction 1`] = `
   controlled={true}
   direction="down"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -161,74 +204,87 @@ exports[`Create a triangle in down direction 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className="test-class"
+    contentEditable={false}
+    controlled={true}
+    direction="down"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="none"
+    nobase={false}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Triangle"
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="large"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "fill": "red",
+        "stroke": "green",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <Triangle__SVGView
-      bottom=""
-      className="ui-triangle test-class"
-      contentEditable={false}
-      controlled={true}
-      direction="down"
-      disabled={false}
-      errorMessage=""
-      focus={false}
-      height=""
-      id=""
-      left=""
-      location="none"
-      nobase={false}
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Triangle"
-      padding=""
-      preserveAspectRatio="xMidYMid meet"
-      selected={false}
-      sizing="large"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "fill": "red",
-          "stokeWidth": "2px",
-          "stroke": "green",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      version="1.1"
-      viewBox="0 0 40 40"
-      visible={true}
-      width=""
-      xcss={null}
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        className="ui-triangle test-class Triangle__SVGView-iDjlpJ cUpmlv"
+      <Triangle__SVGView
+        bottom=""
+        className="ui-triangle test-class"
         contentEditable={false}
+        controlled={true}
         direction="down"
         disabled={false}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
         id=""
+        left=""
+        location="none"
+        nobase={false}
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Triangle"
+        padding=""
         preserveAspectRatio="xMidYMid meet"
         selected={false}
+        sizing="large"
         style={
           Object {
             "fill": "red",
@@ -236,17 +292,45 @@ exports[`Create a triangle in down direction 1`] = `
             "stroke": "green",
           }
         }
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
         version="1.1"
         viewBox="0 0 40 40"
+        visible={true}
         width=""
+        xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="0,35, 20,10 40,35"
-        />
-      </svg>
-    </Triangle__SVGView>
-  </ThemeProvider>
+        <svg
+          className="ui-triangle test-class Triangle__SVGView-iDjlpJ cUpmlv"
+          contentEditable={false}
+          direction="down"
+          disabled={false}
+          height=""
+          id=""
+          preserveAspectRatio="xMidYMid meet"
+          selected={false}
+          style={
+            Object {
+              "fill": "red",
+              "stokeWidth": "2px",
+              "stroke": "green",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 40 40"
+          width=""
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="0,35, 20,10 40,35"
+          />
+        </svg>
+      </Triangle__SVGView>
+    </ThemeProvider>
+  </Wrapper>
 </Triangle>
 `;
 
@@ -258,6 +342,7 @@ exports[`Create a triangle in left direction 1`] = `
   controlled={true}
   direction="left"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -286,74 +371,87 @@ exports[`Create a triangle in left direction 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className="test-class"
+    contentEditable={false}
+    controlled={true}
+    direction="left"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="none"
+    nobase={false}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Triangle"
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="large"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "fill": "red",
+        "stroke": "green",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <Triangle__SVGView
-      bottom=""
-      className="ui-triangle test-class"
-      contentEditable={false}
-      controlled={true}
-      direction="left"
-      disabled={false}
-      errorMessage=""
-      focus={false}
-      height=""
-      id=""
-      left=""
-      location="none"
-      nobase={false}
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Triangle"
-      padding=""
-      preserveAspectRatio="xMidYMid meet"
-      selected={false}
-      sizing="large"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "fill": "red",
-          "stokeWidth": "2px",
-          "stroke": "green",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      version="1.1"
-      viewBox="0 0 40 40"
-      visible={true}
-      width=""
-      xcss={null}
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        className="ui-triangle test-class Triangle__SVGView-iDjlpJ heTpCL"
+      <Triangle__SVGView
+        bottom=""
+        className="ui-triangle test-class"
         contentEditable={false}
+        controlled={true}
         direction="left"
         disabled={false}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
         id=""
+        left=""
+        location="none"
+        nobase={false}
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Triangle"
+        padding=""
         preserveAspectRatio="xMidYMid meet"
         selected={false}
+        sizing="large"
         style={
           Object {
             "fill": "red",
@@ -361,17 +459,45 @@ exports[`Create a triangle in left direction 1`] = `
             "stroke": "green",
           }
         }
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
         version="1.1"
         viewBox="0 0 40 40"
+        visible={true}
         width=""
+        xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="0,35, 20,10 40,35"
-        />
-      </svg>
-    </Triangle__SVGView>
-  </ThemeProvider>
+        <svg
+          className="ui-triangle test-class Triangle__SVGView-iDjlpJ heTpCL"
+          contentEditable={false}
+          direction="left"
+          disabled={false}
+          height=""
+          id=""
+          preserveAspectRatio="xMidYMid meet"
+          selected={false}
+          style={
+            Object {
+              "fill": "red",
+              "stokeWidth": "2px",
+              "stroke": "green",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 40 40"
+          width=""
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="0,35, 20,10 40,35"
+          />
+        </svg>
+      </Triangle__SVGView>
+    </ThemeProvider>
+  </Wrapper>
 </Triangle>
 `;
 
@@ -383,6 +509,7 @@ exports[`Create a triangle in right direction 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -411,74 +538,87 @@ exports[`Create a triangle in right direction 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className="test-class"
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="none"
+    nobase={false}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Triangle"
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="large"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "fill": "red",
+        "stroke": "green",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <Triangle__SVGView
-      bottom=""
-      className="ui-triangle test-class"
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      errorMessage=""
-      focus={false}
-      height=""
-      id=""
-      left=""
-      location="none"
-      nobase={false}
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Triangle"
-      padding=""
-      preserveAspectRatio="xMidYMid meet"
-      selected={false}
-      sizing="large"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "fill": "red",
-          "stokeWidth": "2px",
-          "stroke": "green",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      version="1.1"
-      viewBox="0 0 40 40"
-      visible={true}
-      width=""
-      xcss={null}
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        className="ui-triangle test-class Triangle__SVGView-iDjlpJ euLLVU"
+      <Triangle__SVGView
+        bottom=""
+        className="ui-triangle test-class"
         contentEditable={false}
+        controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
         id=""
+        left=""
+        location="none"
+        nobase={false}
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Triangle"
+        padding=""
         preserveAspectRatio="xMidYMid meet"
         selected={false}
+        sizing="large"
         style={
           Object {
             "fill": "red",
@@ -486,17 +626,45 @@ exports[`Create a triangle in right direction 1`] = `
             "stroke": "green",
           }
         }
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
         version="1.1"
         viewBox="0 0 40 40"
+        visible={true}
         width=""
+        xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="0,35, 20,10 40,35"
-        />
-      </svg>
-    </Triangle__SVGView>
-  </ThemeProvider>
+        <svg
+          className="ui-triangle test-class Triangle__SVGView-iDjlpJ euLLVU"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          height=""
+          id=""
+          preserveAspectRatio="xMidYMid meet"
+          selected={false}
+          style={
+            Object {
+              "fill": "red",
+              "stokeWidth": "2px",
+              "stroke": "green",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 40 40"
+          width=""
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="0,35, 20,10 40,35"
+          />
+        </svg>
+      </Triangle__SVGView>
+    </ThemeProvider>
+  </Wrapper>
 </Triangle>
 `;
 
@@ -508,6 +676,7 @@ exports[`Create a triangle in top direction 1`] = `
   controlled={true}
   direction="top"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -536,74 +705,87 @@ exports[`Create a triangle in top direction 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className="test-class"
+    contentEditable={false}
+    controlled={true}
+    direction="top"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="none"
+    nobase={false}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Triangle"
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="large"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "fill": "red",
+        "stroke": "green",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <Triangle__SVGView
-      bottom=""
-      className="ui-triangle test-class"
-      contentEditable={false}
-      controlled={true}
-      direction="top"
-      disabled={false}
-      errorMessage=""
-      focus={false}
-      height=""
-      id=""
-      left=""
-      location="none"
-      nobase={false}
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Triangle"
-      padding=""
-      preserveAspectRatio="xMidYMid meet"
-      selected={false}
-      sizing="large"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "fill": "red",
-          "stokeWidth": "2px",
-          "stroke": "green",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      version="1.1"
-      viewBox="0 0 40 40"
-      visible={true}
-      width=""
-      xcss={null}
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        className="ui-triangle test-class Triangle__SVGView-iDjlpJ kgcoNS"
+      <Triangle__SVGView
+        bottom=""
+        className="ui-triangle test-class"
         contentEditable={false}
+        controlled={true}
         direction="top"
         disabled={false}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
         id=""
+        left=""
+        location="none"
+        nobase={false}
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Triangle"
+        padding=""
         preserveAspectRatio="xMidYMid meet"
         selected={false}
+        sizing="large"
         style={
           Object {
             "fill": "red",
@@ -611,17 +793,45 @@ exports[`Create a triangle in top direction 1`] = `
             "stroke": "green",
           }
         }
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
         version="1.1"
         viewBox="0 0 40 40"
+        visible={true}
         width=""
+        xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="0,35, 20,10 40,35"
-        />
-      </svg>
-    </Triangle__SVGView>
-  </ThemeProvider>
+        <svg
+          className="ui-triangle test-class Triangle__SVGView-iDjlpJ kgcoNS"
+          contentEditable={false}
+          direction="top"
+          disabled={false}
+          height=""
+          id=""
+          preserveAspectRatio="xMidYMid meet"
+          selected={false}
+          style={
+            Object {
+              "fill": "red",
+              "stokeWidth": "2px",
+              "stroke": "green",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 40 40"
+          width=""
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="0,35, 20,10 40,35"
+          />
+        </svg>
+      </Triangle__SVGView>
+    </ThemeProvider>
+  </Wrapper>
 </Triangle>
 `;
 
@@ -633,6 +843,7 @@ exports[`Create a triangle in up direction 1`] = `
   controlled={true}
   direction="up"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -661,74 +872,87 @@ exports[`Create a triangle in up direction 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className="test-class"
+    contentEditable={false}
+    controlled={true}
+    direction="up"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="none"
+    nobase={false}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Triangle"
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="large"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "fill": "red",
+        "stroke": "green",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <Triangle__SVGView
-      bottom=""
-      className="ui-triangle test-class"
-      contentEditable={false}
-      controlled={true}
-      direction="up"
-      disabled={false}
-      errorMessage=""
-      focus={false}
-      height=""
-      id=""
-      left=""
-      location="none"
-      nobase={false}
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Triangle"
-      padding=""
-      preserveAspectRatio="xMidYMid meet"
-      selected={false}
-      sizing="large"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "fill": "red",
-          "stokeWidth": "2px",
-          "stroke": "green",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      version="1.1"
-      viewBox="0 0 40 40"
-      visible={true}
-      width=""
-      xcss={null}
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        className="ui-triangle test-class Triangle__SVGView-iDjlpJ kgcoNS"
+      <Triangle__SVGView
+        bottom=""
+        className="ui-triangle test-class"
         contentEditable={false}
+        controlled={true}
         direction="up"
         disabled={false}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
         id=""
+        left=""
+        location="none"
+        nobase={false}
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Triangle"
+        padding=""
         preserveAspectRatio="xMidYMid meet"
         selected={false}
+        sizing="large"
         style={
           Object {
             "fill": "red",
@@ -736,39 +960,87 @@ exports[`Create a triangle in up direction 1`] = `
             "stroke": "green",
           }
         }
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
         version="1.1"
         viewBox="0 0 40 40"
+        visible={true}
         width=""
+        xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="0,35, 20,10 40,35"
-        />
-      </svg>
-    </Triangle__SVGView>
-  </ThemeProvider>
+        <svg
+          className="ui-triangle test-class Triangle__SVGView-iDjlpJ kgcoNS"
+          contentEditable={false}
+          direction="up"
+          disabled={false}
+          height=""
+          id=""
+          preserveAspectRatio="xMidYMid meet"
+          selected={false}
+          style={
+            Object {
+              "fill": "red",
+              "stokeWidth": "2px",
+              "stroke": "green",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 40 40"
+          width=""
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="0,35, 20,10 40,35"
+          />
+        </svg>
+      </Triangle__SVGView>
+    </ThemeProvider>
+  </Wrapper>
 </Triangle>
 `;
 
 exports[`Test creation of a Triangle control 1`] = `
-<ThemeProvider
-  theme={
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="up"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  nobase={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Triangle"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
     Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
+      "fill": "black",
+      "stokeWidth": "2px",
+      "stroke": "black",
     }
   }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <Triangle__SVGView
     bottom=""
@@ -777,6 +1049,7 @@ exports[`Test creation of a Triangle control 1`] = `
     controlled={true}
     direction="up"
     disabled={false}
+    err={null}
     errorMessage=""
     focus={false}
     height=""
@@ -814,7 +1087,7 @@ exports[`Test creation of a Triangle control 1`] = `
       points="0,35, 20,10 40,35"
     />
   </Triangle__SVGView>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test retrieval of Triangle props object 1`] = `
@@ -826,6 +1099,7 @@ Object {
   "controlled": true,
   "direction": "up",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",

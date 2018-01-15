@@ -12,8 +12,7 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent, getTheme, Sizing} from '../shared';
-import {ThemeProvider} from '../shared/themed-components';
+import {BaseComponent, Sizing, Wrapper} from '../shared';
 
 export interface ListItemProps extends ItemProps {
 	href?: any;  // holds a function injected by the parent for selection
@@ -130,7 +129,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<Item
 					{...this.props}
 					className={this.classes}
@@ -143,7 +142,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 					sizing={this.props.href.sizing}
 					style={this.inlineStyles}
 				/>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

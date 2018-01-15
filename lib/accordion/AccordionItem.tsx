@@ -67,9 +67,9 @@ import {
 	BaseComponent,
 	Color,
 	fontStyle,
-	getTheme
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
@@ -146,7 +146,6 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	}
 
 	public render() {
-		const theme = getTheme();
 		let content = null;
 
 		if ((this.props.children != null) && (this.state.toggle)) {
@@ -161,7 +160,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 
 		return (
-			<ThemeProvider theme={theme}>
+			<Wrapper {...this.props} >
 				<AccordionItemView
 					className={this.classes}
 					style={this.inlineStyles}
@@ -172,7 +171,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 					/>
 					{content}
 				</AccordionItemView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

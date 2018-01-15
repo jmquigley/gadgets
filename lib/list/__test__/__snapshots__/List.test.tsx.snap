@@ -1,24 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test disabling of a List control 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  alternating={false}
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  noselect={false}
+  obj="List"
+  onAdd={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.ul
     alternating={false}
@@ -40,28 +56,44 @@ exports[`Test disabling of a List control 1`] = `
       some list item
     </li>
   </styled.ul>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test making List control invisible 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  alternating={false}
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  noselect={false}
+  obj="List"
+  onAdd={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={false}
+  width=""
+  xcss={null}
 >
   <styled.ul
     alternating={false}
@@ -83,7 +115,7 @@ exports[`Test making List control invisible 1`] = `
       some list item
     </li>
   </styled.ul>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test retrieval of List props object 1`] = `
@@ -96,6 +128,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",
@@ -123,24 +156,40 @@ Object {
 `;
 
 exports[`Test the creation of a List control container 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  alternating={true}
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  noselect={false}
+  obj="List"
+  onAdd={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.ul
     alternating={true}
@@ -162,5 +211,5 @@ exports[`Test the creation of a List control container 1`] = `
       some list item
     </li>
   </styled.ul>
-</ThemeProvider>
+</Wrapper>
 `;

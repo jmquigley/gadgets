@@ -77,11 +77,11 @@ import {
 	baseZIndex,
 	Color,
 	getDefaultBaseProps,
-	getTheme,
 	Justify,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export enum DialogBoxType {
 	error = 'error',
@@ -284,7 +284,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<ReactModal
 					contentLabel="DialogBox"
 					isOpen={this.state.showModal}
@@ -322,7 +322,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 						</DialogBoxMessageContainerView>
 					</DialogBoxView>
 				</ReactModal>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

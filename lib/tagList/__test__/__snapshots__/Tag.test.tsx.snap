@@ -1,24 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a simple Tag instance 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Tag"
+  onClick={[Function]}
+  onDelete={[Function]}
+  onError={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  usedelete={false}
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     bottom=""
@@ -27,6 +45,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
     controlled={true}
     direction="right"
     disabled={false}
+    err={null}
     errorMessage=""
     focus={false}
     height=""
@@ -61,6 +80,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -93,7 +113,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
       xcss={null}
     />
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test disabling of the simple Tag instance 1`] = `
@@ -104,6 +124,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   controlled={true}
   direction="right"
   disabled={true}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -131,199 +152,249 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={true}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tag"
+    onClick={[MockFunction]}
+    onDelete={[Function]}
+    onError={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    usedelete={true}
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      bottom=""
-      className="ui-tag"
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={true}
-      errorMessage=""
-      focus={false}
-      height=""
-      id=""
-      left=""
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Tag"
-      onClick={[MockFunction]}
-      onDelete={[Function]}
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      padding=""
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      usedelete={true}
-      visible={true}
-      width=""
-      xcss={null}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-tag sc-cSHVUG lfKhxa"
+      <styled.div
+        bottom=""
+        className="ui-tag"
         contentEditable={false}
+        controlled={true}
         direction="right"
         disabled={true}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
         id=""
+        left=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Tag"
         onClick={[MockFunction]}
+        onDelete={[Function]}
         onMouseOut={[Function]}
         onMouseOver={[Function]}
+        padding=""
         selected={false}
+        sizing="normal"
         style={Object {}}
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
+        usedelete={true}
+        visible={true}
         width=""
+        xcss={null}
       >
-        <Label
-          bottom=""
-          className=""
+        <div
+          className="ui-tag sc-cSHVUG lfKhxa"
           contentEditable={false}
-          controlled={true}
           direction="right"
           disabled={true}
-          errorMessage=""
-          focus={false}
           height=""
           id=""
-          left=""
-          location="none"
-          noedit={true}
-          nohover={false}
-          noripple={false}
-          obj="Label"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDoubleClick={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          onUpdate={[Function]}
-          padding=""
+          onClick={[MockFunction]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
           selected={false}
-          sizing="normal"
           style={Object {}}
-          testing={true}
-          text="test tag"
-          theme={null}
-          tooltip=""
-          top=""
-          useedit={false}
-          visible={true}
           width=""
-          xcss={null}
         >
-          <ThemeProvider
-            theme={
-              Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#c0c0c0",
-                "color": "#000000",
-                "headerBackgroundColor": "#004358",
-                "headerForegroundColor": "#ffffff",
-                "headerHoverColor": "#ffe11a",
-                "hoverColor": "#c0c0c0",
-                "inputBorderColor": "#c0c0c0",
-                "selectedBackgroundColor": "#1f8a70",
-                "selectedForegroundColor": "#ffe11a",
-                "tooltipBackgroundColor": "#708090",
-                "tooltipForegroundColor": "#ffffff",
-                "transitionDelay": "0.5s",
-              }
-            }
-          >
-            <styled.span
-              className="ui-label"
-              contentEditable={false}
-              disabled={true}
-              innerRef={[Function]}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDoubleClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyPress={[Function]}
-              sizing="normal"
-              style={Object {}}
-              suppressContentEditableWarning={true}
-              visible={true}
-            >
-              <span
-                className="ui-label sc-fjdhpX wcGfm"
-                contentEditable={false}
-                disabled={true}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDoubleClick={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                style={Object {}}
-                suppressContentEditableWarning={true}
-              >
-                test tag
-              </span>
-            </styled.span>
-          </ThemeProvider>
-        </Label>
-        <Styled(ButtonCircle)
-          disabled={true}
-          iconName="times"
-          onClick={[Function]}
-          sizing="small"
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#d9534f",
-              "color": "#d9534f",
-              "opacity": "0.0",
-            }
-          }
-          visible={true}
-        >
-          <ButtonCircle
+          <Label
             bottom=""
-            className="sc-jzJRlG QJqFa"
+            className=""
             contentEditable={false}
             controlled={true}
             direction="right"
             disabled={true}
+            err={null}
             errorMessage=""
             focus={false}
             height=""
-            iconName="times"
-            iconStyle=""
             id=""
             left=""
             location="none"
-            noedit={false}
+            noedit={true}
             nohover={false}
             noripple={false}
-            obj="ButtonCircle"
+            obj="Label"
+            onBlur={[Function]}
+            onChange={[Function]}
             onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onUpdate={[Function]}
             padding=""
             selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            text="test tag"
+            theme={null}
+            tooltip=""
+            top=""
+            useedit={false}
+            visible={true}
+            width=""
+            xcss={null}
+          >
+            <Wrapper
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={true}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={false}
+              obj="Label"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onError={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              reset={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              text="test tag"
+              theme={null}
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={true}
+              width=""
+              xcss={null}
+            >
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#c0c0c0",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "inputBorderColor": "#c0c0c0",
+                    "itemHoverColor": "#bedb39",
+                    "selectedBackgroundColor": "#1f8a70",
+                    "selectedForegroundColor": "#ffe11a",
+                    "tooltipBackgroundColor": "#708090",
+                    "tooltipForegroundColor": "#ffffff",
+                    "transitionDelay": "0.5s",
+                  }
+                }
+              >
+                <styled.span
+                  className="ui-label"
+                  contentEditable={false}
+                  disabled={true}
+                  innerRef={[Function]}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDoubleClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  sizing="normal"
+                  style={Object {}}
+                  suppressContentEditableWarning={true}
+                  visible={true}
+                >
+                  <span
+                    className="ui-label sc-fjdhpX wcGfm"
+                    contentEditable={false}
+                    disabled={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                  >
+                    test tag
+                  </span>
+                </styled.span>
+              </ThemeProvider>
+            </Wrapper>
+          </Label>
+          <Styled(ButtonCircle)
+            disabled={true}
+            iconName="times"
+            onClick={[Function]}
             sizing="small"
             style={
               Object {
@@ -333,133 +404,133 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 "opacity": "0.0",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
             visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <ButtonCircle
+              bottom=""
+              className="sc-jzJRlG QJqFa"
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={true}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              iconName="times"
+              iconStyle=""
+              id=""
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="ButtonCircle"
+              onClick={[Function]}
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
                   "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "borderColor": "#d9534f",
+                  "color": "#d9534f",
+                  "opacity": "0.0",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <styled.div
-                className="ui-button-circle sc-jzJRlG QJqFa"
+              <Wrapper
+                bottom=""
+                className="sc-jzJRlG QJqFa"
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={true}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                iconName="times"
+                iconStyle=""
+                id=""
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="ButtonCircle"
+                onClick={[Function]}
+                onError={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
+                sizing="small"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                    "opacity": "0.0",
+                  }
+                }
+                testing={true}
+                theme={null}
+                tooltip=""
+                top=""
+                visible={true}
+                width=""
+                xcss={null}
               >
-                <div
-                  className="ui-button-circle sc-jzJRlG QJqFa sc-gzVnrw VIGKP"
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
                 >
                   <styled.div
-                    height="18px"
-                    width="18px"
+                    className="ui-button-circle sc-jzJRlG QJqFa"
                   >
                     <div
-                      className="sc-htoDjs QyFw"
-                      height="18px"
-                      width="18px"
+                      className="ui-button-circle sc-jzJRlG QJqFa sc-gzVnrw VIGKP"
                     >
-                      <Styled(Button)
-                        bottom=""
-                        className="sc-jzJRlG QJqFa"
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
-                        disabled={true}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="times"
-                        iconStyle=""
-                        id=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="ButtonCircle"
-                        onClick={[Function]}
-                        padding=""
-                        selected={false}
-                        sizing="small"
-                        style={
-                          Object {
-                            "backgroundColor": "#ffffff",
-                            "borderColor": "#d9534f",
-                            "color": "#d9534f",
-                            "opacity": "0.0",
-                          }
-                        }
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={true}
-                        width=""
-                        xcss={null}
+                      <styled.div
+                        height="18px"
+                        width="18px"
                       >
-                        <Button
-                          bottom=""
-                          className="sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
-                          contentEditable={false}
-                          controlled={true}
-                          direction="right"
-                          disabled={true}
-                          errorMessage=""
-                          focus={false}
-                          height=""
-                          iconName="times"
-                          iconStyle=""
-                          id=""
-                          left=""
-                          location="none"
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          obj="ButtonCircle"
-                          onClick={[Function]}
-                          padding=""
-                          selected={false}
-                          sizing="small"
-                          style={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#d9534f",
-                              "color": "#d9534f",
-                              "opacity": "0.0",
-                            }
-                          }
-                          testing={true}
-                          theme={null}
-                          tooltip=""
-                          top=""
-                          visible={true}
-                          width=""
-                          xcss={null}
+                        <div
+                          className="sc-htoDjs QyFw"
+                          height="18px"
+                          width="18px"
                         >
-                          <Wrapper
+                          <Styled(Button)
                             bottom=""
-                            className="sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                            className="sc-jzJRlG QJqFa"
                             contentEditable={false}
                             controlled={true}
                             direction="right"
                             disabled={true}
+                            err={null}
                             errorMessage=""
                             focus={false}
                             height=""
@@ -473,9 +544,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                             noripple={false}
                             obj="ButtonCircle"
                             onClick={[Function]}
-                            onError={[Function]}
                             padding=""
-                            reset={false}
                             selected={false}
                             sizing="small"
                             style={
@@ -494,30 +563,72 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                             width=""
                             xcss={null}
                           >
-                            <ThemeProvider
-                              theme={
+                            <Button
+                              bottom=""
+                              className="sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                              contentEditable={false}
+                              controlled={true}
+                              direction="right"
+                              disabled={true}
+                              err={null}
+                              errorMessage=""
+                              focus={false}
+                              height=""
+                              iconName="times"
+                              iconStyle=""
+                              id=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="ButtonCircle"
+                              onClick={[Function]}
+                              padding=""
+                              selected={false}
+                              sizing="small"
+                              style={
                                 Object {
                                   "backgroundColor": "#ffffff",
-                                  "borderColor": "#c0c0c0",
-                                  "color": "#000000",
-                                  "headerBackgroundColor": "#004358",
-                                  "headerForegroundColor": "#ffffff",
-                                  "headerHoverColor": "#ffe11a",
-                                  "hoverColor": "#c0c0c0",
-                                  "inputBorderColor": "#c0c0c0",
-                                  "selectedBackgroundColor": "#1f8a70",
-                                  "selectedForegroundColor": "#ffe11a",
-                                  "tooltipBackgroundColor": "#708090",
-                                  "tooltipForegroundColor": "#ffffff",
-                                  "transitionDelay": "0.5s",
+                                  "borderColor": "#d9534f",
+                                  "color": "#d9534f",
+                                  "opacity": "0.0",
                                 }
                               }
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={true}
+                              width=""
+                              xcss={null}
                             >
-                              <styled.div
-                                className="ui-button nohover sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                              <Wrapper
+                                bottom=""
+                                className="sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                                contentEditable={false}
+                                controlled={true}
+                                direction="right"
                                 disabled={true}
-                                id="Button-0"
+                                err={null}
+                                errorMessage=""
+                                focus={false}
+                                height=""
+                                iconName="times"
+                                iconStyle=""
+                                id=""
+                                left=""
+                                location="none"
+                                noedit={false}
+                                nohover={false}
+                                noripple={false}
+                                obj="ButtonCircle"
                                 onClick={[Function]}
+                                onError={[Function]}
+                                padding=""
+                                reset={false}
+                                selected={false}
+                                sizing="small"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -526,79 +637,71 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                     "opacity": "0.0",
                                   }
                                 }
+                                testing={true}
+                                theme={null}
+                                tooltip=""
+                                top=""
                                 visible={true}
+                                width=""
+                                xcss={null}
                               >
-                                <div
-                                  className="ui-button nohover sc-jzJRlG QJqFa sc-dnqmqq dtsZzm sc-bZQynM kuuPdU"
-                                  disabled={true}
-                                  id="Button-0"
-                                  onClick={[Function]}
-                                  style={
+                                <ThemeProvider
+                                  theme={
                                     Object {
                                       "backgroundColor": "#ffffff",
-                                      "borderColor": "#d9534f",
-                                      "color": "#d9534f",
-                                      "opacity": "0.0",
+                                      "borderColor": "#c0c0c0",
+                                      "color": "#000000",
+                                      "headerBackgroundColor": "#004358",
+                                      "headerForegroundColor": "#ffffff",
+                                      "headerHoverColor": "#ffe11a",
+                                      "hoverColor": "#c0c0c0",
+                                      "inputBorderColor": "#c0c0c0",
+                                      "itemHoverColor": "#bedb39",
+                                      "selectedBackgroundColor": "#1f8a70",
+                                      "selectedForegroundColor": "#ffe11a",
+                                      "tooltipBackgroundColor": "#708090",
+                                      "tooltipForegroundColor": "#ffffff",
+                                      "transitionDelay": "0.5s",
                                     }
                                   }
                                 >
-                                  <Icon
-                                    bottom=""
-                                    className=""
-                                    contentEditable={false}
-                                    controlled={true}
-                                    direction="right"
-                                    disabled={false}
-                                    errorMessage=""
-                                    focus={false}
-                                    height=""
-                                    iconName="times"
-                                    id=""
-                                    imageFile=""
-                                    left=""
-                                    location="none"
-                                    noedit={false}
-                                    nohover={false}
-                                    noripple={false}
-                                    obj="Icon"
-                                    padding=""
-                                    selected={false}
-                                    sizing="small"
-                                    style={Object {}}
-                                    testing={true}
-                                    theme={null}
-                                    tooltip=""
-                                    top=""
+                                  <styled.div
+                                    className="ui-button nohover sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                                    disabled={true}
+                                    id="Button-0"
+                                    onClick={[Function]}
+                                    style={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#d9534f",
+                                        "color": "#d9534f",
+                                        "opacity": "0.0",
+                                      }
+                                    }
                                     visible={true}
-                                    width=""
-                                    xcss={null}
                                   >
-                                    <ThemeProvider
-                                      theme={
+                                    <div
+                                      className="ui-button nohover sc-jzJRlG QJqFa sc-dnqmqq dtsZzm sc-bZQynM kuuPdU"
+                                      disabled={true}
+                                      id="Button-0"
+                                      onClick={[Function]}
+                                      style={
                                         Object {
                                           "backgroundColor": "#ffffff",
-                                          "borderColor": "#c0c0c0",
-                                          "color": "#000000",
-                                          "headerBackgroundColor": "#004358",
-                                          "headerForegroundColor": "#ffffff",
-                                          "headerHoverColor": "#ffe11a",
-                                          "hoverColor": "#c0c0c0",
-                                          "inputBorderColor": "#c0c0c0",
-                                          "selectedBackgroundColor": "#1f8a70",
-                                          "selectedForegroundColor": "#ffe11a",
-                                          "tooltipBackgroundColor": "#708090",
-                                          "tooltipForegroundColor": "#ffffff",
-                                          "transitionDelay": "0.5s",
+                                          "borderColor": "#d9534f",
+                                          "color": "#d9534f",
+                                          "opacity": "0.0",
                                         }
                                       }
                                     >
-                                      <styled.i
+                                      <Icon
                                         bottom=""
-                                        className="ui-icon fa fa-fw fa-times"
+                                        className=""
                                         contentEditable={false}
                                         controlled={true}
                                         direction="right"
                                         disabled={false}
+                                        err={null}
                                         errorMessage=""
                                         focus={false}
                                         height=""
@@ -623,36 +726,125 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                         width=""
                                         xcss={null}
                                       >
-                                        <i
-                                          className="ui-icon fa fa-fw fa-times sc-bwzfXH xVJTk"
+                                        <Wrapper
+                                          bottom=""
+                                          className=""
                                           contentEditable={false}
+                                          controlled={true}
                                           direction="right"
                                           disabled={false}
+                                          err={null}
+                                          errorMessage=""
+                                          focus={false}
                                           height=""
+                                          iconName="times"
                                           id=""
+                                          imageFile=""
+                                          left=""
+                                          location="none"
+                                          noedit={false}
+                                          nohover={false}
+                                          noripple={false}
+                                          obj="Icon"
+                                          onError={[Function]}
+                                          padding=""
+                                          reset={false}
                                           selected={false}
+                                          sizing="small"
                                           style={Object {}}
+                                          testing={true}
+                                          theme={null}
+                                          tooltip=""
+                                          top=""
+                                          visible={true}
                                           width=""
-                                        />
-                                      </styled.i>
-                                    </ThemeProvider>
-                                  </Icon>
-                                </div>
-                              </styled.div>
-                            </ThemeProvider>
-                          </Wrapper>
-                        </Button>
-                      </Styled(Button)>
+                                          xcss={null}
+                                        >
+                                          <ThemeProvider
+                                            theme={
+                                              Object {
+                                                "backgroundColor": "#ffffff",
+                                                "borderColor": "#c0c0c0",
+                                                "color": "#000000",
+                                                "headerBackgroundColor": "#004358",
+                                                "headerForegroundColor": "#ffffff",
+                                                "headerHoverColor": "#ffe11a",
+                                                "hoverColor": "#c0c0c0",
+                                                "inputBorderColor": "#c0c0c0",
+                                                "itemHoverColor": "#bedb39",
+                                                "selectedBackgroundColor": "#1f8a70",
+                                                "selectedForegroundColor": "#ffe11a",
+                                                "tooltipBackgroundColor": "#708090",
+                                                "tooltipForegroundColor": "#ffffff",
+                                                "transitionDelay": "0.5s",
+                                              }
+                                            }
+                                          >
+                                            <styled.i
+                                              bottom=""
+                                              className="ui-icon fa fa-fw fa-times"
+                                              contentEditable={false}
+                                              controlled={true}
+                                              direction="right"
+                                              disabled={false}
+                                              err={null}
+                                              errorMessage=""
+                                              focus={false}
+                                              height=""
+                                              iconName="times"
+                                              id=""
+                                              imageFile=""
+                                              left=""
+                                              location="none"
+                                              noedit={false}
+                                              nohover={false}
+                                              noripple={false}
+                                              obj="Icon"
+                                              padding=""
+                                              selected={false}
+                                              sizing="small"
+                                              style={Object {}}
+                                              testing={true}
+                                              theme={null}
+                                              tooltip=""
+                                              top=""
+                                              visible={true}
+                                              width=""
+                                              xcss={null}
+                                            >
+                                              <i
+                                                className="ui-icon fa fa-fw fa-times sc-bwzfXH xVJTk"
+                                                contentEditable={false}
+                                                direction="right"
+                                                disabled={false}
+                                                height=""
+                                                id=""
+                                                selected={false}
+                                                style={Object {}}
+                                                width=""
+                                              />
+                                            </styled.i>
+                                          </ThemeProvider>
+                                        </Wrapper>
+                                      </Icon>
+                                    </div>
+                                  </styled.div>
+                                </ThemeProvider>
+                              </Wrapper>
+                            </Button>
+                          </Styled(Button)>
+                        </div>
+                      </styled.div>
                     </div>
                   </styled.div>
-                </div>
-              </styled.div>
-            </ThemeProvider>
-          </ButtonCircle>
-        </Styled(ButtonCircle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                </ThemeProvider>
+              </Wrapper>
+            </ButtonCircle>
+          </Styled(ButtonCircle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tag>
 `;
 
@@ -664,6 +856,7 @@ exports[`Test making Tag invisible 1`] = `
   controlled={true}
   direction="right"
   disabled={true}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -691,199 +884,249 @@ exports[`Test making Tag invisible 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={true}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tag"
+    onClick={[Function]}
+    onDelete={[Function]}
+    onError={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    usedelete={true}
+    visible={false}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      bottom=""
-      className="ui-tag"
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={true}
-      errorMessage=""
-      focus={false}
-      height=""
-      id=""
-      left=""
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Tag"
-      onClick={[Function]}
-      onDelete={[Function]}
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      padding=""
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      usedelete={true}
-      visible={false}
-      width=""
-      xcss={null}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-tag sc-cSHVUG eqaZrq"
+      <styled.div
+        bottom=""
+        className="ui-tag"
         contentEditable={false}
+        controlled={true}
         direction="right"
         disabled={true}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
         id=""
+        left=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Tag"
         onClick={[Function]}
+        onDelete={[Function]}
         onMouseOut={[Function]}
         onMouseOver={[Function]}
+        padding=""
         selected={false}
+        sizing="normal"
         style={Object {}}
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
+        usedelete={true}
+        visible={false}
         width=""
+        xcss={null}
       >
-        <Label
-          bottom=""
-          className=""
+        <div
+          className="ui-tag sc-cSHVUG eqaZrq"
           contentEditable={false}
-          controlled={true}
           direction="right"
           disabled={true}
-          errorMessage=""
-          focus={false}
           height=""
           id=""
-          left=""
-          location="none"
-          noedit={true}
-          nohover={false}
-          noripple={false}
-          obj="Label"
-          onBlur={[Function]}
-          onChange={[Function]}
           onClick={[Function]}
-          onDoubleClick={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          onUpdate={[Function]}
-          padding=""
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
           selected={false}
-          sizing="normal"
           style={Object {}}
-          testing={true}
-          text="test tag"
-          theme={null}
-          tooltip=""
-          top=""
-          useedit={false}
-          visible={false}
           width=""
-          xcss={null}
         >
-          <ThemeProvider
-            theme={
-              Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#c0c0c0",
-                "color": "#000000",
-                "headerBackgroundColor": "#004358",
-                "headerForegroundColor": "#ffffff",
-                "headerHoverColor": "#ffe11a",
-                "hoverColor": "#c0c0c0",
-                "inputBorderColor": "#c0c0c0",
-                "selectedBackgroundColor": "#1f8a70",
-                "selectedForegroundColor": "#ffe11a",
-                "tooltipBackgroundColor": "#708090",
-                "tooltipForegroundColor": "#ffffff",
-                "transitionDelay": "0.5s",
-              }
-            }
-          >
-            <styled.span
-              className="ui-label"
-              contentEditable={false}
-              disabled={true}
-              innerRef={[Function]}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDoubleClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyPress={[Function]}
-              sizing="normal"
-              style={Object {}}
-              suppressContentEditableWarning={true}
-              visible={false}
-            >
-              <span
-                className="ui-label sc-fjdhpX iAODdj"
-                contentEditable={false}
-                disabled={true}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDoubleClick={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                style={Object {}}
-                suppressContentEditableWarning={true}
-              >
-                test tag
-              </span>
-            </styled.span>
-          </ThemeProvider>
-        </Label>
-        <Styled(ButtonCircle)
-          disabled={true}
-          iconName="times"
-          onClick={[Function]}
-          sizing="small"
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#d9534f",
-              "color": "#d9534f",
-              "opacity": "0.0",
-            }
-          }
-          visible={false}
-        >
-          <ButtonCircle
+          <Label
             bottom=""
-            className="sc-jzJRlG QJqFa"
+            className=""
             contentEditable={false}
             controlled={true}
             direction="right"
             disabled={true}
+            err={null}
             errorMessage=""
             focus={false}
             height=""
-            iconName="times"
-            iconStyle=""
             id=""
             left=""
             location="none"
-            noedit={false}
+            noedit={true}
             nohover={false}
             noripple={false}
-            obj="ButtonCircle"
+            obj="Label"
+            onBlur={[Function]}
+            onChange={[Function]}
             onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onUpdate={[Function]}
             padding=""
             selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            text="test tag"
+            theme={null}
+            tooltip=""
+            top=""
+            useedit={false}
+            visible={false}
+            width=""
+            xcss={null}
+          >
+            <Wrapper
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={true}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="none"
+              noedit={true}
+              nohover={false}
+              noripple={false}
+              obj="Label"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onError={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              reset={false}
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              text="test tag"
+              theme={null}
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={false}
+              width=""
+              xcss={null}
+            >
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#c0c0c0",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "inputBorderColor": "#c0c0c0",
+                    "itemHoverColor": "#bedb39",
+                    "selectedBackgroundColor": "#1f8a70",
+                    "selectedForegroundColor": "#ffe11a",
+                    "tooltipBackgroundColor": "#708090",
+                    "tooltipForegroundColor": "#ffffff",
+                    "transitionDelay": "0.5s",
+                  }
+                }
+              >
+                <styled.span
+                  className="ui-label"
+                  contentEditable={false}
+                  disabled={true}
+                  innerRef={[Function]}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDoubleClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  sizing="normal"
+                  style={Object {}}
+                  suppressContentEditableWarning={true}
+                  visible={false}
+                >
+                  <span
+                    className="ui-label sc-fjdhpX iAODdj"
+                    contentEditable={false}
+                    disabled={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                  >
+                    test tag
+                  </span>
+                </styled.span>
+              </ThemeProvider>
+            </Wrapper>
+          </Label>
+          <Styled(ButtonCircle)
+            disabled={true}
+            iconName="times"
+            onClick={[Function]}
             sizing="small"
             style={
               Object {
@@ -893,133 +1136,133 @@ exports[`Test making Tag invisible 1`] = `
                 "opacity": "0.0",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
             visible={false}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <ButtonCircle
+              bottom=""
+              className="sc-jzJRlG QJqFa"
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={true}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              iconName="times"
+              iconStyle=""
+              id=""
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="ButtonCircle"
+              onClick={[Function]}
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
                   "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "borderColor": "#d9534f",
+                  "color": "#d9534f",
+                  "opacity": "0.0",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={false}
+              width=""
+              xcss={null}
             >
-              <styled.div
-                className="ui-button-circle sc-jzJRlG QJqFa"
+              <Wrapper
+                bottom=""
+                className="sc-jzJRlG QJqFa"
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={true}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                iconName="times"
+                iconStyle=""
+                id=""
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="ButtonCircle"
+                onClick={[Function]}
+                onError={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
+                sizing="small"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#d9534f",
+                    "color": "#d9534f",
+                    "opacity": "0.0",
+                  }
+                }
+                testing={true}
+                theme={null}
+                tooltip=""
+                top=""
+                visible={false}
+                width=""
+                xcss={null}
               >
-                <div
-                  className="ui-button-circle sc-jzJRlG QJqFa sc-gzVnrw VIGKP"
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
                 >
                   <styled.div
-                    height="18px"
-                    width="18px"
+                    className="ui-button-circle sc-jzJRlG QJqFa"
                   >
                     <div
-                      className="sc-htoDjs QyFw"
-                      height="18px"
-                      width="18px"
+                      className="ui-button-circle sc-jzJRlG QJqFa sc-gzVnrw VIGKP"
                     >
-                      <Styled(Button)
-                        bottom=""
-                        className="sc-jzJRlG QJqFa"
-                        contentEditable={false}
-                        controlled={true}
-                        direction="right"
-                        disabled={true}
-                        errorMessage=""
-                        focus={false}
-                        height=""
-                        iconName="times"
-                        iconStyle=""
-                        id=""
-                        left=""
-                        location="none"
-                        noedit={false}
-                        nohover={false}
-                        noripple={false}
-                        obj="ButtonCircle"
-                        onClick={[Function]}
-                        padding=""
-                        selected={false}
-                        sizing="small"
-                        style={
-                          Object {
-                            "backgroundColor": "#ffffff",
-                            "borderColor": "#d9534f",
-                            "color": "#d9534f",
-                            "opacity": "0.0",
-                          }
-                        }
-                        testing={true}
-                        theme={null}
-                        tooltip=""
-                        top=""
-                        visible={false}
-                        width=""
-                        xcss={null}
+                      <styled.div
+                        height="18px"
+                        width="18px"
                       >
-                        <Button
-                          bottom=""
-                          className="sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
-                          contentEditable={false}
-                          controlled={true}
-                          direction="right"
-                          disabled={true}
-                          errorMessage=""
-                          focus={false}
-                          height=""
-                          iconName="times"
-                          iconStyle=""
-                          id=""
-                          left=""
-                          location="none"
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          obj="ButtonCircle"
-                          onClick={[Function]}
-                          padding=""
-                          selected={false}
-                          sizing="small"
-                          style={
-                            Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#d9534f",
-                              "color": "#d9534f",
-                              "opacity": "0.0",
-                            }
-                          }
-                          testing={true}
-                          theme={null}
-                          tooltip=""
-                          top=""
-                          visible={false}
-                          width=""
-                          xcss={null}
+                        <div
+                          className="sc-htoDjs QyFw"
+                          height="18px"
+                          width="18px"
                         >
-                          <Wrapper
+                          <Styled(Button)
                             bottom=""
-                            className="sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                            className="sc-jzJRlG QJqFa"
                             contentEditable={false}
                             controlled={true}
                             direction="right"
                             disabled={true}
+                            err={null}
                             errorMessage=""
                             focus={false}
                             height=""
@@ -1033,9 +1276,7 @@ exports[`Test making Tag invisible 1`] = `
                             noripple={false}
                             obj="ButtonCircle"
                             onClick={[Function]}
-                            onError={[Function]}
                             padding=""
-                            reset={false}
                             selected={false}
                             sizing="small"
                             style={
@@ -1054,30 +1295,72 @@ exports[`Test making Tag invisible 1`] = `
                             width=""
                             xcss={null}
                           >
-                            <ThemeProvider
-                              theme={
+                            <Button
+                              bottom=""
+                              className="sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                              contentEditable={false}
+                              controlled={true}
+                              direction="right"
+                              disabled={true}
+                              err={null}
+                              errorMessage=""
+                              focus={false}
+                              height=""
+                              iconName="times"
+                              iconStyle=""
+                              id=""
+                              left=""
+                              location="none"
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="ButtonCircle"
+                              onClick={[Function]}
+                              padding=""
+                              selected={false}
+                              sizing="small"
+                              style={
                                 Object {
                                   "backgroundColor": "#ffffff",
-                                  "borderColor": "#c0c0c0",
-                                  "color": "#000000",
-                                  "headerBackgroundColor": "#004358",
-                                  "headerForegroundColor": "#ffffff",
-                                  "headerHoverColor": "#ffe11a",
-                                  "hoverColor": "#c0c0c0",
-                                  "inputBorderColor": "#c0c0c0",
-                                  "selectedBackgroundColor": "#1f8a70",
-                                  "selectedForegroundColor": "#ffe11a",
-                                  "tooltipBackgroundColor": "#708090",
-                                  "tooltipForegroundColor": "#ffffff",
-                                  "transitionDelay": "0.5s",
+                                  "borderColor": "#d9534f",
+                                  "color": "#d9534f",
+                                  "opacity": "0.0",
                                 }
                               }
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              visible={false}
+                              width=""
+                              xcss={null}
                             >
-                              <styled.div
-                                className="ui-button nohover sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                              <Wrapper
+                                bottom=""
+                                className="sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                                contentEditable={false}
+                                controlled={true}
+                                direction="right"
                                 disabled={true}
-                                id="Button-0"
+                                err={null}
+                                errorMessage=""
+                                focus={false}
+                                height=""
+                                iconName="times"
+                                iconStyle=""
+                                id=""
+                                left=""
+                                location="none"
+                                noedit={false}
+                                nohover={false}
+                                noripple={false}
+                                obj="ButtonCircle"
                                 onClick={[Function]}
+                                onError={[Function]}
+                                padding=""
+                                reset={false}
+                                selected={false}
+                                sizing="small"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -1086,79 +1369,71 @@ exports[`Test making Tag invisible 1`] = `
                                     "opacity": "0.0",
                                   }
                                 }
+                                testing={true}
+                                theme={null}
+                                tooltip=""
+                                top=""
                                 visible={false}
+                                width=""
+                                xcss={null}
                               >
-                                <div
-                                  className="ui-button nohover sc-jzJRlG QJqFa sc-dnqmqq dtsZzm sc-bZQynM hkHDhh"
-                                  disabled={true}
-                                  id="Button-0"
-                                  onClick={[Function]}
-                                  style={
+                                <ThemeProvider
+                                  theme={
                                     Object {
                                       "backgroundColor": "#ffffff",
-                                      "borderColor": "#d9534f",
-                                      "color": "#d9534f",
-                                      "opacity": "0.0",
+                                      "borderColor": "#c0c0c0",
+                                      "color": "#000000",
+                                      "headerBackgroundColor": "#004358",
+                                      "headerForegroundColor": "#ffffff",
+                                      "headerHoverColor": "#ffe11a",
+                                      "hoverColor": "#c0c0c0",
+                                      "inputBorderColor": "#c0c0c0",
+                                      "itemHoverColor": "#bedb39",
+                                      "selectedBackgroundColor": "#1f8a70",
+                                      "selectedForegroundColor": "#ffe11a",
+                                      "tooltipBackgroundColor": "#708090",
+                                      "tooltipForegroundColor": "#ffffff",
+                                      "transitionDelay": "0.5s",
                                     }
                                   }
                                 >
-                                  <Icon
-                                    bottom=""
-                                    className=""
-                                    contentEditable={false}
-                                    controlled={true}
-                                    direction="right"
-                                    disabled={false}
-                                    errorMessage=""
-                                    focus={false}
-                                    height=""
-                                    iconName="times"
-                                    id=""
-                                    imageFile=""
-                                    left=""
-                                    location="none"
-                                    noedit={false}
-                                    nohover={false}
-                                    noripple={false}
-                                    obj="Icon"
-                                    padding=""
-                                    selected={false}
-                                    sizing="small"
-                                    style={Object {}}
-                                    testing={true}
-                                    theme={null}
-                                    tooltip=""
-                                    top=""
-                                    visible={true}
-                                    width=""
-                                    xcss={null}
+                                  <styled.div
+                                    className="ui-button nohover sc-jzJRlG QJqFa sc-dnqmqq dtsZzm"
+                                    disabled={true}
+                                    id="Button-0"
+                                    onClick={[Function]}
+                                    style={
+                                      Object {
+                                        "backgroundColor": "#ffffff",
+                                        "borderColor": "#d9534f",
+                                        "color": "#d9534f",
+                                        "opacity": "0.0",
+                                      }
+                                    }
+                                    visible={false}
                                   >
-                                    <ThemeProvider
-                                      theme={
+                                    <div
+                                      className="ui-button nohover sc-jzJRlG QJqFa sc-dnqmqq dtsZzm sc-bZQynM hkHDhh"
+                                      disabled={true}
+                                      id="Button-0"
+                                      onClick={[Function]}
+                                      style={
                                         Object {
                                           "backgroundColor": "#ffffff",
-                                          "borderColor": "#c0c0c0",
-                                          "color": "#000000",
-                                          "headerBackgroundColor": "#004358",
-                                          "headerForegroundColor": "#ffffff",
-                                          "headerHoverColor": "#ffe11a",
-                                          "hoverColor": "#c0c0c0",
-                                          "inputBorderColor": "#c0c0c0",
-                                          "selectedBackgroundColor": "#1f8a70",
-                                          "selectedForegroundColor": "#ffe11a",
-                                          "tooltipBackgroundColor": "#708090",
-                                          "tooltipForegroundColor": "#ffffff",
-                                          "transitionDelay": "0.5s",
+                                          "borderColor": "#d9534f",
+                                          "color": "#d9534f",
+                                          "opacity": "0.0",
                                         }
                                       }
                                     >
-                                      <styled.i
+                                      <Icon
                                         bottom=""
-                                        className="ui-icon fa fa-fw fa-times"
+                                        className=""
                                         contentEditable={false}
                                         controlled={true}
                                         direction="right"
                                         disabled={false}
+                                        err={null}
                                         errorMessage=""
                                         focus={false}
                                         height=""
@@ -1183,36 +1458,125 @@ exports[`Test making Tag invisible 1`] = `
                                         width=""
                                         xcss={null}
                                       >
-                                        <i
-                                          className="ui-icon fa fa-fw fa-times sc-bwzfXH xVJTk"
+                                        <Wrapper
+                                          bottom=""
+                                          className=""
                                           contentEditable={false}
+                                          controlled={true}
                                           direction="right"
                                           disabled={false}
+                                          err={null}
+                                          errorMessage=""
+                                          focus={false}
                                           height=""
+                                          iconName="times"
                                           id=""
+                                          imageFile=""
+                                          left=""
+                                          location="none"
+                                          noedit={false}
+                                          nohover={false}
+                                          noripple={false}
+                                          obj="Icon"
+                                          onError={[Function]}
+                                          padding=""
+                                          reset={false}
                                           selected={false}
+                                          sizing="small"
                                           style={Object {}}
+                                          testing={true}
+                                          theme={null}
+                                          tooltip=""
+                                          top=""
+                                          visible={true}
                                           width=""
-                                        />
-                                      </styled.i>
-                                    </ThemeProvider>
-                                  </Icon>
-                                </div>
-                              </styled.div>
-                            </ThemeProvider>
-                          </Wrapper>
-                        </Button>
-                      </Styled(Button)>
+                                          xcss={null}
+                                        >
+                                          <ThemeProvider
+                                            theme={
+                                              Object {
+                                                "backgroundColor": "#ffffff",
+                                                "borderColor": "#c0c0c0",
+                                                "color": "#000000",
+                                                "headerBackgroundColor": "#004358",
+                                                "headerForegroundColor": "#ffffff",
+                                                "headerHoverColor": "#ffe11a",
+                                                "hoverColor": "#c0c0c0",
+                                                "inputBorderColor": "#c0c0c0",
+                                                "itemHoverColor": "#bedb39",
+                                                "selectedBackgroundColor": "#1f8a70",
+                                                "selectedForegroundColor": "#ffe11a",
+                                                "tooltipBackgroundColor": "#708090",
+                                                "tooltipForegroundColor": "#ffffff",
+                                                "transitionDelay": "0.5s",
+                                              }
+                                            }
+                                          >
+                                            <styled.i
+                                              bottom=""
+                                              className="ui-icon fa fa-fw fa-times"
+                                              contentEditable={false}
+                                              controlled={true}
+                                              direction="right"
+                                              disabled={false}
+                                              err={null}
+                                              errorMessage=""
+                                              focus={false}
+                                              height=""
+                                              iconName="times"
+                                              id=""
+                                              imageFile=""
+                                              left=""
+                                              location="none"
+                                              noedit={false}
+                                              nohover={false}
+                                              noripple={false}
+                                              obj="Icon"
+                                              padding=""
+                                              selected={false}
+                                              sizing="small"
+                                              style={Object {}}
+                                              testing={true}
+                                              theme={null}
+                                              tooltip=""
+                                              top=""
+                                              visible={true}
+                                              width=""
+                                              xcss={null}
+                                            >
+                                              <i
+                                                className="ui-icon fa fa-fw fa-times sc-bwzfXH xVJTk"
+                                                contentEditable={false}
+                                                direction="right"
+                                                disabled={false}
+                                                height=""
+                                                id=""
+                                                selected={false}
+                                                style={Object {}}
+                                                width=""
+                                              />
+                                            </styled.i>
+                                          </ThemeProvider>
+                                        </Wrapper>
+                                      </Icon>
+                                    </div>
+                                  </styled.div>
+                                </ThemeProvider>
+                              </Wrapper>
+                            </Button>
+                          </Styled(Button)>
+                        </div>
+                      </styled.div>
                     </div>
                   </styled.div>
-                </div>
-              </styled.div>
-            </ThemeProvider>
-          </ButtonCircle>
-        </Styled(ButtonCircle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                </ThemeProvider>
+              </Wrapper>
+            </ButtonCircle>
+          </Styled(ButtonCircle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tag>
 `;
 
@@ -1225,6 +1589,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",

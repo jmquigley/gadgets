@@ -58,12 +58,12 @@ import {
 	disabled,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme,
 	invisible,
 	locationStyle,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface IconProps extends BaseProps {
 	iconName?: string;
@@ -145,9 +145,9 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				{icon}
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

@@ -8,6 +8,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -42,40 +43,72 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className="test-class"
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    id=""
+    imageFile=""
+    justify={0}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noicon={false}
+    noripple={false}
+    obj="ButtonText"
+    onClick={[Function]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "blue",
+        "borderColor": "green",
+        "color": "white",
       }
     }
+    testing={true}
+    text="test text"
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-button-text ripple test-class"
-      disabled={false}
-      onClick={[Function]}
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "blue",
-          "borderColor": "green",
-          "color": "white",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={true}
     >
-      <div
-        className="ui-button-text ripple test-class sc-htoDjs gkYZnm"
+      <styled.div
+        className="ui-button-text ripple test-class"
         disabled={false}
         onClick={[Function]}
         style={
@@ -85,74 +118,70 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
             "color": "white",
           }
         }
+        visible={true}
       >
-        <styled.div
-          justify={0}
-          sizing="normal"
-        >
-          <div
-            className="sc-gzVnrw bZUGlb"
-          >
-            test text
-          </div>
-        </styled.div>
-        <Icon
-          bottom=""
-          className=""
-          contentEditable={false}
-          controlled={true}
-          direction="right"
+        <div
+          className="ui-button-text ripple test-class sc-htoDjs gkYZnm"
           disabled={false}
-          errorMessage=""
-          focus={false}
-          height=""
-          iconName="bomb"
-          id=""
-          imageFile=""
-          left=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="Icon"
-          padding=""
-          selected={false}
-          sizing="normal"
-          style={Object {}}
-          testing={true}
-          theme={null}
-          tooltip=""
-          top=""
-          visible={true}
-          width=""
-          xcss={null}
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#c0c0c0",
-                "color": "#000000",
-                "headerBackgroundColor": "#004358",
-                "headerForegroundColor": "#ffffff",
-                "headerHoverColor": "#ffe11a",
-                "hoverColor": "#c0c0c0",
-                "inputBorderColor": "#c0c0c0",
-                "selectedBackgroundColor": "#1f8a70",
-                "selectedForegroundColor": "#ffe11a",
-                "tooltipBackgroundColor": "#708090",
-                "tooltipForegroundColor": "#ffffff",
-                "transitionDelay": "0.5s",
-              }
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "blue",
+              "borderColor": "green",
+              "color": "white",
             }
+          }
+        >
+          <styled.div
+            justify={0}
+            sizing="normal"
           >
-            <styled.i
+            <div
+              className="sc-gzVnrw bZUGlb"
+            >
+              test text
+            </div>
+          </styled.div>
+          <Icon
+            bottom=""
+            className=""
+            contentEditable={false}
+            controlled={true}
+            direction="right"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            focus={false}
+            height=""
+            iconName="bomb"
+            id=""
+            imageFile=""
+            left=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            obj="Icon"
+            padding=""
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            theme={null}
+            tooltip=""
+            top=""
+            visible={true}
+            width=""
+            xcss={null}
+          >
+            <Wrapper
               bottom=""
-              className="ui-icon fa fa-fw fa-bomb"
+              className=""
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
+              err={null}
               errorMessage=""
               focus={false}
               height=""
@@ -165,7 +194,9 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
               nohover={false}
               noripple={false}
               obj="Icon"
+              onError={[Function]}
               padding=""
+              reset={false}
               selected={false}
               sizing="normal"
               style={Object {}}
@@ -177,23 +208,77 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
               width=""
               xcss={null}
             >
-              <i
-                className="ui-icon fa fa-fw fa-bomb sc-bwzfXH hBOHvv"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                height=""
-                id=""
-                selected={false}
-                style={Object {}}
-                width=""
-              />
-            </styled.i>
-          </ThemeProvider>
-        </Icon>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#c0c0c0",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "inputBorderColor": "#c0c0c0",
+                    "itemHoverColor": "#bedb39",
+                    "selectedBackgroundColor": "#1f8a70",
+                    "selectedForegroundColor": "#ffe11a",
+                    "tooltipBackgroundColor": "#708090",
+                    "tooltipForegroundColor": "#ffffff",
+                    "transitionDelay": "0.5s",
+                  }
+                }
+              >
+                <styled.i
+                  bottom=""
+                  className="ui-icon fa fa-fw fa-bomb"
+                  contentEditable={false}
+                  controlled={true}
+                  direction="right"
+                  disabled={false}
+                  err={null}
+                  errorMessage=""
+                  focus={false}
+                  height=""
+                  iconName="bomb"
+                  id=""
+                  imageFile=""
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  obj="Icon"
+                  padding=""
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
+                >
+                  <i
+                    className="ui-icon fa fa-fw fa-bomb sc-bwzfXH hBOHvv"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={false}
+                    height=""
+                    id=""
+                    selected={false}
+                    style={Object {}}
+                    width=""
+                  />
+                </styled.i>
+              </ThemeProvider>
+            </Wrapper>
+          </Icon>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </ButtonText>
 `;
 
@@ -205,6 +290,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
   controlled={true}
   direction="right"
   disabled={true}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -233,95 +319,117 @@ exports[`Test disabling of a ButtonText control 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={true}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    id=""
+    imageFile=""
+    justify={1}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noicon={false}
+    noripple={false}
+    obj="ButtonText"
+    onClick={[MockFunction]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    text=""
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-button-text nohover"
-      disabled={true}
-      onClick={[Function]}
-      style={Object {}}
-      visible={true}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-button-text nohover sc-htoDjs KgKXM"
+      <styled.div
+        className="ui-button-text nohover"
         disabled={true}
         onClick={[Function]}
         style={Object {}}
+        visible={true}
       >
-        <Icon
-          bottom=""
-          className=""
-          contentEditable={false}
-          controlled={true}
-          direction="right"
-          disabled={false}
-          errorMessage=""
-          focus={false}
-          height=""
-          iconName="bomb"
-          id=""
-          imageFile=""
-          left=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="Icon"
-          padding=""
-          selected={false}
-          sizing="normal"
+        <div
+          className="ui-button-text nohover sc-htoDjs KgKXM"
+          disabled={true}
+          onClick={[Function]}
           style={Object {}}
-          testing={true}
-          theme={null}
-          tooltip=""
-          top=""
-          visible={true}
-          width=""
-          xcss={null}
         >
-          <ThemeProvider
-            theme={
-              Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#c0c0c0",
-                "color": "#000000",
-                "headerBackgroundColor": "#004358",
-                "headerForegroundColor": "#ffffff",
-                "headerHoverColor": "#ffe11a",
-                "hoverColor": "#c0c0c0",
-                "inputBorderColor": "#c0c0c0",
-                "selectedBackgroundColor": "#1f8a70",
-                "selectedForegroundColor": "#ffe11a",
-                "tooltipBackgroundColor": "#708090",
-                "tooltipForegroundColor": "#ffffff",
-                "transitionDelay": "0.5s",
-              }
-            }
+          <Icon
+            bottom=""
+            className=""
+            contentEditable={false}
+            controlled={true}
+            direction="right"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            focus={false}
+            height=""
+            iconName="bomb"
+            id=""
+            imageFile=""
+            left=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            obj="Icon"
+            padding=""
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            theme={null}
+            tooltip=""
+            top=""
+            visible={true}
+            width=""
+            xcss={null}
           >
-            <styled.i
+            <Wrapper
               bottom=""
-              className="ui-icon fa fa-fw fa-bomb"
+              className=""
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
+              err={null}
               errorMessage=""
               focus={false}
               height=""
@@ -334,7 +442,9 @@ exports[`Test disabling of a ButtonText control 1`] = `
               nohover={false}
               noripple={false}
               obj="Icon"
+              onError={[Function]}
               padding=""
+              reset={false}
               selected={false}
               sizing="normal"
               style={Object {}}
@@ -346,31 +456,85 @@ exports[`Test disabling of a ButtonText control 1`] = `
               width=""
               xcss={null}
             >
-              <i
-                className="ui-icon fa fa-fw fa-bomb sc-bwzfXH hBOHvv"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                height=""
-                id=""
-                selected={false}
-                style={Object {}}
-                width=""
-              />
-            </styled.i>
-          </ThemeProvider>
-        </Icon>
-        <styled.div
-          justify={1}
-          sizing="normal"
-        >
-          <div
-            className="sc-gzVnrw dlcGuV"
-          />
-        </styled.div>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#c0c0c0",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "inputBorderColor": "#c0c0c0",
+                    "itemHoverColor": "#bedb39",
+                    "selectedBackgroundColor": "#1f8a70",
+                    "selectedForegroundColor": "#ffe11a",
+                    "tooltipBackgroundColor": "#708090",
+                    "tooltipForegroundColor": "#ffffff",
+                    "transitionDelay": "0.5s",
+                  }
+                }
+              >
+                <styled.i
+                  bottom=""
+                  className="ui-icon fa fa-fw fa-bomb"
+                  contentEditable={false}
+                  controlled={true}
+                  direction="right"
+                  disabled={false}
+                  err={null}
+                  errorMessage=""
+                  focus={false}
+                  height=""
+                  iconName="bomb"
+                  id=""
+                  imageFile=""
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  obj="Icon"
+                  padding=""
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
+                >
+                  <i
+                    className="ui-icon fa fa-fw fa-bomb sc-bwzfXH hBOHvv"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={false}
+                    height=""
+                    id=""
+                    selected={false}
+                    style={Object {}}
+                    width=""
+                  />
+                </styled.i>
+              </ThemeProvider>
+            </Wrapper>
+          </Icon>
+          <styled.div
+            justify={1}
+            sizing="normal"
+          >
+            <div
+              className="sc-gzVnrw dlcGuV"
+            />
+          </styled.div>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </ButtonText>
 `;
 
@@ -382,6 +546,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -410,95 +575,117 @@ exports[`Test making a ButtonText control invisible 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    id=""
+    imageFile=""
+    justify={1}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noicon={false}
+    noripple={false}
+    obj="ButtonText"
+    onClick={[MockFunction]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    text=""
+    theme={null}
+    tooltip=""
+    top=""
+    visible={false}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-button-text ripple"
-      disabled={false}
-      onClick={[Function]}
-      style={Object {}}
-      visible={false}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-button-text ripple sc-htoDjs kagfsK"
+      <styled.div
+        className="ui-button-text ripple"
         disabled={false}
         onClick={[Function]}
         style={Object {}}
+        visible={false}
       >
-        <Icon
-          bottom=""
-          className=""
-          contentEditable={false}
-          controlled={true}
-          direction="right"
+        <div
+          className="ui-button-text ripple sc-htoDjs kagfsK"
           disabled={false}
-          errorMessage=""
-          focus={false}
-          height=""
-          iconName="bomb"
-          id=""
-          imageFile=""
-          left=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="Icon"
-          padding=""
-          selected={false}
-          sizing="normal"
+          onClick={[Function]}
           style={Object {}}
-          testing={true}
-          theme={null}
-          tooltip=""
-          top=""
-          visible={true}
-          width=""
-          xcss={null}
         >
-          <ThemeProvider
-            theme={
-              Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#c0c0c0",
-                "color": "#000000",
-                "headerBackgroundColor": "#004358",
-                "headerForegroundColor": "#ffffff",
-                "headerHoverColor": "#ffe11a",
-                "hoverColor": "#c0c0c0",
-                "inputBorderColor": "#c0c0c0",
-                "selectedBackgroundColor": "#1f8a70",
-                "selectedForegroundColor": "#ffe11a",
-                "tooltipBackgroundColor": "#708090",
-                "tooltipForegroundColor": "#ffffff",
-                "transitionDelay": "0.5s",
-              }
-            }
+          <Icon
+            bottom=""
+            className=""
+            contentEditable={false}
+            controlled={true}
+            direction="right"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            focus={false}
+            height=""
+            iconName="bomb"
+            id=""
+            imageFile=""
+            left=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            obj="Icon"
+            padding=""
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            theme={null}
+            tooltip=""
+            top=""
+            visible={true}
+            width=""
+            xcss={null}
           >
-            <styled.i
+            <Wrapper
               bottom=""
-              className="ui-icon fa fa-fw fa-bomb"
+              className=""
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
+              err={null}
               errorMessage=""
               focus={false}
               height=""
@@ -511,7 +698,9 @@ exports[`Test making a ButtonText control invisible 1`] = `
               nohover={false}
               noripple={false}
               obj="Icon"
+              onError={[Function]}
               padding=""
+              reset={false}
               selected={false}
               sizing="normal"
               style={Object {}}
@@ -523,31 +712,85 @@ exports[`Test making a ButtonText control invisible 1`] = `
               width=""
               xcss={null}
             >
-              <i
-                className="ui-icon fa fa-fw fa-bomb sc-bwzfXH hBOHvv"
-                contentEditable={false}
-                direction="right"
-                disabled={false}
-                height=""
-                id=""
-                selected={false}
-                style={Object {}}
-                width=""
-              />
-            </styled.i>
-          </ThemeProvider>
-        </Icon>
-        <styled.div
-          justify={1}
-          sizing="normal"
-        >
-          <div
-            className="sc-gzVnrw dlcGuV"
-          />
-        </styled.div>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#c0c0c0",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "inputBorderColor": "#c0c0c0",
+                    "itemHoverColor": "#bedb39",
+                    "selectedBackgroundColor": "#1f8a70",
+                    "selectedForegroundColor": "#ffe11a",
+                    "tooltipBackgroundColor": "#708090",
+                    "tooltipForegroundColor": "#ffffff",
+                    "transitionDelay": "0.5s",
+                  }
+                }
+              >
+                <styled.i
+                  bottom=""
+                  className="ui-icon fa fa-fw fa-bomb"
+                  contentEditable={false}
+                  controlled={true}
+                  direction="right"
+                  disabled={false}
+                  err={null}
+                  errorMessage=""
+                  focus={false}
+                  height=""
+                  iconName="bomb"
+                  id=""
+                  imageFile=""
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  obj="Icon"
+                  padding=""
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  theme={null}
+                  tooltip=""
+                  top=""
+                  visible={true}
+                  width=""
+                  xcss={null}
+                >
+                  <i
+                    className="ui-icon fa fa-fw fa-bomb sc-bwzfXH hBOHvv"
+                    contentEditable={false}
+                    direction="right"
+                    disabled={false}
+                    height=""
+                    id=""
+                    selected={false}
+                    style={Object {}}
+                    width=""
+                  />
+                </styled.i>
+              </ThemeProvider>
+            </Wrapper>
+          </Icon>
+          <styled.div
+            justify={1}
+            sizing="normal"
+          >
+            <div
+              className="sc-gzVnrw dlcGuV"
+            />
+          </styled.div>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </ButtonText>
 `;
 
@@ -560,6 +803,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",

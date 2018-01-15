@@ -12,6 +12,7 @@ const theme: ThemeProps = {
 	headerHoverColor: ColorScheme.c4,
 	hoverColor: Color.silver,
 	inputBorderColor: Color.silver,
+	itemHoverColor: ColorScheme.c3,
 	selectedBackgroundColor: ColorScheme.c2,
 	selectedForegroundColor: ColorScheme.c4,
 	tooltipBackgroundColor: Color.slategray,

@@ -10,6 +10,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",
@@ -53,24 +54,56 @@ Object {
 `;
 
 exports[`Test the creation of a ListDivider control 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  color="blue"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  layout={5}
+  left=""
+  leftButton={null}
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="ListDivider"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onError={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  padding=""
+  reset={false}
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="​"
+  tooltip=""
+  top=""
+  useedit={false}
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
 >
   <styled.li
     className="ui-list-divider"
@@ -83,5 +116,5 @@ exports[`Test the creation of a ListDivider control 1`] = `
       }
     />
   </styled.li>
-</ThemeProvider>
+</Wrapper>
 `;

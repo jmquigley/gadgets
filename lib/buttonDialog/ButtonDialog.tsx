@@ -47,12 +47,12 @@ import {
 	baseZIndex,
 	Direction,
 	fontStyle,
-	getTheme,
 	Location,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
 import {tooltip} from '../shared/helpers';
-import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {css, withProps} from '../shared/themed-components';
 import {Triangle} from '../triangle';
 
 export interface ButtonDialogProps extends ButtonProps {
@@ -208,22 +208,21 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 
 	public render() {
 		const ils = this.inlineStyles;
-		const theme = getTheme();
 
 		if (ils['color'] !== 'inherit') {
 			this.inlineStyles = {stroke: ils['color']};
 		} else {
-			this.inlineStyles = {stroke: theme.borderColor};
+			this.inlineStyles = {stroke: this.theme.borderColor};
 		}
 
 		if (ils['backgroundColor'] !== 'inherit') {
 			this.inlineStyles = {fill: ils['backgroundColor']};
 		} else {
-			this.inlineStyles = {fill: theme.backgroundColor};
+			this.inlineStyles = {fill: this.theme.backgroundColor};
 		}
 
 		return (
-			<ThemeProvider theme={theme}>
+			<Wrapper {...this.props} >
 				<ButtonDialogView
 					className={this.classes}
 					id={this.id}
@@ -267,7 +266,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 					</ButtonDialogPopup>
 					{tooltip(this.id, this.props)}
 				</ButtonDialogView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

@@ -43,15 +43,15 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import styled, {ThemeProvider} from 'styled-components';
+import styled from 'styled-components';
 import {
 	BaseComponent,
 	BaseProps,
 	boxStyle,
 	Direction,
 	getDefaultBaseProps,
-	getTheme,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
 
 export interface TriangleProps extends BaseProps {
@@ -144,9 +144,9 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				{triangle}
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

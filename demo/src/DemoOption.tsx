@@ -34,7 +34,7 @@ export default class DemoOption extends React.Component<any, undefined> {
 					disabled={this.props['disabled']}
 					onClick={this.handleClick}
 					sizing={this.props['sizing']}
-					type={OptionType[key]}
+					optionType={OptionType[key]}
 				/>
 			);
 

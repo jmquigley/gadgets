@@ -13,10 +13,10 @@ import {
 	BaseProps,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
-import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {css, withProps} from '../shared/themed-components';
 import {Title, TitleLayout, TitleProps} from '../title';
 
 export interface ItemProps extends BaseProps, TitleProps {
@@ -78,7 +78,7 @@ export const ItemView: any = withProps<ItemProps, HTMLLIElement>(styled.li)`
 	display: flex;
 
 	${props => (!props.nohover) &&
-		'&:hover {background-color: ' + props.theme.hoverColor + ' !important;}'
+		'&:hover {background-color: ' + props.theme.itemHoverColor + ' !important;}'
 	}
 
 	&:hover .ui-item-button {
@@ -203,7 +203,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<ItemView
 					id={this.props.id}
 					className={this.classes}
@@ -224,7 +224,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 					/>
 					{this._rightButton}
 				</ItemView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

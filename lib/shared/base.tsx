@@ -88,7 +88,13 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 		this._sizes = Sizes.instance(defaultFontSize);
 		this._sizing = this.props.sizing;
-		this._theme = getTheme();
+
+		if (this.props.theme != null) {
+			this._theme = this.props.theme;
+		} else {
+			this._theme = getTheme();
+		}
+
 		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props.style);
 	}
 

@@ -8,6 +8,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -34,85 +35,82 @@ exports[`Test creation of a Title control with bad layout 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    layout={9999}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Title"
+    onClick={[Function]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    title="Test label text"
+    tooltip=""
+    top=""
+    visible={true}
+    widget={null}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-title-bar ripple"
-      disabled={false}
-      layout={9999}
-      style={Object {}}
-      visible={true}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-title-bar ripple sc-htpNat kRNhtA"
+      <styled.div
+        className="ui-title-bar ripple"
         disabled={false}
+        layout={9999}
         style={Object {}}
+        visible={true}
       >
-        <Styled(Label)
-          bottom=""
-          className="ui-title"
-          contentEditable={false}
-          controlled={true}
-          direction="right"
+        <div
+          className="ui-title-bar ripple sc-htpNat kRNhtA"
           disabled={false}
-          errorMessage=""
-          focus={false}
-          height=""
-          id=""
-          layout={9999}
-          left=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="Title"
-          onClick={[Function]}
-          padding=""
-          selected={false}
-          sizing="normal"
           style={Object {}}
-          testing={true}
-          text="Test label text"
-          theme={null}
-          title="Test label text"
-          tooltip=""
-          top=""
-          visible={true}
-          widget={null}
-          width=""
-          xcss={
-            Array [
-              "
-	text-align: left;
-	flex: 1;
-",
-            ]
-          }
         >
-          <Label
+          <Styled(Label)
             bottom=""
-            className="ui-title sc-ifAKCX iOwpyB"
+            className="ui-title"
             contentEditable={false}
             controlled={true}
             direction="right"
             disabled={false}
+            err={null}
             errorMessage=""
             focus={false}
             height=""
@@ -124,13 +122,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
             nohover={false}
             noripple={false}
             obj="Title"
-            onBlur={[Function]}
-            onChange={[Function]}
             onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onUpdate={[Function]}
             padding=""
             selected={false}
             sizing="normal"
@@ -141,7 +133,6 @@ exports[`Test creation of a Title control with bad layout 1`] = `
             title="Test label text"
             tooltip=""
             top=""
-            useedit={false}
             visible={true}
             widget={null}
             width=""
@@ -154,61 +145,164 @@ exports[`Test creation of a Title control with bad layout 1`] = `
               ]
             }
           >
-            <ThemeProvider
-              theme={
-                Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
-                }
+            <Label
+              bottom=""
+              className="ui-title sc-ifAKCX iOwpyB"
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              layout={9999}
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Title"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              text="Test label text"
+              theme={null}
+              title="Test label text"
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={true}
+              widget={null}
+              width=""
+              xcss={
+                Array [
+                  "
+	text-align: left;
+	flex: 1;
+",
+                ]
               }
             >
-              <styled.span
-                className="ui-label ui-title sc-ifAKCX iOwpyB"
+              <Wrapper
+                bottom=""
+                className="ui-title sc-ifAKCX iOwpyB"
                 contentEditable={false}
+                controlled={true}
+                direction="right"
                 disabled={false}
-                innerRef={[Function]}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                id=""
+                layout={9999}
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="Title"
                 onBlur={[Function]}
+                onChange={[Function]}
                 onClick={[Function]}
                 onDoubleClick={[Function]}
+                onError={[Function]}
                 onKeyDown={[Function]}
                 onKeyPress={[Function]}
+                onUpdate={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
                 sizing="normal"
                 style={Object {}}
-                suppressContentEditableWarning={true}
+                testing={true}
+                text="Test label text"
+                theme={null}
+                title="Test label text"
+                tooltip=""
+                top=""
+                useedit={false}
                 visible={true}
+                widget={null}
+                width=""
+                xcss={
+                  Array [
+                    "
+	text-align: left;
+	flex: 1;
+",
+                  ]
+                }
               >
-                <span
-                  className="ui-label ui-title sc-ifAKCX iOwpyB sc-bwzfXH cEurMc"
-                  contentEditable={false}
-                  disabled={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDoubleClick={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  suppressContentEditableWarning={true}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
                 >
-                  Test label text
-                </span>
-              </styled.span>
-            </ThemeProvider>
-          </Label>
-        </Styled(Label)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <styled.span
+                    className="ui-label ui-title sc-ifAKCX iOwpyB"
+                    contentEditable={false}
+                    disabled={false}
+                    innerRef={[Function]}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    sizing="normal"
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                    visible={true}
+                  >
+                    <span
+                      className="ui-label ui-title sc-ifAKCX iOwpyB sc-bwzfXH cEurMc"
+                      contentEditable={false}
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      style={Object {}}
+                      suppressContentEditableWarning={true}
+                    >
+                      Test label text
+                    </span>
+                  </styled.span>
+                </ThemeProvider>
+              </Wrapper>
+            </Label>
+          </Styled(Label)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Title>
 `;
 
@@ -220,6 +314,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -246,85 +341,82 @@ exports[`Test creation of a Title control with bad layout 2`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    layout={9999}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Title"
+    onClick={[Function]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    title="Test label text"
+    tooltip=""
+    top=""
+    visible={true}
+    widget={null}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-title-bar ripple"
-      disabled={false}
-      layout={9999}
-      style={Object {}}
-      visible={true}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-title-bar ripple sc-htpNat kRNhtA"
+      <styled.div
+        className="ui-title-bar ripple"
         disabled={false}
+        layout={9999}
         style={Object {}}
+        visible={true}
       >
-        <Styled(Label)
-          bottom=""
-          className="ui-title"
-          contentEditable={false}
-          controlled={true}
-          direction="right"
+        <div
+          className="ui-title-bar ripple sc-htpNat kRNhtA"
           disabled={false}
-          errorMessage=""
-          focus={false}
-          height=""
-          id=""
-          layout={9999}
-          left=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="Title"
-          onClick={[Function]}
-          padding=""
-          selected={false}
-          sizing="normal"
           style={Object {}}
-          testing={true}
-          text="Test label text"
-          theme={null}
-          title="Test label text"
-          tooltip=""
-          top=""
-          visible={true}
-          widget={null}
-          width=""
-          xcss={
-            Array [
-              "
-	text-align: left;
-	flex: 1;
-",
-            ]
-          }
         >
-          <Label
+          <Styled(Label)
             bottom=""
-            className="ui-title sc-ifAKCX iOwpyB"
+            className="ui-title"
             contentEditable={false}
             controlled={true}
             direction="right"
             disabled={false}
+            err={null}
             errorMessage=""
             focus={false}
             height=""
@@ -336,13 +428,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
             nohover={false}
             noripple={false}
             obj="Title"
-            onBlur={[Function]}
-            onChange={[Function]}
             onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onUpdate={[Function]}
             padding=""
             selected={false}
             sizing="normal"
@@ -353,7 +439,6 @@ exports[`Test creation of a Title control with bad layout 2`] = `
             title="Test label text"
             tooltip=""
             top=""
-            useedit={false}
             visible={true}
             widget={null}
             width=""
@@ -366,83 +451,203 @@ exports[`Test creation of a Title control with bad layout 2`] = `
               ]
             }
           >
-            <ThemeProvider
-              theme={
-                Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
-                }
+            <Label
+              bottom=""
+              className="ui-title sc-ifAKCX iOwpyB"
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              layout={9999}
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Title"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              text="Test label text"
+              theme={null}
+              title="Test label text"
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={true}
+              widget={null}
+              width=""
+              xcss={
+                Array [
+                  "
+	text-align: left;
+	flex: 1;
+",
+                ]
               }
             >
-              <styled.span
-                className="ui-label ui-title sc-ifAKCX iOwpyB"
+              <Wrapper
+                bottom=""
+                className="ui-title sc-ifAKCX iOwpyB"
                 contentEditable={false}
+                controlled={true}
+                direction="right"
                 disabled={false}
-                innerRef={[Function]}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                id=""
+                layout={9999}
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="Title"
                 onBlur={[Function]}
+                onChange={[Function]}
                 onClick={[Function]}
                 onDoubleClick={[Function]}
+                onError={[Function]}
                 onKeyDown={[Function]}
                 onKeyPress={[Function]}
+                onUpdate={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
                 sizing="normal"
                 style={Object {}}
-                suppressContentEditableWarning={true}
+                testing={true}
+                text="Test label text"
+                theme={null}
+                title="Test label text"
+                tooltip=""
+                top=""
+                useedit={false}
                 visible={true}
+                widget={null}
+                width=""
+                xcss={
+                  Array [
+                    "
+	text-align: left;
+	flex: 1;
+",
+                  ]
+                }
               >
-                <span
-                  className="ui-label ui-title sc-ifAKCX iOwpyB sc-bwzfXH cEurMc"
-                  contentEditable={false}
-                  disabled={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDoubleClick={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  suppressContentEditableWarning={true}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
                 >
-                  Test label text
-                </span>
-              </styled.span>
-            </ThemeProvider>
-          </Label>
-        </Styled(Label)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <styled.span
+                    className="ui-label ui-title sc-ifAKCX iOwpyB"
+                    contentEditable={false}
+                    disabled={false}
+                    innerRef={[Function]}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    sizing="normal"
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                    visible={true}
+                  >
+                    <span
+                      className="ui-label ui-title sc-ifAKCX iOwpyB sc-bwzfXH cEurMc"
+                      contentEditable={false}
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      style={Object {}}
+                      suppressContentEditableWarning={true}
+                    >
+                      Test label text
+                    </span>
+                  </styled.span>
+                </ThemeProvider>
+              </Wrapper>
+            </Label>
+          </Styled(Label)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Title>
 `;
 
 exports[`Test creation of a Title control with default props 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  layout={5}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Title"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test label text"
+  tooltip=""
+  top=""
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-title-bar ripple test-class"
@@ -458,6 +663,7 @@ exports[`Test creation of a Title control with default props 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -493,28 +699,45 @@ exports[`Test creation of a Title control with default props 1`] = `
       }
     />
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of a Title control with even layout 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  layout={1}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Title"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test label text"
+  tooltip=""
+  top=""
+  visible={true}
+  widget="widget"
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-title-bar ripple"
@@ -530,6 +753,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -571,6 +795,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -607,28 +832,45 @@ exports[`Test creation of a Title control with even layout 1`] = `
       widget
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of a Title control with no layout 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  layout={6}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Title"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test label text"
+  tooltip=""
+  top=""
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-title-bar ripple"
@@ -644,6 +886,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -679,28 +922,45 @@ exports[`Test creation of a Title control with no layout 1`] = `
       }
     />
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of a Title control with quarter layout 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  layout={0}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Title"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test label text"
+  tooltip=""
+  top=""
+  visible={true}
+  widget="widget"
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-title-bar ripple"
@@ -716,6 +976,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -757,6 +1018,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -793,28 +1055,45 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       widget
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of a Title control with stacked layout 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  layout={4}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Title"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test label text"
+  tooltip=""
+  top=""
+  visible={true}
+  widget="widget"
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-title-bar ripple"
@@ -830,6 +1109,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -870,6 +1150,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -905,28 +1186,45 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       widget
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of a Title control with thirds layout 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  layout={3}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Title"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test label text"
+  tooltip=""
+  top=""
+  visible={true}
+  widget="widget"
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-title-bar ripple"
@@ -942,6 +1240,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -983,6 +1282,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -1019,28 +1319,45 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       widget
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of a Title control with threequarter layout 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  layout={2}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Title"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test label text"
+  tooltip=""
+  top=""
+  visible={true}
+  widget="widget"
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-title-bar ripple"
@@ -1056,6 +1373,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -1097,6 +1415,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -1133,7 +1452,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       widget
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test disabling the Title control 1`] = `
@@ -1144,6 +1463,7 @@ exports[`Test disabling the Title control 1`] = `
   controlled={true}
   direction="right"
   disabled={true}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -1170,85 +1490,82 @@ exports[`Test disabling the Title control 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={true}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    layout={5}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Title"
+    onClick={[Function]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    title="Test label text"
+    tooltip=""
+    top=""
+    visible={true}
+    widget={null}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-title-bar"
-      disabled={true}
-      layout={5}
-      style={Object {}}
-      visible={true}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-title-bar sc-htpNat iDbwhS"
+      <styled.div
+        className="ui-title-bar"
         disabled={true}
+        layout={5}
         style={Object {}}
+        visible={true}
       >
-        <Styled(Label)
-          bottom=""
-          className="ui-title"
-          contentEditable={false}
-          controlled={true}
-          direction="right"
+        <div
+          className="ui-title-bar sc-htpNat iDbwhS"
           disabled={true}
-          errorMessage=""
-          focus={false}
-          height=""
-          id=""
-          layout={5}
-          left=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="Title"
-          onClick={[Function]}
-          padding=""
-          selected={false}
-          sizing="normal"
           style={Object {}}
-          testing={true}
-          text="Test label text"
-          theme={null}
-          title="Test label text"
-          tooltip=""
-          top=""
-          visible={true}
-          widget={null}
-          width=""
-          xcss={
-            Array [
-              "
-	text-align: left;
-	flex: 5;
-",
-            ]
-          }
         >
-          <Label
+          <Styled(Label)
             bottom=""
-            className="ui-title sc-ifAKCX kzxgWF"
+            className="ui-title"
             contentEditable={false}
             controlled={true}
             direction="right"
             disabled={true}
+            err={null}
             errorMessage=""
             focus={false}
             height=""
@@ -1260,13 +1577,7 @@ exports[`Test disabling the Title control 1`] = `
             nohover={false}
             noripple={false}
             obj="Title"
-            onBlur={[Function]}
-            onChange={[Function]}
             onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onUpdate={[Function]}
             padding=""
             selected={false}
             sizing="normal"
@@ -1277,7 +1588,6 @@ exports[`Test disabling the Title control 1`] = `
             title="Test label text"
             tooltip=""
             top=""
-            useedit={false}
             visible={true}
             widget={null}
             width=""
@@ -1290,61 +1600,164 @@ exports[`Test disabling the Title control 1`] = `
               ]
             }
           >
-            <ThemeProvider
-              theme={
-                Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
-                }
+            <Label
+              bottom=""
+              className="ui-title sc-ifAKCX kzxgWF"
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={true}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              layout={5}
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Title"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              text="Test label text"
+              theme={null}
+              title="Test label text"
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={true}
+              widget={null}
+              width=""
+              xcss={
+                Array [
+                  "
+	text-align: left;
+	flex: 5;
+",
+                ]
               }
             >
-              <styled.span
-                className="ui-label ui-title sc-ifAKCX kzxgWF"
+              <Wrapper
+                bottom=""
+                className="ui-title sc-ifAKCX kzxgWF"
                 contentEditable={false}
+                controlled={true}
+                direction="right"
                 disabled={true}
-                innerRef={[Function]}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                id=""
+                layout={5}
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="Title"
                 onBlur={[Function]}
+                onChange={[Function]}
                 onClick={[Function]}
                 onDoubleClick={[Function]}
+                onError={[Function]}
                 onKeyDown={[Function]}
                 onKeyPress={[Function]}
+                onUpdate={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
                 sizing="normal"
                 style={Object {}}
-                suppressContentEditableWarning={true}
+                testing={true}
+                text="Test label text"
+                theme={null}
+                title="Test label text"
+                tooltip=""
+                top=""
+                useedit={false}
                 visible={true}
+                widget={null}
+                width=""
+                xcss={
+                  Array [
+                    "
+	text-align: left;
+	flex: 5;
+",
+                  ]
+                }
               >
-                <span
-                  className="ui-label ui-title sc-ifAKCX kzxgWF sc-bwzfXH gfZwc"
-                  contentEditable={false}
-                  disabled={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDoubleClick={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  suppressContentEditableWarning={true}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
                 >
-                  Test label text
-                </span>
-              </styled.span>
-            </ThemeProvider>
-          </Label>
-        </Styled(Label)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <styled.span
+                    className="ui-label ui-title sc-ifAKCX kzxgWF"
+                    contentEditable={false}
+                    disabled={true}
+                    innerRef={[Function]}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    sizing="normal"
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                    visible={true}
+                  >
+                    <span
+                      className="ui-label ui-title sc-ifAKCX kzxgWF sc-bwzfXH gfZwc"
+                      contentEditable={false}
+                      disabled={true}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      style={Object {}}
+                      suppressContentEditableWarning={true}
+                    >
+                      Test label text
+                    </span>
+                  </styled.span>
+                </ThemeProvider>
+              </Wrapper>
+            </Label>
+          </Styled(Label)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Title>
 `;
 
@@ -1356,6 +1769,7 @@ exports[`Test making the Title control invisible 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -1382,85 +1796,82 @@ exports[`Test making the Title control invisible 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    layout={5}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Title"
+    onClick={[Function]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    title="Test label text"
+    tooltip=""
+    top=""
+    visible={false}
+    widget={null}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-title-bar ripple"
-      disabled={false}
-      layout={5}
-      style={Object {}}
-      visible={false}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-title-bar ripple sc-htpNat hKwGDY"
+      <styled.div
+        className="ui-title-bar ripple"
         disabled={false}
+        layout={5}
         style={Object {}}
+        visible={false}
       >
-        <Styled(Label)
-          bottom=""
-          className="ui-title"
-          contentEditable={false}
-          controlled={true}
-          direction="right"
+        <div
+          className="ui-title-bar ripple sc-htpNat hKwGDY"
           disabled={false}
-          errorMessage=""
-          focus={false}
-          height=""
-          id=""
-          layout={5}
-          left=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="Title"
-          onClick={[Function]}
-          padding=""
-          selected={false}
-          sizing="normal"
           style={Object {}}
-          testing={true}
-          text="Test label text"
-          theme={null}
-          title="Test label text"
-          tooltip=""
-          top=""
-          visible={false}
-          widget={null}
-          width=""
-          xcss={
-            Array [
-              "
-	text-align: left;
-	flex: 5;
-",
-            ]
-          }
         >
-          <Label
+          <Styled(Label)
             bottom=""
-            className="ui-title sc-ifAKCX kzxgWF"
+            className="ui-title"
             contentEditable={false}
             controlled={true}
             direction="right"
             disabled={false}
+            err={null}
             errorMessage=""
             focus={false}
             height=""
@@ -1472,13 +1883,7 @@ exports[`Test making the Title control invisible 1`] = `
             nohover={false}
             noripple={false}
             obj="Title"
-            onBlur={[Function]}
-            onChange={[Function]}
             onClick={[Function]}
-            onDoubleClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyPress={[Function]}
-            onUpdate={[Function]}
             padding=""
             selected={false}
             sizing="normal"
@@ -1489,7 +1894,6 @@ exports[`Test making the Title control invisible 1`] = `
             title="Test label text"
             tooltip=""
             top=""
-            useedit={false}
             visible={false}
             widget={null}
             width=""
@@ -1502,61 +1906,164 @@ exports[`Test making the Title control invisible 1`] = `
               ]
             }
           >
-            <ThemeProvider
-              theme={
-                Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
-                }
+            <Label
+              bottom=""
+              className="ui-title sc-ifAKCX kzxgWF"
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              layout={5}
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Title"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              text="Test label text"
+              theme={null}
+              title="Test label text"
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={false}
+              widget={null}
+              width=""
+              xcss={
+                Array [
+                  "
+	text-align: left;
+	flex: 5;
+",
+                ]
               }
             >
-              <styled.span
-                className="ui-label ui-title sc-ifAKCX kzxgWF"
+              <Wrapper
+                bottom=""
+                className="ui-title sc-ifAKCX kzxgWF"
                 contentEditable={false}
+                controlled={true}
+                direction="right"
                 disabled={false}
-                innerRef={[Function]}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                id=""
+                layout={5}
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="Title"
                 onBlur={[Function]}
+                onChange={[Function]}
                 onClick={[Function]}
                 onDoubleClick={[Function]}
+                onError={[Function]}
                 onKeyDown={[Function]}
                 onKeyPress={[Function]}
+                onUpdate={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
                 sizing="normal"
                 style={Object {}}
-                suppressContentEditableWarning={true}
+                testing={true}
+                text="Test label text"
+                theme={null}
+                title="Test label text"
+                tooltip=""
+                top=""
+                useedit={false}
                 visible={false}
+                widget={null}
+                width=""
+                xcss={
+                  Array [
+                    "
+	text-align: left;
+	flex: 5;
+",
+                  ]
+                }
               >
-                <span
-                  className="ui-label ui-title sc-ifAKCX kzxgWF sc-bwzfXH feyPXN"
-                  contentEditable={false}
-                  disabled={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDoubleClick={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  suppressContentEditableWarning={true}
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
                 >
-                  Test label text
-                </span>
-              </styled.span>
-            </ThemeProvider>
-          </Label>
-        </Styled(Label)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <styled.span
+                    className="ui-label ui-title sc-ifAKCX kzxgWF"
+                    contentEditable={false}
+                    disabled={false}
+                    innerRef={[Function]}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    sizing="normal"
+                    style={Object {}}
+                    suppressContentEditableWarning={true}
+                    visible={false}
+                  >
+                    <span
+                      className="ui-label ui-title sc-ifAKCX kzxgWF sc-bwzfXH feyPXN"
+                      contentEditable={false}
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      style={Object {}}
+                      suppressContentEditableWarning={true}
+                    >
+                      Test label text
+                    </span>
+                  </styled.span>
+                </ThemeProvider>
+              </Wrapper>
+            </Label>
+          </Styled(Label)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Title>
 `;
 
@@ -1569,6 +2076,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",

@@ -143,11 +143,11 @@ import {
 	BaseProps,
 	Color,
 	getDefaultBaseProps,
-	getTheme,
 	Sizing,
-	SortOrder
+	SortOrder,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 import {TextField} from '../textField';
 import {TitleLayout} from '../title';
 import {Toast, ToastLevel} from '../toast';
@@ -661,7 +661,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<DynamicListContainer className="ui-dynamiclist-container">
 					<Toast
 						decay={true}
@@ -704,7 +704,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						/>
 					</Accordion>
 				</DynamicListContainer>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

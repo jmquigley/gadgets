@@ -46,10 +46,10 @@ import {
 	Color,
 	disabled,
 	getDefaultBaseProps,
-	getTheme,
-	invisible
+	invisible,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface TagProps extends BaseProps {
 	onClick?: any;
@@ -168,7 +168,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<TagView
 					{...this.props}
 					className={this.classes}
@@ -183,7 +183,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 					/>
 					{deleteButton}
 				</TagView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

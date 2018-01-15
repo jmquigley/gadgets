@@ -57,9 +57,10 @@ import {
 	fontStyle,
 	getDefaultBaseProps,
 	getTheme,
-	Location
+	Location,
+	Wrapper
 } from '../shared';
-import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {css, withProps} from '../shared/themed-components';
 import {Triangle} from '../triangle';
 
 export interface TooltipProps extends BaseProps {
@@ -325,7 +326,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<TooltipView
 					className={this.classes}
 					location={this.props.location}
@@ -351,7 +352,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 						}}
 					/>
 				</TooltipView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

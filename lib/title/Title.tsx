@@ -76,10 +76,10 @@ import {
 	disabled,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme,
-	invisible
+	invisible,
+	Wrapper
 } from '../shared';
-import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {css, withProps} from '../shared/themed-components';
 
 export enum TitleLayout {
 	quarter,
@@ -270,7 +270,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<TitleView
 					className={this.classes}
 					disabled={this.props.disabled}
@@ -281,7 +281,7 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 					{title}
 					{widget}
 				</TitleView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

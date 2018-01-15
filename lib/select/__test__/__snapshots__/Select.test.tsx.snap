@@ -1,24 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a Select control 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  className="test-class"
+  disabled={false}
+  obj="Select"
+  onError={[Function]}
+  reset={false}
+  sizing="normal"
+  visible={true}
 >
   <Styled(Select)
     className="ui-select test-class"
@@ -27,5 +17,5 @@ exports[`Test creation of a Select control 1`] = `
     sizing="normal"
     visible={true}
   />
-</ThemeProvider>
+</Wrapper>
 `;

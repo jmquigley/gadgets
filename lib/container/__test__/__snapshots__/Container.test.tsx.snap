@@ -1,44 +1,146 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test adding custom className to Container control 1`] = `
-<styled.div
-  className="ui-container test-classname"
+<Wrapper
+  bottom=""
+  className="test-classname"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
   id="testid"
-  key="testid"
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Container"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
   sizing="normal"
   style={Object {}}
+  testing={true}
+  theme={null}
+  title=""
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
-  <p>
-    Test Container
-  </p>
-</styled.div>
+  <styled.div
+    className="ui-container test-classname"
+    id="testid"
+    key="testid"
+    sizing="normal"
+    style={Object {}}
+  >
+    <p>
+      Test Container
+    </p>
+  </styled.div>
+</Wrapper>
 `;
 
 exports[`Test creation of a Container control 1`] = `
-<styled.div
-  className="ui-container"
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
   id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Container"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
   sizing="normal"
   style={Object {}}
+  testing={true}
+  theme={null}
+  title=""
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
-  <p>
-    Test Container
-  </p>
-</styled.div>
+  <styled.div
+    className="ui-container"
+    id=""
+    sizing="normal"
+    style={Object {}}
+  >
+    <p>
+      Test Container
+    </p>
+  </styled.div>
+</Wrapper>
 `;
 
 exports[`Test creation of a Container control with an id value 1`] = `
-<styled.div
-  className="ui-container"
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
   id="testid"
-  key="testid"
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Container"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
   sizing="normal"
   style={Object {}}
+  testing={true}
+  theme={null}
+  title=""
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
-  <p>
-    Test Container
-  </p>
-</styled.div>
+  <styled.div
+    className="ui-container"
+    id="testid"
+    key="testid"
+    sizing="normal"
+    style={Object {}}
+  >
+    <p>
+      Test Container
+    </p>
+  </styled.div>
+</Wrapper>
 `;
 
 exports[`Test retrieval of Container props object 1`] = `
@@ -50,6 +152,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",

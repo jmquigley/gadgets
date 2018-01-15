@@ -67,7 +67,8 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 	public render() {
 		return(
 			<Container id="badgeExample" title="Badges">
-				'click on the buttons to increment the badges'
+				click on the buttons to increment the badges
+				<br /><br/>
 				<div id="simple-buttons">
 					<div className="box">
 						<p>top right (suppress)</p>

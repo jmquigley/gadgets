@@ -12,8 +12,13 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {Keys} from 'util.keys';
 import {nilEvent} from 'util.toolbox';
-import {BaseComponent, BaseProps, getDefaultBaseProps, getTheme} from '../shared';
-import styled, {ThemeProvider} from '../shared/themed-components';
+import {
+	BaseComponent,
+	BaseProps,
+	getDefaultBaseProps,
+	Wrapper
+} from '../shared';
+import styled from '../shared/themed-components';
 import {ListItem} from './index';
 
 export interface ListProps extends BaseProps {
@@ -109,7 +114,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 		});
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<ListView
 					alternating={this.props.alternating}
 					className={this.classes}
@@ -117,7 +122,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 				>
 					{children}
 				</ListView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

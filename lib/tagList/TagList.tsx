@@ -68,10 +68,10 @@ import {
 	BaseProps,
 	disabled,
 	getDefaultBaseProps,
-	getTheme,
-	invisible
+	invisible,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 import {TextField} from '../textField';
 import {Tag} from './Tag';
 
@@ -233,7 +233,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		});
 
 		return (
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<TagListView className={this.classes}>
 					<StyledIcon
 						disabled={this.props.disabled}
@@ -255,7 +255,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 					/>
 					}
 				</TagListView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

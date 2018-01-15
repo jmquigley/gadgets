@@ -1,6 +1,6 @@
 'use strict';
 
-import {Color} from '../props';
+import {Color, ColorScheme} from '../props';
 import {ThemeProps} from './index';
 
 const theme: ThemeProps = {
@@ -12,6 +12,7 @@ const theme: ThemeProps = {
 	headerHoverColor: '#ffe11a',
 	hoverColor: '#ffe11a',
 	inputBorderColor: Color.silver,
+	itemHoverColor: ColorScheme.c3,
 	selectedBackgroundColor: '#004358',
 	selectedForegroundColor: Color.white,
 	tooltipBackgroundColor: Color.gray,

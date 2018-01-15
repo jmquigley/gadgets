@@ -99,13 +99,13 @@ import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
-	getTheme,
 	Justify,
 	Location,
 	Sizing,
-	SortOrder
+	SortOrder,
+	Wrapper
 } from '../shared';
-import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {css, withProps} from '../shared/themed-components';
 import {TextField} from '../textField';
 
 export const defaultPageSize: number = 25;
@@ -704,7 +704,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.createDialog(this.props, this.state);
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<PagerView className={this.classes}>
 					<StyledButton
 						{...this.props}
@@ -755,7 +755,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						{this._dialog}
 					</StyledButtonDialog>
 				</PagerView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

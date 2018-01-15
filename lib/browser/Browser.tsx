@@ -69,8 +69,13 @@ import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
 import {Divider} from '../divider';
-import {BaseComponent, BaseProps, getDefaultBaseProps, getTheme} from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import {
+	BaseComponent,
+	BaseProps,
+	getDefaultBaseProps,
+	Wrapper
+} from '../shared';
+import styled, {withProps} from '../shared/themed-components';
 import {TextField} from '../textField';
 import {Toolbar} from '../toolbar';
 
@@ -334,7 +339,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 
 	public render() {
 		return(
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<BrowserContainer className={this.classes} >
 					<BrowserToolbar className="ui-browser-toolbar">
 						<BrowserToolbarButtons>
@@ -400,7 +405,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 						innerRef={this.handleRef}
 					/>
 				</BrowserContainer>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

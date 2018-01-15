@@ -11,8 +11,7 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
-import {BaseComponent, getTheme, Sizing, ThemeProps} from '../shared';
-import {ThemeProvider} from '../shared/themed-components';
+import {BaseComponent, Sizing, Wrapper} from '../shared';
 
 export interface ListHeaderProps extends ItemProps {
 	href?: any;
@@ -42,17 +41,15 @@ export class ListHeader extends BaseComponent<ListHeaderProps, undefined> {
 	}
 
 	public render() {
-		const theme: ThemeProps = getTheme();
-
 		return (
-			<ThemeProvider theme={theme}>
+			<Wrapper {...this.props} >
 				<Item
 					{...this.props}
 					className={this.classes}
 					sizing={this.props.href.sizing}
 					style={this.inlineStyles}
 				/>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

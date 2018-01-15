@@ -1,24 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creating a Divider instance for size inherit 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  dividerType=" "
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Divider"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="inherit"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-divider"
@@ -27,28 +41,42 @@ exports[`Test creating a Divider instance for size inherit 1`] = `
   >
      
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creating a Divider instance for size large 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  dividerType=" "
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Divider"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="large"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-divider"
@@ -57,28 +85,42 @@ exports[`Test creating a Divider instance for size large 1`] = `
   >
      
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creating a Divider instance for size medium 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  dividerType=" "
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Divider"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="medium"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-divider"
@@ -87,28 +129,42 @@ exports[`Test creating a Divider instance for size medium 1`] = `
   >
      
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creating a Divider instance for size normal 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  dividerType=" "
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Divider"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-divider"
@@ -117,28 +173,42 @@ exports[`Test creating a Divider instance for size normal 1`] = `
   >
      
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creating a Divider instance for size small 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  dividerType=" "
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Divider"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="small"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-divider"
@@ -147,28 +217,42 @@ exports[`Test creating a Divider instance for size small 1`] = `
   >
      
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creating a Divider instance for size xlarge 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  dividerType=" "
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Divider"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="xlarge"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-divider"
@@ -177,28 +261,42 @@ exports[`Test creating a Divider instance for size xlarge 1`] = `
   >
      
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creating a Divider instance for size xsmall 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  dividerType=" "
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Divider"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="xsmall"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-divider"
@@ -207,28 +305,42 @@ exports[`Test creating a Divider instance for size xsmall 1`] = `
   >
      
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creating a Divider instance for size xxlarge 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  dividerType=" "
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Divider"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="xxlarge"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-divider"
@@ -237,28 +349,42 @@ exports[`Test creating a Divider instance for size xxlarge 1`] = `
   >
      
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creating a Divider instance for size xxsmall 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  dividerType=" "
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Divider"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="xxsmall"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-divider"
@@ -267,7 +393,7 @@ exports[`Test creating a Divider instance for size xxsmall 1`] = `
   >
      
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test retrieval of Divider props object 1`] = `
@@ -280,6 +406,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "dividerType": " ",
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",

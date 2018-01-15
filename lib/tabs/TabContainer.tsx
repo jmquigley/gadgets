@@ -85,10 +85,10 @@ import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
-	getTheme,
-	Location
+	Location,
+	Wrapper
 } from '../shared';
-import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {css, withProps} from '../shared/themed-components';
 import {Tab} from './Tab';
 
 export interface TabContainerProps extends BaseProps {
@@ -464,9 +464,9 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				{body}
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

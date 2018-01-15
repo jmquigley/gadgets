@@ -82,8 +82,7 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent, getTheme} from '../shared';
-import {ThemeProvider} from '../shared/themed-components';
+import {BaseComponent, Wrapper} from '../shared';
 
 export interface ButtonToggleProps extends ButtonProps {
 	bgColorOff?: string;
@@ -172,7 +171,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<Button
 					{...this.props}
 					className={this.classes}
@@ -181,7 +180,7 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 					onClick={this.handleClick}
 					style={this.inlineStyles}
 				/>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

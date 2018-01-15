@@ -4,8 +4,8 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {BaseComponent, getTheme} from '../shared';
-import styled, {ThemeProvider} from '../shared/themed-components';
+import {BaseComponent, Wrapper} from '../shared';
+import styled from '../shared/themed-components';
 import {
 	getDefaultTitleProps,
 	Title,
@@ -47,7 +47,7 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<ListFooterView
 					{...this.props}
 					className={this.classes}
@@ -55,7 +55,7 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 					style={this.inlineStyles}
 					title={this.props.title}
 				/>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

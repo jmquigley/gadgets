@@ -1,24 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of an Icon control with icon 1`] = `
-<ThemeProvider
-  theme={
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="star"
+  id=""
+  imageFile=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Icon"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
     Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
+      "backgroundColor": "blue",
+      "color": "red",
     }
   }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.i
     bottom=""
@@ -27,6 +47,7 @@ exports[`Test creation of an Icon control with icon 1`] = `
     controlled={true}
     direction="right"
     disabled={false}
+    err={null}
     errorMessage=""
     focus={false}
     height=""
@@ -56,28 +77,43 @@ exports[`Test creation of an Icon control with icon 1`] = `
     width=""
     xcss={null}
   />
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of an Icon control with image 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  id=""
+  imageFile="./test-icon-image.png"
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Icon"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.img
     bottom=""
@@ -86,6 +122,7 @@ exports[`Test creation of an Icon control with image 1`] = `
     controlled={true}
     direction="right"
     disabled={false}
+    err={null}
     errorMessage=""
     focus={false}
     height=""
@@ -111,7 +148,7 @@ exports[`Test creation of an Icon control with image 1`] = `
     width=""
     xcss={null}
   />
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test making the ButtonDialog invisible 1`] = `
@@ -129,6 +166,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -153,69 +191,106 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    id=""
+    imageFile=""
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Icon"
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={false}
+    width=""
+    xcss={null}
   >
-    <styled.i
-      bottom=""
-      className="ui-icon fa fa-fw fa-bomb"
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      errorMessage=""
-      focus={false}
-      height=""
-      iconName="bomb"
-      id=""
-      imageFile=""
-      left=""
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Icon"
-      padding=""
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      visible={false}
-      width=""
-      xcss={null}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <i
-        className="ui-icon fa fa-fw fa-bomb c0"
+      <styled.i
+        bottom=""
+        className="ui-icon fa fa-fw fa-bomb"
         contentEditable={false}
+        controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
+        iconName="bomb"
         id=""
+        imageFile=""
+        left=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Icon"
+        padding=""
         selected={false}
+        sizing="normal"
         style={Object {}}
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
+        visible={false}
         width=""
-      />
-    </styled.i>
-  </ThemeProvider>
+        xcss={null}
+      >
+        <i
+          className="ui-icon fa fa-fw fa-bomb c0"
+          contentEditable={false}
+          direction="right"
+          disabled={false}
+          height=""
+          id=""
+          selected={false}
+          style={Object {}}
+          width=""
+        />
+      </styled.i>
+    </ThemeProvider>
+  </Wrapper>
 </Icon>
 `;
 
@@ -228,6 +303,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",
@@ -273,6 +349,7 @@ exports[`Test the disabling of the Icon control 1`] = `
   controlled={true}
   direction="right"
   disabled={true}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -297,68 +374,105 @@ exports[`Test the disabling of the Icon control 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={true}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    id=""
+    imageFile=""
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Icon"
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.i
-      bottom=""
-      className="ui-icon fa fa-fw fa-bomb"
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={true}
-      errorMessage=""
-      focus={false}
-      height=""
-      iconName="bomb"
-      id=""
-      imageFile=""
-      left=""
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={false}
-      obj="Icon"
-      padding=""
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={null}
-      tooltip=""
-      top=""
-      visible={true}
-      width=""
-      xcss={null}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <i
-        className="ui-icon fa fa-fw fa-bomb c0"
+      <styled.i
+        bottom=""
+        className="ui-icon fa fa-fw fa-bomb"
         contentEditable={false}
+        controlled={true}
         direction="right"
         disabled={true}
+        err={null}
+        errorMessage=""
+        focus={false}
         height=""
+        iconName="bomb"
         id=""
+        imageFile=""
+        left=""
+        location="none"
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        obj="Icon"
+        padding=""
         selected={false}
+        sizing="normal"
         style={Object {}}
+        testing={true}
+        theme={null}
+        tooltip=""
+        top=""
+        visible={true}
         width=""
-      />
-    </styled.i>
-  </ThemeProvider>
+        xcss={null}
+      >
+        <i
+          className="ui-icon fa fa-fw fa-bomb c0"
+          contentEditable={false}
+          direction="right"
+          disabled={true}
+          height=""
+          id=""
+          selected={false}
+          style={Object {}}
+          width=""
+        />
+      </styled.i>
+    </ThemeProvider>
+  </Wrapper>
 </Icon>
 `;

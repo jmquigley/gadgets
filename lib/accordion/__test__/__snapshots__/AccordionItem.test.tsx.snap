@@ -45,7 +45,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 }
 
 .c1:hover {
-  background-color: #c0c0c0 !important;
+  background-color: #bedb39 !important;
 }
 
 .c1:hover .ui-item-button {
@@ -74,6 +74,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -116,409 +117,645 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    id=""
+    initialToggle={false}
+    layout={5}
+    left=""
+    leftButton={null}
+    location="none"
+    nocollapse={false}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="AccordionItem"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[MockFunction]}
+    onDoubleClick={[Function]}
+    onError={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    onUpdate={[Function]}
+    padding=""
+    reset={false}
+    rightButton={null}
+    selected={false}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    testing={true}
+    theme={null}
+    title="Test Title"
+    tooltip=""
+    top=""
+    useedit={false}
+    visible={true}
+    widget={null}
+    width=""
+    xcss={null}
   >
-    <styled.ul
-      className="ui-accordionitem"
-      style={Object {}}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <ul
-        className="ui-accordionitem c0"
+      <styled.ul
+        className="ui-accordionitem"
         style={Object {}}
       >
-        <Item
-          bottom=""
-          className=""
-          contentEditable={false}
-          controlled={true}
-          direction="right"
-          disabled={false}
-          errorMessage=""
-          focus={false}
-          height=""
-          hiddenLeftButton={false}
-          hiddenRightButton={false}
-          id=""
-          initialToggle={false}
-          layout={5}
-          left=""
-          leftButton={null}
-          location="none"
-          nocollapse={false}
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="AccordionItem"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDoubleClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          onMouseOut={[Function]}
-          onUpdate={[Function]}
-          padding=""
-          rightButton={null}
-          selected={false}
-          sizing="normal"
-          stacked={false}
+        <ul
+          className="ui-accordionitem c0"
           style={Object {}}
-          testing={true}
-          theme={null}
-          title="Test Title"
-          tooltip=""
-          top=""
-          useedit={false}
-          visible={true}
-          widget={null}
-          width=""
-          xcss={null}
         >
-          <ThemeProvider
-            theme={
-              Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#c0c0c0",
-                "color": "#000000",
-                "headerBackgroundColor": "#004358",
-                "headerForegroundColor": "#ffffff",
-                "headerHoverColor": "#ffe11a",
-                "hoverColor": "#c0c0c0",
-                "inputBorderColor": "#c0c0c0",
-                "selectedBackgroundColor": "#1f8a70",
-                "selectedForegroundColor": "#ffe11a",
-                "tooltipBackgroundColor": "#708090",
-                "tooltipForegroundColor": "#ffffff",
-                "transitionDelay": "0.5s",
-              }
-            }
+          <Item
+            bottom=""
+            className=""
+            contentEditable={false}
+            controlled={true}
+            direction="right"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            focus={false}
+            height=""
+            hiddenLeftButton={false}
+            hiddenRightButton={false}
+            id=""
+            initialToggle={false}
+            layout={5}
+            left=""
+            leftButton={null}
+            location="none"
+            nocollapse={false}
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            obj="AccordionItem"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onMouseOut={[Function]}
+            onUpdate={[Function]}
+            padding=""
+            rightButton={null}
+            selected={false}
+            sizing="normal"
+            stacked={false}
+            style={Object {}}
+            testing={true}
+            theme={null}
+            title="Test Title"
+            tooltip=""
+            top=""
+            useedit={false}
+            visible={true}
+            widget={null}
+            width=""
+            xcss={null}
           >
-            <styled.li
-              className="ui-item"
+            <Wrapper
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              hiddenLeftButton={false}
+              hiddenRightButton={false}
               id=""
+              initialToggle={false}
+              layout={5}
+              left=""
+              leftButton={null}
+              location="none"
+              nocollapse={false}
+              noedit={false}
               nohover={false}
+              noripple={false}
+              obj="AccordionItem"
               onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
               onDoubleClick={[Function]}
+              onError={[Function]}
+              onFocus={[Function]}
               onKeyDown={[Function]}
               onKeyPress={[Function]}
               onMouseOut={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              reset={false}
+              rightButton={null}
               selected={false}
+              sizing="normal"
+              stacked={false}
               style={Object {}}
+              testing={true}
+              theme={null}
+              title="Test Title"
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={true}
+              widget={null}
+              width=""
+              xcss={null}
             >
-              <li
-                className="ui-item c1"
-                id=""
-                onBlur={[Function]}
-                onDoubleClick={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onMouseOut={[Function]}
-                selected={false}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#c0c0c0",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "inputBorderColor": "#c0c0c0",
+                    "itemHoverColor": "#bedb39",
+                    "selectedBackgroundColor": "#1f8a70",
+                    "selectedForegroundColor": "#ffe11a",
+                    "tooltipBackgroundColor": "#708090",
+                    "tooltipForegroundColor": "#ffffff",
+                    "transitionDelay": "0.5s",
+                  }
+                }
               >
-                <Title
-                  bottom=""
-                  className=""
-                  contentEditable={false}
-                  controlled={true}
-                  direction="right"
-                  disabled={false}
-                  errorMessage=""
-                  focus={false}
-                  height=""
-                  hiddenLeftButton={false}
-                  hiddenRightButton={false}
+                <styled.li
+                  className="ui-item"
                   id=""
-                  initialToggle={false}
-                  layout={5}
-                  left=""
-                  leftButton={null}
-                  location="none"
-                  nocollapse={false}
-                  noedit={false}
                   nohover={false}
-                  noripple={false}
-                  obj="AccordionItem"
                   onBlur={[Function]}
-                  onChange={[Function]}
-                  onClick={[Function]}
                   onDoubleClick={[Function]}
-                  onFocus={[Function]}
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
                   onMouseOut={[Function]}
-                  onUpdate={[Function]}
-                  padding=""
-                  rightButton={null}
                   selected={false}
-                  sizing="normal"
-                  stacked={false}
-                  style={
-                    Object {
-                      "padding": "2px 4px",
-                    }
-                  }
-                  testing={true}
-                  theme={null}
-                  title="Test Title"
-                  tooltip=""
-                  top=""
-                  useedit={false}
-                  visible={true}
-                  widget={null}
-                  width=""
-                  xcss={null}
+                  style={Object {}}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#c0c0c0",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "headerHoverColor": "#ffe11a",
-                        "hoverColor": "#c0c0c0",
-                        "inputBorderColor": "#c0c0c0",
-                        "selectedBackgroundColor": "#1f8a70",
-                        "selectedForegroundColor": "#ffe11a",
-                        "tooltipBackgroundColor": "#708090",
-                        "tooltipForegroundColor": "#ffffff",
-                        "transitionDelay": "0.5s",
-                      }
-                    }
+                  <li
+                    className="ui-item c1"
+                    id=""
+                    onBlur={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    onMouseOut={[Function]}
+                    selected={false}
+                    style={Object {}}
                   >
-                    <styled.div
-                      className="ui-title-bar ripple"
+                    <Title
+                      bottom=""
+                      className=""
+                      contentEditable={false}
+                      controlled={true}
+                      direction="right"
                       disabled={false}
+                      err={null}
+                      errorMessage=""
+                      focus={false}
+                      height=""
+                      hiddenLeftButton={false}
+                      hiddenRightButton={false}
+                      id=""
+                      initialToggle={false}
                       layout={5}
+                      left=""
+                      leftButton={null}
+                      location="none"
+                      nocollapse={false}
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      obj="AccordionItem"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onMouseOut={[Function]}
+                      onUpdate={[Function]}
+                      padding=""
+                      rightButton={null}
+                      selected={false}
+                      sizing="normal"
+                      stacked={false}
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
+                      testing={true}
+                      theme={null}
+                      title="Test Title"
+                      tooltip=""
+                      top=""
+                      useedit={false}
                       visible={true}
+                      widget={null}
+                      width=""
+                      xcss={null}
                     >
-                      <div
-                        className="ui-title-bar ripple c2"
+                      <Wrapper
+                        bottom=""
+                        className=""
+                        contentEditable={false}
+                        controlled={true}
+                        direction="right"
                         disabled={false}
+                        err={null}
+                        errorMessage=""
+                        focus={false}
+                        height=""
+                        hiddenLeftButton={false}
+                        hiddenRightButton={false}
+                        id=""
+                        initialToggle={false}
+                        layout={5}
+                        left=""
+                        leftButton={null}
+                        location="none"
+                        nocollapse={false}
+                        noedit={false}
+                        nohover={false}
+                        noripple={false}
+                        obj="AccordionItem"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onError={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        onMouseOut={[Function]}
+                        onUpdate={[Function]}
+                        padding=""
+                        reset={false}
+                        rightButton={null}
+                        selected={false}
+                        sizing="normal"
+                        stacked={false}
                         style={
                           Object {
                             "padding": "2px 4px",
                           }
                         }
+                        testing={true}
+                        theme={null}
+                        title="Test Title"
+                        tooltip=""
+                        top=""
+                        useedit={false}
+                        visible={true}
+                        widget={null}
+                        width=""
+                        xcss={null}
                       >
-                        <Styled(Label)
-                          bottom=""
-                          className="ui-title"
-                          contentEditable={false}
-                          controlled={true}
-                          direction="right"
-                          disabled={false}
-                          errorMessage=""
-                          focus={false}
-                          height=""
-                          hiddenLeftButton={false}
-                          hiddenRightButton={false}
-                          id=""
-                          initialToggle={false}
-                          layout={5}
-                          left=""
-                          leftButton={null}
-                          location="none"
-                          nocollapse={false}
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          obj="AccordionItem"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onDoubleClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyPress={[Function]}
-                          onMouseOut={[Function]}
-                          onUpdate={[Function]}
-                          padding=""
-                          rightButton={null}
-                          selected={false}
-                          sizing="normal"
-                          stacked={false}
-                          style={
+                        <ThemeProvider
+                          theme={
                             Object {
-                              "padding": "2px 4px",
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#c0c0c0",
+                              "color": "#000000",
+                              "headerBackgroundColor": "#004358",
+                              "headerForegroundColor": "#ffffff",
+                              "headerHoverColor": "#ffe11a",
+                              "hoverColor": "#c0c0c0",
+                              "inputBorderColor": "#c0c0c0",
+                              "itemHoverColor": "#bedb39",
+                              "selectedBackgroundColor": "#1f8a70",
+                              "selectedForegroundColor": "#ffe11a",
+                              "tooltipBackgroundColor": "#708090",
+                              "tooltipForegroundColor": "#ffffff",
+                              "transitionDelay": "0.5s",
                             }
                           }
-                          testing={true}
-                          text="Test Title"
-                          theme={null}
-                          title="Test Title"
-                          tooltip=""
-                          top=""
-                          useedit={false}
-                          visible={true}
-                          widget={null}
-                          width=""
-                          xcss={
-                            Array [
-                              "
-	text-align: left;
-	flex: 5;
-",
-                            ]
-                          }
                         >
-                          <Label
-                            bottom=""
-                            className="ui-title c3"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
+                          <styled.div
+                            className="ui-title-bar ripple"
                             disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            hiddenLeftButton={false}
-                            hiddenRightButton={false}
-                            id=""
-                            initialToggle={false}
                             layout={5}
-                            left=""
-                            leftButton={null}
-                            location="none"
-                            nocollapse={false}
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="AccordionItem"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onClick={[Function]}
-                            onDoubleClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyPress={[Function]}
-                            onMouseOut={[Function]}
-                            onUpdate={[Function]}
-                            padding=""
-                            rightButton={null}
-                            selected={false}
-                            sizing="normal"
-                            stacked={false}
                             style={
                               Object {
                                 "padding": "2px 4px",
                               }
                             }
-                            testing={true}
-                            text="Test Title"
-                            theme={null}
-                            title="Test Title"
-                            tooltip=""
-                            top=""
-                            useedit={false}
                             visible={true}
-                            widget={null}
-                            width=""
-                            xcss={
-                              Array [
-                                "
-	text-align: left;
-	flex: 5;
-",
-                              ]
-                            }
                           >
-                            <ThemeProvider
-                              theme={
+                            <div
+                              className="ui-title-bar ripple c2"
+                              disabled={false}
+                              style={
                                 Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#c0c0c0",
-                                  "color": "#000000",
-                                  "headerBackgroundColor": "#004358",
-                                  "headerForegroundColor": "#ffffff",
-                                  "headerHoverColor": "#ffe11a",
-                                  "hoverColor": "#c0c0c0",
-                                  "inputBorderColor": "#c0c0c0",
-                                  "selectedBackgroundColor": "#1f8a70",
-                                  "selectedForegroundColor": "#ffe11a",
-                                  "tooltipBackgroundColor": "#708090",
-                                  "tooltipForegroundColor": "#ffffff",
-                                  "transitionDelay": "0.5s",
+                                  "padding": "2px 4px",
                                 }
                               }
                             >
-                              <styled.span
-                                className="ui-label ui-title c3"
+                              <Styled(Label)
+                                bottom=""
+                                className="ui-title"
                                 contentEditable={false}
+                                controlled={true}
+                                direction="right"
                                 disabled={false}
-                                innerRef={[Function]}
+                                err={null}
+                                errorMessage=""
+                                focus={false}
+                                height=""
+                                hiddenLeftButton={false}
+                                hiddenRightButton={false}
+                                id=""
+                                initialToggle={false}
+                                layout={5}
+                                left=""
+                                leftButton={null}
+                                location="none"
+                                nocollapse={false}
+                                noedit={false}
+                                nohover={false}
+                                noripple={false}
+                                obj="AccordionItem"
                                 onBlur={[Function]}
+                                onChange={[Function]}
                                 onClick={[Function]}
                                 onDoubleClick={[Function]}
+                                onFocus={[Function]}
                                 onKeyDown={[Function]}
                                 onKeyPress={[Function]}
+                                onMouseOut={[Function]}
+                                onUpdate={[Function]}
+                                padding=""
+                                rightButton={null}
+                                selected={false}
                                 sizing="normal"
+                                stacked={false}
                                 style={
                                   Object {
                                     "padding": "2px 4px",
                                   }
                                 }
-                                suppressContentEditableWarning={true}
+                                testing={true}
+                                text="Test Title"
+                                theme={null}
+                                title="Test Title"
+                                tooltip=""
+                                top=""
+                                useedit={false}
                                 visible={true}
+                                widget={null}
+                                width=""
+                                xcss={
+                                  Array [
+                                    "
+	text-align: left;
+	flex: 5;
+",
+                                  ]
+                                }
                               >
-                                <span
-                                  className="ui-label ui-title c3 c4"
+                                <Label
+                                  bottom=""
+                                  className="ui-title c3"
                                   contentEditable={false}
+                                  controlled={true}
+                                  direction="right"
                                   disabled={false}
+                                  err={null}
+                                  errorMessage=""
+                                  focus={false}
+                                  height=""
+                                  hiddenLeftButton={false}
+                                  hiddenRightButton={false}
+                                  id=""
+                                  initialToggle={false}
+                                  layout={5}
+                                  left=""
+                                  leftButton={null}
+                                  location="none"
+                                  nocollapse={false}
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  obj="AccordionItem"
                                   onBlur={[Function]}
+                                  onChange={[Function]}
                                   onClick={[Function]}
                                   onDoubleClick={[Function]}
+                                  onFocus={[Function]}
                                   onKeyDown={[Function]}
                                   onKeyPress={[Function]}
+                                  onMouseOut={[Function]}
+                                  onUpdate={[Function]}
+                                  padding=""
+                                  rightButton={null}
+                                  selected={false}
+                                  sizing="normal"
+                                  stacked={false}
                                   style={
                                     Object {
                                       "padding": "2px 4px",
                                     }
                                   }
-                                  suppressContentEditableWarning={true}
+                                  testing={true}
+                                  text="Test Title"
+                                  theme={null}
+                                  title="Test Title"
+                                  tooltip=""
+                                  top=""
+                                  useedit={false}
+                                  visible={true}
+                                  widget={null}
+                                  width=""
+                                  xcss={
+                                    Array [
+                                      "
+	text-align: left;
+	flex: 5;
+",
+                                    ]
+                                  }
                                 >
-                                  Test Title
-                                </span>
-                              </styled.span>
-                            </ThemeProvider>
-                          </Label>
-                        </Styled(Label)>
-                      </div>
-                    </styled.div>
-                  </ThemeProvider>
-                </Title>
-              </li>
-            </styled.li>
-          </ThemeProvider>
-        </Item>
-      </ul>
-    </styled.ul>
-  </ThemeProvider>
+                                  <Wrapper
+                                    bottom=""
+                                    className="ui-title c3"
+                                    contentEditable={false}
+                                    controlled={true}
+                                    direction="right"
+                                    disabled={false}
+                                    err={null}
+                                    errorMessage=""
+                                    focus={false}
+                                    height=""
+                                    hiddenLeftButton={false}
+                                    hiddenRightButton={false}
+                                    id=""
+                                    initialToggle={false}
+                                    layout={5}
+                                    left=""
+                                    leftButton={null}
+                                    location="none"
+                                    nocollapse={false}
+                                    noedit={false}
+                                    nohover={false}
+                                    noripple={false}
+                                    obj="AccordionItem"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onClick={[Function]}
+                                    onDoubleClick={[Function]}
+                                    onError={[Function]}
+                                    onFocus={[Function]}
+                                    onKeyDown={[Function]}
+                                    onKeyPress={[Function]}
+                                    onMouseOut={[Function]}
+                                    onUpdate={[Function]}
+                                    padding=""
+                                    reset={false}
+                                    rightButton={null}
+                                    selected={false}
+                                    sizing="normal"
+                                    stacked={false}
+                                    style={
+                                      Object {
+                                        "padding": "2px 4px",
+                                      }
+                                    }
+                                    testing={true}
+                                    text="Test Title"
+                                    theme={null}
+                                    title="Test Title"
+                                    tooltip=""
+                                    top=""
+                                    useedit={false}
+                                    visible={true}
+                                    widget={null}
+                                    width=""
+                                    xcss={
+                                      Array [
+                                        "
+	text-align: left;
+	flex: 5;
+",
+                                      ]
+                                    }
+                                  >
+                                    <ThemeProvider
+                                      theme={
+                                        Object {
+                                          "backgroundColor": "#ffffff",
+                                          "borderColor": "#c0c0c0",
+                                          "color": "#000000",
+                                          "headerBackgroundColor": "#004358",
+                                          "headerForegroundColor": "#ffffff",
+                                          "headerHoverColor": "#ffe11a",
+                                          "hoverColor": "#c0c0c0",
+                                          "inputBorderColor": "#c0c0c0",
+                                          "itemHoverColor": "#bedb39",
+                                          "selectedBackgroundColor": "#1f8a70",
+                                          "selectedForegroundColor": "#ffe11a",
+                                          "tooltipBackgroundColor": "#708090",
+                                          "tooltipForegroundColor": "#ffffff",
+                                          "transitionDelay": "0.5s",
+                                        }
+                                      }
+                                    >
+                                      <styled.span
+                                        className="ui-label ui-title c3"
+                                        contentEditable={false}
+                                        disabled={false}
+                                        innerRef={[Function]}
+                                        onBlur={[Function]}
+                                        onClick={[Function]}
+                                        onDoubleClick={[Function]}
+                                        onKeyDown={[Function]}
+                                        onKeyPress={[Function]}
+                                        sizing="normal"
+                                        style={
+                                          Object {
+                                            "padding": "2px 4px",
+                                          }
+                                        }
+                                        suppressContentEditableWarning={true}
+                                        visible={true}
+                                      >
+                                        <span
+                                          className="ui-label ui-title c3 c4"
+                                          contentEditable={false}
+                                          disabled={false}
+                                          onBlur={[Function]}
+                                          onClick={[Function]}
+                                          onDoubleClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          onKeyPress={[Function]}
+                                          style={
+                                            Object {
+                                              "padding": "2px 4px",
+                                            }
+                                          }
+                                          suppressContentEditableWarning={true}
+                                        >
+                                          Test Title
+                                        </span>
+                                      </styled.span>
+                                    </ThemeProvider>
+                                  </Wrapper>
+                                </Label>
+                              </Styled(Label)>
+                            </div>
+                          </styled.div>
+                        </ThemeProvider>
+                      </Wrapper>
+                    </Title>
+                  </li>
+                </styled.li>
+              </ThemeProvider>
+            </Wrapper>
+          </Item>
+        </ul>
+      </styled.ul>
+    </ThemeProvider>
+  </Wrapper>
 </AccordionItem>
 `;
 
@@ -567,7 +804,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 }
 
 .c1:hover {
-  background-color: #c0c0c0 !important;
+  background-color: #bedb39 !important;
 }
 
 .c1:hover .ui-item-button {
@@ -600,6 +837,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -642,443 +880,712 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    id=""
+    initialToggle={false}
+    layout={5}
+    left=""
+    leftButton={null}
+    location="none"
+    nocollapse={true}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="AccordionItem"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[MockFunction]}
+    onDoubleClick={[Function]}
+    onError={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    onUpdate={[Function]}
+    padding=""
+    reset={false}
+    rightButton={null}
+    selected={false}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    testing={true}
+    theme={null}
+    title="Test Title"
+    tooltip=""
+    top=""
+    useedit={false}
+    visible={true}
+    widget={null}
+    width=""
+    xcss={null}
   >
-    <styled.ul
-      className="ui-accordionitem"
-      style={Object {}}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <ul
-        className="ui-accordionitem c0"
+      <styled.ul
+        className="ui-accordionitem"
         style={Object {}}
       >
-        <Item
-          bottom=""
-          className=""
-          contentEditable={false}
-          controlled={true}
-          direction="right"
-          disabled={false}
-          errorMessage=""
-          focus={false}
-          height=""
-          hiddenLeftButton={false}
-          hiddenRightButton={false}
-          id=""
-          initialToggle={false}
-          layout={5}
-          left=""
-          leftButton={null}
-          location="none"
-          nocollapse={true}
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="AccordionItem"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDoubleClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          onMouseOut={[Function]}
-          onUpdate={[Function]}
-          padding=""
-          rightButton={null}
-          selected={false}
-          sizing="normal"
-          stacked={false}
+        <ul
+          className="ui-accordionitem c0"
           style={Object {}}
-          testing={true}
-          theme={null}
-          title="Test Title"
-          tooltip=""
-          top=""
-          useedit={false}
-          visible={true}
-          widget={null}
-          width=""
-          xcss={null}
         >
-          <ThemeProvider
-            theme={
-              Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#c0c0c0",
-                "color": "#000000",
-                "headerBackgroundColor": "#004358",
-                "headerForegroundColor": "#ffffff",
-                "headerHoverColor": "#ffe11a",
-                "hoverColor": "#c0c0c0",
-                "inputBorderColor": "#c0c0c0",
-                "selectedBackgroundColor": "#1f8a70",
-                "selectedForegroundColor": "#ffe11a",
-                "tooltipBackgroundColor": "#708090",
-                "tooltipForegroundColor": "#ffffff",
-                "transitionDelay": "0.5s",
-              }
-            }
+          <Item
+            bottom=""
+            className=""
+            contentEditable={false}
+            controlled={true}
+            direction="right"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            focus={false}
+            height=""
+            hiddenLeftButton={false}
+            hiddenRightButton={false}
+            id=""
+            initialToggle={false}
+            layout={5}
+            left=""
+            leftButton={null}
+            location="none"
+            nocollapse={true}
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            obj="AccordionItem"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onMouseOut={[Function]}
+            onUpdate={[Function]}
+            padding=""
+            rightButton={null}
+            selected={false}
+            sizing="normal"
+            stacked={false}
+            style={Object {}}
+            testing={true}
+            theme={null}
+            title="Test Title"
+            tooltip=""
+            top=""
+            useedit={false}
+            visible={true}
+            widget={null}
+            width=""
+            xcss={null}
           >
-            <styled.li
-              className="ui-item"
+            <Wrapper
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              hiddenLeftButton={false}
+              hiddenRightButton={false}
               id=""
+              initialToggle={false}
+              layout={5}
+              left=""
+              leftButton={null}
+              location="none"
+              nocollapse={true}
+              noedit={false}
               nohover={false}
+              noripple={false}
+              obj="AccordionItem"
               onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
               onDoubleClick={[Function]}
+              onError={[Function]}
+              onFocus={[Function]}
               onKeyDown={[Function]}
               onKeyPress={[Function]}
               onMouseOut={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              reset={false}
+              rightButton={null}
               selected={false}
+              sizing="normal"
+              stacked={false}
               style={Object {}}
+              testing={true}
+              theme={null}
+              title="Test Title"
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={true}
+              widget={null}
+              width=""
+              xcss={null}
             >
-              <li
-                className="ui-item c1"
-                id=""
-                onBlur={[Function]}
-                onDoubleClick={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onMouseOut={[Function]}
-                selected={false}
-                style={Object {}}
+              <ThemeProvider
+                theme={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#c0c0c0",
+                    "color": "#000000",
+                    "headerBackgroundColor": "#004358",
+                    "headerForegroundColor": "#ffffff",
+                    "headerHoverColor": "#ffe11a",
+                    "hoverColor": "#c0c0c0",
+                    "inputBorderColor": "#c0c0c0",
+                    "itemHoverColor": "#bedb39",
+                    "selectedBackgroundColor": "#1f8a70",
+                    "selectedForegroundColor": "#ffe11a",
+                    "tooltipBackgroundColor": "#708090",
+                    "tooltipForegroundColor": "#ffffff",
+                    "transitionDelay": "0.5s",
+                  }
+                }
               >
-                <Title
-                  bottom=""
-                  className=""
-                  contentEditable={false}
-                  controlled={true}
-                  direction="right"
-                  disabled={false}
-                  errorMessage=""
-                  focus={false}
-                  height=""
-                  hiddenLeftButton={false}
-                  hiddenRightButton={false}
+                <styled.li
+                  className="ui-item"
                   id=""
-                  initialToggle={false}
-                  layout={5}
-                  left=""
-                  leftButton={null}
-                  location="none"
-                  nocollapse={true}
-                  noedit={false}
                   nohover={false}
-                  noripple={false}
-                  obj="AccordionItem"
                   onBlur={[Function]}
-                  onChange={[Function]}
-                  onClick={[Function]}
                   onDoubleClick={[Function]}
-                  onFocus={[Function]}
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
                   onMouseOut={[Function]}
-                  onUpdate={[Function]}
-                  padding=""
-                  rightButton={null}
                   selected={false}
-                  sizing="normal"
-                  stacked={false}
-                  style={
-                    Object {
-                      "padding": "2px 4px",
-                    }
-                  }
-                  testing={true}
-                  theme={null}
-                  title="Test Title"
-                  tooltip=""
-                  top=""
-                  useedit={false}
-                  visible={true}
-                  widget={null}
-                  width=""
-                  xcss={null}
+                  style={Object {}}
                 >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#c0c0c0",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "headerHoverColor": "#ffe11a",
-                        "hoverColor": "#c0c0c0",
-                        "inputBorderColor": "#c0c0c0",
-                        "selectedBackgroundColor": "#1f8a70",
-                        "selectedForegroundColor": "#ffe11a",
-                        "tooltipBackgroundColor": "#708090",
-                        "tooltipForegroundColor": "#ffffff",
-                        "transitionDelay": "0.5s",
-                      }
-                    }
+                  <li
+                    className="ui-item c1"
+                    id=""
+                    onBlur={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    onMouseOut={[Function]}
+                    selected={false}
+                    style={Object {}}
                   >
-                    <styled.div
-                      className="ui-title-bar ripple"
+                    <Title
+                      bottom=""
+                      className=""
+                      contentEditable={false}
+                      controlled={true}
+                      direction="right"
                       disabled={false}
+                      err={null}
+                      errorMessage=""
+                      focus={false}
+                      height=""
+                      hiddenLeftButton={false}
+                      hiddenRightButton={false}
+                      id=""
+                      initialToggle={false}
                       layout={5}
+                      left=""
+                      leftButton={null}
+                      location="none"
+                      nocollapse={true}
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      obj="AccordionItem"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onMouseOut={[Function]}
+                      onUpdate={[Function]}
+                      padding=""
+                      rightButton={null}
+                      selected={false}
+                      sizing="normal"
+                      stacked={false}
                       style={
                         Object {
                           "padding": "2px 4px",
                         }
                       }
+                      testing={true}
+                      theme={null}
+                      title="Test Title"
+                      tooltip=""
+                      top=""
+                      useedit={false}
                       visible={true}
+                      widget={null}
+                      width=""
+                      xcss={null}
                     >
-                      <div
-                        className="ui-title-bar ripple c2"
+                      <Wrapper
+                        bottom=""
+                        className=""
+                        contentEditable={false}
+                        controlled={true}
+                        direction="right"
                         disabled={false}
+                        err={null}
+                        errorMessage=""
+                        focus={false}
+                        height=""
+                        hiddenLeftButton={false}
+                        hiddenRightButton={false}
+                        id=""
+                        initialToggle={false}
+                        layout={5}
+                        left=""
+                        leftButton={null}
+                        location="none"
+                        nocollapse={true}
+                        noedit={false}
+                        nohover={false}
+                        noripple={false}
+                        obj="AccordionItem"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onError={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        onMouseOut={[Function]}
+                        onUpdate={[Function]}
+                        padding=""
+                        reset={false}
+                        rightButton={null}
+                        selected={false}
+                        sizing="normal"
+                        stacked={false}
                         style={
                           Object {
                             "padding": "2px 4px",
                           }
                         }
+                        testing={true}
+                        theme={null}
+                        title="Test Title"
+                        tooltip=""
+                        top=""
+                        useedit={false}
+                        visible={true}
+                        widget={null}
+                        width=""
+                        xcss={null}
                       >
-                        <Styled(Label)
-                          bottom=""
-                          className="ui-title"
-                          contentEditable={false}
-                          controlled={true}
-                          direction="right"
-                          disabled={false}
-                          errorMessage=""
-                          focus={false}
-                          height=""
-                          hiddenLeftButton={false}
-                          hiddenRightButton={false}
-                          id=""
-                          initialToggle={false}
-                          layout={5}
-                          left=""
-                          leftButton={null}
-                          location="none"
-                          nocollapse={true}
-                          noedit={false}
-                          nohover={false}
-                          noripple={false}
-                          obj="AccordionItem"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onDoubleClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyPress={[Function]}
-                          onMouseOut={[Function]}
-                          onUpdate={[Function]}
-                          padding=""
-                          rightButton={null}
-                          selected={false}
-                          sizing="normal"
-                          stacked={false}
-                          style={
+                        <ThemeProvider
+                          theme={
                             Object {
-                              "padding": "2px 4px",
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#c0c0c0",
+                              "color": "#000000",
+                              "headerBackgroundColor": "#004358",
+                              "headerForegroundColor": "#ffffff",
+                              "headerHoverColor": "#ffe11a",
+                              "hoverColor": "#c0c0c0",
+                              "inputBorderColor": "#c0c0c0",
+                              "itemHoverColor": "#bedb39",
+                              "selectedBackgroundColor": "#1f8a70",
+                              "selectedForegroundColor": "#ffe11a",
+                              "tooltipBackgroundColor": "#708090",
+                              "tooltipForegroundColor": "#ffffff",
+                              "transitionDelay": "0.5s",
                             }
                           }
-                          testing={true}
-                          text="Test Title"
-                          theme={null}
-                          title="Test Title"
-                          tooltip=""
-                          top=""
-                          useedit={false}
-                          visible={true}
-                          widget={null}
-                          width=""
-                          xcss={
-                            Array [
-                              "
-	text-align: left;
-	flex: 5;
-",
-                            ]
-                          }
                         >
-                          <Label
-                            bottom=""
-                            className="ui-title c3"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
+                          <styled.div
+                            className="ui-title-bar ripple"
                             disabled={false}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            hiddenLeftButton={false}
-                            hiddenRightButton={false}
-                            id=""
-                            initialToggle={false}
                             layout={5}
-                            left=""
-                            leftButton={null}
-                            location="none"
-                            nocollapse={true}
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="AccordionItem"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onClick={[Function]}
-                            onDoubleClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyPress={[Function]}
-                            onMouseOut={[Function]}
-                            onUpdate={[Function]}
-                            padding=""
-                            rightButton={null}
-                            selected={false}
-                            sizing="normal"
-                            stacked={false}
                             style={
                               Object {
                                 "padding": "2px 4px",
                               }
                             }
-                            testing={true}
-                            text="Test Title"
-                            theme={null}
-                            title="Test Title"
-                            tooltip=""
-                            top=""
-                            useedit={false}
                             visible={true}
-                            widget={null}
-                            width=""
-                            xcss={
-                              Array [
-                                "
-	text-align: left;
-	flex: 5;
-",
-                              ]
-                            }
                           >
-                            <ThemeProvider
-                              theme={
+                            <div
+                              className="ui-title-bar ripple c2"
+                              disabled={false}
+                              style={
                                 Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#c0c0c0",
-                                  "color": "#000000",
-                                  "headerBackgroundColor": "#004358",
-                                  "headerForegroundColor": "#ffffff",
-                                  "headerHoverColor": "#ffe11a",
-                                  "hoverColor": "#c0c0c0",
-                                  "inputBorderColor": "#c0c0c0",
-                                  "selectedBackgroundColor": "#1f8a70",
-                                  "selectedForegroundColor": "#ffe11a",
-                                  "tooltipBackgroundColor": "#708090",
-                                  "tooltipForegroundColor": "#ffffff",
-                                  "transitionDelay": "0.5s",
+                                  "padding": "2px 4px",
                                 }
                               }
                             >
-                              <styled.span
-                                className="ui-label ui-title c3"
+                              <Styled(Label)
+                                bottom=""
+                                className="ui-title"
                                 contentEditable={false}
+                                controlled={true}
+                                direction="right"
                                 disabled={false}
-                                innerRef={[Function]}
+                                err={null}
+                                errorMessage=""
+                                focus={false}
+                                height=""
+                                hiddenLeftButton={false}
+                                hiddenRightButton={false}
+                                id=""
+                                initialToggle={false}
+                                layout={5}
+                                left=""
+                                leftButton={null}
+                                location="none"
+                                nocollapse={true}
+                                noedit={false}
+                                nohover={false}
+                                noripple={false}
+                                obj="AccordionItem"
                                 onBlur={[Function]}
+                                onChange={[Function]}
                                 onClick={[Function]}
                                 onDoubleClick={[Function]}
+                                onFocus={[Function]}
                                 onKeyDown={[Function]}
                                 onKeyPress={[Function]}
+                                onMouseOut={[Function]}
+                                onUpdate={[Function]}
+                                padding=""
+                                rightButton={null}
+                                selected={false}
                                 sizing="normal"
+                                stacked={false}
                                 style={
                                   Object {
                                     "padding": "2px 4px",
                                   }
                                 }
-                                suppressContentEditableWarning={true}
+                                testing={true}
+                                text="Test Title"
+                                theme={null}
+                                title="Test Title"
+                                tooltip=""
+                                top=""
+                                useedit={false}
                                 visible={true}
+                                widget={null}
+                                width=""
+                                xcss={
+                                  Array [
+                                    "
+	text-align: left;
+	flex: 5;
+",
+                                  ]
+                                }
                               >
-                                <span
-                                  className="ui-label ui-title c3 c4"
+                                <Label
+                                  bottom=""
+                                  className="ui-title c3"
                                   contentEditable={false}
+                                  controlled={true}
+                                  direction="right"
                                   disabled={false}
+                                  err={null}
+                                  errorMessage=""
+                                  focus={false}
+                                  height=""
+                                  hiddenLeftButton={false}
+                                  hiddenRightButton={false}
+                                  id=""
+                                  initialToggle={false}
+                                  layout={5}
+                                  left=""
+                                  leftButton={null}
+                                  location="none"
+                                  nocollapse={true}
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  obj="AccordionItem"
                                   onBlur={[Function]}
+                                  onChange={[Function]}
                                   onClick={[Function]}
                                   onDoubleClick={[Function]}
+                                  onFocus={[Function]}
                                   onKeyDown={[Function]}
                                   onKeyPress={[Function]}
+                                  onMouseOut={[Function]}
+                                  onUpdate={[Function]}
+                                  padding=""
+                                  rightButton={null}
+                                  selected={false}
+                                  sizing="normal"
+                                  stacked={false}
                                   style={
                                     Object {
                                       "padding": "2px 4px",
                                     }
                                   }
-                                  suppressContentEditableWarning={true}
+                                  testing={true}
+                                  text="Test Title"
+                                  theme={null}
+                                  title="Test Title"
+                                  tooltip=""
+                                  top=""
+                                  useedit={false}
+                                  visible={true}
+                                  widget={null}
+                                  width=""
+                                  xcss={
+                                    Array [
+                                      "
+	text-align: left;
+	flex: 5;
+",
+                                    ]
+                                  }
                                 >
-                                  Test Title
-                                </span>
-                              </styled.span>
-                            </ThemeProvider>
-                          </Label>
-                        </Styled(Label)>
-                      </div>
-                    </styled.div>
-                  </ThemeProvider>
-                </Title>
-              </li>
-            </styled.li>
-          </ThemeProvider>
-        </Item>
-        <styled.div
-          className="ui-accordion-content"
-          sizing="normal"
-        >
-          <div
-            className="ui-accordion-content c5"
+                                  <Wrapper
+                                    bottom=""
+                                    className="ui-title c3"
+                                    contentEditable={false}
+                                    controlled={true}
+                                    direction="right"
+                                    disabled={false}
+                                    err={null}
+                                    errorMessage=""
+                                    focus={false}
+                                    height=""
+                                    hiddenLeftButton={false}
+                                    hiddenRightButton={false}
+                                    id=""
+                                    initialToggle={false}
+                                    layout={5}
+                                    left=""
+                                    leftButton={null}
+                                    location="none"
+                                    nocollapse={true}
+                                    noedit={false}
+                                    nohover={false}
+                                    noripple={false}
+                                    obj="AccordionItem"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onClick={[Function]}
+                                    onDoubleClick={[Function]}
+                                    onError={[Function]}
+                                    onFocus={[Function]}
+                                    onKeyDown={[Function]}
+                                    onKeyPress={[Function]}
+                                    onMouseOut={[Function]}
+                                    onUpdate={[Function]}
+                                    padding=""
+                                    reset={false}
+                                    rightButton={null}
+                                    selected={false}
+                                    sizing="normal"
+                                    stacked={false}
+                                    style={
+                                      Object {
+                                        "padding": "2px 4px",
+                                      }
+                                    }
+                                    testing={true}
+                                    text="Test Title"
+                                    theme={null}
+                                    title="Test Title"
+                                    tooltip=""
+                                    top=""
+                                    useedit={false}
+                                    visible={true}
+                                    widget={null}
+                                    width=""
+                                    xcss={
+                                      Array [
+                                        "
+	text-align: left;
+	flex: 5;
+",
+                                      ]
+                                    }
+                                  >
+                                    <ThemeProvider
+                                      theme={
+                                        Object {
+                                          "backgroundColor": "#ffffff",
+                                          "borderColor": "#c0c0c0",
+                                          "color": "#000000",
+                                          "headerBackgroundColor": "#004358",
+                                          "headerForegroundColor": "#ffffff",
+                                          "headerHoverColor": "#ffe11a",
+                                          "hoverColor": "#c0c0c0",
+                                          "inputBorderColor": "#c0c0c0",
+                                          "itemHoverColor": "#bedb39",
+                                          "selectedBackgroundColor": "#1f8a70",
+                                          "selectedForegroundColor": "#ffe11a",
+                                          "tooltipBackgroundColor": "#708090",
+                                          "tooltipForegroundColor": "#ffffff",
+                                          "transitionDelay": "0.5s",
+                                        }
+                                      }
+                                    >
+                                      <styled.span
+                                        className="ui-label ui-title c3"
+                                        contentEditable={false}
+                                        disabled={false}
+                                        innerRef={[Function]}
+                                        onBlur={[Function]}
+                                        onClick={[Function]}
+                                        onDoubleClick={[Function]}
+                                        onKeyDown={[Function]}
+                                        onKeyPress={[Function]}
+                                        sizing="normal"
+                                        style={
+                                          Object {
+                                            "padding": "2px 4px",
+                                          }
+                                        }
+                                        suppressContentEditableWarning={true}
+                                        visible={true}
+                                      >
+                                        <span
+                                          className="ui-label ui-title c3 c4"
+                                          contentEditable={false}
+                                          disabled={false}
+                                          onBlur={[Function]}
+                                          onClick={[Function]}
+                                          onDoubleClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          onKeyPress={[Function]}
+                                          style={
+                                            Object {
+                                              "padding": "2px 4px",
+                                            }
+                                          }
+                                          suppressContentEditableWarning={true}
+                                        >
+                                          Test Title
+                                        </span>
+                                      </styled.span>
+                                    </ThemeProvider>
+                                  </Wrapper>
+                                </Label>
+                              </Styled(Label)>
+                            </div>
+                          </styled.div>
+                        </ThemeProvider>
+                      </Wrapper>
+                    </Title>
+                  </li>
+                </styled.li>
+              </ThemeProvider>
+            </Wrapper>
+          </Item>
+          <styled.div
+            className="ui-accordion-content"
+            sizing="normal"
           >
-            <div>
-              child content
+            <div
+              className="ui-accordion-content c5"
+            >
+              <div>
+                child content
+              </div>
             </div>
-          </div>
-        </styled.div>
-      </ul>
-    </styled.ul>
-  </ThemeProvider>
+          </styled.div>
+        </ul>
+      </styled.ul>
+    </ThemeProvider>
+  </Wrapper>
 </AccordionItem>
 `;
 
 exports[`Test making the AccordionItem invisible 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  left=""
+  leftButton={null}
+  location="none"
+  nocollapse={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="AccordionItem"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onError={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  padding=""
+  reset={false}
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test Title"
+  tooltip=""
+  top=""
+  useedit={false}
+  visible={false}
+  widget={null}
+  width=""
+  xcss={null}
 >
   <styled.ul
     className="ui-accordionitem"
@@ -1091,6 +1598,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -1134,7 +1642,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
       xcss={null}
     />
   </styled.ul>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test retrieval of AccordionItem props object 1`] = `
@@ -1146,6 +1654,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",
@@ -1191,24 +1700,57 @@ Object {
 `;
 
 exports[`Test the creation of a AccordionItem control 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  left=""
+  leftButton={null}
+  location="none"
+  nocollapse={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="AccordionItem"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onError={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  padding=""
+  reset={false}
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test Title"
+  tooltip=""
+  top=""
+  useedit={false}
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
 >
   <styled.ul
     className="ui-accordionitem test-class"
@@ -1221,6 +1763,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -1264,28 +1807,61 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       xcss={null}
     />
   </styled.ul>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test the disabling of the AccordionItem 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  left=""
+  leftButton={null}
+  location="none"
+  nocollapse={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="AccordionItem"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onError={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  padding=""
+  reset={false}
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test Title"
+  tooltip=""
+  top=""
+  useedit={false}
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
 >
   <styled.ul
     className="ui-accordionitem"
@@ -1298,6 +1874,7 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       controlled={true}
       direction="right"
       disabled={true}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -1341,5 +1918,5 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       xcss={null}
     />
   </styled.ul>
-</ThemeProvider>
+</Wrapper>
 `;

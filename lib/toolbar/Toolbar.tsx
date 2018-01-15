@@ -61,10 +61,10 @@ import {
 	BaseComponent,
 	BaseProps,
 	getDefaultBaseProps,
-	getTheme,
-	Justify
+	Justify,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface ToolbarProps extends BaseProps {
 	justify?: Justify;
@@ -134,7 +134,6 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 
 	public render() {
 		const components: any = [];
-		const theme: any = getTheme();
 
 		React.Children.forEach(this.props.children, (child: any, idx: number) => {
 			if (Toolbar._whitelist.contains(child['props'].obj)) {
@@ -152,7 +151,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						style['width'] = this.fontSizePX(this.props.sizing, 1.5);
 
 					case 'ButtonText':
-						style['border'] = `solid 1px ${theme.borderColor}`,
+						style['border'] = `solid 1px ${this.theme.borderColor}`,
 						delete style['width'];
 						break;
 
@@ -190,7 +189,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 		});
 
 		return(
-			<ThemeProvider theme={theme} >
+			<Wrapper {...this.props} >
 				<ToolbarView className={this.classes}>
 					<ToolbarGroupView
 						className="ui-toolbar-group"
@@ -199,7 +198,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						{components}
 					</ToolbarGroupView>
 				</ToolbarView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

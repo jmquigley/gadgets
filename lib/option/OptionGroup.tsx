@@ -62,11 +62,11 @@ import {
 	BaseProps,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme,
 	invisible,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 import {Title, TitleLayout} from '../title';
 import {Option, OptionType} from './Option';
 
@@ -209,7 +209,7 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 
 	public render() {
 		return(
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<StyledOptionGroup
 					className={this.classes}
 					sizing={this.props.sizing}
@@ -224,7 +224,7 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 					/>
 					{this.buildOptionList()}
 				</StyledOptionGroup>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

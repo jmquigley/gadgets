@@ -46,10 +46,10 @@ import {
 	BaseComponent,
 	borderStyle,
 	Color,
-	getTheme,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface ButtonCircleProps extends ButtonProps {
 	onClick?: any;
@@ -116,7 +116,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 		const size: string = this.fontSizePX(this.props.sizing, 1.5);
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<ButtonCircleContainerView className={this.classes}>
 					<ButtonCircleInnerView
 						height={size}
@@ -129,7 +129,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 						/>
 					</ButtonCircleInnerView>
 				</ButtonCircleContainerView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

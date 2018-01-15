@@ -8,6 +8,7 @@ exports[`Test creation of Tooltip location bottom 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -36,60 +37,90 @@ exports[`Test creation of Tooltip location bottom 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="bottom"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="bottom"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb cNihpN"
+      <styled.div
+        className="ui-tooltip"
+        location="bottom"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb cNihpN"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -97,40 +128,21 @@ exports[`Test creation of Tooltip location bottom 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="up"
-          location="bottom"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH dVmkWo"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="up"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="bottom"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -138,40 +150,51 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH dVmkWo"
+              contentEditable={false}
+              controlled={true}
+              direction="up"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="bottom"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH dVmkWo"
+                className="sc-bwzfXH dVmkWo"
                 contentEditable={false}
                 controlled={true}
                 direction="up"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -183,14 +206,14 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -198,45 +221,105 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH dVmkWo Triangle__SVGView-iDjlpJ eyTBNd"
-                  contentEditable={false}
-                  direction="up"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH dVmkWo"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="up"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="bottom"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH dVmkWo Triangle__SVGView-iDjlpJ eyTBNd"
+                      contentEditable={false}
+                      direction="up"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
@@ -248,6 +331,7 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -276,60 +360,90 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="bottomLeft"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="bottomLeft"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb agBgC"
+      <styled.div
+        className="ui-tooltip"
+        location="bottomLeft"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb agBgC"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -337,40 +451,21 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="up"
-          location="bottomLeft"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH bBfLTI"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="up"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="bottomLeft"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -378,40 +473,51 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH bBfLTI"
+              contentEditable={false}
+              controlled={true}
+              direction="up"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="bottomLeft"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH bBfLTI"
+                className="sc-bwzfXH bBfLTI"
                 contentEditable={false}
                 controlled={true}
                 direction="up"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -423,14 +529,14 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -438,45 +544,105 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH bBfLTI Triangle__SVGView-iDjlpJ eyTBNd"
-                  contentEditable={false}
-                  direction="up"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH bBfLTI"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="up"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="bottomLeft"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH bBfLTI Triangle__SVGView-iDjlpJ eyTBNd"
+                      contentEditable={false}
+                      direction="up"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
@@ -488,6 +654,7 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -516,60 +683,90 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="bottomRight"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="bottomRight"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb flVFMf"
+      <styled.div
+        className="ui-tooltip"
+        location="bottomRight"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb flVFMf"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -577,40 +774,21 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="up"
-          location="bottomRight"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH brrHFc"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="up"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="bottomRight"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -618,40 +796,51 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH brrHFc"
+              contentEditable={false}
+              controlled={true}
+              direction="up"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="bottomRight"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH brrHFc"
+                className="sc-bwzfXH brrHFc"
                 contentEditable={false}
                 controlled={true}
                 direction="up"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -663,14 +852,14 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -678,45 +867,105 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH brrHFc Triangle__SVGView-iDjlpJ eyTBNd"
-                  contentEditable={false}
-                  direction="up"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH brrHFc"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="up"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="bottomRight"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH brrHFc Triangle__SVGView-iDjlpJ eyTBNd"
+                      contentEditable={false}
+                      direction="up"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
@@ -728,6 +977,7 @@ exports[`Test creation of Tooltip location middle 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -756,60 +1006,90 @@ exports[`Test creation of Tooltip location middle 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="middle"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="middle"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb gKhdke"
+      <styled.div
+        className="ui-tooltip"
+        location="middle"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb gKhdke"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -817,40 +1097,21 @@ exports[`Test creation of Tooltip location middle 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="left"
-          location="middle"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH fhgzvr"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="left"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="middle"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -858,40 +1119,51 @@ exports[`Test creation of Tooltip location middle 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH fhgzvr"
+              contentEditable={false}
+              controlled={true}
+              direction="left"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="middle"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH fhgzvr"
+                className="sc-bwzfXH fhgzvr"
                 contentEditable={false}
                 controlled={true}
                 direction="left"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -903,14 +1175,14 @@ exports[`Test creation of Tooltip location middle 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -918,45 +1190,105 @@ exports[`Test creation of Tooltip location middle 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH fhgzvr Triangle__SVGView-iDjlpJ evTwin"
-                  contentEditable={false}
-                  direction="left"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH fhgzvr"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="left"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="middle"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH fhgzvr Triangle__SVGView-iDjlpJ evTwin"
+                      contentEditable={false}
+                      direction="left"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
@@ -968,6 +1300,7 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -996,60 +1329,90 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="middleLeft"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="middleLeft"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb dqETnE"
+      <styled.div
+        className="ui-tooltip"
+        location="middleLeft"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb dqETnE"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -1057,40 +1420,21 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="right"
-          location="middleLeft"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH euNGhF"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="right"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="middleLeft"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -1098,40 +1442,51 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH euNGhF"
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="middleLeft"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH euNGhF"
+                className="sc-bwzfXH euNGhF"
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -1143,14 +1498,14 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -1158,45 +1513,105 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH euNGhF Triangle__SVGView-iDjlpJ bdMlKj"
-                  contentEditable={false}
-                  direction="right"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH euNGhF"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="right"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="middleLeft"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH euNGhF Triangle__SVGView-iDjlpJ bdMlKj"
+                      contentEditable={false}
+                      direction="right"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
@@ -1208,6 +1623,7 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -1236,60 +1652,90 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="middleRight"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="middleRight"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb gKhdke"
+      <styled.div
+        className="ui-tooltip"
+        location="middleRight"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb gKhdke"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -1297,40 +1743,21 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="left"
-          location="middleRight"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH fhgzvr"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="left"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="middleRight"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -1338,40 +1765,51 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH fhgzvr"
+              contentEditable={false}
+              controlled={true}
+              direction="left"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="middleRight"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH fhgzvr"
+                className="sc-bwzfXH fhgzvr"
                 contentEditable={false}
                 controlled={true}
                 direction="left"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -1383,14 +1821,14 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -1398,45 +1836,105 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH fhgzvr Triangle__SVGView-iDjlpJ evTwin"
-                  contentEditable={false}
-                  direction="left"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH fhgzvr"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="left"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="middleRight"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH fhgzvr Triangle__SVGView-iDjlpJ evTwin"
+                      contentEditable={false}
+                      direction="left"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
@@ -1448,6 +1946,7 @@ exports[`Test creation of Tooltip location none 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -1476,60 +1975,90 @@ exports[`Test creation of Tooltip location none 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="none"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb jtYDWU"
+      <styled.div
+        className="ui-tooltip"
+        location="none"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb jtYDWU"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -1537,40 +2066,21 @@ exports[`Test creation of Tooltip location none 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="left"
-          location="none"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH ioVOeJ"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="left"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="none"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -1578,40 +2088,51 @@ exports[`Test creation of Tooltip location none 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH ioVOeJ"
+              contentEditable={false}
+              controlled={true}
+              direction="left"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="none"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH ioVOeJ"
+                className="sc-bwzfXH ioVOeJ"
                 contentEditable={false}
                 controlled={true}
                 direction="left"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -1623,14 +2144,14 @@ exports[`Test creation of Tooltip location none 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -1638,45 +2159,105 @@ exports[`Test creation of Tooltip location none 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH ioVOeJ Triangle__SVGView-iDjlpJ evTwin"
-                  contentEditable={false}
-                  direction="left"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH ioVOeJ"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="left"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="none"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH ioVOeJ Triangle__SVGView-iDjlpJ evTwin"
+                      contentEditable={false}
+                      direction="left"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
@@ -1688,6 +2269,7 @@ exports[`Test creation of Tooltip location top 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -1716,60 +2298,90 @@ exports[`Test creation of Tooltip location top 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="top"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="top"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb jtYDWU"
+      <styled.div
+        className="ui-tooltip"
+        location="top"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb jtYDWU"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -1777,40 +2389,21 @@ exports[`Test creation of Tooltip location top 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="down"
-          location="top"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH ioVOeJ"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="down"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="top"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -1818,40 +2411,51 @@ exports[`Test creation of Tooltip location top 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH ioVOeJ"
+              contentEditable={false}
+              controlled={true}
+              direction="down"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="top"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH ioVOeJ"
+                className="sc-bwzfXH ioVOeJ"
                 contentEditable={false}
                 controlled={true}
                 direction="down"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -1863,14 +2467,14 @@ exports[`Test creation of Tooltip location top 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -1878,45 +2482,105 @@ exports[`Test creation of Tooltip location top 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH ioVOeJ Triangle__SVGView-iDjlpJ eFKBXL"
-                  contentEditable={false}
-                  direction="down"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH ioVOeJ"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="down"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="top"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH ioVOeJ Triangle__SVGView-iDjlpJ eFKBXL"
+                      contentEditable={false}
+                      direction="down"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
@@ -1928,6 +2592,7 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -1956,60 +2621,90 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="topLeft"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="topLeft"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb iKPGvm"
+      <styled.div
+        className="ui-tooltip"
+        location="topLeft"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb iKPGvm"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -2017,40 +2712,21 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="down"
-          location="topLeft"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH EuCCl"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="down"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="topLeft"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -2058,40 +2734,51 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH EuCCl"
+              contentEditable={false}
+              controlled={true}
+              direction="down"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="topLeft"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH EuCCl"
+                className="sc-bwzfXH EuCCl"
                 contentEditable={false}
                 controlled={true}
                 direction="down"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -2103,14 +2790,14 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -2118,45 +2805,105 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH EuCCl Triangle__SVGView-iDjlpJ eFKBXL"
-                  contentEditable={false}
-                  direction="down"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH EuCCl"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="down"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="topLeft"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH EuCCl Triangle__SVGView-iDjlpJ eFKBXL"
+                      contentEditable={false}
+                      direction="down"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
@@ -2168,6 +2915,7 @@ exports[`Test creation of Tooltip location topRight 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -2196,60 +2944,90 @@ exports[`Test creation of Tooltip location topRight 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    left=""
+    location="topRight"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Tooltip"
+    onError={[Function]}
+    padding=""
+    parent={null}
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
       Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
+        "backgroundColor": "#708090",
+        "color": "#ffffff",
       }
     }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-tooltip"
-      location="topRight"
-      sizing="small"
-      style={
+    <ThemeProvider
+      theme={
         Object {
-          "backgroundColor": "#708090",
-          "color": "#ffffff",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      visible={false}
-      width="unset"
     >
-      <div
-        className="ui-tooltip sc-bxivhb iCIexg"
+      <styled.div
+        className="ui-tooltip"
+        location="topRight"
+        sizing="small"
         style={
           Object {
             "backgroundColor": "#708090",
             "color": "#ffffff",
           }
         }
+        visible={false}
         width="unset"
       >
-        <styled.span
-          className="ui-tooltip-content"
-          sizing="small"
+        <div
+          className="ui-tooltip sc-bxivhb iCIexg"
           style={
             Object {
               "backgroundColor": "#708090",
               "color": "#ffffff",
             }
           }
+          width="unset"
         >
-          <span
-            className="ui-tooltip-content sc-htpNat cDqflJ"
+          <styled.span
+            className="ui-tooltip-content"
+            sizing="small"
             style={
               Object {
                 "backgroundColor": "#708090",
@@ -2257,40 +3035,21 @@ exports[`Test creation of Tooltip location topRight 1`] = `
               }
             }
           >
-            Test Text
-          </span>
-        </styled.span>
-        <Styled(Triangle)
-          direction="down"
-          location="topRight"
-          sizing="small"
-          style={
-            Object {
-              "fill": "#708090",
-              "stroke": "#708090",
-            }
-          }
-        >
-          <Triangle
-            bottom=""
-            className="sc-bwzfXH ewscUy"
-            contentEditable={false}
-            controlled={true}
+            <span
+              className="ui-tooltip-content sc-htpNat cDqflJ"
+              style={
+                Object {
+                  "backgroundColor": "#708090",
+                  "color": "#ffffff",
+                }
+              }
+            >
+              Test Text
+            </span>
+          </styled.span>
+          <Styled(Triangle)
             direction="down"
-            disabled={false}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            left=""
             location="topRight"
-            nobase={false}
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Triangle"
-            padding=""
-            selected={false}
             sizing="small"
             style={
               Object {
@@ -2298,40 +3057,51 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                 "stroke": "#708090",
               }
             }
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
           >
-            <ThemeProvider
-              theme={
+            <Triangle
+              bottom=""
+              className="sc-bwzfXH ewscUy"
+              contentEditable={false}
+              controlled={true}
+              direction="down"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              id=""
+              left=""
+              location="topRight"
+              nobase={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Triangle"
+              padding=""
+              selected={false}
+              sizing="small"
+              style={
                 Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#c0c0c0",
-                  "color": "#000000",
-                  "headerBackgroundColor": "#004358",
-                  "headerForegroundColor": "#ffffff",
-                  "headerHoverColor": "#ffe11a",
-                  "hoverColor": "#c0c0c0",
-                  "inputBorderColor": "#c0c0c0",
-                  "selectedBackgroundColor": "#1f8a70",
-                  "selectedForegroundColor": "#ffe11a",
-                  "tooltipBackgroundColor": "#708090",
-                  "tooltipForegroundColor": "#ffffff",
-                  "transitionDelay": "0.5s",
+                  "fill": "#708090",
+                  "stroke": "#708090",
                 }
               }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
             >
-              <Triangle__SVGView
+              <Wrapper
                 bottom=""
-                className="ui-triangle sc-bwzfXH ewscUy"
+                className="sc-bwzfXH ewscUy"
                 contentEditable={false}
                 controlled={true}
                 direction="down"
                 disabled={false}
+                err={null}
                 errorMessage=""
                 focus={false}
                 height=""
@@ -2343,14 +3113,14 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                 nohover={false}
                 noripple={false}
                 obj="Triangle"
+                onError={[Function]}
                 padding=""
-                preserveAspectRatio="xMidYMid meet"
+                reset={false}
                 selected={false}
                 sizing="small"
                 style={
                   Object {
                     "fill": "#708090",
-                    "stokeWidth": "2px",
                     "stroke": "#708090",
                   }
                 }
@@ -2358,67 +3128,147 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                 theme={null}
                 tooltip=""
                 top=""
-                version="1.1"
-                viewBox="0 0 40 40"
                 visible={true}
                 width=""
                 xcss={null}
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="ui-triangle sc-bwzfXH ewscUy Triangle__SVGView-iDjlpJ eFKBXL"
-                  contentEditable={false}
-                  direction="down"
-                  disabled={false}
-                  height=""
-                  id=""
-                  preserveAspectRatio="xMidYMid meet"
-                  selected={false}
-                  style={
+                <ThemeProvider
+                  theme={
                     Object {
-                      "fill": "#708090",
-                      "stokeWidth": "2px",
-                      "stroke": "#708090",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 40 40"
-                  width=""
-                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="0,35, 20,10 40,35"
-                  />
-                </svg>
-              </Triangle__SVGView>
-            </ThemeProvider>
-          </Triangle>
-        </Styled(Triangle)>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+                  <Triangle__SVGView
+                    bottom=""
+                    className="ui-triangle sc-bwzfXH ewscUy"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="down"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    left=""
+                    location="topRight"
+                    nobase={false}
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Triangle"
+                    padding=""
+                    preserveAspectRatio="xMidYMid meet"
+                    selected={false}
+                    sizing="small"
+                    style={
+                      Object {
+                        "fill": "#708090",
+                        "stokeWidth": "2px",
+                        "stroke": "#708090",
+                      }
+                    }
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    version="1.1"
+                    viewBox="0 0 40 40"
+                    visible={true}
+                    width=""
+                    xcss={null}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      className="ui-triangle sc-bwzfXH ewscUy Triangle__SVGView-iDjlpJ eFKBXL"
+                      contentEditable={false}
+                      direction="down"
+                      disabled={false}
+                      height=""
+                      id=""
+                      preserveAspectRatio="xMidYMid meet"
+                      selected={false}
+                      style={
+                        Object {
+                          "fill": "#708090",
+                          "stokeWidth": "2px",
+                          "stroke": "#708090",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 40 40"
+                      width=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="0,35, 20,10 40,35"
+                      />
+                    </svg>
+                  </Triangle__SVGView>
+                </ThemeProvider>
+              </Wrapper>
+            </Triangle>
+          </Styled(Triangle)>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Tooltip>
 `;
 
 exports[`Test creation of a Tooltip control 1`] = `
-<ThemeProvider
-  theme={
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="middleRight"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Tooltip"
+  onError={[Function]}
+  padding=""
+  parent={null}
+  reset={false}
+  selected={false}
+  show={true}
+  sizing="normal"
+  style={
     Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
+      "backgroundColor": "#708090",
+      "color": "#ffffff",
     }
   }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-tooltip test-class"
@@ -2457,28 +3307,47 @@ exports[`Test creation of a Tooltip control 1`] = `
       }
     />
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test disabling of a Tooltip 1`] = `
-<ThemeProvider
-  theme={
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="top"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Tooltip"
+  onError={[Function]}
+  padding=""
+  parent={null}
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
     Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
+      "backgroundColor": "#708090",
+      "color": "#ffffff",
     }
   }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-tooltip"
@@ -2515,28 +3384,47 @@ exports[`Test disabling of a Tooltip 1`] = `
       }
     />
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test making a Tooltip invisible 1`] = `
-<ThemeProvider
-  theme={
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="top"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Tooltip"
+  onError={[Function]}
+  padding=""
+  parent={null}
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
     Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
+      "backgroundColor": "#708090",
+      "color": "#ffffff",
     }
   }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={false}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-tooltip"
@@ -2573,7 +3461,7 @@ exports[`Test making a Tooltip invisible 1`] = `
       }
     />
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test retrieval of Tooltip props object 1`] = `
@@ -2585,6 +3473,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",

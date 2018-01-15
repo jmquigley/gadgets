@@ -126,11 +126,11 @@ import {
 	Color,
 	DisabledCSS,
 	getDefaultBaseProps,
-	getTheme,
 	InvisibleCSS,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 import {Toolbar} from '../toolbar';
 
 export interface QuillKeyBindings {
@@ -349,7 +349,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 
 	public render() {
 		return(
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<EditorContainer
 					className={this.classes}
 					style={this.inlineStyles}
@@ -451,7 +451,7 @@ export class Editor extends BaseComponent<EditorProps, undefined> {
 						visible={this.props.visible}
 					/>
 				</EditorContainer>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

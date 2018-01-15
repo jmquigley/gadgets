@@ -50,13 +50,13 @@ import {
 	BaseProps,
 	disabled,
 	fontStyle,
-	getTheme,
 	invisible,
 	locationStyle,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
 import {getDefaultBaseProps, Location} from '../shared/props';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface BadgeProps extends BaseProps {
 	counter?: number;
@@ -146,12 +146,12 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<BadgeContainerView className="ui-badge-container">
 					{this.props.children}
 					{badge}
 				</BadgeContainerView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

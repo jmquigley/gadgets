@@ -1,19 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test making the accordion control invisible 1`] = `
-<styled.ul
-  className="ui-accordion"
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id="1234"
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Accordion"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
   sizing="normal"
   style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={false}
+  width=""
+  xcss={null}
 >
-  <li
-    disabled={false}
-    key=".0"
+  <styled.ul
+    className="ui-accordion"
     sizing="normal"
+    style={Object {}}
   >
-    some list item
-  </li>
-</styled.ul>
+    <li
+      disabled={false}
+      key=".0"
+      sizing="normal"
+    >
+      some list item
+    </li>
+  </styled.ul>
+</Wrapper>
 `;
 
 exports[`Test retrieval of Accordion props object 1`] = `
@@ -25,6 +58,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",
@@ -50,33 +84,99 @@ Object {
 `;
 
 exports[`Test the creation of a Accordion control container 1`] = `
-<styled.ul
-  className="ui-accordion"
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id="1234"
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Accordion"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
   sizing="normal"
   style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
-  <li
-    disabled={false}
-    key=".0"
+  <styled.ul
+    className="ui-accordion"
     sizing="normal"
+    style={Object {}}
   >
-    some list item
-  </li>
-</styled.ul>
+    <li
+      disabled={false}
+      key=".0"
+      sizing="normal"
+    >
+      some list item
+    </li>
+  </styled.ul>
+</Wrapper>
 `;
 
 exports[`Test the disabling of the Accordion control container 1`] = `
-<styled.ul
-  className="ui-accordion"
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id="1234"
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Accordion"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
   sizing="normal"
   style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
-  <li
-    disabled={true}
-    key=".0"
+  <styled.ul
+    className="ui-accordion"
     sizing="normal"
+    style={Object {}}
   >
-    some list item
-  </li>
-</styled.ul>
+    <li
+      disabled={true}
+      key=".0"
+      sizing="normal"
+    >
+      some list item
+    </li>
+  </styled.ul>
+</Wrapper>
 `;

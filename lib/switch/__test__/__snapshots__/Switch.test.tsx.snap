@@ -1,24 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of an inny type Switch 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  initialToggle={true}
+  innyScale={0.6}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Switch"
+  onClick={[Function]}
+  onError={[Function]}
+  outyScale={1.25}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  sliderScale={1.25}
+  style={Object {}}
+  switchType={0}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-switch"
@@ -31,6 +50,7 @@ exports[`Test creation of an inny type Switch 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -76,28 +96,47 @@ exports[`Test creation of an inny type Switch 1`] = `
       />
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of an outy type Switch 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  initialToggle={true}
+  innyScale={0.6}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Switch"
+  onClick={[Function]}
+  onError={[Function]}
+  outyScale={1.25}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  sliderScale={1.25}
+  style={Object {}}
+  switchType={1}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-switch"
@@ -110,6 +149,7 @@ exports[`Test creation of an outy type Switch 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -155,7 +195,7 @@ exports[`Test creation of an outy type Switch 1`] = `
       />
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test disabling of the Switch control 1`] = `
@@ -166,6 +206,7 @@ exports[`Test disabling of the Switch control 1`] = `
   controlled={true}
   direction="right"
   disabled={true}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -194,101 +235,130 @@ exports[`Test disabling of the Switch control 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={true}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    initialToggle={false}
+    innyScale={0.6}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Switch"
+    onClick={[Function]}
+    onError={[Function]}
+    outyScale={1.25}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    sliderScale={1.25}
+    style={Object {}}
+    switchType={1}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-switch"
-      height="20px"
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-switch sc-bxivhb gEkvMP"
+      <styled.div
+        className="ui-switch"
         height="20px"
       >
-        <styled.div
-          bottom=""
-          className="ui-switch-slider ui-slider-off"
-          contentEditable={false}
-          controlled={true}
-          direction="right"
-          disabled={true}
-          errorMessage=""
-          focus={false}
-          height=""
-          id=""
-          initialToggle={false}
-          innyScale={0.6}
-          left=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="Switch"
-          onClick={[Function]}
-          outyScale={1.25}
-          padding=""
-          selected={false}
-          sizing="normal"
-          sliderScale={1.25}
-          style={
-            Object {
-              "backgroundColor": "#d9534f",
-            }
-          }
-          switchType={1}
-          testing={true}
-          theme={null}
-          tooltip=""
-          top=""
-          visible={true}
-          width=""
-          xcss={null}
+        <div
+          className="ui-switch sc-bxivhb gEkvMP"
+          height="20px"
         >
-          <div
-            className="ui-switch-slider ui-slider-off sc-htpNat fyCqDK"
+          <styled.div
+            bottom=""
+            className="ui-switch-slider ui-slider-off"
             contentEditable={false}
+            controlled={true}
             direction="right"
             disabled={true}
+            err={null}
+            errorMessage=""
+            focus={false}
             height=""
             id=""
+            initialToggle={false}
+            innyScale={0.6}
+            left=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            obj="Switch"
             onClick={[Function]}
+            outyScale={1.25}
+            padding=""
             selected={false}
+            sizing="normal"
+            sliderScale={1.25}
             style={
               Object {
                 "backgroundColor": "#d9534f",
               }
             }
+            switchType={1}
+            testing={true}
+            theme={null}
+            tooltip=""
+            top=""
+            visible={true}
             width=""
+            xcss={null}
           >
-            <styled.div
-              className="ui-switch-button"
-              height="20px"
+            <div
+              className="ui-switch-slider ui-slider-off sc-htpNat fyCqDK"
+              contentEditable={false}
+              direction="right"
+              disabled={true}
+              height=""
+              id=""
               onClick={[Function]}
+              selected={false}
               style={
                 Object {
-                  "left": "45%",
+                  "backgroundColor": "#d9534f",
                 }
               }
-              width="20px"
+              width=""
             >
-              <div
-                className="ui-switch-button sc-bwzfXH blpYHB"
+              <styled.div
+                className="ui-switch-button"
                 height="20px"
                 onClick={[Function]}
                 style={
@@ -297,13 +367,25 @@ exports[`Test disabling of the Switch control 1`] = `
                   }
                 }
                 width="20px"
-              />
-            </styled.div>
-          </div>
-        </styled.div>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+              >
+                <div
+                  className="ui-switch-button sc-bwzfXH blpYHB"
+                  height="20px"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "left": "45%",
+                    }
+                  }
+                  width="20px"
+                />
+              </styled.div>
+            </div>
+          </styled.div>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Switch>
 `;
 
@@ -315,6 +397,7 @@ exports[`Test making the Switch control invisible 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -343,101 +426,130 @@ exports[`Test making the Switch control invisible 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    initialToggle={false}
+    innyScale={0.6}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Switch"
+    onClick={[Function]}
+    onError={[Function]}
+    outyScale={1.25}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    sliderScale={1.25}
+    style={Object {}}
+    switchType={1}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={false}
+    width=""
+    xcss={null}
   >
-    <styled.div
-      className="ui-switch"
-      height="20px"
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <div
-        className="ui-switch sc-bxivhb gEkvMP"
+      <styled.div
+        className="ui-switch"
         height="20px"
       >
-        <styled.div
-          bottom=""
-          className="ui-switch-slider ui-slider-off"
-          contentEditable={false}
-          controlled={true}
-          direction="right"
-          disabled={false}
-          errorMessage=""
-          focus={false}
-          height=""
-          id=""
-          initialToggle={false}
-          innyScale={0.6}
-          left=""
-          location="none"
-          noedit={false}
-          nohover={false}
-          noripple={false}
-          obj="Switch"
-          onClick={[Function]}
-          outyScale={1.25}
-          padding=""
-          selected={false}
-          sizing="normal"
-          sliderScale={1.25}
-          style={
-            Object {
-              "backgroundColor": "#d9534f",
-            }
-          }
-          switchType={1}
-          testing={true}
-          theme={null}
-          tooltip=""
-          top=""
-          visible={false}
-          width=""
-          xcss={null}
+        <div
+          className="ui-switch sc-bxivhb gEkvMP"
+          height="20px"
         >
-          <div
-            className="ui-switch-slider ui-slider-off sc-htpNat iDvcXg"
+          <styled.div
+            bottom=""
+            className="ui-switch-slider ui-slider-off"
             contentEditable={false}
+            controlled={true}
             direction="right"
             disabled={false}
+            err={null}
+            errorMessage=""
+            focus={false}
             height=""
             id=""
+            initialToggle={false}
+            innyScale={0.6}
+            left=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            obj="Switch"
             onClick={[Function]}
+            outyScale={1.25}
+            padding=""
             selected={false}
+            sizing="normal"
+            sliderScale={1.25}
             style={
               Object {
                 "backgroundColor": "#d9534f",
               }
             }
+            switchType={1}
+            testing={true}
+            theme={null}
+            tooltip=""
+            top=""
+            visible={false}
             width=""
+            xcss={null}
           >
-            <styled.div
-              className="ui-switch-button ripple"
-              height="20px"
+            <div
+              className="ui-switch-slider ui-slider-off sc-htpNat iDvcXg"
+              contentEditable={false}
+              direction="right"
+              disabled={false}
+              height=""
+              id=""
               onClick={[Function]}
+              selected={false}
               style={
                 Object {
-                  "left": "45%",
+                  "backgroundColor": "#d9534f",
                 }
               }
-              width="20px"
+              width=""
             >
-              <div
-                className="ui-switch-button ripple sc-bwzfXH blpYHB"
+              <styled.div
+                className="ui-switch-button ripple"
                 height="20px"
                 onClick={[Function]}
                 style={
@@ -446,13 +558,25 @@ exports[`Test making the Switch control invisible 1`] = `
                   }
                 }
                 width="20px"
-              />
-            </styled.div>
-          </div>
-        </styled.div>
-      </div>
-    </styled.div>
-  </ThemeProvider>
+              >
+                <div
+                  className="ui-switch-button ripple sc-bwzfXH blpYHB"
+                  height="20px"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "left": "45%",
+                    }
+                  }
+                  width="20px"
+                />
+              </styled.div>
+            </div>
+          </styled.div>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
 </Switch>
 `;
 
@@ -465,6 +589,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",
@@ -496,24 +621,43 @@ Object {
 `;
 
 exports[`Test the click handler on the Switch control 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  initialToggle={false}
+  innyScale={0.6}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Switch"
+  onClick={[MockFunction]}
+  onError={[Function]}
+  outyScale={1.25}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  sliderScale={1.25}
+  style={Object {}}
+  switchType={1}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-switch"
@@ -526,6 +670,7 @@ exports[`Test the click handler on the Switch control 1`] = `
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
       errorMessage=""
       focus={false}
       height=""
@@ -571,5 +716,5 @@ exports[`Test the click handler on the Switch control 1`] = `
       />
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;

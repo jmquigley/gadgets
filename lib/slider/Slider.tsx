@@ -72,10 +72,10 @@ import {
 	boxStyle,
 	disabled,
 	getDefaultBaseProps,
-	getTheme,
-	invisible
+	invisible,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface SliderProps extends BaseProps {
 	max?: number;
@@ -286,7 +286,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 	public render() {
 		return(
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<SliderContainer
 					className={this.classes}
 					disabled={this.props.disabled}
@@ -309,7 +309,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 						/>
 					</SliderBar>
 				</SliderContainer>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

@@ -36,7 +36,8 @@ import {
 	BaseComponent,
 	BaseProps,
 	fontStyle,
-	getDefaultBaseProps
+	getDefaultBaseProps,
+	Wrapper
 } from '../shared';
 import styled, {withProps} from '../shared/themed-components';
 
@@ -84,16 +85,18 @@ export class Container extends BaseComponent<ContainerProps, undefined> {
 		}
 
 		return (
-			<ContainerView
-				className={this.classes}
-				key={this.props.id}
-				id={this.props.id}
-				sizing={this.props.sizing}
-				style={this.inlineStyles}
-			>
-				{title}
-				{this.props.children}
-			</ContainerView>
+			<Wrapper {...this.props} >
+				<ContainerView
+					className={this.classes}
+					key={this.props.id}
+					id={this.props.id}
+					sizing={this.props.sizing}
+					style={this.inlineStyles}
+				>
+					{title}
+					{this.props.children}
+				</ContainerView>
+			</Wrapper>
 		);
 	}
 }

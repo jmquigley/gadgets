@@ -60,10 +60,10 @@ import {
 	disabled,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme,
-	invisible
+	invisible,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface LabelProps extends BaseProps {
 	noedit?: boolean;
@@ -232,7 +232,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<LabelView
 					className={this.classes}
 					contentEditable={this.state.editable}
@@ -250,7 +250,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				>
 					{this.state.text}
 				</LabelView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

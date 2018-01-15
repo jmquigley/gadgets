@@ -53,12 +53,12 @@ import {
 	BaseComponent,
 	DisabledCSS,
 	fontStyle,
-	getTheme,
 	InvisibleCSS,
 	Justify,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface ButtonTextProps extends IconProps {
 	justify?: Justify;
@@ -170,7 +170,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<ButtonTextView
 					disabled={this.props.disabled}
 					className={this.classes}
@@ -182,7 +182,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 					{icon}
 					{rightButton}
 				</ButtonTextView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

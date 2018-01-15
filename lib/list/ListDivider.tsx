@@ -29,8 +29,8 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {getDefaultItemProps, ItemProps} from '../item';
-import {BaseComponent, getTheme} from '../shared';
-import styled, {ThemeProvider} from '../shared/themed-components';
+import {BaseComponent, Wrapper} from '../shared';
+import styled from '../shared/themed-components';
 
 export interface ListDividerProps extends ItemProps {
 	color?: string;
@@ -68,11 +68,11 @@ export class ListDivider extends BaseComponent<ListDividerProps, undefined> {
 
 	public render() {
 		return(
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<ListDividerView className={this.classes}>
 					<hr	style={{backgroundColor: this.props.color}} />
 				</ListDividerView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

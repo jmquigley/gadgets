@@ -102,10 +102,10 @@ import {
 	disabled,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme,
-	invisible
+	invisible,
+	Wrapper
 } from '../shared';
-import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {css, withProps} from '../shared/themed-components';
 
 export enum ToastLevel {
 	info,
@@ -281,7 +281,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<ToastView
 					usebottom={this.props.usebottom}
 					className={this.classes}
@@ -306,7 +306,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 						}}
 					/>
 				</ToastView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

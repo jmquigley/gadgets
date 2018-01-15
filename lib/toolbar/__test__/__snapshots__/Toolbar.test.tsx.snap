@@ -1,24 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a Toolbar instance with center justification 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  justify={2}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Toolbar"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="small"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-toolbar"
@@ -45,6 +59,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
           controlled={true}
           direction="right"
           disabled={false}
+          err={null}
           errorMessage=""
           focus={false}
           height=""
@@ -73,28 +88,42 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
       </styled.div>
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of a Toolbar instance with left justification 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  justify={0}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Toolbar"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="small"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-toolbar"
@@ -121,6 +150,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
           controlled={true}
           direction="right"
           disabled={false}
+          err={null}
           errorMessage=""
           focus={false}
           height=""
@@ -149,28 +179,42 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
       </styled.div>
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test creation of a Toolbar instance with right justification 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  justify={1}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Toolbar"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="small"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-toolbar"
@@ -197,6 +241,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
           controlled={true}
           direction="right"
           disabled={false}
+          err={null}
           errorMessage=""
           focus={false}
           height=""
@@ -225,28 +270,42 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
       </styled.div>
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test disabling of a Toolbar instance 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  justify={0}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Toolbar"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-toolbar"
@@ -273,6 +332,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
           controlled={true}
           direction="right"
           disabled={true}
+          err={null}
           errorMessage=""
           focus={false}
           height=""
@@ -301,28 +361,42 @@ exports[`Test disabling of a Toolbar instance 1`] = `
       </styled.div>
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test making the Toolbar invisible 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  justify={0}
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Toolbar"
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={false}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-toolbar"
@@ -349,6 +423,7 @@ exports[`Test making the Toolbar invisible 1`] = `
           controlled={true}
           direction="right"
           disabled={false}
+          err={null}
           errorMessage=""
           focus={false}
           height=""
@@ -377,7 +452,7 @@ exports[`Test making the Toolbar invisible 1`] = `
       </styled.div>
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test retrieval of Toolbar props object 1`] = `
@@ -389,6 +464,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",

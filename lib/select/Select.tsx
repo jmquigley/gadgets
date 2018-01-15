@@ -47,8 +47,8 @@
 
 import * as React from 'react';
 import ReactSelect from 'react-select';
-import {BaseComponent, fontStyle, getTheme, Sizing} from '../shared';
-import styled, {ThemeProvider} from '../shared/themed-components';
+import {BaseComponent, fontStyle, Sizing, Wrapper} from '../shared';
+import styled from '../shared/themed-components';
 
 export const StyledReactSelect: any = styled(ReactSelect)`
 	${props => props['sizing'] && fontStyle[props['sizing']]}
@@ -71,12 +71,12 @@ export class Select extends BaseComponent<any, any> {
 
 	public render() {
 		return (
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<StyledReactSelect
 					{...this.props}
 					className={this.classes}
 				/>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

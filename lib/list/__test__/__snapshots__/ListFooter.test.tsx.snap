@@ -9,6 +9,7 @@ Object {
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",
@@ -45,6 +46,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
   errorMessage=""
   focus={false}
   height=""
@@ -71,65 +73,70 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
   width=""
   xcss={null}
 >
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    layout={1}
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="ListFooter"
+    onClick={[Function]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    title="test title"
+    tooltip=""
+    top=""
+    visible={true}
+    widget={null}
+    width=""
+    xcss={null}
   >
-    <Styled(Title)
-      bottom=""
-      className="ui-list-header"
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      errorMessage=""
-      focus={false}
-      height=""
-      id=""
-      layout={1}
-      left=""
-      location="none"
-      noedit={false}
-      nohover={false}
-      noripple={true}
-      obj="ListFooter"
-      onClick={[Function]}
-      padding=""
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={null}
-      title="test title"
-      tooltip=""
-      top=""
-      visible={true}
-      widget={null}
-      width=""
-      xcss={null}
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
     >
-      <Title
+      <Styled(Title)
         bottom=""
-        className="ui-list-header sc-dnqmqq cTxgIV"
+        className="ui-list-header"
         contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
         errorMessage=""
         focus={false}
         height=""
@@ -156,183 +163,311 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
         width=""
         xcss={null}
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#c0c0c0",
-              "color": "#000000",
-              "headerBackgroundColor": "#004358",
-              "headerForegroundColor": "#ffffff",
-              "headerHoverColor": "#ffe11a",
-              "hoverColor": "#c0c0c0",
-              "inputBorderColor": "#c0c0c0",
-              "selectedBackgroundColor": "#1f8a70",
-              "selectedForegroundColor": "#ffe11a",
-              "tooltipBackgroundColor": "#708090",
-              "tooltipForegroundColor": "#ffffff",
-              "transitionDelay": "0.5s",
-            }
-          }
+        <Title
+          bottom=""
+          className="ui-list-header sc-dnqmqq cTxgIV"
+          contentEditable={false}
+          controlled={true}
+          direction="right"
+          disabled={false}
+          err={null}
+          errorMessage=""
+          focus={false}
+          height=""
+          id=""
+          layout={1}
+          left=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={true}
+          obj="ListFooter"
+          onClick={[Function]}
+          padding=""
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={null}
+          title="test title"
+          tooltip=""
+          top=""
+          visible={true}
+          widget={null}
+          width=""
+          xcss={null}
         >
-          <styled.div
-            className="ui-title-bar ui-list-header sc-dnqmqq cTxgIV"
+          <Wrapper
+            bottom=""
+            className="ui-list-header sc-dnqmqq cTxgIV"
+            contentEditable={false}
+            controlled={true}
+            direction="right"
             disabled={false}
+            err={null}
+            errorMessage=""
+            focus={false}
+            height=""
+            id=""
             layout={1}
+            left=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={true}
+            obj="ListFooter"
+            onClick={[Function]}
+            onError={[Function]}
+            padding=""
+            reset={false}
+            selected={false}
+            sizing="normal"
             style={Object {}}
+            testing={true}
+            theme={null}
+            title="test title"
+            tooltip=""
+            top=""
             visible={true}
+            widget={null}
+            width=""
+            xcss={null}
           >
-            <div
-              className="ui-title-bar ui-list-header sc-dnqmqq cTxgIV sc-bxivhb dAMKry"
-              disabled={false}
-              style={Object {}}
-            >
-              <Styled(Label)
-                bottom=""
-                className="ui-title"
-                contentEditable={false}
-                controlled={true}
-                direction="right"
-                disabled={false}
-                errorMessage=""
-                focus={false}
-                height=""
-                id=""
-                layout={1}
-                left=""
-                location="none"
-                noedit={false}
-                nohover={false}
-                noripple={true}
-                obj="ListFooter"
-                onClick={[Function]}
-                padding=""
-                selected={false}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                text="test title"
-                theme={null}
-                title="test title"
-                tooltip=""
-                top=""
-                visible={true}
-                widget={null}
-                width=""
-                xcss={
-                  Array [
-                    "
-	text-align: left;
-	flex: 1;
-",
-                  ]
+            <ThemeProvider
+              theme={
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#c0c0c0",
+                  "color": "#000000",
+                  "headerBackgroundColor": "#004358",
+                  "headerForegroundColor": "#ffffff",
+                  "headerHoverColor": "#ffe11a",
+                  "hoverColor": "#c0c0c0",
+                  "inputBorderColor": "#c0c0c0",
+                  "itemHoverColor": "#bedb39",
+                  "selectedBackgroundColor": "#1f8a70",
+                  "selectedForegroundColor": "#ffe11a",
+                  "tooltipBackgroundColor": "#708090",
+                  "tooltipForegroundColor": "#ffffff",
+                  "transitionDelay": "0.5s",
                 }
+              }
+            >
+              <styled.div
+                className="ui-title-bar ui-list-header sc-dnqmqq cTxgIV"
+                disabled={false}
+                layout={1}
+                style={Object {}}
+                visible={true}
               >
-                <Label
-                  bottom=""
-                  className="ui-title sc-EHOje cgtSEj"
-                  contentEditable={false}
-                  controlled={true}
-                  direction="right"
+                <div
+                  className="ui-title-bar ui-list-header sc-dnqmqq cTxgIV sc-bxivhb dAMKry"
                   disabled={false}
-                  errorMessage=""
-                  focus={false}
-                  height=""
-                  id=""
-                  layout={1}
-                  left=""
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={true}
-                  obj="ListFooter"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onClick={[Function]}
-                  onDoubleClick={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  onUpdate={[Function]}
-                  padding=""
-                  selected={false}
-                  sizing="normal"
                   style={Object {}}
-                  testing={true}
-                  text="test title"
-                  theme={null}
-                  title="test title"
-                  tooltip=""
-                  top=""
-                  useedit={false}
-                  visible={true}
-                  widget={null}
-                  width=""
-                  xcss={
-                    Array [
-                      "
+                >
+                  <Styled(Label)
+                    bottom=""
+                    className="ui-title"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="right"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    layout={1}
+                    left=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={true}
+                    obj="ListFooter"
+                    onClick={[Function]}
+                    padding=""
+                    selected={false}
+                    sizing="normal"
+                    style={Object {}}
+                    testing={true}
+                    text="test title"
+                    theme={null}
+                    title="test title"
+                    tooltip=""
+                    top=""
+                    visible={true}
+                    widget={null}
+                    width=""
+                    xcss={
+                      Array [
+                        "
 	text-align: left;
 	flex: 1;
 ",
-                    ]
-                  }
-                >
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#c0c0c0",
-                        "color": "#000000",
-                        "headerBackgroundColor": "#004358",
-                        "headerForegroundColor": "#ffffff",
-                        "headerHoverColor": "#ffe11a",
-                        "hoverColor": "#c0c0c0",
-                        "inputBorderColor": "#c0c0c0",
-                        "selectedBackgroundColor": "#1f8a70",
-                        "selectedForegroundColor": "#ffe11a",
-                        "tooltipBackgroundColor": "#708090",
-                        "tooltipForegroundColor": "#ffffff",
-                        "transitionDelay": "0.5s",
-                      }
+                      ]
                     }
                   >
-                    <styled.span
-                      className="ui-label ui-title sc-EHOje cgtSEj"
+                    <Label
+                      bottom=""
+                      className="ui-title sc-EHOje cgtSEj"
                       contentEditable={false}
+                      controlled={true}
+                      direction="right"
                       disabled={false}
-                      innerRef={[Function]}
+                      err={null}
+                      errorMessage=""
+                      focus={false}
+                      height=""
+                      id=""
+                      layout={1}
+                      left=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={true}
+                      obj="ListFooter"
                       onBlur={[Function]}
+                      onChange={[Function]}
                       onClick={[Function]}
                       onDoubleClick={[Function]}
                       onKeyDown={[Function]}
                       onKeyPress={[Function]}
+                      onUpdate={[Function]}
+                      padding=""
+                      selected={false}
                       sizing="normal"
                       style={Object {}}
-                      suppressContentEditableWarning={true}
+                      testing={true}
+                      text="test title"
+                      theme={null}
+                      title="test title"
+                      tooltip=""
+                      top=""
+                      useedit={false}
                       visible={true}
+                      widget={null}
+                      width=""
+                      xcss={
+                        Array [
+                          "
+	text-align: left;
+	flex: 1;
+",
+                        ]
+                      }
                     >
-                      <span
-                        className="ui-label ui-title sc-EHOje cgtSEj sc-htpNat eEDiFV"
+                      <Wrapper
+                        bottom=""
+                        className="ui-title sc-EHOje cgtSEj"
                         contentEditable={false}
+                        controlled={true}
+                        direction="right"
                         disabled={false}
+                        err={null}
+                        errorMessage=""
+                        focus={false}
+                        height=""
+                        id=""
+                        layout={1}
+                        left=""
+                        location="none"
+                        noedit={false}
+                        nohover={false}
+                        noripple={true}
+                        obj="ListFooter"
                         onBlur={[Function]}
+                        onChange={[Function]}
                         onClick={[Function]}
                         onDoubleClick={[Function]}
+                        onError={[Function]}
                         onKeyDown={[Function]}
                         onKeyPress={[Function]}
+                        onUpdate={[Function]}
+                        padding=""
+                        reset={false}
+                        selected={false}
+                        sizing="normal"
                         style={Object {}}
-                        suppressContentEditableWarning={true}
+                        testing={true}
+                        text="test title"
+                        theme={null}
+                        title="test title"
+                        tooltip=""
+                        top=""
+                        useedit={false}
+                        visible={true}
+                        widget={null}
+                        width=""
+                        xcss={
+                          Array [
+                            "
+	text-align: left;
+	flex: 1;
+",
+                          ]
+                        }
                       >
-                        test title
-                      </span>
-                    </styled.span>
-                  </ThemeProvider>
-                </Label>
-              </Styled(Label)>
-            </div>
-          </styled.div>
-        </ThemeProvider>
-      </Title>
-    </Styled(Title)>
-  </ThemeProvider>
+                        <ThemeProvider
+                          theme={
+                            Object {
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#c0c0c0",
+                              "color": "#000000",
+                              "headerBackgroundColor": "#004358",
+                              "headerForegroundColor": "#ffffff",
+                              "headerHoverColor": "#ffe11a",
+                              "hoverColor": "#c0c0c0",
+                              "inputBorderColor": "#c0c0c0",
+                              "itemHoverColor": "#bedb39",
+                              "selectedBackgroundColor": "#1f8a70",
+                              "selectedForegroundColor": "#ffe11a",
+                              "tooltipBackgroundColor": "#708090",
+                              "tooltipForegroundColor": "#ffffff",
+                              "transitionDelay": "0.5s",
+                            }
+                          }
+                        >
+                          <styled.span
+                            className="ui-label ui-title sc-EHOje cgtSEj"
+                            contentEditable={false}
+                            disabled={false}
+                            innerRef={[Function]}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            sizing="normal"
+                            style={Object {}}
+                            suppressContentEditableWarning={true}
+                            visible={true}
+                          >
+                            <span
+                              className="ui-label ui-title sc-EHOje cgtSEj sc-htpNat eEDiFV"
+                              contentEditable={false}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onDoubleClick={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyPress={[Function]}
+                              style={Object {}}
+                              suppressContentEditableWarning={true}
+                            >
+                              test title
+                            </span>
+                          </styled.span>
+                        </ThemeProvider>
+                      </Wrapper>
+                    </Label>
+                  </Styled(Label)>
+                </div>
+              </styled.div>
+            </ThemeProvider>
+          </Wrapper>
+        </Title>
+      </Styled(Title)>
+    </ThemeProvider>
+  </Wrapper>
 </ListFooter>
 `;

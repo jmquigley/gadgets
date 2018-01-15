@@ -1,24 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a default DialogBox control 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  dialogType="info"
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  id=""
+  left=""
+  location="none"
+  message=""
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="DialogBox"
+  onClose={[Function]}
+  onError={[Function]}
+  onOpen={[Function]}
+  onSelection={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  show={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <Modal
     ariaHideApp={true}
@@ -90,28 +110,48 @@ exports[`Test creation of a default DialogBox control 1`] = `
       </styled.div>
     </styled.div>
   </Modal>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  dialogType="info"
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  id=""
+  left=""
+  location="none"
+  message="Testing click handler for yes"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="DialogBox"
+  onClose={[Function]}
+  onError={[Function]}
+  onOpen={[Function]}
+  onSelection={[MockFunction]}
+  padding=""
+  reset={false}
+  selected={false}
+  show={true}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <Modal
     ariaHideApp={true}
@@ -183,7 +223,7 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
       </styled.div>
     </styled.div>
   </Modal>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test retrieval of DialogBox props object 1`] = `
@@ -196,6 +236,7 @@ Object {
   "dialogType": "info",
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",
@@ -227,24 +268,48 @@ Object {
 `;
 
 exports[`Test the creation of an custom DialogBox 1`] = `
-<ThemeProvider
-  theme={
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  dialogType="custom"
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="car"
+  id=""
+  left=""
+  location="none"
+  message="Sample info message"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="DialogBox"
+  onClose={[Function]}
+  onError={[Function]}
+  onOpen={[Function]}
+  onSelection={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  show={true}
+  sizing="normal"
+  style={
     Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
+      "color": "magenta",
     }
   }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <Modal
     ariaHideApp={true}
@@ -316,28 +381,48 @@ exports[`Test the creation of an custom DialogBox 1`] = `
       </styled.div>
     </styled.div>
   </Modal>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test the creation of an error DialogBox 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  dialogType="error"
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  id=""
+  left=""
+  location="none"
+  message="Sample error message"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="DialogBox"
+  onClose={[Function]}
+  onError={[Function]}
+  onOpen={[Function]}
+  onSelection={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  show={true}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <Modal
     ariaHideApp={true}
@@ -409,28 +494,48 @@ exports[`Test the creation of an error DialogBox 1`] = `
       </styled.div>
     </styled.div>
   </Modal>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test the creation of an info DialogBox 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  dialogType="info"
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  id=""
+  left=""
+  location="none"
+  message="Sample info message"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="DialogBox"
+  onClose={[Function]}
+  onError={[Function]}
+  onOpen={[Function]}
+  onSelection={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  show={true}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <Modal
     ariaHideApp={true}
@@ -502,28 +607,48 @@ exports[`Test the creation of an info DialogBox 1`] = `
       </styled.div>
     </styled.div>
   </Modal>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test the creation of an success DialogBox 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  dialogType="success"
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  id=""
+  left=""
+  location="none"
+  message="Sample success message"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="DialogBox"
+  onClose={[Function]}
+  onError={[Function]}
+  onOpen={[Function]}
+  onSelection={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  show={true}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <Modal
     ariaHideApp={true}
@@ -595,28 +720,48 @@ exports[`Test the creation of an success DialogBox 1`] = `
       </styled.div>
     </styled.div>
   </Modal>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test the creation of an warning DialogBox 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
-    }
-  }
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  dialogType="warning"
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  id=""
+  left=""
+  location="none"
+  message="Sample warning message"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="DialogBox"
+  onClose={[Function]}
+  onError={[Function]}
+  onOpen={[Function]}
+  onSelection={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  show={true}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <Modal
     ariaHideApp={true}
@@ -688,5 +833,5 @@ exports[`Test the creation of an warning DialogBox 1`] = `
       </styled.div>
     </styled.div>
   </Modal>
-</ThemeProvider>
+</Wrapper>
 `;

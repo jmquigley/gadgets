@@ -46,7 +46,8 @@ import {
 	BaseComponent,
 	BaseProps,
 	fontStyle,
-	getDefaultBaseProps
+	getDefaultBaseProps,
+	Wrapper
 } from '../shared';
 import styled, {withProps} from '../shared/themed-components';
 
@@ -96,13 +97,15 @@ export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public render() {
 		return (
-			<AccordionView
-				className={this.classes}
-				sizing={this.props.sizing}
-				style={this.inlineStyles}
-			>
-				{this._children}
-			</AccordionView>
+			<Wrapper {...this.props} >
+				<AccordionView
+					className={this.classes}
+					sizing={this.props.sizing}
+					style={this.inlineStyles}
+				>
+					{this._children}
+				</AccordionView>
+			</Wrapper>
 		);
 	}
 }

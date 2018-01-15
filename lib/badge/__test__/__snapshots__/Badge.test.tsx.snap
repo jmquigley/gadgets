@@ -1,24 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test creation of a Badge control 1`] = `
-<ThemeProvider
-  theme={
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  counter={1}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="topRight"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Badge"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
     Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
+      "backgroundColor": "blue",
+      "color": "red",
     }
   }
+  suppress={true}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-badge-container"
@@ -42,28 +63,50 @@ exports[`Test creation of a Badge control 1`] = `
       1
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test making the Badge control invisible 1`] = `
-<ThemeProvider
-  theme={
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  counter={0}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="topRight"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Badge"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
     Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
+      "backgroundColor": "white",
+      "border": "solid 3px",
+      "color": "red",
     }
   }
+  suppress={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={false}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-badge-container"
@@ -86,7 +129,7 @@ exports[`Test making the Badge control invisible 1`] = `
       0
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;
 
 exports[`Test retrieval of Badge props object 1`] = `
@@ -99,6 +142,7 @@ Object {
   "counter": 0,
   "direction": "right",
   "disabled": false,
+  "err": null,
   "errorMessage": "",
   "focus": false,
   "height": "",
@@ -130,24 +174,46 @@ Object {
 `;
 
 exports[`Test the disabling of a Badge control 1`] = `
-<ThemeProvider
-  theme={
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  counter={0}
+  direction="right"
+  disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="topRight"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Badge"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
     Object {
-      "backgroundColor": "#ffffff",
-      "borderColor": "#c0c0c0",
-      "color": "#000000",
-      "headerBackgroundColor": "#004358",
-      "headerForegroundColor": "#ffffff",
-      "headerHoverColor": "#ffe11a",
-      "hoverColor": "#c0c0c0",
-      "inputBorderColor": "#c0c0c0",
-      "selectedBackgroundColor": "#1f8a70",
-      "selectedForegroundColor": "#ffe11a",
-      "tooltipBackgroundColor": "#708090",
-      "tooltipForegroundColor": "#ffffff",
-      "transitionDelay": "0.5s",
+      "backgroundColor": "white",
+      "border": "solid 3px",
+      "color": "red",
     }
   }
+  suppress={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-badge-container"
@@ -170,5 +236,5 @@ exports[`Test the disabling of a Badge control 1`] = `
       0
     </styled.div>
   </styled.div>
-</ThemeProvider>
+</Wrapper>
 `;

@@ -120,12 +120,12 @@ import {
 	Color,
 	disabled,
 	fontStyle,
-	getTheme,
 	invisible,
-	Sizing
+	Sizing,
+	Wrapper
 } from '../shared';
 import {tooltip} from '../shared/helpers';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 import {
 	validateEmail,
 	validateMaxLength,
@@ -434,7 +434,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<TextfieldContainerView
 					className="ui-textfield-container"
 					id={this.id}
@@ -474,7 +474,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					}
 				{tooltip(this.id, this.props)}
 				</TextfieldContainerView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

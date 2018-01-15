@@ -65,11 +65,11 @@ import {
 	Color,
 	disabled,
 	getDefaultBaseProps,
-	getTheme,
 	invisible,
-	rectStyle
+	rectStyle,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export enum SwitchType {
 	inny,
@@ -197,7 +197,7 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()}>
+			<Wrapper {...this.props} >
 				<SliderContainerView
 					className={this.classes}
 					height={this.fontSizePX(this.props.sizing, this.props.sliderScale)}
@@ -219,7 +219,7 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 						/>
 					</SliderView>
 				</SliderContainerView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

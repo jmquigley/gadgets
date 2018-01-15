@@ -142,6 +142,7 @@ export interface BaseProps {
 	controlled?: boolean;
 	direction?: Direction;
 	disabled?: boolean;
+	err?: any;
 	errorMessage?: string;
 	focus?: boolean;
 	height?: string;
@@ -173,6 +174,7 @@ const defaultBaseProps: BaseProps = {
 	controlled: true,
 	direction: Direction.right,
 	disabled: false,
+	err: null,
 	errorMessage: '',
 	focus: false,
 	height: '',

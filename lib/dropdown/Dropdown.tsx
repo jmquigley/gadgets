@@ -62,10 +62,10 @@ import {
 	BaseProps,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme
+	Wrapper
 } from '../shared';
 import {tooltip} from '../shared/helpers';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 
 export interface DropdownOption {
 	value: string;
@@ -158,7 +158,7 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 
 	public render() {
 		return(
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<DropdownContainerView
 					className="ui-dropdown-container"
 					sizing={this.props.sizing}
@@ -175,7 +175,7 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 					</DropdownView>
 					{tooltip(this.id, this.props)}
 				</DropdownContainerView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

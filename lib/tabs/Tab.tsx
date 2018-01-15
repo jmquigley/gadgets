@@ -65,11 +65,11 @@ import {
 	ColorScheme,
 	disabled,
 	getDefaultBaseProps,
-	getTheme,
 	invisible,
-	Location
+	Location,
+	Wrapper
 } from '../shared';
-import styled, {css, ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {css, withProps} from '../shared/themed-components';
 import {Title} from '../title';
 
 export interface TabProps extends BaseProps {
@@ -240,7 +240,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		}
 
 		return (
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<TabView
 					disabled={this.props.disabled}
 					className={this.classes}
@@ -267,7 +267,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 						visible={!this.state.hidden}
 					/>
 				</TabView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

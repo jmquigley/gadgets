@@ -68,10 +68,10 @@ import {
 	Color,
 	fontStyle,
 	getDefaultBaseProps,
-	getTheme,
-	invisible
+	invisible,
+	Wrapper
 } from '../shared';
-import styled, {ThemeProvider, withProps} from '../shared/themed-components';
+import styled, {withProps} from '../shared/themed-components';
 import {Title, TitleLayout} from '../title';
 
 export enum OptionType {
@@ -236,7 +236,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		}
 
 		return(
-			<ThemeProvider theme={getTheme()} >
+			<Wrapper {...this.props} >
 				<OptionView
 					className={this.classes}
 					onClick={this.handleClick}
@@ -259,7 +259,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 					/>
 					{title}
 				</OptionView>
-			</ThemeProvider>
+			</Wrapper>
 		);
 	}
 }

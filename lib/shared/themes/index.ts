@@ -48,6 +48,7 @@ export interface ThemeProps {
 	headerHoverColor: string;
 	hoverColor: string;
 	inputBorderColor: string;
+	itemHoverColor: string;
 	selectedBackgroundColor: string;
 	selectedForegroundColor: string;
 	tooltipBackgroundColor: string;
