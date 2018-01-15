@@ -220,6 +220,8 @@ TODO: create a Treeview control
 ### [Triangle](docs/lib/triangle/Triangle.md)
 Uses SVG to draw a triangle within the container.
 
+### [Wrapper](docs/lib/shared/wrapper.md)
+Each component uses the Wrapper component to catch potential errors within the control.  These are [error boundaries](https://reactjs.org/docs/error-boundaries.html) that are new to React 16.  It also wraps the [ThemeProvider](https://www.styled-components.com/docs/api#themeprovider) used by the [styled-components](https://reactjs.org/docs/error-boundaries.html).
 
 ## Styles
 

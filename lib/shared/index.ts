@@ -5,6 +5,7 @@ import {
 } from './base';
 
 import {
+	getDefaultWrapperProps,
 	Wrapper,
 	WrapperProps
 } from './wrapper';
@@ -61,6 +62,7 @@ export {
 	fontStyle,
 	FontStyle,
 	getDefaultBaseProps,
+	getDefaultWrapperProps,
 	getTheme,
 	getThemeList,
 	invisible,
