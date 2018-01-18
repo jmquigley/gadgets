@@ -4,6 +4,7 @@ import {render} from 'react-dom';
 
 import DemoAccordion from './src/DemoAccordion';
 import DemoBadge from './src/DemoBadge';
+import DemoBreadcrumbs from './src/DemoBreadcrumbs';
 import DemoBrowser from './src/DemoBrowser';
 import DemoButtons from './src/DemoButtons';
 import DemoDialogBox from './src/DemoDialogBox';
@@ -110,6 +111,7 @@ class App extends React.Component<any, AppState> {
 
 				<DemoAccordion sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoBadge sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoBreadcrumbs sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoBrowser />
 				<DemoButtons sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoDialogBox sizing={this.state.sizing} disabled={this.state.disabled} />

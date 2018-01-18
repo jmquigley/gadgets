@@ -1,7 +1,38 @@
 <a name="module_themes"></a>
 
 ## themes
-Handles management of themes within the gadgets library.  It contains twomethods: `setTheme` and `getTheme`.  By default the library is initializedwith the *base* theme.  A theme represents an object with key/value pairsthat can be used within a styled component.  The theme object is passedto a styled component with the `ThemeProvider` [wrapper](https://www.styled-components.com/docs/advanced#theming)It contains the following themes:- base - the basic color scheme for the gadgets library- custom - a user defined theme.  It is empty unless the user created oneduring the `setTheme` call.- dark- lightSee the './lib/shared/themes/base.json' for the keys that should be usedwithin a custom object implementation.#### Examples:```javascriptimport {getTheme, setTheme, Theme} from 'gadgets';setTheme(Theme.dark);...render(    <ThemeProvider theme={getTheme()}>        ...    </ThemeProvider>);```
+Handles management of themes within the gadgets library.  It contains two
+methods: `setTheme` and `getTheme`.  By default the library is initialized
+with the *base* theme.  A theme represents an object with key/value pairs
+that can be used within a styled component.  The theme object is passed
+to a styled component with the `ThemeProvider` [wrapper](https://www.styled-components.com/docs/advanced#theming)
+
+It contains the following themes:
+
+- base - the basic color scheme for the gadgets library
+- custom - a user defined theme.  It is empty unless the user created one
+during the `setTheme` call.
+- dark
+- light
+
+See the './lib/shared/themes/base.json' for the keys that should be used
+within a custom object implementation.
+
+#### Examples:
+
+```javascript
+import {getTheme, setTheme, Theme} from 'gadgets';
+
+setTheme(Theme.dark);
+
+...
+
+render(
+    <ThemeProvider theme={getTheme()}>
+        ...
+    </ThemeProvider>
+);
+```
 
 
 * [themes](#module_themes)
@@ -25,11 +56,13 @@ Retrieves the object representing the requested theme.
 
 ### themes~getThemeList() ⇒ <code>Array.&lt;string&gt;</code>
 **Kind**: inner method of [<code>themes</code>](#module_themes)  
-**Returns**: <code>Array.&lt;string&gt;</code> - an array of strings that represent the names of allthemes that are available.  
+**Returns**: <code>Array.&lt;string&gt;</code> - an array of strings that represent the names of all
+themes that are available.  
 <a name="module_themes..setTheme"></a>
 
 ### themes~setTheme(custom, theme) ⇒ <code>ThemeProps</code>
-Sets the current internal theme to the requested name (if it exists)If the requested theme doesn't exist, then the `base` theme is set.
+Sets the current internal theme to the requested name (if it exists)
+If the requested theme doesn't exist, then the `base` theme is set.
 
 **Kind**: inner method of [<code>themes</code>](#module_themes)  
 **Returns**: <code>ThemeProps</code> - a reference to the current theme object  

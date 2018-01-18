@@ -9,6 +9,7 @@ debug('exe: %s', process.env['NODE_ENV']);
 
 import {Accordion, AccordionItem} from './lib/accordion';
 import {Badge} from './lib/badge';
+import {Breadcrumbs, Crumbs} from './lib/breadcrumbs';
 import {Break} from './lib/break';
 import {Browser} from './lib/browser';
 import {Button} from './lib/button';
@@ -81,6 +82,7 @@ export {
 	Badge,
 	BaseComponent,
 	BaseProps,
+	Breadcrumbs,
 	Break,
 	Browser,
 	Button,
@@ -90,6 +92,7 @@ export {
 	ButtonText,
 	Color,
 	Container,
+	Crumbs,
 	css,
 	DialogBox,
 	DialogBoxType,

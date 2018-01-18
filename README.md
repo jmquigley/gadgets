@@ -8,8 +8,13 @@
 [![NPM](https://img.shields.io/npm/v/gadgets.svg)](https://www.npmjs.com/package/gadgets)
 [![Coverage Status](https://coveralls.io/repos/github/jmquigley/gadgets/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/gadgets?branch=master)
 
-**This is a WIP experiment, don't use this right now.  It is volatile.  I'm using this to learn and practice react and some of the surrounding ecosystem**
+This library provides widgets and composite controls for building desktop apps using electron.  The available controls are listed below.
 
+## Requirements
+
+- [Electron](https://electron.atom.io/) v1.7+
+- [Node](https://nodejs.org/en/) v7.8+
+- [React](https://facebook.github.io/react/) v16.1.1+
 
 ## Installation
 
@@ -29,9 +34,9 @@ To build and run the demo application in electron use:
 ```
 $ yarn run demo
 ```
-This will check out all dependencies, build the code, test, and then try to run it within electron.  This will take some time.
+This will check out all dependencies, build the code, test, and then try to run it within electron.  This will take some time to complete.
 
-To just attempt to run the application without building use:
+To just attempt to run the application without building use (assuming the app was recently built):
 ```
 $ yarn start
 ```
@@ -43,15 +48,9 @@ To change the code while electron is running and use `CMD + R` to refresh electr
 
 
 This library was created for use in the [Electron UI](
-https://electron.atom.io/) and has been tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets used in an internal project.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the module.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`).  The library also makes use of [css modules](https://github.com/css-modules/css-modules).
+https://electron.atom.io/) and has been tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets and composite components used to create a desktop application.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the package.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`) that can be included within another project.  The library also makes use of [styled components](https://www.styled-components.com/).
 
-
-### Requirements
-
-- [Electron](https://electron.atom.io/) v1.7+
-- [Node](https://nodejs.org/en/) v7.8+
-- [React](https://facebook.github.io/react/) v16.1.1+
-
+Click on the each documented element below to see a picture of the component (where applicable).  To see a live demo, build the application (listed above).  It will run a demo electron application demonstrating each component.  The demo application also contains samples that demonstrate how the components are used.
 
 ## Usage
 
@@ -104,6 +103,12 @@ A counter widget that annotates (overlays) another widget.
 
 ### [BaseProps](docs/lib/shared/props.md)
 This module represents the properties that are shared by every class in the project.  This includes properties such as color, id, disabled, etc.
+
+### [Breadcrumbs](docs/lib/breadcrumbs/Breadcrumbs.md)
+A navigation control used to keep track of previous locations visited.  The rightmost item is the current location.  This provides a "path" back to the start of some navigation.
+
+### [Break](docs/lib/break/Break.md)
+A wrapper for the `<br>` tag.  This respects the Sizing option for controls so that the height of the break matches the current line height.
 
 ### [Browser](docs/lib/browser/Browser.md)
 Creates a web browser instance using a [webview](https://electron.atom.io/docs/api/webview-tag/) tag

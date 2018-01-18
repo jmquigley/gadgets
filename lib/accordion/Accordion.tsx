@@ -75,7 +75,7 @@ export const AccordionView: any =  withProps<AccordionProps, HTMLUListElement>(s
 export class Accordion extends BaseComponent<AccordionProps, undefined> {
 
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
-	private _children;
+	private _children: any;
 
 	constructor(props: AccordionProps) {
 		super(props, Accordion.defaultProps.style);

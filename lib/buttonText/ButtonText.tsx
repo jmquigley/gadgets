@@ -8,11 +8,11 @@
  * ```javascript
  * import {ButtonText} from 'gadgets';
  * <ButtonText
- *   text="some text"
- *   iconName="cab"
- *   justify={ButtonText.LEFT}
- *   onClick={someFunction}
- *   />
+ *     text="some text"
+ *     iconName="cab"
+ *     justify={Justify.left}
+ *     onClick={someFunction}
+ * />
  * ```
  *
  * #### Events
@@ -26,17 +26,15 @@
  * buttons.
  *
  * #### Properties
- * - `iconName: string` - The name of the font awesome icon used with this
+ * - `iconName: {string} ('bomb')` - The name of the font awesome icon used with this
  * button
- * - `justify: number` - Determines if the button will be on the left or the
+ * - `justify: {Justify} (Justify.right)` - Determines if the button will be on the left, center,
  * right.
- * Two constants are available: ButtonText.LEFT & ButtonText.RIGHT.  It uses
- * right by default.
- * - `noicon: boolean` - Turns off the icon and only shows the text in the
+ * - `noicon: {boolean} (false)` - Turns off the icon and only shows the text in the
  * center of the button.
- * - `sizing: Sizing (normal)` - The size of this control set by the Sizing
+ * - `sizing: {Sizing} (Sizing.normal)` - The size of this control set by the Sizing
  * class
- * - `text: string` - The text string used by the button
+ * - `text: {string} ('')` - The text string used by the button
  *
  * @module ButtonText
  */

@@ -1,6 +1,6 @@
 /**
  * A wrapper for the <br /> tag.  This respects the sizing base
- * proprety setting.
+ * property setting.
  *
  * ## Examples:
  *

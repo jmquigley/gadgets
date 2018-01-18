@@ -102,7 +102,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 	public render() {
 		const selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
-		const children = this._children.map(child => {
+		const children: any = this._children.map((child: any) => {
 			const selected = child['props'].id === selectedKey;
 			return React.cloneElement(child as any, {
 				selected: !this.props.noselect && selected,
