@@ -3,12 +3,11 @@
 const debug = require('debug')('DemoTagList');
 
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Container,
 	TagList
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoTagList extends React.Component<any, undefined> {
 

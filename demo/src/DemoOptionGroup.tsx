@@ -4,11 +4,10 @@ const debug = require('debug')('DemoOptionGroup');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
-const {
+import {
 	Container,
 	OptionGroup
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoOptionGroup extends React.Component<any, undefined> {
 

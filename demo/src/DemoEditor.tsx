@@ -5,11 +5,10 @@ const debug = require('debug')('DemoEditor');
 import * as fs from 'fs';
 import * as React from 'react';
 import {join} from 'util.join';
-
-const {
+import {
 	Container,
 	Editor
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoEditor extends React.Component<any, undefined> {
 

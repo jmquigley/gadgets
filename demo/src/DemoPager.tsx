@@ -4,13 +4,12 @@ const debug = require('debug')('DemoPager');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Container,
 	Pager,
 	SortOrder
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoPager extends React.Component<any, undefined> {
 
@@ -40,8 +39,8 @@ export default class DemoPager extends React.Component<any, undefined> {
 				<div className="pagerBox">
 					<Pager
 						disabled={this.props['disabled']}
-						initialPage="1"
-						totalItems="299"
+						initialPage={1}
+						totalItems={299}
 						sizing={this.props['sizing']}
 						onSelect={this.handleSelect}
 					/>
@@ -52,13 +51,13 @@ export default class DemoPager extends React.Component<any, undefined> {
 				<div className="pagerBox">
 					<Pager
 						disabled={this.props['disabled']}
-						initialPage="1"
+						initialPage={1}
 						onSelect={this.handleSelect}
 						onSort={this.handleSort}
 						pageSizes={[25, 50, 100, 500, 1000]}
-						pagesToDisplay="5"
+						pagesToDisplay={5}
 						sizing={this.props['sizing']}
-						totalItems="30000"
+						totalItems={30000}
 						useinput
 					/>
 				</div>

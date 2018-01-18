@@ -4,13 +4,12 @@ const debug = require('debug')('DemoSwitch');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Container,
 	Switch,
 	SwitchType
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoBrowser extends React.Component<any, undefined> {
 

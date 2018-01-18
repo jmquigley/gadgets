@@ -4,12 +4,11 @@ const debug = require('debug')('DemoErrorHandler');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
-const {
+import {
 	Button,
 	Container,
 	Wrapper
-} = require('../../dist/bundle');
+} from '../../';
 
 export interface DemoErrorHandlerState {
 	show?: boolean;

@@ -5,13 +5,12 @@ const debug = require('debug')('DemoToast');
 import autobind from 'autobind-decorator';
 import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
-
-const {
+import {
 	Button,
 	Container,
 	Toast,
 	ToastLevel
-} = require('../../dist/bundle');
+} from '../../';
 
 export interface DemoToastState {
 	toastVisible1: boolean;

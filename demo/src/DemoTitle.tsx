@@ -3,13 +3,12 @@
 const debug = require('debug')('DemoTitle');
 
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Container,
 	Title,
 	TitleLayout
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoTitle extends React.Component<any, undefined> {
 

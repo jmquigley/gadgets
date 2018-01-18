@@ -3,15 +3,14 @@
 const debug = require('debug')('DemoAccordion');
 
 import * as React from 'react';
-import {createItems} from './helpers';
-
-const {
-	Container,
+import {
 	Accordion,
 	AccordionItem,
 	Button,
+	Container,
 	List
-} = require('../../dist/bundle');
+} from '../../';
+import {createItems} from './helpers';
 
 export default class DemoAccordion extends React.Component<any, undefined> {
 
@@ -49,13 +48,6 @@ export default class DemoAccordion extends React.Component<any, undefined> {
 
 					<AccordionItem title="Accordion #4 (disabled)" disabled>
 						Accordion Items #4 (disabled)
-					</AccordionItem>
-
-					<AccordionItem
-						title="Accordion #5 (no button)"
-						showButton={false}
-					>
-						Accordion Items #5 (no button)
 					</AccordionItem>
 				</Accordion>
 			</Container>

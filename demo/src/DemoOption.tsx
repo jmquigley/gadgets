@@ -5,13 +5,12 @@ const debug = require('debug')('DemoOption');
 import autobind from 'autobind-decorator';
 import {EnumValues as ev} from 'enum-values';
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Container,
 	Option,
 	OptionType
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoOption extends React.Component<any, undefined> {
 

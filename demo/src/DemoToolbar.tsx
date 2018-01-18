@@ -3,8 +3,7 @@
 const debug = require('debug')('DemoToolbar');
 
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Button,
 	ButtonCircle,
@@ -21,7 +20,7 @@ const {
 	Switch,
 	TextField,
 	Toolbar
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoToolbar extends React.Component<any, undefined> {
 

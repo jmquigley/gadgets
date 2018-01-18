@@ -5,14 +5,13 @@ const debug = require('debug')('DemoTabs');
 import autobind from 'autobind-decorator';
 import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Container,
 	Location,
 	Tab,
 	TabContainer
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoTabs extends React.Component<any, undefined> {
 
@@ -50,9 +49,9 @@ export default class DemoTabs extends React.Component<any, undefined> {
 					<Tab title="tab #1" onClose={this.handleClose}>#1<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #2" onClose={this.handleClose}>#2<br/><br/>{this.randomText}</Tab>
 					<Tab title="tab #3" onClose={this.handleClose}>#3<br/><br/>{this.randomText}</Tab>
-					<Tab title="tab #4" onclose={this.handleClose}>#4<br/><br/>{this.randomText}</Tab>
-					<Tab title="tab #5" onclose={this.handleClose}>#5<br/><br/>{this.randomText}</Tab>
-					<Tab title="tab #6" onclose={this.handleClose}>#6<br/><br/>{this.randomText}</Tab>
+					<Tab title="tab #4" onClose={this.handleClose}>#4<br/><br/>{this.randomText}</Tab>
+					<Tab title="tab #5" onClose={this.handleClose}>#5<br/><br/>{this.randomText}</Tab>
+					<Tab title="tab #6" onClose={this.handleClose}>#6<br/><br/>{this.randomText}</Tab>
 				</TabContainer>
 				<Break sizing={this.props['sizing']} />
 

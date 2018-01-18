@@ -4,11 +4,10 @@ const debug = require('debug')('DemoSelect');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
-const {
+import {
 	Container,
 	Select
-} = require('../../dist/bundle');
+} from '../../';
 
 export interface DemoSelectState {
 	selectOption: string;

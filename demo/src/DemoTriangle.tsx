@@ -3,12 +3,11 @@
 const debug = require('debug')('DemoTriangle');
 
 import * as React from 'react';
-
-const {
+import {
 	Container,
 	Direction,
 	Triangle
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoTriangle extends React.Component<any, undefined> {
 

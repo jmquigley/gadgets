@@ -4,13 +4,12 @@ const debug = require('debug')('DemoBadge');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
-const {
+import {
 	Badge,
 	Button,
 	Container,
 	Location
-} = require('../../dist/bundle');
+} from '../../';
 
 export interface DemoBadgeState {
 	counter1?: number;

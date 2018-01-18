@@ -3,12 +3,11 @@
 const debug = require('debug')('DemoLabels');
 
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Container,
 	Label
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoLabels extends React.Component<any, undefined> {
 

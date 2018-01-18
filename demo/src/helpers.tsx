@@ -1,11 +1,11 @@
 'use strict';
 
+import * as React from 'react';
 import {Keys} from 'util.keys';
-
-const {
+import {
 	Button,
 	ListItem
-} = require('../../dist/bundle');
+} from '../../';
 
 /**
  * Creates N random list items and returns them in an array.  Used to

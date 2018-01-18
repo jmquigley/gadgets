@@ -3,8 +3,7 @@
 const debug = require('debug')('DemoListItem');
 
 import * as React from 'react';
-
-const {
+import {
 	Button,
 	ButtonCircle,
 	ButtonDialog,
@@ -15,7 +14,7 @@ const {
 	ListDivider,
 	ListHeader,
 	ListItem
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoListItem extends React.Component<any, undefined> {
 

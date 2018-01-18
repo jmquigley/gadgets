@@ -6,12 +6,12 @@ import autobind from 'autobind-decorator';
 import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 
-const {
+import {
 	ButtonText,
 	Container,
 	DialogBox,
 	DialogBoxType
-} = require('../../dist/bundle');
+} from '../../';
 
 export interface DemoDialogBoxState {
 	dialogError: boolean;

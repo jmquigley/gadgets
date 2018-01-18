@@ -4,12 +4,11 @@ const debug = require('debug')('DemoTooltip');
 
 import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
-
-const {
+import {
 	Container,
 	Location,
 	Tooltip
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoTooltip extends React.Component<any, undefined> {
 

@@ -6,15 +6,14 @@ import autobind from 'autobind-decorator';
 import * as _ from 'lodash';
 import * as React from 'react';
 import {sprintf} from 'sprintf-js';
-
-const {
+import {
 	Button,
 	Container,
 	DynamicList,
 	Option,
 	OptionType,
 	TitleLayout
-} = require('../../dist/bundle');
+} from '../../';
 
 export interface DemoDynamicListState {
 	dynamicListError: string;

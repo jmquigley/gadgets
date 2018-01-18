@@ -3,13 +3,12 @@
 const debug = require('debug')('DemoTextField');
 
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Container,
 	TextField,
 	Validator
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoTextField extends React.Component<any, undefined> {
 

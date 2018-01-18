@@ -4,13 +4,12 @@ const debug = require('debug')('DemoSlider');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
-const {
+import {
 	Break,
 	Container,
 	Option,
 	Slider
-} = require('../../dist/bundle');
+} from '../../';
 
 export interface DemoSliderState {
 	sliderToggle: boolean;

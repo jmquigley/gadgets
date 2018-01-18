@@ -3,17 +3,16 @@
 const debug = require('debug')('DemoButtons');
 
 import * as React from 'react';
-
-const {
+import {
 	Button,
 	ButtonCircle,
 	ButtonDialog,
-	ButtonToggle,
 	ButtonText,
+	ButtonToggle,
 	Container,
 	Icon,
 	Justify
-} = require('../../dist/bundle');
+} from '../../';
 
 export default class DemoButtons extends React.Component<any, undefined> {
 
