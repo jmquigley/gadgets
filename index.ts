@@ -61,6 +61,7 @@ import {Title, TitleLayout} from './lib/title';
 import {Toast, ToastLevel} from './lib/toast';
 import {Toolbar} from './lib/toolbar';
 import {Tooltip} from './lib/tooltip';
+import {Treeview, TreeviewItem} from './lib/treeview';
 import {Triangle} from './lib/triangle';
 
 // Themed component classes
@@ -145,6 +146,8 @@ export {
 	ToastLevel,
 	Toolbar,
 	Tooltip,
+	Treeview,
+	TreeviewItem,
 	Triangle,
 	version,
 	Validator,

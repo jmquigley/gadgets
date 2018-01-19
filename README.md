@@ -219,8 +219,8 @@ A grouping of buttons and/or controls in a horizontal bar.
 ### [Tooltip](docs/lib/tooltip/Tooltip.md)
 A text popup window on a control used to give help or feedback to the user of that control.
 
-### Treeview
-TODO: create a Treeview control
+### [Treeview](docs/lib/treeview/Treeview.md)
+This component represents data in a hierarchical parent/child view.  The underlying code is a wrapper around the [react-sortable-tree](https://www.npmjs.com/package/react-sortable-tree) component written by Chris Fritz.
 
 ### [Triangle](docs/lib/triangle/Triangle.md)
 Uses SVG to draw a triangle within the container.

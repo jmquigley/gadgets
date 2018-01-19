@@ -28,6 +28,7 @@ import DemoToast from './src/DemoToast';
 import DemoToolbar from './src/DemoToolbar';
 import DemoTooltip from './src/DemoTooltip';
 import DemoTriangle from './src/DemoTriangle';
+import DemoTreeview from './src/DemoTreeview';
 
 const debug = require('debug')('app');
 
@@ -135,6 +136,7 @@ class App extends React.Component<any, AppState> {
 				<DemoToolbar sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoTooltip sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoTriangle sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoTreeview sizing={this.state.sizing} disabled={this.state.disabled} />
 
 			</div>
 		);

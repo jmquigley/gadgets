@@ -4,17 +4,23 @@ exports[`Test creation of a Select control 1`] = `
 <Wrapper
   className="test-class"
   disabled={false}
+  err={null}
+  errorMessage=""
   obj="Select"
   onError={[Function]}
   reset={false}
   sizing="normal"
+  testing={false}
   visible={true}
 >
   <Styled(Select)
     className="ui-select test-class"
     disabled={false}
+    err={null}
+    errorMessage=""
     obj="Select"
     sizing="normal"
+    testing={false}
     visible={true}
   />
 </Wrapper>

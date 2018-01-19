@@ -45,26 +45,45 @@
 
 'use strict';
 
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import ReactSelect from 'react-select';
+import ReactSelect, {ReactSelectProps} from 'react-select';
 import {BaseComponent, fontStyle, Sizing, Wrapper} from '../shared';
 import styled from '../shared/themed-components';
 
-export const StyledReactSelect: any = styled(ReactSelect)`
+export const ReactSelectView: any = styled(ReactSelect)`
 	${props => props['sizing'] && fontStyle[props['sizing']]}
 `;
 
+export interface SelectProps extends ReactSelectProps {
+	disabled?: boolean;
+	err?: any;
+	errorMessage?: string;
+	obj?: string;
+	sizing?: Sizing;
+	testing?: boolean;
+	visible?: boolean;
+}
+
+export function getDefaultSelectProps(): SelectProps {
+	return cloneDeep(Object.assign({}, {
+			disabled: false,
+			err: null,
+			errorMessage: '',
+			obj: 'Select',
+			sizing: Sizing.normal,
+			testing: false,
+			visible: true
+		})
+	);
+}
+
 export class Select extends BaseComponent<any, any> {
 
-	public static defaultProps: any = {
-		disabled: false,
-		obj: 'Select',
-		visible: true,
-		sizing: Sizing.normal
-	};
+	public static defaultProps: SelectProps = getDefaultSelectProps();
 
 	constructor(props: any) {
-		super(props, {}, Select.defaultProps.style);
+		super(props, Select.defaultProps.style);
 		this._classes.add('ui-select');
 		this.componentWillUpdate(this.props);
 	}
@@ -72,7 +91,7 @@ export class Select extends BaseComponent<any, any> {
 	public render() {
 		return (
 			<Wrapper {...this.props} >
-				<StyledReactSelect
+				<ReactSelectView
 					{...this.props}
 					className={this.classes}
 				/>

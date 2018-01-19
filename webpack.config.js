@@ -49,12 +49,7 @@ module.exports = {
 		libraryTarget: "umd"
 	},
 	resolve: {
-		extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
-		alias: {
-			"immutable": path.resolve(__dirname, 'node_modules', 'immutable', 'dist', 'immutable.min.js'),
-			"lodash": path.resolve(__dirname, 'node_modules', 'lodash', 'lodash.min.js'),
-			"quill": path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.min.js')
-		}
+		extensions: ['.ts', '.tsx', '.js', '.jsx', '.css']
 	},
 	externals: {
 		react: {

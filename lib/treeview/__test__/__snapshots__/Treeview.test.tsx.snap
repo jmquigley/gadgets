@@ -1,0 +1,4503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a simple Treeview component (inherit) 1`] = `
+<Treeview
+  disabled={false}
+  err={null}
+  errorMessage=""
+  height="400px"
+  obj="Treeview"
+  onChange={[Function]}
+  sizing="inherit"
+  testing={false}
+  treeData={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "title": "1.1",
+          },
+          Object {
+            "title": "1.2",
+          },
+          Object {
+            "title": "1.3",
+          },
+        ],
+        "expanded": true,
+        "title": "1.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "2.1",
+          },
+          Object {
+            "title": "2.2",
+          },
+          Object {
+            "title": "2.3",
+          },
+        ],
+        "expanded": true,
+        "title": "2.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "3.1",
+          },
+          Object {
+            "title": "3.2",
+          },
+          Object {
+            "title": "3.3",
+          },
+        ],
+        "expanded": true,
+        "title": "3.0",
+      },
+    ]
+  }
+  visible={true}
+>
+  <Wrapper
+    disabled={false}
+    err={null}
+    errorMessage=""
+    height="400px"
+    obj="Treeview"
+    onChange={[Function]}
+    onError={[Function]}
+    reset={false}
+    sizing="inherit"
+    testing={false}
+    treeData={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "title": "1.1",
+            },
+            Object {
+              "title": "1.2",
+            },
+            Object {
+              "title": "1.3",
+            },
+          ],
+          "expanded": true,
+          "title": "1.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "2.1",
+            },
+            Object {
+              "title": "2.2",
+            },
+            Object {
+              "title": "2.3",
+            },
+          ],
+          "expanded": true,
+          "title": "2.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "3.1",
+            },
+            Object {
+              "title": "3.2",
+            },
+            Object {
+              "title": "3.3",
+            },
+          ],
+          "expanded": true,
+          "title": "3.0",
+        },
+      ]
+    }
+    visible={true}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-treeview-container"
+        height="400px"
+      >
+        <div
+          className="ui-treeview-container sc-bwzfXH cZIfPy"
+          height="400px"
+        >
+          <Styled(DragDropContext(ReactSortableTree))
+            canDrag={true}
+            className="ui-treeview"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            height="400px"
+            obj="Treeview"
+            onChange={[Function]}
+            sizing="inherit"
+            testing={false}
+            treeData={
+              Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "1.1",
+                    },
+                    Object {
+                      "title": "1.2",
+                    },
+                    Object {
+                      "title": "1.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "1.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "2.1",
+                    },
+                    Object {
+                      "title": "2.2",
+                    },
+                    Object {
+                      "title": "2.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "2.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "3.1",
+                    },
+                    Object {
+                      "title": "3.2",
+                    },
+                    Object {
+                      "title": "3.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "3.0",
+                },
+              ]
+            }
+            visible={true}
+          >
+            <DragDropContext(ReactSortableTree)
+              canDrag={true}
+              className="ui-treeview sc-htpNat iNPnS"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              height="400px"
+              obj="Treeview"
+              onChange={[Function]}
+              sizing="inherit"
+              testing={false}
+              treeData={
+                Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "1.1",
+                      },
+                      Object {
+                        "title": "1.2",
+                      },
+                      Object {
+                        "title": "1.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "1.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "2.1",
+                      },
+                      Object {
+                        "title": "2.2",
+                      },
+                      Object {
+                        "title": "2.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "2.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "3.1",
+                      },
+                      Object {
+                        "title": "3.2",
+                      },
+                      Object {
+                        "title": "3.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "3.0",
+                  },
+                ]
+              }
+              visible={true}
+            >
+              <ReactSortableTree
+                canDrag={true}
+                canDrop={null}
+                className="ui-treeview sc-htpNat iNPnS"
+                disabled={false}
+                dndType={null}
+                err={null}
+                errorMessage=""
+                generateNodeProps={null}
+                getNodeKey={[Function]}
+                height="400px"
+                innerStyle={Object {}}
+                isVirtualized={true}
+                maxDepth={null}
+                nodeContentRenderer={null}
+                obj="Treeview"
+                onChange={[Function]}
+                onDragStateChanged={[Function]}
+                onMoveNode={[Function]}
+                onVisibilityToggle={[Function]}
+                placeholderRenderer={null}
+                reactVirtualizedListProps={Object {}}
+                rowHeight={null}
+                scaffoldBlockPxWidth={null}
+                searchFinishCallback={null}
+                searchFocusOffset={null}
+                searchMethod={null}
+                searchQuery={null}
+                shouldCopyOnOutsideDrop={false}
+                sizing="inherit"
+                slideRegionSize={null}
+                style={Object {}}
+                testing={false}
+                theme={Object {}}
+                treeData={
+                  Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "1.1",
+                        },
+                        Object {
+                          "title": "1.2",
+                        },
+                        Object {
+                          "title": "1.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "1.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "2.1",
+                        },
+                        Object {
+                          "title": "2.2",
+                        },
+                        Object {
+                          "title": "2.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "2.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "3.1",
+                        },
+                        Object {
+                          "title": "3.2",
+                        },
+                        Object {
+                          "title": "3.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "3.0",
+                    },
+                  ]
+                }
+                treeNodeRenderer={null}
+                visible={true}
+              >
+                <div
+                  className="rst__tree ui-treeview sc-htpNat iNPnS"
+                  style={
+                    Object {
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <AutoSizer
+                    disableHeight={false}
+                    disableWidth={false}
+                    onResize={[Function]}
+                    style={Object {}}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "visible",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <Scrolling(List)
+                        className="rst__virtualScrollOverride"
+                        estimatedRowSize={62}
+                        height={0}
+                        horizontalStrength={[Function]}
+                        onScroll={[Function]}
+                        onScrollChange={[Function]}
+                        rowCount={12}
+                        rowHeight={62}
+                        rowRenderer={[Function]}
+                        scrollToAlignment="start"
+                        speed={30}
+                        strengthMultiplier={30}
+                        style={Object {}}
+                        verticalStrength={[Function]}
+                        width={0}
+                      >
+                        <List
+                          autoHeight={false}
+                          className="rst__virtualScrollOverride"
+                          estimatedRowSize={62}
+                          height={0}
+                          noRowsRenderer={[Function]}
+                          onRowsRendered={[Function]}
+                          onScroll={[Function]}
+                          overscanIndicesGetter={[Function]}
+                          overscanRowCount={10}
+                          rowCount={12}
+                          rowHeight={62}
+                          rowRenderer={[Function]}
+                          scrollToAlignment="start"
+                          scrollToIndex={-1}
+                          speed={30}
+                          style={Object {}}
+                          width={0}
+                        >
+                          <Grid
+                            aria-label="grid"
+                            aria-readonly={true}
+                            autoContainerWidth={true}
+                            autoHeight={false}
+                            autoWidth={false}
+                            cellRangeRenderer={[Function]}
+                            cellRenderer={[Function]}
+                            className="ReactVirtualized__List rst__virtualScrollOverride"
+                            columnCount={1}
+                            columnWidth={0}
+                            containerRole="rowgroup"
+                            containerStyle={Object {}}
+                            estimatedColumnSize={100}
+                            estimatedRowSize={62}
+                            getScrollbarSize={[Function]}
+                            height={0}
+                            noContentRenderer={[Function]}
+                            noRowsRenderer={[Function]}
+                            onRowsRendered={[Function]}
+                            onScroll={[Function]}
+                            onScrollbarPresenceChange={[Function]}
+                            onSectionRendered={[Function]}
+                            overscanColumnCount={0}
+                            overscanIndicesGetter={[Function]}
+                            overscanRowCount={10}
+                            role="grid"
+                            rowCount={12}
+                            rowHeight={62}
+                            rowRenderer={[Function]}
+                            scrollToAlignment="start"
+                            scrollToColumn={-1}
+                            scrollToIndex={-1}
+                            scrollToRow={-1}
+                            scrollingResetTimeInterval={150}
+                            speed={30}
+                            style={Object {}}
+                            tabIndex={0}
+                            width={0}
+                          >
+                            <div
+                              aria-label="grid"
+                              aria-readonly={true}
+                              className="ReactVirtualized__Grid ReactVirtualized__List rst__virtualScrollOverride"
+                              onScroll={[Function]}
+                              role="grid"
+                              style={
+                                Object {
+                                  "WebkitOverflowScrolling": "touch",
+                                  "boxSizing": "border-box",
+                                  "direction": "ltr",
+                                  "height": 0,
+                                  "overflowX": "hidden",
+                                  "overflowY": "auto",
+                                  "position": "relative",
+                                  "width": 0,
+                                  "willChange": "transform",
+                                }
+                              }
+                              tabIndex={0}
+                            />
+                          </Grid>
+                        </List>
+                      </Scrolling(List)>
+                    </div>
+                  </AutoSizer>
+                </div>
+              </ReactSortableTree>
+            </DragDropContext(ReactSortableTree)>
+          </Styled(DragDropContext(ReactSortableTree))>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Treeview>
+`;
+
+exports[`Test creation of a simple Treeview component (large) 1`] = `
+<Treeview
+  disabled={false}
+  err={null}
+  errorMessage=""
+  height="400px"
+  obj="Treeview"
+  onChange={[Function]}
+  sizing="large"
+  testing={false}
+  treeData={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "title": "1.1",
+          },
+          Object {
+            "title": "1.2",
+          },
+          Object {
+            "title": "1.3",
+          },
+        ],
+        "expanded": true,
+        "title": "1.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "2.1",
+          },
+          Object {
+            "title": "2.2",
+          },
+          Object {
+            "title": "2.3",
+          },
+        ],
+        "expanded": true,
+        "title": "2.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "3.1",
+          },
+          Object {
+            "title": "3.2",
+          },
+          Object {
+            "title": "3.3",
+          },
+        ],
+        "expanded": true,
+        "title": "3.0",
+      },
+    ]
+  }
+  visible={true}
+>
+  <Wrapper
+    disabled={false}
+    err={null}
+    errorMessage=""
+    height="400px"
+    obj="Treeview"
+    onChange={[Function]}
+    onError={[Function]}
+    reset={false}
+    sizing="large"
+    testing={false}
+    treeData={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "title": "1.1",
+            },
+            Object {
+              "title": "1.2",
+            },
+            Object {
+              "title": "1.3",
+            },
+          ],
+          "expanded": true,
+          "title": "1.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "2.1",
+            },
+            Object {
+              "title": "2.2",
+            },
+            Object {
+              "title": "2.3",
+            },
+          ],
+          "expanded": true,
+          "title": "2.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "3.1",
+            },
+            Object {
+              "title": "3.2",
+            },
+            Object {
+              "title": "3.3",
+            },
+          ],
+          "expanded": true,
+          "title": "3.0",
+        },
+      ]
+    }
+    visible={true}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-treeview-container"
+        height="400px"
+      >
+        <div
+          className="ui-treeview-container sc-bwzfXH cZIfPy"
+          height="400px"
+        >
+          <Styled(DragDropContext(ReactSortableTree))
+            canDrag={true}
+            className="ui-treeview"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            height="400px"
+            obj="Treeview"
+            onChange={[Function]}
+            rowHeight={70}
+            sizing="large"
+            testing={false}
+            treeData={
+              Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "1.1",
+                    },
+                    Object {
+                      "title": "1.2",
+                    },
+                    Object {
+                      "title": "1.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "1.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "2.1",
+                    },
+                    Object {
+                      "title": "2.2",
+                    },
+                    Object {
+                      "title": "2.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "2.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "3.1",
+                    },
+                    Object {
+                      "title": "3.2",
+                    },
+                    Object {
+                      "title": "3.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "3.0",
+                },
+              ]
+            }
+            visible={true}
+          >
+            <DragDropContext(ReactSortableTree)
+              canDrag={true}
+              className="ui-treeview sc-htpNat cAWkZW"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              height="400px"
+              obj="Treeview"
+              onChange={[Function]}
+              rowHeight={70}
+              sizing="large"
+              testing={false}
+              treeData={
+                Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "1.1",
+                      },
+                      Object {
+                        "title": "1.2",
+                      },
+                      Object {
+                        "title": "1.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "1.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "2.1",
+                      },
+                      Object {
+                        "title": "2.2",
+                      },
+                      Object {
+                        "title": "2.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "2.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "3.1",
+                      },
+                      Object {
+                        "title": "3.2",
+                      },
+                      Object {
+                        "title": "3.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "3.0",
+                  },
+                ]
+              }
+              visible={true}
+            >
+              <ReactSortableTree
+                canDrag={true}
+                canDrop={null}
+                className="ui-treeview sc-htpNat cAWkZW"
+                disabled={false}
+                dndType={null}
+                err={null}
+                errorMessage=""
+                generateNodeProps={null}
+                getNodeKey={[Function]}
+                height="400px"
+                innerStyle={Object {}}
+                isVirtualized={true}
+                maxDepth={null}
+                nodeContentRenderer={null}
+                obj="Treeview"
+                onChange={[Function]}
+                onDragStateChanged={[Function]}
+                onMoveNode={[Function]}
+                onVisibilityToggle={[Function]}
+                placeholderRenderer={null}
+                reactVirtualizedListProps={Object {}}
+                rowHeight={70}
+                scaffoldBlockPxWidth={null}
+                searchFinishCallback={null}
+                searchFocusOffset={null}
+                searchMethod={null}
+                searchQuery={null}
+                shouldCopyOnOutsideDrop={false}
+                sizing="large"
+                slideRegionSize={null}
+                style={Object {}}
+                testing={false}
+                theme={Object {}}
+                treeData={
+                  Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "1.1",
+                        },
+                        Object {
+                          "title": "1.2",
+                        },
+                        Object {
+                          "title": "1.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "1.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "2.1",
+                        },
+                        Object {
+                          "title": "2.2",
+                        },
+                        Object {
+                          "title": "2.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "2.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "3.1",
+                        },
+                        Object {
+                          "title": "3.2",
+                        },
+                        Object {
+                          "title": "3.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "3.0",
+                    },
+                  ]
+                }
+                treeNodeRenderer={null}
+                visible={true}
+              >
+                <div
+                  className="rst__tree ui-treeview sc-htpNat cAWkZW"
+                  style={
+                    Object {
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <AutoSizer
+                    disableHeight={false}
+                    disableWidth={false}
+                    onResize={[Function]}
+                    style={Object {}}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "visible",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <Scrolling(List)
+                        className="rst__virtualScrollOverride"
+                        estimatedRowSize={70}
+                        height={0}
+                        horizontalStrength={[Function]}
+                        onScroll={[Function]}
+                        onScrollChange={[Function]}
+                        rowCount={12}
+                        rowHeight={70}
+                        rowRenderer={[Function]}
+                        scrollToAlignment="start"
+                        speed={30}
+                        strengthMultiplier={30}
+                        style={Object {}}
+                        verticalStrength={[Function]}
+                        width={0}
+                      >
+                        <List
+                          autoHeight={false}
+                          className="rst__virtualScrollOverride"
+                          estimatedRowSize={70}
+                          height={0}
+                          noRowsRenderer={[Function]}
+                          onRowsRendered={[Function]}
+                          onScroll={[Function]}
+                          overscanIndicesGetter={[Function]}
+                          overscanRowCount={10}
+                          rowCount={12}
+                          rowHeight={70}
+                          rowRenderer={[Function]}
+                          scrollToAlignment="start"
+                          scrollToIndex={-1}
+                          speed={30}
+                          style={Object {}}
+                          width={0}
+                        >
+                          <Grid
+                            aria-label="grid"
+                            aria-readonly={true}
+                            autoContainerWidth={true}
+                            autoHeight={false}
+                            autoWidth={false}
+                            cellRangeRenderer={[Function]}
+                            cellRenderer={[Function]}
+                            className="ReactVirtualized__List rst__virtualScrollOverride"
+                            columnCount={1}
+                            columnWidth={0}
+                            containerRole="rowgroup"
+                            containerStyle={Object {}}
+                            estimatedColumnSize={100}
+                            estimatedRowSize={70}
+                            getScrollbarSize={[Function]}
+                            height={0}
+                            noContentRenderer={[Function]}
+                            noRowsRenderer={[Function]}
+                            onRowsRendered={[Function]}
+                            onScroll={[Function]}
+                            onScrollbarPresenceChange={[Function]}
+                            onSectionRendered={[Function]}
+                            overscanColumnCount={0}
+                            overscanIndicesGetter={[Function]}
+                            overscanRowCount={10}
+                            role="grid"
+                            rowCount={12}
+                            rowHeight={70}
+                            rowRenderer={[Function]}
+                            scrollToAlignment="start"
+                            scrollToColumn={-1}
+                            scrollToIndex={-1}
+                            scrollToRow={-1}
+                            scrollingResetTimeInterval={150}
+                            speed={30}
+                            style={Object {}}
+                            tabIndex={0}
+                            width={0}
+                          >
+                            <div
+                              aria-label="grid"
+                              aria-readonly={true}
+                              className="ReactVirtualized__Grid ReactVirtualized__List rst__virtualScrollOverride"
+                              onScroll={[Function]}
+                              role="grid"
+                              style={
+                                Object {
+                                  "WebkitOverflowScrolling": "touch",
+                                  "boxSizing": "border-box",
+                                  "direction": "ltr",
+                                  "height": 0,
+                                  "overflowX": "hidden",
+                                  "overflowY": "auto",
+                                  "position": "relative",
+                                  "width": 0,
+                                  "willChange": "transform",
+                                }
+                              }
+                              tabIndex={0}
+                            />
+                          </Grid>
+                        </List>
+                      </Scrolling(List)>
+                    </div>
+                  </AutoSizer>
+                </div>
+              </ReactSortableTree>
+            </DragDropContext(ReactSortableTree)>
+          </Styled(DragDropContext(ReactSortableTree))>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Treeview>
+`;
+
+exports[`Test creation of a simple Treeview component (medium) 1`] = `
+<Treeview
+  disabled={false}
+  err={null}
+  errorMessage=""
+  height="400px"
+  obj="Treeview"
+  onChange={[Function]}
+  sizing="medium"
+  testing={false}
+  treeData={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "title": "1.1",
+          },
+          Object {
+            "title": "1.2",
+          },
+          Object {
+            "title": "1.3",
+          },
+        ],
+        "expanded": true,
+        "title": "1.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "2.1",
+          },
+          Object {
+            "title": "2.2",
+          },
+          Object {
+            "title": "2.3",
+          },
+        ],
+        "expanded": true,
+        "title": "2.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "3.1",
+          },
+          Object {
+            "title": "3.2",
+          },
+          Object {
+            "title": "3.3",
+          },
+        ],
+        "expanded": true,
+        "title": "3.0",
+      },
+    ]
+  }
+  visible={true}
+>
+  <Wrapper
+    disabled={false}
+    err={null}
+    errorMessage=""
+    height="400px"
+    obj="Treeview"
+    onChange={[Function]}
+    onError={[Function]}
+    reset={false}
+    sizing="medium"
+    testing={false}
+    treeData={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "title": "1.1",
+            },
+            Object {
+              "title": "1.2",
+            },
+            Object {
+              "title": "1.3",
+            },
+          ],
+          "expanded": true,
+          "title": "1.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "2.1",
+            },
+            Object {
+              "title": "2.2",
+            },
+            Object {
+              "title": "2.3",
+            },
+          ],
+          "expanded": true,
+          "title": "2.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "3.1",
+            },
+            Object {
+              "title": "3.2",
+            },
+            Object {
+              "title": "3.3",
+            },
+          ],
+          "expanded": true,
+          "title": "3.0",
+        },
+      ]
+    }
+    visible={true}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-treeview-container"
+        height="400px"
+      >
+        <div
+          className="ui-treeview-container sc-bwzfXH cZIfPy"
+          height="400px"
+        >
+          <Styled(DragDropContext(ReactSortableTree))
+            canDrag={true}
+            className="ui-treeview"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            height="400px"
+            obj="Treeview"
+            onChange={[Function]}
+            sizing="medium"
+            testing={false}
+            treeData={
+              Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "1.1",
+                    },
+                    Object {
+                      "title": "1.2",
+                    },
+                    Object {
+                      "title": "1.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "1.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "2.1",
+                    },
+                    Object {
+                      "title": "2.2",
+                    },
+                    Object {
+                      "title": "2.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "2.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "3.1",
+                    },
+                    Object {
+                      "title": "3.2",
+                    },
+                    Object {
+                      "title": "3.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "3.0",
+                },
+              ]
+            }
+            visible={true}
+          >
+            <DragDropContext(ReactSortableTree)
+              canDrag={true}
+              className="ui-treeview sc-htpNat iNPnS"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              height="400px"
+              obj="Treeview"
+              onChange={[Function]}
+              sizing="medium"
+              testing={false}
+              treeData={
+                Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "1.1",
+                      },
+                      Object {
+                        "title": "1.2",
+                      },
+                      Object {
+                        "title": "1.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "1.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "2.1",
+                      },
+                      Object {
+                        "title": "2.2",
+                      },
+                      Object {
+                        "title": "2.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "2.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "3.1",
+                      },
+                      Object {
+                        "title": "3.2",
+                      },
+                      Object {
+                        "title": "3.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "3.0",
+                  },
+                ]
+              }
+              visible={true}
+            >
+              <ReactSortableTree
+                canDrag={true}
+                canDrop={null}
+                className="ui-treeview sc-htpNat iNPnS"
+                disabled={false}
+                dndType={null}
+                err={null}
+                errorMessage=""
+                generateNodeProps={null}
+                getNodeKey={[Function]}
+                height="400px"
+                innerStyle={Object {}}
+                isVirtualized={true}
+                maxDepth={null}
+                nodeContentRenderer={null}
+                obj="Treeview"
+                onChange={[Function]}
+                onDragStateChanged={[Function]}
+                onMoveNode={[Function]}
+                onVisibilityToggle={[Function]}
+                placeholderRenderer={null}
+                reactVirtualizedListProps={Object {}}
+                rowHeight={null}
+                scaffoldBlockPxWidth={null}
+                searchFinishCallback={null}
+                searchFocusOffset={null}
+                searchMethod={null}
+                searchQuery={null}
+                shouldCopyOnOutsideDrop={false}
+                sizing="medium"
+                slideRegionSize={null}
+                style={Object {}}
+                testing={false}
+                theme={Object {}}
+                treeData={
+                  Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "1.1",
+                        },
+                        Object {
+                          "title": "1.2",
+                        },
+                        Object {
+                          "title": "1.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "1.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "2.1",
+                        },
+                        Object {
+                          "title": "2.2",
+                        },
+                        Object {
+                          "title": "2.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "2.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "3.1",
+                        },
+                        Object {
+                          "title": "3.2",
+                        },
+                        Object {
+                          "title": "3.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "3.0",
+                    },
+                  ]
+                }
+                treeNodeRenderer={null}
+                visible={true}
+              >
+                <div
+                  className="rst__tree ui-treeview sc-htpNat iNPnS"
+                  style={
+                    Object {
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <AutoSizer
+                    disableHeight={false}
+                    disableWidth={false}
+                    onResize={[Function]}
+                    style={Object {}}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "visible",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <Scrolling(List)
+                        className="rst__virtualScrollOverride"
+                        estimatedRowSize={62}
+                        height={0}
+                        horizontalStrength={[Function]}
+                        onScroll={[Function]}
+                        onScrollChange={[Function]}
+                        rowCount={12}
+                        rowHeight={62}
+                        rowRenderer={[Function]}
+                        scrollToAlignment="start"
+                        speed={30}
+                        strengthMultiplier={30}
+                        style={Object {}}
+                        verticalStrength={[Function]}
+                        width={0}
+                      >
+                        <List
+                          autoHeight={false}
+                          className="rst__virtualScrollOverride"
+                          estimatedRowSize={62}
+                          height={0}
+                          noRowsRenderer={[Function]}
+                          onRowsRendered={[Function]}
+                          onScroll={[Function]}
+                          overscanIndicesGetter={[Function]}
+                          overscanRowCount={10}
+                          rowCount={12}
+                          rowHeight={62}
+                          rowRenderer={[Function]}
+                          scrollToAlignment="start"
+                          scrollToIndex={-1}
+                          speed={30}
+                          style={Object {}}
+                          width={0}
+                        >
+                          <Grid
+                            aria-label="grid"
+                            aria-readonly={true}
+                            autoContainerWidth={true}
+                            autoHeight={false}
+                            autoWidth={false}
+                            cellRangeRenderer={[Function]}
+                            cellRenderer={[Function]}
+                            className="ReactVirtualized__List rst__virtualScrollOverride"
+                            columnCount={1}
+                            columnWidth={0}
+                            containerRole="rowgroup"
+                            containerStyle={Object {}}
+                            estimatedColumnSize={100}
+                            estimatedRowSize={62}
+                            getScrollbarSize={[Function]}
+                            height={0}
+                            noContentRenderer={[Function]}
+                            noRowsRenderer={[Function]}
+                            onRowsRendered={[Function]}
+                            onScroll={[Function]}
+                            onScrollbarPresenceChange={[Function]}
+                            onSectionRendered={[Function]}
+                            overscanColumnCount={0}
+                            overscanIndicesGetter={[Function]}
+                            overscanRowCount={10}
+                            role="grid"
+                            rowCount={12}
+                            rowHeight={62}
+                            rowRenderer={[Function]}
+                            scrollToAlignment="start"
+                            scrollToColumn={-1}
+                            scrollToIndex={-1}
+                            scrollToRow={-1}
+                            scrollingResetTimeInterval={150}
+                            speed={30}
+                            style={Object {}}
+                            tabIndex={0}
+                            width={0}
+                          >
+                            <div
+                              aria-label="grid"
+                              aria-readonly={true}
+                              className="ReactVirtualized__Grid ReactVirtualized__List rst__virtualScrollOverride"
+                              onScroll={[Function]}
+                              role="grid"
+                              style={
+                                Object {
+                                  "WebkitOverflowScrolling": "touch",
+                                  "boxSizing": "border-box",
+                                  "direction": "ltr",
+                                  "height": 0,
+                                  "overflowX": "hidden",
+                                  "overflowY": "auto",
+                                  "position": "relative",
+                                  "width": 0,
+                                  "willChange": "transform",
+                                }
+                              }
+                              tabIndex={0}
+                            />
+                          </Grid>
+                        </List>
+                      </Scrolling(List)>
+                    </div>
+                  </AutoSizer>
+                </div>
+              </ReactSortableTree>
+            </DragDropContext(ReactSortableTree)>
+          </Styled(DragDropContext(ReactSortableTree))>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Treeview>
+`;
+
+exports[`Test creation of a simple Treeview component (normal) 1`] = `
+<Treeview
+  disabled={false}
+  err={null}
+  errorMessage=""
+  height="400px"
+  obj="Treeview"
+  onChange={[Function]}
+  sizing="normal"
+  testing={false}
+  treeData={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "title": "1.1",
+          },
+          Object {
+            "title": "1.2",
+          },
+          Object {
+            "title": "1.3",
+          },
+        ],
+        "expanded": true,
+        "title": "1.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "2.1",
+          },
+          Object {
+            "title": "2.2",
+          },
+          Object {
+            "title": "2.3",
+          },
+        ],
+        "expanded": true,
+        "title": "2.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "3.1",
+          },
+          Object {
+            "title": "3.2",
+          },
+          Object {
+            "title": "3.3",
+          },
+        ],
+        "expanded": true,
+        "title": "3.0",
+      },
+    ]
+  }
+  visible={true}
+>
+  <Wrapper
+    disabled={false}
+    err={null}
+    errorMessage=""
+    height="400px"
+    obj="Treeview"
+    onChange={[Function]}
+    onError={[Function]}
+    reset={false}
+    sizing="normal"
+    testing={false}
+    treeData={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "title": "1.1",
+            },
+            Object {
+              "title": "1.2",
+            },
+            Object {
+              "title": "1.3",
+            },
+          ],
+          "expanded": true,
+          "title": "1.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "2.1",
+            },
+            Object {
+              "title": "2.2",
+            },
+            Object {
+              "title": "2.3",
+            },
+          ],
+          "expanded": true,
+          "title": "2.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "3.1",
+            },
+            Object {
+              "title": "3.2",
+            },
+            Object {
+              "title": "3.3",
+            },
+          ],
+          "expanded": true,
+          "title": "3.0",
+        },
+      ]
+    }
+    visible={true}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-treeview-container"
+        height="400px"
+      >
+        <div
+          className="ui-treeview-container sc-bwzfXH cZIfPy"
+          height="400px"
+        >
+          <Styled(DragDropContext(ReactSortableTree))
+            canDrag={true}
+            className="ui-treeview"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            height="400px"
+            obj="Treeview"
+            onChange={[Function]}
+            rowHeight={50}
+            sizing="normal"
+            testing={false}
+            treeData={
+              Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "1.1",
+                    },
+                    Object {
+                      "title": "1.2",
+                    },
+                    Object {
+                      "title": "1.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "1.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "2.1",
+                    },
+                    Object {
+                      "title": "2.2",
+                    },
+                    Object {
+                      "title": "2.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "2.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "3.1",
+                    },
+                    Object {
+                      "title": "3.2",
+                    },
+                    Object {
+                      "title": "3.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "3.0",
+                },
+              ]
+            }
+            visible={true}
+          >
+            <DragDropContext(ReactSortableTree)
+              canDrag={true}
+              className="ui-treeview sc-htpNat iNPnS"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              height="400px"
+              obj="Treeview"
+              onChange={[Function]}
+              rowHeight={50}
+              sizing="normal"
+              testing={false}
+              treeData={
+                Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "1.1",
+                      },
+                      Object {
+                        "title": "1.2",
+                      },
+                      Object {
+                        "title": "1.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "1.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "2.1",
+                      },
+                      Object {
+                        "title": "2.2",
+                      },
+                      Object {
+                        "title": "2.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "2.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "3.1",
+                      },
+                      Object {
+                        "title": "3.2",
+                      },
+                      Object {
+                        "title": "3.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "3.0",
+                  },
+                ]
+              }
+              visible={true}
+            >
+              <ReactSortableTree
+                canDrag={true}
+                canDrop={null}
+                className="ui-treeview sc-htpNat iNPnS"
+                disabled={false}
+                dndType={null}
+                err={null}
+                errorMessage=""
+                generateNodeProps={null}
+                getNodeKey={[Function]}
+                height="400px"
+                innerStyle={Object {}}
+                isVirtualized={true}
+                maxDepth={null}
+                nodeContentRenderer={null}
+                obj="Treeview"
+                onChange={[Function]}
+                onDragStateChanged={[Function]}
+                onMoveNode={[Function]}
+                onVisibilityToggle={[Function]}
+                placeholderRenderer={null}
+                reactVirtualizedListProps={Object {}}
+                rowHeight={50}
+                scaffoldBlockPxWidth={null}
+                searchFinishCallback={null}
+                searchFocusOffset={null}
+                searchMethod={null}
+                searchQuery={null}
+                shouldCopyOnOutsideDrop={false}
+                sizing="normal"
+                slideRegionSize={null}
+                style={Object {}}
+                testing={false}
+                theme={Object {}}
+                treeData={
+                  Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "1.1",
+                        },
+                        Object {
+                          "title": "1.2",
+                        },
+                        Object {
+                          "title": "1.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "1.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "2.1",
+                        },
+                        Object {
+                          "title": "2.2",
+                        },
+                        Object {
+                          "title": "2.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "2.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "3.1",
+                        },
+                        Object {
+                          "title": "3.2",
+                        },
+                        Object {
+                          "title": "3.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "3.0",
+                    },
+                  ]
+                }
+                treeNodeRenderer={null}
+                visible={true}
+              >
+                <div
+                  className="rst__tree ui-treeview sc-htpNat iNPnS"
+                  style={
+                    Object {
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <AutoSizer
+                    disableHeight={false}
+                    disableWidth={false}
+                    onResize={[Function]}
+                    style={Object {}}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "visible",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <Scrolling(List)
+                        className="rst__virtualScrollOverride"
+                        estimatedRowSize={50}
+                        height={0}
+                        horizontalStrength={[Function]}
+                        onScroll={[Function]}
+                        onScrollChange={[Function]}
+                        rowCount={12}
+                        rowHeight={50}
+                        rowRenderer={[Function]}
+                        scrollToAlignment="start"
+                        speed={30}
+                        strengthMultiplier={30}
+                        style={Object {}}
+                        verticalStrength={[Function]}
+                        width={0}
+                      >
+                        <List
+                          autoHeight={false}
+                          className="rst__virtualScrollOverride"
+                          estimatedRowSize={50}
+                          height={0}
+                          noRowsRenderer={[Function]}
+                          onRowsRendered={[Function]}
+                          onScroll={[Function]}
+                          overscanIndicesGetter={[Function]}
+                          overscanRowCount={10}
+                          rowCount={12}
+                          rowHeight={50}
+                          rowRenderer={[Function]}
+                          scrollToAlignment="start"
+                          scrollToIndex={-1}
+                          speed={30}
+                          style={Object {}}
+                          width={0}
+                        >
+                          <Grid
+                            aria-label="grid"
+                            aria-readonly={true}
+                            autoContainerWidth={true}
+                            autoHeight={false}
+                            autoWidth={false}
+                            cellRangeRenderer={[Function]}
+                            cellRenderer={[Function]}
+                            className="ReactVirtualized__List rst__virtualScrollOverride"
+                            columnCount={1}
+                            columnWidth={0}
+                            containerRole="rowgroup"
+                            containerStyle={Object {}}
+                            estimatedColumnSize={100}
+                            estimatedRowSize={50}
+                            getScrollbarSize={[Function]}
+                            height={0}
+                            noContentRenderer={[Function]}
+                            noRowsRenderer={[Function]}
+                            onRowsRendered={[Function]}
+                            onScroll={[Function]}
+                            onScrollbarPresenceChange={[Function]}
+                            onSectionRendered={[Function]}
+                            overscanColumnCount={0}
+                            overscanIndicesGetter={[Function]}
+                            overscanRowCount={10}
+                            role="grid"
+                            rowCount={12}
+                            rowHeight={50}
+                            rowRenderer={[Function]}
+                            scrollToAlignment="start"
+                            scrollToColumn={-1}
+                            scrollToIndex={-1}
+                            scrollToRow={-1}
+                            scrollingResetTimeInterval={150}
+                            speed={30}
+                            style={Object {}}
+                            tabIndex={0}
+                            width={0}
+                          >
+                            <div
+                              aria-label="grid"
+                              aria-readonly={true}
+                              className="ReactVirtualized__Grid ReactVirtualized__List rst__virtualScrollOverride"
+                              onScroll={[Function]}
+                              role="grid"
+                              style={
+                                Object {
+                                  "WebkitOverflowScrolling": "touch",
+                                  "boxSizing": "border-box",
+                                  "direction": "ltr",
+                                  "height": 0,
+                                  "overflowX": "hidden",
+                                  "overflowY": "auto",
+                                  "position": "relative",
+                                  "width": 0,
+                                  "willChange": "transform",
+                                }
+                              }
+                              tabIndex={0}
+                            />
+                          </Grid>
+                        </List>
+                      </Scrolling(List)>
+                    </div>
+                  </AutoSizer>
+                </div>
+              </ReactSortableTree>
+            </DragDropContext(ReactSortableTree)>
+          </Styled(DragDropContext(ReactSortableTree))>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Treeview>
+`;
+
+exports[`Test creation of a simple Treeview component (small) 1`] = `
+<Treeview
+  disabled={false}
+  err={null}
+  errorMessage=""
+  height="400px"
+  obj="Treeview"
+  onChange={[Function]}
+  sizing="small"
+  testing={false}
+  treeData={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "title": "1.1",
+          },
+          Object {
+            "title": "1.2",
+          },
+          Object {
+            "title": "1.3",
+          },
+        ],
+        "expanded": true,
+        "title": "1.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "2.1",
+          },
+          Object {
+            "title": "2.2",
+          },
+          Object {
+            "title": "2.3",
+          },
+        ],
+        "expanded": true,
+        "title": "2.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "3.1",
+          },
+          Object {
+            "title": "3.2",
+          },
+          Object {
+            "title": "3.3",
+          },
+        ],
+        "expanded": true,
+        "title": "3.0",
+      },
+    ]
+  }
+  visible={true}
+>
+  <Wrapper
+    disabled={false}
+    err={null}
+    errorMessage=""
+    height="400px"
+    obj="Treeview"
+    onChange={[Function]}
+    onError={[Function]}
+    reset={false}
+    sizing="small"
+    testing={false}
+    treeData={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "title": "1.1",
+            },
+            Object {
+              "title": "1.2",
+            },
+            Object {
+              "title": "1.3",
+            },
+          ],
+          "expanded": true,
+          "title": "1.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "2.1",
+            },
+            Object {
+              "title": "2.2",
+            },
+            Object {
+              "title": "2.3",
+            },
+          ],
+          "expanded": true,
+          "title": "2.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "3.1",
+            },
+            Object {
+              "title": "3.2",
+            },
+            Object {
+              "title": "3.3",
+            },
+          ],
+          "expanded": true,
+          "title": "3.0",
+        },
+      ]
+    }
+    visible={true}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-treeview-container"
+        height="400px"
+      >
+        <div
+          className="ui-treeview-container sc-bwzfXH cZIfPy"
+          height="400px"
+        >
+          <Styled(DragDropContext(ReactSortableTree))
+            canDrag={true}
+            className="ui-treeview"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            height="400px"
+            obj="Treeview"
+            onChange={[Function]}
+            rowHeight={45}
+            sizing="small"
+            testing={false}
+            treeData={
+              Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "1.1",
+                    },
+                    Object {
+                      "title": "1.2",
+                    },
+                    Object {
+                      "title": "1.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "1.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "2.1",
+                    },
+                    Object {
+                      "title": "2.2",
+                    },
+                    Object {
+                      "title": "2.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "2.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "3.1",
+                    },
+                    Object {
+                      "title": "3.2",
+                    },
+                    Object {
+                      "title": "3.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "3.0",
+                },
+              ]
+            }
+            visible={true}
+          >
+            <DragDropContext(ReactSortableTree)
+              canDrag={true}
+              className="ui-treeview sc-htpNat cIMaou"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              height="400px"
+              obj="Treeview"
+              onChange={[Function]}
+              rowHeight={45}
+              sizing="small"
+              testing={false}
+              treeData={
+                Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "1.1",
+                      },
+                      Object {
+                        "title": "1.2",
+                      },
+                      Object {
+                        "title": "1.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "1.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "2.1",
+                      },
+                      Object {
+                        "title": "2.2",
+                      },
+                      Object {
+                        "title": "2.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "2.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "3.1",
+                      },
+                      Object {
+                        "title": "3.2",
+                      },
+                      Object {
+                        "title": "3.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "3.0",
+                  },
+                ]
+              }
+              visible={true}
+            >
+              <ReactSortableTree
+                canDrag={true}
+                canDrop={null}
+                className="ui-treeview sc-htpNat cIMaou"
+                disabled={false}
+                dndType={null}
+                err={null}
+                errorMessage=""
+                generateNodeProps={null}
+                getNodeKey={[Function]}
+                height="400px"
+                innerStyle={Object {}}
+                isVirtualized={true}
+                maxDepth={null}
+                nodeContentRenderer={null}
+                obj="Treeview"
+                onChange={[Function]}
+                onDragStateChanged={[Function]}
+                onMoveNode={[Function]}
+                onVisibilityToggle={[Function]}
+                placeholderRenderer={null}
+                reactVirtualizedListProps={Object {}}
+                rowHeight={45}
+                scaffoldBlockPxWidth={null}
+                searchFinishCallback={null}
+                searchFocusOffset={null}
+                searchMethod={null}
+                searchQuery={null}
+                shouldCopyOnOutsideDrop={false}
+                sizing="small"
+                slideRegionSize={null}
+                style={Object {}}
+                testing={false}
+                theme={Object {}}
+                treeData={
+                  Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "1.1",
+                        },
+                        Object {
+                          "title": "1.2",
+                        },
+                        Object {
+                          "title": "1.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "1.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "2.1",
+                        },
+                        Object {
+                          "title": "2.2",
+                        },
+                        Object {
+                          "title": "2.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "2.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "3.1",
+                        },
+                        Object {
+                          "title": "3.2",
+                        },
+                        Object {
+                          "title": "3.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "3.0",
+                    },
+                  ]
+                }
+                treeNodeRenderer={null}
+                visible={true}
+              >
+                <div
+                  className="rst__tree ui-treeview sc-htpNat cIMaou"
+                  style={
+                    Object {
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <AutoSizer
+                    disableHeight={false}
+                    disableWidth={false}
+                    onResize={[Function]}
+                    style={Object {}}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "visible",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <Scrolling(List)
+                        className="rst__virtualScrollOverride"
+                        estimatedRowSize={45}
+                        height={0}
+                        horizontalStrength={[Function]}
+                        onScroll={[Function]}
+                        onScrollChange={[Function]}
+                        rowCount={12}
+                        rowHeight={45}
+                        rowRenderer={[Function]}
+                        scrollToAlignment="start"
+                        speed={30}
+                        strengthMultiplier={30}
+                        style={Object {}}
+                        verticalStrength={[Function]}
+                        width={0}
+                      >
+                        <List
+                          autoHeight={false}
+                          className="rst__virtualScrollOverride"
+                          estimatedRowSize={45}
+                          height={0}
+                          noRowsRenderer={[Function]}
+                          onRowsRendered={[Function]}
+                          onScroll={[Function]}
+                          overscanIndicesGetter={[Function]}
+                          overscanRowCount={10}
+                          rowCount={12}
+                          rowHeight={45}
+                          rowRenderer={[Function]}
+                          scrollToAlignment="start"
+                          scrollToIndex={-1}
+                          speed={30}
+                          style={Object {}}
+                          width={0}
+                        >
+                          <Grid
+                            aria-label="grid"
+                            aria-readonly={true}
+                            autoContainerWidth={true}
+                            autoHeight={false}
+                            autoWidth={false}
+                            cellRangeRenderer={[Function]}
+                            cellRenderer={[Function]}
+                            className="ReactVirtualized__List rst__virtualScrollOverride"
+                            columnCount={1}
+                            columnWidth={0}
+                            containerRole="rowgroup"
+                            containerStyle={Object {}}
+                            estimatedColumnSize={100}
+                            estimatedRowSize={45}
+                            getScrollbarSize={[Function]}
+                            height={0}
+                            noContentRenderer={[Function]}
+                            noRowsRenderer={[Function]}
+                            onRowsRendered={[Function]}
+                            onScroll={[Function]}
+                            onScrollbarPresenceChange={[Function]}
+                            onSectionRendered={[Function]}
+                            overscanColumnCount={0}
+                            overscanIndicesGetter={[Function]}
+                            overscanRowCount={10}
+                            role="grid"
+                            rowCount={12}
+                            rowHeight={45}
+                            rowRenderer={[Function]}
+                            scrollToAlignment="start"
+                            scrollToColumn={-1}
+                            scrollToIndex={-1}
+                            scrollToRow={-1}
+                            scrollingResetTimeInterval={150}
+                            speed={30}
+                            style={Object {}}
+                            tabIndex={0}
+                            width={0}
+                          >
+                            <div
+                              aria-label="grid"
+                              aria-readonly={true}
+                              className="ReactVirtualized__Grid ReactVirtualized__List rst__virtualScrollOverride"
+                              onScroll={[Function]}
+                              role="grid"
+                              style={
+                                Object {
+                                  "WebkitOverflowScrolling": "touch",
+                                  "boxSizing": "border-box",
+                                  "direction": "ltr",
+                                  "height": 0,
+                                  "overflowX": "hidden",
+                                  "overflowY": "auto",
+                                  "position": "relative",
+                                  "width": 0,
+                                  "willChange": "transform",
+                                }
+                              }
+                              tabIndex={0}
+                            />
+                          </Grid>
+                        </List>
+                      </Scrolling(List)>
+                    </div>
+                  </AutoSizer>
+                </div>
+              </ReactSortableTree>
+            </DragDropContext(ReactSortableTree)>
+          </Styled(DragDropContext(ReactSortableTree))>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Treeview>
+`;
+
+exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
+<Treeview
+  disabled={false}
+  err={null}
+  errorMessage=""
+  height="400px"
+  obj="Treeview"
+  onChange={[Function]}
+  sizing="xlarge"
+  testing={false}
+  treeData={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "title": "1.1",
+          },
+          Object {
+            "title": "1.2",
+          },
+          Object {
+            "title": "1.3",
+          },
+        ],
+        "expanded": true,
+        "title": "1.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "2.1",
+          },
+          Object {
+            "title": "2.2",
+          },
+          Object {
+            "title": "2.3",
+          },
+        ],
+        "expanded": true,
+        "title": "2.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "3.1",
+          },
+          Object {
+            "title": "3.2",
+          },
+          Object {
+            "title": "3.3",
+          },
+        ],
+        "expanded": true,
+        "title": "3.0",
+      },
+    ]
+  }
+  visible={true}
+>
+  <Wrapper
+    disabled={false}
+    err={null}
+    errorMessage=""
+    height="400px"
+    obj="Treeview"
+    onChange={[Function]}
+    onError={[Function]}
+    reset={false}
+    sizing="xlarge"
+    testing={false}
+    treeData={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "title": "1.1",
+            },
+            Object {
+              "title": "1.2",
+            },
+            Object {
+              "title": "1.3",
+            },
+          ],
+          "expanded": true,
+          "title": "1.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "2.1",
+            },
+            Object {
+              "title": "2.2",
+            },
+            Object {
+              "title": "2.3",
+            },
+          ],
+          "expanded": true,
+          "title": "2.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "3.1",
+            },
+            Object {
+              "title": "3.2",
+            },
+            Object {
+              "title": "3.3",
+            },
+          ],
+          "expanded": true,
+          "title": "3.0",
+        },
+      ]
+    }
+    visible={true}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-treeview-container"
+        height="400px"
+      >
+        <div
+          className="ui-treeview-container sc-bwzfXH cZIfPy"
+          height="400px"
+        >
+          <Styled(DragDropContext(ReactSortableTree))
+            canDrag={true}
+            className="ui-treeview"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            height="400px"
+            obj="Treeview"
+            onChange={[Function]}
+            rowHeight={80}
+            sizing="xlarge"
+            testing={false}
+            treeData={
+              Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "1.1",
+                    },
+                    Object {
+                      "title": "1.2",
+                    },
+                    Object {
+                      "title": "1.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "1.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "2.1",
+                    },
+                    Object {
+                      "title": "2.2",
+                    },
+                    Object {
+                      "title": "2.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "2.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "3.1",
+                    },
+                    Object {
+                      "title": "3.2",
+                    },
+                    Object {
+                      "title": "3.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "3.0",
+                },
+              ]
+            }
+            visible={true}
+          >
+            <DragDropContext(ReactSortableTree)
+              canDrag={true}
+              className="ui-treeview sc-htpNat fOgeKy"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              height="400px"
+              obj="Treeview"
+              onChange={[Function]}
+              rowHeight={80}
+              sizing="xlarge"
+              testing={false}
+              treeData={
+                Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "1.1",
+                      },
+                      Object {
+                        "title": "1.2",
+                      },
+                      Object {
+                        "title": "1.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "1.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "2.1",
+                      },
+                      Object {
+                        "title": "2.2",
+                      },
+                      Object {
+                        "title": "2.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "2.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "3.1",
+                      },
+                      Object {
+                        "title": "3.2",
+                      },
+                      Object {
+                        "title": "3.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "3.0",
+                  },
+                ]
+              }
+              visible={true}
+            >
+              <ReactSortableTree
+                canDrag={true}
+                canDrop={null}
+                className="ui-treeview sc-htpNat fOgeKy"
+                disabled={false}
+                dndType={null}
+                err={null}
+                errorMessage=""
+                generateNodeProps={null}
+                getNodeKey={[Function]}
+                height="400px"
+                innerStyle={Object {}}
+                isVirtualized={true}
+                maxDepth={null}
+                nodeContentRenderer={null}
+                obj="Treeview"
+                onChange={[Function]}
+                onDragStateChanged={[Function]}
+                onMoveNode={[Function]}
+                onVisibilityToggle={[Function]}
+                placeholderRenderer={null}
+                reactVirtualizedListProps={Object {}}
+                rowHeight={80}
+                scaffoldBlockPxWidth={null}
+                searchFinishCallback={null}
+                searchFocusOffset={null}
+                searchMethod={null}
+                searchQuery={null}
+                shouldCopyOnOutsideDrop={false}
+                sizing="xlarge"
+                slideRegionSize={null}
+                style={Object {}}
+                testing={false}
+                theme={Object {}}
+                treeData={
+                  Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "1.1",
+                        },
+                        Object {
+                          "title": "1.2",
+                        },
+                        Object {
+                          "title": "1.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "1.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "2.1",
+                        },
+                        Object {
+                          "title": "2.2",
+                        },
+                        Object {
+                          "title": "2.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "2.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "3.1",
+                        },
+                        Object {
+                          "title": "3.2",
+                        },
+                        Object {
+                          "title": "3.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "3.0",
+                    },
+                  ]
+                }
+                treeNodeRenderer={null}
+                visible={true}
+              >
+                <div
+                  className="rst__tree ui-treeview sc-htpNat fOgeKy"
+                  style={
+                    Object {
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <AutoSizer
+                    disableHeight={false}
+                    disableWidth={false}
+                    onResize={[Function]}
+                    style={Object {}}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "visible",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <Scrolling(List)
+                        className="rst__virtualScrollOverride"
+                        estimatedRowSize={80}
+                        height={0}
+                        horizontalStrength={[Function]}
+                        onScroll={[Function]}
+                        onScrollChange={[Function]}
+                        rowCount={12}
+                        rowHeight={80}
+                        rowRenderer={[Function]}
+                        scrollToAlignment="start"
+                        speed={30}
+                        strengthMultiplier={30}
+                        style={Object {}}
+                        verticalStrength={[Function]}
+                        width={0}
+                      >
+                        <List
+                          autoHeight={false}
+                          className="rst__virtualScrollOverride"
+                          estimatedRowSize={80}
+                          height={0}
+                          noRowsRenderer={[Function]}
+                          onRowsRendered={[Function]}
+                          onScroll={[Function]}
+                          overscanIndicesGetter={[Function]}
+                          overscanRowCount={10}
+                          rowCount={12}
+                          rowHeight={80}
+                          rowRenderer={[Function]}
+                          scrollToAlignment="start"
+                          scrollToIndex={-1}
+                          speed={30}
+                          style={Object {}}
+                          width={0}
+                        >
+                          <Grid
+                            aria-label="grid"
+                            aria-readonly={true}
+                            autoContainerWidth={true}
+                            autoHeight={false}
+                            autoWidth={false}
+                            cellRangeRenderer={[Function]}
+                            cellRenderer={[Function]}
+                            className="ReactVirtualized__List rst__virtualScrollOverride"
+                            columnCount={1}
+                            columnWidth={0}
+                            containerRole="rowgroup"
+                            containerStyle={Object {}}
+                            estimatedColumnSize={100}
+                            estimatedRowSize={80}
+                            getScrollbarSize={[Function]}
+                            height={0}
+                            noContentRenderer={[Function]}
+                            noRowsRenderer={[Function]}
+                            onRowsRendered={[Function]}
+                            onScroll={[Function]}
+                            onScrollbarPresenceChange={[Function]}
+                            onSectionRendered={[Function]}
+                            overscanColumnCount={0}
+                            overscanIndicesGetter={[Function]}
+                            overscanRowCount={10}
+                            role="grid"
+                            rowCount={12}
+                            rowHeight={80}
+                            rowRenderer={[Function]}
+                            scrollToAlignment="start"
+                            scrollToColumn={-1}
+                            scrollToIndex={-1}
+                            scrollToRow={-1}
+                            scrollingResetTimeInterval={150}
+                            speed={30}
+                            style={Object {}}
+                            tabIndex={0}
+                            width={0}
+                          >
+                            <div
+                              aria-label="grid"
+                              aria-readonly={true}
+                              className="ReactVirtualized__Grid ReactVirtualized__List rst__virtualScrollOverride"
+                              onScroll={[Function]}
+                              role="grid"
+                              style={
+                                Object {
+                                  "WebkitOverflowScrolling": "touch",
+                                  "boxSizing": "border-box",
+                                  "direction": "ltr",
+                                  "height": 0,
+                                  "overflowX": "hidden",
+                                  "overflowY": "auto",
+                                  "position": "relative",
+                                  "width": 0,
+                                  "willChange": "transform",
+                                }
+                              }
+                              tabIndex={0}
+                            />
+                          </Grid>
+                        </List>
+                      </Scrolling(List)>
+                    </div>
+                  </AutoSizer>
+                </div>
+              </ReactSortableTree>
+            </DragDropContext(ReactSortableTree)>
+          </Styled(DragDropContext(ReactSortableTree))>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Treeview>
+`;
+
+exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
+<Treeview
+  disabled={false}
+  err={null}
+  errorMessage=""
+  height="400px"
+  obj="Treeview"
+  onChange={[Function]}
+  sizing="xsmall"
+  testing={false}
+  treeData={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "title": "1.1",
+          },
+          Object {
+            "title": "1.2",
+          },
+          Object {
+            "title": "1.3",
+          },
+        ],
+        "expanded": true,
+        "title": "1.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "2.1",
+          },
+          Object {
+            "title": "2.2",
+          },
+          Object {
+            "title": "2.3",
+          },
+        ],
+        "expanded": true,
+        "title": "2.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "3.1",
+          },
+          Object {
+            "title": "3.2",
+          },
+          Object {
+            "title": "3.3",
+          },
+        ],
+        "expanded": true,
+        "title": "3.0",
+      },
+    ]
+  }
+  visible={true}
+>
+  <Wrapper
+    disabled={false}
+    err={null}
+    errorMessage=""
+    height="400px"
+    obj="Treeview"
+    onChange={[Function]}
+    onError={[Function]}
+    reset={false}
+    sizing="xsmall"
+    testing={false}
+    treeData={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "title": "1.1",
+            },
+            Object {
+              "title": "1.2",
+            },
+            Object {
+              "title": "1.3",
+            },
+          ],
+          "expanded": true,
+          "title": "1.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "2.1",
+            },
+            Object {
+              "title": "2.2",
+            },
+            Object {
+              "title": "2.3",
+            },
+          ],
+          "expanded": true,
+          "title": "2.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "3.1",
+            },
+            Object {
+              "title": "3.2",
+            },
+            Object {
+              "title": "3.3",
+            },
+          ],
+          "expanded": true,
+          "title": "3.0",
+        },
+      ]
+    }
+    visible={true}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-treeview-container"
+        height="400px"
+      >
+        <div
+          className="ui-treeview-container sc-bwzfXH cZIfPy"
+          height="400px"
+        >
+          <Styled(DragDropContext(ReactSortableTree))
+            canDrag={true}
+            className="ui-treeview"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            height="400px"
+            obj="Treeview"
+            onChange={[Function]}
+            rowHeight={45}
+            sizing="xsmall"
+            testing={false}
+            treeData={
+              Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "1.1",
+                    },
+                    Object {
+                      "title": "1.2",
+                    },
+                    Object {
+                      "title": "1.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "1.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "2.1",
+                    },
+                    Object {
+                      "title": "2.2",
+                    },
+                    Object {
+                      "title": "2.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "2.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "3.1",
+                    },
+                    Object {
+                      "title": "3.2",
+                    },
+                    Object {
+                      "title": "3.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "3.0",
+                },
+              ]
+            }
+            visible={true}
+          >
+            <DragDropContext(ReactSortableTree)
+              canDrag={true}
+              className="ui-treeview sc-htpNat KPZgE"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              height="400px"
+              obj="Treeview"
+              onChange={[Function]}
+              rowHeight={45}
+              sizing="xsmall"
+              testing={false}
+              treeData={
+                Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "1.1",
+                      },
+                      Object {
+                        "title": "1.2",
+                      },
+                      Object {
+                        "title": "1.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "1.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "2.1",
+                      },
+                      Object {
+                        "title": "2.2",
+                      },
+                      Object {
+                        "title": "2.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "2.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "3.1",
+                      },
+                      Object {
+                        "title": "3.2",
+                      },
+                      Object {
+                        "title": "3.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "3.0",
+                  },
+                ]
+              }
+              visible={true}
+            >
+              <ReactSortableTree
+                canDrag={true}
+                canDrop={null}
+                className="ui-treeview sc-htpNat KPZgE"
+                disabled={false}
+                dndType={null}
+                err={null}
+                errorMessage=""
+                generateNodeProps={null}
+                getNodeKey={[Function]}
+                height="400px"
+                innerStyle={Object {}}
+                isVirtualized={true}
+                maxDepth={null}
+                nodeContentRenderer={null}
+                obj="Treeview"
+                onChange={[Function]}
+                onDragStateChanged={[Function]}
+                onMoveNode={[Function]}
+                onVisibilityToggle={[Function]}
+                placeholderRenderer={null}
+                reactVirtualizedListProps={Object {}}
+                rowHeight={45}
+                scaffoldBlockPxWidth={null}
+                searchFinishCallback={null}
+                searchFocusOffset={null}
+                searchMethod={null}
+                searchQuery={null}
+                shouldCopyOnOutsideDrop={false}
+                sizing="xsmall"
+                slideRegionSize={null}
+                style={Object {}}
+                testing={false}
+                theme={Object {}}
+                treeData={
+                  Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "1.1",
+                        },
+                        Object {
+                          "title": "1.2",
+                        },
+                        Object {
+                          "title": "1.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "1.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "2.1",
+                        },
+                        Object {
+                          "title": "2.2",
+                        },
+                        Object {
+                          "title": "2.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "2.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "3.1",
+                        },
+                        Object {
+                          "title": "3.2",
+                        },
+                        Object {
+                          "title": "3.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "3.0",
+                    },
+                  ]
+                }
+                treeNodeRenderer={null}
+                visible={true}
+              >
+                <div
+                  className="rst__tree ui-treeview sc-htpNat KPZgE"
+                  style={
+                    Object {
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <AutoSizer
+                    disableHeight={false}
+                    disableWidth={false}
+                    onResize={[Function]}
+                    style={Object {}}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "visible",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <Scrolling(List)
+                        className="rst__virtualScrollOverride"
+                        estimatedRowSize={45}
+                        height={0}
+                        horizontalStrength={[Function]}
+                        onScroll={[Function]}
+                        onScrollChange={[Function]}
+                        rowCount={12}
+                        rowHeight={45}
+                        rowRenderer={[Function]}
+                        scrollToAlignment="start"
+                        speed={30}
+                        strengthMultiplier={30}
+                        style={Object {}}
+                        verticalStrength={[Function]}
+                        width={0}
+                      >
+                        <List
+                          autoHeight={false}
+                          className="rst__virtualScrollOverride"
+                          estimatedRowSize={45}
+                          height={0}
+                          noRowsRenderer={[Function]}
+                          onRowsRendered={[Function]}
+                          onScroll={[Function]}
+                          overscanIndicesGetter={[Function]}
+                          overscanRowCount={10}
+                          rowCount={12}
+                          rowHeight={45}
+                          rowRenderer={[Function]}
+                          scrollToAlignment="start"
+                          scrollToIndex={-1}
+                          speed={30}
+                          style={Object {}}
+                          width={0}
+                        >
+                          <Grid
+                            aria-label="grid"
+                            aria-readonly={true}
+                            autoContainerWidth={true}
+                            autoHeight={false}
+                            autoWidth={false}
+                            cellRangeRenderer={[Function]}
+                            cellRenderer={[Function]}
+                            className="ReactVirtualized__List rst__virtualScrollOverride"
+                            columnCount={1}
+                            columnWidth={0}
+                            containerRole="rowgroup"
+                            containerStyle={Object {}}
+                            estimatedColumnSize={100}
+                            estimatedRowSize={45}
+                            getScrollbarSize={[Function]}
+                            height={0}
+                            noContentRenderer={[Function]}
+                            noRowsRenderer={[Function]}
+                            onRowsRendered={[Function]}
+                            onScroll={[Function]}
+                            onScrollbarPresenceChange={[Function]}
+                            onSectionRendered={[Function]}
+                            overscanColumnCount={0}
+                            overscanIndicesGetter={[Function]}
+                            overscanRowCount={10}
+                            role="grid"
+                            rowCount={12}
+                            rowHeight={45}
+                            rowRenderer={[Function]}
+                            scrollToAlignment="start"
+                            scrollToColumn={-1}
+                            scrollToIndex={-1}
+                            scrollToRow={-1}
+                            scrollingResetTimeInterval={150}
+                            speed={30}
+                            style={Object {}}
+                            tabIndex={0}
+                            width={0}
+                          >
+                            <div
+                              aria-label="grid"
+                              aria-readonly={true}
+                              className="ReactVirtualized__Grid ReactVirtualized__List rst__virtualScrollOverride"
+                              onScroll={[Function]}
+                              role="grid"
+                              style={
+                                Object {
+                                  "WebkitOverflowScrolling": "touch",
+                                  "boxSizing": "border-box",
+                                  "direction": "ltr",
+                                  "height": 0,
+                                  "overflowX": "hidden",
+                                  "overflowY": "auto",
+                                  "position": "relative",
+                                  "width": 0,
+                                  "willChange": "transform",
+                                }
+                              }
+                              tabIndex={0}
+                            />
+                          </Grid>
+                        </List>
+                      </Scrolling(List)>
+                    </div>
+                  </AutoSizer>
+                </div>
+              </ReactSortableTree>
+            </DragDropContext(ReactSortableTree)>
+          </Styled(DragDropContext(ReactSortableTree))>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Treeview>
+`;
+
+exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
+<Treeview
+  disabled={false}
+  err={null}
+  errorMessage=""
+  height="400px"
+  obj="Treeview"
+  onChange={[Function]}
+  sizing="xxlarge"
+  testing={false}
+  treeData={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "title": "1.1",
+          },
+          Object {
+            "title": "1.2",
+          },
+          Object {
+            "title": "1.3",
+          },
+        ],
+        "expanded": true,
+        "title": "1.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "2.1",
+          },
+          Object {
+            "title": "2.2",
+          },
+          Object {
+            "title": "2.3",
+          },
+        ],
+        "expanded": true,
+        "title": "2.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "3.1",
+          },
+          Object {
+            "title": "3.2",
+          },
+          Object {
+            "title": "3.3",
+          },
+        ],
+        "expanded": true,
+        "title": "3.0",
+      },
+    ]
+  }
+  visible={true}
+>
+  <Wrapper
+    disabled={false}
+    err={null}
+    errorMessage=""
+    height="400px"
+    obj="Treeview"
+    onChange={[Function]}
+    onError={[Function]}
+    reset={false}
+    sizing="xxlarge"
+    testing={false}
+    treeData={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "title": "1.1",
+            },
+            Object {
+              "title": "1.2",
+            },
+            Object {
+              "title": "1.3",
+            },
+          ],
+          "expanded": true,
+          "title": "1.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "2.1",
+            },
+            Object {
+              "title": "2.2",
+            },
+            Object {
+              "title": "2.3",
+            },
+          ],
+          "expanded": true,
+          "title": "2.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "3.1",
+            },
+            Object {
+              "title": "3.2",
+            },
+            Object {
+              "title": "3.3",
+            },
+          ],
+          "expanded": true,
+          "title": "3.0",
+        },
+      ]
+    }
+    visible={true}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-treeview-container"
+        height="400px"
+      >
+        <div
+          className="ui-treeview-container sc-bwzfXH cZIfPy"
+          height="400px"
+        >
+          <Styled(DragDropContext(ReactSortableTree))
+            canDrag={true}
+            className="ui-treeview"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            height="400px"
+            obj="Treeview"
+            onChange={[Function]}
+            rowHeight={90}
+            sizing="xxlarge"
+            testing={false}
+            treeData={
+              Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "1.1",
+                    },
+                    Object {
+                      "title": "1.2",
+                    },
+                    Object {
+                      "title": "1.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "1.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "2.1",
+                    },
+                    Object {
+                      "title": "2.2",
+                    },
+                    Object {
+                      "title": "2.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "2.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "3.1",
+                    },
+                    Object {
+                      "title": "3.2",
+                    },
+                    Object {
+                      "title": "3.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "3.0",
+                },
+              ]
+            }
+            visible={true}
+          >
+            <DragDropContext(ReactSortableTree)
+              canDrag={true}
+              className="ui-treeview sc-htpNat ecyEaL"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              height="400px"
+              obj="Treeview"
+              onChange={[Function]}
+              rowHeight={90}
+              sizing="xxlarge"
+              testing={false}
+              treeData={
+                Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "1.1",
+                      },
+                      Object {
+                        "title": "1.2",
+                      },
+                      Object {
+                        "title": "1.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "1.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "2.1",
+                      },
+                      Object {
+                        "title": "2.2",
+                      },
+                      Object {
+                        "title": "2.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "2.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "3.1",
+                      },
+                      Object {
+                        "title": "3.2",
+                      },
+                      Object {
+                        "title": "3.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "3.0",
+                  },
+                ]
+              }
+              visible={true}
+            >
+              <ReactSortableTree
+                canDrag={true}
+                canDrop={null}
+                className="ui-treeview sc-htpNat ecyEaL"
+                disabled={false}
+                dndType={null}
+                err={null}
+                errorMessage=""
+                generateNodeProps={null}
+                getNodeKey={[Function]}
+                height="400px"
+                innerStyle={Object {}}
+                isVirtualized={true}
+                maxDepth={null}
+                nodeContentRenderer={null}
+                obj="Treeview"
+                onChange={[Function]}
+                onDragStateChanged={[Function]}
+                onMoveNode={[Function]}
+                onVisibilityToggle={[Function]}
+                placeholderRenderer={null}
+                reactVirtualizedListProps={Object {}}
+                rowHeight={90}
+                scaffoldBlockPxWidth={null}
+                searchFinishCallback={null}
+                searchFocusOffset={null}
+                searchMethod={null}
+                searchQuery={null}
+                shouldCopyOnOutsideDrop={false}
+                sizing="xxlarge"
+                slideRegionSize={null}
+                style={Object {}}
+                testing={false}
+                theme={Object {}}
+                treeData={
+                  Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "1.1",
+                        },
+                        Object {
+                          "title": "1.2",
+                        },
+                        Object {
+                          "title": "1.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "1.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "2.1",
+                        },
+                        Object {
+                          "title": "2.2",
+                        },
+                        Object {
+                          "title": "2.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "2.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "3.1",
+                        },
+                        Object {
+                          "title": "3.2",
+                        },
+                        Object {
+                          "title": "3.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "3.0",
+                    },
+                  ]
+                }
+                treeNodeRenderer={null}
+                visible={true}
+              >
+                <div
+                  className="rst__tree ui-treeview sc-htpNat ecyEaL"
+                  style={
+                    Object {
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <AutoSizer
+                    disableHeight={false}
+                    disableWidth={false}
+                    onResize={[Function]}
+                    style={Object {}}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "visible",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <Scrolling(List)
+                        className="rst__virtualScrollOverride"
+                        estimatedRowSize={90}
+                        height={0}
+                        horizontalStrength={[Function]}
+                        onScroll={[Function]}
+                        onScrollChange={[Function]}
+                        rowCount={12}
+                        rowHeight={90}
+                        rowRenderer={[Function]}
+                        scrollToAlignment="start"
+                        speed={30}
+                        strengthMultiplier={30}
+                        style={Object {}}
+                        verticalStrength={[Function]}
+                        width={0}
+                      >
+                        <List
+                          autoHeight={false}
+                          className="rst__virtualScrollOverride"
+                          estimatedRowSize={90}
+                          height={0}
+                          noRowsRenderer={[Function]}
+                          onRowsRendered={[Function]}
+                          onScroll={[Function]}
+                          overscanIndicesGetter={[Function]}
+                          overscanRowCount={10}
+                          rowCount={12}
+                          rowHeight={90}
+                          rowRenderer={[Function]}
+                          scrollToAlignment="start"
+                          scrollToIndex={-1}
+                          speed={30}
+                          style={Object {}}
+                          width={0}
+                        >
+                          <Grid
+                            aria-label="grid"
+                            aria-readonly={true}
+                            autoContainerWidth={true}
+                            autoHeight={false}
+                            autoWidth={false}
+                            cellRangeRenderer={[Function]}
+                            cellRenderer={[Function]}
+                            className="ReactVirtualized__List rst__virtualScrollOverride"
+                            columnCount={1}
+                            columnWidth={0}
+                            containerRole="rowgroup"
+                            containerStyle={Object {}}
+                            estimatedColumnSize={100}
+                            estimatedRowSize={90}
+                            getScrollbarSize={[Function]}
+                            height={0}
+                            noContentRenderer={[Function]}
+                            noRowsRenderer={[Function]}
+                            onRowsRendered={[Function]}
+                            onScroll={[Function]}
+                            onScrollbarPresenceChange={[Function]}
+                            onSectionRendered={[Function]}
+                            overscanColumnCount={0}
+                            overscanIndicesGetter={[Function]}
+                            overscanRowCount={10}
+                            role="grid"
+                            rowCount={12}
+                            rowHeight={90}
+                            rowRenderer={[Function]}
+                            scrollToAlignment="start"
+                            scrollToColumn={-1}
+                            scrollToIndex={-1}
+                            scrollToRow={-1}
+                            scrollingResetTimeInterval={150}
+                            speed={30}
+                            style={Object {}}
+                            tabIndex={0}
+                            width={0}
+                          >
+                            <div
+                              aria-label="grid"
+                              aria-readonly={true}
+                              className="ReactVirtualized__Grid ReactVirtualized__List rst__virtualScrollOverride"
+                              onScroll={[Function]}
+                              role="grid"
+                              style={
+                                Object {
+                                  "WebkitOverflowScrolling": "touch",
+                                  "boxSizing": "border-box",
+                                  "direction": "ltr",
+                                  "height": 0,
+                                  "overflowX": "hidden",
+                                  "overflowY": "auto",
+                                  "position": "relative",
+                                  "width": 0,
+                                  "willChange": "transform",
+                                }
+                              }
+                              tabIndex={0}
+                            />
+                          </Grid>
+                        </List>
+                      </Scrolling(List)>
+                    </div>
+                  </AutoSizer>
+                </div>
+              </ReactSortableTree>
+            </DragDropContext(ReactSortableTree)>
+          </Styled(DragDropContext(ReactSortableTree))>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Treeview>
+`;
+
+exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
+<Treeview
+  disabled={false}
+  err={null}
+  errorMessage=""
+  height="400px"
+  obj="Treeview"
+  onChange={[Function]}
+  sizing="xxsmall"
+  testing={false}
+  treeData={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "title": "1.1",
+          },
+          Object {
+            "title": "1.2",
+          },
+          Object {
+            "title": "1.3",
+          },
+        ],
+        "expanded": true,
+        "title": "1.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "2.1",
+          },
+          Object {
+            "title": "2.2",
+          },
+          Object {
+            "title": "2.3",
+          },
+        ],
+        "expanded": true,
+        "title": "2.0",
+      },
+      Object {
+        "children": Array [
+          Object {
+            "title": "3.1",
+          },
+          Object {
+            "title": "3.2",
+          },
+          Object {
+            "title": "3.3",
+          },
+        ],
+        "expanded": true,
+        "title": "3.0",
+      },
+    ]
+  }
+  visible={true}
+>
+  <Wrapper
+    disabled={false}
+    err={null}
+    errorMessage=""
+    height="400px"
+    obj="Treeview"
+    onChange={[Function]}
+    onError={[Function]}
+    reset={false}
+    sizing="xxsmall"
+    testing={false}
+    treeData={
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "title": "1.1",
+            },
+            Object {
+              "title": "1.2",
+            },
+            Object {
+              "title": "1.3",
+            },
+          ],
+          "expanded": true,
+          "title": "1.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "2.1",
+            },
+            Object {
+              "title": "2.2",
+            },
+            Object {
+              "title": "2.3",
+            },
+          ],
+          "expanded": true,
+          "title": "2.0",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "title": "3.1",
+            },
+            Object {
+              "title": "3.2",
+            },
+            Object {
+              "title": "3.3",
+            },
+          ],
+          "expanded": true,
+          "title": "3.0",
+        },
+      ]
+    }
+    visible={true}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-treeview-container"
+        height="400px"
+      >
+        <div
+          className="ui-treeview-container sc-bwzfXH cZIfPy"
+          height="400px"
+        >
+          <Styled(DragDropContext(ReactSortableTree))
+            canDrag={true}
+            className="ui-treeview"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            height="400px"
+            obj="Treeview"
+            onChange={[Function]}
+            rowHeight={45}
+            sizing="xxsmall"
+            testing={false}
+            treeData={
+              Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "1.1",
+                    },
+                    Object {
+                      "title": "1.2",
+                    },
+                    Object {
+                      "title": "1.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "1.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "2.1",
+                    },
+                    Object {
+                      "title": "2.2",
+                    },
+                    Object {
+                      "title": "2.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "2.0",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "title": "3.1",
+                    },
+                    Object {
+                      "title": "3.2",
+                    },
+                    Object {
+                      "title": "3.3",
+                    },
+                  ],
+                  "expanded": true,
+                  "title": "3.0",
+                },
+              ]
+            }
+            visible={true}
+          >
+            <DragDropContext(ReactSortableTree)
+              canDrag={true}
+              className="ui-treeview sc-htpNat hLFtek"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              height="400px"
+              obj="Treeview"
+              onChange={[Function]}
+              rowHeight={45}
+              sizing="xxsmall"
+              testing={false}
+              treeData={
+                Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "1.1",
+                      },
+                      Object {
+                        "title": "1.2",
+                      },
+                      Object {
+                        "title": "1.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "1.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "2.1",
+                      },
+                      Object {
+                        "title": "2.2",
+                      },
+                      Object {
+                        "title": "2.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "2.0",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "3.1",
+                      },
+                      Object {
+                        "title": "3.2",
+                      },
+                      Object {
+                        "title": "3.3",
+                      },
+                    ],
+                    "expanded": true,
+                    "title": "3.0",
+                  },
+                ]
+              }
+              visible={true}
+            >
+              <ReactSortableTree
+                canDrag={true}
+                canDrop={null}
+                className="ui-treeview sc-htpNat hLFtek"
+                disabled={false}
+                dndType={null}
+                err={null}
+                errorMessage=""
+                generateNodeProps={null}
+                getNodeKey={[Function]}
+                height="400px"
+                innerStyle={Object {}}
+                isVirtualized={true}
+                maxDepth={null}
+                nodeContentRenderer={null}
+                obj="Treeview"
+                onChange={[Function]}
+                onDragStateChanged={[Function]}
+                onMoveNode={[Function]}
+                onVisibilityToggle={[Function]}
+                placeholderRenderer={null}
+                reactVirtualizedListProps={Object {}}
+                rowHeight={45}
+                scaffoldBlockPxWidth={null}
+                searchFinishCallback={null}
+                searchFocusOffset={null}
+                searchMethod={null}
+                searchQuery={null}
+                shouldCopyOnOutsideDrop={false}
+                sizing="xxsmall"
+                slideRegionSize={null}
+                style={Object {}}
+                testing={false}
+                theme={Object {}}
+                treeData={
+                  Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "1.1",
+                        },
+                        Object {
+                          "title": "1.2",
+                        },
+                        Object {
+                          "title": "1.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "1.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "2.1",
+                        },
+                        Object {
+                          "title": "2.2",
+                        },
+                        Object {
+                          "title": "2.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "2.0",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "3.1",
+                        },
+                        Object {
+                          "title": "3.2",
+                        },
+                        Object {
+                          "title": "3.3",
+                        },
+                      ],
+                      "expanded": true,
+                      "title": "3.0",
+                    },
+                  ]
+                }
+                treeNodeRenderer={null}
+                visible={true}
+              >
+                <div
+                  className="rst__tree ui-treeview sc-htpNat hLFtek"
+                  style={
+                    Object {
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <AutoSizer
+                    disableHeight={false}
+                    disableWidth={false}
+                    onResize={[Function]}
+                    style={Object {}}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "visible",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <Scrolling(List)
+                        className="rst__virtualScrollOverride"
+                        estimatedRowSize={45}
+                        height={0}
+                        horizontalStrength={[Function]}
+                        onScroll={[Function]}
+                        onScrollChange={[Function]}
+                        rowCount={12}
+                        rowHeight={45}
+                        rowRenderer={[Function]}
+                        scrollToAlignment="start"
+                        speed={30}
+                        strengthMultiplier={30}
+                        style={Object {}}
+                        verticalStrength={[Function]}
+                        width={0}
+                      >
+                        <List
+                          autoHeight={false}
+                          className="rst__virtualScrollOverride"
+                          estimatedRowSize={45}
+                          height={0}
+                          noRowsRenderer={[Function]}
+                          onRowsRendered={[Function]}
+                          onScroll={[Function]}
+                          overscanIndicesGetter={[Function]}
+                          overscanRowCount={10}
+                          rowCount={12}
+                          rowHeight={45}
+                          rowRenderer={[Function]}
+                          scrollToAlignment="start"
+                          scrollToIndex={-1}
+                          speed={30}
+                          style={Object {}}
+                          width={0}
+                        >
+                          <Grid
+                            aria-label="grid"
+                            aria-readonly={true}
+                            autoContainerWidth={true}
+                            autoHeight={false}
+                            autoWidth={false}
+                            cellRangeRenderer={[Function]}
+                            cellRenderer={[Function]}
+                            className="ReactVirtualized__List rst__virtualScrollOverride"
+                            columnCount={1}
+                            columnWidth={0}
+                            containerRole="rowgroup"
+                            containerStyle={Object {}}
+                            estimatedColumnSize={100}
+                            estimatedRowSize={45}
+                            getScrollbarSize={[Function]}
+                            height={0}
+                            noContentRenderer={[Function]}
+                            noRowsRenderer={[Function]}
+                            onRowsRendered={[Function]}
+                            onScroll={[Function]}
+                            onScrollbarPresenceChange={[Function]}
+                            onSectionRendered={[Function]}
+                            overscanColumnCount={0}
+                            overscanIndicesGetter={[Function]}
+                            overscanRowCount={10}
+                            role="grid"
+                            rowCount={12}
+                            rowHeight={45}
+                            rowRenderer={[Function]}
+                            scrollToAlignment="start"
+                            scrollToColumn={-1}
+                            scrollToIndex={-1}
+                            scrollToRow={-1}
+                            scrollingResetTimeInterval={150}
+                            speed={30}
+                            style={Object {}}
+                            tabIndex={0}
+                            width={0}
+                          >
+                            <div
+                              aria-label="grid"
+                              aria-readonly={true}
+                              className="ReactVirtualized__Grid ReactVirtualized__List rst__virtualScrollOverride"
+                              onScroll={[Function]}
+                              role="grid"
+                              style={
+                                Object {
+                                  "WebkitOverflowScrolling": "touch",
+                                  "boxSizing": "border-box",
+                                  "direction": "ltr",
+                                  "height": 0,
+                                  "overflowX": "hidden",
+                                  "overflowY": "auto",
+                                  "position": "relative",
+                                  "width": 0,
+                                  "willChange": "transform",
+                                }
+                              }
+                              tabIndex={0}
+                            />
+                          </Grid>
+                        </List>
+                      </Scrolling(List)>
+                    </div>
+                  </AutoSizer>
+                </div>
+              </ReactSortableTree>
+            </DragDropContext(ReactSortableTree)>
+          </Styled(DragDropContext(ReactSortableTree))>
+        </div>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Treeview>
+`;
+
+exports[`Test retrieval of Treeview props object 1`] = `
+Object {
+  "disabled": false,
+  "err": null,
+  "errorMessage": "",
+  "height": "400px",
+  "obj": "Treeview",
+  "onChange": [Function],
+  "sizing": "normal",
+  "testing": false,
+  "treeData": Array [],
+  "visible": true,
+}
+`;
