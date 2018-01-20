@@ -23,7 +23,10 @@
  * prop.  The `children` prop is an array on the parent node of the child nodes.
  * Each of these nodes are also potential parent, etc.
  *
- * #### Examples:
+ * ## Screen:
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/treeview.png" width="40%" />
+ *
+ * ## Examples:
  *
  * ```javascript
  * import {Treeview, TreeviewItem} from 'gadgets';
@@ -57,6 +60,7 @@
  * />
  * ```
  *
+ * ## API
  * #### Events
  * - `onChange(treeData: {TreeviewItem[]}) ([])` - The array of TreeItem nodes
  * used to represent the current state of the tree.
