@@ -137,7 +137,9 @@ export class List extends BaseComponent<ListProps, ListState> {
 		this.setState({
 			selectedItem: item
 		}, () => {
-			this.props.onSelect(item['props'].title);
+			if (item != null && 'props' in item) {
+				this.props.onSelect(item['props'].title);
+			}
 		});
 	}
 
