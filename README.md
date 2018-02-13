@@ -149,6 +149,9 @@ A specialized List control that can be manipulated by the user.  They can add/re
 ### [Editor](docs/lib/editor/Editor.md)
 A multi-line text editor control.  It uses a custom [markup module](https://github.com/jmquigley/quill-markup) under the [Quill](https://quilljs.com/) editor/api.
 
+### Gauge
+TODO: create a circular gauge control
+
 ### [Icon](docs/lib/icon/Icon.md)
 Displays a graphical icon within the current container.
 

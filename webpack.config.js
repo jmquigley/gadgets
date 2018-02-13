@@ -40,6 +40,7 @@ module.exports = {
 		path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.bubble.css'),
 		path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.snow.css'),
 		path.resolve(__dirname, 'node_modules', 'quill-markup', 'public', 'styles.css'),
+		path.resolve(__dirname, 'node_modules', 'react-sortable-tree', 'style.css'),
 		path.resolve(__dirname, 'index.ts')
 	],
 	target: 'node',
