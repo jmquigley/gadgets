@@ -1,9 +1,9 @@
 /**
- * A modal, dialog box popup window for yes/no user decisions.
- * It presents a message, an icon, and two buttons.  One for
- * yes (true) or no (false).  A callback is invoked when the
- * user makes a choice to communicate that choice.  Making a
- * choice closes the window.
+ * A modal, dialog box popup window for yes/no user decisions. It presents a
+ * message, an icon, and two buttons.  One for yes (true) or no (false).
+ * A callback is invoked when the user makes a choice to communicate that
+ * choice.  Making a choice closes the window.  This component uses the
+ * [react-modal](https://github.com/reactjs/react-modal) library.
  *
  * It contains five types of windows:
  *
@@ -176,7 +176,8 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 			bottom: 'auto',
 			marginRight: '-50%',
 			transform: 'translate(-50%, -50%)',
-			padding: '15px'
+			padding: '15px',
+			borderRadius: '0'
 		}
 	};
 

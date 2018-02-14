@@ -51,6 +51,8 @@ export interface ThemeProps {
 	itemHoverColor: string;
 	selectedBackgroundColor: string;
 	selectedForegroundColor: string;
+	titleBarBackgroundColor: string;
+	titleBarForegroundColor: string;
 	tooltipBackgroundColor: string;
 	tooltipForegroundColor: string;
 	transitionDelay: string;

@@ -15,6 +15,8 @@ const theme: ThemeProps = {
 	itemHoverColor: ColorScheme.c3,
 	selectedBackgroundColor: ColorScheme.c1,
 	selectedForegroundColor: Color.white,
+	titleBarBackgroundColor: ColorScheme.c1,
+	titleBarForegroundColor: ColorScheme.c4,
 	tooltipBackgroundColor: Color.gray,
 	tooltipForegroundColor: Color.white,
 	transitionDelay: '0.5s'

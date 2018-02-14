@@ -29,11 +29,13 @@ export default class DemoDilogBox extends React.Component<any, DemoDialogBoxStat
 	@autobind
 	private handleShowDialog() {
 		this.setState({dialogShow: true});
+		debug('Showing DialogWindow');
 	}
 
 	@autobind
 	private handleCloseDialog() {
 		this.setState({dialogShow: false});
+		debug('Closing DialogWindow');
 	}
 
 	public render() {
@@ -47,8 +49,12 @@ export default class DemoDilogBox extends React.Component<any, DemoDialogBoxStat
 							text="Show Dialog Window"
 						/>
 						<DialogWindow
+							height="600px"
+							icon="plane"
 							onClose={this.handleCloseDialog}
 							show={this.state.dialogShow}
+							title="Demo Dialog Window"
+							width="600px"
 						>
 							<span>Dialog Content</span>
 						</DialogWindow>
