@@ -131,6 +131,9 @@ A button control that switches between the given icons when clicked.  The state 
 ### [Container](docs/lib/container/Container.md)
 A generic control used to group other controls.  It creates a section tag around the given child component.
 
+### DataGrid
+TODO: create the data grid control
+
 ### DateChooser
 TODO: create the DateChooser control
 
@@ -169,12 +172,6 @@ A grouping of Option conmponents.
 
 ### [Pager](docs/lib/pager/Pager.md)
 A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.
-
-### Popout
-TODO: create the PopOut control
-
-### PopupMenu
-TODO: create the popup Menu control
 
 ### ProgressBar
 TODO: create the ProgressBar control

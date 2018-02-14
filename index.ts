@@ -19,6 +19,7 @@ import {ButtonText} from './lib/buttonText';
 import {ButtonToggle} from './lib/buttonToggle';
 import {Container} from './lib/container';
 import {DialogBox, DialogBoxType} from './lib/dialogBox';
+import {DialogWindow} from './lib/dialogWindow';
 import {Divider, DividerType} from './lib/divider';
 import {Dropdown, DropdownOption} from './lib/dropdown';
 import {DynamicList, DynamicListItem} from './lib/dynamicList';
@@ -97,6 +98,7 @@ export {
 	css,
 	DialogBox,
 	DialogBoxType,
+	DialogWindow,
 	Direction,
 	Divider,
 	DividerType,

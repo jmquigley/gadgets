@@ -20,7 +20,7 @@ const banner = new webpack.BannerPlugin({
 		'Gadgets v' + pkg.version + '\n' +
 		'Mode: ' + getMode() + '\n' +
 		'https://www.npmjs.com/package/gadgets\n' +
-		'Copyright (c) 2017, James Quigley\n',
+		'Copyright (c) 2018, James Quigley\n',
 	entryOnly: true
 });
 

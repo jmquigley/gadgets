@@ -1,6 +1,5 @@
 'use strict';
 
-import * as assert from 'assert';
 import {shallow} from 'enzyme';
 import * as React from 'react';
 import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from '../index';
@@ -8,14 +7,14 @@ import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from '../index';
 test('Test retrieval of DialogBox props object', () => {
 	const props = getDefaultDialogBoxProps();
 
-	assert(props);
+	expect(props).toBeTruthy();
 	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a default DialogBox control', () => {
 	const ctl = shallow(<DialogBox className="test-class" />);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -28,7 +27,7 @@ test('Test the creation of an error DialogBox', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -41,7 +40,7 @@ test('Test the creation of an warning DialogBox', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -54,7 +53,7 @@ test('Test the creation of an success DialogBox', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -67,7 +66,7 @@ test('Test the creation of an info DialogBox', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -84,7 +83,7 @@ test('Test the creation of an custom DialogBox', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -98,7 +97,7 @@ test('Test pressing the "yes" button on the default DialogBox', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
-	assert(ctl.state('showModal'));
+	expect(ctl.state('showModal')).toBe(true);
 });

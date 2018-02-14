@@ -8,6 +8,7 @@ import DemoBreadcrumbs from './src/DemoBreadcrumbs';
 import DemoBrowser from './src/DemoBrowser';
 import DemoButtons from './src/DemoButtons';
 import DemoDialogBox from './src/DemoDialogBox';
+import DemoDialogWindow from './src/DemoDialogWindow';
 import DemoDropdown from './src/DemoDropdown';
 import DemoDynamicList from './src/DemoDynamicList';
 import DemoEditor from './src/DemoEditor';
@@ -116,6 +117,7 @@ class App extends React.Component<any, AppState> {
 				<DemoBrowser />
 				<DemoButtons sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoDialogBox sizing={this.state.sizing} disabled={this.state.disabled} />
+				<DemoDialogWindow sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoDropdown sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoDynamicList disabled={this.state.disabled} />
 				<DemoEditor disabled={this.state.disabled} />
