@@ -127,13 +127,13 @@ module.exports = {
 			failOnError: true
 		}),
 		new MiniCssExtractPlugin({filename: "styles.css"}),
-		//new webpack.optimize.ModuleConcatenationPlugin(),
+		new webpack.optimize.ModuleConcatenationPlugin(),
 		new CopyWebpackPlugin([{
 			from: 'node_modules/quill-markup/public/highlights/**/*.css',
 			to: 'highlights',
 			flatten: true
 		}]),
-		//MinifyPlugin ? new MinifyPlugin() : new NullPlugin()
+		MinifyPlugin ? new MinifyPlugin() : new NullPlugin()
 		// new BundleAnalyzerPlugin(),
 	]
 };
