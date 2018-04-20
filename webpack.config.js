@@ -1,24 +1,25 @@
-const {getMode, isProduction} = require('util.env');
 const {leader} = require('util.leader');
 
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const NullPlugin = require('webpack-null-plugin');
 const path = require('path');
 const webpack = require('webpack');
 const pkg = require('./package.json');
 
+let mode = process.env.NODE_ENV || 'development';
+
 let MinifyPlugin = null;
-if (isProduction()) {
+if (mode === 'production') {
 	MinifyPlugin = require("babel-minify-webpack-plugin");
 }
 
 const banner = new webpack.BannerPlugin({
 	banner:
 		'Gadgets v' + pkg.version + '\n' +
-		'Mode: ' + getMode() + '\n' +
+		`Mode: ${mode}\n` +
 		'https://www.npmjs.com/package/gadgets\n' +
 		'Copyright (c) 2018, James Quigley\n',
 	entryOnly: true
@@ -28,10 +29,15 @@ leader(banner.banner);
 
 const constants = new webpack.DefinePlugin({
 	GADGETS_VERSION: JSON.stringify(pkg.version),
-	NODE_ENV: process.env.NODE_ENV
+	NODE_ENV: mode
 });
 
 module.exports = {
+	mode: `${mode}`,
+	performance: {hints: false},
+	optimization: {
+		minimize: false
+	},
 	entry: [
 		path.resolve(__dirname, 'node_modules', 'font-awesome', 'css', 'font-awesome.min.css'),
 		path.resolve(__dirname, 'node_modules', 'css-ripple-effect', 'dist', 'ripple.min.css'),
@@ -79,9 +85,9 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: [{
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
 						loader: "css-loader",
 						options: {
 							importLoaders: 1,
@@ -89,8 +95,7 @@ module.exports = {
 						}
 					},
 					'postcss-loader'
-					]}
-				)
+				]
 			},
 			{
 				test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
@@ -121,14 +126,14 @@ module.exports = {
 			exclude: /node_modules/,
 			failOnError: true
 		}),
-		new ExtractTextPlugin({filename: "styles.css"}),
-		new webpack.optimize.ModuleConcatenationPlugin(),
+		new MiniCssExtractPlugin({filename: "styles.css"}),
+		//new webpack.optimize.ModuleConcatenationPlugin(),
 		new CopyWebpackPlugin([{
 			from: 'node_modules/quill-markup/public/highlights/**/*.css',
 			to: 'highlights',
 			flatten: true
 		}]),
-		MinifyPlugin ? new MinifyPlugin() : new NullPlugin()
+		//MinifyPlugin ? new MinifyPlugin() : new NullPlugin()
 		// new BundleAnalyzerPlugin(),
 	]
 };

@@ -78,12 +78,12 @@ export function getDefaultSelectProps(): SelectProps {
 	);
 }
 
-export class Select extends BaseComponent<any, any> {
+export class Select extends BaseComponent<any, undefined> {
 
 	public static defaultProps: SelectProps = getDefaultSelectProps();
 
 	constructor(props: any) {
-		super(props, Select.defaultProps.style);
+		super(props, Select.defaultProps.style as any);
 		this._classes.add('ui-select');
 		this.componentWillUpdate(this.props);
 	}

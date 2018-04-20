@@ -156,7 +156,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 						break;
 
 					case 'Switch':
-						style['padding-top'] = '0.1em';
+						style['paddingTop'] = '0.1em';
 						style['margin'] = '0 6px';
 						break;
 

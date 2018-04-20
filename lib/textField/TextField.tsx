@@ -112,7 +112,6 @@ import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {sp} from 'util.constants';
-import {isTesting} from 'util.env';
 import {nilEvent} from 'util.toolbox';
 import {ButtonCircle} from '../buttonCircle';
 import {
@@ -173,7 +172,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		onValidation: nilEvent,
 		sizing: Sizing.normal,
 		style: {},
-		testing: isTesting(),
+		testing: process.env.NODE_ENV === 'test',
 		tooltip: '',
 		type: 'text',
 		useclear: false,

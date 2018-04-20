@@ -2,7 +2,7 @@ const debug = require('debug')('gadgets');
 
 import 'util.string';
 
-process.env['NODE_ENV'] = process.env['NODE_ENV'] || 'production';
+// process.env['NODE_ENV'] = process.env['NODE_ENV'] || 'production';
 
 debug('env: %O', process.env);
 debug('exe: %s', process.env['NODE_ENV']);

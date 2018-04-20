@@ -70,7 +70,6 @@
 'use strict';
 
 import {cloneDeep} from 'lodash';
-import {isTesting} from 'util.env';
 import {Sizing} from './sizing';
 import {css} from './themed-components';
 import {ThemeProps} from './themes';
@@ -189,7 +188,7 @@ const defaultBaseProps: BaseProps = {
 	selected: false,
 	sizing: Sizing.normal,
 	style: {},
-	testing: isTesting(),
+	testing: process.env.NODE_ENV === 'test',
 	theme: null,
 	tooltip: '',
 	top: '',
