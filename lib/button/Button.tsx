@@ -34,6 +34,8 @@
 
 'use strict';
 
+// const debug = require('debug')('Button');
+
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -42,10 +44,11 @@ import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	disabled,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
-	Sizing,
 	Wrapper
 } from '../shared';
 import {tooltip} from '../shared/helpers';
@@ -63,8 +66,7 @@ export function getDefaultButtonProps(): ButtonProps {
 			iconName: 'bomb',
 			iconStyle: '',
 			onClick: nilEvent,
-			obj: 'Button',
-			sizing: Sizing.normal
+			obj: 'Button'
 		})
 	);
 }
@@ -97,15 +99,13 @@ export const ButtonView: any = withProps<ButtonProps, HTMLDivElement>(styled.div
 	${props => invisible(props)}
 `;
 
-export class Button extends BaseComponent<ButtonProps, undefined> {
+export class Button extends BaseComponent<ButtonProps, BaseState> {
 
 	public static readonly defaultProps: ButtonProps = getDefaultButtonProps();
+	public state: BaseState = getDefaultBaseState();
 
 	constructor(props: ButtonProps) {
 		super(props, Button.defaultProps.style);
-
-		this._classes.add('ui-button');
-		this.componentWillUpdate(this.props);
 	}
 
 	@autobind
@@ -118,21 +118,24 @@ export class Button extends BaseComponent<ButtonProps, undefined> {
 		e.stopPropagation();
 	}
 
-	public componentWillUpdate(nextProps: ButtonProps) {
-		this._classes.onIfElse(!nextProps.noripple && !nextProps.disabled)(
+	public static getDerivedStateFromProps(props: ButtonProps, state: BaseState) {
+		state.classes.clear();
+		state.classes.add('ui-button');
+		state.classes.onIf(props.className != null)(props.className);
+		state.classes.onIfElse(!props.noripple && !props.disabled)(
 			'ripple'
 		)(
 			'nohover'
 		);
 
-		super.componentWillUpdate(nextProps);
+		return state;
 	}
 
 	public render() {
 		return (
 			<Wrapper {...this.props} >
 				<ButtonView
-					className={this.classes}
+					className={this.state.classes.classnames}
 					disabled={this.props.disabled}
 					id={this.id}
 					onClick={this.handleClick}

@@ -137,6 +137,8 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		return this._theme;
 	}
 
+	// protected abstract buildClasses(): string;
+
 	protected font(sizing: Sizing = this.sizing): FontStyle {
 		return this.sizes[sizing].font;
 	}

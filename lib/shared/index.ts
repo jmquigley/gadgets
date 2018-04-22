@@ -40,6 +40,11 @@ import {
 } from './sizing';
 
 import {
+	BaseState,
+	getDefaultBaseState
+} from './state';
+
+import {
 	getTheme,
 	getThemeList,
 	setTheme,
@@ -50,6 +55,7 @@ import {
 export {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	baseZIndex,
 	borderStyle,
 	boxStyle,
@@ -62,6 +68,7 @@ export {
 	fontStyle,
 	FontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	getDefaultWrapperProps,
 	getTheme,
 	getThemeList,
