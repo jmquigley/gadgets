@@ -54,10 +54,12 @@ import * as React from 'react';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	boxStyle,
 	disabled,
 	fontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	locationStyle,
 	Sizing,
@@ -96,30 +98,25 @@ export const Image: any = withProps<IconProps, HTMLImageElement>(styled.img)`
 	${props => invisible(props)}
 `;
 
-export class Icon extends BaseComponent<IconProps, undefined> {
+export class Icon extends BaseComponent<IconProps, BaseState> {
 
 	public static readonly defaultProps: IconProps = getDefaultIconProps();
+	public state: BaseState = getDefaultBaseState();
 
 	constructor(props: IconProps) {
 		super(props);
+	}
 
-		this._classes.add([
+	public static getDerivedStateFromProps(props: IconProps, state: BaseState) {
+		state.classes.clear();
+		state.classes.add([
 			'ui-icon',
 			(props.imageFile === '') && 'fa',
 			(props.imageFile === '') && 'fa-fw',
 			(props.imageFile === '') && `fa-${props.iconName}`
 		]);
 
-		this.componentWillUpdate(props);
-	}
-
-	public componentWillUpdate(nextProps: IconProps) {
-		if (this.props.imageFile === '' && this.props.iconName !== nextProps.iconName) {
-			this._classes.off(`fa-${this.props.iconName}`);
-			this._classes.on(`fa-${nextProps.iconName}`);
-		}
-
-		super.componentWillUpdate(nextProps);
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -129,17 +126,19 @@ export class Icon extends BaseComponent<IconProps, undefined> {
 			icon = (
 				<Image
 					{...this.props}
-					className={this.classes}
+					className={this.state.classes.classnames}
+					sizing={this.state.sizing}
 					src={this.props.imageFile}
-					style={this.inlineStyles}
+					style={this.state.style}
 				/>
 			);
 		} else {
 			icon = (
 				<FontAwesome
 					{...this.props}
-					className={this.classes}
-					style={this.inlineStyles}
+					className={this.state.classes.classnames}
+					sizing={this.state.sizing}
+					style={this.state.style}
 				/>
 			);
 		}

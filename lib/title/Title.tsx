@@ -73,9 +73,11 @@ import {Label} from '../label';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	disabled,
 	fontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from '../shared';
@@ -108,6 +110,8 @@ export function getDefaultTitleProps(): TitleProps {
 		})
 	);
 }
+
+export type TitleState = BaseState;
 
 export const TitleView: any = withProps<TitleProps, HTMLDivElement>(styled.div)`
 	box-sizing: border-box;
@@ -187,22 +191,21 @@ const StyledWidget: any = withProps<TitleProps, HTMLDivElement>(styled.div)`
 
 export const StyledLabel: any = StyledWidget.withComponent(Label);
 
-export class Title extends BaseComponent<TitleProps, undefined> {
+export class Title extends BaseComponent<TitleProps, TitleState> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
+	public state: TitleState = getDefaultBaseState();
 
 	constructor(props: TitleProps) {
 		super(props);
-		this._classes.add('ui-title-bar');
-		this.componentWillUpdate(this.props);
 	}
 
-	public componentWillUpdate(nextProps: TitleProps) {
-		this._classes.onIf(!nextProps.noripple && !nextProps.disabled)(
-			'ripple'
-		);
+	public static getDerivedStateFromProps(props: TitleProps, state: TitleState) {
+		state.classes.clear();
+		state.classes.add('ui-title-bar');
+		state.classes.onIf(!props.noripple && !props.disabled)('ripple');
 
-		super.componentWillUpdate(nextProps);
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -272,10 +275,10 @@ export class Title extends BaseComponent<TitleProps, undefined> {
 		return (
 			<Wrapper {...this.props} >
 				<TitleView
-					className={this.classes}
+					className={this.state.classes.classnames}
 					disabled={this.props.disabled}
 					layout={this.props.layout}
-					style={this.inlineStyles}
+					style={this.state.style}
 					visible={this.props.visible}
 				>
 					{title}

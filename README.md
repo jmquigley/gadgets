@@ -12,9 +12,9 @@ This library provides widgets and composite controls for building desktop apps u
 
 ## Requirements
 
-- [Electron](https://electron.atom.io/) v1.7+
+- [Electron](https://electron.atom.io/) v1.8+
 - [Node](https://nodejs.org/en/) v7.8+
-- [React](https://facebook.github.io/react/) v16.1.1+
+- [React](https://facebook.github.io/react/) v16.3+
 
 ## Installation
 

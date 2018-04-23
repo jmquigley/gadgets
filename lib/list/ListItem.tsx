@@ -11,7 +11,13 @@ import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
-import {getDefaultItemProps, Item, ItemProps} from '../item';
+import {
+	getDefaultItemProps,
+	getDefaultItemState,
+	Item,
+	ItemProps,
+	ItemState
+} from '../item';
 import {BaseComponent, Sizing, Wrapper} from '../shared';
 
 export interface ListItemProps extends ItemProps {
@@ -38,27 +44,28 @@ export function getDefaultListItemProps(): ListItemProps {
 	);
 }
 
-export interface ListItemState {
+export interface ListItemState extends ItemState {
 	toggleRipple: boolean;  // use this to turn ripple on/off during editing
+}
+
+export function getDefaultListItemState(): ListItemState {
+	return cloneDeep(Object.assign({},
+		getDefaultItemState(), {
+			toggleRipple: false
+		}));
 }
 
 export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
+	public state: ListItemState = getDefaultListItemState();
+
 	private _delay = 250;  // double click delay
 	private _preventClick: boolean = false;
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
 		super(props, ListItem.defaultProps.style);
-
-		this._classes.add('ui-listitem');
-
-		this.state = {
-			toggleRipple: false
-		};
-
-		this.componentWillUpdate(props);
 	}
 
 	get preventClick(): boolean {
@@ -127,12 +134,19 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		this.props.onKeyPress(e);
 	}
 
+	public static getDerivedStateFromProps(props: ListItemProps, state: ListItemState) {
+		state.classes.clear();
+		state.classes.add('ui-listitem');
+
+		return super.getDerivedStateFromProps(props, state);
+	}
+
 	public render() {
 		return (
 			<Wrapper {...this.props} >
 				<Item
 					{...this.props}
-					className={this.classes}
+					className={this.state.classes.classnames}
 					noripple={this.state.toggleRipple || this.props.noripple}
 					onBlur={this.handleBlur}
 					onClick={this.handleClick}
@@ -140,7 +154,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
 					sizing={this.props.href.sizing}
-					style={this.inlineStyles}
+					style={this.state.style}
 				/>
 			</Wrapper>
 		);

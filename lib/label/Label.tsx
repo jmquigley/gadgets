@@ -57,9 +57,11 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	disabled,
 	fontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from '../shared';
@@ -96,10 +98,19 @@ export function getDefaultLabelProps(): LabelProps {
 	);
 }
 
-export interface LabelState {
+export interface LabelState extends BaseState {
 	editable: boolean;
 	previousText: string;
 	text: string;
+}
+
+export function getDefaultLabelState(): LabelState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			editable: false,
+			previousText: '',
+			text: ''
+		}));
 }
 
 export const LabelView: any = withProps<LabelProps, HTMLSpanElement>(styled.span)`
@@ -113,21 +124,12 @@ export const LabelView: any = withProps<LabelProps, HTMLSpanElement>(styled.span
 export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	public static readonly defaultProps: LabelProps = getDefaultLabelProps();
+	public state: LabelState = getDefaultLabelState();
 
 	private _label: any = null;
 
 	constructor(props: LabelProps) {
 		super(props, Label.defaultProps.style);
-
-		this._classes.add('ui-label');
-
-		this.state = {
-			editable: this.props.useedit,
-			previousText: this.props.text,
-			text: this.props.text
-		};
-
-		this.componentWillUpdate(this.props);
 	}
 
 	get label() {
@@ -221,20 +223,22 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.componentDidMount();
 	}
 
-	public componentWillReceiveProps(nextProps: LabelProps) {
-		if (this.props.text !== nextProps.text) {
-			this.setState({
-				editable: nextProps.useedit,
-				text: nextProps.text
-			});
-		}
+	public static getDerivedStateFromProps(props: LabelProps, state: LabelState) {
+		state.classes.clear();
+		state.classes.add('ui-label');
+
+		state.editable = props.useedit;
+		state.previousText = props.text;
+		state.text = props.text;
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
 		return (
 			<Wrapper {...this.props} >
 				<LabelView
-					className={this.classes}
+					className={this.state.classes.classnames}
 					contentEditable={this.state.editable}
 					disabled={this.props.disabled}
 					innerRef={this.handleRef}
@@ -243,8 +247,8 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 					onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
-					sizing={this.props.sizing}
-					style={this.inlineStyles}
+					sizing={this.state.sizing}
+					style={this.state.style}
 					suppressContentEditableWarning
 					visible={this.props.visible}
 				>

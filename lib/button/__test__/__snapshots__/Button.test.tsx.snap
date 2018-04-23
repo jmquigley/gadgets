@@ -96,6 +96,7 @@ exports[`Test Button click event 1`] = `
         disabled={false}
         id="Button-0"
         onClick={[Function]}
+        sizing="normal"
         style={Object {}}
         visible={true}
       >
@@ -285,10 +286,11 @@ exports[`Test creation of a Button control 1`] = `
   xcss={null}
 >
   <styled.div
-    className="ui-button test-class ripple"
+    className="ui-button ripple test-class"
     disabled={false}
     id="Button-0"
     onClick={[Function]}
+    sizing="normal"
     style={Object {}}
     visible={true}
   >
@@ -376,6 +378,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
     disabled={false}
     id="Button-0"
     onClick={[Function]}
+    sizing="normal"
     style={
       Object {
         "backgroundColor": "black",
@@ -518,6 +521,7 @@ exports[`Test disabling of a Button 1`] = `
         disabled={true}
         id="Button-0"
         onClick={[Function]}
+        sizing="normal"
         style={Object {}}
         visible={true}
       >
@@ -766,6 +770,7 @@ exports[`Test making a Button invisible 1`] = `
         disabled={false}
         id="Button-0"
         onClick={[Function]}
+        sizing="normal"
         style={Object {}}
         visible={false}
       >

@@ -11,8 +11,10 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	fontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Sizing,
 	Wrapper
 } from '../shared';
@@ -65,6 +67,21 @@ export function getDefaultItemProps(): ItemProps {
 		}));
 }
 
+export interface ItemState extends BaseState {
+	leftButton?: any;
+	rightButton?: any;
+	titlePadding?: string;
+}
+
+export function getDefaultItemState(): ItemState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			leftButton: null,
+			rightButton: null,
+			titlePadding: ''
+		}));
+}
+
 export const HiddenButton: any = css`
 	display: none;
 	opacity: 0;
@@ -108,97 +125,89 @@ export const ItemViewButton: any = withProps<ItemProps, HTMLDivElement>(styled.d
 	}
 `;
 
-export class Item extends BaseComponent<ItemProps, undefined> {
+export class Item extends BaseComponent<ItemProps, ItemState> {
 
 	public static defaultProps: ItemProps = getDefaultItemProps();
-
-	private _leftButton: any = null;
-	private _rightButton: any = null;
-	private _titlePadding: string = '';
+	public state: ItemState = getDefaultItemState();
 
 	constructor(props: ItemProps) {
 		super(props);
-		this._classes.add('ui-item');
-		this.componentWillUpdate(this.props);
-		this.componentWillReceiveProps(this.props);
 	}
 
-	public componentWillUpdate(nextProps: ItemProps) {
-		this._classes.onIf(nextProps.selected)(
-			'ui-selected'
-		);
-
-		super.componentWillUpdate(nextProps);
-	}
-
-	public componentWillReceiveProps(nextProps: ItemProps) {
+	public static getDerivedStateFromProps(props: ItemProps, state: ItemState) {
 		let width: string;
 
-		switch (nextProps.sizing) {
+		state.classes.clear();
+		state.classes.add('ui-item');
+		state.classes.onIf(props.selected)('ui-selected');
+
+		switch (props.sizing) {
 			case Sizing.xxsmall:
-				this._titlePadding = '1px 2px';
+				state.titlePadding = '1px 2px';
 				width = '1.0em';
 				break;
 
 			case Sizing.xsmall:
-				this._titlePadding = '1px 2px';
+				state.titlePadding = '1px 2px';
 				width = '1.25em';
 				break;
 
 			case Sizing.small:
-				this._titlePadding = '2px 4px';
+				state.titlePadding = '2px 4px';
 				width = '2.0em';
 				break;
 
 			case Sizing.normal:
 			default:
-				this._titlePadding = '2px 4px';
+				state.titlePadding = '2px 4px';
 				width = '2.25em';
 				break;
 
 			case Sizing.large:
-				this._titlePadding = '4px 8px';
+				state.titlePadding = '4px 8px';
 				width = '3.0em';
 				break;
 
 			case Sizing.xlarge:
-				this._titlePadding = '4px 8px';
+				state.titlePadding = '4px 8px';
 				width = '3.5em';
 				break;
 
 			case Sizing.xxlarge:
-				this._titlePadding = '4px 8px';
+				state.titlePadding = '4px 8px';
 				width = '4.5em';
 				break;
 		}
 
-		if (nextProps.leftButton != null && !nextProps.disabled) {
-			this._leftButton = (
+		if (props.leftButton != null && !props.disabled) {
+			state.leftButton = (
 				<ItemViewButton
 					className="ui-item-button"
-					hiddenLeftButton={nextProps.hiddenLeftButton}
+					hiddenLeftButton={props.hiddenLeftButton}
 					width={width}
 				>
-					{React.cloneElement(nextProps.leftButton, {
-						sizing: nextProps.sizing
+					{React.cloneElement(props.leftButton, {
+						sizing: props.sizing
 					})}
 				</ItemViewButton>
 			);
 		}
 
-		if (nextProps.rightButton != null && !nextProps.disabled) {
-			this._rightButton = (
+		if (props.rightButton != null && !props.disabled) {
+			state.rightButton = (
 				<ItemViewButton
 					className="ui-item-button"
-					hiddenRightButton={nextProps.hiddenRightButton}
+					hiddenRightButton={props.hiddenRightButton}
 					width={width}
 				>
-					{React.cloneElement(nextProps.rightButton, {
-						sizing: nextProps.sizing
+					{React.cloneElement(props.rightButton, {
+						sizing: props.sizing
 					})}
 				</ItemViewButton>
 			);
 		}
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -206,7 +215,7 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 			<Wrapper {...this.props} >
 				<ItemView
 					id={this.props.id}
-					className={this.classes}
+					className={this.state.classes.classnames}
 					nohover={this.props.nohover}
 					onBlur={this.props.onBlur}
 					onDoubleClick={this.props.onDoubleClick}
@@ -214,15 +223,16 @@ export class Item extends BaseComponent<ItemProps, undefined> {
 					onKeyPress={this.props.onKeyPress}
 					onMouseOut={this.props.onMouseOut}
 					selected={this.props.selected}
-					style={this.inlineStyles}
+					sizing={this.state.sizing}
+					style={this.state.style}
 				>
-					{this._leftButton}
+					{this.state.leftButton}
 					<Title
 						{...this.props}
 						layout={this.props.stacked ? TitleLayout.stacked : this.props.layout}
-						style={{padding: this._titlePadding}}
+						style={{padding: this.state.titlePadding}}
 					/>
-					{this._rightButton}
+					{this.state.rightButton}
 				</ItemView>
 			</Wrapper>
 		);

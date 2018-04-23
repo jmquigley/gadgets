@@ -65,8 +65,10 @@ import {nilEvent} from 'util.toolbox';
 import {getDefaultItemProps, Item, ItemProps} from '../item';
 import {
 	BaseComponent,
+	BaseState,
 	Color,
 	fontStyle,
+	getDefaultBaseState,
 	Wrapper
 } from '../shared';
 import styled, {withProps} from '../shared/themed-components';
@@ -92,8 +94,15 @@ export function getDefaultAccordionItemProps(): AccordionItemProps {
 	);
 }
 
-export interface AccordionItemState {
+export interface AccordionItemState extends BaseState {
 	toggle: boolean;
+}
+
+export function getDefaultAccordionItemState(): AccordionItemState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			toggle: false
+		}));
 }
 
 export const AccordionItemView: any = withProps<AccordionItemProps, HTMLUListElement>(styled.ul)`
@@ -115,17 +124,10 @@ export const AccordionContentView: any = withProps<AccordionItemProps, HTMLDivEl
 export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionItemState> {
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
+	public state: AccordionItemState = getDefaultAccordionItemState();
 
 	constructor(props: AccordionItemProps) {
 		super(props);
-
-		this._classes.add('ui-accordionitem');
-
-		this.state = {
-			toggle: (props.nocollapse) ? true : props.initialToggle
-		};
-
-		this.componentWillUpdate(this.props, this.state);
 	}
 
 	@autobind
@@ -139,10 +141,13 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 	}
 
-	public componentWillReceiveProps(nextProps: AccordionItemProps) {
-		if (nextProps.initialToggle !== this.state.toggle) {
-			this.setState({toggle: nextProps.initialToggle});
-		}
+	public static getDerivedStateFromProps(props: AccordionItemProps, state: AccordionItemState) {
+		state.classes.clear();
+		state.classes.add('ui-accordionitem');
+
+		state.toggle = (props.nocollapse) ? true : props.initialToggle;
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -152,7 +157,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 			content = (
 				<AccordionContentView
 					className="ui-accordion-content"
-					sizing={this.props.sizing}
+					sizing={this.state.sizing}
 				>
 					{this.props.children}
 				</AccordionContentView>
@@ -162,8 +167,8 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		return (
 			<Wrapper {...this.props} >
 				<AccordionItemView
-					className={this.classes}
-					style={this.inlineStyles}
+					className={this.state.classes.classnames}
+					style={this.state.style}
 				>
 					<Item
 						{...this.props}

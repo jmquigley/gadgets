@@ -96,6 +96,11 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		}
 
 		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props.style);
+
+		if (this.state) {
+			this.state['style'] = this.inlineStyles;
+		}
+
 	}
 
 	get classes(): string {
@@ -136,8 +141,6 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	get theme(): ThemeProps {
 		return this._theme;
 	}
-
-	// protected abstract buildClasses(): string;
 
 	protected font(sizing: Sizing = this.sizing): FontStyle {
 		return this.sizes[sizing].font;
@@ -287,5 +290,32 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		if (!isEmpty(nextProps.style)) {
 			this.inlineStyles = nextProps.style;
 		}
+	}
+
+	/**
+	 * Each component has a getDerivedStateFromProps call.  This method is used
+	 * by that call to set state properties that are common to all components.
+	 * @param props {P} the set of props that will be updated
+	 * @param state {S} the current state object when called
+	 * @return {S} a new, mutated state that will be merged into the current state
+	 */
+	public static getDerivedStateFromProps(props: any, state: any): any {
+		if (state && props) {
+
+			if ('classes' in state) {
+				state.classes.onIf(props.className != null)(props.className);
+			}
+
+			if ('sizing' in state && state.sizing !== props.sizing) {
+				state.sizing = props.sizing;
+			}
+
+			if ('style' in state) {
+				state.style = Object.assign({}, state.style, props.style);
+			}
+
+		}
+
+		return state;
 	}
 }

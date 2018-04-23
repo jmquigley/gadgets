@@ -67,7 +67,9 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Wrapper
 } from '../shared';
 import styled from '../shared/themed-components';
@@ -92,8 +94,17 @@ export function getDefaultListProps(): ListProps {
 	);
 }
 
-export interface ListState {
+export interface ListState extends BaseState {
+	keys: Keys;
 	selectedItem: ListItem;
+}
+
+export function getDefaultListState(): ListState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			keys: null,
+			selectedItem: null
+		}));
 }
 
 export const ListView: any = styled.ul`
@@ -107,24 +118,12 @@ export const ListView: any = styled.ul`
 
 export class List extends BaseComponent<ListProps, ListState> {
 
-	private _children: any;
-	private _keys: Keys;
-
 	public static defaultProps: ListProps = getDefaultListProps();
+	public state: ListState = getDefaultListState();
 
 	constructor(props: ListProps) {
 		super(props, List.defaultProps.style);
-
-		this._keys = new Keys({testing: this.props.testing});
-		this._classes.add('ui-list');
-		this._children = this.props.children;
-
-		this.state = {
-			selectedItem: null
-		};
-
-		this.componentWillReceiveProps(this.props);
-		this.componentWillUpdate(this.props);
+		this.state.keys = new Keys({testing: this.props.testing});
 	}
 
 	@autobind
@@ -143,38 +142,47 @@ export class List extends BaseComponent<ListProps, ListState> {
 		});
 	}
 
-	public componentWillReceiveProps(nextProps: ListProps) {
-		if (nextProps.children) {
-			this._children = React.Children.map(nextProps.children, (child: any, idx: number) => (
+	public static getDerivedStateFromProps(props: ListProps, state: ListState) {
+		state.classes.clear();
+		state.classes.add('ui-list');
+
+		if (props.children) {
+			state.children = React.Children.map(props.children, (child: any, idx: number) => (
 				React.cloneElement(child, {
 					// only generate an id/key if one is not given with the props
-					id: child['props']['id'] || this._keys.at(idx),
-					key: child['key'] || this._keys.at(idx),
-					sizing: nextProps.sizing
+					id: child['props']['id'] || state.keys.at(idx),
+					key: child['key'] || state.keys.at(idx),
+					sizing: props.sizing
 				})
 			));
 		}
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
+		let children: any = null;
 		const selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
-		const children: any = this._children.map((child: any) => {
-			const selected = child['props'].id === selectedKey;
-			return React.cloneElement(child as any, {
-				selected: !this.props.noselect && selected,
-				href: {
-					selectHandler: this.selectHandler,
-					sizing: this.props.sizing
-				}
+
+		if (this.props.children) {
+			children = React.Children.map(this.state.children, (child: any) => {
+				const selected = child['props'].id === selectedKey;
+				return React.cloneElement(child as any, {
+					href: {
+						selectHandler: this.selectHandler,
+						sizing: this.props.sizing
+					},
+					selected: !this.props.noselect && selected
+				});
 			});
-		});
+		}
 
 		return (
 			<Wrapper {...this.props} >
 				<ListView
 					alternating={this.props.alternating}
-					className={this.classes}
-					style={this.inlineStyles}
+					className={this.state.classes.classnames}
+					style={this.state.style}
 				>
 					{children}
 				</ListView>
