@@ -35,8 +35,10 @@ import * as React from 'react';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	fontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Wrapper
 } from '../shared';
 import styled, {withProps} from '../shared/themed-components';
@@ -56,6 +58,9 @@ export function getDefaultContainerProps(): ContainerProps {
 	);
 }
 
+export type ContainerState = BaseState;
+export const getDefaultContainerState = getDefaultBaseState;
+
 export const ContainerView: any = withProps<ContainerProps, HTMLDivElement>(styled.div)`
 	padding: 0;
 	margin: 2px 0;
@@ -63,15 +68,20 @@ export const ContainerView: any = withProps<ContainerProps, HTMLDivElement>(styl
 	${props => props.sizing && fontStyle[props.sizing]}
 `;
 
-export class Container extends BaseComponent<ContainerProps, undefined> {
+export class Container extends BaseComponent<ContainerProps, ContainerState> {
 
 	public static defaultProps: ContainerProps = getDefaultContainerProps();
+	public state: ContainerState = getDefaultContainerState();
 
 	constructor(props: ContainerProps) {
 		super(props);
+	}
 
-		this._classes.add('ui-container');
-		this.componentWillUpdate(props);
+	public static getDerivedStateFromProps(props: ContainerProps, state: ContainerState) {
+		state.classes.clear();
+		state.classes.add('ui-container');
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -87,11 +97,11 @@ export class Container extends BaseComponent<ContainerProps, undefined> {
 		return (
 			<Wrapper {...this.props} >
 				<ContainerView
-					className={this.classes}
+					className={this.state.classes.classnames}
 					key={this.props.id}
 					id={this.props.id}
-					sizing={this.props.sizing}
-					style={this.inlineStyles}
+					sizing={this.state.sizing}
+					style={this.state.style}
 				>
 					{title}
 					{this.props.children}

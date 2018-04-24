@@ -15,9 +15,6 @@ Object {
   "height": "",
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
-  "href": Object {
-    "sizing": "normal",
-  },
   "id": "",
   "layout": 5,
   "left": "",
@@ -69,11 +66,6 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   height=""
   hiddenLeftButton={false}
   hiddenRightButton={false}
-  href={
-    Object {
-      "sizing": "normal",
-    }
-  }
   id=""
   layout={5}
   left=""
@@ -113,7 +105,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
 >
   <Item
     bottom=""
-    className="ui-list-header nohover"
+    className="ui-list-header"
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -124,11 +116,6 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     height=""
     hiddenLeftButton={false}
     hiddenRightButton={false}
-    href={
-      Object {
-        "sizing": "normal",
-      }
-    }
     id=""
     layout={5}
     left=""

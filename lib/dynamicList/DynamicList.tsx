@@ -230,6 +230,10 @@ export const StyledDeleteButton: any = styled(Button)`
 	}
 `;
 
+export const StyledListFooter: any = styled(ListFooter)`
+	padding-left: 3px;
+`;
+
 export class DynamicList extends BaseComponent<DynamicListProps, DynamicListState> {
 
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
@@ -639,7 +643,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		);
 
 		this._footer = (
-			<ListFooter
+			<StyledListFooter
 				key={this._footerID}
 				layout={TitleLayout.third}
 				title={

@@ -2,6 +2,7 @@
 
 exports[`Test retrieval of ListHeader props object 1`] = `
 Object {
+  "alternating": false,
   "bottom": "",
   "children": null,
   "className": "",
@@ -14,40 +15,24 @@ Object {
   "errorMessage": "",
   "focus": false,
   "height": "",
-  "hiddenLeftButton": false,
-  "hiddenRightButton": false,
   "id": "",
-  "layout": 5,
   "left": "",
-  "leftButton": null,
   "location": "none",
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "noselect": false,
   "obj": "ListDivider",
-  "onBlur": [Function],
-  "onChange": [Function],
-  "onClick": [Function],
-  "onDoubleClick": [Function],
-  "onFocus": [Function],
-  "onKeyDown": [Function],
-  "onKeyPress": [Function],
-  "onMouseOut": [Function],
-  "onUpdate": [Function],
+  "onSelect": [Function],
   "padding": "",
-  "rightButton": null,
   "selected": false,
   "sizing": "normal",
-  "stacked": false,
   "style": Object {},
   "testing": true,
   "theme": null,
-  "title": "​",
   "tooltip": "",
   "top": "",
-  "useedit": false,
   "visible": true,
-  "widget": null,
   "width": "",
   "xcss": null,
 }
@@ -55,6 +40,7 @@ Object {
 
 exports[`Test the creation of a ListDivider control 1`] = `
 <Wrapper
+  alternating={false}
   bottom=""
   className=""
   color="blue"
@@ -66,42 +52,26 @@ exports[`Test the creation of a ListDivider control 1`] = `
   errorMessage=""
   focus={false}
   height=""
-  hiddenLeftButton={false}
-  hiddenRightButton={false}
   id=""
-  layout={5}
   left=""
-  leftButton={null}
   location="none"
   noedit={false}
   nohover={false}
   noripple={false}
+  noselect={false}
   obj="ListDivider"
-  onBlur={[Function]}
-  onChange={[Function]}
-  onClick={[Function]}
-  onDoubleClick={[Function]}
   onError={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyPress={[Function]}
-  onMouseOut={[Function]}
-  onUpdate={[Function]}
+  onSelect={[Function]}
   padding=""
   reset={false}
-  rightButton={null}
   selected={false}
   sizing="normal"
-  stacked={false}
   style={Object {}}
   testing={true}
   theme={null}
-  title="​"
   tooltip=""
   top=""
-  useedit={false}
   visible={true}
-  widget={null}
   width=""
   xcss={null}
 >

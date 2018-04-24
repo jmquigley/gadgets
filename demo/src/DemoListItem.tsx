@@ -12,6 +12,7 @@ import {
 	Icon,
 	List,
 	ListDivider,
+	ListFooter,
 	ListHeader,
 	ListItem
 } from '../../';
@@ -118,6 +119,9 @@ export default class DemoListItem extends React.Component<any, undefined> {
 						noripple
 						noedit
 						title="List Item 11 (noedit)"
+					/>
+					<ListFooter
+						title="Demo List Footer"
 					/>
 				</List>
 			</Container>

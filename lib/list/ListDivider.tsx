@@ -28,17 +28,19 @@
 
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
-import {getDefaultItemProps, ItemProps} from '../item';
 import {BaseComponent, Wrapper} from '../shared';
 import styled from '../shared/themed-components';
+import {getDefaultListProps, getDefaultListState, ListProps, ListState} from './List';
 
-export interface ListDividerProps extends ItemProps {
+export interface ListDividerProps extends ListProps {
 	color?: string;
 }
 
+export type ListDividerState = ListState;
+
 export function getDefaultListDividerProps(): ListDividerProps {
 	return cloneDeep(Object.assign({},
-		getDefaultItemProps(), {
+		getDefaultListProps(), {
 			color: 'lightgray',
 			obj: 'ListDivider'
 		})
@@ -55,22 +57,29 @@ export const ListDividerView: any = styled.li`
 	}
 `;
 
-export class ListDivider extends BaseComponent<ListDividerProps, undefined> {
+export class ListDivider extends BaseComponent<ListDividerProps, ListDividerState> {
 
 	public static defaultProps: ListDividerProps = getDefaultListDividerProps();
+	public state: ListState = getDefaultListState();
 
 	constructor(props: ListDividerProps) {
 		super(props, ListDivider.defaultProps.style);
+	}
 
-		this._classes.add('ui-list-divider');
-		this.componentWillUpdate(this.props);
+	public static getDerivedStateFromProps(props: ListDividerProps, state: ListDividerState) {
+		state.classes.clear();
+		state.classes.add('ui-list-divider');
+
+		Object.assign(state.style, {backgroundColor: props.color});
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
 		return(
 			<Wrapper {...this.props} >
-				<ListDividerView className={this.classes}>
-					<hr	style={{backgroundColor: this.props.color}} />
+				<ListDividerView className={this.state.classes.classnames}>
+					<hr style={this.state.style} />
 				</ListDividerView>
 			</Wrapper>
 		);

@@ -1,4 +1,4 @@
-import {getDefaultListProps, List, ListProps} from './List';
+import {getDefaultListProps, getDefaultListState, List, ListProps, ListState} from './List';
 import {getDefaultListDividerProps, ListDivider} from './ListDivider';
 import {getDefaultListFooterProps, ListFooter} from './ListFooter';
 import {getDefaultListHeaderProps, ListHeader} from './ListHeader';
@@ -10,11 +10,13 @@ export {
 	getDefaultListHeaderProps,
 	getDefaultListItemProps,
 	getDefaultListProps,
+	getDefaultListState,
 	List,
 	ListDivider,
 	ListFooter,
 	ListHeader,
 	ListItem,
 	ListItemProps,
-	ListProps
+	ListProps,
+	ListState
 };

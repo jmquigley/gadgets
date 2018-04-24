@@ -8,9 +8,11 @@ import {BaseComponent, Wrapper} from '../shared';
 import styled from '../shared/themed-components';
 import {
 	getDefaultTitleProps,
+	getDefaultTitleState,
 	Title,
 	TitleLayout,
-	TitleProps
+	TitleProps,
+	TitleState
 } from '../title';
 
 export type ListFooterProps = TitleProps;
@@ -25,24 +27,32 @@ export function getDefaultListFooterProps(): TitleProps {
 	);
 }
 
+export type ListFooterState = TitleState;
+
 export const ListFooterView: any = styled(Title)`
 	margin: -1px;
 	padding: 3px;
+	padding-left: 7px;
 
 	input {
 		padding: 2px;
 	}
 `;
 
-export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
+export class ListFooter extends BaseComponent<ListFooterProps, ListFooterState> {
 
 	public static defaultProps: ListFooterProps = getDefaultListFooterProps();
+	public state: ListFooterState = getDefaultTitleState();
 
 	constructor(props: ListFooterProps) {
 		super(props, ListFooter.defaultProps.style);
+	}
 
-		this._classes.add('ui-list-header');
-		this.componentWillUpdate(props);
+	public static getDerivedStateFromProps(props: ListFooterProps, state: ListFooterState) {
+		state.classes.clear();
+		state.classes.add('ui-list-footer');
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -50,9 +60,9 @@ export class ListFooter extends BaseComponent<ListFooterProps, undefined> {
 			<Wrapper {...this.props} >
 				<ListFooterView
 					{...this.props}
-					className={this.classes}
+					className={this.state.classes.classnames}
 					noripple
-					style={this.inlineStyles}
+					style={this.state.style}
 					title={this.props.title}
 				/>
 			</Wrapper>

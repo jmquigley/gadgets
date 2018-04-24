@@ -112,6 +112,7 @@ export function getDefaultTitleProps(): TitleProps {
 }
 
 export type TitleState = BaseState;
+export const getDefaultTitleState = getDefaultBaseState;
 
 export const TitleView: any = withProps<TitleProps, HTMLDivElement>(styled.div)`
 	box-sizing: border-box;
@@ -194,7 +195,7 @@ export const StyledLabel: any = StyledWidget.withComponent(Label);
 export class Title extends BaseComponent<TitleProps, TitleState> {
 
 	public static defaultProps: TitleProps = getDefaultTitleProps();
-	public state: TitleState = getDefaultBaseState();
+	public state: TitleState = getDefaultTitleState();
 
 	constructor(props: TitleProps) {
 		super(props);

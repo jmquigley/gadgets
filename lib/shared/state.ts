@@ -15,7 +15,7 @@ const defaultBaseState: BaseState = {
 	children: null,
 	classes: new ClassNames(),
 	sizing: Sizing.normal,
-	style: null
+	style: {}
 };
 
 export function getDefaultBaseState(): BaseState {
