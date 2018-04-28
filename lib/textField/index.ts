@@ -1,7 +1,9 @@
 import {
 	getDefaultTextFieldProps,
+	getDefaultTextFieldState,
 	TextField,
-	TextFieldProps
+	TextFieldProps,
+	TextFieldState
 } from './TextField';
 
 import {
@@ -16,8 +18,10 @@ import {
 
 export {
 	getDefaultTextFieldProps,
+	getDefaultTextFieldState,
 	TextField,
 	TextFieldProps,
+	TextFieldState,
 	validateEmail,
 	validateMaxLength,
 	validateMinLength,

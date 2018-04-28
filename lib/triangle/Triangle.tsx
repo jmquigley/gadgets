@@ -47,10 +47,11 @@ import styled from 'styled-components';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	boxStyle,
 	Direction,
 	getDefaultBaseProps,
-	Sizing,
+	getDefaultBaseState,
 	Wrapper
 } from '../shared';
 
@@ -64,7 +65,6 @@ export function getDefaultTriangleProps(): TriangleProps {
 			direction: Direction.up,
 			nobase: false,
 			obj: 'Triangle',
-			sizing: Sizing.normal,
 			style: {
 				fill: 'black',
 				stroke: 'black',
@@ -73,6 +73,9 @@ export function getDefaultTriangleProps(): TriangleProps {
 		}
 	));
 }
+
+export type TriangleState = BaseState;
+export const getDefaultTriangleState = getDefaultBaseState;
 
 export const SVGView: any = styled.svg`
 	transform: ${(props: TriangleProps) => {
@@ -89,27 +92,32 @@ export const SVGView: any = styled.svg`
 	${(props: TriangleProps) => props.sizing && boxStyle[props.sizing]}
 `;
 
-export class Triangle extends BaseComponent<TriangleProps, undefined> {
+export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 
 	public static readonly defaultProps: TriangleProps = getDefaultTriangleProps();
+	public state: TriangleState = getDefaultTriangleState();
 
 	constructor(props: TriangleProps) {
 		super(props, Triangle.defaultProps.style);
-		this._classes.add('ui-triangle');
-		this.componentWillUpdate(props);
+	}
+
+	public static getDerivedStateFromProps(props: TriangleProps, state: TriangleState) {
+		state.classes.clear();
+		state.classes.add('ui-triangle');
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
-		const ils = this.inlineStyles;
 		let triangle: any = null;
 
 		if (this.props.nobase) {
 			triangle = (
 				<SVGView
 					{...this.props}
-					className={this.classes}
+					className={this.state.classes.classnames}
 					preserveAspectRatio="xMidYMid meet"
-					style={ils}
+					style={this.state.style}
 					version="1.1"
 					viewBox="0 0 40 40"
 					xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +129,7 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 					<polygon
 						points="-3,35, 20,10 43,35, 20,10"
 						style={{
-							strokeWidth: ils['strokeWidth'],
+							strokeWidth: this.state.style['strokeWidth'],
 							strokeLinecap: 'square'
 						}}
 					/>
@@ -131,9 +139,9 @@ export class Triangle extends BaseComponent<TriangleProps, undefined> {
 			triangle = (
 				<SVGView
 					{...this.props}
-					className={this.classes}
+					className={this.state.classes.classnames}
 					preserveAspectRatio="xMidYMid meet"
-					style={ils}
+					style={this.state.style}
 					version="1.1"
 					viewBox="0 0 40 40"
 					xmlns="http://www.w3.org/2000/svg"

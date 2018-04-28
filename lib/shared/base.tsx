@@ -62,6 +62,8 @@ export const defaultSize: number = 16;
 
 export abstract class BaseComponent<P extends BaseProps, S> extends React.PureComponent<P, S> {
 
+	public static defaultStyles: any = {};
+
 	private _defaultSize: number;
 	private _id: string;
 	private _inlineStyles: Map<string, string> = Map({});
@@ -75,6 +77,7 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	constructor(props: P, defaultInlineStyles: Styles = {}, defaultFontSize: number = defaultSize) {
 		super(props);
 
+		BaseComponent.defaultStyles = defaultInlineStyles;
 		this._defaultSize = defaultSize;
 
 		// If an id value is not given as a prop, then generate a unique id.  If the
@@ -306,12 +309,8 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 				state.classes.onIf(props.className != null)(props.className);
 			}
 
-			if ('sizing' in state && state.sizing !== props.sizing) {
-				state.sizing = props.sizing;
-			}
-
 			if ('style' in state) {
-				state.style = Object.assign({}, state.style, props.style);
+				state.style = Object.assign({}, BaseComponent.defaultStyles, state.style, props.style);
 			}
 
 		}

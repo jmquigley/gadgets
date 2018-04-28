@@ -109,22 +109,24 @@
 'use strict';
 
 import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
+import {clone, cloneDeep} from 'lodash';
 import * as React from 'react';
 import {sp} from 'util.constants';
 import {nilEvent} from 'util.toolbox';
 import {ButtonCircle} from '../buttonCircle';
 import {
 	BaseComponent,
+	BaseState,
 	Color,
 	disabled,
 	fontStyle,
+	getDefaultBaseState,
 	invisible,
 	Sizing,
 	Wrapper
 } from '../shared';
-import {tooltip} from '../shared/helpers';
 import styled, {withProps} from '../shared/themed-components';
+import {tooltip} from '../tooltip';
 import {
 	validateEmail,
 	validateMaxLength,
@@ -182,11 +184,21 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 	});
 }
 
-export interface TextFieldState {
+export interface TextFieldState extends BaseState {
 	message: string;
 	messageType: MessageType;
 	previousText: string;
 	valid: boolean;
+}
+
+export function getDefaultTextFieldState(): TextFieldState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			message: '',
+			messageType: MessageType.none,
+			previousText: '',
+			valid: true
+		}));
 }
 
 const textTypes: any[] = ['text', 'email', 'search', 'password', 'tel', 'url'];
@@ -249,6 +261,7 @@ export const TextFieldView: any = withProps<TextFieldProps, HTMLDivElement>(styl
 export class TextField extends BaseComponent<any, TextFieldState> {
 
 	public static readonly defaultProps: TextFieldProps = getDefaultTextFieldProps();
+	public state: TextFieldState = getDefaultTextFieldState();
 
 	private _input: HTMLInputElement = null;
 	private _validators: Validator[] = null;
@@ -256,15 +269,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	constructor(props: TextFieldProps) {
 		super(props, TextField.defaultProps.style);
-
-		this._classes.add('ui-textfield');
-
-		this.state = {
-			message: '',
-			messageType: MessageType.none,
-			previousText: props.value || '',
-			valid: true
-		};
 
 		this._validators = cloneDeep(props.validators);
 
@@ -287,9 +291,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					break;
 			}
 		}
-
-		this.componentWillReceiveProps(this.props);
-		this.componentWillUpdate(this.props);
 	}
 
 	get input(): any {
@@ -388,12 +389,19 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		return ret;
 	}
 
-	public componentWillReceiveProps(nextProps: TextFieldProps) {
-		if ('size' in nextProps) {
-			this.inlineStyles = {
-				minWidth: `${(nextProps.size / 2.0) + 3}rem`
-			};
+	public static getDerivedStateFromProps(props: TextFieldProps, state: TextFieldState) {
+		const newState: TextFieldState = clone(state);
+
+		newState.classes.clear();
+		newState.classes.add('ui-textfield');
+
+		newState.previousText = props.value || '';
+
+		if ('size' in props) {
+			newState.style['minWidth'] = `${(props.size / 2.0) + 3}rem`;
 		}
+
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -401,7 +409,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		const {
 			noborder,
 			onValidation,
-			sizing,
 			useclear,
 			usevalidation,
 			validators,
@@ -437,11 +444,11 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 				<TextfieldContainerView
 					className="ui-textfield-container"
 					id={this.id}
-					style={this.inlineStyles}
+					style={this.state.style}
 				>
 					<TextFieldView
 						disabled={props.disabled}
-						className={this.classes}
+						className={this.state.classes.classnames}
 						noborder={this.props.noborder}
 						visible={visible}
 					>
@@ -452,7 +459,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 							onChange={this.handleChange}
 							onKeyDown={this.handleKeyDown}
 							onKeyPress={this.handleKeyPress}
-							sizing={sizing}
+							sizing={this.props.sizing}
 							visible={visible}
 						/>
 						{clearBtn}

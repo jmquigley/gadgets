@@ -49,11 +49,12 @@ import {BaseButtonView} from '../button';
 import {getDefaultIconProps, Icon, IconProps} from '../icon';
 import {
 	BaseComponent,
+	BaseState,
 	DisabledCSS,
 	fontStyle,
+	getDefaultBaseState,
 	InvisibleCSS,
 	Justify,
-	Sizing,
 	Wrapper
 } from '../shared';
 import styled, {withProps} from '../shared/themed-components';
@@ -72,11 +73,13 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 			noicon: false,
 			obj: 'ButtonText',
 			onClick: nilEvent,
-			sizing: Sizing.normal,
 			text: ''
 		})
 	);
 }
+
+export type ButtonTextState = BaseState;
+export const getDefaultButtonTextState = getDefaultBaseState;
 
 export const ButtonTextContent: any = withProps<ButtonTextProps, HTMLDivElement>(styled.div)`
 	flex: 1;
@@ -109,15 +112,13 @@ export const ButtonTextView: any = withProps<ButtonTextProps, HTMLDivElement>(st
 	${props => !props.visible && InvisibleCSS}
 `;
 
-export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
+export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> {
 
 	public static readonly defaultProps: ButtonTextProps = getDefaultButtonTextProps();
+	public state: ButtonTextState = getDefaultButtonTextState();
 
 	constructor(props: ButtonTextProps) {
 		super(props, ButtonText.defaultProps.style);
-
-		this._classes.add('ui-button-text');
-		this.componentWillUpdate(props);
 	}
 
 	@autobind
@@ -128,14 +129,16 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 		e.stopPropagation();
 	}
 
-	public componentWillUpdate(nextProps: ButtonTextProps) {
-		this._classes.onIfElse(!nextProps.noripple && !nextProps.disabled)(
+	public static getDerivedStateFromProps(props: ButtonTextProps, state: ButtonTextState) {
+		state.classes.clear();
+		state.classes.add('ui-button-text');
+		state.classes.onIfElse(!props.noripple && !props.disabled)(
 			'ripple'
 		)(
 			'nohover'
 		);
 
-		super.componentWillUpdate(nextProps);
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -171,8 +174,8 @@ export class ButtonText extends BaseComponent<ButtonTextProps, undefined> {
 			<Wrapper {...this.props} >
 				<ButtonTextView
 					disabled={this.props.disabled}
-					className={this.classes}
-					style={this.inlineStyles}
+					className={this.state.classes.classnames}
+					style={this.state.style}
 					onClick={this.handleClick}
 					visible={this.props.visible}
 				>

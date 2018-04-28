@@ -247,7 +247,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 					onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 					style={this.state.style}
 					suppressContentEditableWarning
 					visible={this.props.visible}

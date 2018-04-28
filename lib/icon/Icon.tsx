@@ -127,7 +127,7 @@ export class Icon extends BaseComponent<IconProps, BaseState> {
 				<Image
 					{...this.props}
 					className={this.state.classes.classnames}
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 					src={this.props.imageFile}
 					style={this.state.style}
 				/>
@@ -137,7 +137,7 @@ export class Icon extends BaseComponent<IconProps, BaseState> {
 				<FontAwesome
 					{...this.props}
 					className={this.state.classes.classnames}
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 					style={this.state.style}
 				/>
 			);

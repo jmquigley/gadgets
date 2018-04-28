@@ -41,9 +41,18 @@
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
-import {BaseButtonView, Button, ButtonProps, getDefaultButtonProps} from '../button';
+import {
+	BaseButtonView,
+	Button,
+	ButtonProps,
+	ButtonState,
+	getDefaultButtonProps,
+	getDefaultButtonState
+} from '../button';
 import {
 	BaseComponent,
+	// @ts-ignore
+	BaseState,
 	borderStyle,
 	Color,
 	Sizing,
@@ -58,16 +67,17 @@ export interface ButtonCircleProps extends ButtonProps {
 export function getDefaultButtonCircleProps(): ButtonProps {
 	return cloneDeep(Object.assign({},
 		getDefaultButtonProps(), {
-			iconName: 'bomb',
 			obj: 'ButtonCircle',
 			onClick: nilEvent,
-			sizing: Sizing.normal,
 			style: {
 				borderColor: Color.black
 			}
 		})
 	);
 }
+
+export type ButtonCircleState = ButtonState;
+export const getDefaultButtonCircleState = getDefaultButtonState;
 
 export const ButtonCircleContainerView: any = withProps<ButtonCircleProps, HTMLDivElement>(styled.div)`
 	${BaseButtonView}
@@ -101,15 +111,20 @@ export const ButtonCircleView: any = withProps<ButtonCircleProps, HTMLDivElement
 	${(props: ButtonCircleProps) => props.sizing && borderStyle[props.sizing]}
 `;
 
-export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
+export class ButtonCircle extends BaseComponent<ButtonCircleProps, ButtonCircleState> {
 
 	public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
+	public state: ButtonCircleState = getDefaultButtonCircleState();
 
 	constructor(props: ButtonCircleProps) {
 		super(props, ButtonCircle.defaultProps.style);
+	}
 
-		this._classes.add('ui-button-circle');
-		this.componentWillUpdate(this.props);
+	public static getDerivedStateFromProps(props: ButtonProps, state: ButtonState) {
+		state.classes.clear();
+		state.classes.add('ui-button-circle');
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -117,7 +132,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 
 		return (
 			<Wrapper {...this.props} >
-				<ButtonCircleContainerView className={this.classes}>
+				<ButtonCircleContainerView className={this.state.classes.classnames}>
 					<ButtonCircleInnerView
 						height={size}
 						width={size}
@@ -125,7 +140,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, undefined> {
 						<ButtonCircleView
 							{...this.props}
 							iconName={this.props.iconName}
-							style={this.inlineStyles}
+							style={this.state.style}
 						/>
 					</ButtonCircleInnerView>
 				</ButtonCircleContainerView>

@@ -1,9 +1,24 @@
 'use strict';
 
-// const debug = require('debug')('helpers');
+const debugEntry = require('debug');
+const pkg = require('../../package.json');
 
-import * as React from 'react';
-import {Tooltip} from '../tooltip';
+/**
+ * A wrapper for the debug function.  It uses the package.json to enable or
+ * disable debugging information in the library.  It also turns off
+ * coverage checks for this function.
+ * @param context {string} the name of the module where this debug request
+ * is made.
+ * @param args {object[]} the list of arguments passed to the the debug
+ * function.
+ */
+export function debug(context: string, ...args: any[]) {
+	/* istanbul ignore if  */
+	if (pkg.debug) {
+		const debugFn = debugEntry(`Gadgets -> ${context}`);
+		debugFn(...args);
+	}
+}
 
 /**
  * Takes a variable name and an object and places that name and associated
@@ -16,37 +31,13 @@ import {Tooltip} from '../tooltip';
  * current global (if it exists)
  * @return {object} the global instance reference
  */
-export function globalize(name: string, pkg: any, replace: boolean = false) {
-	let ref: any = pkg;
+export function globalize(name: string, pkgname: any, replace: boolean = false) {
+	let ref: any = pkgname;
 	if (!(global as any)[name] || replace) {
-		(window as any)[name] = (global as any)[name] = pkg;
+		(window as any)[name] = (global as any)[name] = pkgname;
 	} else {
 		ref = (global as any)[name];
 	}
 
 	return ref;
-}
-
-/**
- * Creates a tooltip object for use within a control.  It will check the given
- * props for a tooltip string.  If it has one, it will create the object and
- * return it.  If it doesn't have it, then NULL is returned.
- * @param props {any} and object representing the props used to generate the
- * tooltip.
- * @return {Tooltip} a new Tooltip reference if there is a given tooltip string
- * otherwise null is returned.
- */
-export function tooltip(id: string, props: any) {
-	if (props['tooltip']) {
-		return (
-			<Tooltip
-				parent={id}
-				sizing={props['sizing']}
-			>
-				{props['tooltip']}
-			</Tooltip>
-		);
-	}
-
-	return null;
 }

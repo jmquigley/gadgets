@@ -70,7 +70,7 @@ export class ListDivider extends BaseComponent<ListDividerProps, ListDividerStat
 		state.classes.clear();
 		state.classes.add('ui-list-divider');
 
-		Object.assign(state.style, {backgroundColor: props.color});
+		state.style['backgroundColor'] = props.color;
 
 		return super.getDerivedStateFromProps(props, state);
 	}

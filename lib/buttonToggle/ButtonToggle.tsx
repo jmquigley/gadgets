@@ -75,14 +75,23 @@
 
 'use strict';
 
-// const debug = require('debug')('ButtonToggle');
-
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
-import {Button, ButtonProps, getDefaultButtonProps} from '../button';
-import {BaseComponent, Wrapper} from '../shared';
+import {
+	Button,
+	ButtonProps,
+	ButtonState,
+	getDefaultButtonProps,
+	getDefaultButtonState
+} from '../button';
+import {
+	BaseComponent,
+	// @ts-ignore
+	BaseState,
+	Wrapper
+} from '../shared';
 
 export interface ButtonToggleProps extends ButtonProps {
 	bgColorOff?: string;
@@ -112,24 +121,25 @@ export function getDefaultButtonToggleProps(): ButtonToggleProps {
 	);
 }
 
-export interface ButtonToggleState {
+export interface ButtonToggleState extends ButtonState {
 	toggle: boolean;
+}
+
+export function getDefaultButtonToggleState(): ButtonToggleState {
+	return cloneDeep(Object.assign({},
+		getDefaultButtonState(), {
+			toggle: false
+		}));
 }
 
 export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleState> {
 
 	public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
+	public state: ButtonToggleState = getDefaultButtonToggleState();
 
 	constructor(props: ButtonToggleProps) {
 		super(props, ButtonToggle.defaultProps.style);
-
-		this._classes.add('ui-button-toggle');
-
-		this.state = {
-			toggle: this.props.initialToggle
-		};
-
-		this.componentWillUpdate(this.props, this.state);
+		this.state['toggle'] = this.props.initialToggle;
 	}
 
 	@autobind
@@ -145,28 +155,25 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 		}
 	}
 
-	public componentWillUpdate(nextProps: ButtonToggleProps, nextState: ButtonToggleState) {
-		if (nextProps.controlled) {
-			if (nextState.toggle) {
-				this.inlineStyles = {
-					backgroundColor: nextProps.bgColorOn,
-					color: nextProps.fgColorOn
-				};
+	public static getDerivedStateFromProps(props: ButtonToggleProps, state: ButtonToggleState) {
+		state.classes.clear();
+		state.classes.add('ui-button-toggle');
+
+		if (!props.controlled) {
+			state.toggle = props.selected;
+		}
+
+		if (props.controlled) {
+			if (state.toggle) {
+				state.style['backgroundColor'] = props.bgColorOn;
+				state.style['color'] = props.fgColorOn;
 			} else {
-				this.inlineStyles = {
-					backgroundColor: nextProps.bgColorOff,
-					color: nextProps.fgColorOff
-				};
+				state.style['backgroundColor'] = props.bgColorOff;
+				state.style['color'] = props.fgColorOff;
 			}
 		}
 
-		super.componentWillUpdate(nextProps, nextState);
-	}
-
-	public componentWillReceiveProps(nextProps: ButtonToggleProps) {
-		if (!nextProps.controlled) {
-			this.setState({toggle: nextProps.selected});
-		}
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -174,11 +181,11 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 			<Wrapper {...this.props} >
 				<Button
 					{...this.props}
-					className={this.classes}
+					className={this.state.classes.classnames}
 					iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
 					noripple
 					onClick={this.handleClick}
-					style={this.inlineStyles}
+					style={this.state.style}
 				/>
 			</Wrapper>
 		);

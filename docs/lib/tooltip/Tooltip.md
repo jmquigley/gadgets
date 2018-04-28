@@ -43,3 +43,18 @@ displayed.
 - `parent: {string} ('')` - The id of the component where this tooltip
 will be applied.
 
+<a name="module_Tooltip..tooltip"></a>
+
+### Tooltip~tooltip(props) ⇒ <code>Tooltip</code>
+Creates a tooltip object for use within a control.  It will check the given
+props for a tooltip string.  If it has one, it will create the object and
+return it.  If it doesn't have it, then NULL is returned.
+
+**Kind**: inner method of [<code>Tooltip</code>](#module_Tooltip)  
+**Returns**: <code>Tooltip</code> - a new Tooltip reference if there is a given tooltip string
+otherwise null is returned.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| props | <code>any</code> | and object representing the props used to generate the tooltip. |
+

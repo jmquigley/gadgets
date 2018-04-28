@@ -223,7 +223,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 					onKeyPress={this.props.onKeyPress}
 					onMouseOut={this.props.onMouseOut}
 					selected={this.props.selected}
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 					style={this.state.style}
 				>
 					{this.state.leftButton}

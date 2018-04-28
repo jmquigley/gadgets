@@ -80,8 +80,6 @@ exports[`Test creation of a ButtonDialog control 1`] = `
         Object {
           "backgroundColor": "inherit",
           "color": "inherit",
-          "fill": "#ffffff",
-          "stroke": "#c0c0c0",
         }
       }
       testing={true}
@@ -107,15 +105,15 @@ exports[`Test creation of a ButtonDialog control 1`] = `
         </p>
       </styled.div>
       <Styled(Triangle)
-        className=""
+        className="ui-dialog-triangle"
         direction="up"
         location="bottom"
         nobase={true}
         sizing="normal"
         style={
           Object {
-            "fill": undefined,
-            "stroke": undefined,
+            "fill": "#ffffff",
+            "stroke": "#c0c0c0",
           }
         }
         visible={false}
@@ -205,8 +203,6 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
         Object {
           "backgroundColor": "inherit",
           "color": "inherit",
-          "fill": "#ffffff",
-          "stroke": "#c0c0c0",
         }
       }
       testing={true}
@@ -232,15 +228,15 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
         </p>
       </styled.div>
       <Styled(Triangle)
-        className=""
+        className="ui-dialog-triangle"
         direction="down"
         location="top"
         nobase={true}
         sizing="normal"
         style={
           Object {
-            "fill": undefined,
-            "stroke": undefined,
+            "fill": "#ffffff",
+            "stroke": "#c0c0c0",
           }
         }
         visible={false}
@@ -393,8 +389,6 @@ exports[`Test making the ButtonDialog invisible 1`] = `
               Object {
                 "backgroundColor": "inherit",
                 "color": "inherit",
-                "fill": "#ffffff",
-                "stroke": "#c0c0c0",
               }
             }
             testing={true}
@@ -435,8 +429,6 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                 Object {
                   "backgroundColor": "inherit",
                   "color": "inherit",
-                  "fill": "#ffffff",
-                  "stroke": "#c0c0c0",
                 }
               }
               testing={true}
@@ -479,8 +471,6 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                     Object {
                       "backgroundColor": "inherit",
                       "color": "inherit",
-                      "fill": "#ffffff",
-                      "stroke": "#c0c0c0",
                     }
                   }
                   visible={false}
@@ -494,8 +484,6 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                       Object {
                         "backgroundColor": "inherit",
                         "color": "inherit",
-                        "fill": "#ffffff",
-                        "stroke": "#c0c0c0",
                       }
                     }
                   >
@@ -662,22 +650,22 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                 </div>
               </styled.div>
               <Styled(Triangle)
-                className=""
+                className="ui-dialog-triangle"
                 direction="up"
                 location="bottom"
                 nobase={true}
                 sizing="normal"
                 style={
                   Object {
-                    "fill": undefined,
-                    "stroke": undefined,
+                    "fill": "#ffffff",
+                    "stroke": "#c0c0c0",
                   }
                 }
                 visible={false}
               >
                 <Triangle
                   bottom=""
-                  className="sc-iwsKbI blFPNt"
+                  className="ui-dialog-triangle sc-iwsKbI blFPNt"
                   contentEditable={false}
                   controlled={true}
                   direction="up"
@@ -699,8 +687,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                   sizing="normal"
                   style={
                     Object {
-                      "fill": undefined,
-                      "stroke": undefined,
+                      "fill": "#ffffff",
+                      "stroke": "#c0c0c0",
                     }
                   }
                   testing={true}
@@ -713,7 +701,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                 >
                   <Wrapper
                     bottom=""
-                    className="sc-iwsKbI blFPNt"
+                    className="ui-dialog-triangle sc-iwsKbI blFPNt"
                     contentEditable={false}
                     controlled={true}
                     direction="up"
@@ -737,8 +725,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                     sizing="normal"
                     style={
                       Object {
-                        "fill": undefined,
-                        "stroke": undefined,
+                        "fill": "#ffffff",
+                        "stroke": "#c0c0c0",
                       }
                     }
                     testing={true}
@@ -773,7 +761,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                     >
                       <Triangle__SVGView
                         bottom=""
-                        className="ui-triangle sc-iwsKbI blFPNt"
+                        className="ui-triangle ui-dialog-triangle sc-iwsKbI blFPNt"
                         contentEditable={false}
                         controlled={true}
                         direction="up"
@@ -796,9 +784,9 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                         sizing="normal"
                         style={
                           Object {
-                            "fill": undefined,
+                            "fill": "#ffffff",
                             "stokeWidth": "2px",
-                            "stroke": undefined,
+                            "stroke": "#c0c0c0",
                           }
                         }
                         testing={true}
@@ -813,7 +801,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <svg
-                          className="ui-triangle sc-iwsKbI blFPNt Triangle__SVGView-iDjlpJ jixAbM"
+                          className="ui-triangle ui-dialog-triangle sc-iwsKbI blFPNt Triangle__SVGView-iDjlpJ jixAbM"
                           contentEditable={false}
                           direction="up"
                           disabled={false}
@@ -823,9 +811,9 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                           selected={false}
                           style={
                             Object {
-                              "fill": undefined,
+                              "fill": "#ffffff",
                               "stokeWidth": "2px",
-                              "stroke": undefined,
+                              "stroke": "#c0c0c0",
                             }
                           }
                           version="1.1"
@@ -1051,8 +1039,6 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
               Object {
                 "backgroundColor": "inherit",
                 "color": "inherit",
-                "fill": "#ffffff",
-                "stroke": "#c0c0c0",
               }
             }
             testing={true}
@@ -1093,8 +1079,6 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                 Object {
                   "backgroundColor": "inherit",
                   "color": "inherit",
-                  "fill": "#ffffff",
-                  "stroke": "#c0c0c0",
                 }
               }
               testing={true}
@@ -1137,8 +1121,6 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                     Object {
                       "backgroundColor": "inherit",
                       "color": "inherit",
-                      "fill": "#ffffff",
-                      "stroke": "#c0c0c0",
                     }
                   }
                   visible={true}
@@ -1152,8 +1134,6 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                       Object {
                         "backgroundColor": "inherit",
                         "color": "inherit",
-                        "fill": "#ffffff",
-                        "stroke": "#c0c0c0",
                       }
                     }
                   >
@@ -1320,22 +1300,22 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                 </div>
               </styled.div>
               <Styled(Triangle)
-                className=""
+                className="ui-dialog-triangle"
                 direction="up"
                 location="bottom"
                 nobase={true}
                 sizing="normal"
                 style={
                   Object {
-                    "fill": undefined,
-                    "stroke": undefined,
+                    "fill": "#ffffff",
+                    "stroke": "#c0c0c0",
                   }
                 }
                 visible={false}
               >
                 <Triangle
                   bottom=""
-                  className="sc-iwsKbI blFPNt"
+                  className="ui-dialog-triangle sc-iwsKbI blFPNt"
                   contentEditable={false}
                   controlled={true}
                   direction="up"
@@ -1357,8 +1337,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                   sizing="normal"
                   style={
                     Object {
-                      "fill": undefined,
-                      "stroke": undefined,
+                      "fill": "#ffffff",
+                      "stroke": "#c0c0c0",
                     }
                   }
                   testing={true}
@@ -1371,7 +1351,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                 >
                   <Wrapper
                     bottom=""
-                    className="sc-iwsKbI blFPNt"
+                    className="ui-dialog-triangle sc-iwsKbI blFPNt"
                     contentEditable={false}
                     controlled={true}
                     direction="up"
@@ -1395,8 +1375,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                     sizing="normal"
                     style={
                       Object {
-                        "fill": undefined,
-                        "stroke": undefined,
+                        "fill": "#ffffff",
+                        "stroke": "#c0c0c0",
                       }
                     }
                     testing={true}
@@ -1431,7 +1411,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                     >
                       <Triangle__SVGView
                         bottom=""
-                        className="ui-triangle sc-iwsKbI blFPNt"
+                        className="ui-triangle ui-dialog-triangle sc-iwsKbI blFPNt"
                         contentEditable={false}
                         controlled={true}
                         direction="up"
@@ -1454,9 +1434,9 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                         sizing="normal"
                         style={
                           Object {
-                            "fill": undefined,
+                            "fill": "#ffffff",
                             "stokeWidth": "2px",
-                            "stroke": undefined,
+                            "stroke": "#c0c0c0",
                           }
                         }
                         testing={true}
@@ -1471,7 +1451,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <svg
-                          className="ui-triangle sc-iwsKbI blFPNt Triangle__SVGView-iDjlpJ jixAbM"
+                          className="ui-triangle ui-dialog-triangle sc-iwsKbI blFPNt Triangle__SVGView-iDjlpJ jixAbM"
                           contentEditable={false}
                           direction="up"
                           disabled={false}
@@ -1481,9 +1461,9 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                           selected={false}
                           style={
                             Object {
-                              "fill": undefined,
+                              "fill": "#ffffff",
                               "stokeWidth": "2px",
-                              "stroke": undefined,
+                              "stroke": "#c0c0c0",
                             }
                           }
                           version="1.1"

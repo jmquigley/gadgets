@@ -318,9 +318,9 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 				break;
 		}
 
-		let tooltip = '';
+		let str: string = '';
 		if (this.props.children) {
-			tooltip = React.Children.map(this.props.children, (child: any) => {
+			str = React.Children.map(this.props.children, (child: any) => {
 				return String(child);
 			}).join(' ');
 		}
@@ -333,14 +333,14 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 					sizing={this.prev(this.props.sizing).type}
 					style={this.inlineStyles}
 					visible={this.state.show}
-					width={tooltip.length < 25 ? 'unset' : '10em'}
+					width={str.length < 25 ? 'unset' : '10em'}
 				>
 					<TootipContentView
 						className="ui-tooltip-content"
 						sizing={this.prev(this.props.sizing).type}
 						style={this.inlineStyles}
 					>
-						{tooltip}
+						{str}
 					</TootipContentView>
 					<StyledTriangle
 						location={this.props.location}
@@ -355,4 +355,28 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 			</Wrapper>
 		);
 	}
+}
+
+/**
+ * Creates a tooltip object for use within a control.  It will check the given
+ * props for a tooltip string.  If it has one, it will create the object and
+ * return it.  If it doesn't have it, then NULL is returned.
+ * @param props {any} and object representing the props used to generate the
+ * tooltip.
+ * @return {Tooltip} a new Tooltip reference if there is a given tooltip string
+ * otherwise null is returned.
+ */
+export function tooltip(id: string, props: any) {
+	if (props['tooltip']) {
+		return (
+			<Tooltip
+				parent={id}
+				sizing={props['sizing']}
+			>
+				{props['tooltip']}
+			</Tooltip>
+		);
+	}
+
+	return null;
 }

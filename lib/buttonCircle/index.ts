@@ -1,11 +1,15 @@
 import {
 	ButtonCircle,
 	ButtonCircleProps,
-	getDefaultButtonCircleProps
+	ButtonCircleState,
+	getDefaultButtonCircleProps,
+	getDefaultButtonCircleState
 } from './ButtonCircle';
 
 export {
 	ButtonCircle,
 	ButtonCircleProps,
-	getDefaultButtonCircleProps
+	ButtonCircleState,
+	getDefaultButtonCircleProps,
+	getDefaultButtonCircleState
 };

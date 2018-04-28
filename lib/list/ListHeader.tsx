@@ -50,7 +50,7 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 				<Item
 					{...this.props}
 					className={this.state.classes.classnames}
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 					style={this.state.style}
 				/>
 			</Wrapper>

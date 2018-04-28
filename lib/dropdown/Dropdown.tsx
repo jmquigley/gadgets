@@ -64,8 +64,8 @@ import {
 	getDefaultBaseProps,
 	Wrapper
 } from '../shared';
-import {tooltip} from '../shared/helpers';
 import styled, {withProps} from '../shared/themed-components';
+import {tooltip} from '../tooltip';
 
 export interface DropdownOption {
 	value: string;

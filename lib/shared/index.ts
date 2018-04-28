@@ -5,10 +5,9 @@ import {
 } from './base';
 
 import {
-	getDefaultWrapperProps,
-	Wrapper,
-	WrapperProps
-} from './wrapper';
+	debug,
+	globalize
+} from './helpers';
 
 import {
 	BaseProps,
@@ -52,6 +51,12 @@ import {
 	ThemeProps
 } from './themes';
 
+import {
+	getDefaultWrapperProps,
+	Wrapper,
+	WrapperProps
+} from './wrapper';
+
 export {
 	BaseComponent,
 	BaseProps,
@@ -61,6 +66,7 @@ export {
 	boxStyle,
 	Color,
 	ColorScheme,
+	debug,
 	defaultSize,
 	Direction,
 	disabled,
@@ -72,6 +78,7 @@ export {
 	getDefaultWrapperProps,
 	getTheme,
 	getThemeList,
+	globalize,
 	invisible,
 	InvisibleCSS,
 	Justify,

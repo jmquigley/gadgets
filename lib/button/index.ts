@@ -2,12 +2,16 @@ import {
 	BaseButtonView,
 	Button,
 	ButtonProps,
-	getDefaultButtonProps
+	ButtonState,
+	getDefaultButtonProps,
+	getDefaultButtonState
 } from './Button';
 
 export {
 	BaseButtonView,
 	Button,
 	ButtonProps,
-	getDefaultButtonProps
+	ButtonState,
+	getDefaultButtonProps,
+	getDefaultButtonState
 };

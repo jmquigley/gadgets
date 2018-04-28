@@ -51,16 +51,14 @@ import {
 	invisible,
 	Wrapper
 } from '../shared';
-import {tooltip} from '../shared/helpers';
 import styled, {css, withProps} from '../shared/themed-components';
+import {tooltip} from '../tooltip';
 
 export interface ButtonProps extends BaseProps {
 	iconName?: string;      // font awesome string
 	iconStyle?: string;
 	onClick?: any;
 }
-
-export type ButtonState = BaseState;
 
 export function getDefaultButtonProps(): ButtonProps {
 	return cloneDeep(Object.assign({},
@@ -72,6 +70,9 @@ export function getDefaultButtonProps(): ButtonProps {
 		})
 	);
 }
+
+export type ButtonState = BaseState;
+export const getDefaultButtonState = getDefaultBaseState;
 
 export const BaseButtonView: any = css`
 	align-items: center;
@@ -104,7 +105,7 @@ export const ButtonView: any = withProps<ButtonProps, HTMLDivElement>(styled.div
 export class Button extends BaseComponent<ButtonProps, ButtonState> {
 
 	public static readonly defaultProps: ButtonProps = getDefaultButtonProps();
-	public state: ButtonState = getDefaultBaseState();
+	public state: ButtonState = getDefaultButtonState();
 
 	constructor(props: ButtonProps) {
 		super(props, Button.defaultProps.style);
@@ -140,14 +141,14 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 					disabled={this.props.disabled}
 					id={this.id}
 					onClick={this.handleClick}
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 					style={this.state.style}
 					visible={this.props.visible}
 				>
 					<Icon
 						className={this.props.iconStyle}
 						iconName={this.props.iconName}
-						sizing={this.state.sizing}
+						sizing={this.props.sizing}
 					/>
 				{tooltip(this.id, this.props)}
 				</ButtonView>

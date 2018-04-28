@@ -157,7 +157,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 			content = (
 				<AccordionContentView
 					className="ui-accordion-content"
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 				>
 					{this.props.children}
 				</AccordionContentView>

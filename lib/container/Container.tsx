@@ -100,7 +100,7 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 					className={this.state.classes.classnames}
 					key={this.props.id}
 					id={this.props.id}
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 					style={this.state.style}
 				>
 					{title}
