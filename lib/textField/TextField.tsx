@@ -109,7 +109,7 @@
 'use strict';
 
 import autobind from 'autobind-decorator';
-import {clone, cloneDeep} from 'lodash';
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {sp} from 'util.constants';
 import {nilEvent} from 'util.toolbox';
@@ -125,7 +125,7 @@ import {
 	Sizing,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 import {tooltip} from '../tooltip';
 import {
 	validateEmail,
@@ -203,17 +203,17 @@ export function getDefaultTextFieldState(): TextFieldState {
 
 const textTypes: any[] = ['text', 'email', 'search', 'password', 'tel', 'url'];
 
-export const ClearButtonView: any = withProps<TextFieldProps, HTMLDivElement>(styled.div)`
+export const ClearButtonView: any = styled.div`
 	display: inline-flex;
 	margin: 0 2px;
 	opacity: 0;
 	padding: 1px 0;
 	transition: opacity ${props => props.theme.transitionDelay} ease-in-out;
 
-	${props => fontStyle[props.sizing]}
+	${props => fontStyle[props['sizing']]}
 `;
 
-export const MessageView: any = withProps<any, HTMLDivElement>(styled.div)`
+export const MessageView: any = styled.div`
 	background-color: unset;
 	border-color: unset;
 	color: ${props => props['messageType'] !== MessageType.success ? Color.error : Color.success};
@@ -224,7 +224,7 @@ export const MessageView: any = withProps<any, HTMLDivElement>(styled.div)`
 	${props => invisible(props)}
 `;
 
-export const StyledInput: any = withProps<TextFieldProps, HTMLInputElement>(styled.input)`
+export const StyledInput: any = styled.input`
 	border: none;
 	box-sizing: border-box;
 	display: inline-flex;
@@ -240,21 +240,21 @@ export const StyledInput: any = withProps<TextFieldProps, HTMLInputElement>(styl
 	${props => invisible(props)}
 `;
 
-export const TextfieldContainerView: any = withProps<TextFieldProps, HTMLDivElement>(styled.div)`
+export const TextfieldContainerView: any = styled.div`
 	display: inline-flex;
 	flex-direction: column;
 	position: relative;
 `;
 
-export const TextFieldView: any = withProps<TextFieldProps, HTMLDivElement>(styled.div)`
+export const TextFieldView: any = styled.div`
 	border: ${
-		props => props.noborder ? 'none' : 'solid 1px ' + props.theme.inputBorderColor
+		props => props['noborder'] ? 'none' : 'solid 1px ' + props.theme.inputBorderColor
 	};
 	display: inherit;
 	padding: 1px 0;
 
 	&:hover .ui-textfield-clear-button {
-		opacity: ${props => !props.disabled ? '1.0;' : '0.0'};
+		opacity: ${props => !props['disabled'] ? '1.0;' : '0.0'};
 	}
 `;
 
@@ -270,6 +270,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	constructor(props: TextFieldProps) {
 		super(props, TextField.defaultProps.style);
 
+		this._classes.add('ui-textfield');
 		this._validators = cloneDeep(props.validators);
 
 		if (textTypes.includes(props.type) && props.usevalidation) {
@@ -390,10 +391,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	}
 
 	public static getDerivedStateFromProps(props: TextFieldProps, state: TextFieldState) {
-		const newState: TextFieldState = clone(state);
-
-		newState.classes.clear();
-		newState.classes.add('ui-textfield');
+		const newState: TextFieldState = {...state};
 
 		newState.previousText = props.value || '';
 
@@ -405,6 +403,8 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	}
 
 	public render() {
+		super.buildClassName();
+
 		// Strip out props that the input control cannot recognize or use
 		const {
 			noborder,
@@ -448,7 +448,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 				>
 					<TextFieldView
 						disabled={props.disabled}
-						className={this.state.classes.classnames}
+						className={this.className}
 						noborder={this.props.noborder}
 						visible={visible}
 					>

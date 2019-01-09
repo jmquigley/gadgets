@@ -105,7 +105,7 @@ import {
 	invisible,
 	Wrapper
 } from '../shared';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 
 export enum ToastLevel {
 	info,
@@ -142,7 +142,7 @@ export interface ToastState {
 	visible: boolean;
 }
 
-export const ContentView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
+export const ContentView: any = styled.div`
 	align-items: center;
 	display: flex;
 	flex: 6;
@@ -153,7 +153,7 @@ export const ContentView: any = withProps<ToastProps, HTMLDivElement>(styled.div
 		user-select: auto;
 	}
 
-	${props => fontStyle[props.sizing]}
+	${(props: ToastProps) => fontStyle[props.sizing]}
 `;
 
 export const Error: any = css`
@@ -172,7 +172,7 @@ export const Warning: any = css`
 `;
 
 export const Hide: any = css`
-	animation: fadeOut ${props => calc(props.theme.transitionDelay, '* 2')};
+	animation: fadeOut ${(props: ToastProps) => calc(props.theme.transitionDelay, '* 2')};
 	opacity: 0;
 	z-index: -1;
 `;
@@ -187,18 +187,18 @@ export const StyledButton: any = styled(Button)`
 	height: unset;
 `;
 
-export const ToastView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
-	bottom: ${props => props.usebottom ? '0' : 'unset'};
+export const ToastView: any = styled.div`
+	bottom: ${(props: ToastProps) => props.usebottom ? '0' : 'unset'};
 	color: white;
 	display: flex;
 	left: 50%;
 	margin: 0 auto;
 	position: absolute;
-	top: ${props => props.usebottom ? 'unset' : '0'};
+	top: ${(props: ToastProps) => props.usebottom ? 'unset' : '0'};
 	transform: translateX(-50%);
 	width: 70%;
 
-	${props => {
+	${(props: ToastProps) => {
 		switch (props.level) {
 			case ToastLevel.warning: return Warning;
 			case ToastLevel.error: return Error;
@@ -208,9 +208,9 @@ export const ToastView: any = withProps<ToastProps, HTMLDivElement>(styled.div)`
 		}
 	}};
 
-	${props => props.xcss}
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: ToastProps) => props.xcss}
+	${(props: ToastProps) => disabled(props)}
+	${(props: ToastProps) => invisible(props)}
 `;
 
 export class Toast extends BaseComponent<ToastProps, ToastState> {

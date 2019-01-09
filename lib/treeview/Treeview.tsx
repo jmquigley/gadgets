@@ -79,7 +79,7 @@
 
 'use strict';
 
-import autobind from 'autobind-decorator';
+// import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import SortableTree, {
@@ -95,7 +95,7 @@ import {
 	Sizing,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export type TreeviewItem = TreeItem;
 
@@ -105,13 +105,16 @@ export interface TreeviewProps extends ReactSortableTreeProps {
 	errorMessage?: string;
 	height?: string;
 	obj?: string;
+	onChange(treeData: TreeItem[]): void;
 	sizing?: Sizing;
+	style?: any;
 	testing?: boolean;
+	treeData: TreeItem[];
 	visible?: boolean;
 }
 
 export function getDefaultTreeviewProps(): TreeviewProps {
-	return cloneDeep(Object.assign({}, {
+	return cloneDeep(Object.assign({}, SortableTree.defaultProps, {
 			disabled: false,
 			err: null,
 			errorMessage: '',
@@ -119,6 +122,7 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 			obj: 'Treeview',
 			onChange: nilEvent,
 			sizing: Sizing.normal,
+			style: {},
 			testing: false,
 			treeData: [],
 			visible: true
@@ -130,14 +134,14 @@ export interface TreeviewState {
 	rowHeight: number;
 }
 
-export const TreeviewContainer: any = withProps<TreeviewProps, HTMLDivElement>(styled.div)`
-	height: ${props => props.height};
-	${props => invisible(props)}
+export const TreeviewContainer: any = styled.div`
+	height: ${(props: TreeviewProps) => props.height};
+	${(props: TreeviewProps) => invisible(props)}
 `;
 
-export const SortableTreeView: any = withProps<TreeviewProps, HTMLElement>(styled(SortableTree))`
-	${props => disabled(props)}
-	${props => props.sizing && fontStyle[props.sizing]}
+export const SortableTreeView: any = styled(SortableTree)`
+	${(props: TreeviewProps) => disabled(props)}
+	${(props: TreeviewProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
 export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
@@ -168,12 +172,12 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		return this._rowHeights;
 	}
 
-	@autobind
-	private handleChange(treeData: TreeviewItem[]) {
-		if (!this.props.disabled) {
-			this.props.onChange(treeData);
-		}
-	}
+	// @autobind
+	// private handleChange(treeData: TreeviewItem[]) {
+		// if (!this.props.disabled) {
+		//    this.props.onChange(treeData);
+		// }
+	// }
 
 	public componentWillReceiveProps(nextProps: TreeviewProps) {
 		if (this.props.sizing !== nextProps.sizing) {
@@ -192,7 +196,6 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 						{...this.props}
 						canDrag={!this.props.disabled}
 						className={this.classes}
-						onChange={this.handleChange}
 						rowHeight={this.state.rowHeight}
 					/>
 				</TreeviewContainer>

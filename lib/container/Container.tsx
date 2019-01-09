@@ -41,10 +41,10 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface ContainerProps extends BaseProps {
-	children?: React.ReactNode;
+	children?: any;
 	title?: string;
 }
 
@@ -61,11 +61,11 @@ export function getDefaultContainerProps(): ContainerProps {
 export type ContainerState = BaseState;
 export const getDefaultContainerState = getDefaultBaseState;
 
-export const ContainerView: any = withProps<ContainerProps, HTMLDivElement>(styled.div)`
+export const ContainerView: any = styled.div`
 	padding: 0;
 	margin: 2px 0;
 
-	${props => props.sizing && fontStyle[props.sizing]}
+	${(props: ContainerProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
 export class Container extends BaseComponent<ContainerProps, ContainerState> {

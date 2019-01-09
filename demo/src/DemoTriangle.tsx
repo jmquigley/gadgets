@@ -7,7 +7,7 @@ import {
 	Container,
 	Direction,
 	Triangle
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoTriangle extends React.Component<any, undefined> {
 

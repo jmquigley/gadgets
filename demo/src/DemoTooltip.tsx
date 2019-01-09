@@ -8,7 +8,7 @@ import {
 	Container,
 	Location,
 	Tooltip
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoTooltip extends React.Component<any, undefined> {
 

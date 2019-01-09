@@ -56,7 +56,7 @@ import {
 	Wrapper
 } from '../shared';
 import {getDefaultBaseProps, Location} from '../shared/props';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface BadgeProps extends BaseProps {
 	counter?: number;
@@ -82,7 +82,7 @@ export function getDefaultBadgeProps(): BadgeProps {
 	);
 }
 
-export const BadgeView: any = withProps<BadgeProps, HTMLDivElement>(styled.div)`
+export const BadgeView: any = styled.div`
 	border-radius: 96px;
 	cursor: default;
 	font-weight: bold;
@@ -91,13 +91,13 @@ export const BadgeView: any = withProps<BadgeProps, HTMLDivElement>(styled.div)`
 	text-align: center;
 	user-select: none;
 
-	${props => props.location && locationStyle[props.location]};
-	${props => props.sizing && fontStyle[props.sizing]};
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: BadgeProps) => props.location && locationStyle[props.location]};
+	${(props: BadgeProps) => props.sizing && fontStyle[props.sizing]};
+	${(props: BadgeProps) => disabled(props)}
+	${(props: BadgeProps) => invisible(props)}
 `;
 
-export const BadgeContainerView: any = withProps<BadgeProps, HTMLDivElement>(styled.div)`
+export const BadgeContainerView: any = styled.div`
 	box-sizing: border-box;
 	display: block;
 	position: relative;

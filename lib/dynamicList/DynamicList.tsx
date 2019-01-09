@@ -677,7 +677,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 					>
 						{this.state.errorMessage}
 					</Toast>
-					<Accordion className={this.classes}>
+					<Accordion className={this.className}>
 						<AccordionItem
 							initialToggle={this.state.initialToggle}
 							nocollapse={this.props.nocollapse}

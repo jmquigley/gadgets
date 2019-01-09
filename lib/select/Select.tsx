@@ -61,17 +61,19 @@ export interface SelectProps extends ReactSelectProps {
 	errorMessage?: string;
 	obj?: string;
 	sizing?: Sizing;
+	style?: any;
 	testing?: boolean;
 	visible?: boolean;
 }
 
-export function getDefaultSelectProps(): SelectProps {
-	return cloneDeep(Object.assign({}, {
+export function getDefaultSelectProps(self: any): SelectProps {
+	return cloneDeep(Object.assign({}, self.defaultProps, {
 			disabled: false,
 			err: null,
 			errorMessage: '',
 			obj: 'Select',
 			sizing: Sizing.normal,
+			style: {},
 			testing: false,
 			visible: true
 		})
@@ -80,7 +82,7 @@ export function getDefaultSelectProps(): SelectProps {
 
 export class Select extends BaseComponent<any, undefined> {
 
-	public static defaultProps: SelectProps = getDefaultSelectProps();
+	public static defaultProps: SelectProps = getDefaultSelectProps(Select);
 
 	constructor(props: any) {
 		super(props, Select.defaultProps.style as any);

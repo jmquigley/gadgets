@@ -48,7 +48,7 @@ import {
 	getDefaultBaseProps,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export enum DividerType {
 	horizontal = '-',
@@ -69,13 +69,13 @@ export function getDefaultDividerProps(): DividerProps {
 	);
 }
 
-export const DividerView: any = withProps<DividerProps, HTMLDivElement>(styled.div)`
+export const DividerView: any = styled.div`
 	align-items: center;
-	color: ${props => props.theme.borderColor || Color.silver};
+	color: ${(props: DividerProps) => props.theme.borderColor || Color.silver};
 	display: inline-flex;
 	justify-content: center;
 	opacity: 0.5;
-	width: ${props => props.width || '1.0em'};
+	width: ${(props: DividerProps) => props.width || '1.0em'};
 `;
 
 export class Divider extends BaseComponent<DividerProps, undefined> {

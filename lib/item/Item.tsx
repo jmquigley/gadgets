@@ -18,7 +18,7 @@ import {
 	Sizing,
 	Wrapper
 } from '../shared';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 import {Title, TitleLayout, TitleProps} from '../title';
 
 export interface ItemProps extends BaseProps, TitleProps {
@@ -85,16 +85,16 @@ export function getDefaultItemState(): ItemState {
 export const HiddenButton: any = css`
 	display: none;
 	opacity: 0;
-	animation: fadeIn ${props => props.theme.transitionDelay};
+	animation: fadeIn ${(props: ItemProps) => props.theme.transitionDelay};
 `;
 
-export const ItemView: any = withProps<ItemProps, HTMLLIElement>(styled.li)`
-	background-color: ${props => props.selected ? props.theme.selectedBackgroundColor + ' !important' : props.theme.backgroundColor};
-	color: ${props => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
+export const ItemView: any = styled.li`
+	background-color: ${(props: ItemProps) => props.selected ? props.theme.selectedBackgroundColor + ' !important' : props.theme.backgroundColor};
+	color: ${(props: ItemProps) => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
 	cursor: default;
 	display: flex;
 
-	${props => (!props.nohover) &&
+	${(props: ItemProps) => (!props.nohover) &&
 		'&:hover {background-color: ' + props.theme.itemHoverColor + ' !important;}'
 	}
 
@@ -104,13 +104,13 @@ export const ItemView: any = withProps<ItemProps, HTMLLIElement>(styled.li)`
 	}
 `;
 
-export const ItemViewButton: any = withProps<ItemProps, HTMLDivElement>(styled.div)`
+export const ItemViewButton: any = styled.div`
 	display: inline-flex;
 	position: relative;
 	width: ${(props: ItemProps) => props.width || '2.0em'};
 
-	${props => props.sizing && fontStyle[props.sizing]};
-	${props => (props.hiddenRightButton || props.hiddenLeftButton) && HiddenButton}
+	${(props: ItemProps) => props.sizing && fontStyle[props.sizing]};
+	${(props: ItemProps) => (props.hiddenRightButton || props.hiddenLeftButton) && HiddenButton}
 
 	> i, > .ui-button-circle, > .ui-option {
 		position: absolute;

@@ -81,16 +81,3 @@ control.
 - `useinput: boolean (false)` - If this is true, then a text input is shown
 with the control that allows the user to jump to a specific page.
 
-<a name="module_Pager..value"></a>
-
-### Pager~value(props)
-Takes the given page size and input props and determines the appropriate initialPage,
-lastPage, and initialPageSize.  These variables are saved within the class and
-are used to set the state of the current page and the computed page size.
-
-**Kind**: inner method of [<code>Pager</code>](#module_Pager)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| props | <code>PagerProps</code> | the set of props that should be used to compute the initial page information (size, first/last page) |
-

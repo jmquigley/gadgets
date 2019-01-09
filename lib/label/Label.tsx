@@ -65,7 +65,7 @@ import {
 	invisible,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface LabelProps extends BaseProps {
 	noedit?: boolean;
@@ -113,12 +113,12 @@ export function getDefaultLabelState(): LabelState {
 		}));
 }
 
-export const LabelView: any = withProps<LabelProps, HTMLSpanElement>(styled.span)`
+export const LabelView: any = styled.span`
 	background-color: inherit;
 
-	${props => disabled(props)}
-	${props => invisible(props)}
-	${props => props.sizing && fontStyle[props.sizing]}
+	${(props: LabelProps) => disabled(props)}
+	${(props: LabelProps) => invisible(props)}
+	${(props: LabelProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
 export class Label extends BaseComponent<LabelProps, LabelState> {

@@ -68,7 +68,7 @@ import {
 	getDefaultBaseProps,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface DialogWindowProps extends BaseProps {
 	icon?: string;
@@ -97,20 +97,20 @@ export function getDefaultDialogWindowProps(): DialogWindowProps {
 	);
 }
 
-export const DialogWindowView: any = withProps<DialogWindowProps, HTMLDivElement>(styled.div)`
+export const DialogWindowView: any = styled.div`
 	overflow: hidden;
 
-	height: ${props => props.height};
-	width: ${props => props.width};
+	height: ${(props: DialogWindowProps) => props.height};
+	width: ${(props: DialogWindowProps) => props.width};
 `;
 
 export const DialogWindowContent: any = styled.div`
 	padding: 0.25rem;
 `;
 
-export const ItemView: any = withProps<DialogWindowProps, HTMLElement>(styled(Item))`
-	background-color: ${props => props.theme.titleBarBackgroundColor};
-	color: ${props => props.theme.titleBarForegroundColor};
+export const ItemView: any = styled(Item)`
+	background-color: ${(props: DialogWindowProps) => props.theme.titleBarBackgroundColor};
+	color: ${(props: DialogWindowProps) => props.theme.titleBarForegroundColor};
 `;
 
 export const StyledDeleteButton: any = styled(Button)`

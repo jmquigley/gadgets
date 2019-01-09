@@ -12,7 +12,7 @@ import {
 	Container,
 	Icon,
 	Justify
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoButtons extends React.Component<any, undefined> {
 

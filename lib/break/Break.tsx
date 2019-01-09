@@ -30,13 +30,13 @@ import {
 	BaseProps,
 	getDefaultBaseProps
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
-export const BreakView: any = withProps<BaseProps, HTMLElement>(styled.p)`
+export const BreakView: any = styled.p`
 	content: '';
 	display: block;
 	margin: 0;
-	margin-top: ${props => props.height};
+	margin-top: ${(props: BaseProps) => props.height};
 `;
 
 export class Break extends BaseComponent<BaseProps, undefined> {

@@ -110,6 +110,10 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		return this._classes.classnames;
 	}
 
+	get className(): string {
+		return this._classes.classnames;
+	}
+
 	get defaultSize(): number {
 		return this._defaultSize;
 	}
@@ -143,6 +147,11 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 	get theme(): ThemeProps {
 		return this._theme;
+	}
+
+	protected buildClassName(): string {
+		this._classes.onIf(this.props.className != null)(this.props.className);
+		return this.className;
 	}
 
 	protected font(sizing: Sizing = this.sizing): FontStyle {

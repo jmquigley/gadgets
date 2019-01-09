@@ -1,23 +1,14 @@
 'use strict';
 
-import * as React from 'react';
 import * as styledComponents from 'styled-components';
 import { ThemedStyledComponentsModule } from 'styled-components';
 
 import {ThemeProps} from './themes';
 
-export type StyledFunction<T> = styledComponents.ThemedStyledFunction<T, ThemeProps>;
-
-function withProps<T, U extends HTMLElement = HTMLElement>(
-	styledFunction: StyledFunction<React.HTMLProps<U>>
-): StyledFunction<T & React.HTMLProps<U>> {
-	return styledFunction;
-}
-
 const {
 	default: styled,
 	css,
-	injectGlobal,
+	createGlobalStyle,
 	keyframes,
 	withTheme,
 	ThemeProvider
@@ -25,9 +16,8 @@ const {
 
 export {
 	css,
-	injectGlobal,
+	createGlobalStyle,
 	keyframes,
-	withProps,
 	withTheme,
 	ThemeProvider
 };

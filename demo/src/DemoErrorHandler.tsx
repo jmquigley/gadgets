@@ -8,7 +8,7 @@ import {
 	Button,
 	Container,
 	Wrapper
-} from '../../';
+} from '../../dist/bundle';
 
 export interface DemoErrorHandlerState {
 	show?: boolean;

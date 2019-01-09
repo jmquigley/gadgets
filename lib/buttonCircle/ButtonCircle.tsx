@@ -58,7 +58,7 @@ import {
 	Sizing,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface ButtonCircleProps extends ButtonProps {
 	onClick?: any;
@@ -79,19 +79,19 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 export type ButtonCircleState = ButtonState;
 export const getDefaultButtonCircleState = getDefaultButtonState;
 
-export const ButtonCircleContainerView: any = withProps<ButtonCircleProps, HTMLDivElement>(styled.div)`
+export const ButtonCircleContainerView: any = styled.div`
 	${BaseButtonView}
 	height: unset;
 `;
 
-export const ButtonCircleInnerView: any = withProps<ButtonCircleProps, HTMLDivElement>(styled.div)`
+export const ButtonCircleInnerView: any = styled.div`
 	border-radius: 4em;
 	display: inline-block;
-	height: ${props => props.height};
-	width: ${props => props.width};
+	height: ${(props: ButtonCircleProps) => props.height};
+	width: ${(props: ButtonCircleProps) => props.width};
 `;
 
-export const ButtonCircleView: any = withProps<ButtonCircleProps, HTMLDivElement>(styled(Button))`
+export const ButtonCircleView: any = styled(Button)`
 	border-radius: 4em;
 	padding: ${(props: ButtonCircleProps) => {
 		switch (props.sizing) {

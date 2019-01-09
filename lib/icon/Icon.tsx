@@ -65,7 +65,7 @@ import {
 	Sizing,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface IconProps extends BaseProps {
 	iconName?: string;
@@ -83,19 +83,19 @@ export function getDefaultIconProps(): IconProps {
 	);
 }
 
-export const FontAwesome: any = withProps<IconProps, HTMLElement>(styled.i)`
+export const FontAwesome: any = styled.i`
 	text-align: center;
-	${props => props.location && locationStyle[props.location]}
-	${props => props.sizing && fontStyle[props.sizing]}
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: IconProps) => props.location && locationStyle[props.location]}
+	${(props: IconProps) => props.sizing && fontStyle[props.sizing]}
+	${(props: IconProps) => disabled(props)}
+	${(props: IconProps) => invisible(props)}
 `;
 
-export const Image: any = withProps<IconProps, HTMLImageElement>(styled.img)`
-	${props => props.location && locationStyle[props.location]}
-	${props => props.sizing && boxStyle[props.sizing]}
-	${props => disabled(props)}
-	${props => invisible(props)}
+export const Image: any = styled.img`
+	${(props: IconProps) => props.location && locationStyle[props.location]}
+	${(props: IconProps) => props.sizing && boxStyle[props.sizing]}
+	${(props: IconProps) => disabled(props)}
+	${(props: IconProps) => invisible(props)}
 `;
 
 export class Icon extends BaseComponent<IconProps, BaseState> {

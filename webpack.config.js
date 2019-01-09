@@ -1,5 +1,6 @@
 const {leader} = require('util.leader');
 
+const TsDeclarationBundlerPlugin = require('ts-declaration-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -25,7 +26,7 @@ const banner = new webpack.BannerPlugin({
 	entryOnly: true
 });
 
-leader(banner.banner);
+leader(banner.options.banner);
 
 const constants = new webpack.DefinePlugin({
 	GADGETS_VERSION: JSON.stringify(pkg.version),
@@ -75,13 +76,12 @@ module.exports = {
 	resolveLoader: {
 		modules: [path.join(__dirname, "node_modules")]
 	},
-	devtool: 'source-map',
 	module: {
 		rules: [
 			{
 				test: /\.tsx?$/,
 				exclude: /node_modules|dist|demo/,
-				loader: 'js-output-loader!babel-loader!awesome-typescript-loader'
+				loader: 'js-output-loader!ts-loader'
 			},
 			{
 				test: /\.css$/,
@@ -133,7 +133,13 @@ module.exports = {
 			to: 'highlights',
 			flatten: true
 		}]),
-		MinifyPlugin ? new MinifyPlugin() : new NullPlugin()
+		MinifyPlugin ? new MinifyPlugin() : new NullPlugin(),
+		new webpack.SourceMapDevToolPlugin({
+			filename: '[name].js.map'
+		}),
+		new TsDeclarationBundlerPlugin({
+			name: 'bundle.d.ts'
+		})
 		// new BundleAnalyzerPlugin(),
 	]
 };

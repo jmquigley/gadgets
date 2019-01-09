@@ -75,7 +75,7 @@ import {
 	getDefaultBaseProps,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 import {TextField} from '../textField';
 import {Toolbar} from '../toolbar';
 
@@ -108,7 +108,7 @@ export function getDefaultBrowserProps(): BrowserProps {
 	);
 }
 
-export const BrowserContainer: any = withProps<BrowserProps, HTMLDivElement>(styled.div)`
+export const BrowserContainer: any = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -117,7 +117,7 @@ export const BrowserContainer: any = withProps<BrowserProps, HTMLDivElement>(sty
 
 	.ui-title-bar {
 		flex-grow: unset;
-		border: solid 1px ${props => props.theme.borderColor};
+		border: solid 1px ${(props: BrowserProps) => props.theme.borderColor};
 		border-bottom: none;
 	}
 
@@ -128,9 +128,9 @@ export const BrowserContainer: any = withProps<BrowserProps, HTMLDivElement>(sty
 	}
 `;
 
-export const BrowserContent: any = withProps<BrowserProps, HTMLIFrameElement>(styled.div)`
+export const BrowserContent: any = styled.div`
 	display: flex;
-	border: solid 1px ${props => props.theme.borderColor};
+	border: solid 1px ${(props: BrowserProps) => props.theme.borderColor};
 	flex-grow: 1;
 
 	> webview {
@@ -138,8 +138,8 @@ export const BrowserContent: any = withProps<BrowserProps, HTMLIFrameElement>(st
 	}
 `;
 
-export const BrowserToolbar: any = withProps<BrowserProps, HTMLDivElement>(styled.div)`
-	border: solid 1px ${props => props.theme.borderColor};
+export const BrowserToolbar: any = styled.div`
+	border: solid 1px ${(props: BrowserProps) => props.theme.borderColor};
 	margin-bottom: -1px;
 	display: flex;
 `;

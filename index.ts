@@ -67,11 +67,10 @@ import {Triangle} from './lib/triangle';
 
 // Themed component classes
 import styled, {
+	createGlobalStyle,
 	css,
-	injectGlobal,
 	keyframes,
 	ThemeProvider,
-	withProps,
 	withTheme
 } from './lib/shared/themed-components';
 
@@ -94,6 +93,7 @@ export {
 	ButtonText,
 	Color,
 	Container,
+	createGlobalStyle,
 	Crumbs,
 	css,
 	DialogBox,
@@ -111,7 +111,6 @@ export {
 	getTheme,
 	getThemeList,
 	Icon,
-	injectGlobal,
 	Item,
 	Justify,
 	keyframes,
@@ -155,7 +154,6 @@ export {
 	version,
 	Validator,
 	ValidatorFn,
-	withProps,
 	withTheme,
 	Wrapper
 };

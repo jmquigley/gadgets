@@ -8,7 +8,7 @@ import {join} from 'util.join';
 import {
 	Container,
 	Editor
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoEditor extends React.Component<any, undefined> {
 

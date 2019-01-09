@@ -11,7 +11,7 @@ import {
 	Location,
 	Tab,
 	TabContainer
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoTabs extends React.Component<any, undefined> {
 

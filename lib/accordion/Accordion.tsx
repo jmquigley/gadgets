@@ -41,7 +41,7 @@
 const debug = require('debug')('Accordion');
 
 import {cloneDeep} from 'lodash';
-import * as React from 'react';
+import React from 'react';
 import {
 	BaseComponent,
 	BaseProps,
@@ -51,7 +51,7 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export type AccordionProps = BaseProps;
 export type AccordionState = BaseState;
@@ -64,7 +64,7 @@ export function getDefaultAccordionProps(): AccordionProps {
 	));
 }
 
-export const AccordionView: any =  withProps<AccordionProps, HTMLUListElement>(styled.ul)`
+export const AccordionView: any = styled.ul`
 	cursor: default;
 	list-style: none;
 
@@ -72,7 +72,7 @@ export const AccordionView: any =  withProps<AccordionProps, HTMLUListElement>(s
 		border-bottom: 0;
 	}
 
-	${props => props.sizing && fontStyle[props.sizing]};
+	${(props: AccordionProps) => props.sizing && fontStyle[props.sizing]};
 `;
 
 export class Accordion extends BaseComponent<AccordionProps, AccordionState> {

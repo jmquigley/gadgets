@@ -4,11 +4,10 @@ const debug = require('debug')('DemoBrowser');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
 import {
 	Browser,
 	Container
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoBrowser extends React.Component<any, undefined> {
 

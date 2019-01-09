@@ -7,7 +7,7 @@ import {
 	Break,
 	Container,
 	Label
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoLabels extends React.Component<any, undefined> {
 

@@ -8,7 +8,7 @@ import {
 	Container,
 	Treeview,
 	TreeviewItem
-} from '../../';
+} from '../../dist/bundle';
 
 export interface DemoTreeviewState {
 	treeData: TreeviewItem[];

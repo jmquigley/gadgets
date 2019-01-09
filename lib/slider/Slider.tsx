@@ -75,7 +75,7 @@ import {
 	invisible,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface SliderProps extends BaseProps {
 	max?: number;
@@ -106,41 +106,41 @@ export interface SliderState {
 	x?: number;
 }
 
-export const SliderBar: any = withProps<SliderProps, HTMLDivElement>(styled.div)`
-	border: solid 1px ${props => props.theme.borderColor};
-	height: ${props => props.height}px;
+export const SliderBar: any = styled.div`
+	border: solid 1px ${(props: SliderProps) => props.theme.borderColor};
+	height: ${(props: SliderProps) => props.height}px;
 	left: 50%;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	width: ${props => props.width}px;
+	width: ${(props: SliderProps) => props.width}px;
 `;
 
-export const SliderContainer: any = withProps<SliderProps, HTMLDivElement>(styled.div)`
+export const SliderContainer: any = styled.div`
 	display: inline-block;
-	height: ${props => props.height}px;
+	height: ${(props: SliderProps) => props.height}px;
 	position: relative;
-	width: ${props => props.width}px;
+	width: ${(props: SliderProps) => props.width}px;
 
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: SliderProps) => disabled(props)}
+	${(props: SliderProps) => invisible(props)}
 `;
 
-export const SliderElement: any = withProps<SliderProps, HTMLDivElement>(styled.div)`
-	background-color: ${props => props.theme.backgroundColor};
-	border: solid 1px ${props => props.theme.borderColor};
-	left: ${props => props.left}px;
+export const SliderElement: any = styled.div`
+	background-color: ${(props: SliderProps) => props.theme.backgroundColor};
+	border: solid 1px ${(props: SliderProps) => props.theme.borderColor};
+	left: ${(props: SliderProps) => props.left}px;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 
-	${props => props.sizing && boxStyle[props.sizing]}
+	${(props: SliderProps) => props.sizing && boxStyle[props.sizing]}
 `;
 
-export const SliderTick: any = withProps<SliderProps, HTMLDivElement>(styled.div)`
-    background-color: ${props => props.theme.borderColor};
+export const SliderTick: any = styled.div`
+    background-color: ${(props: SliderProps) => props.theme.borderColor};
     height: 0.1875rem;
-    left: ${props => props.left}px;
+    left: ${(props: SliderProps) => props.left}px;
     position: absolute;
     bottom: -0.4rem;
     width: 0.125rem;

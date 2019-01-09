@@ -71,7 +71,7 @@ import {
 	invisible,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 import {Title, TitleLayout} from '../title';
 
 export enum OptionType {
@@ -116,7 +116,7 @@ export interface OptionState {
 	selected?: boolean;
 }
 
-export const OptionView: any = withProps<OptionProps, HTMLDivElement>(styled.div)`
+export const OptionView: any = styled.div`
 	align-items: center;
 	cursor: default;
 	display: inline-flex;
@@ -126,11 +126,11 @@ export const OptionView: any = withProps<OptionProps, HTMLDivElement>(styled.div
 	}
 
 	> span:hover {
-		background-color: ${props => props.disabled ? 'unset' : props.theme.hoverColor || Color.silver};
+		background-color: ${(props: OptionProps) => props.disabled ? 'unset' : props.theme.hoverColor || Color.silver};
 	}
 
-	${props => props.sizing && fontStyle[props.sizing]}
-	${props => invisible(props)}
+	${(props: OptionProps) => props.sizing && fontStyle[props.sizing]}
+	${(props: OptionProps) => invisible(props)}
 `;
 
 export const StyledButtonToggle: any = styled(ButtonToggle)`

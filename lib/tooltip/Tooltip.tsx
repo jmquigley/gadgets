@@ -60,7 +60,7 @@ import {
 	Location,
 	Wrapper
 } from '../shared';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 import {Triangle} from '../triangle';
 
 export interface TooltipProps extends BaseProps {
@@ -202,8 +202,8 @@ export const Show: any = css`
 	z-index: calc(${baseZIndex} + 1);
 `;
 
-export const StyledTriangle: any = withProps<TooltipProps, HTMLElement>(styled(Triangle))`
-	${props => {
+export const StyledTriangle: any = styled(Triangle)`
+	${(props: TooltipProps) => {
 		switch (props.location) {
 			case Location.topLeft: return TriangleTopLeft;
 			case Location.topRight: return TriangleTopRight;
@@ -220,11 +220,11 @@ export const StyledTriangle: any = withProps<TooltipProps, HTMLElement>(styled(T
 	}};
 `;
 
-export const TootipContentView: any = withProps<TooltipProps, HTMLDivElement>(styled.span)`
-	${props => props.sizing && fontStyle[props.sizing]}
+export const TootipContentView: any = styled.span`
+	${(props: TooltipProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
-export const TooltipView: any = withProps<TooltipProps, HTMLDivElement>(styled.div)`
+export const TooltipView: any = styled.div`
 	border-radius: 10px;
 	flex:none;
 	line-height: initial;
@@ -233,9 +233,9 @@ export const TooltipView: any = withProps<TooltipProps, HTMLDivElement>(styled.d
 	position: absolute;
 	text-align: initial;
 	transition: opacity 0.75s ease;
-	width: ${props => props.width};
+	width: ${(props: TooltipProps) => props.width};
 
-	${props => {
+	${(props: TooltipProps) => {
 		switch (props.location) {
 			case Location.topLeft: return TopLeft;
 			case Location.topRight: return TopRight;
@@ -251,8 +251,8 @@ export const TooltipView: any = withProps<TooltipProps, HTMLDivElement>(styled.d
 		}
 	}};
 
-	${props => props.visible ? Show : Hide}
-	${props => props.sizing && fontStyle[props.sizing]}
+	${(props: TooltipProps) => props.visible ? Show : Hide}
+	${(props: TooltipProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
 export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {

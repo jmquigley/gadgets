@@ -9,7 +9,7 @@ import {
 	Container,
 	Option,
 	Slider
-} from '../../';
+} from '../../dist/bundle';
 
 export interface DemoSliderState {
 	sliderToggle: boolean;

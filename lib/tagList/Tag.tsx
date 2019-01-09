@@ -49,7 +49,7 @@ import {
 	invisible,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface TagProps extends BaseProps {
 	onClick?: any;
@@ -81,11 +81,11 @@ export const DeleteButtonView: any = styled(ButtonCircle)`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	transition: opacity ${props => props.theme.transitionDelay} ease-in-out;
+	transition: opacity ${(props: TagProps) => props.theme.transitionDelay} ease-in-out;
 	width: unset;
 `;
 
-export const TagView: any = withProps<TagProps, HTMLDivElement>(styled.div)`
+export const TagView: any = styled.div`
 	border: solid 1px silver;
 	border-radius: 3px;
 	cursor: default;
@@ -96,8 +96,8 @@ export const TagView: any = withProps<TagProps, HTMLDivElement>(styled.div)`
 	padding: 0 3px;
 	position: relative;
 
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: TagProps) => disabled(props)}
+	${(props: TagProps) => invisible(props)}
 `;
 
 export class Tag extends BaseComponent<TagProps, TagState> {

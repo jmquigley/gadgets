@@ -4,12 +4,11 @@ const debug = require('debug')('DemoDialogWindow');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
 import {
 	ButtonText,
 	Container,
 	DialogWindow
-} from '../../';
+} from '../../dist/bundle';
 
 export interface DemoDialogBoxState {
 	dialogShow: boolean;

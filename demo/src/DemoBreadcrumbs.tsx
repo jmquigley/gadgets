@@ -4,13 +4,12 @@ const debug = require('debug')('DemoBreadcrumbs');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
 import {
 	Breadcrumbs,
 	Break,
 	Container,
 	Crumbs
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoBrowser extends React.Component<any, undefined> {
 

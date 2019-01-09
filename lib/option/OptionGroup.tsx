@@ -66,7 +66,7 @@ import {
 	Sizing,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 import {Title, TitleLayout} from '../title';
 import {Option, OptionType} from './Option';
 
@@ -95,8 +95,8 @@ export function getDefaultOptionGroupProps(): OptionGroupProps {
 	);
 }
 
-export const StyledOptionGroup: any = withProps<OptionGroupProps, HTMLDivElement>(styled.div)`
-	border: solid 1px ${props => props.theme.borderColor};
+export const StyledOptionGroup: any = styled.div`
+	border: solid 1px ${(props: OptionGroupProps) => props.theme.borderColor};
 	display: inline-flex;
 	flex-direction: column;
 	margin: ${(props: OptionGroupProps) => {
@@ -116,15 +116,15 @@ export const StyledOptionGroup: any = withProps<OptionGroupProps, HTMLDivElement
 	padding: 0.6rem;
 	position: relative;
 
-	${props => props.sizing && fontStyle[props.sizing]}
-	${props => invisible(props)}
+	${(props: OptionGroupProps) => props.sizing && fontStyle[props.sizing]}
+	${(props: OptionGroupProps) => invisible(props)}
 `;
 
 export const StyledOption: any = styled(Option)`
 `;
 
 export const StyledTitle: any = styled(Title)`
-	background-color: ${props => props.theme.backgroundColor};
+	background-color: ${(props: OptionGroupProps) => props.theme.backgroundColor};
 	left: 0.3rem;
 	padding: 0 0.33rem;
 	position: absolute;

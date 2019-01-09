@@ -67,17 +67,17 @@ import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {BaseComponent} from './base';
 import {BaseProps, disabled, invisible} from './props';
-import styled, {ThemeProvider, withProps} from './themed-components';
+import styled, {ThemeProvider} from './themed-components';
 
 export interface WrapperProps extends BaseProps {
-	children?: React.ReactNode;
+	// children?: any;
 	onError?: any;
 	reset?: boolean;
 }
 
 export function getDefaultWrapperProps(): WrapperProps {
 	return cloneDeep(Object.assign({}, {
-			children: null,
+			// children: null,
 			onError: nilEvent,
 			reset: false
 		})
@@ -89,9 +89,9 @@ export interface WrapperState {
 	errorInfo: any;
 }
 
-export const WrapperView: any = withProps<WrapperProps, HTMLDivElement>(styled.div)`
-	${props => disabled(props)}
-	${props => invisible(props)}
+export const WrapperView: any = styled.div`
+	${(props: WrapperProps) => disabled(props)}
+	${(props: WrapperProps) => invisible(props)}
 `;
 
 export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {

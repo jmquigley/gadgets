@@ -51,7 +51,7 @@ import {
 	invisible,
 	Wrapper
 } from '../shared';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 import {tooltip} from '../tooltip';
 
 export interface ButtonProps extends BaseProps {
@@ -89,17 +89,17 @@ export const BaseButtonView: any = css`
 	width: 100%;
 `;
 
-export const ButtonView: any = withProps<ButtonProps, HTMLDivElement>(styled.div)`
+export const ButtonView: any = styled.div`
 	${BaseButtonView}
 
 	flex: 1;
 
 	&:not(.nohover):hover {
-		background-color: ${props => props.theme.hoverColor} ${props => props.style.backgroundColor && '!important'};
+		background-color: ${(props: ButtonProps) => props.theme.hoverColor} ${props => props.style.backgroundColor && '!important'};
 	}
 
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: ButtonProps) => disabled(props)}
+	${(props: ButtonProps) => invisible(props)}
 `;
 
 export class Button extends BaseComponent<ButtonProps, ButtonState> {

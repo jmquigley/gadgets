@@ -15,7 +15,7 @@ import {
 	ListFooter,
 	ListHeader,
 	ListItem
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoListItem extends React.Component<any, undefined> {
 

@@ -20,7 +20,7 @@ import {
 	Switch,
 	TextField,
 	Toolbar
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoToolbar extends React.Component<any, undefined> {
 

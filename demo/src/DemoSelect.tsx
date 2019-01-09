@@ -7,7 +7,7 @@ import * as React from 'react';
 import {
 	Container,
 	Select
-} from '../../';
+} from '../../dist/bundle';
 
 export interface DemoSelectState {
 	selectOption: string;

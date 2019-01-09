@@ -64,7 +64,7 @@ import {
 	getDefaultBaseProps,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 import {tooltip} from '../tooltip';
 
 export interface DropdownOption {
@@ -93,9 +93,9 @@ export interface DropdownState {
 	currentValue: string;
 }
 
-export const DropdownContainerView: any = withProps<DropdownProps, HTMLDivElement>(styled.div)`
+export const DropdownContainerView: any = styled.div`
 	position: relative;
-	${props => props.sizing && fontStyle[props.sizing]};
+	${(props: DropdownProps) => props.sizing && fontStyle[props.sizing]};
 `;
 
 export const DropdownView: any = styled.select`

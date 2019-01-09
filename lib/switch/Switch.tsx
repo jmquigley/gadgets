@@ -69,7 +69,7 @@ import {
 	rectStyle,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export enum SwitchType {
 	inny,
@@ -103,7 +103,7 @@ export interface SwitchState {
 	toggle: boolean;
 }
 
-export const StyledButton: any = withProps<SwitchProps, HTMLDivElement>(styled.div)`
+export const StyledButton: any = styled.div`
 	background: white;
 	border: 1px solid silver;
 	border-radius: 96px;
@@ -111,30 +111,30 @@ export const StyledButton: any = withProps<SwitchProps, HTMLDivElement>(styled.d
 	display: inline-block;
 	position: absolute;
 	top: 50%;
-	transition: all ${props => props.theme.transitionDelay} ease;
+	transition: all ${(props: SwitchProps) => props.theme.transitionDelay} ease;
 	transform: translateY(-50%);
 
 	width: ${(props: SwitchProps) => props.width || '1.0em'};
 	height: ${(props: SwitchProps) => props.height || '1.0em'};
 `;
 
-export const SliderView: any = withProps<SwitchProps, HTMLDivElement>(styled.div)`
+export const SliderView: any = styled.div`
 	border: 1px solid silver;
 	border-radius: 96px;
 	position: relative;
 
-	${props => rectStyle[props.sizing]}
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: SwitchProps) => rectStyle[props.sizing]}
+	${(props: SwitchProps) => disabled(props)}
+	${(props: SwitchProps) => invisible(props)}
 
 	overflow: unset;
 `;
 
-export const SliderContainerView: any = withProps<SwitchProps, HTMLDivElement>(styled.div)`
+export const SliderContainerView: any = styled.div`
 	align-items: center;
 	box-sizing: border-box;
 	display: inline-flex;
-	height: ${props => props.height};
+	height: ${(props: SwitchProps) => props.height};
 	padding: 0 2%;
 	width: auto;
 `;

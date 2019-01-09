@@ -80,7 +80,7 @@ import {
 	Sizing,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface Crumbs {
 	name: string;
@@ -107,14 +107,14 @@ export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
 	);
 }
 
-export const BreadcrumbsView: any = withProps<BreadcrumbsProps, HTMLDivElement>(styled.div)`
+export const BreadcrumbsView: any = styled.div`
 	display: inline-flex;
 
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: BreadcrumbsProps) => disabled(props)}
+	${(props: BreadcrumbsProps) => invisible(props)}
 `;
 
-export const IconView: any = withProps<BreadcrumbsProps, HTMLElement>(styled(Icon))`
+export const IconView: any = styled(Icon)`
 	margin-top: ${(props: BreadcrumbsProps) => {
 		switch (props.sizing) {
 			case Sizing.xxsmall: return('0.075rem');

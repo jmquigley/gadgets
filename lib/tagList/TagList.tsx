@@ -71,7 +71,7 @@ import {
 	invisible,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 import {TextField} from '../textField';
 import {Tag} from './Tag';
 
@@ -126,11 +126,11 @@ export const StyledTextField: any = styled(TextField)`
 	}
 `;
 
-export const TagListView: any = withProps<TagListProps, HTMLDivElement>(styled.div)`
+export const TagListView: any = styled.div`
 	display: inline;
 
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: TagListProps) => disabled(props)}
+	${(props: TagListProps) => invisible(props)}
 `;
 
 export class TagList extends BaseComponent<TagListProps, TagListState> {

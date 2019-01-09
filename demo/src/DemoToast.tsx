@@ -10,7 +10,7 @@ import {
 	Container,
 	Toast,
 	ToastLevel
-} from '../../';
+} from '../../dist/bundle';
 
 export interface DemoToastState {
 	toastVisible1: boolean;

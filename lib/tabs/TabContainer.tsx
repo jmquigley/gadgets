@@ -88,7 +88,7 @@ import {
 	Location,
 	Wrapper
 } from '../shared';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 import {Tab} from './Tab';
 
 export interface TabContainerProps extends BaseProps {
@@ -130,26 +130,26 @@ export const TabBarVertical: any = css`
 	flex-direction: column;
 `;
 
-export const TabBarView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
+export const TabBarView: any = styled.div`
 	display: flex;
-	${props => props.xcss}
+	${(props: TabContainerProps) => props.xcss}
 `;
 
-export const TabContainerView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
-	${props => ((props.location === Location.top || props.location === Location.bottom) ?
+export const TabContainerView: any = styled.div`
+	${(props: TabContainerProps) => ((props.location === Location.top || props.location === Location.bottom) ?
 		'' : 'display: flex; flex-wrap: nowrap;'
 	)}
 `;
 
 export const TabContentHorizontal: any = css`
-	border: solid 1px ${props => props.theme.borderColor};
+	border: solid 1px ${(props: TabContainerProps) => props.theme.borderColor};
 	box-sizing: border-box;
 	min-height: 8em;
 	padding: 0 3px;
 `;
 
 export const TabContentVertical: any = css`
-	border: solid 1px ${props => props.theme.borderColor};
+	border: solid 1px ${(props: TabContainerProps) => props.theme.borderColor};
 	box-sizing: border-box;
 	display: inline-flex;
 	min-height: 8em;
@@ -157,11 +157,11 @@ export const TabContentVertical: any = css`
 	flex-grow: 1;
 `;
 
-export const TabContentView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
-	${props => props.xcss || ''}
+export const TabContentView: any = styled.div`
+	${(props: TabContainerProps) => props.xcss || ''}
 `;
 
-export const TabNavigationView: any = withProps<TabContainerProps, HTMLDivElement>(styled.div)`
+export const TabNavigationView: any = styled.div`
 	align-self: center;
 	display: flex;
 	float: right;

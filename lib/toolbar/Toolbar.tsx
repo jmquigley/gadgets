@@ -64,7 +64,7 @@ import {
 	Justify,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface ToolbarProps extends BaseProps {
 	justify?: Justify;
@@ -79,19 +79,19 @@ export function getDefaultToolbarProps(): ToolbarProps {
 	);
 }
 
-export const ToolbarView: any = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
+export const ToolbarView: any = styled.div`
 	border: solid 1px silver;
 	box-sizing: border-box;
 	display: flex;
 	padding: 3px 2px;
 `;
 
-export const ToolbarGroupView: any = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
+export const ToolbarGroupView: any = styled.div`
 	align-items: center;
 	display: flex;
 	padding: 2px 0 1px 0;
 
-	${props => {
+	${(props: ToolbarProps) => {
 		switch (props.justify) {
 			case Justify.center: return ('margin: auto;');
 			case Justify.right: return ('margin-left: auto;');
@@ -100,7 +100,7 @@ export const ToolbarGroupView: any = withProps<ToolbarProps, HTMLDivElement>(sty
 	}}
 `;
 
-export const ToolbarElementView: any = withProps<ToolbarProps, HTMLDivElement>(styled.div)`
+export const ToolbarElementView: any = styled.div`
 	box-sizing: border-box;
 `;
 

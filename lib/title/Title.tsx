@@ -81,7 +81,7 @@ import {
 	invisible,
 	Wrapper
 } from '../shared';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 
 export enum TitleLayout {
 	quarter,
@@ -114,14 +114,14 @@ export function getDefaultTitleProps(): TitleProps {
 export type TitleState = BaseState;
 export const getDefaultTitleState = getDefaultBaseState;
 
-export const TitleView: any = withProps<TitleProps, HTMLDivElement>(styled.div)`
+export const TitleView: any = styled.div`
 	box-sizing: border-box;
 	display: flex;
-	flex-direction: ${props => props.layout === TitleLayout.stacked ? 'column' : 'row'};
+	flex-direction: ${(props: TitleProps) => props.layout === TitleLayout.stacked ? 'column' : 'row'};
 	flex-grow: 1;
 
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: TitleProps) => disabled(props)}
+	${(props: TitleProps) => invisible(props)}
 `;
 
 export const TitleQuarterView: any = css`
@@ -182,12 +182,12 @@ export const WidgetDominantView: any = css`
 	flex: 1;
 `;
 
-const StyledWidget: any = withProps<TitleProps, HTMLDivElement>(styled.div)`
+const StyledWidget: any = styled.div`
 	align-items: center;
 	display: block;
 
-	${props => props.xcss && props.xcss}
-	${props => props.sizing && fontStyle[props.sizing]}
+	${(props: TitleProps) => props.xcss && props.xcss}
+	${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
 export const StyledLabel: any = StyledWidget.withComponent(Label);

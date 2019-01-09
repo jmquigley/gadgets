@@ -105,7 +105,7 @@ import {
 	SortOrder,
 	Wrapper
 } from '../shared';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 import {TextField} from '../textField';
 
 export const defaultPageSize: number = 25;
@@ -168,31 +168,31 @@ export const PagerView: any = styled.div`
 	}
 
 	> .ui-button:first-child {
-		border-left: solid 1px ${props => props.theme.borderColor};
+		border-left: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 	}
 `;
 
-export const StyledButtonDialog: any = withProps<PagerProps, HTMLElement>(styled(ButtonDialog))`
-	border: solid 1px ${props => props.theme.borderColor};
+export const StyledButtonDialog: any = styled(ButtonDialog)`
+	border: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 	flex: none;
 	height: unset;
 	width: 1rem;
 `;
 
-export const StyledButtonText: any = withProps<PagerProps, HTMLElement>(styled(ButtonText))`
+export const StyledButtonText: any = styled(ButtonText)`
 	${ButtonCSS}
-	background-color: ${props => props.selected ? props.theme.selectedBackgroundColor : props.theme.backgroundColor};
-	border-top: solid 1px ${props => props.theme.borderColor};
-	border-bottom: solid 1px ${props => props.theme.borderColor};
-	border-right: solid 1px ${props => props.theme.borderColor};
-	color: ${props => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
+	background-color: ${(props: PagerProps) => props.selected ? props.theme.selectedBackgroundColor : props.theme.backgroundColor};
+	border-top: solid 1px ${(props: PagerProps) => props.theme.borderColor};
+	border-bottom: solid 1px ${(props: PagerProps) => props.theme.borderColor};
+	border-right: solid 1px ${(props: PagerProps) => props.theme.borderColor};
+	color: ${(props: PagerProps) => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
 `;
 
-export const StyledButton: any = withProps<PagerProps, HTMLElement>(styled(Button))`
+export const StyledButton: any = styled(Button)`
 	${ButtonCSS}
-	border-top: solid 1px ${props => props.theme.borderColor};
-	border-bottom: solid 1px ${props => props.theme.borderColor};
-	border-right: solid 1px ${props => props.theme.borderColor};
+	border-top: solid 1px ${(props: PagerProps) => props.theme.borderColor};
+	border-bottom: solid 1px ${(props: PagerProps) => props.theme.borderColor};
+	border-right: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 `;
 
 export const StyledTextField: any = styled(TextField)`

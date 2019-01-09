@@ -8,7 +8,7 @@ import {
 	Container,
 	TextField,
 	Validator
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoTextField extends React.Component<any, undefined> {
 

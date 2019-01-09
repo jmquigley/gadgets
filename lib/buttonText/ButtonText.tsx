@@ -57,7 +57,7 @@ import {
 	Justify,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface ButtonTextProps extends IconProps {
 	justify?: Justify;
@@ -81,10 +81,10 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 export type ButtonTextState = BaseState;
 export const getDefaultButtonTextState = getDefaultBaseState;
 
-export const ButtonTextContent: any = withProps<ButtonTextProps, HTMLDivElement>(styled.div)`
+export const ButtonTextContent: any = styled.div`
 	flex: 1;
 	padding: 0 0.2em;
-	text-align: ${props => {
+	text-align: ${(props: ButtonTextProps) => {
 		if (props.justify === Justify.center || props.noicon) {
 			return('center');
 		} else if (props.justify === Justify.left) {
@@ -93,7 +93,7 @@ export const ButtonTextContent: any = withProps<ButtonTextProps, HTMLDivElement>
 			return('left');
 		}
 	}};
-	${props => props.sizing && fontStyle[props.sizing]};
+	${(props: ButtonTextProps) => props.sizing && fontStyle[props.sizing]};
 
 	span {
 		margin: 0 auto;
@@ -101,15 +101,15 @@ export const ButtonTextContent: any = withProps<ButtonTextProps, HTMLDivElement>
 	}
 `;
 
-export const ButtonTextView: any = withProps<ButtonTextProps, HTMLDivElement>(styled.div)`
+export const ButtonTextView: any = styled.div`
 	${BaseButtonView}
 
 	&:not(.nohover):hover {
-		background-color: ${props => props.theme.hoverColor} ${props => props.style.backgroundColor && '!important'};
+		background-color: ${(props: ButtonTextProps) => props.theme.hoverColor} ${props => props.style.backgroundColor && '!important'};
 	}
 
-	${props => props.disabled && DisabledCSS}
-	${props => !props.visible && InvisibleCSS}
+	${(props: ButtonTextProps) => props.disabled && DisabledCSS}
+	${(props: ButtonTextProps) => !props.visible && InvisibleCSS}
 `;
 
 export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> {

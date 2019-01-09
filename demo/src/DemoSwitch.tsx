@@ -9,7 +9,7 @@ import {
 	Container,
 	Switch,
 	SwitchType
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoBrowser extends React.Component<any, undefined> {
 

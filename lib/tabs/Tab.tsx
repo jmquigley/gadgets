@@ -69,7 +69,7 @@ import {
 	Location,
 	Wrapper
 } from '../shared';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 import {Title} from '../title';
 
 export interface TabProps extends BaseProps {
@@ -102,53 +102,53 @@ export interface TabState {
 }
 
 export const TabBorderTop: any = css`
-	border-right: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
-	border-top: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	border-right: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-top: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 
 	&:first-child {
-		border-left: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+		border-left: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	}
 `;
 
 export const TabBorderBottom: any = css`
-	border-right: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
-	border-bottom: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	border-right: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-bottom: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 
 	&:first-child {
-		border-left: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+		border-left: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	}
 `;
 
 export const TabBorderLeft: any = css`
-	border-left: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
-	border-bottom: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	border-left: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-bottom: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 
 	&:first-child {
-		border-top: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+		border-top: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	}
 `;
 
 export const TabBorderRight: any = css`
-	border-right: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
-	border-bottom: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+	border-right: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-bottom: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 
 	&:first-child {
-		border-top: solid 1px ${props => props.theme.borderColor || ColorScheme.c1};
+		border-top: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	}
 `;
 
-export const TabView: any = withProps<TabProps, HTMLDivElement>(styled.div)`
-	background-color: ${props => props.selected ? props.theme.selectedBackgroundColor : props.theme.backgroundColor};
-	color: ${props => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
+export const TabView: any = styled.div`
+	background-color: ${(props: TabProps) => props.selected ? props.theme.selectedBackgroundColor : props.theme.backgroundColor};
+	color: ${(props: TabProps) => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
 	cursor: default;
 	display: inline-block;
 	flex-grow: unset;
 
-	${props => props.xcss ? props.xcss : ''}
+	${(props: TabProps) => props.xcss ? props.xcss : ''}
 
 	&:hover .ui-button {
-		color: ${props => props.theme.backgroundColor};
-		background-color: ${props => props.theme.hoverColor};
+		color: ${(props: TabProps) => props.theme.backgroundColor};
+		background-color: ${(props: TabProps) => props.theme.hoverColor};
 		display: flex;
 		opacity: 1.0;
 	}
@@ -158,8 +158,8 @@ export const TabView: any = withProps<TabProps, HTMLDivElement>(styled.div)`
 	}
 
 	.ui-label:hover {
-		color: ${props => !props.disabled ? props.theme.headerHoverColor : 'unset'} !important;
-		background-color: ${props => !props.disabled ? props.theme.headerBackgroundColor : 'unset'} !important;
+		color: ${(props: TabProps) => !props.disabled ? props.theme.headerHoverColor : 'unset'} !important;
+		background-color: ${(props: TabProps) => !props.disabled ? props.theme.headerBackgroundColor : 'unset'} !important;
 	}
 
 	.ui-button:hover {
@@ -169,11 +169,11 @@ export const TabView: any = withProps<TabProps, HTMLDivElement>(styled.div)`
 	.ui-button {
 		display: none;
 		opacity: 0;
-		animation: fadeIn ${props => props.theme.transitionDelay};
+		animation: fadeIn ${(props: TabProps) => props.theme.transitionDelay};
 	}
 
-	${props => disabled(props)}
-	${props => invisible(props)}
+	${(props: TabProps) => disabled(props)}
+	${(props: TabProps) => invisible(props)}
 `;
 
 export class Tab extends BaseComponent<TabProps, TabState> {

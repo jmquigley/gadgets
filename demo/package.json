@@ -8,6 +8,7 @@
 				"build:app": "../node_modules/.bin/babel app.jsx -o app.js",
 				"build:main": "../node_modules/.bin/tsc -p .",
 				"build:src": "../node_modules/.bin/babel src --out-dir src",
-				"copy:highlights": "cpx --clean ../dist/highlights/**/*.css highlights/"
+				"copy:highlights": "cpx --clean ../dist/highlights/**/*.css highlights/",
+				"update:react": "./update-react.sh"
 		}
 }

@@ -9,7 +9,7 @@ import {
 	Button,
 	Container,
 	Location
-} from '../../';
+} from '../../dist/bundle';
 
 export interface DemoBadgeState {
 	counter1?: number;

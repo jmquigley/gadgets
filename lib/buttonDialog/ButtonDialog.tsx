@@ -58,7 +58,7 @@ import {
 	Wrapper
 } from '../shared';
 import {debug} from '../shared/helpers';
-import styled, {css, withProps} from '../shared/themed-components';
+import styled, {css} from '../shared/themed-components';
 import {tooltip} from '../tooltip';
 import {Triangle} from '../triangle';
 
@@ -101,27 +101,27 @@ export function getDefaultButtonDialogState(): ButtonDialogState {
 		}));
 }
 
-export const ButtonDialogContent: any = withProps<ButtonDialogProps, HTMLDivElement>(styled.div)`
-	background-color: ${props => props.theme.backgroundColor};
-	border: solid 1px ${props => props.theme.borderColor};
-	color: ${props => props.theme.color};
-	display: ${props => props.visible ? 'block' : 'none'};
+export const ButtonDialogContent: any = styled.div`
+	background-color: ${(props: ButtonDialogProps) => props.theme.backgroundColor};
+	border: solid 1px ${(props: ButtonDialogProps) => props.theme.borderColor};
+	color: ${(props: ButtonDialogProps) => props.theme.color};
+	display: ${(props: ButtonDialogProps) => props.visible ? 'block' : 'none'};
 	min-width: 100px;
 	min-height: 100%;
 	z-index: calc(${baseZIndex} + 1);
 
-	${props => props.sizing && fontStyle[props.sizing]}
+	${(props: ButtonDialogProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
-export const ButtonDialogPopup: any = withProps<ButtonDialogProps, HTMLDivElement>(styled.div)`
-	display: ${props => props.visible ? 'block' : 'none'};
+export const ButtonDialogPopup: any = styled.div`
+	display: ${(props: ButtonDialogProps) => props.visible ? 'block' : 'none'};
 	position: absolute;
 	z-index: ${baseZIndex};
 
-	${props => props.location === Location.top ? DialogTop : DialogBottom}
+	${(props: ButtonDialogProps) => props.location === Location.top ? DialogTop : DialogBottom}
 `;
 
-export const ButtonDialogView: any = withProps<ButtonDialogProps, HTMLDivElement>(styled.div)`
+export const ButtonDialogView: any = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	height: inherit;
@@ -140,9 +140,9 @@ export const DialogTop: any = css`
 `;
 
 export const StyledTriangle: any = styled(Triangle)`
-	display: ${props => props.visible ? 'block' : 'none'};
+	display: ${(props: ButtonDialogProps) => props.visible ? 'block' : 'none'};
 
-	${props => props.location === Location.top ? TriangleTop : TriangleBottom}
+	${(props: ButtonDialogProps) => props.location === Location.top ? TriangleTop : TriangleBottom}
 `;
 
 export const TriangleBottom: any = css`

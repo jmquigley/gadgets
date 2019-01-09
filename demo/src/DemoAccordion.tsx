@@ -9,7 +9,7 @@ import {
 	Button,
 	Container,
 	List
-} from '../../';
+} from '../../dist/bundle';
 import {createItems} from './helpers';
 
 export default class DemoAccordion extends React.Component<any, undefined> {

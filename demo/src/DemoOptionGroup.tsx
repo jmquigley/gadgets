@@ -7,7 +7,7 @@ import * as React from 'react';
 import {
 	Container,
 	OptionGroup
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoOptionGroup extends React.Component<any, undefined> {
 

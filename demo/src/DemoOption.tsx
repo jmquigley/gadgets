@@ -10,7 +10,7 @@ import {
 	Container,
 	Option,
 	OptionType
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoOption extends React.Component<any, undefined> {
 

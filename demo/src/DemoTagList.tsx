@@ -7,7 +7,7 @@ import {
 	Break,
 	Container,
 	TagList
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoTagList extends React.Component<any, undefined> {
 

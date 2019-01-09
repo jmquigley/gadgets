@@ -71,7 +71,7 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
@@ -105,20 +105,20 @@ export function getDefaultAccordionItemState(): AccordionItemState {
 		}));
 }
 
-export const AccordionItemView: any = withProps<AccordionItemProps, HTMLUListElement>(styled.ul)`
+export const AccordionItemView: any = styled.ul`
 	> .ui-item, > .ui-item-button {
-		color: ${props => props.theme.headerForegroundColor || Color.white};
-		background-color: ${props => props.theme.headerBackgroundColor || Color.black};
+		color: ${(props: AccordionItemProps) => props.theme.headerForegroundColor || Color.white};
+		background-color: ${(props: AccordionItemProps) => props.theme.headerBackgroundColor || Color.black};
 	}
 
 	> .ui-item:hover {
-		color: ${props => props.theme.headerHoverColor || Color.silver};
-		background-color: ${props => props.theme.headerBackgroundColor || Color.black} !important;
+		color: ${(props: AccordionItemProps) => props.theme.headerHoverColor || Color.silver};
+		background-color: ${(props: AccordionItemProps) => props.theme.headerBackgroundColor || Color.black} !important;
 	}
 `;
 
-export const AccordionContentView: any = withProps<AccordionItemProps, HTMLDivElement>(styled.div)`
-	${props => props.sizing && fontStyle[props.sizing]};
+export const AccordionContentView: any = styled.div`
+	${(props: AccordionItemProps) => props.sizing && fontStyle[props.sizing]};
 `;
 
 export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionItemState> {

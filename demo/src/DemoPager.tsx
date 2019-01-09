@@ -9,7 +9,7 @@ import {
 	Container,
 	Pager,
 	SortOrder
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoPager extends React.Component<any, undefined> {
 

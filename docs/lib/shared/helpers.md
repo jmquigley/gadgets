@@ -1,7 +1,7 @@
 ## Functions
 
 <dl>
-<dt><a href="#debug">debug(context, args)</a></dt>
+<dt><a href="#debug">debug(context, ...args)</a></dt>
 <dd><p>A wrapper for the debug function.  It uses the package.json to enable or
 disable debugging information in the library.  It also turns off
 coverage checks for this function.</p>
@@ -16,7 +16,7 @@ flag is used to override the current global reference.</p>
 
 <a name="debug"></a>
 
-## debug(context, args)
+## debug(context, ...args)
 A wrapper for the debug function.  It uses the package.json to enable or
 disable debugging information in the library.  It also turns off
 coverage checks for this function.
@@ -26,7 +26,7 @@ coverage checks for this function.
 | Param | Type | Description |
 | --- | --- | --- |
 | context | <code>string</code> | the name of the module where this debug request is made. |
-| args | <code>Array.&lt;object&gt;</code> | the list of arguments passed to the the debug function. |
+| ...args | <code>Array.&lt;object&gt;</code> | the list of arguments passed to the the debug function. |
 
 <a name="globalize"></a>
 

@@ -4,12 +4,11 @@ const debug = require('debug')('DemoDropdown');
 
 import autobind from 'autobind-decorator';
 import * as React from 'react';
-
 import {
 	Container,
 	Dropdown,
 	DropdownOption
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoDropdown extends React.Component<any, undefined> {
 

@@ -8,7 +8,7 @@ import {
 	Container,
 	Title,
 	TitleLayout
-} from '../../';
+} from '../../dist/bundle';
 
 export default class DemoTitle extends React.Component<any, undefined> {
 

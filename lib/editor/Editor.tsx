@@ -130,7 +130,7 @@ import {
 	Sizing,
 	Wrapper
 } from '../shared';
-import styled, {withProps} from '../shared/themed-components';
+import styled from '../shared/themed-components';
 import {Toolbar} from '../toolbar';
 
 export interface QuillKeyBindings {
@@ -167,7 +167,7 @@ export function getDefaultEditorProps(): EditorProps {
 	);
 }
 
-export const EditorContainer: any = withProps<EditorProps, HTMLDivElement>(styled.div)`
+export const EditorContainer: any = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -176,7 +176,7 @@ export const EditorContainer: any = withProps<EditorProps, HTMLDivElement>(style
 	width: inherit;
 `;
 
-export const EditorView: any = withProps<EditorProps, HTMLDivElement>(styled.div)`
+export const EditorView: any = styled.div`
 	display: flex;
 	min-width: inherit;
 
@@ -186,11 +186,11 @@ export const EditorView: any = withProps<EditorProps, HTMLDivElement>(styled.div
 		width: 100%;
 	}
 
-	${props => props.disabled && DisabledCSS}
-	${props => !props.visible && InvisibleCSS}
+	${(props: EditorProps) => props.disabled && DisabledCSS}
+	${(props: EditorProps) => !props.visible && InvisibleCSS}
 `;
 
-export const EditorToolbar: any = withProps<EditorProps, HTMLDivElement>(styled(Toolbar))`
+export const EditorToolbar: any = styled(Toolbar)`
 	margin-bottom: -1px;
 	min-width: inherit;
 `;
