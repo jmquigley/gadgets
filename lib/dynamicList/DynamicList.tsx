@@ -127,7 +127,7 @@
 const debug = require('debug')('DynamicList');
 
 import autobind from 'autobind-decorator';
-import * as _ from 'lodash';
+import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {sprintf} from 'sprintf-js';
 import {sp} from 'util.constants';
@@ -141,8 +141,10 @@ import {defaultPageSizes, Pager} from '../pager';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	Color,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Sizing,
 	SortOrder,
 	Wrapper
@@ -177,7 +179,7 @@ export interface DynamicListProps extends BaseProps {
 }
 
 export function getDefaultDynamicListProps(): DynamicListProps {
-	return _.cloneDeep(Object.assign(
+	return cloneDeep(Object.assign(
 		getDefaultBaseProps(), {
 			collapsable: false,
 			errorMessage: '',
@@ -203,7 +205,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 	);
 }
 
-export interface DynamicListState {
+export interface DynamicListState extends BaseState {
 	errorMessage?: string;
 	initialToggle?: boolean;
 	page?: number;
@@ -214,6 +216,14 @@ export interface DynamicListState {
 	showNew?: boolean;
 	sortOrder?: SortOrder;
 	totalItems?: number;
+}
+
+// TODO: add additional init
+export function getDefaultToastState(): DynamicListState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			errorMessage: ''
+		}));
 }
 
 export const DynamicListContainer: any = styled.div`
@@ -673,7 +683,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 						level={ToastLevel.error}
 						onClose={this.handleErrorClose}
 						show={this.state.showError}
-						sizing={this.prev(this.props.sizing).type}
+						sizing={BaseComponent.prev(this.state.sizing).type}
 					>
 						{this.state.errorMessage}
 					</Toast>

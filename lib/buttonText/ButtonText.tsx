@@ -28,8 +28,8 @@
  * #### Properties
  * - `iconName: {string} ('bomb')` - The name of the font awesome icon used with this
  * button
- * - `justify: {Justify} (Justify.right)` - Determines if the button will be on the left, center,
- * right.
+ * - `justify: {Justify} (Justify.right)` - Determines if the button will be on the
+ * left, center, right.
  * - `noicon: {boolean} (false)` - Turns off the icon and only shows the text in the
  * center of the button.
  * - `sizing: {Sizing} (Sizing.normal)` - The size of this control set by the Sizing

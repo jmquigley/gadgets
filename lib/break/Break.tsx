@@ -28,7 +28,9 @@ import * as React from 'react';
 import {
 	BaseComponent,
 	BaseProps,
-	getDefaultBaseProps
+	BaseState,
+	getDefaultBaseProps,
+	getDefaultBaseState
 } from '../shared';
 import styled from '../shared/themed-components';
 
@@ -39,23 +41,28 @@ export const BreakView: any = styled.p`
 	margin-top: ${(props: BaseProps) => props.height};
 `;
 
-export class Break extends BaseComponent<BaseProps, undefined> {
+export class Break extends BaseComponent<BaseProps, BaseState> {
 
 	public static defaultProps: BaseProps = getDefaultBaseProps();
+	public state: BaseState = getDefaultBaseState();
 
 	constructor(props: BaseProps) {
 		super(props);
+	}
 
-		this._classes.add('ui-break');
-		this.componentWillUpdate(props);
+	public static getDerivedStateFromProps(props: BaseProps, state: BaseState) {
+		state.classes.clear();
+		state.classes.add('ui-break');
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
 		return (
 			<BreakView
 				className={this.classes}
-				height={this.fontSizeREM(this.props.sizing, 0.5)}
-				sizing={this.props.sizing}
+				height={BaseComponent.fontSizeREM(this.state.sizing, 0.5)}
+				sizing={this.state.sizing}
 				style={this.inlineStyles}
 			/>
 		);

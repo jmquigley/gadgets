@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a default DialogWindow control 1`] = `
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height="600px"
+  icon="plane"
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="DialogWindow"
+  onClose={[Function]}
+  onError={[Function]}
+  onOpen={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  show={true}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Demo Dialog Window"
+  tooltip=""
+  top=""
+  visible={true}
+  width="600px"
+  xcss={null}
+>
+  <Modal
+    ariaHideApp={true}
+    bodyOpenClassName="ReactModal__Body--open"
+    closeTimeoutMS={0}
+    contentLabel="Demo Dialog Window"
+    isOpen={true}
+    onAfterOpen={[Function]}
+    onRequestClose={[Function]}
+    parentSelector={[Function]}
+    portalClassName="ReactModalPortal"
+    role="dialog"
+    shouldCloseOnEsc={true}
+    shouldCloseOnOverlayClick={false}
+    shouldFocusAfterRender={true}
+    shouldReturnFocusAfterClose={true}
+    style={
+      Object {
+        "content": Object {
+          "borderRadius": "0",
+          "bottom": "auto",
+          "left": "50%",
+          "padding": "0",
+          "right": "auto",
+          "top": "50%",
+          "transform": "translate(-50%, -50%)",
+        },
+      }
+    }
+  >
+    <styled.div
+      bottom=""
+      className="ui-dialogwindow"
+      contentEditable={false}
+      controlled={true}
+      direction="right"
+      disabled={false}
+      err={null}
+      errorMessage=""
+      focus={false}
+      height="600px"
+      icon="plane"
+      id=""
+      left=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      obj="DialogWindow"
+      onClose={[Function]}
+      onOpen={[Function]}
+      padding=""
+      selected={false}
+      show={true}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={null}
+      title="Demo Dialog Window"
+      tooltip=""
+      top=""
+      visible={true}
+      width="600px"
+      xcss={null}
+    >
+      <Styled(Item)
+        bottom=""
+        className="test-class"
+        contentEditable={false}
+        controlled={true}
+        direction="right"
+        disabled={false}
+        err={null}
+        errorMessage=""
+        focus={false}
+        height="600px"
+        icon="plane"
+        id=""
+        left=""
+        leftButton={
+          <Icon
+            bottom=""
+            className=""
+            contentEditable={false}
+            controlled={true}
+            direction="right"
+            disabled={false}
+            err={null}
+            errorMessage=""
+            focus={false}
+            height=""
+            iconName="plane"
+            id=""
+            imageFile=""
+            left=""
+            location="none"
+            noedit={false}
+            nohover={false}
+            noripple={false}
+            obj="Icon"
+            padding=""
+            selected={false}
+            sizing="normal"
+            style={Object {}}
+            testing={true}
+            theme={null}
+            tooltip=""
+            top=""
+            visible={true}
+            width=""
+            xcss={null}
+          />
+        }
+        location="none"
+        noedit={false}
+        nohover={true}
+        noripple={true}
+        obj="DialogWindow"
+        onClose={[Function]}
+        onOpen={[Function]}
+        padding=""
+        rightButton={
+          <ForwardRef
+            iconName="times"
+            onClick={[Function]}
+          />
+        }
+        selected={false}
+        show={true}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        theme={null}
+        title="Demo Dialog Window"
+        tooltip=""
+        top=""
+        visible={true}
+        width="600px"
+        xcss={null}
+      >
+        <span>
+          Dialog Content
+        </span>
+      </Styled(Item)>
+      <styled.div
+        className="ui-dialogwindow-content"
+      >
+        <span>
+          Dialog Content
+        </span>
+      </styled.div>
+    </styled.div>
+  </Modal>
+</Wrapper>
+`;
+
+exports[`Test retrieval of DialogWindow props object 1`] = `
+Object {
+  "bottom": "",
+  "children": null,
+  "className": "",
+  "contentEditable": false,
+  "controlled": true,
+  "direction": "right",
+  "disabled": false,
+  "err": null,
+  "errorMessage": "",
+  "focus": false,
+  "height": "400px",
+  "icon": "window-restore",
+  "id": "",
+  "left": "",
+  "location": "none",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "obj": "DialogWindow",
+  "onClose": [Function],
+  "onOpen": [Function],
+  "padding": "",
+  "selected": false,
+  "show": false,
+  "sizing": "normal",
+  "style": Object {},
+  "testing": true,
+  "theme": null,
+  "title": "Dialog Window",
+  "tooltip": "",
+  "top": "",
+  "visible": true,
+  "width": "400px",
+  "xcss": null,
+}
+`;

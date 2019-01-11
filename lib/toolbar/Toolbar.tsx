@@ -60,7 +60,9 @@ import {Keys} from 'util.keys';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Justify,
 	Wrapper
 } from '../shared';
@@ -78,6 +80,9 @@ export function getDefaultToolbarProps(): ToolbarProps {
 		})
 	);
 }
+
+export type ToolbarState = BaseState;
+export const getDefaultToolbarState = getDefaultBaseState;
 
 export const ToolbarView: any = styled.div`
 	border: solid 1px silver;
@@ -104,9 +109,10 @@ export const ToolbarElementView: any = styled.div`
 	box-sizing: border-box;
 `;
 
-export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
+export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 
 	public static readonly defaultProps: ToolbarProps = getDefaultToolbarProps();
+	public state: ToolbarState = getDefaultToolbarState();
 
 	private _keys: Keys;
 	private static readonly _whitelist = new BinaryTree([
@@ -125,11 +131,13 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 
 	constructor(props: ToolbarProps) {
 		super(props, Toolbar.defaultProps.style);
-
 		this._keys = new Keys({testing: this.props.testing});
-		this._classes.add('ui-toolbar');
+	}
 
-		this.componentWillUpdate(this.props);
+	public static getDerivedStateFromProps(props: ToolbarProps, state: ToolbarState) {
+		state.classes.clear();
+		state.classes.add('ui-toolbar');
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -139,7 +147,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 			if (Toolbar._whitelist.contains(child['props'].obj)) {
 				const style = Object.assign({}, child['props'].style, {
 					display: 'flex',
-					height: this.fontSizePX(this.props.sizing, 1.5),
+					height: BaseComponent.fontSizePX(this.state.sizing, 1.5),
 					margin: '0 2px'
 				});
 
@@ -148,7 +156,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 					case 'ButtonCircle':
 					case 'ButtonDialog':
 					case 'ButtonToggle':
-						style['width'] = this.fontSizePX(this.props.sizing, 1.5);
+						style['width'] = BaseComponent.fontSizePX(this.state.sizing, 1.5);
 
 					case 'ButtonText':
 						style['border'] = `solid 1px ${this.theme.borderColor}`,
@@ -173,7 +181,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 				const newChild = React.cloneElement(child as any, {
 					className: 'ui-toolbar-element',
 					disabled: this.props.disabled,
-					sizing: this.props.sizing,
+					sizing: this.state.sizing,
 					visible: this.props.visible
 				});
 
@@ -190,7 +198,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, undefined> {
 
 		return(
 			<Wrapper {...this.props} >
-				<ToolbarView className={this.classes}>
+				<ToolbarView className={this.state.classes.classnames}>
 					<ToolbarGroupView
 						className="ui-toolbar-group"
 						justify={this.props.justify}

@@ -141,14 +141,14 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 					disabled={this.props.disabled}
 					id={this.id}
 					onClick={this.handleClick}
-					sizing={this.props.sizing}
+					sizing={this.state.sizing}
 					style={this.state.style}
 					visible={this.props.visible}
 				>
 					<Icon
 						className={this.props.iconStyle}
 						iconName={this.props.iconName}
-						sizing={this.props.sizing}
+						sizing={this.state.sizing}
 					/>
 				{tooltip(this.id, this.props)}
 				</ButtonView>

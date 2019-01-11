@@ -66,8 +66,10 @@ import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	disabled,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from '../shared';
@@ -104,9 +106,17 @@ export function getDefaultTagListProps(): TagListProps {
 	);
 }
 
-export interface TagListState {
+export interface TagListState extends BaseState {
 	inputTextSize: number;
 	tags?: string[];
+}
+
+export function getDefaultTagListState(): TagListState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			inputTextSize: 1,
+			tags: []
+		}));
 }
 
 export const StyledIcon: any = styled(Icon)`
@@ -137,24 +147,10 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 
 	private tags: SortedList<string> | List<string>;
 	public static readonly defaultProps: TagListProps = getDefaultTagListProps();
+	public state: TagListState = getDefaultTagListState();
 
 	constructor(props: TagListProps) {
 		super(props, TagList.defaultProps.style);
-
-		if (props.nosort) {
-			this.tags = new List<string>(props.tags);
-		} else {
-			this.tags = new SortedList<string>(props.tags);
-		}
-
-		this._classes.add('ui-taglist');
-
-		this.state = {
-			inputTextSize: 1,
-			tags: this.tags.array
-		};
-
-		this.componentWillUpdate(props);
 	}
 
 	private clearInput(e: HTMLInputElement) {
@@ -215,6 +211,19 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 				this.props.onKeyPress(e);
 			}
 		}
+	}
+
+	public static getDerivedStateFromProps(props: TagListProps, state: TagListState) {
+		state.classes.clear();
+		state.classes.add('ui-taglist');
+
+		if (props.nosort) {
+			state.tags = new List<string>(props.tags).array;
+		} else {
+			state.tags = new SortedList<string>(props.tags).array;
+		}
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {

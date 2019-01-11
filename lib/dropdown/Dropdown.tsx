@@ -60,8 +60,10 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	fontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Wrapper
 } from '../shared';
 import styled from '../shared/themed-components';
@@ -89,8 +91,15 @@ export function getDefaultDropdownProps(): DropdownProps {
 	);
 }
 
-export interface DropdownState {
+export interface DropdownState extends BaseState {
 	currentValue: string;
+}
+
+export function getDefaultDropdownState(): DropdownState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			currentValue: ''
+		}));
 }
 
 export const DropdownContainerView: any = styled.div`
@@ -117,12 +126,11 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	constructor(props: DropdownProps) {
 		super(props, Dropdown.defaultProps.style);
 
-		this.state = {
+		this.state = Object.assign(getDefaultDropdownState(), {
 			currentValue: this.props.defaultVal
-		};
+		});
 
 		this._keys = new Keys({testing: this.props.testing});
-		this._classes.add('ui-dropdown');
 
 		this.componentWillReceiveProps(this.props);
 		this.componentWillUpdate(this.props, this.state);
@@ -138,9 +146,16 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 		});
 	}
 
+	public static getDerivedStateFromProps(props: DropdownProps, state: DropdownState) {
+		state.classes.clear();
+		state.classes.add('ui-dropdown');
+
+		return super.getDerivedStateFromProps(props, state);
+	}
+
 	public componentWillReceiveProps(nextProps: DropdownProps) {
 
-		const size: string = this.fontSizePX();
+		const size: string = BaseComponent.fontSizePX();
 		const chevron: string = `url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='${size}' height='${size}' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>")`;
 
 		this.inlineStyles = {
@@ -161,10 +176,10 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 			<Wrapper {...this.props} >
 				<DropdownContainerView
 					className="ui-dropdown-container"
-					sizing={this.props.sizing}
+					sizing={this.state.sizing}
 				>
 					<DropdownView
-						className={this.classes}
+						className={this.state.classes}
 						disabled={this.props.disabled}
 						id={this.id}
 						onChange={this.props.disabled ? nilEvent : this.handleChange}

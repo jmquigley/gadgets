@@ -80,6 +80,7 @@ export interface DialogWindowProps extends BaseProps {
 
 export interface DialogWindowState {
 	showModal?: boolean;
+	icon?: any;
 }
 
 export function getDefaultDialogWindowProps(): DialogWindowProps {
@@ -138,18 +139,14 @@ export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowS
 		}
 	};
 
-	private _icon: any = null;
-
 	constructor(props: DialogWindowProps) {
 		super(props, DialogWindow.defaultProps.style);
 
 		this._classes.add('ui-dialogwindow');
 		this.state = {
+			icon: null,
 			showModal: this.props.show
 		};
-
-		this.componentWillReceiveProps(this.props);
-		this.componentWillUpdate(this.props);
 	}
 
 	@autobind
@@ -164,20 +161,20 @@ export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowS
 		this.props.onOpen();
 	}
 
-	public componentWillReceiveProps(nextProps: DialogWindowProps) {
-		if (this.props.show !== nextProps.show) {
-			this.setState({showModal: nextProps.show});
+	public static getDerivedStateFromProps(props: DialogWindowProps, state: DialogWindowState) {
+		state.showModal = props.show;
+		if (props.icon) {
+			state.icon = <Icon iconName={props.icon} />;
 		}
 
-		if (nextProps.icon) {
-			this._icon = <Icon iconName={nextProps.icon} />;
-		}
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
 		return(
 			<Wrapper {...this.props} >
 				<ReactModal
+					ariaHideApp={false}
 					contentLabel={this.props.title}
 					isOpen={this.state.showModal}
 					onAfterOpen={this.handleOpen}
@@ -191,7 +188,7 @@ export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowS
 					>
 						<ItemView
 							{...this.props}
-							leftButton={this._icon}
+							leftButton={this.state.icon}
 							nohover
 							noripple
 							rightButton={

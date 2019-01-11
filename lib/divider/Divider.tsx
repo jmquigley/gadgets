@@ -44,8 +44,10 @@ import * as React from 'react';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	Color,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Wrapper
 } from '../shared';
 import styled from '../shared/themed-components';
@@ -69,6 +71,9 @@ export function getDefaultDividerProps(): DividerProps {
 	);
 }
 
+export type DividerState = BaseState;
+export const getDefaultDividerState = getDefaultBaseState;
+
 export const DividerView: any = styled.div`
 	align-items: center;
 	color: ${(props: DividerProps) => props.theme.borderColor || Color.silver};
@@ -78,15 +83,20 @@ export const DividerView: any = styled.div`
 	width: ${(props: DividerProps) => props.width || '1.0em'};
 `;
 
-export class Divider extends BaseComponent<DividerProps, undefined> {
+export class Divider extends BaseComponent<DividerProps, DividerState> {
 
 	public static readonly defaultProps: DividerProps = getDefaultDividerProps();
+	public state: DividerState = getDefaultDividerState();
 
 	constructor(props: DividerProps) {
 		super(props, Divider.defaultProps.style);
+	}
 
-		this._classes.add('ui-divider');
-		this.componentWillUpdate(this.props);
+	public static getDerivedStateFromProps(props: DividerProps, state: DividerState) {
+		state.classes.clear();
+		state.classes.add('ui-divider');
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -95,7 +105,7 @@ export class Divider extends BaseComponent<DividerProps, undefined> {
 				<DividerView
 					className={this.classes}
 					style={this.inlineStyles}
-					width={this.fontSizePX(this.props.sizing, 0.25)}
+					width={BaseComponent.fontSizePX(this.state.sizing, 0.25)}
 				>
 					{this.props.dividerType}
 				</DividerView>

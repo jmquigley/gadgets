@@ -57,7 +57,6 @@ import {
 	Sizing,
 	Wrapper
 } from '../shared';
-import {debug} from '../shared/helpers';
 import styled, {css} from '../shared/themed-components';
 import {tooltip} from '../tooltip';
 import {Triangle} from '../triangle';
@@ -195,7 +194,7 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 		}
 	}
 
-	public componentWillMount() {
+	public componentDidMount() {
 		document.addEventListener('keydown', this.handleKeyDown);
 		window.addEventListener('click', this.handleDialogClick);
 	}
@@ -254,8 +253,6 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 				/>
 			);
 		}
-
-		debug('ButtonDialog', 'triangle: %O, props: %O, state: %O', triangle, this.props, this.state);
 
 		return (
 			<Wrapper {...this.props} >

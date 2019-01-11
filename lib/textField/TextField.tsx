@@ -269,8 +269,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	constructor(props: TextFieldProps) {
 		super(props, TextField.defaultProps.style);
-
-		this._classes.add('ui-textfield');
 		this._validators = cloneDeep(props.validators);
 
 		if (textTypes.includes(props.type) && props.usevalidation) {
@@ -391,15 +389,15 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	}
 
 	public static getDerivedStateFromProps(props: TextFieldProps, state: TextFieldState) {
-		const newState: TextFieldState = {...state};
-
-		newState.previousText = props.value || '';
+		state.classes.clear();
+		state.classes.add('ui-textfield');
+		state.previousText = props.value || '';
 
 		if ('size' in props) {
-			newState.style['minWidth'] = `${(props.size / 2.0) + 3}rem`;
+			state.style['minWidth'] = `${(props.size / 2.0) + 3}rem`;
 		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -421,13 +419,13 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			clearBtn = (
 				<ClearButtonView
 					className="ui-textfield-clear-button"
-					sizing={this.prev().type}
+					sizing={BaseComponent.prev().type}
 				>
 					<ButtonCircle
 						disabled={props.disabled}
 						iconName="times"
 						onClick={this.handleClearButton}
-						sizing={this.prev().type}
+						sizing={BaseComponent.prev().type}
 						style={{
 							backgroundColor: Color.white,
 							borderColor: Color.error,
@@ -459,7 +457,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 							onChange={this.handleChange}
 							onKeyDown={this.handleKeyDown}
 							onKeyPress={this.handleKeyPress}
-							sizing={this.props.sizing}
+							sizing={this.state.sizing}
 							visible={visible}
 						/>
 						{clearBtn}
@@ -469,7 +467,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 							className="ui-textfield-validation-message"
 							disabled={props.disabled}
 							messageType={this.state.messageType}
-							sizing={this.prev().type}
+							sizing={BaseComponent.prev().type}
 							visible={visible}
 						>
 							{this.props.usevalidation ? sp : null}

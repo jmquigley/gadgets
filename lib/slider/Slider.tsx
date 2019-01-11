@@ -69,9 +69,11 @@ import {closestNumber, nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	boxStyle,
 	disabled,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from '../shared';
@@ -102,8 +104,15 @@ export function getDefaultSliderProps(): SliderProps {
 	);
 }
 
-export interface SliderState {
+export interface SliderState extends BaseState {
 	x?: number;
+}
+
+export function getDefaultSliderState(): SliderState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			x: false
+		}));
 }
 
 export const SliderBar: any = styled.div`
@@ -163,15 +172,12 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	constructor(props: SliderProps) {
 		super(props, Slider.defaultProps.style);
 
-		this._classes.add('ui-slider');
-
 		this._tickKeys = new Keys({testing: this.props.testing});
-		this.state = {
+		this.state = Object.assign(getDefaultSliderState(), {
 			x: this.props.startPosition
-		};
+		});
 
-		this._sliderSize = this.fontSize();
-
+		this._sliderSize = BaseComponent.fontSize();
 		this._mouseMove = debounce(this.handleMouseMove, this._mouseDelay);
 
 		this.componentWillReceiveProps(this.props);
@@ -284,11 +290,18 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		}
 	}
 
+	public static getDerivedStateFromProps(props: SliderProps, state: SliderState) {
+		state.classes.clear();
+		state.classes.add('ui-slider');
+
+		return super.getDerivedStateFromProps(props, state);
+	}
+
 	public render() {
 		return(
 			<Wrapper {...this.props} >
 				<SliderContainer
-					className={this.classes}
+					className={this.state.classes}
 					disabled={this.props.disabled}
 					height={this._sliderSize + (this._borderSize * 4)}
 					visible={this.props.visible}
@@ -305,7 +318,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 							className="ui-slider-element"
 							left={this.state.x - (this._sliderSize * 0.5) - this._borderSize}
 							onMouseDown={this.handleMouseDown}
-							sizing={this.props.sizing}
+							sizing={this.state.sizing}
 						/>
 					</SliderBar>
 				</SliderContainer>

@@ -43,9 +43,11 @@ import {Label} from '../label';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	Color,
 	disabled,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from '../shared';
@@ -72,8 +74,15 @@ export function getDefaultTagProps(): TagProps {
 	);
 }
 
-export interface TagState {
+export interface TagState extends BaseState {
 	showDelete?: boolean;
+}
+
+export function getDefaultTagState(): TagState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			showDelete: false
+		}));
 }
 
 export const DeleteButtonView: any = styled(ButtonCircle)`
@@ -104,16 +113,10 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 
 	private tag: string;
 	public static readonly defaultProps: TagProps = getDefaultTagProps();
+	public state: TagState = getDefaultTagState();
 
 	constructor(props: TagProps) {
 		super(props, Tag.defaultProps.style);
-		this._classes.add('ui-tag');
-
-		this.state = {
-			showDelete: false
-		};
-
-		this.componentWillUpdate(props, this.state);
 	}
 
 	@autobind
@@ -143,6 +146,12 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		}
 	}
 
+	public static getDerivedStateFromProps(props: TagProps, state: TagState) {
+		state.classes.clear();
+		state.classes.add('ui-tag');
+		return super.getDerivedStateFromProps(props, state);
+	}
+
 	public render() {
 		this.tag = React.Children.map(this.props.children, (child: any) => {
 			return String(child);
@@ -155,7 +164,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 					disabled={this.props.disabled}
 					iconName="times"
 					onClick={this.handleOnClick}
-					sizing={this.prev().type}
+					sizing={BaseComponent.prev().type}
 					style={{
 						backgroundColor: Color.white,
 						borderColor: Color.error,

@@ -128,7 +128,7 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, ButtonCircleS
 	}
 
 	public render() {
-		const size: string = this.fontSizePX(this.props.sizing, 1.5);
+		const size: string = BaseComponent.fontSizePX(this.state.sizing, 1.5);
 
 		return (
 			<Wrapper {...this.props} >

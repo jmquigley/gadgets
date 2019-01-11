@@ -237,8 +237,6 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 				/>
 			)
 		};
-
-		this.componentWillUpdate(this.props);
 	}
 
 	get message(): string {
@@ -277,16 +275,16 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		});
 	}
 
-	public componentWillReceiveProps(nextProps: DialogBoxProps) {
-		if (this.props.show !== nextProps.show) {
-			this.setState({showModal: nextProps.show});
-		}
+	public static getDerivedStateFromProps(props: DialogBoxProps, state: DialogBoxState) {
+		state.showModal = props.show;
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
 		return (
 			<Wrapper {...this.props} >
 				<ReactModal
+					ariaHideApp={false}
 					contentLabel="DialogBox"
 					isOpen={this.state.showModal}
 					onAfterOpen={this.handleOpen}

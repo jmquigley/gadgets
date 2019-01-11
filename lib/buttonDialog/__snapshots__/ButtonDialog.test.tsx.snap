@@ -1,0 +1,2282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a ButtonDialog control 1`] = `
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  dialogClasses={
+    Array [
+      "test-class-dialog",
+    ]
+  }
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  left=""
+  location="bottom"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notriangle={false}
+  obj="ButtonDialog"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  triangleClasses={Array []}
+  visible={true}
+  width=""
+  xcss={null}
+>
+  <styled.div
+    className="ui-button-dialog test-class"
+    id="ButtonDialog-0"
+  >
+    <Button
+      bottom=""
+      className=""
+      contentEditable={false}
+      controlled={true}
+      direction="right"
+      disabled={false}
+      err={null}
+      errorMessage=""
+      focus={false}
+      height=""
+      iconName="bomb"
+      iconStyle=""
+      id=""
+      left=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      obj="Button"
+      onClick={[Function]}
+      padding=""
+      selected={false}
+      sizing="normal"
+      style={
+        Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
+        }
+      }
+      testing={true}
+      theme={null}
+      tooltip=""
+      top=""
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <styled.div
+      className="ui-dialog-popup test-class-dialog"
+      location="bottom"
+      onClick={[Function]}
+      visible={false}
+    >
+      <styled.div
+        sizing="normal"
+        visible={false}
+      >
+        <p>
+          Dialog test
+        </p>
+      </styled.div>
+      <Styled(Triangle)
+        className="ui-dialog-triangle"
+        direction="up"
+        location="bottom"
+        nobase={true}
+        sizing="normal"
+        style={
+          Object {
+            "fill": "#ffffff",
+            "stroke": "#c0c0c0",
+          }
+        }
+        visible={false}
+      />
+    </styled.div>
+  </styled.div>
+</Wrapper>
+`;
+
+exports[`Test creation of a ButtonDialog control on top 1`] = `
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  dialogClasses={
+    Array [
+      "test-class-dialog",
+    ]
+  }
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  left=""
+  location="top"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notriangle={false}
+  obj="ButtonDialog"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  triangleClasses={Array []}
+  visible={true}
+  width=""
+  xcss={null}
+>
+  <styled.div
+    className="ui-button-dialog test-class"
+    id="ButtonDialog-0"
+  >
+    <Button
+      bottom=""
+      className=""
+      contentEditable={false}
+      controlled={true}
+      direction="right"
+      disabled={false}
+      err={null}
+      errorMessage=""
+      focus={false}
+      height=""
+      iconName="bomb"
+      iconStyle=""
+      id=""
+      left=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      obj="Button"
+      onClick={[Function]}
+      padding=""
+      selected={false}
+      sizing="normal"
+      style={
+        Object {
+          "backgroundColor": "inherit",
+          "color": "inherit",
+        }
+      }
+      testing={true}
+      theme={null}
+      tooltip=""
+      top=""
+      visible={true}
+      width=""
+      xcss={null}
+    />
+    <styled.div
+      className="ui-dialog-popup test-class-dialog"
+      location="top"
+      onClick={[Function]}
+      visible={false}
+    >
+      <styled.div
+        sizing="normal"
+        visible={false}
+      >
+        <p>
+          Dialog test
+        </p>
+      </styled.div>
+      <Styled(Triangle)
+        className="ui-dialog-triangle"
+        direction="down"
+        location="top"
+        nobase={true}
+        sizing="normal"
+        style={
+          Object {
+            "fill": "#ffffff",
+            "stroke": "#c0c0c0",
+          }
+        }
+        visible={false}
+      />
+    </styled.div>
+  </styled.div>
+</Wrapper>
+`;
+
+exports[`Test making the ButtonDialog invisible 1`] = `
+<ButtonDialog
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  dialogClasses={Array []}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  left=""
+  location="bottom"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notriangle={false}
+  obj="ButtonDialog"
+  onClick={[Function]}
+  padding=""
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  triangleClasses={Array []}
+  visible={false}
+  width=""
+  xcss={null}
+>
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    dialogClasses={Array []}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    iconStyle=""
+    id=""
+    left=""
+    location="bottom"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    notriangle={false}
+    obj="ButtonDialog"
+    onClick={[Function]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    triangleClasses={Array []}
+    visible={false}
+    width=""
+    xcss={null}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "titleBarBackgroundColor": "#004358",
+          "titleBarForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-button-dialog"
+        id="ButtonDialog-0"
+      >
+        <StyledComponent
+          className="ui-button-dialog"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-jhAzac",
+                "isStatic": true,
+                "lastClassName": "cCDqLk",
+                "rules": Array [
+                  "
+	box-sizing: border-box;
+	display: flex;
+	height: inherit;
+	position: relative;
+	width: inherit;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-jhAzac",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          id="ButtonDialog-0"
+        >
+          <div
+            className="ui-button-dialog sc-jhAzac cCDqLk"
+            id="ButtonDialog-0"
+          >
+            <Button
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              iconName="bomb"
+              iconStyle=""
+              id=""
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Button"
+              onClick={[Function]}
+              padding=""
+              selected={false}
+              sizing="normal"
+              style={
+                Object {
+                  "backgroundColor": "inherit",
+                  "color": "inherit",
+                }
+              }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={false}
+              width=""
+              xcss={null}
+            >
+              <Wrapper
+                bottom=""
+                className=""
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={false}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                iconName="bomb"
+                iconStyle=""
+                id=""
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="Button"
+                onClick={[Function]}
+                onError={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
+                sizing="normal"
+                style={
+                  Object {
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                  }
+                }
+                testing={true}
+                theme={null}
+                tooltip=""
+                top=""
+                visible={false}
+                width=""
+                xcss={null}
+              >
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "titleBarBackgroundColor": "#004358",
+                      "titleBarForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
+                >
+                  <styled.div
+                    className="ui-button ripple"
+                    disabled={false}
+                    id="Button-0"
+                    onClick={[Function]}
+                    sizing="normal"
+                    style={
+                      Object {
+                        "backgroundColor": "inherit",
+                        "color": "inherit",
+                      }
+                    }
+                    visible={false}
+                  >
+                    <StyledComponent
+                      className="ui-button ripple"
+                      disabled={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-kAzzGY",
+                            "isStatic": false,
+                            "lastClassName": "iSDUyN",
+                            "rules": Array [
+                              "
+	",
+                              "
+	align-items: center;
+	box-sizing: border-box;
+	cursor: default;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	line-height: inherit;
+	outline: none;
+	overflow: visible;
+	position: relative;
+	user-select: none;
+	width: 100%;
+",
+                              "
+
+	flex: 1;
+
+	&:not(.nohover):hover {
+		background-color: ",
+                              [Function],
+                              " ",
+                              [Function],
+                              ";
+	}
+
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-kAzzGY",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="Button-0"
+                      onClick={[Function]}
+                      sizing="normal"
+                      style={
+                        Object {
+                          "backgroundColor": "inherit",
+                          "color": "inherit",
+                        }
+                      }
+                      visible={false}
+                    >
+                      <div
+                        className="ui-button ripple sc-kAzzGY iSDUyN"
+                        disabled={false}
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
+                          }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          err={null}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="bomb"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="normal"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
+                        >
+                          <Wrapper
+                            bottom=""
+                            className=""
+                            contentEditable={false}
+                            controlled={true}
+                            direction="right"
+                            disabled={false}
+                            err={null}
+                            errorMessage=""
+                            focus={false}
+                            height=""
+                            iconName="bomb"
+                            id=""
+                            imageFile=""
+                            left=""
+                            location="none"
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            obj="Icon"
+                            onError={[Function]}
+                            padding=""
+                            reset={false}
+                            selected={false}
+                            sizing="normal"
+                            style={Object {}}
+                            testing={true}
+                            theme={null}
+                            tooltip=""
+                            top=""
+                            visible={true}
+                            width=""
+                            xcss={null}
+                          >
+                            <ThemeProvider
+                              theme={
+                                Object {
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#c0c0c0",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "itemHoverColor": "#bedb39",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
+                                  "titleBarBackgroundColor": "#004358",
+                                  "titleBarForegroundColor": "#ffe11a",
+                                  "tooltipBackgroundColor": "#708090",
+                                  "tooltipForegroundColor": "#ffffff",
+                                  "transitionDelay": "0.5s",
+                                }
+                              }
+                            >
+                              <styled.i
+                                bottom=""
+                                className="ui-icon fa fa-fw fa-bomb"
+                                contentEditable={false}
+                                controlled={true}
+                                direction="right"
+                                disabled={false}
+                                err={null}
+                                errorMessage=""
+                                focus={false}
+                                height=""
+                                iconName="bomb"
+                                id=""
+                                imageFile=""
+                                left=""
+                                location="none"
+                                noedit={false}
+                                nohover={false}
+                                noripple={false}
+                                obj="Icon"
+                                padding=""
+                                selected={false}
+                                sizing="normal"
+                                style={Object {}}
+                                testing={true}
+                                theme={null}
+                                tooltip=""
+                                top=""
+                                visible={true}
+                                width=""
+                                xcss={null}
+                              >
+                                <StyledComponent
+                                  bottom=""
+                                  className="ui-icon fa fa-fw fa-bomb"
+                                  contentEditable={false}
+                                  controlled={true}
+                                  direction="right"
+                                  disabled={false}
+                                  err={null}
+                                  errorMessage=""
+                                  focus={false}
+                                  forwardedComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-gqjmRU",
+                                        "isStatic": false,
+                                        "lastClassName": "iCGQxQ",
+                                        "rules": Array [
+                                          "
+	text-align: center;
+	",
+                                          [Function],
+                                          "
+	",
+                                          [Function],
+                                          "
+	",
+                                          [Function],
+                                          "
+	",
+                                          [Function],
+                                          "
+",
+                                        ],
+                                      },
+                                      "displayName": "styled.i",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-gqjmRU",
+                                      "target": "i",
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                    }
+                                  }
+                                  forwardedRef={null}
+                                  height=""
+                                  iconName="bomb"
+                                  id=""
+                                  imageFile=""
+                                  left=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  obj="Icon"
+                                  padding=""
+                                  selected={false}
+                                  sizing="normal"
+                                  style={Object {}}
+                                  testing={true}
+                                  theme={null}
+                                  tooltip=""
+                                  top=""
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
+                                >
+                                  <i
+                                    className="ui-icon fa fa-fw fa-bomb sc-gqjmRU iCGQxQ"
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    height=""
+                                    id=""
+                                    selected={false}
+                                    style={Object {}}
+                                    width=""
+                                  />
+                                </StyledComponent>
+                              </styled.i>
+                            </ThemeProvider>
+                          </Wrapper>
+                        </Icon>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </ThemeProvider>
+              </Wrapper>
+            </Button>
+            <styled.div
+              className="ui-dialog-popup"
+              location="bottom"
+              onClick={[Function]}
+              visible={false}
+            >
+              <StyledComponent
+                className="ui-dialog-popup"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-hzDkRC",
+                      "isStatic": false,
+                      "lastClassName": "hQQhla",
+                      "rules": Array [
+                        "
+	display: ",
+                        [Function],
+                        ";
+	position: absolute;
+	z-index: ",
+                        "9999",
+                        ";
+
+	",
+                        [Function],
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-hzDkRC",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                location="bottom"
+                onClick={[Function]}
+                visible={false}
+              >
+                <div
+                  className="ui-dialog-popup sc-hzDkRC hQQhla"
+                  onClick={[Function]}
+                >
+                  <styled.div
+                    sizing="normal"
+                    visible={false}
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bRBYWo",
+                            "isStatic": false,
+                            "lastClassName": "hczTUb",
+                            "rules": Array [
+                              "
+	background-color: ",
+                              [Function],
+                              ";
+	border: solid 1px ",
+                              [Function],
+                              ";
+	color: ",
+                              [Function],
+                              ";
+	display: ",
+                              [Function],
+                              ";
+	min-width: 100px;
+	min-height: 100%;
+	z-index: calc(",
+                              "9999",
+                              " + 1);
+
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bRBYWo",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      sizing="normal"
+                      visible={false}
+                    >
+                      <div
+                        className="sc-bRBYWo hczTUb"
+                      >
+                        <p>
+                          Dialog test
+                        </p>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                  <Styled(Triangle)
+                    className="ui-dialog-triangle"
+                    direction="up"
+                    location="bottom"
+                    nobase={true}
+                    sizing="normal"
+                    style={
+                      Object {
+                        "fill": "#ffffff",
+                        "stroke": "#c0c0c0",
+                      }
+                    }
+                    visible={false}
+                  >
+                    <StyledComponent
+                      className="ui-dialog-triangle"
+                      direction="up"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-fBuWsC",
+                            "isStatic": false,
+                            "lastClassName": "bQQiNp",
+                            "rules": Array [
+                              "
+	display: ",
+                              [Function],
+                              ";
+
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "defaultStyles": Object {},
+                          "displayName": "Styled(Triangle)",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-fBuWsC",
+                          "target": [Function],
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                          Symbol(Symbol.hasInstance): [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      location="bottom"
+                      nobase={true}
+                      sizing="normal"
+                      style={
+                        Object {
+                          "fill": "#ffffff",
+                          "stroke": "#c0c0c0",
+                        }
+                      }
+                      visible={false}
+                    >
+                      <Triangle
+                        bottom=""
+                        className="ui-dialog-triangle sc-fBuWsC bQQiNp"
+                        contentEditable={false}
+                        controlled={true}
+                        direction="up"
+                        disabled={false}
+                        err={null}
+                        errorMessage=""
+                        focus={false}
+                        height=""
+                        id=""
+                        left=""
+                        location="bottom"
+                        nobase={true}
+                        noedit={false}
+                        nohover={false}
+                        noripple={false}
+                        obj="Triangle"
+                        padding=""
+                        selected={false}
+                        sizing="normal"
+                        style={
+                          Object {
+                            "fill": "#ffffff",
+                            "stroke": "#c0c0c0",
+                          }
+                        }
+                        testing={true}
+                        theme={null}
+                        tooltip=""
+                        top=""
+                        visible={false}
+                        width=""
+                        xcss={null}
+                      >
+                        <Wrapper
+                          bottom=""
+                          className="ui-dialog-triangle sc-fBuWsC bQQiNp"
+                          contentEditable={false}
+                          controlled={true}
+                          direction="up"
+                          disabled={false}
+                          err={null}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          id=""
+                          left=""
+                          location="bottom"
+                          nobase={true}
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Triangle"
+                          onError={[Function]}
+                          padding=""
+                          reset={false}
+                          selected={false}
+                          sizing="normal"
+                          style={
+                            Object {
+                              "fill": "#ffffff",
+                              "stroke": "#c0c0c0",
+                            }
+                          }
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={false}
+                          width=""
+                          xcss={null}
+                        >
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "itemHoverColor": "#bedb39",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "titleBarBackgroundColor": "#004358",
+                                "titleBarForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
+                          >
+                            <styled.svg
+                              bottom=""
+                              className="ui-triangle ui-dialog-triangle sc-fBuWsC bQQiNp"
+                              contentEditable={false}
+                              controlled={true}
+                              direction="up"
+                              disabled={false}
+                              err={null}
+                              errorMessage=""
+                              focus={false}
+                              height=""
+                              id=""
+                              left=""
+                              location="bottom"
+                              nobase={true}
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Triangle"
+                              padding=""
+                              preserveAspectRatio="xMidYMid meet"
+                              selected={false}
+                              sizing="normal"
+                              style={
+                                Object {
+                                  "fill": "#ffffff",
+                                  "stokeWidth": "2px",
+                                  "stroke": "#c0c0c0",
+                                }
+                              }
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              version="1.1"
+                              viewBox="0 0 40 40"
+                              visible={false}
+                              width=""
+                              xcss={null}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <StyledComponent
+                                bottom=""
+                                className="ui-triangle ui-dialog-triangle sc-fBuWsC bQQiNp"
+                                contentEditable={false}
+                                controlled={true}
+                                direction="up"
+                                disabled={false}
+                                err={null}
+                                errorMessage=""
+                                focus={false}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-jTzLTM",
+                                      "isStatic": false,
+                                      "lastClassName": "icdcXA",
+                                      "rules": Array [
+                                        "
+	transform: ",
+                                        [Function],
+                                        ";
+
+	",
+                                        [Function],
+                                        "
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.svg",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-jTzLTM",
+                                    "target": "svg",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                                height=""
+                                id=""
+                                left=""
+                                location="bottom"
+                                nobase={true}
+                                noedit={false}
+                                nohover={false}
+                                noripple={false}
+                                obj="Triangle"
+                                padding=""
+                                preserveAspectRatio="xMidYMid meet"
+                                selected={false}
+                                sizing="normal"
+                                style={
+                                  Object {
+                                    "fill": "#ffffff",
+                                    "stokeWidth": "2px",
+                                    "stroke": "#c0c0c0",
+                                  }
+                                }
+                                testing={true}
+                                theme={null}
+                                tooltip=""
+                                top=""
+                                version="1.1"
+                                viewBox="0 0 40 40"
+                                visible={false}
+                                width=""
+                                xcss={null}
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <svg
+                                  className="ui-triangle ui-dialog-triangle sc-fBuWsC bQQiNp sc-jTzLTM icdcXA"
+                                  contentEditable={false}
+                                  direction="up"
+                                  disabled={false}
+                                  height=""
+                                  id=""
+                                  preserveAspectRatio="xMidYMid meet"
+                                  selected={false}
+                                  style={
+                                    Object {
+                                      "fill": "#ffffff",
+                                      "stokeWidth": "2px",
+                                      "stroke": "#c0c0c0",
+                                    }
+                                  }
+                                  version="1.1"
+                                  viewBox="0 0 40 40"
+                                  width=""
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <polygon
+                                    points="-3,35, 20,10 43,35"
+                                    style={
+                                      Object {
+                                        "stroke": "none",
+                                      }
+                                    }
+                                  />
+                                  <polygon
+                                    points="-3,35, 20,10 43,35, 20,10"
+                                    style={
+                                      Object {
+                                        "strokeLinecap": "square",
+                                        "strokeWidth": undefined,
+                                      }
+                                    }
+                                  />
+                                </svg>
+                              </StyledComponent>
+                            </styled.svg>
+                          </ThemeProvider>
+                        </Wrapper>
+                      </Triangle>
+                    </StyledComponent>
+                  </Styled(Triangle)>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</ButtonDialog>
+`;
+
+exports[`Test retrieval of ButtonDialog props object 1`] = `
+Object {
+  "bottom": "",
+  "children": null,
+  "className": "",
+  "contentEditable": false,
+  "controlled": true,
+  "dialogClasses": Array [],
+  "direction": "right",
+  "disabled": false,
+  "err": null,
+  "errorMessage": "",
+  "focus": false,
+  "height": "",
+  "iconName": "bomb",
+  "iconStyle": "",
+  "id": "",
+  "left": "",
+  "location": "bottom",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "notriangle": false,
+  "obj": "ButtonDialog",
+  "onClick": [Function],
+  "padding": "",
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {
+    "backgroundColor": "inherit",
+    "color": "inherit",
+  },
+  "testing": true,
+  "theme": null,
+  "tooltip": "",
+  "top": "",
+  "triangleClasses": Array [],
+  "visible": true,
+  "width": "",
+  "xcss": null,
+}
+`;
+
+exports[`Test the disabling of the ButtonDialog control 1`] = `
+<ButtonDialog
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  dialogClasses={Array []}
+  direction="right"
+  disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  left=""
+  location="bottom"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notriangle={false}
+  obj="ButtonDialog"
+  onClick={[Function]}
+  padding=""
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "inherit",
+      "color": "inherit",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  triangleClasses={Array []}
+  visible={true}
+  width=""
+  xcss={null}
+>
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    dialogClasses={Array []}
+    direction="right"
+    disabled={true}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    iconStyle=""
+    id=""
+    left=""
+    location="bottom"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    notriangle={false}
+    obj="ButtonDialog"
+    onClick={[Function]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "color": "inherit",
+      }
+    }
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    triangleClasses={Array []}
+    visible={true}
+    width=""
+    xcss={null}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "titleBarBackgroundColor": "#004358",
+          "titleBarForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-button-dialog"
+        id="ButtonDialog-0"
+      >
+        <StyledComponent
+          className="ui-button-dialog"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-jhAzac",
+                "isStatic": true,
+                "lastClassName": "cCDqLk",
+                "rules": Array [
+                  "
+	box-sizing: border-box;
+	display: flex;
+	height: inherit;
+	position: relative;
+	width: inherit;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-jhAzac",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          id="ButtonDialog-0"
+        >
+          <div
+            className="ui-button-dialog sc-jhAzac cCDqLk"
+            id="ButtonDialog-0"
+          >
+            <Button
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={true}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              iconName="bomb"
+              iconStyle=""
+              id=""
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Button"
+              onClick={[Function]}
+              padding=""
+              selected={false}
+              sizing="normal"
+              style={
+                Object {
+                  "backgroundColor": "inherit",
+                  "color": "inherit",
+                }
+              }
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
+            >
+              <Wrapper
+                bottom=""
+                className=""
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={true}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                iconName="bomb"
+                iconStyle=""
+                id=""
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="Button"
+                onClick={[Function]}
+                onError={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
+                sizing="normal"
+                style={
+                  Object {
+                    "backgroundColor": "inherit",
+                    "color": "inherit",
+                  }
+                }
+                testing={true}
+                theme={null}
+                tooltip=""
+                top=""
+                visible={true}
+                width=""
+                xcss={null}
+              >
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "titleBarBackgroundColor": "#004358",
+                      "titleBarForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
+                >
+                  <styled.div
+                    className="ui-button nohover"
+                    disabled={true}
+                    id="Button-0"
+                    onClick={[Function]}
+                    sizing="normal"
+                    style={
+                      Object {
+                        "backgroundColor": "inherit",
+                        "color": "inherit",
+                      }
+                    }
+                    visible={true}
+                  >
+                    <StyledComponent
+                      className="ui-button nohover"
+                      disabled={true}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-kAzzGY",
+                            "isStatic": false,
+                            "lastClassName": "dZmjPY",
+                            "rules": Array [
+                              "
+	",
+                              "
+	align-items: center;
+	box-sizing: border-box;
+	cursor: default;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	line-height: inherit;
+	outline: none;
+	overflow: visible;
+	position: relative;
+	user-select: none;
+	width: 100%;
+",
+                              "
+
+	flex: 1;
+
+	&:not(.nohover):hover {
+		background-color: ",
+                              [Function],
+                              " ",
+                              [Function],
+                              ";
+	}
+
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-kAzzGY",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="Button-0"
+                      onClick={[Function]}
+                      sizing="normal"
+                      style={
+                        Object {
+                          "backgroundColor": "inherit",
+                          "color": "inherit",
+                        }
+                      }
+                      visible={true}
+                    >
+                      <div
+                        className="ui-button nohover sc-kAzzGY dZmjPY"
+                        disabled={true}
+                        id="Button-0"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "inherit",
+                            "color": "inherit",
+                          }
+                        }
+                      >
+                        <Icon
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          err={null}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          iconName="bomb"
+                          id=""
+                          imageFile=""
+                          left=""
+                          location="none"
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Icon"
+                          padding=""
+                          selected={false}
+                          sizing="normal"
+                          style={Object {}}
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={true}
+                          width=""
+                          xcss={null}
+                        >
+                          <Wrapper
+                            bottom=""
+                            className=""
+                            contentEditable={false}
+                            controlled={true}
+                            direction="right"
+                            disabled={false}
+                            err={null}
+                            errorMessage=""
+                            focus={false}
+                            height=""
+                            iconName="bomb"
+                            id=""
+                            imageFile=""
+                            left=""
+                            location="none"
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            obj="Icon"
+                            onError={[Function]}
+                            padding=""
+                            reset={false}
+                            selected={false}
+                            sizing="normal"
+                            style={Object {}}
+                            testing={true}
+                            theme={null}
+                            tooltip=""
+                            top=""
+                            visible={true}
+                            width=""
+                            xcss={null}
+                          >
+                            <ThemeProvider
+                              theme={
+                                Object {
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#c0c0c0",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "itemHoverColor": "#bedb39",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
+                                  "titleBarBackgroundColor": "#004358",
+                                  "titleBarForegroundColor": "#ffe11a",
+                                  "tooltipBackgroundColor": "#708090",
+                                  "tooltipForegroundColor": "#ffffff",
+                                  "transitionDelay": "0.5s",
+                                }
+                              }
+                            >
+                              <styled.i
+                                bottom=""
+                                className="ui-icon fa fa-fw fa-bomb"
+                                contentEditable={false}
+                                controlled={true}
+                                direction="right"
+                                disabled={false}
+                                err={null}
+                                errorMessage=""
+                                focus={false}
+                                height=""
+                                iconName="bomb"
+                                id=""
+                                imageFile=""
+                                left=""
+                                location="none"
+                                noedit={false}
+                                nohover={false}
+                                noripple={false}
+                                obj="Icon"
+                                padding=""
+                                selected={false}
+                                sizing="normal"
+                                style={Object {}}
+                                testing={true}
+                                theme={null}
+                                tooltip=""
+                                top=""
+                                visible={true}
+                                width=""
+                                xcss={null}
+                              >
+                                <StyledComponent
+                                  bottom=""
+                                  className="ui-icon fa fa-fw fa-bomb"
+                                  contentEditable={false}
+                                  controlled={true}
+                                  direction="right"
+                                  disabled={false}
+                                  err={null}
+                                  errorMessage=""
+                                  focus={false}
+                                  forwardedComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-gqjmRU",
+                                        "isStatic": false,
+                                        "lastClassName": "iCGQxQ",
+                                        "rules": Array [
+                                          "
+	text-align: center;
+	",
+                                          [Function],
+                                          "
+	",
+                                          [Function],
+                                          "
+	",
+                                          [Function],
+                                          "
+	",
+                                          [Function],
+                                          "
+",
+                                        ],
+                                      },
+                                      "displayName": "styled.i",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-gqjmRU",
+                                      "target": "i",
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                    }
+                                  }
+                                  forwardedRef={null}
+                                  height=""
+                                  iconName="bomb"
+                                  id=""
+                                  imageFile=""
+                                  left=""
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  obj="Icon"
+                                  padding=""
+                                  selected={false}
+                                  sizing="normal"
+                                  style={Object {}}
+                                  testing={true}
+                                  theme={null}
+                                  tooltip=""
+                                  top=""
+                                  visible={true}
+                                  width=""
+                                  xcss={null}
+                                >
+                                  <i
+                                    className="ui-icon fa fa-fw fa-bomb sc-gqjmRU iCGQxQ"
+                                    contentEditable={false}
+                                    direction="right"
+                                    disabled={false}
+                                    height=""
+                                    id=""
+                                    selected={false}
+                                    style={Object {}}
+                                    width=""
+                                  />
+                                </StyledComponent>
+                              </styled.i>
+                            </ThemeProvider>
+                          </Wrapper>
+                        </Icon>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </ThemeProvider>
+              </Wrapper>
+            </Button>
+            <styled.div
+              className="ui-dialog-popup"
+              location="bottom"
+              onClick={[Function]}
+              visible={false}
+            >
+              <StyledComponent
+                className="ui-dialog-popup"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-hzDkRC",
+                      "isStatic": false,
+                      "lastClassName": "hQQhla",
+                      "rules": Array [
+                        "
+	display: ",
+                        [Function],
+                        ";
+	position: absolute;
+	z-index: ",
+                        "9999",
+                        ";
+
+	",
+                        [Function],
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-hzDkRC",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                location="bottom"
+                onClick={[Function]}
+                visible={false}
+              >
+                <div
+                  className="ui-dialog-popup sc-hzDkRC hQQhla"
+                  onClick={[Function]}
+                >
+                  <styled.div
+                    sizing="normal"
+                    visible={false}
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bRBYWo",
+                            "isStatic": false,
+                            "lastClassName": "hczTUb",
+                            "rules": Array [
+                              "
+	background-color: ",
+                              [Function],
+                              ";
+	border: solid 1px ",
+                              [Function],
+                              ";
+	color: ",
+                              [Function],
+                              ";
+	display: ",
+                              [Function],
+                              ";
+	min-width: 100px;
+	min-height: 100%;
+	z-index: calc(",
+                              "9999",
+                              " + 1);
+
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bRBYWo",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      sizing="normal"
+                      visible={false}
+                    >
+                      <div
+                        className="sc-bRBYWo hczTUb"
+                      >
+                        <p>
+                          Dialog test
+                        </p>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                  <Styled(Triangle)
+                    className="ui-dialog-triangle"
+                    direction="up"
+                    location="bottom"
+                    nobase={true}
+                    sizing="normal"
+                    style={
+                      Object {
+                        "fill": "#ffffff",
+                        "stroke": "#c0c0c0",
+                      }
+                    }
+                    visible={false}
+                  >
+                    <StyledComponent
+                      className="ui-dialog-triangle"
+                      direction="up"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-fBuWsC",
+                            "isStatic": false,
+                            "lastClassName": "bQQiNp",
+                            "rules": Array [
+                              "
+	display: ",
+                              [Function],
+                              ";
+
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "defaultStyles": Object {},
+                          "displayName": "Styled(Triangle)",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-fBuWsC",
+                          "target": [Function],
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                          Symbol(Symbol.hasInstance): [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      location="bottom"
+                      nobase={true}
+                      sizing="normal"
+                      style={
+                        Object {
+                          "fill": "#ffffff",
+                          "stroke": "#c0c0c0",
+                        }
+                      }
+                      visible={false}
+                    >
+                      <Triangle
+                        bottom=""
+                        className="ui-dialog-triangle sc-fBuWsC bQQiNp"
+                        contentEditable={false}
+                        controlled={true}
+                        direction="up"
+                        disabled={false}
+                        err={null}
+                        errorMessage=""
+                        focus={false}
+                        height=""
+                        id=""
+                        left=""
+                        location="bottom"
+                        nobase={true}
+                        noedit={false}
+                        nohover={false}
+                        noripple={false}
+                        obj="Triangle"
+                        padding=""
+                        selected={false}
+                        sizing="normal"
+                        style={
+                          Object {
+                            "fill": "#ffffff",
+                            "stroke": "#c0c0c0",
+                          }
+                        }
+                        testing={true}
+                        theme={null}
+                        tooltip=""
+                        top=""
+                        visible={false}
+                        width=""
+                        xcss={null}
+                      >
+                        <Wrapper
+                          bottom=""
+                          className="ui-dialog-triangle sc-fBuWsC bQQiNp"
+                          contentEditable={false}
+                          controlled={true}
+                          direction="up"
+                          disabled={false}
+                          err={null}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          id=""
+                          left=""
+                          location="bottom"
+                          nobase={true}
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="Triangle"
+                          onError={[Function]}
+                          padding=""
+                          reset={false}
+                          selected={false}
+                          sizing="normal"
+                          style={
+                            Object {
+                              "fill": "#ffffff",
+                              "stroke": "#c0c0c0",
+                            }
+                          }
+                          testing={true}
+                          theme={null}
+                          tooltip=""
+                          top=""
+                          visible={false}
+                          width=""
+                          xcss={null}
+                        >
+                          <ThemeProvider
+                            theme={
+                              Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#c0c0c0",
+                                "color": "#000000",
+                                "headerBackgroundColor": "#004358",
+                                "headerForegroundColor": "#ffffff",
+                                "headerHoverColor": "#ffe11a",
+                                "hoverColor": "#c0c0c0",
+                                "inputBorderColor": "#c0c0c0",
+                                "itemHoverColor": "#bedb39",
+                                "selectedBackgroundColor": "#1f8a70",
+                                "selectedForegroundColor": "#ffe11a",
+                                "titleBarBackgroundColor": "#004358",
+                                "titleBarForegroundColor": "#ffe11a",
+                                "tooltipBackgroundColor": "#708090",
+                                "tooltipForegroundColor": "#ffffff",
+                                "transitionDelay": "0.5s",
+                              }
+                            }
+                          >
+                            <styled.svg
+                              bottom=""
+                              className="ui-triangle ui-dialog-triangle sc-fBuWsC bQQiNp"
+                              contentEditable={false}
+                              controlled={true}
+                              direction="up"
+                              disabled={false}
+                              err={null}
+                              errorMessage=""
+                              focus={false}
+                              height=""
+                              id=""
+                              left=""
+                              location="bottom"
+                              nobase={true}
+                              noedit={false}
+                              nohover={false}
+                              noripple={false}
+                              obj="Triangle"
+                              padding=""
+                              preserveAspectRatio="xMidYMid meet"
+                              selected={false}
+                              sizing="normal"
+                              style={
+                                Object {
+                                  "fill": "#ffffff",
+                                  "stokeWidth": "2px",
+                                  "stroke": "#c0c0c0",
+                                }
+                              }
+                              testing={true}
+                              theme={null}
+                              tooltip=""
+                              top=""
+                              version="1.1"
+                              viewBox="0 0 40 40"
+                              visible={false}
+                              width=""
+                              xcss={null}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <StyledComponent
+                                bottom=""
+                                className="ui-triangle ui-dialog-triangle sc-fBuWsC bQQiNp"
+                                contentEditable={false}
+                                controlled={true}
+                                direction="up"
+                                disabled={false}
+                                err={null}
+                                errorMessage=""
+                                focus={false}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-jTzLTM",
+                                      "isStatic": false,
+                                      "lastClassName": "icdcXA",
+                                      "rules": Array [
+                                        "
+	transform: ",
+                                        [Function],
+                                        ";
+
+	",
+                                        [Function],
+                                        "
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.svg",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-jTzLTM",
+                                    "target": "svg",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                                height=""
+                                id=""
+                                left=""
+                                location="bottom"
+                                nobase={true}
+                                noedit={false}
+                                nohover={false}
+                                noripple={false}
+                                obj="Triangle"
+                                padding=""
+                                preserveAspectRatio="xMidYMid meet"
+                                selected={false}
+                                sizing="normal"
+                                style={
+                                  Object {
+                                    "fill": "#ffffff",
+                                    "stokeWidth": "2px",
+                                    "stroke": "#c0c0c0",
+                                  }
+                                }
+                                testing={true}
+                                theme={null}
+                                tooltip=""
+                                top=""
+                                version="1.1"
+                                viewBox="0 0 40 40"
+                                visible={false}
+                                width=""
+                                xcss={null}
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <svg
+                                  className="ui-triangle ui-dialog-triangle sc-fBuWsC bQQiNp sc-jTzLTM icdcXA"
+                                  contentEditable={false}
+                                  direction="up"
+                                  disabled={false}
+                                  height=""
+                                  id=""
+                                  preserveAspectRatio="xMidYMid meet"
+                                  selected={false}
+                                  style={
+                                    Object {
+                                      "fill": "#ffffff",
+                                      "stokeWidth": "2px",
+                                      "stroke": "#c0c0c0",
+                                    }
+                                  }
+                                  version="1.1"
+                                  viewBox="0 0 40 40"
+                                  width=""
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <polygon
+                                    points="-3,35, 20,10 43,35"
+                                    style={
+                                      Object {
+                                        "stroke": "none",
+                                      }
+                                    }
+                                  />
+                                  <polygon
+                                    points="-3,35, 20,10 43,35, 20,10"
+                                    style={
+                                      Object {
+                                        "strokeLinecap": "square",
+                                        "strokeWidth": undefined,
+                                      }
+                                    }
+                                  />
+                                </svg>
+                              </StyledComponent>
+                            </styled.svg>
+                          </ThemeProvider>
+                        </Wrapper>
+                      </Triangle>
+                    </StyledComponent>
+                  </Styled(Triangle)>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</ButtonDialog>
+`;

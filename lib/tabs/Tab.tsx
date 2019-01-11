@@ -61,10 +61,12 @@ import {Button} from '../button';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	Color,
 	ColorScheme,
 	disabled,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Location,
 	Wrapper
@@ -97,8 +99,15 @@ export function getDefaultTabProps(): TabProps {
 	);
 }
 
-export interface TabState {
+export interface TabState extends BaseState {
 	hidden: boolean;
+}
+
+export function getDefaultTabState(): TabState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			hidden: false
+		}));
 }
 
 export const TabBorderTop: any = css`
@@ -179,17 +188,10 @@ export const TabView: any = styled.div`
 export class Tab extends BaseComponent<TabProps, TabState> {
 
 	public static readonly defaultProps: TabProps = getDefaultTabProps();
+	public state: TabState = getDefaultTabState();
 
 	constructor(props: TabProps) {
 		super(props, Tab.defaultProps.style);
-
-		this._classes.add('ui-tab');
-
-		this.state = {
-			hidden: false
-		};
-
-		this.componentWillUpdate(this.props, this.state);
 	}
 
 	@autobind
@@ -208,26 +210,25 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		});
 	}
 
-	public componentWillUpdate(nextProps: TabProps, nextState: TabState) {
+	public static getDerivedStateFromProps(props: TabProps, state: TabState) {
+		state.classes.clear();
+		state.classes.add('ui-tab');
+		state.classes.onIf(props.selected)('ui-selected');
 
-		this._classes.onIf(nextProps.selected)(
-			'ui-selected'
-		);
-
-		if (nextState.hidden) {
-			this.inlineStyles = {
+		if (state.hidden) {
+			state.style = {
 				display: 'none',
 				minWidth: '',
 				width: ''
 			};
 		} else {
-			this.inlineStyles = {
+			state.style = {
 				minWidth: '80px',
-				width: nextProps.width
+				width: props.width
 			};
 		}
 
-		super.componentWillUpdate(nextProps, nextState);
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -245,7 +246,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 					disabled={this.props.disabled}
 					className={this.classes}
 					selected={this.props.selected}
-					sizing={this.props.sizing}
+					sizing={this.state.sizing}
 					style={this.inlineStyles}
 					visible={this.props.visible}
 					xcss={xcss}

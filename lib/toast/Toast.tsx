@@ -97,11 +97,13 @@ import {Button} from '../button';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	baseZIndex,
 	Color,
 	disabled,
 	fontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from '../shared';
@@ -138,8 +140,15 @@ export function getDefaultToastProps(): ToastProps {
 		}));
 }
 
-export interface ToastState {
+export interface ToastState extends BaseState {
 	visible: boolean;
+}
+
+export function getDefaultToastState(): ToastState {
+	return cloneDeep(Object.assign({},
+		getDefaultBaseState(), {
+			visible: false
+		}));
 }
 
 export const ContentView: any = styled.div`
@@ -216,21 +225,14 @@ export const ToastView: any = styled.div`
 export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public static readonly defaultProps: ToastProps = getDefaultToastProps();
+	public state: ToastState = getDefaultToastState();
 
 	private _initialVisibility: boolean = false;
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
 		super(props, Toast.defaultProps.style);
-
-		this._classes.add('ui-toast');
-
-		this.state = {
-			visible: this.props.show
-		};
-
 		this.handleDecay();
-		this.componentWillUpdate(this.props, this.state);
 	}
 
 	@autobind
@@ -260,14 +262,6 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		this.handleDecay();
 	}
 
-	public componentWillReceiveProps(nextProps: ToastProps) {
-		if (nextProps.show !== this.state.visible) {
-			this.setState({
-				visible: nextProps.visible
-			});
-		}
-	}
-
 	public componentDidMount() {
 		// The initial visibility of the control is set to invisible
 		// This prevents a "flicker" when the component is first created
@@ -277,6 +271,14 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		// second before the dynamic stying is applied to hide it.
 
 		this._initialVisibility = true;
+	}
+
+	public static getDerivedStateFromProps(props: ToastProps, state: ToastState) {
+		state.classes.clear();
+		state.classes.add('ui-toast');
+		state.visible = props.show;
+
+		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -293,14 +295,14 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 				>
 					<ContentView
 						className="ui-toast-content"
-						sizing={this.props.sizing}
+						sizing={this.state.sizing}
 					>
 						<span>{this.props.children}</span>
 					</ContentView>
 					<StyledButton
 						iconName="times"
 						onClick={this.handleClose}
-						sizing={this.next(this.props.sizing).type}
+						sizing={BaseComponent.next(this.state.sizing).type}
 						style={{
 							color: 'white'
 						}}
