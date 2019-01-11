@@ -26,6 +26,8 @@
 		"dist",
 		"coverage",
 		"node_modules",
-	  "**/__test__/*"
+	  "**/__test__/*",
+		"**/*.test.tsx",
+		"**/*.test.ts"
 	]
 }

@@ -2,12 +2,12 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {Container, getDefaultContainerProps} from '../index';
+import {Container, getDefaultContainerProps} from '../../dist/bundle';
 
 test('Test retrieval of Container props object', () => {
 	const props = getDefaultContainerProps();
 
-	expect(props).toBeTruthy();
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
@@ -18,7 +18,7 @@ test('Test creation of a Container control', () => {
 		</Container>
 	);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -29,7 +29,7 @@ test('Test creation of a Container control with an id value', () => {
 		</Container>
 	);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -40,6 +40,6 @@ test('Test adding custom className to Container control', () => {
 		</Container>
 	);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });

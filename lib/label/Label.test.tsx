@@ -1,14 +1,13 @@
 'use strict';
 
-import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultLabelProps, Label} from '../index';
+import {getDefaultLabelProps, Label} from '../../dist/bundle';
 
 test('Test retrieval of default Label props object', () => {
 	const props = getDefaultLabelProps();
 
-	assert(props);
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
@@ -16,7 +15,7 @@ test('Test creation of a Label control', () => {
 	const s: string = 'Test label text';
 	const ctl = shallow(<Label className="test-class" text={s} />);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -25,7 +24,7 @@ test('Test the disabling of the Label control', () => {
 	const s: string = 'Test label text';
 	const ctl = mount(<Label disabled text={s} />);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('span').simulate('click');
@@ -37,7 +36,7 @@ test('Test making the Label control invisible', () => {
 	const s: string = 'Test label text';
 	const ctl = mount(<Label visible={false} text={s} />);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('span').simulate('click');
@@ -63,15 +62,15 @@ test('Test a double click edit of the Label control', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	const label = ctl.find('.ui-label').first();
-	assert(label);
+	expect(label).toBeDefined();
 	label.simulate('doubleClick');
 	expect(dblclick).toHaveBeenCalled();
 
-	assert(ctl.state('editable'));
+	expect(ctl.state('editable')).toBe(true);
 
 	label.simulate('keyDown', {key: 'B'});
 	expect(keydown).toHaveBeenCalled();
@@ -79,12 +78,12 @@ test('Test a double click edit of the Label control', () => {
 	label.simulate('keyPress', {target: {innerHTML: 'ABCDE'}, key: 'Enter'});
 	expect(keypress).toHaveBeenCalled();
 	expect(change).toHaveBeenCalled();
-	assert.equal(ctl.state('text'), 'ABCDE');
-	assert(!ctl.state('editable'));
+	expect(ctl.state('text')).toBe('ABCDE');
+	expect(!ctl.state('editable')).toBe(true);
 
 	expect(update).toHaveBeenCalled();
-	assert.equal(update.mock.calls[0][0], 'A');
-	assert.equal(update.mock.calls[0][1], 'ABCDE');
+	expect(update.mock.calls[0][0]).toBe('A');
+	expect(update.mock.calls[0][1]).toBe('ABCDE');
 });
 
 test('Test cancelling a double click edit of the Label control', () => {
@@ -107,12 +106,12 @@ test('Test cancelling a double click edit of the Label control', () => {
 
 	label.simulate('keyPress', {target: {innerHTML: 'ABCDE'}, key: 'E'});
 	expect(keypress).toHaveBeenCalled();
-	assert(ctl.state('editable'));
+	expect(ctl.state('editable')).toBe(true);
 
 	label.simulate('keyDown', {key: 'Escape'});
 	expect(keydown).toHaveBeenCalled();
-	assert(!ctl.state('editable'));
-	assert.equal(ctl.state('text'), s);
+	expect(!ctl.state('editable')).toBe(true);
+	expect(ctl.state('text')).toBe(s);
 });
 
 test('Test double click change to Label and blur to save', () => {
@@ -132,25 +131,25 @@ test('Test double click change to Label and blur to save', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	const label = ctl.find('.ui-label').first();
-	assert(label);
+	expect(label).toBeDefined();
 	label.simulate('doubleClick');
 	expect(dblclick).toHaveBeenCalled();
 
-	assert(ctl.state('editable'));
+	expect(ctl.state('editable')).toBe(true);
 
 	label.simulate('blur', {target: {innerHTML: 'ABCDE'}});
 	expect(blur).toHaveBeenCalled();
 	expect(change).toHaveBeenCalled();
-	assert.equal(ctl.state('text'), 'ABCDE');
-	assert(!ctl.state('editable'));
+	expect(ctl.state('text')).toBe('ABCDE');
+	expect(!ctl.state('editable')).toBe(true);
 
 	expect(update).toHaveBeenCalled();
-	assert.equal(update.mock.calls[0][0], 'A');
-	assert.equal(update.mock.calls[0][1], 'ABCDE');
+	expect(update.mock.calls[0][0]).toBe('A');
+	expect(update.mock.calls[0][1]).toBe('ABCDE');
 });
 
 test('Test dynamically changing Label props', () => {
@@ -159,12 +158,12 @@ test('Test dynamically changing Label props', () => {
 
 	for (const val of arr) {
 
-		assert(ctl);
+		expect(ctl).toBeDefined();
 		ctl.setProps({text: val});
 
 		const instance = ctl.instance() as Label;
-		assert(instance);
-		assert(instance.label);
-		assert(ctl.state('text'), val);
+		expect(instance).toBeDefined();
+		expect(instance.label).toBeDefined();
+		expect(ctl.state('text')).toBe(val);
 	}
 });

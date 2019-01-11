@@ -188,7 +188,7 @@ const defaultBaseProps: BaseProps = {
 	selected: false,
 	sizing: Sizing.normal,
 	style: {},
-	testing: process.env.NODE_ENV === 'test',
+	testing: false,
 	theme: null,
 	tooltip: '',
 	top: '',
@@ -198,7 +198,9 @@ const defaultBaseProps: BaseProps = {
 };
 
 export function getDefaultBaseProps(): BaseProps {
-	return cloneDeep(defaultBaseProps);
+	const props: BaseProps = cloneDeep(defaultBaseProps);
+	props.testing = process.env.NODE_ENV !== 'production';
+	return props;
 }
 
 export const DisabledCSS: any = css`

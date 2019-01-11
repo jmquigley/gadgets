@@ -1,0 +1,2438 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test clicking of the AccordionItem header 1`] = `
+<AccordionItem
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  left=""
+  leftButton={null}
+  location="none"
+  nocollapse={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="AccordionItem"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[MockFunction]}
+  onDoubleClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  padding=""
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test Title"
+  tooltip=""
+  top=""
+  useedit={false}
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
+>
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    id=""
+    initialToggle={false}
+    layout={5}
+    left=""
+    leftButton={null}
+    location="none"
+    nocollapse={false}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="AccordionItem"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[MockFunction]}
+    onDoubleClick={[Function]}
+    onError={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    onUpdate={[Function]}
+    padding=""
+    reset={false}
+    rightButton={null}
+    selected={false}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    testing={true}
+    theme={null}
+    title="Test Title"
+    tooltip=""
+    top=""
+    useedit={false}
+    visible={true}
+    widget={null}
+    width=""
+    xcss={null}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "titleBarBackgroundColor": "#004358",
+          "titleBarForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.ul
+        className="ui-accordionitem"
+        style={Object {}}
+      >
+        <StyledComponent
+          className="ui-accordionitem"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-htoDjs",
+                "isStatic": false,
+                "lastClassName": "itBGda",
+                "rules": Array [
+                  "
+	> .ui-item, > .ui-item-button {
+		color: ",
+                  [Function],
+                  ";
+		background-color: ",
+                  [Function],
+                  ";
+	}
+
+	> .ui-item:hover {
+		color: ",
+                  [Function],
+                  ";
+		background-color: ",
+                  [Function],
+                  " !important;
+	}
+",
+                ],
+              },
+              "displayName": "styled.ul",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-htoDjs",
+              "target": "ul",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          style={Object {}}
+        >
+          <ul
+            className="ui-accordionitem sc-htoDjs itBGda"
+            style={Object {}}
+          >
+            <Item
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              hiddenLeftButton={false}
+              hiddenRightButton={false}
+              id=""
+              initialToggle={false}
+              layout={5}
+              left=""
+              leftButton={null}
+              location="none"
+              nocollapse={false}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="AccordionItem"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onMouseOut={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              rightButton={null}
+              selected={false}
+              sizing="normal"
+              stacked={false}
+              style={Object {}}
+              testing={true}
+              theme={null}
+              title="Test Title"
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={true}
+              widget={null}
+              width=""
+              xcss={null}
+            >
+              <Wrapper
+                bottom=""
+                className=""
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={false}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                hiddenLeftButton={false}
+                hiddenRightButton={false}
+                id=""
+                initialToggle={false}
+                layout={5}
+                left=""
+                leftButton={null}
+                location="none"
+                nocollapse={false}
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="AccordionItem"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onError={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onMouseOut={[Function]}
+                onUpdate={[Function]}
+                padding=""
+                reset={false}
+                rightButton={null}
+                selected={false}
+                sizing="normal"
+                stacked={false}
+                style={Object {}}
+                testing={true}
+                theme={null}
+                title="Test Title"
+                tooltip=""
+                top=""
+                useedit={false}
+                visible={true}
+                widget={null}
+                width=""
+                xcss={null}
+              >
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "titleBarBackgroundColor": "#004358",
+                      "titleBarForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
+                >
+                  <styled.li
+                    className="ui-item"
+                    id=""
+                    nohover={false}
+                    onBlur={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    onMouseOut={[Function]}
+                    selected={false}
+                    sizing="normal"
+                    style={Object {}}
+                  >
+                    <StyledComponent
+                      className="ui-item"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bZQynM",
+                            "isStatic": false,
+                            "lastClassName": "fXsBlq",
+                            "rules": Array [
+                              "
+	background-color: ",
+                              [Function],
+                              ";
+	color: ",
+                              [Function],
+                              ";
+	cursor: default;
+	display: flex;
+
+	",
+                              [Function],
+                              "
+
+	&:hover .ui-item-button {
+		display: inline-flex;
+		opacity: 1.0;
+	}
+",
+                            ],
+                          },
+                          "displayName": "styled.li",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bZQynM",
+                          "target": "li",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id=""
+                      nohover={false}
+                      onBlur={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onMouseOut={[Function]}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                    >
+                      <li
+                        className="ui-item sc-bZQynM fXsBlq"
+                        id=""
+                        onBlur={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        onMouseOut={[Function]}
+                        selected={false}
+                        style={Object {}}
+                      >
+                        <Title
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          err={null}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          hiddenLeftButton={false}
+                          hiddenRightButton={false}
+                          id=""
+                          initialToggle={false}
+                          layout={5}
+                          left=""
+                          leftButton={null}
+                          location="none"
+                          nocollapse={false}
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="AccordionItem"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          onMouseOut={[Function]}
+                          onUpdate={[Function]}
+                          padding=""
+                          rightButton={null}
+                          selected={false}
+                          sizing="normal"
+                          stacked={false}
+                          style={
+                            Object {
+                              "padding": "2px 4px",
+                            }
+                          }
+                          testing={true}
+                          theme={null}
+                          title="Test Title"
+                          tooltip=""
+                          top=""
+                          useedit={false}
+                          visible={true}
+                          widget={null}
+                          width=""
+                          xcss={null}
+                        >
+                          <Wrapper
+                            bottom=""
+                            className=""
+                            contentEditable={false}
+                            controlled={true}
+                            direction="right"
+                            disabled={false}
+                            err={null}
+                            errorMessage=""
+                            focus={false}
+                            height=""
+                            hiddenLeftButton={false}
+                            hiddenRightButton={false}
+                            id=""
+                            initialToggle={false}
+                            layout={5}
+                            left=""
+                            leftButton={null}
+                            location="none"
+                            nocollapse={false}
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            obj="AccordionItem"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onError={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            onMouseOut={[Function]}
+                            onUpdate={[Function]}
+                            padding=""
+                            reset={false}
+                            rightButton={null}
+                            selected={false}
+                            sizing="normal"
+                            stacked={false}
+                            style={
+                              Object {
+                                "padding": "2px 4px",
+                              }
+                            }
+                            testing={true}
+                            theme={null}
+                            title="Test Title"
+                            tooltip=""
+                            top=""
+                            useedit={false}
+                            visible={true}
+                            widget={null}
+                            width=""
+                            xcss={null}
+                          >
+                            <ThemeProvider
+                              theme={
+                                Object {
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#c0c0c0",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "itemHoverColor": "#bedb39",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
+                                  "titleBarBackgroundColor": "#004358",
+                                  "titleBarForegroundColor": "#ffe11a",
+                                  "tooltipBackgroundColor": "#708090",
+                                  "tooltipForegroundColor": "#ffffff",
+                                  "transitionDelay": "0.5s",
+                                }
+                              }
+                            >
+                              <styled.div
+                                className="ui-title-bar ripple"
+                                disabled={false}
+                                layout={5}
+                                style={
+                                  Object {
+                                    "padding": "2px 4px",
+                                  }
+                                }
+                                visible={true}
+                              >
+                                <StyledComponent
+                                  className="ui-title-bar ripple"
+                                  disabled={false}
+                                  forwardedComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-bxivhb",
+                                        "isStatic": false,
+                                        "lastClassName": "dAMKry",
+                                        "rules": Array [
+                                          "
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: ",
+                                          [Function],
+                                          ";
+	flex-grow: 1;
+
+	",
+                                          [Function],
+                                          "
+	",
+                                          [Function],
+                                          "
+",
+                                        ],
+                                      },
+                                      "displayName": "styled.div",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-bxivhb",
+                                      "target": "div",
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                    }
+                                  }
+                                  forwardedRef={null}
+                                  layout={5}
+                                  style={
+                                    Object {
+                                      "padding": "2px 4px",
+                                    }
+                                  }
+                                  visible={true}
+                                >
+                                  <div
+                                    className="ui-title-bar ripple sc-bxivhb dAMKry"
+                                    disabled={false}
+                                    style={
+                                      Object {
+                                        "padding": "2px 4px",
+                                      }
+                                    }
+                                  >
+                                    <Styled(Label)
+                                      bottom=""
+                                      className="ui-title"
+                                      contentEditable={false}
+                                      controlled={true}
+                                      direction="right"
+                                      disabled={false}
+                                      err={null}
+                                      errorMessage=""
+                                      focus={false}
+                                      height=""
+                                      hiddenLeftButton={false}
+                                      hiddenRightButton={false}
+                                      id=""
+                                      initialToggle={false}
+                                      layout={5}
+                                      left=""
+                                      leftButton={null}
+                                      location="none"
+                                      nocollapse={false}
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      obj="AccordionItem"
+                                      onBlur={[Function]}
+                                      onChange={[Function]}
+                                      onClick={[Function]}
+                                      onDoubleClick={[Function]}
+                                      onFocus={[Function]}
+                                      onKeyDown={[Function]}
+                                      onKeyPress={[Function]}
+                                      onMouseOut={[Function]}
+                                      onUpdate={[Function]}
+                                      padding=""
+                                      rightButton={null}
+                                      selected={false}
+                                      sizing="normal"
+                                      stacked={false}
+                                      style={
+                                        Object {
+                                          "padding": "2px 4px",
+                                        }
+                                      }
+                                      testing={true}
+                                      text="Test Title"
+                                      theme={null}
+                                      title="Test Title"
+                                      tooltip=""
+                                      top=""
+                                      useedit={false}
+                                      visible={true}
+                                      widget={null}
+                                      width=""
+                                      xcss={
+                                        Array [
+                                          "
+	text-align: left;
+	flex: 5;
+",
+                                        ]
+                                      }
+                                    >
+                                      <StyledComponent
+                                        bottom=""
+                                        className="ui-title"
+                                        contentEditable={false}
+                                        controlled={true}
+                                        direction="right"
+                                        disabled={false}
+                                        err={null}
+                                        errorMessage=""
+                                        focus={false}
+                                        forwardedComponent={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "attrs": Array [],
+                                            "componentStyle": ComponentStyle {
+                                              "componentId": "sc-EHOje",
+                                              "isStatic": false,
+                                              "lastClassName": "bqslsQ",
+                                              "rules": Array [
+                                                "
+	align-items: center;
+	display: block;
+
+	",
+                                                [Function],
+                                                "
+	",
+                                                [Function],
+                                                "
+",
+                                              ],
+                                            },
+                                            "defaultStyles": Object {},
+                                            "displayName": "Styled(Label)",
+                                            "foldedComponentIds": Array [],
+                                            "render": [Function],
+                                            "styledComponentId": "sc-EHOje",
+                                            "target": [Function],
+                                            "toString": [Function],
+                                            "warnTooManyClasses": [Function],
+                                            "withComponent": [Function],
+                                            Symbol(Symbol.hasInstance): [Function],
+                                          }
+                                        }
+                                        forwardedRef={null}
+                                        height=""
+                                        hiddenLeftButton={false}
+                                        hiddenRightButton={false}
+                                        id=""
+                                        initialToggle={false}
+                                        layout={5}
+                                        left=""
+                                        leftButton={null}
+                                        location="none"
+                                        nocollapse={false}
+                                        noedit={false}
+                                        nohover={false}
+                                        noripple={false}
+                                        obj="AccordionItem"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClick={[Function]}
+                                        onDoubleClick={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        onKeyPress={[Function]}
+                                        onMouseOut={[Function]}
+                                        onUpdate={[Function]}
+                                        padding=""
+                                        rightButton={null}
+                                        selected={false}
+                                        sizing="normal"
+                                        stacked={false}
+                                        style={
+                                          Object {
+                                            "padding": "2px 4px",
+                                          }
+                                        }
+                                        testing={true}
+                                        text="Test Title"
+                                        theme={null}
+                                        title="Test Title"
+                                        tooltip=""
+                                        top=""
+                                        useedit={false}
+                                        visible={true}
+                                        widget={null}
+                                        width=""
+                                        xcss={
+                                          Array [
+                                            "
+	text-align: left;
+	flex: 5;
+",
+                                          ]
+                                        }
+                                      >
+                                        <Label
+                                          bottom=""
+                                          className="ui-title sc-EHOje bqslsQ"
+                                          contentEditable={false}
+                                          controlled={true}
+                                          direction="right"
+                                          disabled={false}
+                                          err={null}
+                                          errorMessage=""
+                                          focus={false}
+                                          height=""
+                                          hiddenLeftButton={false}
+                                          hiddenRightButton={false}
+                                          id=""
+                                          initialToggle={false}
+                                          layout={5}
+                                          left=""
+                                          leftButton={null}
+                                          location="none"
+                                          nocollapse={false}
+                                          noedit={false}
+                                          nohover={false}
+                                          noripple={false}
+                                          obj="AccordionItem"
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onClick={[Function]}
+                                          onDoubleClick={[Function]}
+                                          onFocus={[Function]}
+                                          onKeyDown={[Function]}
+                                          onKeyPress={[Function]}
+                                          onMouseOut={[Function]}
+                                          onUpdate={[Function]}
+                                          padding=""
+                                          rightButton={null}
+                                          selected={false}
+                                          sizing="normal"
+                                          stacked={false}
+                                          style={
+                                            Object {
+                                              "padding": "2px 4px",
+                                            }
+                                          }
+                                          testing={true}
+                                          text="Test Title"
+                                          theme={null}
+                                          title="Test Title"
+                                          tooltip=""
+                                          top=""
+                                          useedit={false}
+                                          visible={true}
+                                          widget={null}
+                                          width=""
+                                          xcss={
+                                            Array [
+                                              "
+	text-align: left;
+	flex: 5;
+",
+                                            ]
+                                          }
+                                        >
+                                          <Wrapper
+                                            bottom=""
+                                            className="ui-title sc-EHOje bqslsQ"
+                                            contentEditable={false}
+                                            controlled={true}
+                                            direction="right"
+                                            disabled={false}
+                                            err={null}
+                                            errorMessage=""
+                                            focus={false}
+                                            height=""
+                                            hiddenLeftButton={false}
+                                            hiddenRightButton={false}
+                                            id=""
+                                            initialToggle={false}
+                                            layout={5}
+                                            left=""
+                                            leftButton={null}
+                                            location="none"
+                                            nocollapse={false}
+                                            noedit={false}
+                                            nohover={false}
+                                            noripple={false}
+                                            obj="AccordionItem"
+                                            onBlur={[Function]}
+                                            onChange={[Function]}
+                                            onClick={[Function]}
+                                            onDoubleClick={[Function]}
+                                            onError={[Function]}
+                                            onFocus={[Function]}
+                                            onKeyDown={[Function]}
+                                            onKeyPress={[Function]}
+                                            onMouseOut={[Function]}
+                                            onUpdate={[Function]}
+                                            padding=""
+                                            reset={false}
+                                            rightButton={null}
+                                            selected={false}
+                                            sizing="normal"
+                                            stacked={false}
+                                            style={
+                                              Object {
+                                                "padding": "2px 4px",
+                                              }
+                                            }
+                                            testing={true}
+                                            text="Test Title"
+                                            theme={null}
+                                            title="Test Title"
+                                            tooltip=""
+                                            top=""
+                                            useedit={false}
+                                            visible={true}
+                                            widget={null}
+                                            width=""
+                                            xcss={
+                                              Array [
+                                                "
+	text-align: left;
+	flex: 5;
+",
+                                              ]
+                                            }
+                                          >
+                                            <ThemeProvider
+                                              theme={
+                                                Object {
+                                                  "backgroundColor": "#ffffff",
+                                                  "borderColor": "#c0c0c0",
+                                                  "color": "#000000",
+                                                  "headerBackgroundColor": "#004358",
+                                                  "headerForegroundColor": "#ffffff",
+                                                  "headerHoverColor": "#ffe11a",
+                                                  "hoverColor": "#c0c0c0",
+                                                  "inputBorderColor": "#c0c0c0",
+                                                  "itemHoverColor": "#bedb39",
+                                                  "selectedBackgroundColor": "#1f8a70",
+                                                  "selectedForegroundColor": "#ffe11a",
+                                                  "titleBarBackgroundColor": "#004358",
+                                                  "titleBarForegroundColor": "#ffe11a",
+                                                  "tooltipBackgroundColor": "#708090",
+                                                  "tooltipForegroundColor": "#ffffff",
+                                                  "transitionDelay": "0.5s",
+                                                }
+                                              }
+                                            >
+                                              <styled.span
+                                                className="ui-label ui-title sc-EHOje bqslsQ"
+                                                contentEditable={false}
+                                                disabled={false}
+                                                onBlur={[Function]}
+                                                onClick={[Function]}
+                                                onDoubleClick={[Function]}
+                                                onKeyDown={[Function]}
+                                                onKeyPress={[Function]}
+                                                sizing="normal"
+                                                style={
+                                                  Object {
+                                                    "padding": "2px 4px",
+                                                  }
+                                                }
+                                                suppressContentEditableWarning={true}
+                                                visible={true}
+                                              >
+                                                <StyledComponent
+                                                  className="ui-label ui-title sc-EHOje bqslsQ"
+                                                  contentEditable={false}
+                                                  disabled={false}
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-htpNat",
+                                                        "isStatic": false,
+                                                        "lastClassName": "eEDiFV",
+                                                        "rules": Array [
+                                                          "
+	background-color: inherit;
+
+	",
+                                                          [Function],
+                                                          "
+	",
+                                                          [Function],
+                                                          "
+	",
+                                                          [Function],
+                                                          "
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.span",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-htpNat",
+                                                      "target": "span",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={[Function]}
+                                                  onBlur={[Function]}
+                                                  onClick={[Function]}
+                                                  onDoubleClick={[Function]}
+                                                  onKeyDown={[Function]}
+                                                  onKeyPress={[Function]}
+                                                  sizing="normal"
+                                                  style={
+                                                    Object {
+                                                      "padding": "2px 4px",
+                                                    }
+                                                  }
+                                                  suppressContentEditableWarning={true}
+                                                  visible={true}
+                                                >
+                                                  <span
+                                                    className="ui-label ui-title sc-EHOje bqslsQ sc-htpNat eEDiFV"
+                                                    contentEditable={false}
+                                                    disabled={false}
+                                                    onBlur={[Function]}
+                                                    onClick={[Function]}
+                                                    onDoubleClick={[Function]}
+                                                    onKeyDown={[Function]}
+                                                    onKeyPress={[Function]}
+                                                    style={
+                                                      Object {
+                                                        "padding": "2px 4px",
+                                                      }
+                                                    }
+                                                    suppressContentEditableWarning={true}
+                                                  >
+                                                    Test Title
+                                                  </span>
+                                                </StyledComponent>
+                                              </styled.span>
+                                            </ThemeProvider>
+                                          </Wrapper>
+                                        </Label>
+                                      </StyledComponent>
+                                    </Styled(Label)>
+                                  </div>
+                                </StyledComponent>
+                              </styled.div>
+                            </ThemeProvider>
+                          </Wrapper>
+                        </Title>
+                      </li>
+                    </StyledComponent>
+                  </styled.li>
+                </ThemeProvider>
+              </Wrapper>
+            </Item>
+          </ul>
+        </StyledComponent>
+      </styled.ul>
+    </ThemeProvider>
+  </Wrapper>
+</AccordionItem>
+`;
+
+exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
+<AccordionItem
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  left=""
+  leftButton={null}
+  location="none"
+  nocollapse={true}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="AccordionItem"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[MockFunction]}
+  onDoubleClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  padding=""
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test Title"
+  tooltip=""
+  top=""
+  useedit={false}
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
+>
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    hiddenLeftButton={false}
+    hiddenRightButton={false}
+    id=""
+    initialToggle={false}
+    layout={5}
+    left=""
+    leftButton={null}
+    location="none"
+    nocollapse={true}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="AccordionItem"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[MockFunction]}
+    onDoubleClick={[Function]}
+    onError={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onMouseOut={[Function]}
+    onUpdate={[Function]}
+    padding=""
+    reset={false}
+    rightButton={null}
+    selected={false}
+    sizing="normal"
+    stacked={false}
+    style={Object {}}
+    testing={true}
+    theme={null}
+    title="Test Title"
+    tooltip=""
+    top=""
+    useedit={false}
+    visible={true}
+    widget={null}
+    width=""
+    xcss={null}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "titleBarBackgroundColor": "#004358",
+          "titleBarForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.ul
+        className="ui-accordionitem"
+        style={Object {}}
+      >
+        <StyledComponent
+          className="ui-accordionitem"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-htoDjs",
+                "isStatic": false,
+                "lastClassName": "itBGda",
+                "rules": Array [
+                  "
+	> .ui-item, > .ui-item-button {
+		color: ",
+                  [Function],
+                  ";
+		background-color: ",
+                  [Function],
+                  ";
+	}
+
+	> .ui-item:hover {
+		color: ",
+                  [Function],
+                  ";
+		background-color: ",
+                  [Function],
+                  " !important;
+	}
+",
+                ],
+              },
+              "displayName": "styled.ul",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-htoDjs",
+              "target": "ul",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          style={Object {}}
+        >
+          <ul
+            className="ui-accordionitem sc-htoDjs itBGda"
+            style={Object {}}
+          >
+            <Item
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              hiddenLeftButton={false}
+              hiddenRightButton={false}
+              id=""
+              initialToggle={false}
+              layout={5}
+              left=""
+              leftButton={null}
+              location="none"
+              nocollapse={true}
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="AccordionItem"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onMouseOut={[Function]}
+              onUpdate={[Function]}
+              padding=""
+              rightButton={null}
+              selected={false}
+              sizing="normal"
+              stacked={false}
+              style={Object {}}
+              testing={true}
+              theme={null}
+              title="Test Title"
+              tooltip=""
+              top=""
+              useedit={false}
+              visible={true}
+              widget={null}
+              width=""
+              xcss={null}
+            >
+              <Wrapper
+                bottom=""
+                className=""
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={false}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                hiddenLeftButton={false}
+                hiddenRightButton={false}
+                id=""
+                initialToggle={false}
+                layout={5}
+                left=""
+                leftButton={null}
+                location="none"
+                nocollapse={true}
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="AccordionItem"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClick={[Function]}
+                onDoubleClick={[Function]}
+                onError={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onMouseOut={[Function]}
+                onUpdate={[Function]}
+                padding=""
+                reset={false}
+                rightButton={null}
+                selected={false}
+                sizing="normal"
+                stacked={false}
+                style={Object {}}
+                testing={true}
+                theme={null}
+                title="Test Title"
+                tooltip=""
+                top=""
+                useedit={false}
+                visible={true}
+                widget={null}
+                width=""
+                xcss={null}
+              >
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "titleBarBackgroundColor": "#004358",
+                      "titleBarForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
+                >
+                  <styled.li
+                    className="ui-item"
+                    id=""
+                    nohover={false}
+                    onBlur={[Function]}
+                    onDoubleClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    onMouseOut={[Function]}
+                    selected={false}
+                    sizing="normal"
+                    style={Object {}}
+                  >
+                    <StyledComponent
+                      className="ui-item"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bZQynM",
+                            "isStatic": false,
+                            "lastClassName": "fXsBlq",
+                            "rules": Array [
+                              "
+	background-color: ",
+                              [Function],
+                              ";
+	color: ",
+                              [Function],
+                              ";
+	cursor: default;
+	display: flex;
+
+	",
+                              [Function],
+                              "
+
+	&:hover .ui-item-button {
+		display: inline-flex;
+		opacity: 1.0;
+	}
+",
+                            ],
+                          },
+                          "displayName": "styled.li",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bZQynM",
+                          "target": "li",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id=""
+                      nohover={false}
+                      onBlur={[Function]}
+                      onDoubleClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onMouseOut={[Function]}
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                    >
+                      <li
+                        className="ui-item sc-bZQynM fXsBlq"
+                        id=""
+                        onBlur={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        onMouseOut={[Function]}
+                        selected={false}
+                        style={Object {}}
+                      >
+                        <Title
+                          bottom=""
+                          className=""
+                          contentEditable={false}
+                          controlled={true}
+                          direction="right"
+                          disabled={false}
+                          err={null}
+                          errorMessage=""
+                          focus={false}
+                          height=""
+                          hiddenLeftButton={false}
+                          hiddenRightButton={false}
+                          id=""
+                          initialToggle={false}
+                          layout={5}
+                          left=""
+                          leftButton={null}
+                          location="none"
+                          nocollapse={true}
+                          noedit={false}
+                          nohover={false}
+                          noripple={false}
+                          obj="AccordionItem"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          onMouseOut={[Function]}
+                          onUpdate={[Function]}
+                          padding=""
+                          rightButton={null}
+                          selected={false}
+                          sizing="normal"
+                          stacked={false}
+                          style={
+                            Object {
+                              "padding": "2px 4px",
+                            }
+                          }
+                          testing={true}
+                          theme={null}
+                          title="Test Title"
+                          tooltip=""
+                          top=""
+                          useedit={false}
+                          visible={true}
+                          widget={null}
+                          width=""
+                          xcss={null}
+                        >
+                          <Wrapper
+                            bottom=""
+                            className=""
+                            contentEditable={false}
+                            controlled={true}
+                            direction="right"
+                            disabled={false}
+                            err={null}
+                            errorMessage=""
+                            focus={false}
+                            height=""
+                            hiddenLeftButton={false}
+                            hiddenRightButton={false}
+                            id=""
+                            initialToggle={false}
+                            layout={5}
+                            left=""
+                            leftButton={null}
+                            location="none"
+                            nocollapse={true}
+                            noedit={false}
+                            nohover={false}
+                            noripple={false}
+                            obj="AccordionItem"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onError={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            onMouseOut={[Function]}
+                            onUpdate={[Function]}
+                            padding=""
+                            reset={false}
+                            rightButton={null}
+                            selected={false}
+                            sizing="normal"
+                            stacked={false}
+                            style={
+                              Object {
+                                "padding": "2px 4px",
+                              }
+                            }
+                            testing={true}
+                            theme={null}
+                            title="Test Title"
+                            tooltip=""
+                            top=""
+                            useedit={false}
+                            visible={true}
+                            widget={null}
+                            width=""
+                            xcss={null}
+                          >
+                            <ThemeProvider
+                              theme={
+                                Object {
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#c0c0c0",
+                                  "color": "#000000",
+                                  "headerBackgroundColor": "#004358",
+                                  "headerForegroundColor": "#ffffff",
+                                  "headerHoverColor": "#ffe11a",
+                                  "hoverColor": "#c0c0c0",
+                                  "inputBorderColor": "#c0c0c0",
+                                  "itemHoverColor": "#bedb39",
+                                  "selectedBackgroundColor": "#1f8a70",
+                                  "selectedForegroundColor": "#ffe11a",
+                                  "titleBarBackgroundColor": "#004358",
+                                  "titleBarForegroundColor": "#ffe11a",
+                                  "tooltipBackgroundColor": "#708090",
+                                  "tooltipForegroundColor": "#ffffff",
+                                  "transitionDelay": "0.5s",
+                                }
+                              }
+                            >
+                              <styled.div
+                                className="ui-title-bar ripple"
+                                disabled={false}
+                                layout={5}
+                                style={
+                                  Object {
+                                    "padding": "2px 4px",
+                                  }
+                                }
+                                visible={true}
+                              >
+                                <StyledComponent
+                                  className="ui-title-bar ripple"
+                                  disabled={false}
+                                  forwardedComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-bxivhb",
+                                        "isStatic": false,
+                                        "lastClassName": "dAMKry",
+                                        "rules": Array [
+                                          "
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: ",
+                                          [Function],
+                                          ";
+	flex-grow: 1;
+
+	",
+                                          [Function],
+                                          "
+	",
+                                          [Function],
+                                          "
+",
+                                        ],
+                                      },
+                                      "displayName": "styled.div",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-bxivhb",
+                                      "target": "div",
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                    }
+                                  }
+                                  forwardedRef={null}
+                                  layout={5}
+                                  style={
+                                    Object {
+                                      "padding": "2px 4px",
+                                    }
+                                  }
+                                  visible={true}
+                                >
+                                  <div
+                                    className="ui-title-bar ripple sc-bxivhb dAMKry"
+                                    disabled={false}
+                                    style={
+                                      Object {
+                                        "padding": "2px 4px",
+                                      }
+                                    }
+                                  >
+                                    <Styled(Label)
+                                      bottom=""
+                                      className="ui-title"
+                                      contentEditable={false}
+                                      controlled={true}
+                                      direction="right"
+                                      disabled={false}
+                                      err={null}
+                                      errorMessage=""
+                                      focus={false}
+                                      height=""
+                                      hiddenLeftButton={false}
+                                      hiddenRightButton={false}
+                                      id=""
+                                      initialToggle={false}
+                                      layout={5}
+                                      left=""
+                                      leftButton={null}
+                                      location="none"
+                                      nocollapse={true}
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      obj="AccordionItem"
+                                      onBlur={[Function]}
+                                      onChange={[Function]}
+                                      onClick={[Function]}
+                                      onDoubleClick={[Function]}
+                                      onFocus={[Function]}
+                                      onKeyDown={[Function]}
+                                      onKeyPress={[Function]}
+                                      onMouseOut={[Function]}
+                                      onUpdate={[Function]}
+                                      padding=""
+                                      rightButton={null}
+                                      selected={false}
+                                      sizing="normal"
+                                      stacked={false}
+                                      style={
+                                        Object {
+                                          "padding": "2px 4px",
+                                        }
+                                      }
+                                      testing={true}
+                                      text="Test Title"
+                                      theme={null}
+                                      title="Test Title"
+                                      tooltip=""
+                                      top=""
+                                      useedit={false}
+                                      visible={true}
+                                      widget={null}
+                                      width=""
+                                      xcss={
+                                        Array [
+                                          "
+	text-align: left;
+	flex: 5;
+",
+                                        ]
+                                      }
+                                    >
+                                      <StyledComponent
+                                        bottom=""
+                                        className="ui-title"
+                                        contentEditable={false}
+                                        controlled={true}
+                                        direction="right"
+                                        disabled={false}
+                                        err={null}
+                                        errorMessage=""
+                                        focus={false}
+                                        forwardedComponent={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "attrs": Array [],
+                                            "componentStyle": ComponentStyle {
+                                              "componentId": "sc-EHOje",
+                                              "isStatic": false,
+                                              "lastClassName": "bqslsQ",
+                                              "rules": Array [
+                                                "
+	align-items: center;
+	display: block;
+
+	",
+                                                [Function],
+                                                "
+	",
+                                                [Function],
+                                                "
+",
+                                              ],
+                                            },
+                                            "defaultStyles": Object {},
+                                            "displayName": "Styled(Label)",
+                                            "foldedComponentIds": Array [],
+                                            "render": [Function],
+                                            "styledComponentId": "sc-EHOje",
+                                            "target": [Function],
+                                            "toString": [Function],
+                                            "warnTooManyClasses": [Function],
+                                            "withComponent": [Function],
+                                            Symbol(Symbol.hasInstance): [Function],
+                                          }
+                                        }
+                                        forwardedRef={null}
+                                        height=""
+                                        hiddenLeftButton={false}
+                                        hiddenRightButton={false}
+                                        id=""
+                                        initialToggle={false}
+                                        layout={5}
+                                        left=""
+                                        leftButton={null}
+                                        location="none"
+                                        nocollapse={true}
+                                        noedit={false}
+                                        nohover={false}
+                                        noripple={false}
+                                        obj="AccordionItem"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClick={[Function]}
+                                        onDoubleClick={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        onKeyPress={[Function]}
+                                        onMouseOut={[Function]}
+                                        onUpdate={[Function]}
+                                        padding=""
+                                        rightButton={null}
+                                        selected={false}
+                                        sizing="normal"
+                                        stacked={false}
+                                        style={
+                                          Object {
+                                            "padding": "2px 4px",
+                                          }
+                                        }
+                                        testing={true}
+                                        text="Test Title"
+                                        theme={null}
+                                        title="Test Title"
+                                        tooltip=""
+                                        top=""
+                                        useedit={false}
+                                        visible={true}
+                                        widget={null}
+                                        width=""
+                                        xcss={
+                                          Array [
+                                            "
+	text-align: left;
+	flex: 5;
+",
+                                          ]
+                                        }
+                                      >
+                                        <Label
+                                          bottom=""
+                                          className="ui-title sc-EHOje bqslsQ"
+                                          contentEditable={false}
+                                          controlled={true}
+                                          direction="right"
+                                          disabled={false}
+                                          err={null}
+                                          errorMessage=""
+                                          focus={false}
+                                          height=""
+                                          hiddenLeftButton={false}
+                                          hiddenRightButton={false}
+                                          id=""
+                                          initialToggle={false}
+                                          layout={5}
+                                          left=""
+                                          leftButton={null}
+                                          location="none"
+                                          nocollapse={true}
+                                          noedit={false}
+                                          nohover={false}
+                                          noripple={false}
+                                          obj="AccordionItem"
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onClick={[Function]}
+                                          onDoubleClick={[Function]}
+                                          onFocus={[Function]}
+                                          onKeyDown={[Function]}
+                                          onKeyPress={[Function]}
+                                          onMouseOut={[Function]}
+                                          onUpdate={[Function]}
+                                          padding=""
+                                          rightButton={null}
+                                          selected={false}
+                                          sizing="normal"
+                                          stacked={false}
+                                          style={
+                                            Object {
+                                              "padding": "2px 4px",
+                                            }
+                                          }
+                                          testing={true}
+                                          text="Test Title"
+                                          theme={null}
+                                          title="Test Title"
+                                          tooltip=""
+                                          top=""
+                                          useedit={false}
+                                          visible={true}
+                                          widget={null}
+                                          width=""
+                                          xcss={
+                                            Array [
+                                              "
+	text-align: left;
+	flex: 5;
+",
+                                            ]
+                                          }
+                                        >
+                                          <Wrapper
+                                            bottom=""
+                                            className="ui-title sc-EHOje bqslsQ"
+                                            contentEditable={false}
+                                            controlled={true}
+                                            direction="right"
+                                            disabled={false}
+                                            err={null}
+                                            errorMessage=""
+                                            focus={false}
+                                            height=""
+                                            hiddenLeftButton={false}
+                                            hiddenRightButton={false}
+                                            id=""
+                                            initialToggle={false}
+                                            layout={5}
+                                            left=""
+                                            leftButton={null}
+                                            location="none"
+                                            nocollapse={true}
+                                            noedit={false}
+                                            nohover={false}
+                                            noripple={false}
+                                            obj="AccordionItem"
+                                            onBlur={[Function]}
+                                            onChange={[Function]}
+                                            onClick={[Function]}
+                                            onDoubleClick={[Function]}
+                                            onError={[Function]}
+                                            onFocus={[Function]}
+                                            onKeyDown={[Function]}
+                                            onKeyPress={[Function]}
+                                            onMouseOut={[Function]}
+                                            onUpdate={[Function]}
+                                            padding=""
+                                            reset={false}
+                                            rightButton={null}
+                                            selected={false}
+                                            sizing="normal"
+                                            stacked={false}
+                                            style={
+                                              Object {
+                                                "padding": "2px 4px",
+                                              }
+                                            }
+                                            testing={true}
+                                            text="Test Title"
+                                            theme={null}
+                                            title="Test Title"
+                                            tooltip=""
+                                            top=""
+                                            useedit={false}
+                                            visible={true}
+                                            widget={null}
+                                            width=""
+                                            xcss={
+                                              Array [
+                                                "
+	text-align: left;
+	flex: 5;
+",
+                                              ]
+                                            }
+                                          >
+                                            <ThemeProvider
+                                              theme={
+                                                Object {
+                                                  "backgroundColor": "#ffffff",
+                                                  "borderColor": "#c0c0c0",
+                                                  "color": "#000000",
+                                                  "headerBackgroundColor": "#004358",
+                                                  "headerForegroundColor": "#ffffff",
+                                                  "headerHoverColor": "#ffe11a",
+                                                  "hoverColor": "#c0c0c0",
+                                                  "inputBorderColor": "#c0c0c0",
+                                                  "itemHoverColor": "#bedb39",
+                                                  "selectedBackgroundColor": "#1f8a70",
+                                                  "selectedForegroundColor": "#ffe11a",
+                                                  "titleBarBackgroundColor": "#004358",
+                                                  "titleBarForegroundColor": "#ffe11a",
+                                                  "tooltipBackgroundColor": "#708090",
+                                                  "tooltipForegroundColor": "#ffffff",
+                                                  "transitionDelay": "0.5s",
+                                                }
+                                              }
+                                            >
+                                              <styled.span
+                                                className="ui-label ui-title sc-EHOje bqslsQ"
+                                                contentEditable={false}
+                                                disabled={false}
+                                                onBlur={[Function]}
+                                                onClick={[Function]}
+                                                onDoubleClick={[Function]}
+                                                onKeyDown={[Function]}
+                                                onKeyPress={[Function]}
+                                                sizing="normal"
+                                                style={
+                                                  Object {
+                                                    "padding": "2px 4px",
+                                                  }
+                                                }
+                                                suppressContentEditableWarning={true}
+                                                visible={true}
+                                              >
+                                                <StyledComponent
+                                                  className="ui-label ui-title sc-EHOje bqslsQ"
+                                                  contentEditable={false}
+                                                  disabled={false}
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-htpNat",
+                                                        "isStatic": false,
+                                                        "lastClassName": "eEDiFV",
+                                                        "rules": Array [
+                                                          "
+	background-color: inherit;
+
+	",
+                                                          [Function],
+                                                          "
+	",
+                                                          [Function],
+                                                          "
+	",
+                                                          [Function],
+                                                          "
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.span",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-htpNat",
+                                                      "target": "span",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={[Function]}
+                                                  onBlur={[Function]}
+                                                  onClick={[Function]}
+                                                  onDoubleClick={[Function]}
+                                                  onKeyDown={[Function]}
+                                                  onKeyPress={[Function]}
+                                                  sizing="normal"
+                                                  style={
+                                                    Object {
+                                                      "padding": "2px 4px",
+                                                    }
+                                                  }
+                                                  suppressContentEditableWarning={true}
+                                                  visible={true}
+                                                >
+                                                  <span
+                                                    className="ui-label ui-title sc-EHOje bqslsQ sc-htpNat eEDiFV"
+                                                    contentEditable={false}
+                                                    disabled={false}
+                                                    onBlur={[Function]}
+                                                    onClick={[Function]}
+                                                    onDoubleClick={[Function]}
+                                                    onKeyDown={[Function]}
+                                                    onKeyPress={[Function]}
+                                                    style={
+                                                      Object {
+                                                        "padding": "2px 4px",
+                                                      }
+                                                    }
+                                                    suppressContentEditableWarning={true}
+                                                  >
+                                                    Test Title
+                                                  </span>
+                                                </StyledComponent>
+                                              </styled.span>
+                                            </ThemeProvider>
+                                          </Wrapper>
+                                        </Label>
+                                      </StyledComponent>
+                                    </Styled(Label)>
+                                  </div>
+                                </StyledComponent>
+                              </styled.div>
+                            </ThemeProvider>
+                          </Wrapper>
+                        </Title>
+                      </li>
+                    </StyledComponent>
+                  </styled.li>
+                </ThemeProvider>
+              </Wrapper>
+            </Item>
+            <styled.div
+              className="ui-accordion-content"
+              sizing="normal"
+            >
+              <StyledComponent
+                className="ui-accordion-content"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-dnqmqq",
+                      "isStatic": false,
+                      "lastClassName": "iOAsdd",
+                      "rules": Array [
+                        "
+	",
+                        [Function],
+                        ";
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-dnqmqq",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                sizing="normal"
+              >
+                <div
+                  className="ui-accordion-content sc-dnqmqq iOAsdd"
+                >
+                  <div>
+                    child content
+                  </div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </ul>
+        </StyledComponent>
+      </styled.ul>
+    </ThemeProvider>
+  </Wrapper>
+</AccordionItem>
+`;
+
+exports[`Test making the AccordionItem invisible 1`] = `
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  left=""
+  leftButton={null}
+  location="none"
+  nocollapse={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="AccordionItem"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onError={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  padding=""
+  reset={false}
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test Title"
+  tooltip=""
+  top=""
+  useedit={false}
+  visible={false}
+  widget={null}
+  width=""
+  xcss={null}
+>
+  <styled.ul
+    className="ui-accordionitem"
+    style={Object {}}
+  >
+    <Item
+      bottom=""
+      className=""
+      contentEditable={false}
+      controlled={true}
+      direction="right"
+      disabled={false}
+      err={null}
+      errorMessage=""
+      focus={false}
+      height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      id=""
+      initialToggle={false}
+      layout={5}
+      left=""
+      leftButton={null}
+      location="none"
+      nocollapse={false}
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      obj="AccordionItem"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      padding=""
+      rightButton={null}
+      selected={false}
+      sizing="normal"
+      stacked={false}
+      style={Object {}}
+      testing={true}
+      theme={null}
+      title="Test Title"
+      tooltip=""
+      top=""
+      useedit={false}
+      visible={false}
+      widget={null}
+      width=""
+      xcss={null}
+    />
+  </styled.ul>
+</Wrapper>
+`;
+
+exports[`Test retrieval of AccordionItem props object 1`] = `
+Object {
+  "bottom": "",
+  "children": null,
+  "className": "",
+  "contentEditable": false,
+  "controlled": true,
+  "direction": "right",
+  "disabled": false,
+  "err": null,
+  "errorMessage": "",
+  "focus": false,
+  "height": "",
+  "hiddenLeftButton": false,
+  "hiddenRightButton": false,
+  "id": "",
+  "initialToggle": false,
+  "layout": 5,
+  "left": "",
+  "leftButton": null,
+  "location": "none",
+  "nocollapse": false,
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "obj": "AccordionItem",
+  "onBlur": [Function],
+  "onChange": [Function],
+  "onClick": [Function],
+  "onDoubleClick": [Function],
+  "onFocus": [Function],
+  "onKeyDown": [Function],
+  "onKeyPress": [Function],
+  "onMouseOut": [Function],
+  "onUpdate": [Function],
+  "padding": "",
+  "rightButton": null,
+  "selected": false,
+  "sizing": "normal",
+  "stacked": false,
+  "style": Object {},
+  "testing": true,
+  "theme": null,
+  "title": "​",
+  "tooltip": "",
+  "top": "",
+  "useedit": false,
+  "visible": true,
+  "widget": null,
+  "width": "",
+  "xcss": null,
+}
+`;
+
+exports[`Test the creation of a AccordionItem control 1`] = `
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  left=""
+  leftButton={null}
+  location="none"
+  nocollapse={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="AccordionItem"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onError={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  padding=""
+  reset={false}
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test Title"
+  tooltip=""
+  top=""
+  useedit={false}
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
+>
+  <styled.ul
+    className="ui-accordionitem test-class"
+    style={Object {}}
+  >
+    <Item
+      bottom=""
+      className="test-class"
+      contentEditable={false}
+      controlled={true}
+      direction="right"
+      disabled={false}
+      err={null}
+      errorMessage=""
+      focus={false}
+      height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      id=""
+      initialToggle={false}
+      layout={5}
+      left=""
+      leftButton={null}
+      location="none"
+      nocollapse={false}
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      obj="AccordionItem"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      padding=""
+      rightButton={null}
+      selected={false}
+      sizing="normal"
+      stacked={false}
+      style={Object {}}
+      testing={true}
+      theme={null}
+      title="Test Title"
+      tooltip=""
+      top=""
+      useedit={false}
+      visible={true}
+      widget={null}
+      width=""
+      xcss={null}
+    />
+  </styled.ul>
+</Wrapper>
+`;
+
+exports[`Test the disabling of the AccordionItem 1`] = `
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  hiddenLeftButton={false}
+  hiddenRightButton={false}
+  id=""
+  initialToggle={false}
+  layout={5}
+  left=""
+  leftButton={null}
+  location="none"
+  nocollapse={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="AccordionItem"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  onError={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onMouseOut={[Function]}
+  onUpdate={[Function]}
+  padding=""
+  reset={false}
+  rightButton={null}
+  selected={false}
+  sizing="normal"
+  stacked={false}
+  style={Object {}}
+  testing={true}
+  theme={null}
+  title="Test Title"
+  tooltip=""
+  top=""
+  useedit={false}
+  visible={true}
+  widget={null}
+  width=""
+  xcss={null}
+>
+  <styled.ul
+    className="ui-accordionitem"
+    style={Object {}}
+  >
+    <Item
+      bottom=""
+      className=""
+      contentEditable={false}
+      controlled={true}
+      direction="right"
+      disabled={true}
+      err={null}
+      errorMessage=""
+      focus={false}
+      height=""
+      hiddenLeftButton={false}
+      hiddenRightButton={false}
+      id=""
+      initialToggle={false}
+      layout={5}
+      left=""
+      leftButton={null}
+      location="none"
+      nocollapse={false}
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      obj="AccordionItem"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onMouseOut={[Function]}
+      onUpdate={[Function]}
+      padding=""
+      rightButton={null}
+      selected={false}
+      sizing="normal"
+      stacked={false}
+      style={Object {}}
+      testing={true}
+      theme={null}
+      title="Test Title"
+      tooltip=""
+      top=""
+      useedit={false}
+      visible={true}
+      widget={null}
+      width=""
+      xcss={null}
+    />
+  </styled.ul>
+</Wrapper>
+`;

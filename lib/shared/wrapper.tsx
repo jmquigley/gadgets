@@ -1,7 +1,9 @@
 /**
  * This component surrounds (wraps) all other components in the library.  It
- * is used to catch potential errors within the control.  These are [error boundaries](https://reactjs.org/docs/error-boundaries.html)
- * that are new to React 16.  It also wraps the [ThemeProvider](https://www.styled-components.com/docs/api#themeprovider)
+ * is used to catch potential errors within the control.  These are
+ * [error boundaries](https://reactjs.org/docs/error-boundaries.html)
+ * that are new to React 16.  It also wraps the
+ * [ThemeProvider](https://www.styled-components.com/docs/api#themeprovider)
  * used by the [styled-components](https://reactjs.org/docs/error-boundaries.html).
  *
  * ## Screen:
@@ -70,14 +72,14 @@ import {BaseProps, disabled, invisible} from './props';
 import styled, {ThemeProvider} from './themed-components';
 
 export interface WrapperProps extends BaseProps {
-	// children?: any;
+	children?: React.ReactChild;
 	onError?: any;
 	reset?: boolean;
 }
 
 export function getDefaultWrapperProps(): WrapperProps {
 	return cloneDeep(Object.assign({}, {
-			// children: null,
+			children: null,
 			onError: nilEvent,
 			reset: false
 		})
@@ -122,13 +124,15 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 		});
 	}
 
-	public componentWillReceiveProps(nextProps: WrapperProps) {
-		if (nextProps.reset) {
-			this.setState({
-				error: '',
-				errorInfo: null
-			});
+	public static getDerivedStateFromProps(props: WrapperProps, state: WrapperState) {
+		const newState: WrapperState = {...state};
+
+		if (props.reset) {
+			newState.error = '';
+			newState.errorInfo = null;
 		}
+
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {

@@ -80,7 +80,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.tsx?$/,
-				exclude: /node_modules|dist|demo/,
+				exclude: /node_modules|dist|demo|.*\.test\.tsx/,
 				loader: 'js-output-loader!ts-loader'
 			},
 			{

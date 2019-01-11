@@ -107,7 +107,6 @@ exports[`Test a double click edit of the Label control 1`] = `
         className="ui-label"
         contentEditable={false}
         disabled={false}
-        innerRef={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
@@ -118,20 +117,70 @@ exports[`Test a double click edit of the Label control 1`] = `
         suppressContentEditableWarning={true}
         visible={true}
       >
-        <span
-          className="ui-label sc-bwzfXH cEurMc"
+        <StyledComponent
+          className="ui-label"
           contentEditable={false}
           disabled={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-htpNat",
+                "isStatic": false,
+                "lastClassName": "eEDiFV",
+                "rules": Array [
+                  "
+	background-color: inherit;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.span",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-htpNat",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={[Function]}
           onBlur={[Function]}
           onClick={[Function]}
           onDoubleClick={[Function]}
           onKeyDown={[Function]}
           onKeyPress={[Function]}
+          sizing="normal"
           style={Object {}}
           suppressContentEditableWarning={true}
+          visible={true}
         >
-          A
-        </span>
+          <span
+            className="ui-label sc-htpNat eEDiFV"
+            contentEditable={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            style={Object {}}
+            suppressContentEditableWarning={true}
+          >
+            A
+          </span>
+        </StyledComponent>
       </styled.span>
     </ThemeProvider>
   </Wrapper>
@@ -184,7 +233,6 @@ exports[`Test creation of a Label control 1`] = `
     className="ui-label test-class"
     contentEditable={false}
     disabled={false}
-    innerRef={[Function]}
     onBlur={[Function]}
     onClick={[Function]}
     onDoubleClick={[Function]}
@@ -307,7 +355,6 @@ exports[`Test double click change to Label and blur to save 1`] = `
         className="ui-label"
         contentEditable={false}
         disabled={false}
-        innerRef={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
@@ -318,20 +365,70 @@ exports[`Test double click change to Label and blur to save 1`] = `
         suppressContentEditableWarning={true}
         visible={true}
       >
-        <span
-          className="ui-label sc-bwzfXH cEurMc"
+        <StyledComponent
+          className="ui-label"
           contentEditable={false}
           disabled={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-htpNat",
+                "isStatic": false,
+                "lastClassName": "eEDiFV",
+                "rules": Array [
+                  "
+	background-color: inherit;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.span",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-htpNat",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={[Function]}
           onBlur={[Function]}
           onClick={[Function]}
           onDoubleClick={[Function]}
           onKeyDown={[Function]}
           onKeyPress={[Function]}
+          sizing="normal"
           style={Object {}}
           suppressContentEditableWarning={true}
+          visible={true}
         >
-          A
-        </span>
+          <span
+            className="ui-label sc-htpNat eEDiFV"
+            contentEditable={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            style={Object {}}
+            suppressContentEditableWarning={true}
+          >
+            A
+          </span>
+        </StyledComponent>
       </styled.span>
     </ThemeProvider>
   </Wrapper>
@@ -445,7 +542,6 @@ exports[`Test making the Label control invisible 1`] = `
         className="ui-label"
         contentEditable={false}
         disabled={false}
-        innerRef={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
@@ -456,20 +552,70 @@ exports[`Test making the Label control invisible 1`] = `
         suppressContentEditableWarning={true}
         visible={false}
       >
-        <span
-          className="ui-label sc-bwzfXH feyPXN"
+        <StyledComponent
+          className="ui-label"
           contentEditable={false}
           disabled={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-htpNat",
+                "isStatic": false,
+                "lastClassName": "bUAzux",
+                "rules": Array [
+                  "
+	background-color: inherit;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.span",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-htpNat",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={[Function]}
           onBlur={[Function]}
           onClick={[Function]}
           onDoubleClick={[Function]}
           onKeyDown={[Function]}
           onKeyPress={[Function]}
+          sizing="normal"
           style={Object {}}
           suppressContentEditableWarning={true}
+          visible={false}
         >
-          Test label text
-        </span>
+          <span
+            className="ui-label sc-htpNat bUAzux"
+            contentEditable={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            style={Object {}}
+            suppressContentEditableWarning={true}
+          >
+            Test label text
+          </span>
+        </StyledComponent>
       </styled.span>
     </ThemeProvider>
   </Wrapper>
@@ -626,7 +772,6 @@ exports[`Test the disabling of the Label control 1`] = `
         className="ui-label"
         contentEditable={false}
         disabled={true}
-        innerRef={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
         onDoubleClick={[Function]}
@@ -637,20 +782,70 @@ exports[`Test the disabling of the Label control 1`] = `
         suppressContentEditableWarning={true}
         visible={true}
       >
-        <span
-          className="ui-label sc-bwzfXH gfZwc"
+        <StyledComponent
+          className="ui-label"
           contentEditable={false}
           disabled={true}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-htpNat",
+                "isStatic": false,
+                "lastClassName": "gjQKzk",
+                "rules": Array [
+                  "
+	background-color: inherit;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.span",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-htpNat",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={[Function]}
           onBlur={[Function]}
           onClick={[Function]}
           onDoubleClick={[Function]}
           onKeyDown={[Function]}
           onKeyPress={[Function]}
+          sizing="normal"
           style={Object {}}
           suppressContentEditableWarning={true}
+          visible={true}
         >
-          Test label text
-        </span>
+          <span
+            className="ui-label sc-htpNat gjQKzk"
+            contentEditable={false}
+            disabled={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            style={Object {}}
+            suppressContentEditableWarning={true}
+          >
+            Test label text
+          </span>
+        </StyledComponent>
       </styled.span>
     </ThemeProvider>
   </Wrapper>

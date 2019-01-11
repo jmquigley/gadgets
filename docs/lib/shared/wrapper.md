@@ -2,8 +2,10 @@
 
 ## Wrapper
 This component surrounds (wraps) all other components in the library.  It
-is used to catch potential errors within the control.  These are [error boundaries](https://reactjs.org/docs/error-boundaries.html)
-that are new to React 16.  It also wraps the [ThemeProvider](https://www.styled-components.com/docs/api#themeprovider)
+is used to catch potential errors within the control.  These are
+[error boundaries](https://reactjs.org/docs/error-boundaries.html)
+that are new to React 16.  It also wraps the
+[ThemeProvider](https://www.styled-components.com/docs/api#themeprovider)
 used by the [styled-components](https://reactjs.org/docs/error-boundaries.html).
 
 ## Screen:

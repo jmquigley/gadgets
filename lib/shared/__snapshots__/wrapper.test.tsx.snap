@@ -13,6 +13,12 @@ exports[`Test creation of a default Wrapper 1`] = `
           },
         ],
       ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
     }
   }
   reset={true}
@@ -39,32 +45,9 @@ exports[`Test creation of a default Wrapper 1`] = `
       }
     }
   >
-    <styled.div
-      className="ui-error test-class"
-    >
-      <div
-        className="ui-error test-class sc-bdVaJa hfTfIP"
-      >
-        <span
-          className="ui-error-message"
-        >
-          Error in component '
-          '
-        </span>
-        <details
-          className="ui-error-stack"
-          style={
-            Object {
-              "whiteSpace": "pre-wrap",
-            }
-          }
-        >
-          test error
-          <br />
-          test stack
-        </details>
-      </div>
-    </styled.div>
+    <h1>
+      test header
+    </h1>
   </ThemeProvider>
 </Wrapper>
 `;

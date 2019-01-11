@@ -297,7 +297,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 					<SliderBar
 						className="ui-slider-bar"
 						height={this._sliderSize * 0.25}
-						innerRef={this.refContainer}
+						ref={this.refContainer}
 						width={this._width}
 					>
 						{this.buildTicks()}

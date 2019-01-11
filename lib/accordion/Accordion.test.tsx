@@ -5,7 +5,7 @@ import 'jest-styled-components';
 import * as assert from 'assert';
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {Accordion, getDefaultAccordionProps} from '../index';
+import {Accordion, getDefaultAccordionProps} from '../../dist/bundle';
 
 test('Test retrieval of Accordion props object', () => {
 	const props = getDefaultAccordionProps();

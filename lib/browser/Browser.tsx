@@ -402,7 +402,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 					</BrowserToolbar>
 					<BrowserContent
 						className="ui-browser-content"
-						innerRef={this.handleRef}
+						ref={this.handleRef}
 					/>
 				</BrowserContainer>
 			</Wrapper>

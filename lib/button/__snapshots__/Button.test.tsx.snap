@@ -1,0 +1,1372 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Button click event 1`] = `
+<Button
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Button"
+  onClick={[MockFunction]}
+  padding=""
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
+>
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    iconStyle=""
+    id=""
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Button"
+    onClick={[MockFunction]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "titleBarBackgroundColor": "#004358",
+          "titleBarForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-button ripple"
+        disabled={false}
+        id="Button-0"
+        onClick={[Function]}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      >
+        <StyledComponent
+          className="ui-button ripple"
+          disabled={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-kAzzGY",
+                "isStatic": false,
+                "lastClassName": "bgrhxk",
+                "rules": Array [
+                  "
+	",
+                  "
+	align-items: center;
+	box-sizing: border-box;
+	cursor: default;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	line-height: inherit;
+	outline: none;
+	overflow: visible;
+	position: relative;
+	user-select: none;
+	width: 100%;
+",
+                  "
+
+	flex: 1;
+
+	&:not(.nohover):hover {
+		background-color: ",
+                  [Function],
+                  " ",
+                  [Function],
+                  ";
+	}
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-kAzzGY",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          id="Button-0"
+          onClick={[Function]}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <div
+            className="ui-button ripple sc-kAzzGY bgrhxk"
+            disabled={false}
+            id="Button-0"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <Icon
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              iconName="bomb"
+              id=""
+              imageFile=""
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Icon"
+              padding=""
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
+            >
+              <Wrapper
+                bottom=""
+                className=""
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={false}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                iconName="bomb"
+                id=""
+                imageFile=""
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="Icon"
+                onError={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
+                sizing="normal"
+                style={Object {}}
+                testing={true}
+                theme={null}
+                tooltip=""
+                top=""
+                visible={true}
+                width=""
+                xcss={null}
+              >
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "titleBarBackgroundColor": "#004358",
+                      "titleBarForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
+                >
+                  <styled.i
+                    bottom=""
+                    className="ui-icon fa fa-fw fa-bomb"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="right"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    iconName="bomb"
+                    id=""
+                    imageFile=""
+                    left=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Icon"
+                    padding=""
+                    selected={false}
+                    sizing="normal"
+                    style={Object {}}
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    visible={true}
+                    width=""
+                    xcss={null}
+                  >
+                    <StyledComponent
+                      bottom=""
+                      className="ui-icon fa fa-fw fa-bomb"
+                      contentEditable={false}
+                      controlled={true}
+                      direction="right"
+                      disabled={false}
+                      err={null}
+                      errorMessage=""
+                      focus={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-gqjmRU",
+                            "isStatic": false,
+                            "lastClassName": "iCGQxQ",
+                            "rules": Array [
+                              "
+	text-align: center;
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.i",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-gqjmRU",
+                          "target": "i",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      height=""
+                      iconName="bomb"
+                      id=""
+                      imageFile=""
+                      left=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      obj="Icon"
+                      padding=""
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={null}
+                      tooltip=""
+                      top=""
+                      visible={true}
+                      width=""
+                      xcss={null}
+                    >
+                      <i
+                        className="ui-icon fa fa-fw fa-bomb sc-gqjmRU iCGQxQ"
+                        contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        height=""
+                        id=""
+                        selected={false}
+                        style={Object {}}
+                        width=""
+                      />
+                    </StyledComponent>
+                  </styled.i>
+                </ThemeProvider>
+              </Wrapper>
+            </Icon>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Button>
+`;
+
+exports[`Test creation of a Button control 1`] = `
+<Wrapper
+  bottom=""
+  className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Button"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
+>
+  <styled.div
+    className="ui-button ripple test-class"
+    disabled={false}
+    id="Button-0"
+    onClick={[Function]}
+    sizing="normal"
+    style={Object {}}
+    visible={true}
+  >
+    <Icon
+      bottom=""
+      className=""
+      contentEditable={false}
+      controlled={true}
+      direction="right"
+      disabled={false}
+      err={null}
+      errorMessage=""
+      focus={false}
+      height=""
+      iconName="bomb"
+      id=""
+      imageFile=""
+      left=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      obj="Icon"
+      padding=""
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={null}
+      tooltip=""
+      top=""
+      visible={true}
+      width=""
+      xcss={null}
+    />
+  </styled.div>
+</Wrapper>
+`;
+
+exports[`Test creation of a Button control with custom icon, colors, and border 1`] = `
+<Wrapper
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="superpowers"
+  iconStyle=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Button"
+  onClick={[Function]}
+  onError={[Function]}
+  padding=""
+  reset={false}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "black",
+      "borderColor": "green",
+      "borderWidth": "2px",
+      "color": "red",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
+>
+  <styled.div
+    className="ui-button ripple"
+    disabled={false}
+    id="Button-0"
+    onClick={[Function]}
+    sizing="normal"
+    style={
+      Object {
+        "backgroundColor": "black",
+        "borderColor": "green",
+        "borderWidth": "2px",
+        "color": "red",
+      }
+    }
+    visible={true}
+  >
+    <Icon
+      bottom=""
+      className=""
+      contentEditable={false}
+      controlled={true}
+      direction="right"
+      disabled={false}
+      err={null}
+      errorMessage=""
+      focus={false}
+      height=""
+      iconName="superpowers"
+      id=""
+      imageFile=""
+      left=""
+      location="none"
+      noedit={false}
+      nohover={false}
+      noripple={false}
+      obj="Icon"
+      padding=""
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      testing={true}
+      theme={null}
+      tooltip=""
+      top=""
+      visible={true}
+      width=""
+      xcss={null}
+    />
+  </styled.div>
+</Wrapper>
+`;
+
+exports[`Test disabling of a Button 1`] = `
+<Button
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Button"
+  onClick={[MockFunction]}
+  padding=""
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
+>
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={true}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    iconStyle=""
+    id=""
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Button"
+    onClick={[MockFunction]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={true}
+    width=""
+    xcss={null}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "titleBarBackgroundColor": "#004358",
+          "titleBarForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-button nohover"
+        disabled={true}
+        id="Button-0"
+        onClick={[Function]}
+        sizing="normal"
+        style={Object {}}
+        visible={true}
+      >
+        <StyledComponent
+          className="ui-button nohover"
+          disabled={true}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-kAzzGY",
+                "isStatic": false,
+                "lastClassName": "jnCMRO",
+                "rules": Array [
+                  "
+	",
+                  "
+	align-items: center;
+	box-sizing: border-box;
+	cursor: default;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	line-height: inherit;
+	outline: none;
+	overflow: visible;
+	position: relative;
+	user-select: none;
+	width: 100%;
+",
+                  "
+
+	flex: 1;
+
+	&:not(.nohover):hover {
+		background-color: ",
+                  [Function],
+                  " ",
+                  [Function],
+                  ";
+	}
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-kAzzGY",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          id="Button-0"
+          onClick={[Function]}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <div
+            className="ui-button nohover sc-kAzzGY jnCMRO"
+            disabled={true}
+            id="Button-0"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <Icon
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              iconName="bomb"
+              id=""
+              imageFile=""
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Icon"
+              padding=""
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
+            >
+              <Wrapper
+                bottom=""
+                className=""
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={false}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                iconName="bomb"
+                id=""
+                imageFile=""
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="Icon"
+                onError={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
+                sizing="normal"
+                style={Object {}}
+                testing={true}
+                theme={null}
+                tooltip=""
+                top=""
+                visible={true}
+                width=""
+                xcss={null}
+              >
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "titleBarBackgroundColor": "#004358",
+                      "titleBarForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
+                >
+                  <styled.i
+                    bottom=""
+                    className="ui-icon fa fa-fw fa-bomb"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="right"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    iconName="bomb"
+                    id=""
+                    imageFile=""
+                    left=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Icon"
+                    padding=""
+                    selected={false}
+                    sizing="normal"
+                    style={Object {}}
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    visible={true}
+                    width=""
+                    xcss={null}
+                  >
+                    <StyledComponent
+                      bottom=""
+                      className="ui-icon fa fa-fw fa-bomb"
+                      contentEditable={false}
+                      controlled={true}
+                      direction="right"
+                      disabled={false}
+                      err={null}
+                      errorMessage=""
+                      focus={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-gqjmRU",
+                            "isStatic": false,
+                            "lastClassName": "iCGQxQ",
+                            "rules": Array [
+                              "
+	text-align: center;
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.i",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-gqjmRU",
+                          "target": "i",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      height=""
+                      iconName="bomb"
+                      id=""
+                      imageFile=""
+                      left=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      obj="Icon"
+                      padding=""
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={null}
+                      tooltip=""
+                      top=""
+                      visible={true}
+                      width=""
+                      xcss={null}
+                    >
+                      <i
+                        className="ui-icon fa fa-fw fa-bomb sc-gqjmRU iCGQxQ"
+                        contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        height=""
+                        id=""
+                        selected={false}
+                        style={Object {}}
+                        width=""
+                      />
+                    </StyledComponent>
+                  </styled.i>
+                </ThemeProvider>
+              </Wrapper>
+            </Icon>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Button>
+`;
+
+exports[`Test making a Button invisible 1`] = `
+<Button
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  iconName="bomb"
+  iconStyle=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  obj="Button"
+  onClick={[MockFunction]}
+  padding=""
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={false}
+  width=""
+  xcss={null}
+>
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    iconName="bomb"
+    iconStyle=""
+    id=""
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    obj="Button"
+    onClick={[MockFunction]}
+    onError={[Function]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={false}
+    width=""
+    xcss={null}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "titleBarBackgroundColor": "#004358",
+          "titleBarForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
+        }
+      }
+    >
+      <styled.div
+        className="ui-button ripple"
+        disabled={false}
+        id="Button-0"
+        onClick={[Function]}
+        sizing="normal"
+        style={Object {}}
+        visible={false}
+      >
+        <StyledComponent
+          className="ui-button ripple"
+          disabled={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-kAzzGY",
+                "isStatic": false,
+                "lastClassName": "iNzSPr",
+                "rules": Array [
+                  "
+	",
+                  "
+	align-items: center;
+	box-sizing: border-box;
+	cursor: default;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	line-height: inherit;
+	outline: none;
+	overflow: visible;
+	position: relative;
+	user-select: none;
+	width: 100%;
+",
+                  "
+
+	flex: 1;
+
+	&:not(.nohover):hover {
+		background-color: ",
+                  [Function],
+                  " ",
+                  [Function],
+                  ";
+	}
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-kAzzGY",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          id="Button-0"
+          onClick={[Function]}
+          sizing="normal"
+          style={Object {}}
+          visible={false}
+        >
+          <div
+            className="ui-button ripple sc-kAzzGY iNzSPr"
+            disabled={false}
+            id="Button-0"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <Icon
+              bottom=""
+              className=""
+              contentEditable={false}
+              controlled={true}
+              direction="right"
+              disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
+              height=""
+              iconName="bomb"
+              id=""
+              imageFile=""
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              obj="Icon"
+              padding=""
+              selected={false}
+              sizing="normal"
+              style={Object {}}
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
+              width=""
+              xcss={null}
+            >
+              <Wrapper
+                bottom=""
+                className=""
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={false}
+                err={null}
+                errorMessage=""
+                focus={false}
+                height=""
+                iconName="bomb"
+                id=""
+                imageFile=""
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                obj="Icon"
+                onError={[Function]}
+                padding=""
+                reset={false}
+                selected={false}
+                sizing="normal"
+                style={Object {}}
+                testing={true}
+                theme={null}
+                tooltip=""
+                top=""
+                visible={true}
+                width=""
+                xcss={null}
+              >
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#c0c0c0",
+                      "color": "#000000",
+                      "headerBackgroundColor": "#004358",
+                      "headerForegroundColor": "#ffffff",
+                      "headerHoverColor": "#ffe11a",
+                      "hoverColor": "#c0c0c0",
+                      "inputBorderColor": "#c0c0c0",
+                      "itemHoverColor": "#bedb39",
+                      "selectedBackgroundColor": "#1f8a70",
+                      "selectedForegroundColor": "#ffe11a",
+                      "titleBarBackgroundColor": "#004358",
+                      "titleBarForegroundColor": "#ffe11a",
+                      "tooltipBackgroundColor": "#708090",
+                      "tooltipForegroundColor": "#ffffff",
+                      "transitionDelay": "0.5s",
+                    }
+                  }
+                >
+                  <styled.i
+                    bottom=""
+                    className="ui-icon fa fa-fw fa-bomb"
+                    contentEditable={false}
+                    controlled={true}
+                    direction="right"
+                    disabled={false}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    iconName="bomb"
+                    id=""
+                    imageFile=""
+                    left=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    obj="Icon"
+                    padding=""
+                    selected={false}
+                    sizing="normal"
+                    style={Object {}}
+                    testing={true}
+                    theme={null}
+                    tooltip=""
+                    top=""
+                    visible={true}
+                    width=""
+                    xcss={null}
+                  >
+                    <StyledComponent
+                      bottom=""
+                      className="ui-icon fa fa-fw fa-bomb"
+                      contentEditable={false}
+                      controlled={true}
+                      direction="right"
+                      disabled={false}
+                      err={null}
+                      errorMessage=""
+                      focus={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-gqjmRU",
+                            "isStatic": false,
+                            "lastClassName": "iCGQxQ",
+                            "rules": Array [
+                              "
+	text-align: center;
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.i",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-gqjmRU",
+                          "target": "i",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      height=""
+                      iconName="bomb"
+                      id=""
+                      imageFile=""
+                      left=""
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      obj="Icon"
+                      padding=""
+                      selected={false}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      theme={null}
+                      tooltip=""
+                      top=""
+                      visible={true}
+                      width=""
+                      xcss={null}
+                    >
+                      <i
+                        className="ui-icon fa fa-fw fa-bomb sc-gqjmRU iCGQxQ"
+                        contentEditable={false}
+                        direction="right"
+                        disabled={false}
+                        height=""
+                        id=""
+                        selected={false}
+                        style={Object {}}
+                        width=""
+                      />
+                    </StyledComponent>
+                  </styled.i>
+                </ThemeProvider>
+              </Wrapper>
+            </Icon>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Button>
+`;
+
+exports[`Test retrieval of Button props object 1`] = `
+Object {
+  "bottom": "",
+  "children": null,
+  "className": "",
+  "contentEditable": false,
+  "controlled": true,
+  "direction": "right",
+  "disabled": false,
+  "err": null,
+  "errorMessage": "",
+  "focus": false,
+  "height": "",
+  "iconName": "bomb",
+  "iconStyle": "",
+  "id": "",
+  "left": "",
+  "location": "none",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "obj": "Button",
+  "onClick": [Function],
+  "padding": "",
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "testing": true,
+  "theme": null,
+  "tooltip": "",
+  "top": "",
+  "visible": true,
+  "width": "",
+  "xcss": null,
+}
+`;

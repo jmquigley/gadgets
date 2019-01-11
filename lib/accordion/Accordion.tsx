@@ -41,7 +41,7 @@
 const debug = require('debug')('Accordion');
 
 import {cloneDeep} from 'lodash';
-import React from 'react';
+import * as React from 'react';
 import {
 	BaseComponent,
 	BaseProps,

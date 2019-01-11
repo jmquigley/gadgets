@@ -43,7 +43,6 @@
 				"@types/styled-components": "^4.1.5",
 				"autobind-decorator": "^2.4.0",
 				"babel-jest": "^23.6.0",
-				"babel-loader": "^8.0.5",
 				"babel-minify-webpack-plugin": "^0.3.1",
 				"babel-plugin-css-modules-transform": "^1.6.2",
 				"babel-plugin-styled-components": "^1.10.0",
@@ -176,17 +175,16 @@
 						"enzyme-to-json/serializer"
 				],
 				"testEnvironment": "jsdom",
-				"testMatch": null,
 				"testPathIgnorePatterns": [
 						"<rootDir>/bin/",
 						"<rootDir>/node_modules/"
 				],
-				"testRegex": "__test__/.*\\.test\\.(ts|tsx)$",
-				"verbose": false
+				"verbose": false,
+				"watch": false
 		},
 		"scripts": {
 				"all": "yarn install && cross-env NODE_ENV=production yarn run build && yarn run docs && yarn test",
-				"build": "yarn clean && yarn run lint && webpack && yarn run build:demo",
+				"build": "yarn clean && yarn run lint && pkgwrap --build --webpack && yarn run build:demo",
 				"build:demo": "cd demo && yarn run build",
 				"clean": "pkgwrap --clean",
 				"coverage": "pkgwrap --coverage --jest",

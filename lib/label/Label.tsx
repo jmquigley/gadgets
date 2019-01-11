@@ -49,6 +49,8 @@
 
 'use strict';
 
+// const debug = require('debug')('Label');
+
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -124,12 +126,15 @@ export const LabelView: any = styled.span`
 export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	public static readonly defaultProps: LabelProps = getDefaultLabelProps();
-	public state: LabelState = getDefaultLabelState();
-
 	private _label: any = null;
 
 	constructor(props: LabelProps) {
 		super(props, Label.defaultProps.style);
+		this.state = Object.assign(getDefaultLabelState(), {
+			editable: props.useedit,
+			previousText: props.text,
+			text: props.text
+		});
 	}
 
 	get label() {
@@ -227,8 +232,9 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		state.classes.clear();
 		state.classes.add('ui-label');
 
-		state.editable = props.useedit;
-		state.previousText = props.text;
+		if (state.text !== props.text) {
+			state.previousText = state.text;
+		}
 		state.text = props.text;
 
 		return super.getDerivedStateFromProps(props, state);
@@ -241,7 +247,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 					className={this.state.classes.classnames}
 					contentEditable={this.state.editable}
 					disabled={this.props.disabled}
-					innerRef={this.handleRef}
+					ref={this.handleRef}
 					onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
 					onClick={this.props.onClick}
 					onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}

@@ -2,19 +2,19 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {Button,	getDefaultButtonProps} from '../index';
+import {Button,	getDefaultButtonProps} from '../../dist/bundle';
 
 test('Test retrieval of Button props object', () => {
 	const props = getDefaultButtonProps();
 
-	expect(props).toBeTruthy();
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a Button control', () => {
 	const ctl = shallow(<Button className="test-class"/>);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -31,7 +31,7 @@ test('Test creation of a Button control with custom icon, colors, and border', (
 		/>
 	);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -39,7 +39,7 @@ test('Test disabling of a Button', () => {
 	const click = jest.fn();
 	const ctl = mount(<Button onClick={click} disabled={true} />);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button').first().simulate('click');
@@ -50,7 +50,7 @@ test('Test making a Button invisible', () => {
 	const click = jest.fn();
 	const ctl = mount(<Button onClick={click} visible={false} />);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button').first().simulate('click');
@@ -61,7 +61,7 @@ test('Test Button click event', () => {
 	const click = jest.fn();
 	const ctl = mount(<Button onClick={click} />);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button').first().simulate('click');

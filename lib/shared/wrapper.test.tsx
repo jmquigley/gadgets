@@ -2,7 +2,7 @@
 
 import {mount} from 'enzyme';
 import * as React from 'react';
-import {getDefaultWrapperProps, Wrapper} from '../index';
+import {getDefaultWrapperProps, Wrapper} from '../../dist/bundle';
 
 test('Test creation of the Wrapper props object', () => {
 	const props = getDefaultWrapperProps();

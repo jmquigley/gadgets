@@ -174,7 +174,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		onValidation: nilEvent,
 		sizing: Sizing.normal,
 		style: {},
-		testing: process.env.NODE_ENV === 'test',
+		testing: process.env.NODE_ENV !== 'production',
 		tooltip: '',
 		type: 'text',
 		useclear: false,
@@ -454,7 +454,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					>
 						<StyledInput
 							{...props}
-							innerRef={this.handleRef}
+							ref={this.handleRef}
 							onBlur={this.handleBlur}
 							onChange={this.handleChange}
 							onKeyDown={this.handleKeyDown}

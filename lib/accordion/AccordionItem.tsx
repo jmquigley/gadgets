@@ -56,7 +56,7 @@
 
 'use strict';
 
-// const debug = require('debug')('AccordionItem');
+const debug = require('debug')('AccordionItem');
 
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
@@ -98,10 +98,10 @@ export interface AccordionItemState extends BaseState {
 	toggle: boolean;
 }
 
-export function getDefaultAccordionItemState(): AccordionItemState {
+export function getDefaultAccordionItemState(initialState: boolean = false): AccordionItemState {
 	return cloneDeep(Object.assign({},
 		getDefaultBaseState(), {
-			toggle: false
+			toggle: initialState
 		}));
 }
 
@@ -124,10 +124,10 @@ export const AccordionContentView: any = styled.div`
 export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionItemState> {
 
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
-	public state: AccordionItemState = getDefaultAccordionItemState();
 
 	constructor(props: AccordionItemProps) {
 		super(props);
+		this.state = getDefaultAccordionItemState((this.props.nocollapse) ? true : this.props.initialToggle);
 	}
 
 	@autobind
@@ -137,6 +137,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 				toggle: !this.state.toggle
 			}, () => {
 				this.props.onClick(this.state.toggle);
+				debug('handleClick -> props: %O, state: %O', this.props, this.state);
 			});
 		}
 	}
@@ -144,9 +145,6 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	public static getDerivedStateFromProps(props: AccordionItemProps, state: AccordionItemState) {
 		state.classes.clear();
 		state.classes.add('ui-accordionitem');
-
-		state.toggle = (props.nocollapse) ? true : props.initialToggle;
-
 		return super.getDerivedStateFromProps(props, state);
 	}
 

@@ -7,17 +7,17 @@ import 'util.string';
 debug('env: %O', process.env);
 debug('exe: %s', process.env['NODE_ENV']);
 
-import {Accordion, AccordionItem} from './lib/accordion';
-import {Badge} from './lib/badge';
+import {Accordion, AccordionItem, getDefaultAccordionItemProps, getDefaultAccordionProps} from './lib/accordion';
+import {Badge, getDefaultBadgeProps} from './lib/badge';
 import {Breadcrumbs, Crumbs} from './lib/breadcrumbs';
 import {Break} from './lib/break';
-import {Browser} from './lib/browser';
-import {Button} from './lib/button';
+import {Browser, getDefaultBrowserProps} from './lib/browser';
+import {Button, getDefaultButtonProps} from './lib/button';
 import {ButtonCircle} from './lib/buttonCircle';
 import {ButtonDialog} from './lib/buttonDialog';
 import {ButtonText} from './lib/buttonText';
 import {ButtonToggle} from './lib/buttonToggle';
-import {Container} from './lib/container';
+import {Container, getDefaultContainerProps} from './lib/container';
 import {DialogBox, DialogBoxType} from './lib/dialogBox';
 import {DialogWindow} from './lib/dialogWindow';
 import {Divider, DividerType} from './lib/divider';
@@ -26,7 +26,7 @@ import {DynamicList, DynamicListItem} from './lib/dynamicList';
 import {Editor} from './lib/editor';
 import {Icon} from './lib/icon';
 import {Item} from './lib/item';
-import {Label} from './lib/label';
+import {getDefaultLabelProps, Label} from './lib/label';
 import {List, ListDivider, ListFooter, ListHeader, ListItem} from './lib/list';
 import {Option, OptionGroup, OptionType} from './lib/option';
 import {Pager} from './lib/pager';
@@ -37,6 +37,7 @@ import {
 	Color,
 	Direction,
 	FontStyle,
+	getDefaultWrapperProps,
 	getTheme,
 	getThemeList,
 	Justify,
@@ -49,12 +50,18 @@ import {
 	ThemeProps,
 	Wrapper
 } from './lib/shared';
-import {Slider} from './lib/slider';
+import {getDefaultSliderProps, Slider} from './lib/slider';
 import {Switch, SwitchType} from './lib/switch';
 import {Tab, TabContainer} from './lib/tabs';
 import {Tag, TagList} from './lib/tagList';
 import {
+	getDefaultTextFieldProps,
 	TextField,
+	validateEmail,
+	validateMaxLength,
+	validateMinLength,
+	validateRegex,
+	validateURL,
 	Validator,
 	ValidatorFn
 } from './lib/textField';
@@ -108,6 +115,16 @@ export {
 	DynamicListItem,
 	Editor,
 	FontStyle,
+	getDefaultAccordionProps,
+	getDefaultAccordionItemProps,
+	getDefaultBadgeProps,
+	getDefaultBrowserProps,
+	getDefaultButtonProps,
+	getDefaultContainerProps,
+	getDefaultLabelProps,
+	getDefaultSliderProps,
+	getDefaultTextFieldProps,
+	getDefaultWrapperProps,
 	getTheme,
 	getThemeList,
 	Icon,
@@ -151,9 +168,14 @@ export {
 	Treeview,
 	TreeviewItem,
 	Triangle,
-	version,
+	validateEmail,
+	validateMaxLength,
+	validateMinLength,
+	validateRegex,
+	validateURL,
 	Validator,
 	ValidatorFn,
+	version,
 	withTheme,
 	Wrapper
 };

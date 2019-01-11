@@ -8,7 +8,7 @@ import {
 	validateRegex,
 	validateURL,
 	Validator
-} from '../validator';
+} from '../../dist/bundle';
 
 test('Test creation of the default validator object', () => {
 	const validator = new Validator(null, null, null);
