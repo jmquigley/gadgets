@@ -1,8 +1,5 @@
 'use strict';
 
-import 'jest-styled-components';
-
-import * as assert from 'assert';
 import {shallow} from 'enzyme';
 import * as React from 'react';
 import {Accordion, getDefaultAccordionProps} from '../../dist/bundle';
@@ -10,7 +7,7 @@ import {Accordion, getDefaultAccordionProps} from '../../dist/bundle';
 test('Test retrieval of Accordion props object', () => {
 	const props = getDefaultAccordionProps();
 
-	assert(props);
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
@@ -22,7 +19,7 @@ test('Test the creation of a Accordion control container', () => {
 		</Accordion>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -38,7 +35,7 @@ test('Test the disabling of the Accordion control container', () => {
 		</Accordion>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -54,6 +51,6 @@ test('Test making the accordion control invisible', () => {
 		</Accordion>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });

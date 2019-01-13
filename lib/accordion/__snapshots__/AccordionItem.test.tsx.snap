@@ -1998,50 +1998,6 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                 </ThemeProvider>
               </Wrapper>
             </Item>
-            <styled.div
-              className="ui-accordion-content"
-              sizing="normal"
-            >
-              <StyledComponent
-                className="ui-accordion-content"
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-dnqmqq",
-                      "isStatic": false,
-                      "lastClassName": "iOAsdd",
-                      "rules": Array [
-                        "
-	",
-                        [Function],
-                        ";
-",
-                      ],
-                    },
-                    "displayName": "styled.div",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-dnqmqq",
-                    "target": "div",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                sizing="normal"
-              >
-                <div
-                  className="ui-accordion-content sc-dnqmqq iOAsdd"
-                >
-                  <div>
-                    child content
-                  </div>
-                </div>
-              </StyledComponent>
-            </styled.div>
           </ul>
         </StyledComponent>
       </styled.ul>

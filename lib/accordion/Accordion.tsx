@@ -64,6 +64,8 @@ export function getDefaultAccordionProps(): AccordionProps {
 	));
 }
 
+export const getDefaultAccordionState = getDefaultBaseState;
+
 export const AccordionView: any = styled.ul`
 	cursor: default;
 	list-style: none;
@@ -78,15 +80,13 @@ export const AccordionView: any = styled.ul`
 export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
-	public state: AccordionState = getDefaultBaseState();
+	public state: AccordionState = getDefaultAccordionState();
 
 	constructor(props: AccordionProps) {
 		super(props, Accordion.defaultProps.style);
 	}
 
 	public static getDerivedStateFromProps(props: AccordionProps, state: AccordionState) {
-		debug('getDerivedStateFromProps -> props: %O, state: %O', props, state);
-
 		state.classes.clear();
 		state.classes.add('ui-accordion');
 
@@ -101,7 +101,7 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 	}
 
 	public render() {
-		debug('render -> props: %O, state: %O', this.props, this.state);
+		debug('state: %O, props: %O', this.state, this.props);
 
 		return (
 			<Wrapper {...this.props} >

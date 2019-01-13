@@ -1,8 +1,5 @@
 'use strict';
 
-import 'jest-styled-components';
-
-import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {AccordionItem, getDefaultAccordionItemProps} from '../../dist/bundle';
@@ -10,7 +7,7 @@ import {AccordionItem, getDefaultAccordionItemProps} from '../../dist/bundle';
 test('Test retrieval of AccordionItem props object', () => {
 	const props = getDefaultAccordionItemProps();
 
-	assert(props);
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
@@ -19,7 +16,7 @@ test('Test the creation of a AccordionItem control', () => {
 		<AccordionItem className="test-class" title="Test Title" />
 	);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -31,7 +28,7 @@ test('Test the disabling of the AccordionItem', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -43,7 +40,7 @@ test('Test making the AccordionItem invisible', () => {
 		/>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -60,15 +57,15 @@ test('Test clicking of the AccordionItem header', () => {
 		</AccordionItem>
 	);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	assert(!ctl.state('toggle'));
-	assert(!ctl.contains(child));
+	expect(ctl.state('toggle')).toBe(false);
+	expect(ctl.contains(child)).toBe(false);
 	ctl.find('.ui-label').first().simulate('click');
 	expect(click).toHaveBeenCalled();
-	assert(ctl.state('toggle'));
-	assert(ctl.contains(child));
+	expect(ctl.state('toggle')).toBe(true);
+	expect(ctl.contains(child)).toBe(true);
 });
 
 test('Test clicking the AccordionItem header when setting nocollapse', () => {
@@ -85,13 +82,16 @@ test('Test clicking the AccordionItem header when setting nocollapse', () => {
 		</AccordionItem>
 	);
 
-	assert(ctl);
+	console.log(child)
+	console.log(ctl.debug())
+
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	assert(ctl.state('toggle'));
-	assert(ctl.contains(child));
+	expect(ctl.state('toggle')).toBe(false);
+	expect(ctl.contains(child)).toBe(false);
 	ctl.find('.ui-label').first().simulate('click');
 	expect(click).not.toHaveBeenCalled();
-	assert(ctl.state('toggle'));
-	assert(ctl.contains(child));
+	expect(ctl.state('toggle')).toBe(false);
+	expect(ctl.contains(child)).toBe(false);
 });

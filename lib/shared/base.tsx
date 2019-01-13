@@ -89,6 +89,7 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 			this._id = this.constructor.name + '-' + (this.props.testing ? '0' : getUUID());
 		}
 
+		// TODO: removed once sizing values complete in state
 		this._sizing = this.props.sizing;
 		if (defaultFontSize !== defaultSize) {
 			sizes = Sizes.instance(defaultFontSize);
@@ -100,8 +101,10 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 			this._theme = getTheme();
 		}
 
+		// TODO: removed once state values for styles set
 		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props.style);
 
+		// TODO: this will go away for state styles
 		if (this.state) {
 			this.state['style'] = this.inlineStyles;
 		}

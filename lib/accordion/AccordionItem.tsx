@@ -127,7 +127,9 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 	constructor(props: AccordionItemProps) {
 		super(props);
-		this.state = getDefaultAccordionItemState((this.props.nocollapse) ? true : this.props.initialToggle);
+		this.state = Object.assign(getDefaultAccordionItemState(), {
+			toggle: this.props.initialToggle
+		});
 	}
 
 	@autobind
@@ -155,7 +157,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 			content = (
 				<AccordionContentView
 					className="ui-accordion-content"
-					sizing={this.props.sizing}
+					sizing={this.state.sizing}
 				>
 					{this.props.children}
 				</AccordionContentView>

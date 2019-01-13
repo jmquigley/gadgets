@@ -48,14 +48,17 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	disabled,
 	fontStyle,
+	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
+	Location,
 	locationStyle,
 	Sizing,
 	Wrapper
 } from '../shared';
-import {getDefaultBaseProps, Location} from '../shared/props';
 import styled from '../shared/themed-components';
 
 export interface BadgeProps extends BaseProps {
@@ -74,7 +77,7 @@ export function getDefaultBadgeProps(): BadgeProps {
 			sizing: Sizing.normal,
 			style: {
 				backgroundColor: 'white',
-				border: 'solid 3px',
+				border: 'solid 0.125em',
 				color: 'red'
 			},
 			suppress: false
@@ -82,11 +85,14 @@ export function getDefaultBadgeProps(): BadgeProps {
 	);
 }
 
+export type BadgeState = BaseState;
+export const getDefaultBadgeState = getDefaultBaseState;
+
 export const BadgeView: any = styled.div`
 	border-radius: 96px;
 	cursor: default;
 	font-weight: bold;
-	padding: 0 7px;
+	padding: 0.2em 0.6em;
 	position: absolute;
 	text-align: center;
 	user-select: none;
@@ -103,15 +109,13 @@ export const BadgeContainerView: any = styled.div`
 	position: relative;
 `;
 
-export class Badge extends BaseComponent<BadgeProps, undefined> {
+export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 
 	public static readonly defaultProps: BadgeProps = getDefaultBadgeProps();
+	public state: BadgeState = getDefaultBadgeState();
 
 	constructor(props: BadgeProps) {
 		super(props, Badge.defaultProps.style);
-
-		this._classes.add('ui-badge');
-		this.componentWillUpdate(props);
 	}
 
 	@autobind
@@ -124,6 +128,12 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		}
 	}
 
+	public static getDerivedStateFromProps(props: BadgeProps, state: BadgeState) {
+		state.classes.clear();
+		state.classes.add('ui-badge');
+		return super.getDerivedStateFromProps(props, state);
+	}
+
 	public render() {
 		let badge = null;
 
@@ -132,12 +142,12 @@ export class Badge extends BaseComponent<BadgeProps, undefined> {
 		} else {
 			badge = (
 				<BadgeView
-					className={this.classes}
+					className={this.state.classes.classnames}
 					disabled={this.props.disabled}
 					location={this.props.location}
 					onClick={this.handleClick}
-					sizing={this.props.sizing}
-					style={this.inlineStyles}
+					sizing={this.state.sizing}
+					style={this.state.style}
 					visible={this.props.visible}
 				>
 					{this.props.counter}
