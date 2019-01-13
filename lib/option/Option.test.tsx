@@ -3,13 +3,12 @@
 import {EnumValues as ev} from 'enum-values';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {Sizing} from '../../shared';
-import {getDefaultOptionProps, Option, OptionType} from '../index';
+import {getDefaultOptionProps, Option, OptionType, Sizing} from '../../dist/bundle';
 
 test('Test retrieval of Option props object', () => {
 	const props = getDefaultOptionProps();
 
-	expect(props).toBeTruthy();
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
@@ -23,7 +22,7 @@ for (const sizing of ev.getNames(Sizing)) {
 			/>
 		);
 
-		expect(ctl).toBeTruthy();
+		expect(ctl).toBeDefined();
 		expect(ctl).toMatchSnapshot();
 	});
 }
@@ -32,7 +31,7 @@ test('Test disabling of the Option control', () => {
 	const click = jest.fn();
 	const ctl = mount(<Option onClick={click} disabled={true} />);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button-toggle').first().simulate('click');
@@ -43,7 +42,7 @@ test('Test making the Option control invisible', () => {
 	const click = jest.fn();
 	const ctl = mount(<Option onClick={click} visible={false} />);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-button-toggle').first().simulate('click');
@@ -54,7 +53,7 @@ test('Test Option control click event', () => {
 	const click = jest.fn();
 	const ctl = mount(<Option onClick={click} />);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find('.ui-option').first().simulate('click');

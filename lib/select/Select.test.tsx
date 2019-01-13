@@ -1,14 +1,20 @@
 'use strict';
 
-import * as assert from 'assert';
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {Select} from '../index';
+import {getDefaultSelectProps, Select} from '../../dist/bundle';
+
+test('Test retrieval of Select props object', () => {
+	const props = getDefaultSelectProps();
+
+	expect(props).toBeDefined();
+	expect(props).toMatchSnapshot();
+});
 
 test('Test creation of a Select control', () => {
 	const ctl = shallow(<Select className="test-class" />);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 

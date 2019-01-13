@@ -5,10 +5,10 @@ import {mount} from 'enzyme';
 import * as React from 'react';
 import {
 	getDefaultTreeviewProps,
+	Sizing,
 	Treeview,
 	TreeviewItem
-} from '../';
-import {Sizing} from '../../shared';
+} from '../../dist/bundle';
 
 const treeData: TreeviewItem[] = [
 	{title: '1.0', expanded: true, children: [
@@ -31,7 +31,7 @@ const treeData: TreeviewItem[] = [
 test('Test retrieval of Treeview props object', () => {
 	const props = getDefaultTreeviewProps();
 
-	expect(props).toBeTruthy();
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
@@ -44,9 +44,9 @@ for (const sizing of ev.getNames(Sizing)) {
 			/>
 		);
 
-		expect(ctl).toBeTruthy();
+		expect(ctl).toBeDefined();
 		const treeview = ctl.instance() as Treeview;
-		expect(treeview).toBeTruthy();
+		expect(treeview).toBeDefined();
 		treeview.componentWillReceiveProps({sizing});
 		expect(ctl).toMatchSnapshot();
 		expect(ctl.state('rowHeight')).toBe(treeview.rowHeights[sizing]);

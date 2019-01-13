@@ -7,7 +7,12 @@ import 'util.string';
 debug('env: %O', process.env);
 debug('exe: %s', process.env['NODE_ENV']);
 
-import {Accordion, AccordionItem, getDefaultAccordionItemProps, getDefaultAccordionProps} from './lib/accordion';
+import {
+	Accordion,
+	AccordionItem,
+	getDefaultAccordionItemProps,
+	getDefaultAccordionProps
+} from './lib/accordion';
 import {Badge, getDefaultBadgeProps} from './lib/badge';
 import {Breadcrumbs, Crumbs, getDefaultBreadcrumbsProps} from './lib/breadcrumbs';
 import {Break} from './lib/break';
@@ -39,9 +44,15 @@ import {
 	ListHeader,
 	ListItem
 } from './lib/list';
-import {Option, OptionGroup, OptionType} from './lib/option';
-import {Pager} from './lib/pager';
-import {Select} from './lib/select';
+import {
+	getDefaultOptionGroupProps,
+	getDefaultOptionProps,
+	Option,
+	OptionGroup,
+	OptionType
+} from './lib/option';
+import {getDefaultPagerProps, Pager} from './lib/pager';
+import {getDefaultSelectProps, Select} from './lib/select';
 import {
 	BaseComponent,
 	BaseProps,
@@ -80,7 +91,7 @@ import {getDefaultTitleProps, Title, TitleLayout} from './lib/title';
 import {getDefaultToastProps, Toast, ToastLevel} from './lib/toast';
 import {Toolbar} from './lib/toolbar';
 import {getDefaultTooltipProps, Tooltip} from './lib/tooltip';
-import {Treeview, TreeviewItem} from './lib/treeview';
+import {getDefaultTreeviewProps, Treeview, TreeviewItem} from './lib/treeview';
 import {Triangle} from './lib/triangle';
 
 // Themed component classes
@@ -150,14 +161,19 @@ export {
 	getDefaultListHeaderProps,
 	getDefaultListItemProps,
 	getDefaultListProps,
+	getDefaultOptionGroupProps,
+	getDefaultOptionProps,
+	getDefaultPagerProps,
+	getDefaultSelectProps,
 	getDefaultSliderProps,
 	getDefaultSwitchProps,
 	getDefaultTabContainerProps,
 	getDefaultTabProps,
 	getDefaultTagListProps,
+	getDefaultTextFieldProps,
 	getDefaultTitleProps,
 	getDefaultToastProps,
-	getDefaultTextFieldProps,
+	getDefaultTreeviewProps,
 	getDefaultTooltipProps,
 	getDefaultWrapperProps,
 	getTheme,

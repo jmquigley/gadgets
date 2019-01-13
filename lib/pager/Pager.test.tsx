@@ -5,10 +5,10 @@ const debug = require('debug')('Pager.test');
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {waitPromise} from 'util.wait';
-import {getDefaultPagerProps, Pager} from '../index';
+import {getDefaultPagerProps, Pager} from '../../dist/bundle';
 
 function validate(ctl: any) {
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl.prop('disabled')).toBe(false);
 	expect(ctl.prop('visible')).toBe(true);
 	expect(ctl.find('.ui-pager').length).toBe(2);
@@ -17,14 +17,14 @@ function validate(ctl: any) {
 test('Test retrieval of Pager props object', () => {
 	const props = getDefaultPagerProps();
 
-	expect(props).toBeTruthy();
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a Pager control', () => {
 	const ctl = shallow(<Pager className="test-class" />);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -35,7 +35,7 @@ test('Test pager getPages method with front of list', () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.pages).toEqual(expect.arrayContaining([1, 2, 3]));
 	expect(pager.currentPage).toBe(1);
@@ -54,7 +54,7 @@ test('Test pager getPages method with 2nd to last in list', () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.pages).toEqual(expect.arrayContaining([10, 11, 12]));
 	expect(pager.currentPage).toBe(11);
@@ -73,7 +73,7 @@ test('Test Pager getPages method with last in the List', () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.pages).toEqual(expect.arrayContaining([10, 11, 12]));
 	expect(pager.currentPage).toBe(12);
@@ -92,7 +92,7 @@ test('Test Pager getPages method with invalid initial page (negative test)', () 
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.pages).toEqual(expect.arrayContaining([1, 2, 3]));
 	expect(pager.currentPage).toBe(1);
@@ -111,7 +111,7 @@ test('Test Pager getPages method with invalid pageSizes (negative test)', () => 
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.pages).toEqual(expect.arrayContaining([1, 2, 3]));
 	expect(pager.currentPage).toBe(1);
@@ -130,7 +130,7 @@ test('Test Pager getPages method with empty pageSizes (negative test)', () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.pages).toEqual(expect.arrayContaining([1, 2, 3]));
 	expect(pager.currentPage).toBe(1);
@@ -149,7 +149,7 @@ test('Test Pager getPages method with invalid totalItems (negative test)', () =>
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.pages).toEqual(expect.arrayContaining([1, 0, 0]));
 	expect(pager.currentPage).toBe(1);
@@ -170,7 +170,7 @@ test('Test selection of the second page in the control', () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	// Number of button controls in this instance
 	expect(ctl.find('.ui-button').length).toBe(10);
@@ -194,7 +194,7 @@ test('Test pressing the "<<" (first) button', () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.currentPage).toBe(2);
 	expect(pager.lastPage).toBe(12);
@@ -221,7 +221,7 @@ test('Test pressing the "<" (previous) button', () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.currentPage).toBe(3);
 	expect(pager.lastPage).toBe(12);
@@ -247,7 +247,7 @@ test('Test pressing the ">" (next) button', () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.currentPage).toBe(1);
 	expect(pager.lastPage).toBe(12);
@@ -273,7 +273,7 @@ test('Test pressing the ">>" (last) button', () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
+	expect(pager).toBeDefined();
 
 	expect(pager.currentPage).toBe(1);
 	expect(pager.lastPage).toBe(12);
@@ -299,8 +299,8 @@ test('Test selecting dialog "50" to change the page size', async () => {
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
-	expect(pager).toBeTruthy();
-	expect(pager.dialog).toBeTruthy();
+	expect(pager).toBeDefined();
+	expect(pager.dialog).toBeDefined();
 
 	expect(pager.currentPage).toBe(1);
 	expect(pager.lastPage).toBe(12);
@@ -340,7 +340,7 @@ test('Repeatedly create instance with different initial start for props test', (
 
 		validate(ctl);
 		const pager = ctl.instance() as Pager;
-		expect(pager).toBeTruthy();
+		expect(pager).toBeDefined();
 		expect(pager.currentPage).toBe(i);
 	}
 });

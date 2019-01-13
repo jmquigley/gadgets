@@ -3,13 +3,17 @@
 import {EnumValues as ev} from 'enum-values';
 import {mount} from 'enzyme';
 import * as React from 'react';
-import {Sizing} from '../../shared';
-import {getDefaultOptionGroupProps, OptionGroup, OptionType} from '../index';
+import {
+	getDefaultOptionGroupProps,
+	OptionGroup,
+	OptionType,
+	Sizing
+} from '../../dist/bundle';
 
 test('Test retrieval of OptionGroup props object', () => {
 	const props = getDefaultOptionGroupProps();
 
-	expect(props).toBeTruthy();
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
@@ -29,7 +33,7 @@ for (const sizing of ev.getNames(Sizing)) {
 			/>
 		);
 
-		expect(ctl).toBeTruthy();
+		expect(ctl).toBeDefined();
 		expect(ctl).toMatchSnapshot();
 	});
 }
@@ -50,7 +54,7 @@ for (const optionType of ev.getValues(OptionType)) {
 			/>
 		);
 
-		expect(ctl).toBeTruthy();
+		expect(ctl).toBeDefined();
 		expect(ctl).toMatchSnapshot();
 	});
 }
@@ -70,7 +74,7 @@ test('Test disabling of the OptionGroup control', () => {
 		/>
 	);
 
-	expect(ctl).toBeTruthy();
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
