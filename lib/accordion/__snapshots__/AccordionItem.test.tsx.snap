@@ -24,6 +24,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="AccordionItem"
   onBlur={[Function]}
   onChange={[Function]}
@@ -74,6 +75,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="AccordionItem"
     onBlur={[Function]}
     onChange={[Function]}
@@ -201,6 +203,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
               noedit={false}
               nohover={false}
               noripple={false}
+              notheme={false}
               obj="AccordionItem"
               onBlur={[Function]}
               onChange={[Function]}
@@ -251,6 +254,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                notheme={false}
                 obj="AccordionItem"
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -403,6 +407,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                           noedit={false}
                           nohover={false}
                           noripple={false}
+                          notheme={false}
                           obj="AccordionItem"
                           onBlur={[Function]}
                           onChange={[Function]}
@@ -418,11 +423,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                           selected={false}
                           sizing="normal"
                           stacked={false}
-                          style={
-                            Object {
-                              "padding": "2px 4px",
-                            }
-                          }
+                          style={Object {}}
                           testing={true}
                           theme={null}
                           title="Test Title"
@@ -457,6 +458,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            notheme={false}
                             obj="AccordionItem"
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -474,11 +476,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                             selected={false}
                             sizing="normal"
                             stacked={false}
-                            style={
-                              Object {
-                                "padding": "2px 4px",
-                              }
-                            }
+                            style={Object {}}
                             testing={true}
                             theme={null}
                             title="Test Title"
@@ -516,11 +514,8 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                 className="ui-title-bar ripple"
                                 disabled={false}
                                 layout={5}
-                                style={
-                                  Object {
-                                    "padding": "2px 4px",
-                                  }
-                                }
+                                sizing="normal"
+                                style={Object {}}
                                 visible={true}
                               >
                                 <StyledComponent
@@ -564,21 +559,14 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                   }
                                   forwardedRef={null}
                                   layout={5}
-                                  style={
-                                    Object {
-                                      "padding": "2px 4px",
-                                    }
-                                  }
+                                  sizing="normal"
+                                  style={Object {}}
                                   visible={true}
                                 >
                                   <div
                                     className="ui-title-bar ripple sc-bxivhb dAMKry"
                                     disabled={false}
-                                    style={
-                                      Object {
-                                        "padding": "2px 4px",
-                                      }
-                                    }
+                                    style={Object {}}
                                   >
                                     <Styled(Label)
                                       bottom=""
@@ -603,6 +591,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                       noedit={false}
                                       nohover={false}
                                       noripple={false}
+                                      notheme={false}
                                       obj="AccordionItem"
                                       onBlur={[Function]}
                                       onChange={[Function]}
@@ -612,17 +601,12 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
                                       onMouseOut={[Function]}
-                                      onUpdate={[Function]}
                                       padding=""
                                       rightButton={null}
                                       selected={false}
                                       sizing="normal"
                                       stacked={false}
-                                      style={
-                                        Object {
-                                          "padding": "2px 4px",
-                                        }
-                                      }
+                                      style={Object {}}
                                       testing={true}
                                       text="Test Title"
                                       theme={null}
@@ -659,17 +643,19 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-EHOje",
                                               "isStatic": false,
-                                              "lastClassName": "bqslsQ",
+                                              "lastClassName": "hLLCNa",
                                               "rules": Array [
                                                 "
-	align-items: center;
-	display: block;
+	",
+                                                "
+	padding: ",
+                                                [Function],
+                                                ";
 
 	",
                                                 [Function],
                                                 "
-	",
-                                                [Function],
+",
                                                 "
 ",
                                               ],
@@ -700,6 +686,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        notheme={false}
                                         obj="AccordionItem"
                                         onBlur={[Function]}
                                         onChange={[Function]}
@@ -709,17 +696,12 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                         onKeyDown={[Function]}
                                         onKeyPress={[Function]}
                                         onMouseOut={[Function]}
-                                        onUpdate={[Function]}
                                         padding=""
                                         rightButton={null}
                                         selected={false}
                                         sizing="normal"
                                         stacked={false}
-                                        style={
-                                          Object {
-                                            "padding": "2px 4px",
-                                          }
-                                        }
+                                        style={Object {}}
                                         testing={true}
                                         text="Test Title"
                                         theme={null}
@@ -741,7 +723,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                       >
                                         <Label
                                           bottom=""
-                                          className="ui-title sc-EHOje bqslsQ"
+                                          className="ui-title sc-EHOje hLLCNa"
                                           contentEditable={false}
                                           controlled={true}
                                           direction="right"
@@ -762,6 +744,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                           noedit={false}
                                           nohover={false}
                                           noripple={false}
+                                          notheme={false}
                                           obj="AccordionItem"
                                           onBlur={[Function]}
                                           onChange={[Function]}
@@ -777,11 +760,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                           selected={false}
                                           sizing="normal"
                                           stacked={false}
-                                          style={
-                                            Object {
-                                              "padding": "2px 4px",
-                                            }
-                                          }
+                                          style={Object {}}
                                           testing={true}
                                           text="Test Title"
                                           theme={null}
@@ -803,7 +782,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                         >
                                           <Wrapper
                                             bottom=""
-                                            className="ui-title sc-EHOje bqslsQ"
+                                            className="ui-title sc-EHOje hLLCNa"
                                             contentEditable={false}
                                             controlled={true}
                                             direction="right"
@@ -824,6 +803,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            notheme={false}
                                             obj="AccordionItem"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -841,11 +821,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                             selected={false}
                                             sizing="normal"
                                             stacked={false}
-                                            style={
-                                              Object {
-                                                "padding": "2px 4px",
-                                              }
-                                            }
+                                            style={Object {}}
                                             testing={true}
                                             text="Test Title"
                                             theme={null}
@@ -888,7 +864,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                               }
                                             >
                                               <styled.span
-                                                className="ui-label ui-title sc-EHOje bqslsQ"
+                                                className="ui-label ui-title sc-EHOje hLLCNa"
                                                 contentEditable={false}
                                                 disabled={false}
                                                 onBlur={[Function]}
@@ -897,16 +873,12 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                                 onKeyDown={[Function]}
                                                 onKeyPress={[Function]}
                                                 sizing="normal"
-                                                style={
-                                                  Object {
-                                                    "padding": "2px 4px",
-                                                  }
-                                                }
+                                                style={Object {}}
                                                 suppressContentEditableWarning={true}
                                                 visible={true}
                                               >
                                                 <StyledComponent
-                                                  className="ui-label ui-title sc-EHOje bqslsQ"
+                                                  className="ui-label ui-title sc-EHOje hLLCNa"
                                                   contentEditable={false}
                                                   disabled={false}
                                                   forwardedComponent={
@@ -950,16 +922,12 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                                   onKeyDown={[Function]}
                                                   onKeyPress={[Function]}
                                                   sizing="normal"
-                                                  style={
-                                                    Object {
-                                                      "padding": "2px 4px",
-                                                    }
-                                                  }
+                                                  style={Object {}}
                                                   suppressContentEditableWarning={true}
                                                   visible={true}
                                                 >
                                                   <span
-                                                    className="ui-label ui-title sc-EHOje bqslsQ sc-htpNat eEDiFV"
+                                                    className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat eEDiFV"
                                                     contentEditable={false}
                                                     disabled={false}
                                                     onBlur={[Function]}
@@ -967,11 +935,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                                     onDoubleClick={[Function]}
                                                     onKeyDown={[Function]}
                                                     onKeyPress={[Function]}
-                                                    style={
-                                                      Object {
-                                                        "padding": "2px 4px",
-                                                      }
-                                                    }
+                                                    style={Object {}}
                                                     suppressContentEditableWarning={true}
                                                   >
                                                     Test Title
@@ -1027,6 +991,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="AccordionItem"
   onBlur={[Function]}
   onChange={[Function]}
@@ -1077,6 +1042,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="AccordionItem"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1204,6 +1170,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
               noedit={false}
               nohover={false}
               noripple={false}
+              notheme={false}
               obj="AccordionItem"
               onBlur={[Function]}
               onChange={[Function]}
@@ -1254,6 +1221,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                notheme={false}
                 obj="AccordionItem"
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -1406,6 +1374,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                           noedit={false}
                           nohover={false}
                           noripple={false}
+                          notheme={false}
                           obj="AccordionItem"
                           onBlur={[Function]}
                           onChange={[Function]}
@@ -1421,11 +1390,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                           selected={false}
                           sizing="normal"
                           stacked={false}
-                          style={
-                            Object {
-                              "padding": "2px 4px",
-                            }
-                          }
+                          style={Object {}}
                           testing={true}
                           theme={null}
                           title="Test Title"
@@ -1460,6 +1425,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                             noedit={false}
                             nohover={false}
                             noripple={false}
+                            notheme={false}
                             obj="AccordionItem"
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -1477,11 +1443,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                             selected={false}
                             sizing="normal"
                             stacked={false}
-                            style={
-                              Object {
-                                "padding": "2px 4px",
-                              }
-                            }
+                            style={Object {}}
                             testing={true}
                             theme={null}
                             title="Test Title"
@@ -1519,11 +1481,8 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                 className="ui-title-bar ripple"
                                 disabled={false}
                                 layout={5}
-                                style={
-                                  Object {
-                                    "padding": "2px 4px",
-                                  }
-                                }
+                                sizing="normal"
+                                style={Object {}}
                                 visible={true}
                               >
                                 <StyledComponent
@@ -1567,21 +1526,14 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                   }
                                   forwardedRef={null}
                                   layout={5}
-                                  style={
-                                    Object {
-                                      "padding": "2px 4px",
-                                    }
-                                  }
+                                  sizing="normal"
+                                  style={Object {}}
                                   visible={true}
                                 >
                                   <div
                                     className="ui-title-bar ripple sc-bxivhb dAMKry"
                                     disabled={false}
-                                    style={
-                                      Object {
-                                        "padding": "2px 4px",
-                                      }
-                                    }
+                                    style={Object {}}
                                   >
                                     <Styled(Label)
                                       bottom=""
@@ -1606,6 +1558,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                       noedit={false}
                                       nohover={false}
                                       noripple={false}
+                                      notheme={false}
                                       obj="AccordionItem"
                                       onBlur={[Function]}
                                       onChange={[Function]}
@@ -1615,17 +1568,12 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                       onKeyDown={[Function]}
                                       onKeyPress={[Function]}
                                       onMouseOut={[Function]}
-                                      onUpdate={[Function]}
                                       padding=""
                                       rightButton={null}
                                       selected={false}
                                       sizing="normal"
                                       stacked={false}
-                                      style={
-                                        Object {
-                                          "padding": "2px 4px",
-                                        }
-                                      }
+                                      style={Object {}}
                                       testing={true}
                                       text="Test Title"
                                       theme={null}
@@ -1662,17 +1610,19 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-EHOje",
                                               "isStatic": false,
-                                              "lastClassName": "bqslsQ",
+                                              "lastClassName": "hLLCNa",
                                               "rules": Array [
                                                 "
-	align-items: center;
-	display: block;
+	",
+                                                "
+	padding: ",
+                                                [Function],
+                                                ";
 
 	",
                                                 [Function],
                                                 "
-	",
-                                                [Function],
+",
                                                 "
 ",
                                               ],
@@ -1703,6 +1653,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                         noedit={false}
                                         nohover={false}
                                         noripple={false}
+                                        notheme={false}
                                         obj="AccordionItem"
                                         onBlur={[Function]}
                                         onChange={[Function]}
@@ -1712,17 +1663,12 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                         onKeyDown={[Function]}
                                         onKeyPress={[Function]}
                                         onMouseOut={[Function]}
-                                        onUpdate={[Function]}
                                         padding=""
                                         rightButton={null}
                                         selected={false}
                                         sizing="normal"
                                         stacked={false}
-                                        style={
-                                          Object {
-                                            "padding": "2px 4px",
-                                          }
-                                        }
+                                        style={Object {}}
                                         testing={true}
                                         text="Test Title"
                                         theme={null}
@@ -1744,7 +1690,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                       >
                                         <Label
                                           bottom=""
-                                          className="ui-title sc-EHOje bqslsQ"
+                                          className="ui-title sc-EHOje hLLCNa"
                                           contentEditable={false}
                                           controlled={true}
                                           direction="right"
@@ -1765,6 +1711,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                           noedit={false}
                                           nohover={false}
                                           noripple={false}
+                                          notheme={false}
                                           obj="AccordionItem"
                                           onBlur={[Function]}
                                           onChange={[Function]}
@@ -1780,11 +1727,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                           selected={false}
                                           sizing="normal"
                                           stacked={false}
-                                          style={
-                                            Object {
-                                              "padding": "2px 4px",
-                                            }
-                                          }
+                                          style={Object {}}
                                           testing={true}
                                           text="Test Title"
                                           theme={null}
@@ -1806,7 +1749,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                         >
                                           <Wrapper
                                             bottom=""
-                                            className="ui-title sc-EHOje bqslsQ"
+                                            className="ui-title sc-EHOje hLLCNa"
                                             contentEditable={false}
                                             controlled={true}
                                             direction="right"
@@ -1827,6 +1770,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                             noedit={false}
                                             nohover={false}
                                             noripple={false}
+                                            notheme={false}
                                             obj="AccordionItem"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -1844,11 +1788,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                             selected={false}
                                             sizing="normal"
                                             stacked={false}
-                                            style={
-                                              Object {
-                                                "padding": "2px 4px",
-                                              }
-                                            }
+                                            style={Object {}}
                                             testing={true}
                                             text="Test Title"
                                             theme={null}
@@ -1891,7 +1831,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                               }
                                             >
                                               <styled.span
-                                                className="ui-label ui-title sc-EHOje bqslsQ"
+                                                className="ui-label ui-title sc-EHOje hLLCNa"
                                                 contentEditable={false}
                                                 disabled={false}
                                                 onBlur={[Function]}
@@ -1900,16 +1840,12 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                                 onKeyDown={[Function]}
                                                 onKeyPress={[Function]}
                                                 sizing="normal"
-                                                style={
-                                                  Object {
-                                                    "padding": "2px 4px",
-                                                  }
-                                                }
+                                                style={Object {}}
                                                 suppressContentEditableWarning={true}
                                                 visible={true}
                                               >
                                                 <StyledComponent
-                                                  className="ui-label ui-title sc-EHOje bqslsQ"
+                                                  className="ui-label ui-title sc-EHOje hLLCNa"
                                                   contentEditable={false}
                                                   disabled={false}
                                                   forwardedComponent={
@@ -1953,16 +1889,12 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                                   onKeyDown={[Function]}
                                                   onKeyPress={[Function]}
                                                   sizing="normal"
-                                                  style={
-                                                    Object {
-                                                      "padding": "2px 4px",
-                                                    }
-                                                  }
+                                                  style={Object {}}
                                                   suppressContentEditableWarning={true}
                                                   visible={true}
                                                 >
                                                   <span
-                                                    className="ui-label ui-title sc-EHOje bqslsQ sc-htpNat eEDiFV"
+                                                    className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat eEDiFV"
                                                     contentEditable={false}
                                                     disabled={false}
                                                     onBlur={[Function]}
@@ -1970,11 +1902,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                                     onDoubleClick={[Function]}
                                                     onKeyDown={[Function]}
                                                     onKeyPress={[Function]}
-                                                    style={
-                                                      Object {
-                                                        "padding": "2px 4px",
-                                                      }
-                                                    }
+                                                    style={Object {}}
                                                     suppressContentEditableWarning={true}
                                                   >
                                                     Test Title
@@ -2030,6 +1958,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="AccordionItem"
   onBlur={[Function]}
   onChange={[Function]}
@@ -2086,6 +2015,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="AccordionItem"
       onBlur={[Function]}
       onChange={[Function]}
@@ -2142,6 +2072,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "AccordionItem",
   "onBlur": [Function],
   "onChange": [Function],
@@ -2195,6 +2126,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="AccordionItem"
   onBlur={[Function]}
   onChange={[Function]}
@@ -2251,6 +2183,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="AccordionItem"
       onBlur={[Function]}
       onChange={[Function]}
@@ -2306,6 +2239,7 @@ exports[`Test the disabling of the AccordionItem 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="AccordionItem"
   onBlur={[Function]}
   onChange={[Function]}
@@ -2362,6 +2296,7 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="AccordionItem"
       onBlur={[Function]}
       onChange={[Function]}

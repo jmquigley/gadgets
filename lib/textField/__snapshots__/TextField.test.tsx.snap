@@ -1,255 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Create text, change and revert with Enter/Escape in TextField 1`] = `
-<TextField
-  disabled={false}
-  id=""
-  noborder={false}
-  obj="TextField"
-  onBlur={[Function]}
-  onChange={[MockFunction]}
-  onKeyDown={[MockFunction]}
-  onKeyPress={[MockFunction]}
-  onValidation={[MockFunction]}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  tooltip=""
-  type="text"
-  useclear={false}
-  usevalidation={false}
-  validators={Array []}
-  visible={true}
->
-  <Wrapper
-    disabled={false}
-    id=""
-    noborder={false}
-    obj="TextField"
-    onBlur={[Function]}
-    onChange={[MockFunction]}
-    onError={[Function]}
-    onKeyDown={[MockFunction]}
-    onKeyPress={[MockFunction]}
-    onValidation={[MockFunction]}
-    reset={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    tooltip=""
-    type="text"
-    useclear={false}
-    usevalidation={false}
-    validators={Array []}
-    visible={true}
-  >
-    <ThemeProvider
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "color": "#000000",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.5s",
-        }
-      }
-    >
-      <styled.div
-        className="ui-textfield-container"
-        id="TextField-0"
-        style={Object {}}
-      >
-        <div
-          className="ui-textfield-container sc-VigVT hBlZaS"
-          id="TextField-0"
-          style={Object {}}
-        >
-          <styled.div
-            className="ui-textfield"
-            disabled={false}
-            noborder={false}
-            visible={true}
-          >
-            <div
-              className="ui-textfield sc-jTzLTM kZlAoV"
-              disabled={false}
-            >
-              <styled.input
-                disabled={false}
-                id=""
-                innerRef={[Function]}
-                obj="TextField"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                tooltip=""
-                type="text"
-                visible={true}
-              >
-                <input
-                  className="sc-gqjmRU hUmRSn"
-                  disabled={false}
-                  id=""
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  type="text"
-                />
-              </styled.input>
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
-    </ThemeProvider>
-  </Wrapper>
-</TextField>
-`;
-
-exports[`Test creating TextField and saving on blur 1`] = `
-<TextField
-  disabled={false}
-  id=""
-  noborder={false}
-  obj="TextField"
-  onBlur={[MockFunction]}
-  onChange={[MockFunction]}
-  onKeyDown={[Function]}
-  onKeyPress={[Function]}
-  onValidation={[MockFunction]}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  tooltip=""
-  type="text"
-  useclear={false}
-  usevalidation={false}
-  validators={Array []}
-  visible={true}
->
-  <Wrapper
-    disabled={false}
-    id=""
-    noborder={false}
-    obj="TextField"
-    onBlur={[MockFunction]}
-    onChange={[MockFunction]}
-    onError={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onValidation={[MockFunction]}
-    reset={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    tooltip=""
-    type="text"
-    useclear={false}
-    usevalidation={false}
-    validators={Array []}
-    visible={true}
-  >
-    <ThemeProvider
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "color": "#000000",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.5s",
-        }
-      }
-    >
-      <styled.div
-        className="ui-textfield-container"
-        id="TextField-0"
-        style={Object {}}
-      >
-        <div
-          className="ui-textfield-container sc-VigVT hBlZaS"
-          id="TextField-0"
-          style={Object {}}
-        >
-          <styled.div
-            className="ui-textfield"
-            disabled={false}
-            noborder={false}
-            visible={true}
-          >
-            <div
-              className="ui-textfield sc-jTzLTM kZlAoV"
-              disabled={false}
-            >
-              <styled.input
-                disabled={false}
-                id=""
-                innerRef={[Function]}
-                obj="TextField"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                tooltip=""
-                type="text"
-                visible={true}
-              >
-                <input
-                  className="sc-gqjmRU hUmRSn"
-                  disabled={false}
-                  id=""
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  type="text"
-                />
-              </styled.input>
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
-    </ThemeProvider>
-  </Wrapper>
-</TextField>
-`;
-
 exports[`Test creation of a TextField control 1`] = `
 <Wrapper
+  bottom=""
   className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
   disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
   id=""
+  left=""
+  location="none"
+  minWidth="1em"
   noborder={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="TextField"
   onBlur={[Function]}
   onChange={[Function]}
@@ -257,21 +28,27 @@ exports[`Test creation of a TextField control 1`] = `
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onValidation={[Function]}
+  padding=""
   reset={false}
+  selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
+  theme={null}
   tooltip=""
+  top=""
   type="text"
   useclear={false}
   usevalidation={false}
   validators={Array []}
   visible={true}
+  width=""
+  xcss={null}
 >
   <styled.div
     className="ui-textfield-container"
     id="TextField-0"
-    style={Object {}}
+    minWidth=""
   >
     <styled.div
       className="ui-textfield test-class"
@@ -283,7 +60,6 @@ exports[`Test creation of a TextField control 1`] = `
         className="test-class"
         disabled={false}
         id=""
-        innerRef={[Function]}
         obj="TextField"
         onBlur={[Function]}
         onChange={[Function]}
@@ -301,430 +77,11 @@ exports[`Test creation of a TextField control 1`] = `
 </Wrapper>
 `;
 
-exports[`Test creation of a TextField with email validation 1`] = `
-<TextField
-  disabled={false}
-  id=""
-  noborder={false}
-  obj="TextField"
-  onBlur={[Function]}
-  onChange={[MockFunction]}
-  onKeyDown={[Function]}
-  onKeyPress={[MockFunction]}
-  onValidation={[MockFunction]}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  tooltip=""
-  type="email"
-  useclear={false}
-  usevalidation={true}
-  validators={Array []}
-  visible={true}
->
-  <Wrapper
-    disabled={false}
-    id=""
-    noborder={false}
-    obj="TextField"
-    onBlur={[Function]}
-    onChange={[MockFunction]}
-    onError={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[MockFunction]}
-    onValidation={[MockFunction]}
-    reset={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    tooltip=""
-    type="email"
-    useclear={false}
-    usevalidation={true}
-    validators={Array []}
-    visible={true}
-  >
-    <ThemeProvider
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "color": "#000000",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.5s",
-        }
-      }
-    >
-      <styled.div
-        className="ui-textfield-container"
-        id="TextField-0"
-        style={Object {}}
-      >
-        <div
-          className="ui-textfield-container sc-VigVT hBlZaS"
-          id="TextField-0"
-          style={Object {}}
-        >
-          <styled.div
-            className="ui-textfield"
-            disabled={false}
-            noborder={false}
-            visible={true}
-          >
-            <div
-              className="ui-textfield sc-jTzLTM kZlAoV"
-              disabled={false}
-            >
-              <styled.input
-                disabled={false}
-                id=""
-                innerRef={[Function]}
-                obj="TextField"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                tooltip=""
-                type="email"
-                visible={true}
-              >
-                <input
-                  className="sc-gqjmRU hUmRSn"
-                  disabled={false}
-                  id=""
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  type="email"
-                />
-              </styled.input>
-            </div>
-          </styled.div>
-          <styled.div
-            className="ui-textfield-validation-message"
-            disabled={false}
-            messageType={0}
-            sizing="small"
-            visible={true}
-          >
-            <div
-              className="ui-textfield-validation-message sc-gZMcBi eVXyEN"
-              disabled={false}
-            >
-              ​
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
-    </ThemeProvider>
-  </Wrapper>
-</TextField>
-`;
-
-exports[`Test creation of a TextField with url validation 1`] = `
-<TextField
-  disabled={false}
-  id=""
-  noborder={false}
-  obj="TextField"
-  onBlur={[Function]}
-  onChange={[MockFunction]}
-  onKeyDown={[Function]}
-  onKeyPress={[MockFunction]}
-  onValidation={[MockFunction]}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  tooltip=""
-  type="url"
-  useclear={false}
-  usevalidation={true}
-  validators={Array []}
-  visible={true}
->
-  <Wrapper
-    disabled={false}
-    id=""
-    noborder={false}
-    obj="TextField"
-    onBlur={[Function]}
-    onChange={[MockFunction]}
-    onError={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[MockFunction]}
-    onValidation={[MockFunction]}
-    reset={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    tooltip=""
-    type="url"
-    useclear={false}
-    usevalidation={true}
-    validators={Array []}
-    visible={true}
-  >
-    <ThemeProvider
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "color": "#000000",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.5s",
-        }
-      }
-    >
-      <styled.div
-        className="ui-textfield-container"
-        id="TextField-0"
-        style={Object {}}
-      >
-        <div
-          className="ui-textfield-container sc-VigVT hBlZaS"
-          id="TextField-0"
-          style={Object {}}
-        >
-          <styled.div
-            className="ui-textfield"
-            disabled={false}
-            noborder={false}
-            visible={true}
-          >
-            <div
-              className="ui-textfield sc-jTzLTM kZlAoV"
-              disabled={false}
-            >
-              <styled.input
-                disabled={false}
-                id=""
-                innerRef={[Function]}
-                obj="TextField"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                tooltip=""
-                type="url"
-                visible={true}
-              >
-                <input
-                  className="sc-gqjmRU hUmRSn"
-                  disabled={false}
-                  id=""
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  type="url"
-                />
-              </styled.input>
-            </div>
-          </styled.div>
-          <styled.div
-            className="ui-textfield-validation-message"
-            disabled={false}
-            messageType={0}
-            sizing="small"
-            visible={true}
-          >
-            <div
-              className="ui-textfield-validation-message sc-gZMcBi eVXyEN"
-              disabled={false}
-            >
-              ​
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
-    </ThemeProvider>
-  </Wrapper>
-</TextField>
-`;
-
-exports[`Test creation of a textfield with min/max validation 1`] = `
-<TextField
-  disabled={false}
-  id=""
-  maxLength="10"
-  minLength="5"
-  noborder={false}
-  obj="TextField"
-  onBlur={[Function]}
-  onChange={[MockFunction]}
-  onKeyDown={[Function]}
-  onKeyPress={[MockFunction]}
-  onValidation={[MockFunction]}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  tooltip=""
-  type="text"
-  useclear={false}
-  usevalidation={true}
-  validators={Array []}
-  value=""
-  visible={true}
->
-  <Wrapper
-    disabled={false}
-    id=""
-    maxLength="10"
-    minLength="5"
-    noborder={false}
-    obj="TextField"
-    onBlur={[Function]}
-    onChange={[MockFunction]}
-    onError={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[MockFunction]}
-    onValidation={[MockFunction]}
-    reset={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    tooltip=""
-    type="text"
-    useclear={false}
-    usevalidation={true}
-    validators={Array []}
-    value=""
-    visible={true}
-  >
-    <ThemeProvider
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "color": "#000000",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.5s",
-        }
-      }
-    >
-      <styled.div
-        className="ui-textfield-container"
-        id="TextField-0"
-        style={Object {}}
-      >
-        <div
-          className="ui-textfield-container sc-VigVT hBlZaS"
-          id="TextField-0"
-          style={Object {}}
-        >
-          <styled.div
-            className="ui-textfield"
-            disabled={false}
-            noborder={false}
-            visible={true}
-          >
-            <div
-              className="ui-textfield sc-jTzLTM kZlAoV"
-              disabled={false}
-            >
-              <styled.input
-                disabled={false}
-                id=""
-                innerRef={[Function]}
-                maxLength="10"
-                minLength="5"
-                obj="TextField"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                tooltip=""
-                type="text"
-                value=""
-                visible={true}
-              >
-                <input
-                  className="sc-gqjmRU hUmRSn"
-                  disabled={false}
-                  id=""
-                  maxLength="10"
-                  minLength="5"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  type="text"
-                  value=""
-                />
-              </styled.input>
-            </div>
-          </styled.div>
-          <styled.div
-            className="ui-textfield-validation-message"
-            disabled={false}
-            messageType={0}
-            sizing="small"
-            visible={true}
-          >
-            <div
-              className="ui-textfield-validation-message sc-gZMcBi eVXyEN"
-              disabled={false}
-            >
-              ​
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
-    </ThemeProvider>
-  </Wrapper>
-</TextField>
-`;
-
 exports[`Test disabling of a TextField control 1`] = `
 <TextField
   disabled={true}
   id=""
+  minWidth="1em"
   noborder={false}
   obj="TextField"
   onBlur={[Function]}
@@ -743,9 +100,25 @@ exports[`Test disabling of a TextField control 1`] = `
   visible={true}
 >
   <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    direction="right"
     disabled={true}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
     id=""
+    left=""
+    location="none"
+    minWidth="1em"
     noborder={false}
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    notheme={false}
     obj="TextField"
     onBlur={[Function]}
     onChange={[Function]}
@@ -753,16 +126,22 @@ exports[`Test disabling of a TextField control 1`] = `
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onValidation={[Function]}
+    padding=""
     reset={false}
+    selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
+    theme={null}
     tooltip=""
+    top=""
     type="text"
     useclear={false}
     usevalidation={false}
     validators={Array []}
     visible={true}
+    width=""
+    xcss={null}
   >
     <ThemeProvider
       theme={
@@ -789,176 +168,189 @@ exports[`Test disabling of a TextField control 1`] = `
       <styled.div
         className="ui-textfield-container"
         id="TextField-0"
-        style={Object {}}
+        minWidth=""
       >
-        <div
-          className="ui-textfield-container sc-VigVT hBlZaS"
+        <StyledComponent
+          className="ui-textfield-container"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-eHgmQL",
+                "isStatic": false,
+                "lastClassName": "cjGijz",
+                "rules": Array [
+                  "
+	display: inline-flex;
+	flex-direction: column;
+	min-width: ",
+                  [Function],
+                  ";
+	position: relative;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-eHgmQL",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           id="TextField-0"
-          style={Object {}}
+          minWidth=""
         >
-          <styled.div
-            className="ui-textfield"
-            disabled={true}
-            noborder={false}
-            visible={true}
+          <div
+            className="ui-textfield-container sc-eHgmQL cjGijz"
+            id="TextField-0"
           >
-            <div
-              className="ui-textfield sc-jTzLTM irVspP"
+            <styled.div
+              className="ui-textfield"
               disabled={true}
+              noborder={false}
+              visible={true}
             >
-              <styled.input
+              <StyledComponent
+                className="ui-textfield"
                 disabled={true}
-                id=""
-                innerRef={[Function]}
-                obj="TextField"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                tooltip=""
-                type="text"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-cvbbAY",
+                      "isStatic": false,
+                      "lastClassName": "cYeWGI",
+                      "rules": Array [
+                        "
+	border: ",
+                        [Function],
+                        ";
+	display: inherit;
+	padding: 1px 0;
+
+	&:hover .ui-textfield-clear-button {
+		opacity: ",
+                        [Function],
+                        ";
+	}
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-cvbbAY",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                noborder={false}
                 visible={true}
               >
-                <input
-                  className="sc-gqjmRU gRzpSQ"
+                <div
+                  className="ui-textfield sc-cvbbAY cYeWGI"
                   disabled={true}
-                  id=""
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  type="text"
-                />
-              </styled.input>
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
-    </ThemeProvider>
-  </Wrapper>
-</TextField>
-`;
+                >
+                  <styled.input
+                    disabled={true}
+                    id=""
+                    obj="TextField"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    sizing="normal"
+                    style={Object {}}
+                    testing={true}
+                    tooltip=""
+                    type="text"
+                    visible={true}
+                  >
+                    <StyledComponent
+                      disabled={true}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-hSdWYo",
+                            "isStatic": false,
+                            "lastClassName": "Yrcdb",
+                            "rules": Array [
+                              "
+	border: none;
+	box-sizing: border-box;
+	display: inline-flex;
+	font-size: inherit;
+	min-height: 0;
+	min-width: 0;
+	outline: none;
+	padding: 1px 5px;
+	width: 100%;
 
-exports[`Test making the TextField invisible 1`] = `
-<TextField
-  disabled={false}
-  id=""
-  noborder={false}
-  obj="TextField"
-  onBlur={[Function]}
-  onChange={[Function]}
-  onKeyDown={[Function]}
-  onKeyPress={[Function]}
-  onValidation={[Function]}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  tooltip=""
-  type="text"
-  useclear={false}
-  usevalidation={false}
-  validators={Array []}
-  visible={false}
->
-  <Wrapper
-    disabled={false}
-    id=""
-    noborder={false}
-    obj="TextField"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onError={[Function]}
-    onKeyDown={[Function]}
-    onKeyPress={[Function]}
-    onValidation={[Function]}
-    reset={false}
-    sizing="normal"
-    style={Object {}}
-    testing={true}
-    tooltip=""
-    type="text"
-    useclear={false}
-    usevalidation={false}
-    validators={Array []}
-    visible={false}
-  >
-    <ThemeProvider
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "color": "#000000",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.5s",
-        }
-      }
-    >
-      <styled.div
-        className="ui-textfield-container"
-        id="TextField-0"
-        style={Object {}}
-      >
-        <div
-          className="ui-textfield-container sc-VigVT hBlZaS"
-          id="TextField-0"
-          style={Object {}}
-        >
-          <styled.div
-            className="ui-textfield"
-            disabled={false}
-            noborder={false}
-            visible={false}
-          >
-            <div
-              className="ui-textfield sc-jTzLTM kZlAoV"
-              disabled={false}
-            >
-              <styled.input
-                disabled={false}
-                id=""
-                innerRef={[Function]}
-                obj="TextField"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                sizing="normal"
-                style={Object {}}
-                testing={true}
-                tooltip=""
-                type="text"
-                visible={false}
-              >
-                <input
-                  className="sc-gqjmRU iipHzV"
-                  disabled={false}
-                  id=""
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyPress={[Function]}
-                  style={Object {}}
-                  type="text"
-                />
-              </styled.input>
-            </div>
-          </styled.div>
-        </div>
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.input",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-hSdWYo",
+                          "target": "input",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={[Function]}
+                      id=""
+                      obj="TextField"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      sizing="normal"
+                      style={Object {}}
+                      testing={true}
+                      tooltip=""
+                      type="text"
+                      visible={true}
+                    >
+                      <input
+                        className="sc-hSdWYo Yrcdb"
+                        disabled={true}
+                        id=""
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        style={Object {}}
+                        type="text"
+                      />
+                    </StyledComponent>
+                  </styled.input>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>
@@ -969,6 +361,7 @@ exports[`Test retrieval of TextField props object 1`] = `
 Object {
   "disabled": false,
   "id": "",
+  "minWidth": "1em",
   "noborder": false,
   "obj": "TextField",
   "onBlur": [Function],

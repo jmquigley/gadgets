@@ -79,7 +79,7 @@
 
 'use strict';
 
-// import autobind from 'autobind-decorator';
+import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import SortableTree, {
@@ -89,8 +89,10 @@ import SortableTree, {
 import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
+	BaseState,
 	disabled,
 	fontStyle,
+	getDefaultBaseState,
 	invisible,
 	Sizing,
 	Wrapper
@@ -130,8 +132,14 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 	);
 }
 
-export interface TreeviewState {
+export interface TreeviewState extends BaseState {
 	rowHeight: number;
+}
+
+export function getDefaultTreeviewState(): TreeviewState {
+	return cloneDeep({...getDefaultBaseState('ui-treeview'),
+		rowHeight: 50
+	});
 }
 
 export const TreeviewContainer: any = styled.div`
@@ -146,7 +154,6 @@ export const SortableTreeView: any = styled(SortableTree)`
 
 export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
-	public static defaultProps: TreeviewProps = getDefaultTreeviewProps();
 	private _rowHeights = {
 		[Sizing.xxsmall]: 45,
 		[Sizing.xsmall]: 45,
@@ -157,46 +164,40 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		[Sizing.xxlarge]: 90
 	};
 
+	public static defaultProps: TreeviewProps = getDefaultTreeviewProps();
+	public state: TreeviewState = getDefaultTreeviewState();
+
 	constructor(props: TreeviewProps) {
 		super(props, Treeview.defaultProps.style);
-		this._classes.add('ui-treeview');
-
-		this.state = {
-			rowHeight: this.rowHeights[this.props.sizing]
-		};
-
-		this.componentWillUpdate(this.props);
 	}
 
 	get rowHeights() {
 		return this._rowHeights;
 	}
 
-	// @autobind
-	// private handleChange(treeData: TreeviewItem[]) {
-		// if (!this.props.disabled) {
-		//    this.props.onChange(treeData);
-		// }
-	// }
-
-	public componentWillReceiveProps(nextProps: TreeviewProps) {
-		if (this.props.sizing !== nextProps.sizing) {
-			this.setState({rowHeight: this.rowHeights[nextProps.sizing]});
+	@autobind
+	private handleChange(treeData: TreeviewItem[]) {
+		if (!this.props.disabled) {
+			this.props.onChange(treeData);
 		}
 	}
 
 	public render() {
+		const rowHeight: number = this.rowHeights[this.props.sizing];
+
 		return (
 			<Wrapper {...this.props} >
 				<TreeviewContainer
 					className="ui-treeview-container"
 					height={this.props.height}
+					style={this.state.style}
 				>
 					<SortableTreeView
 						{...this.props}
 						canDrag={!this.props.disabled}
-						className={this.classes}
-						rowHeight={this.state.rowHeight}
+						className={this.state.classes.classnames}
+						onChange={this.handleChange}
+						rowHeight={rowHeight}
 					/>
 				</TreeviewContainer>
 			</Wrapper>

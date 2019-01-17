@@ -72,7 +72,10 @@ export function getDefaultDividerProps(): DividerProps {
 }
 
 export type DividerState = BaseState;
-export const getDefaultDividerState = getDefaultBaseState;
+
+export function getDefaultDividerState(): DividerState {
+	return cloneDeep({...getDefaultBaseState('ui-divider')});
+}
 
 export const DividerView: any = styled.div`
 	align-items: center;
@@ -92,20 +95,13 @@ export class Divider extends BaseComponent<DividerProps, DividerState> {
 		super(props, Divider.defaultProps.style);
 	}
 
-	public static getDerivedStateFromProps(props: DividerProps, state: DividerState) {
-		state.classes.clear();
-		state.classes.add('ui-divider');
-
-		return super.getDerivedStateFromProps(props, state);
-	}
-
 	public render() {
 		return(
 			<Wrapper {...this.props} >
 				<DividerView
-					className={this.classes}
-					style={this.inlineStyles}
-					width={BaseComponent.fontSizePX(this.state.sizing, 0.25)}
+					className={this.state.classes.classnames}
+					style={this.state.style}
+					width={BaseComponent.fontSizePX(this.props.sizing, 0.25)}
 				>
 					{this.props.dividerType}
 				</DividerView>

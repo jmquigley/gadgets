@@ -36,15 +36,17 @@ export interface ListDividerProps extends ListProps {
 	color?: string;
 }
 
+export function getDefaultListDividerProps(): ListDividerProps {
+	return cloneDeep({...getDefaultListProps(),
+		color: 'lightgray',
+		obj: 'ListDivider'
+	});
+}
+
 export type ListDividerState = ListState;
 
-export function getDefaultListDividerProps(): ListDividerProps {
-	return cloneDeep(Object.assign({},
-		getDefaultListProps(), {
-			color: 'lightgray',
-			obj: 'ListDivider'
-		})
-	);
+export function getDefaultListDividerState(): ListDividerState {
+	return cloneDeep({...getDefaultListState('ui-list-divider')});
 }
 
 export const ListDividerView: any = styled.li`
@@ -60,19 +62,20 @@ export const ListDividerView: any = styled.li`
 export class ListDivider extends BaseComponent<ListDividerProps, ListDividerState> {
 
 	public static defaultProps: ListDividerProps = getDefaultListDividerProps();
-	public state: ListState = getDefaultListState();
+	public state: ListState = getDefaultListDividerState();
 
 	constructor(props: ListDividerProps) {
 		super(props, ListDivider.defaultProps.style);
 	}
 
 	public static getDerivedStateFromProps(props: ListDividerProps, state: ListDividerState) {
-		state.classes.clear();
-		state.classes.add('ui-list-divider');
+		const newState: ListDividerState = {...state,
+			style: {
+				backgroundColor: props.color
+			}
+		};
 
-		state.style['backgroundColor'] = props.color;
-
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {

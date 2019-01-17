@@ -39,7 +39,7 @@
 
 'use strict';
 
-// const debug = require('debug')('Badge');
+const debug = require('debug')('Badge');
 
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
@@ -68,25 +68,26 @@ export interface BadgeProps extends BaseProps {
 }
 
 export function getDefaultBadgeProps(): BadgeProps {
-	return cloneDeep(Object.assign(
-		getDefaultBaseProps(), {
-			counter: 0,
-			location: Location.topRight,
-			obj: 'Badge',
-			onClick: nilEvent,
-			sizing: Sizing.normal,
-			style: {
-				backgroundColor: 'white',
-				border: 'solid 0.125em',
-				color: 'red'
-			},
-			suppress: false
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		counter: 0,
+		location: Location.topRight,
+		obj: 'Badge',
+		onClick: nilEvent,
+		sizing: Sizing.normal,
+		style: {
+			backgroundColor: 'white',
+			border: 'solid 0.125em',
+			color: 'red'
+		},
+		suppress: false
+	});
 }
 
 export type BadgeState = BaseState;
-export const getDefaultBadgeState = getDefaultBaseState;
+
+export function getDefaultBadgeState(): BadgeState {
+	return cloneDeep({...getDefaultBaseState('ui-badge')});
+}
 
 export const BadgeView: any = styled.div`
 	border-radius: 96px;
@@ -120,24 +121,17 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 
 	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
-		e.preventDefault();
-		if (!this.props.disabled
-			&& this.props.visible
-			&& this.props.onClick != null) {
+		if (!this.props.disabled && this.props.visible && this.props.onClick) {
+			debug('clicking badge');
+			e.preventDefault();
 			this.props.onClick(this.props.counter);
 		}
-	}
-
-	public static getDerivedStateFromProps(props: BadgeProps, state: BadgeState) {
-		state.classes.clear();
-		state.classes.add('ui-badge');
-		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
 		let badge = null;
 
-		if (this.props.suppress && this.props.counter < 1) {
+		if ((this.props.suppress && this.props.counter < 1) || !this.props.visible) {
 			badge = null;
 		} else {
 			badge = (
@@ -146,7 +140,7 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 					disabled={this.props.disabled}
 					location={this.props.location}
 					onClick={this.handleClick}
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 					style={this.state.style}
 					visible={this.props.visible}
 				>

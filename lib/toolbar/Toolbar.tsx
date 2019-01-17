@@ -73,16 +73,17 @@ export interface ToolbarProps extends BaseProps {
 }
 
 export function getDefaultToolbarProps(): ToolbarProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			justify: Justify.left,
-			obj: 'Toolbar'
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		justify: Justify.left,
+		obj: 'Toolbar'
+	});
 }
 
 export type ToolbarState = BaseState;
-export const getDefaultToolbarState = getDefaultBaseState;
+
+export function getDefaultToolbarState(): ToolbarState {
+	return cloneDeep({...getDefaultBaseState('ui-toolbar')});
+}
 
 export const ToolbarView: any = styled.div`
 	border: solid 1px silver;
@@ -134,12 +135,6 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 		this._keys = new Keys({testing: this.props.testing});
 	}
 
-	public static getDerivedStateFromProps(props: ToolbarProps, state: ToolbarState) {
-		state.classes.clear();
-		state.classes.add('ui-toolbar');
-		return super.getDerivedStateFromProps(props, state);
-	}
-
 	public render() {
 		const components: any = [];
 
@@ -147,7 +142,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 			if (Toolbar._whitelist.contains(child['props'].obj)) {
 				const style = Object.assign({}, child['props'].style, {
 					display: 'flex',
-					height: BaseComponent.fontSizePX(this.state.sizing, 1.5),
+					height: BaseComponent.fontSizePX(this.props.sizing, 1.5),
 					margin: '0 2px'
 				});
 
@@ -156,7 +151,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 					case 'ButtonCircle':
 					case 'ButtonDialog':
 					case 'ButtonToggle':
-						style['width'] = BaseComponent.fontSizePX(this.state.sizing, 1.5);
+						style['width'] = BaseComponent.fontSizePX(this.props.sizing, 1.5);
 
 					case 'ButtonText':
 						style['border'] = `solid 1px ${this.theme.borderColor}`,
@@ -181,7 +176,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 				const newChild = React.cloneElement(child as any, {
 					className: 'ui-toolbar-element',
 					disabled: this.props.disabled,
-					sizing: this.state.sizing,
+					sizing: this.props.sizing,
 					visible: this.props.visible
 				});
 

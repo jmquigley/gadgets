@@ -83,15 +83,13 @@ export interface ListProps extends BaseProps {
 }
 
 export function getDefaultListProps(): ListProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			alternating: false,
-			children: null,
-			noselect: false,
-			obj: 'List',
-			onSelect: nilEvent
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		alternating: false,
+		children: null,
+		noselect: false,
+		obj: 'List',
+		onSelect: nilEvent
+	});
 }
 
 export interface ListState extends BaseState {
@@ -99,12 +97,11 @@ export interface ListState extends BaseState {
 	selectedItem: ListItem;
 }
 
-export function getDefaultListState(): ListState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			keys: null,
-			selectedItem: null
-		}));
+export function getDefaultListState(className: string = 'ui-list'): ListState {
+	return cloneDeep({...getDefaultBaseState(className),
+		keys: null,
+		selectedItem: null
+	});
 }
 
 export const ListView: any = styled.ul`
@@ -123,7 +120,10 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 	constructor(props: ListProps) {
 		super(props, List.defaultProps.style);
-		this.state.keys = new Keys({testing: this.props.testing});
+
+		this.state = {...getDefaultListState(),
+			keys: new Keys({testing: this.props.testing})
+		}
 	}
 
 	@autobind
@@ -143,28 +143,27 @@ export class List extends BaseComponent<ListProps, ListState> {
 	}
 
 	public static getDerivedStateFromProps(props: ListProps, state: ListState) {
-		state.classes.clear();
-		state.classes.add('ui-list');
+		const newState: ListState = {...state};
 
 		if (props.children) {
-			state.children = React.Children.map(props.children, (child: any, idx: number) => (
+			newState.children = React.Children.map(props.children, (child: any, idx: number) => (
 				React.cloneElement(child, {
 					// only generate an id/key if one is not given with the props
-					id: child['props']['id'] || state.keys.at(idx),
-					key: child['key'] || state.keys.at(idx),
+					id: child['props']['id'] || newState.keys.at(idx),
+					key: child['key'] || newState.keys.at(idx),
 					sizing: props.sizing
 				})
 			));
 		}
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
 		let children: any = null;
 		const selectedKey = (this.state.selectedItem && this.state.selectedItem.props.id) || null;
 
-		if (this.props.children) {
+		if (this.state.children) {
 			children = React.Children.map(this.state.children, (child: any) => {
 				const selected = child['props'].id === selectedKey;
 				return React.cloneElement(child as any, {

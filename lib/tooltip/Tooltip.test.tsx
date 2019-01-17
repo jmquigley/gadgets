@@ -73,7 +73,7 @@ test('Test creation of Tooltip location none', () => {
 
 test('Test creation of a Tooltip control', () => {
 	const ctl = shallow(
-		<Tooltip className="test-class" location={Location.middleRight} show>
+		<Tooltip className="test-class" location={Location.middleRight}>
 			<span>Test Text</span>
 		</Tooltip>
 	);

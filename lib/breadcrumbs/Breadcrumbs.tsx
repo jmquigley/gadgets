@@ -73,8 +73,10 @@ import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	disabled,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Justify,
 	Sizing,
@@ -107,6 +109,12 @@ export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
 	);
 }
 
+export type BreadcrumbsState = BaseState;
+
+export function getDefaultBreadcrumbsState(): BreadcrumbsState {
+	return cloneDeep({...getDefaultBaseState('ui-breadcrumbs')});
+}
+
 export const BreadcrumbsView: any = styled.div`
 	display: inline-flex;
 
@@ -136,23 +144,18 @@ export const ChevronIconView: any = styled(IconView)`
 	opacity: 0.33;
 `;
 
-export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, undefined> {
+export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, BreadcrumbsState> {
 	public static readonly defaultProps: BreadcrumbsProps = getDefaultBreadcrumbsProps();
+	public state: BreadcrumbsState = getDefaultBreadcrumbsState();
 
 	private _nameKeys: Keys;
 	private _iconKeys: Keys;
-	private _components: any[] = [];
 
 	constructor(props: BreadcrumbsProps) {
 		super(props, Breadcrumbs.defaultProps.style);
 
-		this._classes.add('ui-breadcrumbs');
-
 		this._nameKeys = new Keys({testing: this.props.testing, testingPrefix: 'name'});
 		this._iconKeys = new Keys({testing: this.props.testing, testingPrefix: 'icon'});
-
-		this.componentWillReceiveProps(this.props);
-		this.componentWillUpdate(this.props);
 	}
 
 	@autobind
@@ -164,15 +167,14 @@ export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, undefined> {
 		};
 	}
 
-	public componentWillReceiveProps(nextProps: BreadcrumbsProps) {
-		this._components = [];
+	public render() {
+		const components: any[] = [];
 
-		if (nextProps.items.length >= 1) {
-
-			for (const [idx, {name, uri}] of nextProps.items.entries()) {
-				this._components.push(
+		if (this.props.items.length >= 1) {
+			for (const [idx, {name, uri}] of this.props.items.entries()) {
+				components.push(
 					<ButtonText
-						{...nextProps}
+						{...this.props}
 						className="ui-breadcrumbs-name"
 						justify={Justify.center}
 						key={this._nameKeys.at(idx)}
@@ -180,22 +182,19 @@ export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, undefined> {
 						text={name}
 					/>
 				);
-				this._components.push(
+				components.push(
 					<ChevronIconView
-						{...nextProps}
+						{...this.props}
 						className="ui-breadcrumbs-chevron"
-						iconName={nextProps.chevron}
+						iconName={this.props.chevron}
 						key={this._iconKeys.at(idx)}
 					/>
 				);
 			}
 
 			// Remove the last icon from the array
-			this._components.splice(-1, 1);
+			components.splice(-1, 1);
 		}
-	}
-
-	public render() {
 
 		let icon: any = null;
 		if (!this.props.noicon) {
@@ -210,9 +209,9 @@ export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, undefined> {
 
 		return(
 			<Wrapper {...this.props} >
-				<BreadcrumbsView className={this.classes}>
+				<BreadcrumbsView className={this.state.classes.classnames}>
 					{icon}
-					{this._components}
+					{components}
 				</BreadcrumbsView>
 			</Wrapper>
 		);

@@ -28,6 +28,7 @@
  * - `nohover: {boolean} (false)` - Controls that use a hover can use the nohover to
  * turn off that function.
  * - `noripple: {boolean} (false)` - turns off the ripple effect for a button.
+ * - `notheme: {boolean} (false)` - suppress the theme provider if set to true.
  * - `obj {string} ('Unknown')` - a string that names a component.  We can't use the
  * class name to represent the name of a component because it is lost when the app
  * is minified.  This is used to preserve the name of the component in props.
@@ -151,6 +152,7 @@ export interface BaseProps {
 	noedit?: boolean;
 	nohover?: boolean;
 	noripple?: boolean;
+	notheme?: boolean;
 	obj?: string;
 	padding?: string;
 	selected?: boolean;
@@ -183,6 +185,7 @@ const defaultBaseProps: BaseProps = {
 	noedit: false,
 	nohover: false,
 	noripple: false,
+	notheme: false,
 	obj: 'Unknown',
 	padding: '',
 	selected: false,

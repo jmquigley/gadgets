@@ -8,7 +8,7 @@ import {Editor, getDefaultEditorProps} from '../../dist/bundle';
 
 beforeEach(() => {
 	document.body.innerHTML = fs.readFileSync(
-		join(process.cwd(), 'test', 'fixture', 'index.html'),
+		join(__dirname, '__fixture__', 'index.html'),
 		'utf8'
 	);
 });

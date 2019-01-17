@@ -2,26 +2,61 @@
 
 exports[`Test creation of a Select control 1`] = `
 <Wrapper
+  bottom=""
   className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Select"
   onError={[Function]}
+  padding=""
   reset={false}
+  selected={false}
   sizing="normal"
+  style={Object {}}
   testing={false}
+  theme={null}
+  tooltip=""
+  top=""
   visible={true}
+  width=""
+  xcss={null}
 >
   <Styled(Select)
-    className="ui-select test-class"
+    className="ui-default test-class"
     disabled={false}
     err={null}
     errorMessage=""
     obj="Select"
     sizing="normal"
+    style={Object {}}
     testing={false}
     visible={true}
   />
 </Wrapper>
+`;
+
+exports[`Test retrieval of Select props object 1`] = `
+Object {
+  "disabled": false,
+  "err": null,
+  "errorMessage": "",
+  "obj": "Select",
+  "sizing": "normal",
+  "style": Object {},
+  "testing": false,
+  "visible": true,
+}
 `;

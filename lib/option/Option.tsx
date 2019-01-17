@@ -65,9 +65,11 @@ import {ButtonToggle} from '../buttonToggle';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	Color,
 	fontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from '../shared';
@@ -96,24 +98,28 @@ export interface OptionProps extends BaseProps {
 }
 
 export function getDefaultOptionProps(): OptionProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			initialToggle: false,
-			obj: 'Option',
-			onClick: nilEvent,
-			optionType: OptionType.square,
-			selected: false,
-			style: {
-				backgroundColor: 'inherit',
-				color: 'inherit'
-			},
-			text: ''
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		initialToggle: false,
+		obj: 'Option',
+		onClick: nilEvent,
+		optionType: OptionType.square,
+		selected: false,
+		style: {
+			backgroundColor: 'inherit',
+			color: 'inherit'
+		},
+		text: ''
+	});
 }
 
-export interface OptionState {
+export interface OptionState extends BaseState {
 	selected?: boolean;
+}
+
+export function getDefaultOptionState(): OptionState {
+	return cloneDeep({...getDefaultBaseState('ui-option'),
+		selected: false
+	});
 }
 
 export const OptionView: any = styled.div`
@@ -191,13 +197,9 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 	constructor(props: OptionProps) {
 		super(props, Option.defaultProps.style);
 
-		this._classes.add('ui-option');
-
-		this.state = {
+		this.state = {...getDefaultOptionState(),
 			selected: this.props.initialToggle
 		};
-
-		this.componentWillUpdate(this.props);
 	}
 
 	@autobind
@@ -215,10 +217,14 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		}
 	}
 
-	public componentWillReceiveProps(nextProps: OptionProps) {
-		if (!nextProps.controlled) {
-			this.setState({selected: nextProps.selected});
+	public static getDerivedStateFromProps(props: OptionProps, state: OptionState) {
+		const newState: OptionState = {...state};
+
+		if (!props.controlled) {
+			newState.selected = props.selected;
 		}
+
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -238,19 +244,19 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		return(
 			<Wrapper {...this.props} >
 				<OptionView
-					className={this.classes}
+					className={this.state.classes.classnames}
 					onClick={this.handleClick}
 					sizing={this.props.sizing}
-					style={this.inlineStyles}
+					style={this.state.style}
 					visible={this.props.visible}
 				>
 					<StyledButtonToggle
 						{...this.props}
-						bgColorOff={this.inlineStyles['backgroundColor']}
-						bgColorOn={this.inlineStyles['backgroundColor']}
+						bgColorOff={this.state.style['backgroundColor']}
+						bgColorOn={this.state.style['backgroundColor']}
 						controlled={false}
-						fgColorOff={this.inlineStyles['color']}
-						fgColorOn={this.inlineStyles['color']}
+						fgColorOff={this.state.style['color']}
+						fgColorOn={this.state.style['color']}
 						iconNameOn={this.icons[this.props.optionType].on}
 						iconNameOff={this.icons[this.props.optionType].off}
 						initialToggle={this.props.initialToggle}

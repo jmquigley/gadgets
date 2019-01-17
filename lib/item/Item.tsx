@@ -42,44 +42,34 @@ export interface ItemProps extends BaseProps, TitleProps {
 }
 
 export function getDefaultItemProps(): ItemProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			hiddenLeftButton: false,
-			hiddenRightButton: false,
-			layout: TitleLayout.dominant,
-			leftButton: null,
-			obj: 'Item',
-			onBlur: nilEvent,
-			onChange: nilEvent,
-			onClick: nilEvent,
-			onDoubleClick: nilEvent,
-			onFocus: nilEvent,
-			onKeyDown: nilEvent,
-			onKeyPress: nilEvent,
-			onMouseOut: nilEvent,
-			onUpdate: nilEvent,
-			rightButton: null,
-			selected: false,
-			stacked: false,
-			title: sp,
-			useedit: false,
-			widget: null
-		}));
+	return cloneDeep({...getDefaultBaseProps(),
+		hiddenLeftButton: false,
+		hiddenRightButton: false,
+		layout: TitleLayout.dominant,
+		leftButton: null,
+		obj: 'Item',
+		onBlur: nilEvent,
+		onChange: nilEvent,
+		onClick: nilEvent,
+		onDoubleClick: nilEvent,
+		onFocus: nilEvent,
+		onKeyDown: nilEvent,
+		onKeyPress: nilEvent,
+		onMouseOut: nilEvent,
+		onUpdate: nilEvent,
+		rightButton: null,
+		selected: false,
+		stacked: false,
+		title: sp,
+		useedit: false,
+		widget: null
+	});
 }
 
-export interface ItemState extends BaseState {
-	leftButton?: any;
-	rightButton?: any;
-	titlePadding?: string;
-}
+export type ItemState = BaseState;
 
-export function getDefaultItemState(): ItemState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			leftButton: null,
-			rightButton: null,
-			titlePadding: ''
-		}));
+export function getDefaultItemState(className: string = 'ui-item'): ItemState {
+	return cloneDeep({...getDefaultBaseState(className)});
 }
 
 export const HiddenButton: any = css`
@@ -107,7 +97,20 @@ export const ItemView: any = styled.li`
 export const ItemViewButton: any = styled.div`
 	display: inline-flex;
 	position: relative;
-	width: ${(props: ItemProps) => props.width || '2.0em'};
+	width: ${(props: ItemProps) => {
+		switch (props.sizing) {
+			case Sizing.xxsmall: return('1.0em');
+			case Sizing.xsmall: return('1.25em');
+			case Sizing.small: return('2.0em');
+			case Sizing.large: return('3.0em');
+			case Sizing.xlarge: return('3.5em');
+			case Sizing.xxlarge: return('4.5em');
+
+			case Sizing.normal:
+			default:
+				return('2.25em');
+		}
+	}};
 
 	${(props: ItemProps) => props.sizing && fontStyle[props.sizing]};
 	${(props: ItemProps) => (props.hiddenRightButton || props.hiddenLeftButton) && HiddenButton}
@@ -135,82 +138,41 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 	}
 
 	public static getDerivedStateFromProps(props: ItemProps, state: ItemState) {
-		let width: string;
-
-		state.classes.clear();
-		state.classes.add('ui-item');
-		state.classes.onIf(props.selected)('ui-selected');
-
-		switch (props.sizing) {
-			case Sizing.xxsmall:
-				state.titlePadding = '1px 2px';
-				width = '1.0em';
-				break;
-
-			case Sizing.xsmall:
-				state.titlePadding = '1px 2px';
-				width = '1.25em';
-				break;
-
-			case Sizing.small:
-				state.titlePadding = '2px 4px';
-				width = '2.0em';
-				break;
-
-			case Sizing.normal:
-			default:
-				state.titlePadding = '2px 4px';
-				width = '2.25em';
-				break;
-
-			case Sizing.large:
-				state.titlePadding = '4px 8px';
-				width = '3.0em';
-				break;
-
-			case Sizing.xlarge:
-				state.titlePadding = '4px 8px';
-				width = '3.5em';
-				break;
-
-			case Sizing.xxlarge:
-				state.titlePadding = '4px 8px';
-				width = '4.5em';
-				break;
-		}
-
-		if (props.leftButton != null && !props.disabled) {
-			state.leftButton = (
-				<ItemViewButton
-					className="ui-item-button"
-					hiddenLeftButton={props.hiddenLeftButton}
-					width={width}
-				>
-					{React.cloneElement(props.leftButton, {
-						sizing: props.sizing
-					})}
-				</ItemViewButton>
-			);
-		}
-
-		if (props.rightButton != null && !props.disabled) {
-			state.rightButton = (
-				<ItemViewButton
-					className="ui-item-button"
-					hiddenRightButton={props.hiddenRightButton}
-					width={width}
-				>
-					{React.cloneElement(props.rightButton, {
-						sizing: props.sizing
-					})}
-				</ItemViewButton>
-			);
-		}
-
+		const newState: ItemState = {...state};
+		newState.classes.onIf(props.selected)('ui-selected');
 		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
+		let leftButton: any = null;
+		let rightButton: any = null;
+
+		if (this.props.leftButton != null && !this.props.disabled) {
+			leftButton = (
+				<ItemViewButton
+					className="ui-item-button"
+					hiddenLeftButton={this.props.hiddenLeftButton}
+				>
+					{React.cloneElement(this.props.leftButton, {
+						sizing: this.props.sizing
+					})}
+				</ItemViewButton>
+			);
+		}
+
+		if (this.props.rightButton != null && !this.props.disabled) {
+			rightButton = (
+				<ItemViewButton
+					className="ui-item-button"
+					hiddenRightButton={this.props.hiddenRightButton}
+				>
+					{React.cloneElement(this.props.rightButton, {
+						sizing: this.props.sizing
+					})}
+				</ItemViewButton>
+			);
+		}
+
 		return (
 			<Wrapper {...this.props} >
 				<ItemView
@@ -226,13 +188,12 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 					sizing={this.props.sizing}
 					style={this.state.style}
 				>
-					{this.state.leftButton}
+					{leftButton}
 					<Title
 						{...this.props}
 						layout={this.props.stacked ? TitleLayout.stacked : this.props.layout}
-						style={{padding: this.state.titlePadding}}
 					/>
-					{this.state.rightButton}
+					{rightButton}
 				</ItemView>
 			</Wrapper>
 		);

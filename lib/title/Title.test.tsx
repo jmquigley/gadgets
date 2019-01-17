@@ -101,7 +101,7 @@ test('Test creation of a Title control with bad layout', () => {
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	assert.equal(ctl.prop('widget'), null);
+	expect(ctl.prop('widget')).toBe(null);
 	expect(ctl).toMatchSnapshot();
 });
 

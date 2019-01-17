@@ -77,7 +77,10 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 }
 
 export type ButtonCircleState = ButtonState;
-export const getDefaultButtonCircleState = getDefaultButtonState;
+
+export function getDefaultButtonCircleState(): ButtonCircleState {
+	return cloneDeep({...getDefaultButtonState('ui-button-circle')});
+}
 
 export const ButtonCircleContainerView: any = styled.div`
 	${BaseButtonView}
@@ -120,15 +123,8 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, ButtonCircleS
 		super(props, ButtonCircle.defaultProps.style);
 	}
 
-	public static getDerivedStateFromProps(props: ButtonProps, state: ButtonState) {
-		state.classes.clear();
-		state.classes.add('ui-button-circle');
-
-		return super.getDerivedStateFromProps(props, state);
-	}
-
 	public render() {
-		const size: string = BaseComponent.fontSizePX(this.state.sizing, 1.5);
+		const size: string = BaseComponent.fontSizePX(this.props.sizing, 1.5);
 
 		return (
 			<Wrapper {...this.props} >

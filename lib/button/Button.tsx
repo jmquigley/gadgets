@@ -61,18 +61,19 @@ export interface ButtonProps extends BaseProps {
 }
 
 export function getDefaultButtonProps(): ButtonProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			iconName: 'bomb',
-			iconStyle: '',
-			onClick: nilEvent,
-			obj: 'Button'
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		iconName: 'bomb',
+		iconStyle: '',
+		onClick: nilEvent,
+		obj: 'Button'
+	});
 }
 
 export type ButtonState = BaseState;
-export const getDefaultButtonState = getDefaultBaseState;
+
+export function getDefaultButtonState(className: string = 'ui-button'): ButtonState {
+	return cloneDeep({...getDefaultBaseState(className)});
+}
 
 export const BaseButtonView: any = css`
 	align-items: center;
@@ -122,15 +123,15 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 	}
 
 	public static getDerivedStateFromProps(props: ButtonProps, state: ButtonState) {
-		state.classes.clear();
-		state.classes.add('ui-button');
-		state.classes.onIfElse(!props.noripple && !props.disabled)(
+		const newState: ButtonState = {...state};
+
+		newState.classes.onIfElse(!props.noripple && !props.disabled)(
 			'ripple'
 		)(
 			'nohover'
 		);
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -141,14 +142,14 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 					disabled={this.props.disabled}
 					id={this.id}
 					onClick={this.handleClick}
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 					style={this.state.style}
 					visible={this.props.visible}
 				>
 					<Icon
 						className={this.props.iconStyle}
 						iconName={this.props.iconName}
-						sizing={this.state.sizing}
+						sizing={this.props.sizing}
 					/>
 				{tooltip(this.id, this.props)}
 				</ButtonView>

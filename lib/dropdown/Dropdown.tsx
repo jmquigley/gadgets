@@ -61,9 +61,11 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	disabled,
 	fontStyle,
 	getDefaultBaseProps,
 	getDefaultBaseState,
+	invisible,
 	Wrapper
 } from '../shared';
 import styled from '../shared/themed-components';
@@ -81,14 +83,12 @@ export interface DropdownProps extends BaseProps {
 }
 
 export function getDefaultDropdownProps(): DropdownProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			initialItem: '',
-			items: [],
-			obj: 'Dropdown',
-			onSelect: nilEvent
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		initialItem: '',
+		items: [],
+		obj: 'Dropdown',
+		onSelect: nilEvent
+	});
 }
 
 export interface DropdownState extends BaseState {
@@ -96,10 +96,9 @@ export interface DropdownState extends BaseState {
 }
 
 export function getDefaultDropdownState(): DropdownState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			currentValue: ''
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-dropdown'),
+		currentValue: ''
+	});
 }
 
 export const DropdownContainerView: any = styled.div`
@@ -114,79 +113,75 @@ export const DropdownView: any = styled.select`
 	background-repeat: no-repeat;
 	font-size: inherit;
 	height: 100%;
+
+	${(props: DropdownProps) => disabled(props)}
+	${(props: DropdownProps) => invisible(props)}
 `;
 
 export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 
 	private _keys: Keys;
-	private _options: any[] = [];
 
 	public static readonly defaultProps: DropdownProps = getDefaultDropdownProps();
 
 	constructor(props: DropdownProps) {
 		super(props, Dropdown.defaultProps.style);
 
-		this.state = Object.assign(getDefaultDropdownState(), {
+		this.state = {...getDefaultDropdownState(),
 			currentValue: this.props.defaultVal
-		});
+		};
 
 		this._keys = new Keys({testing: this.props.testing});
-
-		this.componentWillReceiveProps(this.props);
-		this.componentWillUpdate(this.props, this.state);
 	}
 
 	@autobind
 	private handleChange(e: React.FormEvent<HTMLSelectElement>) {
-		const val: any = e.currentTarget.value;
-		this.setState({
-			currentValue: String(val)
-		}, () => {
-			this.props.onSelect(val);
-		});
+		if (!this.props.disabled && this.props.visible) {
+			const val: any = e.currentTarget.value;
+			this.setState({
+				currentValue: String(val)
+			}, () => {
+				this.props.onSelect(val);
+			});
+		}
 	}
 
 	public static getDerivedStateFromProps(props: DropdownProps, state: DropdownState) {
-		state.classes.clear();
-		state.classes.add('ui-dropdown');
-
-		return super.getDerivedStateFromProps(props, state);
-	}
-
-	public componentWillReceiveProps(nextProps: DropdownProps) {
-
+		const newState: DropdownState = {...state};
 		const size: string = BaseComponent.fontSizePX();
 		const chevron: string = `url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='${size}' height='${size}' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>")`;
 
-		this.inlineStyles = {
+		newState.style = {
 			backgroundImage: chevron,
 			paddingRight: size,
 			paddingLeft: calc(size, '* 0.2')
 		};
 
-		this._options = nextProps.items.map(({value, label}, idx) => (
+		return super.getDerivedStateFromProps(props, newState);
+	}
+
+	public render() {
+		const options: any[] = this.props.items.map(({value, label}, idx) => (
 			<option key={this._keys.at(idx)} value={value}>
 			{label}
 			</option>
 		));
-	}
 
-	public render() {
 		return(
 			<Wrapper {...this.props} >
 				<DropdownContainerView
 					className="ui-dropdown-container"
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 				>
 					<DropdownView
-						className={this.state.classes}
+						className={this.state.classes.classnames}
 						disabled={this.props.disabled}
 						id={this.id}
-						onChange={this.props.disabled ? nilEvent : this.handleChange}
-						style={this.inlineStyles}
+						onChange={this.handleChange}
+						style={this.state.style}
 						value={this.state.currentValue}
 					>
-						{this._options}
+						{options}
 					</DropdownView>
 					{tooltip(this.id, this.props)}
 				</DropdownContainerView>

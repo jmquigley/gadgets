@@ -20,6 +20,7 @@ exports[`Test creation of an Icon control with icon 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Icon"
   onError={[Function]}
   padding=""
@@ -59,6 +60,7 @@ exports[`Test creation of an Icon control with icon 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Icon"
     padding=""
     selected={false}
@@ -100,6 +102,7 @@ exports[`Test creation of an Icon control with image 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Icon"
   onError={[Function]}
   padding=""
@@ -134,6 +137,7 @@ exports[`Test creation of an Icon control with image 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Icon"
     padding=""
     selected={false}
@@ -152,13 +156,6 @@ exports[`Test creation of an Icon control with image 1`] = `
 `;
 
 exports[`Test making the ButtonDialog invisible 1`] = `
-.c0 {
-  text-align: center;
-  font-size: 1rem;
-  display: none !important;
-  width: 0 !important;
-}
-
 <Icon
   bottom=""
   className=""
@@ -178,6 +175,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Icon"
   padding=""
   selected={false}
@@ -210,6 +208,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Icon"
     onError={[Function]}
     padding=""
@@ -266,6 +265,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="Icon"
         padding=""
         selected={false}
@@ -279,17 +279,88 @@ exports[`Test making the ButtonDialog invisible 1`] = `
         width=""
         xcss={null}
       >
-        <i
-          className="ui-icon fa fa-fw fa-bomb c0"
+        <StyledComponent
+          bottom=""
+          className="ui-icon fa fa-fw fa-bomb"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
+          err={null}
+          errorMessage=""
+          focus={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-gqjmRU",
+                "isStatic": false,
+                "lastClassName": "gZrnZf",
+                "rules": Array [
+                  "
+	text-align: center;
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.i",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-gqjmRU",
+              "target": "i",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height=""
+          iconName="bomb"
           id=""
+          imageFile=""
+          left=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          notheme={false}
+          obj="Icon"
+          padding=""
           selected={false}
+          sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={null}
+          tooltip=""
+          top=""
+          visible={false}
           width=""
-        />
+          xcss={null}
+        >
+          <i
+            className="ui-icon fa fa-fw fa-bomb sc-gqjmRU gZrnZf"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            selected={false}
+            style={Object {}}
+            width=""
+          />
+        </StyledComponent>
       </styled.i>
     </ThemeProvider>
   </Wrapper>
@@ -317,6 +388,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "Icon",
   "padding": "",
   "selected": false,
@@ -333,17 +405,6 @@ Object {
 `;
 
 exports[`Test the disabling of the Icon control 1`] = `
-.c0 {
-  text-align: center;
-  font-size: 1rem;
-  cursor: default;
-  opacity: 0.5;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 <Icon
   bottom=""
   className=""
@@ -363,6 +424,7 @@ exports[`Test the disabling of the Icon control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Icon"
   padding=""
   selected={false}
@@ -395,6 +457,7 @@ exports[`Test the disabling of the Icon control 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Icon"
     onError={[Function]}
     padding=""
@@ -451,6 +514,7 @@ exports[`Test the disabling of the Icon control 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="Icon"
         padding=""
         selected={false}
@@ -464,17 +528,88 @@ exports[`Test the disabling of the Icon control 1`] = `
         width=""
         xcss={null}
       >
-        <i
-          className="ui-icon fa fa-fw fa-bomb c0"
+        <StyledComponent
+          bottom=""
+          className="ui-icon fa fa-fw fa-bomb"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={true}
+          err={null}
+          errorMessage=""
+          focus={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-gqjmRU",
+                "isStatic": false,
+                "lastClassName": "GUMQe",
+                "rules": Array [
+                  "
+	text-align: center;
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.i",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-gqjmRU",
+              "target": "i",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height=""
+          iconName="bomb"
           id=""
+          imageFile=""
+          left=""
+          location="none"
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          notheme={false}
+          obj="Icon"
+          padding=""
           selected={false}
+          sizing="normal"
           style={Object {}}
+          testing={true}
+          theme={null}
+          tooltip=""
+          top=""
+          visible={true}
           width=""
-        />
+          xcss={null}
+        >
+          <i
+            className="ui-icon fa fa-fw fa-bomb sc-gqjmRU GUMQe"
+            contentEditable={false}
+            direction="right"
+            disabled={true}
+            height=""
+            id=""
+            selected={false}
+            style={Object {}}
+            width=""
+          />
+        </StyledComponent>
       </styled.i>
     </ThemeProvider>
   </Wrapper>

@@ -28,6 +28,7 @@ exports[`Test disabling of a ListItem control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="ListItem"
   onBlur={[Function]}
   onChange={[Function]}
@@ -83,6 +84,7 @@ exports[`Test disabling of a ListItem control 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="ListItem"
     onBlur={[Function]}
     onChange={[Function]}
@@ -162,6 +164,7 @@ exports[`Test disabling of a ListItem control 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="ListItem"
         onBlur={[Function]}
         onChange={[Function]}
@@ -217,6 +220,7 @@ exports[`Test disabling of a ListItem control 1`] = `
           noedit={false}
           nohover={false}
           noripple={false}
+          notheme={false}
           obj="ListItem"
           onBlur={[Function]}
           onChange={[Function]}
@@ -282,77 +286,72 @@ exports[`Test disabling of a ListItem control 1`] = `
               sizing="normal"
               style={Object {}}
             >
-              <li
-                className="ui-item ui-listitem sc-jTzLTM fJmtEf"
+              <StyledComponent
+                className="ui-item ui-listitem"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bZQynM",
+                      "isStatic": false,
+                      "lastClassName": "fXsBlq",
+                      "rules": Array [
+                        "
+	background-color: ",
+                        [Function],
+                        ";
+	color: ",
+                        [Function],
+                        ";
+	cursor: default;
+	display: flex;
+
+	",
+                        [Function],
+                        "
+
+	&:hover .ui-item-button {
+		display: inline-flex;
+		opacity: 1.0;
+	}
+",
+                      ],
+                    },
+                    "displayName": "styled.li",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bZQynM",
+                    "target": "li",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
                 id=""
+                nohover={false}
                 onBlur={[Function]}
                 onDoubleClick={[Function]}
                 onKeyDown={[Function]}
                 onKeyPress={[Function]}
                 onMouseOut={[Function]}
                 selected={false}
+                sizing="normal"
                 style={Object {}}
               >
-                <Title
-                  bottom=""
-                  className="ui-listitem"
-                  contentEditable={false}
-                  controlled={true}
-                  direction="right"
-                  disabled={true}
-                  err={null}
-                  errorMessage=""
-                  focus={false}
-                  height=""
-                  hiddenLeftButton={false}
-                  hiddenRightButton={false}
-                  href={
-                    Object {
-                      "selectHandler": [Function],
-                      "sizing": "normal",
-                    }
-                  }
+                <li
+                  className="ui-item ui-listitem sc-bZQynM fXsBlq"
                   id=""
-                  layout={5}
-                  left=""
-                  leftButton={null}
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  obj="ListItem"
                   onBlur={[Function]}
-                  onChange={[Function]}
-                  onClick={[Function]}
                   onDoubleClick={[Function]}
-                  onFocus={[Function]}
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
                   onMouseOut={[Function]}
-                  onSelect={[Function]}
-                  onUpdate={[Function]}
-                  padding=""
-                  rightButton={null}
                   selected={false}
-                  sizing="normal"
-                  stacked={false}
-                  style={
-                    Object {
-                      "padding": "2px 4px",
-                    }
-                  }
-                  testing={true}
-                  theme={null}
-                  title="test title"
-                  tooltip=""
-                  top=""
-                  useedit={false}
-                  visible={true}
-                  widget={null}
-                  width=""
-                  xcss={null}
+                  style={Object {}}
                 >
-                  <Wrapper
+                  <Title
                     bottom=""
                     className="ui-listitem"
                     contentEditable={false}
@@ -379,12 +378,12 @@ exports[`Test disabling of a ListItem control 1`] = `
                     noedit={false}
                     nohover={false}
                     noripple={false}
+                    notheme={false}
                     obj="ListItem"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onClick={[Function]}
                     onDoubleClick={[Function]}
-                    onError={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
@@ -392,16 +391,11 @@ exports[`Test disabling of a ListItem control 1`] = `
                     onSelect={[Function]}
                     onUpdate={[Function]}
                     padding=""
-                    reset={false}
                     rightButton={null}
                     selected={false}
                     sizing="normal"
                     stacked={false}
-                    style={
-                      Object {
-                        "padding": "2px 4px",
-                      }
-                    }
+                    style={Object {}}
                     testing={true}
                     theme={null}
                     title="test title"
@@ -413,185 +407,147 @@ exports[`Test disabling of a ListItem control 1`] = `
                     width=""
                     xcss={null}
                   >
-                    <ThemeProvider
-                      theme={
+                    <Wrapper
+                      bottom=""
+                      className="ui-listitem"
+                      contentEditable={false}
+                      controlled={true}
+                      direction="right"
+                      disabled={true}
+                      err={null}
+                      errorMessage=""
+                      focus={false}
+                      height=""
+                      hiddenLeftButton={false}
+                      hiddenRightButton={false}
+                      href={
                         Object {
-                          "backgroundColor": "#ffffff",
-                          "borderColor": "#c0c0c0",
-                          "color": "#000000",
-                          "headerBackgroundColor": "#004358",
-                          "headerForegroundColor": "#ffffff",
-                          "headerHoverColor": "#ffe11a",
-                          "hoverColor": "#c0c0c0",
-                          "inputBorderColor": "#c0c0c0",
-                          "itemHoverColor": "#bedb39",
-                          "selectedBackgroundColor": "#1f8a70",
-                          "selectedForegroundColor": "#ffe11a",
-                          "titleBarBackgroundColor": "#004358",
-                          "titleBarForegroundColor": "#ffe11a",
-                          "tooltipBackgroundColor": "#708090",
-                          "tooltipForegroundColor": "#ffffff",
-                          "transitionDelay": "0.5s",
+                          "selectHandler": [Function],
+                          "sizing": "normal",
                         }
                       }
+                      id=""
+                      layout={5}
+                      left=""
+                      leftButton={null}
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      notheme={false}
+                      obj="ListItem"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onError={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onMouseOut={[Function]}
+                      onSelect={[Function]}
+                      onUpdate={[Function]}
+                      padding=""
+                      reset={false}
+                      rightButton={null}
+                      selected={false}
+                      sizing="normal"
+                      stacked={false}
+                      style={Object {}}
+                      testing={true}
+                      theme={null}
+                      title="test title"
+                      tooltip=""
+                      top=""
+                      useedit={false}
+                      visible={true}
+                      widget={null}
+                      width=""
+                      xcss={null}
                     >
-                      <styled.div
-                        className="ui-title-bar ui-listitem"
-                        disabled={true}
-                        layout={5}
-                        style={
+                      <ThemeProvider
+                        theme={
                           Object {
-                            "padding": "2px 4px",
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#c0c0c0",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "headerHoverColor": "#ffe11a",
+                            "hoverColor": "#c0c0c0",
+                            "inputBorderColor": "#c0c0c0",
+                            "itemHoverColor": "#bedb39",
+                            "selectedBackgroundColor": "#1f8a70",
+                            "selectedForegroundColor": "#ffe11a",
+                            "titleBarBackgroundColor": "#004358",
+                            "titleBarForegroundColor": "#ffe11a",
+                            "tooltipBackgroundColor": "#708090",
+                            "tooltipForegroundColor": "#ffffff",
+                            "transitionDelay": "0.5s",
                           }
                         }
-                        visible={true}
                       >
-                        <div
-                          className="ui-title-bar ui-listitem sc-iwsKbI gvFsGi"
+                        <styled.div
+                          className="ui-title-bar ui-listitem"
                           disabled={true}
-                          style={
-                            Object {
-                              "padding": "2px 4px",
-                            }
-                          }
+                          layout={5}
+                          sizing="normal"
+                          style={Object {}}
+                          visible={true}
                         >
-                          <Styled(Label)
-                            bottom=""
-                            className="ui-title"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
+                          <StyledComponent
+                            className="ui-title-bar ui-listitem"
                             disabled={true}
-                            err={null}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            hiddenLeftButton={false}
-                            hiddenRightButton={false}
-                            href={
+                            forwardedComponent={
                               Object {
-                                "selectHandler": [Function],
-                                "sizing": "normal",
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "gsbVwS",
+                                  "rules": Array [
+                                    "
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: ",
+                                    [Function],
+                                    ";
+	flex-grow: 1;
+
+	",
+                                    [Function],
+                                    "
+	",
+                                    [Function],
+                                    "
+",
+                                  ],
+                                },
+                                "displayName": "styled.div",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "div",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
                               }
                             }
-                            id=""
+                            forwardedRef={null}
                             layout={5}
-                            left=""
-                            leftButton={null}
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="ListItem"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onClick={[Function]}
-                            onDoubleClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyPress={[Function]}
-                            onMouseOut={[Function]}
-                            onSelect={[Function]}
-                            onUpdate={[Function]}
-                            padding=""
-                            rightButton={null}
-                            selected={false}
                             sizing="normal"
-                            stacked={false}
-                            style={
-                              Object {
-                                "padding": "2px 4px",
-                              }
-                            }
-                            testing={true}
-                            text="test title"
-                            theme={null}
-                            title="test title"
-                            tooltip=""
-                            top=""
-                            useedit={false}
+                            style={Object {}}
                             visible={true}
-                            widget={null}
-                            width=""
-                            xcss={
-                              Array [
-                                "
-	text-align: left;
-	flex: 5;
-",
-                              ]
-                            }
                           >
-                            <Label
-                              bottom=""
-                              className="ui-title sc-gqjmRU hmXoVc"
-                              contentEditable={false}
-                              controlled={true}
-                              direction="right"
+                            <div
+                              className="ui-title-bar ui-listitem sc-bxivhb gsbVwS"
                               disabled={true}
-                              err={null}
-                              errorMessage=""
-                              focus={false}
-                              height=""
-                              hiddenLeftButton={false}
-                              hiddenRightButton={false}
-                              href={
-                                Object {
-                                  "selectHandler": [Function],
-                                  "sizing": "normal",
-                                }
-                              }
-                              id=""
-                              layout={5}
-                              left=""
-                              leftButton={null}
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              obj="ListItem"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              onClick={[Function]}
-                              onDoubleClick={[Function]}
-                              onFocus={[Function]}
-                              onKeyDown={[Function]}
-                              onKeyPress={[Function]}
-                              onMouseOut={[Function]}
-                              onSelect={[Function]}
-                              onUpdate={[Function]}
-                              padding=""
-                              rightButton={null}
-                              selected={false}
-                              sizing="normal"
-                              stacked={false}
-                              style={
-                                Object {
-                                  "padding": "2px 4px",
-                                }
-                              }
-                              testing={true}
-                              text="test title"
-                              theme={null}
-                              title="test title"
-                              tooltip=""
-                              top=""
-                              useedit={false}
-                              visible={true}
-                              widget={null}
-                              width=""
-                              xcss={
-                                Array [
-                                  "
-	text-align: left;
-	flex: 5;
-",
-                                ]
-                              }
+                              style={Object {}}
                             >
-                              <Wrapper
+                              <Styled(Label)
                                 bottom=""
-                                className="ui-title sc-gqjmRU hmXoVc"
+                                className="ui-title"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -616,29 +572,23 @@ exports[`Test disabling of a ListItem control 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                notheme={false}
                                 obj="ListItem"
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
                                 onDoubleClick={[Function]}
-                                onError={[Function]}
                                 onFocus={[Function]}
                                 onKeyDown={[Function]}
                                 onKeyPress={[Function]}
                                 onMouseOut={[Function]}
                                 onSelect={[Function]}
-                                onUpdate={[Function]}
                                 padding=""
-                                reset={false}
                                 rightButton={null}
                                 selected={false}
                                 sizing="normal"
                                 stacked={false}
-                                style={
-                                  Object {
-                                    "padding": "2px 4px",
-                                  }
-                                }
+                                style={Object {}}
                                 testing={true}
                                 text="test title"
                                 theme={null}
@@ -658,76 +608,350 @@ exports[`Test disabling of a ListItem control 1`] = `
                                   ]
                                 }
                               >
-                                <ThemeProvider
-                                  theme={
+                                <StyledComponent
+                                  bottom=""
+                                  className="ui-title"
+                                  contentEditable={false}
+                                  controlled={true}
+                                  direction="right"
+                                  disabled={true}
+                                  err={null}
+                                  errorMessage=""
+                                  focus={false}
+                                  forwardedComponent={
                                     Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#c0c0c0",
-                                      "color": "#000000",
-                                      "headerBackgroundColor": "#004358",
-                                      "headerForegroundColor": "#ffffff",
-                                      "headerHoverColor": "#ffe11a",
-                                      "hoverColor": "#c0c0c0",
-                                      "inputBorderColor": "#c0c0c0",
-                                      "itemHoverColor": "#bedb39",
-                                      "selectedBackgroundColor": "#1f8a70",
-                                      "selectedForegroundColor": "#ffe11a",
-                                      "titleBarBackgroundColor": "#004358",
-                                      "titleBarForegroundColor": "#ffe11a",
-                                      "tooltipBackgroundColor": "#708090",
-                                      "tooltipForegroundColor": "#ffffff",
-                                      "transitionDelay": "0.5s",
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-EHOje",
+                                        "isStatic": false,
+                                        "lastClassName": "hLLCNa",
+                                        "rules": Array [
+                                          "
+	",
+                                          "
+	padding: ",
+                                          [Function],
+                                          ";
+
+	",
+                                          [Function],
+                                          "
+",
+                                          "
+",
+                                        ],
+                                      },
+                                      "defaultStyles": Object {},
+                                      "displayName": "Styled(Label)",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-EHOje",
+                                      "target": [Function],
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                      Symbol(Symbol.hasInstance): [Function],
                                     }
                                   }
+                                  forwardedRef={null}
+                                  height=""
+                                  hiddenLeftButton={false}
+                                  hiddenRightButton={false}
+                                  href={
+                                    Object {
+                                      "selectHandler": [Function],
+                                      "sizing": "normal",
+                                    }
+                                  }
+                                  id=""
+                                  layout={5}
+                                  left=""
+                                  leftButton={null}
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  notheme={false}
+                                  obj="ListItem"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onClick={[Function]}
+                                  onDoubleClick={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyPress={[Function]}
+                                  onMouseOut={[Function]}
+                                  onSelect={[Function]}
+                                  padding=""
+                                  rightButton={null}
+                                  selected={false}
+                                  sizing="normal"
+                                  stacked={false}
+                                  style={Object {}}
+                                  testing={true}
+                                  text="test title"
+                                  theme={null}
+                                  title="test title"
+                                  tooltip=""
+                                  top=""
+                                  useedit={false}
+                                  visible={true}
+                                  widget={null}
+                                  width=""
+                                  xcss={
+                                    Array [
+                                      "
+	text-align: left;
+	flex: 5;
+",
+                                    ]
+                                  }
                                 >
-                                  <styled.span
-                                    className="ui-label ui-title sc-gqjmRU hmXoVc"
+                                  <Label
+                                    bottom=""
+                                    className="ui-title sc-EHOje hLLCNa"
                                     contentEditable={false}
+                                    controlled={true}
+                                    direction="right"
                                     disabled={true}
-                                    innerRef={[Function]}
-                                    onBlur={[Function]}
-                                    onClick={[Function]}
-                                    onDoubleClick={[Function]}
-                                    onKeyDown={[Function]}
-                                    onKeyPress={[Function]}
-                                    sizing="normal"
-                                    style={
+                                    err={null}
+                                    errorMessage=""
+                                    focus={false}
+                                    height=""
+                                    hiddenLeftButton={false}
+                                    hiddenRightButton={false}
+                                    href={
                                       Object {
-                                        "padding": "2px 4px",
+                                        "selectHandler": [Function],
+                                        "sizing": "normal",
                                       }
                                     }
-                                    suppressContentEditableWarning={true}
+                                    id=""
+                                    layout={5}
+                                    left=""
+                                    leftButton={null}
+                                    location="none"
+                                    noedit={false}
+                                    nohover={false}
+                                    noripple={false}
+                                    notheme={false}
+                                    obj="ListItem"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onClick={[Function]}
+                                    onDoubleClick={[Function]}
+                                    onFocus={[Function]}
+                                    onKeyDown={[Function]}
+                                    onKeyPress={[Function]}
+                                    onMouseOut={[Function]}
+                                    onSelect={[Function]}
+                                    onUpdate={[Function]}
+                                    padding=""
+                                    rightButton={null}
+                                    selected={false}
+                                    sizing="normal"
+                                    stacked={false}
+                                    style={Object {}}
+                                    testing={true}
+                                    text="test title"
+                                    theme={null}
+                                    title="test title"
+                                    tooltip=""
+                                    top=""
+                                    useedit={false}
                                     visible={true}
+                                    widget={null}
+                                    width=""
+                                    xcss={
+                                      Array [
+                                        "
+	text-align: left;
+	flex: 5;
+",
+                                      ]
+                                    }
                                   >
-                                    <span
-                                      className="ui-label ui-title sc-gqjmRU hmXoVc sc-dnqmqq gNPGAn"
+                                    <Wrapper
+                                      bottom=""
+                                      className="ui-title sc-EHOje hLLCNa"
                                       contentEditable={false}
+                                      controlled={true}
+                                      direction="right"
                                       disabled={true}
-                                      onBlur={[Function]}
-                                      onClick={[Function]}
-                                      onDoubleClick={[Function]}
-                                      onKeyDown={[Function]}
-                                      onKeyPress={[Function]}
-                                      style={
+                                      err={null}
+                                      errorMessage=""
+                                      focus={false}
+                                      height=""
+                                      hiddenLeftButton={false}
+                                      hiddenRightButton={false}
+                                      href={
                                         Object {
-                                          "padding": "2px 4px",
+                                          "selectHandler": [Function],
+                                          "sizing": "normal",
                                         }
                                       }
-                                      suppressContentEditableWarning={true}
+                                      id=""
+                                      layout={5}
+                                      left=""
+                                      leftButton={null}
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      notheme={false}
+                                      obj="ListItem"
+                                      onBlur={[Function]}
+                                      onChange={[Function]}
+                                      onClick={[Function]}
+                                      onDoubleClick={[Function]}
+                                      onError={[Function]}
+                                      onFocus={[Function]}
+                                      onKeyDown={[Function]}
+                                      onKeyPress={[Function]}
+                                      onMouseOut={[Function]}
+                                      onSelect={[Function]}
+                                      onUpdate={[Function]}
+                                      padding=""
+                                      reset={false}
+                                      rightButton={null}
+                                      selected={false}
+                                      sizing="normal"
+                                      stacked={false}
+                                      style={Object {}}
+                                      testing={true}
+                                      text="test title"
+                                      theme={null}
+                                      title="test title"
+                                      tooltip=""
+                                      top=""
+                                      useedit={false}
+                                      visible={true}
+                                      widget={null}
+                                      width=""
+                                      xcss={
+                                        Array [
+                                          "
+	text-align: left;
+	flex: 5;
+",
+                                        ]
+                                      }
                                     >
-                                      test title
-                                    </span>
-                                  </styled.span>
-                                </ThemeProvider>
-                              </Wrapper>
-                            </Label>
-                          </Styled(Label)>
-                        </div>
-                      </styled.div>
-                    </ThemeProvider>
-                  </Wrapper>
-                </Title>
-              </li>
+                                      <ThemeProvider
+                                        theme={
+                                          Object {
+                                            "backgroundColor": "#ffffff",
+                                            "borderColor": "#c0c0c0",
+                                            "color": "#000000",
+                                            "headerBackgroundColor": "#004358",
+                                            "headerForegroundColor": "#ffffff",
+                                            "headerHoverColor": "#ffe11a",
+                                            "hoverColor": "#c0c0c0",
+                                            "inputBorderColor": "#c0c0c0",
+                                            "itemHoverColor": "#bedb39",
+                                            "selectedBackgroundColor": "#1f8a70",
+                                            "selectedForegroundColor": "#ffe11a",
+                                            "titleBarBackgroundColor": "#004358",
+                                            "titleBarForegroundColor": "#ffe11a",
+                                            "tooltipBackgroundColor": "#708090",
+                                            "tooltipForegroundColor": "#ffffff",
+                                            "transitionDelay": "0.5s",
+                                          }
+                                        }
+                                      >
+                                        <styled.span
+                                          className="ui-label ui-title sc-EHOje hLLCNa"
+                                          contentEditable={false}
+                                          disabled={true}
+                                          onBlur={[Function]}
+                                          onClick={[Function]}
+                                          onDoubleClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          onKeyPress={[Function]}
+                                          sizing="normal"
+                                          style={Object {}}
+                                          suppressContentEditableWarning={true}
+                                          visible={true}
+                                        >
+                                          <StyledComponent
+                                            className="ui-label ui-title sc-EHOje hLLCNa"
+                                            contentEditable={false}
+                                            disabled={true}
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-htpNat",
+                                                  "isStatic": false,
+                                                  "lastClassName": "gjQKzk",
+                                                  "rules": Array [
+                                                    "
+	background-color: inherit;
+
+	",
+                                                    [Function],
+                                                    "
+	",
+                                                    [Function],
+                                                    "
+	",
+                                                    [Function],
+                                                    "
+",
+                                                  ],
+                                                },
+                                                "displayName": "styled.span",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-htpNat",
+                                                "target": "span",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={[Function]}
+                                            onBlur={[Function]}
+                                            onClick={[Function]}
+                                            onDoubleClick={[Function]}
+                                            onKeyDown={[Function]}
+                                            onKeyPress={[Function]}
+                                            sizing="normal"
+                                            style={Object {}}
+                                            suppressContentEditableWarning={true}
+                                            visible={true}
+                                          >
+                                            <span
+                                              className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat gjQKzk"
+                                              contentEditable={false}
+                                              disabled={true}
+                                              onBlur={[Function]}
+                                              onClick={[Function]}
+                                              onDoubleClick={[Function]}
+                                              onKeyDown={[Function]}
+                                              onKeyPress={[Function]}
+                                              style={Object {}}
+                                              suppressContentEditableWarning={true}
+                                            >
+                                              test title
+                                            </span>
+                                          </StyledComponent>
+                                        </styled.span>
+                                      </ThemeProvider>
+                                    </Wrapper>
+                                  </Label>
+                                </StyledComponent>
+                              </Styled(Label)>
+                            </div>
+                          </StyledComponent>
+                        </styled.div>
+                      </ThemeProvider>
+                    </Wrapper>
+                  </Title>
+                </li>
+              </StyledComponent>
             </styled.li>
           </ThemeProvider>
         </Wrapper>
@@ -765,6 +989,7 @@ exports[`Test making ListItem control invisible 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="ListItem"
   onBlur={[Function]}
   onChange={[Function]}
@@ -820,6 +1045,7 @@ exports[`Test making ListItem control invisible 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="ListItem"
     onBlur={[Function]}
     onChange={[Function]}
@@ -899,6 +1125,7 @@ exports[`Test making ListItem control invisible 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="ListItem"
         onBlur={[Function]}
         onChange={[Function]}
@@ -954,6 +1181,7 @@ exports[`Test making ListItem control invisible 1`] = `
           noedit={false}
           nohover={false}
           noripple={false}
+          notheme={false}
           obj="ListItem"
           onBlur={[Function]}
           onChange={[Function]}
@@ -1019,77 +1247,72 @@ exports[`Test making ListItem control invisible 1`] = `
               sizing="normal"
               style={Object {}}
             >
-              <li
-                className="ui-item ui-listitem sc-jTzLTM fJmtEf"
+              <StyledComponent
+                className="ui-item ui-listitem"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bZQynM",
+                      "isStatic": false,
+                      "lastClassName": "fXsBlq",
+                      "rules": Array [
+                        "
+	background-color: ",
+                        [Function],
+                        ";
+	color: ",
+                        [Function],
+                        ";
+	cursor: default;
+	display: flex;
+
+	",
+                        [Function],
+                        "
+
+	&:hover .ui-item-button {
+		display: inline-flex;
+		opacity: 1.0;
+	}
+",
+                      ],
+                    },
+                    "displayName": "styled.li",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bZQynM",
+                    "target": "li",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
                 id=""
+                nohover={false}
                 onBlur={[Function]}
                 onDoubleClick={[Function]}
                 onKeyDown={[Function]}
                 onKeyPress={[Function]}
                 onMouseOut={[Function]}
                 selected={false}
+                sizing="normal"
                 style={Object {}}
               >
-                <Title
-                  bottom=""
-                  className="ui-listitem"
-                  contentEditable={false}
-                  controlled={true}
-                  direction="right"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  focus={false}
-                  height=""
-                  hiddenLeftButton={false}
-                  hiddenRightButton={false}
-                  href={
-                    Object {
-                      "selectHandler": [Function],
-                      "sizing": "normal",
-                    }
-                  }
+                <li
+                  className="ui-item ui-listitem sc-bZQynM fXsBlq"
                   id=""
-                  layout={5}
-                  left=""
-                  leftButton={null}
-                  location="none"
-                  noedit={false}
-                  nohover={false}
-                  noripple={false}
-                  obj="ListItem"
                   onBlur={[Function]}
-                  onChange={[Function]}
-                  onClick={[Function]}
                   onDoubleClick={[Function]}
-                  onFocus={[Function]}
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
                   onMouseOut={[Function]}
-                  onSelect={[Function]}
-                  onUpdate={[Function]}
-                  padding=""
-                  rightButton={null}
                   selected={false}
-                  sizing="normal"
-                  stacked={false}
-                  style={
-                    Object {
-                      "padding": "2px 4px",
-                    }
-                  }
-                  testing={true}
-                  theme={null}
-                  title="test title"
-                  tooltip=""
-                  top=""
-                  useedit={false}
-                  visible={false}
-                  widget={null}
-                  width=""
-                  xcss={null}
+                  style={Object {}}
                 >
-                  <Wrapper
+                  <Title
                     bottom=""
                     className="ui-listitem"
                     contentEditable={false}
@@ -1116,12 +1339,12 @@ exports[`Test making ListItem control invisible 1`] = `
                     noedit={false}
                     nohover={false}
                     noripple={false}
+                    notheme={false}
                     obj="ListItem"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onClick={[Function]}
                     onDoubleClick={[Function]}
-                    onError={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
@@ -1129,16 +1352,11 @@ exports[`Test making ListItem control invisible 1`] = `
                     onSelect={[Function]}
                     onUpdate={[Function]}
                     padding=""
-                    reset={false}
                     rightButton={null}
                     selected={false}
                     sizing="normal"
                     stacked={false}
-                    style={
-                      Object {
-                        "padding": "2px 4px",
-                      }
-                    }
+                    style={Object {}}
                     testing={true}
                     theme={null}
                     title="test title"
@@ -1150,185 +1368,147 @@ exports[`Test making ListItem control invisible 1`] = `
                     width=""
                     xcss={null}
                   >
-                    <ThemeProvider
-                      theme={
+                    <Wrapper
+                      bottom=""
+                      className="ui-listitem"
+                      contentEditable={false}
+                      controlled={true}
+                      direction="right"
+                      disabled={false}
+                      err={null}
+                      errorMessage=""
+                      focus={false}
+                      height=""
+                      hiddenLeftButton={false}
+                      hiddenRightButton={false}
+                      href={
                         Object {
-                          "backgroundColor": "#ffffff",
-                          "borderColor": "#c0c0c0",
-                          "color": "#000000",
-                          "headerBackgroundColor": "#004358",
-                          "headerForegroundColor": "#ffffff",
-                          "headerHoverColor": "#ffe11a",
-                          "hoverColor": "#c0c0c0",
-                          "inputBorderColor": "#c0c0c0",
-                          "itemHoverColor": "#bedb39",
-                          "selectedBackgroundColor": "#1f8a70",
-                          "selectedForegroundColor": "#ffe11a",
-                          "titleBarBackgroundColor": "#004358",
-                          "titleBarForegroundColor": "#ffe11a",
-                          "tooltipBackgroundColor": "#708090",
-                          "tooltipForegroundColor": "#ffffff",
-                          "transitionDelay": "0.5s",
+                          "selectHandler": [Function],
+                          "sizing": "normal",
                         }
                       }
+                      id=""
+                      layout={5}
+                      left=""
+                      leftButton={null}
+                      location="none"
+                      noedit={false}
+                      nohover={false}
+                      noripple={false}
+                      notheme={false}
+                      obj="ListItem"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onDoubleClick={[Function]}
+                      onError={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onMouseOut={[Function]}
+                      onSelect={[Function]}
+                      onUpdate={[Function]}
+                      padding=""
+                      reset={false}
+                      rightButton={null}
+                      selected={false}
+                      sizing="normal"
+                      stacked={false}
+                      style={Object {}}
+                      testing={true}
+                      theme={null}
+                      title="test title"
+                      tooltip=""
+                      top=""
+                      useedit={false}
+                      visible={false}
+                      widget={null}
+                      width=""
+                      xcss={null}
                     >
-                      <styled.div
-                        className="ui-title-bar ripple ui-listitem"
-                        disabled={false}
-                        layout={5}
-                        style={
+                      <ThemeProvider
+                        theme={
                           Object {
-                            "padding": "2px 4px",
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#c0c0c0",
+                            "color": "#000000",
+                            "headerBackgroundColor": "#004358",
+                            "headerForegroundColor": "#ffffff",
+                            "headerHoverColor": "#ffe11a",
+                            "hoverColor": "#c0c0c0",
+                            "inputBorderColor": "#c0c0c0",
+                            "itemHoverColor": "#bedb39",
+                            "selectedBackgroundColor": "#1f8a70",
+                            "selectedForegroundColor": "#ffe11a",
+                            "titleBarBackgroundColor": "#004358",
+                            "titleBarForegroundColor": "#ffe11a",
+                            "tooltipBackgroundColor": "#708090",
+                            "tooltipForegroundColor": "#ffffff",
+                            "transitionDelay": "0.5s",
                           }
                         }
-                        visible={false}
                       >
-                        <div
-                          className="ui-title-bar ripple ui-listitem sc-iwsKbI ikQKDN"
+                        <styled.div
+                          className="ui-title-bar ripple ui-listitem"
                           disabled={false}
-                          style={
-                            Object {
-                              "padding": "2px 4px",
-                            }
-                          }
+                          layout={5}
+                          sizing="normal"
+                          style={Object {}}
+                          visible={false}
                         >
-                          <Styled(Label)
-                            bottom=""
-                            className="ui-title"
-                            contentEditable={false}
-                            controlled={true}
-                            direction="right"
+                          <StyledComponent
+                            className="ui-title-bar ripple ui-listitem"
                             disabled={false}
-                            err={null}
-                            errorMessage=""
-                            focus={false}
-                            height=""
-                            hiddenLeftButton={false}
-                            hiddenRightButton={false}
-                            href={
+                            forwardedComponent={
                               Object {
-                                "selectHandler": [Function],
-                                "sizing": "normal",
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "cSAToS",
+                                  "rules": Array [
+                                    "
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: ",
+                                    [Function],
+                                    ";
+	flex-grow: 1;
+
+	",
+                                    [Function],
+                                    "
+	",
+                                    [Function],
+                                    "
+",
+                                  ],
+                                },
+                                "displayName": "styled.div",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "div",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
                               }
                             }
-                            id=""
+                            forwardedRef={null}
                             layout={5}
-                            left=""
-                            leftButton={null}
-                            location="none"
-                            noedit={false}
-                            nohover={false}
-                            noripple={false}
-                            obj="ListItem"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onClick={[Function]}
-                            onDoubleClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyPress={[Function]}
-                            onMouseOut={[Function]}
-                            onSelect={[Function]}
-                            onUpdate={[Function]}
-                            padding=""
-                            rightButton={null}
-                            selected={false}
                             sizing="normal"
-                            stacked={false}
-                            style={
-                              Object {
-                                "padding": "2px 4px",
-                              }
-                            }
-                            testing={true}
-                            text="test title"
-                            theme={null}
-                            title="test title"
-                            tooltip=""
-                            top=""
-                            useedit={false}
+                            style={Object {}}
                             visible={false}
-                            widget={null}
-                            width=""
-                            xcss={
-                              Array [
-                                "
-	text-align: left;
-	flex: 5;
-",
-                              ]
-                            }
                           >
-                            <Label
-                              bottom=""
-                              className="ui-title sc-gqjmRU hmXoVc"
-                              contentEditable={false}
-                              controlled={true}
-                              direction="right"
+                            <div
+                              className="ui-title-bar ripple ui-listitem sc-bxivhb cSAToS"
                               disabled={false}
-                              err={null}
-                              errorMessage=""
-                              focus={false}
-                              height=""
-                              hiddenLeftButton={false}
-                              hiddenRightButton={false}
-                              href={
-                                Object {
-                                  "selectHandler": [Function],
-                                  "sizing": "normal",
-                                }
-                              }
-                              id=""
-                              layout={5}
-                              left=""
-                              leftButton={null}
-                              location="none"
-                              noedit={false}
-                              nohover={false}
-                              noripple={false}
-                              obj="ListItem"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              onClick={[Function]}
-                              onDoubleClick={[Function]}
-                              onFocus={[Function]}
-                              onKeyDown={[Function]}
-                              onKeyPress={[Function]}
-                              onMouseOut={[Function]}
-                              onSelect={[Function]}
-                              onUpdate={[Function]}
-                              padding=""
-                              rightButton={null}
-                              selected={false}
-                              sizing="normal"
-                              stacked={false}
-                              style={
-                                Object {
-                                  "padding": "2px 4px",
-                                }
-                              }
-                              testing={true}
-                              text="test title"
-                              theme={null}
-                              title="test title"
-                              tooltip=""
-                              top=""
-                              useedit={false}
-                              visible={false}
-                              widget={null}
-                              width=""
-                              xcss={
-                                Array [
-                                  "
-	text-align: left;
-	flex: 5;
-",
-                                ]
-                              }
+                              style={Object {}}
                             >
-                              <Wrapper
+                              <Styled(Label)
                                 bottom=""
-                                className="ui-title sc-gqjmRU hmXoVc"
+                                className="ui-title"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -1353,29 +1533,23 @@ exports[`Test making ListItem control invisible 1`] = `
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
+                                notheme={false}
                                 obj="ListItem"
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
                                 onDoubleClick={[Function]}
-                                onError={[Function]}
                                 onFocus={[Function]}
                                 onKeyDown={[Function]}
                                 onKeyPress={[Function]}
                                 onMouseOut={[Function]}
                                 onSelect={[Function]}
-                                onUpdate={[Function]}
                                 padding=""
-                                reset={false}
                                 rightButton={null}
                                 selected={false}
                                 sizing="normal"
                                 stacked={false}
-                                style={
-                                  Object {
-                                    "padding": "2px 4px",
-                                  }
-                                }
+                                style={Object {}}
                                 testing={true}
                                 text="test title"
                                 theme={null}
@@ -1395,76 +1569,350 @@ exports[`Test making ListItem control invisible 1`] = `
                                   ]
                                 }
                               >
-                                <ThemeProvider
-                                  theme={
+                                <StyledComponent
+                                  bottom=""
+                                  className="ui-title"
+                                  contentEditable={false}
+                                  controlled={true}
+                                  direction="right"
+                                  disabled={false}
+                                  err={null}
+                                  errorMessage=""
+                                  focus={false}
+                                  forwardedComponent={
                                     Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#c0c0c0",
-                                      "color": "#000000",
-                                      "headerBackgroundColor": "#004358",
-                                      "headerForegroundColor": "#ffffff",
-                                      "headerHoverColor": "#ffe11a",
-                                      "hoverColor": "#c0c0c0",
-                                      "inputBorderColor": "#c0c0c0",
-                                      "itemHoverColor": "#bedb39",
-                                      "selectedBackgroundColor": "#1f8a70",
-                                      "selectedForegroundColor": "#ffe11a",
-                                      "titleBarBackgroundColor": "#004358",
-                                      "titleBarForegroundColor": "#ffe11a",
-                                      "tooltipBackgroundColor": "#708090",
-                                      "tooltipForegroundColor": "#ffffff",
-                                      "transitionDelay": "0.5s",
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-EHOje",
+                                        "isStatic": false,
+                                        "lastClassName": "hLLCNa",
+                                        "rules": Array [
+                                          "
+	",
+                                          "
+	padding: ",
+                                          [Function],
+                                          ";
+
+	",
+                                          [Function],
+                                          "
+",
+                                          "
+",
+                                        ],
+                                      },
+                                      "defaultStyles": Object {},
+                                      "displayName": "Styled(Label)",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-EHOje",
+                                      "target": [Function],
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                      Symbol(Symbol.hasInstance): [Function],
                                     }
                                   }
+                                  forwardedRef={null}
+                                  height=""
+                                  hiddenLeftButton={false}
+                                  hiddenRightButton={false}
+                                  href={
+                                    Object {
+                                      "selectHandler": [Function],
+                                      "sizing": "normal",
+                                    }
+                                  }
+                                  id=""
+                                  layout={5}
+                                  left=""
+                                  leftButton={null}
+                                  location="none"
+                                  noedit={false}
+                                  nohover={false}
+                                  noripple={false}
+                                  notheme={false}
+                                  obj="ListItem"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onClick={[Function]}
+                                  onDoubleClick={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyPress={[Function]}
+                                  onMouseOut={[Function]}
+                                  onSelect={[Function]}
+                                  padding=""
+                                  rightButton={null}
+                                  selected={false}
+                                  sizing="normal"
+                                  stacked={false}
+                                  style={Object {}}
+                                  testing={true}
+                                  text="test title"
+                                  theme={null}
+                                  title="test title"
+                                  tooltip=""
+                                  top=""
+                                  useedit={false}
+                                  visible={false}
+                                  widget={null}
+                                  width=""
+                                  xcss={
+                                    Array [
+                                      "
+	text-align: left;
+	flex: 5;
+",
+                                    ]
+                                  }
                                 >
-                                  <styled.span
-                                    className="ui-label ui-title sc-gqjmRU hmXoVc"
+                                  <Label
+                                    bottom=""
+                                    className="ui-title sc-EHOje hLLCNa"
                                     contentEditable={false}
+                                    controlled={true}
+                                    direction="right"
                                     disabled={false}
-                                    innerRef={[Function]}
-                                    onBlur={[Function]}
-                                    onClick={[Function]}
-                                    onDoubleClick={[Function]}
-                                    onKeyDown={[Function]}
-                                    onKeyPress={[Function]}
-                                    sizing="normal"
-                                    style={
+                                    err={null}
+                                    errorMessage=""
+                                    focus={false}
+                                    height=""
+                                    hiddenLeftButton={false}
+                                    hiddenRightButton={false}
+                                    href={
                                       Object {
-                                        "padding": "2px 4px",
+                                        "selectHandler": [Function],
+                                        "sizing": "normal",
                                       }
                                     }
-                                    suppressContentEditableWarning={true}
+                                    id=""
+                                    layout={5}
+                                    left=""
+                                    leftButton={null}
+                                    location="none"
+                                    noedit={false}
+                                    nohover={false}
+                                    noripple={false}
+                                    notheme={false}
+                                    obj="ListItem"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onClick={[Function]}
+                                    onDoubleClick={[Function]}
+                                    onFocus={[Function]}
+                                    onKeyDown={[Function]}
+                                    onKeyPress={[Function]}
+                                    onMouseOut={[Function]}
+                                    onSelect={[Function]}
+                                    onUpdate={[Function]}
+                                    padding=""
+                                    rightButton={null}
+                                    selected={false}
+                                    sizing="normal"
+                                    stacked={false}
+                                    style={Object {}}
+                                    testing={true}
+                                    text="test title"
+                                    theme={null}
+                                    title="test title"
+                                    tooltip=""
+                                    top=""
+                                    useedit={false}
                                     visible={false}
+                                    widget={null}
+                                    width=""
+                                    xcss={
+                                      Array [
+                                        "
+	text-align: left;
+	flex: 5;
+",
+                                      ]
+                                    }
                                   >
-                                    <span
-                                      className="ui-label ui-title sc-gqjmRU hmXoVc sc-dnqmqq bzVSIx"
+                                    <Wrapper
+                                      bottom=""
+                                      className="ui-title sc-EHOje hLLCNa"
                                       contentEditable={false}
+                                      controlled={true}
+                                      direction="right"
                                       disabled={false}
-                                      onBlur={[Function]}
-                                      onClick={[Function]}
-                                      onDoubleClick={[Function]}
-                                      onKeyDown={[Function]}
-                                      onKeyPress={[Function]}
-                                      style={
+                                      err={null}
+                                      errorMessage=""
+                                      focus={false}
+                                      height=""
+                                      hiddenLeftButton={false}
+                                      hiddenRightButton={false}
+                                      href={
                                         Object {
-                                          "padding": "2px 4px",
+                                          "selectHandler": [Function],
+                                          "sizing": "normal",
                                         }
                                       }
-                                      suppressContentEditableWarning={true}
+                                      id=""
+                                      layout={5}
+                                      left=""
+                                      leftButton={null}
+                                      location="none"
+                                      noedit={false}
+                                      nohover={false}
+                                      noripple={false}
+                                      notheme={false}
+                                      obj="ListItem"
+                                      onBlur={[Function]}
+                                      onChange={[Function]}
+                                      onClick={[Function]}
+                                      onDoubleClick={[Function]}
+                                      onError={[Function]}
+                                      onFocus={[Function]}
+                                      onKeyDown={[Function]}
+                                      onKeyPress={[Function]}
+                                      onMouseOut={[Function]}
+                                      onSelect={[Function]}
+                                      onUpdate={[Function]}
+                                      padding=""
+                                      reset={false}
+                                      rightButton={null}
+                                      selected={false}
+                                      sizing="normal"
+                                      stacked={false}
+                                      style={Object {}}
+                                      testing={true}
+                                      text="test title"
+                                      theme={null}
+                                      title="test title"
+                                      tooltip=""
+                                      top=""
+                                      useedit={false}
+                                      visible={false}
+                                      widget={null}
+                                      width=""
+                                      xcss={
+                                        Array [
+                                          "
+	text-align: left;
+	flex: 5;
+",
+                                        ]
+                                      }
                                     >
-                                      test title
-                                    </span>
-                                  </styled.span>
-                                </ThemeProvider>
-                              </Wrapper>
-                            </Label>
-                          </Styled(Label)>
-                        </div>
-                      </styled.div>
-                    </ThemeProvider>
-                  </Wrapper>
-                </Title>
-              </li>
+                                      <ThemeProvider
+                                        theme={
+                                          Object {
+                                            "backgroundColor": "#ffffff",
+                                            "borderColor": "#c0c0c0",
+                                            "color": "#000000",
+                                            "headerBackgroundColor": "#004358",
+                                            "headerForegroundColor": "#ffffff",
+                                            "headerHoverColor": "#ffe11a",
+                                            "hoverColor": "#c0c0c0",
+                                            "inputBorderColor": "#c0c0c0",
+                                            "itemHoverColor": "#bedb39",
+                                            "selectedBackgroundColor": "#1f8a70",
+                                            "selectedForegroundColor": "#ffe11a",
+                                            "titleBarBackgroundColor": "#004358",
+                                            "titleBarForegroundColor": "#ffe11a",
+                                            "tooltipBackgroundColor": "#708090",
+                                            "tooltipForegroundColor": "#ffffff",
+                                            "transitionDelay": "0.5s",
+                                          }
+                                        }
+                                      >
+                                        <styled.span
+                                          className="ui-label ui-title sc-EHOje hLLCNa"
+                                          contentEditable={false}
+                                          disabled={false}
+                                          onBlur={[Function]}
+                                          onClick={[Function]}
+                                          onDoubleClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          onKeyPress={[Function]}
+                                          sizing="normal"
+                                          style={Object {}}
+                                          suppressContentEditableWarning={true}
+                                          visible={false}
+                                        >
+                                          <StyledComponent
+                                            className="ui-label ui-title sc-EHOje hLLCNa"
+                                            contentEditable={false}
+                                            disabled={false}
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-htpNat",
+                                                  "isStatic": false,
+                                                  "lastClassName": "bUAzux",
+                                                  "rules": Array [
+                                                    "
+	background-color: inherit;
+
+	",
+                                                    [Function],
+                                                    "
+	",
+                                                    [Function],
+                                                    "
+	",
+                                                    [Function],
+                                                    "
+",
+                                                  ],
+                                                },
+                                                "displayName": "styled.span",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-htpNat",
+                                                "target": "span",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={[Function]}
+                                            onBlur={[Function]}
+                                            onClick={[Function]}
+                                            onDoubleClick={[Function]}
+                                            onKeyDown={[Function]}
+                                            onKeyPress={[Function]}
+                                            sizing="normal"
+                                            style={Object {}}
+                                            suppressContentEditableWarning={true}
+                                            visible={false}
+                                          >
+                                            <span
+                                              className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat bUAzux"
+                                              contentEditable={false}
+                                              disabled={false}
+                                              onBlur={[Function]}
+                                              onClick={[Function]}
+                                              onDoubleClick={[Function]}
+                                              onKeyDown={[Function]}
+                                              onKeyPress={[Function]}
+                                              style={Object {}}
+                                              suppressContentEditableWarning={true}
+                                            >
+                                              test title
+                                            </span>
+                                          </StyledComponent>
+                                        </styled.span>
+                                      </ThemeProvider>
+                                    </Wrapper>
+                                  </Label>
+                                </StyledComponent>
+                              </Styled(Label)>
+                            </div>
+                          </StyledComponent>
+                        </styled.div>
+                      </ThemeProvider>
+                    </Wrapper>
+                  </Title>
+                </li>
+              </StyledComponent>
             </styled.li>
           </ThemeProvider>
         </Wrapper>
@@ -1501,6 +1949,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "ListItem",
   "onBlur": [Function],
   "onChange": [Function],
@@ -1559,6 +2008,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="ListItem"
   onBlur={[Function]}
   onChange={[Function]}
@@ -1616,6 +2066,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="ListItem"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1675,6 +2126,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="ListItem"
   onBlur={[Function]}
   onChange={[Function]}
@@ -1732,6 +2184,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="ListItem"
     onBlur={[Function]}
     onChange={[Function]}

@@ -90,18 +90,16 @@ export interface SliderProps extends BaseProps {
 }
 
 export function getDefaultSliderProps(): SliderProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			max: 100,
-			min: 0,
-			obj: 'Slider',
-			onSelect: nilEvent,
-			scale: 1,
-			snap: false,
-			startPosition: 0,
-			ticks: 0
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		max: 100,
+		min: 0,
+		obj: 'Slider',
+		onSelect: nilEvent,
+		scale: 1,
+		snap: false,
+		startPosition: 0,
+		ticks: 0
+	});
 }
 
 export interface SliderState extends BaseState {
@@ -109,10 +107,9 @@ export interface SliderState extends BaseState {
 }
 
 export function getDefaultSliderState(): SliderState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			x: false
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-slider'),
+		x: 0
+	});
 }
 
 export const SliderBar: any = styled.div`
@@ -165,23 +162,19 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	private _mouseDelay: number = 5;
 	private _mouseMove: any = null;
 	private _sliderSize: any;
-	private _tickKeys: Keys;
 	private _ticks: number[] = [];
-	private _width: number = 0;
+	private _tickKeys: Keys;
 
 	constructor(props: SliderProps) {
 		super(props, Slider.defaultProps.style);
 
 		this._tickKeys = new Keys({testing: this.props.testing});
-		this.state = Object.assign(getDefaultSliderState(), {
+		this.state = {...getDefaultSliderState(),
 			x: this.props.startPosition
-		});
+		};
 
 		this._sliderSize = BaseComponent.fontSize();
 		this._mouseMove = debounce(this.handleMouseMove, this._mouseDelay);
-
-		this.componentWillReceiveProps(this.props);
-		this.componentWillUpdate(this.props);
 	}
 
 	get max(): number {
@@ -264,22 +257,16 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		this._box = this._container.getBoundingClientRect();
 	}
 
-	public componentWillReceiveProps(nextProps: SliderProps) {
-		this._width = Math.round((nextProps.max - nextProps.min) * nextProps.scale);
-
-		if (this.props.startPosition !== nextProps.startPosition) {
-			this.setState({
-				x: nextProps.startPosition
-			});
-		}
+	public render() {
+		const width: number = Math.round((this.props.max - this.props.min) * this.props.scale);
 
 		// Builds an array of tick location offsets
 		this._ticks = [];
-		if (nextProps.ticks > 1) {
+		if (this.props.ticks > 1) {
 
 			// the -1 accounts for the start/end tick that will not be part
 			// of the offset or loop
-			const offset: number = this._width / (nextProps.ticks - 1);
+			const offset: number = width / (this.props.ticks - 1);
 			this._ticks.push(0);  // start tick
 
 			for (let i: number = offset; i < this.max; i += offset) {
@@ -288,37 +275,29 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 			this._ticks.push(this.max); // end tick
 		}
-	}
 
-	public static getDerivedStateFromProps(props: SliderProps, state: SliderState) {
-		state.classes.clear();
-		state.classes.add('ui-slider');
-
-		return super.getDerivedStateFromProps(props, state);
-	}
-
-	public render() {
 		return(
 			<Wrapper {...this.props} >
 				<SliderContainer
-					className={this.state.classes}
+					className={this.state.classes.classnames}
 					disabled={this.props.disabled}
 					height={this._sliderSize + (this._borderSize * 4)}
+					style={this.state.style}
 					visible={this.props.visible}
-					width={this._width + this._sliderSize + (this._borderSize * 4)}
+					width={width + this._sliderSize + (this._borderSize * 4)}
 				>
 					<SliderBar
 						className="ui-slider-bar"
 						height={this._sliderSize * 0.25}
 						ref={this.refContainer}
-						width={this._width}
+						width={width}
 					>
 						{this.buildTicks()}
 						<SliderElement
 							className="ui-slider-element"
 							left={this.state.x - (this._sliderSize * 0.5) - this._borderSize}
 							onMouseDown={this.handleMouseDown}
-							sizing={this.state.sizing}
+							sizing={this.props.sizing}
 						/>
 					</SliderBar>
 				</SliderContainer>

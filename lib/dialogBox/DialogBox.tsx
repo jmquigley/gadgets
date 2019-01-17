@@ -74,9 +74,11 @@ import {Icon} from '../icon';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	baseZIndex,
 	Color,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Justify,
 	Sizing,
 	Wrapper
@@ -116,8 +118,14 @@ export function getDefaultDialogBoxProps(): DialogBoxProps {
 	);
 }
 
-export interface DialogBoxState {
+export interface DialogBoxState extends BaseState {
 	showModal?: boolean;
+}
+
+export function getDefaultDialogBoxState(): DialogBoxState {
+	return cloneDeep({...getDefaultBaseState('ui-dialogbox'),
+		showModal: false
+	});
 }
 
 export const ButtonBar: any = styled.div`
@@ -167,6 +175,7 @@ export const StyledIcon: any = styled(Icon)`
 export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 	public static defaultProps: DialogBoxProps = getDefaultDialogBoxProps();
+	public state: DialogBoxState = getDefaultDialogBoxState();
 
 	private _customStyle: any = {
 		content: {
@@ -185,12 +194,6 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 	constructor(props: DialogBoxProps) {
 		super(props, DialogBox.defaultProps.style);
-
-		this._classes.add('ui-dialogbox');
-
-		this.state = {
-			showModal: this.props.show
-		};
 
 		this._icon = {
 			error: (
@@ -276,8 +279,11 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	}
 
 	public static getDerivedStateFromProps(props: DialogBoxProps, state: DialogBoxState) {
-		state.showModal = props.show;
-		return super.getDerivedStateFromProps(props, state);
+		const newState: DialogBoxState = {...state,
+			showModal: props.show
+		};
+
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -292,7 +298,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 					shouldCloseOnOverlayClick={false}
 					style={this._customStyle}
 				>
-					<DialogBoxView className={this.classes}>
+					<DialogBoxView className={this.state.classes.classnames}>
 						<DialogBoxIconView>
 							{this._icon[this.props.dialogType]}
 						</DialogBoxIconView>

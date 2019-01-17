@@ -57,7 +57,7 @@ test('Test a list with ListItem and selection', () => {
 
 	expect(ctl.prop('disabled')).toBe(false);
 	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.find('.ui-list').length).toBe(2);
+	expect(ctl.find('.ui-list').length).toBe(3);
 
 	const li1 = ctl.find(ListItem).first();
 	const li2 = ctl.find(ListItem).last();

@@ -23,6 +23,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "Item",
   "onBlur": [Function],
   "onChange": [Function],
@@ -74,6 +75,7 @@ exports[`Test the creation of a Item control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Item"
   onBlur={[Function]}
   onChange={[Function]}
@@ -137,6 +139,7 @@ exports[`Test the creation of a Item control 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Item"
       onBlur={[Function]}
       onChange={[Function]}
@@ -152,11 +155,7 @@ exports[`Test the creation of a Item control 1`] = `
       selected={false}
       sizing="normal"
       stacked={false}
-      style={
-        Object {
-          "padding": "2px 4px",
-        }
-      }
+      style={Object {}}
       testing={true}
       theme={null}
       title="test title"

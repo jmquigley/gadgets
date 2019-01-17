@@ -66,6 +66,8 @@
 
 'use strict';
 
+// const debug = require('debug')('Title');
+
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
@@ -79,6 +81,7 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	invisible,
+	Sizing,
 	Wrapper
 } from '../shared';
 import styled, {css} from '../shared/themed-components';
@@ -96,23 +99,26 @@ export enum TitleLayout {
 export interface TitleProps extends BaseProps {
 	layout?: TitleLayout;
 	onClick?: any;
+	onUpdate?: any;
 	title?: any;
 	widget?: any;
 }
 
 export function getDefaultTitleProps(): TitleProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			layout: TitleLayout.dominant,
-			obj: 'Title',
-			onClick: nilEvent,
-			widget: null
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		layout: TitleLayout.dominant,
+		obj: 'Title',
+		onClick: nilEvent,
+		onUpdate: nilEvent,
+		widget: null
+	});
 }
 
 export type TitleState = BaseState;
-export const getDefaultTitleState = getDefaultBaseState;
+
+export function getDefaultTitleState(className: string = 'ui-title-bar'): TitleState {
+	return cloneDeep({...getDefaultBaseState(className)});
+}
 
 export const TitleView: any = styled.div`
 	box-sizing: border-box;
@@ -182,15 +188,36 @@ export const WidgetDominantView: any = css`
 	flex: 1;
 `;
 
-const StyledWidget: any = styled.div`
+export const LabelPadding: any = css`
+	padding: ${(props: TitleProps) => {
+		switch (props.sizing) {
+			case Sizing.xxsmall: return('1px 2px');
+			case Sizing.xsmall: return('1px 2px');
+			case Sizing.small: return('2px 4px');
+			case Sizing.large: return('4px 8px');
+			case Sizing.xlarge: return('4px 8px');
+			case Sizing.xxlarge: return('4px 8px');
+
+			case Sizing.normal:
+			default:
+				return('2px 4px');
+		}
+	}};
+
+	${(props: TitleProps) => props.xcss && props.xcss}
+`;
+
+export const StyledWidget: any = styled.div`
 	align-items: center;
 	display: block;
 
-	${(props: TitleProps) => props.xcss && props.xcss}
 	${(props: TitleProps) => props.sizing && fontStyle[props.sizing]}
+	${LabelPadding}
 `;
 
-export const StyledLabel: any = StyledWidget.withComponent(Label);
+export const StyledLabel: any = styled(Label)`
+	${LabelPadding}
+`;
 
 export class Title extends BaseComponent<TitleProps, TitleState> {
 
@@ -202,11 +229,9 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 	}
 
 	public static getDerivedStateFromProps(props: TitleProps, state: TitleState) {
-		state.classes.clear();
-		state.classes.add('ui-title-bar');
-		state.classes.onIf(!props.noripple && !props.disabled)('ripple');
-
-		return super.getDerivedStateFromProps(props, state);
+		const newState: TitleState = {...state};
+		newState.classes.onIf(!props.noripple && !props.disabled)('ripple');
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -215,7 +240,15 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		let widget: any = null;
 		let widgetView: any = null;
 
-		switch (this.props.layout) {
+		// Remove the onUpdate handler from the main props.  This is only passed
+		// down when the title is resolved to a label.  When it's a string the onUpdate
+		// prop should not be attached.
+		const {
+			onUpdate,
+			...props
+		} = this.props;
+
+		switch (props.layout) {
 			case TitleLayout.quarter:
 				titleView = TitleQuarterView;
 				widgetView = WidgetQuarterView;
@@ -248,10 +281,10 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 				break;
 		}
 
-		if (typeof this.props.title === 'string') {
+		if (typeof props.title === 'string') {
 			title = (
 				<StyledLabel
-					{...this.props}
+					{...props}
 					className="ui-title"
 					text={this.props.title}
 					xcss={titleView}
@@ -259,15 +292,19 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 			);
 		} else {
 			title = (
-				<StyledWidget className="ui-title" xcss={titleView}>
+				<StyledWidget
+					{...props}
+					className="ui-title"
+					xcss={titleView}
+				>
 					{this.props.title}
 				</StyledWidget>
 			);
 		}
 
-		if (this.props.layout !== TitleLayout.none && this.props.widget != null) {
+		if (this.props.widget) {
 			widget = (
-				<StyledWidget {...this.props} className="ui-title-widget" xcss={widgetView}>
+				<StyledWidget {...props} className="ui-title-widget" xcss={widgetView}>
 					{this.props.widget}
 				</StyledWidget>
 			);
@@ -279,6 +316,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 					className={this.state.classes.classnames}
 					disabled={this.props.disabled}
 					layout={this.props.layout}
+					sizing={this.props.sizing}
 					style={this.state.style}
 					visible={this.props.visible}
 				>

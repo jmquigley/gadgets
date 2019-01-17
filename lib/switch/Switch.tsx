@@ -88,17 +88,15 @@ export interface SwitchProps extends BaseProps {
 }
 
 export function getDefaultSwitchProps(): SwitchProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			initialToggle: false,
-			innyScale: 0.6,
-			obj: 'Switch',
-			onClick: nilEvent,
-			outyScale: 1.25,
-			sliderScale: 1.25,
-			switchType: SwitchType.outy
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		initialToggle: false,
+		innyScale: 0.6,
+		obj: 'Switch',
+		onClick: nilEvent,
+		outyScale: 1.25,
+		sliderScale: 1.25,
+		switchType: SwitchType.outy
+	});
 }
 
 export interface SwitchState extends BaseState {
@@ -108,12 +106,11 @@ export interface SwitchState extends BaseState {
 }
 
 export function getDefaultSwitchState(): SwitchState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			buttonStyles: new ClassNames(),
-			sliderStyles: new ClassNames(),
-			toggle: false
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-switch'),
+		buttonStyles: new ClassNames('ui-switch-button'),
+		sliderStyles: new ClassNames('ui-switch-slider'),
+		toggle: false
+	});
 }
 
 export const StyledButton: any = styled.div`
@@ -159,9 +156,9 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 	constructor(props: SwitchProps) {
 		super(props, Switch.defaultProps.style);
 
-		this.state = Object.assign(getDefaultSwitchState(), {
+		this.state = {...getDefaultSwitchState(),
 			toggle: this.props.initialToggle
-		});
+		};
 	}
 
 	@autobind
@@ -174,24 +171,19 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 	}
 
 	public static getDerivedStateFromProps(props: SwitchProps, state: SwitchState) {
-		state.classes.clear();
-		state.classes.add('ui-switch');
+		const newState: SwitchState = {...state};
 
-		state.buttonStyles.clear();
-		state.buttonStyles.add('ui-switch-button');
-		state.buttonStyles.onIf(!props.noripple && !props.disabled)(
+		newState.buttonStyles.onIf(!props.noripple && !props.disabled)(
 			'ripple'
 		);
 
-		state.sliderStyles.clear();
-		state.sliderStyles.add('ui-switch-slider');
-		state.sliderStyles.onIfElse(state.toggle)(
+		newState.sliderStyles.onIfElse(newState.toggle)(
 			'ui-slider-on'
 		)(
 			'ui-slider-off'
 		);
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -200,17 +192,18 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 
 		if (this.props.switchType === SwitchType.outy) {
 			left = this.state.toggle ? '-15%' : '45%';
-			size = BaseComponent.fontSizePX(this.state.sizing, this.props.outyScale);
+			size = BaseComponent.fontSizePX(this.props.sizing, this.props.outyScale);
 		} else if (this.props.switchType === SwitchType.inny) {
 			left = this.state.toggle ? '5%' : '60%';
-			size = BaseComponent.fontSizePX(this.state.sizing, this.props.innyScale);
+			size = BaseComponent.fontSizePX(this.props.sizing, this.props.innyScale);
 		}
 
 		return (
 			<Wrapper {...this.props} >
 				<SliderContainerView
-					className={this.classes}
-					height={BaseComponent.fontSizePX(this.state.sizing, this.props.sliderScale)}
+					className={this.state.classes.classnames}
+					height={BaseComponent.fontSizePX(this.props.sizing, this.props.sliderScale)}
+					style={this.state.style}
 				>
 					<SliderView
 						{...this.props}

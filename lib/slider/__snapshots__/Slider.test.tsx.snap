@@ -20,6 +20,7 @@ exports[`Test creation of a simple Slider control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Slider"
   onSelect={[Function]}
   padding=""
@@ -57,6 +58,7 @@ exports[`Test creation of a simple Slider control 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Slider"
     onError={[Function]}
     onSelect={[Function]}
@@ -103,106 +105,485 @@ exports[`Test creation of a simple Slider control 1`] = `
         className="ui-slider"
         disabled={false}
         height={20}
+        style={Object {}}
         visible={true}
         width={118}
       >
-        <div
-          className="ui-slider sc-htpNat KQfGP"
+        <StyledComponent
+          className="ui-slider"
           disabled={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-dfVpRl",
+                "isStatic": false,
+                "lastClassName": "gAGSA",
+                "rules": Array [
+                  "
+	display: inline-block;
+	height: ",
+                  [Function],
+                  "px;
+	position: relative;
+	width: ",
+                  [Function],
+                  "px;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-dfVpRl",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height={20}
+          style={Object {}}
+          visible={true}
           width={118}
         >
-          <styled.div
-            className="ui-slider-bar"
-            height={4}
-            innerRef={[Function]}
-            width={98}
+          <div
+            className="ui-slider sc-dfVpRl gAGSA"
+            disabled={false}
+            height={20}
+            style={Object {}}
+            width={118}
           >
-            <div
-              className="ui-slider-bar sc-bwzfXH leykRn"
+            <styled.div
+              className="ui-slider-bar"
               height={4}
               width={98}
             >
-              <styled.div
-                className="ui-slider-tick"
-                id="0"
-                key="0"
-                left={-1}
+              <StyledComponent
+                className="ui-slider-bar"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-gxMtzJ",
+                      "isStatic": false,
+                      "lastClassName": "cJvurB",
+                      "rules": Array [
+                        "
+	border: solid 1px ",
+                        [Function],
+                        ";
+	height: ",
+                        [Function],
+                        "px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: ",
+                        [Function],
+                        "px;
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-gxMtzJ",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={[Function]}
+                height={4}
+                width={98}
               >
                 <div
-                  className="ui-slider-tick sc-ifAKCX cvZUBx"
-                  id="0"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-tick"
-                id="1"
-                key="1"
-                left={23.5}
-              >
-                <div
-                  className="ui-slider-tick sc-ifAKCX cwDhrr"
-                  id="1"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-tick"
-                id="2"
-                key="2"
-                left={48}
-              >
-                <div
-                  className="ui-slider-tick sc-ifAKCX eqsOzF"
-                  id="2"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-tick"
-                id="3"
-                key="3"
-                left={72.5}
-              >
-                <div
-                  className="ui-slider-tick sc-ifAKCX hkmeQv"
-                  id="3"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-tick"
-                id="4"
-                key="4"
-                left={97}
-              >
-                <div
-                  className="ui-slider-tick sc-ifAKCX dOrTLF"
-                  id="4"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-tick"
-                id="5"
-                key="5"
-                left={99}
-              >
-                <div
-                  className="ui-slider-tick sc-ifAKCX dFbRIn"
-                  id="5"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-element"
-                left={-9}
-                onMouseDown={[Function]}
-                sizing="normal"
-              >
-                <div
-                  className="ui-slider-element sc-bxivhb iHkWne"
-                  onMouseDown={[Function]}
-                />
-              </styled.div>
-            </div>
-          </styled.div>
-        </div>
+                  className="ui-slider-bar sc-gxMtzJ cJvurB"
+                  height={4}
+                  width={98}
+                >
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="0"
+                    key="0"
+                    left={-1}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "ildLXv",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="0"
+                      left={-1}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf gtNsBS"
+                        id="0"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="1"
+                    key="1"
+                    left={23.5}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "ildLXv",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="1"
+                      left={23.5}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf ehOEhu"
+                        id="1"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="2"
+                    key="2"
+                    left={48}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "ildLXv",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="2"
+                      left={48}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf ckkflG"
+                        id="2"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="3"
+                    key="3"
+                    left={72.5}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "ildLXv",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="3"
+                      left={72.5}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf eYMtbD"
+                        id="3"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="4"
+                    key="4"
+                    left={97}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "ildLXv",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="4"
+                      left={97}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf dnenfs"
+                        id="4"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="5"
+                    key="5"
+                    left={99}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "ildLXv",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="5"
+                      left={99}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf ildLXv"
+                        id="5"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-element"
+                    left={-9}
+                    onMouseDown={[Function]}
+                    sizing="normal"
+                  >
+                    <StyledComponent
+                      className="ui-slider-element"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-gzOgki",
+                            "isStatic": false,
+                            "lastClassName": "ftXvTL",
+                            "rules": Array [
+                              "
+	background-color: ",
+                              [Function],
+                              ";
+	border: solid 1px ",
+                              [Function],
+                              ";
+	left: ",
+                              [Function],
+                              "px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-gzOgki",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      left={-9}
+                      onMouseDown={[Function]}
+                      sizing="normal"
+                    >
+                      <div
+                        className="ui-slider-element sc-gzOgki ftXvTL"
+                        onMouseDown={[Function]}
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>
@@ -229,6 +610,7 @@ exports[`Test disabling a Slider control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Slider"
   onSelect={[Function]}
   padding=""
@@ -266,6 +648,7 @@ exports[`Test disabling a Slider control 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Slider"
     onError={[Function]}
     onSelect={[Function]}
@@ -312,95 +695,434 @@ exports[`Test disabling a Slider control 1`] = `
         className="ui-slider"
         disabled={true}
         height={20}
+        style={Object {}}
         visible={true}
         width={220}
       >
-        <div
-          className="ui-slider sc-htpNat gbjngv"
+        <StyledComponent
+          className="ui-slider"
           disabled={true}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-dfVpRl",
+                "isStatic": false,
+                "lastClassName": "ftEYGs",
+                "rules": Array [
+                  "
+	display: inline-block;
+	height: ",
+                  [Function],
+                  "px;
+	position: relative;
+	width: ",
+                  [Function],
+                  "px;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-dfVpRl",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height={20}
+          style={Object {}}
+          visible={true}
           width={220}
         >
-          <styled.div
-            className="ui-slider-bar"
-            height={4}
-            innerRef={[Function]}
-            width={200}
+          <div
+            className="ui-slider sc-dfVpRl ftEYGs"
+            disabled={true}
+            height={20}
+            style={Object {}}
+            width={220}
           >
-            <div
-              className="ui-slider-bar sc-bwzfXH jZDsMg"
+            <styled.div
+              className="ui-slider-bar"
               height={4}
               width={200}
             >
-              <styled.div
-                className="ui-slider-tick"
-                id="0"
-                key="0"
-                left={-1}
+              <StyledComponent
+                className="ui-slider-bar"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-gxMtzJ",
+                      "isStatic": false,
+                      "lastClassName": "iAumRT",
+                      "rules": Array [
+                        "
+	border: solid 1px ",
+                        [Function],
+                        ";
+	height: ",
+                        [Function],
+                        "px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: ",
+                        [Function],
+                        "px;
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-gxMtzJ",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={[Function]}
+                height={4}
+                width={200}
               >
                 <div
-                  className="ui-slider-tick sc-ifAKCX cvZUBx"
-                  id="0"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-tick"
-                id="1"
-                key="1"
-                left={49}
-              >
-                <div
-                  className="ui-slider-tick sc-ifAKCX viUUz"
-                  id="1"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-tick"
-                id="2"
-                key="2"
-                left={99}
-              >
-                <div
-                  className="ui-slider-tick sc-ifAKCX dFbRIn"
-                  id="2"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-tick"
-                id="3"
-                key="3"
-                left={149}
-              >
-                <div
-                  className="ui-slider-tick sc-ifAKCX bXhMDZ"
-                  id="3"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-tick"
-                id="4"
-                key="4"
-                left={199}
-              >
-                <div
-                  className="ui-slider-tick sc-ifAKCX dLirKH"
-                  id="4"
-                />
-              </styled.div>
-              <styled.div
-                className="ui-slider-element"
-                left={-9}
-                onMouseDown={[Function]}
-                sizing="normal"
-              >
-                <div
-                  className="ui-slider-element sc-bxivhb iHkWne"
-                  onMouseDown={[Function]}
-                />
-              </styled.div>
-            </div>
-          </styled.div>
-        </div>
+                  className="ui-slider-bar sc-gxMtzJ iAumRT"
+                  height={4}
+                  width={200}
+                >
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="0"
+                    key="0"
+                    left={-1}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "hNHEhg",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="0"
+                      left={-1}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf gtNsBS"
+                        id="0"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="1"
+                    key="1"
+                    left={49}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "hNHEhg",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="1"
+                      left={49}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf hckSJP"
+                        id="1"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="2"
+                    key="2"
+                    left={99}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "hNHEhg",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="2"
+                      left={99}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf ildLXv"
+                        id="2"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="3"
+                    key="3"
+                    left={149}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "hNHEhg",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="3"
+                      left={149}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf fXrutC"
+                        id="3"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-tick"
+                    id="4"
+                    key="4"
+                    left={199}
+                  >
+                    <StyledComponent
+                      className="ui-slider-tick"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-iyvyFf",
+                            "isStatic": false,
+                            "lastClassName": "hNHEhg",
+                            "rules": Array [
+                              "
+    background-color: ",
+                              [Function],
+                              ";
+    height: 0.1875rem;
+    left: ",
+                              [Function],
+                              "px;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0.125rem;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-iyvyFf",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="4"
+                      left={199}
+                    >
+                      <div
+                        className="ui-slider-tick sc-iyvyFf hNHEhg"
+                        id="4"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div
+                    className="ui-slider-element"
+                    left={-9}
+                    onMouseDown={[Function]}
+                    sizing="normal"
+                  >
+                    <StyledComponent
+                      className="ui-slider-element"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-gzOgki",
+                            "isStatic": false,
+                            "lastClassName": "ftXvTL",
+                            "rules": Array [
+                              "
+	background-color: ",
+                              [Function],
+                              ";
+	border: solid 1px ",
+                              [Function],
+                              ";
+	left: ",
+                              [Function],
+                              "px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-gzOgki",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      left={-9}
+                      onMouseDown={[Function]}
+                      sizing="normal"
+                    >
+                      <div
+                        className="ui-slider-element sc-gzOgki ftXvTL"
+                        onMouseDown={[Function]}
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>
@@ -428,6 +1150,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "Slider",
   "onSelect": [Function],
   "padding": "",
@@ -468,6 +1191,7 @@ exports[`Test with bad min/max values 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Slider"
   onSelect={[Function]}
   padding=""
@@ -505,6 +1229,7 @@ exports[`Test with bad min/max values 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Slider"
     onError={[Function]}
     onSelect={[Function]}
@@ -551,40 +1276,179 @@ exports[`Test with bad min/max values 1`] = `
         className="ui-slider"
         disabled={false}
         height={20}
+        style={Object {}}
         visible={true}
         width={21}
       >
-        <div
-          className="ui-slider sc-htpNat kDtMwL"
+        <StyledComponent
+          className="ui-slider"
           disabled={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-dfVpRl",
+                "isStatic": false,
+                "lastClassName": "kXafIm",
+                "rules": Array [
+                  "
+	display: inline-block;
+	height: ",
+                  [Function],
+                  "px;
+	position: relative;
+	width: ",
+                  [Function],
+                  "px;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-dfVpRl",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height={20}
+          style={Object {}}
+          visible={true}
           width={21}
         >
-          <styled.div
-            className="ui-slider-bar"
-            height={4}
-            innerRef={[Function]}
-            width={1}
+          <div
+            className="ui-slider sc-dfVpRl kXafIm"
+            disabled={false}
+            height={20}
+            style={Object {}}
+            width={21}
           >
-            <div
-              className="ui-slider-bar sc-bwzfXH cGIFmz"
+            <styled.div
+              className="ui-slider-bar"
               height={4}
               width={1}
             >
-              <styled.div
-                className="ui-slider-element"
-                left={-9}
-                onMouseDown={[Function]}
-                sizing="normal"
+              <StyledComponent
+                className="ui-slider-bar"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-gxMtzJ",
+                      "isStatic": false,
+                      "lastClassName": "gBLaNy",
+                      "rules": Array [
+                        "
+	border: solid 1px ",
+                        [Function],
+                        ";
+	height: ",
+                        [Function],
+                        "px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: ",
+                        [Function],
+                        "px;
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-gxMtzJ",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={[Function]}
+                height={4}
+                width={1}
               >
                 <div
-                  className="ui-slider-element sc-bxivhb iHkWne"
-                  onMouseDown={[Function]}
-                />
-              </styled.div>
-            </div>
-          </styled.div>
-        </div>
+                  className="ui-slider-bar sc-gxMtzJ gBLaNy"
+                  height={4}
+                  width={1}
+                >
+                  <styled.div
+                    className="ui-slider-element"
+                    left={-9}
+                    onMouseDown={[Function]}
+                    sizing="normal"
+                  >
+                    <StyledComponent
+                      className="ui-slider-element"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-gzOgki",
+                            "isStatic": false,
+                            "lastClassName": "ftXvTL",
+                            "rules": Array [
+                              "
+	background-color: ",
+                              [Function],
+                              ";
+	border: solid 1px ",
+                              [Function],
+                              ";
+	left: ",
+                              [Function],
+                              "px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-gzOgki",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      left={-9}
+                      onMouseDown={[Function]}
+                      sizing="normal"
+                    >
+                      <div
+                        className="ui-slider-element sc-gzOgki ftXvTL"
+                        onMouseDown={[Function]}
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>

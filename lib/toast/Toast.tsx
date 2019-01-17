@@ -127,17 +127,16 @@ export interface ToastProps extends BaseProps {
 }
 
 export function getDefaultToastProps(): ToastProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			usebottom: false,
-			decay: true,
-			duration: 3,
-			level: ToastLevel.info,
-			obj: 'Toast',
-			onClick: nilEvent,
-			onClose: nilEvent,
-			show: false
-		}));
+	return cloneDeep({...getDefaultBaseProps(),
+		usebottom: false,
+		decay: true,
+		duration: 3,
+		level: ToastLevel.info,
+		obj: 'Toast',
+		onClick: nilEvent,
+		onClose: nilEvent,
+		show: false
+	});
 }
 
 export interface ToastState extends BaseState {
@@ -145,10 +144,9 @@ export interface ToastState extends BaseState {
 }
 
 export function getDefaultToastState(): ToastState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			visible: false
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-toast'),
+		visible: false
+	});
 }
 
 export const ContentView: any = styled.div`
@@ -225,13 +223,17 @@ export const ToastView: any = styled.div`
 export class Toast extends BaseComponent<ToastProps, ToastState> {
 
 	public static readonly defaultProps: ToastProps = getDefaultToastProps();
-	public state: ToastState = getDefaultToastState();
 
 	private _initialVisibility: boolean = false;
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
 		super(props, Toast.defaultProps.style);
+
+		this.state = {...getDefaultToastState(),
+			visible: props.show
+		};
+
 		this.handleDecay();
 	}
 
@@ -274,11 +276,11 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	}
 
 	public static getDerivedStateFromProps(props: ToastProps, state: ToastState) {
-		state.classes.clear();
-		state.classes.add('ui-toast');
-		state.visible = props.show;
+		const newState: ToastState = {...state,
+			visible: props.show
+		};
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -286,23 +288,23 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 			<Wrapper {...this.props} >
 				<ToastView
 					usebottom={this.props.usebottom}
-					className={this.classes}
+					className={this.state.classes.classnames}
 					disabled={this.props.disabled}
 					level={this.props.level}
-					style={this.inlineStyles}
+					style={this.state.style}
 					xcss={this.state.visible ? Show : Hide}
 					visible={this._initialVisibility}
 				>
 					<ContentView
 						className="ui-toast-content"
-						sizing={this.state.sizing}
+						sizing={this.props.sizing}
 					>
 						<span>{this.props.children}</span>
 					</ContentView>
 					<StyledButton
 						iconName="times"
 						onClick={this.handleClose}
-						sizing={BaseComponent.next(this.state.sizing).type}
+						sizing={BaseComponent.next(this.props.sizing).type}
 						style={{
 							color: 'white'
 						}}

@@ -22,7 +22,7 @@ export function debug(context: string, ...args: any[]) {
 
 /**
  * Takes a variable name and an object and places that name and associated
- * object into the global node space.  If the object is alread in the
+ * object into the global node space.  If the object is already in the
  * global space, then that reference is used and returned.  The replace
  * flag is used to override the current global reference.
  * @param name {string} the name of the variable to store globally

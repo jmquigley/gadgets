@@ -60,8 +60,10 @@ import {nilEvent} from 'util.toolbox';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	fontStyle,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	invisible,
 	Sizing,
 	Wrapper
@@ -78,21 +80,25 @@ export interface OptionGroupProps extends BaseProps {
 	title?: string;
 }
 
-export interface OptionGroupState {
+export function getDefaultOptionGroupProps(): OptionGroupProps {
+	return cloneDeep({...getDefaultBaseProps(),
+		obj: 'OptionGroup',
+		default: '',
+		onSelect: nilEvent,
+		optionType: OptionType.square,
+		options: [],
+		title: ''
+	});
+}
+
+export interface OptionGroupState extends BaseState {
 	options?: OrderedMap<string, boolean>;
 }
 
-export function getDefaultOptionGroupProps(): OptionGroupProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			obj: 'OptionGroup',
-			default: '',
-			onSelect: nilEvent,
-			optionType: OptionType.square,
-			options: [],
-			title: ''
-		})
-	);
+export function getDefaultOptionGroupState(): OptionGroupState {
+	return cloneDeep({...getDefaultBaseState('ui-option-group'),
+		options: null
+	});
 }
 
 export const StyledOptionGroup: any = styled.div`
@@ -151,12 +157,9 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 	constructor(props: OptionGroupProps) {
 		super(props, OptionGroup.defaultProps.style);
 
-		this._classes.add('ui-option-group');
-		this.state = {
-			options: this.handleOptions(this.props.options, this.props.default)
-		};
-
-		this.componentWillUpdate(this.props);
+ 		this.state = {...getDefaultOptionGroupState(),
+ 			options: this.handleOptions(this.props.options, this.props.default)
+ 		};
 	}
 
 	private buildOptionList() {
@@ -182,6 +185,16 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 	}
 
 	@autobind
+	private handleOptions(labels: string[], selected: string) {
+		let options: OrderedMap<string, boolean> = OrderedMap();
+		for (const label of labels) {
+			options = options.set(label, label === selected);
+		}
+
+		return options;
+	}
+
+	@autobind
 	private handleSelection(toggle: boolean, text: string) {
 		if (!this.props.disabled && this.props.visible) {
 			toggle = toggle;
@@ -193,25 +206,11 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 		}
 	}
 
-	@autobind
-	private handleOptions(labels: string[], selected: string) {
-		let options: OrderedMap<string, boolean> = OrderedMap();
-		for (const label of labels) {
-			options = options.set(label, label === selected);
-		}
-
-		return options;
-	}
-
-	public componentWillReceiveProps(nextProps: OptionGroupProps) {
-		this.setState({options: this.handleOptions(nextProps.options, nextProps.default)});
-	}
-
 	public render() {
 		return(
 			<Wrapper {...this.props} >
 				<StyledOptionGroup
-					className={this.classes}
+					className={this.state.classes.classnames}
 					sizing={this.props.sizing}
 				>
 					<StyledTitle

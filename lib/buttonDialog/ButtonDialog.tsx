@@ -93,9 +93,9 @@ export interface ButtonDialogState extends ButtonState {
 
 export function getDefaultButtonDialogState(): ButtonDialogState {
 	return cloneDeep(Object.assign({},
-		getDefaultButtonState(), {
-			dialogStyles: new ClassNames(),
-			triangleStyles: new ClassNames(),
+		getDefaultButtonState('ui-button-dialog'), {
+			dialogStyles: new ClassNames('ui-dialog-popup'),
+			triangleStyles: new ClassNames('ui-dialog-triangle'),
 			visible: false
 		}));
 }
@@ -205,23 +205,17 @@ export class ButtonDialog extends BaseComponent<ButtonDialogProps, ButtonDialogS
 	}
 
 	public static getDerivedStateFromProps(props: ButtonDialogProps, state: ButtonDialogState) {
-		state.classes.clear();
-		state.dialogStyles.clear();
-		state.triangleStyles.clear();
+		const newState: ButtonDialogState = {...state};
 
-		state.classes.add('ui-button-dialog');
+		if (props.dialogClasses.length > 0) {
+			newState.dialogStyles.add([...props.dialogClasses.slice()]);
+		}
 
-		state.dialogStyles.add([
-			'ui-dialog-popup',
-			...props.dialogClasses.slice()
-		]);
+		if (props.triangleClasses.length > 0) {
+			newState.triangleStyles.add([...props.triangleClasses.slice()]);
+		}
 
-		state.triangleStyles.add([
-			'ui-dialog-triangle',
-			...props.triangleClasses.slice()
-		]);
-
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {

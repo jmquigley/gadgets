@@ -9,7 +9,7 @@ function validate(ctl: any) {
 	expect(ctl).toBeDefined();
 	expect(ctl.prop('disabled')).toBe(false);
 	expect(ctl.prop('visible')).toBe(true);
-	expect(ctl.find('.ui-listitem').length).toBe(8);
+	expect(ctl.find('.ui-listitem').length).toBe(10);
 }
 
 test('Test retrieval of ListItem props object', () => {
@@ -88,8 +88,8 @@ test('Test clicking of the left button on the ListItem control', () => {
 	ctl.find('.ui-button').first().simulate('click');
 	expect(click).toHaveBeenCalled();
 
-	expect(ctl.find('.fa').length).toBe(2);
-	expect(ctl.find('.fa-bath').length).toBe(2);
+	expect(ctl.find('.fa').length).toBe(3);
+	expect(ctl.find('.fa-bath').length).toBe(3);
 });
 
 test('Test clicking of the right button on the ListItem control', () => {
@@ -107,8 +107,8 @@ test('Test clicking of the right button on the ListItem control', () => {
 	ctl.find('.ui-button').last().simulate('click');
 	expect(click).toHaveBeenCalled();
 
-	expect(ctl.find('.fa').length).toBe(2);
-	expect(ctl.find('.fa-bath').length).toBe(2);
+	expect(ctl.find('.fa').length).toBe(3);
+	expect(ctl.find('.fa-bath').length).toBe(3);
 });
 
 test('Test clicking of the title bar area of the ListItem', async () => {
@@ -132,7 +132,7 @@ test('Test clicking of the title bar area of the ListItem', async () => {
 			expect(click).toHaveBeenCalled();
 		})
 		.catch((err: string) => {
-			throw new Error(string);
+			throw new Error(err);
 		});
 });
 

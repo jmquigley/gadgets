@@ -108,6 +108,8 @@
 
 'use strict';
 
+// const debug = require('debug')('TextField');
+
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -145,6 +147,7 @@ export interface TextFieldProps extends Partial<HTMLInputElement> {
 	disabled?: boolean;
 	noborder?: boolean;
 	id?: string;
+	minWidth?: string;
 	onBlur?: any;
 	onChange?: any;
 	onKeyDown?: any;
@@ -165,6 +168,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 	return cloneDeep({
 		disabled: false,
 		id: '',
+		minWidth: '1em',
 		noborder: false,
 		obj: 'TextField',
 		onBlur: nilEvent,
@@ -187,18 +191,19 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 export interface TextFieldState extends BaseState {
 	message: string;
 	messageType: MessageType;
+	minWidth: string;
 	previousText: string;
 	valid: boolean;
 }
 
 export function getDefaultTextFieldState(): TextFieldState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			message: '',
-			messageType: MessageType.none,
-			previousText: '',
-			valid: true
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-textfield'),
+		message: '',
+		messageType: MessageType.none,
+		minWidth: '',
+		previousText: '',
+		valid: true
+	});
 }
 
 const textTypes: any[] = ['text', 'email', 'search', 'password', 'tel', 'url'];
@@ -243,6 +248,7 @@ export const StyledInput: any = styled.input`
 export const TextfieldContainerView: any = styled.div`
 	display: inline-flex;
 	flex-direction: column;
+	min-width: ${(props: TextFieldProps) => props.minWidth};
 	position: relative;
 `;
 
@@ -389,22 +395,19 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	}
 
 	public static getDerivedStateFromProps(props: TextFieldProps, state: TextFieldState) {
-		state.classes.clear();
-		state.classes.add('ui-textfield');
-		state.previousText = props.value || '';
+		const newState: TextFieldState = {...state};
 
 		if ('size' in props) {
-			state.style['minWidth'] = `${(props.size / 2.0) + 3}rem`;
+			newState.minWidth = `${(props.size / 2.0) + 3}rem`;
 		}
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
-		super.buildClassName();
-
 		// Strip out props that the input control cannot recognize or use
 		const {
+			minWidth,
 			noborder,
 			onValidation,
 			useclear,
@@ -442,11 +445,11 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 				<TextfieldContainerView
 					className="ui-textfield-container"
 					id={this.id}
-					style={this.state.style}
+					minWidth={this.state.minWidth}
 				>
 					<TextFieldView
 						disabled={props.disabled}
-						className={this.className}
+						className={this.state.classes.classnames}
 						noborder={this.props.noborder}
 						visible={visible}
 					>
@@ -457,7 +460,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 							onChange={this.handleChange}
 							onKeyDown={this.handleKeyDown}
 							onKeyPress={this.handleKeyPress}
-							sizing={this.state.sizing}
+							sizing={props.sizing}
 							visible={visible}
 						/>
 						{clearBtn}

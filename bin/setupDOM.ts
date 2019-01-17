@@ -1,3 +1,3 @@
 import 'util.string';
-require('../test/helpers/MutationObserver')(global);
-require('../test/helpers/getSelection')(global);
+require('./helpers/MutationObserver')(global);
+require('./helpers/getSelection')(global);

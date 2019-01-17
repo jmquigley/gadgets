@@ -19,8 +19,10 @@ exports[`Test creation of a Title control with bad layout 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
+  onUpdate={[Function]}
   padding=""
   selected={false}
   sizing="normal"
@@ -53,9 +55,11 @@ exports[`Test creation of a Title control with bad layout 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Title"
     onClick={[Function]}
     onError={[Function]}
+    onUpdate={[Function]}
     padding=""
     reset={false}
     selected={false}
@@ -97,59 +101,63 @@ exports[`Test creation of a Title control with bad layout 1`] = `
         className="ui-title-bar ripple"
         disabled={false}
         layout={9999}
+        sizing="normal"
         style={Object {}}
         visible={true}
       >
-        <div
-          className="ui-title-bar ripple sc-htpNat kRNhtA"
+        <StyledComponent
+          className="ui-title-bar ripple"
           disabled={false}
-          style={Object {}}
-        >
-          <Styled(Label)
-            bottom=""
-            className="ui-title"
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            layout={9999}
-            left=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Title"
-            onClick={[Function]}
-            padding=""
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            text="Test label text"
-            theme={null}
-            title="Test label text"
-            tooltip=""
-            top=""
-            visible={true}
-            widget={null}
-            width=""
-            xcss={
-              Array [
-                "
-	text-align: left;
-	flex: 1;
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "dAMKry",
+                "rules": Array [
+                  "
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: ",
+                  [Function],
+                  ";
+	flex-grow: 1;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
 ",
-              ]
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
             }
+          }
+          forwardedRef={null}
+          layout={9999}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <div
+            className="ui-title-bar ripple sc-bxivhb dAMKry"
+            disabled={false}
+            style={Object {}}
           >
-            <Label
+            <Styled(Label)
               bottom=""
-              className="ui-title sc-ifAKCX iOwpyB"
+              className="ui-title"
               contentEditable={false}
               controlled={true}
               direction="right"
@@ -165,14 +173,9 @@ exports[`Test creation of a Title control with bad layout 1`] = `
               noedit={false}
               nohover={false}
               noripple={false}
+              notheme={false}
               obj="Title"
-              onBlur={[Function]}
-              onChange={[Function]}
               onClick={[Function]}
-              onDoubleClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyPress={[Function]}
-              onUpdate={[Function]}
               padding=""
               selected={false}
               sizing="normal"
@@ -183,7 +186,6 @@ exports[`Test creation of a Title control with bad layout 1`] = `
               title="Test label text"
               tooltip=""
               top=""
-              useedit={false}
               visible={true}
               widget={null}
               width=""
@@ -196,9 +198,9 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                 ]
               }
             >
-              <Wrapper
+              <StyledComponent
                 bottom=""
-                className="ui-title sc-ifAKCX iOwpyB"
+                className="ui-title"
                 contentEditable={false}
                 controlled={true}
                 direction="right"
@@ -206,6 +208,43 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                 err={null}
                 errorMessage=""
                 focus={false}
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-EHOje",
+                      "isStatic": false,
+                      "lastClassName": "gFiEfY",
+                      "rules": Array [
+                        "
+	",
+                        "
+	padding: ",
+                        [Function],
+                        ";
+
+	",
+                        [Function],
+                        "
+",
+                        "
+",
+                      ],
+                    },
+                    "defaultStyles": Object {},
+                    "displayName": "Styled(Label)",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-EHOje",
+                    "target": [Function],
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                forwardedRef={null}
                 height=""
                 id=""
                 layout={9999}
@@ -214,17 +253,10 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                notheme={false}
                 obj="Title"
-                onBlur={[Function]}
-                onChange={[Function]}
                 onClick={[Function]}
-                onDoubleClick={[Function]}
-                onError={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onUpdate={[Function]}
                 padding=""
-                reset={false}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -234,7 +266,6 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                 title="Test label text"
                 tooltip=""
                 top=""
-                useedit={false}
                 visible={true}
                 widget={null}
                 width=""
@@ -247,63 +278,216 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                   ]
                 }
               >
-                <ThemeProvider
-                  theme={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "itemHoverColor": "#bedb39",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "titleBarBackgroundColor": "#004358",
-                      "titleBarForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
-                    }
+                <Label
+                  bottom=""
+                  className="ui-title sc-EHOje gFiEfY"
+                  contentEditable={false}
+                  controlled={true}
+                  direction="right"
+                  disabled={false}
+                  err={null}
+                  errorMessage=""
+                  focus={false}
+                  height=""
+                  id=""
+                  layout={9999}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  notheme={false}
+                  obj="Title"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDoubleClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onUpdate={[Function]}
+                  padding=""
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  text="Test label text"
+                  theme={null}
+                  title="Test label text"
+                  tooltip=""
+                  top=""
+                  useedit={false}
+                  visible={true}
+                  widget={null}
+                  width=""
+                  xcss={
+                    Array [
+                      "
+	text-align: left;
+	flex: 1;
+",
+                    ]
                   }
                 >
-                  <styled.span
-                    className="ui-label ui-title sc-ifAKCX iOwpyB"
+                  <Wrapper
+                    bottom=""
+                    className="ui-title sc-EHOje gFiEfY"
                     contentEditable={false}
+                    controlled={true}
+                    direction="right"
                     disabled={false}
-                    innerRef={[Function]}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    layout={9999}
+                    left=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    notheme={false}
+                    obj="Title"
                     onBlur={[Function]}
+                    onChange={[Function]}
                     onClick={[Function]}
                     onDoubleClick={[Function]}
+                    onError={[Function]}
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
+                    onUpdate={[Function]}
+                    padding=""
+                    reset={false}
+                    selected={false}
                     sizing="normal"
                     style={Object {}}
-                    suppressContentEditableWarning={true}
+                    testing={true}
+                    text="Test label text"
+                    theme={null}
+                    title="Test label text"
+                    tooltip=""
+                    top=""
+                    useedit={false}
                     visible={true}
+                    widget={null}
+                    width=""
+                    xcss={
+                      Array [
+                        "
+	text-align: left;
+	flex: 1;
+",
+                      ]
+                    }
                   >
-                    <span
-                      className="ui-label ui-title sc-ifAKCX iOwpyB sc-bwzfXH cEurMc"
-                      contentEditable={false}
-                      disabled={false}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      style={Object {}}
-                      suppressContentEditableWarning={true}
+                    <ThemeProvider
+                      theme={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#c0c0c0",
+                          "color": "#000000",
+                          "headerBackgroundColor": "#004358",
+                          "headerForegroundColor": "#ffffff",
+                          "headerHoverColor": "#ffe11a",
+                          "hoverColor": "#c0c0c0",
+                          "inputBorderColor": "#c0c0c0",
+                          "itemHoverColor": "#bedb39",
+                          "selectedBackgroundColor": "#1f8a70",
+                          "selectedForegroundColor": "#ffe11a",
+                          "titleBarBackgroundColor": "#004358",
+                          "titleBarForegroundColor": "#ffe11a",
+                          "tooltipBackgroundColor": "#708090",
+                          "tooltipForegroundColor": "#ffffff",
+                          "transitionDelay": "0.5s",
+                        }
+                      }
                     >
-                      Test label text
-                    </span>
-                  </styled.span>
-                </ThemeProvider>
-              </Wrapper>
-            </Label>
-          </Styled(Label)>
-        </div>
+                      <styled.span
+                        className="ui-label ui-title sc-EHOje gFiEfY"
+                        contentEditable={false}
+                        disabled={false}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        sizing="normal"
+                        style={Object {}}
+                        suppressContentEditableWarning={true}
+                        visible={true}
+                      >
+                        <StyledComponent
+                          className="ui-label ui-title sc-EHOje gFiEfY"
+                          contentEditable={false}
+                          disabled={false}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-htpNat",
+                                "isStatic": false,
+                                "lastClassName": "eEDiFV",
+                                "rules": Array [
+                                  "
+	background-color: inherit;
+
+	",
+                                  [Function],
+                                  "
+	",
+                                  [Function],
+                                  "
+	",
+                                  [Function],
+                                  "
+",
+                                ],
+                              },
+                              "displayName": "styled.span",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-htpNat",
+                              "target": "span",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={[Function]}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          sizing="normal"
+                          style={Object {}}
+                          suppressContentEditableWarning={true}
+                          visible={true}
+                        >
+                          <span
+                            className="ui-label ui-title sc-EHOje gFiEfY sc-htpNat eEDiFV"
+                            contentEditable={false}
+                            disabled={false}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            style={Object {}}
+                            suppressContentEditableWarning={true}
+                          >
+                            Test label text
+                          </span>
+                        </StyledComponent>
+                      </styled.span>
+                    </ThemeProvider>
+                  </Wrapper>
+                </Label>
+              </StyledComponent>
+            </Styled(Label)>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>
@@ -329,8 +513,10 @@ exports[`Test creation of a Title control with bad layout 2`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
+  onUpdate={[Function]}
   padding=""
   selected={false}
   sizing="normal"
@@ -363,9 +549,11 @@ exports[`Test creation of a Title control with bad layout 2`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Title"
     onClick={[Function]}
     onError={[Function]}
+    onUpdate={[Function]}
     padding=""
     reset={false}
     selected={false}
@@ -407,59 +595,63 @@ exports[`Test creation of a Title control with bad layout 2`] = `
         className="ui-title-bar ripple"
         disabled={false}
         layout={9999}
+        sizing="normal"
         style={Object {}}
         visible={true}
       >
-        <div
-          className="ui-title-bar ripple sc-htpNat kRNhtA"
+        <StyledComponent
+          className="ui-title-bar ripple"
           disabled={false}
-          style={Object {}}
-        >
-          <Styled(Label)
-            bottom=""
-            className="ui-title"
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            layout={9999}
-            left=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Title"
-            onClick={[Function]}
-            padding=""
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            text="Test label text"
-            theme={null}
-            title="Test label text"
-            tooltip=""
-            top=""
-            visible={true}
-            widget={null}
-            width=""
-            xcss={
-              Array [
-                "
-	text-align: left;
-	flex: 1;
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "dAMKry",
+                "rules": Array [
+                  "
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: ",
+                  [Function],
+                  ";
+	flex-grow: 1;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
 ",
-              ]
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
             }
+          }
+          forwardedRef={null}
+          layout={9999}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <div
+            className="ui-title-bar ripple sc-bxivhb dAMKry"
+            disabled={false}
+            style={Object {}}
           >
-            <Label
+            <Styled(Label)
               bottom=""
-              className="ui-title sc-ifAKCX iOwpyB"
+              className="ui-title"
               contentEditable={false}
               controlled={true}
               direction="right"
@@ -475,14 +667,9 @@ exports[`Test creation of a Title control with bad layout 2`] = `
               noedit={false}
               nohover={false}
               noripple={false}
+              notheme={false}
               obj="Title"
-              onBlur={[Function]}
-              onChange={[Function]}
               onClick={[Function]}
-              onDoubleClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyPress={[Function]}
-              onUpdate={[Function]}
               padding=""
               selected={false}
               sizing="normal"
@@ -493,7 +680,6 @@ exports[`Test creation of a Title control with bad layout 2`] = `
               title="Test label text"
               tooltip=""
               top=""
-              useedit={false}
               visible={true}
               widget={null}
               width=""
@@ -506,9 +692,9 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                 ]
               }
             >
-              <Wrapper
+              <StyledComponent
                 bottom=""
-                className="ui-title sc-ifAKCX iOwpyB"
+                className="ui-title"
                 contentEditable={false}
                 controlled={true}
                 direction="right"
@@ -516,6 +702,43 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                 err={null}
                 errorMessage=""
                 focus={false}
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-EHOje",
+                      "isStatic": false,
+                      "lastClassName": "gFiEfY",
+                      "rules": Array [
+                        "
+	",
+                        "
+	padding: ",
+                        [Function],
+                        ";
+
+	",
+                        [Function],
+                        "
+",
+                        "
+",
+                      ],
+                    },
+                    "defaultStyles": Object {},
+                    "displayName": "Styled(Label)",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-EHOje",
+                    "target": [Function],
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                forwardedRef={null}
                 height=""
                 id=""
                 layout={9999}
@@ -524,17 +747,10 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                notheme={false}
                 obj="Title"
-                onBlur={[Function]}
-                onChange={[Function]}
                 onClick={[Function]}
-                onDoubleClick={[Function]}
-                onError={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onUpdate={[Function]}
                 padding=""
-                reset={false}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -544,7 +760,6 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                 title="Test label text"
                 tooltip=""
                 top=""
-                useedit={false}
                 visible={true}
                 widget={null}
                 width=""
@@ -557,63 +772,216 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                   ]
                 }
               >
-                <ThemeProvider
-                  theme={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "itemHoverColor": "#bedb39",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "titleBarBackgroundColor": "#004358",
-                      "titleBarForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
-                    }
+                <Label
+                  bottom=""
+                  className="ui-title sc-EHOje gFiEfY"
+                  contentEditable={false}
+                  controlled={true}
+                  direction="right"
+                  disabled={false}
+                  err={null}
+                  errorMessage=""
+                  focus={false}
+                  height=""
+                  id=""
+                  layout={9999}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  notheme={false}
+                  obj="Title"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDoubleClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onUpdate={[Function]}
+                  padding=""
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  text="Test label text"
+                  theme={null}
+                  title="Test label text"
+                  tooltip=""
+                  top=""
+                  useedit={false}
+                  visible={true}
+                  widget={null}
+                  width=""
+                  xcss={
+                    Array [
+                      "
+	text-align: left;
+	flex: 1;
+",
+                    ]
                   }
                 >
-                  <styled.span
-                    className="ui-label ui-title sc-ifAKCX iOwpyB"
+                  <Wrapper
+                    bottom=""
+                    className="ui-title sc-EHOje gFiEfY"
                     contentEditable={false}
+                    controlled={true}
+                    direction="right"
                     disabled={false}
-                    innerRef={[Function]}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    layout={9999}
+                    left=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    notheme={false}
+                    obj="Title"
                     onBlur={[Function]}
+                    onChange={[Function]}
                     onClick={[Function]}
                     onDoubleClick={[Function]}
+                    onError={[Function]}
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
+                    onUpdate={[Function]}
+                    padding=""
+                    reset={false}
+                    selected={false}
                     sizing="normal"
                     style={Object {}}
-                    suppressContentEditableWarning={true}
+                    testing={true}
+                    text="Test label text"
+                    theme={null}
+                    title="Test label text"
+                    tooltip=""
+                    top=""
+                    useedit={false}
                     visible={true}
+                    widget={null}
+                    width=""
+                    xcss={
+                      Array [
+                        "
+	text-align: left;
+	flex: 1;
+",
+                      ]
+                    }
                   >
-                    <span
-                      className="ui-label ui-title sc-ifAKCX iOwpyB sc-bwzfXH cEurMc"
-                      contentEditable={false}
-                      disabled={false}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      style={Object {}}
-                      suppressContentEditableWarning={true}
+                    <ThemeProvider
+                      theme={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#c0c0c0",
+                          "color": "#000000",
+                          "headerBackgroundColor": "#004358",
+                          "headerForegroundColor": "#ffffff",
+                          "headerHoverColor": "#ffe11a",
+                          "hoverColor": "#c0c0c0",
+                          "inputBorderColor": "#c0c0c0",
+                          "itemHoverColor": "#bedb39",
+                          "selectedBackgroundColor": "#1f8a70",
+                          "selectedForegroundColor": "#ffe11a",
+                          "titleBarBackgroundColor": "#004358",
+                          "titleBarForegroundColor": "#ffe11a",
+                          "tooltipBackgroundColor": "#708090",
+                          "tooltipForegroundColor": "#ffffff",
+                          "transitionDelay": "0.5s",
+                        }
+                      }
                     >
-                      Test label text
-                    </span>
-                  </styled.span>
-                </ThemeProvider>
-              </Wrapper>
-            </Label>
-          </Styled(Label)>
-        </div>
+                      <styled.span
+                        className="ui-label ui-title sc-EHOje gFiEfY"
+                        contentEditable={false}
+                        disabled={false}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        sizing="normal"
+                        style={Object {}}
+                        suppressContentEditableWarning={true}
+                        visible={true}
+                      >
+                        <StyledComponent
+                          className="ui-label ui-title sc-EHOje gFiEfY"
+                          contentEditable={false}
+                          disabled={false}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-htpNat",
+                                "isStatic": false,
+                                "lastClassName": "eEDiFV",
+                                "rules": Array [
+                                  "
+	background-color: inherit;
+
+	",
+                                  [Function],
+                                  "
+	",
+                                  [Function],
+                                  "
+	",
+                                  [Function],
+                                  "
+",
+                                ],
+                              },
+                              "displayName": "styled.span",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-htpNat",
+                              "target": "span",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={[Function]}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          sizing="normal"
+                          style={Object {}}
+                          suppressContentEditableWarning={true}
+                          visible={true}
+                        >
+                          <span
+                            className="ui-label ui-title sc-EHOje gFiEfY sc-htpNat eEDiFV"
+                            contentEditable={false}
+                            disabled={false}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            style={Object {}}
+                            suppressContentEditableWarning={true}
+                          >
+                            Test label text
+                          </span>
+                        </StyledComponent>
+                      </styled.span>
+                    </ThemeProvider>
+                  </Wrapper>
+                </Label>
+              </StyledComponent>
+            </Styled(Label)>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>
@@ -639,9 +1007,11 @@ exports[`Test creation of a Title control with default props 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding=""
   reset={false}
   selected={false}
@@ -661,6 +1031,7 @@ exports[`Test creation of a Title control with default props 1`] = `
     className="ui-title-bar ripple test-class"
     disabled={false}
     layout={5}
+    sizing="normal"
     style={Object {}}
     visible={true}
   >
@@ -682,6 +1053,7 @@ exports[`Test creation of a Title control with default props 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -729,9 +1101,11 @@ exports[`Test creation of a Title control with even layout 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding=""
   reset={false}
   selected={false}
@@ -751,6 +1125,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
     className="ui-title-bar ripple"
     disabled={false}
     layout={1}
+    sizing="normal"
     style={Object {}}
     visible={true}
   >
@@ -772,6 +1147,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -814,6 +1190,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -862,9 +1239,11 @@ exports[`Test creation of a Title control with no layout 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding=""
   reset={false}
   selected={false}
@@ -884,6 +1263,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
     className="ui-title-bar ripple"
     disabled={false}
     layout={6}
+    sizing="normal"
     style={Object {}}
     visible={true}
   >
@@ -905,6 +1285,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -952,9 +1333,11 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding=""
   reset={false}
   selected={false}
@@ -974,6 +1357,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     className="ui-title-bar ripple"
     disabled={false}
     layout={0}
+    sizing="normal"
     style={Object {}}
     visible={true}
   >
@@ -995,6 +1379,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -1037,6 +1422,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -1085,9 +1471,11 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding=""
   reset={false}
   selected={false}
@@ -1107,6 +1495,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     className="ui-title-bar ripple"
     disabled={false}
     layout={4}
+    sizing="normal"
     style={Object {}}
     visible={true}
   >
@@ -1128,6 +1517,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -1169,6 +1559,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -1216,9 +1607,11 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding=""
   reset={false}
   selected={false}
@@ -1238,6 +1631,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     className="ui-title-bar ripple"
     disabled={false}
     layout={3}
+    sizing="normal"
     style={Object {}}
     visible={true}
   >
@@ -1259,6 +1653,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -1301,6 +1696,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -1349,9 +1745,11 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding=""
   reset={false}
   selected={false}
@@ -1371,6 +1769,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     className="ui-title-bar ripple"
     disabled={false}
     layout={2}
+    sizing="normal"
     style={Object {}}
     visible={true}
   >
@@ -1392,6 +1791,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -1434,6 +1834,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Title"
       onClick={[Function]}
       padding=""
@@ -1482,8 +1883,10 @@ exports[`Test disabling the Title control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
+  onUpdate={[Function]}
   padding=""
   selected={false}
   sizing="normal"
@@ -1516,9 +1919,11 @@ exports[`Test disabling the Title control 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Title"
     onClick={[Function]}
     onError={[Function]}
+    onUpdate={[Function]}
     padding=""
     reset={false}
     selected={false}
@@ -1560,59 +1965,63 @@ exports[`Test disabling the Title control 1`] = `
         className="ui-title-bar"
         disabled={true}
         layout={5}
+        sizing="normal"
         style={Object {}}
         visible={true}
       >
-        <div
-          className="ui-title-bar sc-htpNat iDbwhS"
+        <StyledComponent
+          className="ui-title-bar"
           disabled={true}
-          style={Object {}}
-        >
-          <Styled(Label)
-            bottom=""
-            className="ui-title"
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={true}
-            err={null}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            layout={5}
-            left=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Title"
-            onClick={[Function]}
-            padding=""
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            text="Test label text"
-            theme={null}
-            title="Test label text"
-            tooltip=""
-            top=""
-            visible={true}
-            widget={null}
-            width=""
-            xcss={
-              Array [
-                "
-	text-align: left;
-	flex: 5;
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "gsbVwS",
+                "rules": Array [
+                  "
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: ",
+                  [Function],
+                  ";
+	flex-grow: 1;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
 ",
-              ]
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
             }
+          }
+          forwardedRef={null}
+          layout={5}
+          sizing="normal"
+          style={Object {}}
+          visible={true}
+        >
+          <div
+            className="ui-title-bar sc-bxivhb gsbVwS"
+            disabled={true}
+            style={Object {}}
           >
-            <Label
+            <Styled(Label)
               bottom=""
-              className="ui-title sc-ifAKCX kzxgWF"
+              className="ui-title"
               contentEditable={false}
               controlled={true}
               direction="right"
@@ -1628,14 +2037,9 @@ exports[`Test disabling the Title control 1`] = `
               noedit={false}
               nohover={false}
               noripple={false}
+              notheme={false}
               obj="Title"
-              onBlur={[Function]}
-              onChange={[Function]}
               onClick={[Function]}
-              onDoubleClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyPress={[Function]}
-              onUpdate={[Function]}
               padding=""
               selected={false}
               sizing="normal"
@@ -1646,7 +2050,6 @@ exports[`Test disabling the Title control 1`] = `
               title="Test label text"
               tooltip=""
               top=""
-              useedit={false}
               visible={true}
               widget={null}
               width=""
@@ -1659,9 +2062,9 @@ exports[`Test disabling the Title control 1`] = `
                 ]
               }
             >
-              <Wrapper
+              <StyledComponent
                 bottom=""
-                className="ui-title sc-ifAKCX kzxgWF"
+                className="ui-title"
                 contentEditable={false}
                 controlled={true}
                 direction="right"
@@ -1669,6 +2072,43 @@ exports[`Test disabling the Title control 1`] = `
                 err={null}
                 errorMessage=""
                 focus={false}
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-EHOje",
+                      "isStatic": false,
+                      "lastClassName": "hLLCNa",
+                      "rules": Array [
+                        "
+	",
+                        "
+	padding: ",
+                        [Function],
+                        ";
+
+	",
+                        [Function],
+                        "
+",
+                        "
+",
+                      ],
+                    },
+                    "defaultStyles": Object {},
+                    "displayName": "Styled(Label)",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-EHOje",
+                    "target": [Function],
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                forwardedRef={null}
                 height=""
                 id=""
                 layout={5}
@@ -1677,17 +2117,10 @@ exports[`Test disabling the Title control 1`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                notheme={false}
                 obj="Title"
-                onBlur={[Function]}
-                onChange={[Function]}
                 onClick={[Function]}
-                onDoubleClick={[Function]}
-                onError={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onUpdate={[Function]}
                 padding=""
-                reset={false}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -1697,7 +2130,6 @@ exports[`Test disabling the Title control 1`] = `
                 title="Test label text"
                 tooltip=""
                 top=""
-                useedit={false}
                 visible={true}
                 widget={null}
                 width=""
@@ -1710,63 +2142,216 @@ exports[`Test disabling the Title control 1`] = `
                   ]
                 }
               >
-                <ThemeProvider
-                  theme={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "itemHoverColor": "#bedb39",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "titleBarBackgroundColor": "#004358",
-                      "titleBarForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
-                    }
+                <Label
+                  bottom=""
+                  className="ui-title sc-EHOje hLLCNa"
+                  contentEditable={false}
+                  controlled={true}
+                  direction="right"
+                  disabled={true}
+                  err={null}
+                  errorMessage=""
+                  focus={false}
+                  height=""
+                  id=""
+                  layout={5}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  notheme={false}
+                  obj="Title"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDoubleClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onUpdate={[Function]}
+                  padding=""
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  text="Test label text"
+                  theme={null}
+                  title="Test label text"
+                  tooltip=""
+                  top=""
+                  useedit={false}
+                  visible={true}
+                  widget={null}
+                  width=""
+                  xcss={
+                    Array [
+                      "
+	text-align: left;
+	flex: 5;
+",
+                    ]
                   }
                 >
-                  <styled.span
-                    className="ui-label ui-title sc-ifAKCX kzxgWF"
+                  <Wrapper
+                    bottom=""
+                    className="ui-title sc-EHOje hLLCNa"
                     contentEditable={false}
+                    controlled={true}
+                    direction="right"
                     disabled={true}
-                    innerRef={[Function]}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    layout={5}
+                    left=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    notheme={false}
+                    obj="Title"
                     onBlur={[Function]}
+                    onChange={[Function]}
                     onClick={[Function]}
                     onDoubleClick={[Function]}
+                    onError={[Function]}
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
+                    onUpdate={[Function]}
+                    padding=""
+                    reset={false}
+                    selected={false}
                     sizing="normal"
                     style={Object {}}
-                    suppressContentEditableWarning={true}
+                    testing={true}
+                    text="Test label text"
+                    theme={null}
+                    title="Test label text"
+                    tooltip=""
+                    top=""
+                    useedit={false}
                     visible={true}
+                    widget={null}
+                    width=""
+                    xcss={
+                      Array [
+                        "
+	text-align: left;
+	flex: 5;
+",
+                      ]
+                    }
                   >
-                    <span
-                      className="ui-label ui-title sc-ifAKCX kzxgWF sc-bwzfXH gfZwc"
-                      contentEditable={false}
-                      disabled={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      style={Object {}}
-                      suppressContentEditableWarning={true}
+                    <ThemeProvider
+                      theme={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#c0c0c0",
+                          "color": "#000000",
+                          "headerBackgroundColor": "#004358",
+                          "headerForegroundColor": "#ffffff",
+                          "headerHoverColor": "#ffe11a",
+                          "hoverColor": "#c0c0c0",
+                          "inputBorderColor": "#c0c0c0",
+                          "itemHoverColor": "#bedb39",
+                          "selectedBackgroundColor": "#1f8a70",
+                          "selectedForegroundColor": "#ffe11a",
+                          "titleBarBackgroundColor": "#004358",
+                          "titleBarForegroundColor": "#ffe11a",
+                          "tooltipBackgroundColor": "#708090",
+                          "tooltipForegroundColor": "#ffffff",
+                          "transitionDelay": "0.5s",
+                        }
+                      }
                     >
-                      Test label text
-                    </span>
-                  </styled.span>
-                </ThemeProvider>
-              </Wrapper>
-            </Label>
-          </Styled(Label)>
-        </div>
+                      <styled.span
+                        className="ui-label ui-title sc-EHOje hLLCNa"
+                        contentEditable={false}
+                        disabled={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        sizing="normal"
+                        style={Object {}}
+                        suppressContentEditableWarning={true}
+                        visible={true}
+                      >
+                        <StyledComponent
+                          className="ui-label ui-title sc-EHOje hLLCNa"
+                          contentEditable={false}
+                          disabled={true}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-htpNat",
+                                "isStatic": false,
+                                "lastClassName": "gjQKzk",
+                                "rules": Array [
+                                  "
+	background-color: inherit;
+
+	",
+                                  [Function],
+                                  "
+	",
+                                  [Function],
+                                  "
+	",
+                                  [Function],
+                                  "
+",
+                                ],
+                              },
+                              "displayName": "styled.span",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-htpNat",
+                              "target": "span",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={[Function]}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          sizing="normal"
+                          style={Object {}}
+                          suppressContentEditableWarning={true}
+                          visible={true}
+                        >
+                          <span
+                            className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat gjQKzk"
+                            contentEditable={false}
+                            disabled={true}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            style={Object {}}
+                            suppressContentEditableWarning={true}
+                          >
+                            Test label text
+                          </span>
+                        </StyledComponent>
+                      </styled.span>
+                    </ThemeProvider>
+                  </Wrapper>
+                </Label>
+              </StyledComponent>
+            </Styled(Label)>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>
@@ -1792,8 +2377,10 @@ exports[`Test making the Title control invisible 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Title"
   onClick={[Function]}
+  onUpdate={[Function]}
   padding=""
   selected={false}
   sizing="normal"
@@ -1826,9 +2413,11 @@ exports[`Test making the Title control invisible 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Title"
     onClick={[Function]}
     onError={[Function]}
+    onUpdate={[Function]}
     padding=""
     reset={false}
     selected={false}
@@ -1870,59 +2459,63 @@ exports[`Test making the Title control invisible 1`] = `
         className="ui-title-bar ripple"
         disabled={false}
         layout={5}
+        sizing="normal"
         style={Object {}}
         visible={false}
       >
-        <div
-          className="ui-title-bar ripple sc-htpNat hKwGDY"
+        <StyledComponent
+          className="ui-title-bar ripple"
           disabled={false}
-          style={Object {}}
-        >
-          <Styled(Label)
-            bottom=""
-            className="ui-title"
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            layout={5}
-            left=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Title"
-            onClick={[Function]}
-            padding=""
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            text="Test label text"
-            theme={null}
-            title="Test label text"
-            tooltip=""
-            top=""
-            visible={false}
-            widget={null}
-            width=""
-            xcss={
-              Array [
-                "
-	text-align: left;
-	flex: 5;
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "cSAToS",
+                "rules": Array [
+                  "
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: ",
+                  [Function],
+                  ";
+	flex-grow: 1;
+
+	",
+                  [Function],
+                  "
+	",
+                  [Function],
+                  "
 ",
-              ]
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
             }
+          }
+          forwardedRef={null}
+          layout={5}
+          sizing="normal"
+          style={Object {}}
+          visible={false}
+        >
+          <div
+            className="ui-title-bar ripple sc-bxivhb cSAToS"
+            disabled={false}
+            style={Object {}}
           >
-            <Label
+            <Styled(Label)
               bottom=""
-              className="ui-title sc-ifAKCX kzxgWF"
+              className="ui-title"
               contentEditable={false}
               controlled={true}
               direction="right"
@@ -1938,14 +2531,9 @@ exports[`Test making the Title control invisible 1`] = `
               noedit={false}
               nohover={false}
               noripple={false}
+              notheme={false}
               obj="Title"
-              onBlur={[Function]}
-              onChange={[Function]}
               onClick={[Function]}
-              onDoubleClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyPress={[Function]}
-              onUpdate={[Function]}
               padding=""
               selected={false}
               sizing="normal"
@@ -1956,7 +2544,6 @@ exports[`Test making the Title control invisible 1`] = `
               title="Test label text"
               tooltip=""
               top=""
-              useedit={false}
               visible={false}
               widget={null}
               width=""
@@ -1969,9 +2556,9 @@ exports[`Test making the Title control invisible 1`] = `
                 ]
               }
             >
-              <Wrapper
+              <StyledComponent
                 bottom=""
-                className="ui-title sc-ifAKCX kzxgWF"
+                className="ui-title"
                 contentEditable={false}
                 controlled={true}
                 direction="right"
@@ -1979,6 +2566,43 @@ exports[`Test making the Title control invisible 1`] = `
                 err={null}
                 errorMessage=""
                 focus={false}
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-EHOje",
+                      "isStatic": false,
+                      "lastClassName": "hLLCNa",
+                      "rules": Array [
+                        "
+	",
+                        "
+	padding: ",
+                        [Function],
+                        ";
+
+	",
+                        [Function],
+                        "
+",
+                        "
+",
+                      ],
+                    },
+                    "defaultStyles": Object {},
+                    "displayName": "Styled(Label)",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-EHOje",
+                    "target": [Function],
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                forwardedRef={null}
                 height=""
                 id=""
                 layout={5}
@@ -1987,17 +2611,10 @@ exports[`Test making the Title control invisible 1`] = `
                 noedit={false}
                 nohover={false}
                 noripple={false}
+                notheme={false}
                 obj="Title"
-                onBlur={[Function]}
-                onChange={[Function]}
                 onClick={[Function]}
-                onDoubleClick={[Function]}
-                onError={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                onUpdate={[Function]}
                 padding=""
-                reset={false}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -2007,7 +2624,6 @@ exports[`Test making the Title control invisible 1`] = `
                 title="Test label text"
                 tooltip=""
                 top=""
-                useedit={false}
                 visible={false}
                 widget={null}
                 width=""
@@ -2020,63 +2636,216 @@ exports[`Test making the Title control invisible 1`] = `
                   ]
                 }
               >
-                <ThemeProvider
-                  theme={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderColor": "#c0c0c0",
-                      "color": "#000000",
-                      "headerBackgroundColor": "#004358",
-                      "headerForegroundColor": "#ffffff",
-                      "headerHoverColor": "#ffe11a",
-                      "hoverColor": "#c0c0c0",
-                      "inputBorderColor": "#c0c0c0",
-                      "itemHoverColor": "#bedb39",
-                      "selectedBackgroundColor": "#1f8a70",
-                      "selectedForegroundColor": "#ffe11a",
-                      "titleBarBackgroundColor": "#004358",
-                      "titleBarForegroundColor": "#ffe11a",
-                      "tooltipBackgroundColor": "#708090",
-                      "tooltipForegroundColor": "#ffffff",
-                      "transitionDelay": "0.5s",
-                    }
+                <Label
+                  bottom=""
+                  className="ui-title sc-EHOje hLLCNa"
+                  contentEditable={false}
+                  controlled={true}
+                  direction="right"
+                  disabled={false}
+                  err={null}
+                  errorMessage=""
+                  focus={false}
+                  height=""
+                  id=""
+                  layout={5}
+                  left=""
+                  location="none"
+                  noedit={false}
+                  nohover={false}
+                  noripple={false}
+                  notheme={false}
+                  obj="Title"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDoubleClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onUpdate={[Function]}
+                  padding=""
+                  selected={false}
+                  sizing="normal"
+                  style={Object {}}
+                  testing={true}
+                  text="Test label text"
+                  theme={null}
+                  title="Test label text"
+                  tooltip=""
+                  top=""
+                  useedit={false}
+                  visible={false}
+                  widget={null}
+                  width=""
+                  xcss={
+                    Array [
+                      "
+	text-align: left;
+	flex: 5;
+",
+                    ]
                   }
                 >
-                  <styled.span
-                    className="ui-label ui-title sc-ifAKCX kzxgWF"
+                  <Wrapper
+                    bottom=""
+                    className="ui-title sc-EHOje hLLCNa"
                     contentEditable={false}
+                    controlled={true}
+                    direction="right"
                     disabled={false}
-                    innerRef={[Function]}
+                    err={null}
+                    errorMessage=""
+                    focus={false}
+                    height=""
+                    id=""
+                    layout={5}
+                    left=""
+                    location="none"
+                    noedit={false}
+                    nohover={false}
+                    noripple={false}
+                    notheme={false}
+                    obj="Title"
                     onBlur={[Function]}
+                    onChange={[Function]}
                     onClick={[Function]}
                     onDoubleClick={[Function]}
+                    onError={[Function]}
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
+                    onUpdate={[Function]}
+                    padding=""
+                    reset={false}
+                    selected={false}
                     sizing="normal"
                     style={Object {}}
-                    suppressContentEditableWarning={true}
+                    testing={true}
+                    text="Test label text"
+                    theme={null}
+                    title="Test label text"
+                    tooltip=""
+                    top=""
+                    useedit={false}
                     visible={false}
+                    widget={null}
+                    width=""
+                    xcss={
+                      Array [
+                        "
+	text-align: left;
+	flex: 5;
+",
+                      ]
+                    }
                   >
-                    <span
-                      className="ui-label ui-title sc-ifAKCX kzxgWF sc-bwzfXH feyPXN"
-                      contentEditable={false}
-                      disabled={false}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDoubleClick={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyPress={[Function]}
-                      style={Object {}}
-                      suppressContentEditableWarning={true}
+                    <ThemeProvider
+                      theme={
+                        Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#c0c0c0",
+                          "color": "#000000",
+                          "headerBackgroundColor": "#004358",
+                          "headerForegroundColor": "#ffffff",
+                          "headerHoverColor": "#ffe11a",
+                          "hoverColor": "#c0c0c0",
+                          "inputBorderColor": "#c0c0c0",
+                          "itemHoverColor": "#bedb39",
+                          "selectedBackgroundColor": "#1f8a70",
+                          "selectedForegroundColor": "#ffe11a",
+                          "titleBarBackgroundColor": "#004358",
+                          "titleBarForegroundColor": "#ffe11a",
+                          "tooltipBackgroundColor": "#708090",
+                          "tooltipForegroundColor": "#ffffff",
+                          "transitionDelay": "0.5s",
+                        }
+                      }
                     >
-                      Test label text
-                    </span>
-                  </styled.span>
-                </ThemeProvider>
-              </Wrapper>
-            </Label>
-          </Styled(Label)>
-        </div>
+                      <styled.span
+                        className="ui-label ui-title sc-EHOje hLLCNa"
+                        contentEditable={false}
+                        disabled={false}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        sizing="normal"
+                        style={Object {}}
+                        suppressContentEditableWarning={true}
+                        visible={false}
+                      >
+                        <StyledComponent
+                          className="ui-label ui-title sc-EHOje hLLCNa"
+                          contentEditable={false}
+                          disabled={false}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-htpNat",
+                                "isStatic": false,
+                                "lastClassName": "bUAzux",
+                                "rules": Array [
+                                  "
+	background-color: inherit;
+
+	",
+                                  [Function],
+                                  "
+	",
+                                  [Function],
+                                  "
+	",
+                                  [Function],
+                                  "
+",
+                                ],
+                              },
+                              "displayName": "styled.span",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-htpNat",
+                              "target": "span",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={[Function]}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDoubleClick={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          sizing="normal"
+                          style={Object {}}
+                          suppressContentEditableWarning={true}
+                          visible={false}
+                        >
+                          <span
+                            className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat bUAzux"
+                            contentEditable={false}
+                            disabled={false}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onDoubleClick={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyPress={[Function]}
+                            style={Object {}}
+                            suppressContentEditableWarning={true}
+                          >
+                            Test label text
+                          </span>
+                        </StyledComponent>
+                      </styled.span>
+                    </ThemeProvider>
+                  </Wrapper>
+                </Label>
+              </StyledComponent>
+            </Styled(Label)>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>
@@ -2103,8 +2872,10 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "Title",
   "onClick": [Function],
+  "onUpdate": [Function],
   "padding": "",
   "selected": false,
   "sizing": "normal",

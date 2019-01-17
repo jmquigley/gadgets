@@ -60,22 +60,23 @@ export interface TriangleProps extends BaseProps {
 }
 
 export function getDefaultTriangleProps(): TriangleProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			direction: Direction.up,
-			nobase: false,
-			obj: 'Triangle',
-			style: {
-				fill: 'black',
-				stroke: 'black',
-				stokeWidth: '2px'
-			}
+	return cloneDeep({...getDefaultBaseProps(),
+		direction: Direction.up,
+		nobase: false,
+		obj: 'Triangle',
+		style: {
+			fill: 'black',
+			stroke: 'black',
+			stokeWidth: '2px'
 		}
-	));
+	});
 }
 
 export type TriangleState = BaseState;
-export const getDefaultTriangleState = getDefaultBaseState;
+
+export function getDefaultTriangleState(): TriangleState {
+	return cloneDeep({...getDefaultBaseState('ui-triangle')});
+}
 
 export const SVGView: any = styled.svg`
 	transform: ${(props: TriangleProps) => {
@@ -99,13 +100,6 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 
 	constructor(props: TriangleProps) {
 		super(props, Triangle.defaultProps.style);
-	}
-
-	public static getDerivedStateFromProps(props: TriangleProps, state: TriangleState) {
-		state.classes.clear();
-		state.classes.add('ui-triangle');
-
-		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {

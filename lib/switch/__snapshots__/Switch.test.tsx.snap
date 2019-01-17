@@ -20,6 +20,7 @@ exports[`Test creation of an inny type Switch 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Switch"
   onClick={[Function]}
   onError={[Function]}
@@ -42,6 +43,7 @@ exports[`Test creation of an inny type Switch 1`] = `
   <styled.div
     className="ui-switch"
     height="20px"
+    style={Object {}}
   >
     <styled.div
       bottom=""
@@ -62,6 +64,7 @@ exports[`Test creation of an inny type Switch 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Switch"
       onClick={[Function]}
       outyScale={1.25}
@@ -119,6 +122,7 @@ exports[`Test creation of an outy type Switch 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Switch"
   onClick={[Function]}
   onError={[Function]}
@@ -141,6 +145,7 @@ exports[`Test creation of an outy type Switch 1`] = `
   <styled.div
     className="ui-switch"
     height="20px"
+    style={Object {}}
   >
     <styled.div
       bottom=""
@@ -161,6 +166,7 @@ exports[`Test creation of an outy type Switch 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Switch"
       onClick={[Function]}
       outyScale={1.25}
@@ -218,6 +224,7 @@ exports[`Test disabling of the Switch control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Switch"
   onClick={[Function]}
   outyScale={1.25}
@@ -254,6 +261,7 @@ exports[`Test disabling of the Switch control 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Switch"
     onClick={[Function]}
     onError={[Function]}
@@ -298,93 +306,269 @@ exports[`Test disabling of the Switch control 1`] = `
       <styled.div
         className="ui-switch"
         height="20px"
+        style={Object {}}
       >
-        <div
-          className="ui-switch sc-bxivhb gEkvMP"
-          height="20px"
-        >
-          <styled.div
-            bottom=""
-            className="ui-switch-slider ui-slider-off"
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={true}
-            err={null}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            initialToggle={false}
-            innyScale={0.6}
-            left=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Switch"
-            onClick={[Function]}
-            outyScale={1.25}
-            padding=""
-            selected={false}
-            sizing="normal"
-            sliderScale={1.25}
-            style={
-              Object {
-                "backgroundColor": "#d9534f",
-              }
+        <StyledComponent
+          className="ui-switch"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-kfGgVZ",
+                "isStatic": false,
+                "lastClassName": "cMbrti",
+                "rules": Array [
+                  "
+	align-items: center;
+	box-sizing: border-box;
+	display: inline-flex;
+	height: ",
+                  [Function],
+                  ";
+	padding: 0 2%;
+	width: auto;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-kfGgVZ",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
             }
-            switchType={1}
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={true}
-            width=""
-            xcss={null}
+          }
+          forwardedRef={null}
+          height="20px"
+          style={Object {}}
+        >
+          <div
+            className="ui-switch sc-kfGgVZ cMbrti"
+            height="20px"
+            style={Object {}}
           >
-            <div
-              className="ui-switch-slider ui-slider-off sc-htpNat fyCqDK"
+            <styled.div
+              bottom=""
+              className="ui-switch-slider ui-slider-off"
               contentEditable={false}
+              controlled={true}
               direction="right"
               disabled={true}
+              err={null}
+              errorMessage=""
+              focus={false}
               height=""
               id=""
+              initialToggle={false}
+              innyScale={0.6}
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              notheme={false}
+              obj="Switch"
               onClick={[Function]}
+              outyScale={1.25}
+              padding=""
               selected={false}
+              sizing="normal"
+              sliderScale={1.25}
               style={
                 Object {
                   "backgroundColor": "#d9534f",
                 }
               }
+              switchType={1}
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={true}
               width=""
+              xcss={null}
             >
-              <styled.div
-                className="ui-switch-button"
-                height="20px"
-                onClick={[Function]}
-                style={
+              <StyledComponent
+                bottom=""
+                className="ui-switch-slider ui-slider-off"
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={true}
+                err={null}
+                errorMessage=""
+                focus={false}
+                forwardedComponent={
                   Object {
-                    "left": "45%",
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-kPVwWT",
+                      "isStatic": false,
+                      "lastClassName": "dPvlJY",
+                      "rules": Array [
+                        "
+	border: 1px solid silver;
+	border-radius: 96px;
+	position: relative;
+
+	",
+                        [Function],
+                        "
+	",
+                        [Function],
+                        "
+	",
+                        [Function],
+                        "
+
+	overflow: unset;
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-kPVwWT",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
                   }
                 }
-                width="20px"
+                forwardedRef={null}
+                height=""
+                id=""
+                initialToggle={false}
+                innyScale={0.6}
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                notheme={false}
+                obj="Switch"
+                onClick={[Function]}
+                outyScale={1.25}
+                padding=""
+                selected={false}
+                sizing="normal"
+                sliderScale={1.25}
+                style={
+                  Object {
+                    "backgroundColor": "#d9534f",
+                  }
+                }
+                switchType={1}
+                testing={true}
+                theme={null}
+                tooltip=""
+                top=""
+                visible={true}
+                width=""
+                xcss={null}
               >
                 <div
-                  className="ui-switch-button sc-bwzfXH blpYHB"
-                  height="20px"
+                  className="ui-switch-slider ui-slider-off sc-kPVwWT dPvlJY"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={true}
+                  height=""
+                  id=""
                   onClick={[Function]}
+                  selected={false}
                   style={
                     Object {
-                      "left": "45%",
+                      "backgroundColor": "#d9534f",
                     }
                   }
-                  width="20px"
-                />
-              </styled.div>
-            </div>
-          </styled.div>
-        </div>
+                  width=""
+                >
+                  <styled.div
+                    className="ui-switch-button"
+                    height="20px"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "left": "45%",
+                      }
+                    }
+                    width="20px"
+                  >
+                    <StyledComponent
+                      className="ui-switch-button"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-hwwEjo",
+                            "isStatic": false,
+                            "lastClassName": "gPMHoX",
+                            "rules": Array [
+                              "
+	background: white;
+	border: 1px solid silver;
+	border-radius: 96px;
+	box-sizing: border-box;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	transition: all ",
+                              [Function],
+                              " ease;
+	transform: translateY(-50%);
+
+	width: ",
+                              [Function],
+                              ";
+	height: ",
+                              [Function],
+                              ";
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-hwwEjo",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      height="20px"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "left": "45%",
+                        }
+                      }
+                      width="20px"
+                    >
+                      <div
+                        className="ui-switch-button sc-hwwEjo gPMHoX"
+                        height="20px"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "left": "45%",
+                          }
+                        }
+                        width="20px"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>
@@ -411,6 +595,7 @@ exports[`Test making the Switch control invisible 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Switch"
   onClick={[Function]}
   outyScale={1.25}
@@ -447,6 +632,7 @@ exports[`Test making the Switch control invisible 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Switch"
     onClick={[Function]}
     onError={[Function]}
@@ -491,93 +677,269 @@ exports[`Test making the Switch control invisible 1`] = `
       <styled.div
         className="ui-switch"
         height="20px"
+        style={Object {}}
       >
-        <div
-          className="ui-switch sc-bxivhb gEkvMP"
-          height="20px"
-        >
-          <styled.div
-            bottom=""
-            className="ui-switch-slider ui-slider-off"
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage=""
-            focus={false}
-            height=""
-            id=""
-            initialToggle={false}
-            innyScale={0.6}
-            left=""
-            location="none"
-            noedit={false}
-            nohover={false}
-            noripple={false}
-            obj="Switch"
-            onClick={[Function]}
-            outyScale={1.25}
-            padding=""
-            selected={false}
-            sizing="normal"
-            sliderScale={1.25}
-            style={
-              Object {
-                "backgroundColor": "#d9534f",
-              }
+        <StyledComponent
+          className="ui-switch"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-kfGgVZ",
+                "isStatic": false,
+                "lastClassName": "cMbrti",
+                "rules": Array [
+                  "
+	align-items: center;
+	box-sizing: border-box;
+	display: inline-flex;
+	height: ",
+                  [Function],
+                  ";
+	padding: 0 2%;
+	width: auto;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-kfGgVZ",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
             }
-            switchType={1}
-            testing={true}
-            theme={null}
-            tooltip=""
-            top=""
-            visible={false}
-            width=""
-            xcss={null}
+          }
+          forwardedRef={null}
+          height="20px"
+          style={Object {}}
+        >
+          <div
+            className="ui-switch sc-kfGgVZ cMbrti"
+            height="20px"
+            style={Object {}}
           >
-            <div
-              className="ui-switch-slider ui-slider-off sc-htpNat iDvcXg"
+            <styled.div
+              bottom=""
+              className="ui-switch-slider ui-slider-off"
               contentEditable={false}
+              controlled={true}
               direction="right"
               disabled={false}
+              err={null}
+              errorMessage=""
+              focus={false}
               height=""
               id=""
+              initialToggle={false}
+              innyScale={0.6}
+              left=""
+              location="none"
+              noedit={false}
+              nohover={false}
+              noripple={false}
+              notheme={false}
+              obj="Switch"
               onClick={[Function]}
+              outyScale={1.25}
+              padding=""
               selected={false}
+              sizing="normal"
+              sliderScale={1.25}
               style={
                 Object {
                   "backgroundColor": "#d9534f",
                 }
               }
+              switchType={1}
+              testing={true}
+              theme={null}
+              tooltip=""
+              top=""
+              visible={false}
               width=""
+              xcss={null}
             >
-              <styled.div
-                className="ui-switch-button ripple"
-                height="20px"
-                onClick={[Function]}
-                style={
+              <StyledComponent
+                bottom=""
+                className="ui-switch-slider ui-slider-off"
+                contentEditable={false}
+                controlled={true}
+                direction="right"
+                disabled={false}
+                err={null}
+                errorMessage=""
+                focus={false}
+                forwardedComponent={
                   Object {
-                    "left": "45%",
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-kPVwWT",
+                      "isStatic": false,
+                      "lastClassName": "jKzGbG",
+                      "rules": Array [
+                        "
+	border: 1px solid silver;
+	border-radius: 96px;
+	position: relative;
+
+	",
+                        [Function],
+                        "
+	",
+                        [Function],
+                        "
+	",
+                        [Function],
+                        "
+
+	overflow: unset;
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-kPVwWT",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
                   }
                 }
-                width="20px"
+                forwardedRef={null}
+                height=""
+                id=""
+                initialToggle={false}
+                innyScale={0.6}
+                left=""
+                location="none"
+                noedit={false}
+                nohover={false}
+                noripple={false}
+                notheme={false}
+                obj="Switch"
+                onClick={[Function]}
+                outyScale={1.25}
+                padding=""
+                selected={false}
+                sizing="normal"
+                sliderScale={1.25}
+                style={
+                  Object {
+                    "backgroundColor": "#d9534f",
+                  }
+                }
+                switchType={1}
+                testing={true}
+                theme={null}
+                tooltip=""
+                top=""
+                visible={false}
+                width=""
+                xcss={null}
               >
                 <div
-                  className="ui-switch-button ripple sc-bwzfXH blpYHB"
-                  height="20px"
+                  className="ui-switch-slider ui-slider-off sc-kPVwWT jKzGbG"
+                  contentEditable={false}
+                  direction="right"
+                  disabled={false}
+                  height=""
+                  id=""
                   onClick={[Function]}
+                  selected={false}
                   style={
                     Object {
-                      "left": "45%",
+                      "backgroundColor": "#d9534f",
                     }
                   }
-                  width="20px"
-                />
-              </styled.div>
-            </div>
-          </styled.div>
-        </div>
+                  width=""
+                >
+                  <styled.div
+                    className="ui-switch-button ripple"
+                    height="20px"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "left": "45%",
+                      }
+                    }
+                    width="20px"
+                  >
+                    <StyledComponent
+                      className="ui-switch-button ripple"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-hwwEjo",
+                            "isStatic": false,
+                            "lastClassName": "gPMHoX",
+                            "rules": Array [
+                              "
+	background: white;
+	border: 1px solid silver;
+	border-radius: 96px;
+	box-sizing: border-box;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	transition: all ",
+                              [Function],
+                              " ease;
+	transform: translateY(-50%);
+
+	width: ",
+                              [Function],
+                              ";
+	height: ",
+                              [Function],
+                              ";
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-hwwEjo",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      height="20px"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "left": "45%",
+                        }
+                      }
+                      width="20px"
+                    >
+                      <div
+                        className="ui-switch-button ripple sc-hwwEjo gPMHoX"
+                        height="20px"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "left": "45%",
+                          }
+                        }
+                        width="20px"
+                      />
+                    </StyledComponent>
+                  </styled.div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
       </styled.div>
     </ThemeProvider>
   </Wrapper>
@@ -605,6 +967,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "Switch",
   "onClick": [Function],
   "outyScale": 1.25,
@@ -644,6 +1007,7 @@ exports[`Test the click handler on the Switch control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Switch"
   onClick={[MockFunction]}
   onError={[Function]}
@@ -666,6 +1030,7 @@ exports[`Test the click handler on the Switch control 1`] = `
   <styled.div
     className="ui-switch"
     height="20px"
+    style={Object {}}
   >
     <styled.div
       bottom=""
@@ -686,6 +1051,7 @@ exports[`Test the click handler on the Switch control 1`] = `
       noedit={false}
       nohover={false}
       noripple={false}
+      notheme={false}
       obj="Switch"
       onClick={[Function]}
       outyScale={1.25}

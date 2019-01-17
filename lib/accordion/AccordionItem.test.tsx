@@ -82,9 +82,6 @@ test('Test clicking the AccordionItem header when setting nocollapse', () => {
 		</AccordionItem>
 	);
 
-	console.log(child)
-	console.log(ctl.debug())
-
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 

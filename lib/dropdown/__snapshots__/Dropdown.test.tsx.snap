@@ -36,6 +36,7 @@ exports[`Creation of the Dropdown control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Dropdown"
   onError={[Function]}
   onSelect={[Function]}
@@ -129,6 +130,7 @@ exports[`Disable the Dropdown control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Dropdown"
   onSelect={[MockFunction]}
   padding=""
@@ -178,6 +180,7 @@ exports[`Disable the Dropdown control 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Dropdown"
     onError={[Function]}
     onSelect={[MockFunction]}
@@ -278,8 +281,8 @@ exports[`Disable the Dropdown control 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-kvZOFW",
-                      "isStatic": true,
-                      "lastClassName": "brzxho",
+                      "isStatic": false,
+                      "lastClassName": "feilrf",
                       "rules": Array [
                         "
 	-webkit-appearance: none;
@@ -288,6 +291,13 @@ exports[`Disable the Dropdown control 1`] = `
 	background-repeat: no-repeat;
 	font-size: inherit;
 	height: 100%;
+
+	",
+                        [Function],
+                        "
+	",
+                        [Function],
+                        "
 ",
                       ],
                     },
@@ -314,7 +324,7 @@ exports[`Disable the Dropdown control 1`] = `
                 value="idstr2"
               >
                 <select
-                  className="ui-dropdown sc-kvZOFW brzxho"
+                  className="ui-dropdown sc-kvZOFW feilrf"
                   disabled={true}
                   id="Dropdown-0"
                   onChange={[Function]}
@@ -357,7 +367,7 @@ exports[`Disable the Dropdown control 1`] = `
 `;
 
 exports[`Make the Dropdown control invisible 1`] = `
-<Wrapper
+<Dropdown
   bottom=""
   className=""
   contentEditable={false}
@@ -392,11 +402,10 @@ exports[`Make the Dropdown control invisible 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Dropdown"
-  onError={[Function]}
   onSelect={[MockFunction]}
   padding=""
-  reset={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -408,45 +417,225 @@ exports[`Make the Dropdown control invisible 1`] = `
   width=""
   xcss={null}
 >
-  <styled.div
-    className="ui-dropdown-container"
-    sizing="normal"
-  >
-    <styled.select
-      className="ui-dropdown"
-      disabled={false}
-      id="Dropdown-0"
-      onChange={[Function]}
-      style={
+  <Wrapper
+    bottom=""
+    className=""
+    contentEditable={false}
+    controlled={true}
+    defaultVal="idstr2"
+    direction="right"
+    disabled={false}
+    err={null}
+    errorMessage=""
+    focus={false}
+    height=""
+    id=""
+    initialItem=""
+    items={
+      Array [
         Object {
-          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
-          "paddingLeft": "3.2px",
-          "paddingRight": "16px",
+          "label": "lstr1",
+          "value": "idstr1",
+        },
+        Object {
+          "label": "lstr2",
+          "value": "idstr2",
+        },
+        Object {
+          "label": "lstr3",
+          "value": "idstr3",
+        },
+      ]
+    }
+    left=""
+    location="none"
+    noedit={false}
+    nohover={false}
+    noripple={false}
+    notheme={false}
+    obj="Dropdown"
+    onError={[Function]}
+    onSelect={[MockFunction]}
+    padding=""
+    reset={false}
+    selected={false}
+    sizing="normal"
+    style={Object {}}
+    testing={true}
+    theme={null}
+    tooltip=""
+    top=""
+    visible={false}
+    width=""
+    xcss={null}
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#c0c0c0",
+          "color": "#000000",
+          "headerBackgroundColor": "#004358",
+          "headerForegroundColor": "#ffffff",
+          "headerHoverColor": "#ffe11a",
+          "hoverColor": "#c0c0c0",
+          "inputBorderColor": "#c0c0c0",
+          "itemHoverColor": "#bedb39",
+          "selectedBackgroundColor": "#1f8a70",
+          "selectedForegroundColor": "#ffe11a",
+          "titleBarBackgroundColor": "#004358",
+          "titleBarForegroundColor": "#ffe11a",
+          "tooltipBackgroundColor": "#708090",
+          "tooltipForegroundColor": "#ffffff",
+          "transitionDelay": "0.5s",
         }
       }
-      value="idstr2"
     >
-      <option
-        key="0"
-        value="idstr1"
+      <styled.div
+        className="ui-dropdown-container"
+        sizing="normal"
       >
-        lstr1
-      </option>
-      <option
-        key="1"
-        value="idstr2"
-      >
-        lstr2
-      </option>
-      <option
-        key="2"
-        value="idstr3"
-      >
-        lstr3
-      </option>
-    </styled.select>
-  </styled.div>
-</Wrapper>
+        <StyledComponent
+          className="ui-dropdown-container"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-frDJqD",
+                "isStatic": false,
+                "lastClassName": "ifYVnq",
+                "rules": Array [
+                  "
+	position: relative;
+	",
+                  [Function],
+                  ";
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-frDJqD",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          sizing="normal"
+        >
+          <div
+            className="ui-dropdown-container sc-frDJqD ifYVnq"
+          >
+            <styled.select
+              className="ui-dropdown"
+              disabled={false}
+              id="Dropdown-0"
+              onChange={[Function]}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                  "paddingLeft": "3.2px",
+                  "paddingRight": "16px",
+                }
+              }
+              value="idstr2"
+            >
+              <StyledComponent
+                className="ui-dropdown"
+                disabled={false}
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-kvZOFW",
+                      "isStatic": false,
+                      "lastClassName": "dwxOJI",
+                      "rules": Array [
+                        "
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	font-size: inherit;
+	height: 100%;
+
+	",
+                        [Function],
+                        "
+	",
+                        [Function],
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.select",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-kvZOFW",
+                    "target": "select",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                id="Dropdown-0"
+                onChange={[Function]}
+                style={
+                  Object {
+                    "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                    "paddingLeft": "3.2px",
+                    "paddingRight": "16px",
+                  }
+                }
+                value="idstr2"
+              >
+                <select
+                  className="ui-dropdown sc-kvZOFW dwxOJI"
+                  disabled={false}
+                  id="Dropdown-0"
+                  onChange={[Function]}
+                  style={
+                    Object {
+                      "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+                      "paddingLeft": "3.2px",
+                      "paddingRight": "16px",
+                    }
+                  }
+                  value="idstr2"
+                >
+                  <option
+                    key="0"
+                    value="idstr1"
+                  >
+                    lstr1
+                  </option>
+                  <option
+                    key="1"
+                    value="idstr2"
+                  >
+                    lstr2
+                  </option>
+                  <option
+                    key="2"
+                    value="idstr3"
+                  >
+                    lstr3
+                  </option>
+                </select>
+              </StyledComponent>
+            </styled.select>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </ThemeProvider>
+  </Wrapper>
+</Dropdown>
 `;
 
 exports[`Test retrieval of Dropdown props object 1`] = `
@@ -470,6 +659,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "Dropdown",
   "onSelect": [Function],
   "padding": "",
@@ -522,6 +712,7 @@ exports[`Test the Dropdown click event 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Dropdown"
   onSelect={[MockFunction]}
   padding=""
@@ -571,6 +762,7 @@ exports[`Test the Dropdown click event 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Dropdown"
     onError={[Function]}
     onSelect={[MockFunction]}
@@ -671,8 +863,8 @@ exports[`Test the Dropdown click event 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-kvZOFW",
-                      "isStatic": true,
-                      "lastClassName": "brzxho",
+                      "isStatic": false,
+                      "lastClassName": "dwxOJI",
                       "rules": Array [
                         "
 	-webkit-appearance: none;
@@ -681,6 +873,13 @@ exports[`Test the Dropdown click event 1`] = `
 	background-repeat: no-repeat;
 	font-size: inherit;
 	height: 100%;
+
+	",
+                        [Function],
+                        "
+	",
+                        [Function],
+                        "
 ",
                       ],
                     },
@@ -707,7 +906,7 @@ exports[`Test the Dropdown click event 1`] = `
                 value="idstr1"
               >
                 <select
-                  className="ui-dropdown sc-kvZOFW brzxho"
+                  className="ui-dropdown sc-kvZOFW dwxOJI"
                   disabled={false}
                   id="Dropdown-0"
                   onChange={[Function]}

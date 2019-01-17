@@ -59,7 +59,10 @@ export function getDefaultContainerProps(): ContainerProps {
 }
 
 export type ContainerState = BaseState;
-export const getDefaultContainerState = getDefaultBaseState;
+
+export function getDefaultContainerState(): ContainerState {
+	return cloneDeep({...getDefaultBaseState('ui-container')});
+}
 
 export const ContainerView: any = styled.div`
 	padding: 0;
@@ -75,13 +78,6 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 
 	constructor(props: ContainerProps) {
 		super(props);
-	}
-
-	public static getDerivedStateFromProps(props: ContainerProps, state: ContainerState) {
-		state.classes.clear();
-		state.classes.add('ui-container');
-
-		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {

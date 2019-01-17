@@ -18,16 +18,18 @@ import {
 export type ListFooterProps = TitleProps;
 
 export function getDefaultListFooterProps(): TitleProps {
-	return cloneDeep(Object.assign({},
-		getDefaultTitleProps(), {
-			layout: TitleLayout.even,
-			obj: 'ListFooter',
-			title: ''
-		})
-	);
+	return cloneDeep({...getDefaultTitleProps(),
+		layout: TitleLayout.even,
+		obj: 'ListFooter',
+		title: ''
+	});
 }
 
 export type ListFooterState = TitleState;
+
+export function getDefaultListFooterState(): ListFooterState {
+	return({...getDefaultTitleState('ui-list-footer')});
+}
 
 export const ListFooterView: any = styled(Title)`
 	margin: -1px;
@@ -42,17 +44,10 @@ export const ListFooterView: any = styled(Title)`
 export class ListFooter extends BaseComponent<ListFooterProps, ListFooterState> {
 
 	public static defaultProps: ListFooterProps = getDefaultListFooterProps();
-	public state: ListFooterState = getDefaultTitleState();
+	public state: ListFooterState = getDefaultListFooterState();
 
 	constructor(props: ListFooterProps) {
 		super(props, ListFooter.defaultProps.style);
-	}
-
-	public static getDerivedStateFromProps(props: ListFooterProps, state: ListFooterState) {
-		state.classes.clear();
-		state.classes.add('ui-list-footer');
-
-		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {

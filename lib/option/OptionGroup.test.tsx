@@ -1,7 +1,7 @@
 'use strict';
 
 import {EnumValues as ev} from 'enum-values';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {
 	getDefaultOptionGroupProps,
@@ -19,7 +19,7 @@ test('Test retrieval of OptionGroup props object', () => {
 
 for (const sizing of ev.getNames(Sizing)) {
 	test(`Creation of the OptionGroup control (${sizing})`, () => {
-		const ctl = mount(
+		const ctl = shallow(
 			<OptionGroup
 				className="test-class"
 				default="option1"
@@ -28,7 +28,7 @@ for (const sizing of ev.getNames(Sizing)) {
 					'option2',
 					'option3'
 				]}
-				sizing={sizing}
+				sizing={Sizing[sizing]}
 				title="test options"
 			/>
 		);
@@ -39,8 +39,8 @@ for (const sizing of ev.getNames(Sizing)) {
 }
 
 for (const optionType of ev.getValues(OptionType)) {
-	test(`Creation of the OptionGroup control of type (${OptionType[optionType]})`, () => {
-		const ctl = mount(
+	test(`Creation of the OptionGroup control of type (${optionType})`, () => {
+		const ctl = shallow(
 			<OptionGroup
 				className="test-class"
 				default="option1"
@@ -49,7 +49,7 @@ for (const optionType of ev.getValues(OptionType)) {
 					'option2',
 					'option3'
 				]}
-				optionType={optionType}
+				optionType={OptionType[optionType]}
 				title="test options"
 			/>
 		);

@@ -50,7 +50,7 @@ test('Disable the Dropdown control', () => {
 
 test('Make the Dropdown control invisible', () => {
 	const change = jest.fn();
-	const ctl = shallow(
+	const ctl = mount(
 		<Dropdown
 			defaultVal="idstr2"
 			items={testData}

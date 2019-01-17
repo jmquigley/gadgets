@@ -29,7 +29,7 @@ test('Test retrieval of Toolbar props object', () => {
 		expect(ctl).toBeDefined();
 		expect(ctl).toMatchSnapshot();
 	});
-}
+});
 
 test('Test disabling of a Toolbar instance', () => {
 	const ctl = shallow(

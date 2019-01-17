@@ -58,6 +58,7 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
+import {Item} from '../item';
 import {
 	BaseComponent,
 	BaseProps,
@@ -72,7 +73,6 @@ import {
 	Wrapper
 } from '../shared';
 import styled, {css} from '../shared/themed-components';
-import {Title} from '../title';
 
 export interface TabProps extends BaseProps {
 	href?: any;
@@ -84,19 +84,17 @@ export interface TabProps extends BaseProps {
 }
 
 export function getDefaultTabProps(): TabProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			href: {
-				selectHandler: nilEvent
-			},
-			obj: 'Tab',
-			onClick: nilEvent,
-			onClose: nilEvent,
-			orientation: Location.top,
-			selected: false,
-			title: ''
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		href: {
+			selectHandler: nilEvent
+		},
+		obj: 'Tab',
+		onClick: nilEvent,
+		onClose: nilEvent,
+		orientation: Location.top,
+		selected: false,
+		title: ''
+	});
 }
 
 export interface TabState extends BaseState {
@@ -104,10 +102,9 @@ export interface TabState extends BaseState {
 }
 
 export function getDefaultTabState(): TabState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			hidden: false
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-tab'),
+		hidden: false
+	});
 }
 
 export const TabBorderTop: any = css`
@@ -147,8 +144,6 @@ export const TabBorderRight: any = css`
 `;
 
 export const TabView: any = styled.div`
-	background-color: ${(props: TabProps) => props.selected ? props.theme.selectedBackgroundColor : props.theme.backgroundColor};
-	color: ${(props: TabProps) => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
 	cursor: default;
 	display: inline-block;
 	flex-grow: unset;
@@ -164,11 +159,6 @@ export const TabView: any = styled.div`
 
 	.ui-label {
 		padding-left: 4px;
-	}
-
-	.ui-label:hover {
-		color: ${(props: TabProps) => !props.disabled ? props.theme.headerHoverColor : 'unset'} !important;
-		background-color: ${(props: TabProps) => !props.disabled ? props.theme.headerBackgroundColor : 'unset'} !important;
 	}
 
 	.ui-button:hover {
@@ -211,24 +201,24 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	}
 
 	public static getDerivedStateFromProps(props: TabProps, state: TabState) {
-		state.classes.clear();
-		state.classes.add('ui-tab');
+		const newState: TabState = {...state};
+
 		state.classes.onIf(props.selected)('ui-selected');
 
-		if (state.hidden) {
-			state.style = {
+		if (newState.hidden) {
+			newState.style = {
 				display: 'none',
 				minWidth: '',
 				width: ''
 			};
 		} else {
-			state.style = {
-				minWidth: '80px',
+			newState.style = {
+				minWidth: '120px',
 				width: props.width
 			};
 		}
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -244,27 +234,26 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 			<Wrapper {...this.props} >
 				<TabView
 					disabled={this.props.disabled}
-					className={this.classes}
+					className={this.state.classes.classnames}
 					selected={this.props.selected}
-					sizing={this.state.sizing}
-					style={this.inlineStyles}
+					sizing={this.props.sizing}
+					style={this.state.style}
 					visible={this.props.visible}
 					xcss={xcss}
 				>
-					<Title
+					<Item
 						{...this.props}
-						noedit
-						noripple
+						hiddenRightButton={true}
 						onClick={this.handleClick}
-						title={this.props.title}
-						widget={
-							!this.props.disabled &&
+						rightButton={
 							<Button
 								{...this.props}
 								iconName="times"
 								onClick={this.handleClose}
 							/>
 						}
+						title={this.props.title}
+						useedit={false}
 						visible={!this.state.hidden}
 					/>
 				</TabView>

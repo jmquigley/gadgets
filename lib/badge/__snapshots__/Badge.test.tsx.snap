@@ -19,6 +19,7 @@ exports[`Test creation of a Badge control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Badge"
   onClick={[Function]}
   onError={[Function]}
@@ -85,6 +86,7 @@ exports[`Test making the Badge control invisible 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Badge"
   onClick={[Function]}
   onError={[Function]}
@@ -110,25 +112,7 @@ exports[`Test making the Badge control invisible 1`] = `
 >
   <styled.div
     className="ui-badge-container"
-  >
-    <styled.div
-      className="ui-badge"
-      disabled={false}
-      location="topRight"
-      onClick={[Function]}
-      sizing="normal"
-      style={
-        Object {
-          "backgroundColor": "white",
-          "border": "solid 0.125em",
-          "color": "red",
-        }
-      }
-      visible={false}
-    >
-      0
-    </styled.div>
-  </styled.div>
+  />
 </Wrapper>
 `;
 
@@ -152,6 +136,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "Badge",
   "onClick": [Function],
   "padding": "",
@@ -192,6 +177,7 @@ exports[`Test the disabling of a Badge control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Badge"
   onClick={[Function]}
   onError={[Function]}

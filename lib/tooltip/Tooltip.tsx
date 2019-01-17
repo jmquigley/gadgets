@@ -72,17 +72,15 @@ export interface TooltipProps extends BaseProps {
 export function getDefaultTooltipProps(): TooltipProps {
 	const theme = getTheme();
 
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			location: Location.top,
-			obj: 'Tooltip',
-			parent: null,
-			style: {
-				color: theme.tooltipForegroundColor,
-				backgroundColor: theme.tooltipBackgroundColor
-			}
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		location: Location.top,
+		obj: 'Tooltip',
+		parent: null,
+		style: {
+			color: theme.tooltipForegroundColor,
+			backgroundColor: theme.tooltipBackgroundColor
+		}
+	});
 }
 
 export interface TooltipState extends BaseState {
@@ -90,10 +88,9 @@ export interface TooltipState extends BaseState {
 }
 
 export function getDefaultTooltipState(): TooltipState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			show: false
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-tooltip'),
+		show: false
+	});
 }
 
 export const Bottom: any = css`
@@ -299,12 +296,6 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 		}
 	}
 
-	public static getDerivedStateFromProps(props: TooltipProps, state: TooltipState) {
-		state.classes.clear();
-		state.classes.add('ui-tooltip');
-		return super.getDerivedStateFromProps(props, state);
-	}
-
 	public render() {
 		let direction: Direction = Direction.left;
 
@@ -336,27 +327,27 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 		return (
 			<Wrapper {...this.props} >
 				<TooltipView
-					className={this.state.classes}
+					className={this.state.classes.classnames}
 					location={this.props.location}
-					sizing={BaseComponent.prev(this.state.sizing).type}
-					style={this.inlineStyles}
+					sizing={BaseComponent.prev(this.props.sizing).type}
+					style={this.state.style}
 					visible={this.state.show}
 					width={str.length < 25 ? 'unset' : '10em'}
 				>
 					<TootipContentView
 						className="ui-tooltip-content"
-						sizing={BaseComponent.prev(this.state.sizing).type}
-						style={this.inlineStyles}
+						sizing={BaseComponent.prev(this.props.sizing).type}
+						style={this.state.style}
 					>
 						{str}
 					</TootipContentView>
 					<StyledTriangle
 						location={this.props.location}
 						direction={direction}
-						sizing={BaseComponent.prev(this.state.sizing).type}
+						sizing={BaseComponent.prev(this.props.sizing).type}
 						style={{
-							fill: this.inlineStyles['backgroundColor'],
-							stroke: this.inlineStyles['backgroundColor']
+							fill: this.state.style['backgroundColor'],
+							stroke: this.state.style['backgroundColor']
 						}}
 					/>
 				</TooltipView>

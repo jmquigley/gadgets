@@ -68,7 +68,8 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import {nilEvent} from 'util.toolbox';
 import {BaseComponent} from './base';
-import {BaseProps, disabled, invisible} from './props';
+import {BaseProps, disabled, getDefaultBaseProps, invisible} from './props';
+import {BaseState, getDefaultBaseState} from './state';
 import styled, {ThemeProvider} from './themed-components';
 
 export interface WrapperProps extends BaseProps {
@@ -78,17 +79,23 @@ export interface WrapperProps extends BaseProps {
 }
 
 export function getDefaultWrapperProps(): WrapperProps {
-	return cloneDeep(Object.assign({}, {
-			children: null,
-			onError: nilEvent,
-			reset: false
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		children: null,
+		onError: nilEvent,
+		reset: false
+	});
 }
 
-export interface WrapperState {
+export interface WrapperState extends BaseState {
 	error: string;
 	errorInfo: any;
+}
+
+export function getDefaultWrapperState(): WrapperState {
+	return cloneDeep({...getDefaultBaseState('ui-error'),
+		error: '',
+		errorInfo: null
+	});
 }
 
 export const WrapperView: any = styled.div`
@@ -99,21 +106,15 @@ export const WrapperView: any = styled.div`
 export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 
 	public static defaultProps: WrapperProps = getDefaultWrapperProps();
+	public state: WrapperState = getDefaultWrapperState();
 
 	constructor(props: WrapperProps) {
 		super(props, Wrapper.defaultProps.style);
-
-		this._classes.add('ui-error');
-		this.state = {
-			error: '',
-			errorInfo: null
-		};
-
-		this.componentWillUpdate(props);
 	}
 
 	public componentDidCatch(error: any = null, errorInfo: any = null) {
 		const msg = error ? error.toString() : '';
+
 		this.setState({
 			error: msg,
 			errorInfo
@@ -136,11 +137,13 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 	}
 
 	public render() {
+		let content: any = null;
+
 		if (this.state.errorInfo && !this.props.disabled) {
 			let errobj: any = this.props.err;
 			if (errobj == null) {
 				errobj = (
-					<WrapperView className={this.classes}>
+					<WrapperView className={this.state.classes.classnames}>
 						<span className="ui-error-message">Error in component '{this.props.obj}'</span>
 						<details className="ui-error-stack" style={{ whiteSpace: 'pre-wrap' }}>
 							{this.state.error}
@@ -151,17 +154,19 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 				);
 			}
 
+			content = errobj;
+		} else {
+			content = this.props.children;
+		}
+
+		if (this.props.notheme) {
+			return content;
+		} else {
 			return (
 				<ThemeProvider theme={this.theme}>
-					{errobj}
+					{content}
 				</ThemeProvider>
 			);
 		}
-
-		return (
-			<ThemeProvider theme={this.theme}>
-				{this.props.children}
-			</ThemeProvider>
-		);
 	}
 }

@@ -73,14 +73,18 @@ export interface IconProps extends BaseProps {
 }
 
 export function getDefaultIconProps(): IconProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			iconName: 'bomb',
-			imageFile: '',
-			obj: 'Icon',
-			sizing: Sizing.normal
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		iconName: 'bomb',
+		imageFile: '',
+		obj: 'Icon',
+		sizing: Sizing.normal
+	});
+}
+
+export type IconState = BaseState;
+
+export function getDefaultIconState(): IconState {
+	return cloneDeep({...getDefaultBaseState('ui-icon')});
 }
 
 export const FontAwesome: any = styled.i`
@@ -98,25 +102,27 @@ export const Image: any = styled.img`
 	${(props: IconProps) => invisible(props)}
 `;
 
-export class Icon extends BaseComponent<IconProps, BaseState> {
+export class Icon extends BaseComponent<IconProps, IconState> {
 
 	public static readonly defaultProps: IconProps = getDefaultIconProps();
-	public state: BaseState = getDefaultBaseState();
+	public state: IconState = getDefaultIconState();
 
 	constructor(props: IconProps) {
 		super(props);
 	}
 
 	public static getDerivedStateFromProps(props: IconProps, state: BaseState) {
-		state.classes.clear();
-		state.classes.add([
+		const newState: IconState = {...state};
+
+		newState.classes.clear();
+		newState.classes.add([
 			'ui-icon',
 			(props.imageFile === '') && 'fa',
 			(props.imageFile === '') && 'fa-fw',
 			(props.imageFile === '') && `fa-${props.iconName}`
 		]);
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {

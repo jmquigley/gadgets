@@ -29,19 +29,17 @@ export interface ListItemProps extends ItemProps {
 }
 
 export function getDefaultListItemProps(): ListItemProps {
-	return cloneDeep(Object.assign({},
-		getDefaultItemProps(), {
-			href: {
-				selectHandler: nilEvent,
-				sizing: Sizing.normal
-			},
-			obj: 'ListItem',
-			onBlur: nilEvent,
-			onClick: nilEvent,
-			onDoubleClick: nilEvent,
-			onSelect: nilEvent
-		})
-	);
+	return cloneDeep({...getDefaultItemProps(),
+		href: {
+			selectHandler: nilEvent,
+			sizing: Sizing.normal
+		},
+		obj: 'ListItem',
+		onBlur: nilEvent,
+		onClick: nilEvent,
+		onDoubleClick: nilEvent,
+		onSelect: nilEvent
+	});
 }
 
 export interface ListItemState extends ItemState {
@@ -49,10 +47,9 @@ export interface ListItemState extends ItemState {
 }
 
 export function getDefaultListItemState(): ListItemState {
-	return cloneDeep(Object.assign({},
-		getDefaultItemState(), {
-			toggleRipple: false
-		}));
+	return cloneDeep({...getDefaultItemState('ui-listitem'),
+		toggleRipple: false
+	});
 }
 
 export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
@@ -107,13 +104,16 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	@autobind
 	private handleDoubleClick(e: React.MouseEvent<HTMLLIElement>) {
-		// If a double click occurs, then sent a flag preventing the single click
-		// from firing after its timer expires
-		clearTimeout(this._timer);
-		this._preventClick = true;
-		this.setState({toggleRipple: true}, () => {
-			this.props.onDoubleClick(e);
-		});
+		if (!this.props.disabled && this.props.visible) {
+
+			// If a double click occurs, then sent a flag preventing the single click
+			// from firing after its timer expires
+			clearTimeout(this._timer);
+			this._preventClick = true;
+			this.setState({toggleRipple: true}, () => {
+				this.props.onDoubleClick(e);
+			});
+		}
 	}
 
 	@autobind
@@ -132,13 +132,6 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		}
 
 		this.props.onKeyPress(e);
-	}
-
-	public static getDerivedStateFromProps(props: ListItemProps, state: ListItemState) {
-		state.classes.clear();
-		state.classes.add('ui-listitem');
-
-		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {

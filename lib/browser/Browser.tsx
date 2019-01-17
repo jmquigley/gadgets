@@ -72,7 +72,9 @@ import {Divider} from '../divider';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Wrapper
 } from '../shared';
 import styled from '../shared/themed-components';
@@ -88,24 +90,30 @@ export interface BrowserProps extends BaseProps {
 	useparser?: boolean;
 }
 
-export interface BrowserState {
+export function getDefaultBrowserProps(): BrowserProps {
+	return cloneDeep({...getDefaultBaseProps(),
+		home: 'about:blank',
+		notooltips: false,
+		obj: 'Browser',
+		onClip: nilEvent,
+		onOpen: nilEvent,
+		uri: 'about:blank',
+		useparser: false
+	});
+}
+
+export interface BrowserState extends BaseState {
 	search?: string;
 	uri?: string;
 	uriHistory?: List<string>;
 }
 
-export function getDefaultBrowserProps(): BrowserProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			home: 'about:blank',
-			notooltips: false,
-			obj: 'Browser',
-			onClip: nilEvent,
-			onOpen: nilEvent,
-			uri: 'about:blank',
-			useparser: false
-		})
-	);
+export function getDefaultBrowserState(): BrowserState {
+	return cloneDeep({...getDefaultBaseState('ui-browser'),
+		search: '',
+		uri: '',
+		uriHistory: List()
+	});
 }
 
 export const BrowserContainer: any = styled.div`
@@ -185,13 +193,10 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	constructor(props: BrowserProps) {
 		super(props, Browser.defaultProps.style);
 
-		this._classes.add(['ui-browser']);
-
-		const url = this.props.uri || this.props.home || '';
-		this.state = {
-			search: '',
-			uri: url,
-			uriHistory: List(url)
+		const uri: string = this.props.uri || this.props.home || '';
+		this.state = {...getDefaultBrowserState(),
+			uri: uri,
+			uriHistory: List(uri)
 		};
 	}
 
@@ -340,7 +345,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	public render() {
 		return(
 			<Wrapper {...this.props} >
-				<BrowserContainer className={this.classes} >
+				<BrowserContainer className={this.state.classes.classnames} >
 					<BrowserToolbar className="ui-browser-toolbar">
 						<BrowserToolbarButtons>
 							<Button

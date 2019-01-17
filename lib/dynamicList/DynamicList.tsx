@@ -143,8 +143,10 @@ import {
 	BaseProps,
 	BaseState,
 	Color,
+	disabled,
 	getDefaultBaseProps,
 	getDefaultBaseState,
+	invisible,
 	Sizing,
 	SortOrder,
 	Wrapper
@@ -179,30 +181,28 @@ export interface DynamicListProps extends BaseProps {
 }
 
 export function getDefaultDynamicListProps(): DynamicListProps {
-	return cloneDeep(Object.assign(
-		getDefaultBaseProps(), {
-			collapsable: false,
-			errorMessage: '',
-			errorMessageDuration: 5,
-			items: {},
-			layout: TitleLayout.dominant,
-			nocollapse: false,
-			noselect: false,
-			obj: 'DynamicList',
-			onBlur: nilEvent,
-			onClick: nilEvent,
-			onDelete: nilEvent,
-			onError: nilEvent,
-			onFocus: nilEvent,
-			onNew: nilEvent,
-			onSelect: nilEvent,
-			onSort: nilEvent,
-			onUpdate: nilEvent,
-			pageSizes: defaultPageSizes,
-			sortOrder: SortOrder.ascending,
-			title: sp
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		collapsable: false,
+		errorMessage: '',
+		errorMessageDuration: 3,
+		items: {},
+		layout: TitleLayout.dominant,
+		nocollapse: false,
+		noselect: false,
+		obj: 'DynamicList',
+		onBlur: nilEvent,
+		onClick: nilEvent,
+		onDelete: nilEvent,
+		onError: nilEvent,
+		onFocus: nilEvent,
+		onNew: nilEvent,
+		onSelect: nilEvent,
+		onSort: nilEvent,
+		onUpdate: nilEvent,
+		pageSizes: defaultPageSizes,
+		sortOrder: SortOrder.ascending,
+		title: sp
+	});
 }
 
 export interface DynamicListState extends BaseState {
@@ -219,16 +219,27 @@ export interface DynamicListState extends BaseState {
 }
 
 // TODO: add additional init
-export function getDefaultToastState(): DynamicListState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			errorMessage: ''
-		}));
+export function getDefaultDynamicListState(): DynamicListState {
+	return cloneDeep({...getDefaultBaseState('ui-dynamiclist'),
+		errorMessage: '',
+		initialToggle: true,
+		page: 1,
+		pageSize: 0,
+		search: '',
+		showConfirm: false,
+		showError: false,
+		showNew: false,
+		sortOrder: SortOrder.ascending,
+		totalItems: 0
+	});
 }
 
 export const DynamicListContainer: any = styled.div`
 	min-width: 200px;
 	position: relative;
+
+	${(props: DynamicListProps) => disabled(props)}
+	${(props: DynamicListProps) => invisible(props)}
 `;
 
 export const StyledDeleteButton: any = styled(Button)`
@@ -242,6 +253,10 @@ export const StyledDeleteButton: any = styled(Button)`
 
 export const StyledListFooter: any = styled(ListFooter)`
 	padding-left: 3px;
+
+	> .ui-title > .ui-textfield-container {
+		display: flex;
+	}
 `;
 
 export class DynamicList extends BaseComponent<DynamicListProps, DynamicListState> {
@@ -267,24 +282,15 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		super(props, DynamicList.defaultProps.style);
 
 		this._fillerKeys = new Keys({testing: this.props.testing});
-
 		this._footerID = this._fillerKeys.at(this._fillerIdx++);
 		this._pagerID = this._fillerKeys.at(this._fillerIdx++);
-		this._classes.add('ui-dynamiclist');
 
 		for (const [title, widgets] of Object.entries(this.props.items)) {
 			this._listItems[title] = this.createListItem(title, widgets);
 		}
 
-		this.state = {
-			errorMessage: this.props.errorMessage,
-			initialToggle: true,
-			page: 1,
+		this.state = {...getDefaultDynamicListState(),
 			pageSize: this.props.pageSizes[0],
-			search: '',
-			showConfirm: false,
-			showError: this.props.errorMessage !== '',
-			showNew: false,
 			sortOrder: this.props.sortOrder,
 			totalItems: Object.keys(this._listItems).length
 		};
@@ -301,8 +307,6 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				widget={null}
 			/>
 		);
-
-		this.componentWillUpdate(this.props, this.state);
 	}
 
 	private buildListItems() {
@@ -593,30 +597,34 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		};
 	}
 
-	public componentWillReceiveProps(nextProps: DynamicListProps) {
-		const newState: any = {};
+	public static getDerivedStateFromProps(props: DynamicListProps, state: DynamicListState) {
+		const newState: DynamicListState = {...state};
 
-		if (nextProps.sortOrder !== this.state.sortOrder) {
-			newState['sortOrder'] = nextProps.sortOrder;
+		if (props.sortOrder !== state.sortOrder) {
+			newState.sortOrder = props.sortOrder;
 		}
 
-		if (nextProps.errorMessage !== '') {
-			newState['errorMessage'] = nextProps.errorMessage;
-			newState['showError'] = true;
+		if (props.errorMessage !== '') {
+			debug('getDerivedStateFromProps -> errorMessage: %o', props.errorMessage);
+			newState.errorMessage = props.errorMessage;
+			newState.showError = true;
 		}
 
-		// Scan the incoming props and create a ListItem for new items
-		// or update existing
-		newState['totalItems'] = 0;
-		for (const [title, widgets] of Object.entries(nextProps.items)) {
-			this._listItems[title] = this.createListItem(title, widgets);
-			newState['totalItems']++;
-		}
+		newState.totalItems = Object.keys(props.items).length;
 
-		this.setState(newState);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
-	public componentWillUpdate(nextProps: DynamicListProps, nextState: DynamicListState) {
+	/**
+	 * An internal convenience method that updates internal components of the
+	 * the component.  This could all be pasted into render, but I hate making
+	 * large single functions even if react wants to force me to do it.  This
+	 * is a consequence of the updates to the react lifecycle.
+	 *
+	 * @param nextProps {DynamicListProps} the next set of props used to draw the component
+	 * @param nextState {DynamicListState} the current state of the component befoer render
+	 */
+	private _updateWidgets(nextProps: DynamicListProps, nextState: DynamicListState) {
 		// Compute which items should be in the current list
 		const start: number = ((nextState.page - 1) * nextState.pageSize);
 		const end: number = start + nextState.pageSize;
@@ -669,25 +677,32 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				widget={this._pager}
 			/>
 		);
-
-		super.componentWillUpdate(nextProps);
 	}
 
 	public render() {
+		this._updateWidgets(this.props, this.state);
+
+		for (const [title, widgets] of Object.entries(this.props.items)) {
+			this._listItems[title] = this.createListItem(title, widgets);
+		}
+
 		return (
 			<Wrapper {...this.props} >
-				<DynamicListContainer className="ui-dynamiclist-container">
+				<DynamicListContainer
+					className="ui-dynamiclist-container"
+					disabled={this.props.disabled}
+				>
 					<Toast
 						decay={true}
 						duration={this.props.errorMessageDuration}
 						level={ToastLevel.error}
 						onClose={this.handleErrorClose}
 						show={this.state.showError}
-						sizing={BaseComponent.prev(this.state.sizing).type}
+						sizing={BaseComponent.prev(this.props.sizing).type}
 					>
 						{this.state.errorMessage}
 					</Toast>
-					<Accordion className={this.className}>
+					<Accordion className={this.state.classes.classnames}>
 						<AccordionItem
 							initialToggle={this.state.initialToggle}
 							nocollapse={this.props.nocollapse}

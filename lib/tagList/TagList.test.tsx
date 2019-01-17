@@ -2,6 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
+import {SortedList} from 'util.ds';
 import {getDefaultTagListProps, TagList} from '../../dist/bundle';
 
 test('Test retrieval of TagList props object', () => {
@@ -27,7 +28,10 @@ test('Create a new static TagList with 3 tags (a, b, c)', () => {
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c']));
+
+	let tags: SortedList<string> = ctl.state('tags');
+	expect(tags).toBeDefined();
+	expect(tags.array).toEqual(expect.arrayContaining(['a', 'b', 'c']));
 });
 
 test('Create a new static TagList with 3 tags (c, b, a) with no sorting', () => {
@@ -37,7 +41,10 @@ test('Create a new static TagList with 3 tags (c, b, a) with no sorting', () => 
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['c', 'b', 'a']));
+
+	let tags: SortedList<string> = ctl.state('tags');
+	expect(tags).toBeDefined();
+	expect(tags.array).toEqual(expect.arrayContaining(['c', 'b', 'a']));
 });
 
 test('Create a new dynamic TagList by adding a new input', () => {
@@ -58,15 +65,19 @@ test('Create a new dynamic TagList by adding a new input', () => {
 	const input = ctl.find('input');
 	expect(input).toBeDefined();
 
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['b', 'c', 'd']));
+	let tags: SortedList<string> = ctl.state('tags');
+	expect(tags).toBeDefined();
 
+	expect(tags.array).toEqual(expect.arrayContaining(['b', 'c', 'd']));
 	input.simulate('keyPress', {key: 'Enter', target: {value: 'a'}});
 
 	expect(keypress).toHaveBeenCalled();
 	expect(onnew).toHaveBeenCalled();
 	expect(onnew).toHaveBeenCalledWith('a');
 
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c', 'd']));
+	tags = ctl.state('tags');
+	expect(tags).toBeDefined();
+	expect(tags.array).toEqual(expect.arrayContaining(['a', 'b', 'c', 'd']));
 });
 
 test('Try to create a duplicate entry within a dynamic TagList', () => {
@@ -87,12 +98,18 @@ test('Try to create a duplicate entry within a dynamic TagList', () => {
 	const input = ctl.find('input');
 	expect(input).toBeDefined();
 
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['b', 'c', 'd']));
+	let tags: SortedList<string> = ctl.state('tags');
+	expect(tags).toBeDefined();
+
+	expect(tags.array).toEqual(expect.arrayContaining(['b', 'c', 'd']));
 	input.simulate('keyPress', {key: 'Enter', target: {value: 'd'}});
 
 	expect(keypress).toHaveBeenCalled();
 	expect(onnew).not.toHaveBeenCalled();
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['b', 'c', 'd']));
+
+	tags = ctl.state('tags');
+	expect(tags).toBeDefined();
+	expect(tags.array).toEqual(expect.arrayContaining(['b', 'c', 'd']));
 });
 
 test('Create a new dynamic TagList item and cancel creation with escape', () => {
@@ -111,10 +128,16 @@ test('Create a new dynamic TagList item and cancel creation with escape', () => 
 	const input = ctl.find('input');
 	expect(input).toBeDefined();
 
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c']));
+	let tags: SortedList<string> = ctl.state('tags');
+	expect(tags).toBeDefined();
+
+	expect(tags.array).toEqual(expect.arrayContaining(['a', 'b', 'c']));
 	input.simulate('keyDown', {key: 'Escape'});
 	expect(keydown).toHaveBeenCalled();
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c']));
+
+	tags = ctl.state('tags');
+	expect(tags).toBeDefined();
+	expect(tags.array).toEqual(expect.arrayContaining(['a', 'b', 'c']));
 });
 
 test('Remove a tag from a TagList', () => {
@@ -130,11 +153,11 @@ test('Remove a tag from a TagList', () => {
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['a', 'b', 'c']));
-	expect(ctl.find('.ui-button-circle').length).toBe(6);
+	let tags: SortedList<string> = ctl.state('tags');
+	expect(tags).toBeDefined();
+	expect(tags.array).toEqual(expect.arrayContaining(['a', 'b', 'c']));
 
 	const btns = ctl.find('.ui-button');
-	expect(btns.length).toBe(6);
 
 	// show the delete button that will be clicked
 	ctl.find('.ui-tag').at(0).simulate('mouseOver');
@@ -142,29 +165,8 @@ test('Remove a tag from a TagList', () => {
 
 	expect(ondelete).toHaveBeenCalled();
 	expect(ondelete).toHaveBeenCalledWith('a');
-	expect(ctl.state('tags')).toEqual(expect.arrayContaining(['b', 'c']));
-});
 
-test('Test the change/blur events in TagList', () => {
-	const blur = jest.fn();
-	const change = jest.fn();
-	const ctl = mount(
-		<TagList
-			onChange={change}
-			onBlur={blur}
-			useinput
-		/>
-	);
-
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-
-	const input = ctl.find('input');
-	expect(input).toBeDefined();
-
-	input.simulate('change', {target: {value: 'abc'}});
-	expect(ctl.state('inputTextSize')).toBe(3);
-
-	input.simulate('blur', {target: {value: 'abc'}});
-	expect(ctl.state('inputTextSize')).toBe(1);
+	tags = ctl.state('tags');
+	expect(tags).toBeDefined();
+	expect(tags.array).toEqual(expect.arrayContaining(['b', 'c']));
 });

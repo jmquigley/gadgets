@@ -27,7 +27,7 @@ import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from './lib/dialogBo
 import {DialogWindow, getDefaultDialogWindowProps} from './lib/dialogWindow';
 import {Divider, DividerType, getDefaultDividerProps} from './lib/divider';
 import {Dropdown, DropdownOption, getDefaultDropdownProps} from './lib/dropdown';
-import {DynamicList, DynamicListItem} from './lib/dynamicList';
+import {DynamicList, DynamicListItem, getDefaultDynamicListProps} from './lib/dynamicList';
 import {Editor, getDefaultEditorProps} from './lib/editor';
 import {getDefaultIconProps, Icon} from './lib/icon';
 import {getDefaultItemProps, Item} from './lib/item';
@@ -75,7 +75,7 @@ import {
 import {getDefaultSliderProps, Slider} from './lib/slider';
 import {getDefaultSwitchProps, Switch, SwitchType} from './lib/switch';
 import {getDefaultTabContainerProps, getDefaultTabProps, Tab, TabContainer} from './lib/tabs';
-import {getDefaultTagListProps, Tag, TagList} from './lib/tagList';
+import {getDefaultTagListProps, getDefaultTagProps, Tag, TagList} from './lib/tagList';
 import {
 	getDefaultTextFieldProps,
 	TextField,
@@ -89,10 +89,10 @@ import {
 } from './lib/textField';
 import {getDefaultTitleProps, Title, TitleLayout} from './lib/title';
 import {getDefaultToastProps, Toast, ToastLevel} from './lib/toast';
-import {Toolbar} from './lib/toolbar';
+import {getDefaultToolbarProps, Toolbar} from './lib/toolbar';
 import {getDefaultTooltipProps, Tooltip} from './lib/tooltip';
 import {getDefaultTreeviewProps, Treeview, TreeviewItem} from './lib/treeview';
-import {Triangle} from './lib/triangle';
+import {getDefaultTriangleProps, Triangle} from './lib/triangle';
 
 // Themed component classes
 import styled, {
@@ -152,6 +152,7 @@ export {
 	getDefaultDialogWindowProps,
 	getDefaultDividerProps,
 	getDefaultDropdownProps,
+	getDefaultDynamicListProps,
 	getDefaultEditorProps,
 	getDefaultIconProps,
 	getDefaultItemProps,
@@ -170,11 +171,14 @@ export {
 	getDefaultTabContainerProps,
 	getDefaultTabProps,
 	getDefaultTagListProps,
+	getDefaultTagProps,
 	getDefaultTextFieldProps,
 	getDefaultTitleProps,
 	getDefaultToastProps,
+	getDefaultToolbarProps,
 	getDefaultTreeviewProps,
 	getDefaultTooltipProps,
+	getDefaultTriangleProps,
 	getDefaultWrapperProps,
 	getTheme,
 	getThemeList,

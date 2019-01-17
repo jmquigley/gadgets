@@ -2,7 +2,24 @@
 
 exports[`Test creation of a default Wrapper 1`] = `
 <Wrapper
+  bottom=""
   className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  obj="Unknown"
   onError={
     [MockFunction] {
       "calls": Array [
@@ -21,7 +38,18 @@ exports[`Test creation of a default Wrapper 1`] = `
       ],
     }
   }
+  padding=""
   reset={true}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <ThemeProvider
     theme={
@@ -54,18 +82,74 @@ exports[`Test creation of a default Wrapper 1`] = `
 
 exports[`Test creation of the Wrapper props object 1`] = `
 Object {
+  "bottom": "",
   "children": null,
+  "className": "",
+  "contentEditable": false,
+  "controlled": true,
+  "direction": "right",
+  "disabled": false,
+  "err": null,
+  "errorMessage": "",
+  "focus": false,
+  "height": "",
+  "id": "",
+  "left": "",
+  "location": "none",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "notheme": false,
+  "obj": "Unknown",
   "onError": [Function],
+  "padding": "",
   "reset": false,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "testing": true,
+  "theme": null,
+  "tooltip": "",
+  "top": "",
+  "visible": true,
+  "width": "",
+  "xcss": null,
 }
 `;
 
 exports[`Test disabling the Wrapper 1`] = `
 <Wrapper
+  bottom=""
   className="test-class"
+  contentEditable={false}
+  controlled={true}
+  direction="right"
   disabled={true}
+  err={null}
+  errorMessage=""
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  obj="Unknown"
   onError={[MockFunction]}
+  padding=""
   reset={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
+  visible={true}
+  width=""
+  xcss={null}
 >
   <ThemeProvider
     theme={

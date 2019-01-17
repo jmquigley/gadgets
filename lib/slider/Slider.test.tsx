@@ -1,6 +1,6 @@
 'use strict';
 
-import {mount, shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import * as React from 'react';
 import {getDefaultSliderProps, Slider} from '../../dist/bundle';
 

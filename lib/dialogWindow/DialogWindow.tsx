@@ -64,8 +64,10 @@ import {Item} from '../item';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	Color,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Wrapper
 } from '../shared';
 import styled from '../shared/themed-components';
@@ -76,11 +78,6 @@ export interface DialogWindowProps extends BaseProps {
 	onOpen?: any;
 	show?: boolean;
 	title?: string;
-}
-
-export interface DialogWindowState {
-	showModal?: boolean;
-	icon?: any;
 }
 
 export function getDefaultDialogWindowProps(): DialogWindowProps {
@@ -96,6 +93,18 @@ export function getDefaultDialogWindowProps(): DialogWindowProps {
 			width: '400px'
 		})
 	);
+}
+
+export interface DialogWindowState extends BaseState {
+	showModal?: boolean;
+	icon?: any;
+}
+
+export function getDefaultDialogWindowState(): DialogWindowState {
+	return cloneDeep({...getDefaultBaseState('ui-dialogwindow'),
+		showModal: false,
+		icon: null
+	});
 }
 
 export const DialogWindowView: any = styled.div`
@@ -126,6 +135,7 @@ export const StyledDeleteButton: any = styled(Button)`
 export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowState> {
 
 	public static defaultProps: DialogWindowProps = getDefaultDialogWindowProps();
+	public state: DialogWindowState = getDefaultDialogWindowState();
 
 	private _customStyle: any = {
 		content: {
@@ -141,12 +151,6 @@ export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowS
 
 	constructor(props: DialogWindowProps) {
 		super(props, DialogWindow.defaultProps.style);
-
-		this._classes.add('ui-dialogwindow');
-		this.state = {
-			icon: null,
-			showModal: this.props.show
-		};
 	}
 
 	@autobind
@@ -162,12 +166,12 @@ export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowS
 	}
 
 	public static getDerivedStateFromProps(props: DialogWindowProps, state: DialogWindowState) {
-		state.showModal = props.show;
-		if (props.icon) {
-			state.icon = <Icon iconName={props.icon} />;
-		}
+		const newState: DialogWindowState = {...state,
+			icon: <Icon iconName={props.icon} />,
+			showModal: props.show
+		};
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -184,7 +188,7 @@ export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowS
 				>
 					<DialogWindowView
 						{...this.props}
-						className={this.classes}
+						className={this.state.classes.classnames}
 					>
 						<ItemView
 							{...this.props}

@@ -1,6 +1,5 @@
 'use strict';
 
-import {EnumValues as ev} from 'enum-values';
 import {mount} from 'enzyme';
 import * as React from 'react';
 import {
@@ -23,18 +22,22 @@ test('Test retrieval of Breadcrumbs props object', () => {
 	expect(props).toMatchSnapshot();
 });
 
-for (const sizing of ev.getNames(Sizing)) {
-	test(`Create a simple Breadcrumbs control with defaults (${sizing})`, () => {
-		const ctl = mount(
-			<Breadcrumbs
-				items={items}
-				sizing={sizing}
-			/>
-		);
+for (const val in Sizing) {
+	if (Sizing.hasOwnProperty(val)) {
+		const sizing: Sizing = (Sizing as any)[val];
 
-		expect(ctl).toBeDefined();
-		expect(ctl).toMatchSnapshot();
-	});
+		test(`Create a simple Breadcrumbs control with defaults (${sizing})`, () => {
+			const ctl = mount(
+				<Breadcrumbs
+					items={items}
+					sizing={sizing}
+				/>
+			);
+
+			expect(ctl).toBeDefined();
+			expect(ctl).toMatchSnapshot();
+		});
+	}
 }
 
 test('Create a Breadcrumbs component with custom icon and chevron', () => {

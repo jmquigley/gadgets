@@ -19,6 +19,7 @@ exports[`Create a triangle in bottom direction 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Triangle"
   padding=""
   selected={false}
@@ -55,6 +56,7 @@ exports[`Create a triangle in bottom direction 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Triangle"
     onError={[Function]}
     padding=""
@@ -97,7 +99,7 @@ exports[`Create a triangle in bottom direction 1`] = `
         }
       }
     >
-      <Triangle__SVGView
+      <styled.svg
         bottom=""
         className="ui-triangle test-class"
         contentEditable={false}
@@ -115,6 +117,7 @@ exports[`Create a triangle in bottom direction 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="Triangle"
         padding=""
         preserveAspectRatio="xMidYMid meet"
@@ -138,15 +141,61 @@ exports[`Create a triangle in bottom direction 1`] = `
         xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          className="ui-triangle test-class Triangle__SVGView-iDjlpJ kgcoNS"
+        <StyledComponent
+          bottom=""
+          className="ui-triangle test-class"
           contentEditable={false}
+          controlled={true}
           direction="bottom"
           disabled={false}
+          err={null}
+          errorMessage=""
+          focus={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-jTzLTM",
+                "isStatic": false,
+                "lastClassName": "bWSAXN",
+                "rules": Array [
+                  "
+	transform: ",
+                  [Function],
+                  ";
+
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.svg",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-jTzLTM",
+              "target": "svg",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height=""
           id=""
+          left=""
+          location="none"
+          nobase={false}
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          notheme={false}
+          obj="Triangle"
+          padding=""
           preserveAspectRatio="xMidYMid meet"
           selected={false}
+          sizing="large"
           style={
             Object {
               "fill": "red",
@@ -154,16 +203,44 @@ exports[`Create a triangle in bottom direction 1`] = `
               "stroke": "green",
             }
           }
+          testing={true}
+          theme={null}
+          tooltip=""
+          top=""
           version="1.1"
           viewBox="0 0 40 40"
+          visible={true}
           width=""
+          xcss={null}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="0,35, 20,10 40,35"
-          />
-        </svg>
-      </Triangle__SVGView>
+          <svg
+            className="ui-triangle test-class sc-jTzLTM bWSAXN"
+            contentEditable={false}
+            direction="bottom"
+            disabled={false}
+            height=""
+            id=""
+            preserveAspectRatio="xMidYMid meet"
+            selected={false}
+            style={
+              Object {
+                "fill": "red",
+                "stokeWidth": "2px",
+                "stroke": "green",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 40 40"
+            width=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="0,35, 20,10 40,35"
+            />
+          </svg>
+        </StyledComponent>
+      </styled.svg>
     </ThemeProvider>
   </Wrapper>
 </Triangle>
@@ -188,6 +265,7 @@ exports[`Create a triangle in down direction 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Triangle"
   padding=""
   selected={false}
@@ -224,6 +302,7 @@ exports[`Create a triangle in down direction 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Triangle"
     onError={[Function]}
     padding=""
@@ -266,7 +345,7 @@ exports[`Create a triangle in down direction 1`] = `
         }
       }
     >
-      <Triangle__SVGView
+      <styled.svg
         bottom=""
         className="ui-triangle test-class"
         contentEditable={false}
@@ -284,6 +363,7 @@ exports[`Create a triangle in down direction 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="Triangle"
         padding=""
         preserveAspectRatio="xMidYMid meet"
@@ -307,15 +387,61 @@ exports[`Create a triangle in down direction 1`] = `
         xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          className="ui-triangle test-class Triangle__SVGView-iDjlpJ cUpmlv"
+        <StyledComponent
+          bottom=""
+          className="ui-triangle test-class"
           contentEditable={false}
+          controlled={true}
           direction="down"
           disabled={false}
+          err={null}
+          errorMessage=""
+          focus={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-jTzLTM",
+                "isStatic": false,
+                "lastClassName": "duYmZL",
+                "rules": Array [
+                  "
+	transform: ",
+                  [Function],
+                  ";
+
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.svg",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-jTzLTM",
+              "target": "svg",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height=""
           id=""
+          left=""
+          location="none"
+          nobase={false}
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          notheme={false}
+          obj="Triangle"
+          padding=""
           preserveAspectRatio="xMidYMid meet"
           selected={false}
+          sizing="large"
           style={
             Object {
               "fill": "red",
@@ -323,16 +449,44 @@ exports[`Create a triangle in down direction 1`] = `
               "stroke": "green",
             }
           }
+          testing={true}
+          theme={null}
+          tooltip=""
+          top=""
           version="1.1"
           viewBox="0 0 40 40"
+          visible={true}
           width=""
+          xcss={null}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="0,35, 20,10 40,35"
-          />
-        </svg>
-      </Triangle__SVGView>
+          <svg
+            className="ui-triangle test-class sc-jTzLTM duYmZL"
+            contentEditable={false}
+            direction="down"
+            disabled={false}
+            height=""
+            id=""
+            preserveAspectRatio="xMidYMid meet"
+            selected={false}
+            style={
+              Object {
+                "fill": "red",
+                "stokeWidth": "2px",
+                "stroke": "green",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 40 40"
+            width=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="0,35, 20,10 40,35"
+            />
+          </svg>
+        </StyledComponent>
+      </styled.svg>
     </ThemeProvider>
   </Wrapper>
 </Triangle>
@@ -357,6 +511,7 @@ exports[`Create a triangle in left direction 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Triangle"
   padding=""
   selected={false}
@@ -393,6 +548,7 @@ exports[`Create a triangle in left direction 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Triangle"
     onError={[Function]}
     padding=""
@@ -435,7 +591,7 @@ exports[`Create a triangle in left direction 1`] = `
         }
       }
     >
-      <Triangle__SVGView
+      <styled.svg
         bottom=""
         className="ui-triangle test-class"
         contentEditable={false}
@@ -453,6 +609,7 @@ exports[`Create a triangle in left direction 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="Triangle"
         padding=""
         preserveAspectRatio="xMidYMid meet"
@@ -476,15 +633,61 @@ exports[`Create a triangle in left direction 1`] = `
         xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          className="ui-triangle test-class Triangle__SVGView-iDjlpJ heTpCL"
+        <StyledComponent
+          bottom=""
+          className="ui-triangle test-class"
           contentEditable={false}
+          controlled={true}
           direction="left"
           disabled={false}
+          err={null}
+          errorMessage=""
+          focus={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-jTzLTM",
+                "isStatic": false,
+                "lastClassName": "bYxlwG",
+                "rules": Array [
+                  "
+	transform: ",
+                  [Function],
+                  ";
+
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.svg",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-jTzLTM",
+              "target": "svg",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height=""
           id=""
+          left=""
+          location="none"
+          nobase={false}
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          notheme={false}
+          obj="Triangle"
+          padding=""
           preserveAspectRatio="xMidYMid meet"
           selected={false}
+          sizing="large"
           style={
             Object {
               "fill": "red",
@@ -492,16 +695,44 @@ exports[`Create a triangle in left direction 1`] = `
               "stroke": "green",
             }
           }
+          testing={true}
+          theme={null}
+          tooltip=""
+          top=""
           version="1.1"
           viewBox="0 0 40 40"
+          visible={true}
           width=""
+          xcss={null}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="0,35, 20,10 40,35"
-          />
-        </svg>
-      </Triangle__SVGView>
+          <svg
+            className="ui-triangle test-class sc-jTzLTM bYxlwG"
+            contentEditable={false}
+            direction="left"
+            disabled={false}
+            height=""
+            id=""
+            preserveAspectRatio="xMidYMid meet"
+            selected={false}
+            style={
+              Object {
+                "fill": "red",
+                "stokeWidth": "2px",
+                "stroke": "green",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 40 40"
+            width=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="0,35, 20,10 40,35"
+            />
+          </svg>
+        </StyledComponent>
+      </styled.svg>
     </ThemeProvider>
   </Wrapper>
 </Triangle>
@@ -526,6 +757,7 @@ exports[`Create a triangle in right direction 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Triangle"
   padding=""
   selected={false}
@@ -562,6 +794,7 @@ exports[`Create a triangle in right direction 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Triangle"
     onError={[Function]}
     padding=""
@@ -604,7 +837,7 @@ exports[`Create a triangle in right direction 1`] = `
         }
       }
     >
-      <Triangle__SVGView
+      <styled.svg
         bottom=""
         className="ui-triangle test-class"
         contentEditable={false}
@@ -622,6 +855,7 @@ exports[`Create a triangle in right direction 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="Triangle"
         padding=""
         preserveAspectRatio="xMidYMid meet"
@@ -645,15 +879,61 @@ exports[`Create a triangle in right direction 1`] = `
         xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          className="ui-triangle test-class Triangle__SVGView-iDjlpJ euLLVU"
+        <StyledComponent
+          bottom=""
+          className="ui-triangle test-class"
           contentEditable={false}
+          controlled={true}
           direction="right"
           disabled={false}
+          err={null}
+          errorMessage=""
+          focus={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-jTzLTM",
+                "isStatic": false,
+                "lastClassName": "bziiZZ",
+                "rules": Array [
+                  "
+	transform: ",
+                  [Function],
+                  ";
+
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.svg",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-jTzLTM",
+              "target": "svg",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height=""
           id=""
+          left=""
+          location="none"
+          nobase={false}
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          notheme={false}
+          obj="Triangle"
+          padding=""
           preserveAspectRatio="xMidYMid meet"
           selected={false}
+          sizing="large"
           style={
             Object {
               "fill": "red",
@@ -661,16 +941,44 @@ exports[`Create a triangle in right direction 1`] = `
               "stroke": "green",
             }
           }
+          testing={true}
+          theme={null}
+          tooltip=""
+          top=""
           version="1.1"
           viewBox="0 0 40 40"
+          visible={true}
           width=""
+          xcss={null}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="0,35, 20,10 40,35"
-          />
-        </svg>
-      </Triangle__SVGView>
+          <svg
+            className="ui-triangle test-class sc-jTzLTM bziiZZ"
+            contentEditable={false}
+            direction="right"
+            disabled={false}
+            height=""
+            id=""
+            preserveAspectRatio="xMidYMid meet"
+            selected={false}
+            style={
+              Object {
+                "fill": "red",
+                "stokeWidth": "2px",
+                "stroke": "green",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 40 40"
+            width=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="0,35, 20,10 40,35"
+            />
+          </svg>
+        </StyledComponent>
+      </styled.svg>
     </ThemeProvider>
   </Wrapper>
 </Triangle>
@@ -695,6 +1003,7 @@ exports[`Create a triangle in top direction 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Triangle"
   padding=""
   selected={false}
@@ -731,6 +1040,7 @@ exports[`Create a triangle in top direction 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Triangle"
     onError={[Function]}
     padding=""
@@ -773,7 +1083,7 @@ exports[`Create a triangle in top direction 1`] = `
         }
       }
     >
-      <Triangle__SVGView
+      <styled.svg
         bottom=""
         className="ui-triangle test-class"
         contentEditable={false}
@@ -791,6 +1101,7 @@ exports[`Create a triangle in top direction 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="Triangle"
         padding=""
         preserveAspectRatio="xMidYMid meet"
@@ -814,15 +1125,61 @@ exports[`Create a triangle in top direction 1`] = `
         xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          className="ui-triangle test-class Triangle__SVGView-iDjlpJ kgcoNS"
+        <StyledComponent
+          bottom=""
+          className="ui-triangle test-class"
           contentEditable={false}
+          controlled={true}
           direction="top"
           disabled={false}
+          err={null}
+          errorMessage=""
+          focus={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-jTzLTM",
+                "isStatic": false,
+                "lastClassName": "bWSAXN",
+                "rules": Array [
+                  "
+	transform: ",
+                  [Function],
+                  ";
+
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.svg",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-jTzLTM",
+              "target": "svg",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height=""
           id=""
+          left=""
+          location="none"
+          nobase={false}
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          notheme={false}
+          obj="Triangle"
+          padding=""
           preserveAspectRatio="xMidYMid meet"
           selected={false}
+          sizing="large"
           style={
             Object {
               "fill": "red",
@@ -830,16 +1187,44 @@ exports[`Create a triangle in top direction 1`] = `
               "stroke": "green",
             }
           }
+          testing={true}
+          theme={null}
+          tooltip=""
+          top=""
           version="1.1"
           viewBox="0 0 40 40"
+          visible={true}
           width=""
+          xcss={null}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="0,35, 20,10 40,35"
-          />
-        </svg>
-      </Triangle__SVGView>
+          <svg
+            className="ui-triangle test-class sc-jTzLTM bWSAXN"
+            contentEditable={false}
+            direction="top"
+            disabled={false}
+            height=""
+            id=""
+            preserveAspectRatio="xMidYMid meet"
+            selected={false}
+            style={
+              Object {
+                "fill": "red",
+                "stokeWidth": "2px",
+                "stroke": "green",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 40 40"
+            width=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="0,35, 20,10 40,35"
+            />
+          </svg>
+        </StyledComponent>
+      </styled.svg>
     </ThemeProvider>
   </Wrapper>
 </Triangle>
@@ -864,6 +1249,7 @@ exports[`Create a triangle in up direction 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Triangle"
   padding=""
   selected={false}
@@ -900,6 +1286,7 @@ exports[`Create a triangle in up direction 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Triangle"
     onError={[Function]}
     padding=""
@@ -942,7 +1329,7 @@ exports[`Create a triangle in up direction 1`] = `
         }
       }
     >
-      <Triangle__SVGView
+      <styled.svg
         bottom=""
         className="ui-triangle test-class"
         contentEditable={false}
@@ -960,6 +1347,7 @@ exports[`Create a triangle in up direction 1`] = `
         noedit={false}
         nohover={false}
         noripple={false}
+        notheme={false}
         obj="Triangle"
         padding=""
         preserveAspectRatio="xMidYMid meet"
@@ -983,15 +1371,61 @@ exports[`Create a triangle in up direction 1`] = `
         xcss={null}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          className="ui-triangle test-class Triangle__SVGView-iDjlpJ kgcoNS"
+        <StyledComponent
+          bottom=""
+          className="ui-triangle test-class"
           contentEditable={false}
+          controlled={true}
           direction="up"
           disabled={false}
+          err={null}
+          errorMessage=""
+          focus={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-jTzLTM",
+                "isStatic": false,
+                "lastClassName": "bWSAXN",
+                "rules": Array [
+                  "
+	transform: ",
+                  [Function],
+                  ";
+
+	",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.svg",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-jTzLTM",
+              "target": "svg",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
           height=""
           id=""
+          left=""
+          location="none"
+          nobase={false}
+          noedit={false}
+          nohover={false}
+          noripple={false}
+          notheme={false}
+          obj="Triangle"
+          padding=""
           preserveAspectRatio="xMidYMid meet"
           selected={false}
+          sizing="large"
           style={
             Object {
               "fill": "red",
@@ -999,16 +1433,44 @@ exports[`Create a triangle in up direction 1`] = `
               "stroke": "green",
             }
           }
+          testing={true}
+          theme={null}
+          tooltip=""
+          top=""
           version="1.1"
           viewBox="0 0 40 40"
+          visible={true}
           width=""
+          xcss={null}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="0,35, 20,10 40,35"
-          />
-        </svg>
-      </Triangle__SVGView>
+          <svg
+            className="ui-triangle test-class sc-jTzLTM bWSAXN"
+            contentEditable={false}
+            direction="up"
+            disabled={false}
+            height=""
+            id=""
+            preserveAspectRatio="xMidYMid meet"
+            selected={false}
+            style={
+              Object {
+                "fill": "red",
+                "stokeWidth": "2px",
+                "stroke": "green",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 40 40"
+            width=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="0,35, 20,10 40,35"
+            />
+          </svg>
+        </StyledComponent>
+      </styled.svg>
     </ThemeProvider>
   </Wrapper>
 </Triangle>
@@ -1033,6 +1495,7 @@ exports[`Test creation of a Triangle control 1`] = `
   noedit={false}
   nohover={false}
   noripple={false}
+  notheme={false}
   obj="Triangle"
   onError={[Function]}
   padding=""
@@ -1054,7 +1517,7 @@ exports[`Test creation of a Triangle control 1`] = `
   width=""
   xcss={null}
 >
-  <Triangle__SVGView
+  <styled.svg
     bottom=""
     className="ui-triangle test-class"
     contentEditable={false}
@@ -1072,6 +1535,7 @@ exports[`Test creation of a Triangle control 1`] = `
     noedit={false}
     nohover={false}
     noripple={false}
+    notheme={false}
     obj="Triangle"
     padding=""
     preserveAspectRatio="xMidYMid meet"
@@ -1098,7 +1562,7 @@ exports[`Test creation of a Triangle control 1`] = `
     <polygon
       points="0,35, 20,10 40,35"
     />
-  </Triangle__SVGView>
+  </styled.svg>
 </Wrapper>
 `;
 
@@ -1122,6 +1586,7 @@ Object {
   "noedit": false,
   "nohover": false,
   "noripple": false,
+  "notheme": false,
   "obj": "Triangle",
   "padding": "",
   "selected": false,

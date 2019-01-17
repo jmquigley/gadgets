@@ -45,11 +45,8 @@
 
 // const debug = require('debug')('base');
 
-import {Map} from 'immutable';
-import {isEmpty} from 'lodash';
 import * as React from 'react';
 import {calc} from 'util.calc';
-import {ClassNames} from 'util.classnames';
 import {getUUID} from 'util.toolbox';
 import {BaseProps, Styles} from './props';
 import {FontStyle, Sizes, Sizing, Styling} from './sizing';
@@ -65,20 +62,13 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 
 	public static defaultStyles: any = {};
 
-	private _defaultSize: number;
 	private _id: string;
-	private _inlineStyles: Map<string, string> = Map({});
-	private _sizing: Sizing = null;
 	private _theme: ThemeProps = null;
 
-	// The style object applied (generally) to the root of a component
-	protected _classes: ClassNames = new ClassNames();
-
-	constructor(props: P, defaultInlineStyles: Styles = {}, defaultFontSize: number = defaultSize) {
+	constructor(props: P, defaultStyles: Styles = {}) {
 		super(props);
 
-		BaseComponent.defaultStyles = defaultInlineStyles;
-		this._defaultSize = defaultSize;
+		BaseComponent.defaultStyles = defaultStyles;
 
 		// If an id value is not given as a prop, then generate a unique id.  If the
 		// component is under test, then 0 is used for the UUID value (to make it
@@ -89,38 +79,15 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 			this._id = this.constructor.name + '-' + (this.props.testing ? '0' : getUUID());
 		}
 
-		// TODO: removed once sizing values complete in state
-		this._sizing = this.props.sizing;
-		if (defaultFontSize !== defaultSize) {
-			sizes = Sizes.instance(defaultFontSize);
-		}
-
 		if (this.props.theme != null) {
 			this._theme = this.props.theme;
 		} else {
 			this._theme = getTheme();
 		}
-
-		// TODO: removed once state values for styles set
-		this.inlineStyles = Object.assign({}, defaultInlineStyles, this.props.style);
-
-		// TODO: this will go away for state styles
-		if (this.state) {
-			this.state['style'] = this.inlineStyles;
-		}
-
-	}
-
-	get classes(): string {
-		return this._classes.classnames;
-	}
-
-	get className(): string {
-		return this._classes.classnames;
 	}
 
 	get defaultSize(): number {
-		return this._defaultSize;
+		return defaultSize;
 	}
 
 	/**
@@ -130,29 +97,8 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		return this._id;
 	}
 
-	get inlineStyles(): any {
-		return this._inlineStyles.toObject();
-	}
-
-	set inlineStyles(obj: any) {
-		for (const key in obj) {
-			if (obj.hasOwnProperty(key)) {
-				this._inlineStyles = this._inlineStyles.set(key, obj[key]);
-			}
-		}
-	}
-
-	get sizing(): Sizing {
-		return this._sizing;
-	}
-
 	get theme(): ThemeProps {
 		return this._theme;
-	}
-
-	protected buildClassName(): string {
-		this._classes.onIf(this.props.className != null)(this.props.className);
-		return this.className;
 	}
 
 	public static font(sizing: Sizing = Sizing.normal): FontStyle {
@@ -266,46 +212,6 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	}
 
 	/**
-	 * Every component has a general set of CSS styles that may be applied each
-	 * time the component is rendered (like a style to enable/disable).  This
-	 * lifecycle function is used to generate those basic, shared styles in all
-	 * components.  It uses a set of common props (className, visible, disable,
-	 * etc).
-	 *
-	 * This version of the funtion is in the BaseComponent inherited by all
-	 * components.  If the component doesn't define a version then this is
-	 * called on the base class.  When the component defines a version, then
-	 * super is used to call this version.
-	 *
-	 * @param nextProps {P} the next set of props passed to an update
-	 * @param nextState {S} the next set of base info passed to an update
-	 */
-	public componentWillUpdate(nextProps?: P, nextState?: S) {
-
-		nextState = nextState;
-
-		if (this._sizing !== nextProps.sizing) {
-			this._sizing = nextProps.sizing;
-		}
-
-		if (this.props.className !== nextProps.className) {
-			this._classes.off(this.props.className);
-		}
-
-		this._classes.onIf(nextProps.className != null)(
-			nextProps['className']
-		);
-
-		if (nextProps.nohover) {
-			this._classes.on('nohover');
-		}
-
-		if (!isEmpty(nextProps.style)) {
-			this.inlineStyles = nextProps.style;
-		}
-	}
-
-	/**
 	 * Each component has a getDerivedStateFromProps call.  This method is used
 	 * by that call to set state properties that are common to all components.
 	 * @param props {P} the set of props that will be updated
@@ -313,21 +219,30 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	 * @return {S} a new, mutated state that will be merged into the current state
 	 */
 	public static getDerivedStateFromProps(props: any, state: any): any {
+		let newState: any = null;
+
 		if (state && props) {
+			newState = {...state};
 
-			if ('classes' in state) {
-				state.classes.onIf(props.className != null)(props.className);
+			if ('classes' in newState) {
+				if (props.className != null) {
+					newState.classes.add(props.className);
+				}
+
+				if (props.nohover) {
+					newState.classes.on('nohover');
+				}
 			}
 
-			if ('style' in state) {
-				state.style = Object.assign({}, BaseComponent.defaultStyles, state.style, props.style);
+			if ('style' in newState) {
+				newState.style = Object.assign({}, BaseComponent.defaultStyles, newState.style, props.style);
 			}
 
-			if ('sizing' in state) {
-				state.sizing = props.sizing;
+			if ('sizing' in newState) {
+				newState.sizing = props.sizing;
 			}
 		}
 
-		return state;
+		return newState;
 	}
 }

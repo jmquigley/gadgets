@@ -8,8 +8,6 @@ import {getDefaultTextFieldProps, TextField} from '../../dist/bundle';
 test('Test retrieval of TextField props object', () => {
 	const props = getDefaultTextFieldProps();
 
-	console.log(props);
-
 	assert(props);
 	expect(props).toMatchSnapshot();
 });

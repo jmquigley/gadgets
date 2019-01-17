@@ -67,19 +67,20 @@ export interface ButtonTextProps extends IconProps {
 }
 
 export function getDefaultButtonTextProps(): ButtonTextProps {
-	return cloneDeep(Object.assign({},
-		getDefaultIconProps(), {
-			justify: Justify.right,
-			noicon: false,
-			obj: 'ButtonText',
-			onClick: nilEvent,
-			text: ''
-		})
-	);
+	return cloneDeep({...getDefaultIconProps(),
+		justify: Justify.right,
+		noicon: false,
+		obj: 'ButtonText',
+		onClick: nilEvent,
+		text: ''
+	});
 }
 
 export type ButtonTextState = BaseState;
-export const getDefaultButtonTextState = getDefaultBaseState;
+
+export function getDefaultButtonTextState(): ButtonTextState {
+	return cloneDeep({...getDefaultBaseState('ui-button-text')});
+}
 
 export const ButtonTextContent: any = styled.div`
 	flex: 1;
@@ -130,15 +131,15 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 	}
 
 	public static getDerivedStateFromProps(props: ButtonTextProps, state: ButtonTextState) {
-		state.classes.clear();
-		state.classes.add('ui-button-text');
-		state.classes.onIfElse(!props.noripple && !props.disabled)(
+		const newState: ButtonTextState = {...state};
+
+		newState.classes.onIfElse(!props.noripple && !props.disabled)(
 			'ripple'
 		)(
 			'nohover'
 		);
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {

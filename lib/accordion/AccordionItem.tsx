@@ -56,7 +56,7 @@
 
 'use strict';
 
-const debug = require('debug')('AccordionItem');
+// const debug = require('debug')('AccordionItem');
 
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
@@ -82,27 +82,24 @@ export interface AccordionItemProps extends ItemProps {
 }
 
 export function getDefaultAccordionItemProps(): AccordionItemProps {
-	return cloneDeep(Object.assign({},
-		getDefaultItemProps(), {
-			initialToggle: false,
-			leftButton: null,
-			nocollapse: false,
-			obj: 'AccordionItem',
-			onClick: nilEvent,
-			rightButton: null
-		})
-	);
+	return cloneDeep({...getDefaultItemProps(),
+		initialToggle: false,
+		leftButton: null,
+		nocollapse: false,
+		obj: 'AccordionItem',
+		onClick: nilEvent,
+		rightButton: null
+	});
 }
 
 export interface AccordionItemState extends BaseState {
 	toggle: boolean;
 }
 
-export function getDefaultAccordionItemState(initialState: boolean = false): AccordionItemState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			toggle: initialState
-		}));
+export function getDefaultAccordionItemState(): AccordionItemState {
+	return cloneDeep({...getDefaultBaseState('ui-accordionitem'),
+		toggle: false
+	});
 }
 
 export const AccordionItemView: any = styled.ul`
@@ -127,9 +124,9 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 
 	constructor(props: AccordionItemProps) {
 		super(props);
-		this.state = Object.assign(getDefaultAccordionItemState(), {
+		this.state = {...getDefaultAccordionItemState(),
 			toggle: this.props.initialToggle
-		});
+		};
 	}
 
 	@autobind
@@ -139,15 +136,8 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 				toggle: !this.state.toggle
 			}, () => {
 				this.props.onClick(this.state.toggle);
-				debug('handleClick -> props: %O, state: %O', this.props, this.state);
 			});
 		}
-	}
-
-	public static getDerivedStateFromProps(props: AccordionItemProps, state: AccordionItemState) {
-		state.classes.clear();
-		state.classes.add('ui-accordionitem');
-		return super.getDerivedStateFromProps(props, state);
 	}
 
 	public render() {
@@ -157,7 +147,7 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 			content = (
 				<AccordionContentView
 					className="ui-accordion-content"
-					sizing={this.state.sizing}
+					sizing={this.props.sizing}
 				>
 					{this.props.children}
 				</AccordionContentView>

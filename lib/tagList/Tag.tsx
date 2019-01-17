@@ -62,16 +62,14 @@ export interface TagProps extends BaseProps {
 }
 
 export function getDefaultTagProps(): TagProps {
-	return cloneDeep(Object.assign(
-		getDefaultBaseProps(), {
-			obj: 'Tag',
-			onClick: nilEvent,
-			onDelete: nilEvent,
-			onMouseOut: nilEvent,
-			onMouseOver: nilEvent,
-			usedelete: false
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		obj: 'Tag',
+		onClick: nilEvent,
+		onDelete: nilEvent,
+		onMouseOut: nilEvent,
+		onMouseOver: nilEvent,
+		usedelete: false
+	});
 }
 
 export interface TagState extends BaseState {
@@ -79,10 +77,9 @@ export interface TagState extends BaseState {
 }
 
 export function getDefaultTagState(): TagState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			showDelete: false
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-tag'),
+		showDelete: false
+	});
 }
 
 export const DeleteButtonView: any = styled(ButtonCircle)`
@@ -100,14 +97,21 @@ export const TagView: any = styled.div`
 	cursor: default;
 	box-sizing: border-box;
 	display: inline;
+	font-size: inherit;
 	opacity: 1.0;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
 
+	> span {
+		font-size: inherit;
+	}
+
 	${(props: TagProps) => disabled(props)}
 	${(props: TagProps) => invisible(props)}
 `;
+
+export const StyledLabel: any = styled(Label)``;
 
 export class Tag extends BaseComponent<TagProps, TagState> {
 
@@ -146,49 +150,48 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		}
 	}
 
-	public static getDerivedStateFromProps(props: TagProps, state: TagState) {
-		state.classes.clear();
-		state.classes.add('ui-tag');
-		return super.getDerivedStateFromProps(props, state);
-	}
-
 	public render() {
-		this.tag = React.Children.map(this.props.children, (child: any) => {
+		const {
+			onDelete,
+			...props
+		} = this.props;
+
+		this.tag = React.Children.map(props.children, (child: any) => {
 			return String(child);
 		}).join(' ');
 
 		let deleteButton: any = null;
-		if (this.props.usedelete) {
+		if (props.usedelete) {
 			deleteButton = (
 				<DeleteButtonView
-					disabled={this.props.disabled}
+					disabled={props.disabled}
 					iconName="times"
 					onClick={this.handleOnClick}
-					sizing={BaseComponent.prev().type}
+					sizing={BaseComponent.prev(this.props.sizing).type}
 					style={{
 						backgroundColor: Color.white,
 						borderColor: Color.error,
 						color: Color.error,
 						opacity: this.state.showDelete ? '1.0' : '0.0'
 					}}
-					visible={this.props.visible}
+					visible={props.visible}
 				/>
 			);
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...props} >
 				<TagView
-					{...this.props}
-					className={this.classes}
+					className={this.state.classes.classnames}
 					onMouseOut={this.handleMouseOut}
 					onMouseOver={this.handleMouseOver}
+					style={this.state.style}
 				>
-					<Label
-						disabled={this.props.disabled}
+					<StyledLabel
+						disabled={props.disabled}
 						noedit
 						text={this.tag}
-						visible={this.props.visible}
+						visible={props.visible}
 					/>
 					{deleteButton}
 				</TagView>

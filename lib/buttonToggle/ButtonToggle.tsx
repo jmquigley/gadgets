@@ -75,6 +75,8 @@
 
 'use strict';
 
+// const debug = require('debug')('ButtonToggle');
+
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -126,20 +128,21 @@ export interface ButtonToggleState extends ButtonState {
 }
 
 export function getDefaultButtonToggleState(): ButtonToggleState {
-	return cloneDeep(Object.assign({},
-		getDefaultButtonState(), {
-			toggle: false
-		}));
+	return cloneDeep({...getDefaultButtonState('ui-button-toggle'),
+		toggle: false
+	});
 }
 
 export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleState> {
 
 	public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
-	public state: ButtonToggleState = getDefaultButtonToggleState();
 
 	constructor(props: ButtonToggleProps) {
 		super(props, ButtonToggle.defaultProps.style);
-		this.state['toggle'] = this.props.initialToggle;
+
+		this.state = {...getDefaultButtonToggleState(),
+			toggle: this.props.initialToggle
+		};
 	}
 
 	@autobind
@@ -156,24 +159,21 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 	}
 
 	public static getDerivedStateFromProps(props: ButtonToggleProps, state: ButtonToggleState) {
-		state.classes.clear();
-		state.classes.add('ui-button-toggle');
+		const newState: ButtonToggleState = {...state};
 
 		if (!props.controlled) {
-			state.toggle = props.selected;
-		}
-
-		if (props.controlled) {
-			if (state.toggle) {
-				state.style['backgroundColor'] = props.bgColorOn;
-				state.style['color'] = props.fgColorOn;
+			newState.toggle = props.selected;
+		} else {
+			if (newState.toggle) {
+				newState.style['backgroundColor'] = props.bgColorOn;
+				newState.style['color'] = props.fgColorOn;
 			} else {
-				state.style['backgroundColor'] = props.bgColorOff;
-				state.style['color'] = props.fgColorOff;
+				newState.style['backgroundColor'] = props.bgColorOff;
+				newState.style['color'] = props.fgColorOff;
 			}
 		}
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {

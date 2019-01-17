@@ -57,6 +57,8 @@
 
 'use strict';
 
+// const debug = require('debug')('TagList');
+
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
@@ -68,6 +70,7 @@ import {
 	BaseProps,
 	BaseState,
 	disabled,
+	fontStyle,
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	invisible,
@@ -90,33 +93,30 @@ export interface TagListProps extends BaseProps {
 }
 
 export function getDefaultTagListProps(): TagListProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			nosort: false,
-			obj: 'TagList',
-			onBlur: nilEvent,
-			onChange: nilEvent,
-			onDelete: nilEvent,
-			onKeyDown: nilEvent,
-			onKeyPress: nilEvent,
-			onNew: nilEvent,
-			tags: [],
-			useinput: false
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		nosort: false,
+		obj: 'TagList',
+		onBlur: nilEvent,
+		onChange: nilEvent,
+		onDelete: nilEvent,
+		onKeyDown: nilEvent,
+		onKeyPress: nilEvent,
+		onNew: nilEvent,
+		tags: [],
+		useinput: false
+	});
 }
 
 export interface TagListState extends BaseState {
 	inputTextSize: number;
-	tags?: string[];
+	tags?: SortedList<string> | List<string>;
 }
 
 export function getDefaultTagListState(): TagListState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			inputTextSize: 1,
-			tags: []
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-taglist'),
+		inputTextSize: 1,
+		tags: null
+	});
 }
 
 export const StyledIcon: any = styled(Icon)`
@@ -134,23 +134,35 @@ export const StyledTextField: any = styled(TextField)`
 			opacity: 0.5;
 		}
 	}
+
+	${(props: TagListProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
 export const TagListView: any = styled.div`
 	display: inline;
 
+	${(props: TagListProps) => props.sizing && fontStyle[props.sizing]}
 	${(props: TagListProps) => disabled(props)}
 	${(props: TagListProps) => invisible(props)}
 `;
 
 export class TagList extends BaseComponent<TagListProps, TagListState> {
 
-	private tags: SortedList<string> | List<string>;
 	public static readonly defaultProps: TagListProps = getDefaultTagListProps();
 	public state: TagListState = getDefaultTagListState();
 
 	constructor(props: TagListProps) {
 		super(props, TagList.defaultProps.style);
+
+		if (props.nosort) {
+			this.state = {...getDefaultTagListState(),
+				tags: new List<string>(props.tags)
+			};
+		} else {
+			this.state = {...getDefaultTagListState(),
+				tags: new SortedList<string>(props.tags)
+			};
+		}
 	}
 
 	private clearInput(e: HTMLInputElement) {
@@ -175,9 +187,11 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 
 	@autobind
 	private handleDelete(tag: string) {
-		this.tags.remove(tag);
+		const {tags} = this.state;
+
+		tags.remove(tag);
 		this.setState({
-			tags: this.tags.array
+			tags: tags
 		}, () => {
 			this.props.onDelete(tag);
 		});
@@ -196,11 +210,12 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === 'Enter') {
 			const target = e.target as HTMLInputElement;
+			const {tags} = this.state;
 
-			if (!this.tags.contains(target.value)) {
-				this.tags.insert(target.value);
+			if (!tags.contains(target.value)) {
+				tags.insert(target.value);
 				this.setState({
-					tags: this.tags.array
+					tags: tags
 				}, () => {
 					this.props.onNew(target.value);
 					this.clearInput(target);
@@ -213,21 +228,8 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		}
 	}
 
-	public static getDerivedStateFromProps(props: TagListProps, state: TagListState) {
-		state.classes.clear();
-		state.classes.add('ui-taglist');
-
-		if (props.nosort) {
-			state.tags = new List<string>(props.tags).array;
-		} else {
-			state.tags = new SortedList<string>(props.tags).array;
-		}
-
-		return super.getDerivedStateFromProps(props, state);
-	}
-
 	public render() {
-		const tags = this.state.tags.map((tag: string) => {
+		const tags = this.state.tags.array.map((tag: string) => {
 			return (
 				<Tag
 					disabled={this.props.disabled}
@@ -243,10 +245,15 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 
 		return (
 			<Wrapper {...this.props} >
-				<TagListView className={this.classes}>
+				<TagListView
+					className={this.state.classes.classnames}
+					sizing={this.props.sizing}
+					style={this.state.style}
+				>
 					<StyledIcon
 						disabled={this.props.disabled}
 						iconName="tags"
+						sizing={this.props.sizing}
 						visible={this.props.visible}
 					/>
 					{tags}
@@ -260,6 +267,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 						onKeyPress={this.handleKeyPress}
 						placeholder="new"
 						size={this.state.inputTextSize}
+						sizing={this.props.sizing}
 						visible={this.props.visible}
 					/>
 					}

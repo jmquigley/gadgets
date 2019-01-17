@@ -130,6 +130,7 @@ export default class DemoDynamicList extends React.Component<any, DemoDynamicLis
 		return(
 			<Container id="dynamicListExample" title="Dynamic List">
 				<DynamicList
+					disabled={this.props['disabled']}
 					errorMessage={this.state.dynamicListError}
 					items={this.state.items}
 					layout={TitleLayout.dominant}

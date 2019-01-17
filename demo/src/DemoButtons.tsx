@@ -143,8 +143,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						disabled={this.props['disabled']}
 						iconNameOff="star-o"
 						iconNameOn="star"
-						fgColorOff="#004358"
-						fgColorOn="#ffe11a"
+						fgColorOff="#ffcc00"
+						fgColorOn="#ffcc00"
 						sizing={this.props['sizing']}
 					/>
 				</td>
@@ -155,7 +155,7 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						disabled={this.props['disabled']}
 						fgColorOn="red"
 						fgColorOff="black"
-						iconNameOff="star-o"
+						iconNameOff="star"
 						iconNameOn="star"
 						sizing={this.props['sizing']}
 					/>

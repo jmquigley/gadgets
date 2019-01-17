@@ -44,26 +44,19 @@ export const BreakView: any = styled.p`
 export class Break extends BaseComponent<BaseProps, BaseState> {
 
 	public static defaultProps: BaseProps = getDefaultBaseProps();
-	public state: BaseState = getDefaultBaseState();
+	public state: BaseState = getDefaultBaseState('ui-break');
 
 	constructor(props: BaseProps) {
 		super(props);
 	}
 
-	public static getDerivedStateFromProps(props: BaseProps, state: BaseState) {
-		state.classes.clear();
-		state.classes.add('ui-break');
-
-		return super.getDerivedStateFromProps(props, state);
-	}
-
 	public render() {
 		return (
 			<BreakView
-				className={this.classes}
-				height={BaseComponent.fontSizeREM(this.state.sizing, 0.5)}
-				sizing={this.state.sizing}
-				style={this.inlineStyles}
+				className={this.state.classes.classnames}
+				height={BaseComponent.fontSizeREM(this.props.sizing, 0.5)}
+				sizing={this.props.sizing}
+				style={this.state.style}
 			/>
 		);
 	}

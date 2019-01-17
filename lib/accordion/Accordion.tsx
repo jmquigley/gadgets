@@ -54,17 +54,18 @@ import {
 import styled from '../shared/themed-components';
 
 export type AccordionProps = BaseProps;
-export type AccordionState = BaseState;
 
 export function getDefaultAccordionProps(): AccordionProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			obj: 'Accordion'
-		}
-	));
+	return cloneDeep({...getDefaultBaseProps(),
+		obj: 'Accordion'
+	});
 }
 
-export const getDefaultAccordionState = getDefaultBaseState;
+export type AccordionState = BaseState;
+
+export function getDefaultAccordionState(): AccordionState {
+	return cloneDeep({...getDefaultBaseState('ui-accordion')});
+}
 
 export const AccordionView: any = styled.ul`
 	cursor: default;
@@ -87,21 +88,20 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 	}
 
 	public static getDerivedStateFromProps(props: AccordionProps, state: AccordionState) {
-		state.classes.clear();
-		state.classes.add('ui-accordion');
+		const newState: AccordionState = {...state};
 
-		state.children = React.Children.map(props.children, (child: any) => {
+		newState.children = React.Children.map(props.children, (child: any) => {
 			return React.cloneElement(child, {
 				sizing: props.sizing,
 				disabled: props.disabled
 			});
 		});
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
-		debug('state: %O, props: %O', this.state, this.props);
+		debug('render -> state: %O, props: %O', this.state, this.props);
 
 		return (
 			<Wrapper {...this.props} >

@@ -1,6 +1,6 @@
 'use strict';
 
-const debug = require('debug')('ListFooter.test');
+// const debug = require('debug')('ListFooter.test');
 
 import {mount} from 'enzyme';
 import * as React from 'react';

@@ -93,6 +93,7 @@ test('Test setting an error message', async () => {
 	const ctl = mount(
 		<DynamicList
 			errorMessage={errmsg}
+			errorMessageDuration={1}
 			items={{
 				title1: {right: 'widget1'},
 				title2: {right: 'widget2'},

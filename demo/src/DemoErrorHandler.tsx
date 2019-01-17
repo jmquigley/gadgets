@@ -61,7 +61,7 @@ export default class DemoErrorHandler extends React.PureComponent<any, DemoError
 					{...this.props}
 					obj="DemoErrorHandler"
 					onError={this.handlePrintError}
-					reset
+					reset={!this.state.show}
 				>
 					<BuggyComponent show={this.state.show} />
 				</Wrapper>

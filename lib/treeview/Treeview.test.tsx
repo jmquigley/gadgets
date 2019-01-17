@@ -35,11 +35,12 @@ test('Test retrieval of Treeview props object', () => {
 	expect(props).toMatchSnapshot();
 });
 
+
 for (const sizing of ev.getNames(Sizing)) {
 	test(`Test creation of a simple Treeview component (${sizing})`, () => {
 		const ctl = mount(
 			<Treeview
-				sizing={sizing}
+				sizing={Sizing[sizing]}
 				treeData={treeData}
 			/>
 		);
@@ -47,8 +48,6 @@ for (const sizing of ev.getNames(Sizing)) {
 		expect(ctl).toBeDefined();
 		const treeview = ctl.instance() as Treeview;
 		expect(treeview).toBeDefined();
-		treeview.componentWillReceiveProps({sizing});
 		expect(ctl).toMatchSnapshot();
-		expect(ctl.state('rowHeight')).toBe(treeview.rowHeights[sizing]);
 	});
 }

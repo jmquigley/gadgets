@@ -1,5 +1,6 @@
 'use strict';
 
+import {EnumValues as ev} from 'enum-values';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {
@@ -23,24 +24,21 @@ test('Test creation of a Triangle control', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
-for (const direction in Direction) {
-	if (Direction.hasOwnProperty(direction)) {
+for (const direction of ev.getNames(Direction)) {
+	test(`Create a triangle in ${direction} direction`, () => {
+		const ctl = mount(
+			<Triangle
+				className="test-class"
+				direction={Direction[direction]}
+				sizing={Sizing.large}
+				style={{
+					fill: 'red',
+					stroke: 'green'
+				}}
+			/>
+		);
 
-		test(`Create a triangle in ${direction} direction`, () => {
-			const ctl = mount(
-				<Triangle
-					className="test-class"
-					direction={direction}
-					sizing={Sizing.large}
-					style={{
-						fill: 'red',
-						stroke: 'green'
-					}}
-				/>
-			);
-
-			expect(ctl).toBeDefined();
-			expect(ctl).toMatchSnapshot();
-		});
-	}
+		expect(ctl).toBeDefined();
+		expect(ctl).toMatchSnapshot();
+	});
 }

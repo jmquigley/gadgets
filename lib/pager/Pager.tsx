@@ -84,8 +84,10 @@
 
 'use strict';
 
+// const debug = require('debug')('Pager');
+
 import autobind from 'autobind-decorator';
-import {cloneDeep, isEqual, sortBy} from 'lodash';
+import {cloneDeep, sortBy} from 'lodash';
 import * as React from 'react';
 import {Keys} from 'util.keys';
 import {nilEvent} from 'util.toolbox';
@@ -98,7 +100,9 @@ import {List, ListDivider, ListItem} from '../list';
 import {
 	BaseComponent,
 	BaseProps,
+	BaseState,
 	getDefaultBaseProps,
+	getDefaultBaseState,
 	Justify,
 	Location,
 	Sizing,
@@ -124,27 +128,33 @@ export interface PagerProps extends BaseProps {
 }
 
 export function getDefaultPagerProps(): PagerProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			initialPage: 1,
-			initialPageSize: defaultPageSize,
-			obj: 'Pager',
-			onChangePageSize: nilEvent,
-			onSelect: nilEvent,
-			onSort: null,
-			pagesToDisplay: 3,
-			pageSizes: cloneDeep(defaultPageSizes),
-			sizing: Sizing.normal,
-			totalItems: 0,
-			useinput: false
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		initialPage: 1,
+		initialPageSize: defaultPageSize,
+		obj: 'Pager',
+		onChangePageSize: nilEvent,
+		onSelect: nilEvent,
+		onSort: null,
+		pagesToDisplay: 3,
+		pageSizes: cloneDeep(defaultPageSizes),
+		sizing: Sizing.normal,
+		totalItems: 0,
+		useinput: false
+	});
 }
 
-export interface PagerState {
+export interface PagerState extends BaseState {
 	currentPage: number;
 	currentSort: SortOrder;
 	pageSize: number;
+}
+
+export function getDefaultPagerState(): PagerState {
+	return cloneDeep({...getDefaultBaseState('ui-pager'),
+		currentPage: 0,
+		currentSort: SortOrder.ascending,
+		pageSize: 0
+	});
 }
 
 export const ButtonCSS: any = css`
@@ -181,11 +191,9 @@ export const StyledButtonDialog: any = styled(ButtonDialog)`
 
 export const StyledButtonText: any = styled(ButtonText)`
 	${ButtonCSS}
-	background-color: ${(props: PagerProps) => props.selected ? props.theme.selectedBackgroundColor : props.theme.backgroundColor};
 	border-top: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 	border-bottom: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 	border-right: solid 1px ${(props: PagerProps) => props.theme.borderColor};
-	color: ${(props: PagerProps) => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
 `;
 
 export const StyledButton: any = styled(Button)`
@@ -223,12 +231,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this._dialogKeys = new Keys({testing: this.props.testing});
 		this._fillerKeys = new Keys({testing: this.props.testing});
 
-		this._classes.add('ui-pager');
-
 		this.pageSizes = this.props.pageSizes;
 		this.computeInitialPages(this.props.initialPageSize);
 
-		this.state = {
+		this.state = {...getDefaultPagerState(),
 			currentPage: this.initialPage,
 			currentSort: SortOrder.ascending,
 			pageSize: this.initialPageSize
@@ -253,8 +259,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			/>
 		);
 
-		this.createButtons();
-		this.componentWillUpdate(this.props);
+		this.createButtons(this.sanitizeProps(props));
 	}
 
 	get currentPage(): number {
@@ -385,7 +390,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * select the appropriate button from the list and use that to form the
 	 * display array.
 	 */
-	private createButtons() {
+	private createButtons(props: PagerProps) {
 		this._buttonsDisplay = [];
 
 		for (const page of this.pages) {
@@ -393,12 +398,12 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 				this._buttons[page] = (
 					<StyledButtonText
-						{...this.props}
+						{...props}
 						justify={Justify.center}
 						key={String(page)}
 						noicon
 						onClick={this.handleSelect}
-						sizing={this.props.sizing}
+						sizing={props.sizing}
 						text={String(page)}
 					/>
 				);
@@ -407,7 +412,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			if (page !== 0) {
 				if (page === this.currentPage) {
 					let selected: string;
-					if (this.props.disabled) {
+					if (props.disabled) {
 						selected = ' nohover';
 					} else {
 						selected = ' ui-pager-selected';
@@ -416,27 +421,33 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
 							className: selected,
-							disabled: this.props.disabled,
-							selected: true,
-							sizing: this.props.sizing
+							disabled: props.disabled,
+							sizing: props.sizing,
+							style: {
+								backgroundColor: this.theme.selectedBackgroundColor,
+								color: this.theme.selectedForegroundColor
+							}
 						}));
 				} else {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
-							disabled: this.props.disabled,
-							selected: false,
-							sizing: this.props.sizing
+							disabled: props.disabled,
+							sizing: props.sizing,
+							style: {
+								backgroundColor: this.theme.backgroundColor,
+								color: this.theme.color
+							}
 						}));
 				}
 			} else {
 				this._buttonsDisplay.push(
 					<StyledButtonText
-						{...this.props}
+						{...props}
 						justify={Justify.center}
 						key={this._fillerKeys.at(this._fillerIdx++)}
 						noicon
 						disabled
-						sizing={this.props.sizing}
+						sizing={props.sizing}
 						text=""
 					/>
 				);
@@ -558,6 +569,22 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		);
 	}
 
+	/**
+	 * Removes non-standard props.  When passing non standard props to a standard element it
+	 * will flag warnings in the test runner.  This strips off those props that it complains
+	 * about in this component.
+ 	 **/
+	@autobind
+	private sanitizeProps(props: PagerProps) {
+		const {
+			onChangePageSize,
+			onSort,
+			...newProps
+		} = props;
+
+		return newProps;
+	}
+
 	@autobind
 	private handleBlur(e: React.FocusEvent<HTMLInputElement>) {
 		this.currentPage = Number((e.target as HTMLInputElement).value);
@@ -660,21 +687,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	}
 
 	/**
-	 * Performs a shallow comparison of two sets of input props.
-	 */
-	private propsEqual(p1: PagerProps, p2: PagerProps): boolean {
-		if (p1.initialPage === p2.initialPage &&
-			p1.pagesToDisplay === p2.pagesToDisplay &&
-			isEqual(p1.pageSizes, p2.pageSizes) &&
-			p1.totalItems === p2.totalItems &&
-			p1.useinput === p2.useinput) {
-			return true;
-		}
-
-		return false;
-	}
-
-	/**
 	 * When the page size is changed on a button this callback function is used to
 	 * to recompute the buttons and redisplay them.
 	 *
@@ -687,57 +699,50 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.forceUpdate();
 	}
 
-	public componentWillReceiveProps(nextProps: PagerProps) {
-		if (!this.propsEqual(this.props, nextProps)) {
-			this.pageSizes = nextProps.pageSizes;
-			this.computeInitialPages(nextProps.initialPageSize, nextProps);
-
-			this.currentPage = this.initialPage;
-			this.pageSize = this.initialPageSize;
-
-			this.createDialog(nextProps, this.state);
-		}
-	}
-
 	public render() {
-		this.createButtons();
-		this.createDialog(this.props, this.state);
+		const props = this.sanitizeProps(this.props);
+
+		this.createButtons(props);
+		this.createDialog(props, this.state);
 
 		return (
-			<Wrapper {...this.props} >
-				<PagerView className={this.classes}>
+			<Wrapper {...props} >
+				<PagerView
+					className={this.state.classes.classnames}
+					style={this.state.style}
+				>
 					<StyledButton
-						{...this.props}
+						{...props}
 						iconName="angle-double-left"
 						onClick={this.moveToFront}
 					/>
 					<StyledButton
-						{...this.props}
+						{...props}
 						iconName="angle-left"
 						onClick={this.moveToPrevious}
 					/>
 					{this._buttonsDisplay}
 					<StyledButton
-						{...this.props}
+						{...props}
 						iconName="angle-right"
 						onClick={this.moveToNext}
 					/>
 					<StyledButton
-						{...this.props}
+						{...props}
 						iconName="angle-double-right"
 						onClick={this.moveToEnd}
 					/>
 					<Divider />
-					{this.props.useinput ?
+					{props.useinput ?
 					<StyledTextField
-						disabled={this.props.disabled}
+						disabled={props.disabled}
 						min="1"
 						max={String(this._lastPage)}
 						onBlur={this.handleBlur}
 						onChange={this.handleChange}
 						onKeyPress={this.handleKeyPress}
 						placeholder={String(this.currentPage)}
-						sizing={this.props.sizing}
+						sizing={props.sizing}
 						type="number"
 						value={this.currentPage}
 					/>
@@ -746,11 +751,11 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					}
 					<Divider />
 					<StyledButtonDialog
-						{...this.props}
+						{...props}
 						iconName="ellipsis-v"
 						location={Location.top}
 						notriangle
-						sizing={this.props.sizing}
+						sizing={props.sizing}
 					>
 						{this._dialog}
 					</StyledButtonDialog>

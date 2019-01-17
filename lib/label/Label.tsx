@@ -83,21 +83,19 @@ export interface LabelProps extends BaseProps {
 }
 
 export function getDefaultLabelProps(): LabelProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			noedit: false,
-			obj: 'Label',
-			onBlur: nilEvent,
-			onChange: nilEvent,
-			onClick: nilEvent,
-			onDoubleClick: nilEvent,
-			onKeyDown: nilEvent,
-			onKeyPress: nilEvent,
-			onUpdate: nilEvent,
-			text: sp,
-			useedit: false
-		})
-	);
+	return cloneDeep({...getDefaultBaseProps(),
+		noedit: false,
+		obj: 'Label',
+		onBlur: nilEvent,
+		onChange: nilEvent,
+		onClick: nilEvent,
+		onDoubleClick: nilEvent,
+		onKeyDown: nilEvent,
+		onKeyPress: nilEvent,
+		onUpdate: nilEvent,
+		text: sp,
+		useedit: false
+	});
 }
 
 export interface LabelState extends BaseState {
@@ -107,12 +105,11 @@ export interface LabelState extends BaseState {
 }
 
 export function getDefaultLabelState(): LabelState {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseState(), {
-			editable: false,
-			previousText: '',
-			text: ''
-		}));
+	return cloneDeep({...getDefaultBaseState('ui-label'),
+		editable: false,
+		previousText: '',
+		text: ''
+	});
 }
 
 export const LabelView: any = styled.span`
@@ -130,11 +127,11 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	constructor(props: LabelProps) {
 		super(props, Label.defaultProps.style);
-		this.state = Object.assign(getDefaultLabelState(), {
+		this.state = {...getDefaultLabelState(),
 			editable: props.useedit,
 			previousText: props.text,
 			text: props.text
-		});
+		};
 	}
 
 	get label() {
@@ -143,50 +140,56 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	@autobind
 	private handleBlur(e: React.FocusEvent<HTMLSpanElement>) {
-		this.handleChange(e);
-		this.props.onBlur(e);
+		if (!this.props.disabled && this.props.visible) {
+			this.handleChange(e);
+			this.props.onBlur(e);
+		}
 	}
 
 	@autobind
 	private handleChange(e: React.FormEvent<HTMLSpanElement>) {
-		const element = (e.target as HTMLSpanElement);
+		if (!this.props.disabled && this.props.visible) {
+			const element = (e.target as HTMLSpanElement);
 
-		if (this.state.editable) {
-			const val = element.innerHTML;
-			const previous = this.state.previousText;
+			if (this.state.editable) {
+				const val = element.innerHTML;
+				const previous = this.state.previousText;
 
-			this.setState({
-				editable: false,
-				previousText: val,
-				text: val
-			}, () => {
-				this.props.onChange(val);
-				this.props.onUpdate(previous, val);
-			});
+				this.setState({
+					editable: false,
+					previousText: val,
+					text: val
+				}, () => {
+					this.props.onChange(val);
+					this.props.onUpdate(previous, val);
+				});
+			}
 		}
 	}
 
 	@autobind
 	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
-		e.stopPropagation();
-		e.preventDefault();
+		if (!this.props.disabled && this.props.visible) {
+			e.stopPropagation();
+			e.preventDefault();
 
-		if (!this.props.noedit && document != null && window != null) {
-			if ('caretRangeFromPoint' in document) {
-				const range = document.caretRangeFromPoint(e.clientX, e.clientY);
-				const sel = window.getSelection();
+			if (!this.props.noedit && document != null && window != null) {
+				if ('caretRangeFromPoint' in document) {
+					const range = document.caretRangeFromPoint(e.clientX, e.clientY);
+					const sel = window.getSelection();
 
-				window.setTimeout(() => {
-					sel.removeAllRanges();
-					sel.addRange(range);
-				}, 20);
+					window.setTimeout(() => {
+						sel.removeAllRanges();
+						sel.addRange(range);
+					}, 20);
+				}
 			}
-		}
 
-		if (!this.props.noedit) {
-			this.setState({editable: true}, () => {
-				this.props.onDoubleClick(e);
-			});
+			if (!this.props.noedit) {
+				this.setState({editable: true}, () => {
+					this.props.onDoubleClick(e);
+				});
+			}
 		}
 	}
 
@@ -229,15 +232,14 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	public static getDerivedStateFromProps(props: LabelProps, state: LabelState) {
-		state.classes.clear();
-		state.classes.add('ui-label');
+		const newState: LabelState = {...state};
 
-		if (state.text !== props.text) {
-			state.previousText = state.text;
+		if (newState.text !== props.text) {
+			newState.previousText = newState.text;
 		}
-		state.text = props.text;
+		newState.text = props.text;
 
-		return super.getDerivedStateFromProps(props, state);
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
@@ -248,9 +250,9 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 					contentEditable={this.state.editable}
 					disabled={this.props.disabled}
 					ref={this.handleRef}
-					onBlur={(!this.props.disabled) ? this.handleBlur : nilEvent}
+					onBlur={this.handleBlur}
 					onClick={this.props.onClick}
-					onDoubleClick={(!this.props.disabled) ? this.handleDoubleClick : nilEvent}
+					onDoubleClick={this.handleDoubleClick}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
 					sizing={this.props.sizing}

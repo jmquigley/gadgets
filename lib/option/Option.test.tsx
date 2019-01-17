@@ -3,7 +3,12 @@
 import {EnumValues as ev} from 'enum-values';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultOptionProps, Option, OptionType, Sizing} from '../../dist/bundle';
+import {
+	getDefaultOptionProps,
+	Option,
+	OptionType,
+	Sizing
+} from '../../dist/bundle';
 
 test('Test retrieval of Option props object', () => {
 	const props = getDefaultOptionProps();
@@ -14,10 +19,25 @@ test('Test retrieval of Option props object', () => {
 
 for (const sizing of ev.getNames(Sizing)) {
 	test(`Creation of the Option control (${sizing})`, () => {
-		const ctl = mount(
+		const ctl = shallow(
 			<Option
 				className="test-class"
-				sizing={sizing}
+				sizing={Sizing[sizing]}
+				text="test"
+			/>
+		);
+
+		expect(ctl).toBeDefined();
+		expect(ctl).toMatchSnapshot();
+	});
+}
+
+for (const optionType of ev.getNames(OptionType)) {
+	test(`Creation of the Option control (${optionType})`, () => {
+		const ctl = shallow(
+			<Option
+				className="test-class"
+				optionType={OptionType[optionType]}
 				text="test"
 			/>
 		);
