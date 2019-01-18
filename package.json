@@ -66,7 +66,7 @@
     "identity-obj-proxy": "^3.0.0",
     "immutability-helper": "^2.9.0",
     "immutable": "^4.0.0-rc.12",
-    "jest": "^23.6.0",
+    "jest": "24.0.0-alpha.12",
     "jest-styled-components": "^6.3.1",
     "js-output-loader": ">=0.0.5",
     "json-loader": "^0.5.7",
@@ -170,7 +170,9 @@
       "<rootDir>/bin/setupEnzyme.js",
       "<rootDir>/bin/setupDOM.js"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/bin/setupJest.js",
+    "setupFilesAfterEnv": [
+				"<rootDir>/bin/setupJest.js"
+		],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
@@ -193,7 +195,7 @@
     "lint": "pkgwrap --lint",
     "prepublishOnly": "yarn run all",
     "start": "cross-env NODE_ENV=production electron demo/.",
-    "test": "cross-env NODE_ENV=test jest -i",
+    "test": "cross-env NODE_ENV=test jest",
     "watch": "webpack --watch --progress",
     "webpack": "webpack"
   }
