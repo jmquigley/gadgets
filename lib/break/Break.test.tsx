@@ -3,7 +3,8 @@
 import {EnumValues as ev} from 'enum-values';
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {Break, Sizing} from '../../dist/bundle';
+import {Sizing} from '../shared';
+import {Break} from './index';
 
 for (const sizing of ev.getNames(Sizing)) {
 	test('Test creation of a Break control of size ${sizing}', () => {
