@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultLabelProps, Label} from '../../dist/bundle';
+import {getDefaultLabelProps, Label} from './index';
 
 test('Test retrieval of default Label props object', () => {
 	const props = getDefaultLabelProps();
@@ -150,20 +150,4 @@ test('Test double click change to Label and blur to save', () => {
 	expect(update).toHaveBeenCalled();
 	expect(update.mock.calls[0][0]).toBe('A');
 	expect(update.mock.calls[0][1]).toBe('ABCDE');
-});
-
-test('Test dynamically changing Label props', () => {
-	const arr = ['A', 'B', 'C'];
-	const ctl = mount(<Label/>);
-
-	for (const val of arr) {
-
-		expect(ctl).toBeDefined();
-		ctl.setProps({text: val});
-
-		const instance = ctl.instance() as Label;
-		expect(instance).toBeDefined();
-		expect(instance.label).toBeDefined();
-		expect(ctl.state('text')).toBe(val);
-	}
 });

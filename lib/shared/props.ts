@@ -191,7 +191,7 @@ const defaultBaseProps: BaseProps = {
 	selected: false,
 	sizing: Sizing.normal,
 	style: {},
-	testing: false,
+	testing: process.env.NODE_ENV !== 'production',
 	theme: null,
 	tooltip: '',
 	top: '',

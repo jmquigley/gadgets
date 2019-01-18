@@ -2,12 +2,12 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
+import {Location} from '../shared';
 import {
 	getDefaultTabContainerProps,
-	Location,
 	Tab,
 	TabContainer
-} from '../../dist/bundle';
+} from './index';
 
 test('Test retrieval of Tabs props object', () => {
 	const props = getDefaultTabContainerProps();

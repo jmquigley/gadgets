@@ -2,7 +2,7 @@
 
 import {mount} from 'enzyme';
 import * as React from 'react';
-import {getDefaultSliderProps, Slider} from '../../dist/bundle';
+import {getDefaultSliderProps, Slider} from './index';
 
 test('Test retrieval of Slider props object', () => {
 	const props = getDefaultSliderProps();

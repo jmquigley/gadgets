@@ -3,12 +3,12 @@
 import {EnumValues as ev} from 'enum-values';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
+import {Sizing} from '../shared';
 import {
 	getDefaultOptionGroupProps,
 	OptionGroup,
-	OptionType,
-	Sizing
-} from '../../dist/bundle';
+	OptionType
+} from './index';
 
 test('Test retrieval of OptionGroup props object', () => {
 	const props = getDefaultOptionGroupProps();

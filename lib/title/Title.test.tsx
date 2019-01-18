@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultTitleProps, Title, TitleLayout} from '../../dist/bundle';
+import {getDefaultTitleProps, Title, TitleLayout} from './index';
 
 test('Test retrieval of Title props object', () => {
 	const props = getDefaultTitleProps();

@@ -2,7 +2,7 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultSelectProps, Select} from '../../dist/bundle';
+import {getDefaultSelectProps, Select} from './index';
 
 test('Test retrieval of Select props object', () => {
 	const props = getDefaultSelectProps();

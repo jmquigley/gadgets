@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {ButtonCircle, getDefaultButtonCircleProps} from '../../dist/bundle';
+import {ButtonCircle, getDefaultButtonCircleProps} from './index';
 
 test('Test retrieval of ButtonCircle props object', () => {
 	const props = getDefaultButtonCircleProps();

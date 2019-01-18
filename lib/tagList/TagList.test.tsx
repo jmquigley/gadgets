@@ -3,7 +3,7 @@
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {SortedList} from 'util.ds';
-import {getDefaultTagListProps, TagList} from '../../dist/bundle';
+import {getDefaultTagListProps, TagList} from './index';
 
 test('Test retrieval of TagList props object', () => {
 	const props = getDefaultTagListProps();
@@ -29,7 +29,7 @@ test('Create a new static TagList with 3 tags (a, b, c)', () => {
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	let tags: SortedList<string> = ctl.state('tags');
+	const tags: SortedList<string> = ctl.state('tags');
 	expect(tags).toBeDefined();
 	expect(tags.array).toEqual(expect.arrayContaining(['a', 'b', 'c']));
 });
@@ -42,7 +42,7 @@ test('Create a new static TagList with 3 tags (c, b, a) with no sorting', () => 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	let tags: SortedList<string> = ctl.state('tags');
+	const tags: SortedList<string> = ctl.state('tags');
 	expect(tags).toBeDefined();
 	expect(tags.array).toEqual(expect.arrayContaining(['c', 'b', 'a']));
 });

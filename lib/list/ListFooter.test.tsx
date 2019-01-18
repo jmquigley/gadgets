@@ -4,7 +4,7 @@
 
 import {mount} from 'enzyme';
 import * as React from 'react';
-import {getDefaultListFooterProps, ListFooter} from '../../dist/bundle';
+import {getDefaultListFooterProps, ListFooter} from './index';
 
 test('Test retrieval of ListFooter props object', () => {
 	const props = getDefaultListFooterProps();

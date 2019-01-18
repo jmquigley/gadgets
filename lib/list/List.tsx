@@ -123,7 +123,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 		this.state = {...getDefaultListState(),
 			keys: new Keys({testing: this.props.testing})
-		}
+		};
 	}
 
 	@autobind

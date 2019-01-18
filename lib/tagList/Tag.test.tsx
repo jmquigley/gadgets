@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultTagProps, Tag} from '../../dist/bundle';
+import {getDefaultTagProps, Tag} from './index';
 
 test('Test retrieval of Tag props object', () => {
 	const props = getDefaultTagProps();

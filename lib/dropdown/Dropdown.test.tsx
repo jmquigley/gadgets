@@ -4,7 +4,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {Dropdown, DropdownOption, getDefaultDropdownProps} from '../../dist/bundle';
+import {Dropdown, DropdownOption, getDefaultDropdownProps} from './index';
 
 const testData: DropdownOption[] = [
 	{value: 'idstr1', label: 'lstr1'},

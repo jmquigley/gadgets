@@ -3,7 +3,7 @@
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {waitPromise} from 'util.wait';
-import {DynamicList, getDefaultDynamicListProps} from '../../dist/bundle';
+import {DynamicList, getDefaultDynamicListProps} from './index';
 
 test('Test retrieval of DynamicList props object', () => {
 	const props = getDefaultDynamicListProps();

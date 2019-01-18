@@ -573,7 +573,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * Removes non-standard props.  When passing non standard props to a standard element it
 	 * will flag warnings in the test runner.  This strips off those props that it complains
 	 * about in this component.
- 	 **/
+	 */
 	@autobind
 	private sanitizeProps(props: PagerProps) {
 		const {

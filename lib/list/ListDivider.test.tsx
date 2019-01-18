@@ -2,7 +2,7 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultListDividerProps, ListDivider} from '../../dist/bundle';
+import {getDefaultListDividerProps, ListDivider} from './index';
 
 test('Test retrieval of ListHeader props object', () => {
 	const props = getDefaultListDividerProps();

@@ -2,7 +2,7 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultListHeaderProps, ListHeader} from '../../dist/bundle';
+import {getDefaultListHeaderProps, ListHeader} from './index';
 
 test('Test retrieval of ListHeader props object', () => {
 	const props = getDefaultListHeaderProps();

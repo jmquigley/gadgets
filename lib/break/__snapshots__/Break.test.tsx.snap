@@ -1,10 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test creation of a Break control 1`] = `
+exports[`Test creation of a Break control of size \${sizing} 1`] = `
+<styled.p
+  className="ui-break"
+  height="0.1875rem"
+  sizing="xxsmall"
+  style={Object {}}
+/>
+`;
+
+exports[`Test creation of a Break control of size \${sizing} 2`] = `
+<styled.p
+  className="ui-break"
+  height="0.25rem"
+  sizing="xsmall"
+  style={Object {}}
+/>
+`;
+
+exports[`Test creation of a Break control of size \${sizing} 3`] = `
 <styled.p
   className="ui-break"
   height="0.375rem"
   sizing="small"
+  style={Object {}}
+/>
+`;
+
+exports[`Test creation of a Break control of size \${sizing} 4`] = `
+<styled.p
+  className="ui-break"
+  height="0.5rem"
+  sizing="normal"
+  style={Object {}}
+/>
+`;
+
+exports[`Test creation of a Break control of size \${sizing} 5`] = `
+<styled.p
+  className="ui-break"
+  height="0.5rem"
+  sizing="medium"
+  style={Object {}}
+/>
+`;
+
+exports[`Test creation of a Break control of size \${sizing} 6`] = `
+<styled.p
+  className="ui-break"
+  height="0.75rem"
+  sizing="large"
+  style={Object {}}
+/>
+`;
+
+exports[`Test creation of a Break control of size \${sizing} 7`] = `
+<styled.p
+  className="ui-break"
+  height="1rem"
+  sizing="xlarge"
+  style={Object {}}
+/>
+`;
+
+exports[`Test creation of a Break control of size \${sizing} 8`] = `
+<styled.p
+  className="ui-break"
+  height="1.5rem"
+  sizing="xxlarge"
+  style={Object {}}
+/>
+`;
+
+exports[`Test creation of a Break control of size \${sizing} 9`] = `
+<styled.p
+  className="ui-break"
+  height="0.5rem"
+  sizing="inherit"
   style={Object {}}
 />
 `;

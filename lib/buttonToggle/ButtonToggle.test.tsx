@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {ButtonToggle, getDefaultButtonToggleProps} from '../../dist/bundle';
+import {ButtonToggle, getDefaultButtonToggleProps} from './index';
 
 test('Test retrieval of ButtonToggle props object', () => {
 	const props = getDefaultButtonToggleProps();

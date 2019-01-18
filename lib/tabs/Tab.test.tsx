@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultTabProps, Tab} from '../../dist/bundle';
+import {getDefaultTabProps, Tab} from './index';
 
 test('Test retrieval of Tab props object', () => {
 	const props = getDefaultTabProps();

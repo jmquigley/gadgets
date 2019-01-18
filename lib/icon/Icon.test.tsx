@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultIconProps, Icon} from '../../dist/bundle';
+import {getDefaultIconProps, Icon} from './index';
 
 test('Test retrieval of the Icon props object', () => {
 	const props = getDefaultIconProps();

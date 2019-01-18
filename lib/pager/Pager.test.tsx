@@ -5,7 +5,7 @@
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {waitPromise} from 'util.wait';
-import {getDefaultPagerProps, Pager} from '../../dist/bundle';
+import {getDefaultPagerProps, Pager} from './index';
 
 function validate(ctl: any) {
 	expect(ctl).toBeDefined();

@@ -157,9 +157,9 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 	constructor(props: OptionGroupProps) {
 		super(props, OptionGroup.defaultProps.style);
 
- 		this.state = {...getDefaultOptionGroupState(),
- 			options: this.handleOptions(this.props.options, this.props.default)
- 		};
+		this.state = {...getDefaultOptionGroupState(),
+			options: this.handleOptions(this.props.options, this.props.default)
+		};
 	}
 
 	private buildOptionList() {

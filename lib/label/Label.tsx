@@ -231,17 +231,6 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.componentDidMount();
 	}
 
-	public static getDerivedStateFromProps(props: LabelProps, state: LabelState) {
-		const newState: LabelState = {...state};
-
-		if (newState.text !== props.text) {
-			newState.previousText = newState.text;
-		}
-		newState.text = props.text;
-
-		return super.getDerivedStateFromProps(props, newState);
-	}
-
 	public render() {
 		return (
 			<Wrapper {...this.props} >

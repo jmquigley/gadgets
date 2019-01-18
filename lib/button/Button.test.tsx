@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {Button,	getDefaultButtonProps} from '../../dist/bundle';
+import {Button,	getDefaultButtonProps} from './index';
 
 test('Test retrieval of Button props object', () => {
 	const props = getDefaultButtonProps();

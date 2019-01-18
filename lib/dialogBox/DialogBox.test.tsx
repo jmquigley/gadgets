@@ -2,7 +2,7 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from '../../dist/bundle';
+import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from './index';
 
 test('Test retrieval of DialogBox props object', () => {
 	const props = getDefaultDialogBoxProps();

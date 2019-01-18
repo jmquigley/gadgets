@@ -3,7 +3,8 @@
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {waitPromise} from 'util.wait';
-import {Button, getDefaultListItemProps, ListItem} from '../../dist/bundle';
+import {Button} from '../button';
+import {getDefaultListItemProps, ListItem} from './index';
 
 function validate(ctl: any) {
 	expect(ctl).toBeDefined();

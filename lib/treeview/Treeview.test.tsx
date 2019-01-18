@@ -3,12 +3,12 @@
 import {EnumValues as ev} from 'enum-values';
 import {mount} from 'enzyme';
 import * as React from 'react';
+import {Sizing} from '../shared';
 import {
 	getDefaultTreeviewProps,
-	Sizing,
 	Treeview,
 	TreeviewItem
-} from '../../dist/bundle';
+} from './index';
 
 const treeData: TreeviewItem[] = [
 	{title: '1.0', expanded: true, children: [
@@ -34,7 +34,6 @@ test('Test retrieval of Treeview props object', () => {
 	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
-
 
 for (const sizing of ev.getNames(Sizing)) {
 	test(`Test creation of a simple Treeview component (${sizing})`, () => {

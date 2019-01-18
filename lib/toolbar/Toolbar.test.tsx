@@ -2,13 +2,10 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {
-	Button,
-	getDefaultToolbarProps,
-	Justify,
-	Sizing,
-	Toolbar
-} from '../../dist/bundle';
+
+import {Button} from '../button';
+import {Justify, Sizing} from '../shared';
+import {getDefaultToolbarProps, Toolbar} from './index';
 
 test('Test retrieval of Toolbar props object', () => {
 	const props = getDefaultToolbarProps();

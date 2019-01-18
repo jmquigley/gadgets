@@ -5,7 +5,7 @@ import * as React from 'react';
 import {
 	DialogWindow,
 	getDefaultDialogWindowProps
-} from '../../dist/bundle';
+} from './index';
 
 test('Test retrieval of DialogWindow props object', () => {
 	const props = getDefaultDialogWindowProps();

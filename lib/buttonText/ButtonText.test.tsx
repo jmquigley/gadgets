@@ -2,7 +2,8 @@
 
 import {mount} from 'enzyme';
 import * as React from 'react';
-import {ButtonText, getDefaultButtonTextProps, Justify} from '../../dist/bundle';
+import {Justify} from '../shared';
+import {ButtonText, getDefaultButtonTextProps} from './index';
 
 test('Test retrieval of ButtonText props object', () => {
 	const props = getDefaultButtonTextProps();

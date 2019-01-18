@@ -2,8 +2,8 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {Location} from '../../dist/bundle';
-import {ButtonDialog, getDefaultButtonDialogProps} from '../../dist/bundle';
+import {Location} from '../shared';
+import {ButtonDialog, getDefaultButtonDialogProps} from './index';
 
 test('Test retrieval of ButtonDialog props object', () => {
 	const props = getDefaultButtonDialogProps();

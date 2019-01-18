@@ -2,7 +2,7 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultToastProps, Toast} from '../../dist/bundle';
+import {getDefaultToastProps, Toast} from './index';
 
 test('Test retrieval of Toast props object', () => {
 	const props = getDefaultToastProps();

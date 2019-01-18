@@ -3,7 +3,7 @@
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {waitPromise} from 'util.wait';
-import {getDefaultListProps, List, ListItem} from '../../dist/bundle';
+import {getDefaultListProps, List, ListItem} from './index';
 
 test('Test retrieval of List props object', () => {
 	const props = getDefaultListProps();

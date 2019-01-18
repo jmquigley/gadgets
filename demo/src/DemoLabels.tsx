@@ -30,7 +30,7 @@ export default class DemoLabels extends React.Component<any, undefined> {
 					<Label
 						className="demoLabel"
 						disabled={this.props['disabled']}
-						text="Test Label #3 Styled"
+						text="Test Label #2 Styled"
 						sizing={this.props['sizing']}
 					/>
 					<Break sizing={this.props['sizing']} />
@@ -39,7 +39,7 @@ export default class DemoLabels extends React.Component<any, undefined> {
 						disabled={this.props['disabled']}
 						noedit
 						sizing={this.props['sizing']}
-						text="Text Label #4 (no edit)"
+						text="Text Label #3 (no edit)"
 					/>
 					<Break sizing={this.props['sizing']} />
 
@@ -50,7 +50,7 @@ export default class DemoLabels extends React.Component<any, undefined> {
 							color: 'white',
 							backgroundColor: 'blue'
 						}}
-						text="Text Label #5 (inline style)"
+						text="Text Label #4 (inline style)"
 					/>
 				</div>
 			</Container>

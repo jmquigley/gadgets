@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {Badge, getDefaultBadgeProps} from '../../dist/bundle';
+import {Badge, getDefaultBadgeProps} from './index';
 
 test('Test retrieval of Badge props object', () => {
 	const props = getDefaultBadgeProps();

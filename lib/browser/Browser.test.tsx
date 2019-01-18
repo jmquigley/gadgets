@@ -2,7 +2,7 @@
 
 import {mount} from 'enzyme';
 import * as React from 'react';
-import {Browser, getDefaultBrowserProps} from '../../dist/bundle';
+import {Browser, getDefaultBrowserProps} from './index';
 
 test('Test retrieval of the Browser props object', () => {
 	const props = getDefaultBrowserProps();

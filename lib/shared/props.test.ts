@@ -1,7 +1,7 @@
 'use strict';
 
 import * as assert from 'assert';
-import {getDefaultBaseProps} from '../index';
+import {getDefaultBaseProps} from './props';
 
 test('Test retrieval of default prop object', () => {
 	const props = getDefaultBaseProps();

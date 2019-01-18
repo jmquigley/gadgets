@@ -2,7 +2,7 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {Container, getDefaultContainerProps} from '../../dist/bundle';
+import {Container, getDefaultContainerProps} from './index';
 
 test('Test retrieval of Container props object', () => {
 	const props = getDefaultContainerProps();

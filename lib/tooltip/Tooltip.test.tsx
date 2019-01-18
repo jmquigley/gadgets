@@ -2,7 +2,8 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultTooltipProps, Location, Tooltip} from '../../dist/bundle';
+import {Location} from '../shared';
+import {getDefaultTooltipProps, Tooltip} from './index';
 
 test('Test retrieval of Tooltip props object', () => {
 	const props = getDefaultTooltipProps();

@@ -2,12 +2,12 @@
 
 import {mount} from 'enzyme';
 import * as React from 'react';
+import {Sizing} from '../shared';
 import {
 	Breadcrumbs,
 	Crumbs,
-	getDefaultBreadcrumbsProps,
-	Sizing
-} from '../../dist/bundle';
+	getDefaultBreadcrumbsProps
+} from './index';
 
 const items: Crumbs[] = [
 	{name: 'name1', uri: 'http://www.example1.com'},

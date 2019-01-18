@@ -2,7 +2,7 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {Accordion, getDefaultAccordionProps} from '../../dist/bundle';
+import {Accordion, getDefaultAccordionProps} from './index';
 
 test('Test retrieval of Accordion props object', () => {
 	const props = getDefaultAccordionProps();

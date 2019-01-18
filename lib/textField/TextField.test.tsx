@@ -3,7 +3,7 @@
 import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultTextFieldProps, TextField} from '../../dist/bundle';
+import {getDefaultTextFieldProps, TextField} from './index';
 
 test('Test retrieval of TextField props object', () => {
 	const props = getDefaultTextFieldProps();

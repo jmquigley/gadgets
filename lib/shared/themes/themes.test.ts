@@ -2,8 +2,7 @@
 
 const debug = require('debug')('themes.test');
 
-import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from '../../dist/bundle';
-import {default as base} from '../base';
+import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from '../../../dist/bundle';
 
 test('Test retrieval of the current theme', () => {
 	const theme = getTheme();
@@ -27,6 +26,8 @@ test('Test retrieving the light theme', () => {
 });
 
 test('Test setting and retrieving a custom theme', () => {
+	const base = getTheme(Theme.base);
+
 	const props: ThemeProps = Object.assign({color: 'red'}, base);
 	expect(props).toBeDefined();
 

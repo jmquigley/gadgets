@@ -193,7 +193,7 @@
 				"lint": "pkgwrap --lint",
 				"prepublishOnly": "yarn run all",
 				"start": "cross-env NODE_ENV=production electron demo/.",
-				"test": "cross-env NODE_ENV=test pkgwrap --testing --jest",
+				"test": "cross-env NODE_ENV=test jest",
 				"watch": "webpack --watch --progress",
 				"webpack": "webpack"
 		}

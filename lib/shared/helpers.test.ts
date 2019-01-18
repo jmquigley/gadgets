@@ -3,7 +3,7 @@
 const debug = require('debug')('helpers.test');
 
 import * as assert from 'assert';
-import {globalize} from '../helpers';
+import {globalize} from './helpers';
 
 test('Add a global reference (no replacement)', () => {
 	assert((global as any).GlobalTest == null);

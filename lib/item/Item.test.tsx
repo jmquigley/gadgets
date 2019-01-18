@@ -2,7 +2,7 @@
 
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultItemProps, Item} from '../../dist/bundle';
+import {getDefaultItemProps, Item} from './index';
 
 test('Test retrieval of Item props object', () => {
 	const props = getDefaultItemProps();

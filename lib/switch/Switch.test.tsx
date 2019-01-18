@@ -2,7 +2,7 @@
 
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
-import {getDefaultSwitchProps, Switch, SwitchType} from '../../dist/bundle';
+import {getDefaultSwitchProps, Switch, SwitchType} from './index';
 
 test('Test retrieval of the Switch props object', () => {
 	const props = getDefaultSwitchProps();

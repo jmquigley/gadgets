@@ -3,12 +3,11 @@
 import {EnumValues as ev} from 'enum-values';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
+import {Direction, Sizing} from '../shared';
 import {
-	Direction,
 	getDefaultTriangleProps,
-	Sizing,
 	Triangle
-} from '../../dist/bundle';
+} from './index';
 
 test('Test retrieval of Triangle props object', () => {
 	const props = getDefaultTriangleProps();
