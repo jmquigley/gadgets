@@ -2,15 +2,37 @@
 
 exports[`Test creation of a simple Treeview component (inherit) 1`] = `
 <Treeview
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  defaultTitle="New Title"
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
-  height="400px"
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Treeview"
+  onAdd={[Function]}
   onChange={[Function]}
+  onDelete={[Function]}
+  onSelect={[Function]}
+  padding=""
+  selected={false}
   sizing="inherit"
   style={Object {}}
-  testing={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
   treeData={
     Array [
       Object {
@@ -61,18 +83,21 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
     ]
   }
   visible={true}
+  width=""
+  xcss={null}
 >
   <Wrapper
     bottom=""
     className=""
     contentEditable={false}
     controlled={true}
+    defaultTitle="New Title"
     direction="right"
     disabled={false}
     err={null}
     errorMessage=""
     focus={false}
-    height="400px"
+    height=""
     id=""
     left=""
     location="none"
@@ -81,14 +106,17 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
     noripple={false}
     notheme={false}
     obj="Treeview"
+    onAdd={[Function]}
     onChange={[Function]}
+    onDelete={[Function]}
     onError={[Function]}
+    onSelect={[Function]}
     padding=""
     reset={false}
     selected={false}
     sizing="inherit"
     style={Object {}}
-    testing={false}
+    testing={true}
     theme={null}
     tooltip=""
     top=""
@@ -169,7 +197,6 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
     >
       <styled.div
         className="ui-treeview-container"
-        height="400px"
         style={Object {}}
       >
         <StyledComponent
@@ -179,9 +206,9 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-cSHVUG",
                 "isStatic": false,
-                "lastClassName": "cZIfPy",
+                "lastClassName": "hANYkd",
                 "rules": Array [
                   "
 	height: ",
@@ -196,7 +223,7 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-cSHVUG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -204,26 +231,16 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
             }
           }
           forwardedRef={null}
-          height="400px"
           style={Object {}}
         >
           <div
-            className="ui-treeview-container sc-bwzfXH cZIfPy"
-            height="400px"
+            className="ui-treeview-container sc-cSHVUG hANYkd"
             style={Object {}}
           >
             <Styled(DragDropContext(SortableTreeWithoutDndContext))
-              canDrag={true}
               className="ui-treeview"
-              disabled={false}
-              err={null}
-              errorMessage=""
-              height="400px"
-              obj="Treeview"
+              generateNodeProps={[Function]}
               onChange={[Function]}
-              sizing="inherit"
-              style={Object {}}
-              testing={false}
               treeData={
                 Array [
                   Object {
@@ -273,23 +290,18 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
                   },
                 ]
               }
-              visible={true}
             >
               <StyledComponent
-                canDrag={true}
                 className="ui-treeview"
-                disabled={false}
-                err={null}
-                errorMessage=""
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "DecoratedComponent": [Function],
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "iNPnS",
+                      "lastClassName": "hSpGNO",
                       "rules": Array [
                         "
 	",
@@ -298,13 +310,22 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
 	",
                         [Function],
                         "
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
 ",
                       ],
                     },
                     "displayName": "Styled(DragDropContext(SortableTreeWithoutDndContext))",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -312,12 +333,8 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height="400px"
-                obj="Treeview"
+                generateNodeProps={[Function]}
                 onChange={[Function]}
-                sizing="inherit"
-                style={Object {}}
-                testing={false}
                 treeData={
                   Array [
                     Object {
@@ -367,20 +384,11 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
                     },
                   ]
                 }
-                visible={true}
               >
                 <DragDropContext(SortableTreeWithoutDndContext)
-                  canDrag={true}
-                  className="ui-treeview sc-htpNat iNPnS"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  height="400px"
-                  obj="Treeview"
+                  className="ui-treeview sc-kAzzGY hSpGNO"
+                  generateNodeProps={[Function]}
                   onChange={[Function]}
-                  sizing="inherit"
-                  style={Object {}}
-                  testing={false}
                   treeData={
                     Array [
                       Object {
@@ -430,20 +438,11 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
                       },
                     ]
                   }
-                  visible={true}
                 >
                   <SortableTreeWithoutDndContext
-                    canDrag={true}
-                    className="ui-treeview sc-htpNat iNPnS"
-                    disabled={false}
-                    err={null}
-                    errorMessage=""
-                    height="400px"
-                    obj="Treeview"
+                    className="ui-treeview sc-kAzzGY hSpGNO"
+                    generateNodeProps={[Function]}
                     onChange={[Function]}
-                    sizing="inherit"
-                    style={Object {}}
-                    testing={false}
                     treeData={
                       Array [
                         Object {
@@ -493,14 +492,12 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
                         },
                       ]
                     }
-                    visible={true}
                   >
                     <ReactSortableTree
                       canDrag={true}
                       canDrop={null}
                       canNodeHaveChildren={[Function]}
-                      className="ui-treeview sc-htpNat iNPnS"
-                      disabled={false}
+                      className="ui-treeview sc-kAzzGY hSpGNO"
                       dndType={null}
                       dragDropManager={
                         DragDropManagerImpl {
@@ -619,16 +616,12 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
                           },
                         }
                       }
-                      err={null}
-                      errorMessage=""
-                      generateNodeProps={null}
+                      generateNodeProps={[Function]}
                       getNodeKey={[Function]}
-                      height="400px"
                       innerStyle={Object {}}
                       isVirtualized={true}
                       maxDepth={null}
                       nodeContentRenderer={null}
-                      obj="Treeview"
                       onChange={[Function]}
                       onDragStateChanged={[Function]}
                       onMoveNode={[Function]}
@@ -644,10 +637,8 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
                       searchMethod={null}
                       searchQuery={null}
                       shouldCopyOnOutsideDrop={false}
-                      sizing="inherit"
                       slideRegionSize={null}
                       style={Object {}}
-                      testing={false}
                       theme={Object {}}
                       treeData={
                         Array [
@@ -699,10 +690,9 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
                         ]
                       }
                       treeNodeRenderer={null}
-                      visible={true}
                     >
                       <div
-                        className="rst__tree ui-treeview sc-htpNat iNPnS"
+                        className="rst__tree ui-treeview sc-kAzzGY hSpGNO"
                         style={
                           Object {
                             "height": "100%",
@@ -1194,15 +1184,37 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
 
 exports[`Test creation of a simple Treeview component (large) 1`] = `
 <Treeview
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  defaultTitle="New Title"
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
-  height="400px"
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Treeview"
+  onAdd={[Function]}
   onChange={[Function]}
+  onDelete={[Function]}
+  onSelect={[Function]}
+  padding=""
+  selected={false}
   sizing="large"
   style={Object {}}
-  testing={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
   treeData={
     Array [
       Object {
@@ -1253,18 +1265,21 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
     ]
   }
   visible={true}
+  width=""
+  xcss={null}
 >
   <Wrapper
     bottom=""
     className=""
     contentEditable={false}
     controlled={true}
+    defaultTitle="New Title"
     direction="right"
     disabled={false}
     err={null}
     errorMessage=""
     focus={false}
-    height="400px"
+    height=""
     id=""
     left=""
     location="none"
@@ -1273,14 +1288,17 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
     noripple={false}
     notheme={false}
     obj="Treeview"
+    onAdd={[Function]}
     onChange={[Function]}
+    onDelete={[Function]}
     onError={[Function]}
+    onSelect={[Function]}
     padding=""
     reset={false}
     selected={false}
     sizing="large"
     style={Object {}}
-    testing={false}
+    testing={true}
     theme={null}
     tooltip=""
     top=""
@@ -1361,7 +1379,6 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
     >
       <styled.div
         className="ui-treeview-container"
-        height="400px"
         style={Object {}}
       >
         <StyledComponent
@@ -1371,9 +1388,9 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-cSHVUG",
                 "isStatic": false,
-                "lastClassName": "cZIfPy",
+                "lastClassName": "hANYkd",
                 "rules": Array [
                   "
 	height: ",
@@ -1388,7 +1405,7 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-cSHVUG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -1396,27 +1413,17 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
             }
           }
           forwardedRef={null}
-          height="400px"
           style={Object {}}
         >
           <div
-            className="ui-treeview-container sc-bwzfXH cZIfPy"
-            height="400px"
+            className="ui-treeview-container sc-cSHVUG hANYkd"
             style={Object {}}
           >
             <Styled(DragDropContext(SortableTreeWithoutDndContext))
-              canDrag={true}
               className="ui-treeview"
-              disabled={false}
-              err={null}
-              errorMessage=""
-              height="400px"
-              obj="Treeview"
+              generateNodeProps={[Function]}
               onChange={[Function]}
               rowHeight={70}
-              sizing="large"
-              style={Object {}}
-              testing={false}
               treeData={
                 Array [
                   Object {
@@ -1466,23 +1473,18 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
                   },
                 ]
               }
-              visible={true}
             >
               <StyledComponent
-                canDrag={true}
                 className="ui-treeview"
-                disabled={false}
-                err={null}
-                errorMessage=""
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "DecoratedComponent": [Function],
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "cAWkZW",
+                      "lastClassName": "hSpGNO",
                       "rules": Array [
                         "
 	",
@@ -1491,13 +1493,22 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
 	",
                         [Function],
                         "
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
 ",
                       ],
                     },
                     "displayName": "Styled(DragDropContext(SortableTreeWithoutDndContext))",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1505,13 +1516,9 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height="400px"
-                obj="Treeview"
+                generateNodeProps={[Function]}
                 onChange={[Function]}
                 rowHeight={70}
-                sizing="large"
-                style={Object {}}
-                testing={false}
                 treeData={
                   Array [
                     Object {
@@ -1561,21 +1568,12 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
                     },
                   ]
                 }
-                visible={true}
               >
                 <DragDropContext(SortableTreeWithoutDndContext)
-                  canDrag={true}
-                  className="ui-treeview sc-htpNat cAWkZW"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  height="400px"
-                  obj="Treeview"
+                  className="ui-treeview sc-kAzzGY hSpGNO"
+                  generateNodeProps={[Function]}
                   onChange={[Function]}
                   rowHeight={70}
-                  sizing="large"
-                  style={Object {}}
-                  testing={false}
                   treeData={
                     Array [
                       Object {
@@ -1625,21 +1623,12 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
                       },
                     ]
                   }
-                  visible={true}
                 >
                   <SortableTreeWithoutDndContext
-                    canDrag={true}
-                    className="ui-treeview sc-htpNat cAWkZW"
-                    disabled={false}
-                    err={null}
-                    errorMessage=""
-                    height="400px"
-                    obj="Treeview"
+                    className="ui-treeview sc-kAzzGY hSpGNO"
+                    generateNodeProps={[Function]}
                     onChange={[Function]}
                     rowHeight={70}
-                    sizing="large"
-                    style={Object {}}
-                    testing={false}
                     treeData={
                       Array [
                         Object {
@@ -1689,14 +1678,12 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
                         },
                       ]
                     }
-                    visible={true}
                   >
                     <ReactSortableTree
                       canDrag={true}
                       canDrop={null}
                       canNodeHaveChildren={[Function]}
-                      className="ui-treeview sc-htpNat cAWkZW"
-                      disabled={false}
+                      className="ui-treeview sc-kAzzGY hSpGNO"
                       dndType={null}
                       dragDropManager={
                         DragDropManagerImpl {
@@ -1815,16 +1802,12 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
                           },
                         }
                       }
-                      err={null}
-                      errorMessage=""
-                      generateNodeProps={null}
+                      generateNodeProps={[Function]}
                       getNodeKey={[Function]}
-                      height="400px"
                       innerStyle={Object {}}
                       isVirtualized={true}
                       maxDepth={null}
                       nodeContentRenderer={null}
-                      obj="Treeview"
                       onChange={[Function]}
                       onDragStateChanged={[Function]}
                       onMoveNode={[Function]}
@@ -1840,10 +1823,8 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
                       searchMethod={null}
                       searchQuery={null}
                       shouldCopyOnOutsideDrop={false}
-                      sizing="large"
                       slideRegionSize={null}
                       style={Object {}}
-                      testing={false}
                       theme={Object {}}
                       treeData={
                         Array [
@@ -1895,10 +1876,9 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
                         ]
                       }
                       treeNodeRenderer={null}
-                      visible={true}
                     >
                       <div
-                        className="rst__tree ui-treeview sc-htpNat cAWkZW"
+                        className="rst__tree ui-treeview sc-kAzzGY hSpGNO"
                         style={
                           Object {
                             "height": "100%",
@@ -2390,15 +2370,37 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
 
 exports[`Test creation of a simple Treeview component (medium) 1`] = `
 <Treeview
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  defaultTitle="New Title"
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
-  height="400px"
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Treeview"
+  onAdd={[Function]}
   onChange={[Function]}
+  onDelete={[Function]}
+  onSelect={[Function]}
+  padding=""
+  selected={false}
   sizing="medium"
   style={Object {}}
-  testing={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
   treeData={
     Array [
       Object {
@@ -2449,18 +2451,21 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
     ]
   }
   visible={true}
+  width=""
+  xcss={null}
 >
   <Wrapper
     bottom=""
     className=""
     contentEditable={false}
     controlled={true}
+    defaultTitle="New Title"
     direction="right"
     disabled={false}
     err={null}
     errorMessage=""
     focus={false}
-    height="400px"
+    height=""
     id=""
     left=""
     location="none"
@@ -2469,14 +2474,17 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
     noripple={false}
     notheme={false}
     obj="Treeview"
+    onAdd={[Function]}
     onChange={[Function]}
+    onDelete={[Function]}
     onError={[Function]}
+    onSelect={[Function]}
     padding=""
     reset={false}
     selected={false}
     sizing="medium"
     style={Object {}}
-    testing={false}
+    testing={true}
     theme={null}
     tooltip=""
     top=""
@@ -2557,7 +2565,6 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
     >
       <styled.div
         className="ui-treeview-container"
-        height="400px"
         style={Object {}}
       >
         <StyledComponent
@@ -2567,9 +2574,9 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-cSHVUG",
                 "isStatic": false,
-                "lastClassName": "cZIfPy",
+                "lastClassName": "hANYkd",
                 "rules": Array [
                   "
 	height: ",
@@ -2584,7 +2591,7 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-cSHVUG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -2592,26 +2599,16 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
             }
           }
           forwardedRef={null}
-          height="400px"
           style={Object {}}
         >
           <div
-            className="ui-treeview-container sc-bwzfXH cZIfPy"
-            height="400px"
+            className="ui-treeview-container sc-cSHVUG hANYkd"
             style={Object {}}
           >
             <Styled(DragDropContext(SortableTreeWithoutDndContext))
-              canDrag={true}
               className="ui-treeview"
-              disabled={false}
-              err={null}
-              errorMessage=""
-              height="400px"
-              obj="Treeview"
+              generateNodeProps={[Function]}
               onChange={[Function]}
-              sizing="medium"
-              style={Object {}}
-              testing={false}
               treeData={
                 Array [
                   Object {
@@ -2661,23 +2658,18 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
                   },
                 ]
               }
-              visible={true}
             >
               <StyledComponent
-                canDrag={true}
                 className="ui-treeview"
-                disabled={false}
-                err={null}
-                errorMessage=""
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "DecoratedComponent": [Function],
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "iNPnS",
+                      "lastClassName": "hSpGNO",
                       "rules": Array [
                         "
 	",
@@ -2686,13 +2678,22 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
 	",
                         [Function],
                         "
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
 ",
                       ],
                     },
                     "displayName": "Styled(DragDropContext(SortableTreeWithoutDndContext))",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -2700,12 +2701,8 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height="400px"
-                obj="Treeview"
+                generateNodeProps={[Function]}
                 onChange={[Function]}
-                sizing="medium"
-                style={Object {}}
-                testing={false}
                 treeData={
                   Array [
                     Object {
@@ -2755,20 +2752,11 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
                     },
                   ]
                 }
-                visible={true}
               >
                 <DragDropContext(SortableTreeWithoutDndContext)
-                  canDrag={true}
-                  className="ui-treeview sc-htpNat iNPnS"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  height="400px"
-                  obj="Treeview"
+                  className="ui-treeview sc-kAzzGY hSpGNO"
+                  generateNodeProps={[Function]}
                   onChange={[Function]}
-                  sizing="medium"
-                  style={Object {}}
-                  testing={false}
                   treeData={
                     Array [
                       Object {
@@ -2818,20 +2806,11 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
                       },
                     ]
                   }
-                  visible={true}
                 >
                   <SortableTreeWithoutDndContext
-                    canDrag={true}
-                    className="ui-treeview sc-htpNat iNPnS"
-                    disabled={false}
-                    err={null}
-                    errorMessage=""
-                    height="400px"
-                    obj="Treeview"
+                    className="ui-treeview sc-kAzzGY hSpGNO"
+                    generateNodeProps={[Function]}
                     onChange={[Function]}
-                    sizing="medium"
-                    style={Object {}}
-                    testing={false}
                     treeData={
                       Array [
                         Object {
@@ -2881,14 +2860,12 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
                         },
                       ]
                     }
-                    visible={true}
                   >
                     <ReactSortableTree
                       canDrag={true}
                       canDrop={null}
                       canNodeHaveChildren={[Function]}
-                      className="ui-treeview sc-htpNat iNPnS"
-                      disabled={false}
+                      className="ui-treeview sc-kAzzGY hSpGNO"
                       dndType={null}
                       dragDropManager={
                         DragDropManagerImpl {
@@ -3007,16 +2984,12 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
                           },
                         }
                       }
-                      err={null}
-                      errorMessage=""
-                      generateNodeProps={null}
+                      generateNodeProps={[Function]}
                       getNodeKey={[Function]}
-                      height="400px"
                       innerStyle={Object {}}
                       isVirtualized={true}
                       maxDepth={null}
                       nodeContentRenderer={null}
-                      obj="Treeview"
                       onChange={[Function]}
                       onDragStateChanged={[Function]}
                       onMoveNode={[Function]}
@@ -3032,10 +3005,8 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
                       searchMethod={null}
                       searchQuery={null}
                       shouldCopyOnOutsideDrop={false}
-                      sizing="medium"
                       slideRegionSize={null}
                       style={Object {}}
-                      testing={false}
                       theme={Object {}}
                       treeData={
                         Array [
@@ -3087,10 +3058,9 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
                         ]
                       }
                       treeNodeRenderer={null}
-                      visible={true}
                     >
                       <div
-                        className="rst__tree ui-treeview sc-htpNat iNPnS"
+                        className="rst__tree ui-treeview sc-kAzzGY hSpGNO"
                         style={
                           Object {
                             "height": "100%",
@@ -3582,15 +3552,37 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
 
 exports[`Test creation of a simple Treeview component (normal) 1`] = `
 <Treeview
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  defaultTitle="New Title"
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
-  height="400px"
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Treeview"
+  onAdd={[Function]}
   onChange={[Function]}
+  onDelete={[Function]}
+  onSelect={[Function]}
+  padding=""
+  selected={false}
   sizing="normal"
   style={Object {}}
-  testing={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
   treeData={
     Array [
       Object {
@@ -3641,18 +3633,21 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
     ]
   }
   visible={true}
+  width=""
+  xcss={null}
 >
   <Wrapper
     bottom=""
     className=""
     contentEditable={false}
     controlled={true}
+    defaultTitle="New Title"
     direction="right"
     disabled={false}
     err={null}
     errorMessage=""
     focus={false}
-    height="400px"
+    height=""
     id=""
     left=""
     location="none"
@@ -3661,14 +3656,17 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
     noripple={false}
     notheme={false}
     obj="Treeview"
+    onAdd={[Function]}
     onChange={[Function]}
+    onDelete={[Function]}
     onError={[Function]}
+    onSelect={[Function]}
     padding=""
     reset={false}
     selected={false}
     sizing="normal"
     style={Object {}}
-    testing={false}
+    testing={true}
     theme={null}
     tooltip=""
     top=""
@@ -3749,7 +3747,6 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
     >
       <styled.div
         className="ui-treeview-container"
-        height="400px"
         style={Object {}}
       >
         <StyledComponent
@@ -3759,9 +3756,9 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-cSHVUG",
                 "isStatic": false,
-                "lastClassName": "cZIfPy",
+                "lastClassName": "hANYkd",
                 "rules": Array [
                   "
 	height: ",
@@ -3776,7 +3773,7 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-cSHVUG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -3784,27 +3781,17 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
             }
           }
           forwardedRef={null}
-          height="400px"
           style={Object {}}
         >
           <div
-            className="ui-treeview-container sc-bwzfXH cZIfPy"
-            height="400px"
+            className="ui-treeview-container sc-cSHVUG hANYkd"
             style={Object {}}
           >
             <Styled(DragDropContext(SortableTreeWithoutDndContext))
-              canDrag={true}
               className="ui-treeview"
-              disabled={false}
-              err={null}
-              errorMessage=""
-              height="400px"
-              obj="Treeview"
+              generateNodeProps={[Function]}
               onChange={[Function]}
               rowHeight={50}
-              sizing="normal"
-              style={Object {}}
-              testing={false}
               treeData={
                 Array [
                   Object {
@@ -3854,23 +3841,18 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
                   },
                 ]
               }
-              visible={true}
             >
               <StyledComponent
-                canDrag={true}
                 className="ui-treeview"
-                disabled={false}
-                err={null}
-                errorMessage=""
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "DecoratedComponent": [Function],
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "iNPnS",
+                      "lastClassName": "hSpGNO",
                       "rules": Array [
                         "
 	",
@@ -3879,13 +3861,22 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
 	",
                         [Function],
                         "
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
 ",
                       ],
                     },
                     "displayName": "Styled(DragDropContext(SortableTreeWithoutDndContext))",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -3893,13 +3884,9 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height="400px"
-                obj="Treeview"
+                generateNodeProps={[Function]}
                 onChange={[Function]}
                 rowHeight={50}
-                sizing="normal"
-                style={Object {}}
-                testing={false}
                 treeData={
                   Array [
                     Object {
@@ -3949,21 +3936,12 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
                     },
                   ]
                 }
-                visible={true}
               >
                 <DragDropContext(SortableTreeWithoutDndContext)
-                  canDrag={true}
-                  className="ui-treeview sc-htpNat iNPnS"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  height="400px"
-                  obj="Treeview"
+                  className="ui-treeview sc-kAzzGY hSpGNO"
+                  generateNodeProps={[Function]}
                   onChange={[Function]}
                   rowHeight={50}
-                  sizing="normal"
-                  style={Object {}}
-                  testing={false}
                   treeData={
                     Array [
                       Object {
@@ -4013,21 +3991,12 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
                       },
                     ]
                   }
-                  visible={true}
                 >
                   <SortableTreeWithoutDndContext
-                    canDrag={true}
-                    className="ui-treeview sc-htpNat iNPnS"
-                    disabled={false}
-                    err={null}
-                    errorMessage=""
-                    height="400px"
-                    obj="Treeview"
+                    className="ui-treeview sc-kAzzGY hSpGNO"
+                    generateNodeProps={[Function]}
                     onChange={[Function]}
                     rowHeight={50}
-                    sizing="normal"
-                    style={Object {}}
-                    testing={false}
                     treeData={
                       Array [
                         Object {
@@ -4077,14 +4046,12 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
                         },
                       ]
                     }
-                    visible={true}
                   >
                     <ReactSortableTree
                       canDrag={true}
                       canDrop={null}
                       canNodeHaveChildren={[Function]}
-                      className="ui-treeview sc-htpNat iNPnS"
-                      disabled={false}
+                      className="ui-treeview sc-kAzzGY hSpGNO"
                       dndType={null}
                       dragDropManager={
                         DragDropManagerImpl {
@@ -4203,16 +4170,12 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
                           },
                         }
                       }
-                      err={null}
-                      errorMessage=""
-                      generateNodeProps={null}
+                      generateNodeProps={[Function]}
                       getNodeKey={[Function]}
-                      height="400px"
                       innerStyle={Object {}}
                       isVirtualized={true}
                       maxDepth={null}
                       nodeContentRenderer={null}
-                      obj="Treeview"
                       onChange={[Function]}
                       onDragStateChanged={[Function]}
                       onMoveNode={[Function]}
@@ -4228,10 +4191,8 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
                       searchMethod={null}
                       searchQuery={null}
                       shouldCopyOnOutsideDrop={false}
-                      sizing="normal"
                       slideRegionSize={null}
                       style={Object {}}
-                      testing={false}
                       theme={Object {}}
                       treeData={
                         Array [
@@ -4283,10 +4244,9 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
                         ]
                       }
                       treeNodeRenderer={null}
-                      visible={true}
                     >
                       <div
-                        className="rst__tree ui-treeview sc-htpNat iNPnS"
+                        className="rst__tree ui-treeview sc-kAzzGY hSpGNO"
                         style={
                           Object {
                             "height": "100%",
@@ -4778,15 +4738,37 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
 
 exports[`Test creation of a simple Treeview component (small) 1`] = `
 <Treeview
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  defaultTitle="New Title"
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
-  height="400px"
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Treeview"
+  onAdd={[Function]}
   onChange={[Function]}
+  onDelete={[Function]}
+  onSelect={[Function]}
+  padding=""
+  selected={false}
   sizing="small"
   style={Object {}}
-  testing={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
   treeData={
     Array [
       Object {
@@ -4837,18 +4819,21 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
     ]
   }
   visible={true}
+  width=""
+  xcss={null}
 >
   <Wrapper
     bottom=""
     className=""
     contentEditable={false}
     controlled={true}
+    defaultTitle="New Title"
     direction="right"
     disabled={false}
     err={null}
     errorMessage=""
     focus={false}
-    height="400px"
+    height=""
     id=""
     left=""
     location="none"
@@ -4857,14 +4842,17 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
     noripple={false}
     notheme={false}
     obj="Treeview"
+    onAdd={[Function]}
     onChange={[Function]}
+    onDelete={[Function]}
     onError={[Function]}
+    onSelect={[Function]}
     padding=""
     reset={false}
     selected={false}
     sizing="small"
     style={Object {}}
-    testing={false}
+    testing={true}
     theme={null}
     tooltip=""
     top=""
@@ -4945,7 +4933,6 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
     >
       <styled.div
         className="ui-treeview-container"
-        height="400px"
         style={Object {}}
       >
         <StyledComponent
@@ -4955,9 +4942,9 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-cSHVUG",
                 "isStatic": false,
-                "lastClassName": "cZIfPy",
+                "lastClassName": "hANYkd",
                 "rules": Array [
                   "
 	height: ",
@@ -4972,7 +4959,7 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-cSHVUG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -4980,27 +4967,17 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
             }
           }
           forwardedRef={null}
-          height="400px"
           style={Object {}}
         >
           <div
-            className="ui-treeview-container sc-bwzfXH cZIfPy"
-            height="400px"
+            className="ui-treeview-container sc-cSHVUG hANYkd"
             style={Object {}}
           >
             <Styled(DragDropContext(SortableTreeWithoutDndContext))
-              canDrag={true}
               className="ui-treeview"
-              disabled={false}
-              err={null}
-              errorMessage=""
-              height="400px"
-              obj="Treeview"
+              generateNodeProps={[Function]}
               onChange={[Function]}
               rowHeight={45}
-              sizing="small"
-              style={Object {}}
-              testing={false}
               treeData={
                 Array [
                   Object {
@@ -5050,23 +5027,18 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
                   },
                 ]
               }
-              visible={true}
             >
               <StyledComponent
-                canDrag={true}
                 className="ui-treeview"
-                disabled={false}
-                err={null}
-                errorMessage=""
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "DecoratedComponent": [Function],
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "cIMaou",
+                      "lastClassName": "hSpGNO",
                       "rules": Array [
                         "
 	",
@@ -5075,13 +5047,22 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
 	",
                         [Function],
                         "
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
 ",
                       ],
                     },
                     "displayName": "Styled(DragDropContext(SortableTreeWithoutDndContext))",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -5089,13 +5070,9 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height="400px"
-                obj="Treeview"
+                generateNodeProps={[Function]}
                 onChange={[Function]}
                 rowHeight={45}
-                sizing="small"
-                style={Object {}}
-                testing={false}
                 treeData={
                   Array [
                     Object {
@@ -5145,21 +5122,12 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
                     },
                   ]
                 }
-                visible={true}
               >
                 <DragDropContext(SortableTreeWithoutDndContext)
-                  canDrag={true}
-                  className="ui-treeview sc-htpNat cIMaou"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  height="400px"
-                  obj="Treeview"
+                  className="ui-treeview sc-kAzzGY hSpGNO"
+                  generateNodeProps={[Function]}
                   onChange={[Function]}
                   rowHeight={45}
-                  sizing="small"
-                  style={Object {}}
-                  testing={false}
                   treeData={
                     Array [
                       Object {
@@ -5209,21 +5177,12 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
                       },
                     ]
                   }
-                  visible={true}
                 >
                   <SortableTreeWithoutDndContext
-                    canDrag={true}
-                    className="ui-treeview sc-htpNat cIMaou"
-                    disabled={false}
-                    err={null}
-                    errorMessage=""
-                    height="400px"
-                    obj="Treeview"
+                    className="ui-treeview sc-kAzzGY hSpGNO"
+                    generateNodeProps={[Function]}
                     onChange={[Function]}
                     rowHeight={45}
-                    sizing="small"
-                    style={Object {}}
-                    testing={false}
                     treeData={
                       Array [
                         Object {
@@ -5273,14 +5232,12 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
                         },
                       ]
                     }
-                    visible={true}
                   >
                     <ReactSortableTree
                       canDrag={true}
                       canDrop={null}
                       canNodeHaveChildren={[Function]}
-                      className="ui-treeview sc-htpNat cIMaou"
-                      disabled={false}
+                      className="ui-treeview sc-kAzzGY hSpGNO"
                       dndType={null}
                       dragDropManager={
                         DragDropManagerImpl {
@@ -5399,16 +5356,12 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
                           },
                         }
                       }
-                      err={null}
-                      errorMessage=""
-                      generateNodeProps={null}
+                      generateNodeProps={[Function]}
                       getNodeKey={[Function]}
-                      height="400px"
                       innerStyle={Object {}}
                       isVirtualized={true}
                       maxDepth={null}
                       nodeContentRenderer={null}
-                      obj="Treeview"
                       onChange={[Function]}
                       onDragStateChanged={[Function]}
                       onMoveNode={[Function]}
@@ -5424,10 +5377,8 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
                       searchMethod={null}
                       searchQuery={null}
                       shouldCopyOnOutsideDrop={false}
-                      sizing="small"
                       slideRegionSize={null}
                       style={Object {}}
-                      testing={false}
                       theme={Object {}}
                       treeData={
                         Array [
@@ -5479,10 +5430,9 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
                         ]
                       }
                       treeNodeRenderer={null}
-                      visible={true}
                     >
                       <div
-                        className="rst__tree ui-treeview sc-htpNat cIMaou"
+                        className="rst__tree ui-treeview sc-kAzzGY hSpGNO"
                         style={
                           Object {
                             "height": "100%",
@@ -5974,15 +5924,37 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
 
 exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
 <Treeview
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  defaultTitle="New Title"
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
-  height="400px"
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Treeview"
+  onAdd={[Function]}
   onChange={[Function]}
+  onDelete={[Function]}
+  onSelect={[Function]}
+  padding=""
+  selected={false}
   sizing="xlarge"
   style={Object {}}
-  testing={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
   treeData={
     Array [
       Object {
@@ -6033,18 +6005,21 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
     ]
   }
   visible={true}
+  width=""
+  xcss={null}
 >
   <Wrapper
     bottom=""
     className=""
     contentEditable={false}
     controlled={true}
+    defaultTitle="New Title"
     direction="right"
     disabled={false}
     err={null}
     errorMessage=""
     focus={false}
-    height="400px"
+    height=""
     id=""
     left=""
     location="none"
@@ -6053,14 +6028,17 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
     noripple={false}
     notheme={false}
     obj="Treeview"
+    onAdd={[Function]}
     onChange={[Function]}
+    onDelete={[Function]}
     onError={[Function]}
+    onSelect={[Function]}
     padding=""
     reset={false}
     selected={false}
     sizing="xlarge"
     style={Object {}}
-    testing={false}
+    testing={true}
     theme={null}
     tooltip=""
     top=""
@@ -6141,7 +6119,6 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
     >
       <styled.div
         className="ui-treeview-container"
-        height="400px"
         style={Object {}}
       >
         <StyledComponent
@@ -6151,9 +6128,9 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-cSHVUG",
                 "isStatic": false,
-                "lastClassName": "cZIfPy",
+                "lastClassName": "hANYkd",
                 "rules": Array [
                   "
 	height: ",
@@ -6168,7 +6145,7 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-cSHVUG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -6176,27 +6153,17 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
             }
           }
           forwardedRef={null}
-          height="400px"
           style={Object {}}
         >
           <div
-            className="ui-treeview-container sc-bwzfXH cZIfPy"
-            height="400px"
+            className="ui-treeview-container sc-cSHVUG hANYkd"
             style={Object {}}
           >
             <Styled(DragDropContext(SortableTreeWithoutDndContext))
-              canDrag={true}
               className="ui-treeview"
-              disabled={false}
-              err={null}
-              errorMessage=""
-              height="400px"
-              obj="Treeview"
+              generateNodeProps={[Function]}
               onChange={[Function]}
               rowHeight={80}
-              sizing="xlarge"
-              style={Object {}}
-              testing={false}
               treeData={
                 Array [
                   Object {
@@ -6246,23 +6213,18 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
                   },
                 ]
               }
-              visible={true}
             >
               <StyledComponent
-                canDrag={true}
                 className="ui-treeview"
-                disabled={false}
-                err={null}
-                errorMessage=""
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "DecoratedComponent": [Function],
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "fOgeKy",
+                      "lastClassName": "hSpGNO",
                       "rules": Array [
                         "
 	",
@@ -6271,13 +6233,22 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
 	",
                         [Function],
                         "
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
 ",
                       ],
                     },
                     "displayName": "Styled(DragDropContext(SortableTreeWithoutDndContext))",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -6285,13 +6256,9 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height="400px"
-                obj="Treeview"
+                generateNodeProps={[Function]}
                 onChange={[Function]}
                 rowHeight={80}
-                sizing="xlarge"
-                style={Object {}}
-                testing={false}
                 treeData={
                   Array [
                     Object {
@@ -6341,21 +6308,12 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
                     },
                   ]
                 }
-                visible={true}
               >
                 <DragDropContext(SortableTreeWithoutDndContext)
-                  canDrag={true}
-                  className="ui-treeview sc-htpNat fOgeKy"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  height="400px"
-                  obj="Treeview"
+                  className="ui-treeview sc-kAzzGY hSpGNO"
+                  generateNodeProps={[Function]}
                   onChange={[Function]}
                   rowHeight={80}
-                  sizing="xlarge"
-                  style={Object {}}
-                  testing={false}
                   treeData={
                     Array [
                       Object {
@@ -6405,21 +6363,12 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
                       },
                     ]
                   }
-                  visible={true}
                 >
                   <SortableTreeWithoutDndContext
-                    canDrag={true}
-                    className="ui-treeview sc-htpNat fOgeKy"
-                    disabled={false}
-                    err={null}
-                    errorMessage=""
-                    height="400px"
-                    obj="Treeview"
+                    className="ui-treeview sc-kAzzGY hSpGNO"
+                    generateNodeProps={[Function]}
                     onChange={[Function]}
                     rowHeight={80}
-                    sizing="xlarge"
-                    style={Object {}}
-                    testing={false}
                     treeData={
                       Array [
                         Object {
@@ -6469,14 +6418,12 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
                         },
                       ]
                     }
-                    visible={true}
                   >
                     <ReactSortableTree
                       canDrag={true}
                       canDrop={null}
                       canNodeHaveChildren={[Function]}
-                      className="ui-treeview sc-htpNat fOgeKy"
-                      disabled={false}
+                      className="ui-treeview sc-kAzzGY hSpGNO"
                       dndType={null}
                       dragDropManager={
                         DragDropManagerImpl {
@@ -6595,16 +6542,12 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
                           },
                         }
                       }
-                      err={null}
-                      errorMessage=""
-                      generateNodeProps={null}
+                      generateNodeProps={[Function]}
                       getNodeKey={[Function]}
-                      height="400px"
                       innerStyle={Object {}}
                       isVirtualized={true}
                       maxDepth={null}
                       nodeContentRenderer={null}
-                      obj="Treeview"
                       onChange={[Function]}
                       onDragStateChanged={[Function]}
                       onMoveNode={[Function]}
@@ -6620,10 +6563,8 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
                       searchMethod={null}
                       searchQuery={null}
                       shouldCopyOnOutsideDrop={false}
-                      sizing="xlarge"
                       slideRegionSize={null}
                       style={Object {}}
-                      testing={false}
                       theme={Object {}}
                       treeData={
                         Array [
@@ -6675,10 +6616,9 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
                         ]
                       }
                       treeNodeRenderer={null}
-                      visible={true}
                     >
                       <div
-                        className="rst__tree ui-treeview sc-htpNat fOgeKy"
+                        className="rst__tree ui-treeview sc-kAzzGY hSpGNO"
                         style={
                           Object {
                             "height": "100%",
@@ -7170,15 +7110,37 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
 
 exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
 <Treeview
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  defaultTitle="New Title"
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
-  height="400px"
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Treeview"
+  onAdd={[Function]}
   onChange={[Function]}
+  onDelete={[Function]}
+  onSelect={[Function]}
+  padding=""
+  selected={false}
   sizing="xsmall"
   style={Object {}}
-  testing={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
   treeData={
     Array [
       Object {
@@ -7229,18 +7191,21 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
     ]
   }
   visible={true}
+  width=""
+  xcss={null}
 >
   <Wrapper
     bottom=""
     className=""
     contentEditable={false}
     controlled={true}
+    defaultTitle="New Title"
     direction="right"
     disabled={false}
     err={null}
     errorMessage=""
     focus={false}
-    height="400px"
+    height=""
     id=""
     left=""
     location="none"
@@ -7249,14 +7214,17 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
     noripple={false}
     notheme={false}
     obj="Treeview"
+    onAdd={[Function]}
     onChange={[Function]}
+    onDelete={[Function]}
     onError={[Function]}
+    onSelect={[Function]}
     padding=""
     reset={false}
     selected={false}
     sizing="xsmall"
     style={Object {}}
-    testing={false}
+    testing={true}
     theme={null}
     tooltip=""
     top=""
@@ -7337,7 +7305,6 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
     >
       <styled.div
         className="ui-treeview-container"
-        height="400px"
         style={Object {}}
       >
         <StyledComponent
@@ -7347,9 +7314,9 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-cSHVUG",
                 "isStatic": false,
-                "lastClassName": "cZIfPy",
+                "lastClassName": "hANYkd",
                 "rules": Array [
                   "
 	height: ",
@@ -7364,7 +7331,7 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-cSHVUG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -7372,27 +7339,17 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
             }
           }
           forwardedRef={null}
-          height="400px"
           style={Object {}}
         >
           <div
-            className="ui-treeview-container sc-bwzfXH cZIfPy"
-            height="400px"
+            className="ui-treeview-container sc-cSHVUG hANYkd"
             style={Object {}}
           >
             <Styled(DragDropContext(SortableTreeWithoutDndContext))
-              canDrag={true}
               className="ui-treeview"
-              disabled={false}
-              err={null}
-              errorMessage=""
-              height="400px"
-              obj="Treeview"
+              generateNodeProps={[Function]}
               onChange={[Function]}
               rowHeight={45}
-              sizing="xsmall"
-              style={Object {}}
-              testing={false}
               treeData={
                 Array [
                   Object {
@@ -7442,23 +7399,18 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
                   },
                 ]
               }
-              visible={true}
             >
               <StyledComponent
-                canDrag={true}
                 className="ui-treeview"
-                disabled={false}
-                err={null}
-                errorMessage=""
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "DecoratedComponent": [Function],
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "KPZgE",
+                      "lastClassName": "hSpGNO",
                       "rules": Array [
                         "
 	",
@@ -7467,13 +7419,22 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
 	",
                         [Function],
                         "
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
 ",
                       ],
                     },
                     "displayName": "Styled(DragDropContext(SortableTreeWithoutDndContext))",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -7481,13 +7442,9 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height="400px"
-                obj="Treeview"
+                generateNodeProps={[Function]}
                 onChange={[Function]}
                 rowHeight={45}
-                sizing="xsmall"
-                style={Object {}}
-                testing={false}
                 treeData={
                   Array [
                     Object {
@@ -7537,21 +7494,12 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
                     },
                   ]
                 }
-                visible={true}
               >
                 <DragDropContext(SortableTreeWithoutDndContext)
-                  canDrag={true}
-                  className="ui-treeview sc-htpNat KPZgE"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  height="400px"
-                  obj="Treeview"
+                  className="ui-treeview sc-kAzzGY hSpGNO"
+                  generateNodeProps={[Function]}
                   onChange={[Function]}
                   rowHeight={45}
-                  sizing="xsmall"
-                  style={Object {}}
-                  testing={false}
                   treeData={
                     Array [
                       Object {
@@ -7601,21 +7549,12 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
                       },
                     ]
                   }
-                  visible={true}
                 >
                   <SortableTreeWithoutDndContext
-                    canDrag={true}
-                    className="ui-treeview sc-htpNat KPZgE"
-                    disabled={false}
-                    err={null}
-                    errorMessage=""
-                    height="400px"
-                    obj="Treeview"
+                    className="ui-treeview sc-kAzzGY hSpGNO"
+                    generateNodeProps={[Function]}
                     onChange={[Function]}
                     rowHeight={45}
-                    sizing="xsmall"
-                    style={Object {}}
-                    testing={false}
                     treeData={
                       Array [
                         Object {
@@ -7665,14 +7604,12 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
                         },
                       ]
                     }
-                    visible={true}
                   >
                     <ReactSortableTree
                       canDrag={true}
                       canDrop={null}
                       canNodeHaveChildren={[Function]}
-                      className="ui-treeview sc-htpNat KPZgE"
-                      disabled={false}
+                      className="ui-treeview sc-kAzzGY hSpGNO"
                       dndType={null}
                       dragDropManager={
                         DragDropManagerImpl {
@@ -7791,16 +7728,12 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
                           },
                         }
                       }
-                      err={null}
-                      errorMessage=""
-                      generateNodeProps={null}
+                      generateNodeProps={[Function]}
                       getNodeKey={[Function]}
-                      height="400px"
                       innerStyle={Object {}}
                       isVirtualized={true}
                       maxDepth={null}
                       nodeContentRenderer={null}
-                      obj="Treeview"
                       onChange={[Function]}
                       onDragStateChanged={[Function]}
                       onMoveNode={[Function]}
@@ -7816,10 +7749,8 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
                       searchMethod={null}
                       searchQuery={null}
                       shouldCopyOnOutsideDrop={false}
-                      sizing="xsmall"
                       slideRegionSize={null}
                       style={Object {}}
-                      testing={false}
                       theme={Object {}}
                       treeData={
                         Array [
@@ -7871,10 +7802,9 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
                         ]
                       }
                       treeNodeRenderer={null}
-                      visible={true}
                     >
                       <div
-                        className="rst__tree ui-treeview sc-htpNat KPZgE"
+                        className="rst__tree ui-treeview sc-kAzzGY hSpGNO"
                         style={
                           Object {
                             "height": "100%",
@@ -8366,15 +8296,37 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
 
 exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
 <Treeview
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  defaultTitle="New Title"
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
-  height="400px"
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Treeview"
+  onAdd={[Function]}
   onChange={[Function]}
+  onDelete={[Function]}
+  onSelect={[Function]}
+  padding=""
+  selected={false}
   sizing="xxlarge"
   style={Object {}}
-  testing={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
   treeData={
     Array [
       Object {
@@ -8425,18 +8377,21 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
     ]
   }
   visible={true}
+  width=""
+  xcss={null}
 >
   <Wrapper
     bottom=""
     className=""
     contentEditable={false}
     controlled={true}
+    defaultTitle="New Title"
     direction="right"
     disabled={false}
     err={null}
     errorMessage=""
     focus={false}
-    height="400px"
+    height=""
     id=""
     left=""
     location="none"
@@ -8445,14 +8400,17 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
     noripple={false}
     notheme={false}
     obj="Treeview"
+    onAdd={[Function]}
     onChange={[Function]}
+    onDelete={[Function]}
     onError={[Function]}
+    onSelect={[Function]}
     padding=""
     reset={false}
     selected={false}
     sizing="xxlarge"
     style={Object {}}
-    testing={false}
+    testing={true}
     theme={null}
     tooltip=""
     top=""
@@ -8533,7 +8491,6 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
     >
       <styled.div
         className="ui-treeview-container"
-        height="400px"
         style={Object {}}
       >
         <StyledComponent
@@ -8543,9 +8500,9 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-cSHVUG",
                 "isStatic": false,
-                "lastClassName": "cZIfPy",
+                "lastClassName": "hANYkd",
                 "rules": Array [
                   "
 	height: ",
@@ -8560,7 +8517,7 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-cSHVUG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -8568,27 +8525,17 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
             }
           }
           forwardedRef={null}
-          height="400px"
           style={Object {}}
         >
           <div
-            className="ui-treeview-container sc-bwzfXH cZIfPy"
-            height="400px"
+            className="ui-treeview-container sc-cSHVUG hANYkd"
             style={Object {}}
           >
             <Styled(DragDropContext(SortableTreeWithoutDndContext))
-              canDrag={true}
               className="ui-treeview"
-              disabled={false}
-              err={null}
-              errorMessage=""
-              height="400px"
-              obj="Treeview"
+              generateNodeProps={[Function]}
               onChange={[Function]}
               rowHeight={90}
-              sizing="xxlarge"
-              style={Object {}}
-              testing={false}
               treeData={
                 Array [
                   Object {
@@ -8638,23 +8585,18 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
                   },
                 ]
               }
-              visible={true}
             >
               <StyledComponent
-                canDrag={true}
                 className="ui-treeview"
-                disabled={false}
-                err={null}
-                errorMessage=""
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "DecoratedComponent": [Function],
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "ecyEaL",
+                      "lastClassName": "hSpGNO",
                       "rules": Array [
                         "
 	",
@@ -8663,13 +8605,22 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
 	",
                         [Function],
                         "
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
 ",
                       ],
                     },
                     "displayName": "Styled(DragDropContext(SortableTreeWithoutDndContext))",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -8677,13 +8628,9 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height="400px"
-                obj="Treeview"
+                generateNodeProps={[Function]}
                 onChange={[Function]}
                 rowHeight={90}
-                sizing="xxlarge"
-                style={Object {}}
-                testing={false}
                 treeData={
                   Array [
                     Object {
@@ -8733,21 +8680,12 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
                     },
                   ]
                 }
-                visible={true}
               >
                 <DragDropContext(SortableTreeWithoutDndContext)
-                  canDrag={true}
-                  className="ui-treeview sc-htpNat ecyEaL"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  height="400px"
-                  obj="Treeview"
+                  className="ui-treeview sc-kAzzGY hSpGNO"
+                  generateNodeProps={[Function]}
                   onChange={[Function]}
                   rowHeight={90}
-                  sizing="xxlarge"
-                  style={Object {}}
-                  testing={false}
                   treeData={
                     Array [
                       Object {
@@ -8797,21 +8735,12 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
                       },
                     ]
                   }
-                  visible={true}
                 >
                   <SortableTreeWithoutDndContext
-                    canDrag={true}
-                    className="ui-treeview sc-htpNat ecyEaL"
-                    disabled={false}
-                    err={null}
-                    errorMessage=""
-                    height="400px"
-                    obj="Treeview"
+                    className="ui-treeview sc-kAzzGY hSpGNO"
+                    generateNodeProps={[Function]}
                     onChange={[Function]}
                     rowHeight={90}
-                    sizing="xxlarge"
-                    style={Object {}}
-                    testing={false}
                     treeData={
                       Array [
                         Object {
@@ -8861,14 +8790,12 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
                         },
                       ]
                     }
-                    visible={true}
                   >
                     <ReactSortableTree
                       canDrag={true}
                       canDrop={null}
                       canNodeHaveChildren={[Function]}
-                      className="ui-treeview sc-htpNat ecyEaL"
-                      disabled={false}
+                      className="ui-treeview sc-kAzzGY hSpGNO"
                       dndType={null}
                       dragDropManager={
                         DragDropManagerImpl {
@@ -8987,16 +8914,12 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
                           },
                         }
                       }
-                      err={null}
-                      errorMessage=""
-                      generateNodeProps={null}
+                      generateNodeProps={[Function]}
                       getNodeKey={[Function]}
-                      height="400px"
                       innerStyle={Object {}}
                       isVirtualized={true}
                       maxDepth={null}
                       nodeContentRenderer={null}
-                      obj="Treeview"
                       onChange={[Function]}
                       onDragStateChanged={[Function]}
                       onMoveNode={[Function]}
@@ -9012,10 +8935,8 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
                       searchMethod={null}
                       searchQuery={null}
                       shouldCopyOnOutsideDrop={false}
-                      sizing="xxlarge"
                       slideRegionSize={null}
                       style={Object {}}
-                      testing={false}
                       theme={Object {}}
                       treeData={
                         Array [
@@ -9067,10 +8988,9 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
                         ]
                       }
                       treeNodeRenderer={null}
-                      visible={true}
                     >
                       <div
-                        className="rst__tree ui-treeview sc-htpNat ecyEaL"
+                        className="rst__tree ui-treeview sc-kAzzGY hSpGNO"
                         style={
                           Object {
                             "height": "100%",
@@ -9562,15 +9482,37 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
 
 exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
 <Treeview
+  bottom=""
+  className=""
+  contentEditable={false}
+  controlled={true}
+  defaultTitle="New Title"
+  direction="right"
   disabled={false}
   err={null}
   errorMessage=""
-  height="400px"
+  focus={false}
+  height=""
+  id=""
+  left=""
+  location="none"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
   obj="Treeview"
+  onAdd={[Function]}
   onChange={[Function]}
+  onDelete={[Function]}
+  onSelect={[Function]}
+  padding=""
+  selected={false}
   sizing="xxsmall"
   style={Object {}}
-  testing={false}
+  testing={true}
+  theme={null}
+  tooltip=""
+  top=""
   treeData={
     Array [
       Object {
@@ -9621,18 +9563,21 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
     ]
   }
   visible={true}
+  width=""
+  xcss={null}
 >
   <Wrapper
     bottom=""
     className=""
     contentEditable={false}
     controlled={true}
+    defaultTitle="New Title"
     direction="right"
     disabled={false}
     err={null}
     errorMessage=""
     focus={false}
-    height="400px"
+    height=""
     id=""
     left=""
     location="none"
@@ -9641,14 +9586,17 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
     noripple={false}
     notheme={false}
     obj="Treeview"
+    onAdd={[Function]}
     onChange={[Function]}
+    onDelete={[Function]}
     onError={[Function]}
+    onSelect={[Function]}
     padding=""
     reset={false}
     selected={false}
     sizing="xxsmall"
     style={Object {}}
-    testing={false}
+    testing={true}
     theme={null}
     tooltip=""
     top=""
@@ -9729,7 +9677,6 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
     >
       <styled.div
         className="ui-treeview-container"
-        height="400px"
         style={Object {}}
       >
         <StyledComponent
@@ -9739,9 +9686,9 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-cSHVUG",
                 "isStatic": false,
-                "lastClassName": "cZIfPy",
+                "lastClassName": "hANYkd",
                 "rules": Array [
                   "
 	height: ",
@@ -9756,7 +9703,7 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-cSHVUG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -9764,27 +9711,17 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
             }
           }
           forwardedRef={null}
-          height="400px"
           style={Object {}}
         >
           <div
-            className="ui-treeview-container sc-bwzfXH cZIfPy"
-            height="400px"
+            className="ui-treeview-container sc-cSHVUG hANYkd"
             style={Object {}}
           >
             <Styled(DragDropContext(SortableTreeWithoutDndContext))
-              canDrag={true}
               className="ui-treeview"
-              disabled={false}
-              err={null}
-              errorMessage=""
-              height="400px"
-              obj="Treeview"
+              generateNodeProps={[Function]}
               onChange={[Function]}
               rowHeight={45}
-              sizing="xxsmall"
-              style={Object {}}
-              testing={false}
               treeData={
                 Array [
                   Object {
@@ -9834,23 +9771,18 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
                   },
                 ]
               }
-              visible={true}
             >
               <StyledComponent
-                canDrag={true}
                 className="ui-treeview"
-                disabled={false}
-                err={null}
-                errorMessage=""
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "DecoratedComponent": [Function],
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "hLFtek",
+                      "lastClassName": "hSpGNO",
                       "rules": Array [
                         "
 	",
@@ -9859,13 +9791,22 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
 	",
                         [Function],
                         "
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
 ",
                       ],
                     },
                     "displayName": "Styled(DragDropContext(SortableTreeWithoutDndContext))",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -9873,13 +9814,9 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height="400px"
-                obj="Treeview"
+                generateNodeProps={[Function]}
                 onChange={[Function]}
                 rowHeight={45}
-                sizing="xxsmall"
-                style={Object {}}
-                testing={false}
                 treeData={
                   Array [
                     Object {
@@ -9929,21 +9866,12 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
                     },
                   ]
                 }
-                visible={true}
               >
                 <DragDropContext(SortableTreeWithoutDndContext)
-                  canDrag={true}
-                  className="ui-treeview sc-htpNat hLFtek"
-                  disabled={false}
-                  err={null}
-                  errorMessage=""
-                  height="400px"
-                  obj="Treeview"
+                  className="ui-treeview sc-kAzzGY hSpGNO"
+                  generateNodeProps={[Function]}
                   onChange={[Function]}
                   rowHeight={45}
-                  sizing="xxsmall"
-                  style={Object {}}
-                  testing={false}
                   treeData={
                     Array [
                       Object {
@@ -9993,21 +9921,12 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
                       },
                     ]
                   }
-                  visible={true}
                 >
                   <SortableTreeWithoutDndContext
-                    canDrag={true}
-                    className="ui-treeview sc-htpNat hLFtek"
-                    disabled={false}
-                    err={null}
-                    errorMessage=""
-                    height="400px"
-                    obj="Treeview"
+                    className="ui-treeview sc-kAzzGY hSpGNO"
+                    generateNodeProps={[Function]}
                     onChange={[Function]}
                     rowHeight={45}
-                    sizing="xxsmall"
-                    style={Object {}}
-                    testing={false}
                     treeData={
                       Array [
                         Object {
@@ -10057,14 +9976,12 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
                         },
                       ]
                     }
-                    visible={true}
                   >
                     <ReactSortableTree
                       canDrag={true}
                       canDrop={null}
                       canNodeHaveChildren={[Function]}
-                      className="ui-treeview sc-htpNat hLFtek"
-                      disabled={false}
+                      className="ui-treeview sc-kAzzGY hSpGNO"
                       dndType={null}
                       dragDropManager={
                         DragDropManagerImpl {
@@ -10183,16 +10100,12 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
                           },
                         }
                       }
-                      err={null}
-                      errorMessage=""
-                      generateNodeProps={null}
+                      generateNodeProps={[Function]}
                       getNodeKey={[Function]}
-                      height="400px"
                       innerStyle={Object {}}
                       isVirtualized={true}
                       maxDepth={null}
                       nodeContentRenderer={null}
-                      obj="Treeview"
                       onChange={[Function]}
                       onDragStateChanged={[Function]}
                       onMoveNode={[Function]}
@@ -10208,10 +10121,8 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
                       searchMethod={null}
                       searchQuery={null}
                       shouldCopyOnOutsideDrop={false}
-                      sizing="xxsmall"
                       slideRegionSize={null}
                       style={Object {}}
-                      testing={false}
                       theme={Object {}}
                       treeData={
                         Array [
@@ -10263,10 +10174,9 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
                         ]
                       }
                       treeNodeRenderer={null}
-                      visible={true}
                     >
                       <div
-                        className="rst__tree ui-treeview sc-htpNat hLFtek"
+                        className="rst__tree ui-treeview sc-kAzzGY hSpGNO"
                         style={
                           Object {
                             "height": "100%",
@@ -10758,16 +10668,41 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
 
 exports[`Test retrieval of Treeview props object 1`] = `
 Object {
+  "bottom": "",
+  "children": null,
+  "className": "",
+  "contentEditable": false,
+  "controlled": true,
+  "defaultTitle": "New Title",
+  "direction": "right",
   "disabled": false,
   "err": null,
   "errorMessage": "",
-  "height": "400px",
+  "focus": false,
+  "height": "",
+  "id": "",
+  "left": "",
+  "location": "none",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "notheme": false,
   "obj": "Treeview",
+  "onAdd": [Function],
   "onChange": [Function],
+  "onDelete": [Function],
+  "onSelect": [Function],
+  "padding": "",
+  "selected": false,
   "sizing": "normal",
   "style": Object {},
-  "testing": false,
+  "testing": true,
+  "theme": null,
+  "tooltip": "",
+  "top": "",
   "treeData": Array [],
   "visible": true,
+  "width": "",
+  "xcss": null,
 }
 `;

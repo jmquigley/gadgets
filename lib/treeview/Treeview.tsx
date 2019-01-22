@@ -1,8 +1,8 @@
 /**
  * This component represents data in a hierarchical parent/child view.  The
  * underlying code is a wrapper around the [react-sortable-tree](https://www.npmjs.com/package/react-sortable-tree)
- * component written by Chris Fritz.  The [README](https://github.com/fritz-c/react-sortable-tree/blob/master/README.md) for The
- * project shows examples and properties for the component.
+ * component written by Chris Fritz.  The [README](https://github.com/fritz-c/react-sortable-tree/blob/master/README.md)
+ * for the project shows examples and properties for the component.
  *
  * The two required properties are `treeData` and `onChange`.  The control relies
  * on feeding data back in to the control as props (via treeData state) to control
@@ -79,77 +79,89 @@
 
 'use strict';
 
+// const debug = require('debug')('Treeview');
+
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import SortableTree, {
-	ReactSortableTreeProps,
+	addNodeUnderParent,
+	removeNodeAtPath,
 	TreeItem
 } from 'react-sortable-tree';
 import {nilEvent} from 'util.toolbox';
+import {Button} from '../button';
+import {ButtonCircle} from '../buttonCircle';
+import {Item} from '../item';
 import {
 	BaseComponent,
+	BaseProps,
 	BaseState,
+	Color,
 	disabled,
 	fontStyle,
+	getDefaultBaseProps,
 	getDefaultBaseState,
 	invisible,
 	Sizing,
 	Wrapper
 } from '../shared';
 import styled from '../shared/themed-components';
+import {TitleLayout} from '../title';
 
 export type TreeviewItem = TreeItem;
 
-export interface TreeviewProps extends ReactSortableTreeProps {
-	disabled?: boolean;
-	err?: any;
-	errorMessage?: string;
-	height?: string;
-	obj?: string;
-	onChange(treeData: TreeItem[]): void;
-	sizing?: Sizing;
-	style?: any;
-	testing?: boolean;
-	treeData: TreeItem[];
-	visible?: boolean;
+export interface TreeviewProps extends BaseProps {
+	defaultTitle: string;
+	onAdd(node: TreeviewItem, treeData: any[]): void;
+	onChange(treeData: any[]): void;
+	onDelete(node: TreeviewItem, treeData: any[]): void;
+	onSelect(node: TreeviewItem): void;
+	treeData: any[];
 }
 
 export function getDefaultTreeviewProps(): TreeviewProps {
-	return cloneDeep(Object.assign({}, SortableTree.defaultProps, {
-			disabled: false,
-			err: null,
-			errorMessage: '',
-			height: '400px',
-			obj: 'Treeview',
-			onChange: nilEvent,
-			sizing: Sizing.normal,
-			style: {},
-			testing: false,
-			treeData: [],
-			visible: true
-		})
-	);
-}
-
-export interface TreeviewState extends BaseState {
-	rowHeight: number;
-}
-
-export function getDefaultTreeviewState(): TreeviewState {
-	return cloneDeep({...getDefaultBaseState('ui-treeview'),
-		rowHeight: 50
+	return cloneDeep({...getDefaultBaseProps(),
+		defaultTitle: 'New Title',
+		obj: 'Treeview',
+		onAdd: nilEvent,
+		onChange: nilEvent,
+		onDelete: nilEvent,
+		onSelect: nilEvent,
+		treeData: []
 	});
 }
 
+export type TreeviewState = BaseState;
+
+export function getDefaultTreeviewState(): TreeviewState {
+	return cloneDeep({...getDefaultBaseState('ui-treeview')});
+}
+
 export const TreeviewContainer: any = styled.div`
-	height: ${(props: TreeviewProps) => props.height};
+	height: ${(props: TreeviewProps) => props.height || 'inherit'};
 	${(props: TreeviewProps) => invisible(props)}
 `;
 
 export const SortableTreeView: any = styled(SortableTree)`
 	${(props: TreeviewProps) => disabled(props)}
 	${(props: TreeviewProps) => props.sizing && fontStyle[props.sizing]}
+
+	.rst__rowContents {
+		padding: 0 2px;
+	}
+
+	.rst__rowLabel {
+		padding-right: 0;
+		width: 100%;
+	}
+`;
+
+export const StyledButton: any = styled(Button)`
+	border: 1px solid ${Color.success};
+`;
+
+export const StyledItem: any = styled(Item)`
 `;
 
 export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
@@ -171,8 +183,70 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		super(props, Treeview.defaultProps.style);
 	}
 
-	get rowHeights() {
-		return this._rowHeights;
+	get rowHeight() {
+		return this._rowHeights[this.props.sizing];
+	}
+
+	@autobind
+	private customNodeProperties(tvi: TreeviewItem) {
+		return {
+			title: (
+				<StyledItem
+					hiddenLeftButton={true}
+					hiddenRightButton={true}
+					layout={TitleLayout.none}
+					leftButton={
+						<ButtonCircle
+							iconName="plus"
+							onClick={() => this.handleAdd(tvi)}
+							sizing={BaseComponent.prev(this.props.sizing).type}
+							style={{
+								backgroundColor: this.theme.backgroundColor,
+								borderColor: Color.success,
+								color: Color.success
+							}}
+						/>
+					}
+					onClick={() => this.handleSelect(tvi)}
+					rightButton={
+						<ButtonCircle
+							iconName="times"
+							onClick={() => this.handleDelete(tvi)}
+							sizing={BaseComponent.prev(this.props.sizing).type}
+							style={{
+								backgroundColor: this.theme.backgroundColor,
+								borderColor: Color.error,
+								color: Color.error
+							}}
+						/>
+					}
+					sizing={this.props.sizing}
+					title={tvi.node.title as any}
+				/>
+			)
+		};
+	}
+
+	@autobind
+	private getNodeKey({treeIndex}: any): number {
+		return treeIndex;
+	}
+
+	@autobind
+	private handleAdd(tvi: TreeviewItem) {
+		if (!this.props.disabled) {
+			const newTreeData: any = addNodeUnderParent({
+				treeData: this.props.treeData,
+				getNodeKey: this.getNodeKey,
+				parentKey: tvi.treeIndex,
+				expandParent: true,
+				newNode: {
+					title: this.props.defaultTitle
+				},
+				addAsFirstChild: true
+			});
+			this.props.onAdd(tvi, newTreeData.treeData);
+		}
 	}
 
 	@autobind
@@ -182,22 +256,37 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		}
 	}
 
-	public render() {
-		const rowHeight: number = this.rowHeights[this.props.sizing];
+	@autobind
+	private handleDelete(tvi: TreeviewItem) {
+		if (!this.props.disabled) {
+			const newTreeData: any = removeNodeAtPath({
+				getNodeKey: this.getNodeKey,
+				path: tvi.path,
+				treeData: this.props.treeData
+			});
 
+			this.props.onDelete(tvi, newTreeData);
+		}
+	}
+
+	@autobind
+	private handleSelect(tvi: TreeviewItem) {
+		this.props.onSelect(tvi);
+	}
+
+	public render() {
 		return (
 			<Wrapper {...this.props} >
 				<TreeviewContainer
 					className="ui-treeview-container"
-					height={this.props.height}
 					style={this.state.style}
 				>
 					<SortableTreeView
-						{...this.props}
-						canDrag={!this.props.disabled}
 						className={this.state.classes.classnames}
 						onChange={this.handleChange}
-						rowHeight={rowHeight}
+						rowHeight={this.rowHeight}
+						treeData={this.props.treeData}
+						generateNodeProps={this.customNodeProperties}
 					/>
 				</TreeviewContainer>
 			</Wrapper>

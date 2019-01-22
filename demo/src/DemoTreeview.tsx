@@ -6,6 +6,7 @@ import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
 	Container,
+	styled,
 	Treeview,
 	TreeviewItem
 } from '../../dist/bundle';
@@ -13,6 +14,10 @@ import {
 export interface DemoTreeviewState {
 	treeData: TreeviewItem[];
 }
+
+const StyledContainer: any = styled(Container)`
+	height: 625px;
+`;
 
 export default class DemoTreeview extends React.Component<any, DemoTreeviewState> {
 
@@ -22,7 +27,7 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 
 		this.state = {
 			treeData: [
-				{title: '1.0', expanded: true, children: [
+				{title: '1.0', expanded: true, data: 'some test data', children: [
 					{title: '1.1'},
 					{title: '1.2'},
 					{title: '1.3'}
@@ -42,21 +47,41 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 	}
 
 	@autobind
+	private handleAdd(tvi: TreeviewItem, treeData: TreeviewItem[]) {
+		debug('adding node to tree at parent: %O, treeData: %O', tvi, treeData);
+		this.setState({treeData});
+	}
+
+	@autobind
 	private handleChange(treeData: any) {
 		debug('changing tree: %O', treeData);
 		this.setState({treeData});
 	}
 
+	@autobind
+	private handleDelete(tvi: TreeviewItem, treeData: TreeviewItem[]) {
+		debug('removing node from tree: %O, treeData: %O', tvi, treeData);
+		this.setState({treeData});
+	}
+
+	@autobind
+	private handleSelect(tvi: TreeviewItem) {
+		debug(tvi);
+	}
+
 	public render() {
 		return (
-			<Container id="treeviewExample" title="Treeview">
+			<StyledContainer id="treeviewExample" title="Treeview">
 				<Treeview
 					disabled={this.props['disabled']}
+					onAdd={this.handleAdd}
 					onChange={this.handleChange}
+					onDelete={this.handleDelete}
+					onSelect={this.handleSelect}
 					sizing={this.props['sizing']}
 					treeData={this.state.treeData}
 				/>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

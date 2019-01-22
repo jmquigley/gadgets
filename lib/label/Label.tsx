@@ -100,6 +100,7 @@ export function getDefaultLabelProps(): LabelProps {
 
 export interface LabelState extends BaseState {
 	editable: boolean;
+	originalText: string;
 	previousText: string;
 	text: string;
 }
@@ -107,6 +108,7 @@ export interface LabelState extends BaseState {
 export function getDefaultLabelState(): LabelState {
 	return cloneDeep({...getDefaultBaseState('ui-label'),
 		editable: false,
+		originalText: '',
 		previousText: '',
 		text: ''
 	});
@@ -129,6 +131,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		super(props, Label.defaultProps.style);
 		this.state = {...getDefaultLabelState(),
 			editable: props.useedit,
+			originalText: props.text,
 			previousText: props.text,
 			text: props.text
 		};
@@ -229,6 +232,17 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	public componentDidUpdate() {
 		this.componentDidMount();
+	}
+
+	public static getDerivedStateFromProps(props: LabelProps, state: LabelState) {
+		const newState: LabelState = {...state};
+
+		if (props.text !== newState.originalText) {
+			newState.previousText = newState.text;
+			newState.text = props.text;
+		}
+
+		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {

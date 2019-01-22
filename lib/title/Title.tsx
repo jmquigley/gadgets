@@ -102,6 +102,7 @@ export interface TitleProps extends BaseProps {
 	onUpdate?: any;
 	title?: any;
 	widget?: any;
+	useedit?: boolean;
 }
 
 export function getDefaultTitleProps(): TitleProps {
@@ -110,7 +111,8 @@ export function getDefaultTitleProps(): TitleProps {
 		obj: 'Title',
 		onClick: nilEvent,
 		onUpdate: nilEvent,
-		widget: null
+		widget: null,
+		useedit: false
 	});
 }
 
@@ -287,6 +289,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 					{...props}
 					className="ui-title"
 					text={this.props.title}
+					useedit={this.props.useedit}
 					xcss={titleView}
 				/>
 			);

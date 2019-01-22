@@ -3,8 +3,8 @@
 ## Treeview
 This component represents data in a hierarchical parent/child view.  The
 underlying code is a wrapper around the [react-sortable-tree](https://www.npmjs.com/package/react-sortable-tree)
-component written by Chris Fritz.  The [README](https://github.com/fritz-c/react-sortable-tree/blob/master/README.md) for The
-project shows examples and properties for the component.
+component written by Chris Fritz.  The [README](https://github.com/fritz-c/react-sortable-tree/blob/master/README.md)
+for the project shows examples and properties for the component.
 
 The two required properties are `treeData` and `onChange`.  The control relies
 on feeding data back in to the control as props (via treeData state) to control
