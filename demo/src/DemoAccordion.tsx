@@ -7,9 +7,9 @@ import {
 	Accordion,
 	AccordionItem,
 	Button,
-	Container,
 	List
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 import {createItems} from './helpers';
 
 export default class DemoAccordion extends React.Component<any, undefined> {
@@ -23,7 +23,7 @@ export default class DemoAccordion extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="accordionExample" title="Accordion">
+			<StyledContainer id="accordionExample" title="Accordion">
 				<Accordion sizing={this.props['sizing']} disabled={this.props['disabled']}>
 					<AccordionItem
 						leftButton={<Button iconName="bars" />}
@@ -50,7 +50,7 @@ export default class DemoAccordion extends React.Component<any, undefined> {
 						Accordion Items #4 (disabled)
 					</AccordionItem>
 				</Accordion>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

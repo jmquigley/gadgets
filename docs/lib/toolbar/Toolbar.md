@@ -12,6 +12,7 @@ set of controls (from the Gadgets library)
 - ButtonToggle
 - Divider
 - Dropdown
+- Label
 - Option
 - Switch
 - TextField

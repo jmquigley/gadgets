@@ -5,9 +5,9 @@ const debug = require('debug')('DemoBrowser');
 import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
-	Browser,
-	Container
+	Browser
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoBrowser extends React.Component<any, undefined> {
 
@@ -28,7 +28,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="browserExample" title="Browser">
+			<StyledContainer id="browserExample" title="Browser">
 				<Browser
 					home="http://www.example.com"
 					notooltips
@@ -37,7 +37,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 					uri="http://www.google.com"
 					useparser
 				/>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

@@ -2,7 +2,7 @@
 
 exports[`Test creation of a Badge control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
@@ -10,12 +10,14 @@ exports[`Test creation of a Badge control 1`] = `
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="topRight"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -23,7 +25,7 @@ exports[`Test creation of a Badge control 1`] = `
   obj="Badge"
   onClick={[Function]}
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -36,10 +38,10 @@ exports[`Test creation of a Badge control 1`] = `
   suppress={true}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -69,20 +71,22 @@ exports[`Test creation of a Badge control 1`] = `
 
 exports[`Test making the Badge control invisible 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   counter={0}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="topRight"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -90,7 +94,7 @@ exports[`Test making the Badge control invisible 1`] = `
   obj="Badge"
   onClick={[Function]}
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -104,10 +108,10 @@ exports[`Test making the Badge control invisible 1`] = `
   suppress={false}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={false}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -118,28 +122,30 @@ exports[`Test making the Badge control invisible 1`] = `
 
 exports[`Test retrieval of Badge props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "counter": 0,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
-  "left": "",
+  "height": null,
+  "id": null,
+  "left": null,
   "location": "topRight",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
   "notheme": false,
   "obj": "Badge",
   "onClick": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {
@@ -150,30 +156,32 @@ Object {
   "suppress": false,
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the disabling of a Badge control 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   counter={0}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="topRight"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -181,7 +189,7 @@ exports[`Test the disabling of a Badge control 1`] = `
   obj="Badge"
   onClick={[Function]}
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -195,10 +203,10 @@ exports[`Test the disabling of a Badge control 1`] = `
   suppress={false}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div

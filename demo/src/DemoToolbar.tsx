@@ -10,7 +10,6 @@ import {
 	ButtonDialog,
 	ButtonText,
 	ButtonToggle,
-	Container,
 	Divider,
 	DividerType,
 	Dropdown,
@@ -21,6 +20,7 @@ import {
 	TextField,
 	Toolbar
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoToolbar extends React.Component<any, undefined> {
 
@@ -37,7 +37,7 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="toolbarExample" title="Toolbar">
+			<StyledContainer id="toolbarExample" title="Toolbar">
 
 				<h3>Left Justify space divider chevron</h3>
 				<Toolbar justify={Justify.left} sizing={this.props['sizing']} >
@@ -119,7 +119,7 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 				</Toolbar>
 				<Break sizing={this.props['sizing']} />
 
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

@@ -2,7 +2,7 @@
 
 exports[`Test creation of a Toast control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
@@ -11,13 +11,15 @@ exports[`Test creation of a Toast control 1`] = `
   disabled={false}
   duration={3}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   level={0}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -26,7 +28,7 @@ exports[`Test creation of a Toast control 1`] = `
   onClick={[Function]}
   onClose={[Function]}
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   show={false}
@@ -34,11 +36,11 @@ exports[`Test creation of a Toast control 1`] = `
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   usebottom={false}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -82,9 +84,9 @@ exports[`Test creation of a Toast control 1`] = `
 
 exports[`Test retrieval of Toast props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "decay": true,
@@ -92,13 +94,15 @@ Object {
   "disabled": false,
   "duration": 3,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
-  "left": "",
+  "height": null,
+  "id": null,
+  "left": null,
   "level": 0,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -106,18 +110,18 @@ Object {
   "obj": "Toast",
   "onClick": [Function],
   "onClose": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "show": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "usebottom": false,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;

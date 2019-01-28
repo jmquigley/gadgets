@@ -5,10 +5,10 @@ const debug = require('debug')('DemoTooltip');
 import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 import {
-	Container,
 	Location,
 	Tooltip
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoTooltip extends React.Component<any, undefined> {
 
@@ -21,7 +21,7 @@ export default class DemoTooltip extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="tooltipExample" title="Tooltip">
+			<StyledContainer id="tooltipExample" title="Tooltip">
 				<h3>Simple</h3>
 				Hover over each square to see the Tooltip.<br/><br/><br/>
 				<div id="tooltipContainer">
@@ -83,7 +83,7 @@ export default class DemoTooltip extends React.Component<any, undefined> {
 					</Tooltip>
 				</div>
 
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

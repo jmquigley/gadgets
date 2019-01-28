@@ -2,9 +2,9 @@
 
 exports[`Test retrieval of the Editor props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "content": "",
   "contentEditable": false,
   "controlled": true,
@@ -13,12 +13,14 @@ Object {
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
-  "left": "",
+  "height": null,
+  "id": null,
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -27,7 +29,7 @@ Object {
   "onChange": [Function],
   "onClick": [Function],
   "onClickLink": [Function],
-  "padding": "",
+  "padding": null,
   "scheme": Object {
     "background": "#000000",
     "foreground": "#ffffff",
@@ -37,10 +39,10 @@ Object {
   "style": Object {},
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;

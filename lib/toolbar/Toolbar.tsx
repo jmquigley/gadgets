@@ -10,6 +10,7 @@
  * - ButtonToggle
  * - Divider
  * - Dropdown
+ * - Label
  * - Option
  * - Switch
  * - TextField
@@ -122,12 +123,15 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 		'ButtonDialog',
 		'ButtonText',
 		'ButtonToggle',
+		'Container',
 		'Divider',
 		'Dropdown',
+		'Label',
 		'Option',
 		'StyledComponent',
 		'Switch',
-		'TextField'
+		'TextField',
+		'Toolbar'
 	]);
 
 	constructor(props: ToolbarProps) {
@@ -163,7 +167,10 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 						style['margin'] = '0 6px';
 						break;
 
+					case 'Label':
+					case 'Container':
 					case 'TextField':
+					case 'Toolbar':
 					case 'StyledComponent':
 						delete style['height'];
 						break;

@@ -2,20 +2,22 @@
 
 exports[`Test creation of a Title control with bad layout 1`] = `
 <Title
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={9999}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -23,36 +25,38 @@ exports[`Test creation of a Title control with bad layout 1`] = `
   obj="Title"
   onClick={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
+    height={null}
+    id={null}
     layout={9999}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -61,7 +65,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
     onClick={[Function]}
     onError={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -69,12 +73,12 @@ exports[`Test creation of a Title control with bad layout 1`] = `
     testing={true}
     theme={null}
     title="Test label text"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
     widget={null}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -83,6 +87,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -158,27 +163,29 @@ exports[`Test creation of a Title control with bad layout 1`] = `
             style={Object {}}
           >
             <Styled(Label)
-              bottom=""
+              bottom={null}
               className="ui-title"
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
-              id=""
+              height={null}
+              id={null}
               layout={9999}
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Title"
               onClick={[Function]}
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
@@ -186,12 +193,12 @@ exports[`Test creation of a Title control with bad layout 1`] = `
               text="Test label text"
               theme={null}
               title="Test label text"
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               useedit={false}
               visible={true}
               widget={null}
-              width=""
+              width={null}
               xcss={
                 Array [
                   "
@@ -202,14 +209,14 @@ exports[`Test creation of a Title control with bad layout 1`] = `
               }
             >
               <StyledComponent
-                bottom=""
+                bottom={null}
                 className="ui-title"
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={false}
                 err={null}
-                errorMessage=""
+                errorMessage={null}
                 focus={false}
                 forwardedComponent={
                   Object {
@@ -247,18 +254,20 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height=""
-                id=""
+                height={null}
+                id={null}
                 layout={9999}
-                left=""
+                left={null}
                 location="none"
+                minHeight={null}
+                minWidth={null}
                 noedit={false}
                 nohover={false}
                 noripple={false}
                 notheme={false}
                 obj="Title"
                 onClick={[Function]}
-                padding=""
+                padding={null}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -266,12 +275,12 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                 text="Test label text"
                 theme={null}
                 title="Test label text"
-                tooltip=""
-                top=""
+                tooltip={null}
+                top={null}
                 useedit={false}
                 visible={true}
                 widget={null}
-                width=""
+                width={null}
                 xcss={
                   Array [
                     "
@@ -282,20 +291,22 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                 }
               >
                 <Label
-                  bottom=""
+                  bottom={null}
                   className="ui-title sc-ifAKCX yXbqB"
                   contentEditable={false}
                   controlled={true}
                   direction="right"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
+                  height={null}
+                  id={null}
                   layout={9999}
-                  left=""
+                  left={null}
                   location="none"
+                  minHeight={null}
+                  minWidth={null}
                   noedit={false}
                   nohover={false}
                   noripple={false}
@@ -308,7 +319,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
                   onUpdate={[Function]}
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="normal"
                   style={Object {}}
@@ -316,12 +327,12 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                   text="Test label text"
                   theme={null}
                   title="Test label text"
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   useedit={false}
                   visible={true}
                   widget={null}
-                  width=""
+                  width={null}
                   xcss={
                     Array [
                       "
@@ -332,20 +343,22 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                   }
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="ui-title sc-ifAKCX yXbqB"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
+                    height={null}
+                    id={null}
                     layout={9999}
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
@@ -359,7 +372,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
                     onUpdate={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="normal"
@@ -368,12 +381,12 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                     text="Test label text"
                     theme={null}
                     title="Test label text"
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     useedit={false}
                     visible={true}
                     widget={null}
-                    width=""
+                    width={null}
                     xcss={
                       Array [
                         "
@@ -389,6 +402,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -499,20 +513,22 @@ exports[`Test creation of a Title control with bad layout 1`] = `
 
 exports[`Test creation of a Title control with bad layout 2`] = `
 <Title
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={9999}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -520,36 +536,38 @@ exports[`Test creation of a Title control with bad layout 2`] = `
   obj="Title"
   onClick={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
+    height={null}
+    id={null}
     layout={9999}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -558,7 +576,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
     onClick={[Function]}
     onError={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -566,12 +584,12 @@ exports[`Test creation of a Title control with bad layout 2`] = `
     testing={true}
     theme={null}
     title="Test label text"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
     widget={null}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -580,6 +598,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -655,27 +674,29 @@ exports[`Test creation of a Title control with bad layout 2`] = `
             style={Object {}}
           >
             <Styled(Label)
-              bottom=""
+              bottom={null}
               className="ui-title"
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
-              id=""
+              height={null}
+              id={null}
               layout={9999}
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Title"
               onClick={[Function]}
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
@@ -683,12 +704,12 @@ exports[`Test creation of a Title control with bad layout 2`] = `
               text="Test label text"
               theme={null}
               title="Test label text"
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               useedit={false}
               visible={true}
               widget={null}
-              width=""
+              width={null}
               xcss={
                 Array [
                   "
@@ -699,14 +720,14 @@ exports[`Test creation of a Title control with bad layout 2`] = `
               }
             >
               <StyledComponent
-                bottom=""
+                bottom={null}
                 className="ui-title"
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={false}
                 err={null}
-                errorMessage=""
+                errorMessage={null}
                 focus={false}
                 forwardedComponent={
                   Object {
@@ -744,18 +765,20 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                   }
                 }
                 forwardedRef={null}
-                height=""
-                id=""
+                height={null}
+                id={null}
                 layout={9999}
-                left=""
+                left={null}
                 location="none"
+                minHeight={null}
+                minWidth={null}
                 noedit={false}
                 nohover={false}
                 noripple={false}
                 notheme={false}
                 obj="Title"
                 onClick={[Function]}
-                padding=""
+                padding={null}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -763,12 +786,12 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                 text="Test label text"
                 theme={null}
                 title="Test label text"
-                tooltip=""
-                top=""
+                tooltip={null}
+                top={null}
                 useedit={false}
                 visible={true}
                 widget={null}
-                width=""
+                width={null}
                 xcss={
                   Array [
                     "
@@ -779,20 +802,22 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                 }
               >
                 <Label
-                  bottom=""
+                  bottom={null}
                   className="ui-title sc-ifAKCX yXbqB"
                   contentEditable={false}
                   controlled={true}
                   direction="right"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
+                  height={null}
+                  id={null}
                   layout={9999}
-                  left=""
+                  left={null}
                   location="none"
+                  minHeight={null}
+                  minWidth={null}
                   noedit={false}
                   nohover={false}
                   noripple={false}
@@ -805,7 +830,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
                   onUpdate={[Function]}
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="normal"
                   style={Object {}}
@@ -813,12 +838,12 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                   text="Test label text"
                   theme={null}
                   title="Test label text"
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   useedit={false}
                   visible={true}
                   widget={null}
-                  width=""
+                  width={null}
                   xcss={
                     Array [
                       "
@@ -829,20 +854,22 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                   }
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="ui-title sc-ifAKCX yXbqB"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
+                    height={null}
+                    id={null}
                     layout={9999}
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
@@ -856,7 +883,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
                     onUpdate={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="normal"
@@ -865,12 +892,12 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                     text="Test label text"
                     theme={null}
                     title="Test label text"
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     useedit={false}
                     visible={true}
                     widget={null}
-                    width=""
+                    width={null}
                     xcss={
                       Array [
                         "
@@ -886,6 +913,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -996,20 +1024,22 @@ exports[`Test creation of a Title control with bad layout 2`] = `
 
 exports[`Test creation of a Title control with default props 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={5}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1018,7 +1048,7 @@ exports[`Test creation of a Title control with default props 1`] = `
   onClick={[Function]}
   onError={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -1026,12 +1056,12 @@ exports[`Test creation of a Title control with default props 1`] = `
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -1043,27 +1073,29 @@ exports[`Test creation of a Title control with default props 1`] = `
     visible={true}
   >
     <Styled(Label)
-      bottom=""
+      bottom={null}
       className="ui-title"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={5}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
@@ -1071,12 +1103,12 @@ exports[`Test creation of a Title control with default props 1`] = `
       text="Test label text"
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget={null}
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1092,20 +1124,22 @@ exports[`Test creation of a Title control with default props 1`] = `
 
 exports[`Test creation of a Title control with even layout 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={1}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1114,7 +1148,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
   onClick={[Function]}
   onError={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -1122,12 +1156,12 @@ exports[`Test creation of a Title control with even layout 1`] = `
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget="widget"
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -1139,27 +1173,29 @@ exports[`Test creation of a Title control with even layout 1`] = `
     visible={true}
   >
     <Styled(Label)
-      bottom=""
+      bottom={null}
       className="ui-title"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={1}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
@@ -1167,12 +1203,12 @@ exports[`Test creation of a Title control with even layout 1`] = `
       text="Test label text"
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1183,39 +1219,41 @@ exports[`Test creation of a Title control with even layout 1`] = `
       }
     />
     <styled.div
-      bottom=""
+      bottom={null}
       className="ui-title-widget"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={1}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1233,20 +1271,22 @@ exports[`Test creation of a Title control with even layout 1`] = `
 
 exports[`Test creation of a Title control with no layout 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={6}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1255,7 +1295,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
   onClick={[Function]}
   onError={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -1263,12 +1303,12 @@ exports[`Test creation of a Title control with no layout 1`] = `
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -1280,27 +1320,29 @@ exports[`Test creation of a Title control with no layout 1`] = `
     visible={true}
   >
     <Styled(Label)
-      bottom=""
+      bottom={null}
       className="ui-title"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={6}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
@@ -1308,12 +1350,12 @@ exports[`Test creation of a Title control with no layout 1`] = `
       text="Test label text"
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget={null}
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1329,20 +1371,22 @@ exports[`Test creation of a Title control with no layout 1`] = `
 
 exports[`Test creation of a Title control with quarter layout 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={0}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1351,7 +1395,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
   onClick={[Function]}
   onError={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -1359,12 +1403,12 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget="widget"
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -1376,27 +1420,29 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     visible={true}
   >
     <Styled(Label)
-      bottom=""
+      bottom={null}
       className="ui-title"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={0}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
@@ -1404,12 +1450,12 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       text="Test label text"
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1420,39 +1466,41 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       }
     />
     <styled.div
-      bottom=""
+      bottom={null}
       className="ui-title-widget"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={0}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1470,20 +1518,22 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
 
 exports[`Test creation of a Title control with stacked layout 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={4}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1492,7 +1542,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
   onClick={[Function]}
   onError={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -1500,12 +1550,12 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget="widget"
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -1517,27 +1567,29 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     visible={true}
   >
     <Styled(Label)
-      bottom=""
+      bottom={null}
       className="ui-title"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={4}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
@@ -1545,12 +1597,12 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       text="Test label text"
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1560,39 +1612,41 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       }
     />
     <styled.div
-      bottom=""
+      bottom={null}
       className="ui-title-widget"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={4}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1609,20 +1663,22 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
 
 exports[`Test creation of a Title control with thirds layout 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={3}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1631,7 +1687,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
   onClick={[Function]}
   onError={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -1639,12 +1695,12 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget="widget"
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -1656,27 +1712,29 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     visible={true}
   >
     <Styled(Label)
-      bottom=""
+      bottom={null}
       className="ui-title"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={3}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
@@ -1684,12 +1742,12 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       text="Test label text"
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1700,39 +1758,41 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       }
     />
     <styled.div
-      bottom=""
+      bottom={null}
       className="ui-title-widget"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={3}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1750,20 +1810,22 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
 
 exports[`Test creation of a Title control with threequarter layout 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={2}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1772,7 +1834,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
   onClick={[Function]}
   onError={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -1780,12 +1842,12 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget="widget"
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -1797,27 +1859,29 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     visible={true}
   >
     <Styled(Label)
-      bottom=""
+      bottom={null}
       className="ui-title"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={2}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
@@ -1825,12 +1889,12 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       text="Test label text"
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1841,39 +1905,41 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       }
     />
     <styled.div
-      bottom=""
+      bottom={null}
       className="ui-title-widget"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       layout={2}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Title"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={null}
       title="Test label text"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={
         Array [
           "
@@ -1891,20 +1957,22 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
 
 exports[`Test disabling the Title control 1`] = `
 <Title
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={5}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1912,36 +1980,38 @@ exports[`Test disabling the Title control 1`] = `
   obj="Title"
   onClick={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={true}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
+    height={null}
+    id={null}
     layout={5}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -1950,7 +2020,7 @@ exports[`Test disabling the Title control 1`] = `
     onClick={[Function]}
     onError={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -1958,12 +2028,12 @@ exports[`Test disabling the Title control 1`] = `
     testing={true}
     theme={null}
     title="Test label text"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
     widget={null}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -1972,6 +2042,7 @@ exports[`Test disabling the Title control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -2047,27 +2118,29 @@ exports[`Test disabling the Title control 1`] = `
             style={Object {}}
           >
             <Styled(Label)
-              bottom=""
+              bottom={null}
               className="ui-title"
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={true}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
-              id=""
+              height={null}
+              id={null}
               layout={5}
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Title"
               onClick={[Function]}
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
@@ -2075,12 +2148,12 @@ exports[`Test disabling the Title control 1`] = `
               text="Test label text"
               theme={null}
               title="Test label text"
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               useedit={false}
               visible={true}
               widget={null}
-              width=""
+              width={null}
               xcss={
                 Array [
                   "
@@ -2091,14 +2164,14 @@ exports[`Test disabling the Title control 1`] = `
               }
             >
               <StyledComponent
-                bottom=""
+                bottom={null}
                 className="ui-title"
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={true}
                 err={null}
-                errorMessage=""
+                errorMessage={null}
                 focus={false}
                 forwardedComponent={
                   Object {
@@ -2136,18 +2209,20 @@ exports[`Test disabling the Title control 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height=""
-                id=""
+                height={null}
+                id={null}
                 layout={5}
-                left=""
+                left={null}
                 location="none"
+                minHeight={null}
+                minWidth={null}
                 noedit={false}
                 nohover={false}
                 noripple={false}
                 notheme={false}
                 obj="Title"
                 onClick={[Function]}
-                padding=""
+                padding={null}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -2155,12 +2230,12 @@ exports[`Test disabling the Title control 1`] = `
                 text="Test label text"
                 theme={null}
                 title="Test label text"
-                tooltip=""
-                top=""
+                tooltip={null}
+                top={null}
                 useedit={false}
                 visible={true}
                 widget={null}
-                width=""
+                width={null}
                 xcss={
                   Array [
                     "
@@ -2171,20 +2246,22 @@ exports[`Test disabling the Title control 1`] = `
                 }
               >
                 <Label
-                  bottom=""
+                  bottom={null}
                   className="ui-title sc-ifAKCX iVrkrp"
                   contentEditable={false}
                   controlled={true}
                   direction="right"
                   disabled={true}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
+                  height={null}
+                  id={null}
                   layout={5}
-                  left=""
+                  left={null}
                   location="none"
+                  minHeight={null}
+                  minWidth={null}
                   noedit={false}
                   nohover={false}
                   noripple={false}
@@ -2197,7 +2274,7 @@ exports[`Test disabling the Title control 1`] = `
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
                   onUpdate={[Function]}
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="normal"
                   style={Object {}}
@@ -2205,12 +2282,12 @@ exports[`Test disabling the Title control 1`] = `
                   text="Test label text"
                   theme={null}
                   title="Test label text"
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   useedit={false}
                   visible={true}
                   widget={null}
-                  width=""
+                  width={null}
                   xcss={
                     Array [
                       "
@@ -2221,20 +2298,22 @@ exports[`Test disabling the Title control 1`] = `
                   }
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="ui-title sc-ifAKCX iVrkrp"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={true}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
+                    height={null}
+                    id={null}
                     layout={5}
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
@@ -2248,7 +2327,7 @@ exports[`Test disabling the Title control 1`] = `
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
                     onUpdate={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="normal"
@@ -2257,12 +2336,12 @@ exports[`Test disabling the Title control 1`] = `
                     text="Test label text"
                     theme={null}
                     title="Test label text"
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     useedit={false}
                     visible={true}
                     widget={null}
-                    width=""
+                    width={null}
                     xcss={
                       Array [
                         "
@@ -2278,6 +2357,7 @@ exports[`Test disabling the Title control 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -2388,20 +2468,22 @@ exports[`Test disabling the Title control 1`] = `
 
 exports[`Test making the Title control invisible 1`] = `
 <Title
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={5}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -2409,36 +2491,38 @@ exports[`Test making the Title control invisible 1`] = `
   obj="Title"
   onClick={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
   title="Test label text"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={false}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
+    height={null}
+    id={null}
     layout={5}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -2447,7 +2531,7 @@ exports[`Test making the Title control invisible 1`] = `
     onClick={[Function]}
     onError={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -2455,12 +2539,12 @@ exports[`Test making the Title control invisible 1`] = `
     testing={true}
     theme={null}
     title="Test label text"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={false}
     widget={null}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -2469,6 +2553,7 @@ exports[`Test making the Title control invisible 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -2544,27 +2629,29 @@ exports[`Test making the Title control invisible 1`] = `
             style={Object {}}
           >
             <Styled(Label)
-              bottom=""
+              bottom={null}
               className="ui-title"
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
-              id=""
+              height={null}
+              id={null}
               layout={5}
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Title"
               onClick={[Function]}
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
@@ -2572,12 +2659,12 @@ exports[`Test making the Title control invisible 1`] = `
               text="Test label text"
               theme={null}
               title="Test label text"
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               useedit={false}
               visible={false}
               widget={null}
-              width=""
+              width={null}
               xcss={
                 Array [
                   "
@@ -2588,14 +2675,14 @@ exports[`Test making the Title control invisible 1`] = `
               }
             >
               <StyledComponent
-                bottom=""
+                bottom={null}
                 className="ui-title"
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={false}
                 err={null}
-                errorMessage=""
+                errorMessage={null}
                 focus={false}
                 forwardedComponent={
                   Object {
@@ -2633,18 +2720,20 @@ exports[`Test making the Title control invisible 1`] = `
                   }
                 }
                 forwardedRef={null}
-                height=""
-                id=""
+                height={null}
+                id={null}
                 layout={5}
-                left=""
+                left={null}
                 location="none"
+                minHeight={null}
+                minWidth={null}
                 noedit={false}
                 nohover={false}
                 noripple={false}
                 notheme={false}
                 obj="Title"
                 onClick={[Function]}
-                padding=""
+                padding={null}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
@@ -2652,12 +2741,12 @@ exports[`Test making the Title control invisible 1`] = `
                 text="Test label text"
                 theme={null}
                 title="Test label text"
-                tooltip=""
-                top=""
+                tooltip={null}
+                top={null}
                 useedit={false}
                 visible={false}
                 widget={null}
-                width=""
+                width={null}
                 xcss={
                   Array [
                     "
@@ -2668,20 +2757,22 @@ exports[`Test making the Title control invisible 1`] = `
                 }
               >
                 <Label
-                  bottom=""
+                  bottom={null}
                   className="ui-title sc-ifAKCX iVrkrp"
                   contentEditable={false}
                   controlled={true}
                   direction="right"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
+                  height={null}
+                  id={null}
                   layout={5}
-                  left=""
+                  left={null}
                   location="none"
+                  minHeight={null}
+                  minWidth={null}
                   noedit={false}
                   nohover={false}
                   noripple={false}
@@ -2694,7 +2785,7 @@ exports[`Test making the Title control invisible 1`] = `
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
                   onUpdate={[Function]}
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="normal"
                   style={Object {}}
@@ -2702,12 +2793,12 @@ exports[`Test making the Title control invisible 1`] = `
                   text="Test label text"
                   theme={null}
                   title="Test label text"
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   useedit={false}
                   visible={false}
                   widget={null}
-                  width=""
+                  width={null}
                   xcss={
                     Array [
                       "
@@ -2718,20 +2809,22 @@ exports[`Test making the Title control invisible 1`] = `
                   }
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="ui-title sc-ifAKCX iVrkrp"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
+                    height={null}
+                    id={null}
                     layout={5}
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
@@ -2745,7 +2838,7 @@ exports[`Test making the Title control invisible 1`] = `
                     onKeyDown={[Function]}
                     onKeyPress={[Function]}
                     onUpdate={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="normal"
@@ -2754,12 +2847,12 @@ exports[`Test making the Title control invisible 1`] = `
                     text="Test label text"
                     theme={null}
                     title="Test label text"
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     useedit={false}
                     visible={false}
                     widget={null}
-                    width=""
+                    width={null}
                     xcss={
                       Array [
                         "
@@ -2775,6 +2868,7 @@ exports[`Test making the Title control invisible 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -2885,21 +2979,23 @@ exports[`Test making the Title control invisible 1`] = `
 
 exports[`Test retrieval of Title props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
+  "height": null,
+  "id": null,
   "layout": 5,
-  "left": "",
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -2907,18 +3003,18 @@ Object {
   "obj": "Title",
   "onClick": [Function],
   "onUpdate": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "useedit": false,
   "visible": true,
   "widget": null,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;

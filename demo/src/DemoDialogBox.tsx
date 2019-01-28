@@ -7,10 +7,10 @@ import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 import {
 	ButtonText,
-	Container,
 	DialogBox,
 	DialogBoxType
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export interface DemoDialogBoxState {
 	dialogError: boolean;
@@ -94,7 +94,7 @@ export default class DemoDilogBox extends React.Component<any, DemoDialogBoxStat
 
 	public render() {
 		return(
-			<Container id="dialogBoxExample" title="Dialog Box">
+			<StyledContainer id="dialogBoxExample" title="Dialog Box">
 				<div id="simple-buttons">
 					<div className="box">
 						<ButtonText
@@ -185,7 +185,7 @@ export default class DemoDilogBox extends React.Component<any, DemoDialogBoxStat
 						/>
 					</div>
 				</div>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

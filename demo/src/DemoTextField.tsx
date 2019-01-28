@@ -5,10 +5,10 @@ const debug = require('debug')('DemoTextField');
 import * as React from 'react';
 import {
 	Break,
-	Container,
 	TextField,
 	Validator
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoTextField extends React.Component<any, undefined> {
 
@@ -29,7 +29,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="textfieldExample" title="TextField">
+			<StyledContainer id="textfieldExample" title="TextField">
 
 				<h3>Validation of Max (10) & Min (5) Length</h3>
 				<TextField
@@ -96,7 +96,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 					useclear
 				/>
 
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

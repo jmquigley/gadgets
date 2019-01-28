@@ -8,12 +8,12 @@ import * as React from 'react';
 import {sprintf} from 'sprintf-js';
 import {
 	Button,
-	Container,
 	DynamicList,
 	Option,
 	OptionType,
 	TitleLayout
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export interface DemoDynamicListState {
 	dynamicListError: string;
@@ -128,7 +128,7 @@ export default class DemoDynamicList extends React.Component<any, DemoDynamicLis
 
 	public render() {
 		return(
-			<Container id="dynamicListExample" title="Dynamic List">
+			<StyledContainer id="dynamicListExample" title="Dynamic List">
 				<DynamicList
 					disabled={this.props['disabled']}
 					errorMessage={this.state.dynamicListError}
@@ -158,7 +158,7 @@ export default class DemoDynamicList extends React.Component<any, DemoDynamicLis
 					onClick={this.handleToggleSelection}
 					text="Toggle selection mode (on turns off selection)"
 				/>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

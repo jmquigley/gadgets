@@ -42,7 +42,6 @@ module.exports = {
 	entry: [
 		path.resolve(__dirname, 'node_modules', 'font-awesome', 'css', 'font-awesome.min.css'),
 		path.resolve(__dirname, 'node_modules', 'css-ripple-effect', 'dist', 'ripple.min.css'),
-		path.resolve(__dirname, 'node_modules', 'react-select', 'dist', 'react-select.css'),
 		path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.core.css'),
 		path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.bubble.css'),
 		path.resolve(__dirname, 'node_modules', 'quill', 'dist', 'quill.snow.css'),

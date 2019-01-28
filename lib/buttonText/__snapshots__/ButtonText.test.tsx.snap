@@ -2,22 +2,24 @@
 
 exports[`Test creation of a ButtonText control to the left 1`] = `
 <ButtonText
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
-  id=""
+  id={null}
   imageFile=""
   justify={0}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noicon={false}
@@ -25,7 +27,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   notheme={false}
   obj="ButtonText"
   onClick={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={
@@ -38,29 +40,31 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   testing={true}
   text="test text"
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
+    bottom={null}
     className="test-class"
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     iconName="bomb"
-    id=""
+    id={null}
     imageFile=""
     justify={0}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noicon={false}
@@ -69,7 +73,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
     obj="ButtonText"
     onClick={[Function]}
     onError={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -83,10 +87,10 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
     testing={true}
     text="test text"
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -95,6 +99,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -257,71 +262,75 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
               </StyledComponent>
             </styled.div>
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName="bomb"
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             >
               <Wrapper
-                bottom=""
-                className=""
+                bottom={null}
+                className={null}
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={false}
                 err={null}
-                errorMessage=""
+                errorMessage={null}
                 focus={false}
-                height=""
+                height={null}
                 iconName="bomb"
-                id=""
+                id={null}
                 imageFile=""
-                left=""
+                left={null}
                 location="none"
+                minHeight={null}
+                minWidth={null}
                 noedit={false}
                 nohover={false}
                 noripple={false}
                 notheme={false}
                 obj="Icon"
                 onError={[Function]}
-                padding=""
+                padding={null}
                 reset={false}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
                 testing={true}
                 theme={null}
-                tooltip=""
-                top=""
+                tooltip={null}
+                top={null}
                 visible={true}
-                width=""
+                width={null}
                 xcss={null}
               >
                 <ThemeProvider
@@ -330,6 +339,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
                       "backgroundColor": "#ffffff",
                       "borderColor": "#c0c0c0",
                       "color": "#000000",
+                      "fontFamily": "OpenSans, Georgia, serif",
                       "headerBackgroundColor": "#004358",
                       "headerForegroundColor": "#ffffff",
                       "headerHoverColor": "#ffe11a",
@@ -347,47 +357,49 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
                   }
                 >
                   <styled.i
-                    bottom=""
+                    bottom={null}
                     className="ui-icon fa fa-fw fa-bomb"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
+                    height={null}
                     iconName="bomb"
-                    id=""
+                    id={null}
                     imageFile=""
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
                     notheme={false}
                     obj="Icon"
-                    padding=""
+                    padding={null}
                     selected={false}
                     sizing="normal"
                     style={Object {}}
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <StyledComponent
-                      bottom=""
+                      bottom={null}
                       className="ui-icon fa fa-fw fa-bomb"
                       contentEditable={false}
                       controlled={true}
                       direction="right"
                       disabled={false}
                       err={null}
-                      errorMessage=""
+                      errorMessage={null}
                       focus={false}
                       forwardedComponent={
                         Object {
@@ -426,27 +438,29 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
                         }
                       }
                       forwardedRef={null}
-                      height=""
+                      height={null}
                       iconName="bomb"
-                      id=""
+                      id={null}
                       imageFile=""
-                      left=""
+                      left={null}
                       location="none"
+                      minHeight={null}
+                      minWidth={null}
                       noedit={false}
                       nohover={false}
                       noripple={false}
                       notheme={false}
                       obj="Icon"
-                      padding=""
+                      padding={null}
                       selected={false}
                       sizing="normal"
                       style={Object {}}
                       testing={true}
                       theme={null}
-                      tooltip=""
-                      top=""
+                      tooltip={null}
+                      top={null}
                       visible={true}
-                      width=""
+                      width={null}
                       xcss={null}
                     >
                       <i
@@ -454,11 +468,11 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
                         contentEditable={false}
                         direction="right"
                         disabled={false}
-                        height=""
-                        id=""
+                        height={null}
+                        id={null}
                         selected={false}
                         style={Object {}}
-                        width=""
+                        width={null}
                       />
                     </StyledComponent>
                   </styled.i>
@@ -475,22 +489,24 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
 
 exports[`Test disabling of a ButtonText control 1`] = `
 <ButtonText
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
-  id=""
+  id={null}
   imageFile=""
   justify={1}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noicon={false}
@@ -498,36 +514,38 @@ exports[`Test disabling of a ButtonText control 1`] = `
   notheme={false}
   obj="ButtonText"
   onClick={[MockFunction]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   text=""
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={true}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     iconName="bomb"
-    id=""
+    id={null}
     imageFile=""
     justify={1}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noicon={false}
@@ -536,7 +554,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
     obj="ButtonText"
     onClick={[MockFunction]}
     onError={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -544,10 +562,10 @@ exports[`Test disabling of a ButtonText control 1`] = `
     testing={true}
     text=""
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -556,6 +574,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -648,71 +667,75 @@ exports[`Test disabling of a ButtonText control 1`] = `
             style={Object {}}
           >
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName="bomb"
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             >
               <Wrapper
-                bottom=""
-                className=""
+                bottom={null}
+                className={null}
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={false}
                 err={null}
-                errorMessage=""
+                errorMessage={null}
                 focus={false}
-                height=""
+                height={null}
                 iconName="bomb"
-                id=""
+                id={null}
                 imageFile=""
-                left=""
+                left={null}
                 location="none"
+                minHeight={null}
+                minWidth={null}
                 noedit={false}
                 nohover={false}
                 noripple={false}
                 notheme={false}
                 obj="Icon"
                 onError={[Function]}
-                padding=""
+                padding={null}
                 reset={false}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
                 testing={true}
                 theme={null}
-                tooltip=""
-                top=""
+                tooltip={null}
+                top={null}
                 visible={true}
-                width=""
+                width={null}
                 xcss={null}
               >
                 <ThemeProvider
@@ -721,6 +744,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
                       "backgroundColor": "#ffffff",
                       "borderColor": "#c0c0c0",
                       "color": "#000000",
+                      "fontFamily": "OpenSans, Georgia, serif",
                       "headerBackgroundColor": "#004358",
                       "headerForegroundColor": "#ffffff",
                       "headerHoverColor": "#ffe11a",
@@ -738,47 +762,49 @@ exports[`Test disabling of a ButtonText control 1`] = `
                   }
                 >
                   <styled.i
-                    bottom=""
+                    bottom={null}
                     className="ui-icon fa fa-fw fa-bomb"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
+                    height={null}
                     iconName="bomb"
-                    id=""
+                    id={null}
                     imageFile=""
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
                     notheme={false}
                     obj="Icon"
-                    padding=""
+                    padding={null}
                     selected={false}
                     sizing="normal"
                     style={Object {}}
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <StyledComponent
-                      bottom=""
+                      bottom={null}
                       className="ui-icon fa fa-fw fa-bomb"
                       contentEditable={false}
                       controlled={true}
                       direction="right"
                       disabled={false}
                       err={null}
-                      errorMessage=""
+                      errorMessage={null}
                       focus={false}
                       forwardedComponent={
                         Object {
@@ -817,27 +843,29 @@ exports[`Test disabling of a ButtonText control 1`] = `
                         }
                       }
                       forwardedRef={null}
-                      height=""
+                      height={null}
                       iconName="bomb"
-                      id=""
+                      id={null}
                       imageFile=""
-                      left=""
+                      left={null}
                       location="none"
+                      minHeight={null}
+                      minWidth={null}
                       noedit={false}
                       nohover={false}
                       noripple={false}
                       notheme={false}
                       obj="Icon"
-                      padding=""
+                      padding={null}
                       selected={false}
                       sizing="normal"
                       style={Object {}}
                       testing={true}
                       theme={null}
-                      tooltip=""
-                      top=""
+                      tooltip={null}
+                      top={null}
                       visible={true}
-                      width=""
+                      width={null}
                       xcss={null}
                     >
                       <i
@@ -845,11 +873,11 @@ exports[`Test disabling of a ButtonText control 1`] = `
                         contentEditable={false}
                         direction="right"
                         disabled={false}
-                        height=""
-                        id=""
+                        height={null}
+                        id={null}
                         selected={false}
                         style={Object {}}
-                        width=""
+                        width={null}
                       />
                     </StyledComponent>
                   </styled.i>
@@ -916,22 +944,24 @@ exports[`Test disabling of a ButtonText control 1`] = `
 
 exports[`Test making a ButtonText control invisible 1`] = `
 <ButtonText
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
-  id=""
+  id={null}
   imageFile=""
   justify={1}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noicon={false}
@@ -939,36 +969,38 @@ exports[`Test making a ButtonText control invisible 1`] = `
   notheme={false}
   obj="ButtonText"
   onClick={[MockFunction]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   text=""
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={false}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     iconName="bomb"
-    id=""
+    id={null}
     imageFile=""
     justify={1}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noicon={false}
@@ -977,7 +1009,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
     obj="ButtonText"
     onClick={[MockFunction]}
     onError={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -985,10 +1017,10 @@ exports[`Test making a ButtonText control invisible 1`] = `
     testing={true}
     text=""
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={false}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -997,6 +1029,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -1089,71 +1122,75 @@ exports[`Test making a ButtonText control invisible 1`] = `
             style={Object {}}
           >
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName="bomb"
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             >
               <Wrapper
-                bottom=""
-                className=""
+                bottom={null}
+                className={null}
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={false}
                 err={null}
-                errorMessage=""
+                errorMessage={null}
                 focus={false}
-                height=""
+                height={null}
                 iconName="bomb"
-                id=""
+                id={null}
                 imageFile=""
-                left=""
+                left={null}
                 location="none"
+                minHeight={null}
+                minWidth={null}
                 noedit={false}
                 nohover={false}
                 noripple={false}
                 notheme={false}
                 obj="Icon"
                 onError={[Function]}
-                padding=""
+                padding={null}
                 reset={false}
                 selected={false}
                 sizing="normal"
                 style={Object {}}
                 testing={true}
                 theme={null}
-                tooltip=""
-                top=""
+                tooltip={null}
+                top={null}
                 visible={true}
-                width=""
+                width={null}
                 xcss={null}
               >
                 <ThemeProvider
@@ -1162,6 +1199,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
                       "backgroundColor": "#ffffff",
                       "borderColor": "#c0c0c0",
                       "color": "#000000",
+                      "fontFamily": "OpenSans, Georgia, serif",
                       "headerBackgroundColor": "#004358",
                       "headerForegroundColor": "#ffffff",
                       "headerHoverColor": "#ffe11a",
@@ -1179,47 +1217,49 @@ exports[`Test making a ButtonText control invisible 1`] = `
                   }
                 >
                   <styled.i
-                    bottom=""
+                    bottom={null}
                     className="ui-icon fa fa-fw fa-bomb"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
+                    height={null}
                     iconName="bomb"
-                    id=""
+                    id={null}
                     imageFile=""
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
                     notheme={false}
                     obj="Icon"
-                    padding=""
+                    padding={null}
                     selected={false}
                     sizing="normal"
                     style={Object {}}
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <StyledComponent
-                      bottom=""
+                      bottom={null}
                       className="ui-icon fa fa-fw fa-bomb"
                       contentEditable={false}
                       controlled={true}
                       direction="right"
                       disabled={false}
                       err={null}
-                      errorMessage=""
+                      errorMessage={null}
                       focus={false}
                       forwardedComponent={
                         Object {
@@ -1258,27 +1298,29 @@ exports[`Test making a ButtonText control invisible 1`] = `
                         }
                       }
                       forwardedRef={null}
-                      height=""
+                      height={null}
                       iconName="bomb"
-                      id=""
+                      id={null}
                       imageFile=""
-                      left=""
+                      left={null}
                       location="none"
+                      minHeight={null}
+                      minWidth={null}
                       noedit={false}
                       nohover={false}
                       noripple={false}
                       notheme={false}
                       obj="Icon"
-                      padding=""
+                      padding={null}
                       selected={false}
                       sizing="normal"
                       style={Object {}}
                       testing={true}
                       theme={null}
-                      tooltip=""
-                      top=""
+                      tooltip={null}
+                      top={null}
                       visible={true}
-                      width=""
+                      width={null}
                       xcss={null}
                     >
                       <i
@@ -1286,11 +1328,11 @@ exports[`Test making a ButtonText control invisible 1`] = `
                         contentEditable={false}
                         direction="right"
                         disabled={false}
-                        height=""
-                        id=""
+                        height={null}
+                        id={null}
                         selected={false}
                         style={Object {}}
-                        width=""
+                        width={null}
                       />
                     </StyledComponent>
                   </styled.i>
@@ -1357,23 +1399,25 @@ exports[`Test making a ButtonText control invisible 1`] = `
 
 exports[`Test retrieval of ButtonText props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
+  "height": null,
   "iconName": "bomb",
-  "id": "",
+  "id": null,
   "imageFile": "",
   "justify": 1,
-  "left": "",
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noicon": false,
@@ -1381,17 +1425,17 @@ Object {
   "notheme": false,
   "obj": "ButtonText",
   "onClick": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "text": "",
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;

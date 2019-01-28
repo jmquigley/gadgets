@@ -4,26 +4,28 @@ exports[`Test creation of a ButtonToggle control 1`] = `
 <Wrapper
   bgColorOff="inherit"
   bgColorOn="inherit"
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   fgColorOff="gray"
   fgColorOn="black"
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
   iconNameOff="bomb"
   iconNameOn="bomb"
   iconStyle=""
-  id=""
+  id={null}
   initialToggle={false}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -31,49 +33,51 @@ exports[`Test creation of a ButtonToggle control 1`] = `
   obj="ButtonToggle"
   onClick={[Function]}
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Button
     bgColorOff="inherit"
     bgColorOn="inherit"
-    bottom=""
+    bottom={null}
     className="ui-button-toggle test-class"
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     fgColorOff="gray"
     fgColorOn="black"
     focus={false}
-    height=""
+    height={null}
     iconName="bomb"
     iconNameOff="bomb"
     iconNameOn="bomb"
     iconStyle=""
-    id=""
+    id={null}
     initialToggle={false}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={true}
     notheme={false}
     obj="ButtonToggle"
     onClick={[Function]}
-    padding=""
+    padding={null}
     selected={false}
     sizing="normal"
     style={
@@ -84,10 +88,10 @@ exports[`Test creation of a ButtonToggle control 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   />
 </Wrapper>
@@ -97,67 +101,71 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
 <ButtonToggle
   bgColorOff="inherit"
   bgColorOn="inherit"
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   fgColorOff="gray"
   fgColorOn="black"
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
   iconNameOff="star-o"
   iconNameOn="star"
   iconStyle=""
-  id=""
+  id={null}
   initialToggle={false}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="ButtonToggle"
   onClick={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
     bgColorOff="inherit"
     bgColorOn="inherit"
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     fgColorOff="gray"
     fgColorOn="black"
     focus={false}
-    height=""
+    height={null}
     iconName="bomb"
     iconNameOff="star-o"
     iconNameOn="star"
     iconStyle=""
-    id=""
+    id={null}
     initialToggle={false}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -165,17 +173,17 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
     obj="ButtonToggle"
     onClick={[Function]}
     onError={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -184,6 +192,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -203,33 +212,35 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
       <Button
         bgColorOff="inherit"
         bgColorOn="inherit"
-        bottom=""
+        bottom={null}
         className="ui-button-toggle"
         contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
         err={null}
-        errorMessage=""
+        errorMessage={null}
         fgColorOff="gray"
         fgColorOn="black"
         focus={false}
-        height=""
+        height={null}
         iconName="star-o"
         iconNameOff="star-o"
         iconNameOn="star"
         iconStyle=""
-        id=""
+        id={null}
         initialToggle={false}
-        left=""
+        left={null}
         location="none"
+        minHeight={null}
+        minWidth={null}
         noedit={false}
         nohover={false}
         noripple={true}
         notheme={false}
         obj="ButtonToggle"
         onClick={[Function]}
-        padding=""
+        padding={null}
         selected={false}
         sizing="normal"
         style={
@@ -240,35 +251,37 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
         }
         testing={true}
         theme={null}
-        tooltip=""
-        top=""
+        tooltip={null}
+        top={null}
         visible={true}
-        width=""
+        width={null}
         xcss={null}
       >
         <Wrapper
           bgColorOff="inherit"
           bgColorOn="inherit"
-          bottom=""
+          bottom={null}
           className="ui-button-toggle"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           fgColorOff="gray"
           fgColorOn="black"
           focus={false}
-          height=""
+          height={null}
           iconName="star-o"
           iconNameOff="star-o"
           iconNameOn="star"
           iconStyle=""
-          id=""
+          id={null}
           initialToggle={false}
-          left=""
+          left={null}
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={false}
           nohover={false}
           noripple={true}
@@ -276,7 +289,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
           obj="ButtonToggle"
           onClick={[Function]}
           onError={[Function]}
-          padding=""
+          padding={null}
           reset={false}
           selected={false}
           sizing="normal"
@@ -288,10 +301,10 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
           }
           testing={true}
           theme={null}
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           visible={true}
-          width=""
+          width={null}
           xcss={null}
         >
           <ThemeProvider
@@ -300,6 +313,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
                 "backgroundColor": "#ffffff",
                 "borderColor": "#c0c0c0",
                 "color": "#000000",
+                "fontFamily": "OpenSans, Georgia, serif",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
@@ -414,71 +428,75 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
                   }
                 >
                   <Icon
-                    bottom=""
+                    bottom={null}
                     className=""
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
+                    height={null}
                     iconName="star-o"
-                    id=""
+                    id={null}
                     imageFile=""
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
                     notheme={false}
                     obj="Icon"
-                    padding=""
+                    padding={null}
                     selected={false}
                     sizing="normal"
                     style={Object {}}
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <Wrapper
-                      bottom=""
+                      bottom={null}
                       className=""
                       contentEditable={false}
                       controlled={true}
                       direction="right"
                       disabled={false}
                       err={null}
-                      errorMessage=""
+                      errorMessage={null}
                       focus={false}
-                      height=""
+                      height={null}
                       iconName="star-o"
-                      id=""
+                      id={null}
                       imageFile=""
-                      left=""
+                      left={null}
                       location="none"
+                      minHeight={null}
+                      minWidth={null}
                       noedit={false}
                       nohover={false}
                       noripple={false}
                       notheme={false}
                       obj="Icon"
                       onError={[Function]}
-                      padding=""
+                      padding={null}
                       reset={false}
                       selected={false}
                       sizing="normal"
                       style={Object {}}
                       testing={true}
                       theme={null}
-                      tooltip=""
-                      top=""
+                      tooltip={null}
+                      top={null}
                       visible={true}
-                      width=""
+                      width={null}
                       xcss={null}
                     >
                       <ThemeProvider
@@ -487,6 +505,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
                             "backgroundColor": "#ffffff",
                             "borderColor": "#c0c0c0",
                             "color": "#000000",
+                            "fontFamily": "OpenSans, Georgia, serif",
                             "headerBackgroundColor": "#004358",
                             "headerForegroundColor": "#ffffff",
                             "headerHoverColor": "#ffe11a",
@@ -504,47 +523,49 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
                         }
                       >
                         <styled.i
-                          bottom=""
+                          bottom={null}
                           className="ui-icon fa fa-fw fa-star-o"
                           contentEditable={false}
                           controlled={true}
                           direction="right"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
-                          height=""
+                          height={null}
                           iconName="star-o"
-                          id=""
+                          id={null}
                           imageFile=""
-                          left=""
+                          left={null}
                           location="none"
+                          minHeight={null}
+                          minWidth={null}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Icon"
-                          padding=""
+                          padding={null}
                           selected={false}
                           sizing="normal"
                           style={Object {}}
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                         >
                           <StyledComponent
-                            bottom=""
+                            bottom={null}
                             className="ui-icon fa fa-fw fa-star-o"
                             contentEditable={false}
                             controlled={true}
                             direction="right"
                             disabled={false}
                             err={null}
-                            errorMessage=""
+                            errorMessage={null}
                             focus={false}
                             forwardedComponent={
                               Object {
@@ -583,27 +604,29 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
                               }
                             }
                             forwardedRef={null}
-                            height=""
+                            height={null}
                             iconName="star-o"
-                            id=""
+                            id={null}
                             imageFile=""
-                            left=""
+                            left={null}
                             location="none"
+                            minHeight={null}
+                            minWidth={null}
                             noedit={false}
                             nohover={false}
                             noripple={false}
                             notheme={false}
                             obj="Icon"
-                            padding=""
+                            padding={null}
                             selected={false}
                             sizing="normal"
                             style={Object {}}
                             testing={true}
                             theme={null}
-                            tooltip=""
-                            top=""
+                            tooltip={null}
+                            top={null}
                             visible={true}
-                            width=""
+                            width={null}
                             xcss={null}
                           >
                             <i
@@ -611,11 +634,11 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
                               contentEditable={false}
                               direction="right"
                               disabled={false}
-                              height=""
-                              id=""
+                              height={null}
+                              id={null}
                               selected={false}
                               style={Object {}}
-                              width=""
+                              width={null}
                             />
                           </StyledComponent>
                         </styled.i>
@@ -637,67 +660,71 @@ exports[`Test disabling of a ButtonToggle 1`] = `
 <ButtonToggle
   bgColorOff="inherit"
   bgColorOn="inherit"
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   fgColorOff="gray"
   fgColorOn="black"
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
   iconNameOff="bomb"
   iconNameOn="bomb"
   iconStyle=""
-  id=""
+  id={null}
   initialToggle={false}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="ButtonToggle"
   onClick={[MockFunction]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
     bgColorOff="inherit"
     bgColorOn="inherit"
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={true}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     fgColorOff="gray"
     fgColorOn="black"
     focus={false}
-    height=""
+    height={null}
     iconName="bomb"
     iconNameOff="bomb"
     iconNameOn="bomb"
     iconStyle=""
-    id=""
+    id={null}
     initialToggle={false}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -705,17 +732,17 @@ exports[`Test disabling of a ButtonToggle 1`] = `
     obj="ButtonToggle"
     onClick={[MockFunction]}
     onError={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -724,6 +751,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -743,33 +771,35 @@ exports[`Test disabling of a ButtonToggle 1`] = `
       <Button
         bgColorOff="inherit"
         bgColorOn="inherit"
-        bottom=""
+        bottom={null}
         className="ui-button-toggle"
         contentEditable={false}
         controlled={true}
         direction="right"
         disabled={true}
         err={null}
-        errorMessage=""
+        errorMessage={null}
         fgColorOff="gray"
         fgColorOn="black"
         focus={false}
-        height=""
+        height={null}
         iconName="bomb"
         iconNameOff="bomb"
         iconNameOn="bomb"
         iconStyle=""
-        id=""
+        id={null}
         initialToggle={false}
-        left=""
+        left={null}
         location="none"
+        minHeight={null}
+        minWidth={null}
         noedit={false}
         nohover={false}
         noripple={true}
         notheme={false}
         obj="ButtonToggle"
         onClick={[Function]}
-        padding=""
+        padding={null}
         selected={false}
         sizing="normal"
         style={
@@ -780,35 +810,37 @@ exports[`Test disabling of a ButtonToggle 1`] = `
         }
         testing={true}
         theme={null}
-        tooltip=""
-        top=""
+        tooltip={null}
+        top={null}
         visible={true}
-        width=""
+        width={null}
         xcss={null}
       >
         <Wrapper
           bgColorOff="inherit"
           bgColorOn="inherit"
-          bottom=""
+          bottom={null}
           className="ui-button-toggle"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={true}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           fgColorOff="gray"
           fgColorOn="black"
           focus={false}
-          height=""
+          height={null}
           iconName="bomb"
           iconNameOff="bomb"
           iconNameOn="bomb"
           iconStyle=""
-          id=""
+          id={null}
           initialToggle={false}
-          left=""
+          left={null}
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={false}
           nohover={false}
           noripple={true}
@@ -816,7 +848,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
           obj="ButtonToggle"
           onClick={[Function]}
           onError={[Function]}
-          padding=""
+          padding={null}
           reset={false}
           selected={false}
           sizing="normal"
@@ -828,10 +860,10 @@ exports[`Test disabling of a ButtonToggle 1`] = `
           }
           testing={true}
           theme={null}
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           visible={true}
-          width=""
+          width={null}
           xcss={null}
         >
           <ThemeProvider
@@ -840,6 +872,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
                 "backgroundColor": "#ffffff",
                 "borderColor": "#c0c0c0",
                 "color": "#000000",
+                "fontFamily": "OpenSans, Georgia, serif",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
@@ -954,71 +987,75 @@ exports[`Test disabling of a ButtonToggle 1`] = `
                   }
                 >
                   <Icon
-                    bottom=""
+                    bottom={null}
                     className=""
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
+                    height={null}
                     iconName="bomb"
-                    id=""
+                    id={null}
                     imageFile=""
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
                     notheme={false}
                     obj="Icon"
-                    padding=""
+                    padding={null}
                     selected={false}
                     sizing="normal"
                     style={Object {}}
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <Wrapper
-                      bottom=""
+                      bottom={null}
                       className=""
                       contentEditable={false}
                       controlled={true}
                       direction="right"
                       disabled={false}
                       err={null}
-                      errorMessage=""
+                      errorMessage={null}
                       focus={false}
-                      height=""
+                      height={null}
                       iconName="bomb"
-                      id=""
+                      id={null}
                       imageFile=""
-                      left=""
+                      left={null}
                       location="none"
+                      minHeight={null}
+                      minWidth={null}
                       noedit={false}
                       nohover={false}
                       noripple={false}
                       notheme={false}
                       obj="Icon"
                       onError={[Function]}
-                      padding=""
+                      padding={null}
                       reset={false}
                       selected={false}
                       sizing="normal"
                       style={Object {}}
                       testing={true}
                       theme={null}
-                      tooltip=""
-                      top=""
+                      tooltip={null}
+                      top={null}
                       visible={true}
-                      width=""
+                      width={null}
                       xcss={null}
                     >
                       <ThemeProvider
@@ -1027,6 +1064,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
                             "backgroundColor": "#ffffff",
                             "borderColor": "#c0c0c0",
                             "color": "#000000",
+                            "fontFamily": "OpenSans, Georgia, serif",
                             "headerBackgroundColor": "#004358",
                             "headerForegroundColor": "#ffffff",
                             "headerHoverColor": "#ffe11a",
@@ -1044,47 +1082,49 @@ exports[`Test disabling of a ButtonToggle 1`] = `
                         }
                       >
                         <styled.i
-                          bottom=""
+                          bottom={null}
                           className="ui-icon fa fa-fw fa-bomb"
                           contentEditable={false}
                           controlled={true}
                           direction="right"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
-                          height=""
+                          height={null}
                           iconName="bomb"
-                          id=""
+                          id={null}
                           imageFile=""
-                          left=""
+                          left={null}
                           location="none"
+                          minHeight={null}
+                          minWidth={null}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Icon"
-                          padding=""
+                          padding={null}
                           selected={false}
                           sizing="normal"
                           style={Object {}}
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                         >
                           <StyledComponent
-                            bottom=""
+                            bottom={null}
                             className="ui-icon fa fa-fw fa-bomb"
                             contentEditable={false}
                             controlled={true}
                             direction="right"
                             disabled={false}
                             err={null}
-                            errorMessage=""
+                            errorMessage={null}
                             focus={false}
                             forwardedComponent={
                               Object {
@@ -1123,27 +1163,29 @@ exports[`Test disabling of a ButtonToggle 1`] = `
                               }
                             }
                             forwardedRef={null}
-                            height=""
+                            height={null}
                             iconName="bomb"
-                            id=""
+                            id={null}
                             imageFile=""
-                            left=""
+                            left={null}
                             location="none"
+                            minHeight={null}
+                            minWidth={null}
                             noedit={false}
                             nohover={false}
                             noripple={false}
                             notheme={false}
                             obj="Icon"
-                            padding=""
+                            padding={null}
                             selected={false}
                             sizing="normal"
                             style={Object {}}
                             testing={true}
                             theme={null}
-                            tooltip=""
-                            top=""
+                            tooltip={null}
+                            top={null}
                             visible={true}
-                            width=""
+                            width={null}
                             xcss={null}
                           >
                             <i
@@ -1151,11 +1193,11 @@ exports[`Test disabling of a ButtonToggle 1`] = `
                               contentEditable={false}
                               direction="right"
                               disabled={false}
-                              height=""
-                              id=""
+                              height={null}
+                              id={null}
                               selected={false}
                               style={Object {}}
-                              width=""
+                              width={null}
                             />
                           </StyledComponent>
                         </styled.i>
@@ -1177,67 +1219,71 @@ exports[`Test making a ButtonToggle invisible 1`] = `
 <ButtonToggle
   bgColorOff="inherit"
   bgColorOn="inherit"
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   fgColorOff="gray"
   fgColorOn="black"
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
   iconNameOff="bomb"
   iconNameOn="bomb"
   iconStyle=""
-  id=""
+  id={null}
   initialToggle={false}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="ButtonToggle"
   onClick={[MockFunction]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={false}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
     bgColorOff="inherit"
     bgColorOn="inherit"
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     fgColorOff="gray"
     fgColorOn="black"
     focus={false}
-    height=""
+    height={null}
     iconName="bomb"
     iconNameOff="bomb"
     iconNameOn="bomb"
     iconStyle=""
-    id=""
+    id={null}
     initialToggle={false}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -1245,17 +1291,17 @@ exports[`Test making a ButtonToggle invisible 1`] = `
     obj="ButtonToggle"
     onClick={[MockFunction]}
     onError={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={false}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -1264,6 +1310,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -1283,33 +1330,35 @@ exports[`Test making a ButtonToggle invisible 1`] = `
       <Button
         bgColorOff="inherit"
         bgColorOn="inherit"
-        bottom=""
+        bottom={null}
         className="ui-button-toggle"
         contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
         err={null}
-        errorMessage=""
+        errorMessage={null}
         fgColorOff="gray"
         fgColorOn="black"
         focus={false}
-        height=""
+        height={null}
         iconName="bomb"
         iconNameOff="bomb"
         iconNameOn="bomb"
         iconStyle=""
-        id=""
+        id={null}
         initialToggle={false}
-        left=""
+        left={null}
         location="none"
+        minHeight={null}
+        minWidth={null}
         noedit={false}
         nohover={false}
         noripple={true}
         notheme={false}
         obj="ButtonToggle"
         onClick={[Function]}
-        padding=""
+        padding={null}
         selected={false}
         sizing="normal"
         style={
@@ -1320,35 +1369,37 @@ exports[`Test making a ButtonToggle invisible 1`] = `
         }
         testing={true}
         theme={null}
-        tooltip=""
-        top=""
+        tooltip={null}
+        top={null}
         visible={false}
-        width=""
+        width={null}
         xcss={null}
       >
         <Wrapper
           bgColorOff="inherit"
           bgColorOn="inherit"
-          bottom=""
+          bottom={null}
           className="ui-button-toggle"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           fgColorOff="gray"
           fgColorOn="black"
           focus={false}
-          height=""
+          height={null}
           iconName="bomb"
           iconNameOff="bomb"
           iconNameOn="bomb"
           iconStyle=""
-          id=""
+          id={null}
           initialToggle={false}
-          left=""
+          left={null}
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={false}
           nohover={false}
           noripple={true}
@@ -1356,7 +1407,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
           obj="ButtonToggle"
           onClick={[Function]}
           onError={[Function]}
-          padding=""
+          padding={null}
           reset={false}
           selected={false}
           sizing="normal"
@@ -1368,10 +1419,10 @@ exports[`Test making a ButtonToggle invisible 1`] = `
           }
           testing={true}
           theme={null}
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           visible={false}
-          width=""
+          width={null}
           xcss={null}
         >
           <ThemeProvider
@@ -1380,6 +1431,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
                 "backgroundColor": "#ffffff",
                 "borderColor": "#c0c0c0",
                 "color": "#000000",
+                "fontFamily": "OpenSans, Georgia, serif",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
@@ -1494,71 +1546,75 @@ exports[`Test making a ButtonToggle invisible 1`] = `
                   }
                 >
                   <Icon
-                    bottom=""
+                    bottom={null}
                     className=""
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
+                    height={null}
                     iconName="bomb"
-                    id=""
+                    id={null}
                     imageFile=""
-                    left=""
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
                     notheme={false}
                     obj="Icon"
-                    padding=""
+                    padding={null}
                     selected={false}
                     sizing="normal"
                     style={Object {}}
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <Wrapper
-                      bottom=""
+                      bottom={null}
                       className=""
                       contentEditable={false}
                       controlled={true}
                       direction="right"
                       disabled={false}
                       err={null}
-                      errorMessage=""
+                      errorMessage={null}
                       focus={false}
-                      height=""
+                      height={null}
                       iconName="bomb"
-                      id=""
+                      id={null}
                       imageFile=""
-                      left=""
+                      left={null}
                       location="none"
+                      minHeight={null}
+                      minWidth={null}
                       noedit={false}
                       nohover={false}
                       noripple={false}
                       notheme={false}
                       obj="Icon"
                       onError={[Function]}
-                      padding=""
+                      padding={null}
                       reset={false}
                       selected={false}
                       sizing="normal"
                       style={Object {}}
                       testing={true}
                       theme={null}
-                      tooltip=""
-                      top=""
+                      tooltip={null}
+                      top={null}
                       visible={true}
-                      width=""
+                      width={null}
                       xcss={null}
                     >
                       <ThemeProvider
@@ -1567,6 +1623,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
                             "backgroundColor": "#ffffff",
                             "borderColor": "#c0c0c0",
                             "color": "#000000",
+                            "fontFamily": "OpenSans, Georgia, serif",
                             "headerBackgroundColor": "#004358",
                             "headerForegroundColor": "#ffffff",
                             "headerHoverColor": "#ffe11a",
@@ -1584,47 +1641,49 @@ exports[`Test making a ButtonToggle invisible 1`] = `
                         }
                       >
                         <styled.i
-                          bottom=""
+                          bottom={null}
                           className="ui-icon fa fa-fw fa-bomb"
                           contentEditable={false}
                           controlled={true}
                           direction="right"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
-                          height=""
+                          height={null}
                           iconName="bomb"
-                          id=""
+                          id={null}
                           imageFile=""
-                          left=""
+                          left={null}
                           location="none"
+                          minHeight={null}
+                          minWidth={null}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Icon"
-                          padding=""
+                          padding={null}
                           selected={false}
                           sizing="normal"
                           style={Object {}}
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                         >
                           <StyledComponent
-                            bottom=""
+                            bottom={null}
                             className="ui-icon fa fa-fw fa-bomb"
                             contentEditable={false}
                             controlled={true}
                             direction="right"
                             disabled={false}
                             err={null}
-                            errorMessage=""
+                            errorMessage={null}
                             focus={false}
                             forwardedComponent={
                               Object {
@@ -1663,27 +1722,29 @@ exports[`Test making a ButtonToggle invisible 1`] = `
                               }
                             }
                             forwardedRef={null}
-                            height=""
+                            height={null}
                             iconName="bomb"
-                            id=""
+                            id={null}
                             imageFile=""
-                            left=""
+                            left={null}
                             location="none"
+                            minHeight={null}
+                            minWidth={null}
                             noedit={false}
                             nohover={false}
                             noripple={false}
                             notheme={false}
                             obj="Icon"
-                            padding=""
+                            padding={null}
                             selected={false}
                             sizing="normal"
                             style={Object {}}
                             testing={true}
                             theme={null}
-                            tooltip=""
-                            top=""
+                            tooltip={null}
+                            top={null}
                             visible={true}
-                            width=""
+                            width={null}
                             xcss={null}
                           >
                             <i
@@ -1691,11 +1752,11 @@ exports[`Test making a ButtonToggle invisible 1`] = `
                               contentEditable={false}
                               direction="right"
                               disabled={false}
-                              height=""
-                              id=""
+                              height={null}
+                              id={null}
                               selected={false}
                               style={Object {}}
-                              width=""
+                              width={null}
                             />
                           </StyledComponent>
                         </styled.i>
@@ -1717,43 +1778,45 @@ exports[`Test retrieval of ButtonToggle props object 1`] = `
 Object {
   "bgColorOff": "inherit",
   "bgColorOn": "inherit",
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "fgColorOff": "gray",
   "fgColorOn": "black",
   "focus": false,
-  "height": "",
+  "height": null,
   "iconName": "bomb",
   "iconNameOff": "bomb",
   "iconNameOn": "bomb",
   "iconStyle": "",
-  "id": "",
+  "id": null,
   "initialToggle": false,
-  "left": "",
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
   "notheme": false,
   "obj": "ButtonToggle",
   "onClick": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;

@@ -7,9 +7,9 @@ import * as React from 'react';
 import {
 	Badge,
 	Button,
-	Container,
 	Location
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export interface DemoBadgeState {
 	counter1?: number;
@@ -65,7 +65,7 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 
 	public render() {
 		return(
-			<Container id="badgeExample" title="Badges">
+			<StyledContainer id="badgeExample" title="Badges">
 				click on the buttons to increment the badges
 				<br /><br/>
 				<div id="simple-buttons">
@@ -144,7 +144,7 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 					</div>
 
 				</div>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

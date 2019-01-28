@@ -2,19 +2,21 @@
 
 exports[`Test creation of a default Wrapper 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -38,17 +40,17 @@ exports[`Test creation of a default Wrapper 1`] = `
       ],
     }
   }
-  padding=""
+  padding={null}
   reset={true}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <ThemeProvider
@@ -57,6 +59,7 @@ exports[`Test creation of a default Wrapper 1`] = `
         "backgroundColor": "#ffffff",
         "borderColor": "#c0c0c0",
         "color": "#000000",
+        "fontFamily": "OpenSans, Georgia, serif",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",
@@ -82,73 +85,77 @@ exports[`Test creation of a default Wrapper 1`] = `
 
 exports[`Test creation of the Wrapper props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
-  "left": "",
+  "height": null,
+  "id": null,
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
   "notheme": false,
   "obj": "Unknown",
   "onError": [Function],
-  "padding": "",
+  "padding": null,
   "reset": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test disabling the Wrapper 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Unknown"
   onError={[MockFunction]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <ThemeProvider
@@ -157,6 +164,7 @@ exports[`Test disabling the Wrapper 1`] = `
         "backgroundColor": "#ffffff",
         "borderColor": "#c0c0c0",
         "color": "#000000",
+        "fontFamily": "OpenSans, Georgia, serif",
         "headerBackgroundColor": "#004358",
         "headerForegroundColor": "#ffffff",
         "headerHoverColor": "#ffe11a",

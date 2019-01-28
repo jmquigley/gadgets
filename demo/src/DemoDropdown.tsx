@@ -5,10 +5,10 @@ const debug = require('debug')('DemoDropdown');
 import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
-	Container,
 	Dropdown,
 	DropdownOption
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoDropdown extends React.Component<any, undefined> {
 
@@ -32,7 +32,7 @@ export default class DemoDropdown extends React.Component<any, undefined> {
 
 	public render() {
 		return(
-			<Container id="dropdownExample" title="Dropdown">
+			<StyledContainer id="dropdownExample" title="Dropdown">
 				<Dropdown
 					defaultVal="idstr2"
 					disabled={this.props['disabled']}
@@ -40,7 +40,7 @@ export default class DemoDropdown extends React.Component<any, undefined> {
 					onSelect={this.handleDebugDropdown}
 					sizing={this.props['sizing']}
 				/>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

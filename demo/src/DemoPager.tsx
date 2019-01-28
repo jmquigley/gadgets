@@ -6,10 +6,10 @@ import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
 	Break,
-	Container,
 	Pager,
 	SortOrder
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoPager extends React.Component<any, undefined> {
 
@@ -34,7 +34,7 @@ export default class DemoPager extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="pagerExample" title="Pager">
+			<StyledContainer id="pagerExample" title="Pager">
 				<h3>simple pager</h3>
 				<div className="pagerBox">
 					<Pager
@@ -63,7 +63,7 @@ export default class DemoPager extends React.Component<any, undefined> {
 				</div>
 				<Break sizing={this.props['sizing']} />
 
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

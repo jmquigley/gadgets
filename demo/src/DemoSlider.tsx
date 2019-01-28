@@ -6,10 +6,10 @@ import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
 	Break,
-	Container,
 	Option,
 	Slider
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export interface DemoSliderState {
 	sliderToggle: boolean;
@@ -41,7 +41,7 @@ export default class DemoSlider extends React.Component<any, DemoSliderState> {
 
 	public render() {
 		return (
-			<Container id="sliderExample" title="Slider">
+			<StyledContainer id="sliderExample" title="Slider">
 				<h3>Normal slider control, range 0 - 100, toggle snap</h3>
 				<Slider
 					disabled={this.props['disabled']}
@@ -67,7 +67,7 @@ export default class DemoSlider extends React.Component<any, DemoSliderState> {
 					sizing={this.props['sizing']}
 				/>
 
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

@@ -4,10 +4,10 @@ const debug = require('debug')('DemoTriangle');
 
 import * as React from 'react';
 import {
-	Container,
 	Direction,
 	Triangle
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoTriangle extends React.Component<any, undefined> {
 
@@ -23,7 +23,7 @@ export default class DemoTriangle extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="triangleExample" title="Triangle">
+			<StyledContainer id="triangleExample" title="Triangle">
 
 				<h3>Default</h3>
 				<Triangle sizing={this.props['sizing']} direction={Direction.up} />
@@ -37,7 +37,7 @@ export default class DemoTriangle extends React.Component<any, undefined> {
 				<Triangle sizing={this.props['sizing']} direction={Direction.down} style={this.style} />
 				<Triangle sizing={this.props['sizing']} direction={Direction.left} style={this.style} />
 
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

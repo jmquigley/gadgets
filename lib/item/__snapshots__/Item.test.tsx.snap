@@ -2,24 +2,26 @@
 
 exports[`Test retrieval of Item props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
+  "height": null,
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
-  "id": "",
+  "id": null,
   "layout": 5,
-  "left": "",
+  "left": null,
   "leftButton": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -34,7 +36,7 @@ Object {
   "onKeyPress": [Function],
   "onMouseOut": [Function],
   "onUpdate": [Function],
-  "padding": "",
+  "padding": null,
   "rightButton": null,
   "selected": false,
   "sizing": "normal",
@@ -43,35 +45,37 @@ Object {
   "testing": true,
   "theme": null,
   "title": "​",
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "useedit": false,
   "visible": true,
   "widget": null,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the creation of a Item control 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   hiddenLeftButton={false}
   hiddenRightButton={false}
-  id=""
+  id={null}
   layout={5}
-  left=""
+  left={null}
   leftButton={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -87,7 +91,7 @@ exports[`Test the creation of a Item control 1`] = `
   onKeyPress={[Function]}
   onMouseOut={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   rightButton={null}
   selected={false}
@@ -97,17 +101,17 @@ exports[`Test the creation of a Item control 1`] = `
   testing={true}
   theme={null}
   title="test title"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget="widget"
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.li
     className="ui-item"
-    id=""
+    id={null}
     nohover={false}
     onBlur={[Function]}
     onDoubleClick={[Function]}
@@ -119,23 +123,25 @@ exports[`Test the creation of a Item control 1`] = `
     style={Object {}}
   >
     <Title
-      bottom=""
-      className=""
+      bottom={null}
+      className={null}
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
+      height={null}
       hiddenLeftButton={false}
       hiddenRightButton={false}
-      id=""
+      id={null}
       layout={5}
-      left=""
+      left={null}
       leftButton={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
@@ -150,7 +156,7 @@ exports[`Test the creation of a Item control 1`] = `
       onKeyPress={[Function]}
       onMouseOut={[Function]}
       onUpdate={[Function]}
-      padding=""
+      padding={null}
       rightButton={null}
       selected={false}
       sizing="normal"
@@ -159,12 +165,12 @@ exports[`Test the creation of a Item control 1`] = `
       testing={true}
       theme={null}
       title="test title"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       useedit={false}
       visible={true}
       widget="widget"
-      width=""
+      width={null}
       xcss={null}
     />
   </styled.li>

@@ -2,19 +2,20 @@
 
 exports[`Test creation of a TextField control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   id=""
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
   minWidth="1em"
   noborder={false}
   noedit={false}
@@ -28,7 +29,7 @@ exports[`Test creation of a TextField control 1`] = `
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onValidation={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -36,13 +37,13 @@ exports[`Test creation of a TextField control 1`] = `
   testing={true}
   theme={null}
   tooltip=""
-  top=""
+  top={null}
   type="text"
   useclear={false}
   usevalidation={false}
   validators={Array []}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -100,19 +101,20 @@ exports[`Test disabling of a TextField control 1`] = `
   visible={true}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={true}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     id=""
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
     minWidth="1em"
     noborder={false}
     noedit={false}
@@ -126,7 +128,7 @@ exports[`Test disabling of a TextField control 1`] = `
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onValidation={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -134,13 +136,13 @@ exports[`Test disabling of a TextField control 1`] = `
     testing={true}
     theme={null}
     tooltip=""
-    top=""
+    top={null}
     type="text"
     useclear={false}
     usevalidation={false}
     validators={Array []}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -149,6 +151,7 @@ exports[`Test disabling of a TextField control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",

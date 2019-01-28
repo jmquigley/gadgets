@@ -5,10 +5,10 @@ const debug = require('debug')('DemoTitle');
 import * as React from 'react';
 import {
 	Break,
-	Container,
 	Title,
 	TitleLayout
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoTitle extends React.Component<any, undefined> {
 
@@ -19,7 +19,7 @@ export default class DemoTitle extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-		<Container id="titleExample" title="Title">
+		<StyledContainer id="titleExample" title="Title">
 
 			<Title
 				layout={TitleLayout.quarter}
@@ -84,7 +84,7 @@ export default class DemoTitle extends React.Component<any, undefined> {
 			/>
 			<Break sizing={this.props['sizing']} />
 
-		</Container>
+		</StyledContainer>
 		);
 	}
 }

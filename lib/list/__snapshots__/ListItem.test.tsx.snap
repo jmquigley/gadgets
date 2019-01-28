@@ -2,16 +2,16 @@
 
 exports[`Test disabling of a ListItem control 1`] = `
 <ListItem
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -20,11 +20,13 @@ exports[`Test disabling of a ListItem control 1`] = `
       "sizing": "normal",
     }
   }
-  id=""
+  id={null}
   layout={5}
-  left=""
+  left={null}
   leftButton={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -40,7 +42,7 @@ exports[`Test disabling of a ListItem control 1`] = `
   onMouseOut={[Function]}
   onSelect={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   rightButton={null}
   selected={false}
   sizing="normal"
@@ -49,25 +51,25 @@ exports[`Test disabling of a ListItem control 1`] = `
   testing={true}
   theme={null}
   title="test title"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={true}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     href={
@@ -76,11 +78,13 @@ exports[`Test disabling of a ListItem control 1`] = `
         "sizing": "normal",
       }
     }
-    id=""
+    id={null}
     layout={5}
-    left=""
+    left={null}
     leftButton={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -97,7 +101,7 @@ exports[`Test disabling of a ListItem control 1`] = `
     onMouseOut={[Function]}
     onSelect={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     rightButton={null}
     selected={false}
@@ -107,12 +111,12 @@ exports[`Test disabling of a ListItem control 1`] = `
     testing={true}
     theme={null}
     title="test title"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
     widget={null}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -121,6 +125,7 @@ exports[`Test disabling of a ListItem control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -138,16 +143,16 @@ exports[`Test disabling of a ListItem control 1`] = `
       }
     >
       <Item
-        bottom=""
+        bottom={null}
         className="ui-listitem"
         contentEditable={false}
         controlled={true}
         direction="right"
         disabled={true}
         err={null}
-        errorMessage=""
+        errorMessage={null}
         focus={false}
-        height=""
+        height={null}
         hiddenLeftButton={false}
         hiddenRightButton={false}
         href={
@@ -156,11 +161,13 @@ exports[`Test disabling of a ListItem control 1`] = `
             "sizing": "normal",
           }
         }
-        id=""
+        id={null}
         layout={5}
-        left=""
+        left={null}
         leftButton={null}
         location="none"
+        minHeight={null}
+        minWidth={null}
         noedit={false}
         nohover={false}
         noripple={false}
@@ -176,7 +183,7 @@ exports[`Test disabling of a ListItem control 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
-        padding=""
+        padding={null}
         rightButton={null}
         selected={false}
         sizing="normal"
@@ -185,25 +192,25 @@ exports[`Test disabling of a ListItem control 1`] = `
         testing={true}
         theme={null}
         title="test title"
-        tooltip=""
-        top=""
+        tooltip={null}
+        top={null}
         useedit={false}
         visible={true}
         widget={null}
-        width=""
+        width={null}
         xcss={null}
       >
         <Wrapper
-          bottom=""
+          bottom={null}
           className="ui-listitem"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={true}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -212,11 +219,13 @@ exports[`Test disabling of a ListItem control 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           layout={5}
-          left=""
+          left={null}
           leftButton={null}
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={false}
           nohover={false}
           noripple={false}
@@ -233,7 +242,7 @@ exports[`Test disabling of a ListItem control 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           reset={false}
           rightButton={null}
           selected={false}
@@ -243,12 +252,12 @@ exports[`Test disabling of a ListItem control 1`] = `
           testing={true}
           theme={null}
           title="test title"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           useedit={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         >
           <ThemeProvider
@@ -257,6 +266,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                 "backgroundColor": "#ffffff",
                 "borderColor": "#c0c0c0",
                 "color": "#000000",
+                "fontFamily": "OpenSans, Georgia, serif",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
@@ -275,7 +285,7 @@ exports[`Test disabling of a ListItem control 1`] = `
           >
             <styled.li
               className="ui-item ui-listitem"
-              id=""
+              id={null}
               nohover={false}
               onBlur={[Function]}
               onDoubleClick={[Function]}
@@ -329,7 +339,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                   }
                 }
                 forwardedRef={null}
-                id=""
+                id={null}
                 nohover={false}
                 onBlur={[Function]}
                 onDoubleClick={[Function]}
@@ -342,7 +352,7 @@ exports[`Test disabling of a ListItem control 1`] = `
               >
                 <li
                   className="ui-item ui-listitem sc-fjdhpX fveNcT"
-                  id=""
+                  id={null}
                   onBlur={[Function]}
                   onDoubleClick={[Function]}
                   onKeyDown={[Function]}
@@ -352,16 +362,16 @@ exports[`Test disabling of a ListItem control 1`] = `
                   style={Object {}}
                 >
                   <Title
-                    bottom=""
+                    bottom={null}
                     className="ui-listitem"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={true}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
+                    height={null}
                     hiddenLeftButton={false}
                     hiddenRightButton={false}
                     href={
@@ -370,11 +380,13 @@ exports[`Test disabling of a ListItem control 1`] = `
                         "sizing": "normal",
                       }
                     }
-                    id=""
+                    id={null}
                     layout={5}
-                    left=""
+                    left={null}
                     leftButton={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
@@ -390,7 +402,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                     onMouseOut={[Function]}
                     onSelect={[Function]}
                     onUpdate={[Function]}
-                    padding=""
+                    padding={null}
                     rightButton={null}
                     selected={false}
                     sizing="normal"
@@ -399,25 +411,25 @@ exports[`Test disabling of a ListItem control 1`] = `
                     testing={true}
                     theme={null}
                     title="test title"
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     useedit={false}
                     visible={true}
                     widget={null}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <Wrapper
-                      bottom=""
+                      bottom={null}
                       className="ui-listitem"
                       contentEditable={false}
                       controlled={true}
                       direction="right"
                       disabled={true}
                       err={null}
-                      errorMessage=""
+                      errorMessage={null}
                       focus={false}
-                      height=""
+                      height={null}
                       hiddenLeftButton={false}
                       hiddenRightButton={false}
                       href={
@@ -426,11 +438,13 @@ exports[`Test disabling of a ListItem control 1`] = `
                           "sizing": "normal",
                         }
                       }
-                      id=""
+                      id={null}
                       layout={5}
-                      left=""
+                      left={null}
                       leftButton={null}
                       location="none"
+                      minHeight={null}
+                      minWidth={null}
                       noedit={false}
                       nohover={false}
                       noripple={false}
@@ -447,7 +461,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                       onMouseOut={[Function]}
                       onSelect={[Function]}
                       onUpdate={[Function]}
-                      padding=""
+                      padding={null}
                       reset={false}
                       rightButton={null}
                       selected={false}
@@ -457,12 +471,12 @@ exports[`Test disabling of a ListItem control 1`] = `
                       testing={true}
                       theme={null}
                       title="test title"
-                      tooltip=""
-                      top=""
+                      tooltip={null}
+                      top={null}
                       useedit={false}
                       visible={true}
                       widget={null}
-                      width=""
+                      width={null}
                       xcss={null}
                     >
                       <ThemeProvider
@@ -471,6 +485,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                             "backgroundColor": "#ffffff",
                             "borderColor": "#c0c0c0",
                             "color": "#000000",
+                            "fontFamily": "OpenSans, Georgia, serif",
                             "headerBackgroundColor": "#004358",
                             "headerForegroundColor": "#ffffff",
                             "headerHoverColor": "#ffe11a",
@@ -546,16 +561,16 @@ exports[`Test disabling of a ListItem control 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
-                                bottom=""
+                                bottom={null}
                                 className="ui-title"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
                                 disabled={true}
                                 err={null}
-                                errorMessage=""
+                                errorMessage={null}
                                 focus={false}
-                                height=""
+                                height={null}
                                 hiddenLeftButton={false}
                                 hiddenRightButton={false}
                                 href={
@@ -564,11 +579,13 @@ exports[`Test disabling of a ListItem control 1`] = `
                                     "sizing": "normal",
                                   }
                                 }
-                                id=""
+                                id={null}
                                 layout={5}
-                                left=""
+                                left={null}
                                 leftButton={null}
                                 location="none"
+                                minHeight={null}
+                                minWidth={null}
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
@@ -583,7 +600,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                                 onKeyPress={[Function]}
                                 onMouseOut={[Function]}
                                 onSelect={[Function]}
-                                padding=""
+                                padding={null}
                                 rightButton={null}
                                 selected={false}
                                 sizing="normal"
@@ -593,12 +610,12 @@ exports[`Test disabling of a ListItem control 1`] = `
                                 text="test title"
                                 theme={null}
                                 title="test title"
-                                tooltip=""
-                                top=""
+                                tooltip={null}
+                                top={null}
                                 useedit={false}
                                 visible={true}
                                 widget={null}
-                                width=""
+                                width={null}
                                 xcss={
                                   Array [
                                     "
@@ -609,14 +626,14 @@ exports[`Test disabling of a ListItem control 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  bottom=""
+                                  bottom={null}
                                   className="ui-title"
                                   contentEditable={false}
                                   controlled={true}
                                   direction="right"
                                   disabled={true}
                                   err={null}
-                                  errorMessage=""
+                                  errorMessage={null}
                                   focus={false}
                                   forwardedComponent={
                                     Object {
@@ -654,7 +671,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                                     }
                                   }
                                   forwardedRef={null}
-                                  height=""
+                                  height={null}
                                   hiddenLeftButton={false}
                                   hiddenRightButton={false}
                                   href={
@@ -663,11 +680,13 @@ exports[`Test disabling of a ListItem control 1`] = `
                                       "sizing": "normal",
                                     }
                                   }
-                                  id=""
+                                  id={null}
                                   layout={5}
-                                  left=""
+                                  left={null}
                                   leftButton={null}
                                   location="none"
+                                  minHeight={null}
+                                  minWidth={null}
                                   noedit={false}
                                   nohover={false}
                                   noripple={false}
@@ -682,7 +701,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                                   onKeyPress={[Function]}
                                   onMouseOut={[Function]}
                                   onSelect={[Function]}
-                                  padding=""
+                                  padding={null}
                                   rightButton={null}
                                   selected={false}
                                   sizing="normal"
@@ -692,12 +711,12 @@ exports[`Test disabling of a ListItem control 1`] = `
                                   text="test title"
                                   theme={null}
                                   title="test title"
-                                  tooltip=""
-                                  top=""
+                                  tooltip={null}
+                                  top={null}
                                   useedit={false}
                                   visible={true}
                                   widget={null}
-                                  width=""
+                                  width={null}
                                   xcss={
                                     Array [
                                       "
@@ -708,16 +727,16 @@ exports[`Test disabling of a ListItem control 1`] = `
                                   }
                                 >
                                   <Label
-                                    bottom=""
+                                    bottom={null}
                                     className="ui-title sc-VigVT dxLNQ"
                                     contentEditable={false}
                                     controlled={true}
                                     direction="right"
                                     disabled={true}
                                     err={null}
-                                    errorMessage=""
+                                    errorMessage={null}
                                     focus={false}
-                                    height=""
+                                    height={null}
                                     hiddenLeftButton={false}
                                     hiddenRightButton={false}
                                     href={
@@ -726,11 +745,13 @@ exports[`Test disabling of a ListItem control 1`] = `
                                         "sizing": "normal",
                                       }
                                     }
-                                    id=""
+                                    id={null}
                                     layout={5}
-                                    left=""
+                                    left={null}
                                     leftButton={null}
                                     location="none"
+                                    minHeight={null}
+                                    minWidth={null}
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
@@ -746,7 +767,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                                     onMouseOut={[Function]}
                                     onSelect={[Function]}
                                     onUpdate={[Function]}
-                                    padding=""
+                                    padding={null}
                                     rightButton={null}
                                     selected={false}
                                     sizing="normal"
@@ -756,12 +777,12 @@ exports[`Test disabling of a ListItem control 1`] = `
                                     text="test title"
                                     theme={null}
                                     title="test title"
-                                    tooltip=""
-                                    top=""
+                                    tooltip={null}
+                                    top={null}
                                     useedit={false}
                                     visible={true}
                                     widget={null}
-                                    width=""
+                                    width={null}
                                     xcss={
                                       Array [
                                         "
@@ -772,16 +793,16 @@ exports[`Test disabling of a ListItem control 1`] = `
                                     }
                                   >
                                     <Wrapper
-                                      bottom=""
+                                      bottom={null}
                                       className="ui-title sc-VigVT dxLNQ"
                                       contentEditable={false}
                                       controlled={true}
                                       direction="right"
                                       disabled={true}
                                       err={null}
-                                      errorMessage=""
+                                      errorMessage={null}
                                       focus={false}
-                                      height=""
+                                      height={null}
                                       hiddenLeftButton={false}
                                       hiddenRightButton={false}
                                       href={
@@ -790,11 +811,13 @@ exports[`Test disabling of a ListItem control 1`] = `
                                           "sizing": "normal",
                                         }
                                       }
-                                      id=""
+                                      id={null}
                                       layout={5}
-                                      left=""
+                                      left={null}
                                       leftButton={null}
                                       location="none"
+                                      minHeight={null}
+                                      minWidth={null}
                                       noedit={false}
                                       nohover={false}
                                       noripple={false}
@@ -811,7 +834,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                                       onMouseOut={[Function]}
                                       onSelect={[Function]}
                                       onUpdate={[Function]}
-                                      padding=""
+                                      padding={null}
                                       reset={false}
                                       rightButton={null}
                                       selected={false}
@@ -822,12 +845,12 @@ exports[`Test disabling of a ListItem control 1`] = `
                                       text="test title"
                                       theme={null}
                                       title="test title"
-                                      tooltip=""
-                                      top=""
+                                      tooltip={null}
+                                      top={null}
                                       useedit={false}
                                       visible={true}
                                       widget={null}
-                                      width=""
+                                      width={null}
                                       xcss={
                                         Array [
                                           "
@@ -843,6 +866,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                                             "backgroundColor": "#ffffff",
                                             "borderColor": "#c0c0c0",
                                             "color": "#000000",
+                                            "fontFamily": "OpenSans, Georgia, serif",
                                             "headerBackgroundColor": "#004358",
                                             "headerForegroundColor": "#ffffff",
                                             "headerHoverColor": "#ffe11a",
@@ -962,16 +986,16 @@ exports[`Test disabling of a ListItem control 1`] = `
 
 exports[`Test making ListItem control invisible 1`] = `
 <ListItem
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -980,11 +1004,13 @@ exports[`Test making ListItem control invisible 1`] = `
       "sizing": "normal",
     }
   }
-  id=""
+  id={null}
   layout={5}
-  left=""
+  left={null}
   leftButton={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1000,7 +1026,7 @@ exports[`Test making ListItem control invisible 1`] = `
   onMouseOut={[Function]}
   onSelect={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   rightButton={null}
   selected={false}
   sizing="normal"
@@ -1009,25 +1035,25 @@ exports[`Test making ListItem control invisible 1`] = `
   testing={true}
   theme={null}
   title="test title"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={false}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     href={
@@ -1036,11 +1062,13 @@ exports[`Test making ListItem control invisible 1`] = `
         "sizing": "normal",
       }
     }
-    id=""
+    id={null}
     layout={5}
-    left=""
+    left={null}
     leftButton={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -1057,7 +1085,7 @@ exports[`Test making ListItem control invisible 1`] = `
     onMouseOut={[Function]}
     onSelect={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     rightButton={null}
     selected={false}
@@ -1067,12 +1095,12 @@ exports[`Test making ListItem control invisible 1`] = `
     testing={true}
     theme={null}
     title="test title"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={false}
     widget={null}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -1081,6 +1109,7 @@ exports[`Test making ListItem control invisible 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -1098,16 +1127,16 @@ exports[`Test making ListItem control invisible 1`] = `
       }
     >
       <Item
-        bottom=""
+        bottom={null}
         className="ui-listitem"
         contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
         err={null}
-        errorMessage=""
+        errorMessage={null}
         focus={false}
-        height=""
+        height={null}
         hiddenLeftButton={false}
         hiddenRightButton={false}
         href={
@@ -1116,11 +1145,13 @@ exports[`Test making ListItem control invisible 1`] = `
             "sizing": "normal",
           }
         }
-        id=""
+        id={null}
         layout={5}
-        left=""
+        left={null}
         leftButton={null}
         location="none"
+        minHeight={null}
+        minWidth={null}
         noedit={false}
         nohover={false}
         noripple={false}
@@ -1136,7 +1167,7 @@ exports[`Test making ListItem control invisible 1`] = `
         onMouseOut={[Function]}
         onSelect={[Function]}
         onUpdate={[Function]}
-        padding=""
+        padding={null}
         rightButton={null}
         selected={false}
         sizing="normal"
@@ -1145,25 +1176,25 @@ exports[`Test making ListItem control invisible 1`] = `
         testing={true}
         theme={null}
         title="test title"
-        tooltip=""
-        top=""
+        tooltip={null}
+        top={null}
         useedit={false}
         visible={false}
         widget={null}
-        width=""
+        width={null}
         xcss={null}
       >
         <Wrapper
-          bottom=""
+          bottom={null}
           className="ui-listitem"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -1172,11 +1203,13 @@ exports[`Test making ListItem control invisible 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           layout={5}
-          left=""
+          left={null}
           leftButton={null}
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={false}
           nohover={false}
           noripple={false}
@@ -1193,7 +1226,7 @@ exports[`Test making ListItem control invisible 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           reset={false}
           rightButton={null}
           selected={false}
@@ -1203,12 +1236,12 @@ exports[`Test making ListItem control invisible 1`] = `
           testing={true}
           theme={null}
           title="test title"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           useedit={false}
           visible={false}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         >
           <ThemeProvider
@@ -1217,6 +1250,7 @@ exports[`Test making ListItem control invisible 1`] = `
                 "backgroundColor": "#ffffff",
                 "borderColor": "#c0c0c0",
                 "color": "#000000",
+                "fontFamily": "OpenSans, Georgia, serif",
                 "headerBackgroundColor": "#004358",
                 "headerForegroundColor": "#ffffff",
                 "headerHoverColor": "#ffe11a",
@@ -1235,7 +1269,7 @@ exports[`Test making ListItem control invisible 1`] = `
           >
             <styled.li
               className="ui-item ui-listitem"
-              id=""
+              id={null}
               nohover={false}
               onBlur={[Function]}
               onDoubleClick={[Function]}
@@ -1289,7 +1323,7 @@ exports[`Test making ListItem control invisible 1`] = `
                   }
                 }
                 forwardedRef={null}
-                id=""
+                id={null}
                 nohover={false}
                 onBlur={[Function]}
                 onDoubleClick={[Function]}
@@ -1302,7 +1336,7 @@ exports[`Test making ListItem control invisible 1`] = `
               >
                 <li
                   className="ui-item ui-listitem sc-fjdhpX fveNcT"
-                  id=""
+                  id={null}
                   onBlur={[Function]}
                   onDoubleClick={[Function]}
                   onKeyDown={[Function]}
@@ -1312,16 +1346,16 @@ exports[`Test making ListItem control invisible 1`] = `
                   style={Object {}}
                 >
                   <Title
-                    bottom=""
+                    bottom={null}
                     className="ui-listitem"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
+                    height={null}
                     hiddenLeftButton={false}
                     hiddenRightButton={false}
                     href={
@@ -1330,11 +1364,13 @@ exports[`Test making ListItem control invisible 1`] = `
                         "sizing": "normal",
                       }
                     }
-                    id=""
+                    id={null}
                     layout={5}
-                    left=""
+                    left={null}
                     leftButton={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     noedit={false}
                     nohover={false}
                     noripple={false}
@@ -1350,7 +1386,7 @@ exports[`Test making ListItem control invisible 1`] = `
                     onMouseOut={[Function]}
                     onSelect={[Function]}
                     onUpdate={[Function]}
-                    padding=""
+                    padding={null}
                     rightButton={null}
                     selected={false}
                     sizing="normal"
@@ -1359,25 +1395,25 @@ exports[`Test making ListItem control invisible 1`] = `
                     testing={true}
                     theme={null}
                     title="test title"
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     useedit={false}
                     visible={false}
                     widget={null}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <Wrapper
-                      bottom=""
+                      bottom={null}
                       className="ui-listitem"
                       contentEditable={false}
                       controlled={true}
                       direction="right"
                       disabled={false}
                       err={null}
-                      errorMessage=""
+                      errorMessage={null}
                       focus={false}
-                      height=""
+                      height={null}
                       hiddenLeftButton={false}
                       hiddenRightButton={false}
                       href={
@@ -1386,11 +1422,13 @@ exports[`Test making ListItem control invisible 1`] = `
                           "sizing": "normal",
                         }
                       }
-                      id=""
+                      id={null}
                       layout={5}
-                      left=""
+                      left={null}
                       leftButton={null}
                       location="none"
+                      minHeight={null}
+                      minWidth={null}
                       noedit={false}
                       nohover={false}
                       noripple={false}
@@ -1407,7 +1445,7 @@ exports[`Test making ListItem control invisible 1`] = `
                       onMouseOut={[Function]}
                       onSelect={[Function]}
                       onUpdate={[Function]}
-                      padding=""
+                      padding={null}
                       reset={false}
                       rightButton={null}
                       selected={false}
@@ -1417,12 +1455,12 @@ exports[`Test making ListItem control invisible 1`] = `
                       testing={true}
                       theme={null}
                       title="test title"
-                      tooltip=""
-                      top=""
+                      tooltip={null}
+                      top={null}
                       useedit={false}
                       visible={false}
                       widget={null}
-                      width=""
+                      width={null}
                       xcss={null}
                     >
                       <ThemeProvider
@@ -1431,6 +1469,7 @@ exports[`Test making ListItem control invisible 1`] = `
                             "backgroundColor": "#ffffff",
                             "borderColor": "#c0c0c0",
                             "color": "#000000",
+                            "fontFamily": "OpenSans, Georgia, serif",
                             "headerBackgroundColor": "#004358",
                             "headerForegroundColor": "#ffffff",
                             "headerHoverColor": "#ffe11a",
@@ -1506,16 +1545,16 @@ exports[`Test making ListItem control invisible 1`] = `
                               style={Object {}}
                             >
                               <Styled(Label)
-                                bottom=""
+                                bottom={null}
                                 className="ui-title"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
                                 disabled={false}
                                 err={null}
-                                errorMessage=""
+                                errorMessage={null}
                                 focus={false}
-                                height=""
+                                height={null}
                                 hiddenLeftButton={false}
                                 hiddenRightButton={false}
                                 href={
@@ -1524,11 +1563,13 @@ exports[`Test making ListItem control invisible 1`] = `
                                     "sizing": "normal",
                                   }
                                 }
-                                id=""
+                                id={null}
                                 layout={5}
-                                left=""
+                                left={null}
                                 leftButton={null}
                                 location="none"
+                                minHeight={null}
+                                minWidth={null}
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
@@ -1543,7 +1584,7 @@ exports[`Test making ListItem control invisible 1`] = `
                                 onKeyPress={[Function]}
                                 onMouseOut={[Function]}
                                 onSelect={[Function]}
-                                padding=""
+                                padding={null}
                                 rightButton={null}
                                 selected={false}
                                 sizing="normal"
@@ -1553,12 +1594,12 @@ exports[`Test making ListItem control invisible 1`] = `
                                 text="test title"
                                 theme={null}
                                 title="test title"
-                                tooltip=""
-                                top=""
+                                tooltip={null}
+                                top={null}
                                 useedit={false}
                                 visible={false}
                                 widget={null}
-                                width=""
+                                width={null}
                                 xcss={
                                   Array [
                                     "
@@ -1569,14 +1610,14 @@ exports[`Test making ListItem control invisible 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  bottom=""
+                                  bottom={null}
                                   className="ui-title"
                                   contentEditable={false}
                                   controlled={true}
                                   direction="right"
                                   disabled={false}
                                   err={null}
-                                  errorMessage=""
+                                  errorMessage={null}
                                   focus={false}
                                   forwardedComponent={
                                     Object {
@@ -1614,7 +1655,7 @@ exports[`Test making ListItem control invisible 1`] = `
                                     }
                                   }
                                   forwardedRef={null}
-                                  height=""
+                                  height={null}
                                   hiddenLeftButton={false}
                                   hiddenRightButton={false}
                                   href={
@@ -1623,11 +1664,13 @@ exports[`Test making ListItem control invisible 1`] = `
                                       "sizing": "normal",
                                     }
                                   }
-                                  id=""
+                                  id={null}
                                   layout={5}
-                                  left=""
+                                  left={null}
                                   leftButton={null}
                                   location="none"
+                                  minHeight={null}
+                                  minWidth={null}
                                   noedit={false}
                                   nohover={false}
                                   noripple={false}
@@ -1642,7 +1685,7 @@ exports[`Test making ListItem control invisible 1`] = `
                                   onKeyPress={[Function]}
                                   onMouseOut={[Function]}
                                   onSelect={[Function]}
-                                  padding=""
+                                  padding={null}
                                   rightButton={null}
                                   selected={false}
                                   sizing="normal"
@@ -1652,12 +1695,12 @@ exports[`Test making ListItem control invisible 1`] = `
                                   text="test title"
                                   theme={null}
                                   title="test title"
-                                  tooltip=""
-                                  top=""
+                                  tooltip={null}
+                                  top={null}
                                   useedit={false}
                                   visible={false}
                                   widget={null}
-                                  width=""
+                                  width={null}
                                   xcss={
                                     Array [
                                       "
@@ -1668,16 +1711,16 @@ exports[`Test making ListItem control invisible 1`] = `
                                   }
                                 >
                                   <Label
-                                    bottom=""
+                                    bottom={null}
                                     className="ui-title sc-VigVT dxLNQ"
                                     contentEditable={false}
                                     controlled={true}
                                     direction="right"
                                     disabled={false}
                                     err={null}
-                                    errorMessage=""
+                                    errorMessage={null}
                                     focus={false}
-                                    height=""
+                                    height={null}
                                     hiddenLeftButton={false}
                                     hiddenRightButton={false}
                                     href={
@@ -1686,11 +1729,13 @@ exports[`Test making ListItem control invisible 1`] = `
                                         "sizing": "normal",
                                       }
                                     }
-                                    id=""
+                                    id={null}
                                     layout={5}
-                                    left=""
+                                    left={null}
                                     leftButton={null}
                                     location="none"
+                                    minHeight={null}
+                                    minWidth={null}
                                     noedit={false}
                                     nohover={false}
                                     noripple={false}
@@ -1706,7 +1751,7 @@ exports[`Test making ListItem control invisible 1`] = `
                                     onMouseOut={[Function]}
                                     onSelect={[Function]}
                                     onUpdate={[Function]}
-                                    padding=""
+                                    padding={null}
                                     rightButton={null}
                                     selected={false}
                                     sizing="normal"
@@ -1716,12 +1761,12 @@ exports[`Test making ListItem control invisible 1`] = `
                                     text="test title"
                                     theme={null}
                                     title="test title"
-                                    tooltip=""
-                                    top=""
+                                    tooltip={null}
+                                    top={null}
                                     useedit={false}
                                     visible={false}
                                     widget={null}
-                                    width=""
+                                    width={null}
                                     xcss={
                                       Array [
                                         "
@@ -1732,16 +1777,16 @@ exports[`Test making ListItem control invisible 1`] = `
                                     }
                                   >
                                     <Wrapper
-                                      bottom=""
+                                      bottom={null}
                                       className="ui-title sc-VigVT dxLNQ"
                                       contentEditable={false}
                                       controlled={true}
                                       direction="right"
                                       disabled={false}
                                       err={null}
-                                      errorMessage=""
+                                      errorMessage={null}
                                       focus={false}
-                                      height=""
+                                      height={null}
                                       hiddenLeftButton={false}
                                       hiddenRightButton={false}
                                       href={
@@ -1750,11 +1795,13 @@ exports[`Test making ListItem control invisible 1`] = `
                                           "sizing": "normal",
                                         }
                                       }
-                                      id=""
+                                      id={null}
                                       layout={5}
-                                      left=""
+                                      left={null}
                                       leftButton={null}
                                       location="none"
+                                      minHeight={null}
+                                      minWidth={null}
                                       noedit={false}
                                       nohover={false}
                                       noripple={false}
@@ -1771,7 +1818,7 @@ exports[`Test making ListItem control invisible 1`] = `
                                       onMouseOut={[Function]}
                                       onSelect={[Function]}
                                       onUpdate={[Function]}
-                                      padding=""
+                                      padding={null}
                                       reset={false}
                                       rightButton={null}
                                       selected={false}
@@ -1782,12 +1829,12 @@ exports[`Test making ListItem control invisible 1`] = `
                                       text="test title"
                                       theme={null}
                                       title="test title"
-                                      tooltip=""
-                                      top=""
+                                      tooltip={null}
+                                      top={null}
                                       useedit={false}
                                       visible={false}
                                       widget={null}
-                                      width=""
+                                      width={null}
                                       xcss={
                                         Array [
                                           "
@@ -1803,6 +1850,7 @@ exports[`Test making ListItem control invisible 1`] = `
                                             "backgroundColor": "#ffffff",
                                             "borderColor": "#c0c0c0",
                                             "color": "#000000",
+                                            "fontFamily": "OpenSans, Georgia, serif",
                                             "headerBackgroundColor": "#004358",
                                             "headerForegroundColor": "#ffffff",
                                             "headerHoverColor": "#ffe11a",
@@ -1922,28 +1970,30 @@ exports[`Test making ListItem control invisible 1`] = `
 
 exports[`Test retrieval of ListItem props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
+  "height": null,
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
   "href": Object {
     "selectHandler": [Function],
     "sizing": "normal",
   },
-  "id": "",
+  "id": null,
   "layout": 5,
-  "left": "",
+  "left": null,
   "leftButton": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -1959,7 +2009,7 @@ Object {
   "onMouseOut": [Function],
   "onSelect": [Function],
   "onUpdate": [Function],
-  "padding": "",
+  "padding": null,
   "rightButton": null,
   "selected": false,
   "sizing": "normal",
@@ -1968,28 +2018,28 @@ Object {
   "testing": true,
   "theme": null,
   "title": "​",
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "useedit": false,
   "visible": true,
   "widget": null,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the creation of a ListItem control with left & right title 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -1998,11 +2048,13 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
       "sizing": "normal",
     }
   }
-  id=""
+  id={null}
   layout={5}
-  left=""
+  left={null}
   leftButton={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -2019,7 +2071,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   onMouseOut={[Function]}
   onSelect={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   rightButton={null}
   selected={false}
@@ -2029,25 +2081,25 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   testing={true}
   theme={null}
   title="test title left"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget="test title right"
-  width=""
+  width={null}
   xcss={null}
 >
   <Item
-    bottom=""
+    bottom={null}
     className="ui-listitem"
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     href={
@@ -2056,11 +2108,13 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
         "sizing": "normal",
       }
     }
-    id=""
+    id={null}
     layout={5}
-    left=""
+    left={null}
     leftButton={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -2076,7 +2130,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
     onMouseOut={[Function]}
     onSelect={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     rightButton={null}
     selected={false}
     sizing="normal"
@@ -2085,12 +2139,12 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
     testing={true}
     theme={null}
     title="test title left"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
     widget="test title right"
-    width=""
+    width={null}
     xcss={null}
   />
 </Wrapper>
@@ -2098,16 +2152,16 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
 
 exports[`Test the creation of a ListItem control with simple title 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   href={
@@ -2116,11 +2170,13 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
       "sizing": "normal",
     }
   }
-  id=""
+  id={null}
   layout={5}
-  left=""
+  left={null}
   leftButton={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -2137,7 +2193,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   onMouseOut={[Function]}
   onSelect={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   rightButton={null}
   selected={true}
@@ -2147,25 +2203,25 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   testing={true}
   theme={null}
   title="test title"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <Item
-    bottom=""
+    bottom={null}
     className="ui-listitem"
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     href={
@@ -2174,11 +2230,13 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
         "sizing": "normal",
       }
     }
-    id=""
+    id={null}
     layout={5}
-    left=""
+    left={null}
     leftButton={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -2194,7 +2252,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
     onMouseOut={[Function]}
     onSelect={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     rightButton={null}
     selected={true}
     sizing="normal"
@@ -2203,12 +2261,12 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
     testing={true}
     theme={null}
     title="test title"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
     widget={null}
-    width=""
+    width={null}
     xcss={null}
   />
 </Wrapper>

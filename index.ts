@@ -52,7 +52,6 @@ import {
 	OptionType
 } from './lib/option';
 import {getDefaultPagerProps, Pager} from './lib/pager';
-import {getDefaultSelectProps, Select} from './lib/select';
 import {
 	BaseComponent,
 	BaseProps,
@@ -171,7 +170,6 @@ export {
 	getDefaultOptionGroupProps,
 	getDefaultOptionProps,
 	getDefaultPagerProps,
-	getDefaultSelectProps,
 	getDefaultSliderProps,
 	getDefaultSwitchProps,
 	getDefaultTabContainerProps,
@@ -204,7 +202,6 @@ export {
 	OptionGroup,
 	OptionType,
 	Pager,
-	Select,
 	setTheme,
 	Sizes,
 	Sizing,

@@ -2,28 +2,30 @@
 
 exports[`Test creation of a simple Slider control 1`] = `
 <Slider
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
   max={50}
   min={1}
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Slider"
   onSelect={[Function]}
-  padding=""
+  padding={null}
   scale={2}
   selected={false}
   sizing="normal"
@@ -33,28 +35,30 @@ exports[`Test creation of a simple Slider control 1`] = `
   testing={true}
   theme={null}
   ticks={5}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="none"
     max={50}
     min={1}
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -62,7 +66,7 @@ exports[`Test creation of a simple Slider control 1`] = `
     obj="Slider"
     onError={[Function]}
     onSelect={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     scale={2}
     selected={false}
@@ -73,10 +77,10 @@ exports[`Test creation of a simple Slider control 1`] = `
     testing={true}
     theme={null}
     ticks={5}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -85,6 +89,7 @@ exports[`Test creation of a simple Slider control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -592,28 +597,30 @@ exports[`Test creation of a simple Slider control 1`] = `
 
 exports[`Test disabling a Slider control 1`] = `
 <Slider
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
   max={100}
   min={0}
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Slider"
   onSelect={[Function]}
-  padding=""
+  padding={null}
   scale={2}
   selected={false}
   sizing="normal"
@@ -623,28 +630,30 @@ exports[`Test disabling a Slider control 1`] = `
   testing={true}
   theme={null}
   ticks={5}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={true}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="none"
     max={100}
     min={0}
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -652,7 +661,7 @@ exports[`Test disabling a Slider control 1`] = `
     obj="Slider"
     onError={[Function]}
     onSelect={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     scale={2}
     selected={false}
@@ -663,10 +672,10 @@ exports[`Test disabling a Slider control 1`] = `
     testing={true}
     theme={null}
     ticks={5}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -675,6 +684,7 @@ exports[`Test disabling a Slider control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -1131,29 +1141,31 @@ exports[`Test disabling a Slider control 1`] = `
 
 exports[`Test retrieval of Slider props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
-  "left": "",
+  "height": null,
+  "id": null,
+  "left": null,
   "location": "none",
   "max": 100,
   "min": 0,
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
   "notheme": false,
   "obj": "Slider",
   "onSelect": [Function],
-  "padding": "",
+  "padding": null,
   "scale": 1,
   "selected": false,
   "sizing": "normal",
@@ -1163,38 +1175,40 @@ Object {
   "testing": true,
   "theme": null,
   "ticks": 0,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test with bad min/max values 1`] = `
 <Slider
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
   max={0}
   min={-1}
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Slider"
   onSelect={[Function]}
-  padding=""
+  padding={null}
   scale={1}
   selected={false}
   sizing="normal"
@@ -1204,28 +1218,30 @@ exports[`Test with bad min/max values 1`] = `
   testing={true}
   theme={null}
   ticks={0}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="none"
     max={0}
     min={-1}
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -1233,7 +1249,7 @@ exports[`Test with bad min/max values 1`] = `
     obj="Slider"
     onError={[Function]}
     onSelect={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     scale={1}
     selected={false}
@@ -1244,10 +1260,10 @@ exports[`Test with bad min/max values 1`] = `
     testing={true}
     theme={null}
     ticks={0}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -1256,6 +1272,7 @@ exports[`Test with bad min/max values 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",

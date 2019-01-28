@@ -7,10 +7,10 @@ import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 import {
 	Button,
-	Container,
 	Toast,
 	ToastLevel
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export interface DemoToastState {
 	toastVisible1: boolean;
@@ -71,7 +71,7 @@ export default class DemoToast extends React.Component<any, DemoToastState> {
 
 	public render() {
 		return (
-			<Container id="toastExample" title="Toast">
+			<StyledContainer id="toastExample" title="Toast">
 				<h3>Info message with decay</h3>
 				<div className="toastInfo">
 					<p>{this.randomText}</p>
@@ -194,7 +194,7 @@ export default class DemoToast extends React.Component<any, DemoToastState> {
 						This is a sample custom message
 					</Toast>
 				</div>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

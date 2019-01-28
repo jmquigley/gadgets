@@ -116,7 +116,7 @@ export function getDefaultBrowserState(): BrowserState {
 	});
 }
 
-export const BrowserContainer: any = styled.div`
+const BrowserContainer: any = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -136,7 +136,7 @@ export const BrowserContainer: any = styled.div`
 	}
 `;
 
-export const BrowserContent: any = styled.div`
+const BrowserContent: any = styled.div`
 	display: flex;
 	border: solid 1px ${(props: BrowserProps) => props.theme.borderColor};
 	flex-grow: 1;
@@ -146,17 +146,17 @@ export const BrowserContent: any = styled.div`
 	}
 `;
 
-export const BrowserToolbar: any = styled.div`
+const BrowserToolbar: any = styled.div`
 	border: solid 1px ${(props: BrowserProps) => props.theme.borderColor};
 	margin-bottom: -1px;
 	display: flex;
 `;
 
-export const BrowserToolbarButtons: any = styled(Toolbar)`
+const BrowserToolbarButtons: any = styled(Toolbar)`
 	border: none;
 `;
 
-export const BrowserToolbarURL: any = styled.div`
+const BrowserToolbarURL: any = styled.div`
 	display: flex;
 	flex-grow: 1;
 
@@ -166,14 +166,10 @@ export const BrowserToolbarURL: any = styled.div`
 	}
 `;
 
-export const BrowserToolbarSearch: any = styled(Toolbar)`
-	border: none;
+const URLTextField: any = styled(TextField)`
 `;
 
-export const URLTextField: any = styled(TextField)`
-`;
-
-export const SearchTextField: any = styled(TextField)`
+const SearchTextField: any = styled(TextField)`
 	border-radius: 45px;
 	width: 12em;
 
@@ -378,7 +374,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 								value={this.state.uri}
 							/>
 						</BrowserToolbarURL>
-						<BrowserToolbarSearch>
+						<BrowserToolbarButtons>
 							<Button
 								iconName="camera-retro"
 								onClick={this.handleSnapshot}
@@ -403,7 +399,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 								onClick={this.handleNextSearch}
 								tooltip={this.props.notooltips ? '' : 'search forward'}
 							/>
-						</BrowserToolbarSearch>
+						</BrowserToolbarButtons>
 					</BrowserToolbar>
 					<BrowserContent
 						className="ui-browser-content"

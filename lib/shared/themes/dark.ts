@@ -1,9 +1,10 @@
 'use strict';
 
 import {Color, ColorScheme} from '../props';
+import defaultTheme from './default';
 import {ThemeProps} from './index';
 
-const theme: ThemeProps = {
+const theme: ThemeProps = {...defaultTheme,
 	backgroundColor: Color.black,
 	borderColor: ColorScheme.c1,
 	color: Color.white,

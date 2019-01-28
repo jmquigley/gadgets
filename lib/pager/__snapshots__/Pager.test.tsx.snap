@@ -2,21 +2,23 @@
 
 exports[`Test creation of a Pager control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   initialPage={1}
   initialPageSize={25}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -24,7 +26,7 @@ exports[`Test creation of a Pager control 1`] = `
   obj="Pager"
   onError={[Function]}
   onSelect={[Function]}
-  padding=""
+  padding={null}
   pageSizes={
     Array [
       25,
@@ -39,12 +41,12 @@ exports[`Test creation of a Pager control 1`] = `
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   totalItems={0}
   useinput={false}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -52,22 +54,24 @@ exports[`Test creation of a Pager control 1`] = `
     style={Object {}}
   >
     <Styled(Button)
-      bottom=""
+      bottom={null}
       className="test-class"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
+      height={null}
       iconName="angle-double-left"
-      id=""
+      id={null}
       initialPage={1}
       initialPageSize={25}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
@@ -75,7 +79,7 @@ exports[`Test creation of a Pager control 1`] = `
       obj="Pager"
       onClick={[Function]}
       onSelect={[Function]}
-      padding=""
+      padding={null}
       pageSizes={
         Array [
           25,
@@ -89,31 +93,33 @@ exports[`Test creation of a Pager control 1`] = `
       style={Object {}}
       testing={true}
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       totalItems={0}
       useinput={false}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <Styled(Button)
-      bottom=""
+      bottom={null}
       className="test-class"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
+      height={null}
       iconName="angle-left"
-      id=""
+      id={null}
       initialPage={1}
       initialPageSize={25}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
@@ -121,7 +127,7 @@ exports[`Test creation of a Pager control 1`] = `
       obj="Pager"
       onClick={[Function]}
       onSelect={[Function]}
-      padding=""
+      padding={null}
       pageSizes={
         Array [
           25,
@@ -135,32 +141,34 @@ exports[`Test creation of a Pager control 1`] = `
       style={Object {}}
       testing={true}
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       totalItems={0}
       useinput={false}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <Styled(ButtonText)
-      bottom=""
+      bottom={null}
       className=" ui-pager-selected"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       initialPage={1}
       initialPageSize={25}
       justify={2}
       key="1"
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noicon={true}
@@ -169,7 +177,7 @@ exports[`Test creation of a Pager control 1`] = `
       obj="Pager"
       onClick={[Function]}
       onSelect={[Function]}
-      padding=""
+      padding={null}
       pageSizes={
         Array [
           25,
@@ -189,32 +197,34 @@ exports[`Test creation of a Pager control 1`] = `
       testing={true}
       text="1"
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       totalItems={0}
       useinput={false}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <Styled(ButtonText)
-      bottom=""
+      bottom={null}
       className="test-class"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={true}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       initialPage={1}
       initialPageSize={25}
       justify={2}
       key="4"
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noicon={true}
@@ -222,7 +232,7 @@ exports[`Test creation of a Pager control 1`] = `
       notheme={false}
       obj="Pager"
       onSelect={[Function]}
-      padding=""
+      padding={null}
       pageSizes={
         Array [
           25,
@@ -237,32 +247,34 @@ exports[`Test creation of a Pager control 1`] = `
       testing={true}
       text=""
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       totalItems={0}
       useinput={false}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <Styled(ButtonText)
-      bottom=""
+      bottom={null}
       className="test-class"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={true}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
+      height={null}
+      id={null}
       initialPage={1}
       initialPageSize={25}
       justify={2}
       key="5"
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noicon={true}
@@ -270,7 +282,7 @@ exports[`Test creation of a Pager control 1`] = `
       notheme={false}
       obj="Pager"
       onSelect={[Function]}
-      padding=""
+      padding={null}
       pageSizes={
         Array [
           25,
@@ -285,31 +297,33 @@ exports[`Test creation of a Pager control 1`] = `
       testing={true}
       text=""
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       totalItems={0}
       useinput={false}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <Styled(Button)
-      bottom=""
+      bottom={null}
       className="test-class"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
+      height={null}
       iconName="angle-right"
-      id=""
+      id={null}
       initialPage={1}
       initialPageSize={25}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
@@ -317,7 +331,7 @@ exports[`Test creation of a Pager control 1`] = `
       obj="Pager"
       onClick={[Function]}
       onSelect={[Function]}
-      padding=""
+      padding={null}
       pageSizes={
         Array [
           25,
@@ -331,31 +345,33 @@ exports[`Test creation of a Pager control 1`] = `
       style={Object {}}
       testing={true}
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       totalItems={0}
       useinput={false}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <Styled(Button)
-      bottom=""
+      bottom={null}
       className="test-class"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
+      height={null}
       iconName="angle-double-right"
-      id=""
+      id={null}
       initialPage={1}
       initialPageSize={25}
-      left=""
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
@@ -363,7 +379,7 @@ exports[`Test creation of a Pager control 1`] = `
       obj="Pager"
       onClick={[Function]}
       onSelect={[Function]}
-      padding=""
+      padding={null}
       pageSizes={
         Array [
           25,
@@ -377,95 +393,101 @@ exports[`Test creation of a Pager control 1`] = `
       style={Object {}}
       testing={true}
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       totalItems={0}
       useinput={false}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <Divider
-      bottom=""
-      className=""
+      bottom={null}
+      className={null}
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       dividerType=" "
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
-      left=""
+      height={null}
+      id={null}
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Divider"
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <Divider
-      bottom=""
-      className=""
+      bottom={null}
+      className={null}
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       dividerType=" "
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
-      id=""
-      left=""
+      height={null}
+      id={null}
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Divider"
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={Object {}}
       testing={true}
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <Styled(ButtonDialog)
-      bottom=""
+      bottom={null}
       className="test-class"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
+      height={null}
       iconName="ellipsis-v"
-      id=""
+      id={null}
       initialPage={1}
       initialPageSize={25}
-      left=""
+      left={null}
       location="top"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
@@ -473,7 +495,7 @@ exports[`Test creation of a Pager control 1`] = `
       notriangle={true}
       obj="Pager"
       onSelect={[Function]}
-      padding=""
+      padding={null}
       pageSizes={
         Array [
           25,
@@ -487,12 +509,12 @@ exports[`Test creation of a Pager control 1`] = `
       style={Object {}}
       testing={true}
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       totalItems={0}
       useinput={false}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     >
       <Styled(List)
@@ -500,16 +522,16 @@ exports[`Test creation of a Pager control 1`] = `
         sizing="normal"
       >
         <ListItem
-          bottom=""
+          bottom={null}
           className="test-class"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -518,48 +540,52 @@ exports[`Test creation of a Pager control 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           initialPage={1}
           initialPageSize={25}
           key="4"
           layout={5}
-          left=""
+          left={null}
           leftButton={
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName=""
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             />
           }
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={true}
           nohover={false}
           noripple={false}
@@ -575,7 +601,7 @@ exports[`Test creation of a Pager control 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           pageSizes={
             Array [
               25,
@@ -592,27 +618,27 @@ exports[`Test creation of a Pager control 1`] = `
           testing={true}
           theme={null}
           title="First"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           totalItems={0}
           useedit={false}
           useinput={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         />
         <ListItem
-          bottom=""
+          bottom={null}
           className="test-class"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -621,48 +647,52 @@ exports[`Test creation of a Pager control 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           initialPage={1}
           initialPageSize={25}
           key="5"
           layout={5}
-          left=""
+          left={null}
           leftButton={
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName=""
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             />
           }
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={true}
           nohover={false}
           noripple={false}
@@ -678,7 +708,7 @@ exports[`Test creation of a Pager control 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           pageSizes={
             Array [
               25,
@@ -695,27 +725,27 @@ exports[`Test creation of a Pager control 1`] = `
           testing={true}
           theme={null}
           title="Last"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           totalItems={0}
           useedit={false}
           useinput={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         />
         <ListItem
-          bottom=""
+          bottom={null}
           className="test-class"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -724,48 +754,52 @@ exports[`Test creation of a Pager control 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           initialPage={1}
           initialPageSize={25}
           key="6"
           layout={5}
-          left=""
+          left={null}
           leftButton={
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName=""
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             />
           }
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={true}
           nohover={false}
           noripple={false}
@@ -781,7 +815,7 @@ exports[`Test creation of a Pager control 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           pageSizes={
             Array [
               25,
@@ -798,27 +832,27 @@ exports[`Test creation of a Pager control 1`] = `
           testing={true}
           theme={null}
           title="Next"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           totalItems={0}
           useedit={false}
           useinput={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         />
         <ListItem
-          bottom=""
+          bottom={null}
           className="test-class"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -827,48 +861,52 @@ exports[`Test creation of a Pager control 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           initialPage={1}
           initialPageSize={25}
           key="7"
           layout={5}
-          left=""
+          left={null}
           leftButton={
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName=""
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             />
           }
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={true}
           nohover={false}
           noripple={false}
@@ -884,7 +922,7 @@ exports[`Test creation of a Pager control 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           pageSizes={
             Array [
               25,
@@ -901,32 +939,34 @@ exports[`Test creation of a Pager control 1`] = `
           testing={true}
           theme={null}
           title="Previous"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           totalItems={0}
           useedit={false}
           useinput={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         />
         <ListDivider
           alternating={false}
-          bottom=""
-          className=""
+          bottom={null}
+          className={null}
           color="lightgray"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
-          id=""
-          left=""
+          height={null}
+          id={null}
+          left={null}
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={false}
           nohover={false}
           noripple={false}
@@ -934,29 +974,29 @@ exports[`Test creation of a Pager control 1`] = `
           notheme={false}
           obj="ListDivider"
           onSelect={[Function]}
-          padding=""
+          padding={null}
           selected={false}
           sizing="normal"
           style={Object {}}
           testing={true}
           theme={null}
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           visible={true}
-          width=""
+          width={null}
           xcss={null}
         />
         <ListItem
-          bottom=""
+          bottom={null}
           className="test-class"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -965,35 +1005,37 @@ exports[`Test creation of a Pager control 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           initialPage={1}
           initialPageSize={25}
           key="0"
           layout={5}
-          left=""
+          left={null}
           leftButton={
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName="check"
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={
@@ -1003,14 +1045,16 @@ exports[`Test creation of a Pager control 1`] = `
               }
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             />
           }
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={true}
           nohover={false}
           noripple={false}
@@ -1026,7 +1070,7 @@ exports[`Test creation of a Pager control 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           pageSizes={
             Array [
               25,
@@ -1043,27 +1087,27 @@ exports[`Test creation of a Pager control 1`] = `
           testing={true}
           theme={null}
           title="25"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           totalItems={0}
           useedit={false}
           useinput={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         />
         <ListItem
-          bottom=""
+          bottom={null}
           className="test-class"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -1072,48 +1116,52 @@ exports[`Test creation of a Pager control 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           initialPage={1}
           initialPageSize={25}
           key="1"
           layout={5}
-          left=""
+          left={null}
           leftButton={
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName=""
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             />
           }
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={true}
           nohover={false}
           noripple={false}
@@ -1129,7 +1177,7 @@ exports[`Test creation of a Pager control 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           pageSizes={
             Array [
               25,
@@ -1146,27 +1194,27 @@ exports[`Test creation of a Pager control 1`] = `
           testing={true}
           theme={null}
           title="50"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           totalItems={0}
           useedit={false}
           useinput={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         />
         <ListItem
-          bottom=""
+          bottom={null}
           className="test-class"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -1175,48 +1223,52 @@ exports[`Test creation of a Pager control 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           initialPage={1}
           initialPageSize={25}
           key="2"
           layout={5}
-          left=""
+          left={null}
           leftButton={
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName=""
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             />
           }
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={true}
           nohover={false}
           noripple={false}
@@ -1232,7 +1284,7 @@ exports[`Test creation of a Pager control 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           pageSizes={
             Array [
               25,
@@ -1249,27 +1301,27 @@ exports[`Test creation of a Pager control 1`] = `
           testing={true}
           theme={null}
           title="100"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           totalItems={0}
           useedit={false}
           useinput={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         />
         <ListItem
-          bottom=""
+          bottom={null}
           className="test-class"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
-          height=""
+          height={null}
           hiddenLeftButton={false}
           hiddenRightButton={false}
           href={
@@ -1278,48 +1330,52 @@ exports[`Test creation of a Pager control 1`] = `
               "sizing": "normal",
             }
           }
-          id=""
+          id={null}
           initialPage={1}
           initialPageSize={25}
           key="3"
           layout={5}
-          left=""
+          left={null}
           leftButton={
             <Icon
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName=""
-              id=""
+              id={null}
               imageFile=""
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Icon"
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={Object {}}
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             />
           }
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={true}
           nohover={false}
           noripple={false}
@@ -1335,7 +1391,7 @@ exports[`Test creation of a Pager control 1`] = `
           onMouseOut={[Function]}
           onSelect={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           pageSizes={
             Array [
               25,
@@ -1352,14 +1408,14 @@ exports[`Test creation of a Pager control 1`] = `
           testing={true}
           theme={null}
           title="all"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           totalItems={0}
           useedit={false}
           useinput={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         />
       </Styled(List)>
@@ -1370,22 +1426,24 @@ exports[`Test creation of a Pager control 1`] = `
 
 exports[`Test retrieval of Pager props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
+  "height": null,
+  "id": null,
   "initialPage": 1,
   "initialPageSize": 25,
-  "left": "",
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -1394,7 +1452,7 @@ Object {
   "onChangePageSize": [Function],
   "onSelect": [Function],
   "onSort": null,
-  "padding": "",
+  "padding": null,
   "pageSizes": Array [
     25,
     50,
@@ -1406,12 +1464,12 @@ Object {
   "style": Object {},
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "totalItems": 0,
   "useinput": false,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;

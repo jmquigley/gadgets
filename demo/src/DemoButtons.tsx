@@ -9,10 +9,10 @@ import {
 	ButtonDialog,
 	ButtonText,
 	ButtonToggle,
-	Container,
 	Icon,
 	Justify
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoButtons extends React.Component<any, undefined> {
 
@@ -241,9 +241,36 @@ export default class DemoButtons extends React.Component<any, undefined> {
 		);
 	}
 
+	private buildButtonWithTooltip() {
+		return(
+			<tr>
+				<th>Button with Tooltip<br/>(Center)</th>
+				<td>
+					<ButtonText
+						disabled={this.props['disabled']}
+						text="Tooltip 1"
+						justify={Justify.center}
+						sizing={this.props['sizing']}
+						tooltip="sample tooltip"
+					/>
+				</td>
+				<td>
+					<ButtonText
+						disabled={this.props['disabled']}
+						text="Tooltip 2"
+						justify={Justify.center}
+						sizing={this.props['sizing']}
+						style={{color: 'white', backgroundColor: 'red'}}
+						tooltip="sample tooltip"
+					/>
+				</td>
+			</tr>
+		);
+	}
+
 	public render() {
 		return (
-			<Container id="buttonExample" title="Buttons & Icons">
+			<StyledContainer id="buttonExample" title="Buttons & Icons">
 				<table id="buttonTable">
 					<thead>
 						<tr>
@@ -262,9 +289,10 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						{this.buildButtonTextRight()}
 						{this.buildButtonTextLeft()}
 						{this.buildButtonTextCenter()}
+						{this.buildButtonWithTooltip()}
 					</tbody>
 				</table>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

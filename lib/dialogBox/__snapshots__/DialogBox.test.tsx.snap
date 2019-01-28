@@ -2,7 +2,7 @@
 
 exports[`Test creation of a default DialogBox control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
@@ -10,14 +10,16 @@ exports[`Test creation of a default DialogBox control 1`] = `
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="none"
   message=""
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -27,7 +29,7 @@ exports[`Test creation of a default DialogBox control 1`] = `
   onError={[Function]}
   onOpen={[Function]}
   onSelection={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   show={false}
@@ -35,10 +37,10 @@ exports[`Test creation of a default DialogBox control 1`] = `
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Modal
@@ -118,22 +120,24 @@ exports[`Test creation of a default DialogBox control 1`] = `
 
 exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   dialogType="info"
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="none"
   message="Testing click handler for yes"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -143,7 +147,7 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
   onError={[Function]}
   onOpen={[Function]}
   onSelection={[MockFunction]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   show={true}
@@ -151,10 +155,10 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Modal
@@ -234,23 +238,25 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
 
 exports[`Test retrieval of DialogBox props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "dialogType": "info",
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
+  "height": null,
   "iconName": "bomb",
-  "id": "",
-  "left": "",
+  "id": null,
+  "left": null,
   "location": "none",
   "message": "",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -259,39 +265,41 @@ Object {
   "onClose": [Function],
   "onOpen": [Function],
   "onSelection": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "show": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the creation of an custom DialogBox 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   dialogType="custom"
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="car"
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="none"
   message="Sample info message"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -301,7 +309,7 @@ exports[`Test the creation of an custom DialogBox 1`] = `
   onError={[Function]}
   onOpen={[Function]}
   onSelection={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   show={true}
@@ -313,10 +321,10 @@ exports[`Test the creation of an custom DialogBox 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Modal
@@ -396,22 +404,24 @@ exports[`Test the creation of an custom DialogBox 1`] = `
 
 exports[`Test the creation of an error DialogBox 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   dialogType="error"
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="none"
   message="Sample error message"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -421,7 +431,7 @@ exports[`Test the creation of an error DialogBox 1`] = `
   onError={[Function]}
   onOpen={[Function]}
   onSelection={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   show={true}
@@ -429,10 +439,10 @@ exports[`Test the creation of an error DialogBox 1`] = `
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Modal
@@ -512,22 +522,24 @@ exports[`Test the creation of an error DialogBox 1`] = `
 
 exports[`Test the creation of an info DialogBox 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   dialogType="info"
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="none"
   message="Sample info message"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -537,7 +549,7 @@ exports[`Test the creation of an info DialogBox 1`] = `
   onError={[Function]}
   onOpen={[Function]}
   onSelection={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   show={true}
@@ -545,10 +557,10 @@ exports[`Test the creation of an info DialogBox 1`] = `
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Modal
@@ -628,22 +640,24 @@ exports[`Test the creation of an info DialogBox 1`] = `
 
 exports[`Test the creation of an success DialogBox 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   dialogType="success"
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="none"
   message="Sample success message"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -653,7 +667,7 @@ exports[`Test the creation of an success DialogBox 1`] = `
   onError={[Function]}
   onOpen={[Function]}
   onSelection={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   show={true}
@@ -661,10 +675,10 @@ exports[`Test the creation of an success DialogBox 1`] = `
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Modal
@@ -744,22 +758,24 @@ exports[`Test the creation of an success DialogBox 1`] = `
 
 exports[`Test the creation of an warning DialogBox 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   dialogType="warning"
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="none"
   message="Sample warning message"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -769,7 +785,7 @@ exports[`Test the creation of an warning DialogBox 1`] = `
   onError={[Function]}
   onOpen={[Function]}
   onSelection={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   show={true}
@@ -777,10 +793,10 @@ exports[`Test the creation of an warning DialogBox 1`] = `
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Modal

@@ -7,10 +7,10 @@ import {EnumValues as ev} from 'enum-values';
 import * as React from 'react';
 import {
 	Break,
-	Container,
 	Option,
 	OptionType
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoOption extends React.Component<any, undefined> {
 
@@ -56,9 +56,9 @@ export default class DemoOption extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="optionExample" title="Option">
+			<StyledContainer id="optionExample" title="Option">
 				{this.buildOptions()}
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

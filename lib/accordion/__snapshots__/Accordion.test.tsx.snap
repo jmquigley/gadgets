@@ -2,36 +2,38 @@
 
 exports[`Test making the accordion control invisible 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   id="1234"
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Accordion"
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={false}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.ul
@@ -52,71 +54,75 @@ exports[`Test making the accordion control invisible 1`] = `
 
 exports[`Test retrieval of Accordion props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
-  "left": "",
+  "height": null,
+  "id": null,
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
   "notheme": false,
   "obj": "Accordion",
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the creation of a Accordion control container 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   id="1234"
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Accordion"
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.ul
@@ -137,36 +143,38 @@ exports[`Test the creation of a Accordion control container 1`] = `
 
 exports[`Test the disabling of the Accordion control container 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   id="1234"
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Accordion"
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.ul

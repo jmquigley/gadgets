@@ -6,10 +6,10 @@ import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
 	Break,
-	Container,
 	Switch,
 	SwitchType
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoBrowser extends React.Component<any, undefined> {
 
@@ -25,7 +25,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="switchExample" title="Switch">
+			<StyledContainer id="switchExample" title="Switch">
 				<h3>Inny</h3>
 				<Switch
 					disabled={this.props['disabled']}
@@ -44,7 +44,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 					sizing={this.props['sizing']}
 					switchType={SwitchType.outy}
 				/>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

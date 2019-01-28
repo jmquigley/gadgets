@@ -5,9 +5,9 @@ const debug = require('debug')('DemoLabels');
 import * as React from 'react';
 import {
 	Break,
-	Container,
 	Label
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoLabels extends React.Component<any, undefined> {
 
@@ -18,7 +18,7 @@ export default class DemoLabels extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="labelExample" title="Labels">
+			<StyledContainer id="labelExample" title="Labels">
 				<div id="simple-labels">
 					<Label
 						disabled={this.props['disabled']}
@@ -53,7 +53,7 @@ export default class DemoLabels extends React.Component<any, undefined> {
 						text="Text Label #4 (inline style)"
 					/>
 				</div>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

@@ -2,26 +2,28 @@
 
 exports[`Test adding custom className to Container control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-classname"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   id="testid"
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Container"
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -29,16 +31,18 @@ exports[`Test adding custom className to Container control 1`] = `
   testing={true}
   theme={null}
   title=""
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
     className="ui-container test-classname"
+    height={null}
     id="testid"
     key="testid"
+    minHeight={null}
     sizing="normal"
     style={Object {}}
   >
@@ -51,26 +55,28 @@ exports[`Test adding custom className to Container control 1`] = `
 
 exports[`Test creation of a Container control 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Container"
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -78,16 +84,18 @@ exports[`Test creation of a Container control 1`] = `
   testing={true}
   theme={null}
   title=""
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
     className="ui-container"
-    id=""
-    key=""
+    height={null}
+    id={null}
+    key="null"
+    minHeight={null}
     sizing="normal"
     style={Object {}}
   >
@@ -100,26 +108,28 @@ exports[`Test creation of a Container control 1`] = `
 
 exports[`Test creation of a Container control with an id value 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   id="testid"
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Container"
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -127,16 +137,18 @@ exports[`Test creation of a Container control with an id value 1`] = `
   testing={true}
   theme={null}
   title=""
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
     className="ui-container"
+    height={null}
     id="testid"
     key="testid"
+    minHeight={null}
     sizing="normal"
     style={Object {}}
   >
@@ -149,36 +161,38 @@ exports[`Test creation of a Container control with an id value 1`] = `
 
 exports[`Test retrieval of Container props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
-  "left": "",
+  "height": null,
+  "id": null,
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
   "notheme": false,
   "obj": "Container",
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
   "title": "",
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;

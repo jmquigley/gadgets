@@ -43,6 +43,7 @@ export interface ThemeProps {
 	backgroundColor: string;
 	borderColor: string;
 	color: string;
+	fontFamily: string;
 	headerForegroundColor: string;
 	headerBackgroundColor: string;
 	headerHoverColor: string;

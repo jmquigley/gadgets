@@ -7,11 +7,11 @@ import * as loremIpsum from 'lorem-ipsum';
 import * as React from 'react';
 import {
 	Break,
-	Container,
 	Location,
 	Tab,
 	TabContainer
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoTabs extends React.Component<any, undefined> {
 
@@ -39,7 +39,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="tabControl" title="Tabs">
+			<StyledContainer id="tabControl" title="Tabs">
 				<h3>Top</h3>
 				<TabContainer
 					disabled={this.props['disabled']}
@@ -114,7 +114,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 					<Tab title="tab #4" onClose={this.handleClose}>#4<br/><br/>{this.randomText}</Tab>
 				</TabContainer>
 
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

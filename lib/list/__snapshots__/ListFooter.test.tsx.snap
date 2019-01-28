@@ -2,21 +2,23 @@
 
 exports[`Test retrieval of ListFooter props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
+  "height": null,
+  "id": null,
   "layout": 1,
-  "left": "",
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -24,39 +26,41 @@ Object {
   "obj": "ListFooter",
   "onClick": [Function],
   "onUpdate": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
   "title": "",
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "useedit": false,
   "visible": true,
   "widget": null,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the creation of a ListFooter control with simple title 1`] = `
 <ListFooter
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   layout={1}
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -64,36 +68,38 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
   obj="ListFooter"
   onClick={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
   title="test title"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
+    height={null}
+    id={null}
     layout={1}
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -102,7 +108,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
     onClick={[Function]}
     onError={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -110,12 +116,12 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
     testing={true}
     theme={null}
     title="test title"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
     widget={null}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -124,6 +130,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -141,20 +148,22 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
       }
     >
       <Styled(Title)
-        bottom=""
+        bottom={null}
         className="ui-list-footer"
         contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
         err={null}
-        errorMessage=""
+        errorMessage={null}
         focus={false}
-        height=""
-        id=""
+        height={null}
+        id={null}
         layout={1}
-        left=""
+        left={null}
         location="none"
+        minHeight={null}
+        minWidth={null}
         noedit={false}
         nohover={false}
         noripple={true}
@@ -162,30 +171,30 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
         obj="ListFooter"
         onClick={[Function]}
         onUpdate={[Function]}
-        padding=""
+        padding={null}
         selected={false}
         sizing="normal"
         style={Object {}}
         testing={true}
         theme={null}
         title="test title"
-        tooltip=""
-        top=""
+        tooltip={null}
+        top={null}
         useedit={false}
         visible={true}
         widget={null}
-        width=""
+        width={null}
         xcss={null}
       >
         <StyledComponent
-          bottom=""
+          bottom={null}
           className="ui-list-footer"
           contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
-          errorMessage=""
+          errorMessage={null}
           focus={false}
           forwardedComponent={
             Object {
@@ -219,11 +228,13 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
             }
           }
           forwardedRef={null}
-          height=""
-          id=""
+          height={null}
+          id={null}
           layout={1}
-          left=""
+          left={null}
           location="none"
+          minHeight={null}
+          minWidth={null}
           noedit={false}
           nohover={false}
           noripple={true}
@@ -231,36 +242,38 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
           obj="ListFooter"
           onClick={[Function]}
           onUpdate={[Function]}
-          padding=""
+          padding={null}
           selected={false}
           sizing="normal"
           style={Object {}}
           testing={true}
           theme={null}
           title="test title"
-          tooltip=""
-          top=""
+          tooltip={null}
+          top={null}
           useedit={false}
           visible={true}
           widget={null}
-          width=""
+          width={null}
           xcss={null}
         >
           <Title
-            bottom=""
+            bottom={null}
             className="ui-list-footer sc-gzVnrw kQHqrN"
             contentEditable={false}
             controlled={true}
             direction="right"
             disabled={false}
             err={null}
-            errorMessage=""
+            errorMessage={null}
             focus={false}
-            height=""
-            id=""
+            height={null}
+            id={null}
             layout={1}
-            left=""
+            left={null}
             location="none"
+            minHeight={null}
+            minWidth={null}
             noedit={false}
             nohover={false}
             noripple={true}
@@ -268,36 +281,38 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
             obj="ListFooter"
             onClick={[Function]}
             onUpdate={[Function]}
-            padding=""
+            padding={null}
             selected={false}
             sizing="normal"
             style={Object {}}
             testing={true}
             theme={null}
             title="test title"
-            tooltip=""
-            top=""
+            tooltip={null}
+            top={null}
             useedit={false}
             visible={true}
             widget={null}
-            width=""
+            width={null}
             xcss={null}
           >
             <Wrapper
-              bottom=""
+              bottom={null}
               className="ui-list-footer sc-gzVnrw kQHqrN"
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
-              id=""
+              height={null}
+              id={null}
               layout={1}
-              left=""
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={true}
@@ -306,7 +321,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
               onClick={[Function]}
               onError={[Function]}
               onUpdate={[Function]}
-              padding=""
+              padding={null}
               reset={false}
               selected={false}
               sizing="normal"
@@ -314,12 +329,12 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
               testing={true}
               theme={null}
               title="test title"
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               useedit={false}
               visible={true}
               widget={null}
-              width=""
+              width={null}
               xcss={null}
             >
               <ThemeProvider
@@ -328,6 +343,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                     "backgroundColor": "#ffffff",
                     "borderColor": "#c0c0c0",
                     "color": "#000000",
+                    "fontFamily": "OpenSans, Georgia, serif",
                     "headerBackgroundColor": "#004358",
                     "headerForegroundColor": "#ffffff",
                     "headerHoverColor": "#ffe11a",
@@ -403,27 +419,29 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                       style={Object {}}
                     >
                       <Styled(Label)
-                        bottom=""
+                        bottom={null}
                         className="ui-title"
                         contentEditable={false}
                         controlled={true}
                         direction="right"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
+                        height={null}
+                        id={null}
                         layout={1}
-                        left=""
+                        left={null}
                         location="none"
+                        minHeight={null}
+                        minWidth={null}
                         noedit={false}
                         nohover={false}
                         noripple={true}
                         notheme={false}
                         obj="ListFooter"
                         onClick={[Function]}
-                        padding=""
+                        padding={null}
                         selected={false}
                         sizing="normal"
                         style={Object {}}
@@ -431,12 +449,12 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                         text="test title"
                         theme={null}
                         title="test title"
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         useedit={false}
                         visible={true}
                         widget={null}
-                        width=""
+                        width={null}
                         xcss={
                           Array [
                             "
@@ -447,14 +465,14 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                         }
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-title"
                           contentEditable={false}
                           controlled={true}
                           direction="right"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -492,18 +510,20 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
+                          height={null}
+                          id={null}
                           layout={1}
-                          left=""
+                          left={null}
                           location="none"
+                          minHeight={null}
+                          minWidth={null}
                           noedit={false}
                           nohover={false}
                           noripple={true}
                           notheme={false}
                           obj="ListFooter"
                           onClick={[Function]}
-                          padding=""
+                          padding={null}
                           selected={false}
                           sizing="normal"
                           style={Object {}}
@@ -511,12 +531,12 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                           text="test title"
                           theme={null}
                           title="test title"
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           useedit={false}
                           visible={true}
                           widget={null}
-                          width=""
+                          width={null}
                           xcss={
                             Array [
                               "
@@ -527,20 +547,22 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                           }
                         >
                           <Label
-                            bottom=""
+                            bottom={null}
                             className="ui-title sc-bZQynM eDjJla"
                             contentEditable={false}
                             controlled={true}
                             direction="right"
                             disabled={false}
                             err={null}
-                            errorMessage=""
+                            errorMessage={null}
                             focus={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             layout={1}
-                            left=""
+                            left={null}
                             location="none"
+                            minHeight={null}
+                            minWidth={null}
                             noedit={false}
                             nohover={false}
                             noripple={true}
@@ -553,7 +575,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                             onKeyDown={[Function]}
                             onKeyPress={[Function]}
                             onUpdate={[Function]}
-                            padding=""
+                            padding={null}
                             selected={false}
                             sizing="normal"
                             style={Object {}}
@@ -561,12 +583,12 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                             text="test title"
                             theme={null}
                             title="test title"
-                            tooltip=""
-                            top=""
+                            tooltip={null}
+                            top={null}
                             useedit={false}
                             visible={true}
                             widget={null}
-                            width=""
+                            width={null}
                             xcss={
                               Array [
                                 "
@@ -577,20 +599,22 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                             }
                           >
                             <Wrapper
-                              bottom=""
+                              bottom={null}
                               className="ui-title sc-bZQynM eDjJla"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
                               disabled={false}
                               err={null}
-                              errorMessage=""
+                              errorMessage={null}
                               focus={false}
-                              height=""
-                              id=""
+                              height={null}
+                              id={null}
                               layout={1}
-                              left=""
+                              left={null}
                               location="none"
+                              minHeight={null}
+                              minWidth={null}
                               noedit={false}
                               nohover={false}
                               noripple={true}
@@ -604,7 +628,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                               onKeyDown={[Function]}
                               onKeyPress={[Function]}
                               onUpdate={[Function]}
-                              padding=""
+                              padding={null}
                               reset={false}
                               selected={false}
                               sizing="normal"
@@ -613,12 +637,12 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                               text="test title"
                               theme={null}
                               title="test title"
-                              tooltip=""
-                              top=""
+                              tooltip={null}
+                              top={null}
                               useedit={false}
                               visible={true}
                               widget={null}
-                              width=""
+                              width={null}
                               xcss={
                                 Array [
                                   "
@@ -634,6 +658,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                                     "backgroundColor": "#ffffff",
                                     "borderColor": "#c0c0c0",
                                     "color": "#000000",
+                                    "fontFamily": "OpenSans, Georgia, serif",
                                     "headerBackgroundColor": "#004358",
                                     "headerForegroundColor": "#ffffff",
                                     "headerHoverColor": "#ffe11a",

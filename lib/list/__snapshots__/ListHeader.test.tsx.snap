@@ -2,24 +2,26 @@
 
 exports[`Test retrieval of ListHeader props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
+  "height": null,
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
-  "id": "",
+  "id": null,
   "layout": 5,
-  "left": "",
+  "left": null,
   "leftButton": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": true,
   "noripple": false,
@@ -34,7 +36,7 @@ Object {
   "onKeyPress": [Function],
   "onMouseOut": [Function],
   "onUpdate": [Function],
-  "padding": "",
+  "padding": null,
   "rightButton": null,
   "selected": false,
   "sizing": "normal",
@@ -43,35 +45,37 @@ Object {
   "testing": true,
   "theme": null,
   "title": "​",
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "useedit": false,
   "visible": true,
   "widget": null,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the creation of a ListHeader control with simple title 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   hiddenLeftButton={false}
   hiddenRightButton={false}
-  id=""
+  id={null}
   layout={5}
-  left=""
+  left={null}
   leftButton={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={true}
   noripple={false}
@@ -87,7 +91,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   onKeyPress={[Function]}
   onMouseOut={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   rightButton={null}
   selected={false}
@@ -97,32 +101,34 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   testing={true}
   theme={null}
   title="test title"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
   widget={null}
-  width=""
+  width={null}
   xcss={null}
 >
   <Item
-    bottom=""
+    bottom={null}
     className="ui-item nohover"
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     hiddenLeftButton={false}
     hiddenRightButton={false}
-    id=""
+    id={null}
     layout={5}
-    left=""
+    left={null}
     leftButton={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={true}
     noripple={false}
@@ -137,7 +143,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     onKeyPress={[Function]}
     onMouseOut={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     rightButton={null}
     selected={false}
     sizing="normal"
@@ -146,12 +152,12 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     testing={true}
     theme={null}
     title="test title"
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
     widget={null}
-    width=""
+    width={null}
     xcss={null}
   />
 </Wrapper>

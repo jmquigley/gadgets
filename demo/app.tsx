@@ -2,6 +2,8 @@ import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {render} from 'react-dom';
 
+import {Container, styled} from '../dist/bundle';
+
 import DemoAccordion from './src/DemoAccordion';
 import DemoBadge from './src/DemoBadge';
 import DemoBreadcrumbs from './src/DemoBreadcrumbs';
@@ -18,7 +20,6 @@ import DemoListItem from './src/DemoListItem';
 import DemoOption from './src/DemoOption';
 import DemoOptionGroup from './src/DemoOptionGroup';
 import DemoPager from './src/DemoPager';
-import DemoSelect from './src/DemoSelect';
 import DemoSlider from './src/DemoSlider';
 import DemoSwitch from './src/DemoSwitch';
 import DemoTabs from './src/DemoTabs';
@@ -50,6 +51,10 @@ interface AppState {
 	disabled: boolean;
 	sizing: any;
 }
+
+export const StyledContainer: any = styled(Container)`
+	margin: 30px 0 10px 0;
+`;
 
 class App extends React.Component<any, AppState> {
 
@@ -127,7 +132,6 @@ class App extends React.Component<any, AppState> {
 				<DemoOption sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoOptionGroup sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoPager sizing={this.state.sizing} disabled={this.state.disabled} />
-				<DemoSelect sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoSlider sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoSwitch sizing={this.state.sizing} disabled={this.state.disabled} />
 				<DemoTabs sizing={this.state.sizing} disabled={this.state.disabled} />

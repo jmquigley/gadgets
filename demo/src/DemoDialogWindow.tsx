@@ -6,9 +6,9 @@ import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
 	ButtonText,
-	Container,
 	DialogWindow
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export interface DemoDialogBoxState {
 	dialogShow: boolean;
@@ -39,7 +39,7 @@ export default class DemoDilogBox extends React.Component<any, DemoDialogBoxStat
 
 	public render() {
 		return(
-			<Container id="dialogWindowExample" title="Dialog Window">
+			<StyledContainer id="dialogWindowExample" title="Dialog Window">
 				<div id="simple-buttons">
 					<div className="box">
 						<ButtonText
@@ -60,7 +60,7 @@ export default class DemoDilogBox extends React.Component<any, DemoDialogBoxStat
 					</div>
 
 				</div>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

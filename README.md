@@ -173,14 +173,14 @@ A grouping of Option conmponents.
 ### [Pager](docs/lib/pager/Pager.md)
 A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.
 
+### Preview
+TODO: create a markup preview widget for markdown, asciidoc, and restructured text
+
 ### ProgressBar
 TODO: create the ProgressBar control
 
 ### Rating
 TODO: create the Rating control
-
-### [Select](docs/lib/select/Select.md)
-A dropdown combo box control.  This uses the [react-select](https://www.npmjs.com/package/react-select) library from NPM maintained by Jed Watson. See the [README](https://github.com/JedWatson/react-select/blob/master/README.md) of this project for events and properties used.
 
 ### [Slider](docs/lib/slider/Slider.md)
 The Slider control creates a horizontal line overlapped by a chevron that can be moved along this horizontal line.
@@ -224,6 +224,9 @@ This component represents data in a hierarchical parent/child view.  The underly
 
 ### [Triangle](docs/lib/triangle/Triangle.md)
 Uses SVG to draw a triangle within the container.
+
+### Voting
+TODO: Create a Voting control (up/down arrows to affect vote count like Reddit)
 
 ### [Wrapper](docs/lib/shared/wrapper.md)
 Each component uses the Wrapper component to catch potential errors within the control.  These are [error boundaries](https://reactjs.org/docs/error-boundaries.html) that are new to React 16.  It also wraps the [ThemeProvider](https://www.styled-components.com/docs/api#themeprovider) used by the [styled-components](https://reactjs.org/docs/error-boundaries.html).

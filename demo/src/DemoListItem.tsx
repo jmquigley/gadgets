@@ -8,7 +8,6 @@ import {
 	ButtonCircle,
 	ButtonDialog,
 	ButtonToggle,
-	Container,
 	Icon,
 	List,
 	ListDivider,
@@ -16,6 +15,7 @@ import {
 	ListHeader,
 	ListItem
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoListItem extends React.Component<any, undefined> {
 
@@ -26,7 +26,7 @@ export default class DemoListItem extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="listExample1" title="List/ListItem">
+			<StyledContainer id="listExample1" title="List/ListItem">
 				<List alternating sizing={this.props['sizing']}>
 					<ListHeader
 						leftButton={<ButtonDialog iconName="bars"><div>header dialog</div><br/></ButtonDialog>}
@@ -124,7 +124,7 @@ export default class DemoListItem extends React.Component<any, undefined> {
 						title="Demo List Footer"
 					/>
 				</List>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

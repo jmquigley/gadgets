@@ -2,19 +2,21 @@
 
 exports[`Test a double click edit of the Label control 1`] = `
 <Label
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={true}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -27,34 +29,36 @@ exports[`Test a double click edit of the Label control 1`] = `
   onKeyDown={[MockFunction]}
   onKeyPress={[MockFunction]}
   onUpdate={[MockFunction]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   text="A"
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={true}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -68,7 +72,7 @@ exports[`Test a double click edit of the Label control 1`] = `
     onKeyDown={[MockFunction]}
     onKeyPress={[MockFunction]}
     onUpdate={[MockFunction]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -76,11 +80,11 @@ exports[`Test a double click edit of the Label control 1`] = `
     testing={true}
     text="A"
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -89,6 +93,7 @@ exports[`Test a double click edit of the Label control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -191,19 +196,21 @@ exports[`Test a double click edit of the Label control 1`] = `
 
 exports[`Test creation of a Label control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -217,7 +224,7 @@ exports[`Test creation of a Label control 1`] = `
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -225,11 +232,11 @@ exports[`Test creation of a Label control 1`] = `
   testing={true}
   text="Test label text"
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.span
@@ -253,19 +260,21 @@ exports[`Test creation of a Label control 1`] = `
 
 exports[`Test double click change to Label and blur to save 1`] = `
 <Label
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={true}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -278,34 +287,36 @@ exports[`Test double click change to Label and blur to save 1`] = `
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onUpdate={[MockFunction]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   text="A"
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={true}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -319,7 +330,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onUpdate={[MockFunction]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -327,11 +338,11 @@ exports[`Test double click change to Label and blur to save 1`] = `
     testing={true}
     text="A"
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -340,6 +351,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -442,19 +454,21 @@ exports[`Test double click change to Label and blur to save 1`] = `
 
 exports[`Test making the Label control invisible 1`] = `
 <Label
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -467,34 +481,36 @@ exports[`Test making the Label control invisible 1`] = `
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   text="Test label text"
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={false}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -508,7 +524,7 @@ exports[`Test making the Label control invisible 1`] = `
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -516,11 +532,11 @@ exports[`Test making the Label control invisible 1`] = `
     testing={true}
     text="Test label text"
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={false}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -529,6 +545,7 @@ exports[`Test making the Label control invisible 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -631,20 +648,22 @@ exports[`Test making the Label control invisible 1`] = `
 
 exports[`Test retrieval of default Label props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
-  "left": "",
+  "height": null,
+  "id": null,
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -657,37 +676,39 @@ Object {
   "onKeyDown": [Function],
   "onKeyPress": [Function],
   "onUpdate": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "text": "​",
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "useedit": false,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the disabling of the Label control 1`] = `
 <Label
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -700,34 +721,36 @@ exports[`Test the disabling of the Label control 1`] = `
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onUpdate={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   text="Test label text"
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   useedit={false}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={true}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -741,7 +764,7 @@ exports[`Test the disabling of the Label control 1`] = `
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onUpdate={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -749,11 +772,11 @@ exports[`Test the disabling of the Label control 1`] = `
     testing={true}
     text="Test label text"
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     useedit={false}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -762,6 +785,7 @@ exports[`Test the disabling of the Label control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",

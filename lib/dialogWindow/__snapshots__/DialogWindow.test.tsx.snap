@@ -2,20 +2,22 @@
 
 exports[`Test creation of a default DialogWindow control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
   height="600px"
   icon="plane"
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -24,7 +26,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
   onClose={[Function]}
   onError={[Function]}
   onOpen={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   show={true}
@@ -33,8 +35,8 @@ exports[`Test creation of a default DialogWindow control 1`] = `
   testing={true}
   theme={null}
   title="Demo Dialog Window"
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
   width="600px"
   xcss={null}
@@ -69,20 +71,22 @@ exports[`Test creation of a default DialogWindow control 1`] = `
     }
   >
     <styled.div
-      bottom=""
+      bottom={null}
       className="ui-dialogwindow test-class"
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
       height="600px"
       icon="plane"
-      id=""
-      left=""
+      id={null}
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
@@ -90,7 +94,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
       obj="DialogWindow"
       onClose={[Function]}
       onOpen={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       show={true}
       sizing="normal"
@@ -98,62 +102,66 @@ exports[`Test creation of a default DialogWindow control 1`] = `
       testing={true}
       theme={null}
       title="Demo Dialog Window"
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       visible={true}
       width="600px"
       xcss={null}
     >
       <Styled(Item)
-        bottom=""
+        bottom={null}
         className="test-class"
         contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
         err={null}
-        errorMessage=""
+        errorMessage={null}
         focus={false}
         height="600px"
         icon="plane"
-        id=""
-        left=""
+        id={null}
+        left={null}
         leftButton={
           <Icon
-            bottom=""
-            className=""
+            bottom={null}
+            className={null}
             contentEditable={false}
             controlled={true}
             direction="right"
             disabled={false}
             err={null}
-            errorMessage=""
+            errorMessage={null}
             focus={false}
-            height=""
+            height={null}
             iconName="plane"
-            id=""
+            id={null}
             imageFile=""
-            left=""
+            left={null}
             location="none"
+            minHeight={null}
+            minWidth={null}
             noedit={false}
             nohover={false}
             noripple={false}
             notheme={false}
             obj="Icon"
-            padding=""
+            padding={null}
             selected={false}
             sizing="normal"
             style={Object {}}
             testing={true}
             theme={null}
-            tooltip=""
-            top=""
+            tooltip={null}
+            top={null}
             visible={true}
-            width=""
+            width={null}
             xcss={null}
           />
         }
         location="none"
+        minHeight={null}
+        minWidth={null}
         noedit={false}
         nohover={true}
         noripple={true}
@@ -161,7 +169,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
         obj="DialogWindow"
         onClose={[Function]}
         onOpen={[Function]}
-        padding=""
+        padding={null}
         rightButton={
           <ForwardRef
             iconName="times"
@@ -175,8 +183,8 @@ exports[`Test creation of a default DialogWindow control 1`] = `
         testing={true}
         theme={null}
         title="Demo Dialog Window"
-        tooltip=""
-        top=""
+        tooltip={null}
+        top={null}
         visible={true}
         width="600px"
         xcss={null}
@@ -199,21 +207,23 @@ exports[`Test creation of a default DialogWindow control 1`] = `
 
 exports[`Test retrieval of DialogWindow props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
   "height": "400px",
   "icon": "window-restore",
-  "id": "",
-  "left": "",
+  "id": null,
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -221,7 +231,7 @@ Object {
   "obj": "DialogWindow",
   "onClose": [Function],
   "onOpen": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "show": false,
   "sizing": "normal",
@@ -229,8 +239,8 @@ Object {
   "testing": true,
   "theme": null,
   "title": "Dialog Window",
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
   "width": "400px",
   "xcss": null,

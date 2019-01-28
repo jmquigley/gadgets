@@ -65,8 +65,10 @@ export function getDefaultContainerState(): ContainerState {
 }
 
 export const ContainerView: any = styled.div`
-	padding: 0;
+	height: ${(props: ContainerProps) => props.height};
 	margin: 2px 0;
+	minHeight: ${(props: ContainerProps) => props.minHeight};
+	padding: 0;
 
 	${(props: ContainerProps) => props.sizing && fontStyle[props.sizing]}
 `;
@@ -95,7 +97,9 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 				<ContainerView
 					className={this.state.classes.classnames}
 					key={this.props.id}
+					height={this.props.height}
 					id={this.props.id}
+					minHeight={this.props.minHeight}
 					sizing={this.props.sizing}
 					style={this.state.style}
 				>

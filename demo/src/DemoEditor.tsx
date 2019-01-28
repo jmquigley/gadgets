@@ -6,9 +6,9 @@ import * as fs from 'fs';
 import * as React from 'react';
 import {join} from 'util.join';
 import {
-	Container,
 	Editor
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoEditor extends React.Component<any, undefined> {
 
@@ -23,9 +23,9 @@ export default class DemoEditor extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="editorExample" title="Editor">
+			<StyledContainer id="editorExample" title="Editor">
 				<Editor content={this.markdown} scheme={{bold: 'red'}} />
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

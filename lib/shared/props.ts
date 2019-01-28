@@ -148,6 +148,8 @@ export interface BaseProps {
 	id?: string;
 	left?: string;
 	location?: Location;
+	minHeight?: string;
+	minWidth?: string;
 	noedit?: boolean;
 	nohover?: boolean;
 	noripple?: boolean;
@@ -167,35 +169,37 @@ export interface BaseProps {
 }
 
 const defaultBaseProps: BaseProps = {
-	bottom: '',
+	bottom: null,
 	children: null,
-	className: '',
+	className: null,
 	contentEditable: false,
 	controlled: true,
 	direction: Direction.right,
 	disabled: false,
 	err: null,
-	errorMessage: '',
+	errorMessage: null,
 	focus: false,
-	height: '',
-	id: '',
-	left: '',
+	height: null,
+	id: null,
+	left: null,
 	location: Location.none,
+	minHeight: null,
+	minWidth: null,
 	noedit: false,
 	nohover: false,
 	noripple: false,
 	notheme: false,
 	obj: 'Unknown',
-	padding: '',
+	padding: null,
 	selected: false,
 	sizing: Sizing.normal,
 	style: {},
 	testing: process.env.NODE_ENV !== 'production',
 	theme: null,
-	tooltip: '',
-	top: '',
+	tooltip: null,
+	top: null,
 	visible: true,
-	width: '',
+	width: null,
 	xcss: null
 };
 

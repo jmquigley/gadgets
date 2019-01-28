@@ -5,19 +5,14 @@ const debug = require('debug')('DemoTreeview');
 import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
-	Container,
-	styled,
 	Treeview,
 	TreeviewItem
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export interface DemoTreeviewState {
 	treeData: TreeviewItem[];
 }
-
-const StyledContainer: any = styled(Container)`
-	height: 625px;
-`;
 
 export default class DemoTreeview extends React.Component<any, DemoTreeviewState> {
 
@@ -74,6 +69,7 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 			<StyledContainer id="treeviewExample" title="Treeview">
 				<Treeview
 					disabled={this.props['disabled']}
+					height="640px"
 					onAdd={this.handleAdd}
 					onChange={this.handleChange}
 					onDelete={this.handleDelete}

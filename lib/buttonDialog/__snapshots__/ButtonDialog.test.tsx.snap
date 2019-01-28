@@ -2,7 +2,7 @@
 
 exports[`Test creation of a ButtonDialog control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
@@ -14,14 +14,16 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
   iconStyle=""
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="bottom"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -30,7 +32,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   obj="ButtonDialog"
   onClick={[Function]}
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -42,11 +44,11 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   triangleClasses={Array []}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -54,28 +56,30 @@ exports[`Test creation of a ButtonDialog control 1`] = `
     id="ButtonDialog-0"
   >
     <Button
-      bottom=""
-      className=""
+      bottom={null}
+      className={null}
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
+      height={null}
       iconName="bomb"
       iconStyle=""
-      id=""
-      left=""
+      id={null}
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Button"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={
@@ -86,10 +90,10 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       }
       testing={true}
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <styled.div
@@ -127,7 +131,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
 
 exports[`Test creation of a ButtonDialog control on top 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
@@ -139,14 +143,16 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
   iconStyle=""
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="top"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -155,7 +161,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   obj="ButtonDialog"
   onClick={[Function]}
   onError={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
@@ -167,11 +173,11 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   triangleClasses={Array []}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -179,28 +185,30 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
     id="ButtonDialog-0"
   >
     <Button
-      bottom=""
-      className=""
+      bottom={null}
+      className={null}
       contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
       err={null}
-      errorMessage=""
+      errorMessage={null}
       focus={false}
-      height=""
+      height={null}
       iconName="bomb"
       iconStyle=""
-      id=""
-      left=""
+      id={null}
+      left={null}
       location="none"
+      minHeight={null}
+      minWidth={null}
       noedit={false}
       nohover={false}
       noripple={false}
       notheme={false}
       obj="Button"
       onClick={[Function]}
-      padding=""
+      padding={null}
       selected={false}
       sizing="normal"
       style={
@@ -211,10 +219,10 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       }
       testing={true}
       theme={null}
-      tooltip=""
-      top=""
+      tooltip={null}
+      top={null}
       visible={true}
-      width=""
+      width={null}
       xcss={null}
     />
     <styled.div
@@ -252,22 +260,24 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
 
 exports[`Test making the ButtonDialog invisible 1`] = `
 <ButtonDialog
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   dialogClasses={Array []}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
   iconStyle=""
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="bottom"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -275,7 +285,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   notriangle={false}
   obj="ButtonDialog"
   onClick={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={
@@ -286,30 +296,32 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   triangleClasses={Array []}
   visible={false}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     dialogClasses={Array []}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     iconName="bomb"
     iconStyle=""
-    id=""
-    left=""
+    id={null}
+    left={null}
     location="bottom"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -318,7 +330,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
     obj="ButtonDialog"
     onClick={[Function]}
     onError={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -330,11 +342,11 @@ exports[`Test making the ButtonDialog invisible 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     triangleClasses={Array []}
     visible={false}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -343,6 +355,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -401,28 +414,30 @@ exports[`Test making the ButtonDialog invisible 1`] = `
             id="ButtonDialog-0"
           >
             <Button
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={false}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName="bomb"
               iconStyle=""
-              id=""
-              left=""
+              id={null}
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Button"
               onClick={[Function]}
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={
@@ -433,28 +448,30 @@ exports[`Test making the ButtonDialog invisible 1`] = `
               }
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={false}
-              width=""
+              width={null}
               xcss={null}
             >
               <Wrapper
-                bottom=""
-                className=""
+                bottom={null}
+                className={null}
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={false}
                 err={null}
-                errorMessage=""
+                errorMessage={null}
                 focus={false}
-                height=""
+                height={null}
                 iconName="bomb"
                 iconStyle=""
-                id=""
-                left=""
+                id={null}
+                left={null}
                 location="none"
+                minHeight={null}
+                minWidth={null}
                 noedit={false}
                 nohover={false}
                 noripple={false}
@@ -462,7 +479,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                 obj="Button"
                 onClick={[Function]}
                 onError={[Function]}
-                padding=""
+                padding={null}
                 reset={false}
                 selected={false}
                 sizing="normal"
@@ -474,10 +491,10 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                 }
                 testing={true}
                 theme={null}
-                tooltip=""
-                top=""
+                tooltip={null}
+                top={null}
                 visible={false}
-                width=""
+                width={null}
                 xcss={null}
               >
                 <ThemeProvider
@@ -486,6 +503,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                       "backgroundColor": "#ffffff",
                       "borderColor": "#c0c0c0",
                       "color": "#000000",
+                      "fontFamily": "OpenSans, Georgia, serif",
                       "headerBackgroundColor": "#004358",
                       "headerForegroundColor": "#ffffff",
                       "headerHoverColor": "#ffe11a",
@@ -600,71 +618,75 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                         }
                       >
                         <Icon
-                          bottom=""
+                          bottom={null}
                           className=""
                           contentEditable={false}
                           controlled={true}
                           direction="right"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
-                          height=""
+                          height={null}
                           iconName="bomb"
-                          id=""
+                          id={null}
                           imageFile=""
-                          left=""
+                          left={null}
                           location="none"
+                          minHeight={null}
+                          minWidth={null}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Icon"
-                          padding=""
+                          padding={null}
                           selected={false}
                           sizing="normal"
                           style={Object {}}
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                         >
                           <Wrapper
-                            bottom=""
+                            bottom={null}
                             className=""
                             contentEditable={false}
                             controlled={true}
                             direction="right"
                             disabled={false}
                             err={null}
-                            errorMessage=""
+                            errorMessage={null}
                             focus={false}
-                            height=""
+                            height={null}
                             iconName="bomb"
-                            id=""
+                            id={null}
                             imageFile=""
-                            left=""
+                            left={null}
                             location="none"
+                            minHeight={null}
+                            minWidth={null}
                             noedit={false}
                             nohover={false}
                             noripple={false}
                             notheme={false}
                             obj="Icon"
                             onError={[Function]}
-                            padding=""
+                            padding={null}
                             reset={false}
                             selected={false}
                             sizing="normal"
                             style={Object {}}
                             testing={true}
                             theme={null}
-                            tooltip=""
-                            top=""
+                            tooltip={null}
+                            top={null}
                             visible={true}
-                            width=""
+                            width={null}
                             xcss={null}
                           >
                             <ThemeProvider
@@ -673,6 +695,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                                   "backgroundColor": "#ffffff",
                                   "borderColor": "#c0c0c0",
                                   "color": "#000000",
+                                  "fontFamily": "OpenSans, Georgia, serif",
                                   "headerBackgroundColor": "#004358",
                                   "headerForegroundColor": "#ffffff",
                                   "headerHoverColor": "#ffe11a",
@@ -690,47 +713,49 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                               }
                             >
                               <styled.i
-                                bottom=""
+                                bottom={null}
                                 className="ui-icon fa fa-fw fa-bomb"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
                                 disabled={false}
                                 err={null}
-                                errorMessage=""
+                                errorMessage={null}
                                 focus={false}
-                                height=""
+                                height={null}
                                 iconName="bomb"
-                                id=""
+                                id={null}
                                 imageFile=""
-                                left=""
+                                left={null}
                                 location="none"
+                                minHeight={null}
+                                minWidth={null}
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
                                 notheme={false}
                                 obj="Icon"
-                                padding=""
+                                padding={null}
                                 selected={false}
                                 sizing="normal"
                                 style={Object {}}
                                 testing={true}
                                 theme={null}
-                                tooltip=""
-                                top=""
+                                tooltip={null}
+                                top={null}
                                 visible={true}
-                                width=""
+                                width={null}
                                 xcss={null}
                               >
                                 <StyledComponent
-                                  bottom=""
+                                  bottom={null}
                                   className="ui-icon fa fa-fw fa-bomb"
                                   contentEditable={false}
                                   controlled={true}
                                   direction="right"
                                   disabled={false}
                                   err={null}
-                                  errorMessage=""
+                                  errorMessage={null}
                                   focus={false}
                                   forwardedComponent={
                                     Object {
@@ -769,27 +794,29 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                                     }
                                   }
                                   forwardedRef={null}
-                                  height=""
+                                  height={null}
                                   iconName="bomb"
-                                  id=""
+                                  id={null}
                                   imageFile=""
-                                  left=""
+                                  left={null}
                                   location="none"
+                                  minHeight={null}
+                                  minWidth={null}
                                   noedit={false}
                                   nohover={false}
                                   noripple={false}
                                   notheme={false}
                                   obj="Icon"
-                                  padding=""
+                                  padding={null}
                                   selected={false}
                                   sizing="normal"
                                   style={Object {}}
                                   testing={true}
                                   theme={null}
-                                  tooltip=""
-                                  top=""
+                                  tooltip={null}
+                                  top={null}
                                   visible={true}
-                                  width=""
+                                  width={null}
                                   xcss={null}
                                 >
                                   <i
@@ -797,11 +824,11 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                                     contentEditable={false}
                                     direction="right"
                                     disabled={false}
-                                    height=""
-                                    id=""
+                                    height={null}
+                                    id={null}
                                     selected={false}
                                     style={Object {}}
-                                    width=""
+                                    width={null}
                                   />
                                 </StyledComponent>
                               </styled.i>
@@ -988,26 +1015,28 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                       visible={false}
                     >
                       <Triangle
-                        bottom=""
+                        bottom={null}
                         className="ui-dialog-triangle sc-gZMcBi cknAzr"
                         contentEditable={false}
                         controlled={true}
                         direction="up"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="bottom"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={true}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         selected={false}
                         sizing="normal"
                         style={
@@ -1018,26 +1047,28 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         visible={false}
-                        width=""
+                        width={null}
                         xcss={null}
                       >
                         <Wrapper
-                          bottom=""
+                          bottom={null}
                           className="ui-dialog-triangle sc-gZMcBi cknAzr"
                           contentEditable={false}
                           controlled={true}
                           direction="up"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="bottom"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={true}
                           noedit={false}
                           nohover={false}
@@ -1045,7 +1076,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                           notheme={false}
                           obj="Triangle"
                           onError={[Function]}
-                          padding=""
+                          padding={null}
                           reset={false}
                           selected={false}
                           sizing="normal"
@@ -1057,10 +1088,10 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           visible={false}
-                          width=""
+                          width={null}
                           xcss={null}
                         >
                           <ThemeProvider
@@ -1069,6 +1100,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                                 "backgroundColor": "#ffffff",
                                 "borderColor": "#c0c0c0",
                                 "color": "#000000",
+                                "fontFamily": "OpenSans, Georgia, serif",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
@@ -1086,26 +1118,28 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                             }
                           >
                             <styled.svg
-                              bottom=""
+                              bottom={null}
                               className="ui-triangle ui-dialog-triangle sc-gZMcBi cknAzr"
                               contentEditable={false}
                               controlled={true}
                               direction="up"
                               disabled={false}
                               err={null}
-                              errorMessage=""
+                              errorMessage={null}
                               focus={false}
-                              height=""
-                              id=""
-                              left=""
+                              height={null}
+                              id={null}
+                              left={null}
                               location="bottom"
+                              minHeight={null}
+                              minWidth={null}
                               nobase={true}
                               noedit={false}
                               nohover={false}
                               noripple={false}
                               notheme={false}
                               obj="Triangle"
-                              padding=""
+                              padding={null}
                               preserveAspectRatio="xMidYMid meet"
                               selected={false}
                               sizing="normal"
@@ -1118,24 +1152,24 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                               }
                               testing={true}
                               theme={null}
-                              tooltip=""
-                              top=""
+                              tooltip={null}
+                              top={null}
                               version="1.1"
                               viewBox="0 0 40 40"
                               visible={false}
-                              width=""
+                              width={null}
                               xcss={null}
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <StyledComponent
-                                bottom=""
+                                bottom={null}
                                 className="ui-triangle ui-dialog-triangle sc-gZMcBi cknAzr"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="up"
                                 disabled={false}
                                 err={null}
-                                errorMessage=""
+                                errorMessage={null}
                                 focus={false}
                                 forwardedComponent={
                                   Object {
@@ -1168,17 +1202,19 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                                   }
                                 }
                                 forwardedRef={null}
-                                height=""
-                                id=""
-                                left=""
+                                height={null}
+                                id={null}
+                                left={null}
                                 location="bottom"
+                                minHeight={null}
+                                minWidth={null}
                                 nobase={true}
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
                                 notheme={false}
                                 obj="Triangle"
-                                padding=""
+                                padding={null}
                                 preserveAspectRatio="xMidYMid meet"
                                 selected={false}
                                 sizing="normal"
@@ -1191,12 +1227,12 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                                 }
                                 testing={true}
                                 theme={null}
-                                tooltip=""
-                                top=""
+                                tooltip={null}
+                                top={null}
                                 version="1.1"
                                 viewBox="0 0 40 40"
                                 visible={false}
-                                width=""
+                                width={null}
                                 xcss={null}
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -1205,8 +1241,8 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                                   contentEditable={false}
                                   direction="up"
                                   disabled={false}
-                                  height=""
-                                  id=""
+                                  height={null}
+                                  id={null}
                                   preserveAspectRatio="xMidYMid meet"
                                   selected={false}
                                   style={
@@ -1218,7 +1254,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
                                   }
                                   version="1.1"
                                   viewBox="0 0 40 40"
-                                  width=""
+                                  width={null}
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <polygon
@@ -1259,23 +1295,25 @@ exports[`Test making the ButtonDialog invisible 1`] = `
 
 exports[`Test retrieval of ButtonDialog props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "dialogClasses": Array [],
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
+  "height": null,
   "iconName": "bomb",
   "iconStyle": "",
-  "id": "",
-  "left": "",
+  "id": null,
+  "left": null,
   "location": "bottom",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
@@ -1283,7 +1321,7 @@ Object {
   "notriangle": false,
   "obj": "ButtonDialog",
   "onClick": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {
@@ -1292,33 +1330,35 @@ Object {
   },
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "triangleClasses": Array [],
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the disabling of the ButtonDialog control 1`] = `
 <ButtonDialog
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   dialogClasses={Array []}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
+  height={null}
   iconName="bomb"
   iconStyle=""
-  id=""
-  left=""
+  id={null}
+  left={null}
   location="bottom"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -1326,7 +1366,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   notriangle={false}
   obj="ButtonDialog"
   onClick={[Function]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={
@@ -1337,30 +1377,32 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   triangleClasses={Array []}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     dialogClasses={Array []}
     direction="right"
     disabled={true}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
+    height={null}
     iconName="bomb"
     iconStyle=""
-    id=""
-    left=""
+    id={null}
+    left={null}
     location="bottom"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -1369,7 +1411,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
     obj="ButtonDialog"
     onClick={[Function]}
     onError={[Function]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
@@ -1381,11 +1423,11 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     triangleClasses={Array []}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -1394,6 +1436,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -1452,28 +1495,30 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
             id="ButtonDialog-0"
           >
             <Button
-              bottom=""
-              className=""
+              bottom={null}
+              className={null}
               contentEditable={false}
               controlled={true}
               direction="right"
               disabled={true}
               err={null}
-              errorMessage=""
+              errorMessage={null}
               focus={false}
-              height=""
+              height={null}
               iconName="bomb"
               iconStyle=""
-              id=""
-              left=""
+              id={null}
+              left={null}
               location="none"
+              minHeight={null}
+              minWidth={null}
               noedit={false}
               nohover={false}
               noripple={false}
               notheme={false}
               obj="Button"
               onClick={[Function]}
-              padding=""
+              padding={null}
               selected={false}
               sizing="normal"
               style={
@@ -1484,28 +1529,30 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
               }
               testing={true}
               theme={null}
-              tooltip=""
-              top=""
+              tooltip={null}
+              top={null}
               visible={true}
-              width=""
+              width={null}
               xcss={null}
             >
               <Wrapper
-                bottom=""
-                className=""
+                bottom={null}
+                className={null}
                 contentEditable={false}
                 controlled={true}
                 direction="right"
                 disabled={true}
                 err={null}
-                errorMessage=""
+                errorMessage={null}
                 focus={false}
-                height=""
+                height={null}
                 iconName="bomb"
                 iconStyle=""
-                id=""
-                left=""
+                id={null}
+                left={null}
                 location="none"
+                minHeight={null}
+                minWidth={null}
                 noedit={false}
                 nohover={false}
                 noripple={false}
@@ -1513,7 +1560,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                 obj="Button"
                 onClick={[Function]}
                 onError={[Function]}
-                padding=""
+                padding={null}
                 reset={false}
                 selected={false}
                 sizing="normal"
@@ -1525,10 +1572,10 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                 }
                 testing={true}
                 theme={null}
-                tooltip=""
-                top=""
+                tooltip={null}
+                top={null}
                 visible={true}
-                width=""
+                width={null}
                 xcss={null}
               >
                 <ThemeProvider
@@ -1537,6 +1584,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                       "backgroundColor": "#ffffff",
                       "borderColor": "#c0c0c0",
                       "color": "#000000",
+                      "fontFamily": "OpenSans, Georgia, serif",
                       "headerBackgroundColor": "#004358",
                       "headerForegroundColor": "#ffffff",
                       "headerHoverColor": "#ffe11a",
@@ -1651,71 +1699,75 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                         }
                       >
                         <Icon
-                          bottom=""
+                          bottom={null}
                           className=""
                           contentEditable={false}
                           controlled={true}
                           direction="right"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
-                          height=""
+                          height={null}
                           iconName="bomb"
-                          id=""
+                          id={null}
                           imageFile=""
-                          left=""
+                          left={null}
                           location="none"
+                          minHeight={null}
+                          minWidth={null}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Icon"
-                          padding=""
+                          padding={null}
                           selected={false}
                           sizing="normal"
                           style={Object {}}
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                         >
                           <Wrapper
-                            bottom=""
+                            bottom={null}
                             className=""
                             contentEditable={false}
                             controlled={true}
                             direction="right"
                             disabled={false}
                             err={null}
-                            errorMessage=""
+                            errorMessage={null}
                             focus={false}
-                            height=""
+                            height={null}
                             iconName="bomb"
-                            id=""
+                            id={null}
                             imageFile=""
-                            left=""
+                            left={null}
                             location="none"
+                            minHeight={null}
+                            minWidth={null}
                             noedit={false}
                             nohover={false}
                             noripple={false}
                             notheme={false}
                             obj="Icon"
                             onError={[Function]}
-                            padding=""
+                            padding={null}
                             reset={false}
                             selected={false}
                             sizing="normal"
                             style={Object {}}
                             testing={true}
                             theme={null}
-                            tooltip=""
-                            top=""
+                            tooltip={null}
+                            top={null}
                             visible={true}
-                            width=""
+                            width={null}
                             xcss={null}
                           >
                             <ThemeProvider
@@ -1724,6 +1776,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                                   "backgroundColor": "#ffffff",
                                   "borderColor": "#c0c0c0",
                                   "color": "#000000",
+                                  "fontFamily": "OpenSans, Georgia, serif",
                                   "headerBackgroundColor": "#004358",
                                   "headerForegroundColor": "#ffffff",
                                   "headerHoverColor": "#ffe11a",
@@ -1741,47 +1794,49 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                               }
                             >
                               <styled.i
-                                bottom=""
+                                bottom={null}
                                 className="ui-icon fa fa-fw fa-bomb"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
                                 disabled={false}
                                 err={null}
-                                errorMessage=""
+                                errorMessage={null}
                                 focus={false}
-                                height=""
+                                height={null}
                                 iconName="bomb"
-                                id=""
+                                id={null}
                                 imageFile=""
-                                left=""
+                                left={null}
                                 location="none"
+                                minHeight={null}
+                                minWidth={null}
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
                                 notheme={false}
                                 obj="Icon"
-                                padding=""
+                                padding={null}
                                 selected={false}
                                 sizing="normal"
                                 style={Object {}}
                                 testing={true}
                                 theme={null}
-                                tooltip=""
-                                top=""
+                                tooltip={null}
+                                top={null}
                                 visible={true}
-                                width=""
+                                width={null}
                                 xcss={null}
                               >
                                 <StyledComponent
-                                  bottom=""
+                                  bottom={null}
                                   className="ui-icon fa fa-fw fa-bomb"
                                   contentEditable={false}
                                   controlled={true}
                                   direction="right"
                                   disabled={false}
                                   err={null}
-                                  errorMessage=""
+                                  errorMessage={null}
                                   focus={false}
                                   forwardedComponent={
                                     Object {
@@ -1820,27 +1875,29 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                                     }
                                   }
                                   forwardedRef={null}
-                                  height=""
+                                  height={null}
                                   iconName="bomb"
-                                  id=""
+                                  id={null}
                                   imageFile=""
-                                  left=""
+                                  left={null}
                                   location="none"
+                                  minHeight={null}
+                                  minWidth={null}
                                   noedit={false}
                                   nohover={false}
                                   noripple={false}
                                   notheme={false}
                                   obj="Icon"
-                                  padding=""
+                                  padding={null}
                                   selected={false}
                                   sizing="normal"
                                   style={Object {}}
                                   testing={true}
                                   theme={null}
-                                  tooltip=""
-                                  top=""
+                                  tooltip={null}
+                                  top={null}
                                   visible={true}
-                                  width=""
+                                  width={null}
                                   xcss={null}
                                 >
                                   <i
@@ -1848,11 +1905,11 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                                     contentEditable={false}
                                     direction="right"
                                     disabled={false}
-                                    height=""
-                                    id=""
+                                    height={null}
+                                    id={null}
                                     selected={false}
                                     style={Object {}}
-                                    width=""
+                                    width={null}
                                   />
                                 </StyledComponent>
                               </styled.i>
@@ -2039,26 +2096,28 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                       visible={false}
                     >
                       <Triangle
-                        bottom=""
+                        bottom={null}
                         className="ui-dialog-triangle sc-gZMcBi cknAzr"
                         contentEditable={false}
                         controlled={true}
                         direction="up"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="bottom"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={true}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         selected={false}
                         sizing="normal"
                         style={
@@ -2069,26 +2128,28 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         visible={false}
-                        width=""
+                        width={null}
                         xcss={null}
                       >
                         <Wrapper
-                          bottom=""
+                          bottom={null}
                           className="ui-dialog-triangle sc-gZMcBi cknAzr"
                           contentEditable={false}
                           controlled={true}
                           direction="up"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="bottom"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={true}
                           noedit={false}
                           nohover={false}
@@ -2096,7 +2157,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                           notheme={false}
                           obj="Triangle"
                           onError={[Function]}
-                          padding=""
+                          padding={null}
                           reset={false}
                           selected={false}
                           sizing="normal"
@@ -2108,10 +2169,10 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           visible={false}
-                          width=""
+                          width={null}
                           xcss={null}
                         >
                           <ThemeProvider
@@ -2120,6 +2181,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                                 "backgroundColor": "#ffffff",
                                 "borderColor": "#c0c0c0",
                                 "color": "#000000",
+                                "fontFamily": "OpenSans, Georgia, serif",
                                 "headerBackgroundColor": "#004358",
                                 "headerForegroundColor": "#ffffff",
                                 "headerHoverColor": "#ffe11a",
@@ -2137,26 +2199,28 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                             }
                           >
                             <styled.svg
-                              bottom=""
+                              bottom={null}
                               className="ui-triangle ui-dialog-triangle sc-gZMcBi cknAzr"
                               contentEditable={false}
                               controlled={true}
                               direction="up"
                               disabled={false}
                               err={null}
-                              errorMessage=""
+                              errorMessage={null}
                               focus={false}
-                              height=""
-                              id=""
-                              left=""
+                              height={null}
+                              id={null}
+                              left={null}
                               location="bottom"
+                              minHeight={null}
+                              minWidth={null}
                               nobase={true}
                               noedit={false}
                               nohover={false}
                               noripple={false}
                               notheme={false}
                               obj="Triangle"
-                              padding=""
+                              padding={null}
                               preserveAspectRatio="xMidYMid meet"
                               selected={false}
                               sizing="normal"
@@ -2169,24 +2233,24 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                               }
                               testing={true}
                               theme={null}
-                              tooltip=""
-                              top=""
+                              tooltip={null}
+                              top={null}
                               version="1.1"
                               viewBox="0 0 40 40"
                               visible={false}
-                              width=""
+                              width={null}
                               xcss={null}
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <StyledComponent
-                                bottom=""
+                                bottom={null}
                                 className="ui-triangle ui-dialog-triangle sc-gZMcBi cknAzr"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="up"
                                 disabled={false}
                                 err={null}
-                                errorMessage=""
+                                errorMessage={null}
                                 focus={false}
                                 forwardedComponent={
                                   Object {
@@ -2219,17 +2283,19 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                                   }
                                 }
                                 forwardedRef={null}
-                                height=""
-                                id=""
-                                left=""
+                                height={null}
+                                id={null}
+                                left={null}
                                 location="bottom"
+                                minHeight={null}
+                                minWidth={null}
                                 nobase={true}
                                 noedit={false}
                                 nohover={false}
                                 noripple={false}
                                 notheme={false}
                                 obj="Triangle"
-                                padding=""
+                                padding={null}
                                 preserveAspectRatio="xMidYMid meet"
                                 selected={false}
                                 sizing="normal"
@@ -2242,12 +2308,12 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                                 }
                                 testing={true}
                                 theme={null}
-                                tooltip=""
-                                top=""
+                                tooltip={null}
+                                top={null}
                                 version="1.1"
                                 viewBox="0 0 40 40"
                                 visible={false}
-                                width=""
+                                width={null}
                                 xcss={null}
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -2256,8 +2322,8 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                                   contentEditable={false}
                                   direction="up"
                                   disabled={false}
-                                  height=""
-                                  id=""
+                                  height={null}
+                                  id={null}
                                   preserveAspectRatio="xMidYMid meet"
                                   selected={false}
                                   style={
@@ -2269,7 +2335,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
                                   }
                                   version="1.1"
                                   viewBox="0 0 40 40"
-                                  width=""
+                                  width={null}
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <polygon

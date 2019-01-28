@@ -7,9 +7,9 @@ import * as React from 'react';
 import {
 	Breadcrumbs,
 	Break,
-	Container,
 	Crumbs
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoBrowser extends React.Component<any, undefined> {
 
@@ -31,7 +31,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="breadcrumbsExample" title="Breadcrumbs">
+			<StyledContainer id="breadcrumbsExample" title="Breadcrumbs">
 				<h3>Basic (default)</h3>
 				<Breadcrumbs
 					disabled={this.props['disabled']}
@@ -60,7 +60,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 					onSelect={this.handleSelect}
 					sizing={this.props['sizing']}
 				/>
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

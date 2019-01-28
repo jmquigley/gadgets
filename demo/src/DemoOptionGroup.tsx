@@ -5,9 +5,9 @@ const debug = require('debug')('DemoOptionGroup');
 import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
-	Container,
 	OptionGroup
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoOptionGroup extends React.Component<any, undefined> {
 
@@ -23,7 +23,7 @@ export default class DemoOptionGroup extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="optionGroupExample" title="OptionGroup">
+			<StyledContainer id="optionGroupExample" title="OptionGroup">
 
 				<OptionGroup
 					default="option1"
@@ -39,7 +39,7 @@ export default class DemoOptionGroup extends React.Component<any, undefined> {
 					title="test options"
 				/>
 
-			</Container>
+			</StyledContainer>
 		);
 	}
 }

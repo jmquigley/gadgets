@@ -5,9 +5,9 @@ const debug = require('debug')('DemoTagList');
 import * as React from 'react';
 import {
 	Break,
-	Container,
 	TagList
 } from '../../dist/bundle';
+import {StyledContainer} from '../app';
 
 export default class DemoTagList extends React.Component<any, undefined> {
 
@@ -18,7 +18,7 @@ export default class DemoTagList extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<Container id="tagListExample" title="TagList">
+			<StyledContainer id="tagListExample" title="TagList">
 
 				<h3>Static</h3>
 				<TagList
@@ -46,7 +46,7 @@ export default class DemoTagList extends React.Component<any, undefined> {
 					useinput
 				/>
 
-		</Container>
+		</StyledContainer>
 		);
 	}
 }

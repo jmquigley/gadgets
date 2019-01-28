@@ -2,25 +2,27 @@
 
 exports[`Test creation of Tooltip location bottom 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="bottom"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -32,33 +34,35 @@ exports[`Test creation of Tooltip location bottom 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="bottom"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -71,10 +75,10 @@ exports[`Test creation of Tooltip location bottom 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -83,6 +87,7 @@ exports[`Test creation of Tooltip location bottom 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -292,26 +297,28 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat fwRXmj"
                   contentEditable={false}
                   controlled={true}
                   direction="up"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="bottom"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -322,26 +329,28 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat fwRXmj"
                     contentEditable={false}
                     controlled={true}
                     direction="up"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="bottom"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -349,7 +358,7 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -361,10 +370,10 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -373,6 +382,7 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -390,26 +400,28 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat fwRXmj"
                         contentEditable={false}
                         controlled={true}
                         direction="up"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="bottom"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -422,24 +434,24 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat fwRXmj"
                           contentEditable={false}
                           controlled={true}
                           direction="up"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -472,17 +484,19 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="bottom"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -495,12 +509,12 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -509,8 +523,8 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                             contentEditable={false}
                             direction="up"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -522,7 +536,7 @@ exports[`Test creation of Tooltip location bottom 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -546,25 +560,27 @@ exports[`Test creation of Tooltip location bottom 1`] = `
 
 exports[`Test creation of Tooltip location bottomLeft 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="bottomLeft"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -576,33 +592,35 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="bottomLeft"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -615,10 +633,10 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -627,6 +645,7 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -836,26 +855,28 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat laCcFT"
                   contentEditable={false}
                   controlled={true}
                   direction="up"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="bottomLeft"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -866,26 +887,28 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat laCcFT"
                     contentEditable={false}
                     controlled={true}
                     direction="up"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="bottomLeft"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -893,7 +916,7 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -905,10 +928,10 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -917,6 +940,7 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -934,26 +958,28 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat laCcFT"
                         contentEditable={false}
                         controlled={true}
                         direction="up"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="bottomLeft"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -966,24 +992,24 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat laCcFT"
                           contentEditable={false}
                           controlled={true}
                           direction="up"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -1016,17 +1042,19 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="bottomLeft"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -1039,12 +1067,12 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -1053,8 +1081,8 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                             contentEditable={false}
                             direction="up"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -1066,7 +1094,7 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -1090,25 +1118,27 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
 
 exports[`Test creation of Tooltip location bottomRight 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="bottomRight"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -1120,33 +1150,35 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="bottomRight"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -1159,10 +1191,10 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -1171,6 +1203,7 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -1380,26 +1413,28 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat dELass"
                   contentEditable={false}
                   controlled={true}
                   direction="up"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="bottomRight"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -1410,26 +1445,28 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat dELass"
                     contentEditable={false}
                     controlled={true}
                     direction="up"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="bottomRight"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -1437,7 +1474,7 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -1449,10 +1486,10 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -1461,6 +1498,7 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -1478,26 +1516,28 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat dELass"
                         contentEditable={false}
                         controlled={true}
                         direction="up"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="bottomRight"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -1510,24 +1550,24 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat dELass"
                           contentEditable={false}
                           controlled={true}
                           direction="up"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -1560,17 +1600,19 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="bottomRight"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -1583,12 +1625,12 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -1597,8 +1639,8 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                             contentEditable={false}
                             direction="up"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -1610,7 +1652,7 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -1634,25 +1676,27 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
 
 exports[`Test creation of Tooltip location middle 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="middle"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -1664,33 +1708,35 @@ exports[`Test creation of Tooltip location middle 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="middle"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -1703,10 +1749,10 @@ exports[`Test creation of Tooltip location middle 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -1715,6 +1761,7 @@ exports[`Test creation of Tooltip location middle 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -1924,26 +1971,28 @@ exports[`Test creation of Tooltip location middle 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat gmcxum"
                   contentEditable={false}
                   controlled={true}
                   direction="left"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="middle"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -1954,26 +2003,28 @@ exports[`Test creation of Tooltip location middle 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat gmcxum"
                     contentEditable={false}
                     controlled={true}
                     direction="left"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="middle"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -1981,7 +2032,7 @@ exports[`Test creation of Tooltip location middle 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -1993,10 +2044,10 @@ exports[`Test creation of Tooltip location middle 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -2005,6 +2056,7 @@ exports[`Test creation of Tooltip location middle 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -2022,26 +2074,28 @@ exports[`Test creation of Tooltip location middle 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat gmcxum"
                         contentEditable={false}
                         controlled={true}
                         direction="left"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="middle"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -2054,24 +2108,24 @@ exports[`Test creation of Tooltip location middle 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat gmcxum"
                           contentEditable={false}
                           controlled={true}
                           direction="left"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -2104,17 +2158,19 @@ exports[`Test creation of Tooltip location middle 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="middle"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -2127,12 +2183,12 @@ exports[`Test creation of Tooltip location middle 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -2141,8 +2197,8 @@ exports[`Test creation of Tooltip location middle 1`] = `
                             contentEditable={false}
                             direction="left"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -2154,7 +2210,7 @@ exports[`Test creation of Tooltip location middle 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -2178,25 +2234,27 @@ exports[`Test creation of Tooltip location middle 1`] = `
 
 exports[`Test creation of Tooltip location middleLeft 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="middleLeft"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -2208,33 +2266,35 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="middleLeft"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -2247,10 +2307,10 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -2259,6 +2319,7 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -2468,26 +2529,28 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat VCRvk"
                   contentEditable={false}
                   controlled={true}
                   direction="right"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="middleLeft"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -2498,26 +2561,28 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat VCRvk"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="middleLeft"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -2525,7 +2590,7 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -2537,10 +2602,10 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -2549,6 +2614,7 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -2566,26 +2632,28 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat VCRvk"
                         contentEditable={false}
                         controlled={true}
                         direction="right"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="middleLeft"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -2598,24 +2666,24 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat VCRvk"
                           contentEditable={false}
                           controlled={true}
                           direction="right"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -2648,17 +2716,19 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="middleLeft"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -2671,12 +2741,12 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -2685,8 +2755,8 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                             contentEditable={false}
                             direction="right"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -2698,7 +2768,7 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -2722,25 +2792,27 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
 
 exports[`Test creation of Tooltip location middleRight 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="middleRight"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -2752,33 +2824,35 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="middleRight"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -2791,10 +2865,10 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -2803,6 +2877,7 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -3012,26 +3087,28 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat gmcxum"
                   contentEditable={false}
                   controlled={true}
                   direction="left"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="middleRight"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -3042,26 +3119,28 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat gmcxum"
                     contentEditable={false}
                     controlled={true}
                     direction="left"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="middleRight"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -3069,7 +3148,7 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -3081,10 +3160,10 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -3093,6 +3172,7 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -3110,26 +3190,28 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat gmcxum"
                         contentEditable={false}
                         controlled={true}
                         direction="left"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="middleRight"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -3142,24 +3224,24 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat gmcxum"
                           contentEditable={false}
                           controlled={true}
                           direction="left"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -3192,17 +3274,19 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="middleRight"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -3215,12 +3299,12 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -3229,8 +3313,8 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                             contentEditable={false}
                             direction="left"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -3242,7 +3326,7 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -3266,25 +3350,27 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
 
 exports[`Test creation of Tooltip location none 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -3296,33 +3382,35 @@ exports[`Test creation of Tooltip location none 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -3335,10 +3423,10 @@ exports[`Test creation of Tooltip location none 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -3347,6 +3435,7 @@ exports[`Test creation of Tooltip location none 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -3556,26 +3645,28 @@ exports[`Test creation of Tooltip location none 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat esaNDS"
                   contentEditable={false}
                   controlled={true}
                   direction="left"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="none"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -3586,26 +3677,28 @@ exports[`Test creation of Tooltip location none 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat esaNDS"
                     contentEditable={false}
                     controlled={true}
                     direction="left"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="none"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -3613,7 +3706,7 @@ exports[`Test creation of Tooltip location none 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -3625,10 +3718,10 @@ exports[`Test creation of Tooltip location none 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -3637,6 +3730,7 @@ exports[`Test creation of Tooltip location none 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -3654,26 +3748,28 @@ exports[`Test creation of Tooltip location none 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat esaNDS"
                         contentEditable={false}
                         controlled={true}
                         direction="left"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="none"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -3686,24 +3782,24 @@ exports[`Test creation of Tooltip location none 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat esaNDS"
                           contentEditable={false}
                           controlled={true}
                           direction="left"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -3736,17 +3832,19 @@ exports[`Test creation of Tooltip location none 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="none"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -3759,12 +3857,12 @@ exports[`Test creation of Tooltip location none 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -3773,8 +3871,8 @@ exports[`Test creation of Tooltip location none 1`] = `
                             contentEditable={false}
                             direction="left"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -3786,7 +3884,7 @@ exports[`Test creation of Tooltip location none 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -3810,25 +3908,27 @@ exports[`Test creation of Tooltip location none 1`] = `
 
 exports[`Test creation of Tooltip location top 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="top"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -3840,33 +3940,35 @@ exports[`Test creation of Tooltip location top 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="top"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -3879,10 +3981,10 @@ exports[`Test creation of Tooltip location top 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -3891,6 +3993,7 @@ exports[`Test creation of Tooltip location top 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -4100,26 +4203,28 @@ exports[`Test creation of Tooltip location top 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat esaNDS"
                   contentEditable={false}
                   controlled={true}
                   direction="down"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="top"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -4130,26 +4235,28 @@ exports[`Test creation of Tooltip location top 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat esaNDS"
                     contentEditable={false}
                     controlled={true}
                     direction="down"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="top"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -4157,7 +4264,7 @@ exports[`Test creation of Tooltip location top 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -4169,10 +4276,10 @@ exports[`Test creation of Tooltip location top 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -4181,6 +4288,7 @@ exports[`Test creation of Tooltip location top 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -4198,26 +4306,28 @@ exports[`Test creation of Tooltip location top 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat esaNDS"
                         contentEditable={false}
                         controlled={true}
                         direction="down"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="top"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -4230,24 +4340,24 @@ exports[`Test creation of Tooltip location top 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat esaNDS"
                           contentEditable={false}
                           controlled={true}
                           direction="down"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -4280,17 +4390,19 @@ exports[`Test creation of Tooltip location top 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="top"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -4303,12 +4415,12 @@ exports[`Test creation of Tooltip location top 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -4317,8 +4429,8 @@ exports[`Test creation of Tooltip location top 1`] = `
                             contentEditable={false}
                             direction="down"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -4330,7 +4442,7 @@ exports[`Test creation of Tooltip location top 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -4354,25 +4466,27 @@ exports[`Test creation of Tooltip location top 1`] = `
 
 exports[`Test creation of Tooltip location topLeft 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="topLeft"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -4384,33 +4498,35 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="topLeft"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -4423,10 +4539,10 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -4435,6 +4551,7 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -4644,26 +4761,28 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat hoKlqd"
                   contentEditable={false}
                   controlled={true}
                   direction="down"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="topLeft"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -4674,26 +4793,28 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat hoKlqd"
                     contentEditable={false}
                     controlled={true}
                     direction="down"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="topLeft"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -4701,7 +4822,7 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -4713,10 +4834,10 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -4725,6 +4846,7 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -4742,26 +4864,28 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat hoKlqd"
                         contentEditable={false}
                         controlled={true}
                         direction="down"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="topLeft"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -4774,24 +4898,24 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat hoKlqd"
                           contentEditable={false}
                           controlled={true}
                           direction="down"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -4824,17 +4948,19 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="topLeft"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -4847,12 +4973,12 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -4861,8 +4987,8 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                             contentEditable={false}
                             direction="down"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -4874,7 +5000,7 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -4898,25 +5024,27 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
 
 exports[`Test creation of Tooltip location topRight 1`] = `
 <Tooltip
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="topRight"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
-  padding=""
+  padding={null}
   parent={null}
   selected={false}
   sizing="normal"
@@ -4928,33 +5056,35 @@ exports[`Test creation of Tooltip location topRight 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
-    left=""
+    height={null}
+    id={null}
+    left={null}
     location="topRight"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
     notheme={false}
     obj="Tooltip"
     onError={[Function]}
-    padding=""
+    padding={null}
     parent={null}
     reset={false}
     selected={false}
@@ -4967,10 +5097,10 @@ exports[`Test creation of Tooltip location topRight 1`] = `
     }
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -4979,6 +5109,7 @@ exports[`Test creation of Tooltip location topRight 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -5188,26 +5319,28 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                 }
               >
                 <Triangle
-                  bottom=""
+                  bottom={null}
                   className="sc-htpNat ghetu"
                   contentEditable={false}
                   controlled={true}
                   direction="down"
                   disabled={false}
                   err={null}
-                  errorMessage=""
+                  errorMessage={null}
                   focus={false}
-                  height=""
-                  id=""
-                  left=""
+                  height={null}
+                  id={null}
+                  left={null}
                   location="topRight"
+                  minHeight={null}
+                  minWidth={null}
                   nobase={false}
                   noedit={false}
                   nohover={false}
                   noripple={false}
                   notheme={false}
                   obj="Triangle"
-                  padding=""
+                  padding={null}
                   selected={false}
                   sizing="small"
                   style={
@@ -5218,26 +5351,28 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                   }
                   testing={true}
                   theme={null}
-                  tooltip=""
-                  top=""
+                  tooltip={null}
+                  top={null}
                   visible={true}
-                  width=""
+                  width={null}
                   xcss={null}
                 >
                   <Wrapper
-                    bottom=""
+                    bottom={null}
                     className="sc-htpNat ghetu"
                     contentEditable={false}
                     controlled={true}
                     direction="down"
                     disabled={false}
                     err={null}
-                    errorMessage=""
+                    errorMessage={null}
                     focus={false}
-                    height=""
-                    id=""
-                    left=""
+                    height={null}
+                    id={null}
+                    left={null}
                     location="topRight"
+                    minHeight={null}
+                    minWidth={null}
                     nobase={false}
                     noedit={false}
                     nohover={false}
@@ -5245,7 +5380,7 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                     notheme={false}
                     obj="Triangle"
                     onError={[Function]}
-                    padding=""
+                    padding={null}
                     reset={false}
                     selected={false}
                     sizing="small"
@@ -5257,10 +5392,10 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                     }
                     testing={true}
                     theme={null}
-                    tooltip=""
-                    top=""
+                    tooltip={null}
+                    top={null}
                     visible={true}
-                    width=""
+                    width={null}
                     xcss={null}
                   >
                     <ThemeProvider
@@ -5269,6 +5404,7 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                           "backgroundColor": "#ffffff",
                           "borderColor": "#c0c0c0",
                           "color": "#000000",
+                          "fontFamily": "OpenSans, Georgia, serif",
                           "headerBackgroundColor": "#004358",
                           "headerForegroundColor": "#ffffff",
                           "headerHoverColor": "#ffe11a",
@@ -5286,26 +5422,28 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                       }
                     >
                       <styled.svg
-                        bottom=""
+                        bottom={null}
                         className="ui-triangle sc-htpNat ghetu"
                         contentEditable={false}
                         controlled={true}
                         direction="down"
                         disabled={false}
                         err={null}
-                        errorMessage=""
+                        errorMessage={null}
                         focus={false}
-                        height=""
-                        id=""
-                        left=""
+                        height={null}
+                        id={null}
+                        left={null}
                         location="topRight"
+                        minHeight={null}
+                        minWidth={null}
                         nobase={false}
                         noedit={false}
                         nohover={false}
                         noripple={false}
                         notheme={false}
                         obj="Triangle"
-                        padding=""
+                        padding={null}
                         preserveAspectRatio="xMidYMid meet"
                         selected={false}
                         sizing="small"
@@ -5318,24 +5456,24 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                         }
                         testing={true}
                         theme={null}
-                        tooltip=""
-                        top=""
+                        tooltip={null}
+                        top={null}
                         version="1.1"
                         viewBox="0 0 40 40"
                         visible={true}
-                        width=""
+                        width={null}
                         xcss={null}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <StyledComponent
-                          bottom=""
+                          bottom={null}
                           className="ui-triangle sc-htpNat ghetu"
                           contentEditable={false}
                           controlled={true}
                           direction="down"
                           disabled={false}
                           err={null}
-                          errorMessage=""
+                          errorMessage={null}
                           focus={false}
                           forwardedComponent={
                             Object {
@@ -5368,17 +5506,19 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          height=""
-                          id=""
-                          left=""
+                          height={null}
+                          id={null}
+                          left={null}
                           location="topRight"
+                          minHeight={null}
+                          minWidth={null}
                           nobase={false}
                           noedit={false}
                           nohover={false}
                           noripple={false}
                           notheme={false}
                           obj="Triangle"
-                          padding=""
+                          padding={null}
                           preserveAspectRatio="xMidYMid meet"
                           selected={false}
                           sizing="small"
@@ -5391,12 +5531,12 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                           }
                           testing={true}
                           theme={null}
-                          tooltip=""
-                          top=""
+                          tooltip={null}
+                          top={null}
                           version="1.1"
                           viewBox="0 0 40 40"
                           visible={true}
-                          width=""
+                          width={null}
                           xcss={null}
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -5405,8 +5545,8 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                             contentEditable={false}
                             direction="down"
                             disabled={false}
-                            height=""
-                            id=""
+                            height={null}
+                            id={null}
                             preserveAspectRatio="xMidYMid meet"
                             selected={false}
                             style={
@@ -5418,7 +5558,7 @@ exports[`Test creation of Tooltip location topRight 1`] = `
                             }
                             version="1.1"
                             viewBox="0 0 40 40"
-                            width=""
+                            width={null}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <polygon
@@ -5442,26 +5582,28 @@ exports[`Test creation of Tooltip location topRight 1`] = `
 
 exports[`Test creation of a Tooltip control 1`] = `
 <Wrapper
-  bottom=""
+  bottom={null}
   className="test-class"
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="middleRight"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
   onError={[Function]}
-  padding=""
+  padding={null}
   parent={null}
   reset={false}
   selected={false}
@@ -5474,10 +5616,10 @@ exports[`Test creation of a Tooltip control 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -5522,26 +5664,28 @@ exports[`Test creation of a Tooltip control 1`] = `
 
 exports[`Test disabling of a Tooltip 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="top"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
   onError={[Function]}
-  padding=""
+  padding={null}
   parent={null}
   reset={false}
   selected={false}
@@ -5554,10 +5698,10 @@ exports[`Test disabling of a Tooltip 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -5600,26 +5744,28 @@ exports[`Test disabling of a Tooltip 1`] = `
 
 exports[`Test making a Tooltip invisible 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
-  left=""
+  height={null}
+  id={null}
+  left={null}
   location="top"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Tooltip"
   onError={[Function]}
-  padding=""
+  padding={null}
   parent={null}
   reset={false}
   selected={false}
@@ -5632,10 +5778,10 @@ exports[`Test making a Tooltip invisible 1`] = `
   }
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={false}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -5678,26 +5824,28 @@ exports[`Test making a Tooltip invisible 1`] = `
 
 exports[`Test retrieval of Tooltip props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
-  "left": "",
+  "height": null,
+  "id": null,
+  "left": null,
   "location": "top",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
   "notheme": false,
   "obj": "Tooltip",
-  "padding": "",
+  "padding": null,
   "parent": null,
   "selected": false,
   "sizing": "normal",
@@ -5707,10 +5855,10 @@ Object {
   },
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;

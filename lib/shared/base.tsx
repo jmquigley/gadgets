@@ -68,8 +68,6 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	constructor(props: P, defaultStyles: Styles = {}) {
 		super(props);
 
-		BaseComponent.defaultStyles = defaultStyles;
-
 		// If an id value is not given as a prop, then generate a unique id.  If the
 		// component is under test, then 0 is used for the UUID value (to make it
 		// predictable
@@ -84,6 +82,8 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		} else {
 			this._theme = getTheme();
 		}
+
+		BaseComponent.defaultStyles = defaultStyles;
 	}
 
 	get defaultSize(): number {

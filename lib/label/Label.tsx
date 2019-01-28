@@ -78,7 +78,7 @@ export interface LabelProps extends BaseProps {
 	onKeyDown?: any;
 	onKeyPress?: any;
 	onUpdate?: any;
-	text?: string;
+	text?: string | number;
 	useedit?: boolean;
 }
 
@@ -131,9 +131,9 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		super(props, Label.defaultProps.style);
 		this.state = {...getDefaultLabelState(),
 			editable: props.useedit,
-			originalText: props.text,
-			previousText: props.text,
-			text: props.text
+			originalText: String(props.text),
+			previousText: String(props.text),
+			text: String(props.text)
 		};
 	}
 
@@ -237,9 +237,10 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	public static getDerivedStateFromProps(props: LabelProps, state: LabelState) {
 		const newState: LabelState = {...state};
 
-		if (props.text !== newState.originalText) {
+		if (String(props.text) !== newState.originalText) {
 			newState.previousText = newState.text;
-			newState.text = props.text;
+			newState.text = String(props.text);
+			newState.originalText = String(props.text);
 		}
 
 		return super.getDerivedStateFromProps(props, newState);

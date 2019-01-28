@@ -2,18 +2,18 @@
 
 exports[`Creation of the Dropdown control 1`] = `
 <Wrapper
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   defaultVal="idstr2"
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   initialItem=""
   items={
     Array [
@@ -31,8 +31,10 @@ exports[`Creation of the Dropdown control 1`] = `
       },
     ]
   }
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
@@ -40,17 +42,17 @@ exports[`Creation of the Dropdown control 1`] = `
   obj="Dropdown"
   onError={[Function]}
   onSelect={[Function]}
-  padding=""
+  padding={null}
   reset={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <styled.div
@@ -96,18 +98,18 @@ exports[`Creation of the Dropdown control 1`] = `
 
 exports[`Disable the Dropdown control 1`] = `
 <Dropdown
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   defaultVal="idstr2"
   direction="right"
   disabled={true}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   initialItem=""
   items={
     Array [
@@ -125,39 +127,41 @@ exports[`Disable the Dropdown control 1`] = `
       },
     ]
   }
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Dropdown"
   onSelect={[MockFunction]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     defaultVal="idstr2"
     direction="right"
     disabled={true}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
+    height={null}
+    id={null}
     initialItem=""
     items={
       Array [
@@ -175,8 +179,10 @@ exports[`Disable the Dropdown control 1`] = `
         },
       ]
     }
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -184,17 +190,17 @@ exports[`Disable the Dropdown control 1`] = `
     obj="Dropdown"
     onError={[Function]}
     onSelect={[MockFunction]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -203,6 +209,7 @@ exports[`Disable the Dropdown control 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -368,18 +375,18 @@ exports[`Disable the Dropdown control 1`] = `
 
 exports[`Make the Dropdown control invisible 1`] = `
 <Dropdown
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   defaultVal="idstr2"
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   initialItem=""
   items={
     Array [
@@ -397,39 +404,41 @@ exports[`Make the Dropdown control invisible 1`] = `
       },
     ]
   }
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Dropdown"
   onSelect={[MockFunction]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={false}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     defaultVal="idstr2"
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
+    height={null}
+    id={null}
     initialItem=""
     items={
       Array [
@@ -447,8 +456,10 @@ exports[`Make the Dropdown control invisible 1`] = `
         },
       ]
     }
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -456,17 +467,17 @@ exports[`Make the Dropdown control invisible 1`] = `
     obj="Dropdown"
     onError={[Function]}
     onSelect={[MockFunction]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={false}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -475,6 +486,7 @@ exports[`Make the Dropdown control invisible 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
@@ -640,56 +652,58 @@ exports[`Make the Dropdown control invisible 1`] = `
 
 exports[`Test retrieval of Dropdown props object 1`] = `
 Object {
-  "bottom": "",
+  "bottom": null,
   "children": null,
-  "className": "",
+  "className": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
   "err": null,
-  "errorMessage": "",
+  "errorMessage": null,
   "focus": false,
-  "height": "",
-  "id": "",
+  "height": null,
+  "id": null,
   "initialItem": "",
   "items": Array [],
-  "left": "",
+  "left": null,
   "location": "none",
+  "minHeight": null,
+  "minWidth": null,
   "noedit": false,
   "nohover": false,
   "noripple": false,
   "notheme": false,
   "obj": "Dropdown",
   "onSelect": [Function],
-  "padding": "",
+  "padding": null,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
   "theme": null,
-  "tooltip": "",
-  "top": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
-  "width": "",
+  "width": null,
   "xcss": null,
 }
 `;
 
 exports[`Test the Dropdown click event 1`] = `
 <Dropdown
-  bottom=""
-  className=""
+  bottom={null}
+  className={null}
   contentEditable={false}
   controlled={true}
   defaultVal="idstr1"
   direction="right"
   disabled={false}
   err={null}
-  errorMessage=""
+  errorMessage={null}
   focus={false}
-  height=""
-  id=""
+  height={null}
+  id={null}
   initialItem=""
   items={
     Array [
@@ -707,39 +721,41 @@ exports[`Test the Dropdown click event 1`] = `
       },
     ]
   }
-  left=""
+  left={null}
   location="none"
+  minHeight={null}
+  minWidth={null}
   noedit={false}
   nohover={false}
   noripple={false}
   notheme={false}
   obj="Dropdown"
   onSelect={[MockFunction]}
-  padding=""
+  padding={null}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
-  top=""
+  tooltip={null}
+  top={null}
   visible={true}
-  width=""
+  width={null}
   xcss={null}
 >
   <Wrapper
-    bottom=""
-    className=""
+    bottom={null}
+    className={null}
     contentEditable={false}
     controlled={true}
     defaultVal="idstr1"
     direction="right"
     disabled={false}
     err={null}
-    errorMessage=""
+    errorMessage={null}
     focus={false}
-    height=""
-    id=""
+    height={null}
+    id={null}
     initialItem=""
     items={
       Array [
@@ -757,8 +773,10 @@ exports[`Test the Dropdown click event 1`] = `
         },
       ]
     }
-    left=""
+    left={null}
     location="none"
+    minHeight={null}
+    minWidth={null}
     noedit={false}
     nohover={false}
     noripple={false}
@@ -766,17 +784,17 @@ exports[`Test the Dropdown click event 1`] = `
     obj="Dropdown"
     onError={[Function]}
     onSelect={[MockFunction]}
-    padding=""
+    padding={null}
     reset={false}
     selected={false}
     sizing="normal"
     style={Object {}}
     testing={true}
     theme={null}
-    tooltip=""
-    top=""
+    tooltip={null}
+    top={null}
     visible={true}
-    width=""
+    width={null}
     xcss={null}
   >
     <ThemeProvider
@@ -785,6 +803,7 @@ exports[`Test the Dropdown click event 1`] = `
           "backgroundColor": "#ffffff",
           "borderColor": "#c0c0c0",
           "color": "#000000",
+          "fontFamily": "OpenSans, Georgia, serif",
           "headerBackgroundColor": "#004358",
           "headerForegroundColor": "#ffffff",
           "headerHoverColor": "#ffe11a",
