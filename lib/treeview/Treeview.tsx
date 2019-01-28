@@ -100,7 +100,7 @@
 
 'use strict';
 
-const debug = require('debug')('Treeview');
+// const debug = require('debug')('Treeview');
 
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
@@ -462,7 +462,6 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 	@autobind
 	private handleSearchFinish(matches: NodeData[]) {
-		debug('handleSearchFinish: %O', matches);
 		const searchFocusIndex: number =
 			matches.length > 0 ? this.state.searchFocusIndex % matches.length : 0;
 
