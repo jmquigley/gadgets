@@ -46,7 +46,7 @@
 
 'use strict';
 
-const debug = require('debug')('Tooltip');
+// const debug = require('debug')('Tooltip');
 
 import autobind from 'autobind-decorator';
 import {cloneDeep} from 'lodash';
@@ -284,9 +284,6 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 
 	public componentDidMount() {
 		const parent = document.getElementById(this.props.parent);
-
-		debug('componentDidMount -> key: %o, parent: %O', this.props.parent, parent);
-
 		if (parent) {
 			parent.addEventListener('mouseenter', this.handleMouseEnter);
 			parent.addEventListener('mouseleave', this.handleMouseLeave);

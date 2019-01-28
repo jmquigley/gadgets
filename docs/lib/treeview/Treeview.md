@@ -26,7 +26,7 @@ prop.  The `children` prop is an array on the parent node of the child nodes.
 Each of these nodes are also potential parent, etc.
 
 ## Screen:
-<img src="https://github.com/jmquigley/gadgets/blob/master/images/treeview.png" width="40%" />
+<img src="https://github.com/jmquigley/gadgets/blob/master/images/treeview.png" width="30%" />
 
 ## Examples:
 
@@ -65,15 +65,25 @@ this.state = {
 ## API
 #### Events
 - `onAdd(tvi: TreeviewItem, treeData: TreeviewItem[])` - invoked when a new node is
-added to the tree via the "+" add button (when highlighting the parent node).  The
-tvi value is the parent node.
+added to the tree via the "+" add button (when highlighting the parent node). The
+tvi represents the value added to the tree.
 - `onChange(treeData: {TreeviewItem[]}) ([])` - The array of TreeItem nodes
 used to represent the current state of the tree.
+- `onCollapse(treeData: TreeviewItem[])` - invoked when the full tree is collapsed
+via the collapse all button
 - `onDelete(tvi: TreeviewItem, treeData: TreeviewItem[]` - invoked when a node is
 removed from the tree.  The tvi value is the node that was deleted.
-- 'onSearch(tvi: TreeviewItem)` - invoked when a search is performed.  It returns
+- `onExpand(treeData: TreeviewItem[])` - invoked when the full tree is expanded
+via the expand all button
+- `onSearch(tvi: TreeviewItem)` - invoked when a search is performed.  It returns
 the current item found in the search.  As moving from previous/next the node is
 sent to this callback.
+- `onSelect(tvi: TreeviewItem)` - invoked when a tree item is selected.  The node
+selected is passed to the callback.
+- `onUpdate(current: TreeviewItem, previous: TreeviewItem, treeData: TreeviewItem[])` -
+invoked when the contents of a tree node (title) have been changed.  It passes
+a reference to the new node (current), the previous node values before the change
+and the new treeData once the change has been applied.
 
 #### Styles
 - `ui-treeview` - applied to the SortableTree component on the top `div`

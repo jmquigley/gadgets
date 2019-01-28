@@ -73,6 +73,7 @@ This will create a control with a custom alphanumeric validation routine.
 - `onBlur` - Invoked when focus on control is lost.
 - `onChange` - Invoked each time a key is pressed.  The validation routine is
 also called with each key.
+- `onClear` - Invoked when the clear button is pressed in a search text control
 - `onKeyDown` - Invoked when a key is pressed.  The escape key is checked
 and if pressed the input is reverted to its previous setting.
 - `onKeyPress` - Invoked when a key pressed.  When the "Enter" key is pressed

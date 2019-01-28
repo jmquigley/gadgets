@@ -14,6 +14,8 @@ const theme: ThemeProps = {
 	hoverColor: Color.silver,
 	inputBorderColor: Color.silver,
 	itemHoverColor: ColorScheme.c3,
+	searchFocus: Color.success,
+	searchMatch: Color.error,
 	selectedBackgroundColor: ColorScheme.c2,
 	selectedForegroundColor: ColorScheme.c4,
 	titleBarBackgroundColor: ColorScheme.c1,

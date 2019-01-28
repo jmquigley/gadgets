@@ -43,7 +43,7 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 
 	@autobind
 	private handleAdd(tvi: TreeviewItem, treeData: TreeviewItem[]) {
-		debug('adding node to tree at parent: %O, treeData: %O', tvi, treeData);
+		debug('adding node to tree: %o, treeData: %O', tvi.node.title, treeData);
 		this.setState({treeData});
 	}
 
@@ -54,14 +54,36 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 	}
 
 	@autobind
+	private handleCollapse(treeData: any) {
+		debug('collapsing tree: %O', treeData);
+	}
+
+	@autobind
 	private handleDelete(tvi: TreeviewItem, treeData: TreeviewItem[]) {
-		debug('removing node from tree: %O, treeData: %O', tvi, treeData);
+		debug('removing node from tree: %o, treeData: %O', tvi.node.title, treeData);
 		this.setState({treeData});
 	}
 
 	@autobind
+	private handleExpand(treeData: any) {
+		debug('expanding tree: %O', treeData);
+	}
+
+	@autobind
+	private handleSearch(tvi: TreeviewItem) {
+		debug('found search node: %o', tvi.node.title);
+	}
+
+	@autobind
 	private handleSelect(tvi: TreeviewItem) {
-		debug(tvi);
+		debug('selecting node %o: %O', tvi.node.title, tvi);
+	}
+
+	@autobind
+	private handleUpdate(current: TreeviewItem, previous: TreeviewItem, treeData: TreeviewItem[]) {
+		debug('updating -> current: %O, previous: %O', current, previous, treeData);
+		this.setState({treeData});
+
 	}
 
 	public render() {
@@ -73,8 +95,12 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 					notooltip
 					onAdd={this.handleAdd}
 					onChange={this.handleChange}
+					onCollapse={this.handleCollapse}
 					onDelete={this.handleDelete}
+					onExpand={this.handleExpand}
+					onSearch={this.handleSearch}
 					onSelect={this.handleSelect}
+					onUpdate={this.handleUpdate}
 					sizing={this.props['sizing']}
 					treeData={this.state.treeData}
 				/>

@@ -63,15 +63,25 @@
  * ## API
  * #### Events
  * - `onAdd(tvi: TreeviewItem, treeData: TreeviewItem[])` - invoked when a new node is
- * added to the tree via the "+" add button (when highlighting the parent node).  The
- * tvi value is the parent node.
+ * added to the tree via the "+" add button (when highlighting the parent node). The
+ * tvi represents the value added to the tree.
  * - `onChange(treeData: {TreeviewItem[]}) ([])` - The array of TreeItem nodes
  * used to represent the current state of the tree.
+ * - `onCollapse(treeData: TreeviewItem[])` - invoked when the full tree is collapsed
+ * via the collapse all button
  * - `onDelete(tvi: TreeviewItem, treeData: TreeviewItem[]` - invoked when a node is
  * removed from the tree.  The tvi value is the node that was deleted.
- * - 'onSearch(tvi: TreeviewItem)` - invoked when a search is performed.  It returns
+ * - `onExpand(treeData: TreeviewItem[])` - invoked when the full tree is expanded
+ * via the expand all button
+ * - `onSearch(tvi: TreeviewItem)` - invoked when a search is performed.  It returns
  * the current item found in the search.  As moving from previous/next the node is
  * sent to this callback.
+ * - `onSelect(tvi: TreeviewItem)` - invoked when a tree item is selected.  The node
+ * selected is passed to the callback.
+ * - `onUpdate(current: TreeviewItem, previous: TreeviewItem, treeData: TreeviewItem[])` -
+ * invoked when the contents of a tree node (title) have been changed.  It passes
+ * a reference to the new node (current), the previous node values before the change
+ * and the new treeData once the change has been applied.
  *
  * #### Styles
  * - `ui-treeview` - applied to the SortableTree component on the top `div`
@@ -97,6 +107,8 @@ import {cloneDeep} from 'lodash';
 import * as React from 'react';
 import SortableTree, {
 	addNodeUnderParent,
+	changeNodeAtPath,
+	getVisibleNodeInfoAtIndex,
 	NodeData,
 	removeNodeAtPath,
 	toggleExpandedForAll,
@@ -134,9 +146,14 @@ export interface TreeviewProps extends BaseProps {
 	defaultTitle: string;
 	onAdd(node: TreeviewItem, treeData: any[]): void;
 	onChange(treeData: any[]): void;
+	onCollapse(treeData: any[]): void;
 	onDelete(node: TreeviewItem, treeData: any[]): void;
+	onExpand(treeData: any[]): void;
+	onSearch(node: TreeviewItem): void;
 	onSelect(node: TreeviewItem): void;
+	onUpdate(node: TreeviewItem, previous: TreeviewItem, treeData: any[]): void;
 	treeData: any[];
+	usehidden: boolean;
 }
 
 export function getDefaultTreeviewProps(): TreeviewProps {
@@ -148,23 +165,32 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		obj: 'Treeview',
 		onAdd: nilEvent,
 		onChange: nilEvent,
+		onCollapse: nilEvent,
 		onDelete: nilEvent,
+		onExpand: nilEvent,
+		onSearch: nilEvent,
 		onSelect: nilEvent,
-		treeData: []
+		onUpdate: nilEvent,
+		treeData: [],
+		usehidden: true
 	});
 }
 
 export interface TreeviewState extends BaseState {
+	matches?: NodeData[];
 	search?: string;
 	searchFocusIndex?: number;
 	searchFoundCount?: number;
+	selectedIndex?: number;
 }
 
 export function getDefaultTreeviewState(): TreeviewState {
 	return cloneDeep({...getDefaultBaseState('ui-treeview'),
+		matches: [],
 		search: '',
 		searchFocusIndex: 0,
-		searchFoundCount: null
+		searchFoundCount: null,
+		selectedIndex: 0
 	});
 }
 
@@ -179,6 +205,14 @@ const SortableTreeView: any = styled(SortableTree)`
 	.rst__rowLabel {
 		padding-right: 0;
 		width: 100%;
+	}
+
+	.rst__rowSearchMatch {
+		outline: solid 2px ${(props: TreeviewProps) => props.theme.searchMatch};
+	}
+
+	.rst__rowSearchFocus {
+		outline: solid 2px ${(props: TreeviewProps) => props.theme.searchFocus};
 	}
 
 	.rst__rowTitle {
@@ -233,12 +267,24 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	}
 
 	@autobind
+	private clearSearch() {
+		this.setState({
+			matches: [],
+			search: '',
+			searchFocusIndex: 0,
+			searchFoundCount: 0
+		});
+	}
+
+	@autobind
 	private customNodeProperties(tvi: TreeviewItem) {
+		// overrides the string title to use Item in its place.  This allows for
+		// the + add a new node under this one or to remove the current node
 		return {
 			title: (
 				<StyledItem
-					hiddenLeftButton={true}
-					hiddenRightButton={true}
+					hiddenLeftButton={this.props.usehidden}
+					hiddenRightButton={this.props.usehidden}
 					layout={TitleLayout.none}
 					leftButton={
 						<StyledButtonCircle
@@ -247,12 +293,20 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 							sizing={BaseComponent.prev(this.props.sizing).type}
 							style={{
 								backgroundColor: this.theme.backgroundColor,
-								borderColor: Color.success,
-								color: Color.success
+								borderColor: Color.gray,
+								color: Color.gray
 							}}
 						/>
 					}
-					onClick={() => this.handleSelect(tvi)}
+					onClick={() => {
+						this.clearSearch();
+						this.setState({
+							selectedIndex: tvi.treeIndex
+						}, () => {
+							this.handleSelect(tvi);
+						});
+					}}
+					onChange={(title: string) => this.handleNodeUpdate(title, tvi)}
 					rightButton={
 						<StyledButtonCircle
 							iconName="times"
@@ -265,10 +319,12 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 							}}
 						/>
 					}
+					selected={tvi.treeIndex === this.state.selectedIndex}
 					sizing={this.props.sizing}
 					title={tvi.node.title as any}
 				/>
-			)
+			),
+			className: (tvi.treeIndex === this.state.selectedIndex) ? 'ui-selected' : ''
 		};
 	}
 
@@ -280,6 +336,8 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	@autobind
 	private handleAdd(tvi: TreeviewItem) {
 		if (!this.props.disabled) {
+			this.clearSearch();
+
 			const newTreeData: any = addNodeUnderParent({
 				treeData: this.props.treeData,
 				getNodeKey: this.getNodeKey,
@@ -290,7 +348,14 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 				},
 				addAsFirstChild: true
 			});
-			this.props.onAdd(tvi, newTreeData.treeData);
+
+			const node: TreeviewItem = getVisibleNodeInfoAtIndex({
+				treeData: newTreeData.treeData,
+				index: newTreeData.treeIndex,
+				getNodeKey: this.getNodeKey
+			});
+
+			this.props.onAdd(node, newTreeData.treeData);
 		}
 	}
 
@@ -304,6 +369,8 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	@autobind
 	private handleDelete(tvi: TreeviewItem) {
 		if (!this.props.disabled) {
+			this.clearSearch();
+
 			const newTreeData: any = removeNodeAtPath({
 				getNodeKey: this.getNodeKey,
 				path: tvi.path,
@@ -344,8 +411,35 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 				expanded
 			});
 
+			if (expanded) {
+				this.props.onExpand(newTreeData);
+			} else {
+				this.props.onCollapse(newTreeData);
+			}
+
 			this.handleChange(newTreeData);
 		});
+	}
+
+	@autobind
+	private handleNodeUpdate(title: string, tvi: TreeviewItem) {
+		if (!this.props.disabled) {
+			this.clearSearch();
+
+			const node: TreeviewItem = cloneDeep({...tvi});
+			node.node.title = title;
+
+			const newTreeData: any = changeNodeAtPath({
+				getNodeKey: this.getNodeKey,
+				newNode: {
+					title
+				},
+				path: tvi.path,
+				treeData: this.props.treeData
+			});
+
+			this.props.onUpdate(node, tvi, newTreeData);
+		}
 	}
 
 	@autobind
@@ -353,7 +447,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		const {searchFocusIndex, searchFoundCount} = this.state;
 		if (searchFoundCount > 0) {
 			this.setState({
-				searchFocusIndex: searchFoundCount + searchFocusIndex - 1 % searchFoundCount
+				searchFocusIndex: (searchFoundCount + searchFocusIndex - 1) % searchFoundCount
 			});
 		}
 	}
@@ -363,22 +457,35 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		const value: string = (e.target as HTMLInputElement).value;
 		this.setState({
 			search: value
-		}, () => {
-			debug('searching for %o', this.state.search);
 		});
 	}
 
 	@autobind
 	private handleSearchFinish(matches: NodeData[]) {
-		this.setState({
-			searchFoundCount: matches.length,
-			searchFocusIndex: matches.length > 0 ? this.state.searchFocusIndex % matches.length : 0
-		});
+		debug('handleSearchFinish: %O', matches);
+		const searchFocusIndex: number =
+			matches.length > 0 ? this.state.searchFocusIndex % matches.length : 0;
+
+		if (matches.length > 0) {
+			this.setState({
+				selectedIndex: matches[searchFocusIndex].treeIndex,
+				matches: matches,
+				searchFoundCount: matches.length,
+				searchFocusIndex
+			}, () => {
+				if (matches.length > 0) {
+					this.props.onSearch(this.state.matches[searchFocusIndex]);
+					this.props.onSelect(this.state.matches[searchFocusIndex]);
+				}
+			});
+		}
 	}
 
 	@autobind
 	private handleSelect(tvi: TreeviewItem) {
-		this.props.onSelect(tvi);
+		if (!this.props.disabled) {
+			this.props.onSelect(tvi);
+		}
 	}
 
 	public render() {
@@ -415,6 +522,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 						<SearchTextField
 							obj="TextField"
 							onChange={this.handleSearch}
+							onClear={this.clearSearch}
 							placeholder="search"
 							useclear
 							value={this.state.search}
@@ -443,6 +551,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					>
 						<SortableTreeView
 							generateNodeProps={this.customNodeProperties}
+							isVirtualized={true}
 							onChange={this.handleChange}
 							rowHeight={this.rowHeight}
 							searchFinishCallback={this.handleSearchFinish}

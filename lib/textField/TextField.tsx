@@ -71,6 +71,7 @@
  * - `onBlur` - Invoked when focus on control is lost.
  * - `onChange` - Invoked each time a key is pressed.  The validation routine is
  * also called with each key.
+ * - `onClear` - Invoked when the clear button is pressed in a search text control
  * - `onKeyDown` - Invoked when a key is pressed.  The escape key is checked
  * and if pressed the input is reverted to its previous setting.
  * - `onKeyPress` - Invoked when a key pressed.  When the "Enter" key is pressed
@@ -149,6 +150,7 @@ export interface TextFieldProps extends Partial<HTMLInputElement> {
 	id?: string;
 	minWidth?: string;
 	onBlur?: any;
+	onClear(): void;
 	onChange?: any;
 	onKeyDown?: any;
 	onKeyPress?: any;
@@ -173,6 +175,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		obj: 'TextField',
 		onBlur: nilEvent,
 		onChange: nilEvent,
+		onClear: nilEvent,
 		onKeyDown: nilEvent,
 		onKeyPress: nilEvent,
 		onValidation: nilEvent,
@@ -328,6 +331,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			this.input.value = '';
 			this.handleChange({target: this.input} as any);
 			this.input.focus();
+			this.props.onClear();
 		});
 	}
 
@@ -409,6 +413,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		const {
 			minWidth,
 			noborder,
+			onClear,
 			onValidation,
 			useclear,
 			usevalidation,
