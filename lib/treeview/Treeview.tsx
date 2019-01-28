@@ -24,7 +24,7 @@
  * Each of these nodes are also potential parent, etc.
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/treeview.png" width="40%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/treeview.png" width="30%" />
  *
  * ## Examples:
  *
