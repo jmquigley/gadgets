@@ -70,6 +70,7 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 				<Treeview
 					disabled={this.props['disabled']}
 					height="640px"
+					notooltip
 					onAdd={this.handleAdd}
 					onChange={this.handleChange}
 					onDelete={this.handleDelete}

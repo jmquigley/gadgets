@@ -4,10 +4,10 @@
  * component written by Chris Fritz.  The [README](https://github.com/fritz-c/react-sortable-tree/blob/master/README.md)
  * for the project shows examples and properties for the component.
  *
- * The two required properties are `treeData` and `onChange`.  The control relies
- * on feeding data back in to the control as props (via treeData state) to control
- * the contents; the calling app is repsonsible for the data.  The `treeData` uses
- * the following array of node structures (TreeviewItem), where a node is defined as:
+ * The control relies on feeding data back in to the control as props (via
+ * treeData state) to control the contents; the calling app is repsonsible for
+ * the data.  The `treeData` uses the following array of node structures
+ * (TreeviewItem), where a node is defined as:
  *
  *     [
  *       {title: "string", subtitle: "string", expanded: "boolean", children: ["treeData"]},
@@ -62,15 +62,26 @@
  *
  * ## API
  * #### Events
+ * - `onAdd(tvi: TreeviewItem, treeData: TreeviewItem[])` - invoked when a new node is
+ * added to the tree via the "+" add button (when highlighting the parent node).  The
+ * tvi value is the parent node.
  * - `onChange(treeData: {TreeviewItem[]}) ([])` - The array of TreeItem nodes
  * used to represent the current state of the tree.
+ * - `onDelete(tvi: TreeviewItem, treeData: TreeviewItem[]` - invoked when a node is
+ * removed from the tree.  The tvi value is the node that was deleted.
+ * - 'onSearch(tvi: TreeviewItem)` - invoked when a search is performed.  It returns
+ * the current item found in the search.  As moving from previous/next the node is
+ * sent to this callback.
  *
  * #### Styles
  * - `ui-treeview` - applied to the SortableTree component on the top `div`
  * - `ui-treeview-container` - applied to a div that surrounds the tree control.
  * this is where the height of the control is handled.
+ * - `ui-treeview-toolbar` - applied to the search toollbar
  *
  * #### Properties
+ * - `defaultTitle: {string} ('New Title')` - When a new node is added this title is
+ * used as the placeholder label.
  * - `treeData: {TreeviewItem[]}) ([])` - The data structure that describes the
  * tree hierarchy (see example above).
  *
@@ -342,7 +353,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		const {searchFocusIndex, searchFoundCount} = this.state;
 		if (searchFoundCount > 0) {
 			this.setState({
-				searchFocusIndex: Math.abs(searchFocusIndex - 1) % searchFoundCount
+				searchFocusIndex: searchFoundCount + searchFocusIndex - 1 % searchFoundCount
 			});
 		}
 	}
@@ -390,12 +401,15 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					>
 						<Button
 							iconName="angle-double-down"
+							notooltip={this.props.notooltip}
 							onClick={this.handleNodeExpand}
 							tooltip="expand"
 						/>
 						<Button
 							iconName="angle-double-up"
+							notooltip={this.props.notooltip}
 							onClick={this.handleNodeCollapse}
+							tooltip="collapse"
 						/>
 						<Divider />
 						<SearchTextField
@@ -408,11 +422,15 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 						<Divider />
 						<Button
 							iconName="caret-left"
+							notooltip={this.props.notooltip}
 							onClick={this.handlePreviousMatch}
+							tooltip="previous search item"
 						/>
 						<Button
 							iconName="caret-right"
+							notooltip={this.props.notooltip}
 							onClick={this.handleNextMatch}
+							tooltip="next search item"
 						/>
 						<Divider />
 						<Label text={searchFoundCount > 0 ? searchFocusIndex + 1 : 0} />

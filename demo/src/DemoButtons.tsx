@@ -246,19 +246,15 @@ export default class DemoButtons extends React.Component<any, undefined> {
 			<tr>
 				<th>Button with Tooltip<br/>(Center)</th>
 				<td>
-					<ButtonText
+					<Button
 						disabled={this.props['disabled']}
-						text="Tooltip 1"
-						justify={Justify.center}
 						sizing={this.props['sizing']}
 						tooltip="sample tooltip"
 					/>
 				</td>
 				<td>
-					<ButtonText
+					<Button
 						disabled={this.props['disabled']}
-						text="Tooltip 2"
-						justify={Justify.center}
 						sizing={this.props['sizing']}
 						style={{color: 'white', backgroundColor: 'red'}}
 						tooltip="sample tooltip"

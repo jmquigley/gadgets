@@ -154,6 +154,7 @@ export interface BaseProps {
 	nohover?: boolean;
 	noripple?: boolean;
 	notheme?: boolean;
+	notooltip?: boolean;
 	obj?: string;
 	padding?: string;
 	selected?: boolean;
@@ -189,6 +190,7 @@ const defaultBaseProps: BaseProps = {
 	nohover: false,
 	noripple: false,
 	notheme: false,
+	notooltip: false,
 	obj: 'Unknown',
 	padding: null,
 	selected: false,
