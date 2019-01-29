@@ -87,6 +87,7 @@ export enum Color {
 	error = '#d9534f',
 	gray = '#808080',
 	info = '#5bc0de',
+	lightsaber = '#2ff923',
 	silver = '#c0c0c0',
 	slategray = '#708090',
 	success = '#5cb85c',

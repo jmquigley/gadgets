@@ -97,6 +97,9 @@
  * #### Properties
  * - `defaultTitle: {string} ('New Title')` - When a new node is added this title is
  * used as the placeholder label.
+ * - `height: string ('15em')` - The height of the treeview container.  This must
+ * be set or the tree will not display anything.
+ * - `nodeWidth: string ('20em`)` -the width of the text nodes that are displayed.
  * - `treeData: {TreeviewItem[]}) ([])` - The data structure that describes the
  * tree hierarchy (see example above).
  * - `usehidden: {boolean} (true) - by default the add/delete buttons are hidden on
@@ -125,7 +128,6 @@ import SortableTree, {
 import {calc, toREM} from 'util.calc';
 import {nilEvent} from 'util.toolbox';
 import {Button} from '../button';
-import {ButtonCircle} from '../buttonCircle';
 import {Container} from '../container';
 import {Divider} from '../divider';
 import {Item} from '../item';
@@ -152,6 +154,7 @@ export type TreeviewItem = TreeItem;
 
 export interface TreeviewProps extends BaseProps {
 	defaultTitle: string;
+	nodeWidth?: string;
 	onAdd(node: TreeviewItem, treeData: any[]): void;
 	onChange(treeData: any[]): void;
 	onCollapse(treeData: any[]): void;
@@ -161,7 +164,7 @@ export interface TreeviewProps extends BaseProps {
 	onSelect(node: TreeviewItem): void;
 	onUpdate(node: TreeviewItem, previous: TreeviewItem, treeData: any[]): void;
 	treeData: any[];
-	usehidden: boolean;
+	usehidden?: boolean;
 }
 
 export function getDefaultTreeviewProps(): TreeviewProps {
@@ -169,7 +172,7 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		defaultTitle: 'New Title',
 		height: '15em',
 		minHeight: '15em',
-		minWidth: '26em',
+		nodeWidth: '20em',
 		obj: 'Treeview',
 		onAdd: nilEvent,
 		onChange: nilEvent,
@@ -197,7 +200,7 @@ export function getDefaultTreeviewState(): TreeviewState {
 		matches: [],
 		search: '',
 		searchFocusIndex: 0,
-		searchFoundCount: null,
+		searchFoundCount: 0,
 		selectedIndex: 0
 	});
 }
@@ -207,7 +210,8 @@ const SortableTreeView: any = styled(SortableTree)`
 	${(props: TreeviewProps) => props.sizing && fontStyle[props.sizing]}
 
 	.rst__rowContents {
-		padding: 0 2px;
+		padding: 0 1px;
+		border-radius: 0;
 	}
 
 	.rst__rowLabel {
@@ -216,11 +220,13 @@ const SortableTreeView: any = styled(SortableTree)`
 	}
 
 	.rst__rowSearchMatch {
-		outline: solid 2px ${(props: TreeviewProps) => props.theme.searchMatch};
+		outline: none;
+		box-shadow: 0 0 14px ${(props: TreeviewProps) => props.theme.searchMatch};
 	}
 
 	.rst__rowSearchFocus {
-		outline: solid 2px ${(props: TreeviewProps) => props.theme.searchFocus};
+		outline: none;
+		box-shadow: 0 0 14px ${(props: TreeviewProps) => props.theme.searchFocus};
 	}
 
 	.rst__rowTitle {
@@ -232,9 +238,22 @@ const SearchTextField: any = styled(TextField)`
 	width: 15rem;
 `;
 
-const StyledButtonCircle: any = styled(ButtonCircle)``;
+const StyledButton: any = styled(Button)``;
 
-const StyledItem: any = styled(Item)``;
+const StyledItem: any = styled(Item)`
+	&:hover {
+		color: ${(props: TreeviewProps) => props.theme.color}
+	}
+
+	&:hover .ui-item-button {
+		color: ${(props: TreeviewProps) => props.theme.backgroundColor};
+		background-color: ${(props: TreeviewProps) => props.theme.hoverColor};
+	}
+
+	.ui-button:hover {
+		background-color: ${Color.error} !important;
+	}
+`;
 
 const StyledToolbar: any = styled(Toolbar)`
 	border-top: 0;
@@ -291,21 +310,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		return {
 			title: (
 				<StyledItem
-					hiddenLeftButton={this.props.usehidden}
 					hiddenRightButton={this.props.usehidden}
 					layout={TitleLayout.none}
-					leftButton={
-						<StyledButtonCircle
-							iconName="plus"
-							onClick={() => this.handleAdd(tvi)}
-							sizing={BaseComponent.prev(this.props.sizing).type}
-							style={{
-								backgroundColor: this.theme.backgroundColor,
-								borderColor: Color.gray,
-								color: Color.gray
-							}}
-						/>
-					}
+					noripple
 					onClick={() => {
 						this.clearSearch();
 						this.setState({
@@ -316,15 +323,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					}}
 					onChange={(title: string) => this.handleNodeUpdate(title, tvi)}
 					rightButton={
-						<StyledButtonCircle
+						<StyledButton
 							iconName="times"
 							onClick={() => this.handleDelete(tvi)}
-							sizing={BaseComponent.prev(this.props.sizing).type}
-							style={{
-								backgroundColor: this.theme.backgroundColor,
-								borderColor: Color.error,
-								color: Color.error
-							}}
 						/>
 					}
 					selected={tvi.treeIndex === this.state.selectedIndex}
@@ -332,7 +333,10 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					title={tvi.node.title as any}
 				/>
 			),
-			className: (tvi.treeIndex === this.state.selectedIndex) ? 'ui-selected' : ''
+			className: (tvi.treeIndex === this.state.selectedIndex) ? 'ui-selected' : '',
+			style: {
+				width: this.props.nodeWidth
+			}
 		};
 	}
 
@@ -342,14 +346,14 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	}
 
 	@autobind
-	private handleAdd(tvi: TreeviewItem) {
-		if (!this.props.disabled) {
+	private handleAdd() {
+		if (!this.props.disabled && this.state.selectedIndex != null) {
 			this.clearSearch();
 
 			const newTreeData: any = addNodeUnderParent({
 				treeData: this.props.treeData,
 				getNodeKey: this.getNodeKey,
-				parentKey: tvi.treeIndex,
+				parentKey: this.state.selectedIndex,
 				expandParent: true,
 				newNode: {
 					title: this.props.defaultTitle
@@ -513,6 +517,18 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 						className="ui-treeview-toolbar"
 						sizing={this.props.sizing}
 					>
+						<Button
+							iconName="plus"
+							notooltip={this.props.notooltip}
+							onClick={this.handleAdd}
+							style={{
+								backgroundColor: this.theme.backgroundColor,
+								borderColor: Color.gray,
+								color: Color.gray
+							}}
+							tooltip="Create a new node under selected"
+						/>
+						<Divider />
 						<Button
 							iconName="angle-double-down"
 							notooltip={this.props.notooltip}

@@ -99,6 +99,9 @@ this is where the height of the control is handled.
 #### Properties
 - `defaultTitle: {string} ('New Title')` - When a new node is added this title is
 used as the placeholder label.
+- `height: string ('15em')` - The height of the treeview container.  This must
+be set or the tree will not display anything.
+- `nodeWidth: string ('20em`)` -the width of the text nodes that are displayed.
 - `treeData: {TreeviewItem[]}) ([])` - The data structure that describes the
 tree hierarchy (see example above).
 - `usehidden: {boolean} (true) - by default the add/delete buttons are hidden on
