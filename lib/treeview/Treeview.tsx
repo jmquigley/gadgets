@@ -18,10 +18,12 @@
  *       ...
  *     ]
  *
- * Where `title` and `subtitle` are shown on the node as text.  The `expanded` boolean
- * will show objects under the parent (if they exist) based on the `children`
- * prop.  The `children` prop is an array on the parent node of the child nodes linked
- * to this parent.  Each of these nodes are also potential parent, etc (recursive relationship).
+ * Where `title` and `subtitle` are shown on the node as Label.  It is editable
+ * by double clicking the text in the node.  The `expanded` boolean will show objects
+ * under the parent (if they exist) based on the `children` prop.  The
+ * `children` prop is an array on the parent node of the child nodes linked to
+ * this parent.  Each of these nodes are also potential parent, etc (recursive
+ * relationship).
  *
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/treeview.png" width="60%" />
