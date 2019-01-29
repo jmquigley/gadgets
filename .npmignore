@@ -1,4 +1,4 @@
-bin/
+bin
 coverage/
 demo/
 docs/
@@ -32,3 +32,6 @@ yarn.lock
 yarn-error.log
 *.ts
 !*.d.ts
+**/*.snap
+demo/**/*
+lib/**/*
