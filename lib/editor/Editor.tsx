@@ -97,6 +97,9 @@
  *   - `strikethrough`
  *   - `underline`
  *   - `wiki` - wiki name coloring in [[name | link]]
+ * - `useSmallButtons: {boolean} (false)` - if set to true, then the buttons
+ * on the toolbar will use sizing.SMALL, otherwise the sizing is set to the
+ * default for the component (which is typically Sizing.normal).
  *
  * @module Editor
  */
@@ -149,6 +152,7 @@ export interface EditorProps extends BaseProps {
 	onClick?: any;
 	onClickLink?: any;
 	scheme?: any;
+	useSmallButtons?: boolean;
 }
 
 export function getDefaultEditorProps(): EditorProps {
@@ -163,7 +167,8 @@ export function getDefaultEditorProps(): EditorProps {
 		scheme: {
 			background: Color.black,
 			foreground: Color.white
-		}
+		},
+		useSmallButtons: false
 	});
 }
 
@@ -356,7 +361,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 					<EditorToolbar
 						{...this.props}
 						className={this.state.toolbarStyles.classnames}
-						sizing={Sizing.small}
+						sizing={this.props.useSmallButtons ? Sizing.small : this.props.sizing}
 					>
 						<Button
 							iconName="bold"

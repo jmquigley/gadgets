@@ -8,7 +8,7 @@
 [![NPM](https://img.shields.io/npm/v/gadgets.svg)](https://www.npmjs.com/package/gadgets)
 [![Coverage Status](https://coveralls.io/repos/github/jmquigley/gadgets/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/gadgets?branch=master)
 
-This library provides widgets and composite controls for building desktop apps using electron.  The available controls are listed below.
+This library provides widgets and composite controls for building desktop apps using [Electron](https://electronjs.org/).  The widgets are listed below.
 
 ## Requirements
 

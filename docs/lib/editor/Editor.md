@@ -99,4 +99,7 @@ keys:
   - `strikethrough`
   - `underline`
   - `wiki` - wiki name coloring in [[name | link]]
+- `useSmallButtons: {boolean} (false)` - if set to true, then the buttons
+on the toolbar will use sizing.SMALL, otherwise the sizing is set to the
+default for the component (which is typically Sizing.normal).
 
