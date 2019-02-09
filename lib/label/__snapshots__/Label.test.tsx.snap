@@ -6,6 +6,7 @@ exports[`Test a double click edit of the Label control 1`] = `
   className={null}
   contentEditable={false}
   controlled={true}
+  defaultText="default"
   direction="right"
   disabled={false}
   err={null}
@@ -49,6 +50,7 @@ exports[`Test a double click edit of the Label control 1`] = `
     className={null}
     contentEditable={false}
     controlled={true}
+    defaultText="default"
     direction="right"
     disabled={false}
     err={null}
@@ -139,10 +141,15 @@ exports[`Test a double click edit of the Label control 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bwzfXH",
                 "isStatic": false,
-                "lastClassName": "cEurMc",
+                "lastClassName": "kWkIbd",
                 "rules": Array [
                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                  "​",
+                  "\\";
+	}
 
 	",
                   [Function],
@@ -178,7 +185,7 @@ exports[`Test a double click edit of the Label control 1`] = `
           visible={true}
         >
           <span
-            className="ui-label sc-bwzfXH cEurMc"
+            className="ui-label sc-bwzfXH kWkIbd"
             contentEditable={false}
             disabled={false}
             onBlur={[Function]}
@@ -204,6 +211,7 @@ exports[`Test creation of a Label control 1`] = `
   className="test-class"
   contentEditable={false}
   controlled={true}
+  defaultText="default"
   direction="right"
   disabled={false}
   err={null}
@@ -269,6 +277,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
   className={null}
   contentEditable={false}
   controlled={true}
+  defaultText="default"
   direction="right"
   disabled={false}
   err={null}
@@ -312,6 +321,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
     className={null}
     contentEditable={false}
     controlled={true}
+    defaultText="default"
     direction="right"
     disabled={false}
     err={null}
@@ -402,10 +412,15 @@ exports[`Test double click change to Label and blur to save 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bwzfXH",
                 "isStatic": false,
-                "lastClassName": "cEurMc",
+                "lastClassName": "kWkIbd",
                 "rules": Array [
                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                  "​",
+                  "\\";
+	}
 
 	",
                   [Function],
@@ -441,7 +456,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
           visible={true}
         >
           <span
-            className="ui-label sc-bwzfXH cEurMc"
+            className="ui-label sc-bwzfXH kWkIbd"
             contentEditable={false}
             disabled={false}
             onBlur={[Function]}
@@ -467,6 +482,7 @@ exports[`Test making the Label control invisible 1`] = `
   className={null}
   contentEditable={false}
   controlled={true}
+  defaultText="default"
   direction="right"
   disabled={false}
   err={null}
@@ -510,6 +526,7 @@ exports[`Test making the Label control invisible 1`] = `
     className={null}
     contentEditable={false}
     controlled={true}
+    defaultText="default"
     direction="right"
     disabled={false}
     err={null}
@@ -600,10 +617,15 @@ exports[`Test making the Label control invisible 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bwzfXH",
                 "isStatic": false,
-                "lastClassName": "feyPXN",
+                "lastClassName": "deFhZV",
                 "rules": Array [
                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                  "​",
+                  "\\";
+	}
 
 	",
                   [Function],
@@ -639,7 +661,7 @@ exports[`Test making the Label control invisible 1`] = `
           visible={false}
         >
           <span
-            className="ui-label sc-bwzfXH feyPXN"
+            className="ui-label sc-bwzfXH deFhZV"
             contentEditable={false}
             disabled={false}
             onBlur={[Function]}
@@ -666,6 +688,7 @@ Object {
   "className": null,
   "contentEditable": false,
   "controlled": true,
+  "defaultText": "default",
   "direction": "right",
   "disabled": false,
   "err": null,
@@ -712,6 +735,7 @@ exports[`Test the disabling of the Label control 1`] = `
   className={null}
   contentEditable={false}
   controlled={true}
+  defaultText="default"
   direction="right"
   disabled={true}
   err={null}
@@ -755,6 +779,7 @@ exports[`Test the disabling of the Label control 1`] = `
     className={null}
     contentEditable={false}
     controlled={true}
+    defaultText="default"
     direction="right"
     disabled={true}
     err={null}
@@ -845,10 +870,15 @@ exports[`Test the disabling of the Label control 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bwzfXH",
                 "isStatic": false,
-                "lastClassName": "gfZwc",
+                "lastClassName": "cnGDic",
                 "rules": Array [
                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                  "​",
+                  "\\";
+	}
 
 	",
                   [Function],
@@ -884,7 +914,7 @@ exports[`Test the disabling of the Label control 1`] = `
           visible={true}
         >
           <span
-            className="ui-label sc-bwzfXH gfZwc"
+            className="ui-label sc-bwzfXH cnGDic"
             contentEditable={false}
             disabled={true}
             onBlur={[Function]}

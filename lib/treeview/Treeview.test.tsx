@@ -6,11 +6,11 @@ import * as React from 'react';
 import {Sizing} from '../shared';
 import {
 	getDefaultTreeviewProps,
-	Treeview,
-	TreeviewItem
+	TreeItem,
+	Treeview
 } from './index';
 
-const treeData: TreeviewItem[] = [
+const treeData: TreeItem[] = [
 	{title: '1.0', expanded: true, children: [
 		{title: '1.1'},
 		{title: '1.2'},

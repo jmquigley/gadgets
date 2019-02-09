@@ -564,6 +564,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                             className="ui-title sc-bZQynM eDjJla"
                             contentEditable={false}
                             controlled={true}
+                            defaultText="default"
                             direction="right"
                             disabled={false}
                             err={null}
@@ -617,6 +618,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                               className="ui-title sc-bZQynM eDjJla"
                               contentEditable={false}
                               controlled={true}
+                              defaultText="default"
                               direction="right"
                               disabled={false}
                               err={null}
@@ -717,10 +719,15 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "sc-bxivhb",
                                           "isStatic": false,
-                                          "lastClassName": "cTXvCi",
+                                          "lastClassName": "bdjuny",
                                           "rules": Array [
                                             "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                            "​",
+                                            "\\";
+	}
 
 	",
                                             [Function],
@@ -756,7 +763,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
                                     visible={true}
                                   >
                                     <span
-                                      className="ui-label ui-title sc-bZQynM eDjJla sc-bxivhb cTXvCi"
+                                      className="ui-label ui-title sc-bZQynM eDjJla sc-bxivhb bdjuny"
                                       contentEditable={false}
                                       disabled={false}
                                       onBlur={[Function]}

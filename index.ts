@@ -94,7 +94,7 @@ import {getDefaultTitleProps, Title, TitleLayout} from './lib/title';
 import {getDefaultToastProps, Toast, ToastLevel} from './lib/toast';
 import {getDefaultToolbarProps, Toolbar} from './lib/toolbar';
 import {getDefaultTooltipProps, Tooltip} from './lib/tooltip';
-import {getDefaultTreeviewProps, Treeview, TreeviewItem} from './lib/treeview';
+import {getDefaultTreeviewProps, TreeItem, Treeview} from './lib/treeview';
 import {getDefaultTriangleProps, Triangle} from './lib/triangle';
 
 // Themed component classes
@@ -225,8 +225,8 @@ export {
 	ToastLevel,
 	Toolbar,
 	Tooltip,
+	TreeItem,
 	Treeview,
-	TreeviewItem,
 	Triangle,
 	validateEmail,
 	validateMaxLength,

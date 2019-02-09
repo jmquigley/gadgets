@@ -2155,6 +2155,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -2272,6 +2273,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -2436,10 +2438,15 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -2475,7 +2482,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -4161,6 +4168,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -4278,6 +4286,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -4442,10 +4451,15 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -4481,7 +4495,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -6167,6 +6181,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -6284,6 +6299,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -6448,10 +6464,15 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -6487,7 +6508,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -9855,6 +9876,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={true}
                                                               err={null}
@@ -9972,6 +9994,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={true}
                                                                 err={null}
@@ -10136,10 +10159,15 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "iouaLl",
+                                                                            "lastClassName": "hOMeO",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -10175,7 +10203,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs iouaLl"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs hOMeO"
                                                                         contentEditable={false}
                                                                         disabled={true}
                                                                         onBlur={[Function]}
@@ -11368,6 +11396,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={true}
                                                               err={null}
@@ -11485,6 +11514,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={true}
                                                                 err={null}
@@ -11649,10 +11679,15 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "iouaLl",
+                                                                            "lastClassName": "hOMeO",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -11688,7 +11723,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs iouaLl"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs hOMeO"
                                                                         contentEditable={false}
                                                                         disabled={true}
                                                                         onBlur={[Function]}
@@ -12881,6 +12916,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={true}
                                                               err={null}
@@ -12998,6 +13034,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={true}
                                                                 err={null}
@@ -13162,10 +13199,15 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "iouaLl",
+                                                                            "lastClassName": "hOMeO",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -13201,7 +13243,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs iouaLl"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs hOMeO"
                                                                         contentEditable={false}
                                                                         disabled={true}
                                                                         onBlur={[Function]}
@@ -15964,6 +16006,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -16081,6 +16124,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -16245,10 +16289,15 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -16284,7 +16333,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -17970,6 +18019,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -18087,6 +18137,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -18251,10 +18302,15 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -18290,7 +18346,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -19976,6 +20032,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -20093,6 +20150,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -20257,10 +20315,15 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -20296,7 +20359,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -23708,6 +23771,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -23825,6 +23889,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -23989,10 +24054,15 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -24028,7 +24098,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -25714,6 +25784,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -25831,6 +25902,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -25995,10 +26067,15 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -26034,7 +26111,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -27720,6 +27797,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -27837,6 +27915,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -28001,10 +28080,15 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -28040,7 +28124,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -31408,6 +31492,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -31525,6 +31610,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -31689,10 +31775,15 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -31728,7 +31819,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -33414,6 +33505,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -33531,6 +33623,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -33695,10 +33788,15 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -33734,7 +33832,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}
@@ -35420,6 +35518,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                               className="ui-title sc-gZMcBi gAxdUB"
                                                               contentEditable={false}
                                                               controlled={true}
+                                                              defaultText="default"
                                                               direction="right"
                                                               disabled={false}
                                                               err={null}
@@ -35537,6 +35636,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                                 className="ui-title sc-gZMcBi gAxdUB"
                                                                 contentEditable={false}
                                                                 controlled={true}
+                                                                defaultText="default"
                                                                 direction="right"
                                                                 disabled={false}
                                                                 err={null}
@@ -35701,10 +35801,15 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-htoDjs",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "korbdG",
+                                                                            "lastClassName": "edCVzg",
                                                                             "rules": Array [
                                                                               "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                              "​",
+                                                                              "\\";
+	}
 
 	",
                                                                               [Function],
@@ -35740,7 +35845,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
                                                                       visible={true}
                                                                     >
                                                                       <span
-                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs korbdG"
+                                                                        className="ui-label ui-title sc-gZMcBi gAxdUB sc-htoDjs edCVzg"
                                                                         contentEditable={false}
                                                                         disabled={false}
                                                                         onBlur={[Function]}

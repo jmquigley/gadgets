@@ -758,6 +758,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                           className="ui-title sc-EHOje hLLCNa"
                                           contentEditable={false}
                                           controlled={true}
+                                          defaultText="default"
                                           direction="right"
                                           disabled={false}
                                           err={null}
@@ -820,6 +821,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                             className="ui-title sc-EHOje hLLCNa"
                                             contentEditable={false}
                                             controlled={true}
+                                            defaultText="default"
                                             direction="right"
                                             disabled={false}
                                             err={null}
@@ -929,10 +931,15 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-htpNat",
                                                         "isStatic": false,
-                                                        "lastClassName": "eEDiFV",
+                                                        "lastClassName": "kVPSaJ",
                                                         "rules": Array [
                                                           "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                          "​",
+                                                          "\\";
+	}
 
 	",
                                                           [Function],
@@ -968,7 +975,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                                                   visible={true}
                                                 >
                                                   <span
-                                                    className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat eEDiFV"
+                                                    className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat kVPSaJ"
                                                     contentEditable={false}
                                                     disabled={false}
                                                     onBlur={[Function]}
@@ -1766,6 +1773,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                           className="ui-title sc-EHOje hLLCNa"
                                           contentEditable={false}
                                           controlled={true}
+                                          defaultText="default"
                                           direction="right"
                                           disabled={false}
                                           err={null}
@@ -1828,6 +1836,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                             className="ui-title sc-EHOje hLLCNa"
                                             contentEditable={false}
                                             controlled={true}
+                                            defaultText="default"
                                             direction="right"
                                             disabled={false}
                                             err={null}
@@ -1937,10 +1946,15 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-htpNat",
                                                         "isStatic": false,
-                                                        "lastClassName": "eEDiFV",
+                                                        "lastClassName": "kVPSaJ",
                                                         "rules": Array [
                                                           "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                          "​",
+                                                          "\\";
+	}
 
 	",
                                                           [Function],
@@ -1976,7 +1990,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                                                   visible={true}
                                                 >
                                                   <span
-                                                    className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat eEDiFV"
+                                                    className="ui-label ui-title sc-EHOje hLLCNa sc-htpNat kVPSaJ"
                                                     contentEditable={false}
                                                     disabled={false}
                                                     onBlur={[Function]}

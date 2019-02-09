@@ -2363,6 +2363,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                   className="ui-title sc-gZMcBi jLaVqp"
                                   contentEditable={false}
                                   controlled={true}
+                                  defaultText="default"
                                   direction="right"
                                   disabled={false}
                                   err={null}
@@ -2416,6 +2417,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                     className="ui-title sc-gZMcBi jLaVqp"
                                     contentEditable={false}
                                     controlled={true}
+                                    defaultText="default"
                                     direction="right"
                                     disabled={false}
                                     err={null}
@@ -2516,10 +2518,15 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-htoDjs",
                                                 "isStatic": false,
-                                                "lastClassName": "iouaLl",
+                                                "lastClassName": "hOMeO",
                                                 "rules": Array [
                                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                  "​",
+                                                  "\\";
+	}
 
 	",
                                                   [Function],
@@ -2555,7 +2562,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                           visible={true}
                                         >
                                           <span
-                                            className="ui-label ui-title sc-gZMcBi jLaVqp sc-htoDjs korbdG"
+                                            className="ui-label ui-title sc-gZMcBi jLaVqp sc-htoDjs edCVzg"
                                             contentEditable={false}
                                             disabled={false}
                                             onBlur={[Function]}
@@ -3872,6 +3879,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                   className="ui-title sc-gZMcBi jLaVqp"
                                                   contentEditable={false}
                                                   controlled={true}
+                                                  defaultText="default"
                                                   direction="right"
                                                   disabled={true}
                                                   err={null}
@@ -3925,6 +3933,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                     className="ui-title sc-gZMcBi jLaVqp"
                                                     contentEditable={false}
                                                     controlled={true}
+                                                    defaultText="default"
                                                     direction="right"
                                                     disabled={true}
                                                     err={null}
@@ -4025,10 +4034,15 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-htoDjs",
                                                                 "isStatic": false,
-                                                                "lastClassName": "iouaLl",
+                                                                "lastClassName": "hOMeO",
                                                                 "rules": Array [
                                                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                  "​",
+                                                                  "\\";
+	}
 
 	",
                                                                   [Function],
@@ -4064,7 +4078,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                           visible={true}
                                                         >
                                                           <span
-                                                            className="ui-label ui-title sc-gZMcBi jLaVqp sc-htoDjs iouaLl"
+                                                            className="ui-label ui-title sc-gZMcBi jLaVqp sc-htoDjs hOMeO"
                                                             contentEditable={false}
                                                             disabled={true}
                                                             onBlur={[Function]}
@@ -5389,6 +5403,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                   className="ui-title sc-gZMcBi jLaVqp"
                                                   contentEditable={false}
                                                   controlled={true}
+                                                  defaultText="default"
                                                   direction="right"
                                                   disabled={true}
                                                   err={null}
@@ -5442,6 +5457,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                     className="ui-title sc-gZMcBi jLaVqp"
                                                     contentEditable={false}
                                                     controlled={true}
+                                                    defaultText="default"
                                                     direction="right"
                                                     disabled={true}
                                                     err={null}
@@ -5542,10 +5558,15 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-htoDjs",
                                                                 "isStatic": false,
-                                                                "lastClassName": "iouaLl",
+                                                                "lastClassName": "hOMeO",
                                                                 "rules": Array [
                                                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                  "​",
+                                                                  "\\";
+	}
 
 	",
                                                                   [Function],
@@ -5581,7 +5602,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                           visible={true}
                                                         >
                                                           <span
-                                                            className="ui-label ui-title sc-gZMcBi jLaVqp sc-htoDjs iouaLl"
+                                                            className="ui-label ui-title sc-gZMcBi jLaVqp sc-htoDjs hOMeO"
                                                             contentEditable={false}
                                                             disabled={true}
                                                             onBlur={[Function]}
@@ -6906,6 +6927,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                   className="ui-title sc-gZMcBi jLaVqp"
                                                   contentEditable={false}
                                                   controlled={true}
+                                                  defaultText="default"
                                                   direction="right"
                                                   disabled={true}
                                                   err={null}
@@ -6959,6 +6981,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                     className="ui-title sc-gZMcBi jLaVqp"
                                                     contentEditable={false}
                                                     controlled={true}
+                                                    defaultText="default"
                                                     direction="right"
                                                     disabled={true}
                                                     err={null}
@@ -7059,10 +7082,15 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-htoDjs",
                                                                 "isStatic": false,
-                                                                "lastClassName": "iouaLl",
+                                                                "lastClassName": "hOMeO",
                                                                 "rules": Array [
                                                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                                  "​",
+                                                                  "\\";
+	}
 
 	",
                                                                   [Function],
@@ -7098,7 +7126,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
                                                           visible={true}
                                                         >
                                                           <span
-                                                            className="ui-label ui-title sc-gZMcBi jLaVqp sc-htoDjs iouaLl"
+                                                            className="ui-label ui-title sc-gZMcBi jLaVqp sc-htoDjs hOMeO"
                                                             contentEditable={false}
                                                             disabled={true}
                                                             onBlur={[Function]}

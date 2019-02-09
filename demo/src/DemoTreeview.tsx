@@ -5,13 +5,13 @@ const debug = require('debug')('DemoTreeview');
 import autobind from 'autobind-decorator';
 import * as React from 'react';
 import {
-	Treeview,
-	TreeviewItem
+	TreeItem,
+	Treeview
 } from '../../dist/bundle';
 import {StyledContainer} from '../app';
 
 export interface DemoTreeviewState {
-	treeData: TreeviewItem[];
+	treeData: TreeItem[];
 }
 
 export default class DemoTreeview extends React.Component<any, DemoTreeviewState> {
@@ -22,7 +22,7 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 
 		this.state = {
 			treeData: [
-				{title: '1.0', expanded: true, data: 'some test data', children: [
+				{title: '1.0', expanded: true, note: 'some test data', children: [
 					{title: '1.1'},
 					{title: '1.2'},
 					{title: '1.3'}
@@ -42,48 +42,47 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 	}
 
 	@autobind
-	private handleAdd(tvi: TreeviewItem, treeData: TreeviewItem[]) {
-		debug('adding node to tree: %o, treeData: %O', tvi.node.title, treeData);
+	private handleAdd(node: TreeItem, treeData: TreeItem[]) {
+		debug('adding node to tree: %O, treeData: %O', node, treeData);
 		this.setState({treeData});
 	}
 
 	@autobind
-	private handleChange(treeData: any) {
+	private handleChange(treeData: TreeItem[]) {
 		debug('changing tree: %O', treeData);
 		this.setState({treeData});
 	}
 
 	@autobind
-	private handleCollapse(treeData: any) {
+	private handleCollapse(treeData: TreeItem[]) {
 		debug('collapsing tree: %O', treeData);
 	}
 
 	@autobind
-	private handleDelete(tvi: TreeviewItem, treeData: TreeviewItem[]) {
-		debug('removing node from tree: %o, treeData: %O', tvi.node.title, treeData);
+	private handleDelete(node: TreeItem, treeData: TreeItem[]) {
+		debug('removing node from tree: %o, treeData: %O', node.title, treeData);
 		this.setState({treeData});
 	}
 
 	@autobind
-	private handleExpand(treeData: any) {
+	private handleExpand(treeData: TreeItem[]) {
 		debug('expanding tree: %O', treeData);
 	}
 
 	@autobind
-	private handleSearch(tvi: TreeviewItem) {
-		debug('found search node: %o', tvi.node.title);
+	private handleSearch(node: TreeItem) {
+		debug('found search node: %o: %O', node.title, node);
 	}
 
 	@autobind
-	private handleSelect(tvi: TreeviewItem) {
-		debug('selecting node %o: %O', tvi.node.title, tvi);
+	private handleSelect(node: TreeItem) {
+		debug('selecting node %o: %O', node.title, node);
 	}
 
 	@autobind
-	private handleUpdate(current: TreeviewItem, previous: TreeviewItem, treeData: TreeviewItem[]) {
-		debug('updating -> current: %O, previous: %O', current, previous, treeData);
+	private handleUpdate(current: TreeItem, previous: TreeItem, treeData: TreeItem[]) {
+		debug('updating -> current: %O, previous: %O, treeData: %O', current, previous, treeData);
 		this.setState({treeData});
-
 	}
 
 	public render() {
@@ -101,6 +100,7 @@ export default class DemoTreeview extends React.Component<any, DemoTreeviewState
 					onSearch={this.handleSearch}
 					onSelect={this.handleSelect}
 					onUpdate={this.handleUpdate}
+					selectNew={false}
 					sizing={this.props['sizing']}
 					treeData={this.state.treeData}
 				/>

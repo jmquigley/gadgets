@@ -1,13 +1,13 @@
 import {
 	getDefaultTreeviewProps,
+	TreeItem,
 	Treeview,
-	TreeviewItem,
 	TreeviewProps
 } from './Treeview';
 
 export {
 	getDefaultTreeviewProps,
+	TreeItem,
 	Treeview,
-	TreeviewItem,
 	TreeviewProps
 };

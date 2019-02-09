@@ -745,6 +745,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                                     className="ui-title sc-VigVT dxLNQ"
                                     contentEditable={false}
                                     controlled={true}
+                                    defaultText="default"
                                     direction="right"
                                     disabled={true}
                                     err={null}
@@ -812,6 +813,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                                       className="ui-title sc-VigVT dxLNQ"
                                       contentEditable={false}
                                       controlled={true}
+                                      defaultText="default"
                                       direction="right"
                                       disabled={true}
                                       err={null}
@@ -926,10 +928,15 @@ exports[`Test disabling of a ListItem control 1`] = `
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-iwsKbI",
                                                   "isStatic": false,
-                                                  "lastClassName": "eruvMJ",
+                                                  "lastClassName": "bcTGFf",
                                                   "rules": Array [
                                                     "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                    "​",
+                                                    "\\";
+	}
 
 	",
                                                     [Function],
@@ -965,7 +972,7 @@ exports[`Test disabling of a ListItem control 1`] = `
                                             visible={true}
                                           >
                                             <span
-                                              className="ui-label ui-title sc-VigVT dxLNQ sc-iwsKbI eruvMJ"
+                                              className="ui-label ui-title sc-VigVT dxLNQ sc-iwsKbI bcTGFf"
                                               contentEditable={false}
                                               disabled={true}
                                               onBlur={[Function]}
@@ -1747,6 +1754,7 @@ exports[`Test making ListItem control invisible 1`] = `
                                     className="ui-title sc-VigVT dxLNQ"
                                     contentEditable={false}
                                     controlled={true}
+                                    defaultText="default"
                                     direction="right"
                                     disabled={false}
                                     err={null}
@@ -1814,6 +1822,7 @@ exports[`Test making ListItem control invisible 1`] = `
                                       className="ui-title sc-VigVT dxLNQ"
                                       contentEditable={false}
                                       controlled={true}
+                                      defaultText="default"
                                       direction="right"
                                       disabled={false}
                                       err={null}
@@ -1928,10 +1937,15 @@ exports[`Test making ListItem control invisible 1`] = `
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-iwsKbI",
                                                   "isStatic": false,
-                                                  "lastClassName": "iAJkTJ",
+                                                  "lastClassName": "kqdhft",
                                                   "rules": Array [
                                                     "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                                    "​",
+                                                    "\\";
+	}
 
 	",
                                                     [Function],
@@ -1967,7 +1981,7 @@ exports[`Test making ListItem control invisible 1`] = `
                                             visible={false}
                                           >
                                             <span
-                                              className="ui-label ui-title sc-VigVT dxLNQ sc-iwsKbI iAJkTJ"
+                                              className="ui-label ui-title sc-VigVT dxLNQ sc-iwsKbI kqdhft"
                                               contentEditable={false}
                                               disabled={false}
                                               onBlur={[Function]}

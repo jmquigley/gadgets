@@ -38,6 +38,8 @@
  * - `ui-label` - Applied to the surrounding `<span>` element for all labels
  *
  * #### Properties
+ * - `defaultText: {string} ('default')` - If the text is fully deleted from the
+ * label, then this text is put in as a placeholder.
  * - `focus: {boolean} (false)` - If true, then this control is given the focus
  * - `noedit: {boolean} (false)` - If true, then the control can't be edited
  * - `text: {string} ('')` - the text value associated with the label.
@@ -70,6 +72,7 @@ import {
 import styled from '../shared/themed-components';
 
 export interface LabelProps extends BaseProps {
+	defaultText: string;
 	noedit?: boolean;
 	onBlur?: any;
 	onChange?: any;
@@ -84,6 +87,7 @@ export interface LabelProps extends BaseProps {
 
 export function getDefaultLabelProps(): LabelProps {
 	return cloneDeep({...getDefaultBaseProps(),
+		defaultText: 'default',
 		noedit: false,
 		obj: 'Label',
 		onBlur: nilEvent,
@@ -116,6 +120,9 @@ export function getDefaultLabelState(): LabelState {
 
 export const LabelView: any = styled.span`
 	background-color: inherit;
+	:empty:before {
+    	content: "${sp}";
+	}
 
 	${(props: LabelProps) => disabled(props)}
 	${(props: LabelProps) => invisible(props)}
@@ -155,8 +162,16 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			const element = (e.target as HTMLSpanElement);
 
 			if (this.state.editable) {
-				const val = element.innerHTML;
 				const previous = this.state.previousText;
+				let val: string = element.innerHTML;
+
+				if (val) {
+					val = val.trim();
+				}
+
+				if (val.length === 0) {
+					val = element.innerHTML = this.props.defaultText;
+				}
 
 				this.setState({
 					editable: false,

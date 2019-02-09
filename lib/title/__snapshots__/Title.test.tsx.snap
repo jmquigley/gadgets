@@ -301,6 +301,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                   className="ui-title sc-ifAKCX yXbqB"
                   contentEditable={false}
                   controlled={true}
+                  defaultText="default"
                   direction="right"
                   disabled={false}
                   err={null}
@@ -354,6 +355,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                     className="ui-title sc-ifAKCX yXbqB"
                     contentEditable={false}
                     controlled={true}
+                    defaultText="default"
                     direction="right"
                     disabled={false}
                     err={null}
@@ -454,10 +456,15 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bwzfXH",
                                 "isStatic": false,
-                                "lastClassName": "cEurMc",
+                                "lastClassName": "kWkIbd",
                                 "rules": Array [
                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                  "​",
+                                  "\\";
+	}
 
 	",
                                   [Function],
@@ -493,7 +500,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
                           visible={true}
                         >
                           <span
-                            className="ui-label ui-title sc-ifAKCX yXbqB sc-bwzfXH cEurMc"
+                            className="ui-label ui-title sc-ifAKCX yXbqB sc-bwzfXH kWkIbd"
                             contentEditable={false}
                             disabled={false}
                             onBlur={[Function]}
@@ -822,6 +829,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                   className="ui-title sc-ifAKCX yXbqB"
                   contentEditable={false}
                   controlled={true}
+                  defaultText="default"
                   direction="right"
                   disabled={false}
                   err={null}
@@ -875,6 +883,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                     className="ui-title sc-ifAKCX yXbqB"
                     contentEditable={false}
                     controlled={true}
+                    defaultText="default"
                     direction="right"
                     disabled={false}
                     err={null}
@@ -975,10 +984,15 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bwzfXH",
                                 "isStatic": false,
-                                "lastClassName": "cEurMc",
+                                "lastClassName": "kWkIbd",
                                 "rules": Array [
                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                  "​",
+                                  "\\";
+	}
 
 	",
                                   [Function],
@@ -1014,7 +1028,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
                           visible={true}
                         >
                           <span
-                            className="ui-label ui-title sc-ifAKCX yXbqB sc-bwzfXH cEurMc"
+                            className="ui-label ui-title sc-ifAKCX yXbqB sc-bwzfXH kWkIbd"
                             contentEditable={false}
                             disabled={false}
                             onBlur={[Function]}
@@ -2295,6 +2309,7 @@ exports[`Test disabling the Title control 1`] = `
                   className="ui-title sc-ifAKCX iVrkrp"
                   contentEditable={false}
                   controlled={true}
+                  defaultText="default"
                   direction="right"
                   disabled={true}
                   err={null}
@@ -2348,6 +2363,7 @@ exports[`Test disabling the Title control 1`] = `
                     className="ui-title sc-ifAKCX iVrkrp"
                     contentEditable={false}
                     controlled={true}
+                    defaultText="default"
                     direction="right"
                     disabled={true}
                     err={null}
@@ -2448,10 +2464,15 @@ exports[`Test disabling the Title control 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bwzfXH",
                                 "isStatic": false,
-                                "lastClassName": "gfZwc",
+                                "lastClassName": "cnGDic",
                                 "rules": Array [
                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                  "​",
+                                  "\\";
+	}
 
 	",
                                   [Function],
@@ -2487,7 +2508,7 @@ exports[`Test disabling the Title control 1`] = `
                           visible={true}
                         >
                           <span
-                            className="ui-label ui-title sc-ifAKCX iVrkrp sc-bwzfXH gfZwc"
+                            className="ui-label ui-title sc-ifAKCX iVrkrp sc-bwzfXH cnGDic"
                             contentEditable={false}
                             disabled={true}
                             onBlur={[Function]}
@@ -2816,6 +2837,7 @@ exports[`Test making the Title control invisible 1`] = `
                   className="ui-title sc-ifAKCX iVrkrp"
                   contentEditable={false}
                   controlled={true}
+                  defaultText="default"
                   direction="right"
                   disabled={false}
                   err={null}
@@ -2869,6 +2891,7 @@ exports[`Test making the Title control invisible 1`] = `
                     className="ui-title sc-ifAKCX iVrkrp"
                     contentEditable={false}
                     controlled={true}
+                    defaultText="default"
                     direction="right"
                     disabled={false}
                     err={null}
@@ -2969,10 +2992,15 @@ exports[`Test making the Title control invisible 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bwzfXH",
                                 "isStatic": false,
-                                "lastClassName": "feyPXN",
+                                "lastClassName": "deFhZV",
                                 "rules": Array [
                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                  "​",
+                                  "\\";
+	}
 
 	",
                                   [Function],
@@ -3008,7 +3036,7 @@ exports[`Test making the Title control invisible 1`] = `
                           visible={false}
                         >
                           <span
-                            className="ui-label ui-title sc-ifAKCX iVrkrp sc-bwzfXH feyPXN"
+                            className="ui-label ui-title sc-ifAKCX iVrkrp sc-bwzfXH deFhZV"
                             contentEditable={false}
                             disabled={false}
                             onBlur={[Function]}

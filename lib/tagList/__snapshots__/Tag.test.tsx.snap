@@ -264,6 +264,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                   className="sc-chPdSV byfFmt"
                   contentEditable={false}
                   controlled={true}
+                  defaultText="default"
                   direction="right"
                   disabled={true}
                   err={null}
@@ -307,6 +308,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                     className="sc-chPdSV byfFmt"
                     contentEditable={false}
                     controlled={true}
+                    defaultText="default"
                     direction="right"
                     disabled={true}
                     err={null}
@@ -397,10 +399,15 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-jzJRlG",
                                 "isStatic": false,
-                                "lastClassName": "duGDxt",
+                                "lastClassName": "drTvjS",
                                 "rules": Array [
                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                  "​",
+                                  "\\";
+	}
 
 	",
                                   [Function],
@@ -436,7 +443,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                           visible={true}
                         >
                           <span
-                            className="ui-label sc-chPdSV byfFmt sc-jzJRlG duGDxt"
+                            className="ui-label sc-chPdSV byfFmt sc-jzJRlG drTvjS"
                             contentEditable={false}
                             disabled={true}
                             onBlur={[Function]}
@@ -1526,6 +1533,7 @@ exports[`Test making Tag invisible 1`] = `
                   className="sc-chPdSV byfFmt"
                   contentEditable={false}
                   controlled={true}
+                  defaultText="default"
                   direction="right"
                   disabled={true}
                   err={null}
@@ -1569,6 +1577,7 @@ exports[`Test making Tag invisible 1`] = `
                     className="sc-chPdSV byfFmt"
                     contentEditable={false}
                     controlled={true}
+                    defaultText="default"
                     direction="right"
                     disabled={true}
                     err={null}
@@ -1659,10 +1668,15 @@ exports[`Test making Tag invisible 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-jzJRlG",
                                 "isStatic": false,
-                                "lastClassName": "eMkDPa",
+                                "lastClassName": "byzXaB",
                                 "rules": Array [
                                   "
 	background-color: inherit;
+	:empty:before {
+    	content: \\"",
+                                  "​",
+                                  "\\";
+	}
 
 	",
                                   [Function],
@@ -1698,7 +1712,7 @@ exports[`Test making Tag invisible 1`] = `
                           visible={false}
                         >
                           <span
-                            className="ui-label sc-chPdSV byfFmt sc-jzJRlG eMkDPa"
+                            className="ui-label sc-chPdSV byfFmt sc-jzJRlG byzXaB"
                             contentEditable={false}
                             disabled={true}
                             onBlur={[Function]}
