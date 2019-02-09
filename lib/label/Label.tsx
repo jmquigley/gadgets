@@ -163,14 +163,19 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 			if (this.state.editable) {
 				const previous = this.state.previousText;
-				let val: string = element.innerHTML;
+				let val: string;
 
-				if (val) {
-					val = val.trim();
-				}
-
-				if (val.length === 0) {
-					val = element.innerHTML = this.props.defaultText;
+				if (this.props.testing) {
+					// special case for testing with JSDOM
+					val = element.innerHTML;
+					if (val.length === 0) {
+						val = element.innerHTML = this.props.defaultText;
+					}
+				} else {
+					val = element.textContent.trim();
+					if (val.length === 0) {
+						val = element.textContent = this.props.defaultText;
+					}
 				}
 
 				this.setState({
