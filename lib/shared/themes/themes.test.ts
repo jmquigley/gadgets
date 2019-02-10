@@ -2,7 +2,7 @@
 
 const debug = require('debug')('themes.test');
 
-import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from '../../../dist/bundle';
+import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from './index';
 
 test('Test retrieval of the current theme', () => {
 	const theme = getTheme();

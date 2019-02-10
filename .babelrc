@@ -1,15 +1,18 @@
 {
-    "presets": [
-				"@babel/preset-env",
-				"@babel/typescript",
-				"@babel/preset-react"
-		],
-		"sourceMaps": "inline",
-		"plugins": [
-				"babel-plugin-styled-components",
-				["@babel/plugin-transform-runtime", {
-						"helpers": false,
-						"regenerator": true
-				}]
-		]
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "sourceMaps": "inline",
+  "plugins": [
+    "babel-plugin-styled-components",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "helpers": false,
+        "regenerator": true
+      }
+    ]
+  ]
 }

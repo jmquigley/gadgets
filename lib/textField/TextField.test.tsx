@@ -1,6 +1,5 @@
 'use strict';
 
-import * as assert from 'assert';
 import {mount, shallow} from 'enzyme';
 import * as React from 'react';
 import {getDefaultTextFieldProps, TextField} from './index';
@@ -8,21 +7,21 @@ import {getDefaultTextFieldProps, TextField} from './index';
 test('Test retrieval of TextField props object', () => {
 	const props = getDefaultTextFieldProps();
 
-	assert(props);
+	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
 test('Test creation of a TextField control', () => {
 	const ctl = shallow(<TextField className="test-class" />);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
 test('Test disabling of a TextField control', () => {
 	const ctl = mount(<TextField disabled />);
 
-	assert(ctl);
+	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 

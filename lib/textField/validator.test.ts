@@ -1,6 +1,5 @@
 'use strict';
 
-import * as assert from 'assert';
 import {
 	validateEmail,
 	validateMaxLength,
@@ -13,7 +12,7 @@ import {
 test('Test creation of the default validator object', () => {
 	const validator = new Validator(null, null, null);
 
-	assert(validator);
+	expect(validator).toBeDefined();
 	expect(validator).toMatchSnapshot();
 });
 
@@ -30,62 +29,62 @@ test('Create a dummy valiator class and verify', () => {
 		'success message'
 	);
 
-	assert(validator);
-	assert(validator.validate('a'));
-	assert(!validator.validate('b'));
-	assert(validator.success === 'success message');
-	assert(validator.failure === 'failure message');
+	expect(validator).toBeDefined();
+	expect(validator.validate('a')).toBe(true);
+	expect(validator.validate('b')).toBe(false);
+	expect(validator.success === 'success message').toBe(true);
+	expect(validator.failure === 'failure message').toBe(true);
 });
 
 test('Validate builtin min length validator', () => {
 	const validator: Validator = validateMinLength(5);
 
-	assert(validator);
-	assert(validator.validate('abcdef'));
-	assert(validator.validate('abcde'));
-	assert(!validator.validate('abcd'));
-	assert(!validator.validate(''));
+	expect(validator).toBeDefined();
+	expect(validator.validate('abcdef')).toBe(true);
+	expect(validator.validate('abcde')).toBe(true);
+	expect(validator.validate('abcd')).toBe(false);
+	expect(validator.validate('')).toBe(false);
 });
 
 test('Validate builtin max length validator', () => {
 	const validator: Validator = validateMaxLength(5);
 
-	assert(validator);
-	assert(validator.validate(''));
-	assert(validator.validate('abcd'));
-	assert(validator.validate('abcde'));
-	assert(!validator.validate('abcdef'));
+	expect(validator).toBeDefined();
+	expect(validator.validate('')).toBe(true);
+	expect(validator.validate('abcd')).toBe(true);
+	expect(validator.validate('abcde')).toBe(true);
+	expect(validator.validate('abcdef')).toBe(false);
 });
 
 test('Validate builtin email validator', () => {
 	const validator: Validator = validateEmail();
 
-	assert(validator);
-	assert(validator.validate('example@example.com'));
-	assert(!validator.validate('blah'));
+	expect(validator).toBeDefined();
+	expect(validator.validate('example@example.com')).toBe(true);
+	expect(validator.validate('blah')).toBe(false);
 });
 
 test('Validate builtin url validator', () => {
 	const validator: Validator = validateURL();
 
-	assert(validator);
-	assert(validator.validate('http://example.com'));
-	assert(validator.validate('https://example.com'));
-	assert(!validator.validate('blah'));
+	expect(validator).toBeDefined();
+	expect(validator.validate('http://example.com')).toBe(true);
+	expect(validator.validate('https://example.com')).toBe(true);
+	expect(validator.validate('blah')).toBe(false);
 });
 
 test('Validate builtin regex validator', () => {
 	let validator: Validator = validateRegex(/^[0-9a-zA-Z]+$/);
 
-	assert(validator);
-	assert(validator.validate('abcABC123'));
-	assert(!validator.validate('abcABC@123'));
+	expect(validator).toBeDefined();
+	expect(validator.validate('abcABC123')).toBe(true);
+	expect(validator.validate('abcABC@123')).toBe(false);
 
 	validator = validateRegex();
-	assert(validator);
-	assert(validator.validate('aaaaaaaaaa'));
-	assert(validator.validate(''));
-	assert(validator.validate('1232352@$^@$%@^&@$%aldgkjalkdgjadlf'));
+	expect(validator).toBeDefined();
+	expect(validator.validate('aaaaaaaaaa')).toBe(true);
+	expect(validator.validate('')).toBe(true);
+	expect(validator.validate('1232352@$^@$%@^&@$%aldgkjalkdgjadlf')).toBe(true);
 });
 
 test('Test creation of a Validator with bad params', () => {
@@ -95,8 +94,8 @@ test('Test creation of a Validator with bad params', () => {
 		null
 	);
 
-	assert(validator);
-	assert(validator.validate('blah'));
-	assert(validator.success === '');
-	assert(validator.failure === '');
+	expect(validator).toBeDefined();
+	expect(validator.validate('blah')).toBe(true);
+	expect(validator.success === '').toBe(true);
+	expect(validator.failure === '').toBe(true);
 });
