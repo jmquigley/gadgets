@@ -1,16 +1,8 @@
-'use strict';
+"use strict";
 
-import {
-	getDefaultTagListProps,
-	TagList,
-	TagListProps
-} from './TagList';
+import {getDefaultTagListProps, TagList, TagListProps} from "./TagList";
 
-import {
-	getDefaultTagProps,
-	Tag,
-	TagProps
-} from './Tag';
+import {getDefaultTagProps, Tag, TagProps} from "./Tag";
 
 export {
 	getDefaultTagProps,

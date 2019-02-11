@@ -82,21 +82,21 @@
  * @module Pager
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Pager');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep, sortBy} from 'lodash';
-import * as React from 'react';
-import {Keys} from 'util.keys';
-import {nilEvent} from 'util.toolbox';
-import {Button} from '../button';
-import {ButtonDialog} from '../buttonDialog';
-import {ButtonText} from '../buttonText';
-import {Divider} from '../divider';
-import {Icon} from '../icon';
-import {List, ListDivider, ListItem} from '../list';
+import autobind from "autobind-decorator";
+import {cloneDeep, sortBy} from "lodash";
+import * as React from "react";
+import {Keys} from "util.keys";
+import {nilEvent} from "util.toolbox";
+import {Button} from "../button";
+import {ButtonDialog} from "../buttonDialog";
+import {ButtonText} from "../buttonText";
+import {Divider} from "../divider";
+import {Icon} from "../icon";
+import {List, ListDivider, ListItem} from "../list";
 import {
 	BaseComponent,
 	BaseProps,
@@ -108,9 +108,9 @@ import {
 	Sizing,
 	SortOrder,
 	Wrapper
-} from '../shared';
-import styled, {css} from '../shared/themed-components';
-import {TextField} from '../textField';
+} from "../shared";
+import styled, {css} from "../shared/themed-components";
+import {TextField} from "../textField";
 
 export const defaultPageSize: number = 25;
 export const defaultPageSizes: number[] = [25, 50, 100];
@@ -128,10 +128,11 @@ export interface PagerProps extends BaseProps {
 }
 
 export function getDefaultPagerProps(): PagerProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		initialPage: 1,
 		initialPageSize: defaultPageSize,
-		obj: 'Pager',
+		obj: "Pager",
 		onChangePageSize: nilEvent,
 		onSelect: nilEvent,
 		onSort: null,
@@ -150,7 +151,8 @@ export interface PagerState extends BaseState {
 }
 
 export function getDefaultPagerState(): PagerState {
-	return cloneDeep({...getDefaultBaseState('ui-pager'),
+	return cloneDeep({
+		...getDefaultBaseState("ui-pager"),
 		currentPage: 0,
 		currentSort: SortOrder.ascending,
 		pageSize: 0
@@ -209,7 +211,6 @@ export const StyledTextField: any = styled(TextField)`
 `;
 
 export class Pager extends BaseComponent<PagerProps, PagerState> {
-
 	public static defaultProps: PagerProps = getDefaultPagerProps();
 
 	private _lastPage: number = 0;
@@ -234,7 +235,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.pageSizes = this.props.pageSizes;
 		this.computeInitialPages(this.props.initialPageSize);
 
-		this.state = {...getDefaultPagerState(),
+		this.state = {
+			...getDefaultPagerState(),
 			currentPage: this.initialPage,
 			currentSort: SortOrder.ascending,
 			pageSize: this.initialPageSize
@@ -242,7 +244,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		this._iconBlank = (
 			<Icon
-				iconName=""
+				iconName=''
 				key={this._fillerKeys.at(this._fillerIdx++)}
 				sizing={this.props.sizing}
 			/>
@@ -250,11 +252,11 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		this._iconCheck = (
 			<Icon
-				iconName="check"
+				iconName='check'
 				key={this._fillerKeys.at(this._fillerIdx++)}
 				sizing={this.props.sizing}
 				style={{
-					color: 'green'
+					color: "green"
 				}}
 			/>
 		);
@@ -302,7 +304,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		const l: number[] = [];
 
 		const endBlock = this.lastPage - this.props.pagesToDisplay;
-		if (this.currentPage > endBlock && this.lastPage >= this.props.pagesToDisplay) {
+		if (
+			this.currentPage > endBlock &&
+			this.lastPage >= this.props.pagesToDisplay
+		) {
 			for (let i = endBlock + 1; i <= this.lastPage; i++) {
 				l.push(i);
 			}
@@ -352,7 +357,10 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 * @param props {PagerProps} the set of props that should be used to
 	 * compute the initial page information (size, first/last page)
 	 */
-	private computeInitialPages(pageSize: number, props: PagerProps = this.props) {
+	private computeInitialPages(
+		pageSize: number,
+		props: PagerProps = this.props
+	) {
 		this._initialPageSize = pageSize;
 		this._lastPage = this.computeLastPage(this.initialPageSize);
 		this._initialPage = Number(props.initialPage);
@@ -395,7 +403,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		for (const page of this.pages) {
 			if (page !== 0 && this._buttons[page] == null) {
-
 				this._buttons[page] = (
 					<StyledButtonText
 						{...props}
@@ -413,9 +420,9 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				if (page === this.currentPage) {
 					let selected: string;
 					if (props.disabled) {
-						selected = ' nohover';
+						selected = " nohover";
 					} else {
-						selected = ' ui-pager-selected';
+						selected = " ui-pager-selected";
 					}
 
 					this._buttonsDisplay.push(
@@ -424,10 +431,12 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 							disabled: props.disabled,
 							sizing: props.sizing,
 							style: {
-								backgroundColor: this.theme.selectedBackgroundColor,
+								backgroundColor: this.theme
+									.selectedBackgroundColor,
 								color: this.theme.selectedForegroundColor
 							}
-						}));
+						})
+					);
 				} else {
 					this._buttonsDisplay.push(
 						React.cloneElement(this._buttons[page], {
@@ -437,7 +446,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 								backgroundColor: this.theme.backgroundColor,
 								color: this.theme.color
 							}
-						}));
+						})
+					);
 				}
 			} else {
 				this._buttonsDisplay.push(
@@ -448,7 +458,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						noicon
 						disabled
 						sizing={props.sizing}
-						text=""
+						text=''
 					/>
 				);
 			}
@@ -464,17 +474,23 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		const sortOptions = [];
 		let idx: number = 0;
 
-		if (nextProps.onSort && typeof nextProps.onSort === 'function' && nextProps.onSort !== nilEvent) {
+		if (
+			nextProps.onSort &&
+			typeof nextProps.onSort === "function" &&
+			nextProps.onSort !== nilEvent
+		) {
 			sortOptions.push(
 				<ListItem
 					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={
-						nextState.currentSort === SortOrder.ascending ?	this._iconCheck	: this._iconBlank
+						nextState.currentSort === SortOrder.ascending
+							? this._iconCheck
+							: this._iconBlank
 					}
 					noedit
 					onSelect={this.handleSortAscending}
-					title="Ascending"
+					title='Ascending'
 				/>
 			);
 
@@ -483,11 +499,13 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={
-						nextState.currentSort === SortOrder.descending ? this._iconCheck : this._iconBlank
+						nextState.currentSort === SortOrder.descending
+							? this._iconCheck
+							: this._iconBlank
 					}
 					noedit
 					onSelect={this.handleSortDescending}
-					title="Descending"
+					title='Descending'
 				/>
 			);
 
@@ -524,7 +542,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				leftButton={allFlag ? this._iconCheck : this._iconBlank}
 				noedit
 				onSelect={this.handleDialogSelect}
-				title="all"
+				title='all'
 			/>
 		);
 
@@ -537,7 +555,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					leftButton={this._iconBlank}
 					noedit
 					onSelect={this.moveToFront}
-					title="First"
+					title='First'
 				/>
 				<ListItem
 					{...nextProps}
@@ -545,7 +563,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					leftButton={this._iconBlank}
 					noedit
 					onSelect={this.moveToEnd}
-					title="Last"
+					title='Last'
 				/>
 				<ListItem
 					{...nextProps}
@@ -553,7 +571,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					leftButton={this._iconBlank}
 					noedit
 					onSelect={this.moveToNext}
-					title="Next"
+					title='Next'
 				/>
 				<ListItem
 					{...nextProps}
@@ -561,7 +579,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					leftButton={this._iconBlank}
 					noedit
 					onSelect={this.moveToPrevious}
-					title="Previous"
+					title='Previous'
 				/>
 				<ListDivider />
 				{items}
@@ -576,11 +594,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	 */
 	@autobind
 	private sanitizeProps(props: PagerProps) {
-		const {
-			onChangePageSize,
-			onSort,
-			...newProps
-		} = props;
+		const {onChangePageSize, onSort, ...newProps} = props;
 
 		return newProps;
 	}
@@ -599,7 +613,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private handleDialogSelect(text: string) {
 		let size: number;
 
-		if (text === 'all') {
+		if (text === "all") {
 			size = this.props.totalItems;
 		} else {
 			size = Number(text);
@@ -621,14 +635,13 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	@autobind
 	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
-		if (e.key === 'Enter') {
+		if (e.key === "Enter") {
 			this.currentPage = Number((e.target as HTMLInputElement).value);
 		}
 	}
 
 	@autobind
 	private handleSelect(newPage: number) {
-
 		// This is a workaround check.  The createButtons function creates a series
 		// of ButtonText controls for each "page".  When the button is clicked this
 		// handler is invoked by that button.  It passes the number text for that
@@ -637,7 +650,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		// then the logic for currentPage fails (as computing pages from this string
 		// doesn't work).  This check ensures the type for the newPage and converts
 		// when it is not a number.
-		if (typeof newPage !== 'number') {
+		if (typeof newPage !== "number") {
 			newPage = Number(newPage);
 		}
 
@@ -706,53 +719,51 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.createDialog(props, this.state);
 
 		return (
-			<Wrapper {...props} >
+			<Wrapper {...props}>
 				<PagerView
 					className={this.state.classes.classnames}
 					style={this.state.style}
 				>
 					<StyledButton
 						{...props}
-						iconName="angle-double-left"
+						iconName='angle-double-left'
 						onClick={this.moveToFront}
 					/>
 					<StyledButton
 						{...props}
-						iconName="angle-left"
+						iconName='angle-left'
 						onClick={this.moveToPrevious}
 					/>
 					{this._buttonsDisplay}
 					<StyledButton
 						{...props}
-						iconName="angle-right"
+						iconName='angle-right'
 						onClick={this.moveToNext}
 					/>
 					<StyledButton
 						{...props}
-						iconName="angle-double-right"
+						iconName='angle-double-right'
 						onClick={this.moveToEnd}
 					/>
 					<Divider />
-					{props.useinput ?
-					<StyledTextField
-						disabled={props.disabled}
-						min="1"
-						max={String(this._lastPage)}
-						onBlur={this.handleBlur}
-						onChange={this.handleChange}
-						onKeyPress={this.handleKeyPress}
-						placeholder={String(this.currentPage)}
-						sizing={props.sizing}
-						type="number"
-						value={this.currentPage}
-					/>
-					:
-						null
-					}
+					{props.useinput ? (
+						<StyledTextField
+							disabled={props.disabled}
+							min='1'
+							max={String(this._lastPage)}
+							onBlur={this.handleBlur}
+							onChange={this.handleChange}
+							onKeyPress={this.handleKeyPress}
+							placeholder={String(this.currentPage)}
+							sizing={props.sizing}
+							type='number'
+							value={this.currentPage}
+						/>
+					) : null}
 					<Divider />
 					<StyledButtonDialog
 						{...props}
-						iconName="ellipsis-v"
+						iconName='ellipsis-v'
 						location={Location.top}
 						notriangle
 						sizing={props.sizing}

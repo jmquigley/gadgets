@@ -49,15 +49,15 @@
  * @module Label
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Label');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {sp} from 'util.constants';
-import {nilEvent} from 'util.toolbox';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {sp} from "util.constants";
+import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
 	BaseProps,
@@ -68,8 +68,8 @@ import {
 	getDefaultBaseState,
 	invisible,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface LabelProps extends BaseProps {
 	defaultText: string;
@@ -86,10 +86,11 @@ export interface LabelProps extends BaseProps {
 }
 
 export function getDefaultLabelProps(): LabelProps {
-	return cloneDeep({...getDefaultBaseProps(),
-		defaultText: 'default',
+	return cloneDeep({
+		...getDefaultBaseProps(),
+		defaultText: "default",
 		noedit: false,
-		obj: 'Label',
+		obj: "Label",
 		onBlur: nilEvent,
 		onChange: nilEvent,
 		onClick: nilEvent,
@@ -110,11 +111,12 @@ export interface LabelState extends BaseState {
 }
 
 export function getDefaultLabelState(): LabelState {
-	return cloneDeep({...getDefaultBaseState('ui-label'),
+	return cloneDeep({
+		...getDefaultBaseState("ui-label"),
 		editable: false,
-		originalText: '',
-		previousText: '',
-		text: ''
+		originalText: "",
+		previousText: "",
+		text: ""
 	});
 }
 
@@ -130,13 +132,13 @@ export const LabelView: any = styled.span`
 `;
 
 export class Label extends BaseComponent<LabelProps, LabelState> {
-
 	public static readonly defaultProps: LabelProps = getDefaultLabelProps();
 	private _label: any = null;
 
 	constructor(props: LabelProps) {
 		super(props, Label.defaultProps.style);
-		this.state = {...getDefaultLabelState(),
+		this.state = {
+			...getDefaultLabelState(),
 			editable: props.useedit,
 			originalText: String(props.text),
 			previousText: String(props.text),
@@ -159,7 +161,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	@autobind
 	private handleChange(e: React.FormEvent<HTMLSpanElement>) {
 		if (!this.props.disabled && this.props.visible) {
-			const element = (e.target as HTMLSpanElement);
+			const element = e.target as HTMLSpanElement;
 
 			if (this.state.editable) {
 				const previous = this.state.previousText;
@@ -178,14 +180,17 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 					}
 				}
 
-				this.setState({
-					editable: false,
-					previousText: val,
-					text: val
-				}, () => {
-					this.props.onChange(val);
-					this.props.onUpdate(previous, val);
-				});
+				this.setState(
+					{
+						editable: false,
+						previousText: val,
+						text: val
+					},
+					() => {
+						this.props.onChange(val);
+						this.props.onUpdate(previous, val);
+					}
+				);
 			}
 		}
 	}
@@ -197,8 +202,11 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 			e.preventDefault();
 
 			if (!this.props.noedit && document != null && window != null) {
-				if ('caretRangeFromPoint' in document) {
-					const range = document.caretRangeFromPoint(e.clientX, e.clientY);
+				if ("caretRangeFromPoint" in document) {
+					const range = document.caretRangeFromPoint(
+						e.clientX,
+						e.clientY
+					);
 					const sel = window.getSelection();
 
 					window.setTimeout(() => {
@@ -218,7 +226,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
-		if (e.key === 'Escape') {
+		if (e.key === "Escape") {
 			this.setState({
 				editable: false,
 				text: this.state.previousText
@@ -232,7 +240,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	@autobind
 	private handleKeyPress(e: React.KeyboardEvent<HTMLSpanElement>) {
-		if (e.key === 'Enter') {
+		if (e.key === "Enter") {
 			this.handleChange(e);
 		}
 
@@ -254,7 +262,10 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		this.componentDidMount();
 	}
 
-	public static getDerivedStateFromProps(props: LabelProps, state: LabelState) {
+	public static getDerivedStateFromProps(
+		props: LabelProps,
+		state: LabelState
+	) {
 		const newState: LabelState = {...state};
 
 		if (String(props.text) !== newState.originalText) {
@@ -268,7 +279,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	public render() {
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<LabelView
 					className={this.state.classes.classnames}
 					contentEditable={this.state.editable}

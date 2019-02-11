@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-import {regexEmail, regexURL} from 'util.constants';
+import {regexEmail, regexURL} from "util.constants";
 
 export type ValidatorFn = (text: string, option?: any) => boolean;
 
@@ -40,12 +40,11 @@ export type ValidatorFn = (text: string, option?: any) => boolean;
  *
  */
 export class Validator {
-
-	private _failure: string = '';
-	private _success: string = '';
+	private _failure: string = "";
+	private _success: string = "";
 
 	constructor(fn: ValidatorFn, failure: string, success?: string) {
-		if (fn != null && typeof fn === 'function') this.validate = fn;
+		if (fn != null && typeof fn === "function") this.validate = fn;
 		if (failure != null) this._failure = failure;
 		if (success != null) this._success = success;
 	}
@@ -58,11 +57,14 @@ export class Validator {
 		return this._success;
 	}
 
-	public validate: ValidatorFn = (text: string = '', option: any = ''): boolean => {
+	public validate: ValidatorFn = (
+		text: string = "",
+		option: any = ""
+	): boolean => {
 		text = text;
 		option = option;
 		return true;
-	}
+	};
 }
 
 export function validateMaxLength(length: number): Validator {
@@ -102,8 +104,8 @@ export function validateEmail(): Validator {
 
 			return false;
 		},
-		'Invalid email address',
-		'Valid email address'
+		"Invalid email address",
+		"Valid email address"
 	);
 }
 
@@ -116,8 +118,8 @@ export function validateURL(): Validator {
 
 			return false;
 		},
-		'Invalid URL',
-		'Valid URL'
+		"Invalid URL",
+		"Valid URL"
 	);
 }
 
@@ -127,6 +129,6 @@ export function validateRegex(regex: RegExp = /.*/): Validator {
 			return re.test(value);
 		},
 		`Invalid regex (${regex})`,
-		''
+		""
 	);
 }

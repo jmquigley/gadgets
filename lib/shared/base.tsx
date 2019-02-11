@@ -41,25 +41,27 @@
  * @module BaseComponent
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('base');
 
-import * as React from 'react';
-import {calc} from 'util.calc';
-import {getUUID} from 'util.toolbox';
-import {BaseProps, Styles} from './props';
-import {FontStyle, Sizes, Sizing, Styling} from './sizing';
-import {getTheme, ThemeProps} from './themes';
+import * as React from "react";
+import {calc} from "util.calc";
+import {getUUID} from "util.toolbox";
+import {BaseProps, Styles} from "./props";
+import {FontStyle, Sizes, Sizing, Styling} from "./sizing";
+import {getTheme, ThemeProps} from "./themes";
 
-require('./styles.css');
+require("./styles.css");
 
 export const baseZIndex: number = 9999;
 export const defaultSize: number = 16;
 export let sizes: Sizes = Sizes.instance(defaultSize);
 
-export abstract class BaseComponent<P extends BaseProps, S> extends React.PureComponent<P, S> {
-
+export abstract class BaseComponent<
+	P extends BaseProps,
+	S
+> extends React.PureComponent<P, S> {
 	public static defaultStyles: any = {};
 
 	private _id: string;
@@ -74,7 +76,10 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		if (this.props.id) {
 			this._id = this.props.id;
 		} else {
-			this._id = this.constructor.name + '-' + (this.props.testing ? '0' : getUUID());
+			this._id =
+				this.constructor.name +
+				"-" +
+				(this.props.testing ? "0" : getUUID());
 		}
 
 		if (this.props.theme != null) {
@@ -109,11 +114,17 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		return sizes[sizing].font.size;
 	}
 
-	public static fontSizePX(sizing: Sizing = Sizing.normal, scale: number = 1.0): string {
+	public static fontSizePX(
+		sizing: Sizing = Sizing.normal,
+		scale: number = 1.0
+	): string {
 		return calc(sizes[sizing].font.sizepx, `* ${scale}`);
 	}
 
-	public static fontSizeREM(sizing: Sizing = Sizing.normal, scale: number = 1.0): string {
+	public static fontSizeREM(
+		sizing: Sizing = Sizing.normal,
+		scale: number = 1.0
+	): string {
 		return calc(sizes[sizing].font.sizerem, `* ${scale}`);
 	}
 
@@ -128,12 +139,18 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	 */
 	public static next(sizing: Sizing = Sizing.normal): Styling {
 		switch (sizing) {
-			case Sizing.xxsmall: return sizes[Sizing.xsmall];
-			case Sizing.xsmall: return sizes[Sizing.small];
-			case Sizing.small: return sizes[Sizing.normal];
-			case Sizing.large: return sizes[Sizing.xlarge];
-			case Sizing.xlarge: return sizes[Sizing.xxlarge];
-			case Sizing.xxlarge: return sizes[Sizing.xxlarge];
+			case Sizing.xxsmall:
+				return sizes[Sizing.xsmall];
+			case Sizing.xsmall:
+				return sizes[Sizing.small];
+			case Sizing.small:
+				return sizes[Sizing.normal];
+			case Sizing.large:
+				return sizes[Sizing.xlarge];
+			case Sizing.xlarge:
+				return sizes[Sizing.xxlarge];
+			case Sizing.xxlarge:
+				return sizes[Sizing.xxlarge];
 
 			case Sizing.normal:
 			case Sizing.medium:
@@ -155,19 +172,25 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 	 */
 	public static prev(sizing: Sizing = Sizing.normal): Styling {
 		switch (sizing) {
-		case Sizing.xxsmall: return sizes[Sizing.xxsmall];
-		case Sizing.xsmall: return sizes[Sizing.xxsmall];
-		case Sizing.small: return sizes[Sizing.xsmall];
-		case Sizing.large: return sizes[Sizing.normal];
-		case Sizing.xlarge: return sizes[Sizing.large];
-		case Sizing.xxlarge: return sizes[Sizing.xlarge];
+			case Sizing.xxsmall:
+				return sizes[Sizing.xxsmall];
+			case Sizing.xsmall:
+				return sizes[Sizing.xxsmall];
+			case Sizing.small:
+				return sizes[Sizing.xsmall];
+			case Sizing.large:
+				return sizes[Sizing.normal];
+			case Sizing.xlarge:
+				return sizes[Sizing.large];
+			case Sizing.xxlarge:
+				return sizes[Sizing.xlarge];
 
-		case Sizing.normal:
-		case Sizing.medium:
-			return sizes[Sizing.small];
+			case Sizing.normal:
+			case Sizing.medium:
+				return sizes[Sizing.small];
 
-		default:
-			return sizes[Sizing.normal];
+			default:
+				return sizes[Sizing.normal];
 		}
 	}
 
@@ -198,8 +221,10 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 			if (props.sizing !== nextProps.sizing) {
 				// debug('Children prop sizing change');
 				return React.Children.map(nextProps.children, (child: any) => {
-					if (child.props && 'sizing' in child.props) {
-						return React.cloneElement(child, {sizing: nextProps.sizing});
+					if (child.props && "sizing" in child.props) {
+						return React.cloneElement(child, {
+							sizing: nextProps.sizing
+						});
 					} else {
 						return child;
 					}
@@ -224,21 +249,26 @@ export abstract class BaseComponent<P extends BaseProps, S> extends React.PureCo
 		if (state && props) {
 			newState = {...state};
 
-			if ('classes' in newState) {
+			if ("classes" in newState) {
 				if (props.className != null) {
 					newState.classes.add(props.className);
 				}
 
 				if (props.nohover) {
-					newState.classes.on('nohover');
+					newState.classes.on("nohover");
 				}
 			}
 
-			if ('style' in newState) {
-				newState.style = Object.assign({}, BaseComponent.defaultStyles, newState.style, props.style);
+			if ("style" in newState) {
+				newState.style = Object.assign(
+					{},
+					BaseComponent.defaultStyles,
+					newState.style,
+					props.style
+				);
 			}
 
-			if ('sizing' in newState) {
+			if ("sizing" in newState) {
 				newState.sizing = props.sizing;
 			}
 		}

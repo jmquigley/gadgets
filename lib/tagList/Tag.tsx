@@ -32,14 +32,14 @@
  * @module Tag
  */
 
-'use strict';
+"use strict";
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {ButtonCircle} from '../buttonCircle';
-import {Label} from '../label';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {ButtonCircle} from "../buttonCircle";
+import {Label} from "../label";
 import {
 	BaseComponent,
 	BaseProps,
@@ -50,8 +50,8 @@ import {
 	getDefaultBaseState,
 	invisible,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface TagProps extends BaseProps {
 	onClick?: any;
@@ -62,8 +62,9 @@ export interface TagProps extends BaseProps {
 }
 
 export function getDefaultTagProps(): TagProps {
-	return cloneDeep({...getDefaultBaseProps(),
-		obj: 'Tag',
+	return cloneDeep({
+		...getDefaultBaseProps(),
+		obj: "Tag",
 		onClick: nilEvent,
 		onDelete: nilEvent,
 		onMouseOut: nilEvent,
@@ -77,9 +78,7 @@ export interface TagState extends BaseState {
 }
 
 export function getDefaultTagState(): TagState {
-	return cloneDeep({...getDefaultBaseState('ui-tag'),
-		showDelete: false
-	});
+	return cloneDeep({...getDefaultBaseState("ui-tag"), showDelete: false});
 }
 
 export const DeleteButtonView: any = styled(ButtonCircle)`
@@ -87,7 +86,8 @@ export const DeleteButtonView: any = styled(ButtonCircle)`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	transition: opacity ${(props: TagProps) => props.theme.transitionDelay} ease-in-out;
+	transition: opacity ${(props: TagProps) => props.theme.transitionDelay}
+		ease-in-out;
 	width: unset;
 `;
 
@@ -98,7 +98,7 @@ export const TagView: any = styled.div`
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -114,7 +114,6 @@ export const TagView: any = styled.div`
 export const StyledLabel: any = styled(Label)``;
 
 export class Tag extends BaseComponent<TagProps, TagState> {
-
 	private tag: string;
 	public static readonly defaultProps: TagProps = getDefaultTagProps();
 	public state: TagState = getDefaultTagState();
@@ -151,28 +150,25 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	}
 
 	public render() {
-		const {
-			onDelete,
-			...props
-		} = this.props;
+		const {onDelete, ...props} = this.props;
 
 		this.tag = React.Children.map(props.children, (child: any) => {
 			return String(child);
-		}).join(' ');
+		}).join(" ");
 
 		let deleteButton: any = null;
 		if (props.usedelete) {
 			deleteButton = (
 				<DeleteButtonView
 					disabled={props.disabled}
-					iconName="times"
+					iconName='times'
 					onClick={this.handleOnClick}
 					sizing={BaseComponent.prev(this.props.sizing).type}
 					style={{
 						backgroundColor: Color.white,
 						borderColor: Color.error,
 						color: Color.error,
-						opacity: this.state.showDelete ? '1.0' : '0.0'
+						opacity: this.state.showDelete ? "1.0" : "0.0"
 					}}
 					visible={props.visible}
 				/>
@@ -180,7 +176,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		}
 
 		return (
-			<Wrapper {...props} >
+			<Wrapper {...props}>
 				<TagView
 					className={this.state.classes.classnames}
 					onMouseOut={this.handleMouseOut}

@@ -4,7 +4,7 @@ import {
 	TextField,
 	TextFieldProps,
 	TextFieldState
-} from './TextField';
+} from "./TextField";
 
 import {
 	validateEmail,
@@ -14,7 +14,7 @@ import {
 	validateURL,
 	Validator,
 	ValidatorFn
-} from './validator';
+} from "./validator";
 
 export {
 	getDefaultTextFieldProps,

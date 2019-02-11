@@ -1,7 +1,7 @@
 {
 	"compileOnSave": true,
 	"compilerOptions": {
-		"allowSyntheticDefaultImports" : true,
+		"allowSyntheticDefaultImports": true,
 		"alwaysStrict": true,
 		"baseUrl": ".",
 		"declaration": true,
@@ -26,7 +26,7 @@
 		"dist",
 		"coverage",
 		"node_modules",
-	  "**/__test__/*",
+		"**/__test__/*",
 		"**/*.test.tsx",
 		"**/*.test.ts"
 	]

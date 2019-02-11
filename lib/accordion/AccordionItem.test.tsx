@@ -1,58 +1,44 @@
-'use strict';
+"use strict";
 
-import {mount, shallow} from 'enzyme';
-import * as React from 'react';
-import {AccordionItem, getDefaultAccordionItemProps} from './index';
+import {mount, shallow} from "enzyme";
+import * as React from "react";
+import {AccordionItem, getDefaultAccordionItemProps} from "./index";
 
-test('Test retrieval of AccordionItem props object', () => {
+test("Test retrieval of AccordionItem props object", () => {
 	const props = getDefaultAccordionItemProps();
 
 	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
-test('Test the creation of a AccordionItem control', () => {
+test("Test the creation of a AccordionItem control", () => {
 	const ctl = shallow(
-		<AccordionItem className="test-class" title="Test Title" />
+		<AccordionItem className='test-class' title='Test Title' />
 	);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test the disabling of the AccordionItem', () => {
-	const ctl = shallow(
-		<AccordionItem
-			disabled
-			title="Test Title"
-		/>
-	);
+test("Test the disabling of the AccordionItem", () => {
+	const ctl = shallow(<AccordionItem disabled title='Test Title' />);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test making the AccordionItem invisible', () => {
-	const ctl = shallow(
-		<AccordionItem
-			title="Test Title"
-			visible={false}
-		/>
-	);
+test("Test making the AccordionItem invisible", () => {
+	const ctl = shallow(<AccordionItem title='Test Title' visible={false} />);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test clicking of the AccordionItem header', () => {
+test("Test clicking of the AccordionItem header", () => {
 	const click = jest.fn();
 	const child = <div>child content</div>;
 	const ctl = mount(
-		<AccordionItem
-			initialToggle={false}
-			onClick={click}
-			title="Test Title"
-		>
+		<AccordionItem initialToggle={false} onClick={click} title='Test Title'>
 			{child}
 		</AccordionItem>
 	);
@@ -60,15 +46,17 @@ test('Test clicking of the AccordionItem header', () => {
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	expect(ctl.state('toggle')).toBe(false);
+	expect(ctl.state("toggle")).toBe(false);
 	expect(ctl.contains(child)).toBe(false);
-	ctl.find('.ui-label').first().simulate('click');
+	ctl.find(".ui-label")
+		.first()
+		.simulate("click");
 	expect(click).toHaveBeenCalled();
-	expect(ctl.state('toggle')).toBe(true);
+	expect(ctl.state("toggle")).toBe(true);
 	expect(ctl.contains(child)).toBe(true);
 });
 
-test('Test clicking the AccordionItem header when setting nocollapse', () => {
+test("Test clicking the AccordionItem header when setting nocollapse", () => {
 	const click = jest.fn();
 	const child = <div>child content</div>;
 	const ctl = mount(
@@ -76,7 +64,7 @@ test('Test clicking the AccordionItem header when setting nocollapse', () => {
 			initialToggle={false}
 			nocollapse
 			onClick={click}
-			title="Test Title"
+			title='Test Title'
 		>
 			{child}
 		</AccordionItem>
@@ -85,10 +73,12 @@ test('Test clicking the AccordionItem header when setting nocollapse', () => {
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	expect(ctl.state('toggle')).toBe(false);
+	expect(ctl.state("toggle")).toBe(false);
 	expect(ctl.contains(child)).toBe(false);
-	ctl.find('.ui-label').first().simulate('click');
+	ctl.find(".ui-label")
+		.first()
+		.simulate("click");
 	expect(click).not.toHaveBeenCalled();
-	expect(ctl.state('toggle')).toBe(false);
+	expect(ctl.state("toggle")).toBe(false);
 	expect(ctl.contains(child)).toBe(false);
 });

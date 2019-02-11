@@ -4,7 +4,7 @@ import {
 	ContainerState,
 	getDefaultContainerProps,
 	getDefaultContainerState
-} from './Container';
+} from "./Container";
 
 export {
 	Container,

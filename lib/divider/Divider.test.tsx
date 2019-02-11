@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-import {EnumValues as ev} from 'enum-values';
-import {shallow} from 'enzyme';
-import * as React from 'react';
-import {Sizing} from '../shared';
-import {Divider, getDefaultDividerProps} from './index';
+import {EnumValues as ev} from "enum-values";
+import {shallow} from "enzyme";
+import * as React from "react";
+import {Sizing} from "../shared";
+import {Divider, getDefaultDividerProps} from "./index";
 
-test('Test retrieval of Divider props object', () => {
+test("Test retrieval of Divider props object", () => {
 	const props = getDefaultDividerProps();
 
 	expect(props).toBeDefined();

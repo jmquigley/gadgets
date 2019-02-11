@@ -3,11 +3,6 @@ import {
 	tooltip,
 	Tooltip,
 	TooltipProps
-} from './Tooltip';
+} from "./Tooltip";
 
-export {
-	getDefaultTooltipProps,
-	tooltip,
-	Tooltip,
-	TooltipProps
-};
+export {getDefaultTooltipProps, tooltip, Tooltip, TooltipProps};

@@ -70,17 +70,17 @@
  * @module TabContainer
  */
 
-'use strict';
+"use strict";
 
-const debug = require('debug')('TabContainer');
+const debug = require("debug")("TabContainer");
 
-import autobind from 'autobind-decorator';
-import {List} from 'immutable';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {Keys} from 'util.keys';
-import {nilEvent} from 'util.toolbox';
-import {Button} from '../button';
+import autobind from "autobind-decorator";
+import {List} from "immutable";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {Keys} from "util.keys";
+import {nilEvent} from "util.toolbox";
+import {Button} from "../button";
 import {
 	BaseComponent,
 	BaseProps,
@@ -89,9 +89,9 @@ import {
 	getDefaultBaseState,
 	Location,
 	Wrapper
-} from '../shared';
-import styled, {css} from '../shared/themed-components';
-import {Tab} from './Tab';
+} from "../shared";
+import styled, {css} from "../shared/themed-components";
+import {Tab} from "./Tab";
 
 export interface TabContainerProps extends BaseProps {
 	children?: React.ReactNode;
@@ -104,12 +104,13 @@ export interface TabContainerProps extends BaseProps {
 }
 
 export function getDefaultTabContainerProps(): TabContainerProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		location: Location.top,
 		maxTabs: 5,
 		noclose: false,
 		nonavigation: false,
-		obj: 'TabContainer',
+		obj: "TabContainer",
 		onRemove: nilEvent,
 		onSelect: nilEvent,
 		tabWidth: 120
@@ -121,8 +122,9 @@ export interface TabContainerState extends BaseState {
 }
 
 export function getDefaultTabContainerState(): TabContainerState {
-	return cloneDeep({...getDefaultBaseState('ui-tab-container'),
-		selectedTab: ''
+	return cloneDeep({
+		...getDefaultBaseState("ui-tab-container"),
+		selectedTab: ""
 	});
 }
 
@@ -141,9 +143,10 @@ export const TabBarView: any = styled.div`
 `;
 
 export const TabContainerView: any = styled.div`
-	${(props: TabContainerProps) => ((props.location === Location.top || props.location === Location.bottom) ?
-		'' : 'display: flex; flex-wrap: nowrap;'
-	)}
+	${(props: TabContainerProps) =>
+		props.location === Location.top || props.location === Location.bottom
+			? ""
+			: "display: flex; flex-wrap: nowrap;"}
 `;
 
 export const TabContentHorizontal: any = css`
@@ -163,7 +166,7 @@ export const TabContentVertical: any = css`
 `;
 
 export const TabContentView: any = styled.div`
-	${(props: TabContainerProps) => props.xcss || ''}
+	${(props: TabContainerProps) => props.xcss || ""}
 `;
 
 export const TabNavigationView: any = styled.div`
@@ -179,11 +182,13 @@ export const TabNavigationView: any = styled.div`
 
 export const TabBar = (props: any) => (
 	<TabBarView
-		className="ui-tab-bar"
+		className='ui-tab-bar'
 		style={props.style}
 		xcss={
-			props.location === Location.top || props.location === Location.bottom ?
-			TabBarHorizontal : TabBarVertical
+			props.location === Location.top ||
+			props.location === Location.bottom
+				? TabBarHorizontal
+				: TabBarVertical
 		}
 	>
 		{props.tabs}
@@ -193,28 +198,32 @@ export const TabBar = (props: any) => (
 
 export const TabContent = (props: any) => (
 	<TabContentView
-		className="ui-tab-content"
+		className='ui-tab-content'
 		style={props.style}
 		xcss={
-			props.location === Location.top || props.location === Location.bottom ?
-			TabContentHorizontal : TabContentVertical
+			props.location === Location.top ||
+			props.location === Location.bottom
+				? TabContentHorizontal
+				: TabContentVertical
 		}
 	>
 		{props.content}
 	</TabContentView>
 );
 
-export const TabNavigation = (props: any) => (
-	!props.nonavigation && !props.disabled && (
-		<TabNavigationView className="ui-tab-navigation">
-			<Button iconName="chevron-left" onClick={props.handleLeftClick}/>
-			<Button iconName="chevron-right" onClick={props.handleRightClick}/>
+export const TabNavigation = (props: any) =>
+	!props.nonavigation &&
+	!props.disabled && (
+		<TabNavigationView className='ui-tab-navigation'>
+			<Button iconName='chevron-left' onClick={props.handleLeftClick} />
+			<Button iconName='chevron-right' onClick={props.handleRightClick} />
 		</TabNavigationView>
-	)
-);
+	);
 
-export class TabContainer extends BaseComponent<TabContainerProps, TabContainerState> {
-
+export class TabContainer extends BaseComponent<
+	TabContainerProps,
+	TabContainerState
+> {
 	private _containerWidth: number = 0;
 	private _keys: Keys;
 	private _tabContent: any = null;
@@ -234,16 +243,21 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			let pos: number = 0;
 
 			for (const child of children) {
-
-				if (child['type'] === Tab && (child['props']['visible'] && !child['props']['disabled'])) {
-					this._tabs = this._tabs.set(pos, React.cloneElement(child as any, {
-						href: {
-							hiddenTabHandler: this.hiddenTabHandler,
-							selectHandler: this.selectHandler
-						},
-						id: this._keys.at(pos),
-						key: this._keys.at(pos)
-					}));
+				if (
+					child["type"] === Tab &&
+					(child["props"]["visible"] && !child["props"]["disabled"])
+				) {
+					this._tabs = this._tabs.set(
+						pos,
+						React.cloneElement(child as any, {
+							href: {
+								hiddenTabHandler: this.hiddenTabHandler,
+								selectHandler: this.selectHandler
+							},
+							id: this._keys.at(pos),
+							key: this._keys.at(pos)
+						})
+					);
 
 					pos++;
 				}
@@ -254,8 +268,10 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			}
 		}
 
-		this.state = {...getDefaultTabContainerState(),
-			selectedTab: this._tabs.size > 0 ? this._tabs.get(0).props['id'] : null
+		this.state = {
+			...getDefaultTabContainerState(),
+			selectedTab:
+				this._tabs.size > 0 ? this._tabs.get(0).props["id"] : null
 		};
 	}
 
@@ -308,13 +324,13 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		// try to get the one to the left first.  If that doesn't exist
 		// the get the one to the right.  If that doesn't exist (it was
 		// the last tab), then set to null
-		const idx: number = this._getTabIdx(tab.props['id']);
+		const idx: number = this._getTabIdx(tab.props["id"]);
 		let id: string = null;
 
 		if (idx - 1 >= 0) {
-			id = this._tabs.get(idx - 1).props['id'];
+			id = this._tabs.get(idx - 1).props["id"];
 		} else if (idx + 1 <= this._tabs.size - 1) {
-			id = this._tabs.get(idx + 1).props['id'];
+			id = this._tabs.get(idx + 1).props["id"];
 		}
 
 		this._tabs = this._tabs.splice(idx, 1);
@@ -326,9 +342,13 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	private selectHandler(tab: Tab) {
 		const [previous, idx] = this._getTab(this.state.selectedTab);
 
-		this.selectedTab = tab.props['id'];
+		this.selectedTab = tab.props["id"];
 		this.props.onSelect(tab, previous ? previous : tab);
-		debug(`selected tab: ${tab.props['id']}, tab: %O, previous @ ${idx}: %O`, tab, previous);
+		debug(
+			`selected tab: ${tab.props["id"]}, tab: %O, previous @ ${idx}: %O`,
+			tab,
+			previous
+		);
 	}
 
 	/**
@@ -343,7 +363,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	public _getTab(id: string): any {
 		if (id) {
 			for (const [idx, tab] of this._tabs.entries()) {
-				if (tab.props['id'] === id) {
+				if (tab.props["id"] === id) {
 					return [this._tabs.get(idx), idx];
 				}
 			}
@@ -363,7 +383,7 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 	public _getTabIdx(id: string): number {
 		if (id) {
 			for (const [idx, tab] of this._tabs.entries()) {
-				if (tab.props['id'] === id) {
+				if (tab.props["id"] === id) {
 					return idx;
 				}
 			}
@@ -377,34 +397,36 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 		const style = {};
 
 		// Removes non standard property to remove jest warning in test
-		const {
-			onRemove,
-			...props
-		} = this.props;
+		const {onRemove, ...props} = this.props;
 
 		if (this._tabs.size > 0) {
-
 			for (const [idx, child] of this._tabs.entries()) {
-				const selected = this.state.selectedTab === child.props['id'];
+				const selected = this.state.selectedTab === child.props["id"];
 
 				if (selected && !props.disabled) {
-					this._tabContent = child['props'].children;
+					this._tabContent = child["props"].children;
 				}
 
-				this._tabs = this._tabs.set(idx, React.cloneElement(child as any, {
-					disabled: props.disabled,
-					orientation: props.location,
-					sizing: props.sizing,
-					selected: selected,
-					width: `${props.tabWidth}px`
-				}));
+				this._tabs = this._tabs.set(
+					idx,
+					React.cloneElement(child as any, {
+						disabled: props.disabled,
+						orientation: props.location,
+						sizing: props.sizing,
+						selected: selected,
+						width: `${props.tabWidth}px`
+					})
+				);
 			}
 
 			// Sets the default width of the content container for the component
 			// It uses the number of tabs and the current tab width to compute
 			// a reasonable size.
 
-			if (props.location === Location.top || props.location === Location.bottom) {
+			if (
+				props.location === Location.top ||
+				props.location === Location.bottom
+			) {
 				this._containerWidth = (this._tabs.size + 1) * props.tabWidth;
 			} else {
 				this._containerWidth = 5 * props.tabWidth;
@@ -414,8 +436,11 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			this._tabContent = null;
 		}
 
-		if (props.location === Location.right || props.location === Location.left) {
-			style['width'] = `${props.tabWidth}px`;
+		if (
+			props.location === Location.right ||
+			props.location === Location.left
+		) {
+			style["width"] = `${props.tabWidth}px`;
 		}
 
 		const tabNavigation = (
@@ -436,14 +461,12 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			/>
 		);
 
-		const tabContent = (
-			<TabContent
-				{...props}
-				content={this._tabContent}
-			/>
-		);
+		const tabContent = <TabContent {...props} content={this._tabContent} />;
 
-		if (props.location === Location.top || props.location === Location.left) {
+		if (
+			props.location === Location.top ||
+			props.location === Location.left
+		) {
 			body = (
 				<TabContainerView
 					{...props}
@@ -467,10 +490,6 @@ export class TabContainer extends BaseComponent<TabContainerProps, TabContainerS
 			);
 		}
 
-		return (
-			<Wrapper {...props} >
-				{body}
-			</Wrapper>
-		);
+		return <Wrapper {...props}>{body}</Wrapper>;
 	}
 }

@@ -3,7 +3,7 @@ import {
 	DynamicListItem,
 	DynamicListProps,
 	getDefaultDynamicListProps
-} from './DynamicList';
+} from "./DynamicList";
 
 export {
 	DynamicList,

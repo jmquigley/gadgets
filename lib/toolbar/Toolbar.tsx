@@ -50,14 +50,14 @@
  * @module Toolbar
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Toolbar');
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {BinaryTree} from 'util.ds';
-import {Keys} from 'util.keys';
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {BinaryTree} from "util.ds";
+import {Keys} from "util.keys";
 import {
 	BaseComponent,
 	BaseProps,
@@ -66,24 +66,25 @@ import {
 	getDefaultBaseState,
 	Justify,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface ToolbarProps extends BaseProps {
 	justify?: Justify;
 }
 
 export function getDefaultToolbarProps(): ToolbarProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		justify: Justify.left,
-		obj: 'Toolbar'
+		obj: "Toolbar"
 	});
 }
 
 export type ToolbarState = BaseState;
 
 export function getDefaultToolbarState(): ToolbarState {
-	return cloneDeep({...getDefaultBaseState('ui-toolbar')});
+	return cloneDeep({...getDefaultBaseState("ui-toolbar")});
 }
 
 export const ToolbarView: any = styled.div`
@@ -100,9 +101,12 @@ export const ToolbarGroupView: any = styled.div`
 
 	${(props: ToolbarProps) => {
 		switch (props.justify) {
-			case Justify.center: return ('margin: auto;');
-			case Justify.right: return ('margin-left: auto;');
-			default: return('');
+			case Justify.center:
+				return "margin: auto;";
+			case Justify.right:
+				return "margin-left: auto;";
+			default:
+				return "";
 		}
 	}}
 `;
@@ -112,26 +116,25 @@ export const ToolbarElementView: any = styled.div`
 `;
 
 export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
-
 	public static readonly defaultProps: ToolbarProps = getDefaultToolbarProps();
 	public state: ToolbarState = getDefaultToolbarState();
 
 	private _keys: Keys;
 	private static readonly _whitelist = new BinaryTree([
-		'Button',
-		'ButtonCircle',
-		'ButtonDialog',
-		'ButtonText',
-		'ButtonToggle',
-		'Container',
-		'Divider',
-		'Dropdown',
-		'Label',
-		'Option',
-		'StyledComponent',
-		'Switch',
-		'TextField',
-		'Toolbar'
+		"Button",
+		"ButtonCircle",
+		"ButtonDialog",
+		"ButtonText",
+		"ButtonToggle",
+		"Container",
+		"Divider",
+		"Dropdown",
+		"Label",
+		"Option",
+		"StyledComponent",
+		"Switch",
+		"TextField",
+		"Toolbar"
 	]);
 
 	constructor(props: ToolbarProps) {
@@ -142,67 +145,78 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 	public render() {
 		const components: any = [];
 
-		React.Children.forEach(this.props.children, (child: any, idx: number) => {
-			if (Toolbar._whitelist.contains(child['props'].obj)) {
-				const style = Object.assign({}, child['props'].style, {
-					display: 'flex',
-					height: BaseComponent.fontSizePX(this.props.sizing, 1.5),
-					margin: '0 2px'
-				});
+		React.Children.forEach(
+			this.props.children,
+			(child: any, idx: number) => {
+				if (Toolbar._whitelist.contains(child["props"].obj)) {
+					const style = Object.assign({}, child["props"].style, {
+						display: "flex",
+						height: BaseComponent.fontSizePX(
+							this.props.sizing,
+							1.5
+						),
+						margin: "0 2px"
+					});
 
-				switch (child['props'].obj) {
-					case 'Button':
-					case 'ButtonCircle':
-					case 'ButtonDialog':
-					case 'ButtonToggle':
-						style['width'] = BaseComponent.fontSizePX(this.props.sizing, 1.5);
+					switch (child["props"].obj) {
+						case "Button":
+						case "ButtonCircle":
+						case "ButtonDialog":
+						case "ButtonToggle":
+							style["width"] = BaseComponent.fontSizePX(
+								this.props.sizing,
+								1.5
+							);
 
-					case 'ButtonText':
-						style['border'] = `solid 1px ${this.theme.borderColor}`,
-						delete style['width'];
-						break;
+						case "ButtonText":
+							(style["border"] = `solid 1px ${
+								this.theme.borderColor
+							}`),
+								delete style["width"];
+							break;
 
-					case 'Switch':
-						style['paddingTop'] = '0.1em';
-						style['margin'] = '0 6px';
-						break;
+						case "Switch":
+							style["paddingTop"] = "0.1em";
+							style["margin"] = "0 6px";
+							break;
 
-					case 'Label':
-					case 'Container':
-					case 'TextField':
-					case 'Toolbar':
-					case 'StyledComponent':
-						delete style['height'];
-						break;
+						case "Label":
+						case "Container":
+						case "TextField":
+						case "Toolbar":
+						case "StyledComponent":
+							delete style["height"];
+							break;
+					}
+
+					if (child["props"].obj === "ButtonCircle") {
+						delete style["border"];
+					}
+
+					const newChild = React.cloneElement(child as any, {
+						className: "ui-toolbar-element",
+						disabled: this.props.disabled,
+						sizing: this.props.sizing,
+						visible: this.props.visible
+					});
+
+					components.push(
+						<ToolbarElementView
+							key={this._keys.at(idx)}
+							style={style}
+						>
+							{newChild}
+						</ToolbarElementView>
+					);
 				}
-
-				if (child['props'].obj === 'ButtonCircle') {
-					delete style['border'];
-				}
-
-				const newChild = React.cloneElement(child as any, {
-					className: 'ui-toolbar-element',
-					disabled: this.props.disabled,
-					sizing: this.props.sizing,
-					visible: this.props.visible
-				});
-
-				components.push(
-					<ToolbarElementView
-						key={this._keys.at(idx)}
-						style={style}
-					>
-						{newChild}
-					</ToolbarElementView>
-				);
 			}
-		});
+		);
 
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<ToolbarView className={this.state.classes.classnames}>
 					<ToolbarGroupView
-						className="ui-toolbar-group"
+						className='ui-toolbar-group'
 						justify={this.props.justify}
 					>
 						{components}

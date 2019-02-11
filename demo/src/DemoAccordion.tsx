@@ -1,52 +1,45 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('DemoAccordion');
+const debug = require("debug")("DemoAccordion");
 
-import * as React from 'react';
-import {
-	Accordion,
-	AccordionItem,
-	Button,
-	List
-} from '../../dist/bundle';
-import {StyledContainer} from '../app';
-import {createItems} from './helpers';
+import * as React from "react";
+import {Accordion, AccordionItem, Button, List} from "../../dist/bundle";
+import {StyledContainer} from "../app";
+import {createItems} from "./helpers";
 
 export default class DemoAccordion extends React.Component<any, undefined> {
-
 	private items: any = createItems(5);
 
 	constructor(props: any) {
 		super(props);
-		debug('creating');
+		debug("creating");
 	}
 
 	public render() {
 		return (
-			<StyledContainer id="accordionExample" title="Accordion">
-				<Accordion sizing={this.props['sizing']} disabled={this.props['disabled']}>
+			<StyledContainer id='accordionExample' title='Accordion'>
+				<Accordion
+					sizing={this.props["sizing"]}
+					disabled={this.props["disabled"]}
+				>
 					<AccordionItem
-						leftButton={<Button iconName="bars" />}
+						leftButton={<Button iconName='bars' />}
 						noedit
-						rightButton={<Button iconName="plus" />}
-						title="Accordion #1 (click to expand)"
+						rightButton={<Button iconName='plus' />}
+						title='Accordion #1 (click to expand)'
 					>
-						<List alternating>
-							{this.items}
-						</List>
+						<List alternating>{this.items}</List>
 					</AccordionItem>
 
-					<AccordionItem title="Accordion #2">
+					<AccordionItem title='Accordion #2'>
 						Accordion Items #2
 					</AccordionItem>
 
-					<AccordionItem
-						title="Accordion #3"
-					>
+					<AccordionItem title='Accordion #3'>
 						Accordion Items #3
 					</AccordionItem>
 
-					<AccordionItem title="Accordion #4 (disabled)" disabled>
+					<AccordionItem title='Accordion #4 (disabled)' disabled>
 						Accordion Items #4 (disabled)
 					</AccordionItem>
 				</Accordion>

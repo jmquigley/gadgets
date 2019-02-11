@@ -54,15 +54,15 @@
  * @module AccordionItem
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('AccordionItem');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {getDefaultItemProps, Item, ItemProps} from '../item';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {getDefaultItemProps, Item, ItemProps} from "../item";
 import {
 	BaseComponent,
 	BaseState,
@@ -70,8 +70,8 @@ import {
 	fontStyle,
 	getDefaultBaseState,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
@@ -82,11 +82,12 @@ export interface AccordionItemProps extends ItemProps {
 }
 
 export function getDefaultAccordionItemProps(): AccordionItemProps {
-	return cloneDeep({...getDefaultItemProps(),
+	return cloneDeep({
+		...getDefaultItemProps(),
 		initialToggle: false,
 		leftButton: null,
 		nocollapse: false,
-		obj: 'AccordionItem',
+		obj: "AccordionItem",
 		onClick: nilEvent,
 		rightButton: null
 	});
@@ -97,20 +98,26 @@ export interface AccordionItemState extends BaseState {
 }
 
 export function getDefaultAccordionItemState(): AccordionItemState {
-	return cloneDeep({...getDefaultBaseState('ui-accordionitem'),
+	return cloneDeep({
+		...getDefaultBaseState("ui-accordionitem"),
 		toggle: false
 	});
 }
 
 export const AccordionItemView: any = styled.ul`
-	> .ui-item, > .ui-item-button {
-		color: ${(props: AccordionItemProps) => props.theme.headerForegroundColor || Color.white};
-		background-color: ${(props: AccordionItemProps) => props.theme.headerBackgroundColor || Color.black};
+	> .ui-item,
+	> .ui-item-button {
+		color: ${(props: AccordionItemProps) =>
+			props.theme.headerForegroundColor || Color.white};
+		background-color: ${(props: AccordionItemProps) =>
+			props.theme.headerBackgroundColor || Color.black};
 	}
 
 	> .ui-item:hover {
-		color: ${(props: AccordionItemProps) => props.theme.headerHoverColor || Color.silver};
-		background-color: ${(props: AccordionItemProps) => props.theme.headerBackgroundColor || Color.black} !important;
+		color: ${(props: AccordionItemProps) =>
+			props.theme.headerHoverColor || Color.silver};
+		background-color: ${(props: AccordionItemProps) =>
+			props.theme.headerBackgroundColor || Color.black} !important;
 	}
 `;
 
@@ -118,13 +125,16 @@ export const AccordionContentView: any = styled.div`
 	${(props: AccordionItemProps) => props.sizing && fontStyle[props.sizing]};
 `;
 
-export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionItemState> {
-
+export class AccordionItem extends BaseComponent<
+	AccordionItemProps,
+	AccordionItemState
+> {
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
 	constructor(props: AccordionItemProps) {
 		super(props);
-		this.state = {...getDefaultAccordionItemState(),
+		this.state = {
+			...getDefaultAccordionItemState(),
 			toggle: this.props.initialToggle
 		};
 	}
@@ -132,21 +142,24 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 	@autobind
 	private handleClick() {
 		if (!this.props.nocollapse) {
-			this.setState({
-				toggle: !this.state.toggle
-			}, () => {
-				this.props.onClick(this.state.toggle);
-			});
+			this.setState(
+				{
+					toggle: !this.state.toggle
+				},
+				() => {
+					this.props.onClick(this.state.toggle);
+				}
+			);
 		}
 	}
 
 	public render() {
 		let content = null;
 
-		if ((this.props.children != null) && (this.state.toggle)) {
+		if (this.props.children != null && this.state.toggle) {
 			content = (
 				<AccordionContentView
-					className="ui-accordion-content"
+					className='ui-accordion-content'
 					sizing={this.props.sizing}
 				>
 					{this.props.children}
@@ -155,14 +168,18 @@ export class AccordionItem extends BaseComponent<AccordionItemProps, AccordionIt
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<AccordionItemView
 					className={this.state.classes.classnames}
 					style={this.state.style}
 				>
 					<Item
 						{...this.props}
-						onClick={(!this.props.disabled && this.props.visible) ? this.handleClick : nilEvent}
+						onClick={
+							!this.props.disabled && this.props.visible
+								? this.handleClick
+								: nilEvent
+						}
 					/>
 					{content}
 				</AccordionItemView>

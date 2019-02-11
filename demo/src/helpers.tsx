@@ -1,11 +1,8 @@
-'use strict';
+"use strict";
 
-import * as React from 'react';
-import {Keys} from 'util.keys';
-import {
-	Button,
-	ListItem
-} from '../../';
+import * as React from "react";
+import {Keys} from "util.keys";
+import {Button, ListItem} from "../../";
 
 /**
  * Creates N random list items and returns them in an array.  Used to

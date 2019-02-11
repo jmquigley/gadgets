@@ -1,15 +1,11 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('DemoBadge');
+const debug = require("debug")("DemoBadge");
 
-import autobind from 'autobind-decorator';
-import * as React from 'react';
-import {
-	Badge,
-	Button,
-	Location
-} from '../../dist/bundle';
-import {StyledContainer} from '../app';
+import autobind from "autobind-decorator";
+import * as React from "react";
+import {Badge, Button, Location} from "../../dist/bundle";
+import {StyledContainer} from "../app";
 
 export interface DemoBadgeState {
 	counter1?: number;
@@ -22,7 +18,7 @@ export interface DemoBadgeState {
 export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 	constructor(props: any) {
 		super(props);
-		debug('creating');
+		debug("creating");
 
 		this.state = {
 			counter1: 0,
@@ -64,85 +60,89 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 	}
 
 	public render() {
-		return(
-			<StyledContainer id="badgeExample" title="Badges">
+		return (
+			<StyledContainer id='badgeExample' title='Badges'>
 				click on the buttons to increment the badges
-				<br /><br/>
-				<div id="simple-buttons">
-					<div className="box">
+				<br />
+				<br />
+				<div id='simple-buttons'>
+					<div className='box'>
 						<p>top right (suppress)</p>
 						<Badge
-							disabled={this.props['disabled']}
+							disabled={this.props["disabled"]}
 							counter={this.state.counter1}
-							sizing={this.props['sizing']}
+							sizing={this.props["sizing"]}
 							suppress
 						>
-							<div className="boxButtons">
+							<div className='boxButtons'>
 								<Button onClick={this.handleCounter1} />
 							</div>
 						</Badge>
 					</div>
 
-					<div className="box">
-						<p>top left<br/>&nbsp;</p>
+					<div className='box'>
+						<p>
+							top left
+							<br />
+							&nbsp;
+						</p>
 						<Badge
-							disabled={this.props['disabled']}
+							disabled={this.props["disabled"]}
 							counter={this.state.counter2}
 							location={Location.topLeft}
 							onClick={this.handleDebugCounter}
-							sizing={this.props['sizing']}
+							sizing={this.props["sizing"]}
 						>
-							<div className="boxButtons">
+							<div className='boxButtons'>
 								<Button onClick={this.handleCounter2} />
 							</div>
 						</Badge>
 					</div>
 
-					<div className="box">
+					<div className='box'>
 						<p>bottom right</p>
 						<Badge
-							disabled={this.props['disabled']}
+							disabled={this.props["disabled"]}
 							counter={this.state.counter3}
 							location={Location.bottomRight}
-							sizing={this.props['sizing']}
-							style={{color: 'green'}}
+							sizing={this.props["sizing"]}
+							style={{color: "green"}}
 						>
-							<div className="boxButtons">
+							<div className='boxButtons'>
 								<Button onClick={this.handleCounter3} />
 							</div>
 						</Badge>
 					</div>
 
-					<div className="box">
+					<div className='box'>
 						<p>bottom left</p>
 						<Badge
-							disabled={this.props['disabled']}
+							disabled={this.props["disabled"]}
 							counter={this.state.counter4}
 							location={Location.bottomLeft}
-							sizing={this.props['sizing']}
-							style={{color: 'magenta'}}
+							sizing={this.props["sizing"]}
+							style={{color: "magenta"}}
 						>
-							<div className="boxButtons">
+							<div className='boxButtons'>
 								<Button onClick={this.handleCounter4} />
 							</div>
 						</Badge>
 					</div>
 
-					<div className="box">
+					<div className='box'>
 						<p>bottom (negative)</p>
 						<Badge
-							disabled={this.props['disabled']}
+							disabled={this.props["disabled"]}
 							counter={this.state.counter5}
 							location={Location.bottom}
-							sizing={this.props['sizing']}
-							style={{color: 'blue'}}
+							sizing={this.props["sizing"]}
+							style={{color: "blue"}}
 						>
-							<div className="boxButtons">
+							<div className='boxButtons'>
 								<Button onClick={this.handleCounter5} />
 							</div>
 						</Badge>
 					</div>
-
 				</div>
 			</StyledContainer>
 		);

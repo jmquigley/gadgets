@@ -1,11 +1,3 @@
-import {
-	getDefaultSliderProps,
-	Slider,
-	SliderProps
-} from './Slider';
+import {getDefaultSliderProps, Slider, SliderProps} from "./Slider";
 
-export {
-	getDefaultSliderProps,
-	Slider,
-	SliderProps
-};
+export {getDefaultSliderProps, Slider, SliderProps};

@@ -4,9 +4,9 @@ import {
 	Item,
 	ItemProps,
 	ItemState
-} from './Item';
+} from "./Item";
 
-import {Title, TitleLayout} from '../title';
+import {Title, TitleLayout} from "../title";
 
 export {
 	getDefaultItemProps,

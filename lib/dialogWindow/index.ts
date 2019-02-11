@@ -2,10 +2,6 @@ import {
 	DialogWindow,
 	DialogWindowProps,
 	getDefaultDialogWindowProps
-} from './DialogWindow';
+} from "./DialogWindow";
 
-export {
-	DialogWindow,
-	DialogWindowProps,
-	getDefaultDialogWindowProps
-};
+export {DialogWindow, DialogWindowProps, getDefaultDialogWindowProps};

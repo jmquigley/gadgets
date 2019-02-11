@@ -49,14 +49,14 @@
  * @module Dropdown
  */
 
-'use strict';
+"use strict";
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {calc} from 'util.calc';
-import {Keys} from 'util.keys';
-import {nilEvent} from 'util.toolbox';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {calc} from "util.calc";
+import {Keys} from "util.keys";
+import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
 	BaseProps,
@@ -67,9 +67,9 @@ import {
 	getDefaultBaseState,
 	invisible,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
-import {tooltip} from '../tooltip';
+} from "../shared";
+import styled from "../shared/themed-components";
+import {tooltip} from "../tooltip";
 
 export interface DropdownOption {
 	value: string;
@@ -83,10 +83,11 @@ export interface DropdownProps extends BaseProps {
 }
 
 export function getDefaultDropdownProps(): DropdownProps {
-	return cloneDeep({...getDefaultBaseProps(),
-		initialItem: '',
+	return cloneDeep({
+		...getDefaultBaseProps(),
+		initialItem: "",
 		items: [],
-		obj: 'Dropdown',
+		obj: "Dropdown",
 		onSelect: nilEvent
 	});
 }
@@ -96,9 +97,7 @@ export interface DropdownState extends BaseState {
 }
 
 export function getDefaultDropdownState(): DropdownState {
-	return cloneDeep({...getDefaultBaseState('ui-dropdown'),
-		currentValue: ''
-	});
+	return cloneDeep({...getDefaultBaseState("ui-dropdown"), currentValue: ""});
 }
 
 export const DropdownContainerView: any = styled.div`
@@ -119,7 +118,6 @@ export const DropdownView: any = styled.select`
 `;
 
 export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
-
 	private _keys: Keys;
 
 	public static readonly defaultProps: DropdownProps = getDefaultDropdownProps();
@@ -127,7 +125,8 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	constructor(props: DropdownProps) {
 		super(props, Dropdown.defaultProps.style);
 
-		this.state = {...getDefaultDropdownState(),
+		this.state = {
+			...getDefaultDropdownState(),
 			currentValue: this.props.defaultVal
 		};
 
@@ -138,15 +137,21 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	private handleChange(e: React.FormEvent<HTMLSelectElement>) {
 		if (!this.props.disabled && this.props.visible) {
 			const val: any = e.currentTarget.value;
-			this.setState({
-				currentValue: String(val)
-			}, () => {
-				this.props.onSelect(val);
-			});
+			this.setState(
+				{
+					currentValue: String(val)
+				},
+				() => {
+					this.props.onSelect(val);
+				}
+			);
 		}
 	}
 
-	public static getDerivedStateFromProps(props: DropdownProps, state: DropdownState) {
+	public static getDerivedStateFromProps(
+		props: DropdownProps,
+		state: DropdownState
+	) {
 		const newState: DropdownState = {...state};
 		const size: string = BaseComponent.fontSizePX();
 		const chevron: string = `url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='${size}' height='${size}' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>")`;
@@ -154,7 +159,7 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 		newState.style = {
 			backgroundImage: chevron,
 			paddingRight: size,
-			paddingLeft: calc(size, '* 0.2')
+			paddingLeft: calc(size, "* 0.2")
 		};
 
 		return super.getDerivedStateFromProps(props, newState);
@@ -163,14 +168,14 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	public render() {
 		const options: any[] = this.props.items.map(({value, label}, idx) => (
 			<option key={this._keys.at(idx)} value={value}>
-			{label}
+				{label}
 			</option>
 		));
 
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<DropdownContainerView
-					className="ui-dropdown-container"
+					className='ui-dropdown-container'
 					sizing={this.props.sizing}
 				>
 					<DropdownView

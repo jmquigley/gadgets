@@ -6,38 +6,41 @@
 // for a header.
 //
 
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
+import {cloneDeep} from "lodash";
+import * as React from "react";
 import {
 	getDefaultItemProps,
 	getDefaultItemState,
 	Item,
 	ItemProps,
 	ItemState
-} from '../item';
-import {BaseComponent, Wrapper} from '../shared';
+} from "../item";
+import {BaseComponent, Wrapper} from "../shared";
 
 export interface ListHeaderProps extends ItemProps {
 	href?: any;
 }
 
 export function getDefaultListHeaderProps(): ListHeaderProps {
-	return cloneDeep({...getDefaultItemProps(),
+	return cloneDeep({
+		...getDefaultItemProps(),
 		nohover: true,
-		obj: 'ListHeader'
+		obj: "ListHeader"
 	});
 }
 
 export type ListHeaderState = ItemState;
 
 export function getDefaultListHeaderState(): ListHeaderState {
-	return({...getDefaultItemState('ui-list-header')});
+	return {...getDefaultItemState("ui-list-header")};
 }
 
-export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> {
-
+export class ListHeader extends BaseComponent<
+	ListHeaderProps,
+	ListHeaderState
+> {
 	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
 	public state: ListHeaderState = getDefaultItemState();
 
@@ -47,7 +50,7 @@ export class ListHeader extends BaseComponent<ListHeaderProps, ListHeaderState> 
 
 	public render() {
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<Item
 					{...this.props}
 					className={this.state.classes.classnames}

@@ -4,7 +4,7 @@ import {
 	getDefaultPagerProps,
 	Pager,
 	PagerProps
-} from './Pager';
+} from "./Pager";
 
 export {
 	defaultPageSize,

@@ -122,22 +122,22 @@
  * @module DynamicList
  */
 
-'use strict';
+"use strict";
 
-const debug = require('debug')('DynamicList');
+const debug = require("debug")("DynamicList");
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {sprintf} from 'sprintf-js';
-import {sp} from 'util.constants';
-import {Keys} from 'util.keys';
-import {nil, nilEvent} from 'util.toolbox';
-import {Accordion, AccordionItem} from '../accordion';
-import {Button} from '../button';
-import {DialogBox, DialogBoxType} from '../dialogBox';
-import {List, ListFooter, ListItem} from '../list';
-import {defaultPageSizes, Pager} from '../pager';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {sprintf} from "sprintf-js";
+import {sp} from "util.constants";
+import {Keys} from "util.keys";
+import {nil, nilEvent} from "util.toolbox";
+import {Accordion, AccordionItem} from "../accordion";
+import {Button} from "../button";
+import {DialogBox, DialogBoxType} from "../dialogBox";
+import {List, ListFooter, ListItem} from "../list";
+import {defaultPageSizes, Pager} from "../pager";
 import {
 	BaseComponent,
 	BaseProps,
@@ -150,11 +150,11 @@ import {
 	Sizing,
 	SortOrder,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
-import {TextField} from '../textField';
-import {TitleLayout} from '../title';
-import {Toast, ToastLevel} from '../toast';
+} from "../shared";
+import styled from "../shared/themed-components";
+import {TextField} from "../textField";
+import {TitleLayout} from "../title";
+import {Toast, ToastLevel} from "../toast";
 
 export interface DynamicListItem {
 	[key: string]: any;
@@ -181,15 +181,16 @@ export interface DynamicListProps extends BaseProps {
 }
 
 export function getDefaultDynamicListProps(): DynamicListProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		collapsable: false,
-		errorMessage: '',
+		errorMessage: "",
 		errorMessageDuration: 3,
 		items: {},
 		layout: TitleLayout.dominant,
 		nocollapse: false,
 		noselect: false,
-		obj: 'DynamicList',
+		obj: "DynamicList",
 		onBlur: nilEvent,
 		onClick: nilEvent,
 		onDelete: nilEvent,
@@ -220,12 +221,13 @@ export interface DynamicListState extends BaseState {
 
 // TODO: add additional init
 export function getDefaultDynamicListState(): DynamicListState {
-	return cloneDeep({...getDefaultBaseState('ui-dynamiclist'),
-		errorMessage: '',
+	return cloneDeep({
+		...getDefaultBaseState("ui-dynamiclist"),
+		errorMessage: "",
 		initialToggle: true,
 		page: 1,
 		pageSize: 0,
-		search: '',
+		search: "",
 		showConfirm: false,
 		showError: false,
 		showNew: false,
@@ -259,11 +261,14 @@ export const StyledListFooter: any = styled(ListFooter)`
 	}
 `;
 
-export class DynamicList extends BaseComponent<DynamicListProps, DynamicListState> {
-
+export class DynamicList extends BaseComponent<
+	DynamicListProps,
+	DynamicListState
+> {
 	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
 
-	private readonly _baseMessage: string = 'Are you sure you want to delete "%s"?';
+	private readonly _baseMessage: string =
+		'Are you sure you want to delete "%s"?';
 	private _emptyListItem: any = null;
 	private _fillerKeys: Keys;
 	private _fillerIdx: number = 0;
@@ -274,8 +279,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private _pager: any = null;
 	private _pagerID: string;
 	private _previousPage: number = 1;
-	private _qDelete: string = '';
-	private _selection: string = '';
+	private _qDelete: string = "";
+	private _selection: string = "";
 	private _startSearch: boolean = true;
 
 	constructor(props: DynamicListProps) {
@@ -289,7 +294,8 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			this._listItems[title] = this.createListItem(title, widgets);
 		}
 
-		this.state = {...getDefaultDynamicListState(),
+		this.state = {
+			...getDefaultDynamicListState(),
 			pageSize: this.props.pageSizes[0],
 			sortOrder: this.props.sortOrder,
 			totalItems: Object.keys(this._listItems).length
@@ -321,7 +327,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 
 		// Adds filler for the last items when it is smaller than the page size
-		for (let i = 0; i < (this.state.pageSize - this._keys.length); i++) {
+		for (let i = 0; i < this.state.pageSize - this._keys.length; i++) {
 			listItems.push(
 				<ListItem
 					disabled
@@ -361,15 +367,14 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 	@autobind
 	private createListItem(title: string, widgets: any) {
-
 		let right: any = null;
-		if ('right' in widgets) {
-			right = widgets['right'];
+		if ("right" in widgets) {
+			right = widgets["right"];
 		}
 
 		let left: any = null;
-		if ('left' in widgets) {
-			left = widgets['left'];
+		if ("left" in widgets) {
+			left = widgets["left"];
 		}
 
 		return (
@@ -386,7 +391,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				onUpdate={this.handleUpdate}
 				rightButton={
 					<StyledDeleteButton
-						iconName="times"
+						iconName='times'
 						onClick={this.listItemDeletor(title)}
 					/>
 				}
@@ -426,14 +431,17 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private handleDelete(title: string, cb: any = nil) {
 		if (title in this._listItems) {
 			delete this._listItems[title];
-			debug('removing item: %s', title);
+			debug("removing item: %s", title);
 
-			this.setState({
-				totalItems: this.state.totalItems - 1
-			}, () => {
-				this.props.onDelete(title);
-				cb(title);
-			});
+			this.setState(
+				{
+					totalItems: this.state.totalItems - 1
+				},
+				() => {
+					this.props.onDelete(title);
+					cb(title);
+				}
+			);
 		}
 	}
 
@@ -442,22 +450,25 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		if (selection) {
 			this.handleDelete(this._qDelete);
 		}
-		this._qDelete = '';
+		this._qDelete = "";
 		this.setState({showConfirm: false});
 	}
 
 	@autobind
 	private handleErrorClose() {
-		this.setState({
-			showError: false
-		}, () => {
-			this.props.onError(this.state.errorMessage);
-		});
+		this.setState(
+			{
+				showError: false
+			},
+			() => {
+				this.props.onError(this.state.errorMessage);
+			}
+		);
 	}
 
 	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLSpanElement>) {
-		if (e.key === 'Escape') {
+		if (e.key === "Escape") {
 			this.hideEdit();
 		}
 	}
@@ -474,14 +485,17 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private handleNewItem(title: string, widget: any = null, cb: any = nil) {
 		title = title.trimHTML();
 		if (title) {
-			debug('creating new item: %s, %O', title, widget);
-			this.setState({
-				showNew: false,
-				totalItems: this.state.totalItems + 1
-			}, () => {
-				this.props.onNew(title, widget);
-				cb(title);
-			});
+			debug("creating new item: %s, %O", title, widget);
+			this.setState(
+				{
+					showNew: false,
+					totalItems: this.state.totalItems + 1
+				},
+				() => {
+					this.props.onNew(title, widget);
+					cb(title);
+				}
+			);
 		} else {
 			this.hideEdit();
 		}
@@ -515,13 +529,12 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			this._startSearch = false;
 		}
 
-		if (val === '') {
-
+		if (val === "") {
 			// If there is a selection title, check to see if it was a new
 			// selection from the search.  If it is is, then set
 			// a new page number by setting previous.  If it is not, then
 			// ignore.
-			if (this._selection !== '') {
+			if (this._selection !== "") {
 				const selectionPage = this.computePageByItem(this._selection);
 				if (selectionPage !== this._previousPage) {
 					this._previousPage = selectionPage;
@@ -532,7 +545,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 
 		this.setState({
-			page: (val === '') ? this._previousPage : 1,
+			page: val === "" ? this._previousPage : 1,
 			search: val
 		});
 	}
@@ -541,10 +554,10 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	private handleSelect(title: string) {
 		if (this._selection !== title) {
 			this._selection = title;
-			debug('selected item: %s', title);
+			debug("selected item: %s", title);
 			this.props.onSelect(title);
 		} else {
-			this._selection = '';
+			this._selection = "";
 		}
 	}
 
@@ -571,12 +584,15 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 			debug('updating item "%s" to "%s"', previous, title);
 			delete this._listItems[previous];
 
-			this.setState({
-				showNew: false,
-				totalItems: this.state.totalItems - 1
-			}, () => {
-				this.props.onUpdate(previous, title);
-			});
+			this.setState(
+				{
+					showNew: false,
+					totalItems: this.state.totalItems - 1
+				},
+				() => {
+					this.props.onUpdate(previous, title);
+				}
+			);
 		} else {
 			this.hideEdit();
 		}
@@ -597,15 +613,21 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		};
 	}
 
-	public static getDerivedStateFromProps(props: DynamicListProps, state: DynamicListState) {
+	public static getDerivedStateFromProps(
+		props: DynamicListProps,
+		state: DynamicListState
+	) {
 		const newState: DynamicListState = {...state};
 
 		if (props.sortOrder !== state.sortOrder) {
 			newState.sortOrder = props.sortOrder;
 		}
 
-		if (props.errorMessage !== '') {
-			debug('getDerivedStateFromProps -> errorMessage: %o', props.errorMessage);
+		if (props.errorMessage !== "") {
+			debug(
+				"getDerivedStateFromProps -> errorMessage: %o",
+				props.errorMessage
+			);
 			newState.errorMessage = props.errorMessage;
 			newState.showError = true;
 		}
@@ -624,15 +646,20 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 	 * @param nextProps {DynamicListProps} the next set of props used to draw the component
 	 * @param nextState {DynamicListState} the current state of the component befoer render
 	 */
-	private _updateWidgets(nextProps: DynamicListProps, nextState: DynamicListState) {
+	private _updateWidgets(
+		nextProps: DynamicListProps,
+		nextState: DynamicListState
+	) {
 		// Compute which items should be in the current list
-		const start: number = ((nextState.page - 1) * nextState.pageSize);
+		const start: number = (nextState.page - 1) * nextState.pageSize;
 		const end: number = start + nextState.pageSize;
 
-		if (nextState.search !== '') {
-			this._keys = Object.keys(this._listItems).filter((val: string) => {
-				return (val.indexOf(nextState.search) === -1) ? false : true;
-			}).sort();
+		if (nextState.search !== "") {
+			this._keys = Object.keys(this._listItems)
+				.filter((val: string) => {
+					return val.indexOf(nextState.search) === -1 ? false : true;
+				})
+				.sort();
 		} else {
 			this._keys = Object.keys(this._listItems).sort();
 		}
@@ -645,7 +672,7 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 
 		this._pager = (
 			<Pager
-				disabled={nextState.search === '' ? false : true}
+				disabled={nextState.search === "" ? false : true}
 				initialPage={nextState.page}
 				initialPageSize={nextState.pageSize}
 				key={this._pagerID}
@@ -667,9 +694,9 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 				title={
 					<TextField
 						onChange={this.handleSearch}
-						placeholder="search"
-						style={{display: 'flex'}}
-						type="text"
+						placeholder='search'
+						style={{display: "flex"}}
+						type='text'
 						useclear
 						value={nextState.search}
 					/>
@@ -687,9 +714,9 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<DynamicListContainer
-					className="ui-dynamiclist-container"
+					className='ui-dynamiclist-container'
 					disabled={this.props.disabled}
 				>
 					<Toast
@@ -712,16 +739,13 @@ export class DynamicList extends BaseComponent<DynamicListProps, DynamicListStat
 							onClick={this.handleTitleClick}
 							rightButton={
 								<Button
-									iconName="plus"
+									iconName='plus'
 									onClick={this.createNewItem}
 								/>
 							}
 							title={this.buildTitle()}
 						>
-							<List
-								alternating
-								noselect={this.props.noselect}
-							>
+							<List alternating noselect={this.props.noselect}>
 								{this.buildListItems()}
 							</List>
 						</AccordionItem>

@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const debugEntry = require('debug');
-const pkg = require('../../package.json');
+const debugEntry = require("debug");
+const pkg = require("../../package.json");
 
 /**
  * A wrapper for the debug function.  It uses the package.json to enable or
@@ -31,7 +31,11 @@ export function debug(context: string, ...args: any[]) {
  * current global (if it exists)
  * @return {object} the global instance reference
  */
-export function globalize(name: string, pkgname: any, replace: boolean = false) {
+export function globalize(
+	name: string,
+	pkgname: any,
+	replace: boolean = false
+) {
 	let ref: any = pkgname;
 	if (!(global as any)[name] || replace) {
 		(window as any)[name] = (global as any)[name] = pkgname;

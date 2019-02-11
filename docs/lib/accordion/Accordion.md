@@ -33,5 +33,5 @@ level of the control.
 
 #### Properties
 - `children: React.ReactNode (null)` - the children nodes contained within
-this container.  Generally this will be `AccordionItem` controls.
+this container.	Generally this will be `AccordionItem` controls.
 

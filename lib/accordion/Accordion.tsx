@@ -31,17 +31,17 @@
  *
  * #### Properties
  * - `children: React.ReactNode (null)` - the children nodes contained within
- * this container.  Generally this will be `AccordionItem` controls.
+ * this container.	Generally this will be `AccordionItem` controls.
  *
  * @module Accordion
  */
 
-'use strict';
+"use strict";
 
-const debug = require('debug')('Accordion');
+const debug = require("debug")("Accordion");
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
+import {cloneDeep} from "lodash";
+import * as React from "react";
 import {
 	BaseComponent,
 	BaseProps,
@@ -50,21 +50,19 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export type AccordionProps = BaseProps;
 
 export function getDefaultAccordionProps(): AccordionProps {
-	return cloneDeep({...getDefaultBaseProps(),
-		obj: 'Accordion'
-	});
+	return cloneDeep({...getDefaultBaseProps(), obj: "Accordion"});
 }
 
 export type AccordionState = BaseState;
 
 export function getDefaultAccordionState(): AccordionState {
-	return cloneDeep({...getDefaultBaseState('ui-accordion')});
+	return cloneDeep({...getDefaultBaseState("ui-accordion")});
 }
 
 export const AccordionView: any = styled.ul`
@@ -79,7 +77,6 @@ export const AccordionView: any = styled.ul`
 `;
 
 export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
-
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
 	public state: AccordionState = getDefaultAccordionState();
 
@@ -87,7 +84,10 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 		super(props, Accordion.defaultProps.style);
 	}
 
-	public static getDerivedStateFromProps(props: AccordionProps, state: AccordionState) {
+	public static getDerivedStateFromProps(
+		props: AccordionProps,
+		state: AccordionState
+	) {
 		const newState: AccordionState = {...state};
 
 		newState.children = React.Children.map(props.children, (child: any) => {
@@ -101,10 +101,10 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 	}
 
 	public render() {
-		debug('render -> state: %O, props: %O', this.state, this.props);
+		debug("render -> state: %O, props: %O", this.state, this.props);
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<AccordionView
 					className={this.state.classes.classnames}
 					sizing={this.props.sizing}

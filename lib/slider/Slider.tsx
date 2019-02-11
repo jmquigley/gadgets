@@ -57,15 +57,15 @@
  * @module Slider
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Slider');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep, debounce} from 'lodash';
-import * as React from 'react';
-import {Keys} from 'util.keys';
-import {closestNumber, nilEvent} from 'util.toolbox';
+import autobind from "autobind-decorator";
+import {cloneDeep, debounce} from "lodash";
+import * as React from "react";
+import {Keys} from "util.keys";
+import {closestNumber, nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
 	BaseProps,
@@ -76,8 +76,8 @@ import {
 	getDefaultBaseState,
 	invisible,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface SliderProps extends BaseProps {
 	max?: number;
@@ -90,10 +90,11 @@ export interface SliderProps extends BaseProps {
 }
 
 export function getDefaultSliderProps(): SliderProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		max: 100,
 		min: 0,
-		obj: 'Slider',
+		obj: "Slider",
 		onSelect: nilEvent,
 		scale: 1,
 		snap: false,
@@ -107,9 +108,7 @@ export interface SliderState extends BaseState {
 }
 
 export function getDefaultSliderState(): SliderState {
-	return cloneDeep({...getDefaultBaseState('ui-slider'),
-		x: 0
-	});
+	return cloneDeep({...getDefaultBaseState("ui-slider"), x: 0});
 }
 
 export const SliderBar: any = styled.div`
@@ -144,16 +143,15 @@ export const SliderElement: any = styled.div`
 `;
 
 export const SliderTick: any = styled.div`
-    background-color: ${(props: SliderProps) => props.theme.borderColor};
-    height: 0.1875rem;
-    left: ${(props: SliderProps) => props.left}px;
-    position: absolute;
-    bottom: -0.4rem;
-    width: 0.125rem;
+	background-color: ${(props: SliderProps) => props.theme.borderColor};
+	height: 0.1875rem;
+	left: ${(props: SliderProps) => props.left}px;
+	position: absolute;
+	bottom: -0.4rem;
+	width: 0.125rem;
 `;
 
 export class Slider extends BaseComponent<SliderProps, SliderState> {
-
 	public static readonly defaultProps: SliderProps = getDefaultSliderProps();
 
 	private _borderSize: number = 1;
@@ -169,9 +167,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		super(props, Slider.defaultProps.style);
 
 		this._tickKeys = new Keys({testing: this.props.testing});
-		this.state = {...getDefaultSliderState(),
-			x: this.props.startPosition
-		};
+		this.state = {...getDefaultSliderState(), x: this.props.startPosition};
 
 		this._sliderSize = BaseComponent.fontSize();
 		this._mouseMove = debounce(this.handleMouseMove, this._mouseDelay);
@@ -181,7 +177,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		if (this.props.max <= 0) {
 			return 1;
 		} else {
-			return (this.props.max * this.props.scale);
+			return this.props.max * this.props.scale;
 		}
 	}
 
@@ -199,7 +195,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 				<SliderTick
 					id={this._tickKeys.at(idx)}
 					key={this._tickKeys.at(idx)}
-					className="ui-slider-tick"
+					className='ui-slider-tick'
 					left={offset - 1}
 				/>
 			);
@@ -209,8 +205,8 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	@autobind
 	private handleMouseDown(e: any) {
 		if (!this.props.disabled) {
-			document.addEventListener('mousemove', this._mouseMove);
-			document.addEventListener('mouseup', this.handleMouseUp);
+			document.addEventListener("mousemove", this._mouseMove);
+			document.addEventListener("mouseup", this.handleMouseUp);
 			e.preventDefault();
 		}
 	}
@@ -241,8 +237,8 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		if (!this.props.disabled) {
 			this.props.onSelect(Math.round(this.state.x / this.props.scale));
 
-			document.removeEventListener('mousemove', this._mouseMove);
-			document.removeEventListener('mouseup', this.handleMouseUp);
+			document.removeEventListener("mousemove", this._mouseMove);
+			document.removeEventListener("mouseup", this.handleMouseUp);
 
 			e.preventDefault();
 		}
@@ -258,16 +254,17 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	}
 
 	public render() {
-		const width: number = Math.round((this.props.max - this.props.min) * this.props.scale);
+		const width: number = Math.round(
+			(this.props.max - this.props.min) * this.props.scale
+		);
 
 		// Builds an array of tick location offsets
 		this._ticks = [];
 		if (this.props.ticks > 1) {
-
 			// the -1 accounts for the start/end tick that will not be part
 			// of the offset or loop
 			const offset: number = width / (this.props.ticks - 1);
-			this._ticks.push(0);  // start tick
+			this._ticks.push(0); // start tick
 
 			for (let i: number = offset; i < this.max; i += offset) {
 				this._ticks.push(i);
@@ -276,26 +273,30 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 			this._ticks.push(this.max); // end tick
 		}
 
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<SliderContainer
 					className={this.state.classes.classnames}
 					disabled={this.props.disabled}
-					height={this._sliderSize + (this._borderSize * 4)}
+					height={this._sliderSize + this._borderSize * 4}
 					style={this.state.style}
 					visible={this.props.visible}
-					width={width + this._sliderSize + (this._borderSize * 4)}
+					width={width + this._sliderSize + this._borderSize * 4}
 				>
 					<SliderBar
-						className="ui-slider-bar"
+						className='ui-slider-bar'
 						height={this._sliderSize * 0.25}
 						ref={this.refContainer}
 						width={width}
 					>
 						{this.buildTicks()}
 						<SliderElement
-							className="ui-slider-element"
-							left={this.state.x - (this._sliderSize * 0.5) - this._borderSize}
+							className='ui-slider-element'
+							left={
+								this.state.x -
+								this._sliderSize * 0.5 -
+								this._borderSize
+							}
 							onMouseDown={this.handleMouseDown}
 							sizing={this.props.sizing}
 						/>

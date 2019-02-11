@@ -559,7 +559,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -568,7 +568,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -602,7 +602,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -869,7 +869,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -878,7 +878,8 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -910,7 +911,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -954,7 +955,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -1024,10 +1025,10 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -1071,7 +1072,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -1120,7 +1121,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -1164,7 +1165,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -1179,7 +1180,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -1241,7 +1242,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -1285,7 +1286,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -1355,7 +1356,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -1371,7 +1372,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -1380,7 +1381,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -1405,7 +1406,8 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -1444,7 +1446,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -1826,7 +1828,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -1835,7 +1837,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -1869,7 +1871,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -2136,7 +2138,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -2145,7 +2147,8 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -2177,7 +2180,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -2221,7 +2224,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -2291,10 +2294,10 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -2338,7 +2341,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -2387,7 +2390,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -2431,7 +2434,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -2446,7 +2449,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -2508,7 +2511,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -2552,7 +2555,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -2622,7 +2625,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -2638,7 +2641,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -2647,7 +2650,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -2672,7 +2675,8 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -2711,7 +2715,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -3093,7 +3097,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -3102,7 +3106,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -3136,7 +3140,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -3403,7 +3407,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -3412,7 +3416,8 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -3444,7 +3449,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -3488,7 +3493,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -3558,10 +3563,10 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -3605,7 +3610,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -3654,7 +3659,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -3698,7 +3703,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -3713,7 +3718,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -3775,7 +3780,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -3819,7 +3824,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -3889,7 +3894,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -3905,7 +3910,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -3914,7 +3919,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -3939,7 +3944,8 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -3978,7 +3984,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -5169,7 +5175,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -5178,7 +5184,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -5212,7 +5218,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -5479,7 +5485,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -5488,7 +5494,8 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -5520,7 +5527,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -5564,7 +5571,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -5634,10 +5641,10 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -5681,7 +5688,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -5730,7 +5737,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -5774,7 +5781,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -5789,7 +5796,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -5851,7 +5858,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -5895,7 +5902,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -5965,7 +5972,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -5981,7 +5988,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -5990,7 +5997,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -6015,7 +6022,8 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -6054,7 +6062,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -6436,7 +6444,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -6445,7 +6453,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -6479,7 +6487,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -6746,7 +6754,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -6755,7 +6763,8 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -6787,7 +6796,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -6831,7 +6840,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -6901,10 +6910,10 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -6948,7 +6957,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -6997,7 +7006,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -7041,7 +7050,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -7056,7 +7065,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -7118,7 +7127,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -7162,7 +7171,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -7232,7 +7241,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -7248,7 +7257,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -7257,7 +7266,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -7282,7 +7291,8 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -7321,7 +7331,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -7703,7 +7713,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -7712,7 +7722,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -7746,7 +7756,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -8013,7 +8023,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -8022,7 +8032,8 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -8054,7 +8065,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -8098,7 +8109,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -8168,10 +8179,10 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -8215,7 +8226,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -8264,7 +8275,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -8308,7 +8319,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -8323,7 +8334,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -8385,7 +8396,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -8429,7 +8440,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -8499,7 +8510,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -8515,7 +8526,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -8524,7 +8535,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -8549,7 +8560,8 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -8588,7 +8600,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -9779,7 +9791,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -9788,7 +9800,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -9822,7 +9834,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -10191,7 +10203,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -10200,7 +10212,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -10234,7 +10246,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -10603,7 +10615,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -10612,7 +10624,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -10646,7 +10658,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -11462,7 +11474,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -11471,7 +11483,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -11505,7 +11517,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -11874,7 +11886,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -11883,7 +11895,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -11917,7 +11929,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -12286,7 +12298,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -12295,7 +12307,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -12329,7 +12341,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -13145,7 +13157,7 @@ exports[`Remove a tag from a TagList 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -13154,7 +13166,7 @@ exports[`Remove a tag from a TagList 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -13188,7 +13200,7 @@ exports[`Remove a tag from a TagList 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -13455,7 +13467,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -13464,7 +13476,8 @@ exports[`Remove a tag from a TagList 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -13496,7 +13509,7 @@ exports[`Remove a tag from a TagList 1`] = `
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -13540,7 +13553,7 @@ exports[`Remove a tag from a TagList 1`] = `
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -13610,10 +13623,10 @@ exports[`Remove a tag from a TagList 1`] = `
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -13657,7 +13670,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -13706,7 +13719,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -13750,7 +13763,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -13765,7 +13778,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -13827,7 +13840,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -13871,7 +13884,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -13941,7 +13954,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -13957,7 +13970,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -13966,7 +13979,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -13991,7 +14004,8 @@ exports[`Remove a tag from a TagList 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -14030,7 +14044,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -14412,7 +14426,7 @@ exports[`Remove a tag from a TagList 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -14421,7 +14435,7 @@ exports[`Remove a tag from a TagList 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -14455,7 +14469,7 @@ exports[`Remove a tag from a TagList 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -14722,7 +14736,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -14731,7 +14745,8 @@ exports[`Remove a tag from a TagList 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -14763,7 +14778,7 @@ exports[`Remove a tag from a TagList 1`] = `
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -14807,7 +14822,7 @@ exports[`Remove a tag from a TagList 1`] = `
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -14877,10 +14892,10 @@ exports[`Remove a tag from a TagList 1`] = `
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -14924,7 +14939,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -14973,7 +14988,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -15017,7 +15032,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -15032,7 +15047,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -15094,7 +15109,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -15138,7 +15153,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -15208,7 +15223,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -15224,7 +15239,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -15233,7 +15248,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -15258,7 +15273,8 @@ exports[`Remove a tag from a TagList 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -15297,7 +15313,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -15679,7 +15695,7 @@ exports[`Remove a tag from a TagList 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -15688,7 +15704,7 @@ exports[`Remove a tag from a TagList 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -15722,7 +15738,7 @@ exports[`Remove a tag from a TagList 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -15989,7 +16005,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -15998,7 +16014,8 @@ exports[`Remove a tag from a TagList 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -16030,7 +16047,7 @@ exports[`Remove a tag from a TagList 1`] = `
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -16074,7 +16091,7 @@ exports[`Remove a tag from a TagList 1`] = `
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -16144,10 +16161,10 @@ exports[`Remove a tag from a TagList 1`] = `
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -16191,7 +16208,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -16240,7 +16257,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -16284,7 +16301,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -16299,7 +16316,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -16361,7 +16378,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -16405,7 +16422,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -16475,7 +16492,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -16491,7 +16508,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -16500,7 +16517,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -16525,7 +16542,8 @@ exports[`Remove a tag from a TagList 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -16564,7 +16582,7 @@ exports[`Remove a tag from a TagList 1`] = `
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -17863,7 +17881,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -17872,7 +17890,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -17906,7 +17924,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -18173,7 +18191,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -18182,7 +18200,8 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -18214,7 +18233,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -18258,7 +18277,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -18328,10 +18347,10 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -18375,7 +18394,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -18424,7 +18443,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -18468,7 +18487,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -18483,7 +18502,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -18545,7 +18564,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -18589,7 +18608,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -18659,7 +18678,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -18675,7 +18694,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -18684,7 +18703,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -18709,7 +18728,8 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -18748,7 +18768,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -19130,7 +19150,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -19139,7 +19159,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -19173,7 +19193,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -19440,7 +19460,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -19449,7 +19469,8 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -19481,7 +19502,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -19525,7 +19546,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -19595,10 +19616,10 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -19642,7 +19663,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -19691,7 +19712,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -19735,7 +19756,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -19750,7 +19771,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -19812,7 +19833,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -19856,7 +19877,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -19926,7 +19947,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -19942,7 +19963,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -19951,7 +19972,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -19976,7 +19997,8 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -20015,7 +20037,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}
@@ -20397,7 +20419,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "iLHaNu",
+                            "lastClassName": "bmtfWq",
                             "rules": Array [
                               "
 	border: solid 1px silver;
@@ -20406,7 +20428,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -20440,7 +20462,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="ui-tag sc-kAzzGY iLHaNu"
+                        className="ui-tag sc-kAzzGY bmtfWq"
                         onMouseOut={[Function]}
                         onMouseOver={[Function]}
                         style={Object {}}
@@ -20707,7 +20729,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fZQdpw",
+                                  "lastClassName": "gMwlPu",
                                   "rules": Array [
                                     "
 	position: absolute;
@@ -20716,7 +20738,8 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                                     [Function],
-                                    " ease-in-out;
+                                    "
+		ease-in-out;
 	width: unset;
 ",
                                   ],
@@ -20748,7 +20771,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                           >
                             <ButtonCircle
                               bottom={null}
-                              className="sc-cSHVUG fZQdpw"
+                              className="sc-cSHVUG gMwlPu"
                               contentEditable={false}
                               controlled={true}
                               direction="right"
@@ -20792,7 +20815,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                             >
                               <Wrapper
                                 bottom={null}
-                                className="sc-cSHVUG fZQdpw"
+                                className="sc-cSHVUG gMwlPu"
                                 contentEditable={false}
                                 controlled={true}
                                 direction="right"
@@ -20862,10 +20885,10 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                   }
                                 >
                                   <styled.div
-                                    className="ui-button-circle sc-cSHVUG fZQdpw"
+                                    className="ui-button-circle sc-cSHVUG gMwlPu"
                                   >
                                     <StyledComponent
-                                      className="ui-button-circle sc-cSHVUG fZQdpw"
+                                      className="ui-button-circle sc-cSHVUG gMwlPu"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -20909,7 +20932,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                                        className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                                       >
                                         <styled.div
                                           height="18px"
@@ -20958,7 +20981,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                             >
                                               <Styled(Button)
                                                 bottom={null}
-                                                className="sc-cSHVUG fZQdpw"
+                                                className="sc-cSHVUG gMwlPu"
                                                 contentEditable={false}
                                                 controlled={true}
                                                 direction="right"
@@ -21002,7 +21025,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                               >
                                                 <StyledComponent
                                                   bottom={null}
-                                                  className="sc-cSHVUG fZQdpw"
+                                                  className="sc-cSHVUG gMwlPu"
                                                   contentEditable={false}
                                                   controlled={true}
                                                   direction="right"
@@ -21017,7 +21040,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-iwsKbI",
                                                         "isStatic": false,
-                                                        "lastClassName": "hrmGrl",
+                                                        "lastClassName": "fHSaaL",
                                                         "rules": Array [
                                                           "
 	border-radius: 4em;
@@ -21079,7 +21102,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                 >
                                                   <Button
                                                     bottom={null}
-                                                    className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                    className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                     contentEditable={false}
                                                     controlled={true}
                                                     direction="right"
@@ -21123,7 +21146,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                   >
                                                     <Wrapper
                                                       bottom={null}
-                                                      className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                      className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                       contentEditable={false}
                                                       controlled={true}
                                                       direction="right"
@@ -21193,7 +21216,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                         }
                                                       >
                                                         <styled.div
-                                                          className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                          className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                           disabled={false}
                                                           id="Button-0"
                                                           onClick={[Function]}
@@ -21209,7 +21232,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                           visible={true}
                                                         >
                                                           <StyledComponent
-                                                            className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                            className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                             disabled={false}
                                                             forwardedComponent={
                                                               Object {
@@ -21218,7 +21241,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "sc-gzVnrw",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "lmUwCM",
+                                                                  "lastClassName": "fiaWaW",
                                                                   "rules": Array [
                                                                     "
 	",
@@ -21243,7 +21266,8 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                                     [Function],
-                                                                    " ",
+                                                                    "
+			",
                                                                     [Function],
                                                                     ";
 	}
@@ -21282,7 +21306,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
                                                             visible={true}
                                                           >
                                                             <div
-                                                              className="ui-button ripple sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw lmUwCM"
+                                                              className="ui-button ripple sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw fiaWaW"
                                                               disabled={false}
                                                               id="Button-0"
                                                               onClick={[Function]}

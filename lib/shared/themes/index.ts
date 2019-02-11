@@ -35,9 +35,9 @@
  * @module themes
  */
 
-import {default as base} from './base';
-import {default as dark} from './dark';
-import {default as light} from './light';
+import {default as base} from "./base";
+import {default as dark} from "./dark";
+import {default as light} from "./light";
 
 export interface ThemeProps {
 	backgroundColor: string;
@@ -101,8 +101,8 @@ export function getTheme(theme: Theme = currentTheme): ThemeProps {
  */
 export function getThemeList(): string[] {
 	return Object.keys(Theme)
-		.map(key => Theme[key])
-		.filter(it => typeof it === 'string')
+		.map((key) => Theme[key])
+		.filter((it) => typeof it === "string")
 		.sort();
 }
 

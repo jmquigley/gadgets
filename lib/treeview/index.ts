@@ -3,11 +3,6 @@ import {
 	TreeItem,
 	Treeview,
 	TreeviewProps
-} from './Treeview';
+} from "./Treeview";
 
-export {
-	getDefaultTreeviewProps,
-	TreeItem,
-	Treeview,
-	TreeviewProps
-};
+export {getDefaultTreeviewProps, TreeItem, Treeview, TreeviewProps};

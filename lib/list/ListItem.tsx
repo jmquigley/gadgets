@@ -5,23 +5,23 @@
 // to the `<li>` tag.
 //
 
-'use strict';
+"use strict";
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
 import {
 	getDefaultItemProps,
 	getDefaultItemState,
 	Item,
 	ItemProps,
 	ItemState
-} from '../item';
-import {BaseComponent, Sizing, Wrapper} from '../shared';
+} from "../item";
+import {BaseComponent, Sizing, Wrapper} from "../shared";
 
 export interface ListItemProps extends ItemProps {
-	href?: any;  // holds a function injected by the parent for selection
+	href?: any; // holds a function injected by the parent for selection
 	onBlur?: any;
 	onDoubleClick?: any;
 	onClick?: any;
@@ -29,12 +29,13 @@ export interface ListItemProps extends ItemProps {
 }
 
 export function getDefaultListItemProps(): ListItemProps {
-	return cloneDeep({...getDefaultItemProps(),
+	return cloneDeep({
+		...getDefaultItemProps(),
 		href: {
 			selectHandler: nilEvent,
 			sizing: Sizing.normal
 		},
-		obj: 'ListItem',
+		obj: "ListItem",
 		onBlur: nilEvent,
 		onClick: nilEvent,
 		onDoubleClick: nilEvent,
@@ -43,21 +44,21 @@ export function getDefaultListItemProps(): ListItemProps {
 }
 
 export interface ListItemState extends ItemState {
-	toggleRipple: boolean;  // use this to turn ripple on/off during editing
+	toggleRipple: boolean; // use this to turn ripple on/off during editing
 }
 
 export function getDefaultListItemState(): ListItemState {
-	return cloneDeep({...getDefaultItemState('ui-listitem'),
+	return cloneDeep({
+		...getDefaultItemState("ui-listitem"),
 		toggleRipple: false
 	});
 }
 
 export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
-
 	public static defaultProps: ListItemProps = getDefaultListItemProps();
 	public state: ListItemState = getDefaultListItemState();
 
-	private _delay = 250;  // double click delay
+	private _delay = 250; // double click delay
 	private _preventClick: boolean = false;
 	private _timer: any = null;
 
@@ -75,9 +76,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	 */
 	private deactivateEdit() {
 		this._preventClick = false;
-		this.setState(() => (
-			{toggleRipple: false}
-		));
+		this.setState(() => ({toggleRipple: false}));
 	}
 
 	@autobind
@@ -105,7 +104,6 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	@autobind
 	private handleDoubleClick(e: React.MouseEvent<HTMLLIElement>) {
 		if (!this.props.disabled && this.props.visible) {
-
 			// If a double click occurs, then sent a flag preventing the single click
 			// from firing after its timer expires
 			clearTimeout(this._timer);
@@ -118,7 +116,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLLIElement>) {
-		if (e.key === 'Escape') {
+		if (e.key === "Escape") {
 			this.deactivateEdit();
 		}
 
@@ -127,7 +125,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	@autobind
 	private handleKeyPress(e: React.KeyboardEvent<HTMLLIElement>) {
-		if (e.key === 'Enter') {
+		if (e.key === "Enter") {
 			this.deactivateEdit();
 		}
 
@@ -136,7 +134,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 
 	public render() {
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<Item
 					{...this.props}
 					className={this.state.classes.classnames}

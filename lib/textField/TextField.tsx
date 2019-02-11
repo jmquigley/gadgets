@@ -107,16 +107,16 @@
  * @module TextField
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('TextField');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {sp} from 'util.constants';
-import {nilEvent} from 'util.toolbox';
-import {ButtonCircle} from '../buttonCircle';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {sp} from "util.constants";
+import {nilEvent} from "util.toolbox";
+import {ButtonCircle} from "../buttonCircle";
 import {
 	BaseComponent,
 	BaseState,
@@ -127,16 +127,16 @@ import {
 	invisible,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
-import {tooltip} from '../tooltip';
+} from "../shared";
+import styled from "../shared/themed-components";
+import {tooltip} from "../tooltip";
 import {
 	validateEmail,
 	validateMaxLength,
 	validateMinLength,
 	validateURL,
 	Validator
-} from './validator';
+} from "./validator";
 
 export enum MessageType {
 	none,
@@ -169,10 +169,10 @@ export interface TextFieldProps extends Partial<HTMLInputElement> {
 export function getDefaultTextFieldProps(): TextFieldProps {
 	return cloneDeep({
 		disabled: false,
-		id: '',
-		minWidth: '1em',
+		id: "",
+		minWidth: "1em",
 		noborder: false,
-		obj: 'TextField',
+		obj: "TextField",
 		onBlur: nilEvent,
 		onChange: nilEvent,
 		onClear: nilEvent,
@@ -181,9 +181,9 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		onValidation: nilEvent,
 		sizing: Sizing.normal,
 		style: {},
-		testing: process.env.NODE_ENV !== 'production',
-		tooltip: '',
-		type: 'text',
+		testing: process.env.NODE_ENV !== "production",
+		tooltip: "",
+		type: "text",
 		useclear: false,
 		usevalidation: false,
 		validators: [],
@@ -200,36 +200,40 @@ export interface TextFieldState extends BaseState {
 }
 
 export function getDefaultTextFieldState(): TextFieldState {
-	return cloneDeep({...getDefaultBaseState('ui-textfield'),
-		message: '',
+	return cloneDeep({
+		...getDefaultBaseState("ui-textfield"),
+		message: "",
 		messageType: MessageType.none,
-		minWidth: '',
-		previousText: '',
+		minWidth: "",
+		previousText: "",
 		valid: true
 	});
 }
 
-const textTypes: any[] = ['text', 'email', 'search', 'password', 'tel', 'url'];
+const textTypes: any[] = ["text", "email", "search", "password", "tel", "url"];
 
 export const ClearButtonView: any = styled.div`
 	display: inline-flex;
 	margin: 0 2px;
 	opacity: 0;
 	padding: 1px 0;
-	transition: opacity ${props => props.theme.transitionDelay} ease-in-out;
+	transition: opacity ${(props) => props.theme.transitionDelay} ease-in-out;
 
-	${props => fontStyle[props['sizing']]}
+	${(props) => fontStyle[props["sizing"]]}
 `;
 
 export const MessageView: any = styled.div`
 	background-color: unset;
 	border-color: unset;
-	color: ${props => props['messageType'] !== MessageType.success ? Color.error : Color.success};
+	color: ${(props) =>
+		props["messageType"] !== MessageType.success
+			? Color.error
+			: Color.success};
 	display: block;
 
-	${props => disabled(props)}
-	${props => fontStyle[props['sizing']]}
-	${props => invisible(props)}
+	${(props) => disabled(props)}
+	${(props) => fontStyle[props["sizing"]]}
+	${(props) => invisible(props)}
 `;
 
 export const StyledInput: any = styled.input`
@@ -243,9 +247,9 @@ export const StyledInput: any = styled.input`
 	padding: 1px 5px;
 	width: 100%;
 
-	${props => disabled(props)}
-	${props => fontStyle[props['sizing']]}
-	${props => invisible(props)}
+	${(props) => disabled(props)}
+	${(props) => fontStyle[props["sizing"]]}
+	${(props) => invisible(props)}
 `;
 
 export const TextfieldContainerView: any = styled.div`
@@ -256,45 +260,49 @@ export const TextfieldContainerView: any = styled.div`
 `;
 
 export const TextFieldView: any = styled.div`
-	border: ${
-		props => props['noborder'] ? 'none' : 'solid 1px ' + props.theme.inputBorderColor
-	};
+	border: ${(props) =>
+		props["noborder"]
+			? "none"
+			: "solid 1px " + props.theme.inputBorderColor};
 	display: inherit;
 	padding: 1px 0;
 
 	&:hover .ui-textfield-clear-button {
-		opacity: ${props => !props['disabled'] ? '1.0;' : '0.0'};
+		opacity: ${(props) => (!props["disabled"] ? "1.0;" : "0.0")};
 	}
 `;
 
 export class TextField extends BaseComponent<any, TextFieldState> {
-
 	public static readonly defaultProps: TextFieldProps = getDefaultTextFieldProps();
 	public state: TextFieldState = getDefaultTextFieldState();
 
 	private _input: HTMLInputElement = null;
 	private _validators: Validator[] = null;
-	private _value: string = '';
+	private _value: string = "";
 
 	constructor(props: TextFieldProps) {
 		super(props, TextField.defaultProps.style);
 		this._validators = cloneDeep(props.validators);
 
 		if (textTypes.includes(props.type) && props.usevalidation) {
-			if ('maxLength' in props) {
-				this._validators.push(validateMaxLength(Number(props.maxLength)));
+			if ("maxLength" in props) {
+				this._validators.push(
+					validateMaxLength(Number(props.maxLength))
+				);
 			}
 
-			if ('minLength' in props) {
-				this._validators.push(validateMinLength(Number(props.minLength)));
+			if ("minLength" in props) {
+				this._validators.push(
+					validateMinLength(Number(props.minLength))
+				);
 			}
 
 			switch (props.type) {
-				case 'email':
+				case "email":
 					this._validators.push(validateEmail());
 					break;
 
-				case 'url':
+				case "url":
 					this._validators.push(validateURL());
 					break;
 			}
@@ -324,20 +332,23 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	@autobind
 	private handleClearButton() {
-		this.setState({
-			message: '',
-			previousText: ''
-		}, () => {
-			this.input.value = '';
-			this.handleChange({target: this.input} as any);
-			this.input.focus();
-			this.props.onClear();
-		});
+		this.setState(
+			{
+				message: "",
+				previousText: ""
+			},
+			() => {
+				this.input.value = "";
+				this.handleChange({target: this.input} as any);
+				this.input.focus();
+				this.props.onClear();
+			}
+		);
 	}
 
 	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-		if (e.key === 'Escape') {
+		if (e.key === "Escape") {
 			(e.target as HTMLInputElement).value = this.state.previousText;
 			this._value = this.state.previousText;
 			this.validate(this.state.previousText);
@@ -348,7 +359,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	@autobind
 	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
-		if (e.key === 'Enter') {
+		if (e.key === "Enter") {
 			this.commit(e.target as HTMLInputElement);
 		}
 
@@ -370,12 +381,11 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	private validate(value: string): boolean {
 		let ret: boolean = true;
-		let message: string = '';
+		let message: string = "";
 		let messageType: MessageType = MessageType.none;
 
-		if (value !== '' && this.props.usevalidation) {
+		if (value !== "" && this.props.usevalidation) {
 			ret = this._validators.every((it: Validator) => {
-
 				if (it.validate(value)) {
 					message = it.success;
 					messageType = MessageType.success;
@@ -398,11 +408,14 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		return ret;
 	}
 
-	public static getDerivedStateFromProps(props: TextFieldProps, state: TextFieldState) {
+	public static getDerivedStateFromProps(
+		props: TextFieldProps,
+		state: TextFieldState
+	) {
 		const newState: TextFieldState = {...state};
 
-		if ('size' in props) {
-			newState.minWidth = `${(props.size / 2.0) + 3}rem`;
+		if ("size" in props) {
+			newState.minWidth = `${props.size / 2.0 + 3}rem`;
 		}
 
 		return super.getDerivedStateFromProps(props, newState);
@@ -426,12 +439,12 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		if (this.props.useclear) {
 			clearBtn = (
 				<ClearButtonView
-					className="ui-textfield-clear-button"
+					className='ui-textfield-clear-button'
 					sizing={BaseComponent.prev().type}
 				>
 					<ButtonCircle
 						disabled={props.disabled}
-						iconName="times"
+						iconName='times'
 						onClick={this.handleClearButton}
 						sizing={BaseComponent.prev().type}
 						style={{
@@ -446,9 +459,9 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<TextfieldContainerView
-					className="ui-textfield-container"
+					className='ui-textfield-container'
 					id={this.id}
 					minWidth={this.state.minWidth}
 				>
@@ -470,9 +483,9 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 						/>
 						{clearBtn}
 					</TextFieldView>
-					{this.props.usevalidation ?
+					{this.props.usevalidation ? (
 						<MessageView
-							className="ui-textfield-validation-message"
+							className='ui-textfield-validation-message'
 							disabled={props.disabled}
 							messageType={this.state.messageType}
 							sizing={BaseComponent.prev().type}
@@ -481,10 +494,8 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 							{this.props.usevalidation ? sp : null}
 							{this.state.message}
 						</MessageView>
-					:
-						null
-					}
-				{tooltip(this.id, this.props)}
+					) : null}
+					{tooltip(this.id, this.props)}
 				</TextfieldContainerView>
 			</Wrapper>
 		);

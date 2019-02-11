@@ -104,25 +104,25 @@
  * @module Editor
  */
 
-'use strict';
+"use strict";
 
-const debug = require('debug')('Editor');
+const debug = require("debug")("Editor");
 
-import {globalize} from '../shared/helpers';
-globalize('hljs', require('highlight.js'));
-const Quill = globalize('Quill', require('quill'));
+import {globalize} from "../shared/helpers";
+globalize("hljs", require("highlight.js"));
+const Quill = globalize("Quill", require("quill"));
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import {Markup, MarkupMode} from 'quill-markup';
-import * as React from 'react';
-import {ClassNames} from 'util.classnames';
-import { nilEvent} from 'util.toolbox';
-import {Button} from '../button';
-import {ButtonDialog} from '../buttonDialog';
-import {Divider} from '../divider';
-import {Dropdown, DropdownOption} from '../dropdown';
-import {List, ListItem} from '../list';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import {Markup, MarkupMode} from "quill-markup";
+import * as React from "react";
+import {ClassNames} from "util.classnames";
+import {nilEvent} from "util.toolbox";
+import {Button} from "../button";
+import {ButtonDialog} from "../buttonDialog";
+import {Divider} from "../divider";
+import {Dropdown, DropdownOption} from "../dropdown";
+import {List, ListItem} from "../list";
 import {
 	BaseComponent,
 	BaseProps,
@@ -134,9 +134,9 @@ import {
 	InvisibleCSS,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
-import {Toolbar} from '../toolbar';
+} from "../shared";
+import styled from "../shared/themed-components";
+import {Toolbar} from "../toolbar";
 
 export interface QuillKeyBindings {
 	[key: string]: any;
@@ -156,11 +156,12 @@ export interface EditorProps extends BaseProps {
 }
 
 export function getDefaultEditorProps(): EditorProps {
-	return cloneDeep({...getDefaultBaseProps(),
-		content: '',
-		defaultFont: 'Fira Code',
+	return cloneDeep({
+		...getDefaultBaseProps(),
+		content: "",
+		defaultFont: "Fira Code",
 		defaultFontSize: 12,
-		obj: 'Editor',
+		obj: "Editor",
 		onChange: nilEvent,
 		onClick: nilEvent,
 		onClickLink: nilEvent,
@@ -178,9 +179,10 @@ export interface EditorState extends BaseState {
 }
 
 export function getDefaultEditorState(): EditorState {
-	return cloneDeep({...getDefaultBaseState('ui-editor'),
-		editorStyles: new ClassNames('ui-editor-quill'),
-		toolbarStyles: new ClassNames('ui-editor-toolbar')
+	return cloneDeep({
+		...getDefaultBaseState("ui-editor"),
+		editorStyles: new ClassNames("ui-editor-quill"),
+		toolbarStyles: new ClassNames("ui-editor-toolbar")
 	});
 }
 
@@ -219,21 +221,21 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	private _fontSizes: DropdownOption[] = [];
 	private _highlights: DropdownOption[] = [];
 	private _keybindings: QuillKeyBindings = {
-		'tab': {
+		tab: {
 			key: 9,
 			handler: function(textRange: any) {
-				this.quill.insertText(textRange.index, '    ');
+				this.quill.insertText(textRange.index, "    ");
 				return false;
 			}
 		},
-		'indent code-block': null,
-		'outdent code-block': null,
-		'code exit': null,
-		'embed left': null,
-		'embed right': null,
-		'embed left shift': null,
-		'embed right shift': null,
-		'list autofill': null
+		"indent code-block": null,
+		"outdent code-block": null,
+		"code exit": null,
+		"embed left": null,
+		"embed right": null,
+		"embed left shift": null,
+		"embed right shift": null,
+		"list autofill": null
 	};
 	private _markup: Markup;
 	private _modes: DropdownOption[] = [];
@@ -241,37 +243,39 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
 	public state: EditorState = getDefaultEditorState();
 
-	constructor(props: EditorProps)	{
+	constructor(props: EditorProps) {
 		super(props, Editor.defaultProps.style);
 		debug('Editor key: "%s"', this.id);
 	}
 
 	private buildFontList() {
-		this._fontList = this._markup.fonts.map((fontName: string) => (
-			{value: fontName, label: fontName}
-		));
+		this._fontList = this._markup.fonts.map((fontName: string) => ({
+			value: fontName,
+			label: fontName
+		}));
 	}
 
 	private buildFontSizes() {
-		const sizes: number[] = [
-			8, 9, 10, 11, 12, 13, 14, 16, 20, 24, 32, 48
-		];
+		const sizes: number[] = [8, 9, 10, 11, 12, 13, 14, 16, 20, 24, 32, 48];
 
-		this._fontSizes = sizes.map((size: number) => (
-			{value: String(size), label: String(size)}
-		));
+		this._fontSizes = sizes.map((size: number) => ({
+			value: String(size),
+			label: String(size)
+		}));
 	}
 
 	private buildHighlights() {
-		this._highlights = this._markup.highlights.map((highlight: string) => (
-			{value: highlight, label: highlight.capitalize().replace(/\W/g, ' ')}
-		));
+		this._highlights = this._markup.highlights.map((highlight: string) => ({
+			value: highlight,
+			label: highlight.capitalize().replace(/\W/g, " ")
+		}));
 	}
 
 	private buildModes() {
-		this._modes = this._markup.modes.map((mode: string) => (
-			{value: mode, label: mode.capitalize()}
-		));
+		this._modes = this._markup.modes.map((mode: string) => ({
+			value: mode,
+			label: mode.capitalize()
+		}));
 	}
 
 	@autobind
@@ -281,19 +285,23 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		};
 	}
 
-	public static getDerivedStateFromProps(props: EditorProps, state: EditorState) {
+	public static getDerivedStateFromProps(
+		props: EditorProps,
+		state: EditorState
+	) {
 		const newState: EditorState = {...state};
-		newState.editorStyles.onIf('disabled' in props && props.disabled)('nohover');
+		newState.editorStyles.onIf("disabled" in props && props.disabled)(
+			"nohover"
+		);
 		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public componentDidMount() {
-
 		// The quill editor must be added after the component has mounted
 		// because the DOM element used for replacement is not available
 		// until the first render call.
 
-		Quill.register('modules/markup', Markup);
+		Quill.register("modules/markup", Markup);
 		this._editor = new Quill(`#${this.id}`, {
 			modules: {
 				history: {
@@ -319,10 +327,10 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 				},
 				toolbar: null
 			},
-			theme: 'snow'
+			theme: "snow"
 		});
 
-		this._markup = this._editor.getModule('markup');
+		this._markup = this._editor.getModule("markup");
 		this._markup.setContent(this.props.content);
 		this._markup.refresh();
 
@@ -347,13 +355,14 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 			}
 		}
 
-		this._custom = Object.assign({},
+		this._custom = Object.assign(
+			{},
 			Editor.defaultProps.scheme,
 			this.props.scheme
 		);
 
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<EditorContainer
 					className={this.state.classes.classnames}
 					style={this.state.style}
@@ -361,91 +370,115 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 					<EditorToolbar
 						{...this.props}
 						className={this.state.toolbarStyles.classnames}
-						sizing={this.props.useSmallButtons ? Sizing.small : this.props.sizing}
+						sizing={
+							this.props.useSmallButtons
+								? Sizing.small
+								: this.props.sizing
+						}
 					>
 						<Button
-							iconName="bold"
+							iconName='bold'
 							onClick={this._markup && this._markup.setBold}
-							tooltip="bold"
+							tooltip='bold'
 						/>
 						<Button
-							iconName="italic"
+							iconName='italic'
 							onClick={this._markup && this._markup.setItalic}
-							tooltip="italic"
+							tooltip='italic'
 						/>
 						<Button
-							iconName="underline"
+							iconName='underline'
 							onClick={this._markup && this._markup.setUnderline}
-							tooltip="underline"
+							tooltip='underline'
 						/>
 						<Button
-							iconName="strikethrough"
-							onClick={this._markup && this._markup.setStrikeThrough}
-							tooltip="strike through"
+							iconName='strikethrough'
+							onClick={
+								this._markup && this._markup.setStrikeThrough
+							}
+							tooltip='strike through'
 						/>
 						<Button
-							iconName="code"
+							iconName='code'
 							onClick={this._markup && this._markup.setMono}
-							tooltip="code"
+							tooltip='code'
 						/>
 						<ButtonDialog
-							iconName="header"
+							iconName='header'
 							notriangle
-							tooltip="header"
+							tooltip='header'
 						>
 							<List sizing={Sizing.small} alternating noselect>
-								<ListItem title="h1" onSelect={this.handleSelect('1')} />
-								<ListItem title="h2" onSelect={this.handleSelect('2')} />
-								<ListItem title="h3" onSelect={this.handleSelect('3')} />
-								<ListItem title="h4" onSelect={this.handleSelect('4')} />
-								<ListItem title="h5" onSelect={this.handleSelect('5')} />
-								<ListItem title="h6" onSelect={this.handleSelect('6')} />
+								<ListItem
+									title='h1'
+									onSelect={this.handleSelect("1")}
+								/>
+								<ListItem
+									title='h2'
+									onSelect={this.handleSelect("2")}
+								/>
+								<ListItem
+									title='h3'
+									onSelect={this.handleSelect("3")}
+								/>
+								<ListItem
+									title='h4'
+									onSelect={this.handleSelect("4")}
+								/>
+								<ListItem
+									title='h5'
+									onSelect={this.handleSelect("5")}
+								/>
+								<ListItem
+									title='h6'
+									onSelect={this.handleSelect("6")}
+								/>
 							</List>
 						</ButtonDialog>
 						<Divider />
 						<Button
-							iconName="undo"
+							iconName='undo'
 							onClick={this._markup && this._markup.undo}
-							tooltip="undo"
+							tooltip='undo'
 						/>
 						<Button
-							iconName="repeat"
+							iconName='repeat'
 							onClick={this._markup && this._markup.redo}
-							tooltip="redo"
+							tooltip='redo'
 						/>
 						<Divider />
 						<Dropdown
 							defaultVal={this.props.defaultFont}
 							items={this._fontList}
 							onSelect={this._markup && this._markup.setFont}
-							tooltip="font"
+							tooltip='font'
 						/>
 						<Dropdown
 							defaultVal={this.props.defaultFontSize.toString()}
 							items={this._fontSizes}
 							onSelect={this._markup && this._markup.setFontSize}
-							tooltip="font size"
+							tooltip='font size'
 						/>
 						<Divider />
 						<Dropdown
-							defaultVal={'markdown'}
+							defaultVal={"markdown"}
 							items={this._modes}
 							onSelect={this._markup && this._markup.setMode}
-							tooltip="mode"
+							tooltip='mode'
 						/>
 						<Dropdown
-							defaultVal={'solarized-light'}
+							defaultVal={"solarized-light"}
 							items={this._highlights}
 							onSelect={this._markup && this._markup.setHighlight}
 							style={{
-								width: '6rem'
+								width: "6rem"
 							}}
-							tooltip="syntax highlighting"
+							tooltip='syntax highlighting'
 						/>
 						<Button
-							iconName="refresh"
+							iconName='refresh'
 							onClick={this._markup && this._markup.refresh}
-							tooltip="refresh"
+							tooltip='refresh'
 						/>
 					</EditorToolbar>
 					<EditorView

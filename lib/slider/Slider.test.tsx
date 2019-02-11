@@ -1,53 +1,34 @@
-'use strict';
+"use strict";
 
-import {mount} from 'enzyme';
-import * as React from 'react';
-import {getDefaultSliderProps, Slider} from './index';
+import {mount} from "enzyme";
+import * as React from "react";
+import {getDefaultSliderProps, Slider} from "./index";
 
-test('Test retrieval of Slider props object', () => {
+test("Test retrieval of Slider props object", () => {
 	const props = getDefaultSliderProps();
 
 	expect(props).toBeTruthy();
 	expect(props).toMatchSnapshot();
 });
 
-test('Test creation of a simple Slider control', () => {
+test("Test creation of a simple Slider control", () => {
 	const ctl = mount(
-		<Slider
-			min={1}
-			max={50}
-			scale={2}
-			snap
-			startPosition={0}
-			ticks={5}
-		/>
+		<Slider min={1} max={50} scale={2} snap startPosition={0} ticks={5} />
 	);
 
 	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test disabling a Slider control', () => {
-	const ctl = mount(
-		<Slider
-			disabled
-			scale={2}
-			snap
-			ticks={5}
-		/>
-	);
+test("Test disabling a Slider control", () => {
+	const ctl = mount(<Slider disabled scale={2} snap ticks={5} />);
 
 	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test with bad min/max values', () => {
-	const ctl = mount(
-		<Slider
-			max={0}
-			min={-1}
-		/>
-	);
+test("Test with bad min/max values", () => {
+	const ctl = mount(<Slider max={0} min={-1} />);
 
 	expect(ctl).toBeTruthy();
 	expect(ctl).toMatchSnapshot();

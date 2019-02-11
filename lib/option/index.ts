@@ -1,5 +1,5 @@
-import {getDefaultOptionProps, Option, OptionType} from './Option';
-import {getDefaultOptionGroupProps, OptionGroup} from './OptionGroup';
+import {getDefaultOptionProps, Option, OptionType} from "./Option";
+import {getDefaultOptionGroupProps, OptionGroup} from "./OptionGroup";
 
 export {
 	getDefaultOptionGroupProps,

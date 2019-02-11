@@ -1,24 +1,27 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('DemoBrowser');
+const debug = require("debug")("DemoBrowser");
 
-import autobind from 'autobind-decorator';
-import * as React from 'react';
-import {
-	Browser
-} from '../../dist/bundle';
-import {StyledContainer} from '../app';
+import autobind from "autobind-decorator";
+import * as React from "react";
+import {Browser} from "../../dist/bundle";
+import {StyledContainer} from "../app";
 
 export default class DemoBrowser extends React.Component<any, undefined> {
-
 	constructor(props: any) {
 		super(props);
-		debug('creating');
+		debug("creating");
 	}
 
 	@autobind
 	private handleClip(uri: string, content: string, dom: any, history: any) {
-		debug(`handleClip => uri: %s, content: '%s', dom: %O, history: %O`, uri, content, dom, history);
+		debug(
+			`handleClip => uri: %s, content: '%s', dom: %O, history: %O`,
+			uri,
+			content,
+			dom,
+			history
+		);
 	}
 
 	@autobind
@@ -28,13 +31,13 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<StyledContainer id="browserExample" title="Browser">
+			<StyledContainer id='browserExample' title='Browser'>
 				<Browser
-					home="http://www.example.com"
+					home='http://www.example.com'
 					notooltips
 					onClip={this.handleClip}
 					onOpen={this.handleOpen}
-					uri="http://www.google.com"
+					uri='http://www.google.com'
 					useparser
 				/>
 			</StyledContainer>

@@ -1,25 +1,20 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('DemoSlider');
+const debug = require("debug")("DemoSlider");
 
-import autobind from 'autobind-decorator';
-import * as React from 'react';
-import {
-	Break,
-	Option,
-	Slider
-} from '../../dist/bundle';
-import {StyledContainer} from '../app';
+import autobind from "autobind-decorator";
+import * as React from "react";
+import {Break, Option, Slider} from "../../dist/bundle";
+import {StyledContainer} from "../app";
 
 export interface DemoSliderState {
 	sliderToggle: boolean;
 }
 
 export default class DemoSlider extends React.Component<any, DemoSliderState> {
-
 	constructor(props: any) {
 		super(props);
-		debug('creating');
+		debug("creating");
 
 		this.state = {
 			sliderToggle: false
@@ -28,7 +23,7 @@ export default class DemoSlider extends React.Component<any, DemoSliderState> {
 
 	@autobind
 	private handleSnap(toggle: boolean, title: string) {
-		debug('%s to %o, %O', title, toggle, this.state);
+		debug("%s to %o, %O", title, toggle, this.state);
 		this.setState({
 			sliderToggle: toggle
 		});
@@ -36,37 +31,36 @@ export default class DemoSlider extends React.Component<any, DemoSliderState> {
 
 	@autobind
 	private handleSelect(val: any) {
-		debug('slider select: %o', val);
+		debug("slider select: %o", val);
 	}
 
 	public render() {
 		return (
-			<StyledContainer id="sliderExample" title="Slider">
+			<StyledContainer id='sliderExample' title='Slider'>
 				<h3>Normal slider control, range 0 - 100, toggle snap</h3>
 				<Slider
-					disabled={this.props['disabled']}
+					disabled={this.props["disabled"]}
 					onSelect={this.handleSelect}
 					scale={2}
-					sizing={this.props['sizing']}
+					sizing={this.props["sizing"]}
 					snap={this.state.sliderToggle}
 					ticks={5}
 				/>
 
 				<Option
-					disabled={this.props['disabled']}
+					disabled={this.props["disabled"]}
 					onClick={this.handleSnap}
-					text="Toggle snap mode on/off"
+					text='Toggle snap mode on/off'
 				/>
-				<Break sizing={this.props['sizing']}/>
+				<Break sizing={this.props["sizing"]} />
 
 				<h3>Normal slider, no ticks, range 0 - 100</h3>
 				<Slider
-					disabled={this.props['disabled']}
+					disabled={this.props["disabled"]}
 					onSelect={this.handleSelect}
 					scale={2}
-					sizing={this.props['sizing']}
+					sizing={this.props["sizing"]}
 				/>
-
 			</StyledContainer>
 		);
 	}

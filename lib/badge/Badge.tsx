@@ -37,14 +37,14 @@
  * @module Badge
  */
 
-'use strict';
+"use strict";
 
-const debug = require('debug')('Badge');
+const debug = require("debug")("Badge");
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
 	BaseProps,
@@ -58,8 +58,8 @@ import {
 	locationStyle,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface BadgeProps extends BaseProps {
 	counter?: number;
@@ -68,16 +68,17 @@ export interface BadgeProps extends BaseProps {
 }
 
 export function getDefaultBadgeProps(): BadgeProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		counter: 0,
 		location: Location.topRight,
-		obj: 'Badge',
+		obj: "Badge",
 		onClick: nilEvent,
 		sizing: Sizing.normal,
 		style: {
-			backgroundColor: 'white',
-			border: 'solid 0.125em',
-			color: 'red'
+			backgroundColor: "white",
+			border: "solid 0.125em",
+			color: "red"
 		},
 		suppress: false
 	});
@@ -86,7 +87,7 @@ export function getDefaultBadgeProps(): BadgeProps {
 export type BadgeState = BaseState;
 
 export function getDefaultBadgeState(): BadgeState {
-	return cloneDeep({...getDefaultBaseState('ui-badge')});
+	return cloneDeep({...getDefaultBaseState("ui-badge")});
 }
 
 export const BadgeView: any = styled.div`
@@ -111,7 +112,6 @@ export const BadgeContainerView: any = styled.div`
 `;
 
 export class Badge extends BaseComponent<BadgeProps, BadgeState> {
-
 	public static readonly defaultProps: BadgeProps = getDefaultBadgeProps();
 	public state: BadgeState = getDefaultBadgeState();
 
@@ -122,7 +122,7 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (!this.props.disabled && this.props.visible && this.props.onClick) {
-			debug('clicking badge');
+			debug("clicking badge");
 			e.preventDefault();
 			this.props.onClick(this.props.counter);
 		}
@@ -131,7 +131,10 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 	public render() {
 		let badge = null;
 
-		if ((this.props.suppress && this.props.counter < 1) || !this.props.visible) {
+		if (
+			(this.props.suppress && this.props.counter < 1) ||
+			!this.props.visible
+		) {
 			badge = null;
 		} else {
 			badge = (
@@ -150,8 +153,8 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 		}
 
 		return (
-			<Wrapper {...this.props} >
-				<BadgeContainerView className="ui-badge-container">
+			<Wrapper {...this.props}>
+				<BadgeContainerView className='ui-badge-container'>
 					{this.props.children}
 					{badge}
 				</BadgeContainerView>

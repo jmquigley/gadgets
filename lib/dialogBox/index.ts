@@ -3,11 +3,6 @@ import {
 	DialogBoxProps,
 	DialogBoxType,
 	getDefaultDialogBoxProps
-} from './DialogBox';
+} from "./DialogBox";
 
-export {
-	DialogBox,
-	DialogBoxProps,
-	DialogBoxType,
-	getDefaultDialogBoxProps
-};
+export {DialogBox, DialogBoxProps, DialogBoxType, getDefaultDialogBoxProps};

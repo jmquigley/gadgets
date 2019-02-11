@@ -47,10 +47,10 @@
  * @module Icon
  */
 
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
+import {cloneDeep} from "lodash";
+import * as React from "react";
 import {
 	BaseComponent,
 	BaseProps,
@@ -64,8 +64,8 @@ import {
 	locationStyle,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface IconProps extends BaseProps {
 	iconName?: string;
@@ -73,10 +73,11 @@ export interface IconProps extends BaseProps {
 }
 
 export function getDefaultIconProps(): IconProps {
-	return cloneDeep({...getDefaultBaseProps(),
-		iconName: 'bomb',
-		imageFile: '',
-		obj: 'Icon',
+	return cloneDeep({
+		...getDefaultBaseProps(),
+		iconName: "bomb",
+		imageFile: "",
+		obj: "Icon",
 		sizing: Sizing.normal
 	});
 }
@@ -84,7 +85,7 @@ export function getDefaultIconProps(): IconProps {
 export type IconState = BaseState;
 
 export function getDefaultIconState(): IconState {
-	return cloneDeep({...getDefaultBaseState('ui-icon')});
+	return cloneDeep({...getDefaultBaseState("ui-icon")});
 }
 
 export const FontAwesome: any = styled.i`
@@ -103,7 +104,6 @@ export const Image: any = styled.img`
 `;
 
 export class Icon extends BaseComponent<IconProps, IconState> {
-
 	public static readonly defaultProps: IconProps = getDefaultIconProps();
 	public state: IconState = getDefaultIconState();
 
@@ -116,10 +116,10 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 
 		newState.classes.clear();
 		newState.classes.add([
-			'ui-icon',
-			(props.imageFile === '') && 'fa',
-			(props.imageFile === '') && 'fa-fw',
-			(props.imageFile === '') && `fa-${props.iconName}`
+			"ui-icon",
+			props.imageFile === "" && "fa",
+			props.imageFile === "" && "fa-fw",
+			props.imageFile === "" && `fa-${props.iconName}`
 		]);
 
 		return super.getDerivedStateFromProps(props, newState);
@@ -128,7 +128,7 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 	public render() {
 		let icon: any = null;
 
-		if (this.props.imageFile !== '') {
+		if (this.props.imageFile !== "") {
 			icon = (
 				<Image
 					{...this.props}
@@ -149,10 +149,6 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 			);
 		}
 
-		return (
-			<Wrapper {...this.props} >
-				{icon}
-			</Wrapper>
-		);
+		return <Wrapper {...this.props}>{icon}</Wrapper>;
 	}
 }

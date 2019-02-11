@@ -143,7 +143,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-dnqmqq",
                 "isStatic": false,
-                "lastClassName": "bcNLX",
+                "lastClassName": "NsXmb",
                 "rules": Array [
                   "
 	",
@@ -166,7 +166,8 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                   [Function],
-                  " ",
+                  "
+			",
                   [Function],
                   ";
 	}
@@ -202,7 +203,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
           visible={true}
         >
           <div
-            className="ui-button-text ripple test-class sc-dnqmqq bcNLX"
+            className="ui-button-text ripple test-class sc-dnqmqq NsXmb"
             disabled={false}
             onClick={[Function]}
             style={
@@ -622,7 +623,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-dnqmqq",
                 "isStatic": false,
-                "lastClassName": "cQLLYk",
+                "lastClassName": "eTEweI",
                 "rules": Array [
                   "
 	",
@@ -645,7 +646,8 @@ exports[`Test disabling of a ButtonText control 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                   [Function],
-                  " ",
+                  "
+			",
                   [Function],
                   ";
 	}
@@ -675,7 +677,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
           visible={true}
         >
           <div
-            className="ui-button-text nohover sc-dnqmqq cQLLYk"
+            className="ui-button-text nohover sc-dnqmqq eTEweI"
             disabled={true}
             onClick={[Function]}
             style={Object {}}
@@ -1087,7 +1089,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-dnqmqq",
                 "isStatic": false,
-                "lastClassName": "jgTvXu",
+                "lastClassName": "jfeNHW",
                 "rules": Array [
                   "
 	",
@@ -1110,7 +1112,8 @@ exports[`Test making a ButtonText control invisible 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                   [Function],
-                  " ",
+                  "
+			",
                   [Function],
                   ";
 	}
@@ -1140,7 +1143,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
           visible={false}
         >
           <div
-            className="ui-button-text ripple sc-dnqmqq jgTvXu"
+            className="ui-button-text ripple sc-dnqmqq jfeNHW"
             disabled={false}
             onClick={[Function]}
             style={Object {}}

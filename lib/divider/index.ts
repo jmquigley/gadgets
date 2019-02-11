@@ -3,11 +3,6 @@ import {
 	DividerProps,
 	DividerType,
 	getDefaultDividerProps
-} from './Divider';
+} from "./Divider";
 
-export {
-	Divider,
-	DividerProps,
-	DividerType,
-	getDefaultDividerProps
-};
+export {Divider, DividerProps, DividerType, getDefaultDividerProps};

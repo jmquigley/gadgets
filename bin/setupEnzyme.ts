@@ -14,13 +14,13 @@
 // ...
 //
 
-process.env['NODE_ENV'] = 'test';
+process.env["NODE_ENV"] = "test";
 
-const debug = require('debug')('setupEnzyme');
-const Enzyme = require('enzyme');
-const Adapter = require('enzyme-adapter-react-16');
+const debug = require("debug")("setupEnzyme");
+const Enzyme = require("enzyme");
+const Adapter = require("enzyme-adapter-react-16");
 
-debug('Enzyme: %O, Adapter: %O', Enzyme, Adapter);
+debug("Enzyme: %O, Adapter: %O", Enzyme, Adapter);
 
 Enzyme.configure({
 	adapter: new Adapter()

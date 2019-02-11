@@ -1,88 +1,130 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('DemoTooltip');
+const debug = require("debug")("DemoTooltip");
 
-import * as loremIpsum from 'lorem-ipsum';
-import * as React from 'react';
-import {
-	Location,
-	Tooltip
-} from '../../dist/bundle';
-import {StyledContainer} from '../app';
+import * as loremIpsum from "lorem-ipsum";
+import * as React from "react";
+import {Location, Tooltip} from "../../dist/bundle";
+import {StyledContainer} from "../app";
 
 export default class DemoTooltip extends React.Component<any, undefined> {
-
-	private randomText = loremIpsum({units: 'sentences', count: 2, random: null});
+	private randomText = loremIpsum({
+		units: "sentences",
+		count: 2,
+		random: null
+	});
 
 	constructor(props: any) {
 		super(props);
-		debug('creating');
+		debug("creating");
 	}
 
 	public render() {
 		return (
-			<StyledContainer id="tooltipExample" title="Tooltip">
+			<StyledContainer id='tooltipExample' title='Tooltip'>
 				<h3>Simple</h3>
-				Hover over each square to see the Tooltip.<br/><br/><br/>
-				<div id="tooltipContainer">
-					<div id="tt-topLeft" className="tooltipCell topLeft">
+				Hover over each square to see the Tooltip.
+				<br />
+				<br />
+				<br />
+				<div id='tooltipContainer'>
+					<div id='tt-topLeft' className='tooltipCell topLeft'>
 						topLeft
-						<Tooltip location={Location.topLeft} parent="tt-topLeft">{this.randomText}</Tooltip>
+						<Tooltip
+							location={Location.topLeft}
+							parent='tt-topLeft'
+						>
+							{this.randomText}
+						</Tooltip>
 					</div>
 
-					<div id="tt-top" className="tooltipCell top">
+					<div id='tt-top' className='tooltipCell top'>
 						top
-						<Tooltip location={Location.top} parent="tt-top">{this.randomText}</Tooltip>
+						<Tooltip location={Location.top} parent='tt-top'>
+							{this.randomText}
+						</Tooltip>
 					</div>
 
-					<div id="tt-topRight" className="tooltipCell topRight">
+					<div id='tt-topRight' className='tooltipCell topRight'>
 						topRight
-						<Tooltip location={Location.topRight} parent="tt-topRight">{this.randomText}</Tooltip>
+						<Tooltip
+							location={Location.topRight}
+							parent='tt-topRight'
+						>
+							{this.randomText}
+						</Tooltip>
 					</div>
 
-					<div id="tt-middleLeft" className="tooltipCell middleLeft">
+					<div id='tt-middleLeft' className='tooltipCell middleLeft'>
 						middleLeft
-						<Tooltip location={Location.middleLeft} parent="tt-middleLeft">{this.randomText}</Tooltip>
+						<Tooltip
+							location={Location.middleLeft}
+							parent='tt-middleLeft'
+						>
+							{this.randomText}
+						</Tooltip>
 					</div>
 
-					<div className="tooltipCell middle inactive">N/A</div>
+					<div className='tooltipCell middle inactive'>N/A</div>
 
-					<div id="tt-middleRight" className="tooltipCell middleRight">
+					<div
+						id='tt-middleRight'
+						className='tooltipCell middleRight'
+					>
 						middleRight
-						<Tooltip location={Location.middleRight} parent="tt-middleRight">{this.randomText}</Tooltip>
+						<Tooltip
+							location={Location.middleRight}
+							parent='tt-middleRight'
+						>
+							{this.randomText}
+						</Tooltip>
 					</div>
 
-					<div id="tt-bottomLeft" className="tooltipCell bottomLeft">
+					<div id='tt-bottomLeft' className='tooltipCell bottomLeft'>
 						bottomLeft
-						<Tooltip location={Location.bottomLeft} parent="tt-bottomLeft">{this.randomText}</Tooltip>
+						<Tooltip
+							location={Location.bottomLeft}
+							parent='tt-bottomLeft'
+						>
+							{this.randomText}
+						</Tooltip>
 					</div>
 
-					<div id="tt-bottom" className="tooltipCell bottom">
+					<div id='tt-bottom' className='tooltipCell bottom'>
 						bottom
-						<Tooltip location={Location.bottom} parent="tt-bottom">{this.randomText}</Tooltip>
+						<Tooltip location={Location.bottom} parent='tt-bottom'>
+							{this.randomText}
+						</Tooltip>
 					</div>
 
-					<div id="tt-bottomRight" className="tooltipCell bottomRight">
+					<div
+						id='tt-bottomRight'
+						className='tooltipCell bottomRight'
+					>
 						bottomRight
-						<Tooltip location={Location.bottomRight} parent="tt-bottomRight">{this.randomText}</Tooltip>
+						<Tooltip
+							location={Location.bottomRight}
+							parent='tt-bottomRight'
+						>
+							{this.randomText}
+						</Tooltip>
 					</div>
 				</div>
-
 				<h3>Custom style</h3>
-				Hover over the square to see the custom style colors on the tooltip
-				<div id="tooltipStyleExample">
+				Hover over the square to see the custom style colors on the
+				tooltip
+				<div id='tooltipStyleExample'>
 					<Tooltip
 						location={Location.middleRight}
-						parent="tooltipStyleExample"
+						parent='tooltipStyleExample'
 						style={{
-							color: '#fd7400',
-							backgroundColor: '#004358'
+							color: "#fd7400",
+							backgroundColor: "#004358"
 						}}
 					>
 						{this.randomText}
 					</Tooltip>
 				</div>
-
 			</StyledContainer>
 		);
 	}

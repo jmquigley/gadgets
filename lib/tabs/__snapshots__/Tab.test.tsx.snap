@@ -129,15 +129,18 @@ exports[`Test disabling of a Tab 1`] = `
         xcss={
           Array [
             "
-	border-right: solid 1px ",
+	border-right: solid 1px
+		",
             [Function],
             ";
-	border-top: solid 1px ",
+	border-top: solid 1px
+		",
             [Function],
             ";
 
 	&:first-child {
-		border-left: solid 1px ",
+		border-left: solid 1px
+			",
             [Function],
             ";
 	}
@@ -155,7 +158,7 @@ exports[`Test disabling of a Tab 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-jTzLTM",
                 "isStatic": false,
-                "lastClassName": "bEDcAd",
+                "lastClassName": "kWmDFJ",
                 "rules": Array [
                   "
 	cursor: default;
@@ -174,7 +177,7 @@ exports[`Test disabling of a Tab 1`] = `
                   [Function],
                   ";
 		display: flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 
 	.ui-label {
@@ -227,15 +230,18 @@ exports[`Test disabling of a Tab 1`] = `
           xcss={
             Array [
               "
-	border-right: solid 1px ",
+	border-right: solid 1px
+		",
               [Function],
               ";
-	border-top: solid 1px ",
+	border-top: solid 1px
+		",
               [Function],
               ";
 
 	&:first-child {
-		border-left: solid 1px ",
+		border-left: solid 1px
+			",
               [Function],
               ";
 	}
@@ -244,7 +250,7 @@ exports[`Test disabling of a Tab 1`] = `
           }
         >
           <div
-            className="ui-tab sc-jTzLTM bEDcAd"
+            className="ui-tab sc-jTzLTM kWmDFJ"
             disabled={true}
             selected={false}
             style={
@@ -517,7 +523,7 @@ exports[`Test disabling of a Tab 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-gqjmRU",
                             "isStatic": false,
-                            "lastClassName": "cGvDUY",
+                            "lastClassName": "kKSdcg",
                             "rules": Array [
                               "
 	background-color: ",
@@ -535,7 +541,7 @@ exports[`Test disabling of a Tab 1`] = `
 
 	&:hover .ui-item-button {
 		display: inline-flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 ",
                             ],
@@ -563,7 +569,7 @@ exports[`Test disabling of a Tab 1`] = `
                       style={Object {}}
                     >
                       <li
-                        className="ui-item sc-gqjmRU cGvDUY"
+                        className="ui-item sc-gqjmRU kKSdcg"
                         id={null}
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -1633,15 +1639,18 @@ exports[`Test making a Tab invisible 1`] = `
         xcss={
           Array [
             "
-	border-right: solid 1px ",
+	border-right: solid 1px
+		",
             [Function],
             ";
-	border-top: solid 1px ",
+	border-top: solid 1px
+		",
             [Function],
             ";
 
 	&:first-child {
-		border-left: solid 1px ",
+		border-left: solid 1px
+			",
             [Function],
             ";
 	}
@@ -1659,7 +1668,7 @@ exports[`Test making a Tab invisible 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-jTzLTM",
                 "isStatic": false,
-                "lastClassName": "jKmmpx",
+                "lastClassName": "graWHj",
                 "rules": Array [
                   "
 	cursor: default;
@@ -1678,7 +1687,7 @@ exports[`Test making a Tab invisible 1`] = `
                   [Function],
                   ";
 		display: flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 
 	.ui-label {
@@ -1731,15 +1740,18 @@ exports[`Test making a Tab invisible 1`] = `
           xcss={
             Array [
               "
-	border-right: solid 1px ",
+	border-right: solid 1px
+		",
               [Function],
               ";
-	border-top: solid 1px ",
+	border-top: solid 1px
+		",
               [Function],
               ";
 
 	&:first-child {
-		border-left: solid 1px ",
+		border-left: solid 1px
+			",
               [Function],
               ";
 	}
@@ -1748,7 +1760,7 @@ exports[`Test making a Tab invisible 1`] = `
           }
         >
           <div
-            className="ui-tab sc-jTzLTM jKmmpx"
+            className="ui-tab sc-jTzLTM graWHj"
             disabled={false}
             selected={false}
             style={
@@ -2021,7 +2033,7 @@ exports[`Test making a Tab invisible 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-gqjmRU",
                             "isStatic": false,
-                            "lastClassName": "cGvDUY",
+                            "lastClassName": "kKSdcg",
                             "rules": Array [
                               "
 	background-color: ",
@@ -2039,7 +2051,7 @@ exports[`Test making a Tab invisible 1`] = `
 
 	&:hover .ui-item-button {
 		display: inline-flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 ",
                             ],
@@ -2067,7 +2079,7 @@ exports[`Test making a Tab invisible 1`] = `
                       style={Object {}}
                     >
                       <li
-                        className="ui-item sc-gqjmRU cGvDUY"
+                        className="ui-item sc-gqjmRU kKSdcg"
                         id={null}
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -3189,7 +3201,7 @@ exports[`Test making a Tab invisible 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-gzVnrw",
                                               "isStatic": false,
-                                              "lastClassName": "jvERqM",
+                                              "lastClassName": "hAvGOd",
                                               "rules": Array [
                                                 "
 	",
@@ -3214,7 +3226,8 @@ exports[`Test making a Tab invisible 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                 [Function],
-                                                " ",
+                                                "
+			",
                                                 [Function],
                                                 ";
 	}
@@ -3246,7 +3259,7 @@ exports[`Test making a Tab invisible 1`] = `
                                         visible={false}
                                       >
                                         <div
-                                          className="ui-button ripple sc-gzVnrw jvERqM"
+                                          className="ui-button ripple sc-gzVnrw hAvGOd"
                                           disabled={false}
                                           id="Button-0"
                                           onClick={[Function]}
@@ -3673,15 +3686,18 @@ exports[`Test the click handler in the Tab instance 1`] = `
         xcss={
           Array [
             "
-	border-right: solid 1px ",
+	border-right: solid 1px
+		",
             [Function],
             ";
-	border-top: solid 1px ",
+	border-top: solid 1px
+		",
             [Function],
             ";
 
 	&:first-child {
-		border-left: solid 1px ",
+		border-left: solid 1px
+			",
             [Function],
             ";
 	}
@@ -3699,7 +3715,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-jTzLTM",
                 "isStatic": false,
-                "lastClassName": "GBEEd",
+                "lastClassName": "jshGAh",
                 "rules": Array [
                   "
 	cursor: default;
@@ -3718,7 +3734,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                   [Function],
                   ";
 		display: flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 
 	.ui-label {
@@ -3771,15 +3787,18 @@ exports[`Test the click handler in the Tab instance 1`] = `
           xcss={
             Array [
               "
-	border-right: solid 1px ",
+	border-right: solid 1px
+		",
               [Function],
               ";
-	border-top: solid 1px ",
+	border-top: solid 1px
+		",
               [Function],
               ";
 
 	&:first-child {
-		border-left: solid 1px ",
+		border-left: solid 1px
+			",
               [Function],
               ";
 	}
@@ -3788,7 +3807,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
           }
         >
           <div
-            className="ui-tab sc-jTzLTM GBEEd"
+            className="ui-tab sc-jTzLTM jshGAh"
             disabled={false}
             selected={false}
             style={
@@ -4061,7 +4080,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-gqjmRU",
                             "isStatic": false,
-                            "lastClassName": "cGvDUY",
+                            "lastClassName": "kKSdcg",
                             "rules": Array [
                               "
 	background-color: ",
@@ -4079,7 +4098,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
 
 	&:hover .ui-item-button {
 		display: inline-flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 ",
                             ],
@@ -4107,7 +4126,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                       style={Object {}}
                     >
                       <li
-                        className="ui-item sc-gqjmRU cGvDUY"
+                        className="ui-item sc-gqjmRU kKSdcg"
                         id={null}
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -5229,7 +5248,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-gzVnrw",
                                               "isStatic": false,
-                                              "lastClassName": "bsgMqy",
+                                              "lastClassName": "htVJVe",
                                               "rules": Array [
                                                 "
 	",
@@ -5254,7 +5273,8 @@ exports[`Test the click handler in the Tab instance 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                 [Function],
-                                                " ",
+                                                "
+			",
                                                 [Function],
                                                 ";
 	}
@@ -5286,7 +5306,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-gzVnrw bsgMqy"
+                                          className="ui-button ripple sc-gzVnrw htVJVe"
                                           disabled={false}
                                           id="Button-0"
                                           onClick={[Function]}
@@ -5668,15 +5688,18 @@ exports[`Test the close click handler on a Tab instance 1`] = `
         xcss={
           Array [
             "
-	border-right: solid 1px ",
+	border-right: solid 1px
+		",
             [Function],
             ";
-	border-top: solid 1px ",
+	border-top: solid 1px
+		",
             [Function],
             ";
 
 	&:first-child {
-		border-left: solid 1px ",
+		border-left: solid 1px
+			",
             [Function],
             ";
 	}
@@ -5694,7 +5717,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-jTzLTM",
                 "isStatic": false,
-                "lastClassName": "GBEEd",
+                "lastClassName": "jshGAh",
                 "rules": Array [
                   "
 	cursor: default;
@@ -5713,7 +5736,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                   [Function],
                   ";
 		display: flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 
 	.ui-label {
@@ -5766,15 +5789,18 @@ exports[`Test the close click handler on a Tab instance 1`] = `
           xcss={
             Array [
               "
-	border-right: solid 1px ",
+	border-right: solid 1px
+		",
               [Function],
               ";
-	border-top: solid 1px ",
+	border-top: solid 1px
+		",
               [Function],
               ";
 
 	&:first-child {
-		border-left: solid 1px ",
+		border-left: solid 1px
+			",
               [Function],
               ";
 	}
@@ -5783,7 +5809,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
           }
         >
           <div
-            className="ui-tab sc-jTzLTM GBEEd"
+            className="ui-tab sc-jTzLTM jshGAh"
             disabled={false}
             selected={false}
             style={
@@ -6056,7 +6082,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-gqjmRU",
                             "isStatic": false,
-                            "lastClassName": "cGvDUY",
+                            "lastClassName": "kKSdcg",
                             "rules": Array [
                               "
 	background-color: ",
@@ -6074,7 +6100,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
 
 	&:hover .ui-item-button {
 		display: inline-flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 ",
                             ],
@@ -6102,7 +6128,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                       style={Object {}}
                     >
                       <li
-                        className="ui-item sc-gqjmRU cGvDUY"
+                        className="ui-item sc-gqjmRU kKSdcg"
                         id={null}
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -7224,7 +7250,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-gzVnrw",
                                               "isStatic": false,
-                                              "lastClassName": "bsgMqy",
+                                              "lastClassName": "htVJVe",
                                               "rules": Array [
                                                 "
 	",
@@ -7249,7 +7275,8 @@ exports[`Test the close click handler on a Tab instance 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                 [Function],
-                                                " ",
+                                                "
+			",
                                                 [Function],
                                                 ";
 	}
@@ -7281,7 +7308,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
                                         visible={true}
                                       >
                                         <div
-                                          className="ui-button ripple sc-gzVnrw bsgMqy"
+                                          className="ui-button ripple sc-gzVnrw htVJVe"
                                           disabled={false}
                                           id="Button-0"
                                           onClick={[Function]}
@@ -7595,15 +7622,18 @@ exports[`Test the creation of a Tab instance 1`] = `
     xcss={
       Array [
         "
-	border-right: solid 1px ",
+	border-right: solid 1px
+		",
         [Function],
         ";
-	border-top: solid 1px ",
+	border-top: solid 1px
+		",
         [Function],
         ";
 
 	&:first-child {
-		border-left: solid 1px ",
+		border-left: solid 1px
+			",
         [Function],
         ";
 	}

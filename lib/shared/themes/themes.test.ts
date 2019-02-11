@@ -1,34 +1,34 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('themes.test');
+const debug = require("debug")("themes.test");
 
-import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from './index';
+import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from "./index";
 
-test('Test retrieval of the current theme', () => {
+test("Test retrieval of the current theme", () => {
 	const theme = getTheme();
 
 	expect(theme).toBeDefined();
 	expect(theme).toMatchSnapshot();
 });
 
-test('Test retrieving the dark theme', () => {
+test("Test retrieving the dark theme", () => {
 	const theme = getTheme(Theme.dark);
 
 	expect(theme).toBeDefined();
 	expect(theme).toMatchSnapshot();
 });
 
-test('Test retrieving the light theme', () => {
+test("Test retrieving the light theme", () => {
 	const theme = getTheme(Theme.light);
 
 	expect(theme).toBeDefined();
 	expect(theme).toMatchSnapshot();
 });
 
-test('Test setting and retrieving a custom theme', () => {
+test("Test setting and retrieving a custom theme", () => {
 	const base = getTheme(Theme.base);
 
-	const props: ThemeProps = Object.assign({color: 'red'}, base);
+	const props: ThemeProps = Object.assign({color: "red"}, base);
 	expect(props).toBeDefined();
 
 	const theme: ThemeProps = setTheme(props);
@@ -39,7 +39,7 @@ test('Test setting and retrieving a custom theme', () => {
 	expect(theme).toBe(customTheme);
 });
 
-test('Test retrieving a bad theme (doesn\'t exist)', () => {
+test("Test retrieving a bad theme (doesn't exist)", () => {
 	const theme = getTheme(null);
 	expect(theme).toBeDefined();
 	expect(theme).toMatchSnapshot();
@@ -49,7 +49,7 @@ test('Test retrieving a bad theme (doesn\'t exist)', () => {
 	expect(theme).toBe(baseTheme);
 });
 
-test('Test setting a bad theme', () => {
+test("Test setting a bad theme", () => {
 	const theme = setTheme(null, null);
 	expect(theme).toBeDefined();
 
@@ -58,10 +58,10 @@ test('Test setting a bad theme', () => {
 	expect(theme).toBe(baseTheme);
 });
 
-test('Test retrieving the list of available themes', () => {
+test("Test retrieving the list of available themes", () => {
 	const themeList: string[] = getThemeList();
 
 	expect(themeList).toBeDefined();
 	debug(themeList);
-	expect(themeList).toEqual(['base', 'custom', 'dark', 'light']);
+	expect(themeList).toEqual(["base", "custom", "dark", "light"]);
 });

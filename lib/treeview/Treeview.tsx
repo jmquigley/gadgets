@@ -120,24 +120,21 @@
  * @module Treeview
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Treeview');
 
-import autobind from 'autobind-decorator';
-import {clone, cloneDeep} from 'lodash';
-import * as React from 'react';
-import SortableTree, {
-	ExtendedNodeData,
-	NodeData
-} from 'react-sortable-tree';
-import {calc, toREM} from 'util.calc';
-import {getUUID, nilEvent} from 'util.toolbox';
-import {Button} from '../button';
-import {Container} from '../container';
-import {Divider} from '../divider';
-import {Item} from '../item';
-import {Label} from '../label';
+import autobind from "autobind-decorator";
+import {clone, cloneDeep} from "lodash";
+import * as React from "react";
+import SortableTree, {ExtendedNodeData, NodeData} from "react-sortable-tree";
+import {calc, toREM} from "util.calc";
+import {getUUID, nilEvent} from "util.toolbox";
+import {Button} from "../button";
+import {Container} from "../container";
+import {Divider} from "../divider";
+import {Item} from "../item";
+import {Label} from "../label";
 import {
 	BaseComponent,
 	BaseProps,
@@ -150,11 +147,11 @@ import {
 	invisible,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
-import {TextField} from '../textField';
-import {TitleLayout} from '../title';
-import {Toolbar} from '../toolbar';
+} from "../shared";
+import styled from "../shared/themed-components";
+import {TextField} from "../textField";
+import {TitleLayout} from "../title";
+import {Toolbar} from "../toolbar";
 
 let sequence: number = 0;
 function getKey(testing: boolean = false): string {
@@ -198,13 +195,14 @@ export interface TreeviewProps extends BaseProps {
 }
 
 export function getDefaultTreeviewProps(): TreeviewProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		addAsFirstChild: true,
-		defaultTitle: 'New Title',
-		height: '15em',
-		minHeight: '15em',
-		nodeWidth: '20em',
-		obj: 'Treeview',
+		defaultTitle: "New Title",
+		height: "15em",
+		minHeight: "15em",
+		nodeWidth: "20em",
+		obj: "Treeview",
 		onAdd: nilEvent,
 		onChange: nilEvent,
 		onCollapse: nilEvent,
@@ -230,9 +228,10 @@ export interface TreeviewState extends BaseState {
 }
 
 export function getDefaultTreeviewState(): TreeviewState {
-	return cloneDeep({...getDefaultBaseState('ui-treeview'),
+	return cloneDeep({
+		...getDefaultBaseState("ui-treeview"),
 		matches: [],
-		search: '',
+		search: "",
 		searchFocusIndex: 0,
 		searchFoundCount: 0,
 		selectedId: null,
@@ -243,7 +242,8 @@ export function getDefaultTreeviewState(): TreeviewState {
 
 const SortableTreeView: any = styled(SortableTree)`
 	${(props: TreeviewProps) => disabled(props)}
-	${(props: TreeviewProps) => props.sizing && fontStyle[props.sizing]}
+	${(props: TreeviewProps) =>
+		props.sizing && fontStyle[props.sizing]}
 
 	.rst__rowContents {
 		padding: 0 1px;
@@ -257,12 +257,14 @@ const SortableTreeView: any = styled(SortableTree)`
 
 	.rst__rowSearchMatch {
 		outline: none;
-		box-shadow: 0 0 14px ${(props: TreeviewProps) => props.theme.searchMatch};
+		box-shadow: 0 0 14px
+			${(props: TreeviewProps) => props.theme.searchMatch};
 	}
 
 	.rst__rowSearchFocus {
 		outline: none;
-		box-shadow: 0 0 14px ${(props: TreeviewProps) => props.theme.searchFocus};
+		box-shadow: 0 0 14px
+			${(props: TreeviewProps) => props.theme.searchFocus};
 	}
 
 	.rst__rowTitle {
@@ -278,7 +280,7 @@ const StyledButton: any = styled(Button)``;
 
 const StyledItem: any = styled(Item)`
 	&:hover {
-		color: ${(props: TreeviewProps) => props.theme.color}
+		color: ${(props: TreeviewProps) => props.theme.color};
 	}
 
 	&:hover .ui-item-button {
@@ -307,7 +309,6 @@ const TreeviewContainer: any = styled.div`
 const TreeviewWrapper: any = styled(Container)``;
 
 export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
-
 	private _rowHeights = {
 		[Sizing.xxsmall]: 45,
 		[Sizing.xsmall]: 45,
@@ -333,7 +334,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	private clearSearch() {
 		this.setState({
 			matches: [],
-			search: '',
+			search: "",
 			searchFocusIndex: 0,
 			searchFoundCount: 0
 		});
@@ -345,9 +346,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 			children: [],
 			expanded: true,
 			id: getUUID(),
-			note: '',
+			note: "",
 			parentId: parentNode.id,
-			subtitle: '',
+			subtitle: "",
 			title: this.props.defaultTitle
 		};
 	}
@@ -365,20 +366,28 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					layout={TitleLayout.none}
 					noripple
 					onClick={() => {
-						const previousSelectedId: string = this.state.selectedId;
+						const previousSelectedId: string = this.state
+							.selectedId;
 						this.clearSearch();
-						this.setState({
-							selectedId: node.id
-						}, () => {
-							if (previousSelectedId !== this.state.selectedId) {
-								this.handleSelect(node);
+						this.setState(
+							{
+								selectedId: node.id
+							},
+							() => {
+								if (
+									previousSelectedId !== this.state.selectedId
+								) {
+									this.handleSelect(node);
+								}
 							}
-						});
+						);
 					}}
-					onChange={(title: string) => this.handleNodeUpdate(title, node)}
+					onChange={(title: string) =>
+						this.handleNodeUpdate(title, node)
+					}
 					rightButton={
 						<StyledButton
-							iconName="times"
+							iconName='times'
 							onClick={() => this.handleDelete(node)}
 						/>
 					}
@@ -387,7 +396,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					title={node.title as any}
 				/>
 			),
-			className: (node.id === this.state.selectedId) ? 'ui-selected' : '',
+			className: node.id === this.state.selectedId ? "ui-selected" : "",
 			style: {
 				width: this.props.nodeWidth
 			}
@@ -399,7 +408,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		if (!this.props.disabled && this.state.selectedId != null) {
 			this.clearSearch();
 
-			const parentNode: TreeItem = this.state.treeIndex[this.state.selectedId];
+			const parentNode: TreeItem = this.state.treeIndex[
+				this.state.selectedId
+			];
 			const node: TreeItem = this.createNode(parentNode);
 
 			if (this.props.addAsFirstChild) {
@@ -437,7 +448,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 			// id will be null.
 			const parentNode: TreeItem = treeIndex[node.parentId];
 			if (parentNode != null) {
-				parentNode.children = parentNode.children.filter(it => it.id !== node.id);
+				parentNode.children = parentNode.children.filter(
+					(it) => it.id !== node.id
+				);
 			}
 
 			// Scane the root node every time intentionally.  This will ensure that the
@@ -445,7 +458,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 			// If this is not done, then underlying child changes will make the top
 			// level state look like it has not changed prevent a rerender.  This also
 			// ensures the special case where the change is at the root and has no parent
-			const newTreeData: TreeItem[] = treeData.filter(it => it.id !== node.id);
+			const newTreeData: TreeItem[] = treeData.filter(
+				(it) => it.id !== node.id
+			);
 
 			if (this.state.selectedId === node.id) {
 				this.setState({selectedId: null});
@@ -484,7 +499,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		function preorder(arr: TreeItem[]) {
 			for (const it of arr) {
 				it.expanded = expanded;
-				if ('children' in it && it.children.length > 0) {
+				if ("children" in it && it.children.length > 0) {
 					preorder(it.children);
 				}
 			}
@@ -518,7 +533,8 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		const {searchFocusIndex, searchFoundCount} = this.state;
 		if (searchFoundCount > 0) {
 			this.setState({
-				searchFocusIndex: (searchFoundCount + searchFocusIndex - 1) % searchFoundCount
+				searchFocusIndex:
+					(searchFoundCount + searchFocusIndex - 1) % searchFoundCount
 			});
 		}
 	}
@@ -534,20 +550,29 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	@autobind
 	private handleSearchFinish(matches: ExtendedNodeData[]) {
 		const searchFocusIndex: number =
-			matches.length > 0 ? this.state.searchFocusIndex % matches.length : 0;
+			matches.length > 0
+				? this.state.searchFocusIndex % matches.length
+				: 0;
 
 		if (matches.length > 0) {
-			this.setState({
-				selectedId: matches[searchFocusIndex].node.id,
-				matches,
-				searchFoundCount: matches.length,
-				searchFocusIndex
-			}, () => {
-				if (matches.length > 0) {
-					this.props.onSearch(this.state.matches[searchFocusIndex].node);
-					this.props.onSelect(this.state.matches[searchFocusIndex].node);
+			this.setState(
+				{
+					selectedId: matches[searchFocusIndex].node.id,
+					matches,
+					searchFoundCount: matches.length,
+					searchFocusIndex
+				},
+				() => {
+					if (matches.length > 0) {
+						this.props.onSearch(
+							this.state.matches[searchFocusIndex].node
+						);
+						this.props.onSelect(
+							this.state.matches[searchFocusIndex].node
+						);
+					}
 				}
-			});
+			);
 		}
 	}
 
@@ -558,39 +583,45 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		}
 	}
 
-	private static sanitizeNode(node: TreeItem, props: TreeviewProps): TreeItem {
-		if (!('parentId' in node)) {
-			node['parentId'] = null;
+	private static sanitizeNode(
+		node: TreeItem,
+		props: TreeviewProps
+	): TreeItem {
+		if (!("parentId" in node)) {
+			node["parentId"] = null;
 		}
 
-		if (!('id' in node)) {
-			node['id'] = getKey(props.testing);
+		if (!("id" in node)) {
+			node["id"] = getKey(props.testing);
 		}
 
-		if (!('title' in node) || node['title'] == null) {
-			node['title'] = props.defaultTitle;
+		if (!("title" in node) || node["title"] == null) {
+			node["title"] = props.defaultTitle;
 		}
 
-		if (!('subtitle' in node)) {
-			node['subtitle'] = '';
+		if (!("subtitle" in node)) {
+			node["subtitle"] = "";
 		}
 
-		if (!('expanded' in node)) {
-			node['expanded'] = true;
+		if (!("expanded" in node)) {
+			node["expanded"] = true;
 		}
 
-		if (!('note' in node)) {
-			node['note'] = '';
+		if (!("note" in node)) {
+			node["note"] = "";
 		}
 
-		if (!('children' in node)) {
-			node['children'] = [];
+		if (!("children" in node)) {
+			node["children"] = [];
 		}
 
 		return node;
 	}
 
-	public static getDerivedStateFromProps(props: TreeviewProps, state: TreeviewState) {
+	public static getDerivedStateFromProps(
+		props: TreeviewProps,
+		state: TreeviewState
+	) {
 		const newState: TreeviewState = {...state};
 		const treeData: TreeItem[] = props.treeData;
 
@@ -602,13 +633,12 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		// nodes (if they have any) to that parent id.
 		function preorder(arr: TreeItem[]) {
 			for (let it of arr) {
-
 				let parentId: string;
-				if (!('id' in it) || it.id == null) {
+				if (!("id" in it) || it.id == null) {
 					parentId = getKey(props.testing);
-					it['id'] = parentId;
+					it["id"] = parentId;
 				} else {
-					parentId = it['id'];  // preserve existing node id
+					parentId = it["id"]; // preserve existing node id
 				}
 				it = Treeview.sanitizeNode(it, props);
 
@@ -616,9 +646,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 				// treeData component.
 				newState.treeIndex[parentId] = it;
 
-				if ('children' in it && it.children.length > 0) {
+				if ("children" in it && it.children.length > 0) {
 					for (const child of it.children) {
-						child['parentId'] = parentId;
+						child["parentId"] = parentId;
 					}
 
 					preorder(it.children);
@@ -639,23 +669,29 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	public render() {
 		// The 0.75 represents the top/bottom padding in rem for the toolbar
 		// To compute the proper treeview height we must remove the size taken up by the toolbar
-		const toolbarHeight: string = calc(BaseComponent.fontSizeREM(this.props.sizing), '+ 0.75');
-		const treeviewHeight: string = calc(toREM(this.props.height), `- ${parseFloat(toolbarHeight)}`);
+		const toolbarHeight: string = calc(
+			BaseComponent.fontSizeREM(this.props.sizing),
+			"+ 0.75"
+		);
+		const treeviewHeight: string = calc(
+			toREM(this.props.height),
+			`- ${parseFloat(toolbarHeight)}`
+		);
 
 		const {searchFocusIndex, searchFoundCount} = this.state;
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<TreeviewContainer
-					className="ui-treeview-container"
+					className='ui-treeview-container'
 					style={this.state.style}
 				>
 					<StyledToolbar
-						className="ui-treeview-toolbar"
+						className='ui-treeview-toolbar'
 						sizing={this.props.sizing}
 					>
 						<Button
-							iconName="plus"
+							iconName='plus'
 							notooltip={this.props.notooltip}
 							onClick={this.handleAdd}
 							style={{
@@ -663,46 +699,50 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 								borderColor: Color.gray,
 								color: Color.gray
 							}}
-							tooltip="Create a new node under selected"
+							tooltip='Create a new node under selected'
 						/>
 						<Divider />
 						<Button
-							iconName="angle-double-down"
+							iconName='angle-double-down'
 							notooltip={this.props.notooltip}
 							onClick={this.handleNodeExpand}
-							tooltip="expand"
+							tooltip='expand'
 						/>
 						<Button
-							iconName="angle-double-up"
+							iconName='angle-double-up'
 							notooltip={this.props.notooltip}
 							onClick={this.handleNodeCollapse}
-							tooltip="collapse"
+							tooltip='collapse'
 						/>
 						<Divider />
 						<SearchTextField
-							obj="TextField"
+							obj='TextField'
 							onChange={this.handleSearch}
 							onClear={this.clearSearch}
-							placeholder="search"
+							placeholder='search'
 							useclear
 							value={this.state.search}
 						/>
 						<Divider />
 						<Button
-							iconName="caret-left"
+							iconName='caret-left'
 							notooltip={this.props.notooltip}
 							onClick={this.handlePreviousMatch}
-							tooltip="previous search item"
+							tooltip='previous search item'
 						/>
 						<Button
-							iconName="caret-right"
+							iconName='caret-right'
 							notooltip={this.props.notooltip}
 							onClick={this.handleNextMatch}
-							tooltip="next search item"
+							tooltip='next search item'
 						/>
 						<Divider />
-						<Label text={searchFoundCount > 0 ? searchFocusIndex + 1 : 0} />
-						<Label text=" / " />
+						<Label
+							text={
+								searchFoundCount > 0 ? searchFocusIndex + 1 : 0
+							}
+						/>
+						<Label text=' / ' />
 						<Label text={searchFoundCount} />
 					</StyledToolbar>
 					<TreeviewWrapper

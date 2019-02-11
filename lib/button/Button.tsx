@@ -32,15 +32,15 @@
  * @module Button
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Button');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {Icon} from '../icon';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {Icon} from "../icon";
 import {
 	BaseComponent,
 	BaseProps,
@@ -50,28 +50,31 @@ import {
 	getDefaultBaseState,
 	invisible,
 	Wrapper
-} from '../shared';
-import styled, {css} from '../shared/themed-components';
-import {tooltip} from '../tooltip';
+} from "../shared";
+import styled, {css} from "../shared/themed-components";
+import {tooltip} from "../tooltip";
 
 export interface ButtonProps extends BaseProps {
-	iconName?: string;      // font awesome string
+	iconName?: string; // font awesome string
 	iconStyle?: string;
 	onClick?: any;
 }
 
 export function getDefaultButtonProps(): ButtonProps {
-	return cloneDeep({...getDefaultBaseProps(),
-		iconName: 'bomb',
-		iconStyle: '',
+	return cloneDeep({
+		...getDefaultBaseProps(),
+		iconName: "bomb",
+		iconStyle: "",
 		onClick: nilEvent,
-		obj: 'Button'
+		obj: "Button"
 	});
 }
 
 export type ButtonState = BaseState;
 
-export function getDefaultButtonState(className: string = 'ui-button'): ButtonState {
+export function getDefaultButtonState(
+	className: string = "ui-button"
+): ButtonState {
 	return cloneDeep({...getDefaultBaseState(className)});
 }
 
@@ -96,7 +99,8 @@ export const ButtonView: any = styled.div`
 	flex: 1;
 
 	&:not(.nohover):hover {
-		background-color: ${(props: ButtonProps) => props.theme.hoverColor} ${props => props.style.backgroundColor && '!important'};
+		background-color: ${(props: ButtonProps) => props.theme.hoverColor}
+			${(props) => props.style.backgroundColor && "!important"};
 	}
 
 	${(props: ButtonProps) => disabled(props)}
@@ -104,7 +108,6 @@ export const ButtonView: any = styled.div`
 `;
 
 export class Button extends BaseComponent<ButtonProps, ButtonState> {
-
 	public static readonly defaultProps: ButtonProps = getDefaultButtonProps();
 	public state: ButtonState = getDefaultButtonState();
 
@@ -114,21 +117,24 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 
 	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
-		if (!this.props.disabled
-			&& this.props.visible
-			&& this.props.onClick != null) {
+		if (
+			!this.props.disabled &&
+			this.props.visible &&
+			this.props.onClick != null
+		) {
 			this.props.onClick(e);
 		}
 		e.stopPropagation();
 	}
 
-	public static getDerivedStateFromProps(props: ButtonProps, state: ButtonState) {
+	public static getDerivedStateFromProps(
+		props: ButtonProps,
+		state: ButtonState
+	) {
 		const newState: ButtonState = {...state};
 
-		newState.classes.onIfElse(!props.noripple && !props.disabled)(
-			'ripple'
-		)(
-			'nohover'
+		newState.classes.onIfElse(!props.noripple && !props.disabled)("ripple")(
+			"nohover"
 		);
 
 		return super.getDerivedStateFromProps(props, newState);
@@ -136,7 +142,7 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 
 	public render() {
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<ButtonView
 					className={this.state.classes.classnames}
 					disabled={this.props.disabled}
@@ -151,7 +157,7 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 						iconName={this.props.iconName}
 						sizing={this.props.sizing}
 					/>
-				{tooltip(this.id, this.props)}
+					{tooltip(this.id, this.props)}
 				</ButtonView>
 			</Wrapper>
 		);

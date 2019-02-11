@@ -64,14 +64,14 @@
  * @module Title
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Title');
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {Label} from '../label';
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {Label} from "../label";
 import {
 	BaseComponent,
 	BaseProps,
@@ -83,8 +83,8 @@ import {
 	invisible,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled, {css} from '../shared/themed-components';
+} from "../shared";
+import styled, {css} from "../shared/themed-components";
 
 export enum TitleLayout {
 	quarter,
@@ -106,9 +106,10 @@ export interface TitleProps extends BaseProps {
 }
 
 export function getDefaultTitleProps(): TitleProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		layout: TitleLayout.dominant,
-		obj: 'Title',
+		obj: "Title",
 		onClick: nilEvent,
 		onUpdate: nilEvent,
 		widget: null,
@@ -118,14 +119,17 @@ export function getDefaultTitleProps(): TitleProps {
 
 export type TitleState = BaseState;
 
-export function getDefaultTitleState(className: string = 'ui-title-bar'): TitleState {
+export function getDefaultTitleState(
+	className: string = "ui-title-bar"
+): TitleState {
 	return cloneDeep({...getDefaultBaseState(className)});
 }
 
 export const TitleView: any = styled.div`
 	box-sizing: border-box;
 	display: flex;
-	flex-direction: ${(props: TitleProps) => props.layout === TitleLayout.stacked ? 'column' : 'row'};
+	flex-direction: ${(props: TitleProps) =>
+		props.layout === TitleLayout.stacked ? "column" : "row"};
 	flex-grow: 1;
 
 	${(props: TitleProps) => disabled(props)}
@@ -193,16 +197,22 @@ export const WidgetDominantView: any = css`
 export const LabelPadding: any = css`
 	padding: ${(props: TitleProps) => {
 		switch (props.sizing) {
-			case Sizing.xxsmall: return('1px 2px');
-			case Sizing.xsmall: return('1px 2px');
-			case Sizing.small: return('2px 4px');
-			case Sizing.large: return('4px 8px');
-			case Sizing.xlarge: return('4px 8px');
-			case Sizing.xxlarge: return('4px 8px');
+			case Sizing.xxsmall:
+				return "1px 2px";
+			case Sizing.xsmall:
+				return "1px 2px";
+			case Sizing.small:
+				return "2px 4px";
+			case Sizing.large:
+				return "4px 8px";
+			case Sizing.xlarge:
+				return "4px 8px";
+			case Sizing.xxlarge:
+				return "4px 8px";
 
 			case Sizing.normal:
 			default:
-				return('2px 4px');
+				return "2px 4px";
 		}
 	}};
 
@@ -222,7 +232,6 @@ export const StyledLabel: any = styled(Label)`
 `;
 
 export class Title extends BaseComponent<TitleProps, TitleState> {
-
 	public static defaultProps: TitleProps = getDefaultTitleProps();
 	public state: TitleState = getDefaultTitleState();
 
@@ -230,9 +239,12 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		super(props);
 	}
 
-	public static getDerivedStateFromProps(props: TitleProps, state: TitleState) {
+	public static getDerivedStateFromProps(
+		props: TitleProps,
+		state: TitleState
+	) {
 		const newState: TitleState = {...state};
-		newState.classes.onIf(!props.noripple && !props.disabled)('ripple');
+		newState.classes.onIf(!props.noripple && !props.disabled)("ripple");
 		return super.getDerivedStateFromProps(props, newState);
 	}
 
@@ -245,10 +257,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		// Remove the onUpdate handler from the main props.  This is only passed
 		// down when the title is resolved to a label.  When it's a string the onUpdate
 		// prop should not be attached.
-		const {
-			onUpdate,
-			...props
-		} = this.props;
+		const {onUpdate, ...props} = this.props;
 
 		switch (props.layout) {
 			case TitleLayout.quarter:
@@ -283,11 +292,11 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 				break;
 		}
 
-		if (typeof props.title === 'string') {
+		if (typeof props.title === "string") {
 			title = (
 				<StyledLabel
 					{...props}
-					className="ui-title"
+					className='ui-title'
 					text={this.props.title}
 					useedit={this.props.useedit}
 					xcss={titleView}
@@ -295,11 +304,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 			);
 		} else {
 			title = (
-				<StyledWidget
-					{...props}
-					className="ui-title"
-					xcss={titleView}
-				>
+				<StyledWidget {...props} className='ui-title' xcss={titleView}>
 					{this.props.title}
 				</StyledWidget>
 			);
@@ -307,14 +312,18 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 
 		if (this.props.widget) {
 			widget = (
-				<StyledWidget {...props} className="ui-title-widget" xcss={widgetView}>
+				<StyledWidget
+					{...props}
+					className='ui-title-widget'
+					xcss={widgetView}
+				>
 					{this.props.widget}
 				</StyledWidget>
 			);
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<TitleView
 					className={this.state.classes.classnames}
 					disabled={this.props.disabled}

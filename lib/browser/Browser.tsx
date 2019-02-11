@@ -58,17 +58,17 @@
  * @module Browser
  */
 
-'use strict';
+"use strict";
 
-const debug = require('debug')('Browser');
+const debug = require("debug")("Browser");
 
-import autobind from 'autobind-decorator';
-import {List} from 'immutable';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {Button} from '../button';
-import {Divider} from '../divider';
+import autobind from "autobind-decorator";
+import {List} from "immutable";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {Button} from "../button";
+import {Divider} from "../divider";
 import {
 	BaseComponent,
 	BaseProps,
@@ -76,10 +76,10 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
-import {TextField} from '../textField';
-import {Toolbar} from '../toolbar';
+} from "../shared";
+import styled from "../shared/themed-components";
+import {TextField} from "../textField";
+import {Toolbar} from "../toolbar";
 
 export interface BrowserProps extends BaseProps {
 	home?: string;
@@ -91,13 +91,14 @@ export interface BrowserProps extends BaseProps {
 }
 
 export function getDefaultBrowserProps(): BrowserProps {
-	return cloneDeep({...getDefaultBaseProps(),
-		home: 'about:blank',
+	return cloneDeep({
+		...getDefaultBaseProps(),
+		home: "about:blank",
 		notooltips: false,
-		obj: 'Browser',
+		obj: "Browser",
 		onClip: nilEvent,
 		onOpen: nilEvent,
-		uri: 'about:blank',
+		uri: "about:blank",
 		useparser: false
 	});
 }
@@ -109,9 +110,10 @@ export interface BrowserState extends BaseState {
 }
 
 export function getDefaultBrowserState(): BrowserState {
-	return cloneDeep({...getDefaultBaseState('ui-browser'),
-		search: '',
-		uri: '',
+	return cloneDeep({
+		...getDefaultBaseState("ui-browser"),
+		search: "",
+		uri: "",
 		uriHistory: List()
 	});
 }
@@ -166,8 +168,7 @@ const BrowserToolbarURL: any = styled.div`
 	}
 `;
 
-const URLTextField: any = styled(TextField)`
-`;
+const URLTextField: any = styled(TextField)``;
 
 const SearchTextField: any = styled(TextField)`
 	border-radius: 45px;
@@ -180,7 +181,6 @@ const SearchTextField: any = styled(TextField)`
 `;
 
 export class Browser extends BaseComponent<BrowserProps, BrowserState> {
-
 	private _webview: any = null;
 	private _browser: HTMLDivElement = null;
 
@@ -189,8 +189,9 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	constructor(props: BrowserProps) {
 		super(props, Browser.defaultProps.style);
 
-		const uri: string = this.props.uri || this.props.home || '';
-		this.state = {...getDefaultBrowserState(),
+		const uri: string = this.props.uri || this.props.home || "";
+		this.state = {
+			...getDefaultBrowserState(),
 			uri: uri,
 			uriHistory: List(uri)
 		};
@@ -213,11 +214,14 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	@autobind
 	private handleHome() {
 		if (this._webview && this.props.home) {
-			this.setState({
-				uri: this.props.home
-			}, () => {
-				this.refreshPage();
-			});
+			this.setState(
+				{
+					uri: this.props.home
+				},
+				() => {
+					this.refreshPage();
+				}
+			);
 		}
 	}
 
@@ -225,7 +229,10 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	private handleNextSearch() {
 		if (this._webview) {
 			if (this.state.search) {
-				this._webview.findInPage(this.state.search, {forward: true, findNext: true});
+				this._webview.findInPage(this.state.search, {
+					forward: true,
+					findNext: true
+				});
 			}
 		}
 	}
@@ -234,7 +241,10 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	private handlePreviousSearch() {
 		if (this._webview) {
 			if (this.state.search) {
-				this._webview.findInPage(this.state.search, {forward: false, findNext: true});
+				this._webview.findInPage(this.state.search, {
+					forward: false,
+					findNext: true
+				});
 			}
 		}
 	}
@@ -247,7 +257,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	@autobind
 	private handleReload() {
 		if (this._webview) {
-			this.handleSearch({target: {value: ''}} as any);
+			this.handleSearch({target: {value: ""}} as any);
 			this._webview.reload();
 		}
 	}
@@ -255,24 +265,27 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	@autobind
 	private handleSearch(e: React.FormEvent<HTMLInputElement>) {
 		const value: string = (e.target as HTMLInputElement).value;
-		this.setState({
-			search: value
-		}, () => {
-			if (this._webview) {
-				if (value) {
-					this._webview.findInPage(value, {findNext: false});
-				} else {
-					this._webview.stopFindInPage('clearSelection');
+		this.setState(
+			{
+				search: value
+			},
+			() => {
+				if (this._webview) {
+					if (value) {
+						this._webview.findInPage(value, {findNext: false});
+					} else {
+						this._webview.stopFindInPage("clearSelection");
+					}
 				}
 			}
-		});
+		);
 	}
 
 	@autobind
 	private handleSnapshot() {
 		if (this._webview) {
 			this._webview.executeJavaScript(
-				'document.documentElement.innerHTML',
+				"document.documentElement.innerHTML",
 				false,
 				(content: string) => {
 					let dom: any = null;
@@ -283,7 +296,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 					// it.
 					if (this.props.useparser) {
 						const parser = new DOMParser();
-						dom = parser.parseFromString(content, 'text/html');
+						dom = parser.parseFromString(content, "text/html");
 					}
 
 					this.props.onClip(
@@ -306,103 +319,125 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 
 	@autobind
 	private handleURLKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
-		if (e.key === 'Enter') {
+		if (e.key === "Enter") {
 			const value: string = (e.target as HTMLInputElement).value;
 
-			this.setState({
-				uri: value,
-				uriHistory: this.state.uriHistory.push(value)
-			}, () => {
-				this.refreshPage();
-			});
+			this.setState(
+				{
+					uri: value,
+					uriHistory: this.state.uriHistory.push(value)
+				},
+				() => {
+					this.refreshPage();
+				}
+			);
 		}
 	}
 
 	private refreshPage() {
 		if (this._webview) {
-			debug('Loading URI: %s for webview: %O', this.state.uri, this._webview);
+			debug(
+				"Loading URI: %s for webview: %O",
+				this.state.uri,
+				this._webview
+			);
 			this._webview.src = this.state.uri;
 			this.props.onOpen(this.state.uri, this.state.uriHistory);
 		}
 	}
 
 	public componentDidMount() {
-
 		// The webview is dynamically inserted into the div represented by the
 		// <div> in BrowserContent
 
-		this._webview = document.createElement('webview');
-		this._webview.setAttribute('id', this.props.id || 'ui-browser-content');
+		this._webview = document.createElement("webview");
+		this._webview.setAttribute("id", this.props.id || "ui-browser-content");
 		this._webview.nodeintegration = true;
 		this._browser.appendChild(this._webview);
 		this.refreshPage();
 	}
 
 	public render() {
-		return(
-			<Wrapper {...this.props} >
-				<BrowserContainer className={this.state.classes.classnames} >
-					<BrowserToolbar className="ui-browser-toolbar">
+		return (
+			<Wrapper {...this.props}>
+				<BrowserContainer className={this.state.classes.classnames}>
+					<BrowserToolbar className='ui-browser-toolbar'>
 						<BrowserToolbarButtons>
 							<Button
-								iconName="arrow-left"
+								iconName='arrow-left'
 								onClick={this.handleBack}
-								tooltip={this.props.notooltips ? '' : 'back'}
+								tooltip={this.props.notooltips ? "" : "back"}
 							/>
 							<Button
-								iconName="arrow-right"
+								iconName='arrow-right'
 								onClick={this.handleForward}
-								tooltip={this.props.notooltips ? '' : 'forward'}
+								tooltip={this.props.notooltips ? "" : "forward"}
 							/>
 							<Button
-								iconName="refresh"
+								iconName='refresh'
 								onClick={this.handleReload}
-								tooltip={this.props.notooltips ? '' : 'refresh'}
+								tooltip={this.props.notooltips ? "" : "refresh"}
 							/>
 							<Divider />
 							<Button
-								iconName="home"
+								iconName='home'
 								onClick={this.handleHome}
-								tooltip={this.props.notooltips ? '' : 'home'}
+								tooltip={this.props.notooltips ? "" : "home"}
 							/>
 						</BrowserToolbarButtons>
 						<BrowserToolbarURL>
 							<URLTextField
 								onChange={this.handleURLChange}
 								onKeyPress={this.handleURLKeyPress}
-								tooltip={this.props.notooltips ? '' : 'website URL'}
+								tooltip={
+									this.props.notooltips ? "" : "website URL"
+								}
 								value={this.state.uri}
 							/>
 						</BrowserToolbarURL>
 						<BrowserToolbarButtons>
 							<Button
-								iconName="camera-retro"
+								iconName='camera-retro'
 								onClick={this.handleSnapshot}
-								tooltip={this.props.notooltips ? '' : 'clip webpage'}
+								tooltip={
+									this.props.notooltips ? "" : "clip webpage"
+								}
 							/>
 							<Divider />
 							<SearchTextField
-								obj="TextField"
+								obj='TextField'
 								onChange={this.handleSearch}
-								placeholder="search"
-								tooltip={this.props.notooltips ? '' : 'search text on page'}
+								placeholder='search'
+								tooltip={
+									this.props.notooltips
+										? ""
+										: "search text on page"
+								}
 								useclear
 								value={this.state.search}
 							/>
 							<Button
-								iconName="step-backward"
+								iconName='step-backward'
 								onClick={this.handlePreviousSearch}
-								tooltip={this.props.notooltips ? '' : 'search backward'}
+								tooltip={
+									this.props.notooltips
+										? ""
+										: "search backward"
+								}
 							/>
 							<Button
-								iconName="step-forward"
+								iconName='step-forward'
 								onClick={this.handleNextSearch}
-								tooltip={this.props.notooltips ? '' : 'search forward'}
+								tooltip={
+									this.props.notooltips
+										? ""
+										: "search forward"
+								}
 							/>
 						</BrowserToolbarButtons>
 					</BrowserToolbar>
 					<BrowserContent
-						className="ui-browser-content"
+						className='ui-browser-content'
 						ref={this.handleRef}
 					/>
 				</BrowserContainer>

@@ -16,5 +16,5 @@
 //
 
 (global as any).requestAnimationFrame = (callback: any) => {
-    setTimeout(callback, 0);
+	setTimeout(callback, 0);
 };

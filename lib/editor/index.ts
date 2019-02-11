@@ -1,7 +1,3 @@
-import {Editor, EditorProps, getDefaultEditorProps} from './Editor';
+import {Editor, EditorProps, getDefaultEditorProps} from "./Editor";
 
-export {
-	Editor,
-	EditorProps,
-	getDefaultEditorProps
-};
+export {Editor, EditorProps, getDefaultEditorProps};

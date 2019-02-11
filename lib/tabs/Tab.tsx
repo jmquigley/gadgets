@@ -51,14 +51,14 @@
  * @module Tab
  */
 
-'use strict';
+"use strict";
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {Button} from '../button';
-import {Item} from '../item';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {Button} from "../button";
+import {Item} from "../item";
 import {
 	BaseComponent,
 	BaseProps,
@@ -71,8 +71,8 @@ import {
 	invisible,
 	Location,
 	Wrapper
-} from '../shared';
-import styled, {css} from '../shared/themed-components';
+} from "../shared";
+import styled, {css} from "../shared/themed-components";
 
 export interface TabProps extends BaseProps {
 	href?: any;
@@ -84,16 +84,17 @@ export interface TabProps extends BaseProps {
 }
 
 export function getDefaultTabProps(): TabProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		href: {
 			selectHandler: nilEvent
 		},
-		obj: 'Tab',
+		obj: "Tab",
 		onClick: nilEvent,
 		onClose: nilEvent,
 		orientation: Location.top,
 		selected: false,
-		title: ''
+		title: ""
 	});
 }
 
@@ -102,44 +103,54 @@ export interface TabState extends BaseState {
 }
 
 export function getDefaultTabState(): TabState {
-	return cloneDeep({...getDefaultBaseState('ui-tab'),
-		hidden: false
-	});
+	return cloneDeep({...getDefaultBaseState("ui-tab"), hidden: false});
 }
 
 export const TabBorderTop: any = css`
-	border-right: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
-	border-top: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-right: solid 1px
+		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-top: solid 1px
+		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 
 	&:first-child {
-		border-left: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+		border-left: solid 1px
+			${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	}
 `;
 
 export const TabBorderBottom: any = css`
-	border-right: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
-	border-bottom: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-right: solid 1px
+		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-bottom: solid 1px
+		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 
 	&:first-child {
-		border-left: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+		border-left: solid 1px
+			${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	}
 `;
 
 export const TabBorderLeft: any = css`
-	border-left: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
-	border-bottom: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-left: solid 1px
+		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-bottom: solid 1px
+		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 
 	&:first-child {
-		border-top: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+		border-top: solid 1px
+			${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	}
 `;
 
 export const TabBorderRight: any = css`
-	border-right: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
-	border-bottom: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-right: solid 1px
+		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+	border-bottom: solid 1px
+		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 
 	&:first-child {
-		border-top: solid 1px ${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
+		border-top: solid 1px
+			${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	}
 `;
 
@@ -148,13 +159,13 @@ export const TabView: any = styled.div`
 	display: inline-block;
 	flex-grow: unset;
 
-	${(props: TabProps) => props.xcss ? props.xcss : ''}
+	${(props: TabProps) => (props.xcss ? props.xcss : "")}
 
 	&:hover .ui-button {
 		color: ${(props: TabProps) => props.theme.backgroundColor};
 		background-color: ${(props: TabProps) => props.theme.hoverColor};
 		display: flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 
 	.ui-label {
@@ -176,7 +187,6 @@ export const TabView: any = styled.div`
 `;
 
 export class Tab extends BaseComponent<TabProps, TabState> {
-
 	public static readonly defaultProps: TabProps = getDefaultTabProps();
 	public state: TabState = getDefaultTabState();
 
@@ -203,17 +213,17 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	public static getDerivedStateFromProps(props: TabProps, state: TabState) {
 		const newState: TabState = {...state};
 
-		state.classes.onIf(props.selected)('ui-selected');
+		state.classes.onIf(props.selected)("ui-selected");
 
 		if (newState.hidden) {
 			newState.style = {
-				display: 'none',
-				minWidth: '',
-				width: ''
+				display: "none",
+				minWidth: "",
+				width: ""
 			};
 		} else {
 			newState.style = {
-				minWidth: '120px',
+				minWidth: "120px",
 				width: props.width
 			};
 		}
@@ -222,16 +232,24 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	}
 
 	public render() {
-		let xcss: any = '';
+		let xcss: any = "";
 		switch (this.props.orientation) {
-			case Location.top: xcss = TabBorderTop; break;
-			case Location.bottom: xcss = TabBorderBottom; break;
-			case Location.left: xcss = TabBorderLeft; break;
-			case Location.right: xcss = TabBorderRight; break;
+			case Location.top:
+				xcss = TabBorderTop;
+				break;
+			case Location.bottom:
+				xcss = TabBorderBottom;
+				break;
+			case Location.left:
+				xcss = TabBorderLeft;
+				break;
+			case Location.right:
+				xcss = TabBorderRight;
+				break;
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<TabView
 					disabled={this.props.disabled}
 					className={this.state.classes.classnames}
@@ -248,7 +266,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 						rightButton={
 							<Button
 								{...this.props}
-								iconName="times"
+								iconName='times'
 								onClick={this.handleClose}
 							/>
 						}

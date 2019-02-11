@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-import * as styledComponents from 'styled-components';
-import { ThemedStyledComponentsModule } from 'styled-components';
+import * as styledComponents from "styled-components";
+import {ThemedStyledComponentsModule} from "styled-components";
 
-import {ThemeProps} from './themes';
+import {ThemeProps} from "./themes";
 
 const {
 	default: styled,
@@ -12,14 +12,10 @@ const {
 	keyframes,
 	withTheme,
 	ThemeProvider
-} = styledComponents as ThemedStyledComponentsModule<any> as ThemedStyledComponentsModule<ThemeProps>;
+} = (styledComponents as ThemedStyledComponentsModule<
+	any
+>) as ThemedStyledComponentsModule<ThemeProps>;
 
-export {
-	css,
-	createGlobalStyle,
-	keyframes,
-	withTheme,
-	ThemeProvider
-};
+export {css, createGlobalStyle, keyframes, withTheme, ThemeProvider};
 
 export default styled;

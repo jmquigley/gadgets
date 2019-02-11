@@ -177,7 +177,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-kAzzGY",
                 "isStatic": false,
-                "lastClassName": "iLHaNu",
+                "lastClassName": "bmtfWq",
                 "rules": Array [
                   "
 	border: solid 1px silver;
@@ -186,7 +186,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -220,7 +220,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
           style={Object {}}
         >
           <div
-            className="ui-tag sc-kAzzGY iLHaNu"
+            className="ui-tag sc-kAzzGY bmtfWq"
             onMouseOut={[Function]}
             onMouseOver={[Function]}
             style={Object {}}
@@ -487,7 +487,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-cSHVUG",
                       "isStatic": false,
-                      "lastClassName": "fZQdpw",
+                      "lastClassName": "gMwlPu",
                       "rules": Array [
                         "
 	position: absolute;
@@ -496,7 +496,8 @@ exports[`Test disabling of the simple Tag instance 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                         [Function],
-                        " ease-in-out;
+                        "
+		ease-in-out;
 	width: unset;
 ",
                       ],
@@ -528,7 +529,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
               >
                 <ButtonCircle
                   bottom={null}
-                  className="sc-cSHVUG fZQdpw"
+                  className="sc-cSHVUG gMwlPu"
                   contentEditable={false}
                   controlled={true}
                   direction="right"
@@ -572,7 +573,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                 >
                   <Wrapper
                     bottom={null}
-                    className="sc-cSHVUG fZQdpw"
+                    className="sc-cSHVUG gMwlPu"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
@@ -642,10 +643,10 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                       }
                     >
                       <styled.div
-                        className="ui-button-circle sc-cSHVUG fZQdpw"
+                        className="ui-button-circle sc-cSHVUG gMwlPu"
                       >
                         <StyledComponent
-                          className="ui-button-circle sc-cSHVUG fZQdpw"
+                          className="ui-button-circle sc-cSHVUG gMwlPu"
                           forwardedComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
@@ -689,7 +690,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                            className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                           >
                             <styled.div
                               height="18px"
@@ -738,7 +739,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                 >
                                   <Styled(Button)
                                     bottom={null}
-                                    className="sc-cSHVUG fZQdpw"
+                                    className="sc-cSHVUG gMwlPu"
                                     contentEditable={false}
                                     controlled={true}
                                     direction="right"
@@ -782,7 +783,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                   >
                                     <StyledComponent
                                       bottom={null}
-                                      className="sc-cSHVUG fZQdpw"
+                                      className="sc-cSHVUG gMwlPu"
                                       contentEditable={false}
                                       controlled={true}
                                       direction="right"
@@ -797,7 +798,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-iwsKbI",
                                             "isStatic": false,
-                                            "lastClassName": "hrmGrl",
+                                            "lastClassName": "fHSaaL",
                                             "rules": Array [
                                               "
 	border-radius: 4em;
@@ -859,7 +860,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                     >
                                       <Button
                                         bottom={null}
-                                        className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                        className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                         contentEditable={false}
                                         controlled={true}
                                         direction="right"
@@ -903,7 +904,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                       >
                                         <Wrapper
                                           bottom={null}
-                                          className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                          className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                           contentEditable={false}
                                           controlled={true}
                                           direction="right"
@@ -973,7 +974,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                             }
                                           >
                                             <styled.div
-                                              className="ui-button nohover sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                              className="ui-button nohover sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                               disabled={true}
                                               id="Button-0"
                                               onClick={[Function]}
@@ -989,7 +990,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                               visible={true}
                                             >
                                               <StyledComponent
-                                                className="ui-button nohover sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                className="ui-button nohover sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                 disabled={true}
                                                 forwardedComponent={
                                                   Object {
@@ -998,7 +999,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-gzVnrw",
                                                       "isStatic": false,
-                                                      "lastClassName": "fqspZq",
+                                                      "lastClassName": "jHQWoh",
                                                       "rules": Array [
                                                         "
 	",
@@ -1023,7 +1024,8 @@ exports[`Test disabling of the simple Tag instance 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                         [Function],
-                                                        " ",
+                                                        "
+			",
                                                         [Function],
                                                         ";
 	}
@@ -1062,7 +1064,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
                                                 visible={true}
                                               >
                                                 <div
-                                                  className="ui-button nohover sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw fqspZq"
+                                                  className="ui-button nohover sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw jHQWoh"
                                                   disabled={true}
                                                   id="Button-0"
                                                   onClick={[Function]}
@@ -1446,7 +1448,7 @@ exports[`Test making Tag invisible 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-kAzzGY",
                 "isStatic": false,
-                "lastClassName": "iLHaNu",
+                "lastClassName": "bmtfWq",
                 "rules": Array [
                   "
 	border: solid 1px silver;
@@ -1455,7 +1457,7 @@ exports[`Test making Tag invisible 1`] = `
 	box-sizing: border-box;
 	display: inline;
 	font-size: inherit;
-	opacity: 1.0;
+	opacity: 1;
 	margin: 0 1px;
 	padding: 0 3px;
 	position: relative;
@@ -1489,7 +1491,7 @@ exports[`Test making Tag invisible 1`] = `
           style={Object {}}
         >
           <div
-            className="ui-tag sc-kAzzGY iLHaNu"
+            className="ui-tag sc-kAzzGY bmtfWq"
             onMouseOut={[Function]}
             onMouseOver={[Function]}
             style={Object {}}
@@ -1756,7 +1758,7 @@ exports[`Test making Tag invisible 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-cSHVUG",
                       "isStatic": false,
-                      "lastClassName": "fZQdpw",
+                      "lastClassName": "gMwlPu",
                       "rules": Array [
                         "
 	position: absolute;
@@ -1765,7 +1767,8 @@ exports[`Test making Tag invisible 1`] = `
 	transform: translate(-50%, -50%);
 	transition: opacity ",
                         [Function],
-                        " ease-in-out;
+                        "
+		ease-in-out;
 	width: unset;
 ",
                       ],
@@ -1797,7 +1800,7 @@ exports[`Test making Tag invisible 1`] = `
               >
                 <ButtonCircle
                   bottom={null}
-                  className="sc-cSHVUG fZQdpw"
+                  className="sc-cSHVUG gMwlPu"
                   contentEditable={false}
                   controlled={true}
                   direction="right"
@@ -1841,7 +1844,7 @@ exports[`Test making Tag invisible 1`] = `
                 >
                   <Wrapper
                     bottom={null}
-                    className="sc-cSHVUG fZQdpw"
+                    className="sc-cSHVUG gMwlPu"
                     contentEditable={false}
                     controlled={true}
                     direction="right"
@@ -1911,10 +1914,10 @@ exports[`Test making Tag invisible 1`] = `
                       }
                     >
                       <styled.div
-                        className="ui-button-circle sc-cSHVUG fZQdpw"
+                        className="ui-button-circle sc-cSHVUG gMwlPu"
                       >
                         <StyledComponent
-                          className="ui-button-circle sc-cSHVUG fZQdpw"
+                          className="ui-button-circle sc-cSHVUG gMwlPu"
                           forwardedComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
@@ -1958,7 +1961,7 @@ exports[`Test making Tag invisible 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="ui-button-circle sc-cSHVUG fZQdpw sc-htoDjs nJPZJ"
+                            className="ui-button-circle sc-cSHVUG gMwlPu sc-htoDjs nJPZJ"
                           >
                             <styled.div
                               height="18px"
@@ -2007,7 +2010,7 @@ exports[`Test making Tag invisible 1`] = `
                                 >
                                   <Styled(Button)
                                     bottom={null}
-                                    className="sc-cSHVUG fZQdpw"
+                                    className="sc-cSHVUG gMwlPu"
                                     contentEditable={false}
                                     controlled={true}
                                     direction="right"
@@ -2051,7 +2054,7 @@ exports[`Test making Tag invisible 1`] = `
                                   >
                                     <StyledComponent
                                       bottom={null}
-                                      className="sc-cSHVUG fZQdpw"
+                                      className="sc-cSHVUG gMwlPu"
                                       contentEditable={false}
                                       controlled={true}
                                       direction="right"
@@ -2066,7 +2069,7 @@ exports[`Test making Tag invisible 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-iwsKbI",
                                             "isStatic": false,
-                                            "lastClassName": "hrmGrl",
+                                            "lastClassName": "fHSaaL",
                                             "rules": Array [
                                               "
 	border-radius: 4em;
@@ -2128,7 +2131,7 @@ exports[`Test making Tag invisible 1`] = `
                                     >
                                       <Button
                                         bottom={null}
-                                        className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                        className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                         contentEditable={false}
                                         controlled={true}
                                         direction="right"
@@ -2172,7 +2175,7 @@ exports[`Test making Tag invisible 1`] = `
                                       >
                                         <Wrapper
                                           bottom={null}
-                                          className="sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                          className="sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                           contentEditable={false}
                                           controlled={true}
                                           direction="right"
@@ -2242,7 +2245,7 @@ exports[`Test making Tag invisible 1`] = `
                                             }
                                           >
                                             <styled.div
-                                              className="ui-button nohover sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                              className="ui-button nohover sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                               disabled={true}
                                               id="Button-0"
                                               onClick={[Function]}
@@ -2258,7 +2261,7 @@ exports[`Test making Tag invisible 1`] = `
                                               visible={false}
                                             >
                                               <StyledComponent
-                                                className="ui-button nohover sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl"
+                                                className="ui-button nohover sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL"
                                                 disabled={true}
                                                 forwardedComponent={
                                                   Object {
@@ -2267,7 +2270,7 @@ exports[`Test making Tag invisible 1`] = `
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-gzVnrw",
                                                       "isStatic": false,
-                                                      "lastClassName": "fhYORU",
+                                                      "lastClassName": "kzaMNK",
                                                       "rules": Array [
                                                         "
 	",
@@ -2292,7 +2295,8 @@ exports[`Test making Tag invisible 1`] = `
 	&:not(.nohover):hover {
 		background-color: ",
                                                         [Function],
-                                                        " ",
+                                                        "
+			",
                                                         [Function],
                                                         ";
 	}
@@ -2331,7 +2335,7 @@ exports[`Test making Tag invisible 1`] = `
                                                 visible={false}
                                               >
                                                 <div
-                                                  className="ui-button nohover sc-cSHVUG fZQdpw sc-iwsKbI hrmGrl sc-gzVnrw fhYORU"
+                                                  className="ui-button nohover sc-cSHVUG gMwlPu sc-iwsKbI fHSaaL sc-gzVnrw kzaMNK"
                                                   disabled={true}
                                                   id="Button-0"
                                                   onClick={[Function]}

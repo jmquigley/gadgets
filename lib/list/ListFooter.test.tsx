@@ -1,22 +1,20 @@
-'use strict';
+"use strict";
 
 // const debug = require('debug')('ListFooter.test');
 
-import {mount} from 'enzyme';
-import * as React from 'react';
-import {getDefaultListFooterProps, ListFooter} from './index';
+import {mount} from "enzyme";
+import * as React from "react";
+import {getDefaultListFooterProps, ListFooter} from "./index";
 
-test('Test retrieval of ListFooter props object', () => {
+test("Test retrieval of ListFooter props object", () => {
 	const props = getDefaultListFooterProps();
 
 	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
-test('Test the creation of a ListFooter control with simple title', () => {
-	const ctl = mount(
-		<ListFooter title="test title" />
-	);
+test("Test the creation of a ListFooter control with simple title", () => {
+	const ctl = mount(<ListFooter title='test title' />);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();

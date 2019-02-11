@@ -44,13 +44,13 @@
  * @module Tooltip
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Tooltip');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
 import {
 	BaseComponent,
 	BaseProps,
@@ -63,9 +63,9 @@ import {
 	getTheme,
 	Location,
 	Wrapper
-} from '../shared';
-import styled, {css} from '../shared/themed-components';
-import {Triangle} from '../triangle';
+} from "../shared";
+import styled, {css} from "../shared/themed-components";
+import {Triangle} from "../triangle";
 
 export interface TooltipProps extends BaseProps {
 	parent?: any;
@@ -74,9 +74,10 @@ export interface TooltipProps extends BaseProps {
 export function getDefaultTooltipProps(): TooltipProps {
 	const theme = getTheme();
 
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		location: Location.top,
-		obj: 'Tooltip',
+		obj: "Tooltip",
 		parent: null,
 		style: {
 			color: theme.tooltipForegroundColor,
@@ -90,9 +91,7 @@ export interface TooltipState extends BaseState {
 }
 
 export function getDefaultTooltipState(): TooltipState {
-	return cloneDeep({...getDefaultBaseState('ui-tooltip'),
-		show: false
-	});
+	return cloneDeep({...getDefaultBaseState("ui-tooltip"), show: false});
 }
 
 export const Bottom: any = css`
@@ -206,24 +205,32 @@ export const Hide: any = css`
 `;
 
 export const Show: any = css`
-	opacity: 1.0;
+	opacity: 1;
 	z-index: calc(${baseZIndex} + 1);
 `;
 
 export const StyledTriangle: any = styled(Triangle)`
 	${(props: TooltipProps) => {
 		switch (props.location) {
-			case Location.topLeft: return TriangleTopLeft;
-			case Location.topRight: return TriangleTopRight;
-			case Location.middleLeft: return TriangleMiddleLeft;
+			case Location.topLeft:
+				return TriangleTopLeft;
+			case Location.topRight:
+				return TriangleTopRight;
+			case Location.middleLeft:
+				return TriangleMiddleLeft;
 			case Location.middle:
-			case Location.middleRight: return TriangleMiddleRight;
-			case Location.bottomLeft: return TriangleBottomLeft;
-			case Location.bottom: return TriangleBottom;
-			case Location.bottomRight: return TriangleBottomRight;
+			case Location.middleRight:
+				return TriangleMiddleRight;
+			case Location.bottomLeft:
+				return TriangleBottomLeft;
+			case Location.bottom:
+				return TriangleBottom;
+			case Location.bottomRight:
+				return TriangleBottomRight;
 
 			default:
-			case Location.top: return TriangleTop;
+			case Location.top:
+				return TriangleTop;
 		}
 	}};
 `;
@@ -234,9 +241,9 @@ export const TootipContentView: any = styled.span`
 
 export const TooltipView: any = styled.div`
 	border-radius: 10px;
-	flex:none;
+	flex: none;
 	line-height: initial;
-	padding: 0.5em 1.0em;
+	padding: 0.5em 1em;
 	pointer-events: none;
 	position: absolute;
 	text-align: initial;
@@ -245,26 +252,33 @@ export const TooltipView: any = styled.div`
 
 	${(props: TooltipProps) => {
 		switch (props.location) {
-			case Location.topLeft: return TopLeft;
-			case Location.topRight: return TopRight;
-			case Location.middleLeft: return MiddleLeft;
+			case Location.topLeft:
+				return TopLeft;
+			case Location.topRight:
+				return TopRight;
+			case Location.middleLeft:
+				return MiddleLeft;
 			case Location.middle:
-			case Location.middleRight: return Middle;
-			case Location.bottomLeft: return BottomLeft;
-			case Location.bottom: return Bottom;
-			case Location.bottomRight: return BottomRight;
+			case Location.middleRight:
+				return Middle;
+			case Location.bottomLeft:
+				return BottomLeft;
+			case Location.bottom:
+				return Bottom;
+			case Location.bottomRight:
+				return BottomRight;
 
 			default:
-			case Location.top: return Top;
+			case Location.top:
+				return Top;
 		}
 	}};
 
-	${(props: TooltipProps) => props.visible ? Show : Hide}
+	${(props: TooltipProps) => (props.visible ? Show : Hide)}
 	${(props: TooltipProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
 export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
-
 	public static readonly defaultProps: TooltipProps = getDefaultTooltipProps();
 	public state: TooltipState = getDefaultTooltipState();
 
@@ -285,16 +299,16 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 	public componentDidMount() {
 		const parent = document.getElementById(this.props.parent);
 		if (parent) {
-			parent.addEventListener('mouseenter', this.handleMouseEnter);
-			parent.addEventListener('mouseleave', this.handleMouseLeave);
+			parent.addEventListener("mouseenter", this.handleMouseEnter);
+			parent.addEventListener("mouseleave", this.handleMouseLeave);
 		}
 	}
 
 	public componentWillUnmount() {
 		const parent = document.getElementById(this.props.parent);
 		if (parent) {
-			parent.removeEventListener('mouseenter', this.handleMouseEnter);
-			parent.removeEventListener('mouseleave', this.handleMouseLeave);
+			parent.removeEventListener("mouseenter", this.handleMouseEnter);
+			parent.removeEventListener("mouseleave", this.handleMouseLeave);
 		}
 	}
 
@@ -319,25 +333,25 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 				break;
 		}
 
-		let str: string = '';
+		let str: string = "";
 		if (this.props.children) {
 			str = React.Children.map(this.props.children, (child: any) => {
 				return String(child);
-			}).join(' ');
+			}).join(" ");
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<TooltipView
 					className={this.state.classes.classnames}
 					location={this.props.location}
 					sizing={BaseComponent.prev(this.props.sizing).type}
 					style={this.state.style}
 					visible={this.state.show}
-					width={str.length < 25 ? 'unset' : '10em'}
+					width={str.length < 25 ? "unset" : "10em"}
 				>
 					<TootipContentView
-						className="ui-tooltip-content"
+						className='ui-tooltip-content'
 						sizing={BaseComponent.prev(this.props.sizing).type}
 						style={this.state.style}
 					>
@@ -348,8 +362,8 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 						direction={direction}
 						sizing={BaseComponent.prev(this.props.sizing).type}
 						style={{
-							fill: this.state.style['backgroundColor'],
-							stroke: this.state.style['backgroundColor']
+							fill: this.state.style["backgroundColor"],
+							stroke: this.state.style["backgroundColor"]
 						}}
 					/>
 				</TooltipView>
@@ -368,13 +382,10 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
  * otherwise null is returned.
  */
 export function tooltip(id: string, props: any) {
-	if (props['tooltip'] && !props['notooltip']) {
+	if (props["tooltip"] && !props["notooltip"]) {
 		return (
-			<Tooltip
-				parent={id}
-				sizing={props['sizing']}
-			>
-				{props['tooltip']}
+			<Tooltip parent={id} sizing={props["sizing"]}>
+				{props["tooltip"]}
 			</Tooltip>
 		);
 	}

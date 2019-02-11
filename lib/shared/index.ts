@@ -1,13 +1,6 @@
-import {
-	BaseComponent,
-	baseZIndex,
-	defaultSize
-} from './base';
+import {BaseComponent, baseZIndex, defaultSize} from "./base";
 
-import {
-	debug,
-	globalize
-} from './helpers';
+import {debug, globalize} from "./helpers";
 
 import {
 	BaseProps,
@@ -24,7 +17,7 @@ import {
 	locationStyle,
 	SortOrder,
 	Styles
-} from './props';
+} from "./props";
 
 import {
 	borderStyle,
@@ -36,26 +29,13 @@ import {
 	Sizes,
 	Sizing,
 	Styling
-} from './sizing';
+} from "./sizing";
 
-import {
-	BaseState,
-	getDefaultBaseState
-} from './state';
+import {BaseState, getDefaultBaseState} from "./state";
 
-import {
-	getTheme,
-	getThemeList,
-	setTheme,
-	Theme,
-	ThemeProps
-} from './themes';
+import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from "./themes";
 
-import {
-	getDefaultWrapperProps,
-	Wrapper,
-	WrapperProps
-} from './wrapper';
+import {getDefaultWrapperProps, Wrapper, WrapperProps} from "./wrapper";
 
 export {
 	BaseComponent,

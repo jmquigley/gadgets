@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import {ClassNames} from 'util.classnames';
+import {cloneDeep} from "lodash";
+import {ClassNames} from "util.classnames";
 
 export interface BaseState {
 	children?: any;
@@ -10,7 +10,9 @@ export interface BaseState {
 }
 
 // TODO: make classes null after converting constructors
-export function getDefaultBaseState(className: string = 'ui-default'): BaseState {
+export function getDefaultBaseState(
+	className: string = "ui-default"
+): BaseState {
 	return cloneDeep({
 		children: null,
 		classes: new ClassNames(className),

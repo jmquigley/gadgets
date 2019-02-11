@@ -36,11 +36,11 @@
  * @module ButtonCircle
  */
 
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
 import {
 	BaseButtonView,
 	Button,
@@ -48,7 +48,7 @@ import {
 	ButtonState,
 	getDefaultButtonProps,
 	getDefaultButtonState
-} from '../button';
+} from "../button";
 import {
 	BaseComponent,
 	// @ts-ignore
@@ -57,17 +57,17 @@ import {
 	Color,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface ButtonCircleProps extends ButtonProps {
 	onClick?: any;
 }
 
 export function getDefaultButtonCircleProps(): ButtonProps {
-	return cloneDeep(Object.assign({},
-		getDefaultButtonProps(), {
-			obj: 'ButtonCircle',
+	return cloneDeep(
+		Object.assign({}, getDefaultButtonProps(), {
+			obj: "ButtonCircle",
 			onClick: nilEvent,
 			style: {
 				borderColor: Color.black
@@ -79,7 +79,7 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 export type ButtonCircleState = ButtonState;
 
 export function getDefaultButtonCircleState(): ButtonCircleState {
-	return cloneDeep({...getDefaultButtonState('ui-button-circle')});
+	return cloneDeep({...getDefaultButtonState("ui-button-circle")});
 }
 
 export const ButtonCircleContainerView: any = styled.div`
@@ -98,24 +98,32 @@ export const ButtonCircleView: any = styled(Button)`
 	border-radius: 4em;
 	padding: ${(props: ButtonCircleProps) => {
 		switch (props.sizing) {
-			case Sizing.xxsmall: return('0.2em 0.2em');
-			case Sizing.xsmall: return('0.08em 0.005em');
-			case Sizing.small: return('0.1em 0.005em');
-			case Sizing.large: return('0.175em 0');
-			case Sizing.xlarge: return('0.25em 0');
-			case Sizing.xxlarge: return('0.33em 0');
+			case Sizing.xxsmall:
+				return "0.2em 0.2em";
+			case Sizing.xsmall:
+				return "0.08em 0.005em";
+			case Sizing.small:
+				return "0.1em 0.005em";
+			case Sizing.large:
+				return "0.175em 0";
+			case Sizing.xlarge:
+				return "0.25em 0";
+			case Sizing.xxlarge:
+				return "0.33em 0";
 
 			case Sizing.normal:
 			default:
-				return('0.125em 0');
+				return "0.125em 0";
 		}
 	}};
 
 	${(props: ButtonCircleProps) => props.sizing && borderStyle[props.sizing]}
 `;
 
-export class ButtonCircle extends BaseComponent<ButtonCircleProps, ButtonCircleState> {
-
+export class ButtonCircle extends BaseComponent<
+	ButtonCircleProps,
+	ButtonCircleState
+> {
 	public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 	public state: ButtonCircleState = getDefaultButtonCircleState();
 
@@ -127,12 +135,11 @@ export class ButtonCircle extends BaseComponent<ButtonCircleProps, ButtonCircleS
 		const size: string = BaseComponent.fontSizePX(this.props.sizing, 1.5);
 
 		return (
-			<Wrapper {...this.props} >
-				<ButtonCircleContainerView className={this.state.classes.classnames}>
-					<ButtonCircleInnerView
-						height={size}
-						width={size}
-					>
+			<Wrapper {...this.props}>
+				<ButtonCircleContainerView
+					className={this.state.classes.classnames}
+				>
+					<ButtonCircleInnerView height={size} width={size}>
 						<ButtonCircleView
 							{...this.props}
 							iconName={this.props.iconName}

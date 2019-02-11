@@ -59,18 +59,18 @@
  * @module DialogBox
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('DialogBox');
 
-const ReactModal = require('react-modal');
+const ReactModal = require("react-modal");
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {ButtonText} from '../buttonText';
-import {Icon} from '../icon';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {ButtonText} from "../buttonText";
+import {Icon} from "../icon";
 import {
 	BaseComponent,
 	BaseProps,
@@ -82,15 +82,15 @@ import {
 	Justify,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export enum DialogBoxType {
-	error = 'error',
-	warning = 'warning',
-	success = 'success',
-	info = 'info',
-	custom = 'custom'
+	error = "error",
+	warning = "warning",
+	success = "success",
+	info = "info",
+	custom = "custom"
 }
 
 export interface DialogBoxProps extends BaseProps {
@@ -104,12 +104,12 @@ export interface DialogBoxProps extends BaseProps {
 }
 
 export function getDefaultDialogBoxProps(): DialogBoxProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
+	return cloneDeep(
+		Object.assign({}, getDefaultBaseProps(), {
 			dialogType: DialogBoxType.info,
-			iconName: 'bomb',
-			message: '',
-			obj: 'DialogBox',
+			iconName: "bomb",
+			message: "",
+			obj: "DialogBox",
 			onClose: nilEvent,
 			onOpen: nilEvent,
 			onSelection: nilEvent,
@@ -123,7 +123,8 @@ export interface DialogBoxState extends BaseState {
 }
 
 export function getDefaultDialogBoxState(): DialogBoxState {
-	return cloneDeep({...getDefaultBaseState('ui-dialogbox'),
+	return cloneDeep({
+		...getDefaultBaseState("ui-dialogbox"),
 		showModal: false
 	});
 }
@@ -143,7 +144,7 @@ export const DialogBoxMessageContainerView: any = styled.div`
 `;
 
 export const DialogBoxMessageView: any = styled.div`
-	margin-bottom: 1.0em;
+	margin-bottom: 1em;
 
 	+ p {
 		margin-bottom: 0.5em;
@@ -173,20 +174,19 @@ export const StyledIcon: any = styled(Icon)`
 `;
 
 export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
-
 	public static defaultProps: DialogBoxProps = getDefaultDialogBoxProps();
 	public state: DialogBoxState = getDefaultDialogBoxState();
 
 	private _customStyle: any = {
 		content: {
-			top: '40%',
-			left: '50%',
-			right: 'auto',
-			bottom: 'auto',
-			marginRight: '-50%',
-			transform: 'translate(-50%, -50%)',
-			padding: '15px',
-			borderRadius: '0'
+			top: "40%",
+			left: "50%",
+			right: "auto",
+			bottom: "auto",
+			marginRight: "-50%",
+			transform: "translate(-50%, -50%)",
+			padding: "15px",
+			borderRadius: "0"
 		}
 	};
 
@@ -198,7 +198,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		this._icon = {
 			error: (
 				<StyledIcon
-					iconName="times-circle"
+					iconName='times-circle'
 					sizing={Sizing.xxlarge}
 					style={{
 						color: Color.error
@@ -207,7 +207,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 			),
 			warning: (
 				<StyledIcon
-					iconName="exclamation-circle"
+					iconName='exclamation-circle'
 					sizing={Sizing.xxlarge}
 					style={{
 						color: Color.warning
@@ -216,7 +216,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 			),
 			success: (
 				<StyledIcon
-					iconName="check-circle"
+					iconName='check-circle'
 					sizing={Sizing.xxlarge}
 					style={{
 						color: Color.success
@@ -225,7 +225,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 			),
 			info: (
 				<StyledIcon
-					iconName="info-circle"
+					iconName='info-circle'
 					sizing={Sizing.xxlarge}
 					style={{
 						color: Color.info
@@ -245,12 +245,12 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	get message(): string {
 		const message: string[] = [];
 		for (const line of this.props.message.splitNL()) {
-			message.push('<p>');
+			message.push("<p>");
 			message.push(line);
-			message.push('</p>');
+			message.push("</p>");
 		}
 
-		return message.join('');
+		return message.join("");
 	}
 
 	@autobind
@@ -278,20 +278,21 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		});
 	}
 
-	public static getDerivedStateFromProps(props: DialogBoxProps, state: DialogBoxState) {
-		const newState: DialogBoxState = {...state,
-			showModal: props.show
-		};
+	public static getDerivedStateFromProps(
+		props: DialogBoxProps,
+		state: DialogBoxState
+	) {
+		const newState: DialogBoxState = {...state, showModal: props.show};
 
 		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<ReactModal
 					ariaHideApp={false}
-					contentLabel="DialogBox"
+					contentLabel='DialogBox'
 					isOpen={this.state.showModal}
 					onAfterOpen={this.handleOpen}
 					onRequestClose={this.handleClose}
@@ -313,7 +314,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 									noicon
 									onClick={this.handleYes}
 									sizing={this.props.sizing}
-									text="Yes"
+									text='Yes'
 								/>
 								<Spacer />
 								<StyledButtonText
@@ -321,7 +322,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 									noicon
 									onClick={this.handleNo}
 									sizing={this.props.sizing}
-									text="No"
+									text='No'
 								/>
 							</ButtonBar>
 						</DialogBoxMessageContainerView>

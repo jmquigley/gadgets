@@ -24,29 +24,35 @@
  * @module ListDivider
  */
 
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {BaseComponent, Wrapper} from '../shared';
-import styled from '../shared/themed-components';
-import {getDefaultListProps, getDefaultListState, ListProps, ListState} from './List';
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {BaseComponent, Wrapper} from "../shared";
+import styled from "../shared/themed-components";
+import {
+	getDefaultListProps,
+	getDefaultListState,
+	ListProps,
+	ListState
+} from "./List";
 
 export interface ListDividerProps extends ListProps {
 	color?: string;
 }
 
 export function getDefaultListDividerProps(): ListDividerProps {
-	return cloneDeep({...getDefaultListProps(),
-		color: 'lightgray',
-		obj: 'ListDivider'
+	return cloneDeep({
+		...getDefaultListProps(),
+		color: "lightgray",
+		obj: "ListDivider"
 	});
 }
 
 export type ListDividerState = ListState;
 
 export function getDefaultListDividerState(): ListDividerState {
-	return cloneDeep({...getDefaultListState('ui-list-divider')});
+	return cloneDeep({...getDefaultListState("ui-list-divider")});
 }
 
 export const ListDividerView: any = styled.li`
@@ -59,8 +65,10 @@ export const ListDividerView: any = styled.li`
 	}
 `;
 
-export class ListDivider extends BaseComponent<ListDividerProps, ListDividerState> {
-
+export class ListDivider extends BaseComponent<
+	ListDividerProps,
+	ListDividerState
+> {
 	public static defaultProps: ListDividerProps = getDefaultListDividerProps();
 	public state: ListState = getDefaultListDividerState();
 
@@ -68,8 +76,12 @@ export class ListDivider extends BaseComponent<ListDividerProps, ListDividerStat
 		super(props, ListDivider.defaultProps.style);
 	}
 
-	public static getDerivedStateFromProps(props: ListDividerProps, state: ListDividerState) {
-		const newState: ListDividerState = {...state,
+	public static getDerivedStateFromProps(
+		props: ListDividerProps,
+		state: ListDividerState
+	) {
+		const newState: ListDividerState = {
+			...state,
 			style: {
 				backgroundColor: props.color
 			}
@@ -79,8 +91,8 @@ export class ListDivider extends BaseComponent<ListDividerProps, ListDividerStat
 	}
 
 	public render() {
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<ListDividerView className={this.state.classes.classnames}>
 					<hr style={this.state.style} />
 				</ListDividerView>

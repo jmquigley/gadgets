@@ -22,29 +22,28 @@
  * @module Break
  */
 
-'use strict';
+"use strict";
 
-import * as React from 'react';
+import * as React from "react";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	getDefaultBaseProps,
 	getDefaultBaseState
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export const BreakView: any = styled.p`
-	content: '';
+	content: "";
 	display: block;
 	margin: 0;
 	margin-top: ${(props: BaseProps) => props.height};
 `;
 
 export class Break extends BaseComponent<BaseProps, BaseState> {
-
 	public static defaultProps: BaseProps = getDefaultBaseProps();
-	public state: BaseState = getDefaultBaseState('ui-break');
+	public state: BaseState = getDefaultBaseState("ui-break");
 
 	constructor(props: BaseProps) {
 		super(props);

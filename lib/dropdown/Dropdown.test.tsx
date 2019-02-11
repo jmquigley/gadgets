@@ -1,41 +1,36 @@
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Dropdown.test');
 
-import {mount, shallow} from 'enzyme';
-import * as React from 'react';
-import {Dropdown, DropdownOption, getDefaultDropdownProps} from './index';
+import {mount, shallow} from "enzyme";
+import * as React from "react";
+import {Dropdown, DropdownOption, getDefaultDropdownProps} from "./index";
 
 const testData: DropdownOption[] = [
-	{value: 'idstr1', label: 'lstr1'},
-	{value: 'idstr2', label: 'lstr2'},
-	{value: 'idstr3', label: 'lstr3'}
+	{value: "idstr1", label: "lstr1"},
+	{value: "idstr2", label: "lstr2"},
+	{value: "idstr3", label: "lstr3"}
 ];
 
-test('Test retrieval of Dropdown props object', () => {
+test("Test retrieval of Dropdown props object", () => {
 	const props = getDefaultDropdownProps();
 
 	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
-test('Creation of the Dropdown control', () => {
-	const ctl = shallow(
-		<Dropdown
-			defaultVal="idstr2"
-			items={testData}
-		/>
-	);
+test("Creation of the Dropdown control", () => {
+	const ctl = shallow(<Dropdown defaultVal='idstr2' items={testData} />);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Disable the Dropdown control', () => {
+test("Disable the Dropdown control", () => {
 	const change = jest.fn();
 	const ctl = mount(
 		<Dropdown
-			defaultVal="idstr2"
+			defaultVal='idstr2'
 			disabled
 			items={testData}
 			onSelect={change}
@@ -44,15 +39,17 @@ test('Disable the Dropdown control', () => {
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
-	ctl.find('.ui-dropdown').first().simulate('change', {target: {value: 'idstr2'}});
+	ctl.find(".ui-dropdown")
+		.first()
+		.simulate("change", {target: {value: "idstr2"}});
 	expect(change).not.toHaveBeenCalled();
 });
 
-test('Make the Dropdown control invisible', () => {
+test("Make the Dropdown control invisible", () => {
 	const change = jest.fn();
 	const ctl = mount(
 		<Dropdown
-			defaultVal="idstr2"
+			defaultVal='idstr2'
 			items={testData}
 			onSelect={change}
 			visible={false}
@@ -62,24 +59,24 @@ test('Make the Dropdown control invisible', () => {
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-dropdown').first().simulate('change', {target: {value: 'idstr2'}});
+	ctl.find(".ui-dropdown")
+		.first()
+		.simulate("change", {target: {value: "idstr2"}});
 	expect(change).not.toHaveBeenCalled();
 });
 
-test('Test the Dropdown click event', () => {
+test("Test the Dropdown click event", () => {
 	const change = jest.fn();
 	const ctl = mount(
-		<Dropdown
-			defaultVal="idstr1"
-			items={testData}
-			onSelect={change}
-		/>
+		<Dropdown defaultVal='idstr1' items={testData} onSelect={change} />
 	);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 
-	ctl.find('.ui-dropdown').first().simulate('change', {target: {value: 'idstr1'}});
+	ctl.find(".ui-dropdown")
+		.first()
+		.simulate("change", {target: {value: "idstr1"}});
 	expect(change).toHaveBeenCalled();
-	expect(change.mock.calls[0][0]).toBe('idstr1');
+	expect(change.mock.calls[0][0]).toBe("idstr1");
 });

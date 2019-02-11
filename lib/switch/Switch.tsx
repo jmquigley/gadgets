@@ -52,13 +52,13 @@
  * @module Switch
  */
 
-'use strict';
+"use strict";
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {ClassNames} from 'util.classnames';
-import {nilEvent} from 'util.toolbox';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {ClassNames} from "util.classnames";
+import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
 	BaseProps,
@@ -70,8 +70,8 @@ import {
 	invisible,
 	rectStyle,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export enum SwitchType {
 	inny,
@@ -88,10 +88,11 @@ export interface SwitchProps extends BaseProps {
 }
 
 export function getDefaultSwitchProps(): SwitchProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		initialToggle: false,
 		innyScale: 0.6,
-		obj: 'Switch',
+		obj: "Switch",
 		onClick: nilEvent,
 		outyScale: 1.25,
 		sliderScale: 1.25,
@@ -106,9 +107,10 @@ export interface SwitchState extends BaseState {
 }
 
 export function getDefaultSwitchState(): SwitchState {
-	return cloneDeep({...getDefaultBaseState('ui-switch'),
-		buttonStyles: new ClassNames('ui-switch-button'),
-		sliderStyles: new ClassNames('ui-switch-slider'),
+	return cloneDeep({
+		...getDefaultBaseState("ui-switch"),
+		buttonStyles: new ClassNames("ui-switch-button"),
+		sliderStyles: new ClassNames("ui-switch-slider"),
 		toggle: false
 	});
 }
@@ -124,8 +126,8 @@ export const StyledButton: any = styled.div`
 	transition: all ${(props: SwitchProps) => props.theme.transitionDelay} ease;
 	transform: translateY(-50%);
 
-	width: ${(props: SwitchProps) => props.width || '1.0em'};
-	height: ${(props: SwitchProps) => props.height || '1.0em'};
+	width: ${(props: SwitchProps) => props.width || "1.0em"};
+	height: ${(props: SwitchProps) => props.height || "1.0em"};
 `;
 
 export const SliderView: any = styled.div`
@@ -150,13 +152,13 @@ export const SliderContainerView: any = styled.div`
 `;
 
 export class Switch extends BaseComponent<SwitchProps, SwitchState> {
-
 	public static defaultProps: SwitchProps = getDefaultSwitchProps();
 
 	constructor(props: SwitchProps) {
 		super(props, Switch.defaultProps.style);
 
-		this.state = {...getDefaultSwitchState(),
+		this.state = {
+			...getDefaultSwitchState(),
 			toggle: this.props.initialToggle
 		};
 	}
@@ -170,39 +172,49 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 		}
 	}
 
-	public static getDerivedStateFromProps(props: SwitchProps, state: SwitchState) {
+	public static getDerivedStateFromProps(
+		props: SwitchProps,
+		state: SwitchState
+	) {
 		const newState: SwitchState = {...state};
 
 		newState.buttonStyles.onIf(!props.noripple && !props.disabled)(
-			'ripple'
+			"ripple"
 		);
 
-		newState.sliderStyles.onIfElse(newState.toggle)(
-			'ui-slider-on'
-		)(
-			'ui-slider-off'
+		newState.sliderStyles.onIfElse(newState.toggle)("ui-slider-on")(
+			"ui-slider-off"
 		);
 
 		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public render() {
-		let size: string = '';
-		let left: string = '';
+		let size: string = "";
+		let left: string = "";
 
 		if (this.props.switchType === SwitchType.outy) {
-			left = this.state.toggle ? '-15%' : '45%';
-			size = BaseComponent.fontSizePX(this.props.sizing, this.props.outyScale);
+			left = this.state.toggle ? "-15%" : "45%";
+			size = BaseComponent.fontSizePX(
+				this.props.sizing,
+				this.props.outyScale
+			);
 		} else if (this.props.switchType === SwitchType.inny) {
-			left = this.state.toggle ? '5%' : '60%';
-			size = BaseComponent.fontSizePX(this.props.sizing, this.props.innyScale);
+			left = this.state.toggle ? "5%" : "60%";
+			size = BaseComponent.fontSizePX(
+				this.props.sizing,
+				this.props.innyScale
+			);
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<SliderContainerView
 					className={this.state.classes.classnames}
-					height={BaseComponent.fontSizePX(this.props.sizing, this.props.sliderScale)}
+					height={BaseComponent.fontSizePX(
+						this.props.sizing,
+						this.props.sliderScale
+					)}
 					style={this.state.style}
 				>
 					<SliderView
@@ -210,7 +222,9 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 						className={this.state.sliderStyles.classnames}
 						onClick={this.handleClick}
 						style={{
-							backgroundColor: this.state.toggle ? Color.success : Color.error
+							backgroundColor: this.state.toggle
+								? Color.success
+								: Color.error
 						}}
 					>
 						<StyledButton

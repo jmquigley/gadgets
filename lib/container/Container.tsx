@@ -28,10 +28,10 @@
  * @module Container
  */
 
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
+import {cloneDeep} from "lodash";
+import * as React from "react";
 import {
 	BaseComponent,
 	BaseProps,
@@ -40,8 +40,8 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface ContainerProps extends BaseProps {
 	children?: any;
@@ -49,11 +49,11 @@ export interface ContainerProps extends BaseProps {
 }
 
 export function getDefaultContainerProps(): ContainerProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
+	return cloneDeep(
+		Object.assign({}, getDefaultBaseProps(), {
 			children: null,
-			obj: 'Container',
-			title: ''
+			obj: "Container",
+			title: ""
 		})
 	);
 }
@@ -61,20 +61,19 @@ export function getDefaultContainerProps(): ContainerProps {
 export type ContainerState = BaseState;
 
 export function getDefaultContainerState(): ContainerState {
-	return cloneDeep({...getDefaultBaseState('ui-container')});
+	return cloneDeep({...getDefaultBaseState("ui-container")});
 }
 
 export const ContainerView: any = styled.div`
 	height: ${(props: ContainerProps) => props.height};
 	margin: 2px 0;
-	minHeight: ${(props: ContainerProps) => props.minHeight};
+	minheight: ${(props: ContainerProps) => props.minHeight};
 	padding: 0;
 
 	${(props: ContainerProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
 export class Container extends BaseComponent<ContainerProps, ContainerState> {
-
 	public static defaultProps: ContainerProps = getDefaultContainerProps();
 	public state: ContainerState = getDefaultContainerState();
 
@@ -85,15 +84,11 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 	public render() {
 		let title: any = null;
 		if (this.props.title) {
-			title = (
-				<h1 key={this.props.title}>
-					{this.props.title}
-				</h1>
-			);
+			title = <h1 key={this.props.title}>{this.props.title}</h1>;
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<ContainerView
 					className={this.state.classes.classnames}
 					key={this.props.id}

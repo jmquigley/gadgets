@@ -1,37 +1,53 @@
-const debug = require('debug')('gadgets');
+const debug = require("debug")("gadgets");
 
-import 'util.string';
+import "util.string";
 
 // process.env['NODE_ENV'] = process.env['NODE_ENV'] || 'production';
 
-debug('env: %O', process.env);
-debug('exe: %s', process.env['NODE_ENV']);
+debug("env: %O", process.env);
+debug("exe: %s", process.env["NODE_ENV"]);
 
 import {
 	Accordion,
 	AccordionItem,
 	getDefaultAccordionItemProps,
 	getDefaultAccordionProps
-} from './lib/accordion';
-import {Badge, getDefaultBadgeProps} from './lib/badge';
-import {Breadcrumbs, Crumbs, getDefaultBreadcrumbsProps} from './lib/breadcrumbs';
-import {Break} from './lib/break';
-import {Browser, getDefaultBrowserProps} from './lib/browser';
-import {Button, getDefaultButtonProps} from './lib/button';
-import {ButtonCircle, getDefaultButtonCircleProps} from './lib/buttonCircle';
-import {ButtonDialog, getDefaultButtonDialogProps} from './lib/buttonDialog';
-import {ButtonText, getDefaultButtonTextProps} from './lib/buttonText';
-import {ButtonToggle, getDefaultButtonToggleProps} from './lib/buttonToggle';
-import {Container, getDefaultContainerProps} from './lib/container';
-import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from './lib/dialogBox';
-import {DialogWindow, getDefaultDialogWindowProps} from './lib/dialogWindow';
-import {Divider, DividerType, getDefaultDividerProps} from './lib/divider';
-import {Dropdown, DropdownOption, getDefaultDropdownProps} from './lib/dropdown';
-import {DynamicList, DynamicListItem, getDefaultDynamicListProps} from './lib/dynamicList';
-import {Editor, getDefaultEditorProps} from './lib/editor';
-import {getDefaultIconProps, Icon} from './lib/icon';
-import {getDefaultItemProps, Item} from './lib/item';
-import {getDefaultLabelProps, Label} from './lib/label';
+} from "./lib/accordion";
+import {Badge, getDefaultBadgeProps} from "./lib/badge";
+import {
+	Breadcrumbs,
+	Crumbs,
+	getDefaultBreadcrumbsProps
+} from "./lib/breadcrumbs";
+import {Break} from "./lib/break";
+import {Browser, getDefaultBrowserProps} from "./lib/browser";
+import {Button, getDefaultButtonProps} from "./lib/button";
+import {ButtonCircle, getDefaultButtonCircleProps} from "./lib/buttonCircle";
+import {ButtonDialog, getDefaultButtonDialogProps} from "./lib/buttonDialog";
+import {ButtonText, getDefaultButtonTextProps} from "./lib/buttonText";
+import {ButtonToggle, getDefaultButtonToggleProps} from "./lib/buttonToggle";
+import {Container, getDefaultContainerProps} from "./lib/container";
+import {
+	DialogBox,
+	DialogBoxType,
+	getDefaultDialogBoxProps
+} from "./lib/dialogBox";
+import {DialogWindow, getDefaultDialogWindowProps} from "./lib/dialogWindow";
+import {Divider, DividerType, getDefaultDividerProps} from "./lib/divider";
+import {
+	Dropdown,
+	DropdownOption,
+	getDefaultDropdownProps
+} from "./lib/dropdown";
+import {
+	DynamicList,
+	DynamicListItem,
+	getDefaultDynamicListProps
+} from "./lib/dynamicList";
+import {Editor, getDefaultEditorProps} from "./lib/editor";
+import {getDefaultIconProps, Icon} from "./lib/icon";
+import {getDefaultItemProps, Item} from "./lib/item";
+import {getDefaultLabelProps, Label} from "./lib/label";
 import {
 	getDefaultListDividerProps,
 	getDefaultListFooterProps,
@@ -43,15 +59,15 @@ import {
 	ListFooter,
 	ListHeader,
 	ListItem
-} from './lib/list';
+} from "./lib/list";
 import {
 	getDefaultOptionGroupProps,
 	getDefaultOptionProps,
 	Option,
 	OptionGroup,
 	OptionType
-} from './lib/option';
-import {getDefaultPagerProps, Pager} from './lib/pager';
+} from "./lib/option";
+import {getDefaultPagerProps, Pager} from "./lib/pager";
 import {
 	BaseComponent,
 	BaseProps,
@@ -74,11 +90,21 @@ import {
 	Theme,
 	ThemeProps,
 	Wrapper
-} from './lib/shared';
-import {getDefaultSliderProps, Slider} from './lib/slider';
-import {getDefaultSwitchProps, Switch, SwitchType} from './lib/switch';
-import {getDefaultTabContainerProps, getDefaultTabProps, Tab, TabContainer} from './lib/tabs';
-import {getDefaultTagListProps, getDefaultTagProps, Tag, TagList} from './lib/tagList';
+} from "./lib/shared";
+import {getDefaultSliderProps, Slider} from "./lib/slider";
+import {getDefaultSwitchProps, Switch, SwitchType} from "./lib/switch";
+import {
+	getDefaultTabContainerProps,
+	getDefaultTabProps,
+	Tab,
+	TabContainer
+} from "./lib/tabs";
+import {
+	getDefaultTagListProps,
+	getDefaultTagProps,
+	Tag,
+	TagList
+} from "./lib/tagList";
 import {
 	getDefaultTextFieldProps,
 	TextField,
@@ -89,13 +115,13 @@ import {
 	validateURL,
 	Validator,
 	ValidatorFn
-} from './lib/textField';
-import {getDefaultTitleProps, Title, TitleLayout} from './lib/title';
-import {getDefaultToastProps, Toast, ToastLevel} from './lib/toast';
-import {getDefaultToolbarProps, Toolbar} from './lib/toolbar';
-import {getDefaultTooltipProps, Tooltip} from './lib/tooltip';
-import {getDefaultTreeviewProps, TreeItem, Treeview} from './lib/treeview';
-import {getDefaultTriangleProps, Triangle} from './lib/triangle';
+} from "./lib/textField";
+import {getDefaultTitleProps, Title, TitleLayout} from "./lib/title";
+import {getDefaultToastProps, Toast, ToastLevel} from "./lib/toast";
+import {getDefaultToolbarProps, Toolbar} from "./lib/toolbar";
+import {getDefaultTooltipProps, Tooltip} from "./lib/tooltip";
+import {getDefaultTreeviewProps, TreeItem, Treeview} from "./lib/treeview";
+import {getDefaultTriangleProps, Triangle} from "./lib/triangle";
 
 // Themed component classes
 import styled, {
@@ -104,9 +130,9 @@ import styled, {
 	keyframes,
 	ThemeProvider,
 	withTheme
-} from './lib/shared/themed-components';
+} from "./lib/shared/themed-components";
 
-const pkg = require('./package.json');
+const pkg = require("./package.json");
 const version = `v${JSON.stringify(pkg.version)}`;
 
 export {

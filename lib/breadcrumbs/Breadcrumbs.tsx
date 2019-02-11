@@ -59,17 +59,17 @@
  * @module Breadcrumbs
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Breadcrumbs');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {Keys} from 'util.keys';
-import {nilEvent} from 'util.toolbox';
-import {ButtonText} from '../buttonText';
-import {Icon} from '../icon';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {Keys} from "util.keys";
+import {nilEvent} from "util.toolbox";
+import {ButtonText} from "../buttonText";
+import {Icon} from "../icon";
 import {
 	BaseComponent,
 	BaseProps,
@@ -81,8 +81,8 @@ import {
 	Justify,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface Crumbs {
 	name: string;
@@ -98,12 +98,12 @@ export interface BreadcrumbsProps extends BaseProps {
 }
 
 export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			chevron: 'chevron-right',
-			icon: 'paperclip',
+	return cloneDeep(
+		Object.assign({}, getDefaultBaseProps(), {
+			chevron: "chevron-right",
+			icon: "paperclip",
 			items: [],
-			obj: 'Breadcrumbs',
+			obj: "Breadcrumbs",
 			onSelect: nilEvent
 		})
 	);
@@ -112,7 +112,7 @@ export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
 export type BreadcrumbsState = BaseState;
 
 export function getDefaultBreadcrumbsState(): BreadcrumbsState {
-	return cloneDeep({...getDefaultBaseState('ui-breadcrumbs')});
+	return cloneDeep({...getDefaultBaseState("ui-breadcrumbs")});
 }
 
 export const BreadcrumbsView: any = styled.div`
@@ -125,16 +125,22 @@ export const BreadcrumbsView: any = styled.div`
 export const IconView: any = styled(Icon)`
 	margin-top: ${(props: BreadcrumbsProps) => {
 		switch (props.sizing) {
-			case Sizing.xxsmall: return('0.075rem');
-			case Sizing.xsmall: return('0.1rem');
-			case Sizing.small: return('0.2rem');
-			case Sizing.large: return('0.3rem');
-			case Sizing.xlarge: return('0.5rem');
-			case Sizing.xxlarge: return('0.7rem');
+			case Sizing.xxsmall:
+				return "0.075rem";
+			case Sizing.xsmall:
+				return "0.1rem";
+			case Sizing.small:
+				return "0.2rem";
+			case Sizing.large:
+				return "0.3rem";
+			case Sizing.xlarge:
+				return "0.5rem";
+			case Sizing.xxlarge:
+				return "0.7rem";
 
 			case Sizing.normal:
 			default:
-				return('0.2rem');
+				return "0.2rem";
 		}
 	}};
 	padding: 0 0.3rem;
@@ -144,7 +150,10 @@ export const ChevronIconView: any = styled(IconView)`
 	opacity: 0.33;
 `;
 
-export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, BreadcrumbsState> {
+export class Breadcrumbs extends BaseComponent<
+	BreadcrumbsProps,
+	BreadcrumbsState
+> {
 	public static readonly defaultProps: BreadcrumbsProps = getDefaultBreadcrumbsProps();
 	public state: BreadcrumbsState = getDefaultBreadcrumbsState();
 
@@ -154,8 +163,14 @@ export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, BreadcrumbsStat
 	constructor(props: BreadcrumbsProps) {
 		super(props, Breadcrumbs.defaultProps.style);
 
-		this._nameKeys = new Keys({testing: this.props.testing, testingPrefix: 'name'});
-		this._iconKeys = new Keys({testing: this.props.testing, testingPrefix: 'icon'});
+		this._nameKeys = new Keys({
+			testing: this.props.testing,
+			testingPrefix: "name"
+		});
+		this._iconKeys = new Keys({
+			testing: this.props.testing,
+			testingPrefix: "icon"
+		});
 	}
 
 	@autobind
@@ -175,7 +190,7 @@ export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, BreadcrumbsStat
 				components.push(
 					<ButtonText
 						{...this.props}
-						className="ui-breadcrumbs-name"
+						className='ui-breadcrumbs-name'
 						justify={Justify.center}
 						key={this._nameKeys.at(idx)}
 						onClick={this.buttonSelector(name, uri)}
@@ -185,7 +200,7 @@ export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, BreadcrumbsStat
 				components.push(
 					<ChevronIconView
 						{...this.props}
-						className="ui-breadcrumbs-chevron"
+						className='ui-breadcrumbs-chevron'
 						iconName={this.props.chevron}
 						key={this._iconKeys.at(idx)}
 					/>
@@ -201,14 +216,14 @@ export class Breadcrumbs extends BaseComponent<BreadcrumbsProps, BreadcrumbsStat
 			icon = (
 				<IconView
 					{...this.props}
-					className="ui-breadcrumbs-icon"
+					className='ui-breadcrumbs-icon'
 					iconName={this.props.icon}
 				/>
 			);
 		}
 
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<BreadcrumbsView className={this.state.classes.classnames}>
 					{icon}
 					{components}

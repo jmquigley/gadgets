@@ -37,10 +37,10 @@
  * @module Divider
  */
 
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
+import {cloneDeep} from "lodash";
+import * as React from "react";
 import {
 	BaseComponent,
 	BaseProps,
@@ -49,13 +49,13 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export enum DividerType {
-	horizontal = '-',
-	vertical = '|',
-	none = ' '
+	horizontal = "-",
+	vertical = "|",
+	none = " "
 }
 
 export interface DividerProps extends BaseProps {
@@ -63,10 +63,10 @@ export interface DividerProps extends BaseProps {
 }
 
 export function getDefaultDividerProps(): DividerProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
+	return cloneDeep(
+		Object.assign({}, getDefaultBaseProps(), {
 			dividerType: DividerType.none,
-			obj: 'Divider'
+			obj: "Divider"
 		})
 	);
 }
@@ -74,7 +74,7 @@ export function getDefaultDividerProps(): DividerProps {
 export type DividerState = BaseState;
 
 export function getDefaultDividerState(): DividerState {
-	return cloneDeep({...getDefaultBaseState('ui-divider')});
+	return cloneDeep({...getDefaultBaseState("ui-divider")});
 }
 
 export const DividerView: any = styled.div`
@@ -83,11 +83,10 @@ export const DividerView: any = styled.div`
 	display: inline-flex;
 	justify-content: center;
 	opacity: 0.5;
-	width: ${(props: DividerProps) => props.width || '1.0em'};
+	width: ${(props: DividerProps) => props.width || "1.0em"};
 `;
 
 export class Divider extends BaseComponent<DividerProps, DividerState> {
-
 	public static readonly defaultProps: DividerProps = getDefaultDividerProps();
 	public state: DividerState = getDefaultDividerState();
 
@@ -96,8 +95,8 @@ export class Divider extends BaseComponent<DividerProps, DividerState> {
 	}
 
 	public render() {
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<DividerView
 					className={this.state.classes.classnames}
 					style={this.state.style}

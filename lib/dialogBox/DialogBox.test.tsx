@@ -1,28 +1,28 @@
-'use strict';
+"use strict";
 
-import {shallow} from 'enzyme';
-import * as React from 'react';
-import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from './index';
+import {shallow} from "enzyme";
+import * as React from "react";
+import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from "./index";
 
-test('Test retrieval of DialogBox props object', () => {
+test("Test retrieval of DialogBox props object", () => {
 	const props = getDefaultDialogBoxProps();
 
 	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
-test('Test creation of a default DialogBox control', () => {
-	const ctl = shallow(<DialogBox className="test-class" />);
+test("Test creation of a default DialogBox control", () => {
+	const ctl = shallow(<DialogBox className='test-class' />);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test the creation of an error DialogBox', () => {
+test("Test the creation of an error DialogBox", () => {
 	const ctl = shallow(
 		<DialogBox
 			dialogType={DialogBoxType.error}
-			message="Sample error message"
+			message='Sample error message'
 			show
 		/>
 	);
@@ -31,11 +31,11 @@ test('Test the creation of an error DialogBox', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test the creation of an warning DialogBox', () => {
+test("Test the creation of an warning DialogBox", () => {
 	const ctl = shallow(
 		<DialogBox
 			dialogType={DialogBoxType.warning}
-			message="Sample warning message"
+			message='Sample warning message'
 			show
 		/>
 	);
@@ -44,11 +44,11 @@ test('Test the creation of an warning DialogBox', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test the creation of an success DialogBox', () => {
+test("Test the creation of an success DialogBox", () => {
 	const ctl = shallow(
 		<DialogBox
 			dialogType={DialogBoxType.success}
-			message="Sample success message"
+			message='Sample success message'
 			show
 		/>
 	);
@@ -57,11 +57,11 @@ test('Test the creation of an success DialogBox', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test the creation of an info DialogBox', () => {
+test("Test the creation of an info DialogBox", () => {
 	const ctl = shallow(
 		<DialogBox
 			dialogType={DialogBoxType.info}
-			message="Sample info message"
+			message='Sample info message'
 			show
 		/>
 	);
@@ -70,15 +70,15 @@ test('Test the creation of an info DialogBox', () => {
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test the creation of an custom DialogBox', () => {
+test("Test the creation of an custom DialogBox", () => {
 	const ctl = shallow(
 		<DialogBox
 			dialogType={DialogBoxType.custom}
-			iconName="car"
-			message="Sample info message"
+			iconName='car'
+			message='Sample info message'
 			show
 			style={{
-				color: 'magenta'
+				color: "magenta"
 			}}
 		/>
 	);
@@ -91,7 +91,7 @@ test('Test pressing the "yes" button on the default DialogBox', () => {
 	const selection = jest.fn();
 	const ctl = shallow(
 		<DialogBox
-			message="Testing click handler for yes"
+			message='Testing click handler for yes'
 			onSelection={selection}
 			show
 		/>
@@ -99,5 +99,5 @@ test('Test pressing the "yes" button on the default DialogBox', () => {
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
-	expect(ctl.state('showModal')).toBe(true);
+	expect(ctl.state("showModal")).toBe(true);
 });

@@ -1,27 +1,22 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('DemoOption');
+const debug = require("debug")("DemoOption");
 
-import autobind from 'autobind-decorator';
-import {EnumValues as ev} from 'enum-values';
-import * as React from 'react';
-import {
-	Break,
-	Option,
-	OptionType
-} from '../../dist/bundle';
-import {StyledContainer} from '../app';
+import autobind from "autobind-decorator";
+import {EnumValues as ev} from "enum-values";
+import * as React from "react";
+import {Break, Option, OptionType} from "../../dist/bundle";
+import {StyledContainer} from "../app";
 
 export default class DemoOption extends React.Component<any, undefined> {
-
 	constructor(props: any) {
 		super(props);
-		debug('creating');
+		debug("creating");
 	}
 
 	@autobind
 	private handleClick(val: boolean, text: string) {
-		debug('clicked option, flag: %o, text: %o', val, text);
+		debug("clicked option, flag: %o, text: %o", val, text);
 	}
 
 	private buildOptions() {
@@ -30,25 +25,25 @@ export default class DemoOption extends React.Component<any, undefined> {
 		for (const key of ev.getNames(OptionType)) {
 			options.push(
 				<Option
-					disabled={this.props['disabled']}
+					disabled={this.props["disabled"]}
 					onClick={this.handleClick}
-					sizing={this.props['sizing']}
+					sizing={this.props["sizing"]}
 					optionType={OptionType[key]}
 				/>
 			);
 
 			options.push(
 				<Option
-					disabled={this.props['disabled']}
+					disabled={this.props["disabled"]}
 					initialToggle={true}
 					onClick={this.handleClick}
 					optionType={OptionType[key]}
-					sizing={this.props['sizing']}
+					sizing={this.props["sizing"]}
 					text={key}
 				/>
 			);
 
-			options.push(<Break sizing={this.props['sizing']} />);
+			options.push(<Break sizing={this.props["sizing"]} />);
 		}
 
 		return options;
@@ -56,7 +51,7 @@ export default class DemoOption extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<StyledContainer id="optionExample" title="Option">
+			<StyledContainer id='optionExample' title='Option'>
 				{this.buildOptions()}
 			</StyledContainer>
 		);

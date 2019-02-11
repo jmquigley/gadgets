@@ -5,7 +5,7 @@ import {
 	ButtonState,
 	getDefaultButtonProps,
 	getDefaultButtonState
-} from './Button';
+} from "./Button";
 
 export {
 	BaseButtonView,

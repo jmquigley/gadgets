@@ -68,40 +68,40 @@
  * @module BaseProps
  */
 
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import {Sizing} from './sizing';
-import {css} from './themed-components';
+import {cloneDeep} from "lodash";
+import {Sizing} from "./sizing";
+import {css} from "./themed-components";
 
 export enum ColorScheme {
-	c1 = '#004358',
-	c2 = '#1f8a70',
-	c3 = '#bedb39',
-	c4 = '#ffe11a',
-	c5 = '#fd7400'
+	c1 = "#004358",
+	c2 = "#1f8a70",
+	c3 = "#bedb39",
+	c4 = "#ffe11a",
+	c5 = "#fd7400"
 }
 
 export enum Color {
-	black = '#000000',
-	error = '#d9534f',
-	gray = '#808080',
-	info = '#5bc0de',
-	lightsaber = '#2ff923',
-	silver = '#c0c0c0',
-	slategray = '#708090',
-	success = '#5cb85c',
-	warning = '#f0ad4e',
-	white = '#ffffff'
+	black = "#000000",
+	error = "#d9534f",
+	gray = "#808080",
+	info = "#5bc0de",
+	lightsaber = "#2ff923",
+	silver = "#c0c0c0",
+	slategray = "#708090",
+	success = "#5cb85c",
+	warning = "#f0ad4e",
+	white = "#ffffff"
 }
 
 export enum Direction {
-	up = 'up',
-	top = 'top',
-	down = 'down',
-	bottom = 'bottom',
-	left = 'left',
-	right = 'right'
+	up = "up",
+	top = "top",
+	down = "down",
+	bottom = "bottom",
+	left = "left",
+	right = "right"
 }
 
 export enum Justify {
@@ -111,18 +111,18 @@ export enum Justify {
 }
 
 export enum Location {
-	none = 'none',
-	topLeft = 'topLeft',
-	top = 'top',
-	topRight = 'topRight',
-	middleLeft = 'middleLeft',
-	middle = 'middle',
-	middleRight = 'middleRight',
-	bottomLeft = 'bottomLeft',
-	bottom = 'bottom',
-	bottomRight = 'bottomRight',
-	left = 'left',
-	right = 'right'
+	none = "none",
+	topLeft = "topLeft",
+	top = "top",
+	topRight = "topRight",
+	middleLeft = "middleLeft",
+	middle = "middle",
+	middleRight = "middleRight",
+	bottomLeft = "bottomLeft",
+	bottom = "bottom",
+	bottomRight = "bottomRight",
+	left = "left",
+	right = "right"
 }
 
 export enum SortOrder {
@@ -192,12 +192,12 @@ const defaultBaseProps: BaseProps = {
 	noripple: false,
 	notheme: false,
 	notooltip: false,
-	obj: 'Unknown',
+	obj: "Unknown",
 	padding: null,
 	selected: false,
 	sizing: Sizing.normal,
 	style: {},
-	testing: process.env.NODE_ENV !== 'production',
+	testing: process.env.NODE_ENV !== "production",
 	theme: null,
 	tooltip: null,
 	top: null,
@@ -208,7 +208,7 @@ const defaultBaseProps: BaseProps = {
 
 export function getDefaultBaseProps(): BaseProps {
 	const props: BaseProps = cloneDeep(defaultBaseProps);
-	props.testing = process.env.NODE_ENV !== 'production';
+	props.testing = process.env.NODE_ENV !== "production";
 	return props;
 }
 
@@ -223,7 +223,7 @@ export function disabled(props: BaseProps) {
 		return DisabledCSS;
 	}
 
-	return '';
+	return "";
 }
 
 export const InvisibleCSS: any = css`
@@ -236,7 +236,7 @@ export function invisible(props: BaseProps) {
 		return InvisibleCSS;
 	}
 
-	return '';
+	return "";
 }
 
 export const locationStyle: any = {
@@ -299,13 +299,31 @@ export const locationStyle: any = {
 };
 
 export const borderStyle: any = {
-	[Sizing.xxsmall]: css`border: solid 0.1em;`,
-	[Sizing.xsmall]: css`border: solid 0.1em;`,
-	[Sizing.small]: css`border: solid 0.125em;`,
-	[Sizing.medium]: css`border: solid 0.15em;`,
-	[Sizing.normal]: css`border: solid 0.15em;`,
-	[Sizing.large]: css`border: solid 0.2em;`,
-	[Sizing.xlarge]: css`border: solid 0.25em;`,
-	[Sizing.xxlarge]: css`border: solid 0.3em;`,
-	[Sizing.inherit]: css`border: inherit;`
+	[Sizing.xxsmall]: css`
+		border: solid 0.1em;
+	`,
+	[Sizing.xsmall]: css`
+		border: solid 0.1em;
+	`,
+	[Sizing.small]: css`
+		border: solid 0.125em;
+	`,
+	[Sizing.medium]: css`
+		border: solid 0.15em;
+	`,
+	[Sizing.normal]: css`
+		border: solid 0.15em;
+	`,
+	[Sizing.large]: css`
+		border: solid 0.2em;
+	`,
+	[Sizing.xlarge]: css`
+		border: solid 0.25em;
+	`,
+	[Sizing.xxlarge]: css`
+		border: solid 0.3em;
+	`,
+	[Sizing.inherit]: css`
+		border: inherit;
+	`
 };

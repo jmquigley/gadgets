@@ -1,52 +1,46 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('DemoTagList');
+const debug = require("debug")("DemoTagList");
 
-import * as React from 'react';
-import {
-	Break,
-	TagList
-} from '../../dist/bundle';
-import {StyledContainer} from '../app';
+import * as React from "react";
+import {Break, TagList} from "../../dist/bundle";
+import {StyledContainer} from "../app";
 
 export default class DemoTagList extends React.Component<any, undefined> {
-
 	constructor(props: any) {
 		super(props);
-		debug('creating');
+		debug("creating");
 	}
 
 	public render() {
 		return (
-			<StyledContainer id="tagListExample" title="TagList">
-
+			<StyledContainer id='tagListExample' title='TagList'>
 				<h3>Static</h3>
 				<TagList
-					disabled={this.props['disabled']}
-					sizing={this.props['sizing']}
-					tags={['one', 'two', 'three']}
+					disabled={this.props["disabled"]}
+					sizing={this.props["sizing"]}
+					tags={["one", "two", "three"]}
 				/>
-				<Break sizing={this.props['sizing']} />
+				<Break sizing={this.props["sizing"]} />
 
 				<h3>Changeable (no sorting)</h3>
 				<TagList
-					disabled={this.props['disabled']}
+					disabled={this.props["disabled"]}
 					nosort
-					sizing={this.props['sizing']}
-					tags={['aaa', 'ccc', 'bbb']}
+					sizing={this.props["sizing"]}
+					tags={["aaa", "ccc", "bbb"]}
 					useinput
 				/>
-				<Break sizing={this.props['sizing']} />
+				<Break sizing={this.props["sizing"]} />
 
 				<h3>Changeable (sorted)</h3>
 				<TagList
-					disabled={this.props['disabled']}
-					sizing={this.props['sizing']}
-					tags={['aaa', 'ccc', 'bbb']}
+					disabled={this.props["disabled"]}
+					sizing={this.props["sizing"]}
+					tags={["aaa", "ccc", "bbb"]}
 					useinput
 				/>
-
-		</StyledContainer>
+			</StyledContainer>
 		);
 	}
 }

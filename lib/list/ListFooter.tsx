@@ -1,11 +1,11 @@
 // TODO: add documenation for ListFooter
 
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {BaseComponent, Wrapper} from '../shared';
-import styled from '../shared/themed-components';
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {BaseComponent, Wrapper} from "../shared";
+import styled from "../shared/themed-components";
 import {
 	getDefaultTitleProps,
 	getDefaultTitleState,
@@ -13,22 +13,23 @@ import {
 	TitleLayout,
 	TitleProps,
 	TitleState
-} from '../title';
+} from "../title";
 
 export type ListFooterProps = TitleProps;
 
 export function getDefaultListFooterProps(): TitleProps {
-	return cloneDeep({...getDefaultTitleProps(),
+	return cloneDeep({
+		...getDefaultTitleProps(),
 		layout: TitleLayout.even,
-		obj: 'ListFooter',
-		title: ''
+		obj: "ListFooter",
+		title: ""
 	});
 }
 
 export type ListFooterState = TitleState;
 
 export function getDefaultListFooterState(): ListFooterState {
-	return({...getDefaultTitleState('ui-list-footer')});
+	return {...getDefaultTitleState("ui-list-footer")};
 }
 
 export const ListFooterView: any = styled(Title)`
@@ -41,8 +42,10 @@ export const ListFooterView: any = styled(Title)`
 	}
 `;
 
-export class ListFooter extends BaseComponent<ListFooterProps, ListFooterState> {
-
+export class ListFooter extends BaseComponent<
+	ListFooterProps,
+	ListFooterState
+> {
 	public static defaultProps: ListFooterProps = getDefaultListFooterProps();
 	public state: ListFooterState = getDefaultListFooterState();
 
@@ -52,7 +55,7 @@ export class ListFooter extends BaseComponent<ListFooterProps, ListFooterState> 
 
 	public render() {
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<ListFooterView
 					{...this.props}
 					className={this.state.classes.classnames}

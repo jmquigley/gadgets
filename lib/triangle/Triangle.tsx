@@ -39,11 +39,11 @@
  * @module Triangle
  */
 
-'use strict';
+"use strict";
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import styled from 'styled-components';
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import styled from "styled-components";
 import {
 	BaseComponent,
 	BaseProps,
@@ -53,21 +53,22 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	Wrapper
-} from '../shared';
+} from "../shared";
 
 export interface TriangleProps extends BaseProps {
 	nobase?: boolean;
 }
 
 export function getDefaultTriangleProps(): TriangleProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		direction: Direction.up,
 		nobase: false,
-		obj: 'Triangle',
+		obj: "Triangle",
 		style: {
-			fill: 'black',
-			stroke: 'black',
-			stokeWidth: '2px'
+			fill: "black",
+			stroke: "black",
+			stokeWidth: "2px"
 		}
 	});
 }
@@ -75,18 +76,21 @@ export function getDefaultTriangleProps(): TriangleProps {
 export type TriangleState = BaseState;
 
 export function getDefaultTriangleState(): TriangleState {
-	return cloneDeep({...getDefaultBaseState('ui-triangle')});
+	return cloneDeep({...getDefaultBaseState("ui-triangle")});
 }
 
 export const SVGView: any = styled.svg`
 	transform: ${(props: TriangleProps) => {
 		switch (props.direction) {
-			case Direction.right: return('rotate(90deg)');
-			case Direction.down: return('rotate(180deg)');
-			case Direction.left: return('rotate(270deg)');
+			case Direction.right:
+				return "rotate(90deg)";
+			case Direction.down:
+				return "rotate(180deg)";
+			case Direction.left:
+				return "rotate(270deg)";
 			case Direction.up:
 			default:
-				return('rotate(0deg)');
+				return "rotate(0deg)";
 		}
 	}};
 
@@ -94,7 +98,6 @@ export const SVGView: any = styled.svg`
 `;
 
 export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
-
 	public static readonly defaultProps: TriangleProps = getDefaultTriangleProps();
 	public state: TriangleState = getDefaultTriangleState();
 
@@ -110,21 +113,21 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 				<SVGView
 					{...this.props}
 					className={this.state.classes.classnames}
-					preserveAspectRatio="xMidYMid meet"
+					preserveAspectRatio='xMidYMid meet'
 					style={this.state.style}
-					version="1.1"
-					viewBox="0 0 40 40"
-					xmlns="http://www.w3.org/2000/svg"
+					version='1.1'
+					viewBox='0 0 40 40'
+					xmlns='http://www.w3.org/2000/svg'
 				>
 					<polygon
-						points="-3,35, 20,10 43,35"
-						style={{stroke: 'none'}}
+						points='-3,35, 20,10 43,35'
+						style={{stroke: "none"}}
 					/>
 					<polygon
-						points="-3,35, 20,10 43,35, 20,10"
+						points='-3,35, 20,10 43,35, 20,10'
 						style={{
-							strokeWidth: this.state.style['strokeWidth'],
-							strokeLinecap: 'square'
+							strokeWidth: this.state.style["strokeWidth"],
+							strokeLinecap: "square"
 						}}
 					/>
 				</SVGView>
@@ -134,21 +137,17 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 				<SVGView
 					{...this.props}
 					className={this.state.classes.classnames}
-					preserveAspectRatio="xMidYMid meet"
+					preserveAspectRatio='xMidYMid meet'
 					style={this.state.style}
-					version="1.1"
-					viewBox="0 0 40 40"
-					xmlns="http://www.w3.org/2000/svg"
+					version='1.1'
+					viewBox='0 0 40 40'
+					xmlns='http://www.w3.org/2000/svg'
 				>
-					<polygon points="0,35, 20,10 40,35" />
+					<polygon points='0,35, 20,10 40,35' />
 				</SVGView>
 			);
 		}
 
-		return (
-			<Wrapper {...this.props} >
-				{triangle}
-			</Wrapper>
-		);
+		return <Wrapper {...this.props}>{triangle}</Wrapper>;
 	}
 }

@@ -1,18 +1,18 @@
-'use strict';
+"use strict";
 
-import {shallow} from 'enzyme';
-import * as React from 'react';
-import {getDefaultToastProps, Toast} from './index';
+import {shallow} from "enzyme";
+import * as React from "react";
+import {getDefaultToastProps, Toast} from "./index";
 
-test('Test retrieval of Toast props object', () => {
+test("Test retrieval of Toast props object", () => {
 	const props = getDefaultToastProps();
 
 	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
-test('Test creation of a Toast control', () => {
-	const ctl = shallow(<Toast className="test-class" />);
+test("Test creation of a Toast control", () => {
+	const ctl = shallow(<Toast className='test-class' />);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();

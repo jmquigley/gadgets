@@ -5,7 +5,7 @@ import {
 	TitleLayout,
 	TitleProps,
 	TitleState
-} from './Title';
+} from "./Title";
 
 export {
 	getDefaultTitleProps,

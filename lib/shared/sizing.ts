@@ -43,24 +43,24 @@
  *
  */
 
-'use strict';
+"use strict";
 
-const debug = require('debug')('sizing');
+const debug = require("debug")("sizing");
 
-import {css} from './themed-components';
+import {css} from "./themed-components";
 
 const instances = new Map();
 
 export enum Sizing {
-	xxsmall = 'xxsmall',
-	xsmall = 'xsmall',
-	small = 'small',
-	normal = 'normal',
-	medium = 'medium',
-	large = 'large',
-	xlarge = 'xlarge',
-	xxlarge = 'xxlarge',
-	inherit = 'inherit'
+	xxsmall = "xxsmall",
+	xsmall = "xsmall",
+	small = "small",
+	normal = "normal",
+	medium = "medium",
+	large = "large",
+	xlarge = "xlarge",
+	xxlarge = "xxlarge",
+	inherit = "inherit"
 }
 
 export interface FontStyle {
@@ -79,15 +79,33 @@ export interface Styling {
 }
 
 export const borderStyle: any = {
-	[Sizing.xxsmall]: css`border: solid 0.05em;`,
-	[Sizing.xsmall]: css`border: solid 0.05em;`,
-	[Sizing.small]: css`border: solid 0.1em;`,
-	[Sizing.medium]: css`border: solid 0.15em;`,
-	[Sizing.normal]: css`border: solid 0.15em;`,
-	[Sizing.large]: css`border: solid 0.2em;`,
-	[Sizing.xlarge]: css`border: solid 0.25em;`,
-	[Sizing.xxlarge]: css`border: solid 0.3em;`,
-	[Sizing.inherit]: css`border: inherit;`
+	[Sizing.xxsmall]: css`
+		border: solid 0.05em;
+	`,
+	[Sizing.xsmall]: css`
+		border: solid 0.05em;
+	`,
+	[Sizing.small]: css`
+		border: solid 0.1em;
+	`,
+	[Sizing.medium]: css`
+		border: solid 0.15em;
+	`,
+	[Sizing.normal]: css`
+		border: solid 0.15em;
+	`,
+	[Sizing.large]: css`
+		border: solid 0.2em;
+	`,
+	[Sizing.xlarge]: css`
+		border: solid 0.25em;
+	`,
+	[Sizing.xxlarge]: css`
+		border: solid 0.3em;
+	`,
+	[Sizing.inherit]: css`
+		border: inherit;
+	`
 };
 export const boxStyle: any = {};
 export const fontStyle: any = {};
@@ -95,15 +113,14 @@ export const rectStyle: any = {};
 export const lineHeightStyle: any = {};
 
 export class Sizes {
-
 	private _sizes: any = {};
 	private readonly _rectWidth: number = 1.75;
-	private readonly _rectHeight: number = 0.80;
+	private readonly _rectHeight: number = 0.8;
 
 	public static instance(baseFontSize: number): Sizes {
 		let tmp = instances.get(baseFontSize);
 		if (!tmp) {
-			debug('Creating new base font sizing: %d', baseFontSize);
+			debug("Creating new base font sizing: %d", baseFontSize);
 			tmp = new Sizes(baseFontSize);
 			instances.set(baseFontSize, tmp);
 		}
@@ -112,7 +129,6 @@ export class Sizes {
 	}
 
 	private constructor(baseFontSize: number) {
-
 		const sizes = [
 			[Sizing.xxsmall, -10],
 			[Sizing.xsmall, -8],
@@ -156,7 +172,8 @@ export class Sizes {
 			};
 		}
 
-		debug('Sizing: %O, boxStyle: %O, fontStyle: %O, rectStyle: %O',
+		debug(
+			"Sizing: %O, boxStyle: %O, fontStyle: %O, rectStyle: %O",
 			this._sizes,
 			boxStyle,
 			fontStyle,
@@ -167,5 +184,4 @@ export class Sizes {
 	public toString(): string {
 		return JSON.stringify(this._sizes, null, 4);
 	}
-
 }

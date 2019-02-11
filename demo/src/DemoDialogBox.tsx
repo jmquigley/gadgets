@@ -1,16 +1,12 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('DemoDialogBox');
+const debug = require("debug")("DemoDialogBox");
 
-import autobind from 'autobind-decorator';
-import * as loremIpsum from 'lorem-ipsum';
-import * as React from 'react';
-import {
-	ButtonText,
-	DialogBox,
-	DialogBoxType
-} from '../../dist/bundle';
-import {StyledContainer} from '../app';
+import autobind from "autobind-decorator";
+import * as loremIpsum from "lorem-ipsum";
+import * as React from "react";
+import {ButtonText, DialogBox, DialogBoxType} from "../../dist/bundle";
+import {StyledContainer} from "../app";
 
 export interface DemoDialogBoxState {
 	dialogError: boolean;
@@ -20,13 +16,19 @@ export interface DemoDialogBoxState {
 	dialogCustom: boolean;
 }
 
-export default class DemoDilogBox extends React.Component<any, DemoDialogBoxState> {
-
-	private randomText: string = loremIpsum({units: 'sentences', count: 2, random: null});
+export default class DemoDilogBox extends React.Component<
+	any,
+	DemoDialogBoxState
+> {
+	private randomText: string = loremIpsum({
+		units: "sentences",
+		count: 2,
+		random: null
+	});
 
 	constructor(props: any) {
 		super(props);
-		debug('creating');
+		debug("creating");
 
 		this.state = {
 			dialogError: false,
@@ -93,94 +95,109 @@ export default class DemoDilogBox extends React.Component<any, DemoDialogBoxStat
 	}
 
 	public render() {
-		return(
-			<StyledContainer id="dialogBoxExample" title="Dialog Box">
-				<div id="simple-buttons">
-					<div className="box">
+		return (
+			<StyledContainer id='dialogBoxExample' title='Dialog Box'>
+				<div id='simple-buttons'>
+					<div className='box'>
 						<ButtonText
 							noicon
 							onClick={this.handleShowErrorDialog}
 							style={{
-								backgroundColor: '#d9534f'
+								backgroundColor: "#d9534f"
 							}}
-							text="Show Error Dialog"
+							text='Show Error Dialog'
 						/>
 						<DialogBox
 							dialogType={DialogBoxType.error}
-							message={'This is a sample error dialog message\n' + this.randomText}
+							message={
+								"This is a sample error dialog message\n" +
+								this.randomText
+							}
 							onSelection={this.handleCloseErrorDialog}
 							show={this.state.dialogError}
 						/>
 					</div>
 
-					<div className="box">
+					<div className='box'>
 						<ButtonText
 							noicon
 							onClick={this.handleShowWarningDialog}
 							style={{
-								backgroundColor: '#f0ad4e'
+								backgroundColor: "#f0ad4e"
 							}}
-							text="Show Warning Dialog"
+							text='Show Warning Dialog'
 						/>
 						<DialogBox
 							dialogType={DialogBoxType.warning}
-							message={'This is a sample warning dialog message\n' + this.randomText}
+							message={
+								"This is a sample warning dialog message\n" +
+								this.randomText
+							}
 							onSelection={this.handleCloseWarningDialog}
 							show={this.state.dialogWarning}
 						/>
 					</div>
 
-					<div className="box">
+					<div className='box'>
 						<ButtonText
 							noicon
 							onClick={this.handleShowSuccessDialog}
 							style={{
-								backgroundColor: '#5cb85c'
+								backgroundColor: "#5cb85c"
 							}}
-							text="Show Success Dialog"
+							text='Show Success Dialog'
 						/>
 						<DialogBox
 							dialogType={DialogBoxType.success}
-							message={'This is a sample success dialog message\n' + this.randomText}
+							message={
+								"This is a sample success dialog message\n" +
+								this.randomText
+							}
 							onSelection={this.handleCloseSuccessDialog}
 							show={this.state.dialogSuccess}
 						/>
 					</div>
 
-					<div className="box">
+					<div className='box'>
 						<ButtonText
 							noicon
 							onClick={this.handleShowInfoDialog}
 							style={{
-								backgroundColor: '#5bc0de'
+								backgroundColor: "#5bc0de"
 							}}
-							text="Show Info Dialog"
+							text='Show Info Dialog'
 						/>
 						<DialogBox
 							dialogType={DialogBoxType.info}
-							message={'This is a sample info dialog message\n' + this.randomText}
+							message={
+								"This is a sample info dialog message\n" +
+								this.randomText
+							}
 							onSelection={this.handleCloseInfoDialog}
 							show={this.state.dialogInfo}
 						/>
 					</div>
 
-					<div className="box">
+					<div className='box'>
 						<ButtonText
 							noicon
 							onClick={this.handleShowCustomDialog}
 							style={{
-								backgroundColor: 'magenta'
+								backgroundColor: "magenta"
 							}}
-							text="Show Custom Dialog"
+							text='Show Custom Dialog'
 						/>
 						<DialogBox
 							dialogType={DialogBoxType.custom}
-							iconName="car"
-							message={'This is a sample custom dialog message\n' + this.randomText}
+							iconName='car'
+							message={
+								"This is a sample custom dialog message\n" +
+								this.randomText
+							}
 							onSelection={this.handleCloseCustomDialog}
 							show={this.state.dialogCustom}
 							style={{
-								color: 'magenta'
+								color: "magenta"
 							}}
 						/>
 					</div>

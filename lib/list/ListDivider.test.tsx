@@ -1,20 +1,18 @@
-'use strict';
+"use strict";
 
-import {shallow} from 'enzyme';
-import * as React from 'react';
-import {getDefaultListDividerProps, ListDivider} from './index';
+import {shallow} from "enzyme";
+import * as React from "react";
+import {getDefaultListDividerProps, ListDivider} from "./index";
 
-test('Test retrieval of ListHeader props object', () => {
+test("Test retrieval of ListHeader props object", () => {
 	const props = getDefaultListDividerProps();
 
 	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
-test('Test the creation of a ListDivider control', () => {
-	const ctl = shallow(
-		<ListDivider color="blue" />
-	);
+test("Test the creation of a ListDivider control", () => {
+	const ctl = shallow(<ListDivider color='blue' />);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();

@@ -60,17 +60,17 @@
  * @module Wrapper
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Wrapper');
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {BaseComponent} from './base';
-import {BaseProps, disabled, getDefaultBaseProps, invisible} from './props';
-import {BaseState, getDefaultBaseState} from './state';
-import styled, {ThemeProvider} from './themed-components';
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {BaseComponent} from "./base";
+import {BaseProps, disabled, getDefaultBaseProps, invisible} from "./props";
+import {BaseState, getDefaultBaseState} from "./state";
+import styled, {ThemeProvider} from "./themed-components";
 
 export interface WrapperProps extends BaseProps {
 	children?: React.ReactChild;
@@ -79,7 +79,8 @@ export interface WrapperProps extends BaseProps {
 }
 
 export function getDefaultWrapperProps(): WrapperProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		children: null,
 		onError: nilEvent,
 		reset: false
@@ -92,8 +93,9 @@ export interface WrapperState extends BaseState {
 }
 
 export function getDefaultWrapperState(): WrapperState {
-	return cloneDeep({...getDefaultBaseState('ui-error'),
-		error: '',
+	return cloneDeep({
+		...getDefaultBaseState("ui-error"),
+		error: "",
 		errorInfo: null
 	});
 }
@@ -104,7 +106,6 @@ export const WrapperView: any = styled.div`
 `;
 
 export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
-
 	public static defaultProps: WrapperProps = getDefaultWrapperProps();
 	public state: WrapperState = getDefaultWrapperState();
 
@@ -113,23 +114,29 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 	}
 
 	public componentDidCatch(error: any = null, errorInfo: any = null) {
-		const msg = error ? error.toString() : '';
+		const msg = error ? error.toString() : "";
 
-		this.setState({
-			error: msg,
-			errorInfo
-		}, () => {
-			if (!this.props.disabled) {
-				this.props.onError(msg, errorInfo);
+		this.setState(
+			{
+				error: msg,
+				errorInfo
+			},
+			() => {
+				if (!this.props.disabled) {
+					this.props.onError(msg, errorInfo);
+				}
 			}
-		});
+		);
 	}
 
-	public static getDerivedStateFromProps(props: WrapperProps, state: WrapperState) {
+	public static getDerivedStateFromProps(
+		props: WrapperProps,
+		state: WrapperState
+	) {
 		const newState: WrapperState = {...state};
 
 		if (props.reset) {
-			newState.error = '';
+			newState.error = "";
 			newState.errorInfo = null;
 		}
 
@@ -144,8 +151,13 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 			if (errobj == null) {
 				errobj = (
 					<WrapperView className={this.state.classes.classnames}>
-						<span className="ui-error-message">Error in component '{this.props.obj}'</span>
-						<details className="ui-error-stack" style={{ whiteSpace: 'pre-wrap' }}>
+						<span className='ui-error-message'>
+							Error in component '{this.props.obj}'
+						</span>
+						<details
+							className='ui-error-stack'
+							style={{whiteSpace: "pre-wrap"}}
+						>
 							{this.state.error}
 							<br />
 							{this.state.errorInfo.componentStack}
@@ -162,11 +174,7 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 		if (this.props.notheme) {
 			return content;
 		} else {
-			return (
-				<ThemeProvider theme={this.theme}>
-					{content}
-				</ThemeProvider>
-			);
+			return <ThemeProvider theme={this.theme}>{content}</ThemeProvider>;
 		}
 	}
 }

@@ -4,7 +4,7 @@ import {
 	ButtonCircleState,
 	getDefaultButtonCircleProps,
 	getDefaultButtonCircleState
-} from './ButtonCircle';
+} from "./ButtonCircle";
 
 export {
 	ButtonCircle,

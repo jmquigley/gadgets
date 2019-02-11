@@ -1,24 +1,23 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('DemoDialogWindow');
+const debug = require("debug")("DemoDialogWindow");
 
-import autobind from 'autobind-decorator';
-import * as React from 'react';
-import {
-	ButtonText,
-	DialogWindow
-} from '../../dist/bundle';
-import {StyledContainer} from '../app';
+import autobind from "autobind-decorator";
+import * as React from "react";
+import {ButtonText, DialogWindow} from "../../dist/bundle";
+import {StyledContainer} from "../app";
 
 export interface DemoDialogBoxState {
 	dialogShow: boolean;
 }
 
-export default class DemoDilogBox extends React.Component<any, DemoDialogBoxState> {
-
+export default class DemoDilogBox extends React.Component<
+	any,
+	DemoDialogBoxState
+> {
 	constructor(props: any) {
 		super(props);
-		debug('creating');
+		debug("creating");
 
 		this.state = {
 			dialogShow: false
@@ -28,37 +27,36 @@ export default class DemoDilogBox extends React.Component<any, DemoDialogBoxStat
 	@autobind
 	private handleShowDialog() {
 		this.setState({dialogShow: true});
-		debug('Showing DialogWindow');
+		debug("Showing DialogWindow");
 	}
 
 	@autobind
 	private handleCloseDialog() {
 		this.setState({dialogShow: false});
-		debug('Closing DialogWindow');
+		debug("Closing DialogWindow");
 	}
 
 	public render() {
-		return(
-			<StyledContainer id="dialogWindowExample" title="Dialog Window">
-				<div id="simple-buttons">
-					<div className="box">
+		return (
+			<StyledContainer id='dialogWindowExample' title='Dialog Window'>
+				<div id='simple-buttons'>
+					<div className='box'>
 						<ButtonText
 							noicon
 							onClick={this.handleShowDialog}
-							text="Show Dialog Window"
+							text='Show Dialog Window'
 						/>
 						<DialogWindow
-							height="600px"
-							icon="plane"
+							height='600px'
+							icon='plane'
 							onClose={this.handleCloseDialog}
 							show={this.state.dialogShow}
-							title="Demo Dialog Window"
-							width="600px"
+							title='Demo Dialog Window'
+							width='600px'
 						>
 							<span>Dialog Content</span>
 						</DialogWindow>
 					</div>
-
 				</div>
 			</StyledContainer>
 		);

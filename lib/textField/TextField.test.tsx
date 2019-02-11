@@ -1,24 +1,24 @@
-'use strict';
+"use strict";
 
-import {mount, shallow} from 'enzyme';
-import * as React from 'react';
-import {getDefaultTextFieldProps, TextField} from './index';
+import {mount, shallow} from "enzyme";
+import * as React from "react";
+import {getDefaultTextFieldProps, TextField} from "./index";
 
-test('Test retrieval of TextField props object', () => {
+test("Test retrieval of TextField props object", () => {
 	const props = getDefaultTextFieldProps();
 
 	expect(props).toBeDefined();
 	expect(props).toMatchSnapshot();
 });
 
-test('Test creation of a TextField control', () => {
-	const ctl = shallow(<TextField className="test-class" />);
+test("Test creation of a TextField control", () => {
+	const ctl = shallow(<TextField className='test-class' />);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
 });
 
-test('Test disabling of a TextField control', () => {
+test("Test disabling of a TextField control", () => {
 	const ctl = mount(<TextField disabled />);
 
 	expect(ctl).toBeDefined();

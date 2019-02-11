@@ -48,19 +48,19 @@
  * @module DialogWindow
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('DialogWindow');
 
-const ReactModal = require('react-modal');
+const ReactModal = require("react-modal");
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {Button} from '../button';
-import {Icon} from '../icon';
-import {Item} from '../item';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {Button} from "../button";
+import {Icon} from "../icon";
+import {Item} from "../item";
 import {
 	BaseComponent,
 	BaseProps,
@@ -69,8 +69,8 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface DialogWindowProps extends BaseProps {
 	icon?: string;
@@ -81,16 +81,16 @@ export interface DialogWindowProps extends BaseProps {
 }
 
 export function getDefaultDialogWindowProps(): DialogWindowProps {
-	return cloneDeep(Object.assign({},
-		getDefaultBaseProps(), {
-			height: '400px',
-			icon: 'window-restore',
-			obj: 'DialogWindow',
+	return cloneDeep(
+		Object.assign({}, getDefaultBaseProps(), {
+			height: "400px",
+			icon: "window-restore",
+			obj: "DialogWindow",
 			onClose: nilEvent,
 			onOpen: nilEvent,
 			show: false,
-			title: 'Dialog Window',
-			width: '400px'
+			title: "Dialog Window",
+			width: "400px"
 		})
 	);
 }
@@ -101,7 +101,8 @@ export interface DialogWindowState extends BaseState {
 }
 
 export function getDefaultDialogWindowState(): DialogWindowState {
-	return cloneDeep({...getDefaultBaseState('ui-dialogwindow'),
+	return cloneDeep({
+		...getDefaultBaseState("ui-dialogwindow"),
 		showModal: false,
 		icon: null
 	});
@@ -119,7 +120,8 @@ export const DialogWindowContent: any = styled.div`
 `;
 
 export const ItemView: any = styled(Item)`
-	background-color: ${(props: DialogWindowProps) => props.theme.titleBarBackgroundColor};
+	background-color: ${(props: DialogWindowProps) =>
+		props.theme.titleBarBackgroundColor};
 	color: ${(props: DialogWindowProps) => props.theme.titleBarForegroundColor};
 `;
 
@@ -132,20 +134,22 @@ export const StyledDeleteButton: any = styled(Button)`
 	}
 `;
 
-export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowState> {
-
+export class DialogWindow extends BaseComponent<
+	DialogWindowProps,
+	DialogWindowState
+> {
 	public static defaultProps: DialogWindowProps = getDefaultDialogWindowProps();
 	public state: DialogWindowState = getDefaultDialogWindowState();
 
 	private _customStyle: any = {
 		content: {
-			top: '50%',
-			left: '50%',
-			right: 'auto',
-			bottom: 'auto',
-			transform: 'translate(-50%, -50%)',
-			padding: '0',
-			borderRadius: '0'
+			top: "50%",
+			left: "50%",
+			right: "auto",
+			bottom: "auto",
+			transform: "translate(-50%, -50%)",
+			padding: "0",
+			borderRadius: "0"
 		}
 	};
 
@@ -165,8 +169,12 @@ export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowS
 		this.props.onOpen();
 	}
 
-	public static getDerivedStateFromProps(props: DialogWindowProps, state: DialogWindowState) {
-		const newState: DialogWindowState = {...state,
+	public static getDerivedStateFromProps(
+		props: DialogWindowProps,
+		state: DialogWindowState
+	) {
+		const newState: DialogWindowState = {
+			...state,
 			icon: <Icon iconName={props.icon} />,
 			showModal: props.show
 		};
@@ -175,8 +183,8 @@ export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowS
 	}
 
 	public render() {
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<ReactModal
 					ariaHideApp={false}
 					contentLabel={this.props.title}
@@ -197,15 +205,13 @@ export class DialogWindow extends BaseComponent<DialogWindowProps, DialogWindowS
 							noripple
 							rightButton={
 								<StyledDeleteButton
-									iconName="times"
+									iconName='times'
 									onClick={this.handleClose}
 								/>
 							}
 							title={this.props.title}
 						/>
-						<DialogWindowContent
-							className="ui-dialogwindow-content"
-						>
+						<DialogWindowContent className='ui-dialogwindow-content'>
 							{this.props.children}
 						</DialogWindowContent>
 					</DialogWindowView>

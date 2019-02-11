@@ -149,10 +149,11 @@ exports[`Test clicking of the AccordionItem header 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-htoDjs",
                 "isStatic": false,
-                "lastClassName": "itBGda",
+                "lastClassName": "duLatu",
                 "rules": Array [
                   "
-	> .ui-item, > .ui-item-button {
+	> .ui-item,
+	> .ui-item-button {
 		color: ",
                   [Function],
                   ";
@@ -186,7 +187,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
           style={Object {}}
         >
           <ul
-            className="ui-accordionitem sc-htoDjs itBGda"
+            className="ui-accordionitem sc-htoDjs duLatu"
             style={Object {}}
           >
             <Item
@@ -346,7 +347,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-bZQynM",
                             "isStatic": false,
-                            "lastClassName": "fXsBlq",
+                            "lastClassName": "hxjYjh",
                             "rules": Array [
                               "
 	background-color: ",
@@ -364,7 +365,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 
 	&:hover .ui-item-button {
 		display: inline-flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 ",
                             ],
@@ -392,7 +393,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
                       style={Object {}}
                     >
                       <li
-                        className="ui-item sc-bZQynM fXsBlq"
+                        className="ui-item sc-bZQynM hxjYjh"
                         id={null}
                         onBlur={[Function]}
                         onDoubleClick={[Function]}
@@ -1164,10 +1165,11 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-htoDjs",
                 "isStatic": false,
-                "lastClassName": "itBGda",
+                "lastClassName": "duLatu",
                 "rules": Array [
                   "
-	> .ui-item, > .ui-item-button {
+	> .ui-item,
+	> .ui-item-button {
 		color: ",
                   [Function],
                   ";
@@ -1201,7 +1203,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
           style={Object {}}
         >
           <ul
-            className="ui-accordionitem sc-htoDjs itBGda"
+            className="ui-accordionitem sc-htoDjs duLatu"
             style={Object {}}
           >
             <Item
@@ -1361,7 +1363,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-bZQynM",
                             "isStatic": false,
-                            "lastClassName": "fXsBlq",
+                            "lastClassName": "hxjYjh",
                             "rules": Array [
                               "
 	background-color: ",
@@ -1379,7 +1381,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 
 	&:hover .ui-item-button {
 		display: inline-flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 ",
                             ],
@@ -1407,7 +1409,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
                       style={Object {}}
                     >
                       <li
-                        className="ui-item sc-bZQynM fXsBlq"
+                        className="ui-item sc-bZQynM hxjYjh"
                         id={null}
                         onBlur={[Function]}
                         onDoubleClick={[Function]}

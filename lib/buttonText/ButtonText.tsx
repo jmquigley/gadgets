@@ -39,14 +39,14 @@
  * @module ButtonText
  */
 
-'use strict';
+"use strict";
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {BaseButtonView} from '../button';
-import {getDefaultIconProps, Icon, IconProps} from '../icon';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {BaseButtonView} from "../button";
+import {getDefaultIconProps, Icon, IconProps} from "../icon";
 import {
 	BaseComponent,
 	BaseState,
@@ -56,8 +56,8 @@ import {
 	InvisibleCSS,
 	Justify,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
+} from "../shared";
+import styled from "../shared/themed-components";
 
 export interface ButtonTextProps extends IconProps {
 	justify?: Justify;
@@ -67,19 +67,20 @@ export interface ButtonTextProps extends IconProps {
 }
 
 export function getDefaultButtonTextProps(): ButtonTextProps {
-	return cloneDeep({...getDefaultIconProps(),
+	return cloneDeep({
+		...getDefaultIconProps(),
 		justify: Justify.right,
 		noicon: false,
-		obj: 'ButtonText',
+		obj: "ButtonText",
 		onClick: nilEvent,
-		text: ''
+		text: ""
 	});
 }
 
 export type ButtonTextState = BaseState;
 
 export function getDefaultButtonTextState(): ButtonTextState {
-	return cloneDeep({...getDefaultBaseState('ui-button-text')});
+	return cloneDeep({...getDefaultBaseState("ui-button-text")});
 }
 
 export const ButtonTextContent: any = styled.div`
@@ -87,11 +88,11 @@ export const ButtonTextContent: any = styled.div`
 	padding: 0 0.2em;
 	text-align: ${(props: ButtonTextProps) => {
 		if (props.justify === Justify.center || props.noicon) {
-			return('center');
+			return "center";
 		} else if (props.justify === Justify.left) {
-			return('right');
+			return "right";
 		} else {
-			return('left');
+			return "left";
 		}
 	}};
 	${(props: ButtonTextProps) => props.sizing && fontStyle[props.sizing]};
@@ -106,15 +107,18 @@ export const ButtonTextView: any = styled.div`
 	${BaseButtonView}
 
 	&:not(.nohover):hover {
-		background-color: ${(props: ButtonTextProps) => props.theme.hoverColor} ${props => props.style.backgroundColor && '!important'};
+		background-color: ${(props: ButtonTextProps) => props.theme.hoverColor}
+			${(props) => props.style.backgroundColor && "!important"};
 	}
 
 	${(props: ButtonTextProps) => props.disabled && DisabledCSS}
 	${(props: ButtonTextProps) => !props.visible && InvisibleCSS}
 `;
 
-export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> {
-
+export class ButtonText extends BaseComponent<
+	ButtonTextProps,
+	ButtonTextState
+> {
 	public static readonly defaultProps: ButtonTextProps = getDefaultButtonTextProps();
 	public state: ButtonTextState = getDefaultButtonTextState();
 
@@ -124,19 +128,24 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 
 	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
-		if (!this.props.disabled && this.props.visible && this.props.onClick != null) {
+		if (
+			!this.props.disabled &&
+			this.props.visible &&
+			this.props.onClick != null
+		) {
 			this.props.onClick(this.props.text);
 		}
 		e.stopPropagation();
 	}
 
-	public static getDerivedStateFromProps(props: ButtonTextProps, state: ButtonTextState) {
+	public static getDerivedStateFromProps(
+		props: ButtonTextProps,
+		state: ButtonTextState
+	) {
 		const newState: ButtonTextState = {...state};
 
-		newState.classes.onIfElse(!props.noripple && !props.disabled)(
-			'ripple'
-		)(
-			'nohover'
+		newState.classes.onIfElse(!props.noripple && !props.disabled)("ripple")(
+			"nohover"
 		);
 
 		return super.getDerivedStateFromProps(props, newState);
@@ -172,7 +181,7 @@ export class ButtonText extends BaseComponent<ButtonTextProps, ButtonTextState> 
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<ButtonTextView
 					disabled={this.props.disabled}
 					className={this.state.classes.classnames}

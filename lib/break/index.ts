@@ -1,5 +1,3 @@
-import {Break} from './Break';
+import {Break} from "./Break";
 
-export {
-	Break
-};
+export {Break};

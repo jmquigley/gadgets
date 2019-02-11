@@ -53,15 +53,15 @@
  * @module Option
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Option');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
-import {ButtonToggle} from '../buttonToggle';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
+import {ButtonToggle} from "../buttonToggle";
 import {
 	BaseComponent,
 	BaseProps,
@@ -72,9 +72,9 @@ import {
 	getDefaultBaseState,
 	invisible,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
-import {Title, TitleLayout} from '../title';
+} from "../shared";
+import styled from "../shared/themed-components";
+import {Title, TitleLayout} from "../title";
 
 export enum OptionType {
 	square,
@@ -98,17 +98,18 @@ export interface OptionProps extends BaseProps {
 }
 
 export function getDefaultOptionProps(): OptionProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		initialToggle: false,
-		obj: 'Option',
+		obj: "Option",
 		onClick: nilEvent,
 		optionType: OptionType.square,
 		selected: false,
 		style: {
-			backgroundColor: 'inherit',
-			color: 'inherit'
+			backgroundColor: "inherit",
+			color: "inherit"
 		},
-		text: ''
+		text: ""
 	});
 }
 
@@ -117,9 +118,7 @@ export interface OptionState extends BaseState {
 }
 
 export function getDefaultOptionState(): OptionState {
-	return cloneDeep({...getDefaultBaseState('ui-option'),
-		selected: false
-	});
+	return cloneDeep({...getDefaultBaseState("ui-option"), selected: false});
 }
 
 export const OptionView: any = styled.div`
@@ -132,7 +131,8 @@ export const OptionView: any = styled.div`
 	}
 
 	> span:hover {
-		background-color: ${(props: OptionProps) => props.disabled ? 'unset' : props.theme.hoverColor || Color.silver};
+		background-color: ${(props: OptionProps) =>
+			props.disabled ? "unset" : props.theme.hoverColor || Color.silver};
 	}
 
 	${(props: OptionProps) => props.sizing && fontStyle[props.sizing]}
@@ -148,47 +148,46 @@ export const StyledButtonToggle: any = styled(ButtonToggle)`
 export const StyledTitle: any = styled(Title)``;
 
 export class Option extends BaseComponent<OptionProps, OptionState> {
-
 	private readonly icons: any = {
 		[OptionType.square]: {
-			off: 'square-o',
-			on: 'check-square-o'
+			off: "square-o",
+			on: "check-square-o"
 		},
 		[OptionType.squareFilled]: {
-			off: 'square-o',
-			on: 'square'
+			off: "square-o",
+			on: "square"
 		},
 		[OptionType.squareReverse]: {
-			off: 'square-o',
-			on: 'check-square'
+			off: "square-o",
+			on: "check-square"
 		},
 		[OptionType.circle]: {
-			off: 'circle-o',
-			on: 'check-circle-o'
+			off: "circle-o",
+			on: "check-circle-o"
 		},
 		[OptionType.circleFilled]: {
-			off: 'circle-o',
-			on: 'circle'
+			off: "circle-o",
+			on: "circle"
 		},
 		[OptionType.circleReverse]: {
-			off: 'circle-o',
-			on: 'check-circle'
+			off: "circle-o",
+			on: "check-circle"
 		},
 		[OptionType.times]: {
-			off: 'circle-o',
-			on: 'times-circle-o'
+			off: "circle-o",
+			on: "times-circle-o"
 		},
 		[OptionType.timesReverse]: {
-			off: 'circle-o',
-			on: 'times-circle'
+			off: "circle-o",
+			on: "times-circle"
 		},
 		[OptionType.dot]: {
-			off: 'circle-o',
-			on: 'dot-circle-o'
+			off: "circle-o",
+			on: "dot-circle-o"
 		},
 		[OptionType.star]: {
-			off: 'star-o',
-			on: 'star'
+			off: "star-o",
+			on: "star"
 		}
 	};
 
@@ -197,7 +196,8 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 	constructor(props: OptionProps) {
 		super(props, Option.defaultProps.style);
 
-		this.state = {...getDefaultOptionState(),
+		this.state = {
+			...getDefaultOptionState(),
 			selected: this.props.initialToggle
 		};
 	}
@@ -206,18 +206,27 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 	private handleClick() {
 		if (!this.props.disabled && this.props.visible) {
 			if (this.props.controlled) {
-				this.setState({
-					selected: !this.state.selected
-				}, () => {
-					this.props.onClick(this.state.selected, this.props.text);
-				});
+				this.setState(
+					{
+						selected: !this.state.selected
+					},
+					() => {
+						this.props.onClick(
+							this.state.selected,
+							this.props.text
+						);
+					}
+				);
 			} else {
 				this.props.onClick(this.state.selected, this.props.text);
 			}
 		}
 	}
 
-	public static getDerivedStateFromProps(props: OptionProps, state: OptionState) {
+	public static getDerivedStateFromProps(
+		props: OptionProps,
+		state: OptionState
+	) {
 		const newState: OptionState = {...state};
 
 		if (!props.controlled) {
@@ -241,8 +250,8 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 			);
 		}
 
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<OptionView
 					className={this.state.classes.classnames}
 					onClick={this.handleClick}
@@ -252,11 +261,11 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 				>
 					<StyledButtonToggle
 						{...this.props}
-						bgColorOff={this.state.style['backgroundColor']}
-						bgColorOn={this.state.style['backgroundColor']}
+						bgColorOff={this.state.style["backgroundColor"]}
+						bgColorOn={this.state.style["backgroundColor"]}
 						controlled={false}
-						fgColorOff={this.state.style['color']}
-						fgColorOn={this.state.style['color']}
+						fgColorOff={this.state.style["color"]}
+						fgColorOn={this.state.style["color"]}
 						iconNameOn={this.icons[this.props.optionType].on}
 						iconNameOff={this.icons[this.props.optionType].off}
 						initialToggle={this.props.initialToggle}

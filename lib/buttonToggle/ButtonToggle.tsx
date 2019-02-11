@@ -73,50 +73,50 @@
  * @module ButtonToggle
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('ButtonToggle');
 
-import autobind from 'autobind-decorator';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import autobind from "autobind-decorator";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
 import {
 	Button,
 	ButtonProps,
 	ButtonState,
 	getDefaultButtonProps,
 	getDefaultButtonState
-} from '../button';
+} from "../button";
 import {
 	BaseComponent,
 	// @ts-ignore
 	BaseState,
 	Wrapper
-} from '../shared';
+} from "../shared";
 
 export interface ButtonToggleProps extends ButtonProps {
 	bgColorOff?: string;
 	bgColorOn?: string;
 	fgColorOff?: string;
 	fgColorOn?: string;
-	iconNameOff?: string;      // font awesome string
-	iconNameOn?: string;       // font awesome string
+	iconNameOff?: string; // font awesome string
+	iconNameOn?: string; // font awesome string
 	initialToggle?: boolean;
 	onClick?: any;
 }
 
 export function getDefaultButtonToggleProps(): ButtonToggleProps {
-	return cloneDeep(Object.assign({},
-		getDefaultButtonProps(), {
-			bgColorOff: 'inherit',
-			bgColorOn: 'inherit',
-			fgColorOff: 'gray',
-			fgColorOn: 'black',
-			iconNameOff: 'bomb',
-			iconNameOn: 'bomb',
+	return cloneDeep(
+		Object.assign({}, getDefaultButtonProps(), {
+			bgColorOff: "inherit",
+			bgColorOn: "inherit",
+			fgColorOff: "gray",
+			fgColorOn: "black",
+			iconNameOff: "bomb",
+			iconNameOn: "bomb",
 			initialToggle: false,
-			obj: 'ButtonToggle',
+			obj: "ButtonToggle",
 			onClick: nilEvent,
 			selected: false
 		})
@@ -128,48 +128,62 @@ export interface ButtonToggleState extends ButtonState {
 }
 
 export function getDefaultButtonToggleState(): ButtonToggleState {
-	return cloneDeep({...getDefaultButtonState('ui-button-toggle'),
+	return cloneDeep({
+		...getDefaultButtonState("ui-button-toggle"),
 		toggle: false
 	});
 }
 
-export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleState> {
-
+export class ButtonToggle extends BaseComponent<
+	ButtonToggleProps,
+	ButtonToggleState
+> {
 	public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
 	constructor(props: ButtonToggleProps) {
 		super(props, ButtonToggle.defaultProps.style);
 
-		this.state = {...getDefaultButtonToggleState(),
+		this.state = {
+			...getDefaultButtonToggleState(),
 			toggle: this.props.initialToggle
 		};
 	}
 
 	@autobind
 	public handleClick() {
-		if (!this.props.disabled && this.props.visible && this.props.controlled) {
-			this.setState({
-				toggle: !this.state.toggle
-			}, () => {
-				this.props.onClick(this.state.toggle);
-			});
+		if (
+			!this.props.disabled &&
+			this.props.visible &&
+			this.props.controlled
+		) {
+			this.setState(
+				{
+					toggle: !this.state.toggle
+				},
+				() => {
+					this.props.onClick(this.state.toggle);
+				}
+			);
 		} else {
 			this.props.onClick(this.state.toggle);
 		}
 	}
 
-	public static getDerivedStateFromProps(props: ButtonToggleProps, state: ButtonToggleState) {
+	public static getDerivedStateFromProps(
+		props: ButtonToggleProps,
+		state: ButtonToggleState
+	) {
 		const newState: ButtonToggleState = {...state};
 
 		if (!props.controlled) {
 			newState.toggle = props.selected;
 		} else {
 			if (newState.toggle) {
-				newState.style['backgroundColor'] = props.bgColorOn;
-				newState.style['color'] = props.fgColorOn;
+				newState.style["backgroundColor"] = props.bgColorOn;
+				newState.style["color"] = props.fgColorOn;
 			} else {
-				newState.style['backgroundColor'] = props.bgColorOff;
-				newState.style['color'] = props.fgColorOff;
+				newState.style["backgroundColor"] = props.bgColorOff;
+				newState.style["color"] = props.fgColorOff;
 			}
 		}
 
@@ -178,11 +192,15 @@ export class ButtonToggle extends BaseComponent<ButtonToggleProps, ButtonToggleS
 
 	public render() {
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<Button
 					{...this.props}
 					className={this.state.classes.classnames}
-					iconName={this.state.toggle ? this.props.iconNameOn : this.props.iconNameOff}
+					iconName={
+						this.state.toggle
+							? this.props.iconNameOn
+							: this.props.iconNameOff
+					}
 					noripple
 					onClick={this.handleClick}
 					style={this.state.style}

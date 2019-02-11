@@ -1,7 +1,3 @@
-import {getDefaultIconProps, Icon, IconProps} from './Icon';
+import {getDefaultIconProps, Icon, IconProps} from "./Icon";
 
-export {
-	getDefaultIconProps,
-	Icon,
-	IconProps
-};
+export {getDefaultIconProps, Icon, IconProps};

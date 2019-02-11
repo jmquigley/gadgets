@@ -48,15 +48,15 @@
  * @module OptionGroup
  */
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('OptionGroup');
 
-import autobind from 'autobind-decorator';
-import {OrderedMap} from 'immutable';
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {nilEvent} from 'util.toolbox';
+import autobind from "autobind-decorator";
+import {OrderedMap} from "immutable";
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
 	BaseProps,
@@ -67,10 +67,10 @@ import {
 	invisible,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled from '../shared/themed-components';
-import {Title, TitleLayout} from '../title';
-import {Option, OptionType} from './Option';
+} from "../shared";
+import styled from "../shared/themed-components";
+import {Title, TitleLayout} from "../title";
+import {Option, OptionType} from "./Option";
 
 export interface OptionGroupProps extends BaseProps {
 	default?: string;
@@ -81,13 +81,14 @@ export interface OptionGroupProps extends BaseProps {
 }
 
 export function getDefaultOptionGroupProps(): OptionGroupProps {
-	return cloneDeep({...getDefaultBaseProps(),
-		obj: 'OptionGroup',
-		default: '',
+	return cloneDeep({
+		...getDefaultBaseProps(),
+		obj: "OptionGroup",
+		default: "",
 		onSelect: nilEvent,
 		optionType: OptionType.square,
 		options: [],
-		title: ''
+		title: ""
 	});
 }
 
@@ -96,7 +97,8 @@ export interface OptionGroupState extends BaseState {
 }
 
 export function getDefaultOptionGroupState(): OptionGroupState {
-	return cloneDeep({...getDefaultBaseState('ui-option-group'),
+	return cloneDeep({
+		...getDefaultBaseState("ui-option-group"),
 		options: null
 	});
 }
@@ -107,16 +109,22 @@ export const StyledOptionGroup: any = styled.div`
 	flex-direction: column;
 	margin: ${(props: OptionGroupProps) => {
 		switch (props.sizing) {
-			case Sizing.xxsmall: return('0.25rem 0 0 0');
-			case Sizing.xsmall: return('0.4rem 0 0 0');
-			case Sizing.small: return('0.6rem 0 0 0');
-			case Sizing.large: return('1.3rem 0 0 0');
-			case Sizing.xlarge: return('1.7rem 0 0 0');
-			case Sizing.xxlarge: return('2.5rem 0 0 0');
+			case Sizing.xxsmall:
+				return "0.25rem 0 0 0";
+			case Sizing.xsmall:
+				return "0.4rem 0 0 0";
+			case Sizing.small:
+				return "0.6rem 0 0 0";
+			case Sizing.large:
+				return "1.3rem 0 0 0";
+			case Sizing.xlarge:
+				return "1.7rem 0 0 0";
+			case Sizing.xxlarge:
+				return "2.5rem 0 0 0";
 
 			case Sizing.normal:
 			default:
-				return('0.8rem 0 0 0');
+				return "0.8rem 0 0 0";
 		}
 	}};
 	padding: 0.6rem;
@@ -126,38 +134,47 @@ export const StyledOptionGroup: any = styled.div`
 	${(props: OptionGroupProps) => invisible(props)}
 `;
 
-export const StyledOption: any = styled(Option)`
-`;
+export const StyledOption: any = styled(Option)``;
 
 export const StyledTitle: any = styled(Title)`
-	background-color: ${(props: OptionGroupProps) => props.theme.backgroundColor};
+	background-color: ${(props: OptionGroupProps) =>
+		props.theme.backgroundColor};
 	left: 0.3rem;
 	padding: 0 0.33rem;
 	position: absolute;
 	top: -${(props: OptionGroupProps) => {
-		switch (props.sizing) {
-			case Sizing.xxsmall: return('0.25rem');
-			case Sizing.xsmall: return('0.4rem');
-			case Sizing.small: return('0.6rem');
-			case Sizing.large: return('1.3rem');
-			case Sizing.xlarge: return('1.7rem');
-			case Sizing.xxlarge: return('2.5rem');
+			switch (props.sizing) {
+				case Sizing.xxsmall:
+					return "0.25rem";
+				case Sizing.xsmall:
+					return "0.4rem";
+				case Sizing.small:
+					return "0.6rem";
+				case Sizing.large:
+					return "1.3rem";
+				case Sizing.xlarge:
+					return "1.7rem";
+				case Sizing.xxlarge:
+					return "2.5rem";
 
-			case Sizing.normal:
-			default:
-				return('0.80rem');
-		}
-	}};
+				case Sizing.normal:
+				default:
+					return "0.80rem";
+			}
+		}};
 `;
 
-export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupState> {
-
+export class OptionGroup extends BaseComponent<
+	OptionGroupProps,
+	OptionGroupState
+> {
 	private static readonly defaultProps: OptionGroupProps = getDefaultOptionGroupProps();
 
 	constructor(props: OptionGroupProps) {
 		super(props, OptionGroup.defaultProps.style);
 
-		this.state = {...getDefaultOptionGroupState(),
+		this.state = {
+			...getDefaultOptionGroupState(),
 			options: this.handleOptions(this.props.options, this.props.default)
 		};
 	}
@@ -198,23 +215,26 @@ export class OptionGroup extends BaseComponent<OptionGroupProps, OptionGroupStat
 	private handleSelection(toggle: boolean, text: string) {
 		if (!this.props.disabled && this.props.visible) {
 			toggle = toggle;
-			this.setState({
-				options: this.handleOptions(this.props.options, text)
-			}, () => {
-				this.props.onSelect(text);
-			});
+			this.setState(
+				{
+					options: this.handleOptions(this.props.options, text)
+				},
+				() => {
+					this.props.onSelect(text);
+				}
+			);
 		}
 	}
 
 	public render() {
-		return(
-			<Wrapper {...this.props} >
+		return (
+			<Wrapper {...this.props}>
 				<StyledOptionGroup
 					className={this.state.classes.classnames}
 					sizing={this.props.sizing}
 				>
 					<StyledTitle
-						className="ui-option-group-title"
+						className='ui-option-group-title'
 						layout={TitleLayout.none}
 						noedit
 						noripple

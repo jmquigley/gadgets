@@ -1,13 +1,13 @@
 // TODO: add Item documentation
 
-'use strict';
+"use strict";
 
 // const debug = require('debug')('Item');
 
-import {cloneDeep} from 'lodash';
-import * as React from 'react';
-import {sp} from 'util.constants';
-import {nilEvent} from 'util.toolbox';
+import {cloneDeep} from "lodash";
+import * as React from "react";
+import {sp} from "util.constants";
+import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
 	BaseProps,
@@ -17,9 +17,9 @@ import {
 	getDefaultBaseState,
 	Sizing,
 	Wrapper
-} from '../shared';
-import styled, {css} from '../shared/themed-components';
-import {Title, TitleLayout, TitleProps} from '../title';
+} from "../shared";
+import styled, {css} from "../shared/themed-components";
+import {Title, TitleLayout, TitleProps} from "../title";
 
 export interface ItemProps extends BaseProps, TitleProps {
 	hiddenLeftButton?: boolean;
@@ -42,12 +42,13 @@ export interface ItemProps extends BaseProps, TitleProps {
 }
 
 export function getDefaultItemProps(): ItemProps {
-	return cloneDeep({...getDefaultBaseProps(),
+	return cloneDeep({
+		...getDefaultBaseProps(),
 		hiddenLeftButton: false,
 		hiddenRightButton: false,
 		layout: TitleLayout.dominant,
 		leftButton: null,
-		obj: 'Item',
+		obj: "Item",
 		onBlur: nilEvent,
 		onChange: nilEvent,
 		onClick: nilEvent,
@@ -68,7 +69,7 @@ export function getDefaultItemProps(): ItemProps {
 
 export type ItemState = BaseState;
 
-export function getDefaultItemState(className: string = 'ui-item'): ItemState {
+export function getDefaultItemState(className: string = "ui-item"): ItemState {
 	return cloneDeep({...getDefaultBaseState(className)});
 }
 
@@ -79,18 +80,26 @@ export const HiddenButton: any = css`
 `;
 
 export const ItemView: any = styled.li`
-	background-color: ${(props: ItemProps) => props.selected ? props.theme.selectedBackgroundColor + ' !important' : props.theme.backgroundColor};
-	color: ${(props: ItemProps) => props.selected ? props.theme.selectedForegroundColor : props.theme.color};
+	background-color: ${(props: ItemProps) =>
+		props.selected
+			? props.theme.selectedBackgroundColor + " !important"
+			: props.theme.backgroundColor};
+	color: ${(props: ItemProps) =>
+		props.selected
+			? props.theme.selectedForegroundColor
+			: props.theme.color};
 	cursor: default;
 	display: flex;
 
-	${(props: ItemProps) => (!props.nohover) &&
-		'&:hover {background-color: ' + props.theme.itemHoverColor + ' !important;}'
-	}
+	${(props: ItemProps) =>
+		!props.nohover &&
+		"&:hover {background-color: " +
+			props.theme.itemHoverColor +
+			" !important;}"}
 
 	&:hover .ui-item-button {
 		display: inline-flex;
-		opacity: 1.0;
+		opacity: 1;
 	}
 `;
 
@@ -99,21 +108,28 @@ export const ItemViewButton: any = styled.div`
 	position: relative;
 	width: ${(props: ItemProps) => {
 		switch (props.sizing) {
-			case Sizing.xxsmall: return('1.0em');
-			case Sizing.xsmall: return('1.25em');
-			case Sizing.small: return('2.0em');
-			case Sizing.large: return('3.0em');
-			case Sizing.xlarge: return('3.5em');
-			case Sizing.xxlarge: return('4.5em');
+			case Sizing.xxsmall:
+				return "1.0em";
+			case Sizing.xsmall:
+				return "1.25em";
+			case Sizing.small:
+				return "2.0em";
+			case Sizing.large:
+				return "3.0em";
+			case Sizing.xlarge:
+				return "3.5em";
+			case Sizing.xxlarge:
+				return "4.5em";
 
 			case Sizing.normal:
 			default:
-				return('2.25em');
+				return "2.25em";
 		}
 	}};
 
 	${(props: ItemProps) => props.sizing && fontStyle[props.sizing]};
-	${(props: ItemProps) => (props.hiddenRightButton || props.hiddenLeftButton) && HiddenButton}
+	${(props: ItemProps) =>
+		(props.hiddenRightButton || props.hiddenLeftButton) && HiddenButton}
 
 	> i, > .ui-button-circle, > .ui-option {
 		position: absolute;
@@ -129,7 +145,6 @@ export const ItemViewButton: any = styled.div`
 `;
 
 export class Item extends BaseComponent<ItemProps, ItemState> {
-
 	public static defaultProps: ItemProps = getDefaultItemProps();
 	public state: ItemState = getDefaultItemState();
 
@@ -139,7 +154,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 
 	public static getDerivedStateFromProps(props: ItemProps, state: ItemState) {
 		const newState: ItemState = {...state};
-		newState.classes.onIf(props.selected)('ui-selected');
+		newState.classes.onIf(props.selected)("ui-selected");
 		return super.getDerivedStateFromProps(props, state);
 	}
 
@@ -150,7 +165,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		if (this.props.leftButton != null && !this.props.disabled) {
 			leftButton = (
 				<ItemViewButton
-					className="ui-item-button"
+					className='ui-item-button'
 					hiddenLeftButton={this.props.hiddenLeftButton}
 				>
 					{React.cloneElement(this.props.leftButton, {
@@ -163,7 +178,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		if (this.props.rightButton != null && !this.props.disabled) {
 			rightButton = (
 				<ItemViewButton
-					className="ui-item-button"
+					className='ui-item-button'
 					hiddenRightButton={this.props.hiddenRightButton}
 				>
 					{React.cloneElement(this.props.rightButton, {
@@ -174,7 +189,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		}
 
 		return (
-			<Wrapper {...this.props} >
+			<Wrapper {...this.props}>
 				<ItemView
 					id={this.props.id}
 					className={this.state.classes.classnames}
@@ -191,7 +206,11 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 					{leftButton}
 					<Title
 						{...this.props}
-						layout={this.props.stacked ? TitleLayout.stacked : this.props.layout}
+						layout={
+							this.props.stacked
+								? TitleLayout.stacked
+								: this.props.layout
+						}
 					/>
 					{rightButton}
 				</ItemView>

@@ -1,10 +1,11 @@
-'use strict';
+"use strict";
 
-import {Color, ColorScheme} from '../props';
-import defaultTheme from './default';
-import {ThemeProps} from './index';
+import {Color, ColorScheme} from "../props";
+import defaultTheme from "./default";
+import {ThemeProps} from "./index";
 
-const theme: ThemeProps = {...defaultTheme,
+const theme: ThemeProps = {
+	...defaultTheme,
 	backgroundColor: Color.white,
 	borderColor: Color.silver,
 	color: Color.black,
@@ -20,7 +21,7 @@ const theme: ThemeProps = {...defaultTheme,
 	titleBarForegroundColor: ColorScheme.c4,
 	tooltipBackgroundColor: Color.slategray,
 	tooltipForegroundColor: Color.white,
-	transitionDelay: '0.5s'
+	transitionDelay: "0.5s"
 };
 
 export default theme;

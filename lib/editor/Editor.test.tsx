@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-import {getDefaultEditorProps} from './index';
+import {getDefaultEditorProps} from "./index";
 
-test('Test retrieval of the Editor props object', () => {
+test("Test retrieval of the Editor props object", () => {
 	const props = getDefaultEditorProps();
 
 	expect(props).toBeDefined();

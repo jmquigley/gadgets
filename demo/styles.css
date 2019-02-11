@@ -1,12 +1,13 @@
-@import url('./fonts.css');
+@import url("./fonts.css");
 
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	font-family: 'OpenSans', Georgia, serif;
+	font-family: "OpenSans", Georgia, serif;
 }
 
 h1 {
@@ -16,7 +17,7 @@ h1 {
 }
 
 h1:first-child {
-	margin: 0 0  10px 0;
+	margin: 0 0 10px 0;
 }
 
 h3 {
@@ -36,11 +37,13 @@ section {
 	padding: 10px;
 }
 
-#dialogBoxExample, textfieldExample {
+#dialogBoxExample,
+textfieldExample {
 	width: 100%;
 }
 
-#simple-buttons, #simple-icons {
+#simple-buttons,
+#simple-icons {
 	display: inline-flex;
 }
 
@@ -79,25 +82,27 @@ section {
 	text-align: right;
 }
 
-#buttonTable th, #buttonTable td {
+#buttonTable th,
+#buttonTable td {
 	height: 80px;
 	min-width: 80px;
-    overflow: visible;
+	overflow: visible;
 }
 
 #buttonTable td > div {
-    overflow: visible !important;
+	overflow: visible !important;
 }
 
-#buttonTable .tblIcons td i, #buttonTable .tblIcons td img {
+#buttonTable .tblIcons td i,
+#buttonTable .tblIcons td img {
 	left: 50%;
 	position: relative;
 	transform: translateX(-50%);
 }
 
 #editorExample {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	height: 600px;
 }
 
@@ -105,8 +110,7 @@ section {
 .box .ui-button,
 .toastBox .ui-button,
 .box .boxButtons,
-#buttonTable td
-{
+#buttonTable td {
 	border: solid 1px lightgray;
 }
 
@@ -115,7 +119,8 @@ section {
 	color: #ffe11a !important;
 }
 
-.pagerBox, selectBox  {
+.pagerBox,
+selectBox {
 	margin-bottom: 30px;
 	width: 350px;
 }
@@ -192,7 +197,6 @@ section {
 	margin: 30px auto;
 	background-color: #fd7400;
 }
-
 
 /*
 

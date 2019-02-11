@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-import {getDefaultBaseProps} from './props';
+import {getDefaultBaseProps} from "./props";
 
-test('Test retrieval of default prop object', () => {
+test("Test retrieval of default prop object", () => {
 	const props = getDefaultBaseProps();
 
 	expect(props).toBeDefined();
