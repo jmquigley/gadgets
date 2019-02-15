@@ -24,7 +24,7 @@ export default class DemoTreeview extends React.Component<
 				{
 					title: "1.0",
 					expanded: true,
-					note: "some test data",
+					data: "some test data",
 					children: [{title: "1.1"}, {title: "1.2"}, {title: "1.3"}]
 				},
 				{
