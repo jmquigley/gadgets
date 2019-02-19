@@ -120,7 +120,16 @@ import {getDefaultTitleProps, Title, TitleLayout} from "./lib/title";
 import {getDefaultToastProps, Toast, ToastLevel} from "./lib/toast";
 import {getDefaultToolbarProps, Toolbar} from "./lib/toolbar";
 import {getDefaultTooltipProps, Tooltip} from "./lib/tooltip";
-import {getDefaultTreeviewProps, TreeItem, Treeview} from "./lib/treeview";
+import {
+	getDefaultTreeviewProps,
+	TreeData,
+	TreeId,
+	TreeIndex,
+	TreeItem,
+	Treeview,
+	TreeviewProps,
+	WalkCallback
+} from "./lib/treeview";
 import {getDefaultTriangleProps, Triangle} from "./lib/triangle";
 
 // Themed component classes
@@ -251,8 +260,12 @@ export {
 	ToastLevel,
 	Toolbar,
 	Tooltip,
+	TreeData,
+	TreeId,
+	TreeIndex,
 	TreeItem,
 	Treeview,
+	TreeviewProps,
 	Triangle,
 	validateEmail,
 	validateMaxLength,
@@ -263,5 +276,6 @@ export {
 	ValidatorFn,
 	version,
 	withTheme,
+	WalkCallback,
 	Wrapper
 };

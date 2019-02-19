@@ -130,7 +130,6 @@ import * as React from "react";
 import SortableTree, {ExtendedNodeData, NodeData} from "react-sortable-tree";
 import {calc, toREM} from "util.calc";
 import {getUUID, nilEvent} from "util.toolbox";
-import {TreeData, TreeItem} from "util.treeitem";
 import {Button} from "../button";
 import {Container} from "../container";
 import {Divider} from "../divider";
@@ -153,12 +152,7 @@ import styled from "../shared/themed-components";
 import {TextField} from "../textField";
 import {TitleLayout} from "../title";
 import {Toolbar} from "../toolbar";
-
-export type TreeItem = TreeItem;
-
-export interface TreeIndex {
-	[key: string]: TreeItem;
-}
+import {TreeData, TreeItem} from "./TreeData";
 
 export interface TreeviewProps extends BaseProps {
 	addAsFirstChild: boolean;

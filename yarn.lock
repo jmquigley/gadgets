@@ -5510,7 +5510,7 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.11.0, js-yaml@^3.12.0, js-yaml@^3.7.0, js-yaml@^3.9.0:
+js-yaml@^3.11.0, js-yaml@^3.12.0, js-yaml@^3.12.1, js-yaml@^3.7.0, js-yaml@^3.9.0:
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
   integrity sha512-um46hB9wNOKlwkHgiuyEVAybXBjwFUV0Z/RaHJblRd9DXltue9FTYvzCr9ErQrK9Adz5MU4gHWVaNUfdmrC8qA==
@@ -8868,9 +8868,9 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
-sprintf-js@^1.1.2, "sprintf-js@git+https://github.com/jmquigley/sprintf.js.git#dc62b1c":
+sprintf-js@^1.1.2, "sprintf-js@https://github.com/jmquigley/sprintf.js.git#dc62b1c":
   version "1.1.2"
-  resolved "git+https://github.com/jmquigley/sprintf.js.git#dc62b1cfe788952cfee6f303a174a5f4546625a3"
+  resolved "https://github.com/jmquigley/sprintf.js.git#dc62b1cfe788952cfee6f303a174a5f4546625a3"
   dependencies:
     util.obj-cycle "0.0.1"
 
@@ -8997,6 +8997,11 @@ string-length@^2.0.0:
   dependencies:
     astral-regex "^1.0.0"
     strip-ansi "^4.0.0"
+
+string-template@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/string-template/-/string-template-1.0.0.tgz#9e9f2233dc00f218718ec379a28a5673ecca8b96"
+  integrity sha1-np8iM9wA8hhxjsN5oopWc+zKi5Y=
 
 string-width@^1.0.1:
   version "1.0.2"
@@ -9692,6 +9697,13 @@ util.calc@^0.0.14:
     util.constants "^0.0.18"
     util.toolbox "^0.0.69"
 
+util.chdir@0.0.38:
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/util.chdir/-/util.chdir-0.0.38.tgz#8d7488ac300725b37965cd05f0f6be15d97cfad2"
+  integrity sha512-V31cuvFV86S4PNRyTogNCkwaSlbkqERHfu1bN1sr3pwsRPH4Rvae57F1ZGHxJFHR7wLVZIvbTwfvShjTCItm2Q==
+  dependencies:
+    fs-extra "^7.0.1"
+
 util.classnames@^0.0.24:
   version "0.0.24"
   resolved "https://registry.yarnpkg.com/util.classnames/-/util.classnames-0.0.24.tgz#3b1478faa78f2ec3b2a20fcda0ba9010090d5d5b"
@@ -9709,6 +9721,34 @@ util.ds@^0.0.42:
   dependencies:
     fs-extra "^7.0.1"
     sprintf-js "https://github.com/jmquigley/sprintf.js.git#dc62b1c"
+
+util.filelist@0.0.33:
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/util.filelist/-/util.filelist-0.0.33.tgz#647ab9aae8cb80c6c78f7228d8bcf18cefae1dfb"
+  integrity sha512-EPJmjpWQ1e6HF/M1MHPyQ2bvxSXRIMvxSQAkZRZJ51poIycHDL2bkzh/T48nEhAP6ssEeX3x9g4cFdjlrHllCw==
+  dependencies:
+    fs-extra "^7.0.1"
+    util.rstrip "0.0.43"
+
+util.fixture@^0.0.67:
+  version "0.0.67"
+  resolved "https://registry.yarnpkg.com/util.fixture/-/util.fixture-0.0.67.tgz#6ff357c3dae4e20daa1f058a1ebe7c7cb7d199ee"
+  integrity sha512-oDeI+Y5XK2KM6eiNEhNy5XAMQmSZHxct/ePRwurEBiY5aqs7K+7w6/OcjGpETsUCu86djtmMlDGvDl/iZe5t4w==
+  dependencies:
+    fs-extra "^7.0.1"
+    js-yaml "^3.12.1"
+    klaw-sync "^6.0.0"
+    lodash "^4.17.11"
+    lorem-ipsum "^1.0.6"
+    rimraf "^2.6.3"
+    string-template "^1.0.0"
+    util.chdir "0.0.38"
+    util.constants "^0.0.18"
+    util.filelist "0.0.33"
+    util.join "0.0.22"
+    util.toolbox "0.0.69"
+    util.wait "0.0.34"
+    uuid "^3.3.2"
 
 util.home@0.0.28:
   version "0.0.28"
@@ -9824,16 +9864,7 @@ util.toolbox@0.0.69, util.toolbox@^0.0.69:
     util.rstrip "0.0.43"
     uuid "^3.3.2"
 
-util.treeitem@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/util.treeitem/-/util.treeitem-0.0.10.tgz#e1779f1eafdfa579d2aef3540c8f4682975d797e"
-  integrity sha512-1Zgn4D55es0Z1Rrt2VKev6z4aN1JiKoozNBEyLZgbM44AtpcYbRV3Bry8plo+Exjat3/OcXlmSNi8wopd/dlhA==
-  dependencies:
-    util.constants "^0.0.18"
-    util.ds "^0.0.42"
-    util.log "^0.0.37"
-
-util.wait@^0.0.34:
+util.wait@0.0.34, util.wait@^0.0.34:
   version "0.0.34"
   resolved "https://registry.yarnpkg.com/util.wait/-/util.wait-0.0.34.tgz#cfb46ed626ae58ccc2e7aaba3189bc7944a66b65"
   integrity sha512-RDXzSTulnZIzYPxwLC6/848ivATuc+/1+Im1QitmgGdsbtGert69uavZ3Ul1G2CIRad5/Ubnvi/ojP+kRo911A==
