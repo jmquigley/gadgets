@@ -77,9 +77,6 @@
  * ```
  *
  * # API
- * - [TreeData (class)](docs/lib/treeview/TreeData.md#TreeData)
- * - [TreeData (new)](docs/lib/treeview/TreeData.md#new_TreeData_new)
- *
  * ### properties
  * - `defaultTitle {string} ('default')` - the default string loaded into the
  *   TreeItem.title field when a new node is created or sanitized (when the
@@ -98,14 +95,7 @@
  *   relationships are in place and that all valid TreeItem fields are in the
  *   objects (with default values if they are missing).
  *
- * ### methods
- * - [.createNode()](docs/lib/treeview/TreeData.md#TreeData+createNode)
- * - [.find()](docs/lib/treeview/TreeData.md#TreeData+find)
- * - [.getNewKey()](docs/lib/treeview/TreeData.md#TreeData+getNewKey)
- * - [.sanitize()](docs/lib/treeview/TreeData.md#TreeData+sanitize)
- * - [.toString()](docs/lib/treeview/TreeData.md#TreeData+toString)
- * - [.walk()](docs/lib/treeview/TreeData.md#TreeData+walk)
- *
+ * ### class & methods
  * @module TreeData
  */
 
