@@ -1,7 +1,112 @@
 /**
- * This module contains all of the code to create and manipulate the TreeData
- * structure used by a Treeview react control in the gadgets library.
+ * The treeData is an array of `TreeItem` nodes.  A `TreeItem` node is a
+ * dictionary that contains the following properties:
  *
+ * - `id {string}` - a unique id/key value for the node
+ * - `parent {TreeItem}` - reference to the parent node, where the id of the
+ *    parent is `parent.id`
+ * - `data {any}` - a variable to hold any data associated with the node
+ *    (can hold any type of data)
+ * - `title {string}` - a string that represents the title displayed on the
+ *    Treeview component
+ * - `subtitle {string}` - sub string below the main title.
+ * - `expanded {boolean}` - a boolean flag that determines if the children of
+ *    this node are displayed
+ * - `children {TreeItem[]}` - an array of `TreeItem` nodes attached to this
+ *  node.
+ *
+ * An example of this data structure is:
+ *
+ *     [
+ *         {title: "string", subtitle: "string", expanded: "boolean", children: ["treeData"]},
+ *         {title: "string", subtitle: "string", expanded: "boolean", children: [
+ *             {title: "string", subtitle: "string", expanded: "boolean", children: ["treeData"]},
+ *             {title: "string", subtitle: "string", expanded: "boolean", children: ["treeData"]}
+ *         ]}
+ *         ...
+ *     ]
+ *
+ * This is the structure of a [general tree](http://www.cs.cmu.edu/~clo/www/CMU/DataStructures/Lessons/lesson4_1.htm),
+ * where each node can have an arbitrary number of *children*.
+ *
+ * # Usage
+ *
+ * Create an instance of the `TreeData` class, where the constructor is an array
+ * of `TreeItem` nodes (shown above).  The resulting instance is then used to
+ *  interact with the data.  To create a simple instance:
+ *
+ * ```javascript
+ * import {TreeData, TreeItem} from "util.treeitem";
+ *
+ * const data: TreeItem[] = [
+ *     {id: 0, title: "1.0", children: [{id: 3, title: "1.1", children[]}]}
+ *     {id: 1, title: "2.0", children: []}
+ *     {id: 2, title: "3.0", children: []}
+ * ];
+ *
+ * const td = new TreeData(data);
+ * ```
+ *
+ * Once the instance is created the tree can be searched by `id` values using
+ * the `find` function:
+ *
+ * ```javascript
+ * let it: TreeItem = td.find(1);
+ *
+ * // it -> {id: 1, title: "2.0", children: []}
+ * ```
+ *
+ * The tree can also be traversed in order with the `walk` function:
+ *
+ * ```javascript
+ * td.walk((node: TreeItem) => {
+ *     log.info('node: %O', node);
+ * });
+ * ```
+ *
+ * The `walk` function will visit each node in the tree in order invoking a
+ * callback function as each node is encountered.  The callback receives a
+ * reference to each node.  If the `useindex` property is set when the class
+ * is created, which it is by default, then an id-to-node index is created.
+ * The `treeIndex` property can be used to quickly find a node by its index:
+ *
+ * ```javascript
+ * let it: TreeItem = td.treeIndex[2];
+ *
+ * // it -> {id: 2, title: "3.0", children: []}
+ * ```
+ *
+ * # API
+ * - [TreeData (class)](docs/lib/treeview/TreeData.md#TreeData)
+ * - [TreeData (new)](docs/lib/treeview/TreeData.md#new_TreeData_new)
+ *
+ * ### properties
+ * - `defaultTitle {string} ('default')` - the default string loaded into the
+ *   TreeItem.title field when a new node is created or sanitized (when the
+ *   title is empty).
+ * - `sequence {number} (0)` - the starting sequence number in key generation
+ *   when the class is under test
+ * - `testing {boolean} (false)` - set to true when this class is under test.
+ *   This is needed to generate predicatble keys instead of UUID values.
+ * - `treeData {TreeItem[]}` - the data that represents the current general tree
+ * - `treeIndex {TreeIndex}` - a key/node value pair used to quickly look up a
+ *   node by its unique id value.
+ * - `useindex {boolean} (true)` - turns on node indexing when walking the tree
+ *   or finding nodes
+ * - `usesanitize {boolean} (true)` - if true, then run sanitization on nodes
+ *   when walking the tree.  This ensures that all of the parent/child key
+ *   relationships are in place and that all valid TreeItem fields are in the
+ *   objects (with default values if they are missing).
+ *
+ * ### methods
+ * - [.createNode()](docs/lib/treeview/TreeData.md#TreeData+createNode)
+ * - [.find()](docs/lib/treeview/TreeData.md#TreeData+find)
+ * - [.getNewKey()](docs/lib/treeview/TreeData.md#TreeData+getNewKey)
+ * - [.sanitize()](docs/lib/treeview/TreeData.md#TreeData+sanitize)
+ * - [.toString()](docs/lib/treeview/TreeData.md#TreeData+toString)
+ * - [.walk()](docs/lib/treeview/TreeData.md#TreeData+walk)
+ *
+ * @module TreeData
  */
 
 "use strict";
