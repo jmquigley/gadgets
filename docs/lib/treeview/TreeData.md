@@ -132,15 +132,21 @@ Creates an instance of the TreeData class.  When the data is loaded via
 the constructor the full tree is traversed and the nodes are sanitized.
 All of the parent/child keys are set if they are not available.
 
+**Params**
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| treeData | <code>Array.&lt;TreeItem&gt;</code> |  | the data that represents the current general tree.  This field is mandatory when instantiating the class. |
-| _testing | <code>boolean</code> | <code>false</code> | set to true when this class is under test.  This is needed to generate predicatble keys instead of UUID values. |
-| _sequence | <code>number</code> | <code>0</code> | the starting sequence number in key generation when the class is under test. |
-| _defaultTitle | <code>string</code> | <code>&quot;default&quot;</code> | the default string loadeed into the TreeItem.title field when a new node is created or sanitized. |
-| _useindex | <code>boolean</code> | <code>true</code> | turns on a map index of the node values that are loaded into the tree.  Used for a fast id lookup. |
-| _usesanitize | <code>boolean</code> | <code>true</code> | when new nodes are processed by the walk function each node is checked by default to ensure parent/child keys are set and all fields are in the TreeItem. |
+- treeData <code>Array.&lt;TreeItem&gt;</code> - the data that represents the current general
+tree.  This field is mandatory when instantiating the class.
+- _testing <code>boolean</code> <code> = false</code> - set to true when this class is under
+test.  This is needed to generate predicatble keys instead of UUID values.
+- _sequence <code>number</code> <code> = 0</code> - the starting sequence number in key generation
+when the class is under test.
+- _defaultTitle <code>string</code> <code> = &quot;default&quot;</code> - the default string loadeed into
+the TreeItem.title field when a new node is created or sanitized.
+- _useindex <code>boolean</code> <code> = true</code> - turns on a map index of the node values
+that are loaded into the tree.  Used for a fast id lookup.
+- _usesanitize <code>boolean</code> <code> = true</code> - when new nodes are processed by
+the walk function each node is checked by default to ensure parent/child
+keys are set and all fields are in the TreeItem.
 
 <a name="module_TreeData..TreeData+createNode"></a>
 
@@ -149,10 +155,9 @@ Creates a new node object with default properties.
 
 **Kind**: instance method of [<code>TreeData</code>](#module_TreeData..TreeData)  
 **Returns**: <code>TreeItem</code> - a new node instance reference  
+**Params**
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| parentNode | <code>TreeItem</code> | <code></code> | a parent node associated with this instance |
+- parentNode <code>TreeItem</code> <code> = </code> - a parent node associated with this instance
 
 <a name="module_TreeData..TreeData+find"></a>
 
@@ -161,10 +166,9 @@ Performs a breadth search of the tree for a matching id value.
 
 **Kind**: instance method of [<code>TreeData</code>](#module_TreeData..TreeData)  
 **Returns**: <code>TreeItem</code> - of the item found otherwise null  
+**Params**
 
-| Param | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | the id value to search for |
+- id <code>string</code> - the id value to search for
 
 <a name="module_TreeData..TreeData+getNewKey"></a>
 
@@ -183,10 +187,9 @@ also creates the node key value if one does not exist.
 
 **Kind**: instance method of [<code>TreeData</code>](#module_TreeData..TreeData)  
 **Returns**: <code>TreeItem</code> - a referece back of the node that was sanitized  
+**Params**
 
-| Param | Type | Description |
-| --- | --- | --- |
-| node | <code>TreeItem</code> | the node to fix |
+- node <code>TreeItem</code> - the node to fix
 
 <a name="module_TreeData..TreeData+toString"></a>
 
@@ -206,8 +209,8 @@ is given as a parameter.
 **Kind**: instance method of [<code>TreeData</code>](#module_TreeData..TreeData)  
 **Returns**: <code>Array.&lt;TreeeItem&gt;</code> - a reference to the tree structure that was
 processed.  
+**Params**
 
-| Param | Type | Description |
-| --- | --- | --- |
-| fn | <code>WalkCallback</code> | a callback function invoked on each node as it is encountered. |
+- fn <code>WalkCallback</code> - a callback function invoked on each
+node as it is encountered.
 

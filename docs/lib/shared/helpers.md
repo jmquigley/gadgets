@@ -22,11 +22,12 @@ disable debugging information in the library.  It also turns off
 coverage checks for this function.
 
 **Kind**: global function  
+**Params**
 
-| Param | Type | Description |
-| --- | --- | --- |
-| context | <code>string</code> | the name of the module where this debug request is made. |
-| ...args | <code>Array.&lt;object&gt;</code> | the list of arguments passed to the the debug function. |
+- context <code>string</code> - the name of the module where this debug request
+is made.
+- ...args <code>Array.&lt;object&gt;</code> - the list of arguments passed to the the debug
+function.
 
 <a name="globalize"></a>
 
@@ -38,10 +39,10 @@ flag is used to override the current global reference.
 
 **Kind**: global function  
 **Returns**: <code>object</code> - the global instance reference  
+**Params**
 
-| Param | Type | Description |
-| --- | --- | --- |
-| name | <code>string</code> | the name of the variable to store globally |
-| pkg | <code>object</code> | the object associated with the variable name |
-| replace | <code>boolean</code> | if true, then it will always overwrite the current global (if it exists) |
+- name <code>string</code> - the name of the variable to store globally
+- pkg <code>object</code> - the object associated with the variable name
+- replace <code>boolean</code> - if true, then it will always overwrite the
+current global (if it exists)
 

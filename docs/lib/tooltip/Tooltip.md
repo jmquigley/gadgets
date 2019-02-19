@@ -53,8 +53,8 @@ return it.  If it doesn't have it, then NULL is returned.
 **Kind**: inner method of [<code>Tooltip</code>](#module_Tooltip)  
 **Returns**: <code>Tooltip</code> - a new Tooltip reference if there is a given tooltip string
 otherwise null is returned.  
+**Params**
 
-| Param | Type | Description |
-| --- | --- | --- |
-| props | <code>any</code> | and object representing the props used to generate the tooltip. |
+- props <code>any</code> - and object representing the props used to generate the
+tooltip.
 

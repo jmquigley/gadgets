@@ -47,10 +47,10 @@ Retrieves the object representing the requested theme.
 
 **Kind**: inner method of [<code>themes</code>](#module_themes)  
 **Returns**: <code>ThemeProps</code> - the key/value object that contains CSS settings  
+**Params**
 
-| Param | Type | Description |
-| --- | --- | --- |
-| theme | <code>Theme</code> | a reference to the name of the theme that should be selected and set within this module. |
+- theme <code>Theme</code> - a reference to the name of the theme that should be
+selected and set within this module.
 
 <a name="module_themes..getThemeList"></a>
 
@@ -66,9 +66,9 @@ If the requested theme doesn't exist, then the `base` theme is set.
 
 **Kind**: inner method of [<code>themes</code>](#module_themes)  
 **Returns**: <code>ThemeProps</code> - a reference to the current theme object  
+**Params**
 
-| Param | Type | Description |
-| --- | --- | --- |
-| custom | <code>Object</code> | a custom theme object |
-| theme | <code>Theme</code> | a reference to the name of the theme that should be selected and set within this module. |
+- custom <code>Object</code> - a custom theme object
+- theme <code>Theme</code> - a reference to the name of the theme that should be
+selected and set within this module.
 
