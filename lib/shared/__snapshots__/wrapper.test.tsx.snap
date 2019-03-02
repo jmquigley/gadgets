@@ -53,37 +53,7 @@ exports[`Test creation of a default Wrapper 1`] = `
   visible={true}
   width={null}
   xcss={null}
->
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "fontFamily": "OpenSans, Georgia, serif",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "itemHoverColor": "#bedb39",
-        "searchFocus": "#fd7400",
-        "searchMatch": "#1f8a70",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "titleBarBackgroundColor": "#004358",
-        "titleBarForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
-  >
-    <h1>
-      test header
-    </h1>
-  </ThemeProvider>
-</Wrapper>
+/>
 `;
 
 exports[`Test creation of the Wrapper props object 1`] = `
@@ -162,35 +132,5 @@ exports[`Test disabling the Wrapper 1`] = `
   visible={true}
   width={null}
   xcss={null}
->
-  <ThemeProvider
-    theme={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#c0c0c0",
-        "color": "#000000",
-        "fontFamily": "OpenSans, Georgia, serif",
-        "headerBackgroundColor": "#004358",
-        "headerForegroundColor": "#ffffff",
-        "headerHoverColor": "#ffe11a",
-        "hoverColor": "#c0c0c0",
-        "inputBorderColor": "#c0c0c0",
-        "itemHoverColor": "#bedb39",
-        "searchFocus": "#fd7400",
-        "searchMatch": "#1f8a70",
-        "selectedBackgroundColor": "#1f8a70",
-        "selectedForegroundColor": "#ffe11a",
-        "titleBarBackgroundColor": "#004358",
-        "titleBarForegroundColor": "#ffe11a",
-        "tooltipBackgroundColor": "#708090",
-        "tooltipForegroundColor": "#ffffff",
-        "transitionDelay": "0.5s",
-      }
-    }
-  >
-    <h1>
-      test header
-    </h1>
-  </ThemeProvider>
-</Wrapper>
+/>
 `;

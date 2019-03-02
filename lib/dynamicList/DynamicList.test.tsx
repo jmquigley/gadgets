@@ -120,4 +120,4 @@ test("Test setting an error message", async () => {
 		.catch((err: string) => {
 			expect(err).toBeNull();
 		});
-});
+}, 20000);

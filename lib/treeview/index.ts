@@ -1,14 +1,15 @@
-import {getDefaultTreeviewProps, Treeview, TreeviewProps} from "./Treeview";
-
-import {TreeData, TreeId, TreeIndex, TreeItem, WalkCallback} from "./TreeData";
+import {
+	getDefaultTreeviewProps,
+	TreeItem,
+	Treeview,
+	TreeviewData,
+	TreeviewProps
+} from "./Treeview";
 
 export {
 	getDefaultTreeviewProps,
-	TreeData,
-	TreeId,
-	TreeIndex,
 	TreeItem,
 	Treeview,
-	TreeviewProps,
-	WalkCallback
+	TreeviewData,
+	TreeviewProps
 };

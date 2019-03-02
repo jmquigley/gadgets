@@ -122,13 +122,10 @@ import {getDefaultToolbarProps, Toolbar} from "./lib/toolbar";
 import {getDefaultTooltipProps, Tooltip} from "./lib/tooltip";
 import {
 	getDefaultTreeviewProps,
-	TreeData,
-	TreeId,
-	TreeIndex,
 	TreeItem,
 	Treeview,
-	TreeviewProps,
-	WalkCallback
+	TreeviewData,
+	TreeviewProps
 } from "./lib/treeview";
 import {getDefaultTriangleProps, Triangle} from "./lib/triangle";
 
@@ -260,11 +257,9 @@ export {
 	ToastLevel,
 	Toolbar,
 	Tooltip,
-	TreeData,
-	TreeId,
-	TreeIndex,
 	TreeItem,
 	Treeview,
+	TreeviewData,
 	TreeviewProps,
 	Triangle,
 	validateEmail,
@@ -276,6 +271,5 @@ export {
 	ValidatorFn,
 	version,
 	withTheme,
-	WalkCallback,
 	Wrapper
 };

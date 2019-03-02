@@ -349,7 +349,6 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	public componentDidMount() {
 		// The webview is dynamically inserted into the div represented by the
 		// <div> in BrowserContent
-
 		this._webview = document.createElement("webview");
 		this._webview.setAttribute("id", this.props.id || "ui-browser-content");
 		this._webview.nodeintegration = true;

@@ -38,8 +38,6 @@ for (const sizing of ev.getNames(Sizing)) {
 		);
 
 		expect(ctl).toBeDefined();
-		const treeview = ctl.instance() as Treeview;
-		expect(treeview).toBeDefined();
 		expect(ctl).toMatchSnapshot();
 	});
 }

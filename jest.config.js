@@ -16,7 +16,6 @@ module.exports = {
 		"<rootDir>/bin/setupDOM.js"
 	],
 	setupFilesAfterEnv: ["<rootDir>/bin/setupJest.js"],
-	snapshotSerializers: ["enzyme-to-json/serializer"],
 	testPathIgnorePatterns: [
 		"<rootDir>/bin/",
 		"<rootDir>/dist",

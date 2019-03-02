@@ -129,7 +129,8 @@ import {clone, cloneDeep} from "lodash";
 import * as React from "react";
 import SortableTree, {ExtendedNodeData, NodeData} from "react-sortable-tree";
 import {calc, toREM} from "util.calc";
-import {getUUID, nilEvent} from "util.toolbox";
+import {GeneralTree, GeneralTreeItem} from "util.ds";
+import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
 import {Container} from "../container";
 import {Divider} from "../divider";
@@ -152,7 +153,15 @@ import styled from "../shared/themed-components";
 import {TextField} from "../textField";
 import {TitleLayout} from "../title";
 import {Toolbar} from "../toolbar";
-import {TreeData, TreeItem} from "./TreeData";
+
+export interface TreeviewData {
+	title?: string;
+	subtitle?: string;
+	expanded?: boolean;
+	[key: string]: any;
+}
+
+export type TreeItem = GeneralTreeItem<TreeviewData>;
 
 export interface TreeviewProps extends BaseProps {
 	addAsFirstChild: boolean;
@@ -200,7 +209,7 @@ export interface TreeviewState extends BaseState {
 	searchFocusIndex?: number;
 	searchFoundCount?: number;
 	selectedId?: string | number;
-	td?: TreeData;
+	td?: GeneralTree<TreeviewData>;
 }
 
 export function getDefaultTreeviewState(): TreeviewState {
@@ -302,7 +311,10 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 		this.state = {
 			...getDefaultTreeviewState(),
-			td: new TreeData(this.props.treeData, this.props.testing)
+			td: new GeneralTree({
+				treeData: this.props.treeData,
+				testing: this.props.testing
+			})
 		};
 	}
 
@@ -321,21 +333,8 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	}
 
 	@autobind
-	private createNode(parentNode: TreeItem): TreeItem {
-		return {
-			children: [],
-			expanded: true,
-			id: getUUID(),
-			data: "",
-			parent: parentNode,
-			subtitle: "",
-			title: this.props.defaultTitle
-		};
-	}
-
-	@autobind
 	private customNodeProperties(ext: ExtendedNodeData) {
-		const node: TreeItem = ext.node;
+		const node: TreeItem = ext.node as TreeItem;
 
 		// overrides the string title to use Item in its place.  This allows for
 		// the + add a new node under this one or to remove the current node
@@ -388,16 +387,15 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		if (!this.props.disabled && this.state.selectedId != null) {
 			this.clearSearch();
 
-			const parentNode: TreeItem = this.state.td.treeIndex[
-				this.state.selectedId
-			];
-			const node: TreeItem = this.createNode(parentNode);
+			const {td} = this.state;
+			const parentNode: TreeItem = td.find(this.state.selectedId);
 
-			if (this.props.addAsFirstChild) {
-				parentNode.children.unshift(node);
-			} else {
-				parentNode.children.push(node);
-			}
+			const node = td.insert(
+				{
+					parentId: parentNode.id
+				},
+				this.props.addAsFirstChild
+			);
 
 			if (this.props.selectNew) {
 				this.setState({
@@ -405,7 +403,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 				});
 			}
 
-			this.props.onAdd(node, clone(this.state.td.treeData));
+			this.props.onAdd(node, clone(td.treeData));
 		}
 	}
 
@@ -422,31 +420,13 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 			this.clearSearch();
 
 			const {td} = this.state;
-
-			// To delete a node find its parent.  Then remove it from the
-			// parent's child array.  If this is a root node, then the parent
-			// id will be null.
-			const parentNode: TreeItem = td.treeIndex[node.parent.id];
-			if (parentNode != null) {
-				parentNode.children = parentNode.children.filter(
-					(it) => it.id !== node.id
-				);
-			}
-
-			// Scane the root node every time intentionally.  This will ensure that the
-			// tree data object will be different when passed to the onDelete callback.
-			// If this is not done, then underlying child changes will make the top
-			// level state look like it has not changed prevent a rerender.  This also
-			// ensures the special case where the change is at the root and has no parent
-			const newTreeData: TreeItem[] = td.treeData.filter(
-				(it) => it.id !== node.id
-			);
+			td.remove(node.id);
 
 			if (this.state.selectedId === node.id) {
 				this.setState({selectedId: null});
 			}
 
-			this.props.onDelete(node, newTreeData);
+			this.props.onDelete(node, clone(td.treeData));
 		}
 	}
 
@@ -474,18 +454,13 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	private handleNodeExpansion(expanded: boolean) {
 		this.clearSearch();
 
-		const newTreeData: TreeItem[] = clone(this.state.td.treeData);
+		const {td} = this.state;
 
-		function preorder(arr: TreeItem[]) {
-			for (const it of arr) {
-				it.expanded = expanded;
-				if ("children" in it && it.children.length > 0) {
-					preorder(it.children);
-				}
-			}
-		}
+		td.walk((it: TreeItem) => {
+			it.expanded = expanded;
+		});
 
-		preorder(newTreeData);
+		const newTreeData = clone(td.treeData);
 
 		if (expanded) {
 			this.props.onExpand(newTreeData);
@@ -548,12 +523,10 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 				},
 				() => {
 					if (matches.length > 0) {
-						this.props.onSearch(
-							this.state.matches[searchFocusIndex].node
-						);
-						this.props.onSelect(
-							this.state.matches[searchFocusIndex].node
-						);
+						this.props.onSearch(this.state.matches[searchFocusIndex]
+							.node as TreeItem);
+						this.props.onSelect(this.state.matches[searchFocusIndex]
+							.node as TreeItem);
 					}
 				}
 			);

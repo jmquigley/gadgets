@@ -109,8 +109,11 @@
 const debug = require("debug")("Editor");
 
 import {globalize} from "../shared/helpers";
-globalize("hljs", require("highlight.js"));
+const hljs = globalize("hljs", require("highlight.js"));
 const Quill = globalize("Quill", require("quill"));
+
+debug(`hljs: %O`, hljs);
+debug(`Quill: %O`, Quill);
 
 import autobind from "autobind-decorator";
 import {cloneDeep} from "lodash";
