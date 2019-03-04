@@ -45,11 +45,11 @@ exports[`Test creation of a Badge control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Badge__BadgeContainerView
     className="ui-badge-container"
   >
     Test Component
-    <styled.div
+    <Badge__BadgeView
       className="ui-badge test-class"
       disabled={false}
       location="topRight"
@@ -65,8 +65,8 @@ exports[`Test creation of a Badge control 1`] = `
       visible={true}
     >
       1
-    </styled.div>
-  </styled.div>
+    </Badge__BadgeView>
+  </Badge__BadgeContainerView>
 </Wrapper>
 `;
 
@@ -116,7 +116,7 @@ exports[`Test making the Badge control invisible 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Badge__BadgeContainerView
     className="ui-badge-container"
   />
 </Wrapper>
@@ -213,10 +213,10 @@ exports[`Test the disabling of a Badge control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Badge__BadgeContainerView
     className="ui-badge-container"
   >
-    <styled.div
+    <Badge__BadgeView
       className="ui-badge"
       disabled={true}
       location="topRight"
@@ -232,7 +232,7 @@ exports[`Test the disabling of a Badge control 1`] = `
       visible={true}
     >
       0
-    </styled.div>
-  </styled.div>
+    </Badge__BadgeView>
+  </Badge__BadgeContainerView>
 </Wrapper>
 `;

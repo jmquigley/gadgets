@@ -302,7 +302,7 @@ exports[`Test creation of a Triangle control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.svg
+  <Triangle__SVGView
     bottom={null}
     className="ui-triangle test-class"
     contentEditable={false}
@@ -350,7 +350,7 @@ exports[`Test creation of a Triangle control 1`] = `
     <polygon
       points="0,35, 20,10 40,35"
     />
-  </styled.svg>
+  </Triangle__SVGView>
 </Wrapper>
 `;
 

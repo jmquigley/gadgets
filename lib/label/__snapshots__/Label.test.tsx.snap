@@ -94,7 +94,7 @@ exports[`Test creation of a Label control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.span
+  <Label__LabelView
     className="ui-label test-class"
     contentEditable={false}
     disabled={false}
@@ -109,7 +109,7 @@ exports[`Test creation of a Label control 1`] = `
     visible={true}
   >
     Test label text
-  </styled.span>
+  </Label__LabelView>
 </Wrapper>
 `;
 

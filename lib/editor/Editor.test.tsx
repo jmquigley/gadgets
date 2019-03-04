@@ -1,5 +1,6 @@
 "use strict";
 
+import "../globals";
 import {getDefaultEditorProps} from "./index";
 
 test("Test retrieval of the Editor props object", () => {

@@ -2,7 +2,13 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import {render} from "react-dom";
 
-import {Container, styled} from "../dist/bundle";
+const debug = require("debug")("app");
+debug("Starting Demo application");
+
+// (global as any).hljs = require("highlight.js");
+// (global as any).Quill = require("quill");
+
+import {Container, Dropdown, Option, Sizing, styled} from "../dist/bundle";
 
 import DemoAccordion from "./src/DemoAccordion";
 import DemoBadge from "./src/DemoBadge";
@@ -31,17 +37,6 @@ import DemoToolbar from "./src/DemoToolbar";
 import DemoTooltip from "./src/DemoTooltip";
 import DemoTriangle from "./src/DemoTriangle";
 import DemoTreeview from "./src/DemoTreeview";
-
-const debug = require("debug")("app");
-
-//
-// This is not how the components would typically be included within an
-// electron app.  This is kind of a "hack" to allow the demo app and the
-// library code to coexist.  Typically they would be imported using
-// CommonJS import.
-//
-
-const {Dropdown, Option, Sizing} = require("../dist/bundle");
 
 interface AppState {
 	disabled: boolean;

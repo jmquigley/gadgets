@@ -48,18 +48,18 @@ exports[`Test creation of a TextField control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <TextField__TextfieldContainerView
     className="ui-textfield-container"
     id="TextField-0"
     minWidth=""
   >
-    <styled.div
+    <TextField__TextFieldView
       className="ui-textfield test-class"
       disabled={false}
       noborder={false}
       visible={true}
     >
-      <styled.input
+      <TextField__StyledInput
         className="test-class"
         disabled={false}
         id=""
@@ -75,8 +75,8 @@ exports[`Test creation of a TextField control 1`] = `
         type="text"
         visible={true}
       />
-    </styled.div>
-  </styled.div>
+    </TextField__TextFieldView>
+  </TextField__TextfieldContainerView>
 </Wrapper>
 `;
 

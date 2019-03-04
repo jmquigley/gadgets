@@ -56,11 +56,11 @@ exports[`Creation of the Dropdown control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Dropdown__DropdownContainerView
     className="ui-dropdown-container"
     sizing="normal"
   >
-    <styled.select
+    <Dropdown__DropdownView
       className="ui-dropdown"
       disabled={false}
       id="Dropdown-0"
@@ -89,8 +89,8 @@ exports[`Creation of the Dropdown control 1`] = `
       >
         lstr3
       </option>
-    </styled.select>
-  </styled.div>
+    </Dropdown__DropdownView>
+  </Dropdown__DropdownContainerView>
 </Wrapper>
 `;
 

@@ -108,12 +108,7 @@
 
 const debug = require("debug")("Editor");
 
-import {globalize} from "../shared/helpers";
-const hljs = globalize("hljs", require("highlight.js"));
-const Quill = globalize("Quill", require("quill"));
-
-debug(`hljs: %O`, hljs);
-debug(`Quill: %O`, Quill);
+const Quill = (global as any).Quill;
 
 import autobind from "autobind-decorator";
 import {cloneDeep} from "lodash";

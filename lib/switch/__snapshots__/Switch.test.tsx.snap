@@ -43,12 +43,12 @@ exports[`Test creation of an inny type Switch 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Switch__SliderContainerView
     className="ui-switch"
     height="20px"
     style={Object {}}
   >
-    <styled.div
+    <Switch__SliderView
       bottom={null}
       className="ui-switch-slider ui-slider-on"
       contentEditable={false}
@@ -92,7 +92,7 @@ exports[`Test creation of an inny type Switch 1`] = `
       width={null}
       xcss={null}
     >
-      <styled.div
+      <Switch__StyledButton
         className="ui-switch-button ripple"
         height="9.6px"
         onClick={[Function]}
@@ -103,8 +103,8 @@ exports[`Test creation of an inny type Switch 1`] = `
         }
         width="9.6px"
       />
-    </styled.div>
-  </styled.div>
+    </Switch__SliderView>
+  </Switch__SliderContainerView>
 </Wrapper>
 `;
 
@@ -151,12 +151,12 @@ exports[`Test creation of an outy type Switch 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Switch__SliderContainerView
     className="ui-switch"
     height="20px"
     style={Object {}}
   >
-    <styled.div
+    <Switch__SliderView
       bottom={null}
       className="ui-switch-slider ui-slider-on"
       contentEditable={false}
@@ -200,7 +200,7 @@ exports[`Test creation of an outy type Switch 1`] = `
       width={null}
       xcss={null}
     >
-      <styled.div
+      <Switch__StyledButton
         className="ui-switch-button ripple"
         height="20px"
         onClick={[Function]}
@@ -211,8 +211,8 @@ exports[`Test creation of an outy type Switch 1`] = `
         }
         width="20px"
       />
-    </styled.div>
-  </styled.div>
+    </Switch__SliderView>
+  </Switch__SliderContainerView>
 </Wrapper>
 `;
 
@@ -389,12 +389,12 @@ exports[`Test the click handler on the Switch control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Switch__SliderContainerView
     className="ui-switch"
     height="20px"
     style={Object {}}
   >
-    <styled.div
+    <Switch__SliderView
       bottom={null}
       className="ui-switch-slider ui-slider-off"
       contentEditable={false}
@@ -438,7 +438,7 @@ exports[`Test the click handler on the Switch control 1`] = `
       width={null}
       xcss={null}
     >
-      <styled.div
+      <Switch__StyledButton
         className="ui-switch-button ripple"
         height="20px"
         onClick={[Function]}
@@ -449,7 +449,7 @@ exports[`Test the click handler on the Switch control 1`] = `
         }
         width="20px"
       />
-    </styled.div>
-  </styled.div>
+    </Switch__SliderView>
+  </Switch__SliderContainerView>
 </Wrapper>
 `;

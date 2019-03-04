@@ -38,14 +38,14 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Toolbar__ToolbarView
     className="ui-toolbar"
   >
-    <styled.div
+    <Toolbar__ToolbarGroupView
       className="ui-toolbar-group"
       justify={2}
     >
-      <styled.div
+      <Toolbar__ToolbarElementView
         style={
           Object {
             "border": "solid 1px #c0c0c0",
@@ -92,9 +92,9 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
           width={null}
           xcss={null}
         />
-      </styled.div>
-    </styled.div>
-  </styled.div>
+      </Toolbar__ToolbarElementView>
+    </Toolbar__ToolbarGroupView>
+  </Toolbar__ToolbarView>
 </Wrapper>
 `;
 
@@ -136,14 +136,14 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Toolbar__ToolbarView
     className="ui-toolbar"
   >
-    <styled.div
+    <Toolbar__ToolbarGroupView
       className="ui-toolbar-group"
       justify={0}
     >
-      <styled.div
+      <Toolbar__ToolbarElementView
         style={
           Object {
             "border": "solid 1px #c0c0c0",
@@ -190,9 +190,9 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
           width={null}
           xcss={null}
         />
-      </styled.div>
-    </styled.div>
-  </styled.div>
+      </Toolbar__ToolbarElementView>
+    </Toolbar__ToolbarGroupView>
+  </Toolbar__ToolbarView>
 </Wrapper>
 `;
 
@@ -234,14 +234,14 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Toolbar__ToolbarView
     className="ui-toolbar"
   >
-    <styled.div
+    <Toolbar__ToolbarGroupView
       className="ui-toolbar-group"
       justify={1}
     >
-      <styled.div
+      <Toolbar__ToolbarElementView
         style={
           Object {
             "border": "solid 1px #c0c0c0",
@@ -288,9 +288,9 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
           width={null}
           xcss={null}
         />
-      </styled.div>
-    </styled.div>
-  </styled.div>
+      </Toolbar__ToolbarElementView>
+    </Toolbar__ToolbarGroupView>
+  </Toolbar__ToolbarView>
 </Wrapper>
 `;
 
@@ -332,14 +332,14 @@ exports[`Test disabling of a Toolbar instance 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Toolbar__ToolbarView
     className="ui-toolbar"
   >
-    <styled.div
+    <Toolbar__ToolbarGroupView
       className="ui-toolbar-group"
       justify={0}
     >
-      <styled.div
+      <Toolbar__ToolbarElementView
         style={
           Object {
             "border": "solid 1px #c0c0c0",
@@ -386,9 +386,9 @@ exports[`Test disabling of a Toolbar instance 1`] = `
           width={null}
           xcss={null}
         />
-      </styled.div>
-    </styled.div>
-  </styled.div>
+      </Toolbar__ToolbarElementView>
+    </Toolbar__ToolbarGroupView>
+  </Toolbar__ToolbarView>
 </Wrapper>
 `;
 
@@ -430,14 +430,14 @@ exports[`Test making the Toolbar invisible 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Toolbar__ToolbarView
     className="ui-toolbar"
   >
-    <styled.div
+    <Toolbar__ToolbarGroupView
       className="ui-toolbar-group"
       justify={0}
     >
-      <styled.div
+      <Toolbar__ToolbarElementView
         style={
           Object {
             "border": "solid 1px #c0c0c0",
@@ -484,9 +484,9 @@ exports[`Test making the Toolbar invisible 1`] = `
           width={null}
           xcss={null}
         />
-      </styled.div>
-    </styled.div>
-  </styled.div>
+      </Toolbar__ToolbarElementView>
+    </Toolbar__ToolbarGroupView>
+  </Toolbar__ToolbarView>
 </Wrapper>
 `;
 

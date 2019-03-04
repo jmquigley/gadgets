@@ -71,7 +71,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
       }
     }
   >
-    <styled.div
+    <DialogWindow__DialogWindowView
       bottom={null}
       className="ui-dialogwindow test-class"
       contentEditable={false}
@@ -110,7 +110,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
       width="600px"
       xcss={null}
     >
-      <Styled(Item)
+      <DialogWindow__ItemView
         bottom={null}
         className="test-class"
         contentEditable={false}
@@ -196,15 +196,15 @@ exports[`Test creation of a default DialogWindow control 1`] = `
         <span>
           Dialog Content
         </span>
-      </Styled(Item)>
-      <styled.div
+      </DialogWindow__ItemView>
+      <DialogWindow__DialogWindowContent
         className="ui-dialogwindow-content"
       >
         <span>
           Dialog Content
         </span>
-      </styled.div>
-    </styled.div>
+      </DialogWindow__DialogWindowContent>
+    </DialogWindow__DialogWindowView>
   </Modal>
 </Wrapper>
 `;

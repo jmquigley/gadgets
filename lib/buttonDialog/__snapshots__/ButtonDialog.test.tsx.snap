@@ -52,7 +52,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <ButtonDialog__ButtonDialogView
     className="ui-button-dialog test-class"
     id="ButtonDialog-0"
   >
@@ -98,21 +98,21 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       width={null}
       xcss={null}
     />
-    <styled.div
+    <ButtonDialog__ButtonDialogPopup
       className="ui-dialog-popup test-class-dialog"
       location="bottom"
       onClick={[Function]}
       visible={false}
     >
-      <styled.div
+      <ButtonDialog__ButtonDialogContent
         sizing="normal"
         visible={false}
       >
         <p>
           Dialog test
         </p>
-      </styled.div>
-      <Styled(Triangle)
+      </ButtonDialog__ButtonDialogContent>
+      <ButtonDialog__StyledTriangle
         className="ui-dialog-triangle"
         direction="up"
         location="bottom"
@@ -126,8 +126,8 @@ exports[`Test creation of a ButtonDialog control 1`] = `
         }
         visible={false}
       />
-    </styled.div>
-  </styled.div>
+    </ButtonDialog__ButtonDialogPopup>
+  </ButtonDialog__ButtonDialogView>
 </Wrapper>
 `;
 
@@ -183,7 +183,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <ButtonDialog__ButtonDialogView
     className="ui-button-dialog test-class"
     id="ButtonDialog-0"
   >
@@ -229,21 +229,21 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       width={null}
       xcss={null}
     />
-    <styled.div
+    <ButtonDialog__ButtonDialogPopup
       className="ui-dialog-popup test-class-dialog"
       location="top"
       onClick={[Function]}
       visible={false}
     >
-      <styled.div
+      <ButtonDialog__ButtonDialogContent
         sizing="normal"
         visible={false}
       >
         <p>
           Dialog test
         </p>
-      </styled.div>
-      <Styled(Triangle)
+      </ButtonDialog__ButtonDialogContent>
+      <ButtonDialog__StyledTriangle
         className="ui-dialog-triangle"
         direction="down"
         location="top"
@@ -257,8 +257,8 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
         }
         visible={false}
       />
-    </styled.div>
-  </styled.div>
+    </ButtonDialog__ButtonDialogPopup>
+  </ButtonDialog__ButtonDialogView>
 </Wrapper>
 `;
 

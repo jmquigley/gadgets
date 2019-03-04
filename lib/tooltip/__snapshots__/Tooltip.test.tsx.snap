@@ -473,7 +473,7 @@ exports[`Test creation of a Tooltip control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Tooltip__TooltipView
     className="ui-tooltip test-class"
     location="middleRight"
     sizing="small"
@@ -486,7 +486,7 @@ exports[`Test creation of a Tooltip control 1`] = `
     visible={false}
     width="unset"
   >
-    <styled.span
+    <Tooltip__TootipContentView
       className="ui-tooltip-content"
       sizing="small"
       style={
@@ -497,8 +497,8 @@ exports[`Test creation of a Tooltip control 1`] = `
       }
     >
       [object Object]
-    </styled.span>
-    <Styled(Triangle)
+    </Tooltip__TootipContentView>
+    <Tooltip__StyledTriangle
       direction="left"
       location="middleRight"
       sizing="small"
@@ -509,7 +509,7 @@ exports[`Test creation of a Tooltip control 1`] = `
         }
       }
     />
-  </styled.div>
+  </Tooltip__TooltipView>
 </Wrapper>
 `;
 
@@ -556,7 +556,7 @@ exports[`Test disabling of a Tooltip 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Tooltip__TooltipView
     className="ui-tooltip"
     location="top"
     sizing="small"
@@ -569,7 +569,7 @@ exports[`Test disabling of a Tooltip 1`] = `
     visible={false}
     width="unset"
   >
-    <styled.span
+    <Tooltip__TootipContentView
       className="ui-tooltip-content"
       sizing="small"
       style={
@@ -579,7 +579,7 @@ exports[`Test disabling of a Tooltip 1`] = `
         }
       }
     />
-    <Styled(Triangle)
+    <Tooltip__StyledTriangle
       direction="down"
       location="top"
       sizing="small"
@@ -590,7 +590,7 @@ exports[`Test disabling of a Tooltip 1`] = `
         }
       }
     />
-  </styled.div>
+  </Tooltip__TooltipView>
 </Wrapper>
 `;
 
@@ -637,7 +637,7 @@ exports[`Test making a Tooltip invisible 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Tooltip__TooltipView
     className="ui-tooltip"
     location="top"
     sizing="small"
@@ -650,7 +650,7 @@ exports[`Test making a Tooltip invisible 1`] = `
     visible={false}
     width="unset"
   >
-    <styled.span
+    <Tooltip__TootipContentView
       className="ui-tooltip-content"
       sizing="small"
       style={
@@ -660,7 +660,7 @@ exports[`Test making a Tooltip invisible 1`] = `
         }
       }
     />
-    <Styled(Triangle)
+    <Tooltip__StyledTriangle
       direction="down"
       location="top"
       sizing="small"
@@ -671,7 +671,7 @@ exports[`Test making a Tooltip invisible 1`] = `
         }
       }
     />
-  </styled.div>
+  </Tooltip__TooltipView>
 </Wrapper>
 `;
 

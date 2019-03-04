@@ -1,6 +1,6 @@
 import {BaseComponent, baseZIndex, defaultSize} from "./base";
 
-import {debug, globalize} from "./helpers";
+import {globalize} from "./helpers";
 
 import {
 	BaseProps,
@@ -46,7 +46,6 @@ export {
 	boxStyle,
 	Color,
 	ColorScheme,
-	debug,
 	defaultSize,
 	Direction,
 	disabled,

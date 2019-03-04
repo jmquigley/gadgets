@@ -275,7 +275,7 @@ exports[`Test the creation of a Tab instance 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Tab__TabView
     className="ui-tab ui-selected"
     disabled={false}
     selected={true}
@@ -289,23 +289,13 @@ exports[`Test the creation of a Tab instance 1`] = `
     visible={true}
     xcss={
       Array [
-        "
-	border-right: solid 1px
-		",
+        "border-right:solid 1px ",
         [Function],
-        ";
-	border-top: solid 1px
-		",
+        ";border-top:solid 1px ",
         [Function],
-        ";
-
-	&:first-child {
-		border-left: solid 1px
-			",
+        ";&:first-child{border-left:solid 1px ",
         [Function],
-        ";
-	}
-",
+        ";}",
       ]
     }
   >
@@ -418,6 +408,6 @@ exports[`Test the creation of a Tab instance 1`] = `
     >
       Test content
     </Item>
-  </styled.div>
+  </Tab__TabView>
 </Wrapper>
 `;

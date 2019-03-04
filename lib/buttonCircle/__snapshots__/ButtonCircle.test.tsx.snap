@@ -88,14 +88,14 @@ exports[`Test creation of a ButtonCircle control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <ButtonCircle__ButtonCircleContainerView
     className="ui-button-circle test-class"
   >
-    <styled.div
+    <ButtonCircle__ButtonCircleInnerView
       height="24px"
       width="24px"
     >
-      <Styled(Button)
+      <ButtonCircle__ButtonCircleView
         bottom={null}
         className="test-class"
         contentEditable={false}
@@ -136,8 +136,8 @@ exports[`Test creation of a ButtonCircle control 1`] = `
         width={null}
         xcss={null}
       />
-    </styled.div>
-  </styled.div>
+    </ButtonCircle__ButtonCircleInnerView>
+  </ButtonCircle__ButtonCircleContainerView>
 </Wrapper>
 `;
 

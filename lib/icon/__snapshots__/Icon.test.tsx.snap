@@ -44,7 +44,7 @@ exports[`Test creation of an Icon control with icon 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.i
+  <Icon__FontAwesome
     bottom={null}
     className="ui-icon fa fa-fw fa-star test-class"
     contentEditable={false}
@@ -127,7 +127,7 @@ exports[`Test creation of an Icon control with image 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.img
+  <Icon__Image
     bottom={null}
     className="ui-icon"
     contentEditable={false}

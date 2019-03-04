@@ -46,7 +46,7 @@ exports[`Creation of the Option control (circle) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -58,7 +58,7 @@ exports[`Creation of the Option control (circle) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -107,14 +107,14 @@ exports[`Creation of the Option control (circle) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -164,7 +164,7 @@ exports[`Creation of the Option control (circleFilled) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -176,7 +176,7 @@ exports[`Creation of the Option control (circleFilled) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -225,14 +225,14 @@ exports[`Creation of the Option control (circleFilled) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -282,7 +282,7 @@ exports[`Creation of the Option control (circleReverse) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -294,7 +294,7 @@ exports[`Creation of the Option control (circleReverse) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -343,14 +343,14 @@ exports[`Creation of the Option control (circleReverse) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -400,7 +400,7 @@ exports[`Creation of the Option control (dot) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -412,7 +412,7 @@ exports[`Creation of the Option control (dot) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -461,14 +461,14 @@ exports[`Creation of the Option control (dot) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -518,7 +518,7 @@ exports[`Creation of the Option control (inherit) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="inherit"
@@ -530,7 +530,7 @@ exports[`Creation of the Option control (inherit) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -579,14 +579,14 @@ exports[`Creation of the Option control (inherit) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="inherit"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -636,7 +636,7 @@ exports[`Creation of the Option control (large) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="large"
@@ -648,7 +648,7 @@ exports[`Creation of the Option control (large) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -697,14 +697,14 @@ exports[`Creation of the Option control (large) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="large"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -754,7 +754,7 @@ exports[`Creation of the Option control (medium) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="medium"
@@ -766,7 +766,7 @@ exports[`Creation of the Option control (medium) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -815,14 +815,14 @@ exports[`Creation of the Option control (medium) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="medium"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -872,7 +872,7 @@ exports[`Creation of the Option control (normal) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -884,7 +884,7 @@ exports[`Creation of the Option control (normal) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -933,14 +933,14 @@ exports[`Creation of the Option control (normal) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -990,7 +990,7 @@ exports[`Creation of the Option control (small) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="small"
@@ -1002,7 +1002,7 @@ exports[`Creation of the Option control (small) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -1051,14 +1051,14 @@ exports[`Creation of the Option control (small) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="small"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -1108,7 +1108,7 @@ exports[`Creation of the Option control (square) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -1120,7 +1120,7 @@ exports[`Creation of the Option control (square) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -1169,14 +1169,14 @@ exports[`Creation of the Option control (square) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -1226,7 +1226,7 @@ exports[`Creation of the Option control (squareFilled) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -1238,7 +1238,7 @@ exports[`Creation of the Option control (squareFilled) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -1287,14 +1287,14 @@ exports[`Creation of the Option control (squareFilled) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -1344,7 +1344,7 @@ exports[`Creation of the Option control (squareReverse) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -1356,7 +1356,7 @@ exports[`Creation of the Option control (squareReverse) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -1405,14 +1405,14 @@ exports[`Creation of the Option control (squareReverse) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -1462,7 +1462,7 @@ exports[`Creation of the Option control (star) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -1474,7 +1474,7 @@ exports[`Creation of the Option control (star) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -1523,14 +1523,14 @@ exports[`Creation of the Option control (star) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -1580,7 +1580,7 @@ exports[`Creation of the Option control (times) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -1592,7 +1592,7 @@ exports[`Creation of the Option control (times) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -1641,14 +1641,14 @@ exports[`Creation of the Option control (times) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -1698,7 +1698,7 @@ exports[`Creation of the Option control (timesReverse) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="normal"
@@ -1710,7 +1710,7 @@ exports[`Creation of the Option control (timesReverse) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -1759,14 +1759,14 @@ exports[`Creation of the Option control (timesReverse) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="normal"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -1816,7 +1816,7 @@ exports[`Creation of the Option control (xlarge) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="xlarge"
@@ -1828,7 +1828,7 @@ exports[`Creation of the Option control (xlarge) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -1877,14 +1877,14 @@ exports[`Creation of the Option control (xlarge) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="xlarge"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -1934,7 +1934,7 @@ exports[`Creation of the Option control (xsmall) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="xsmall"
@@ -1946,7 +1946,7 @@ exports[`Creation of the Option control (xsmall) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -1995,14 +1995,14 @@ exports[`Creation of the Option control (xsmall) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="xsmall"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -2052,7 +2052,7 @@ exports[`Creation of the Option control (xxlarge) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="xxlarge"
@@ -2064,7 +2064,7 @@ exports[`Creation of the Option control (xxlarge) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -2113,14 +2113,14 @@ exports[`Creation of the Option control (xxlarge) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="xxlarge"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 
@@ -2170,7 +2170,7 @@ exports[`Creation of the Option control (xxsmall) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Option__OptionView
     className="ui-option test-class"
     onClick={[Function]}
     sizing="xxsmall"
@@ -2182,7 +2182,7 @@ exports[`Creation of the Option control (xxsmall) 1`] = `
     }
     visible={true}
   >
-    <Styled(ButtonToggle)
+    <Option__StyledButtonToggle
       bgColorOff="inherit"
       bgColorOn="inherit"
       bottom={null}
@@ -2231,14 +2231,14 @@ exports[`Creation of the Option control (xxsmall) 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Title)
+    <Option__StyledTitle
       disabled={false}
       layout={6}
       noedit={true}
       sizing="xxsmall"
       title="test"
     />
-  </styled.div>
+  </Option__OptionView>
 </Wrapper>
 `;
 

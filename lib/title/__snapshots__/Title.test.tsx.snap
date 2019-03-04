@@ -129,7 +129,7 @@ exports[`Test creation of a Title control with default props 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Title__TitleView
     className="ui-title-bar ripple test-class"
     disabled={false}
     layout={5}
@@ -137,7 +137,7 @@ exports[`Test creation of a Title control with default props 1`] = `
     style={Object {}}
     visible={true}
   >
-    <Styled(Label)
+    <Title__StyledLabel
       bottom={null}
       className="ui-title"
       contentEditable={false}
@@ -177,14 +177,11 @@ exports[`Test creation of a Title control with default props 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: left;
-	flex: 5;
-",
+          "text-align:left;flex:5;",
         ]
       }
     />
-  </styled.div>
+  </Title__TitleView>
 </Wrapper>
 `;
 
@@ -231,7 +228,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Title__TitleView
     className="ui-title-bar ripple"
     disabled={false}
     layout={1}
@@ -239,7 +236,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
     style={Object {}}
     visible={true}
   >
-    <Styled(Label)
+    <Title__StyledLabel
       bottom={null}
       className="ui-title"
       contentEditable={false}
@@ -279,14 +276,11 @@ exports[`Test creation of a Title control with even layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: left;
-	flex: 1;
-",
+          "text-align:left;flex:1;",
         ]
       }
     />
-    <styled.div
+    <Title__StyledWidget
       bottom={null}
       className="ui-title-widget"
       contentEditable={false}
@@ -325,16 +319,13 @@ exports[`Test creation of a Title control with even layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: right;
-	flex: 1;
-",
+          "text-align:right;flex:1;",
         ]
       }
     >
       widget
-    </styled.div>
-  </styled.div>
+    </Title__StyledWidget>
+  </Title__TitleView>
 </Wrapper>
 `;
 
@@ -381,7 +372,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Title__TitleView
     className="ui-title-bar ripple"
     disabled={false}
     layout={6}
@@ -389,7 +380,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
     style={Object {}}
     visible={true}
   >
-    <Styled(Label)
+    <Title__StyledLabel
       bottom={null}
       className="ui-title"
       contentEditable={false}
@@ -429,14 +420,11 @@ exports[`Test creation of a Title control with no layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: left;
-	flex: 1;
-",
+          "text-align:left;flex:1;",
         ]
       }
     />
-  </styled.div>
+  </Title__TitleView>
 </Wrapper>
 `;
 
@@ -483,7 +471,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Title__TitleView
     className="ui-title-bar ripple"
     disabled={false}
     layout={0}
@@ -491,7 +479,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     style={Object {}}
     visible={true}
   >
-    <Styled(Label)
+    <Title__StyledLabel
       bottom={null}
       className="ui-title"
       contentEditable={false}
@@ -531,14 +519,11 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: left;
-	flex: 1;
-",
+          "text-align:left;flex:1;",
         ]
       }
     />
-    <styled.div
+    <Title__StyledWidget
       bottom={null}
       className="ui-title-widget"
       contentEditable={false}
@@ -577,16 +562,13 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: right;
-	flex: 3;
-",
+          "text-align:right;flex:3;",
         ]
       }
     >
       widget
-    </styled.div>
-  </styled.div>
+    </Title__StyledWidget>
+  </Title__TitleView>
 </Wrapper>
 `;
 
@@ -633,7 +615,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Title__TitleView
     className="ui-title-bar ripple"
     disabled={false}
     layout={4}
@@ -641,7 +623,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     style={Object {}}
     visible={true}
   >
-    <Styled(Label)
+    <Title__StyledLabel
       bottom={null}
       className="ui-title"
       contentEditable={false}
@@ -681,13 +663,11 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	display: block;
-",
+          "display:block;",
         ]
       }
     />
-    <styled.div
+    <Title__StyledWidget
       bottom={null}
       className="ui-title-widget"
       contentEditable={false}
@@ -726,15 +706,13 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	display: block;
-",
+          "display:block;",
         ]
       }
     >
       widget
-    </styled.div>
-  </styled.div>
+    </Title__StyledWidget>
+  </Title__TitleView>
 </Wrapper>
 `;
 
@@ -781,7 +759,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Title__TitleView
     className="ui-title-bar ripple"
     disabled={false}
     layout={3}
@@ -789,7 +767,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     style={Object {}}
     visible={true}
   >
-    <Styled(Label)
+    <Title__StyledLabel
       bottom={null}
       className="ui-title"
       contentEditable={false}
@@ -829,14 +807,11 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: left;
-	flex: 1;
-",
+          "text-align:left;flex:1;",
         ]
       }
     />
-    <styled.div
+    <Title__StyledWidget
       bottom={null}
       className="ui-title-widget"
       contentEditable={false}
@@ -875,16 +850,13 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: right;
-	flex: 2;
-",
+          "text-align:right;flex:2;",
         ]
       }
     >
       widget
-    </styled.div>
-  </styled.div>
+    </Title__StyledWidget>
+  </Title__TitleView>
 </Wrapper>
 `;
 
@@ -931,7 +903,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Title__TitleView
     className="ui-title-bar ripple"
     disabled={false}
     layout={2}
@@ -939,7 +911,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     style={Object {}}
     visible={true}
   >
-    <Styled(Label)
+    <Title__StyledLabel
       bottom={null}
       className="ui-title"
       contentEditable={false}
@@ -979,14 +951,11 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: left;
-	flex: 3;
-",
+          "text-align:left;flex:3;",
         ]
       }
     />
-    <styled.div
+    <Title__StyledWidget
       bottom={null}
       className="ui-title-widget"
       contentEditable={false}
@@ -1025,16 +994,13 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       width={null}
       xcss={
         Array [
-          "
-	text-align: right;
-	flex: 1;
-",
+          "text-align:right;flex:1;",
         ]
       }
     >
       widget
-    </styled.div>
-  </styled.div>
+    </Title__StyledWidget>
+  </Title__TitleView>
 </Wrapper>
 `;
 

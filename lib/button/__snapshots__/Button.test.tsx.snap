@@ -80,7 +80,7 @@ exports[`Test creation of a Button control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Button__ButtonView
     className="ui-button ripple test-class"
     disabled={false}
     id="Button-0"
@@ -125,7 +125,7 @@ exports[`Test creation of a Button control 1`] = `
       width={null}
       xcss={null}
     />
-  </styled.div>
+  </Button__ButtonView>
 </Wrapper>
 `;
 
@@ -176,7 +176,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Button__ButtonView
     className="ui-button ripple"
     disabled={false}
     id="Button-0"
@@ -228,7 +228,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
       width={null}
       xcss={null}
     />
-  </styled.div>
+  </Button__ButtonView>
 </Wrapper>
 `;
 

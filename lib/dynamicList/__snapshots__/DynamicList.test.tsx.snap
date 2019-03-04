@@ -60,7 +60,7 @@ exports[`Test creation of a DynamicList control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <DynamicList__DynamicListContainer
     className="ui-dynamiclist-container"
     disabled={false}
   >
@@ -1743,7 +1743,7 @@ exports[`Test creation of a DynamicList control 1`] = `
             width={null}
             xcss={null}
           />
-          <Styled(ListFooter)
+          <DynamicList__StyledListFooter
             layout={3}
             title={
               <TextField
@@ -1871,7 +1871,7 @@ exports[`Test creation of a DynamicList control 1`] = `
         xcss={null}
       />
     </Accordion>
-  </styled.div>
+  </DynamicList__DynamicListContainer>
 </Wrapper>
 `;
 
@@ -1947,7 +1947,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <DynamicList__DynamicListContainer
     className="ui-dynamiclist-container"
     disabled={false}
   >
@@ -2760,7 +2760,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
             width={null}
             xcss={null}
           />
-          <Styled(ListFooter)
+          <DynamicList__StyledListFooter
             layout={3}
             title={
               <TextField
@@ -2888,7 +2888,7 @@ exports[`Test creation of a DynamicList with 3 items 1`] = `
         xcss={null}
       />
     </Accordion>
-  </styled.div>
+  </DynamicList__DynamicListContainer>
 </Wrapper>
 `;
 
@@ -2964,7 +2964,7 @@ exports[`Test disabling of a Dynamic List control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <DynamicList__DynamicListContainer
     className="ui-dynamiclist-container"
     disabled={true}
   >
@@ -3777,7 +3777,7 @@ exports[`Test disabling of a Dynamic List control 1`] = `
             width={null}
             xcss={null}
           />
-          <Styled(ListFooter)
+          <DynamicList__StyledListFooter
             layout={3}
             title={
               <TextField
@@ -3905,7 +3905,7 @@ exports[`Test disabling of a Dynamic List control 1`] = `
         xcss={null}
       />
     </Accordion>
-  </styled.div>
+  </DynamicList__DynamicListContainer>
 </Wrapper>
 `;
 
@@ -3981,7 +3981,7 @@ exports[`Test making a Dynamic List invisible 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <DynamicList__DynamicListContainer
     className="ui-dynamiclist-container"
     disabled={false}
   >
@@ -4794,7 +4794,7 @@ exports[`Test making a Dynamic List invisible 1`] = `
             width={null}
             xcss={null}
           />
-          <Styled(ListFooter)
+          <DynamicList__StyledListFooter
             layout={3}
             title={
               <TextField
@@ -4922,7 +4922,7 @@ exports[`Test making a Dynamic List invisible 1`] = `
         xcss={null}
       />
     </Accordion>
-  </styled.div>
+  </DynamicList__DynamicListContainer>
 </Wrapper>
 `;
 
@@ -5131,7 +5131,7 @@ exports[`Test setting the control to noselect 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <DynamicList__DynamicListContainer
     className="ui-dynamiclist-container"
     disabled={false}
   >
@@ -5944,7 +5944,7 @@ exports[`Test setting the control to noselect 1`] = `
             width={null}
             xcss={null}
           />
-          <Styled(ListFooter)
+          <DynamicList__StyledListFooter
             layout={3}
             title={
               <TextField
@@ -6072,6 +6072,6 @@ exports[`Test setting the control to noselect 1`] = `
         xcss={null}
       />
     </Accordion>
-  </styled.div>
+  </DynamicList__DynamicListContainer>
 </Wrapper>
 `;

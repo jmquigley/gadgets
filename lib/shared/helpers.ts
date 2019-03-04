@@ -1,24 +1,6 @@
 "use strict";
 
-const debugEntry = require("debug");
-const pkg = require("../../package.json");
-
-/**
- * A wrapper for the debug function.  It uses the package.json to enable or
- * disable debugging information in the library.  It also turns off
- * coverage checks for this function.
- * @param context {string} the name of the module where this debug request
- * is made.
- * @param args {object[]} the list of arguments passed to the the debug
- * function.
- */
-export function debug(context: string, ...args: any[]) {
-	/* istanbul ignore if  */
-	if (pkg.debug) {
-		const debugFn = debugEntry(`Gadgets -> ${context}`);
-		debugFn(...args);
-	}
-}
+const debug = require("debug")("helpers");
 
 /**
  * Takes a variable name and an object and places that name and associated
@@ -39,6 +21,7 @@ export function globalize(
 	let ref: any = pkgname;
 	if (!(global as any)[name] || replace) {
 		(window as any)[name] = (global as any)[name] = pkgname;
+		debug("Adding global variable %o -> %O", name, (global as any)[name]);
 	} else {
 		ref = (global as any)[name];
 	}

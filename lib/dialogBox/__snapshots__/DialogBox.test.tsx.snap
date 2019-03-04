@@ -74,11 +74,11 @@ exports[`Test creation of a default DialogBox control 1`] = `
       }
     }
   >
-    <styled.div
+    <DialogBox__DialogBoxView
       className="ui-dialogbox test-class"
     >
-      <styled.div>
-        <Styled(Icon)
+      <DialogBox__DialogBoxIconView>
+        <DialogBox__StyledIcon
           iconName="info-circle"
           sizing="xxlarge"
           style={
@@ -87,34 +87,34 @@ exports[`Test creation of a default DialogBox control 1`] = `
             }
           }
         />
-      </styled.div>
-      <styled.div>
-        <styled.div
+      </DialogBox__DialogBoxIconView>
+      <DialogBox__DialogBoxMessageContainerView>
+        <DialogBox__DialogBoxMessageView
           dangerouslySetInnerHTML={
             Object {
               "__html": "<p></p>",
             }
           }
         />
-        <styled.div>
-          <Styled(ButtonText)
+        <DialogBox__ButtonBar>
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="Yes"
           />
-          <styled.div />
-          <Styled(ButtonText)
+          <DialogBox__Spacer />
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="No"
           />
-        </styled.div>
-      </styled.div>
-    </styled.div>
+        </DialogBox__ButtonBar>
+      </DialogBox__DialogBoxMessageContainerView>
+    </DialogBox__DialogBoxView>
   </Modal>
 </Wrapper>
 `;
@@ -193,11 +193,11 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
       }
     }
   >
-    <styled.div
+    <DialogBox__DialogBoxView
       className="ui-dialogbox"
     >
-      <styled.div>
-        <Styled(Icon)
+      <DialogBox__DialogBoxIconView>
+        <DialogBox__StyledIcon
           iconName="info-circle"
           sizing="xxlarge"
           style={
@@ -206,34 +206,34 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
             }
           }
         />
-      </styled.div>
-      <styled.div>
-        <styled.div
+      </DialogBox__DialogBoxIconView>
+      <DialogBox__DialogBoxMessageContainerView>
+        <DialogBox__DialogBoxMessageView
           dangerouslySetInnerHTML={
             Object {
               "__html": "<p>Testing click handler for yes</p>",
             }
           }
         />
-        <styled.div>
-          <Styled(ButtonText)
+        <DialogBox__ButtonBar>
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="Yes"
           />
-          <styled.div />
-          <Styled(ButtonText)
+          <DialogBox__Spacer />
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="No"
           />
-        </styled.div>
-      </styled.div>
-    </styled.div>
+        </DialogBox__ButtonBar>
+      </DialogBox__DialogBoxMessageContainerView>
+    </DialogBox__DialogBoxView>
   </Modal>
 </Wrapper>
 `;
@@ -361,11 +361,11 @@ exports[`Test the creation of an custom DialogBox 1`] = `
       }
     }
   >
-    <styled.div
+    <DialogBox__DialogBoxView
       className="ui-dialogbox"
     >
-      <styled.div>
-        <Styled(Icon)
+      <DialogBox__DialogBoxIconView>
+        <DialogBox__StyledIcon
           iconName="car"
           sizing="xxlarge"
           style={
@@ -374,34 +374,34 @@ exports[`Test the creation of an custom DialogBox 1`] = `
             }
           }
         />
-      </styled.div>
-      <styled.div>
-        <styled.div
+      </DialogBox__DialogBoxIconView>
+      <DialogBox__DialogBoxMessageContainerView>
+        <DialogBox__DialogBoxMessageView
           dangerouslySetInnerHTML={
             Object {
               "__html": "<p>Sample info message</p>",
             }
           }
         />
-        <styled.div>
-          <Styled(ButtonText)
+        <DialogBox__ButtonBar>
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="Yes"
           />
-          <styled.div />
-          <Styled(ButtonText)
+          <DialogBox__Spacer />
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="No"
           />
-        </styled.div>
-      </styled.div>
-    </styled.div>
+        </DialogBox__ButtonBar>
+      </DialogBox__DialogBoxMessageContainerView>
+    </DialogBox__DialogBoxView>
   </Modal>
 </Wrapper>
 `;
@@ -480,11 +480,11 @@ exports[`Test the creation of an error DialogBox 1`] = `
       }
     }
   >
-    <styled.div
+    <DialogBox__DialogBoxView
       className="ui-dialogbox"
     >
-      <styled.div>
-        <Styled(Icon)
+      <DialogBox__DialogBoxIconView>
+        <DialogBox__StyledIcon
           iconName="times-circle"
           sizing="xxlarge"
           style={
@@ -493,34 +493,34 @@ exports[`Test the creation of an error DialogBox 1`] = `
             }
           }
         />
-      </styled.div>
-      <styled.div>
-        <styled.div
+      </DialogBox__DialogBoxIconView>
+      <DialogBox__DialogBoxMessageContainerView>
+        <DialogBox__DialogBoxMessageView
           dangerouslySetInnerHTML={
             Object {
               "__html": "<p>Sample error message</p>",
             }
           }
         />
-        <styled.div>
-          <Styled(ButtonText)
+        <DialogBox__ButtonBar>
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="Yes"
           />
-          <styled.div />
-          <Styled(ButtonText)
+          <DialogBox__Spacer />
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="No"
           />
-        </styled.div>
-      </styled.div>
-    </styled.div>
+        </DialogBox__ButtonBar>
+      </DialogBox__DialogBoxMessageContainerView>
+    </DialogBox__DialogBoxView>
   </Modal>
 </Wrapper>
 `;
@@ -599,11 +599,11 @@ exports[`Test the creation of an info DialogBox 1`] = `
       }
     }
   >
-    <styled.div
+    <DialogBox__DialogBoxView
       className="ui-dialogbox"
     >
-      <styled.div>
-        <Styled(Icon)
+      <DialogBox__DialogBoxIconView>
+        <DialogBox__StyledIcon
           iconName="info-circle"
           sizing="xxlarge"
           style={
@@ -612,34 +612,34 @@ exports[`Test the creation of an info DialogBox 1`] = `
             }
           }
         />
-      </styled.div>
-      <styled.div>
-        <styled.div
+      </DialogBox__DialogBoxIconView>
+      <DialogBox__DialogBoxMessageContainerView>
+        <DialogBox__DialogBoxMessageView
           dangerouslySetInnerHTML={
             Object {
               "__html": "<p>Sample info message</p>",
             }
           }
         />
-        <styled.div>
-          <Styled(ButtonText)
+        <DialogBox__ButtonBar>
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="Yes"
           />
-          <styled.div />
-          <Styled(ButtonText)
+          <DialogBox__Spacer />
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="No"
           />
-        </styled.div>
-      </styled.div>
-    </styled.div>
+        </DialogBox__ButtonBar>
+      </DialogBox__DialogBoxMessageContainerView>
+    </DialogBox__DialogBoxView>
   </Modal>
 </Wrapper>
 `;
@@ -718,11 +718,11 @@ exports[`Test the creation of an success DialogBox 1`] = `
       }
     }
   >
-    <styled.div
+    <DialogBox__DialogBoxView
       className="ui-dialogbox"
     >
-      <styled.div>
-        <Styled(Icon)
+      <DialogBox__DialogBoxIconView>
+        <DialogBox__StyledIcon
           iconName="check-circle"
           sizing="xxlarge"
           style={
@@ -731,34 +731,34 @@ exports[`Test the creation of an success DialogBox 1`] = `
             }
           }
         />
-      </styled.div>
-      <styled.div>
-        <styled.div
+      </DialogBox__DialogBoxIconView>
+      <DialogBox__DialogBoxMessageContainerView>
+        <DialogBox__DialogBoxMessageView
           dangerouslySetInnerHTML={
             Object {
               "__html": "<p>Sample success message</p>",
             }
           }
         />
-        <styled.div>
-          <Styled(ButtonText)
+        <DialogBox__ButtonBar>
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="Yes"
           />
-          <styled.div />
-          <Styled(ButtonText)
+          <DialogBox__Spacer />
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="No"
           />
-        </styled.div>
-      </styled.div>
-    </styled.div>
+        </DialogBox__ButtonBar>
+      </DialogBox__DialogBoxMessageContainerView>
+    </DialogBox__DialogBoxView>
   </Modal>
 </Wrapper>
 `;
@@ -837,11 +837,11 @@ exports[`Test the creation of an warning DialogBox 1`] = `
       }
     }
   >
-    <styled.div
+    <DialogBox__DialogBoxView
       className="ui-dialogbox"
     >
-      <styled.div>
-        <Styled(Icon)
+      <DialogBox__DialogBoxIconView>
+        <DialogBox__StyledIcon
           iconName="exclamation-circle"
           sizing="xxlarge"
           style={
@@ -850,34 +850,34 @@ exports[`Test the creation of an warning DialogBox 1`] = `
             }
           }
         />
-      </styled.div>
-      <styled.div>
-        <styled.div
+      </DialogBox__DialogBoxIconView>
+      <DialogBox__DialogBoxMessageContainerView>
+        <DialogBox__DialogBoxMessageView
           dangerouslySetInnerHTML={
             Object {
               "__html": "<p>Sample warning message</p>",
             }
           }
         />
-        <styled.div>
-          <Styled(ButtonText)
+        <DialogBox__ButtonBar>
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="Yes"
           />
-          <styled.div />
-          <Styled(ButtonText)
+          <DialogBox__Spacer />
+          <DialogBox__StyledButtonText
             justify={2}
             noicon={true}
             onClick={[Function]}
             sizing="normal"
             text="No"
           />
-        </styled.div>
-      </styled.div>
-    </styled.div>
+        </DialogBox__ButtonBar>
+      </DialogBox__DialogBoxMessageContainerView>
+    </DialogBox__DialogBoxView>
   </Modal>
 </Wrapper>
 `;

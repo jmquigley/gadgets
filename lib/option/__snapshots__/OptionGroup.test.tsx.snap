@@ -48,11 +48,11 @@ exports[`Creation of the OptionGroup control (inherit) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="inherit"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -60,7 +60,7 @@ exports[`Creation of the OptionGroup control (inherit) 1`] = `
       sizing="inherit"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -70,7 +70,7 @@ exports[`Creation of the OptionGroup control (inherit) 1`] = `
       sizing="inherit"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -80,7 +80,7 @@ exports[`Creation of the OptionGroup control (inherit) 1`] = `
       sizing="inherit"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -90,7 +90,7 @@ exports[`Creation of the OptionGroup control (inherit) 1`] = `
       sizing="inherit"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -142,11 +142,11 @@ exports[`Creation of the OptionGroup control (large) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="large"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -154,7 +154,7 @@ exports[`Creation of the OptionGroup control (large) 1`] = `
       sizing="large"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -164,7 +164,7 @@ exports[`Creation of the OptionGroup control (large) 1`] = `
       sizing="large"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -174,7 +174,7 @@ exports[`Creation of the OptionGroup control (large) 1`] = `
       sizing="large"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -184,7 +184,7 @@ exports[`Creation of the OptionGroup control (large) 1`] = `
       sizing="large"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -236,11 +236,11 @@ exports[`Creation of the OptionGroup control (medium) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="medium"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -248,7 +248,7 @@ exports[`Creation of the OptionGroup control (medium) 1`] = `
       sizing="medium"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -258,7 +258,7 @@ exports[`Creation of the OptionGroup control (medium) 1`] = `
       sizing="medium"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -268,7 +268,7 @@ exports[`Creation of the OptionGroup control (medium) 1`] = `
       sizing="medium"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -278,7 +278,7 @@ exports[`Creation of the OptionGroup control (medium) 1`] = `
       sizing="medium"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -330,11 +330,11 @@ exports[`Creation of the OptionGroup control (normal) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -342,7 +342,7 @@ exports[`Creation of the OptionGroup control (normal) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -352,7 +352,7 @@ exports[`Creation of the OptionGroup control (normal) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -362,7 +362,7 @@ exports[`Creation of the OptionGroup control (normal) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -372,7 +372,7 @@ exports[`Creation of the OptionGroup control (normal) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -424,11 +424,11 @@ exports[`Creation of the OptionGroup control (small) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="small"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -436,7 +436,7 @@ exports[`Creation of the OptionGroup control (small) 1`] = `
       sizing="small"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -446,7 +446,7 @@ exports[`Creation of the OptionGroup control (small) 1`] = `
       sizing="small"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -456,7 +456,7 @@ exports[`Creation of the OptionGroup control (small) 1`] = `
       sizing="small"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -466,7 +466,7 @@ exports[`Creation of the OptionGroup control (small) 1`] = `
       sizing="small"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -518,11 +518,11 @@ exports[`Creation of the OptionGroup control (xlarge) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="xlarge"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -530,7 +530,7 @@ exports[`Creation of the OptionGroup control (xlarge) 1`] = `
       sizing="xlarge"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -540,7 +540,7 @@ exports[`Creation of the OptionGroup control (xlarge) 1`] = `
       sizing="xlarge"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -550,7 +550,7 @@ exports[`Creation of the OptionGroup control (xlarge) 1`] = `
       sizing="xlarge"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -560,7 +560,7 @@ exports[`Creation of the OptionGroup control (xlarge) 1`] = `
       sizing="xlarge"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -612,11 +612,11 @@ exports[`Creation of the OptionGroup control (xsmall) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="xsmall"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -624,7 +624,7 @@ exports[`Creation of the OptionGroup control (xsmall) 1`] = `
       sizing="xsmall"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -634,7 +634,7 @@ exports[`Creation of the OptionGroup control (xsmall) 1`] = `
       sizing="xsmall"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -644,7 +644,7 @@ exports[`Creation of the OptionGroup control (xsmall) 1`] = `
       sizing="xsmall"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -654,7 +654,7 @@ exports[`Creation of the OptionGroup control (xsmall) 1`] = `
       sizing="xsmall"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -706,11 +706,11 @@ exports[`Creation of the OptionGroup control (xxlarge) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="xxlarge"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -718,7 +718,7 @@ exports[`Creation of the OptionGroup control (xxlarge) 1`] = `
       sizing="xxlarge"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -728,7 +728,7 @@ exports[`Creation of the OptionGroup control (xxlarge) 1`] = `
       sizing="xxlarge"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -738,7 +738,7 @@ exports[`Creation of the OptionGroup control (xxlarge) 1`] = `
       sizing="xxlarge"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -748,7 +748,7 @@ exports[`Creation of the OptionGroup control (xxlarge) 1`] = `
       sizing="xxlarge"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -800,11 +800,11 @@ exports[`Creation of the OptionGroup control (xxsmall) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="xxsmall"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -812,7 +812,7 @@ exports[`Creation of the OptionGroup control (xxsmall) 1`] = `
       sizing="xxsmall"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -822,7 +822,7 @@ exports[`Creation of the OptionGroup control (xxsmall) 1`] = `
       sizing="xxsmall"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -832,7 +832,7 @@ exports[`Creation of the OptionGroup control (xxsmall) 1`] = `
       sizing="xxsmall"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -842,7 +842,7 @@ exports[`Creation of the OptionGroup control (xxsmall) 1`] = `
       sizing="xxsmall"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -894,11 +894,11 @@ exports[`Creation of the OptionGroup control of type (0) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -906,7 +906,7 @@ exports[`Creation of the OptionGroup control of type (0) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -916,7 +916,7 @@ exports[`Creation of the OptionGroup control of type (0) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -926,7 +926,7 @@ exports[`Creation of the OptionGroup control of type (0) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -936,7 +936,7 @@ exports[`Creation of the OptionGroup control of type (0) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -988,11 +988,11 @@ exports[`Creation of the OptionGroup control of type (1) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -1000,7 +1000,7 @@ exports[`Creation of the OptionGroup control of type (1) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -1010,7 +1010,7 @@ exports[`Creation of the OptionGroup control of type (1) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1020,7 +1020,7 @@ exports[`Creation of the OptionGroup control of type (1) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1030,7 +1030,7 @@ exports[`Creation of the OptionGroup control of type (1) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -1082,11 +1082,11 @@ exports[`Creation of the OptionGroup control of type (2) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -1094,7 +1094,7 @@ exports[`Creation of the OptionGroup control of type (2) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -1104,7 +1104,7 @@ exports[`Creation of the OptionGroup control of type (2) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1114,7 +1114,7 @@ exports[`Creation of the OptionGroup control of type (2) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1124,7 +1124,7 @@ exports[`Creation of the OptionGroup control of type (2) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -1176,11 +1176,11 @@ exports[`Creation of the OptionGroup control of type (3) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -1188,7 +1188,7 @@ exports[`Creation of the OptionGroup control of type (3) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -1198,7 +1198,7 @@ exports[`Creation of the OptionGroup control of type (3) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1208,7 +1208,7 @@ exports[`Creation of the OptionGroup control of type (3) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1218,7 +1218,7 @@ exports[`Creation of the OptionGroup control of type (3) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -1270,11 +1270,11 @@ exports[`Creation of the OptionGroup control of type (4) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -1282,7 +1282,7 @@ exports[`Creation of the OptionGroup control of type (4) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -1292,7 +1292,7 @@ exports[`Creation of the OptionGroup control of type (4) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1302,7 +1302,7 @@ exports[`Creation of the OptionGroup control of type (4) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1312,7 +1312,7 @@ exports[`Creation of the OptionGroup control of type (4) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -1364,11 +1364,11 @@ exports[`Creation of the OptionGroup control of type (5) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -1376,7 +1376,7 @@ exports[`Creation of the OptionGroup control of type (5) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -1386,7 +1386,7 @@ exports[`Creation of the OptionGroup control of type (5) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1396,7 +1396,7 @@ exports[`Creation of the OptionGroup control of type (5) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1406,7 +1406,7 @@ exports[`Creation of the OptionGroup control of type (5) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -1458,11 +1458,11 @@ exports[`Creation of the OptionGroup control of type (6) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -1470,7 +1470,7 @@ exports[`Creation of the OptionGroup control of type (6) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -1480,7 +1480,7 @@ exports[`Creation of the OptionGroup control of type (6) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1490,7 +1490,7 @@ exports[`Creation of the OptionGroup control of type (6) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1500,7 +1500,7 @@ exports[`Creation of the OptionGroup control of type (6) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -1552,11 +1552,11 @@ exports[`Creation of the OptionGroup control of type (7) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -1564,7 +1564,7 @@ exports[`Creation of the OptionGroup control of type (7) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -1574,7 +1574,7 @@ exports[`Creation of the OptionGroup control of type (7) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1584,7 +1584,7 @@ exports[`Creation of the OptionGroup control of type (7) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1594,7 +1594,7 @@ exports[`Creation of the OptionGroup control of type (7) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -1646,11 +1646,11 @@ exports[`Creation of the OptionGroup control of type (8) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -1658,7 +1658,7 @@ exports[`Creation of the OptionGroup control of type (8) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -1668,7 +1668,7 @@ exports[`Creation of the OptionGroup control of type (8) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1678,7 +1678,7 @@ exports[`Creation of the OptionGroup control of type (8) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1688,7 +1688,7 @@ exports[`Creation of the OptionGroup control of type (8) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 
@@ -1740,11 +1740,11 @@ exports[`Creation of the OptionGroup control of type (9) 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <OptionGroup__StyledOptionGroup
     className="ui-option-group test-class"
     sizing="normal"
   >
-    <Styled(Title)
+    <OptionGroup__StyledTitle
       className="ui-option-group-title"
       layout={6}
       noedit={true}
@@ -1752,7 +1752,7 @@ exports[`Creation of the OptionGroup control of type (9) 1`] = `
       sizing="normal"
       title="test options"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={true}
@@ -1762,7 +1762,7 @@ exports[`Creation of the OptionGroup control of type (9) 1`] = `
       sizing="normal"
       text="option1"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1772,7 +1772,7 @@ exports[`Creation of the OptionGroup control of type (9) 1`] = `
       sizing="normal"
       text="option2"
     />
-    <Styled(Option)
+    <OptionGroup__StyledOption
       controlled={false}
       disabled={false}
       initialToggle={false}
@@ -1782,7 +1782,7 @@ exports[`Creation of the OptionGroup control of type (9) 1`] = `
       sizing="normal"
       text="option3"
     />
-  </styled.div>
+  </OptionGroup__StyledOptionGroup>
 </Wrapper>
 `;
 

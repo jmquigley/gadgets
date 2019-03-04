@@ -4,11 +4,15 @@ const debug = require("debug")("DemoTreeview");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
-import {TreeItem, Treeview} from "../../dist/bundle";
+import {TreeItem, Treeview, TreeviewData} from "../../dist/bundle";
 import {StyledContainer} from "../app";
 
+interface DemoData extends TreeviewData {
+	note?: string;
+}
+
 export interface DemoTreeviewState {
-	treeData: TreeItem[];
+	treeData: DemoData[];
 }
 
 export default class DemoTreeview extends React.Component<

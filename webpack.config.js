@@ -1,20 +1,16 @@
 const {leader} = require("util.leader");
 
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 const CircularDependencyPlugin = require("circular-dependency-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const NullPlugin = require("webpack-null-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+	.BundleAnalyzerPlugin;
 const path = require("path");
 const webpack = require("webpack");
 const pkg = require("./package.json");
 
 let mode = process.env.NODE_ENV || "development";
-
-let MinifyPlugin = null;
-if (mode === "production") {
-	MinifyPlugin = require("babel-minify-webpack-plugin");
-}
 
 const banner = new webpack.BannerPlugin({
 	banner:
@@ -89,7 +85,7 @@ module.exports = {
 			"react-sortable-tree",
 			"style.css"
 		),
-		path.resolve(__dirname, "index.ts")
+		path.resolve(__dirname, "index.js")
 	],
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -97,7 +93,7 @@ module.exports = {
 		libraryTarget: "umd"
 	},
 	resolve: {
-		extensions: [".ts", ".tsx", ".js", ".jsx", ".css"]
+		extensions: [".js", ".jsx", ".css"]
 	},
 	externals: {
 		react: {
@@ -119,9 +115,9 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.tsx?$/,
-				exclude: /node_modules|dist|demo|.*\.test\.tsx/,
-				loader: "ts-loader"
+				test: /\.jsx?$/,
+				exclude: /node_modules|dist|demo|.*\.test\.tsx|.*\.d.ts/,
+				loader: "babel-loader"
 			},
 			{
 				test: /\.css$/,
@@ -176,10 +172,10 @@ module.exports = {
 				flatten: true
 			}
 		]),
-		MinifyPlugin ? new MinifyPlugin() : new NullPlugin()
-		// new webpack.SourceMapDevToolPlugin({
-		// 	filename: "[name].js.map"
-		// })
-		// new BundleAnalyzerPlugin(),
+		new MinifyPlugin(),
+		new BundleAnalyzerPlugin({
+			analyzerMode: "static",
+			reportFilename: "bundle.report.html"
+		})
 	]
 };

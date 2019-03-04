@@ -50,11 +50,11 @@ exports[`Test creation of a Pager control 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <Pager__PagerView
     className="ui-pager test-class"
     style={Object {}}
   >
-    <Styled(Button)
+    <Pager__StyledButton
       bottom={null}
       className="test-class"
       contentEditable={false}
@@ -103,7 +103,7 @@ exports[`Test creation of a Pager control 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Button)
+    <Pager__StyledButton
       bottom={null}
       className="test-class"
       contentEditable={false}
@@ -152,7 +152,7 @@ exports[`Test creation of a Pager control 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(ButtonText)
+    <Pager__StyledButtonText
       bottom={null}
       className=" ui-pager-selected"
       contentEditable={false}
@@ -208,7 +208,7 @@ exports[`Test creation of a Pager control 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(ButtonText)
+    <Pager__StyledButtonText
       bottom={null}
       className="test-class"
       contentEditable={false}
@@ -258,7 +258,7 @@ exports[`Test creation of a Pager control 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(ButtonText)
+    <Pager__StyledButtonText
       bottom={null}
       className="test-class"
       contentEditable={false}
@@ -308,7 +308,7 @@ exports[`Test creation of a Pager control 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Button)
+    <Pager__StyledButton
       bottom={null}
       className="test-class"
       contentEditable={false}
@@ -357,7 +357,7 @@ exports[`Test creation of a Pager control 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(Button)
+    <Pager__StyledButton
       bottom={null}
       className="test-class"
       contentEditable={false}
@@ -476,7 +476,7 @@ exports[`Test creation of a Pager control 1`] = `
       width={null}
       xcss={null}
     />
-    <Styled(ButtonDialog)
+    <Pager__StyledButtonDialog
       bottom={null}
       className="test-class"
       contentEditable={false}
@@ -525,7 +525,7 @@ exports[`Test creation of a Pager control 1`] = `
       width={null}
       xcss={null}
     >
-      <Styled(List)
+      <Pager__DialogListView
         noselect={true}
         sizing="normal"
       >
@@ -1435,9 +1435,9 @@ exports[`Test creation of a Pager control 1`] = `
           width={null}
           xcss={null}
         />
-      </Styled(List)>
-    </Styled(ButtonDialog)>
-  </styled.div>
+      </Pager__DialogListView>
+    </Pager__StyledButtonDialog>
+  </Pager__PagerView>
 </Wrapper>
 `;
 

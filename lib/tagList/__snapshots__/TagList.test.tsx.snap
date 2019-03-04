@@ -306,18 +306,18 @@ exports[`Test creation of a simple TagList instance 1`] = `
   width={null}
   xcss={null}
 >
-  <styled.div
+  <TagList__TagListView
     className="ui-taglist"
     sizing="normal"
     style={Object {}}
   >
-    <Styled(Icon)
+    <TagList__StyledIcon
       disabled={false}
       iconName="tags"
       sizing="normal"
       visible={true}
     />
-  </styled.div>
+  </TagList__TagListView>
 </Wrapper>
 `;
 
