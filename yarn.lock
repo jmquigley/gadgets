@@ -2215,10 +2215,15 @@ camelize@^1.0.0:
   resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
-caniuse-lite@^1.0.30000939, caniuse-lite@^1.0.30000940:
+caniuse-lite@^1.0.30000939:
   version "1.0.30000940"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000940.tgz#19f2b1497fbfa5b96b615963097c3757f27989ce"
   integrity sha512-rp/086IBUfCsNgBpko6DGQv674jRjeXPesDatDB2kxrkmDfD+S5Gesw+uT8YjpRWvLKLMRBy72SLRZ8I0EgQFw==
+
+caniuse-lite@^1.0.30000941:
+  version "1.0.30000941"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000941.tgz#f0810802b2ab8d27f4b625d4769a610e24d5a42c"
+  integrity sha512-4vzGb2MfZcO20VMPj1j6nRAixhmtlhkypM4fL4zhgzEucQIYiRzSqPcWIu1OF8i0FETD93FMIPWfUJCAcFvrqA==
 
 capture-exit@^1.2.0:
   version "1.2.0"
@@ -3222,10 +3227,10 @@ electron-to-chromium@^1.3.113:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.113.tgz#b1ccf619df7295aea17bc6951dc689632629e4a9"
   integrity sha512-De+lPAxEcpxvqPTyZAXELNpRZXABRxf+uL/rSykstQhzj/B0l1150G/ExIIxKc16lI89Hgz81J0BHAcbTqK49g==
 
-electron@4.0.6:
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-4.0.6.tgz#f936772ddb5eaa026591ea14ef806e1385fbbda9"
-  integrity sha512-r2ow/EmDibjoCNJp35mB1CcPs2xBF9fp2eoWuUOJmpVQyzdba6EnqsSD1BxwXzF9vQ5WkQ2UbfXBIvpomrdioQ==
+electron@4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-4.0.7.tgz#1930533a5031aff842a43eb90890332f9f6d0195"
+  integrity sha512-KYQ9SJZFWNKqoq6XjKW1bLFHjmAGeSC3XNuhHK/Sd2MK5H5sO3iKjvZU/YhiBUtkB/cBSkOdQTVEaLcMwU8l3A==
   dependencies:
     "@types/node" "^10.12.18"
     electron-download "^4.1.0"
@@ -7713,10 +7718,10 @@ quill-delta@^4.0.1:
     extend "^3.0.2"
     fast-diff "1.2.0"
 
-quill-markup@^0.0.31:
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/quill-markup/-/quill-markup-0.0.31.tgz#f9f129a8cc45aa0163f9701ea1c104b4948d91fa"
-  integrity sha512-LVeOifyKSi4nvSvTT59NnryTD2IoQMOYAHxb9SRd7uxD+o7WxNbvyBeooS2cjY7/iiO5Stmv/K5+JBfHqaEq9g==
+quill-markup@^0.0.33:
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/quill-markup/-/quill-markup-0.0.33.tgz#6bcbcf7d5564f3046b8fcff699c26351f55af76c"
+  integrity sha512-3WDF+0riplrn9JvSmzIaVkCjguwKSkxv12kGSSiUVHCMMNaFqUCiBqdW76Pwas8p+QYQup0JlY9vBWHqmY7R3g==
   dependencies:
     quill "^1.3.6"
 
@@ -9498,10 +9503,10 @@ util.constants@^0.0.21:
   resolved "https://registry.yarnpkg.com/util.constants/-/util.constants-0.0.21.tgz#1f22885e80ca09a61608f2561dbc3c9708451258"
   integrity sha512-IyxN0TccbWJ25UEhzrE2JVbwzpDDzLp6rhvJ/+q2CrrLkpd2iS/p1cMaPoqImKukgZNnVDFXHQvuzP2K+I40Kw==
 
-util.ds@^0.0.47:
-  version "0.0.47"
-  resolved "https://registry.yarnpkg.com/util.ds/-/util.ds-0.0.47.tgz#cc67a68a8d54ff93ce8577c24bd7b94224bfd39b"
-  integrity sha512-cFYALjbfLabtIGpOdJa6uOXEAEpIsS0quJedoEUcqgp18eEltqDO4Dp/V99lo8+/AS8l0lRfSWEztnxO7L73Aw==
+util.ds@^0.0.48:
+  version "0.0.48"
+  resolved "https://registry.yarnpkg.com/util.ds/-/util.ds-0.0.48.tgz#c4e3f45b767d6130113c7557a7828c35b7e52d7f"
+  integrity sha512-TChF3NQlJ5xphxMbeHwKsalkbvkEbNi2dhk3CtXx5q26Ve9tLRjVLXt3zrA6INzFv6Hoy9lnHnikxILF/L0svg==
 
 util.filelist@0.0.34:
   version "0.0.34"

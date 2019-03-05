@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.0.65
+#### Enhancements:
+
+- Updated to latest quill-markup plugin
+
+#### Bug Fixes:
+
+N/A
+
+---
+
 ## v0.0.64
 #### Enhancements:
 
