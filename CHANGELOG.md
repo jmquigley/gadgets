@@ -4,6 +4,7 @@
 #### Enhancements:
 
 - Updated to latest quill-markup plugin
+- Changed from travisci to circleci for automated build/testing
 
 #### Bug Fixes:
 

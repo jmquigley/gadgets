@@ -1,4 +1,5 @@
 module.exports = {
+	bail: true,
 	collectCoverage: true,
 	coveragePathIgnorePatterns: [
 		"<rootDir>/bin/",
@@ -11,11 +12,12 @@ module.exports = {
 	},
 	notify: false,
 	setupFiles: [
+		"<rootDir>/jest.setup.js",
 		"<rootDir>/bin/workaround.js",
 		"<rootDir>/bin/setupEnzyme.js",
 		"<rootDir>/bin/setupDOM.js"
 	],
-	setupFilesAfterEnv: ["<rootDir>/bin/setupJest.js"],
+	setupFilesAfterEnv: ["<rootDir>/bin/setupTestEnv.js"],
 	testPathIgnorePatterns: [
 		"<rootDir>/bin/",
 		"<rootDir>/dist",
