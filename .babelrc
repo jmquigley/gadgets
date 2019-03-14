@@ -1,6 +1,7 @@
 {
 	"presets": ["@babel/env", "@babel/typescript", "@babel/react"],
 	"plugins": [
+		"babel-plugin-espower",
 		"babel-plugin-styled-components",
 		"@babel/transform-runtime",
 		["@babel/proposal-decorators", {"legacy": true}],
