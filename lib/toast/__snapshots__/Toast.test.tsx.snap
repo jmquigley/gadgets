@@ -2,8 +2,11 @@
 
 exports[`Test creation of a Toast control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   decay={true}
@@ -81,9 +84,12 @@ exports[`Test creation of a Toast control 1`] = `
 
 exports[`Test retrieval of Toast props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "decay": true,

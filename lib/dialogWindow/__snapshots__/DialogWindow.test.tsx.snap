@@ -2,8 +2,11 @@
 
 exports[`Test creation of a default DialogWindow control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -72,8 +75,11 @@ exports[`Test creation of a default DialogWindow control 1`] = `
     }
   >
     <DialogWindow__DialogWindowView
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className="ui-dialogwindow test-class"
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -111,8 +117,11 @@ exports[`Test creation of a default DialogWindow control 1`] = `
       xcss={null}
     >
       <DialogWindow__ItemView
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className="test-class"
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -126,8 +135,11 @@ exports[`Test creation of a default DialogWindow control 1`] = `
         left={null}
         leftButton={
           <Icon
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -211,9 +223,12 @@ exports[`Test creation of a default DialogWindow control 1`] = `
 
 exports[`Test retrieval of DialogWindow props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",

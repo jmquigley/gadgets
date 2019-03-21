@@ -2,10 +2,13 @@
 
 exports[`Test creation of a ButtonToggle control 1`] = `
 <Wrapper
+  backgroundColor={null}
   bgColorOff="inherit"
   bgColorOn="inherit"
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -48,10 +51,13 @@ exports[`Test creation of a ButtonToggle control 1`] = `
   xcss={null}
 >
   <Button
+    backgroundColor={null}
     bgColorOff="inherit"
     bgColorOn="inherit"
+    borderColor={null}
     bottom={null}
     className="ui-button-toggle test-class"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -101,10 +107,13 @@ exports[`Test creation of a ButtonToggle control 1`] = `
 
 exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
 <ButtonToggle
+  backgroundColor={null}
   bgColorOff="inherit"
   bgColorOn="inherit"
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -148,10 +157,13 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
 
 exports[`Test disabling of a ButtonToggle 1`] = `
 <ButtonToggle
+  backgroundColor={null}
   bgColorOff="inherit"
   bgColorOn="inherit"
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -195,10 +207,13 @@ exports[`Test disabling of a ButtonToggle 1`] = `
 
 exports[`Test making a ButtonToggle invisible 1`] = `
 <ButtonToggle
+  backgroundColor={null}
   bgColorOff="inherit"
   bgColorOn="inherit"
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -242,11 +257,14 @@ exports[`Test making a ButtonToggle invisible 1`] = `
 
 exports[`Test retrieval of ButtonToggle props object 1`] = `
 Object {
+  "backgroundColor": null,
   "bgColorOff": "inherit",
   "bgColorOn": "inherit",
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",

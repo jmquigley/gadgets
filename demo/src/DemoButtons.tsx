@@ -76,10 +76,11 @@ export default class DemoButtons extends React.Component<any, undefined> {
 				</td>
 				<td>
 					<Button
+						backgroundColor='green'
+						color='yellow'
 						disabled={this.props["disabled"]}
 						iconName='motorcycle'
 						sizing={this.props["sizing"]}
-						style={{color: "yellow", backgroundColor: "green"}}
 					/>
 				</td>
 			</tr>

@@ -3,6 +3,8 @@
 exports[`Test retrieval of ListHeader props object 1`] = `
 Object {
   "alternating": false,
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
@@ -45,6 +47,8 @@ Object {
 exports[`Test the creation of a ListDivider control 1`] = `
 <Wrapper
   alternating={false}
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
   color="blue"
@@ -90,6 +94,7 @@ exports[`Test the creation of a ListDivider control 1`] = `
       style={
         Object {
           "backgroundColor": "blue",
+          "color": "blue",
         }
       }
     />

@@ -166,6 +166,7 @@ export type TreeItem = GeneralTreeItem<TreeviewData>;
 export interface TreeviewProps extends BaseProps {
 	addAsFirstChild: boolean;
 	defaultTitle: string;
+	isVirtualized: boolean;
 	nodeWidth?: string;
 	onAdd(node: TreeItem, treeData: TreeItem[]): void;
 	onChange(treeData: TreeItem[]): void;
@@ -186,6 +187,7 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		addAsFirstChild: true,
 		defaultTitle: "New Title",
 		height: "15em",
+		isVirtualized: true,
 		minHeight: "15em",
 		nodeWidth: "20em",
 		obj: "Treeview",
@@ -230,7 +232,7 @@ const SortableTreeView: any = styled(SortableTree)`
 		props.sizing && fontStyle[props.sizing]}
 
 	.rst__rowContents {
-		padding: 0 1px;
+		padding: 0 0 0 1px;
 		border-radius: 0;
 	}
 
@@ -254,10 +256,14 @@ const SortableTreeView: any = styled(SortableTree)`
 	.rst__rowTitle {
 		font-weight: normal;
 	}
+
+	.rst__rowWrapper {
+		padding: 5px 0;
+	}
 `;
 
 const SearchTextField: any = styled(TextField)`
-	width: 15rem;
+	width: 10rem;
 `;
 
 const StyledButton: any = styled(Button)``;
@@ -275,6 +281,10 @@ const StyledItem: any = styled(Item)`
 	.ui-button:hover {
 		background-color: ${Color.error} !important;
 	}
+
+	.ui-label {
+		padding: 8px 2px;
+	}
 `;
 
 const StyledToolbar: any = styled(Toolbar)`
@@ -282,12 +292,13 @@ const StyledToolbar: any = styled(Toolbar)`
 	border-left: 0;
 	border-right: 0;
 	display: flex;
-	padding: 0.25rem 0.25rem 0.5rem 0.25rem;
+	padding: 0.1rem 0.1rem 0.25rem 0.1rem;
 	width: 100%;
 `;
 
 const TreeviewContainer: any = styled.div`
 	${(props: TreeviewProps) => invisible(props)}
+	height: inherit;
 `;
 
 const TreeviewWrapper: any = styled(Container)``;
@@ -375,10 +386,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					title={node.title as any}
 				/>
 			),
-			className: node.id === this.state.selectedId ? "ui-selected" : "",
-			style: {
-				width: this.props.nodeWidth
-			}
+			className: node.id === this.state.selectedId ? "ui-selected" : ""
 		};
 	}
 
@@ -550,11 +558,11 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	}
 
 	public render() {
-		// The 0.75 represents the top/bottom padding in rem for the toolbar
+		// The 0.35 represents the top/bottom padding in rem for the toolbar
 		// To compute the proper treeview height we must remove the size taken up by the toolbar
 		const toolbarHeight: string = calc(
 			BaseComponent.fontSizeREM(this.props.sizing),
-			"+ 0.75"
+			"+ 0.35"
 		);
 		const treeviewHeight: string = calc(
 			toREM(this.props.height),
@@ -562,6 +570,12 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		);
 
 		const {searchFocusIndex, searchFoundCount} = this.state;
+
+		const buttonStyles = {
+			backgroundColor: this.theme.backgroundColor,
+			borderColor: this.theme.buttonColor,
+			color: this.theme.buttonColor
+		};
 
 		return (
 			<Wrapper {...this.props}>
@@ -577,11 +591,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 							iconName='plus'
 							notooltip={this.props.notooltip}
 							onClick={this.handleAdd}
-							style={{
-								backgroundColor: this.theme.backgroundColor,
-								borderColor: Color.gray,
-								color: Color.gray
-							}}
+							style={buttonStyles}
 							tooltip='Create a new node under selected'
 						/>
 						<Divider />
@@ -589,12 +599,14 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 							iconName='angle-double-down'
 							notooltip={this.props.notooltip}
 							onClick={this.handleNodeExpand}
+							style={buttonStyles}
 							tooltip='expand'
 						/>
 						<Button
 							iconName='angle-double-up'
 							notooltip={this.props.notooltip}
 							onClick={this.handleNodeCollapse}
+							style={buttonStyles}
 							tooltip='collapse'
 						/>
 						<Divider />
@@ -603,6 +615,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 							onChange={this.handleSearch}
 							onClear={this.clearSearch}
 							placeholder='search'
+							style={buttonStyles}
 							useclear
 							value={this.state.search}
 						/>
@@ -611,12 +624,14 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 							iconName='caret-left'
 							notooltip={this.props.notooltip}
 							onClick={this.handlePreviousMatch}
+							style={buttonStyles}
 							tooltip='previous search item'
 						/>
 						<Button
 							iconName='caret-right'
 							notooltip={this.props.notooltip}
 							onClick={this.handleNextMatch}
+							style={buttonStyles}
 							tooltip='next search item'
 						/>
 						<Divider />
@@ -634,7 +649,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					>
 						<SortableTreeView
 							generateNodeProps={this.customNodeProperties}
-							isVirtualized={true}
+							isVirtualized={this.props.isVirtualized}
 							onChange={this.handleChange}
 							rowHeight={this.rowHeight}
 							searchFinishCallback={this.handleSearchFinish}

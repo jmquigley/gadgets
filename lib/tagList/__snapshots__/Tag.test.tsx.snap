@@ -2,8 +2,11 @@
 
 exports[`Test creation of a simple Tag instance 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -59,8 +62,11 @@ exports[`Test creation of a simple Tag instance 1`] = `
 
 exports[`Test disabling of the simple Tag instance 1`] = `
 <Tag
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -101,8 +107,11 @@ exports[`Test disabling of the simple Tag instance 1`] = `
 
 exports[`Test making Tag invisible 1`] = `
 <Tag
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -143,9 +152,12 @@ exports[`Test making Tag invisible 1`] = `
 
 exports[`Test retrieval of Tag props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",

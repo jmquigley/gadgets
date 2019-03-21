@@ -42,6 +42,7 @@ import {default as light} from "./light";
 export interface ThemeProps {
 	backgroundColor: string;
 	borderColor: string;
+	buttonColor: string;
 	color: string;
 	fontFamily: string;
 	headerForegroundColor: string;

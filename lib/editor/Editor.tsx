@@ -377,35 +377,26 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 						<Button
 							iconName='bold'
 							onClick={this._markup && this._markup.setBold}
-							tooltip='bold'
 						/>
 						<Button
 							iconName='italic'
 							onClick={this._markup && this._markup.setItalic}
-							tooltip='italic'
 						/>
 						<Button
 							iconName='underline'
 							onClick={this._markup && this._markup.setUnderline}
-							tooltip='underline'
 						/>
 						<Button
 							iconName='strikethrough'
 							onClick={
 								this._markup && this._markup.setStrikeThrough
 							}
-							tooltip='strike through'
 						/>
 						<Button
 							iconName='code'
 							onClick={this._markup && this._markup.setMono}
-							tooltip='code'
 						/>
-						<ButtonDialog
-							iconName='header'
-							notriangle
-							tooltip='header'
-						>
+						<ButtonDialog iconName='header' notriangle>
 							<List sizing={Sizing.small} alternating noselect>
 								<ListItem
 									title='h1'
@@ -437,12 +428,10 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 						<Button
 							iconName='undo'
 							onClick={this._markup && this._markup.undo}
-							tooltip='undo'
 						/>
 						<Button
 							iconName='repeat'
 							onClick={this._markup && this._markup.redo}
-							tooltip='redo'
 						/>
 						<Divider />
 						<Dropdown
@@ -455,14 +444,12 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 							defaultVal={this.props.defaultFontSize.toString()}
 							items={this._fontSizes}
 							onSelect={this._markup && this._markup.setFontSize}
-							tooltip='font size'
 						/>
 						<Divider />
 						<Dropdown
 							defaultVal={"markdown"}
 							items={this._modes}
 							onSelect={this._markup && this._markup.setMode}
-							tooltip='mode'
 						/>
 						<Dropdown
 							defaultVal={"solarized-light"}
@@ -471,12 +458,10 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 							style={{
 								width: "6rem"
 							}}
-							tooltip='syntax highlighting'
 						/>
 						<Button
 							iconName='refresh'
 							onClick={this._markup && this._markup.refresh}
-							tooltip='refresh'
 						/>
 					</EditorToolbar>
 					<EditorView

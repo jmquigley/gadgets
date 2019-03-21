@@ -2,8 +2,11 @@
 
 exports[`Create a triangle in bottom direction 1`] = `
 <Triangle
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="bottom"
@@ -45,8 +48,11 @@ exports[`Create a triangle in bottom direction 1`] = `
 
 exports[`Create a triangle in down direction 1`] = `
 <Triangle
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="down"
@@ -88,8 +94,11 @@ exports[`Create a triangle in down direction 1`] = `
 
 exports[`Create a triangle in left direction 1`] = `
 <Triangle
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="left"
@@ -131,8 +140,11 @@ exports[`Create a triangle in left direction 1`] = `
 
 exports[`Create a triangle in right direction 1`] = `
 <Triangle
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -174,8 +186,11 @@ exports[`Create a triangle in right direction 1`] = `
 
 exports[`Create a triangle in top direction 1`] = `
 <Triangle
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="top"
@@ -217,8 +232,11 @@ exports[`Create a triangle in top direction 1`] = `
 
 exports[`Create a triangle in up direction 1`] = `
 <Triangle
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="up"
@@ -260,8 +278,11 @@ exports[`Create a triangle in up direction 1`] = `
 
 exports[`Test creation of a Triangle control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="up"
@@ -303,8 +324,11 @@ exports[`Test creation of a Triangle control 1`] = `
   xcss={null}
 >
   <Triangle__SVGView
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-triangle test-class"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="up"
@@ -356,9 +380,12 @@ exports[`Test creation of a Triangle control 1`] = `
 
 exports[`Test retrieval of Triangle props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "up",

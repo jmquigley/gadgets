@@ -2,8 +2,11 @@
 
 exports[`Test creation of a Browser instance 1`] = `
 <Browser
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -45,8 +48,11 @@ exports[`Test creation of a Browser instance 1`] = `
 
 exports[`Test creation of a Browser instance with empty uri values 1`] = `
 <Browser
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -88,9 +94,12 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
 
 exports[`Test retrieval of the Browser props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",

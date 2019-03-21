@@ -2,9 +2,12 @@
 
 exports[`Test retrieval of ListHeader props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -58,8 +61,11 @@ Object {
 
 exports[`Test the creation of a ListHeader control with simple title 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -112,8 +118,11 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   xcss={null}
 >
   <Item
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-item nohover"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"

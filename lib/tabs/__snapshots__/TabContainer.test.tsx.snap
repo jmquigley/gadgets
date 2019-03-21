@@ -2,8 +2,11 @@
 
 exports[`Create an empty TabContainer instance 1`] = `
 <TabContainer
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -45,8 +48,11 @@ exports[`Create an empty TabContainer instance 1`] = `
 
 exports[`Test TabContainer retrieval functions 1`] = `
 <TabContainer
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -88,8 +94,11 @@ exports[`Test TabContainer retrieval functions 1`] = `
 
 exports[`Test disabling the TabContainer instance 1`] = `
 <TabContainer
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -131,8 +140,11 @@ exports[`Test disabling the TabContainer instance 1`] = `
 
 exports[`Test making the TabContainer invisible 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -172,8 +184,11 @@ exports[`Test making the TabContainer invisible 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-tab-container"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -215,8 +230,11 @@ exports[`Test making the TabContainer invisible 1`] = `
     xcss={null}
   >
     <TabBar
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -233,8 +251,11 @@ exports[`Test making the TabContainer invisible 1`] = `
       minWidth={null}
       navigation={
         <TabNavigation
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className={null}
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -274,8 +295,11 @@ exports[`Test making the TabContainer invisible 1`] = `
           xcss={null}
         >
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -319,8 +343,11 @@ exports[`Test making the TabContainer invisible 1`] = `
             #1
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -364,8 +391,11 @@ exports[`Test making the TabContainer invisible 1`] = `
             #2
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -427,8 +457,11 @@ exports[`Test making the TabContainer invisible 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -473,8 +506,11 @@ exports[`Test making the TabContainer invisible 1`] = `
             #1
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -519,8 +555,11 @@ exports[`Test making the TabContainer invisible 1`] = `
             #2
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -575,8 +614,11 @@ exports[`Test making the TabContainer invisible 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -620,8 +662,11 @@ exports[`Test making the TabContainer invisible 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -665,8 +710,11 @@ exports[`Test making the TabContainer invisible 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -711,8 +759,11 @@ exports[`Test making the TabContainer invisible 1`] = `
       </Tab>
     </TabBar>
     <TabContent
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       content="#1"
       contentEditable={false}
       controlled={true}
@@ -751,8 +802,11 @@ exports[`Test making the TabContainer invisible 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -796,8 +850,11 @@ exports[`Test making the TabContainer invisible 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -841,8 +898,11 @@ exports[`Test making the TabContainer invisible 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -892,8 +952,11 @@ exports[`Test making the TabContainer invisible 1`] = `
 
 exports[`Test removing the first item from the TabContainer 1`] = `
 <TabContainer
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -935,9 +998,12 @@ exports[`Test removing the first item from the TabContainer 1`] = `
 
 exports[`Test retrieval of Tabs props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -979,8 +1045,11 @@ Object {
 
 exports[`Test selecting the first tab within the TabContainer 1`] = `
 <TabContainer
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -1022,8 +1091,11 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
 
 exports[`Test the TabContainer with the previous and next buttons 1`] = `
 <TabContainer
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -1065,8 +1137,11 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
 
 exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -1106,8 +1181,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-tab-container"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -1149,8 +1227,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
     xcss={null}
   >
     <TabContent
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       content="#1"
       contentEditable={false}
       controlled={true}
@@ -1189,8 +1270,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -1234,8 +1318,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -1279,8 +1366,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -1325,8 +1415,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       </Tab>
     </TabContent>
     <TabBar
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -1343,8 +1436,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       minWidth={null}
       navigation={
         <TabNavigation
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className={null}
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -1384,8 +1480,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           xcss={null}
         >
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -1429,8 +1528,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             #1
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -1474,8 +1576,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             #2
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -1537,8 +1642,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -1583,8 +1691,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             #1
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -1629,8 +1740,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             #2
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -1685,8 +1799,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -1730,8 +1847,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -1775,8 +1895,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -1826,8 +1949,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
 
 exports[`Test the creation of a TabContainer instance (left) 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -1867,8 +1993,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-tab-container"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -1910,8 +2039,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
     xcss={null}
   >
     <TabBar
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -1928,8 +2060,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       minWidth={null}
       navigation={
         <TabNavigation
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className={null}
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -1969,8 +2104,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           xcss={null}
         >
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -2014,8 +2152,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             #1
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -2059,8 +2200,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             #2
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -2126,8 +2270,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -2172,8 +2319,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             #1
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -2218,8 +2368,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             #2
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -2274,8 +2427,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -2319,8 +2475,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -2364,8 +2523,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -2410,8 +2572,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       </Tab>
     </TabBar>
     <TabContent
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       content="#1"
       contentEditable={false}
       controlled={true}
@@ -2450,8 +2615,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -2495,8 +2663,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -2540,8 +2711,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -2591,8 +2765,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
 
 exports[`Test the creation of a TabContainer instance (right) 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -2632,8 +2809,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-tab-container"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -2675,8 +2855,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
     xcss={null}
   >
     <TabContent
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       content="#1"
       contentEditable={false}
       controlled={true}
@@ -2715,8 +2898,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -2760,8 +2946,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -2805,8 +2994,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -2851,8 +3043,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       </Tab>
     </TabContent>
     <TabBar
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -2869,8 +3064,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       minWidth={null}
       navigation={
         <TabNavigation
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className={null}
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -2910,8 +3108,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           xcss={null}
         >
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -2955,8 +3156,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             #1
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3000,8 +3204,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             #2
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3067,8 +3274,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3113,8 +3323,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             #1
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3159,8 +3372,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             #2
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3215,8 +3431,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -3260,8 +3479,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -3305,8 +3527,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -3356,8 +3581,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
 
 exports[`Test the creation of a TabContainer instance (top) 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -3397,8 +3625,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-tab-container"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -3440,8 +3671,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
     xcss={null}
   >
     <TabBar
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -3458,8 +3692,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       minWidth={null}
       navigation={
         <TabNavigation
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className={null}
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -3499,8 +3736,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           xcss={null}
         >
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3544,8 +3784,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             #1
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3589,8 +3832,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             #2
           </Tab>
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3652,8 +3898,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       tabs={
         Immutable.List [
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3698,8 +3947,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             #1
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3744,8 +3996,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             #2
           </Tab>,
           <Tab
+            backgroundColor={null}
+            borderColor={null}
             bottom={null}
             className={null}
+            color={null}
             contentEditable={false}
             controlled={true}
             direction="right"
@@ -3800,8 +4055,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -3845,8 +4103,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -3890,8 +4151,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -3936,8 +4200,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       </Tab>
     </TabBar>
     <TabContent
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       content="#1"
       contentEditable={false}
       controlled={true}
@@ -3976,8 +4243,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -4021,8 +4291,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         #1
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -4066,8 +4339,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         #2
       </Tab>
       <Tab
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className={null}
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"

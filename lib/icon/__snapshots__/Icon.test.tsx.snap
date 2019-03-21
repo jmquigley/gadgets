@@ -2,8 +2,11 @@
 
 exports[`Test creation of an Icon control with icon 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -45,8 +48,11 @@ exports[`Test creation of an Icon control with icon 1`] = `
   xcss={null}
 >
   <Icon__FontAwesome
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-icon fa fa-fw fa-star test-class"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -90,8 +96,11 @@ exports[`Test creation of an Icon control with icon 1`] = `
 
 exports[`Test creation of an Icon control with image 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -128,8 +137,11 @@ exports[`Test creation of an Icon control with image 1`] = `
   xcss={null}
 >
   <Icon__Image
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-icon"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -169,8 +181,11 @@ exports[`Test creation of an Icon control with image 1`] = `
 
 exports[`Test making the ButtonDialog invisible 1`] = `
 <Icon
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -208,9 +223,12 @@ exports[`Test making the ButtonDialog invisible 1`] = `
 
 exports[`Test retrieval of the Icon props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -248,8 +266,11 @@ Object {
 
 exports[`Test the disabling of the Icon control 1`] = `
 <Icon
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"

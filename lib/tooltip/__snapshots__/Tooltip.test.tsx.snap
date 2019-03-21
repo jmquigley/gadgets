@@ -2,8 +2,11 @@
 
 exports[`Test creation of Tooltip location bottom 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -45,8 +48,11 @@ exports[`Test creation of Tooltip location bottom 1`] = `
 
 exports[`Test creation of Tooltip location bottomLeft 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -88,8 +94,11 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
 
 exports[`Test creation of Tooltip location bottomRight 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -131,8 +140,11 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
 
 exports[`Test creation of Tooltip location middle 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -174,8 +186,11 @@ exports[`Test creation of Tooltip location middle 1`] = `
 
 exports[`Test creation of Tooltip location middleLeft 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -217,8 +232,11 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
 
 exports[`Test creation of Tooltip location middleRight 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -260,8 +278,11 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
 
 exports[`Test creation of Tooltip location none 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -303,8 +324,11 @@ exports[`Test creation of Tooltip location none 1`] = `
 
 exports[`Test creation of Tooltip location top 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -346,8 +370,11 @@ exports[`Test creation of Tooltip location top 1`] = `
 
 exports[`Test creation of Tooltip location topLeft 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -389,8 +416,11 @@ exports[`Test creation of Tooltip location topLeft 1`] = `
 
 exports[`Test creation of Tooltip location topRight 1`] = `
 <Tooltip
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -432,8 +462,11 @@ exports[`Test creation of Tooltip location topRight 1`] = `
 
 exports[`Test creation of a Tooltip control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -515,8 +548,11 @@ exports[`Test creation of a Tooltip control 1`] = `
 
 exports[`Test disabling of a Tooltip 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -596,8 +632,11 @@ exports[`Test disabling of a Tooltip 1`] = `
 
 exports[`Test making a Tooltip invisible 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -677,9 +716,12 @@ exports[`Test making a Tooltip invisible 1`] = `
 
 exports[`Test retrieval of Tooltip props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",

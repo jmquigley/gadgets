@@ -2,8 +2,11 @@
 
 exports[`Test creation of a default DialogBox control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   dialogType="info"
@@ -121,8 +124,11 @@ exports[`Test creation of a default DialogBox control 1`] = `
 
 exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   dialogType="info"
@@ -240,9 +246,12 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
 
 exports[`Test retrieval of DialogBox props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "dialogType": "info",
@@ -285,8 +294,11 @@ Object {
 
 exports[`Test the creation of an custom DialogBox 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   dialogType="custom"
@@ -408,8 +420,11 @@ exports[`Test the creation of an custom DialogBox 1`] = `
 
 exports[`Test the creation of an error DialogBox 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   dialogType="error"
@@ -527,8 +542,11 @@ exports[`Test the creation of an error DialogBox 1`] = `
 
 exports[`Test the creation of an info DialogBox 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   dialogType="info"
@@ -646,8 +664,11 @@ exports[`Test the creation of an info DialogBox 1`] = `
 
 exports[`Test the creation of an success DialogBox 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   dialogType="success"
@@ -765,8 +786,11 @@ exports[`Test the creation of an success DialogBox 1`] = `
 
 exports[`Test the creation of an warning DialogBox 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   dialogType="warning"

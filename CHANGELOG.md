@@ -5,6 +5,7 @@
 
 - Updated to latest quill-markup plugin
 - Changed from travisci to circleci for automated build/testing
+- Added circleci workflow to handle deployment of NPM artifacts when a new tag is pushed to a commit.
 
 #### Bug Fixes:
 

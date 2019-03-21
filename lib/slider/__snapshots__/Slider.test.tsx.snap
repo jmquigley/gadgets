@@ -2,8 +2,11 @@
 
 exports[`Test creation of a simple Slider control 1`] = `
 <Slider
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -46,8 +49,11 @@ exports[`Test creation of a simple Slider control 1`] = `
 
 exports[`Test disabling a Slider control 1`] = `
 <Slider
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -90,9 +96,12 @@ exports[`Test disabling a Slider control 1`] = `
 
 exports[`Test retrieval of Slider props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -135,8 +144,11 @@ Object {
 
 exports[`Test with bad min/max values 1`] = `
 <Slider
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"

@@ -2,9 +2,12 @@
 
 exports[`Create a Breadcrumbs component with custom icon and chevron 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="arrow-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -58,9 +61,12 @@ exports[`Create a Breadcrumbs component with custom icon and chevron 1`] = `
 
 exports[`Create a simple Breadcrumbs control with defaults (inherit) 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -114,9 +120,12 @@ exports[`Create a simple Breadcrumbs control with defaults (inherit) 1`] = `
 
 exports[`Create a simple Breadcrumbs control with defaults (large) 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -170,9 +179,12 @@ exports[`Create a simple Breadcrumbs control with defaults (large) 1`] = `
 
 exports[`Create a simple Breadcrumbs control with defaults (medium) 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -226,9 +238,12 @@ exports[`Create a simple Breadcrumbs control with defaults (medium) 1`] = `
 
 exports[`Create a simple Breadcrumbs control with defaults (normal) 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -282,9 +297,12 @@ exports[`Create a simple Breadcrumbs control with defaults (normal) 1`] = `
 
 exports[`Create a simple Breadcrumbs control with defaults (small) 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -338,9 +356,12 @@ exports[`Create a simple Breadcrumbs control with defaults (small) 1`] = `
 
 exports[`Create a simple Breadcrumbs control with defaults (xlarge) 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -394,9 +415,12 @@ exports[`Create a simple Breadcrumbs control with defaults (xlarge) 1`] = `
 
 exports[`Create a simple Breadcrumbs control with defaults (xsmall) 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -450,9 +474,12 @@ exports[`Create a simple Breadcrumbs control with defaults (xsmall) 1`] = `
 
 exports[`Create a simple Breadcrumbs control with defaults (xxlarge) 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -506,9 +533,12 @@ exports[`Create a simple Breadcrumbs control with defaults (xxlarge) 1`] = `
 
 exports[`Create a simple Breadcrumbs control with defaults (xxsmall) 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -562,9 +592,12 @@ exports[`Create a simple Breadcrumbs control with defaults (xxsmall) 1`] = `
 
 exports[`Test Breadcrumbs select event 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -618,9 +651,12 @@ exports[`Test Breadcrumbs select event 1`] = `
 
 exports[`Test disabling the Breadcrumbs control 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -674,9 +710,12 @@ exports[`Test disabling the Breadcrumbs control 1`] = `
 
 exports[`Test making the Breadcrumbs invisible 1`] = `
 <Breadcrumbs
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   chevron="chevron-right"
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -730,10 +769,13 @@ exports[`Test making the Breadcrumbs invisible 1`] = `
 
 exports[`Test retrieval of Breadcrumbs props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "chevron": "chevron-right",
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",

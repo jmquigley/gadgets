@@ -2,8 +2,11 @@
 
 exports[`Test clicking of the AccordionItem header 1`] = `
 <AccordionItem
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -59,8 +62,11 @@ exports[`Test clicking of the AccordionItem header 1`] = `
 
 exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 <AccordionItem
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -116,8 +122,11 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
 
 exports[`Test making the AccordionItem invisible 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -176,8 +185,11 @@ exports[`Test making the AccordionItem invisible 1`] = `
     style={Object {}}
   >
     <Item
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -235,9 +247,12 @@ exports[`Test making the AccordionItem invisible 1`] = `
 
 exports[`Test retrieval of AccordionItem props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -293,8 +308,11 @@ Object {
 
 exports[`Test the creation of a AccordionItem control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -353,8 +371,11 @@ exports[`Test the creation of a AccordionItem control 1`] = `
     style={Object {}}
   >
     <Item
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className="test-class"
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -412,8 +433,11 @@ exports[`Test the creation of a AccordionItem control 1`] = `
 
 exports[`Test the disabling of the AccordionItem 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -472,8 +496,11 @@ exports[`Test the disabling of the AccordionItem 1`] = `
     style={Object {}}
   >
     <Item
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"

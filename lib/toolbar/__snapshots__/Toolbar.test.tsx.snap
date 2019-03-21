@@ -2,8 +2,11 @@
 
 exports[`Test creation of a Toolbar instance with center justification 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -49,6 +52,7 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
         style={
           Object {
             "border": "solid 1px #c0c0c0",
+            "color": "#666666",
             "display": "flex",
             "height": "18px",
             "margin": "0 2px",
@@ -56,8 +60,11 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
         }
       >
         <Button
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className="ui-toolbar-element"
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -100,8 +107,11 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
 
 exports[`Test creation of a Toolbar instance with left justification 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -147,6 +157,7 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
         style={
           Object {
             "border": "solid 1px #c0c0c0",
+            "color": "#666666",
             "display": "flex",
             "height": "18px",
             "margin": "0 2px",
@@ -154,8 +165,11 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
         }
       >
         <Button
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className="ui-toolbar-element"
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -198,8 +212,11 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
 
 exports[`Test creation of a Toolbar instance with right justification 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -245,6 +262,7 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
         style={
           Object {
             "border": "solid 1px #c0c0c0",
+            "color": "#666666",
             "display": "flex",
             "height": "18px",
             "margin": "0 2px",
@@ -252,8 +270,11 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
         }
       >
         <Button
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className="ui-toolbar-element"
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -296,8 +317,11 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
 
 exports[`Test disabling of a Toolbar instance 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -343,6 +367,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
         style={
           Object {
             "border": "solid 1px #c0c0c0",
+            "color": "#666666",
             "display": "flex",
             "height": "24px",
             "margin": "0 2px",
@@ -350,8 +375,11 @@ exports[`Test disabling of a Toolbar instance 1`] = `
         }
       >
         <Button
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className="ui-toolbar-element"
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -394,8 +422,11 @@ exports[`Test disabling of a Toolbar instance 1`] = `
 
 exports[`Test making the Toolbar invisible 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -441,6 +472,7 @@ exports[`Test making the Toolbar invisible 1`] = `
         style={
           Object {
             "border": "solid 1px #c0c0c0",
+            "color": "#666666",
             "display": "flex",
             "height": "24px",
             "margin": "0 2px",
@@ -448,8 +480,11 @@ exports[`Test making the Toolbar invisible 1`] = `
         }
       >
         <Button
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className="ui-toolbar-element"
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"
@@ -492,9 +527,12 @@ exports[`Test making the Toolbar invisible 1`] = `
 
 exports[`Test retrieval of Toolbar props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",

@@ -17,42 +17,6 @@ This library provides widgets and composite controls for building desktop apps u
 - [Node](https://nodejs.org/en/) v10.x+
 - [React](https://facebook.github.io/react/) v16.3+
 
-## Installation
-
-This module uses [yarn](https://yarnpkg.com/en/) to manage dependencies and run scripts for development.
-
-To install as an application dependency:
-```
-$ yarn add gadgets
-```
-
-To build the app and run all tests:
-```
-$ yarn run all
-```
-
-To build and run the demo application in electron use:
-```
-$ yarn run demo
-```
-This will check out all dependencies, build the code, test, and then try to run it within electron.  This will take some time to complete.
-
-To just attempt to run the application without building use (assuming the app was recently built):
-```
-$ yarn start
-```
-
-To change the code while electron is running and use `CMD + R` to refresh electron:
-```
-# yarn run watch
-```
-
-
-This library was created for use in the [Electron UI](
-https://electron.atom.io/) and has been tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets and composite components used to create a desktop application.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the package.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`) that can be included within another project.  The library also makes use of [styled components](https://www.styled-components.com/).
-
-Click on the each documented element below to see a picture of the component (where applicable).  To see a live demo, build the application (listed above).  It will run a demo electron application demonstrating each component.  The demo application also contains samples that demonstrate how the components are used.
-
 ## Usage
 
 The CSS styles must be included within a project using CSS modules or via webpack configuration:
@@ -92,6 +56,44 @@ This will give a webpack module an **entry** point to copy the gadgets CSS file 
 
 Note that React is NOT packaged with the app.  An app that uses this library must supply the React library.  The demo application shows an example of this.
 
+
+## Installation
+
+This module uses [yarn](https://yarnpkg.com/en/) to manage dependencies and run scripts for development.
+
+To install as an application dependency:
+```
+$ yarn add gadgets
+```
+
+To build the app and run all tests:
+```
+$ yarn run all
+```
+
+To build and run the demo application in electron use:
+```
+$ yarn run demo
+```
+This will check out all dependencies, build the code, test, and then try to run it within electron.  This will take some time to complete.
+
+To just attempt to run the application without building use (assuming the app was recently built):
+```
+$ yarn start
+```
+
+To change the code while electron is running and use `CMD + R` to refresh electron (in two terminals):
+```
+$ tsc --watch -p .    # starts the typescript compiler in terminal 2
+$ yarn run watch      # starts the webpack watcher in terminal 1
+```
+
+This starts two separate watchers.  It will watch for changes in the typescript files first.  When detected the typescript compiler will build from `.tsx` to `.jsx`.  The webpack watcher will then see this and rebuild the bundle with the second watcher.
+
+This library was created for use in the [Electron UI](
+https://electron.atom.io/) and has been tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets and composite components used to create a desktop application.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the package.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`) that can be included within another project.  The library also makes use of [styled components](https://www.styled-components.com/).
+
+Click on the each documented element below to see a picture of the component (where applicable).  To see a live demo, build the application (listed above).  It will run a demo electron application demonstrating each component.  The demo application also contains samples that demonstrate how the components are used.
 
 ## Widgets
 The module contains the following widgets (click on each header to see attribute/event details for each):

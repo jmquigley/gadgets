@@ -108,9 +108,9 @@ export const AccordionItemView: any = styled.ul`
 	> .ui-item,
 	> .ui-item-button {
 		color: ${(props: AccordionItemProps) =>
-			props.theme.headerForegroundColor || Color.white};
+			props.theme.headerForegroundColor || Color.white} !important;
 		background-color: ${(props: AccordionItemProps) =>
-			props.theme.headerBackgroundColor || Color.black};
+			props.theme.headerBackgroundColor || Color.black} !important;
 	}
 
 	> .ui-item:hover {

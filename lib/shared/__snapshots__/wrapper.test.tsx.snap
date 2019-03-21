@@ -2,8 +2,11 @@
 
 exports[`Test creation of a default Wrapper 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -58,9 +61,12 @@ exports[`Test creation of a default Wrapper 1`] = `
 
 exports[`Test creation of the Wrapper props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -98,8 +104,11 @@ Object {
 
 exports[`Test disabling the Wrapper 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"

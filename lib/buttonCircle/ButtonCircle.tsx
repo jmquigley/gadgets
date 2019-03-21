@@ -54,7 +54,6 @@ import {
 	// @ts-ignore
 	BaseState,
 	borderStyle,
-	Color,
 	Sizing,
 	Wrapper
 } from "../shared";
@@ -68,10 +67,7 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 	return cloneDeep(
 		Object.assign({}, getDefaultButtonProps(), {
 			obj: "ButtonCircle",
-			onClick: nilEvent,
-			style: {
-				borderColor: Color.black
-			}
+			onClick: nilEvent
 		})
 	);
 }

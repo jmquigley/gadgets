@@ -2,8 +2,11 @@
 
 exports[`Test creation of a Badge control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   counter={1}
@@ -72,8 +75,11 @@ exports[`Test creation of a Badge control 1`] = `
 
 exports[`Test making the Badge control invisible 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   counter={0}
@@ -124,9 +130,12 @@ exports[`Test making the Badge control invisible 1`] = `
 
 exports[`Test retrieval of Badge props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "counter": 0,
@@ -169,8 +178,11 @@ Object {
 
 exports[`Test the disabling of a Badge control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   counter={0}

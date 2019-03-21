@@ -2,8 +2,11 @@
 
 exports[`Test ButtonCircle click event 1`] = `
 <ButtonCircle
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -29,11 +32,7 @@ exports[`Test ButtonCircle click event 1`] = `
   padding={null}
   selected={false}
   sizing="normal"
-  style={
-    Object {
-      "borderColor": "#000000",
-    }
-  }
+  style={Object {}}
   testing={true}
   theme={null}
   tooltip={null}
@@ -46,8 +45,11 @@ exports[`Test ButtonCircle click event 1`] = `
 
 exports[`Test creation of a ButtonCircle control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -75,11 +77,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
   reset={false}
   selected={false}
   sizing="normal"
-  style={
-    Object {
-      "borderColor": "#000000",
-    }
-  }
+  style={Object {}}
   testing={true}
   theme={null}
   tooltip={null}
@@ -96,8 +94,11 @@ exports[`Test creation of a ButtonCircle control 1`] = `
       width="24px"
     >
       <ButtonCircle__ButtonCircleView
+        backgroundColor={null}
+        borderColor={null}
         bottom={null}
         className="test-class"
+        color={null}
         contentEditable={false}
         controlled={true}
         direction="right"
@@ -123,11 +124,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
         padding={null}
         selected={false}
         sizing="normal"
-        style={
-          Object {
-            "borderColor": "#000000",
-          }
-        }
+        style={Object {}}
         testing={true}
         theme={null}
         tooltip={null}
@@ -143,8 +140,11 @@ exports[`Test creation of a ButtonCircle control 1`] = `
 
 exports[`Test disabling of a ButtonCircle control 1`] = `
 <ButtonCircle
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -170,11 +170,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   padding={null}
   selected={false}
   sizing="normal"
-  style={
-    Object {
-      "borderColor": "#000000",
-    }
-  }
+  style={Object {}}
   testing={true}
   theme={null}
   tooltip={null}
@@ -187,8 +183,11 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
 
 exports[`Test making a ButtonCircle control invisible 1`] = `
 <ButtonCircle
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -214,11 +213,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   padding={null}
   selected={false}
   sizing="normal"
-  style={
-    Object {
-      "borderColor": "#000000",
-    }
-  }
+  style={Object {}}
   testing={true}
   theme={null}
   tooltip={null}
@@ -231,9 +226,12 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
 
 exports[`Test retrieval of ButtonCircle props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -259,9 +257,7 @@ Object {
   "padding": null,
   "selected": false,
   "sizing": "normal",
-  "style": Object {
-    "borderColor": "#000000",
-  },
+  "style": Object {},
   "testing": true,
   "theme": null,
   "tooltip": null,

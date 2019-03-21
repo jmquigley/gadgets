@@ -85,7 +85,7 @@ export enum ColorScheme {
 export enum Color {
 	black = "#000000",
 	error = "#d9534f",
-	gray = "#808080",
+	gray = "#666666",
 	info = "#5bc0de",
 	lightsaber = "#2ff923",
 	silver = "#c0c0c0",
@@ -135,9 +135,12 @@ export interface Styles {
 }
 
 export interface BaseProps {
+	backgroundColor?: string;
+	borderColor?: string;
 	bottom?: string;
 	children?: any;
 	className?: string;
+	color?: string;
 	contentEditable?: boolean;
 	controlled?: boolean;
 	direction?: Direction;
@@ -171,9 +174,12 @@ export interface BaseProps {
 }
 
 const defaultBaseProps: BaseProps = {
+	backgroundColor: null,
+	borderColor: null,
 	bottom: null,
 	children: null,
 	className: null,
+	color: null,
 	contentEditable: false,
 	controlled: true,
 	direction: Direction.right,

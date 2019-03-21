@@ -150,6 +150,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 			(child: any, idx: number) => {
 				if (Toolbar._whitelist.contains(child["props"].obj)) {
 					const style = Object.assign({}, child["props"].style, {
+						color: this.theme.buttonColor,
 						display: "flex",
 						height: BaseComponent.fontSizePX(
 							this.props.sizing,
@@ -160,7 +161,6 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 
 					switch (child["props"].obj) {
 						case "Button":
-						case "ButtonCircle":
 						case "ButtonDialog":
 						case "ButtonToggle":
 							style["width"] = BaseComponent.fontSizePX(
@@ -173,6 +173,14 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 								this.theme.borderColor
 							}`),
 								delete style["width"];
+							break;
+
+						case "ButtonCircle":
+							style["borderColor"] = this.theme.buttonColor;
+							style["width"] = BaseComponent.fontSizePX(
+								this.props.sizing,
+								1.5
+							);
 							break;
 
 						case "Switch":

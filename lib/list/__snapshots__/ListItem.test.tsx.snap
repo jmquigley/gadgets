@@ -2,8 +2,11 @@
 
 exports[`Test disabling of a ListItem control 1`] = `
 <ListItem
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -64,8 +67,11 @@ exports[`Test disabling of a ListItem control 1`] = `
 
 exports[`Test making ListItem control invisible 1`] = `
 <ListItem
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -126,9 +132,12 @@ exports[`Test making ListItem control invisible 1`] = `
 
 exports[`Test retrieval of ListItem props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -187,8 +196,11 @@ Object {
 
 exports[`Test the creation of a ListItem control with left & right title 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -248,8 +260,11 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   xcss={null}
 >
   <Item
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-listitem"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"
@@ -311,8 +326,11 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
 
 exports[`Test the creation of a ListItem control with simple title 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -372,8 +390,11 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   xcss={null}
 >
   <Item
+    backgroundColor={null}
+    borderColor={null}
     bottom={null}
     className="ui-listitem"
+    color={null}
     contentEditable={false}
     controlled={true}
     direction="right"

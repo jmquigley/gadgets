@@ -4,6 +4,7 @@ exports[`Test retrieval of the current theme 1`] = `
 Object {
   "backgroundColor": "#ffffff",
   "borderColor": "#c0c0c0",
+  "buttonColor": "#666666",
   "color": "#000000",
   "fontFamily": "OpenSans, Georgia, serif",
   "headerBackgroundColor": "#004358",
@@ -28,6 +29,7 @@ exports[`Test retrieving a bad theme (doesn't exist) 1`] = `
 Object {
   "backgroundColor": "#ffffff",
   "borderColor": "#c0c0c0",
+  "buttonColor": "#666666",
   "color": "#000000",
   "fontFamily": "OpenSans, Georgia, serif",
   "headerBackgroundColor": "#004358",
@@ -52,6 +54,7 @@ exports[`Test retrieving the dark theme 1`] = `
 Object {
   "backgroundColor": "#000000",
   "borderColor": "#004358",
+  "buttonColor": "#666666",
   "color": "#ffffff",
   "fontFamily": "OpenSans, Georgia, serif",
   "headerBackgroundColor": "#004358",
@@ -66,7 +69,7 @@ Object {
   "selectedForegroundColor": "#ffffff",
   "titleBarBackgroundColor": "#004358",
   "titleBarForegroundColor": "#ffe11a",
-  "tooltipBackgroundColor": "#808080",
+  "tooltipBackgroundColor": "#666666",
   "tooltipForegroundColor": "#ffffff",
   "transitionDelay": "0.5s",
 }
@@ -76,6 +79,7 @@ exports[`Test retrieving the light theme 1`] = `
 Object {
   "backgroundColor": "#ffffff",
   "borderColor": "#004358",
+  "buttonColor": "#666666",
   "color": "#000000",
   "fontFamily": "OpenSans, Georgia, serif",
   "headerBackgroundColor": "#004358",
@@ -90,7 +94,7 @@ Object {
   "selectedForegroundColor": "#ffffff",
   "titleBarBackgroundColor": "#004358",
   "titleBarForegroundColor": "#ffe11a",
-  "tooltipBackgroundColor": "#808080",
+  "tooltipBackgroundColor": "#666666",
   "tooltipForegroundColor": "#ffffff",
   "transitionDelay": "0.5s",
 }
@@ -100,6 +104,7 @@ exports[`Test setting and retrieving a custom theme 1`] = `
 Object {
   "backgroundColor": "#ffffff",
   "borderColor": "#c0c0c0",
+  "buttonColor": "#666666",
   "color": "#000000",
   "fontFamily": "OpenSans, Georgia, serif",
   "headerBackgroundColor": "#004358",

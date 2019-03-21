@@ -2,8 +2,11 @@
 
 exports[`Test Button click event 1`] = `
 <Button
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -42,8 +45,11 @@ exports[`Test Button click event 1`] = `
 
 exports[`Test creation of a Button control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -90,8 +96,11 @@ exports[`Test creation of a Button control 1`] = `
     visible={true}
   >
     <Icon
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className=""
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -131,8 +140,11 @@ exports[`Test creation of a Button control 1`] = `
 
 exports[`Test creation of a Button control with custom icon, colors, and border 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -193,8 +205,11 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
     visible={true}
   >
     <Icon
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className=""
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -234,8 +249,11 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
 
 exports[`Test disabling of a Button 1`] = `
 <Button
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -274,8 +292,11 @@ exports[`Test disabling of a Button 1`] = `
 
 exports[`Test making a Button invisible 1`] = `
 <Button
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -314,9 +335,12 @@ exports[`Test making a Button invisible 1`] = `
 
 exports[`Test retrieval of Button props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",

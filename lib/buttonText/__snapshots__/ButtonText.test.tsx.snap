@@ -2,8 +2,11 @@
 
 exports[`Test creation of a ButtonText control to the left 1`] = `
 <ButtonText
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -51,8 +54,11 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
 
 exports[`Test disabling of a ButtonText control 1`] = `
 <ButtonText
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -94,8 +100,11 @@ exports[`Test disabling of a ButtonText control 1`] = `
 
 exports[`Test making a ButtonText control invisible 1`] = `
 <ButtonText
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -137,9 +146,12 @@ exports[`Test making a ButtonText control invisible 1`] = `
 
 exports[`Test retrieval of ButtonText props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",

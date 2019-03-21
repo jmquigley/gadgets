@@ -266,6 +266,18 @@ export abstract class BaseComponent<
 					newState.style,
 					props.style
 				);
+
+				if (props.color) {
+					newState.style["color"] = props.color;
+				}
+
+				if (props.backgroundColor) {
+					newState.style["backgroundColor"] = props.backgroundColor;
+				}
+
+				if (props.borderColor) {
+					newState.style["borderColor"] = props.borderColor;
+				}
 			}
 
 			if ("sizing" in newState) {

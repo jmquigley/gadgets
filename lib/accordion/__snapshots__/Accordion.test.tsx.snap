@@ -2,8 +2,11 @@
 
 exports[`Test making the accordion control invisible 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -54,9 +57,12 @@ exports[`Test making the accordion control invisible 1`] = `
 
 exports[`Test retrieval of Accordion props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -92,8 +98,11 @@ Object {
 
 exports[`Test the creation of a Accordion control container 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -144,8 +153,11 @@ exports[`Test the creation of a Accordion control container 1`] = `
 
 exports[`Test the disabling of the Accordion control container 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-class"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"

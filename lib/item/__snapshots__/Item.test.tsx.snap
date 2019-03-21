@@ -2,9 +2,12 @@
 
 exports[`Test retrieval of Item props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -58,8 +61,11 @@ Object {
 
 exports[`Test the creation of a Item control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -125,8 +131,11 @@ exports[`Test the creation of a Item control 1`] = `
     style={Object {}}
   >
     <Title
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"

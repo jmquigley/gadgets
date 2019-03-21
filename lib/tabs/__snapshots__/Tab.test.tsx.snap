@@ -2,8 +2,11 @@
 
 exports[`Test disabling of a Tab 1`] = `
 <Tab
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -48,8 +51,11 @@ exports[`Test disabling of a Tab 1`] = `
 
 exports[`Test making a Tab invisible 1`] = `
 <Tab
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -94,9 +100,12 @@ exports[`Test making a Tab invisible 1`] = `
 
 exports[`Test retrieval of Tab props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
@@ -139,8 +148,11 @@ Object {
 
 exports[`Test the click handler in the Tab instance 1`] = `
 <Tab
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -185,8 +197,11 @@ exports[`Test the click handler in the Tab instance 1`] = `
 
 exports[`Test the close click handler on a Tab instance 1`] = `
 <Tab
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -231,8 +246,11 @@ exports[`Test the close click handler on a Tab instance 1`] = `
 
 exports[`Test the creation of a Tab instance 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -300,8 +318,11 @@ exports[`Test the creation of a Tab instance 1`] = `
     }
   >
     <Item
+      backgroundColor={null}
+      borderColor={null}
       bottom={null}
       className={null}
+      color={null}
       contentEditable={false}
       controlled={true}
       direction="right"
@@ -344,8 +365,11 @@ exports[`Test the creation of a Tab instance 1`] = `
       padding={null}
       rightButton={
         <Button
+          backgroundColor={null}
+          borderColor={null}
           bottom={null}
           className={null}
+          color={null}
           contentEditable={false}
           controlled={true}
           direction="right"

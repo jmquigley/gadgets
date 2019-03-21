@@ -2,8 +2,11 @@
 
 exports[`Test adding custom className to Container control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className="test-classname"
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -55,8 +58,11 @@ exports[`Test adding custom className to Container control 1`] = `
 
 exports[`Test creation of a Container control 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -108,8 +114,11 @@ exports[`Test creation of a Container control 1`] = `
 
 exports[`Test creation of a Container control with an id value 1`] = `
 <Wrapper
+  backgroundColor={null}
+  borderColor={null}
   bottom={null}
   className={null}
+  color={null}
   contentEditable={false}
   controlled={true}
   direction="right"
@@ -161,9 +170,12 @@ exports[`Test creation of a Container control with an id value 1`] = `
 
 exports[`Test retrieval of Container props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
+  "color": null,
   "contentEditable": false,
   "controlled": true,
   "direction": "right",
