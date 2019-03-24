@@ -400,7 +400,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 			const node = td.insert(
 				{
-					parentId: parentNode.id
+					expanded: true,
+					parentId: parentNode.id,
+					title: this.props.defaultTitle
 				},
 				this.props.addAsFirstChild
 			);
@@ -553,7 +555,27 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		state: TreeviewState
 	) {
 		const newState: TreeviewState = {...state};
-		newState.td.treeData = props.treeData;
+
+		if (props.treeData.length > 0) {
+			newState.td.treeData = props.treeData;
+		} else {
+			// if the tree is empty, then create an empty node at the root
+			const node = newState.td.insert(
+				{
+					expanded: true,
+					parentId: null,
+					title: props.defaultTitle
+				},
+				props.addAsFirstChild
+			);
+
+			if (props.selectNew) {
+				newState.selectedId = node.id;
+			}
+
+			props.onAdd(node, clone(newState.td.treeData));
+		}
+
 		return super.getDerivedStateFromProps(props, newState);
 	}
 

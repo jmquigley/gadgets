@@ -84,8 +84,8 @@ $ yarn start
 
 To change the code while electron is running and use `CMD + R` to refresh electron (in two terminals):
 ```
-$ tsc --watch -p .    # starts the typescript compiler in terminal 2
-$ yarn run watch      # starts the webpack watcher in terminal 1
+$ yarn watch:types.    # starts the typescript compiler in terminal 1
+$ yarn watch:webpack   # starts the webpack watcher in terminal 2
 ```
 
 This starts two separate watchers.  It will watch for changes in the typescript files first.  When detected the typescript compiler will build from `.tsx` to `.jsx`.  The webpack watcher will then see this and rebuild the bundle with the second watcher.
