@@ -149,7 +149,7 @@
 		"manifest": "npm pack --dry-run",
 		"prettier": "prettier --write \"**/*.{ts,tsx,js,json,yaml,yml,css}\"",
 		"start": "cross-env NODE_ENV=production electron demo/.",
-		"test": "cross-env NODE_ENV=development jest",
+		"test": "cross-env NODE_ENV=development jest --runInBand",
 		"types": "dts-bundle-generator --no-check -o ./dist/bundle.d.ts index.ts",
 		"watch:types": "tsc --watch -p .",
 		"watch:webpack": "webpack --watch --progress",

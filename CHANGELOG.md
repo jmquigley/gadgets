@@ -6,10 +6,12 @@
 - Updated to latest quill-markup plugin
 - Changed from travisci to circleci for automated build/testing
 - Added circleci workflow to handle deployment of NPM artifacts when a new tag is pushed to a commit.
+- The Treeview component now adds a new, empty, default node when the tree becomes empty.  This ensures that the tree will always have one node.
+- Changed jest tests to "--runInBand" for Circle CI resource concerns.
 
 #### Bug Fixes:
 
-N/A
+- Fixed a bug in Treeview control where new node would have a blank title.  They now use the defaultTitle prop
 
 ---
 
