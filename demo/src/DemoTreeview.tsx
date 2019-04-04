@@ -4,7 +4,14 @@ const debug = require("debug")("DemoTreeview");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
-import {TreeItem, Treeview, TreeviewData} from "../../dist/bundle";
+import {
+	Break,
+	Direction,
+	Option,
+	TreeItem,
+	Treeview,
+	TreeviewData
+} from "../../dist/bundle";
 import {StyledContainer} from "../app";
 
 interface DemoData extends TreeviewData {
@@ -12,6 +19,7 @@ interface DemoData extends TreeviewData {
 }
 
 export interface DemoTreeviewState {
+	menuPosition: boolean;
 	treeData: DemoData[];
 }
 
@@ -24,6 +32,7 @@ export default class DemoTreeview extends React.Component<
 		debug("creating");
 
 		this.state = {
+			menuPosition: false,
 			treeData: [
 				{
 					title: "1.0",
@@ -78,6 +87,11 @@ export default class DemoTreeview extends React.Component<
 	}
 
 	@autobind
+	private handleMenuPosition(selected: boolean) {
+		this.setState({menuPosition: selected});
+	}
+
+	@autobind
 	private handleSearch(node: TreeItem) {
 		debug("found search node: %o: %O", node.title, node);
 	}
@@ -105,7 +119,19 @@ export default class DemoTreeview extends React.Component<
 	public render() {
 		return (
 			<StyledContainer id='treeviewExample' title='Treeview'>
+				<Option
+					disabled={this.props["disabled"]}
+					onClick={this.handleMenuPosition}
+					text='Select the option to put the menu on the bottom'
+				/>
+				<Break sizing={this.props["sizing"]} />
+
 				<Treeview
+					direction={
+						this.state.menuPosition
+							? Direction.bottom
+							: Direction.top
+					}
 					disabled={this.props["disabled"]}
 					height='640px'
 					notooltip

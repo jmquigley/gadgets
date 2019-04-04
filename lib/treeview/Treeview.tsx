@@ -141,6 +141,7 @@ import {
 	BaseProps,
 	BaseState,
 	Color,
+	Direction,
 	disabled,
 	fontStyle,
 	getDefaultBaseProps,
@@ -166,6 +167,7 @@ export type TreeItem = GeneralTreeItem<TreeviewData>;
 export interface TreeviewProps extends BaseProps {
 	addAsFirstChild: boolean;
 	defaultTitle: string;
+	direction: Direction;
 	isVirtualized: boolean;
 	nodeWidth?: string;
 	onAdd(node: TreeItem, treeData: TreeItem[]): void;
@@ -186,6 +188,7 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		...getDefaultBaseProps(),
 		addAsFirstChild: true,
 		defaultTitle: "New Title",
+		direction: Direction.top,
 		height: "15em",
 		isVirtualized: true,
 		minHeight: "15em",
@@ -288,9 +291,13 @@ const StyledItem: any = styled(Item)`
 `;
 
 const StyledToolbar: any = styled(Toolbar)`
-	border-top: 0;
 	border-left: 0;
 	border-right: 0;
+	${(props: TreeviewProps) =>
+		props.direction === Direction.top
+			? "border-top: 0;"
+			: "border-bottom: 0;"}
+
 	display: flex;
 	padding: 0.1rem 0.1rem 0.25rem 0.1rem;
 	width: 100%;
@@ -599,72 +606,73 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 			color: this.theme.buttonColor
 		};
 
+		const toolbar = (
+			<StyledToolbar
+				className='ui-treeview-toolbar'
+				direction={this.props.direction}
+				sizing={this.props.sizing}
+			>
+				<Button
+					iconName='plus'
+					notooltip={this.props.notooltip}
+					onClick={this.handleAdd}
+					style={buttonStyles}
+					tooltip='Create a new node under selected'
+				/>
+				<Divider />
+				<Button
+					iconName='angle-double-down'
+					notooltip={this.props.notooltip}
+					onClick={this.handleNodeExpand}
+					style={buttonStyles}
+					tooltip='expand'
+				/>
+				<Button
+					iconName='angle-double-up'
+					notooltip={this.props.notooltip}
+					onClick={this.handleNodeCollapse}
+					style={buttonStyles}
+					tooltip='collapse'
+				/>
+				<Divider />
+				<SearchTextField
+					obj='TextField'
+					onChange={this.handleSearch}
+					onClear={this.clearSearch}
+					placeholder='search'
+					style={buttonStyles}
+					useclear
+					value={this.state.search}
+				/>
+				<Divider />
+				<Button
+					iconName='caret-left'
+					notooltip={this.props.notooltip}
+					onClick={this.handlePreviousMatch}
+					style={buttonStyles}
+					tooltip='previous search item'
+				/>
+				<Button
+					iconName='caret-right'
+					notooltip={this.props.notooltip}
+					onClick={this.handleNextMatch}
+					style={buttonStyles}
+					tooltip='next search item'
+				/>
+				<Divider />
+				<Label text={searchFoundCount > 0 ? searchFocusIndex + 1 : 0} />
+				<Label text=' / ' />
+				<Label text={searchFoundCount} />
+			</StyledToolbar>
+		);
+
 		return (
 			<Wrapper {...this.props}>
 				<TreeviewContainer
 					className='ui-treeview-container'
 					style={this.state.style}
 				>
-					<StyledToolbar
-						className='ui-treeview-toolbar'
-						sizing={this.props.sizing}
-					>
-						<Button
-							iconName='plus'
-							notooltip={this.props.notooltip}
-							onClick={this.handleAdd}
-							style={buttonStyles}
-							tooltip='Create a new node under selected'
-						/>
-						<Divider />
-						<Button
-							iconName='angle-double-down'
-							notooltip={this.props.notooltip}
-							onClick={this.handleNodeExpand}
-							style={buttonStyles}
-							tooltip='expand'
-						/>
-						<Button
-							iconName='angle-double-up'
-							notooltip={this.props.notooltip}
-							onClick={this.handleNodeCollapse}
-							style={buttonStyles}
-							tooltip='collapse'
-						/>
-						<Divider />
-						<SearchTextField
-							obj='TextField'
-							onChange={this.handleSearch}
-							onClear={this.clearSearch}
-							placeholder='search'
-							style={buttonStyles}
-							useclear
-							value={this.state.search}
-						/>
-						<Divider />
-						<Button
-							iconName='caret-left'
-							notooltip={this.props.notooltip}
-							onClick={this.handlePreviousMatch}
-							style={buttonStyles}
-							tooltip='previous search item'
-						/>
-						<Button
-							iconName='caret-right'
-							notooltip={this.props.notooltip}
-							onClick={this.handleNextMatch}
-							style={buttonStyles}
-							tooltip='next search item'
-						/>
-						<Divider />
-						<Label
-							text={
-								searchFoundCount > 0 ? searchFocusIndex + 1 : 0
-							}
-						/>
-						<Label text=' / ' />
-						<Label text={searchFoundCount} />
-					</StyledToolbar>
+					{this.props.direction === Direction.top ? toolbar : null}
 					<TreeviewWrapper
 						className={this.state.classes.classnames}
 						height={treeviewHeight}
@@ -680,6 +688,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 							treeData={this.state.td.treeData}
 						/>
 					</TreeviewWrapper>
+					{this.props.direction !== Direction.top ? toolbar : null}
 				</TreeviewContainer>
 			</Wrapper>
 		);

@@ -18,6 +18,7 @@ processFile() {
 
     wget ${2}
     head -n 4 ${1}
+    touch ${1}
 }
 
 pushd vendor

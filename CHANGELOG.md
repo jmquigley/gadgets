@@ -1,5 +1,18 @@
 # Changelog
 
+
+## v0.0.66
+#### Enhancements:
+
+- Added a new property `direction` to Treeview to allow the search toolbar to be on the top or bottom of the component.
+
+
+#### But Fixes:
+
+
+
+---
+
 ## v0.0.65
 #### Enhancements:
 
