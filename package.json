@@ -124,12 +124,12 @@
 		"bail": true,
 		"cleanup": [
 			"docs",
-			"bin/*.{js,d.ts}",
-			"demo/src/**/*.{js,jsx,d.ts}",
-			"demo/main.{js,d.ts}",
-			"demo/app.{js,jsx,d.ts}",
-			"index.{js,d.ts}",
-			"lib/**/*.{js,jsx,d.ts}",
+			"bin/*.{js,d.ts,js.map}",
+			"demo/src/**/*.{js,jsx,d.ts,js.map}",
+			"demo/main.{js,d.ts,js.map}",
+			"demo/app.{js,jsx,d.ts,js.map}",
+			"index.{js,d.ts,js.map}",
+			"lib/**/*.{js,jsx,d.ts,js.map,jsx.map}",
 			"tsconfig.tsbuildinfo"
 		],
 		"include": [
