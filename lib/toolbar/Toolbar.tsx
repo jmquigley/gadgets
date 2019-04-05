@@ -88,6 +88,7 @@ export function getDefaultToolbarState(): ToolbarState {
 }
 
 export const ToolbarView: any = styled.div`
+	background-color: ${(props: ToolbarProps) => props.theme.backgroundColor};
 	border: solid 1px silver;
 	box-sizing: border-box;
 	display: flex;

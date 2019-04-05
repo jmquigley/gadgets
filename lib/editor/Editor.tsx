@@ -438,7 +438,6 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 							defaultVal={this.props.defaultFont}
 							items={this._fontList}
 							onSelect={this._markup && this._markup.setFont}
-							tooltip='font'
 						/>
 						<Dropdown
 							defaultVal={this.props.defaultFontSize.toString()}

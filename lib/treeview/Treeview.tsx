@@ -128,7 +128,6 @@ import autobind from "autobind-decorator";
 import {clone, cloneDeep} from "lodash";
 import * as React from "react";
 import SortableTree, {ExtendedNodeData, NodeData} from "react-sortable-tree";
-import {calc, toREM} from "util.calc";
 import {GeneralTree, GeneralTreeItem} from "util.ds";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
@@ -298,17 +297,27 @@ const StyledToolbar: any = styled(Toolbar)`
 			? "border-top: 0;"
 			: "border-bottom: 0;"}
 
-	display: flex;
+	display: block;
 	padding: 0.1rem 0.1rem 0.25rem 0.1rem;
 	width: 100%;
+	z-index: 1;
 `;
 
 const TreeviewContainer: any = styled.div`
 	${(props: TreeviewProps) => invisible(props)}
-	height: inherit;
+
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	height: 100%;
 `;
 
-const TreeviewWrapper: any = styled(Container)``;
+const TreeviewWrapper: any = styled(Container)`
+	display: block;
+	height: 100%;
+	overflow: auto;
+	z-index: 0;
+`;
 
 export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	private _rowHeights = {
@@ -404,6 +413,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 			const {td} = this.state;
 			const parentNode: TreeItem = td.find(this.state.selectedId);
+			parentNode.expanded = true;
 
 			const node = td.insert(
 				{
@@ -587,17 +597,6 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	}
 
 	public render() {
-		// The 0.35 represents the top/bottom padding in rem for the toolbar
-		// To compute the proper treeview height we must remove the size taken up by the toolbar
-		const toolbarHeight: string = calc(
-			BaseComponent.fontSizeREM(this.props.sizing),
-			"+ 0.35"
-		);
-		const treeviewHeight: string = calc(
-			toREM(this.props.height),
-			`- ${parseFloat(toolbarHeight)}`
-		);
-
 		const {searchFocusIndex, searchFoundCount} = this.state;
 
 		const buttonStyles = {
@@ -617,7 +616,6 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					notooltip={this.props.notooltip}
 					onClick={this.handleAdd}
 					style={buttonStyles}
-					tooltip='Create a new node under selected'
 				/>
 				<Divider />
 				<Button
@@ -625,14 +623,12 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					notooltip={this.props.notooltip}
 					onClick={this.handleNodeExpand}
 					style={buttonStyles}
-					tooltip='expand'
 				/>
 				<Button
 					iconName='angle-double-up'
 					notooltip={this.props.notooltip}
 					onClick={this.handleNodeCollapse}
 					style={buttonStyles}
-					tooltip='collapse'
 				/>
 				<Divider />
 				<SearchTextField
@@ -650,14 +646,12 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					notooltip={this.props.notooltip}
 					onClick={this.handlePreviousMatch}
 					style={buttonStyles}
-					tooltip='previous search item'
 				/>
 				<Button
 					iconName='caret-right'
 					notooltip={this.props.notooltip}
 					onClick={this.handleNextMatch}
 					style={buttonStyles}
-					tooltip='next search item'
 				/>
 				<Divider />
 				<Label text={searchFoundCount > 0 ? searchFocusIndex + 1 : 0} />
@@ -673,10 +667,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					style={this.state.style}
 				>
 					{this.props.direction === Direction.top ? toolbar : null}
-					<TreeviewWrapper
-						className={this.state.classes.classnames}
-						height={treeviewHeight}
-					>
+					<TreeviewWrapper className={this.state.classes.classnames}>
 						<SortableTreeView
 							generateNodeProps={this.customNodeProperties}
 							isVirtualized={this.props.isVirtualized}

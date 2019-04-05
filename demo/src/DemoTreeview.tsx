@@ -6,13 +6,14 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import {
 	Break,
+	Container,
 	Direction,
 	Option,
+	styled,
 	TreeItem,
 	Treeview,
 	TreeviewData
 } from "../../dist/bundle";
-import {StyledContainer} from "../app";
 
 interface DemoData extends TreeviewData {
 	note?: string;
@@ -22,6 +23,11 @@ export interface DemoTreeviewState {
 	menuPosition: boolean;
 	treeData: DemoData[];
 }
+
+export const StyledContainer: any = styled(Container)`
+	height: 750px;
+	margin: 30px 0 10px 0;
+`;
 
 export default class DemoTreeview extends React.Component<
 	any,
