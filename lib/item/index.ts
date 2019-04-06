@@ -1,3 +1,4 @@
+import {Title, TitleLayout} from "../title";
 import {
 	getDefaultItemProps,
 	getDefaultItemState,
@@ -5,8 +6,6 @@ import {
 	ItemProps,
 	ItemState
 } from "./Item";
-
-import {Title, TitleLayout} from "../title";
 
 export {
 	getDefaultItemProps,

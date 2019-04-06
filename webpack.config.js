@@ -85,6 +85,14 @@ module.exports = {
 			"react-sortable-tree",
 			"style.css"
 		),
+		path.resolve(
+			__dirname,
+			"node_modules",
+			"bootstrap",
+			"dist",
+			"css",
+			"bootstrap.css"
+		),
 		path.resolve(__dirname, "index.js")
 	],
 	output: {

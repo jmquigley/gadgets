@@ -1,5 +1,8 @@
 {
 	"extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+	"linterOptions": {
+		"exclude": ["./dist/**", "node_modules/**", "./**/*.d.ts"]
+	},
 	"rules": {
 		"curly": [true, "ignore-same-line"],
 		"interface-name": [true, "never-prefix"],
@@ -9,6 +12,7 @@
 		"jsx-no-multiline-js": false,
 		"max-classes-per-file": false,
 		"max-line-length": false,
+		"member-access": false,
 		"member-ordering": false,
 		"no-bitwise": false,
 		"no-console": false,

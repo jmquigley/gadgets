@@ -21,6 +21,12 @@ import {ButtonText, getDefaultButtonTextProps} from "./lib/buttonText";
 import {ButtonToggle, getDefaultButtonToggleProps} from "./lib/buttonToggle";
 import {Container, getDefaultContainerProps} from "./lib/container";
 import {
+	Datagrid,
+	DatagridColumn,
+	DatagridRow,
+	getDefaultDatagridProps
+} from "./lib/datagrid";
+import {
 	DialogBox,
 	DialogBoxType,
 	getDefaultDialogBoxProps
@@ -153,6 +159,9 @@ export {
 	createGlobalStyle,
 	Crumbs,
 	css,
+	Datagrid,
+	DatagridColumn,
+	DatagridRow,
 	defaultSize,
 	DialogBox,
 	DialogBoxType,
@@ -178,6 +187,7 @@ export {
 	getDefaultButtonTextProps,
 	getDefaultButtonToggleProps,
 	getDefaultContainerProps,
+	getDefaultDatagridProps,
 	getDefaultDialogBoxProps,
 	getDefaultDialogWindowProps,
 	getDefaultDividerProps,

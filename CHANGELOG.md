@@ -5,11 +5,12 @@
 #### Enhancements:
 
 - Added a new property `direction` to Treeview to allow the search toolbar to be on the top or bottom of the component.
+- Adds the following new components to the library:
+  - [Datagrid](https://github.com/jmquigley/gadgets/blob/master/docs/lib/datagrid/Datagrid.md)
 
+#### Bug Fixes:
 
-#### But Fixes:
-
-
+n/a
 
 ---
 

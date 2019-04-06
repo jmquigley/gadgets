@@ -134,8 +134,8 @@ A button control that switches between the given icons when clicked.  The state 
 ### [Container](docs/lib/container/Container.md)
 A generic control used to group other controls.  It creates a section tag around the given child component.
 
-### DataGrid
-TODO: create the data grid control
+### [DataGrid](docs/lib/datagrid/Datagrid.md)
+A component that represents data in a 2D table format like excel.  The underlying code is a wrapper around the [react-data-grid](https://www.npmjs.com/package/react-data-grid) component.
 
 ### DateChooser
 TODO: create the DateChooser control

@@ -15,6 +15,7 @@ import DemoBadge from "./src/DemoBadge";
 import DemoBreadcrumbs from "./src/DemoBreadcrumbs";
 import DemoBrowser from "./src/DemoBrowser";
 import DemoButtons from "./src/DemoButtons";
+import DemoDatagrid from "./src/DemoDatagrid";
 import DemoDialogBox from "./src/DemoDialogBox";
 import DemoDialogWindow from "./src/DemoDialogWindow";
 import DemoDropdown from "./src/DemoDropdown";
@@ -35,8 +36,8 @@ import DemoTitle from "./src/DemoTitle";
 import DemoToast from "./src/DemoToast";
 import DemoToolbar from "./src/DemoToolbar";
 import DemoTooltip from "./src/DemoTooltip";
-import DemoTriangle from "./src/DemoTriangle";
 import DemoTreeview from "./src/DemoTreeview";
+import DemoTriangle from "./src/DemoTriangle";
 
 interface AppState {
 	disabled: boolean;
@@ -71,7 +72,7 @@ class App extends React.Component<any, AppState> {
 		});
 	}
 
-	render() {
+	public render() {
 		return (
 			<div id='app'>
 				<p>
@@ -118,6 +119,10 @@ class App extends React.Component<any, AppState> {
 				/>
 				<DemoBrowser />
 				<DemoButtons
+					sizing={this.state.sizing}
+					disabled={this.state.disabled}
+				/>
+				<DemoDatagrid
 					sizing={this.state.sizing}
 					disabled={this.state.disabled}
 				/>
