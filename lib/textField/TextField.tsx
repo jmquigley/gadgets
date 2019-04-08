@@ -31,15 +31,18 @@
  *
  * ##### Max/Min validator
  * ```javascript
- * import {TextField} from 'gadgets';
+ * import {TextField, TextFieldType} from 'gadgets';
  *
  * <TextField
- *     placeholder="min/max validation"
- *     minLength="5"
+ *     initialValue="abcde"
  *     maxLength="10"
+ *     minLength="5"
+ *     placeholder="min/max validation"
+ *     type={TextFieldType.text}
  *     usevalidation
  * />
  * ```
+ *
  * This will create an input control that uses validation.  It will check the
  * width of the string to fall within the min/max range.  When the string is
  * outside of the validation range the red *error* message value will be used
@@ -48,10 +51,11 @@
  *
  * ##### Custom validator
  * ```javascript
- * import {TextField, Validator} from 'gadgets';
+ * import {TextField, TextFieldType, Validator} from 'gadgets';
  *
  * <TextField
  *     placeholder="custom"
+ *     type={TextFieldType.text}
  *     usevalidation
  *     validators={[
  *         new Validator(
@@ -88,11 +92,20 @@
  * #### Properties
  * - `disabled: {boolean} (false)` - When true, the control is disabled
  * - `id: {string} ('')` - The CSS id for this control
+ * - `initialValue: {string} ('')` - The first value set within the control.
+ * This is only done one time when the compoment is constructued.
+ * - `max: {string} ('any')` - the maxium number for a spinner text box.  When
+ * set to "any" there is no size.
+ * - `min: {string} ('any')` - the minimum  number for a spinner text box.  When
+ * set to "any" there is no size.
  * - `noborder: {boolean} (false)` - Turns off the border around the component
- * - `sizing: {Sizing} (Sizing.normal) - The font size for the control (see
+ * - `sizing: {Sizing} (Sizing.normal)` - The font size for the control (see
  * the Sizing class in shared).
- * - `type: {string} ('text')` - The type of input control.  This is the type
- * defined by the [HTML input tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
+ * - `step: {string} ('any') - the increment number for a spinner text box.
+ * When this is set to "any" the step is 1 by default.
+ * - `type: {TextFieldtype} (TextFieldType.text)` - The type of input control.
+ * This is the type defined by the [HTML input tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).  The
+ * value is an enum that maps to these valid types.
  * - `useclear {boolean} (false)` - When used it presents a circle "x" button
  * that will clear the current input from the control and set the focus to
  * the input.
@@ -144,11 +157,23 @@ export enum MessageType {
 	success
 }
 
+export enum TextFieldType {
+	email = "email",
+	number = "number",
+	spinner = "number",
+	string = "text",
+	text = "text",
+	url = "url"
+}
+
 export interface TextFieldProps extends Partial<HTMLInputElement> {
 	disabled?: boolean;
 	noborder?: boolean;
 	id?: string;
+	initialValue?: string;
 	minWidth?: string;
+	max?: string;
+	min?: string;
 	onBlur?: any;
 	onClear(): void;
 	onChange?: any;
@@ -156,10 +181,11 @@ export interface TextFieldProps extends Partial<HTMLInputElement> {
 	onKeyPress?: any;
 	onValidation?: any;
 	sizing?: Sizing;
+	step?: string;
 	style?: any;
 	tooltip?: string;
 	testing?: boolean;
-	type?: string;
+	type: string;
 	useclear?: boolean;
 	usevalidation?: boolean;
 	validators?: Validator[];
@@ -170,7 +196,10 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 	return cloneDeep({
 		disabled: false,
 		id: "",
+		initialValue: "",
 		minWidth: "1em",
+		min: "any",
+		max: "any",
 		noborder: false,
 		obj: "TextField",
 		onBlur: nilEvent,
@@ -180,10 +209,11 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		onKeyPress: nilEvent,
 		onValidation: nilEvent,
 		sizing: Sizing.normal,
+		step: "any",
 		style: {},
 		testing: process.env.NODE_ENV !== "production",
 		tooltip: "",
-		type: "text",
+		type: TextFieldType.text,
 		useclear: false,
 		usevalidation: false,
 		validators: [],
@@ -278,11 +308,17 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	private _input: HTMLInputElement = null;
 	private _validators: Validator[] = null;
-	private _value: string = "";
+	private _value: string;
 
 	constructor(props: TextFieldProps) {
 		super(props, TextField.defaultProps.style);
 		this._validators = cloneDeep(props.validators);
+		this._value = props.initialValue;
+
+		this.state = {
+			...getDefaultTextFieldState(),
+			previousText: this.props.initialValue
+		};
 
 		if (textTypes.includes(props.type) && props.usevalidation) {
 			if ("maxLength" in props) {
@@ -298,11 +334,11 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 			}
 
 			switch (props.type) {
-				case "email":
+				case TextFieldType.email:
 					this._validators.push(validateEmail());
 					break;
 
-				case "url":
+				case TextFieldType.url:
 					this._validators.push(validateURL());
 					break;
 			}
@@ -479,6 +515,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 							onKeyDown={this.handleKeyDown}
 							onKeyPress={this.handleKeyPress}
 							sizing={props.sizing}
+							value={this._value}
 							visible={visible}
 						/>
 						{clearBtn}

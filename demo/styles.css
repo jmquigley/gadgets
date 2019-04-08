@@ -48,9 +48,10 @@ textfieldExample {
 }
 
 .box {
-	padding: 5px;
 	border-right: solid 1px #004358;
-	width: 75px;
+	flex: 1;
+	flex-direction: column;
+	padding: 10px;
 }
 
 .box:last-child {
@@ -73,6 +74,8 @@ textfieldExample {
 #buttonTable th {
 	font-size: 0.8em;
 	font-weight: normal;
+	padding-right: 7px;
+	text-align: center;
 }
 
 #buttonTable thead th {
@@ -84,7 +87,7 @@ textfieldExample {
 
 #buttonTable th,
 #buttonTable td {
-	height: 80px;
+	height: 60px;
 	min-width: 80px;
 	overflow: visible;
 }

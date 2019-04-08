@@ -3,7 +3,8 @@ import {
 	getDefaultTextFieldState,
 	TextField,
 	TextFieldProps,
-	TextFieldState
+	TextFieldState,
+	TextFieldType
 } from "./TextField";
 
 import {
@@ -22,6 +23,7 @@ export {
 	TextField,
 	TextFieldProps,
 	TextFieldState,
+	TextFieldType,
 	validateEmail,
 	validateMaxLength,
 	validateMinLength,

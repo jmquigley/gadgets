@@ -198,9 +198,6 @@ A button control that works like a toggle.  Pressing the button will turn it *on
 ### [TagList](docs/lib/tagList/TagList.md) ([Tag](docs/lib/tagList/Tag.md))
 The tag list control is a basic list of strings that act as metadata for another control.  They are used to categorize information.
 
-### Table
-TODO: create the Table control
-
 ### [TabContainer](docs/lib/tabs/TabContainer.md) ([Tab](docs/lib/tabs/Tab.md))
 A typical tab control container.  This manages `Tab` elements within it.
 

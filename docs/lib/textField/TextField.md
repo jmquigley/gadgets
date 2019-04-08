@@ -33,15 +33,18 @@ This will create a standard input text box with no validation.
 
 ##### Max/Min validator
 ```javascript
-import {TextField} from 'gadgets';
+import {TextField, TextFieldType} from 'gadgets';
 
 <TextField
-    placeholder="min/max validation"
-    minLength="5"
+    initialValue="abcde"
     maxLength="10"
+    minLength="5"
+    placeholder="min/max validation"
+    type={TextFieldType.text}
     usevalidation
 />
 ```
+
 This will create an input control that uses validation.  It will check the
 width of the string to fall within the min/max range.  When the string is
 outside of the validation range the red *error* message value will be used
@@ -50,10 +53,11 @@ too display a message below the control.  When it is within range a green
 
 ##### Custom validator
 ```javascript
-import {TextField, Validator} from 'gadgets';
+import {TextField, TextFieldType, Validator} from 'gadgets';
 
 <TextField
     placeholder="custom"
+    type={TextFieldType.text}
     usevalidation
     validators={[
         new Validator(
@@ -90,11 +94,20 @@ validation message when the input contains validation code.
 #### Properties
 - `disabled: {boolean} (false)` - When true, the control is disabled
 - `id: {string} ('')` - The CSS id for this control
+- `initialValue: {string} ('')` - The first value set within the control.
+This is only done one time when the compoment is constructued.
+- `max: {string} ('any')` - the maxium number for a spinner text box.  When
+set to "any" there is no size.
+- `min: {string} ('any')` - the minimum  number for a spinner text box.  When
+set to "any" there is no size.
 - `noborder: {boolean} (false)` - Turns off the border around the component
-- `sizing: {Sizing} (Sizing.normal) - The font size for the control (see
+- `sizing: {Sizing} (Sizing.normal)` - The font size for the control (see
 the Sizing class in shared).
-- `type: {string} ('text')` - The type of input control.  This is the type
-defined by the [HTML input tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
+- `step: {string} ('any') - the increment number for a spinner text box.
+When this is set to "any" the step is 1 by default.
+- `type: {TextFieldtype} (TextFieldType.text)` - The type of input control.
+This is the type defined by the [HTML input tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).  The
+value is an enum that maps to these valid types.
 - `useclear {boolean} (false)` - When used it presents a circle "x" button
 that will clear the current input from the control and set the focus to
 the input.

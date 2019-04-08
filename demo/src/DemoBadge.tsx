@@ -100,7 +100,11 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 					</div>
 
 					<div className='box'>
-						<p>bottom right</p>
+						<p>
+							bottom
+							<br />
+							right
+						</p>
 						<Badge
 							disabled={this.props["disabled"]}
 							counter={this.state.counter3}
@@ -115,7 +119,11 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 					</div>
 
 					<div className='box'>
-						<p>bottom left</p>
+						<p>
+							bottom
+							<br />
+							left
+						</p>
 						<Badge
 							disabled={this.props["disabled"]}
 							counter={this.state.counter4}

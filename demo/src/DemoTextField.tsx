@@ -3,7 +3,7 @@
 const debug = require("debug")("DemoTextField");
 
 import * as React from "react";
-import {Break, TextField, Validator} from "../../dist/bundle";
+import {Break, TextField, TextFieldType, Validator} from "../../dist/bundle";
 import {StyledContainer} from "../app";
 
 export default class DemoTextField extends React.Component<any, undefined> {
@@ -33,14 +33,16 @@ export default class DemoTextField extends React.Component<any, undefined> {
 					placeholder='validation'
 					sizing={this.props["sizing"]}
 					tooltip='Enter text with length greather than 5 and less than 10'
+					type={TextFieldType.text}
 					usevalidation
 				/>
 
 				<h3>Validation of Email</h3>
 				<TextField
+					initialValue='foo@example.com'
 					placeholder='email validation'
 					sizing={this.props["sizing"]}
-					type='email'
+					type={TextFieldType.email}
 					usevalidation
 				/>
 
@@ -48,7 +50,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 				<TextField
 					placeholder='url validation'
 					sizing={this.props["sizing"]}
-					type='url'
+					type={TextFieldType.url}
 					usevalidation
 				/>
 
@@ -67,8 +69,22 @@ export default class DemoTextField extends React.Component<any, undefined> {
 					style={{
 						width: "11em"
 					}}
-					type='text'
+					type={TextFieldType.text}
 					useclear
+				/>
+				<Break sizing={this.props["sizing"]} />
+
+				<h3>TextField with spinner (1-20, start 5)</h3>
+				<TextField
+					initialValue='5'
+					max='20'
+					min='1'
+					placeholder='spinner'
+					sizing={this.props["sizing"]}
+					style={{
+						width: "12.5em"
+					}}
+					type={TextFieldType.spinner}
 				/>
 				<Break sizing={this.props["sizing"]} />
 
@@ -77,7 +93,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 					disabled
 					placeholder='disabled'
 					sizing={this.props["sizing"]}
-					type='text'
+					type={TextFieldType.text}
 				/>
 				<Break sizing={this.props["sizing"]} />
 
@@ -86,7 +102,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 					disabled
 					placeholder='disabled'
 					sizing={this.props["sizing"]}
-					type='text'
+					type={TextFieldType.text}
 					useclear
 				/>
 			</StyledContainer>

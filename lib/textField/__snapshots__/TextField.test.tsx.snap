@@ -16,8 +16,11 @@ exports[`Test creation of a TextField control 1`] = `
   focus={false}
   height={null}
   id=""
+  initialValue=""
   left={null}
   location="none"
+  max="any"
+  min="any"
   minHeight={null}
   minWidth="1em"
   noborder={false}
@@ -38,6 +41,7 @@ exports[`Test creation of a TextField control 1`] = `
   reset={false}
   selected={false}
   sizing="normal"
+  step="any"
   style={Object {}}
   testing={true}
   theme={null}
@@ -66,16 +70,21 @@ exports[`Test creation of a TextField control 1`] = `
         className="test-class"
         disabled={false}
         id=""
+        initialValue=""
+        max="any"
+        min="any"
         obj="TextField"
         onBlur={[Function]}
         onChange={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
         sizing="normal"
+        step="any"
         style={Object {}}
         testing={true}
         tooltip=""
         type="text"
+        value=""
         visible={true}
       />
     </TextField__TextFieldView>
@@ -87,6 +96,9 @@ exports[`Test disabling of a TextField control 1`] = `
 <TextField
   disabled={true}
   id=""
+  initialValue=""
+  max="any"
+  min="any"
   minWidth="1em"
   noborder={false}
   obj="TextField"
@@ -97,6 +109,7 @@ exports[`Test disabling of a TextField control 1`] = `
   onKeyPress={[Function]}
   onValidation={[Function]}
   sizing="normal"
+  step="any"
   style={Object {}}
   testing={true}
   tooltip=""
@@ -112,6 +125,9 @@ exports[`Test retrieval of TextField props object 1`] = `
 Object {
   "disabled": false,
   "id": "",
+  "initialValue": "",
+  "max": "any",
+  "min": "any",
   "minWidth": "1em",
   "noborder": false,
   "obj": "TextField",
@@ -122,6 +138,7 @@ Object {
   "onKeyPress": [Function],
   "onValidation": [Function],
   "sizing": "normal",
+  "step": "any",
   "style": Object {},
   "testing": true,
   "tooltip": "",
