@@ -260,7 +260,7 @@ const SortableTreeView: any = styled(SortableTree)`
 	}
 
 	.rst__rowWrapper {
-		padding: 5px 0;
+		padding: 4px 0;
 	}
 `;
 

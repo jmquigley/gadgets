@@ -5,6 +5,7 @@
 #### Enhancements:
 
 - Added a new property `direction` to Treeview to allow the search toolbar to be on the top or bottom of the component.
+- Added the spinner option to the [TextField](https://github.com/jmquigley/gadgets/blob/master/docs/lib/textField/TextField.md) component.
 - Adds the following new components to the library:
   - [Datagrid](https://github.com/jmquigley/gadgets/blob/master/docs/lib/datagrid/Datagrid.md)
 

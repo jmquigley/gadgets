@@ -188,10 +188,6 @@ TODO: create the Rating control
 ### [Slider](docs/lib/slider/Slider.md)
 The Slider control creates a horizontal line overlapped by a chevron that can be moved along this horizontal line.
 
-### Spinner
-A text control with an up/down arrow that will increment a counter.
-TODO: create the Spinner control
-
 ### [Switch](docs/lib/switch/Switch.md)
 A button control that works like a toggle.  Pressing the button will turn it *on* or *off*.  The color of the slider shows the state.
 
