@@ -131,6 +131,7 @@ import {cloneDeep} from "lodash";
 import * as React from "react";
 import {sprintf} from "sprintf-js";
 import {sp} from "util.constants";
+import {trimHTML} from "util.html";
 import {Keys} from "util.keys";
 import {nil, nilEvent} from "util.toolbox";
 import {Accordion, AccordionItem} from "../accordion";
@@ -483,7 +484,7 @@ export class DynamicList extends BaseComponent<
 	 */
 	@autobind
 	private handleNewItem(title: string, widget: any = null, cb: any = nil) {
-		title = title.trimHTML();
+		title = trimHTML(title);
 		if (title) {
 			debug("creating new item: %s, %O", title, widget);
 			this.setState(
@@ -579,7 +580,7 @@ export class DynamicList extends BaseComponent<
 
 	@autobind
 	private handleUpdate(previous: string, title: string) {
-		title = title.trimHTML();
+		title = trimHTML(title);
 		if (title !== previous) {
 			debug('updating item "%s" to "%s"', previous, title);
 			delete this._listItems[previous];

@@ -1,6 +1,5 @@
 const {leader} = require("util.leader");
 
-const MinifyPlugin = require("babel-minify-webpack-plugin");
 const CircularDependencyPlugin = require("circular-dependency-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -11,6 +10,7 @@ const webpack = require("webpack");
 const pkg = require("./package.json");
 
 let mode = process.env.NODE_ENV || "development";
+let externals = Object.keys(pkg.dependencies);
 
 const banner = new webpack.BannerPlugin({
 	banner:
@@ -33,9 +33,6 @@ const constants = new webpack.DefinePlugin({
 module.exports = {
 	mode,
 	performance: {hints: false},
-	optimization: {
-		minimize: false
-	},
 	entry: [
 		path.resolve(
 			__dirname,
@@ -98,25 +95,13 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "bundle.js",
-		libraryTarget: "umd"
+		libraryTarget: "umd",
+		globalObject: "this"
 	},
 	resolve: {
 		extensions: [".js", ".jsx", ".css"]
 	},
-	externals: {
-		react: {
-			root: "React",
-			commonjs2: "react",
-			commonjs: "react",
-			amd: "react"
-		},
-		"react-dom": {
-			root: "ReactDOM",
-			commonjs2: "react-dom",
-			commonjs: "react-dom",
-			amd: "react-dom"
-		}
-	},
+	externals,
 	resolveLoader: {
 		modules: [path.join(__dirname, "node_modules")]
 	},
@@ -180,7 +165,6 @@ module.exports = {
 				flatten: true
 			}
 		]),
-		new MinifyPlugin(),
 		new BundleAnalyzerPlugin({
 			analyzerMode: "static",
 			reportFilename: "bundle.report.html"
