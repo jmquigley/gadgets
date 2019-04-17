@@ -5,7 +5,7 @@ const debug = require("debug")("DemoPager");
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {Break, Pager, SortOrder} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoPager extends React.Component<any, undefined> {
 	constructor(props: any) {

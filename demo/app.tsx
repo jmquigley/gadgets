@@ -8,7 +8,7 @@ debug("Starting Demo application");
 // (global as any).hljs = require("highlight.js");
 // (global as any).Quill = require("quill");
 
-import {Container, Dropdown, Option, Sizing, styled} from "../dist/bundle";
+import {Break, Dropdown, Option, Sizing} from "../dist/bundle";
 
 import DemoAccordion from "./src/DemoAccordion";
 import DemoBadge from "./src/DemoBadge";
@@ -27,6 +27,7 @@ import DemoListItem from "./src/DemoListItem";
 import DemoOption from "./src/DemoOption";
 import DemoOptionGroup from "./src/DemoOptionGroup";
 import DemoPager from "./src/DemoPager";
+import DemoPreview from "./src/DemoPreview";
 import DemoSlider from "./src/DemoSlider";
 import DemoSwitch from "./src/DemoSwitch";
 import DemoTabs from "./src/DemoTabs";
@@ -43,10 +44,6 @@ interface AppState {
 	disabled: boolean;
 	sizing: any;
 }
-
-export const StyledContainer: any = styled(Container)`
-	margin: 30px 0 10px 0;
-`;
 
 class App extends React.Component<any, AppState> {
 	constructor(props: any) {
@@ -94,7 +91,7 @@ class App extends React.Component<any, AppState> {
 					]}
 					onSelect={this.handleSizingChange}
 				/>
-				<br />
+				<Break sizing={this.state.sizing} />
 
 				<p>Use this checkbox to disable all controls</p>
 
@@ -103,7 +100,7 @@ class App extends React.Component<any, AppState> {
 					onClick={this.handleToggleDisable}
 					text='disabled'
 				/>
-				<br />
+				<Break sizing={this.state.sizing} />
 
 				<DemoAccordion
 					sizing={this.state.sizing}
@@ -161,6 +158,10 @@ class App extends React.Component<any, AppState> {
 					disabled={this.state.disabled}
 				/>
 				<DemoPager
+					sizing={this.state.sizing}
+					disabled={this.state.disabled}
+				/>
+				<DemoPreview
 					sizing={this.state.sizing}
 					disabled={this.state.disabled}
 				/>

@@ -15,7 +15,7 @@ import {
 	ListHeader,
 	ListItem
 } from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoListItem extends React.Component<any, undefined> {
 	constructor(props: any) {

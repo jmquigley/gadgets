@@ -9,8 +9,8 @@ const path = require("path");
 const webpack = require("webpack");
 const pkg = require("./package.json");
 
-let mode = process.env.NODE_ENV || "development";
-let externals = Object.keys(pkg.dependencies);
+const mode = process.env.NODE_ENV || "development";
+const externals = Object.keys(pkg.dependencies);
 
 const banner = new webpack.BannerPlugin({
 	banner:
@@ -33,6 +33,7 @@ const constants = new webpack.DefinePlugin({
 module.exports = {
 	mode,
 	performance: {hints: false},
+	target: "node",
 	entry: [
 		path.resolve(
 			__dirname,

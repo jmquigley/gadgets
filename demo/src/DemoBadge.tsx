@@ -5,7 +5,7 @@ const debug = require("debug")("DemoBadge");
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {Badge, Button, Location} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export interface DemoBadgeState {
 	counter1?: number;

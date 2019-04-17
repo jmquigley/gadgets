@@ -165,13 +165,6 @@ export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
 		return this.props.rows[rowIdx];
 	}
 
-	public static getDerivedStateFromProps(
-		props: DatagridProps,
-		state: DatagridState
-	) {
-		return super.getDerivedStateFromProps(props, state);
-	}
-
 	public render() {
 		const {minHeight, minWidth, ...props} = this.props;
 

@@ -5,7 +5,7 @@ const debug = require("debug")("DemoErrorHandler");
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {Button, Wrapper} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export interface DemoErrorHandlerState {
 	show?: boolean;

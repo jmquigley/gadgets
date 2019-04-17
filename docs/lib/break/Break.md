@@ -19,5 +19,6 @@ N/A
 - `ui-break` - placed on the root `<br>` tag
 
 #### Properties
-N/A
+- `n=1 {number}` - repeat count for the component.  The default is one Break
+This is used to create N consecutive breaks.
 

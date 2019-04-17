@@ -6,7 +6,7 @@ import autobind from "autobind-decorator";
 import {EnumValues as ev} from "enum-values";
 import * as React from "react";
 import {Break, Option, OptionType} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoOption extends React.Component<any, undefined> {
 	constructor(props: any) {
@@ -24,26 +24,24 @@ export default class DemoOption extends React.Component<any, undefined> {
 
 		for (const key of ev.getNames(OptionType)) {
 			options.push(
-				<Option
-					disabled={this.props["disabled"]}
-					onClick={this.handleClick}
-					sizing={this.props["sizing"]}
-					optionType={OptionType[key]}
-				/>
+				<div className='option-display-group'>
+					<Option
+						disabled={this.props["disabled"]}
+						onClick={this.handleClick}
+						sizing={this.props["sizing"]}
+						optionType={OptionType[key]}
+					/>
+					<Option
+						disabled={this.props["disabled"]}
+						initialToggle={true}
+						onClick={this.handleClick}
+						optionType={OptionType[key]}
+						sizing={this.props["sizing"]}
+						text={key}
+					/>
+					<Break sizing={this.props["sizing"]} />
+				</div>
 			);
-
-			options.push(
-				<Option
-					disabled={this.props["disabled"]}
-					initialToggle={true}
-					onClick={this.handleClick}
-					optionType={OptionType[key]}
-					sizing={this.props["sizing"]}
-					text={key}
-				/>
-			);
-
-			options.push(<Break sizing={this.props["sizing"]} />);
 		}
 
 		return options;

@@ -6,7 +6,7 @@ import autobind from "autobind-decorator";
 import * as loremIpsum from "lorem-ipsum";
 import * as React from "react";
 import {Break, Location, Tab, TabContainer} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoTabs extends React.Component<any, undefined> {
 	private randomText = loremIpsum({

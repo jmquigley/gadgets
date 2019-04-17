@@ -5,7 +5,7 @@ const debug = require("debug")("DemoDropdown");
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {Dropdown, DropdownOption} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoDropdown extends React.Component<any, undefined> {
 	private items: DropdownOption[] = [

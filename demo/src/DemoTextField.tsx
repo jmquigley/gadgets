@@ -3,8 +3,20 @@
 const debug = require("debug")("DemoTextField");
 
 import * as React from "react";
-import {Break, TextField, TextFieldType, Validator} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {
+	Break,
+	styled,
+	TextField,
+	TextFieldType,
+	Validator
+} from "../../dist/bundle";
+import {StyledContainer} from "./helpers";
+
+const TextFieldStyledContainer: any = styled(StyledContainer)`
+	.ui-textfield {
+		width: 200px;
+	}
+`;
 
 export default class DemoTextField extends React.Component<any, undefined> {
 	private validator: any;
@@ -24,7 +36,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<StyledContainer id='textfieldExample' title='TextField'>
+			<TextFieldStyledContainer id='textfieldExample' title='TextField'>
 				<h3>Validation of Max (10) & Min (5) Length</h3>
 				<TextField
 					id='tf-validation'
@@ -105,7 +117,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 					type={TextFieldType.text}
 					useclear
 				/>
-			</StyledContainer>
+			</TextFieldStyledContainer>
 		);
 	}
 }

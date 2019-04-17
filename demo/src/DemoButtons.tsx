@@ -10,9 +10,14 @@ import {
 	ButtonText,
 	ButtonToggle,
 	Icon,
-	Justify
+	Justify,
+	styled
 } from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
+
+const StyledTable: any = styled.table`
+	width: 500px;
+`;
 
 export default class DemoButtons extends React.Component<any, undefined> {
 	constructor(props: any) {
@@ -290,7 +295,7 @@ export default class DemoButtons extends React.Component<any, undefined> {
 	public render() {
 		return (
 			<StyledContainer id='buttonExample' title='Buttons & Icons'>
-				<table id='buttonTable'>
+				<StyledTable id='buttonTable'>
 					<thead>
 						<tr>
 							<th />
@@ -310,7 +315,7 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						{this.buildButtonTextCenter()}
 						{this.buildButtonWithTooltip()}
 					</tbody>
-				</table>
+				</StyledTable>
 			</StyledContainer>
 		);
 	}

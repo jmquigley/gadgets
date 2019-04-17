@@ -4,7 +4,7 @@ const debug = require("debug")("DemoTagList");
 
 import * as React from "react";
 import {Break, TagList} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoTagList extends React.Component<any, undefined> {
 	constructor(props: any) {

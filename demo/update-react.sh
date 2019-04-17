@@ -1,30 +1,41 @@
 #!/usr/bin/bash
 
-REACT_FILE=react.production.min.js
-REACT_URI=https://unpkg.com/react@16/umd/${REACT_FILE}
+#
+# Updates the react/vendor files used by the demo application.  It uses
+# wget to retrieve minimized javascript code from a CDN.
+#
+# The list of files to retrieve (FILES) are in the format:
+#
+#     "{filename},${URI}"
+#
 
-REACT_DOM_FILE=react-dom.production.min.js
-REACT_DOM_URI=https://unpkg.com/react-dom@16/umd/${REACT_DOM_FILE}
+FILES=(
+    "react.production.min.js,https://unpkg.com/react@16/umd/"
+    "react-dom.production.min.js,https://unpkg.com/react-dom@16/umd/"
+)
 
 TS=`date +"%Y%m%d%H%M%S"`
 
 processFile() {
-    echo $1
-    echo $2
+    FILENAME=$1
+    URI=$2
 
-    if [ -f ${1} ]; then
-        mv ${1} ${1}.${TS}.bak
+    if [ -f ${FILENAME} ]; then
+        mv ${FILENAME} ${FILENAME}.${TS}.bak
     fi
 
-    wget ${2}
-    head -n 4 ${1}
-    touch ${1}
+    wget ${URI}${FILENAME}
+    head -n 4 ${FILENAME}
+    touch ${FILENAME}
 }
 
 pushd vendor
 
-processFile ${REACT_FILE} ${REACT_URI}
-processFile ${REACT_DOM_FILE} ${REACT_DOM_URI}
+for PARAM in ${FILES[@]}; do
+    IFS=","
+    set -- ${PARAM}
+    processFile $1 $2
+done
 
 ls -axpl
 

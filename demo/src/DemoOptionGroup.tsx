@@ -5,7 +5,7 @@ const debug = require("debug")("DemoOptionGroup");
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {OptionGroup} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoOptionGroup extends React.Component<any, undefined> {
 	constructor(props: any) {

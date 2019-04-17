@@ -6,7 +6,6 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import {
 	Break,
-	Container,
 	Direction,
 	Option,
 	styled,
@@ -14,6 +13,7 @@ import {
 	Treeview,
 	TreeviewData
 } from "../../dist/bundle";
+import {StyledContainer} from "./helpers";
 
 interface DemoData extends TreeviewData {
 	note?: string;
@@ -24,9 +24,8 @@ export interface DemoTreeviewState {
 	treeData: DemoData[];
 }
 
-export const StyledContainer: any = styled(Container)`
+export const TreeviewStyledContainer: any = styled(StyledContainer)`
 	height: 750px;
-	margin: 30px 0 10px 0;
 `;
 
 export default class DemoTreeview extends React.Component<
@@ -124,7 +123,7 @@ export default class DemoTreeview extends React.Component<
 
 	public render() {
 		return (
-			<StyledContainer id='treeviewExample' title='Treeview'>
+			<TreeviewStyledContainer id='treeviewExample' title='Treeview'>
 				<Option
 					disabled={this.props["disabled"]}
 					onClick={this.handleMenuPosition}
@@ -153,7 +152,7 @@ export default class DemoTreeview extends React.Component<
 					sizing={this.props["sizing"]}
 					treeData={this.state.treeData}
 				/>
-			</StyledContainer>
+			</TreeviewStyledContainer>
 		);
 	}
 }

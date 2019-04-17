@@ -6,7 +6,7 @@ import * as fs from "fs";
 import * as React from "react";
 import {join} from "util.join";
 import {Editor} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoEditor extends React.Component<any, undefined> {
 	private markdown: string;
@@ -16,7 +16,7 @@ export default class DemoEditor extends React.Component<any, undefined> {
 		debug("creating");
 
 		this.markdown = fs.readFileSync(
-			join(process.cwd(), "demo", "samples", "markdown.md"),
+			join(process.cwd(), "demo", "samples", "markdown.txt"),
 			"utf8"
 		);
 	}

@@ -5,7 +5,7 @@ const debug = require("debug")("DemoDatagrid");
 // import autobind from "autobind-decorator";
 import * as React from "react";
 import {Datagrid, DatagridColumn, DatagridRow} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export interface DemoDatagridState {
 	columns: DatagridColumn[];

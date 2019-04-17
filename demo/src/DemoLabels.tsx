@@ -4,7 +4,7 @@ const debug = require("debug")("DemoLabels");
 
 import * as React from "react";
 import {Break, Label} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoLabels extends React.Component<any, undefined> {
 	constructor(props: any) {

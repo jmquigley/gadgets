@@ -5,7 +5,7 @@ const debug = require("debug")("DemoBreadcrumbs");
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {Breadcrumbs, Break, Crumbs} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoBrowser extends React.Component<any, undefined> {
 	private _items: Crumbs[] = [

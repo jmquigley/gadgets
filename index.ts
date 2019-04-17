@@ -67,6 +67,7 @@ import {
 	OptionType
 } from "./lib/option";
 import {getDefaultPagerProps, Pager} from "./lib/pager";
+import {getDefaultPreviewProps, Preview, PreviewMode} from "./lib/preview";
 import {
 	BaseComponent,
 	BaseProps,
@@ -206,6 +207,7 @@ export {
 	getDefaultOptionGroupProps,
 	getDefaultOptionProps,
 	getDefaultPagerProps,
+	getDefaultPreviewProps,
 	getDefaultSliderProps,
 	getDefaultSwitchProps,
 	getDefaultTabContainerProps,
@@ -238,6 +240,8 @@ export {
 	OptionGroup,
 	OptionType,
 	Pager,
+	Preview,
+	PreviewMode,
 	setTheme,
 	Sizes,
 	Sizing,

@@ -6,7 +6,7 @@ import autobind from "autobind-decorator";
 import * as loremIpsum from "lorem-ipsum";
 import * as React from "react";
 import {ButtonText, DialogBox, DialogBoxType} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export interface DemoDialogBoxState {
 	dialogError: boolean;

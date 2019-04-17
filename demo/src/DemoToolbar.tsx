@@ -20,7 +20,7 @@ import {
 	TextField,
 	Toolbar
 } from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoToolbar extends React.Component<any, undefined> {
 	private items: any = [

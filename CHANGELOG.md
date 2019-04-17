@@ -8,6 +8,7 @@
 - Added the spinner option to the [TextField](https://github.com/jmquigley/gadgets/blob/master/docs/lib/textField/TextField.md) component.
 - Adds the following new components to the library:
   - [Datagrid](https://github.com/jmquigley/gadgets/blob/master/docs/lib/datagrid/Datagrid.md)
+  - [Preview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/preview/Preview.md)
 
 #### Bug Fixes:
 

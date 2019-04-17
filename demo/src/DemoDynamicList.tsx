@@ -13,7 +13,7 @@ import {
 	OptionType,
 	TitleLayout
 } from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export interface DemoDynamicListState {
 	dynamicListError: string;

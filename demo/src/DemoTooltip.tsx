@@ -5,7 +5,7 @@ const debug = require("debug")("DemoTooltip");
 import * as loremIpsum from "lorem-ipsum";
 import * as React from "react";
 import {Location, Tooltip} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export default class DemoTooltip extends React.Component<any, undefined> {
 	private randomText = loremIpsum({

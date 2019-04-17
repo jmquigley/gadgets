@@ -4,8 +4,7 @@ const debug = require("debug")("DemoAccordion");
 
 import * as React from "react";
 import {Accordion, AccordionItem, Button, List} from "../../dist/bundle";
-import {StyledContainer} from "../app";
-import {createItems} from "./helpers";
+import {createItems, StyledContainer} from "./helpers";
 
 export default class DemoAccordion extends React.Component<any, undefined> {
 	private items: any = createItems(5);

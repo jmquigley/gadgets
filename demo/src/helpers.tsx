@@ -2,7 +2,24 @@
 
 import * as React from "react";
 import {Keys} from "util.keys";
-import {Button, ListItem} from "../../";
+import {Button, Container, ListItem, styled} from "../../";
+
+export const StyledContainer: any = styled(Container)`
+	display: flex;
+	flex-direction: column;
+	margin: 30px 0 10px 0;
+	min-width: 500px;
+
+	> h1 {
+		background-color: #bedb39;
+		font-size: 1.75em;
+		padding: 10px 5px;
+	}
+
+	> h1:first-child {
+		margin: 0 0 10px 0;
+	}
+`;
 
 /**
  * Creates N random list items and returns them in an array.  Used to

@@ -5,7 +5,7 @@ const debug = require("debug")("DemoSlider");
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {Break, Option, Slider} from "../../dist/bundle";
-import {StyledContainer} from "../app";
+import {StyledContainer} from "./helpers";
 
 export interface DemoSliderState {
 	sliderToggle: boolean;
@@ -52,7 +52,7 @@ export default class DemoSlider extends React.Component<any, DemoSliderState> {
 					onClick={this.handleSnap}
 					text='Toggle snap mode on/off'
 				/>
-				<Break sizing={this.props["sizing"]} />
+				<Break n={2} sizing={this.props["sizing"]} />
 
 				<h3>Normal slider, no ticks, range 0 - 100</h3>
 				<Slider

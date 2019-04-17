@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create a simple Preview widget 1`] = `
+<Preview
+  backgroundColor={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  content=""
+  contentEditable={false}
+  controlled={true}
+  css=""
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  id={null}
+  left={null}
+  location="none"
+  minHeight={null}
+  minWidth={null}
+  mode="markdown"
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  notooltip={false}
+  obj="Preview"
+  onChange={[Function]}
+  padding={null}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={null}
+  tooltip={null}
+  top={null}
+  visible={true}
+  width={null}
+  xcss={null}
+/>
+`;
+
+exports[`Test retrieval of Preview props object 1`] = `
+Object {
+  "backgroundColor": null,
+  "borderColor": null,
+  "bottom": null,
+  "children": null,
+  "className": null,
+  "color": null,
+  "content": "",
+  "contentEditable": false,
+  "controlled": true,
+  "css": "",
+  "direction": "right",
+  "disabled": false,
+  "err": null,
+  "errorMessage": null,
+  "focus": false,
+  "height": null,
+  "id": null,
+  "left": null,
+  "location": "none",
+  "minHeight": null,
+  "minWidth": null,
+  "mode": "markdown",
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "notheme": false,
+  "notooltip": false,
+  "obj": "Preview",
+  "onChange": [Function],
+  "padding": null,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "testing": true,
+  "theme": null,
+  "tooltip": null,
+  "top": null,
+  "visible": true,
+  "width": null,
+  "xcss": null,
+}
+`;

@@ -176,8 +176,8 @@ A grouping of Option conmponents.
 ### [Pager](docs/lib/pager/Pager.md)
 A pagination control.  This takes an input size `I` and a page size `P` and breaks it up into `N = I/P` entries.  The entries are displayed as a list of pages that can be chosen by the user.
 
-### Preview
-TODO: create a markup preview widget for markdown, asciidoc, and restructured text
+### [Preview](docs/lib/preview/Preview.md)
+Takes a string of a markup language (asciidoc, markdown, or restructuredtext), converts it to HTML, and presents it in a webview control.
 
 ### ProgressBar
 TODO: create the ProgressBar control
