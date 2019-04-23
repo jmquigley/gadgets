@@ -36,12 +36,10 @@
  * @module Accordion
  */
 
-"use strict";
-
 const debug = require("debug")("Accordion");
 
-import {cloneDeep} from "lodash";
 import * as React from "react";
+import {Keys} from "util.keys";
 import {
 	BaseComponent,
 	BaseProps,
@@ -56,16 +54,21 @@ import styled from "../shared/themed-components";
 export type AccordionProps = BaseProps;
 
 export function getDefaultAccordionProps(): AccordionProps {
-	return cloneDeep({...getDefaultBaseProps(), obj: "Accordion"});
+	return {
+		...getDefaultBaseProps(),
+		obj: "Accordion"
+	};
 }
 
 export type AccordionState = BaseState;
 
 export function getDefaultAccordionState(): AccordionState {
-	return cloneDeep({...getDefaultBaseState("ui-accordion")});
+	return {
+		...getDefaultBaseState("ui-accordion")
+	};
 }
 
-export const AccordionView: any = styled.ul`
+const AccordionView: any = styled.ul`
 	cursor: default;
 	list-style: none;
 
@@ -79,29 +82,28 @@ export const AccordionView: any = styled.ul`
 export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
 	public state: AccordionState = getDefaultAccordionState();
+	private keys: Keys = null;
 
 	constructor(props: AccordionProps) {
 		super(props, Accordion.defaultProps.style);
-	}
-
-	public static getDerivedStateFromProps(
-		props: AccordionProps,
-		state: AccordionState
-	) {
-		const newState: AccordionState = {...state};
-
-		newState.children = React.Children.map(props.children, (child: any) => {
-			return React.cloneElement(child, {
-				sizing: props.sizing,
-				disabled: props.disabled
-			});
-		});
-
-		return super.getDerivedStateFromProps(props, newState);
+		this.keys = new Keys({testing: this.props.testing});
 	}
 
 	public render() {
 		debug("render -> state: %O, props: %O", this.state, this.props);
+
+		let idx: number = 0;
+		const children = React.Children.map(
+			this.props.children,
+			(child: any) => {
+				return React.cloneElement(child, {
+					disabled: this.props.disabled,
+					key: child["key"] || this.keys.at(idx++),
+					sizing: this.props.sizing,
+					visible: this.props.visible
+				});
+			}
+		);
 
 		return (
 			<Wrapper {...this.props}>
@@ -110,9 +112,11 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 					sizing={this.props.sizing}
 					style={this.state.style}
 				>
-					{this.state.children}
+					{children}
 				</AccordionView>
 			</Wrapper>
 		);
 	}
 }
+
+export default Accordion;

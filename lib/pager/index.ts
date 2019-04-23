@@ -1,8 +1,8 @@
-import {
+import Pager, {
 	defaultPageSize,
 	defaultPageSizes,
 	getDefaultPagerProps,
-	Pager,
+	getDefaultPagerState,
 	PagerProps
 } from "./Pager";
 
@@ -10,6 +10,7 @@ export {
 	defaultPageSize,
 	defaultPageSizes,
 	getDefaultPagerProps,
+	getDefaultPagerState,
 	Pager,
 	PagerProps
 };

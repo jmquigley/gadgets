@@ -1,14 +1,25 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {getDefaultSwitchProps, Switch, SwitchType} from "./index";
+import {
+	getDefaultSwitchProps,
+	getDefaultSwitchState,
+	Switch,
+	SwitchType
+} from "./index";
 
 test("Test retrieval of the Switch props object", () => {
 	const props = getDefaultSwitchProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultSwitchState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of an inny type Switch", () => {
@@ -16,7 +27,7 @@ test("Test creation of an inny type Switch", () => {
 		<Switch initialToggle={true} switchType={SwitchType.inny} />
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -25,21 +36,21 @@ test("Test creation of an outy type Switch", () => {
 		<Switch initialToggle={true} switchType={SwitchType.outy} />
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
 test("Test disabling of the Switch control", () => {
 	const ctl = mount(<Switch disabled />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
 test("Test making the Switch control invisible", () => {
 	const ctl = mount(<Switch visible={false} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -47,19 +58,20 @@ test("Test the click handler on the Switch control", () => {
 	const click = jest.fn();
 	const ctl = shallow(<Switch onClick={click} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
-	expect(ctl.state("toggle")).toBe(false);
+	assert(ctl.state("toggle") === false);
 
 	const btn = ctl.find(".ui-switch-button");
+	assert(btn);
 
 	btn.simulate("click");
 	expect(click).toHaveBeenCalled();
 	expect(click).toHaveBeenLastCalledWith(true);
-	expect(ctl.state("toggle")).toBe(true);
+	assert(ctl.state("toggle"));
 
 	btn.simulate("click");
 	expect(click).toHaveBeenCalledTimes(2);
 	expect(click).toHaveBeenLastCalledWith(false);
-	expect(ctl.state("toggle")).toBe(false);
+	assert(ctl.state("toggle") === false);
 });

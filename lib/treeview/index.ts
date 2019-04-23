@@ -1,13 +1,14 @@
-import {
+import Treeview, {
 	getDefaultTreeviewProps,
+	getDefaultTreeviewState,
 	TreeItem,
-	Treeview,
 	TreeviewData,
 	TreeviewProps
 } from "./Treeview";
 
 export {
 	getDefaultTreeviewProps,
+	getDefaultTreeviewState,
 	TreeItem,
 	Treeview,
 	TreeviewData,

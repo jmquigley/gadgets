@@ -37,10 +37,6 @@ export default class DemoAccordion extends React.Component<any, undefined> {
 					<AccordionItem title='Accordion #3'>
 						Accordion Items #3
 					</AccordionItem>
-
-					<AccordionItem title='Accordion #4 (disabled)' disabled>
-						Accordion Items #4 (disabled)
-					</AccordionItem>
 				</Accordion>
 			</StyledContainer>
 		);

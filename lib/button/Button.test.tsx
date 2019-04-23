@@ -1,20 +1,25 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {Button, getDefaultButtonProps} from "./index";
+import {Button, getDefaultButtonProps, getDefaultButtonState} from "./index";
 
 test("Test retrieval of Button props object", () => {
 	const props = getDefaultButtonProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultButtonState();
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a Button control", () => {
 	const ctl = shallow(<Button className='test-class' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -31,7 +36,7 @@ test("Test creation of a Button control with custom icon, colors, and border", (
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -39,7 +44,7 @@ test("Test disabling of a Button", () => {
 	const click = jest.fn();
 	const ctl = mount(<Button onClick={click} disabled={true} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button")
@@ -52,7 +57,7 @@ test("Test making a Button invisible", () => {
 	const click = jest.fn();
 	const ctl = mount(<Button onClick={click} visible={false} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button")
@@ -65,7 +70,7 @@ test("Test Button click event", () => {
 	const click = jest.fn();
 	const ctl = mount(<Button onClick={click} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button")

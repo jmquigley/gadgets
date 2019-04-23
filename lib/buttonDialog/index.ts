@@ -1,3 +1,6 @@
-import {ButtonDialog, getDefaultButtonDialogProps} from "./ButtonDialog";
+import ButtonDialog, {
+	getDefaultButtonDialogProps,
+	getDefaultButtonDialogState
+} from "./ButtonDialog";
 
-export {ButtonDialog, getDefaultButtonDialogProps};
+export {ButtonDialog, getDefaultButtonDialogProps, getDefaultButtonDialogState};

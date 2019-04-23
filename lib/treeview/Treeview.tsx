@@ -120,8 +120,6 @@
  * @module Treeview
  */
 
-"use strict";
-
 // const debug = require('debug')('Treeview');
 
 import autobind from "autobind-decorator";
@@ -169,21 +167,25 @@ export interface TreeviewProps extends BaseProps {
 	direction: Direction;
 	isVirtualized: boolean;
 	nodeWidth?: string;
-	onAdd(node: TreeItem, treeData: TreeItem[]): void;
-	onChange(treeData: TreeItem[]): void;
-	onCollapse(treeData: TreeItem[]): void;
-	onDelete(node: TreeItem, treeData: TreeItem[]): void;
-	onExpand(treeData: TreeItem[]): void;
-	onSearch(node: TreeItem): void;
-	onSelect(node: TreeItem): void;
-	onUpdate(node: TreeItem, previous: TreeItem, treeData: TreeItem[]): void;
+	onAdd?: (node: TreeItem, treeData: TreeItem[]) => void;
+	onChange?: (treeData: TreeItem[]) => void;
+	onCollapse?: (treeData: TreeItem[]) => void;
+	onDelete?: (node: TreeItem, treeData: TreeItem[]) => void;
+	onExpand?: (treeData: TreeItem[]) => void;
+	onSearch?: (node: TreeItem) => void;
+	onSelect?: (node: TreeItem) => void;
+	onUpdate?: (
+		node: TreeItem,
+		previous: TreeItem,
+		treeData: TreeItem[]
+	) => void;
 	selectNew: boolean;
 	treeData: TreeItem[];
 	usehidden?: boolean;
 }
 
 export function getDefaultTreeviewProps(): TreeviewProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		addAsFirstChild: true,
 		defaultTitle: "New Title",
@@ -204,7 +206,7 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		selectNew: true,
 		treeData: [],
 		usehidden: true
-	});
+	};
 }
 
 export interface TreeviewState extends BaseState {
@@ -217,7 +219,7 @@ export interface TreeviewState extends BaseState {
 }
 
 export function getDefaultTreeviewState(): TreeviewState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-treeview"),
 		matches: [],
 		search: "",
@@ -225,7 +227,7 @@ export function getDefaultTreeviewState(): TreeviewState {
 		searchFoundCount: 0,
 		selectedId: null,
 		td: null
-	});
+	};
 }
 
 const SortableTreeView: any = styled(SortableTree)`
@@ -685,3 +687,5 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		);
 	}
 }
+
+export default Treeview;

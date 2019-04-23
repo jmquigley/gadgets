@@ -292,6 +292,26 @@ Object {
 }
 `;
 
+exports[`Test retrieval of DialogBox props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-dialogbox" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "showModal": false,
+  "sizing": "normal",
+  "style": Object {},
+}
+`;
+
 exports[`Test the creation of an custom DialogBox 1`] = `
 <Wrapper
   backgroundColor={null}

@@ -1,80 +1,32 @@
 "use strict";
 
+import {EnumValues as ev} from "enum-values";
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
 import {Location} from "../shared";
-import {getDefaultTooltipProps, Tooltip} from "./index";
+import {getDefaultTooltipProps, getDefaultTooltipState, Tooltip} from "./index";
 
 test("Test retrieval of Tooltip props object", () => {
 	const props = getDefaultTooltipProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultTooltipState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
-test("Test creation of Tooltip location topLeft", () => {
-	const ctl = mount(<Tooltip location={Location.topLeft}>Test Text</Tooltip>);
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-});
+for (const location of ev.getNames(Location)) {
+	test(`Creation of Tooltip in position ${location}`, () => {
+		const ctl = mount(<Tooltip location={location}>Test Text</Tooltip>);
 
-test("Test creation of Tooltip location top", () => {
-	const ctl = mount(<Tooltip location={Location.top}>Test Text</Tooltip>);
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-});
-
-test("Test creation of Tooltip location topRight", () => {
-	const ctl = mount(
-		<Tooltip location={Location.topRight}>Test Text</Tooltip>
-	);
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-});
-
-test("Test creation of Tooltip location middleLeft", () => {
-	const ctl = mount(
-		<Tooltip location={Location.middleLeft}>Test Text</Tooltip>
-	);
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-});
-
-test("Test creation of Tooltip location middle", () => {
-	const ctl = mount(<Tooltip location={Location.middle}>Test Text</Tooltip>);
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-});
-
-test("Test creation of Tooltip location middleRight", () => {
-	const ctl = mount(
-		<Tooltip location={Location.middleRight}>Test Text</Tooltip>
-	);
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-});
-
-test("Test creation of Tooltip location bottomLeft", () => {
-	const ctl = mount(
-		<Tooltip location={Location.bottomLeft}>Test Text</Tooltip>
-	);
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-});
-
-test("Test creation of Tooltip location bottom", () => {
-	const ctl = mount(<Tooltip location={Location.bottom}>Test Text</Tooltip>);
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-});
-
-test("Test creation of Tooltip location bottomRight", () => {
-	const ctl = mount(
-		<Tooltip location={Location.bottomRight}>Test Text</Tooltip>
-	);
-	expect(ctl).toBeDefined();
-	expect(ctl).toMatchSnapshot();
-});
+		assert(ctl);
+		expect(ctl).toMatchSnapshot();
+	});
+}
 
 test("Test creation of Tooltip location none", () => {
 	const ctl = mount(<Tooltip location={Location.none}>Test Text</Tooltip>);

@@ -51,10 +51,7 @@
  * @module Tab
  */
 
-"use strict";
-
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
@@ -76,15 +73,15 @@ import styled, {css} from "../shared/themed-components";
 
 export interface TabProps extends BaseProps {
 	href?: any;
-	onClick?: any;
-	onClose?: any;
+	onClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
+	onClose?: (tab: any) => void;
 	orientation?: Location;
 	selected?: boolean;
 	title?: string;
 }
 
 export function getDefaultTabProps(): TabProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		href: {
 			selectHandler: nilEvent
@@ -95,7 +92,7 @@ export function getDefaultTabProps(): TabProps {
 		orientation: Location.top,
 		selected: false,
 		title: ""
-	});
+	};
 }
 
 export interface TabState extends BaseState {
@@ -103,10 +100,10 @@ export interface TabState extends BaseState {
 }
 
 export function getDefaultTabState(): TabState {
-	return cloneDeep({...getDefaultBaseState("ui-tab"), hidden: false});
+	return {...getDefaultBaseState("ui-tab"), hidden: false};
 }
 
-export const TabBorderTop: any = css`
+const TabBorderTop: any = css`
 	border-right: solid 1px
 		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	border-top: solid 1px
@@ -118,7 +115,7 @@ export const TabBorderTop: any = css`
 	}
 `;
 
-export const TabBorderBottom: any = css`
+const TabBorderBottom: any = css`
 	border-right: solid 1px
 		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	border-bottom: solid 1px
@@ -130,7 +127,7 @@ export const TabBorderBottom: any = css`
 	}
 `;
 
-export const TabBorderLeft: any = css`
+const TabBorderLeft: any = css`
 	border-left: solid 1px
 		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	border-bottom: solid 1px
@@ -142,7 +139,7 @@ export const TabBorderLeft: any = css`
 	}
 `;
 
-export const TabBorderRight: any = css`
+const TabBorderRight: any = css`
 	border-right: solid 1px
 		${(props: TabProps) => props.theme.borderColor || ColorScheme.c1};
 	border-bottom: solid 1px
@@ -154,7 +151,7 @@ export const TabBorderRight: any = css`
 	}
 `;
 
-export const TabView: any = styled.div`
+const TabView: any = styled.div`
 	cursor: default;
 	display: inline-block;
 	flex-grow: unset;
@@ -195,10 +192,10 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	}
 
 	@autobind
-	private handleClick() {
+	private handleClick(e: React.MouseEvent<HTMLLIElement>) {
 		if (!this.props.disabled && this.props.visible) {
 			this.props.href.selectHandler(this);
-			this.props.onClick();
+			this.props.onClick(e);
 		}
 	}
 
@@ -213,7 +210,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	public static getDerivedStateFromProps(props: TabProps, state: TabState) {
 		const newState: TabState = {...state};
 
-		state.classes.onIf(props.selected)("ui-selected");
+		newState.classes.onIf(props.selected)("ui-selected");
 
 		if (newState.hidden) {
 			newState.style = {
@@ -279,3 +276,5 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		);
 	}
 }
+
+export default Tab;

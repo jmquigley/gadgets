@@ -142,6 +142,26 @@ Object {
 }
 `;
 
+exports[`Test retrieval of Slider props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-slider" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "style": Object {},
+  "x": 0,
+}
+`;
+
 exports[`Test with bad min/max values 1`] = `
 <Slider
   backgroundColor={null}

@@ -160,7 +160,7 @@ export default class DemoDynamicList extends React.Component<
 				</div>
 
 				<Option
-					onClick={this.handleToggleSelection}
+					onSelect={this.handleToggleSelection}
 					text='Toggle selection mode (on turns off selection)'
 				/>
 			</StyledContainer>

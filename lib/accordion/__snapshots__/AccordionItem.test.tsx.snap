@@ -306,6 +306,26 @@ Object {
 }
 `;
 
+exports[`Test retrieval of AccordionItem props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-accordionitem" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "style": Object {},
+  "toggle": false,
+}
+`;
+
 exports[`Test the creation of a AccordionItem control 1`] = `
 <Wrapper
   backgroundColor={null}

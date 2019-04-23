@@ -35,7 +35,12 @@ import {BaseState, getDefaultBaseState} from "./state";
 
 import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from "./themes";
 
-import {getDefaultWrapperProps, Wrapper, WrapperProps} from "./wrapper";
+import {
+	getDefaultWrapperProps,
+	getDefaultWrapperState,
+	Wrapper,
+	WrapperProps
+} from "./wrapper";
 
 export {
 	BaseComponent,
@@ -55,6 +60,7 @@ export {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	getDefaultWrapperProps,
+	getDefaultWrapperState,
 	getTheme,
 	getThemeList,
 	globalize,

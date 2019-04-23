@@ -31,7 +31,7 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 
 	@autobind
 	private handleDebugCounter(counter: number) {
-		debug(`Badge counter click: ${counter}`);
+		debug(`Badge counter: ${counter}`);
 	}
 
 	@autobind
@@ -67,7 +67,11 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 				<br />
 				<div id='simple-buttons'>
 					<div className='box'>
-						<p>top right (suppress)</p>
+						<p>
+							top right
+							<br />
+							(suppress)
+						</p>
 						<Badge
 							disabled={this.props["disabled"]}
 							counter={this.state.counter1}
@@ -90,7 +94,7 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 							disabled={this.props["disabled"]}
 							counter={this.state.counter2}
 							location={Location.topLeft}
-							onClick={this.handleDebugCounter}
+							onUpdate={this.handleDebugCounter}
 							sizing={this.props["sizing"]}
 						>
 							<div className='boxButtons'>
@@ -101,9 +105,9 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 
 					<div className='box'>
 						<p>
-							bottom
+							bottom right
 							<br />
-							right
+							&nbsp;
 						</p>
 						<Badge
 							disabled={this.props["disabled"]}
@@ -120,9 +124,9 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 
 					<div className='box'>
 						<p>
-							bottom
+							bottom left
 							<br />
-							left
+							&nbsp;
 						</p>
 						<Badge
 							disabled={this.props["disabled"]}
@@ -138,7 +142,11 @@ export default class DemoBadge extends React.Component<any, DemoBadgeState> {
 					</div>
 
 					<div className='box'>
-						<p>bottom (negative)</p>
+						<p>
+							bottom
+							<br />
+							(negative)
+						</p>
 						<Badge
 							disabled={this.props["disabled"]}
 							counter={this.state.counter5}

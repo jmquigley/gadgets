@@ -44,7 +44,7 @@
  * ```
  *
  * #### Events
- * - `onclick(toggle: boolean)` - When the button is clicked, then the
+ * - `onToggle(toggle: boolean)` - When the button is clicked, then the
  * button toggle is changed.  This callback returns the current state
  * of the toggle.  True is on, false is off.
  *
@@ -73,12 +73,9 @@
  * @module ButtonToggle
  */
 
-"use strict";
-
 // const debug = require('debug')('ButtonToggle');
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {
@@ -103,24 +100,25 @@ export interface ButtonToggleProps extends ButtonProps {
 	iconNameOff?: string; // font awesome string
 	iconNameOn?: string; // font awesome string
 	initialToggle?: boolean;
-	onClick?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+	onToggle?: (toggle: boolean) => void;
 }
 
 export function getDefaultButtonToggleProps(): ButtonToggleProps {
-	return cloneDeep(
-		Object.assign({}, getDefaultButtonProps(), {
-			bgColorOff: "inherit",
-			bgColorOn: "inherit",
-			fgColorOff: "gray",
-			fgColorOn: "black",
-			iconNameOff: "bomb",
-			iconNameOn: "bomb",
-			initialToggle: false,
-			obj: "ButtonToggle",
-			onClick: nilEvent,
-			selected: false
-		})
-	);
+	return {
+		...getDefaultButtonProps(),
+		bgColorOff: "inherit",
+		bgColorOn: "inherit",
+		fgColorOff: "gray",
+		fgColorOn: "black",
+		iconNameOff: "bomb",
+		iconNameOn: "bomb",
+		initialToggle: false,
+		obj: "ButtonToggle",
+		onClick: nilEvent,
+		onToggle: nilEvent,
+		selected: false
+	};
 }
 
 export interface ButtonToggleState extends ButtonState {
@@ -128,10 +126,10 @@ export interface ButtonToggleState extends ButtonState {
 }
 
 export function getDefaultButtonToggleState(): ButtonToggleState {
-	return cloneDeep({
+	return {
 		...getDefaultButtonState("ui-button-toggle"),
 		toggle: false
-	});
+	};
 }
 
 export class ButtonToggle extends BaseComponent<
@@ -150,7 +148,7 @@ export class ButtonToggle extends BaseComponent<
 	}
 
 	@autobind
-	public handleClick() {
+	public handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (
 			!this.props.disabled &&
 			this.props.visible &&
@@ -161,11 +159,13 @@ export class ButtonToggle extends BaseComponent<
 					toggle: !this.state.toggle
 				},
 				() => {
-					this.props.onClick(this.state.toggle);
+					this.props.onClick(e);
+					this.props.onToggle(this.state.toggle);
 				}
 			);
 		} else {
-			this.props.onClick(this.state.toggle);
+			this.props.onClick(e);
+			this.props.onToggle(this.state.toggle);
 		}
 	}
 
@@ -209,3 +209,5 @@ export class ButtonToggle extends BaseComponent<
 		);
 	}
 }
+
+export default ButtonToggle;

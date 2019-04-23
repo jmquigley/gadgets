@@ -126,7 +126,7 @@ export default class DemoTreeview extends React.Component<
 			<TreeviewStyledContainer id='treeviewExample' title='Treeview'>
 				<Option
 					disabled={this.props["disabled"]}
-					onClick={this.handleMenuPosition}
+					onSelect={this.handleMenuPosition}
 					text='Select the option to put the menu on the bottom'
 				/>
 				<Break sizing={this.props["sizing"]} />

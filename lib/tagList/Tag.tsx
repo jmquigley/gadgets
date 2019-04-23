@@ -32,10 +32,7 @@
  * @module Tag
  */
 
-"use strict";
-
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {ButtonCircle} from "../buttonCircle";
@@ -54,15 +51,15 @@ import {
 import styled from "../shared/themed-components";
 
 export interface TagProps extends BaseProps {
-	onClick?: any;
-	onDelete?: any;
-	onMouseOut?: any;
-	onMouseOver?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+	onDelete?: (tag: string) => void;
+	onMouseOut?: (e: React.MouseEvent<HTMLDivElement>) => void;
+	onMouseOver?: (e: React.MouseEvent<HTMLDivElement>) => void;
 	usedelete?: boolean;
 }
 
 export function getDefaultTagProps(): TagProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		obj: "Tag",
 		onClick: nilEvent,
@@ -70,7 +67,7 @@ export function getDefaultTagProps(): TagProps {
 		onMouseOut: nilEvent,
 		onMouseOver: nilEvent,
 		usedelete: false
-	});
+	};
 }
 
 export interface TagState extends BaseState {
@@ -78,10 +75,10 @@ export interface TagState extends BaseState {
 }
 
 export function getDefaultTagState(): TagState {
-	return cloneDeep({...getDefaultBaseState("ui-tag"), showDelete: false});
+	return {...getDefaultBaseState("ui-tag"), showDelete: false};
 }
 
-export const DeleteButtonView: any = styled(ButtonCircle)`
+const DeleteButtonView: any = styled(ButtonCircle)`
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -91,7 +88,7 @@ export const DeleteButtonView: any = styled(ButtonCircle)`
 	width: unset;
 `;
 
-export const TagView: any = styled.div`
+const TagView: any = styled.div`
 	border: solid 1px silver;
 	border-radius: 3px;
 	cursor: default;
@@ -123,7 +120,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	}
 
 	@autobind
-	private handleOnClick(e: React.MouseEvent<HTMLDivElement>) {
+	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (this.props.usedelete && !this.props.disabled) {
 			this.props.onDelete(this.tag);
 		}
@@ -132,20 +129,18 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	}
 
 	@autobind
-	private handleMouseOut() {
+	private handleMouseOut(e: React.MouseEvent<HTMLDivElement>) {
 		if (this.props.usedelete && !this.props.disabled) {
-			this.setState({showDelete: false}, () => {
-				this.props.onMouseOut();
-			});
+			this.setState({showDelete: false});
+			this.props.onMouseOut(e);
 		}
 	}
 
 	@autobind
-	private handleMouseOver() {
+	private handleMouseOver(e: React.MouseEvent<HTMLDivElement>) {
 		if (this.props.usedelete && !this.props.disabled) {
-			this.setState({showDelete: true}, () => {
-				this.props.onMouseOver();
-			});
+			this.setState({showDelete: true});
+			this.props.onMouseOver(e);
 		}
 	}
 
@@ -162,7 +157,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 				<DeleteButtonView
 					disabled={props.disabled}
 					iconName='times'
-					onClick={this.handleOnClick}
+					onClick={this.handleClick}
 					sizing={BaseComponent.prev(this.props.sizing).type}
 					style={{
 						backgroundColor: Color.white,
@@ -195,3 +190,5 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		);
 	}
 }
+
+export default Tag;

@@ -1,14 +1,24 @@
 "use strict";
 
 import {shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {Container, getDefaultContainerProps} from "./index";
+import {
+	Container,
+	getDefaultContainerProps,
+	getDefaultContainerState
+} from "./index";
 
 test("Test retrieval of Container props object", () => {
 	const props = getDefaultContainerProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultContainerState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a Container control", () => {
@@ -18,7 +28,7 @@ test("Test creation of a Container control", () => {
 		</Container>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -29,7 +39,7 @@ test("Test creation of a Container control with an id value", () => {
 		</Container>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -40,6 +50,6 @@ test("Test adding custom className to Container control", () => {
 		</Container>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });

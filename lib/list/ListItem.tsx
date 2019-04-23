@@ -5,10 +5,7 @@
 // to the `<li>` tag.
 //
 
-"use strict";
-
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {
@@ -22,14 +19,14 @@ import {BaseComponent, Sizing, Wrapper} from "../shared";
 
 export interface ListItemProps extends ItemProps {
 	href?: any; // holds a function injected by the parent for selection
-	onBlur?: any;
-	onDoubleClick?: any;
-	onClick?: any;
-	onSelect?: any;
+	onBlur?: (e: React.FocusEvent<HTMLLIElement>) => void;
+	onClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
+	onDoubleClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
+	onSelect?: (title: string) => void;
 }
 
 export function getDefaultListItemProps(): ListItemProps {
-	return cloneDeep({
+	return {
 		...getDefaultItemProps(),
 		href: {
 			selectHandler: nilEvent,
@@ -40,7 +37,7 @@ export function getDefaultListItemProps(): ListItemProps {
 		onClick: nilEvent,
 		onDoubleClick: nilEvent,
 		onSelect: nilEvent
-	});
+	};
 }
 
 export interface ListItemState extends ItemState {
@@ -48,10 +45,10 @@ export interface ListItemState extends ItemState {
 }
 
 export function getDefaultListItemState(): ListItemState {
-	return cloneDeep({
+	return {
 		...getDefaultItemState("ui-listitem"),
 		toggleRipple: false
-	});
+	};
 }
 
 export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
@@ -151,3 +148,5 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		);
 	}
 }
+
+export default ListItem;

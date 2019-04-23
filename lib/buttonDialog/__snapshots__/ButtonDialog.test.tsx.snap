@@ -375,6 +375,48 @@ Object {
 }
 `;
 
+exports[`Test retrieval of ButtonDialog props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-button-dialog" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "dialogStyles": b {
+    "_classes": Map {
+      "ui-dialog-popup" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "style": Object {},
+  "triangleStyles": b {
+    "_classes": Map {
+      "ui-dialog-triangle" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "visible": false,
+}
+`;
+
 exports[`Test the disabling of the ButtonDialog control 1`] = `
 <ButtonDialog
   backgroundColor={null}

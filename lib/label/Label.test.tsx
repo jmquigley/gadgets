@@ -1,21 +1,27 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {getDefaultLabelProps, Label} from "./index";
+import {getDefaultLabelProps, getDefaultLabelState, Label} from "./index";
 
 test("Test retrieval of default Label props object", () => {
 	const props = getDefaultLabelProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultLabelState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a Label control", () => {
 	const s: string = "Test label text";
 	const ctl = shallow(<Label className='test-class' text={s} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -24,7 +30,7 @@ test("Test the disabling of the Label control", () => {
 	const s: string = "Test label text";
 	const ctl = mount(<Label disabled text={s} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find("span").simulate("click");
@@ -36,7 +42,7 @@ test("Test making the Label control invisible", () => {
 	const s: string = "Test label text";
 	const ctl = mount(<Label visible={false} text={s} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find("span").simulate("click");
@@ -62,15 +68,15 @@ test("Test a double click edit of the Label control", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	const label = ctl.find(".ui-label").first();
-	expect(label).toBeDefined();
+	assert(label);
 	label.simulate("doubleClick");
 	expect(dblclick).toHaveBeenCalled();
 
-	expect(ctl.state("editable")).toBe(true);
+	assert(ctl.state("editable"));
 
 	label.simulate("keyDown", {key: "B"});
 	expect(keydown).toHaveBeenCalled();
@@ -78,12 +84,12 @@ test("Test a double click edit of the Label control", () => {
 	label.simulate("keyPress", {target: {innerHTML: "ABCDE"}, key: "Enter"});
 	expect(keypress).toHaveBeenCalled();
 	expect(change).toHaveBeenCalled();
-	expect(ctl.state("text")).toBe("ABCDE");
-	expect(!ctl.state("editable")).toBe(true);
+	assert(ctl.state("text") === "ABCDE");
+	assert(ctl.state("editable") === false);
 
 	expect(update).toHaveBeenCalled();
-	expect(update.mock.calls[0][0]).toBe("A");
-	expect(update.mock.calls[0][1]).toBe("ABCDE");
+	assert(update.mock.calls[0][0] === "A");
+	assert(update.mock.calls[0][1] === "ABCDE");
 });
 
 test("Test cancelling a double click edit of the Label control", () => {
@@ -100,18 +106,22 @@ test("Test cancelling a double click edit of the Label control", () => {
 		/>
 	);
 
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+
 	const label = ctl.find(".ui-label").first();
+	assert(label);
 	label.simulate("doubleClick");
 	expect(dblclick).toHaveBeenCalled();
 
 	label.simulate("keyPress", {target: {innerHTML: "ABCDE"}, key: "E"});
 	expect(keypress).toHaveBeenCalled();
-	expect(ctl.state("editable")).toBe(true);
+	assert(ctl.state("editable"));
 
 	label.simulate("keyDown", {key: "Escape"});
 	expect(keydown).toHaveBeenCalled();
-	expect(!ctl.state("editable")).toBe(true);
-	expect(ctl.state("text")).toBe(s);
+	assert(ctl.state("editable") === false);
+	assert(ctl.state("text") === s);
 });
 
 test("Test double click change to Label and blur to save", () => {
@@ -131,23 +141,23 @@ test("Test double click change to Label and blur to save", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	const label = ctl.find(".ui-label").first();
-	expect(label).toBeDefined();
+	assert(label);
 	label.simulate("doubleClick");
 	expect(dblclick).toHaveBeenCalled();
 
-	expect(ctl.state("editable")).toBe(true);
+	assert(ctl.state("editable"));
 
 	label.simulate("blur", {target: {innerHTML: "ABCDE"}});
 	expect(blur).toHaveBeenCalled();
 	expect(change).toHaveBeenCalled();
-	expect(ctl.state("text")).toBe("ABCDE");
-	expect(!ctl.state("editable")).toBe(true);
+	assert(ctl.state("text") === "ABCDE");
+	assert(ctl.state("editable") === false);
 
 	expect(update).toHaveBeenCalled();
-	expect(update.mock.calls[0][0]).toBe("A");
-	expect(update.mock.calls[0][1]).toBe("ABCDE");
+	assert(update.mock.calls[0][0] === "A");
+	assert(update.mock.calls[0][1] === "ABCDE");
 });

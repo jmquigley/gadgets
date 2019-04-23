@@ -1,3 +1,7 @@
-import {getDefaultSliderProps, Slider, SliderProps} from "./Slider";
+import Slider, {
+	getDefaultSliderProps,
+	getDefaultSliderState,
+	SliderProps
+} from "./Slider";
 
-export {getDefaultSliderProps, Slider, SliderProps};
+export {getDefaultSliderProps, getDefaultSliderState, Slider, SliderProps};

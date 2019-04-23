@@ -1,10 +1,14 @@
-"use strict";
-
 // const debug = require('debug')('Dropdown.test');
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {Dropdown, DropdownOption, getDefaultDropdownProps} from "./index";
+import {
+	Dropdown,
+	DropdownOption,
+	getDefaultDropdownProps,
+	getDefaultDropdownState
+} from "./index";
 
 const testData: DropdownOption[] = [
 	{value: "idstr1", label: "lstr1"},
@@ -15,14 +19,19 @@ const testData: DropdownOption[] = [
 test("Test retrieval of Dropdown props object", () => {
 	const props = getDefaultDropdownProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultDropdownState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Creation of the Dropdown control", () => {
 	const ctl = shallow(<Dropdown defaultVal='idstr2' items={testData} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -37,7 +46,7 @@ test("Disable the Dropdown control", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 	ctl.find(".ui-dropdown")
 		.first()
@@ -56,7 +65,7 @@ test("Make the Dropdown control invisible", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-dropdown")
@@ -71,12 +80,12 @@ test("Test the Dropdown click event", () => {
 		<Dropdown defaultVal='idstr1' items={testData} onSelect={change} />
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-dropdown")
 		.first()
 		.simulate("change", {target: {value: "idstr1"}});
 	expect(change).toHaveBeenCalled();
-	expect(change.mock.calls[0][0]).toBe("idstr1");
+	assert(change.mock.calls[0][0] === "idstr1");
 });

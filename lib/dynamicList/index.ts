@@ -1,13 +1,14 @@
-import {
-	DynamicList,
+import DynamicList, {
 	DynamicListItem,
 	DynamicListProps,
-	getDefaultDynamicListProps
+	getDefaultDynamicListProps,
+	getDefaultDynamicListState
 } from "./DynamicList";
 
 export {
 	DynamicList,
 	DynamicListItem,
 	DynamicListProps,
-	getDefaultDynamicListProps
+	getDefaultDynamicListProps,
+	getDefaultDynamicListState
 };

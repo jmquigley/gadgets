@@ -36,9 +36,6 @@
  * @module ButtonCircle
  */
 
-"use strict";
-
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {
@@ -60,37 +57,36 @@ import {
 import styled from "../shared/themed-components";
 
 export interface ButtonCircleProps extends ButtonProps {
-	onClick?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 export function getDefaultButtonCircleProps(): ButtonProps {
-	return cloneDeep(
-		Object.assign({}, getDefaultButtonProps(), {
-			obj: "ButtonCircle",
-			onClick: nilEvent
-		})
-	);
+	return {
+		...getDefaultButtonProps(),
+		obj: "ButtonCircle",
+		onClick: nilEvent
+	};
 }
 
 export type ButtonCircleState = ButtonState;
 
 export function getDefaultButtonCircleState(): ButtonCircleState {
-	return cloneDeep({...getDefaultButtonState("ui-button-circle")});
+	return {...getDefaultButtonState("ui-button-circle")};
 }
 
-export const ButtonCircleContainerView: any = styled.div`
+const ButtonCircleContainerView: any = styled.div`
 	${BaseButtonView}
 	height: unset;
 `;
 
-export const ButtonCircleInnerView: any = styled.div`
+const ButtonCircleInnerView: any = styled.div`
 	border-radius: 4em;
 	display: inline-block;
 	height: ${(props: ButtonCircleProps) => props.height};
 	width: ${(props: ButtonCircleProps) => props.width};
 `;
 
-export const ButtonCircleView: any = styled(Button)`
+const ButtonCircleView: any = styled(Button)`
 	border-radius: 4em;
 	padding: ${(props: ButtonCircleProps) => {
 		switch (props.sizing) {
@@ -147,3 +143,5 @@ export class ButtonCircle extends BaseComponent<
 		);
 	}
 }
+
+export default ButtonCircle;

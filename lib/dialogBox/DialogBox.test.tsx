@@ -1,20 +1,31 @@
 "use strict";
 
 import {shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {DialogBox, DialogBoxType, getDefaultDialogBoxProps} from "./index";
+import {
+	DialogBox,
+	DialogBoxType,
+	getDefaultDialogBoxProps,
+	getDefaultDialogBoxState
+} from "./index";
 
 test("Test retrieval of DialogBox props object", () => {
 	const props = getDefaultDialogBoxProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultDialogBoxState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a default DialogBox control", () => {
 	const ctl = shallow(<DialogBox className='test-class' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -27,7 +38,7 @@ test("Test the creation of an error DialogBox", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -40,7 +51,7 @@ test("Test the creation of an warning DialogBox", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -53,7 +64,7 @@ test("Test the creation of an success DialogBox", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -66,7 +77,7 @@ test("Test the creation of an info DialogBox", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -83,7 +94,7 @@ test("Test the creation of an custom DialogBox", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -97,7 +108,7 @@ test('Test pressing the "yes" button on the default DialogBox', () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
-	expect(ctl.state("showModal")).toBe(true);
+	assert(ctl.state("showModal"));
 });

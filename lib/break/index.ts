@@ -1,3 +1,3 @@
-import {Break} from "./Break";
+import Break, {getDefaultBreakProps} from "./Break";
 
-export {Break};
+export {Break, getDefaultBreakProps};

@@ -12,7 +12,7 @@ import {
 	Crumbs,
 	getDefaultBreadcrumbsProps
 } from "./lib/breadcrumbs";
-import {Break} from "./lib/break";
+import {Break, getDefaultBreakProps} from "./lib/break";
 import {Browser, getDefaultBrowserProps} from "./lib/browser";
 import {Button, getDefaultButtonProps} from "./lib/button";
 import {ButtonCircle, getDefaultButtonCircleProps} from "./lib/buttonCircle";
@@ -182,6 +182,7 @@ export {
 	getDefaultBadgeProps,
 	getDefaultBaseProps,
 	getDefaultBreadcrumbsProps,
+	getDefaultBreakProps,
 	getDefaultBrowserProps,
 	getDefaultButtonCircleProps,
 	getDefaultButtonDialogProps,

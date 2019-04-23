@@ -28,13 +28,13 @@
  * <Dropdown iconName="cab" onClick={someFunction}
  *     defaultVal='val1'
  *     items={options}
- *     onSelect{(val: string) => {// process value}}
+ *     onSelect{(val: DropdownDataType) => {// process value}}
  * />
  * ```
  *
  * ## API
  * #### Events
- * - `onSelect(val: any)` - The value (id) of the item that was selected
+ * - `onSelect(val: string)` - The value (id) of the item that was selected
  * from the list.
  *
  * #### Styles
@@ -49,11 +49,9 @@
  * @module Dropdown
  */
 
-"use strict";
-
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
+import {sprintf} from "sprintf-js";
 import {calc} from "util.calc";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
@@ -66,6 +64,7 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	invisible,
+	Sizing,
 	Wrapper
 } from "../shared";
 import styled from "../shared/themed-components";
@@ -76,20 +75,23 @@ export interface DropdownOption {
 	label: string;
 }
 
+export type DropdownDataType = string | number;
+
 export interface DropdownProps extends BaseProps {
 	defaultVal?: string;
+	initialItem?: string;
 	items?: DropdownOption[];
-	onSelect?: any;
+	onSelect?: (val: DropdownDataType) => void;
 }
 
 export function getDefaultDropdownProps(): DropdownProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		initialItem: "",
 		items: [],
 		obj: "Dropdown",
 		onSelect: nilEvent
-	});
+	};
 }
 
 export interface DropdownState extends BaseState {
@@ -97,15 +99,15 @@ export interface DropdownState extends BaseState {
 }
 
 export function getDefaultDropdownState(): DropdownState {
-	return cloneDeep({...getDefaultBaseState("ui-dropdown"), currentValue: ""});
+	return {...getDefaultBaseState("ui-dropdown"), currentValue: ""};
 }
 
-export const DropdownContainerView: any = styled.div`
+const DropdownContainerView: any = styled.div`
 	position: relative;
 	${(props: DropdownProps) => props.sizing && fontStyle[props.sizing]};
 `;
 
-export const DropdownView: any = styled.select`
+const DropdownView: any = styled.select`
 	-webkit-appearance: none;
 	-webkit-border-radius: 0px;
 	background-position: 100% 50%;
@@ -117,6 +119,8 @@ export const DropdownView: any = styled.select`
 	${(props: DropdownProps) => invisible(props)}
 `;
 
+const chevronImage: string = `url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='%s' height='%s' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>")`;
+
 export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	private _keys: Keys;
 
@@ -127,16 +131,28 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 
 		this.state = {
 			...getDefaultDropdownState(),
-			currentValue: this.props.defaultVal
+			currentValue: this.props.defaultVal,
+			style: this.getChevronStyle(props.sizing)
 		};
 
 		this._keys = new Keys({testing: this.props.testing});
 	}
 
+	private getChevronStyle(sizing: Sizing) {
+		const size = BaseComponent.fontSizePX(sizing);
+		const chevron = sprintf(chevronImage, size);
+
+		return {
+			backgroundImage: chevron,
+			paddingRight: size,
+			paddingLeft: calc(size, "* 0.2")
+		};
+	}
+
 	@autobind
 	private handleChange(e: React.FormEvent<HTMLSelectElement>) {
 		if (!this.props.disabled && this.props.visible) {
-			const val: any = e.currentTarget.value;
+			const val: DropdownDataType = e.currentTarget.value;
 			this.setState(
 				{
 					currentValue: String(val)
@@ -148,21 +164,12 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 		}
 	}
 
-	public static getDerivedStateFromProps(
-		props: DropdownProps,
-		state: DropdownState
-	) {
-		const newState: DropdownState = {...state};
-		const size: string = BaseComponent.fontSizePX();
-		const chevron: string = `url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='${size}' height='${size}' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>")`;
-
-		newState.style = {
-			backgroundImage: chevron,
-			paddingRight: size,
-			paddingLeft: calc(size, "* 0.2")
-		};
-
-		return super.getDerivedStateFromProps(props, newState);
+	public componentDidUpdate(prevProps: DropdownProps) {
+		if (prevProps.sizing !== this.props.sizing) {
+			this.setState({
+				style: this.getChevronStyle(this.props.sizing)
+			});
+		}
 	}
 
 	public render() {
@@ -194,3 +201,5 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 		);
 	}
 }
+
+export default Dropdown;

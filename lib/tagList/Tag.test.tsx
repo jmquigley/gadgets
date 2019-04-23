@@ -1,20 +1,26 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {getDefaultTagProps, Tag} from "./index";
+import {getDefaultTagProps, getDefaultTagState, Tag} from "./index";
 
 test("Test retrieval of Tag props object", () => {
 	const props = getDefaultTagProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultTagState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a simple Tag instance", () => {
 	const ctl = shallow(<Tag>test tag</Tag>);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -26,7 +32,7 @@ test("Test disabling of the simple Tag instance", () => {
 		</Tag>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button")
@@ -42,7 +48,7 @@ test("Test making Tag invisible", () => {
 		</Tag>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -55,7 +61,7 @@ test("Test hiding/showing the delete button in Tag", () => {
 		</Tag>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	ctl.find(".ui-tag")
 		.first()
 		.simulate("mouseOver");
@@ -71,13 +77,14 @@ test("Test the mouseout event to hide the Tag delete button", () => {
 	const tag: string = "test tag";
 	const ctl = mount(<Tag usedelete>{tag}</Tag>);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	ctl.find(".ui-tag")
 		.first()
 		.simulate("mouseOver");
-	expect(ctl.state("showDelete")).toBe(true);
+	assert(ctl.state("showDelete"));
+
 	ctl.find(".ui-tag")
 		.first()
 		.simulate("mouseOut");
-	expect(ctl.state("showDelete")).toBe(false);
+	assert(ctl.state("showDelete") === false);
 });

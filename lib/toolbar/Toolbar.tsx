@@ -50,11 +50,8 @@
  * @module Toolbar
  */
 
-"use strict";
-
 // const debug = require('debug')('Toolbar');
 
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {BinaryTree} from "util.ds";
 import {Keys} from "util.keys";
@@ -74,20 +71,20 @@ export interface ToolbarProps extends BaseProps {
 }
 
 export function getDefaultToolbarProps(): ToolbarProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		justify: Justify.left,
 		obj: "Toolbar"
-	});
+	};
 }
 
 export type ToolbarState = BaseState;
 
 export function getDefaultToolbarState(): ToolbarState {
-	return cloneDeep({...getDefaultBaseState("ui-toolbar")});
+	return {...getDefaultBaseState("ui-toolbar")};
 }
 
-export const ToolbarView: any = styled.div`
+const ToolbarView: any = styled.div`
 	background-color: ${(props: ToolbarProps) => props.theme.backgroundColor};
 	border: solid 1px silver;
 	box-sizing: border-box;
@@ -95,7 +92,7 @@ export const ToolbarView: any = styled.div`
 	padding: 3px 2px;
 `;
 
-export const ToolbarGroupView: any = styled.div`
+const ToolbarGroupView: any = styled.div`
 	align-items: center;
 	display: flex;
 	padding: 2px 0 1px 0;
@@ -112,8 +109,16 @@ export const ToolbarGroupView: any = styled.div`
 	}}
 `;
 
-export const ToolbarElementView: any = styled.div`
+const ToolbarElementView: any = styled.div`
 	box-sizing: border-box;
+
+	.ui-textfield {
+		padding: 0;
+	}
+
+	.ui-textfield input {
+		padding: 0 4px;
+	}
 `;
 
 export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
@@ -235,3 +240,5 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 		);
 	}
 }
+
+export default Toolbar;

@@ -1,14 +1,24 @@
 "use strict";
 
 import {mount} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {getDefaultWrapperProps, Wrapper} from "./wrapper";
+import {
+	getDefaultWrapperProps,
+	getDefaultWrapperState,
+	Wrapper
+} from "./wrapper";
 
 test("Test creation of the Wrapper props object", () => {
 	const props = getDefaultWrapperProps();
 
-	expect(props).toBeTruthy();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultWrapperState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a default Wrapper", () => {
@@ -22,10 +32,10 @@ test("Test creation of a default Wrapper", () => {
 		</Wrapper>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 	ctl.setState({error: errmsg, errorInfo: errinfo});
 	const wrapper = ctl.instance() as Wrapper;
-	expect(wrapper).toBeTruthy();
+	assert(wrapper);
 	wrapper.componentDidCatch(errmsg, errinfo);
 
 	expect(ctl).toMatchSnapshot();
@@ -42,6 +52,7 @@ test("Test disabling the Wrapper", () => {
 		</Wrapper>
 	);
 
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 	expect(errfn).not.toHaveBeenCalled();
 });

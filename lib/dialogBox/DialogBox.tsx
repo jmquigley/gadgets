@@ -59,14 +59,11 @@
  * @module DialogBox
  */
 
-"use strict";
-
 // const debug = require('debug')('DialogBox');
 
 const ReactModal = require("react-modal");
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {ButtonText} from "../buttonText";
@@ -97,25 +94,24 @@ export interface DialogBoxProps extends BaseProps {
 	dialogType?: DialogBoxType;
 	iconName?: string;
 	message?: string;
-	onClose?: any;
-	onOpen?: any;
-	onSelection?: any;
+	onClose?: () => void;
+	onOpen?: () => void;
+	onSelection?: (choice: boolean) => void;
 	show?: boolean;
 }
 
 export function getDefaultDialogBoxProps(): DialogBoxProps {
-	return cloneDeep(
-		Object.assign({}, getDefaultBaseProps(), {
-			dialogType: DialogBoxType.info,
-			iconName: "bomb",
-			message: "",
-			obj: "DialogBox",
-			onClose: nilEvent,
-			onOpen: nilEvent,
-			onSelection: nilEvent,
-			show: false
-		})
-	);
+	return {
+		...getDefaultBaseProps(),
+		dialogType: DialogBoxType.info,
+		iconName: "bomb",
+		message: "",
+		obj: "DialogBox",
+		onClose: nilEvent,
+		onOpen: nilEvent,
+		onSelection: nilEvent,
+		show: false
+	};
 }
 
 export interface DialogBoxState extends BaseState {
@@ -123,27 +119,27 @@ export interface DialogBoxState extends BaseState {
 }
 
 export function getDefaultDialogBoxState(): DialogBoxState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-dialogbox"),
 		showModal: false
-	});
+	};
 }
 
-export const ButtonBar: any = styled.div`
+const ButtonBar: any = styled.div`
 	display: flex;
 `;
 
-export const DialogBoxIconView: any = styled.div`
+const DialogBoxIconView: any = styled.div`
 	flex: none;
 `;
 
-export const DialogBoxMessageContainerView: any = styled.div`
+const DialogBoxMessageContainerView: any = styled.div`
 	flex: 1;
 	max-width: 250px;
 	padding-left: 15px;
 `;
 
-export const DialogBoxMessageView: any = styled.div`
+const DialogBoxMessageView: any = styled.div`
 	margin-bottom: 1em;
 
 	+ p {
@@ -151,17 +147,17 @@ export const DialogBoxMessageView: any = styled.div`
 	}
 `;
 
-export const DialogBoxView: any = styled.div`
+const DialogBoxView: any = styled.div`
 	display: flex;
 	overflow: hidden;
 	z-index: ${baseZIndex + 1};
 `;
 
-export const Spacer: any = styled.div`
+const Spacer: any = styled.div`
 	flex: 1;
 `;
 
-export const StyledButtonText: any = styled(ButtonText)`
+const StyledButtonText: any = styled(ButtonText)`
 	border: solid 1px gray;
 	display: inline-flex;
 	flex: none;
@@ -169,7 +165,7 @@ export const StyledButtonText: any = styled(ButtonText)`
 	width: 5em;
 `;
 
-export const StyledIcon: any = styled(Icon)`
+const StyledIcon: any = styled(Icon)`
 	flex: none;
 `;
 
@@ -332,3 +328,5 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		);
 	}
 }
+
+export default DialogBox;

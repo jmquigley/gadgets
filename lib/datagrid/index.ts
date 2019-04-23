@@ -1,5 +1,4 @@
-import {
-	Datagrid,
+import Datagrid, {
 	DatagridColumn,
 	DatagridProps,
 	DatagridRow,

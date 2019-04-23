@@ -104,17 +104,15 @@
  * @module Editor
  */
 
-"use strict";
-
 const debug = require("debug")("Editor");
 
 const Quill = (global as any).Quill;
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import {Markup, MarkupMode} from "quill-markup";
 import * as React from "react";
 import {ClassNames} from "util.classnames";
+import {Match} from "util.matches";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
 import {ButtonDialog} from "../buttonDialog";
@@ -147,14 +145,14 @@ export interface EditorProps extends BaseProps {
 	defaultFontSize?: number;
 	foreground?: string;
 	onChange?: any;
-	onClick?: any;
-	onClickLink?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+	onClickLink?: (match: Match) => void;
 	scheme?: any;
 	useSmallButtons?: boolean;
 }
 
 export function getDefaultEditorProps(): EditorProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		content: "",
 		defaultFont: "Fira Code",
@@ -168,7 +166,7 @@ export function getDefaultEditorProps(): EditorProps {
 			foreground: Color.white
 		},
 		useSmallButtons: false
-	});
+	};
 }
 
 export interface EditorState extends BaseState {
@@ -177,14 +175,14 @@ export interface EditorState extends BaseState {
 }
 
 export function getDefaultEditorState(): EditorState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-editor"),
 		editorStyles: new ClassNames("ui-editor-quill"),
 		toolbarStyles: new ClassNames("ui-editor-toolbar")
-	});
+	};
 }
 
-export const EditorContainer: any = styled.div`
+const EditorContainer: any = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -193,7 +191,7 @@ export const EditorContainer: any = styled.div`
 	width: inherit;
 `;
 
-export const EditorView: any = styled.div`
+const EditorView: any = styled.div`
 	display: flex;
 	min-width: inherit;
 
@@ -207,7 +205,7 @@ export const EditorView: any = styled.div`
 	${(props: EditorProps) => !props.visible && InvisibleCSS}
 `;
 
-export const EditorToolbar: any = styled(Toolbar)`
+const EditorToolbar: any = styled(Toolbar)`
 	margin-bottom: -1px;
 	min-width: inherit;
 `;
@@ -474,3 +472,5 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		);
 	}
 }
+
+export default Editor;

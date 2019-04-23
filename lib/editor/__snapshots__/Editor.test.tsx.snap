@@ -51,3 +51,44 @@ Object {
   "xcss": null,
 }
 `;
+
+exports[`Test retrieval of the Editor props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-editor" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "editorStyles": b {
+    "_classes": Map {
+      "ui-editor-quill" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "style": Object {},
+  "toolbarStyles": b {
+    "_classes": Map {
+      "ui-editor-toolbar" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+}
+`;

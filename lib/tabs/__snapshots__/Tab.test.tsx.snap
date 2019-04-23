@@ -146,6 +146,26 @@ Object {
 }
 `;
 
+exports[`Test retrieval of Tab props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-tab" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "hidden": false,
+  "sizing": "normal",
+  "style": Object {},
+}
+`;
+
 exports[`Test the click handler in the Tab instance 1`] = `
 <Tab
   backgroundColor={null}

@@ -15,7 +15,7 @@ export default class DemoOption extends React.Component<any, undefined> {
 	}
 
 	@autobind
-	private handleClick(val: boolean, text: string) {
+	private handleSelect(val: boolean, text: string) {
 		debug("clicked option, flag: %o, text: %o", val, text);
 	}
 
@@ -27,14 +27,14 @@ export default class DemoOption extends React.Component<any, undefined> {
 				<div className='option-display-group'>
 					<Option
 						disabled={this.props["disabled"]}
-						onClick={this.handleClick}
+						onSelect={this.handleSelect}
 						sizing={this.props["sizing"]}
 						optionType={OptionType[key]}
 					/>
 					<Option
 						disabled={this.props["disabled"]}
 						initialToggle={true}
-						onClick={this.handleClick}
+						onSelect={this.handleSelect}
 						optionType={OptionType[key]}
 						sizing={this.props["sizing"]}
 						text={key}

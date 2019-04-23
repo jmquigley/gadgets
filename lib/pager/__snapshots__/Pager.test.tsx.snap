@@ -1577,3 +1577,25 @@ Object {
   "xcss": null,
 }
 `;
+
+exports[`Test retrieval of Pager props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-pager" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "currentPage": 0,
+  "currentSort": 0,
+  "pageSize": 0,
+  "sizing": "normal",
+  "style": Object {},
+}
+`;

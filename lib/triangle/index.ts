@@ -1,3 +1,12 @@
-import {getDefaultTriangleProps, Triangle, TriangleProps} from "./Triangle";
+import Triangle, {
+	getDefaultTriangleProps,
+	getDefaultTriangleState,
+	TriangleProps
+} from "./Triangle";
 
-export {getDefaultTriangleProps, Triangle, TriangleProps};
+export {
+	getDefaultTriangleProps,
+	getDefaultTriangleState,
+	Triangle,
+	TriangleProps
+};

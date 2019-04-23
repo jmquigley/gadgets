@@ -46,7 +46,7 @@ import {ButtonToggle} from 'gadgets';
 ```
 
 #### Events
-- `onclick(toggle: boolean)` - When the button is clicked, then the
+- `onToggle(toggle: boolean)` - When the button is clicked, then the
 button toggle is changed.  This callback returns the current state
 of the toggle.  True is on, false is off.
 

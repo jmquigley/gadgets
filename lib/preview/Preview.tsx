@@ -91,7 +91,7 @@ export function getDefaultPreviewState(): PreviewState {
 	};
 }
 
-export const PreviewWrapper: any = styled.div`
+const PreviewWrapper: any = styled.div`
 	border: solid 1px ${(props: PreviewProps) => props.theme.borderColor};
 	height: 100%;
 	overflow: auto;
@@ -184,6 +184,7 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 					className={this.state.classes.classnames}
 					disabled={this.props.disabled}
 					ref={this.handleRef}
+					style={this.state.style}
 					visible={this.props.visible}
 				/>
 			</Wrapper>

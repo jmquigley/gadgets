@@ -195,3 +195,23 @@ Object {
   "xcss": null,
 }
 `;
+
+exports[`Test retrieval of Tag props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-tag" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "showDelete": false,
+  "sizing": "normal",
+  "style": Object {},
+}
+`;

@@ -2,15 +2,26 @@
 
 import {EnumValues as ev} from "enum-values";
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
 import {Sizing} from "../shared";
-import {getDefaultOptionProps, Option, OptionType} from "./index";
+import {
+	getDefaultOptionProps,
+	getDefaultOptionState,
+	Option,
+	OptionType
+} from "./index";
 
 test("Test retrieval of Option props object", () => {
 	const props = getDefaultOptionProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultOptionState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 for (const sizing of ev.getNames(Sizing)) {
@@ -23,7 +34,7 @@ for (const sizing of ev.getNames(Sizing)) {
 			/>
 		);
 
-		expect(ctl).toBeDefined();
+		assert(ctl);
 		expect(ctl).toMatchSnapshot();
 	});
 }
@@ -38,16 +49,16 @@ for (const optionType of ev.getNames(OptionType)) {
 			/>
 		);
 
-		expect(ctl).toBeDefined();
+		assert(ctl);
 		expect(ctl).toMatchSnapshot();
 	});
 }
 
 test("Test disabling of the Option control", () => {
 	const click = jest.fn();
-	const ctl = mount(<Option onClick={click} disabled={true} />);
+	const ctl = mount(<Option onSelect={click} disabled={true} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button-toggle")
@@ -58,9 +69,9 @@ test("Test disabling of the Option control", () => {
 
 test("Test making the Option control invisible", () => {
 	const click = jest.fn();
-	const ctl = mount(<Option onClick={click} visible={false} />);
+	const ctl = mount(<Option onSelect={click} visible={false} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button-toggle")
@@ -71,14 +82,14 @@ test("Test making the Option control invisible", () => {
 
 test("Test Option control click event", () => {
 	const click = jest.fn();
-	const ctl = mount(<Option onClick={click} />);
+	const ctl = mount(<Option onSelect={click} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-option")
 		.first()
 		.simulate("click");
 	expect(click).toHaveBeenCalled();
-	expect(click.mock.calls[0][0]).toBe(true);
+	assert(click.mock.calls[0][0]);
 });

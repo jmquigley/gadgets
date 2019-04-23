@@ -1,7 +1,12 @@
-import {
-	ButtonText,
+import ButtonText, {
 	ButtonTextProps,
-	getDefaultButtonTextProps
+	getDefaultButtonTextProps,
+	getDefaultButtonTextState
 } from "./ButtonText";
 
-export {ButtonText, ButtonTextProps, getDefaultButtonTextProps};
+export {
+	ButtonText,
+	ButtonTextProps,
+	getDefaultButtonTextProps,
+	getDefaultButtonTextState
+};

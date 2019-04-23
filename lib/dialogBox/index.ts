@@ -1,8 +1,14 @@
-import {
+import DialogBox, {
+	DialogBoxProps,
+	DialogBoxType,
+	getDefaultDialogBoxProps,
+	getDefaultDialogBoxState
+} from "./DialogBox";
+
+export {
 	DialogBox,
 	DialogBoxProps,
 	DialogBoxType,
-	getDefaultDialogBoxProps
-} from "./DialogBox";
-
-export {DialogBox, DialogBoxProps, DialogBoxType, getDefaultDialogBoxProps};
+	getDefaultDialogBoxProps,
+	getDefaultDialogBoxState
+};

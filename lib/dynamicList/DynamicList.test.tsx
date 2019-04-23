@@ -1,21 +1,31 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
 import {waitPromise} from "util.wait";
-import {DynamicList, getDefaultDynamicListProps} from "./index";
+import {
+	DynamicList,
+	getDefaultDynamicListProps,
+	getDefaultDynamicListState
+} from "./index";
 
 test("Test retrieval of DynamicList props object", () => {
 	const props = getDefaultDynamicListProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultDynamicListState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a DynamicList control", () => {
 	const ctl = shallow(<DynamicList className='test-class' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -33,7 +43,7 @@ test("Test creation of a DynamicList with 3 items", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -50,7 +60,7 @@ test("Test disabling of a Dynamic List control", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -67,7 +77,7 @@ test("Test making a Dynamic List invisible", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -84,7 +94,7 @@ test("Test setting the control to noselect", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -105,7 +115,7 @@ test("Test setting an error message", async () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	// This test must wait for 2+ seconds before checking for the error
@@ -120,4 +130,4 @@ test("Test setting an error message", async () => {
 		.catch((err: string) => {
 			expect(err).toBeNull();
 		});
-}, 20000);
+});

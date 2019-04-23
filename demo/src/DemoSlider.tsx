@@ -49,7 +49,7 @@ export default class DemoSlider extends React.Component<any, DemoSliderState> {
 
 				<Option
 					disabled={this.props["disabled"]}
-					onClick={this.handleSnap}
+					onSelect={this.handleSnap}
 					text='Toggle snap mode on/off'
 				/>
 				<Break n={2} sizing={this.props["sizing"]} />

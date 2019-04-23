@@ -39,7 +39,6 @@
 
 "use strict";
 
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {
 	BaseComponent,
@@ -63,21 +62,20 @@ export interface DividerProps extends BaseProps {
 }
 
 export function getDefaultDividerProps(): DividerProps {
-	return cloneDeep(
-		Object.assign({}, getDefaultBaseProps(), {
-			dividerType: DividerType.none,
-			obj: "Divider"
-		})
-	);
+	return {
+		...getDefaultBaseProps(),
+		dividerType: DividerType.none,
+		obj: "Divider"
+	};
 }
 
 export type DividerState = BaseState;
 
 export function getDefaultDividerState(): DividerState {
-	return cloneDeep({...getDefaultBaseState("ui-divider")});
+	return {...getDefaultBaseState("ui-divider")};
 }
 
-export const DividerView: any = styled.div`
+const DividerView: any = styled.div`
 	align-items: center;
 	color: ${(props: DividerProps) => props.theme.borderColor || Color.silver};
 	display: inline-flex;
@@ -108,3 +106,5 @@ export class Divider extends BaseComponent<DividerProps, DividerState> {
 		);
 	}
 }
+
+export default Divider;

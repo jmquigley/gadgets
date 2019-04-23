@@ -33,11 +33,12 @@ import {List} from 'immutable';
 
 ## API
 #### Events
-- `onClip(uri: string, content: string, dom: any, history: List)` - When the user clicks
-the "clip" button this event is invoked.  It is given the current URI, the text of the
-page, the parsed dom for the page (if useparser is given) and the current link history
-- `onOpen(uri: string, history: List)` - When a page is opened in the browser this
-callback is invoked with the name of the URI that was opened.
+- `onClip(uri: string, content: string, dom: any, history: List<string>)` -
+When the user clicks the "clip" button this event is invoked.  It is
+given the current URI, the text of the page, the parsed dom for the page
+(if useparser is given) and the current link history
+- `onOpen(uri: string, history: List<string>)` - When a page is opened in the
+browser this callback is invoked with the name of the URI that was opened.
 
 #### Styles
 - `ui-browser` - placed on the root `<div>` of the control.  This wraps the toolbar

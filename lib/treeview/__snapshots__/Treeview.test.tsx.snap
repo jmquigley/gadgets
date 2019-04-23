@@ -2008,3 +2008,28 @@ Object {
   "xcss": null,
 }
 `;
+
+exports[`Test retrieval of Treeview props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-treeview" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "matches": Array [],
+  "search": "",
+  "searchFocusIndex": 0,
+  "searchFoundCount": 0,
+  "selectedId": null,
+  "sizing": "normal",
+  "style": Object {},
+  "td": null,
+}
+`;

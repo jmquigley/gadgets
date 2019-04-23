@@ -1,3 +1,7 @@
-import {getDefaultToolbarProps, Toolbar, ToolbarProps} from "./Toolbar";
+import Toolbar, {
+	getDefaultToolbarProps,
+	getDefaultToolbarState,
+	ToolbarProps
+} from "./Toolbar";
 
-export {getDefaultToolbarProps, Toolbar, ToolbarProps};
+export {getDefaultToolbarProps, getDefaultToolbarState, Toolbar, ToolbarProps};

@@ -34,10 +34,7 @@
  * @module ButtonDialog
  */
 
-"use strict";
-
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {ClassNames} from "util.classnames";
 import {nilEvent} from "util.toolbox";
@@ -64,25 +61,24 @@ import {Triangle} from "../triangle";
 export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
 	notriangle?: boolean;
-	onClick?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 	triangleClasses?: string[];
 }
 
 export function getDefaultButtonDialogProps(): ButtonDialogProps {
-	return cloneDeep(
-		Object.assign({}, getDefaultButtonProps(), {
-			dialogClasses: [],
-			location: Location.bottom,
-			notriangle: false,
-			obj: "ButtonDialog",
-			onClick: nilEvent,
-			style: {
-				backgroundColor: "inherit",
-				color: "inherit"
-			},
-			triangleClasses: []
-		})
-	);
+	return {
+		...getDefaultButtonProps(),
+		dialogClasses: [],
+		location: Location.bottom,
+		notriangle: false,
+		obj: "ButtonDialog",
+		onClick: nilEvent,
+		style: {
+			backgroundColor: "inherit",
+			color: "inherit"
+		},
+		triangleClasses: []
+	};
 }
 
 export interface ButtonDialogState extends ButtonState {
@@ -92,16 +88,15 @@ export interface ButtonDialogState extends ButtonState {
 }
 
 export function getDefaultButtonDialogState(): ButtonDialogState {
-	return cloneDeep(
-		Object.assign({}, getDefaultButtonState("ui-button-dialog"), {
-			dialogStyles: new ClassNames("ui-dialog-popup"),
-			triangleStyles: new ClassNames("ui-dialog-triangle"),
-			visible: false
-		})
-	);
+	return {
+		...getDefaultButtonState("ui-button-dialog"),
+		dialogStyles: new ClassNames("ui-dialog-popup"),
+		triangleStyles: new ClassNames("ui-dialog-triangle"),
+		visible: false
+	};
 }
 
-export const ButtonDialogContent: any = styled.div`
+const ButtonDialogContent: any = styled.div`
 	background-color: ${(props: ButtonDialogProps) =>
 		props.theme.backgroundColor};
 	border: solid 1px ${(props: ButtonDialogProps) => props.theme.borderColor};
@@ -115,7 +110,7 @@ export const ButtonDialogContent: any = styled.div`
 	${(props: ButtonDialogProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
-export const ButtonDialogPopup: any = styled.div`
+const ButtonDialogPopup: any = styled.div`
 	display: ${(props: ButtonDialogProps) =>
 		props.visible ? "block" : "none"};
 	position: absolute;
@@ -125,7 +120,7 @@ export const ButtonDialogPopup: any = styled.div`
 		props.location === Location.top ? DialogTop : DialogBottom}
 `;
 
-export const ButtonDialogView: any = styled.div`
+const ButtonDialogView: any = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	height: inherit;
@@ -133,17 +128,17 @@ export const ButtonDialogView: any = styled.div`
 	width: inherit;
 `;
 
-export const DialogBottom: any = css`
+const DialogBottom: any = css`
 	left: 0;
 	top: 108%;
 `;
 
-export const DialogTop: any = css`
+const DialogTop: any = css`
 	bottom: 108%;
 	right: 0;
 `;
 
-export const StyledTriangle: any = styled(Triangle)`
+const StyledTriangle: any = styled(Triangle)`
 	display: ${(props: ButtonDialogProps) =>
 		props.visible ? "block" : "none"};
 
@@ -151,14 +146,14 @@ export const StyledTriangle: any = styled(Triangle)`
 		props.location === Location.top ? TriangleTop : TriangleBottom}
 `;
 
-export const TriangleBottom: any = css`
+const TriangleBottom: any = css`
 	position: absolute;
 	top: -13px;
 	left: 2%;
 	z-index: calc(${baseZIndex} + 2);
 `;
 
-export const TriangleTop: any = css`
+const TriangleTop: any = css`
 	position: absolute;
 	bottom: -13px;
 	right: 2%;
@@ -177,14 +172,14 @@ export class ButtonDialog extends BaseComponent<
 	}
 
 	@autobind
-	private handleClick() {
+	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (!this.props.disabled) {
 			this.setState(
 				{
 					visible: !this.state.visible
 				},
 				() => {
-					this.props.onClick();
+					this.props.onClick(e);
 				}
 			);
 		}
@@ -301,3 +296,5 @@ export class ButtonDialog extends BaseComponent<
 		);
 	}
 }
+
+export default ButtonDialog;

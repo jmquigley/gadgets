@@ -1,20 +1,30 @@
 "use strict";
 
 import {shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {getDefaultListHeaderProps, ListHeader} from "./index";
+import {
+	getDefaultListHeaderProps,
+	getDefaultListHeaderState,
+	ListHeader
+} from "./index";
 
 test("Test retrieval of ListHeader props object", () => {
 	const props = getDefaultListHeaderProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultListHeaderState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test the creation of a ListHeader control with simple title", () => {
 	const ctl = shallow(<ListHeader title='test title' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 

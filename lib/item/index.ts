@@ -1,18 +1,8 @@
-import {Title, TitleLayout} from "../title";
-import {
+import Item, {
 	getDefaultItemProps,
 	getDefaultItemState,
-	Item,
 	ItemProps,
 	ItemState
 } from "./Item";
 
-export {
-	getDefaultItemProps,
-	getDefaultItemState,
-	Item,
-	ItemProps,
-	ItemState,
-	Title,
-	TitleLayout
-};
+export {getDefaultItemProps, getDefaultItemState, Item, ItemProps, ItemState};

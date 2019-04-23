@@ -1,14 +1,20 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {Badge, getDefaultBadgeProps} from "./index";
+import {Badge, getDefaultBadgeProps, getDefaultBadgeState} from "./index";
 
 test("Test retrieval of Badge props object", () => {
 	const props = getDefaultBadgeProps();
 
-	expect(props).toBeTruthy();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultBadgeState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a Badge control", () => {
@@ -26,21 +32,21 @@ test("Test creation of a Badge control", () => {
 		</Badge>
 	);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
 test("Test the disabling of a Badge control", () => {
 	const ctl = shallow(<Badge disabled />);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
 test("Test making the Badge control invisible", () => {
 	const ctl = shallow(<Badge visible={false} />);
 
-	expect(ctl).toBeTruthy();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -52,10 +58,9 @@ test("Test clicking a Badge counter control", () => {
 		</Badge>
 	);
 
-	expect(ctl).toBeTruthy();
-
-	expect(ctl.prop("disabled")).toBe(false);
-	expect(ctl.prop("visible")).toBe(true);
+	assert(ctl);
+	assert(ctl.prop("disabled") === false);
+	assert(ctl.prop("visible"));
 
 	ctl.find(".ui-badge")
 		.first()

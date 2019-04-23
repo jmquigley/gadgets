@@ -1,7 +1,6 @@
-import {
+import Title, {
 	getDefaultTitleProps,
 	getDefaultTitleState,
-	Title,
 	TitleLayout,
 	TitleProps,
 	TitleState

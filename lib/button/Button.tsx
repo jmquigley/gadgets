@@ -32,12 +32,9 @@
  * @module Button
  */
 
-"use strict";
-
 // const debug = require('debug')('Button');
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {Icon} from "../icon";
@@ -57,17 +54,17 @@ import {tooltip} from "../tooltip";
 export interface ButtonProps extends BaseProps {
 	iconName?: string; // font awesome string
 	iconStyle?: string;
-	onClick?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 export function getDefaultButtonProps(): ButtonProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		iconName: "bomb",
 		iconStyle: "",
 		onClick: nilEvent,
 		obj: "Button"
-	});
+	};
 }
 
 export type ButtonState = BaseState;
@@ -75,7 +72,7 @@ export type ButtonState = BaseState;
 export function getDefaultButtonState(
 	className: string = "ui-button"
 ): ButtonState {
-	return cloneDeep({...getDefaultBaseState(className)});
+	return {...getDefaultBaseState(className)};
 }
 
 export const BaseButtonView: any = css`
@@ -93,7 +90,7 @@ export const BaseButtonView: any = css`
 	width: 100%;
 `;
 
-export const ButtonView: any = styled.div`
+const ButtonView: any = styled.div`
 	${BaseButtonView}
 
 	flex: 1;
@@ -163,3 +160,5 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 		);
 	}
 }
+
+export default Button;

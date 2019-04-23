@@ -264,6 +264,25 @@ Object {
 }
 `;
 
+exports[`Test retrieval of the Icon props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-icon" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "style": Object {},
+}
+`;
+
 exports[`Test the disabling of the Icon control 1`] = `
 <Icon
   backgroundColor={null}

@@ -31,7 +31,7 @@
  *
  * ## API
  * #### Events
- * - `onClick(toggle: boolean, text: string)` - When the option is clicked, then
+ * - `onSelect(toggle: boolean, text: string)` - When the option is clicked, then
  * the button display is changed (toggled).  The callback returns the current state of
  * the toggle and the text label associated with the option.  When the button is "clear",
  * it is off and "false" is sent to the callback.  When the button is "checked", it is
@@ -53,12 +53,9 @@
  * @module Option
  */
 
-"use strict";
-
 // const debug = require('debug')('Option');
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {ButtonToggle} from "../buttonToggle";
@@ -91,14 +88,15 @@ export enum OptionType {
 
 export interface OptionProps extends BaseProps {
 	initialToggle?: boolean;
-	onClick?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+	onSelect?: (selected: boolean, text: string) => void;
 	optionType?: OptionType;
 	selected?: boolean;
 	text?: string;
 }
 
 export function getDefaultOptionProps(): OptionProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		initialToggle: false,
 		obj: "Option",
@@ -110,7 +108,7 @@ export function getDefaultOptionProps(): OptionProps {
 			color: "inherit"
 		},
 		text: ""
-	});
+	};
 }
 
 export interface OptionState extends BaseState {
@@ -118,10 +116,10 @@ export interface OptionState extends BaseState {
 }
 
 export function getDefaultOptionState(): OptionState {
-	return cloneDeep({...getDefaultBaseState("ui-option"), selected: false});
+	return {...getDefaultBaseState("ui-option"), selected: false};
 }
 
-export const OptionView: any = styled.div`
+const OptionView: any = styled.div`
 	align-items: center;
 	cursor: default;
 	display: inline-flex;
@@ -139,13 +137,11 @@ export const OptionView: any = styled.div`
 	${(props: OptionProps) => invisible(props)}
 `;
 
-export const StyledButtonToggle: any = styled(ButtonToggle)`
+const StyledButtonToggle: any = styled(ButtonToggle)`
 	display: inline;
 	flex: unset;
 	width: unset;
 `;
-
-export const StyledTitle: any = styled(Title)``;
 
 export class Option extends BaseComponent<OptionProps, OptionState> {
 	private readonly icons: any = {
@@ -203,7 +199,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 	}
 
 	@autobind
-	private handleClick() {
+	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (!this.props.disabled && this.props.visible) {
 			if (this.props.controlled) {
 				this.setState(
@@ -211,14 +207,16 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 						selected: !this.state.selected
 					},
 					() => {
-						this.props.onClick(
+						this.props.onClick(e);
+						this.props.onSelect(
 							this.state.selected,
 							this.props.text
 						);
 					}
 				);
 			} else {
-				this.props.onClick(this.state.selected, this.props.text);
+				this.props.onClick(e);
+				this.props.onSelect(this.state.selected, this.props.text);
 			}
 		}
 	}
@@ -240,7 +238,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		let title: any = null;
 		if (this.props.text) {
 			title = (
-				<StyledTitle
+				<Title
 					disabled={this.props.disabled}
 					layout={TitleLayout.none}
 					noedit
@@ -278,3 +276,5 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		);
 	}
 }
+
+export default Option;

@@ -64,11 +64,8 @@
  * @module Title
  */
 
-"use strict";
-
 // const debug = require('debug')('Title');
 
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {Label} from "../label";
@@ -98,23 +95,24 @@ export enum TitleLayout {
 
 export interface TitleProps extends BaseProps {
 	layout?: TitleLayout;
-	onClick?: any;
-	onUpdate?: any;
+	onClick?: (e: React.MouseEvent<any>) => void;
+	onUpdate?: (previous: string, val: string) => void;
 	title?: any;
 	widget?: any;
 	useedit?: boolean;
 }
 
 export function getDefaultTitleProps(): TitleProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		layout: TitleLayout.dominant,
+		noripple: true,
 		obj: "Title",
 		onClick: nilEvent,
 		onUpdate: nilEvent,
 		widget: null,
 		useedit: false
-	});
+	};
 }
 
 export type TitleState = BaseState;
@@ -122,7 +120,7 @@ export type TitleState = BaseState;
 export function getDefaultTitleState(
 	className: string = "ui-title-bar"
 ): TitleState {
-	return cloneDeep({...getDefaultBaseState(className)});
+	return {...getDefaultBaseState(className)};
 }
 
 export const TitleView: any = styled.div`
@@ -136,65 +134,65 @@ export const TitleView: any = styled.div`
 	${(props: TitleProps) => invisible(props)}
 `;
 
-export const TitleQuarterView: any = css`
+const TitleQuarterView: any = css`
 	text-align: left;
 	flex: 1;
 `;
 
-export const WidgetQuarterView: any = css`
+const WidgetQuarterView: any = css`
 	text-align: right;
 	flex: 3;
 `;
 
-export const TitleEvenView: any = css`
+const TitleEvenView: any = css`
 	text-align: left;
 	flex: 1;
 `;
 
-export const WidgetEvenView: any = css`
+const WidgetEvenView: any = css`
 	text-align: right;
 	flex: 1;
 `;
 
-export const TitleThreeQuarterView: any = css`
+const TitleThreeQuarterView: any = css`
 	text-align: left;
 	flex: 3;
 `;
 
-export const WidgetThreeQuarterView: any = css`
+const WidgetThreeQuarterView: any = css`
 	text-align: right;
 	flex: 1;
 `;
 
-export const TitleThirdView: any = css`
+const TitleThirdView: any = css`
 	text-align: left;
 	flex: 1;
 `;
 
-export const WidgetThirdView: any = css`
+const WidgetThirdView: any = css`
 	text-align: right;
 	flex: 2;
 `;
 
-export const TitleStackedView: any = css`
+const TitleStackedView: any = css`
 	display: block;
 `;
 
-export const WidgetStackedView: any = css`
+const WidgetStackedView: any = css`
 	display: block;
 `;
 
-export const TitleDominantView: any = css`
+const TitleDominantView: any = css`
 	text-align: left;
 	flex: 5;
 `;
 
-export const WidgetDominantView: any = css`
+const WidgetDominantView: any = css`
 	text-align: right;
 	flex: 1;
 `;
 
-export const LabelPadding: any = css`
+const LabelPadding: any = css`
 	padding: ${(props: TitleProps) => {
 		switch (props.sizing) {
 			case Sizing.xxsmall:
@@ -219,7 +217,7 @@ export const LabelPadding: any = css`
 	${(props: TitleProps) => props.xcss && props.xcss}
 `;
 
-export const StyledWidget: any = styled.div`
+const StyledWidget: any = styled.div`
 	align-items: center;
 	display: block;
 
@@ -227,7 +225,7 @@ export const StyledWidget: any = styled.div`
 	${LabelPadding}
 `;
 
-export const StyledLabel: any = styled(Label)`
+const StyledLabel: any = styled(Label)`
 	${LabelPadding}
 `;
 
@@ -297,6 +295,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 				<StyledLabel
 					{...props}
 					className='ui-title'
+					onUpdate={this.props.onUpdate}
 					text={this.props.title}
 					useedit={this.props.useedit}
 					xcss={titleView}
@@ -339,3 +338,5 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		);
 	}
 }
+
+export default Title;

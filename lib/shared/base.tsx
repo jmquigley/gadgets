@@ -257,15 +257,18 @@ export abstract class BaseComponent<
 				if (props.nohover) {
 					newState.classes.on("nohover");
 				}
+
+				if (props.noripple) {
+					newState.classes.off("ripple");
+				}
 			}
 
 			if ("style" in newState) {
-				newState.style = Object.assign(
-					{},
-					BaseComponent.defaultStyles,
-					newState.style,
-					props.style
-				);
+				newState.style = {
+					...BaseComponent.defaultStyles,
+					...newState.style,
+					...props.style
+				};
 
 				if (props.color) {
 					newState.style["color"] = props.color;

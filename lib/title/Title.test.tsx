@@ -1,14 +1,25 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {getDefaultTitleProps, Title, TitleLayout} from "./index";
+import {
+	getDefaultTitleProps,
+	getDefaultTitleState,
+	Title,
+	TitleLayout
+} from "./index";
 
 test("Test retrieval of Title props object", () => {
 	const props = getDefaultTitleProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultTitleState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a Title control with default props", () => {
@@ -16,7 +27,7 @@ test("Test creation of a Title control with default props", () => {
 		<Title className='test-class' title='Test label text' />
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -29,7 +40,7 @@ test("Test creation of a Title control with quarter layout", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -42,7 +53,7 @@ test("Test creation of a Title control with even layout", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -55,7 +66,7 @@ test("Test creation of a Title control with threequarter layout", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -68,7 +79,7 @@ test("Test creation of a Title control with thirds layout", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -81,7 +92,7 @@ test("Test creation of a Title control with stacked layout", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -90,14 +101,14 @@ test("Test creation of a Title control with no layout", () => {
 		<Title layout={TitleLayout.none} title='Test label text' />
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
 test("Test creation of a Title control with bad layout", () => {
 	const ctl = mount(<Title layout={9999} title='Test label text' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	expect(ctl.prop("widget")).toBe(null);
@@ -107,13 +118,13 @@ test("Test creation of a Title control with bad layout", () => {
 test("Test disabling the Title control", () => {
 	const ctl = mount(<Title disabled={true} title='Test label text' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
 test("Test making the Title control invisible", () => {
 	const ctl = mount(<Title visible={false} title='Test label text' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });

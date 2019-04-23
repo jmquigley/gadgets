@@ -1,3 +1,14 @@
-import {getDefaultLabelProps, Label, LabelProps, LabelState} from "./Label";
+import Label, {
+	getDefaultLabelProps,
+	getDefaultLabelState,
+	LabelProps,
+	LabelState
+} from "./Label";
 
-export {getDefaultLabelProps, Label, LabelProps, LabelState};
+export {
+	getDefaultLabelProps,
+	getDefaultLabelState,
+	Label,
+	LabelProps,
+	LabelState
+};

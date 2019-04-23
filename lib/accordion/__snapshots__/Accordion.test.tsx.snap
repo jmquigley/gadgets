@@ -48,6 +48,7 @@ exports[`Test making the accordion control invisible 1`] = `
     <li
       disabled={false}
       sizing="normal"
+      visible={false}
     >
       some list item
     </li>
@@ -93,6 +94,25 @@ Object {
   "visible": true,
   "width": null,
   "xcss": null,
+}
+`;
+
+exports[`Test retrieval of Accordion props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-accordion" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "style": Object {},
 }
 `;
 
@@ -144,6 +164,7 @@ exports[`Test the creation of a Accordion control container 1`] = `
     <li
       disabled={false}
       sizing="normal"
+      visible={true}
     >
       some list item
     </li>
@@ -199,6 +220,7 @@ exports[`Test the disabling of the Accordion control container 1`] = `
     <li
       disabled={true}
       sizing="normal"
+      visible={true}
     >
       some list item
     </li>

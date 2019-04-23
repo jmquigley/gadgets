@@ -2,6 +2,7 @@
 
 html,
 body {
+	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
 }
@@ -41,6 +42,7 @@ textfieldExample {
 	border-right: solid 1px #004358;
 	flex: 1;
 	flex-direction: column;
+	min-width: 125px;
 	padding: 10px;
 }
 

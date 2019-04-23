@@ -12,7 +12,8 @@
 
 #### Bug Fixes:
 
-n/a
+- Fixed event call signature on all components for typescript checking
+- Removed unnecessary cloneDeep calls for all default prop initializers
 
 ---
 

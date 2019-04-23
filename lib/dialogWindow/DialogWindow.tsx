@@ -48,14 +48,11 @@
  * @module DialogWindow
  */
 
-"use strict";
-
 // const debug = require('debug')('DialogWindow');
 
 const ReactModal = require("react-modal");
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
@@ -74,25 +71,24 @@ import styled from "../shared/themed-components";
 
 export interface DialogWindowProps extends BaseProps {
 	icon?: string;
-	onClose?: any;
-	onOpen?: any;
+	onClose?: () => void;
+	onOpen?: () => void;
 	show?: boolean;
 	title?: string;
 }
 
 export function getDefaultDialogWindowProps(): DialogWindowProps {
-	return cloneDeep(
-		Object.assign({}, getDefaultBaseProps(), {
-			height: "400px",
-			icon: "window-restore",
-			obj: "DialogWindow",
-			onClose: nilEvent,
-			onOpen: nilEvent,
-			show: false,
-			title: "Dialog Window",
-			width: "400px"
-		})
-	);
+	return {
+		...getDefaultBaseProps(),
+		height: "400px",
+		icon: "window-restore",
+		obj: "DialogWindow",
+		onClose: nilEvent,
+		onOpen: nilEvent,
+		show: false,
+		title: "Dialog Window",
+		width: "400px"
+	};
 }
 
 export interface DialogWindowState extends BaseState {
@@ -101,31 +97,31 @@ export interface DialogWindowState extends BaseState {
 }
 
 export function getDefaultDialogWindowState(): DialogWindowState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-dialogwindow"),
 		showModal: false,
 		icon: null
-	});
+	};
 }
 
-export const DialogWindowView: any = styled.div`
+const DialogWindowView: any = styled.div`
 	overflow: hidden;
 
 	height: ${(props: DialogWindowProps) => props.height};
 	width: ${(props: DialogWindowProps) => props.width};
 `;
 
-export const DialogWindowContent: any = styled.div`
+const DialogWindowContent: any = styled.div`
 	padding: 0.25rem;
 `;
 
-export const ItemView: any = styled(Item)`
+const ItemView: any = styled(Item)`
 	background-color: ${(props: DialogWindowProps) =>
 		props.theme.titleBarBackgroundColor};
 	color: ${(props: DialogWindowProps) => props.theme.titleBarForegroundColor};
 `;
 
-export const StyledDeleteButton: any = styled(Button)`
+const StyledDeleteButton: any = styled(Button)`
 	color: white;
 	background-color: silver;
 
@@ -220,3 +216,5 @@ export class DialogWindow extends BaseComponent<
 		);
 	}
 }
+
+export default DialogWindow;

@@ -23,9 +23,8 @@
  * @module Break
  */
 
-"use strict";
-
 import * as React from "react";
+import {sp} from "util.constants";
 import {roundUp} from "util.toolbox";
 import {
 	BaseComponent,
@@ -37,22 +36,25 @@ import {
 import styled from "../shared/themed-components";
 
 export interface BreakProps extends BaseProps {
+	fontSize?: string;
 	n?: number;
 }
 
 export function getDefaultBreakProps(): BreakProps {
 	return {
 		...getDefaultBaseProps(),
+		fontSize: "1.0rem",
 		n: 1,
 		obj: "Break"
 	};
 }
 
-export const BreakView: any = styled.p`
+const BreakView: any = styled.p`
 	content: "";
 	display: block;
 	margin: 0;
 	margin-top: ${(props: BreakProps) => props.height};
+	font-size: ${(props: BreakProps) => props.fontSize};
 `;
 
 export class Break extends BaseComponent<BreakProps, BaseState> {
@@ -73,13 +75,20 @@ export class Break extends BaseComponent<BreakProps, BaseState> {
 			breaks.push(
 				<BreakView
 					className={this.state.classes.classnames}
-					height={BaseComponent.fontSizeREM(this.props.sizing, 0.5)}
+					fontSize={BaseComponent.fontSizeREM(
+						this.props.sizing,
+						0.666
+					)}
 					sizing={this.props.sizing}
 					style={this.state.style}
-				/>
+				>
+					{sp}
+				</BreakView>
 			);
 		}
 
 		return breaks;
 	}
 }
+
+export default Break;

@@ -1,14 +1,22 @@
 "use strict";
 
 import {mount} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
 import {Justify} from "../shared";
-import {ButtonText, getDefaultButtonTextProps} from "./index";
+import {
+	ButtonText,
+	getDefaultButtonTextProps,
+	getDefaultButtonTextState
+} from "./index";
 
 test("Test retrieval of ButtonText props object", () => {
 	const props = getDefaultButtonTextProps();
+	assert(props);
+	expect(props).toMatchSnapshot();
 
-	expect(props).toBeDefined();
+	const state = getDefaultButtonTextState();
+	assert(state);
 	expect(props).toMatchSnapshot();
 });
 
@@ -26,7 +34,7 @@ test("Test creation of a ButtonText control to the left", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -34,7 +42,7 @@ test("Test disabling of a ButtonText control", () => {
 	const click = jest.fn();
 	const ctl = mount(<ButtonText onClick={click} disabled={true} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button-text")
@@ -47,7 +55,7 @@ test("Test making a ButtonText control invisible", () => {
 	const click = jest.fn();
 	const ctl = mount(<ButtonText onClick={click} visible={false} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button-text")
@@ -62,11 +70,10 @@ test("Test button click in ButtonText control", () => {
 		<ButtonText className='test-class' text='test text' onClick={click} />
 	);
 
-	expect(ctl).toBeDefined();
-
-	expect(ctl.prop("disabled")).toBe(false);
-	expect(ctl.prop("visible")).toBe(true);
-	expect(ctl.prop("text")).toBe("test text");
+	assert(ctl);
+	assert(ctl.prop("disabled") === false);
+	assert(ctl.prop("visible"));
+	assert(ctl.prop("text") === "test text");
 
 	ctl.find(".ui-button-text")
 		.first()

@@ -48,13 +48,10 @@
  * @module OptionGroup
  */
 
-"use strict";
-
 // const debug = require('debug')('OptionGroup');
 
 import autobind from "autobind-decorator";
 import {OrderedMap} from "immutable";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {
@@ -74,14 +71,14 @@ import {Option, OptionType} from "./Option";
 
 export interface OptionGroupProps extends BaseProps {
 	default?: string;
-	onSelect?: any;
+	onSelect?: (text: string) => void;
 	optionType?: OptionType;
 	options?: string[];
 	title?: string;
 }
 
 export function getDefaultOptionGroupProps(): OptionGroupProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		obj: "OptionGroup",
 		default: "",
@@ -89,7 +86,7 @@ export function getDefaultOptionGroupProps(): OptionGroupProps {
 		optionType: OptionType.square,
 		options: [],
 		title: ""
-	});
+	};
 }
 
 export interface OptionGroupState extends BaseState {
@@ -97,13 +94,13 @@ export interface OptionGroupState extends BaseState {
 }
 
 export function getDefaultOptionGroupState(): OptionGroupState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-option-group"),
 		options: null
-	});
+	};
 }
 
-export const StyledOptionGroup: any = styled.div`
+const StyledOptionGroup: any = styled.div`
 	border: solid 1px ${(props: OptionGroupProps) => props.theme.borderColor};
 	display: inline-flex;
 	flex-direction: column;
@@ -134,9 +131,7 @@ export const StyledOptionGroup: any = styled.div`
 	${(props: OptionGroupProps) => invisible(props)}
 `;
 
-export const StyledOption: any = styled(Option)``;
-
-export const StyledTitle: any = styled(Title)`
+const StyledTitle: any = styled(Title)`
 	background-color: ${(props: OptionGroupProps) =>
 		props.theme.backgroundColor};
 	left: 0.3rem;
@@ -184,12 +179,12 @@ export class OptionGroup extends BaseComponent<
 
 		for (const [text, toggle] of this.state.options.entries()) {
 			options.push(
-				<StyledOption
+				<Option
 					controlled={false}
 					disabled={this.props.disabled}
 					initialToggle={toggle}
 					key={text}
-					onClick={this.handleSelection}
+					onSelect={this.handleSelection}
 					optionType={this.props.optionType}
 					selected={toggle}
 					sizing={this.props.sizing}
@@ -247,3 +242,5 @@ export class OptionGroup extends BaseComponent<
 		);
 	}
 }
+
+export default OptionGroup;

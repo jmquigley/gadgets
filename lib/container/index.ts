@@ -1,5 +1,4 @@
-import {
-	Container,
+import Container, {
 	ContainerProps,
 	ContainerState,
 	getDefaultContainerProps,

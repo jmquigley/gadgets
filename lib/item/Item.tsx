@@ -1,10 +1,7 @@
 // TODO: add Item documentation
 
-"use strict";
-
 // const debug = require('debug')('Item');
 
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {sp} from "util.constants";
 import {nilEvent} from "util.toolbox";
@@ -26,15 +23,15 @@ export interface ItemProps extends BaseProps, TitleProps {
 	hiddenRightButton?: boolean;
 	leftButton?: any;
 	layout?: TitleLayout;
-	onBlur?: any;
-	onChange?: any;
-	onClick?: any;
-	onDoubleClick?: any;
-	onFocus?: any;
-	onKeyDown?: any;
-	onKeyPress?: any;
-	onMouseOut?: any;
-	onUpdate?: any;
+	onBlur?: (e: React.FocusEvent<HTMLLIElement>) => void;
+	onChange?: (...args) => void;
+	onClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
+	onDoubleClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
+	onFocus?: (e: React.FocusEvent<HTMLLIElement>) => void;
+	onKeyDown?: (e: React.KeyboardEvent<HTMLLIElement>) => void;
+	onKeyPress?: (e: React.KeyboardEvent<HTMLLIElement>) => void;
+	onMouseOut?: (e: React.MouseEvent<HTMLLIElement>) => void;
+	onUpdate?: (...args) => void;
 	rightButton?: any;
 	stacked?: boolean;
 	title?: string;
@@ -42,7 +39,7 @@ export interface ItemProps extends BaseProps, TitleProps {
 }
 
 export function getDefaultItemProps(): ItemProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		hiddenLeftButton: false,
 		hiddenRightButton: false,
@@ -64,22 +61,22 @@ export function getDefaultItemProps(): ItemProps {
 		title: sp,
 		useedit: false,
 		widget: null
-	});
+	};
 }
 
 export type ItemState = BaseState;
 
 export function getDefaultItemState(className: string = "ui-item"): ItemState {
-	return cloneDeep({...getDefaultBaseState(className)});
+	return {...getDefaultBaseState(className)};
 }
 
-export const HiddenButton: any = css`
+const HiddenButton: any = css`
 	display: none;
 	opacity: 0;
 	animation: fadeIn ${(props: ItemProps) => props.theme.transitionDelay};
 `;
 
-export const ItemView: any = styled.li`
+const ItemView: any = styled.li`
 	background-color: ${(props: ItemProps) =>
 		props.selected
 			? props.theme.selectedBackgroundColor + " !important"
@@ -103,7 +100,7 @@ export const ItemView: any = styled.li`
 	}
 `;
 
-export const ItemViewButton: any = styled.div`
+const ItemViewButton: any = styled.div`
 	display: inline-flex;
 	position: relative;
 	width: ${(props: ItemProps) => {
@@ -218,3 +215,5 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		);
 	}
 }
+
+export default Item;

@@ -1,13 +1,18 @@
 "use strict";
 
+import assert from "power-assert";
 import "../globals";
-import {getDefaultEditorProps} from "./index";
+import {getDefaultEditorProps, getDefaultEditorState} from "./index";
 
 test("Test retrieval of the Editor props object", () => {
 	const props = getDefaultEditorProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultEditorState();
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 // Editor test are currently broken in jest.  Still trying to figure out why, so these are removed

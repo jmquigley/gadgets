@@ -1,3 +1,14 @@
-import {getDefaultToastProps, Toast, ToastLevel, ToastProps} from "./Toast";
+import Toast, {
+	getDefaultToastProps,
+	getDefaultToastState,
+	ToastLevel,
+	ToastProps
+} from "./Toast";
 
-export {getDefaultToastProps, Toast, ToastLevel, ToastProps};
+export {
+	getDefaultToastProps,
+	getDefaultToastState,
+	Toast,
+	ToastLevel,
+	ToastProps
+};

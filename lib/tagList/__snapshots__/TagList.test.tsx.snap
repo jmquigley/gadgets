@@ -389,6 +389,27 @@ Object {
 }
 `;
 
+exports[`Test retrieval of TagList props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-taglist" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "inputTextSize": 1,
+  "sizing": "normal",
+  "style": Object {},
+  "tags": null,
+}
+`;
+
 exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 <TagList
   backgroundColor={null}

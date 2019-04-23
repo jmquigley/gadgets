@@ -6,9 +6,6 @@
 // for a header.
 //
 
-"use strict";
-
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {
 	getDefaultItemProps,
@@ -24,11 +21,11 @@ export interface ListHeaderProps extends ItemProps {
 }
 
 export function getDefaultListHeaderProps(): ListHeaderProps {
-	return cloneDeep({
+	return {
 		...getDefaultItemProps(),
 		nohover: true,
 		obj: "ListHeader"
-	});
+	};
 }
 
 export type ListHeaderState = ItemState;
@@ -61,3 +58,5 @@ export class ListHeader extends BaseComponent<
 		);
 	}
 }
+
+export default ListHeader;

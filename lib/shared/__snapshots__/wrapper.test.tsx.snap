@@ -102,6 +102,27 @@ Object {
 }
 `;
 
+exports[`Test creation of the Wrapper props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-error" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "error": "",
+  "errorInfo": null,
+  "sizing": "normal",
+  "style": Object {},
+}
+`;
+
 exports[`Test disabling the Wrapper 1`] = `
 <Wrapper
   backgroundColor={null}

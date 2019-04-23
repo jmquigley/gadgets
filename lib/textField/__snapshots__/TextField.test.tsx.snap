@@ -15,18 +15,21 @@ exports[`Test creation of a TextField control 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
-  id=""
+  id={null}
   initialValue=""
   left={null}
   location="none"
   max="any"
+  maxLength={null}
   min="any"
   minHeight={null}
+  minLength={null}
   minWidth="1em"
   noborder={false}
   noedit={false}
   nohover={false}
   noripple={false}
+  nospinner={false}
   notheme={false}
   notooltip={false}
   obj="TextField"
@@ -40,12 +43,13 @@ exports[`Test creation of a TextField control 1`] = `
   padding={null}
   reset={false}
   selected={false}
+  size={null}
   sizing="normal"
   step="any"
   style={Object {}}
   testing={true}
   theme={null}
-  tooltip=""
+  tooltip={null}
   top={null}
   type="text"
   useclear={false}
@@ -58,34 +62,68 @@ exports[`Test creation of a TextField control 1`] = `
   <TextField__TextfieldContainerView
     className="ui-textfield-container"
     id="TextField-0"
-    minWidth=""
+    minWidth="3rem"
+    width={null}
   >
     <TextField__TextFieldView
-      className="ui-textfield test-class"
+      className="ui-textfield"
       disabled={false}
       noborder={false}
       visible={true}
     >
       <TextField__StyledInput
+        backgroundColor={null}
+        borderColor={null}
+        bottom={null}
         className="test-class"
+        color={null}
+        contentEditable={false}
+        controlled={true}
+        direction="right"
         disabled={false}
-        id=""
+        err={null}
+        errorMessage={null}
+        focus={false}
+        height={null}
+        id={null}
         initialValue=""
+        left={null}
+        location="none"
         max="any"
+        maxLength={null}
         min="any"
+        minHeight={null}
+        minLength={null}
+        minWidth="1em"
+        noborder={false}
+        noedit={false}
+        nohover={false}
+        noripple={false}
+        nospinner={false}
+        notheme={false}
+        notooltip={false}
         obj="TextField"
         onBlur={[Function]}
         onChange={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
+        padding={null}
+        selected={false}
+        size={null}
         sizing="normal"
         step="any"
         style={Object {}}
         testing={true}
-        tooltip=""
+        theme={null}
+        tooltip={null}
+        top={null}
         type="text"
+        useclear={false}
+        usevalidation={false}
         value=""
         visible={true}
+        width={null}
+        xcss={null}
       />
     </TextField__TextFieldView>
   </TextField__TextfieldContainerView>
@@ -94,13 +132,36 @@ exports[`Test creation of a TextField control 1`] = `
 
 exports[`Test disabling of a TextField control 1`] = `
 <TextField
+  backgroundColor={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  contentEditable={false}
+  controlled={true}
+  direction="right"
   disabled={true}
-  id=""
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  id={null}
   initialValue=""
+  left={null}
+  location="none"
   max="any"
+  maxLength={null}
   min="any"
+  minHeight={null}
+  minLength={null}
   minWidth="1em"
   noborder={false}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  nospinner={false}
+  notheme={false}
+  notooltip={false}
   obj="TextField"
   onBlur={[Function]}
   onChange={[Function]}
@@ -108,28 +169,59 @@ exports[`Test disabling of a TextField control 1`] = `
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onValidation={[Function]}
+  padding={null}
+  selected={false}
+  size={null}
   sizing="normal"
   step="any"
   style={Object {}}
   testing={true}
-  tooltip=""
+  theme={null}
+  tooltip={null}
+  top={null}
   type="text"
   useclear={false}
   usevalidation={false}
   validators={Array []}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test retrieval of TextField props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "borderColor": null,
+  "bottom": null,
+  "children": null,
+  "className": null,
+  "color": null,
+  "contentEditable": false,
+  "controlled": true,
+  "direction": "right",
   "disabled": false,
-  "id": "",
+  "err": null,
+  "errorMessage": null,
+  "focus": false,
+  "height": null,
+  "id": null,
   "initialValue": "",
+  "left": null,
+  "location": "none",
   "max": "any",
+  "maxLength": null,
   "min": "any",
+  "minHeight": null,
+  "minLength": null,
   "minWidth": "1em",
   "noborder": false,
+  "noedit": false,
+  "nohover": false,
+  "noripple": false,
+  "nospinner": false,
+  "notheme": false,
+  "notooltip": false,
   "obj": "TextField",
   "onBlur": [Function],
   "onChange": [Function],
@@ -137,15 +229,47 @@ Object {
   "onKeyDown": [Function],
   "onKeyPress": [Function],
   "onValidation": [Function],
+  "padding": null,
+  "selected": false,
+  "size": null,
   "sizing": "normal",
   "step": "any",
   "style": Object {},
   "testing": true,
-  "tooltip": "",
+  "theme": null,
+  "tooltip": null,
+  "top": null,
   "type": "text",
   "useclear": false,
   "usevalidation": false,
   "validators": Array [],
   "visible": true,
+  "width": null,
+  "xcss": null,
+}
+`;
+
+exports[`Test retrieval of TextField props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-textfield" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "message": "",
+  "messageType": 0,
+  "minWidth": "",
+  "previousValue": "",
+  "sizing": "normal",
+  "style": Object {},
+  "valid": true,
+  "value": "",
 }
 `;

@@ -52,12 +52,9 @@
  * @module Datagrid
  */
 
-"use strict";
-
 // const debug = require("debug")("Datagrid");
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import ReactDataGrid from "react-data-grid";
 import {
@@ -92,12 +89,12 @@ export interface DatagridProps extends BaseProps {
 }
 
 export function getDefaultDatagridProps(): DatagridProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		columns: [],
 		rows: [],
 		obj: "Datagrid"
-	});
+	};
 }
 
 export type DatagridState = BaseState;
@@ -105,10 +102,10 @@ export type DatagridState = BaseState;
 export function getDefaultDatagridState(
 	className: string = "ui-datagrid"
 ): DatagridState {
-	return cloneDeep({...getDefaultBaseState(className)});
+	return {...getDefaultBaseState(className)};
 }
 
-export const DatagridWrapper: any = styled.div`
+const DatagridWrapper: any = styled.div`
 	.react-grid-HeaderRow {
 		background-color: ${(props: DatagridProps) =>
 			props.theme.headerBackgroundColor || Color.black} !important;
@@ -188,3 +185,5 @@ export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
 		);
 	}
 }
+
+export default Datagrid;

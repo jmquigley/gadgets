@@ -39,9 +39,6 @@
  * @module Triangle
  */
 
-"use strict";
-
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import styled from "styled-components";
 import {
@@ -60,7 +57,7 @@ export interface TriangleProps extends BaseProps {
 }
 
 export function getDefaultTriangleProps(): TriangleProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		direction: Direction.up,
 		nobase: false,
@@ -70,16 +67,16 @@ export function getDefaultTriangleProps(): TriangleProps {
 			stroke: "black",
 			stokeWidth: "2px"
 		}
-	});
+	};
 }
 
 export type TriangleState = BaseState;
 
 export function getDefaultTriangleState(): TriangleState {
-	return cloneDeep({...getDefaultBaseState("ui-triangle")});
+	return {...getDefaultBaseState("ui-triangle")};
 }
 
-export const SVGView: any = styled.svg`
+const SVGView: any = styled.svg`
 	transform: ${(props: TriangleProps) => {
 		switch (props.direction) {
 			case Direction.right:
@@ -151,3 +148,5 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 		return <Wrapper {...this.props}>{triangle}</Wrapper>;
 	}
 }
+
+export default Triangle;

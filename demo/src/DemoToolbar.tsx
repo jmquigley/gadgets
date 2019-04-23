@@ -38,7 +38,11 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 		return (
 			<StyledContainer id='toolbarExample' title='Toolbar'>
 				<h3>Left Justify space divider chevron</h3>
-				<Toolbar justify={Justify.left} sizing={this.props["sizing"]}>
+				<Toolbar
+					disabled={this.props["disabled"]}
+					justify={Justify.left}
+					sizing={this.props["sizing"]}
+				>
 					<Button iconName='car' />
 					<ButtonCircle iconName='times' />
 					<ButtonDialog iconName='bars'>Test Text</ButtonDialog>
@@ -58,7 +62,11 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 				<Break sizing={this.props["sizing"]} />
 
 				<h3>Center Justify vertical divider chevron</h3>
-				<Toolbar justify={Justify.center} sizing={this.props["sizing"]}>
+				<Toolbar
+					disabled={this.props["disabled"]}
+					justify={Justify.center}
+					sizing={this.props["sizing"]}
+				>
 					<Button iconName='car' />
 					<ButtonCircle iconName='times' />
 					<ButtonDialog iconName='bars'>Test Text</ButtonDialog>
@@ -78,7 +86,11 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 				<Break sizing={this.props["sizing"]} />
 
 				<h3>Right Justify horizontal divider chevron</h3>
-				<Toolbar justify={Justify.right} sizing={this.props["sizing"]}>
+				<Toolbar
+					disabled={this.props["disabled"]}
+					justify={Justify.right}
+					sizing={this.props["sizing"]}
+				>
 					<Button iconName='car' />
 					<ButtonCircle iconName='times' />
 					<ButtonDialog iconName='bars'>Test Text</ButtonDialog>
@@ -97,10 +109,10 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 				</Toolbar>
 				<Break sizing={this.props["sizing"]} />
 
-				<h3>Center Justify Diabled</h3>
+				<h3>Center Justify</h3>
 				<Toolbar
+					disabled={this.props["disabled"]}
 					justify={Justify.center}
-					disabled
 					sizing={this.props["sizing"]}
 				>
 					<Button iconName='car' />
@@ -117,25 +129,6 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 					<Switch />
 					<TextField placeholder='test' size={4} maxLength={4} />
 				</Toolbar>
-				<Break sizing={this.props["sizing"]} />
-
-				<h3>Center Justify xsmall</h3>
-				<Toolbar justify={Justify.center} sizing={this.props["sizing"]}>
-					<Button iconName='car' />
-					<ButtonCircle iconName='times' />
-					<ButtonDialog iconName='bars'>Test Text</ButtonDialog>
-					<ButtonText text='btext' iconName='fighter-jet' />
-					<ButtonToggle
-						iconNameOn='star'
-						iconNameOff='star-o'
-						fgColorOn='red'
-						fgColorOff='green'
-					/>
-					<Option optionType={OptionType.dot} text='test' />
-					<Switch />
-					<TextField placeholder='test' size={4} maxLength={4} />
-				</Toolbar>
-				<Break sizing={this.props["sizing"]} />
 			</StyledContainer>
 		);
 	}

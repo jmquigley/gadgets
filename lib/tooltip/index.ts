@@ -1,8 +1,14 @@
-import {
+import Tooltip, {
 	getDefaultTooltipProps,
+	getDefaultTooltipState,
 	tooltip,
-	Tooltip,
 	TooltipProps
 } from "./Tooltip";
 
-export {getDefaultTooltipProps, tooltip, Tooltip, TooltipProps};
+export {
+	getDefaultTooltipProps,
+	getDefaultTooltipState,
+	tooltip,
+	Tooltip,
+	TooltipProps
+};

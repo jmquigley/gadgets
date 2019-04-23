@@ -70,7 +70,6 @@
 
 "use strict";
 
-import {cloneDeep} from "lodash";
 import {Sizing} from "./sizing";
 import {css} from "./themed-components";
 
@@ -174,49 +173,45 @@ export interface BaseProps {
 	xcss?: any;
 }
 
-const defaultBaseProps: BaseProps = {
-	backgroundColor: null,
-	borderColor: null,
-	bottom: null,
-	children: null,
-	className: null,
-	color: null,
-	contentEditable: false,
-	controlled: true,
-	direction: Direction.right,
-	disabled: false,
-	err: null,
-	errorMessage: null,
-	focus: false,
-	height: null,
-	id: null,
-	left: null,
-	location: Location.none,
-	minHeight: null,
-	minWidth: null,
-	noedit: false,
-	nohover: false,
-	noripple: false,
-	notheme: false,
-	notooltip: false,
-	obj: "Unknown",
-	padding: null,
-	selected: false,
-	sizing: Sizing.normal,
-	style: {},
-	testing: process.env.NODE_ENV !== "production",
-	theme: null,
-	tooltip: null,
-	top: null,
-	visible: true,
-	width: null,
-	xcss: null
-};
-
 export function getDefaultBaseProps(): BaseProps {
-	const props: BaseProps = cloneDeep(defaultBaseProps);
-	props.testing = process.env.NODE_ENV !== "production";
-	return props;
+	return {
+		backgroundColor: null,
+		borderColor: null,
+		bottom: null,
+		children: null,
+		className: null,
+		color: null,
+		contentEditable: false,
+		controlled: true,
+		direction: Direction.right,
+		disabled: false,
+		err: null,
+		errorMessage: null,
+		focus: false,
+		height: null,
+		id: null,
+		left: null,
+		location: Location.none,
+		minHeight: null,
+		minWidth: null,
+		noedit: false,
+		nohover: false,
+		noripple: false,
+		notheme: false,
+		notooltip: false,
+		obj: "Unknown",
+		padding: null,
+		selected: false,
+		sizing: Sizing.normal,
+		style: {},
+		testing: process.env.NODE_ENV !== "production",
+		theme: null,
+		tooltip: null,
+		top: null,
+		visible: true,
+		width: null,
+		xcss: null
+	};
 }
 
 export const DisabledCSS: any = css`

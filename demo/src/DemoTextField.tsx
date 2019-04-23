@@ -3,20 +3,8 @@
 const debug = require("debug")("DemoTextField");
 
 import * as React from "react";
-import {
-	Break,
-	styled,
-	TextField,
-	TextFieldType,
-	Validator
-} from "../../dist/bundle";
+import {Break, TextField, TextFieldType, Validator} from "../../dist/bundle";
 import {StyledContainer} from "./helpers";
-
-const TextFieldStyledContainer: any = styled(StyledContainer)`
-	.ui-textfield {
-		width: 200px;
-	}
-`;
 
 export default class DemoTextField extends React.Component<any, undefined> {
 	private validator: any;
@@ -36,7 +24,15 @@ export default class DemoTextField extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<TextFieldStyledContainer id='textfieldExample' title='TextField'>
+			<StyledContainer id='textfieldExample' title='TextField'>
+				<h3>Simple TextField (width 200px)</h3>
+				<TextField
+					initialValue='test value'
+					sizing={this.props["sizing"]}
+					width='200px'
+				/>
+				<Break sizing={this.props["sizing"]} />
+
 				<h3>Validation of Max (10) & Min (5) Length</h3>
 				<TextField
 					id='tf-validation'
@@ -100,6 +96,21 @@ export default class DemoTextField extends React.Component<any, undefined> {
 				/>
 				<Break sizing={this.props["sizing"]} />
 
+				<h3>TextField as number, no spinner</h3>
+				<TextField
+					initialValue='5'
+					max='20'
+					min='1'
+					nospinner
+					placeholder='spinner'
+					sizing={this.props["sizing"]}
+					style={{
+						width: "12.5em"
+					}}
+					type={TextFieldType.spinner}
+				/>
+				<Break sizing={this.props["sizing"]} />
+
 				<h3>Disabled TextField</h3>
 				<TextField
 					disabled
@@ -117,7 +128,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 					type={TextFieldType.text}
 					useclear
 				/>
-			</TextFieldStyledContainer>
+			</StyledContainer>
 		);
 	}
 }

@@ -70,7 +70,7 @@ exports[`Creation of the Dropdown control 1`] = `
       onChange={[Function]}
       style={
         Object {
-          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
+          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='undefined' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>\\")",
           "paddingLeft": "3.2px",
           "paddingRight": "16px",
         }
@@ -256,6 +256,26 @@ Object {
   "visible": true,
   "width": null,
   "xcss": null,
+}
+`;
+
+exports[`Test retrieval of Dropdown props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-dropdown" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "currentValue": "",
+  "sizing": "normal",
+  "style": Object {},
 }
 `;
 

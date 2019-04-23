@@ -1,14 +1,22 @@
 "use strict";
 
 import {shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {Accordion, getDefaultAccordionProps} from "./index";
+import {
+	Accordion,
+	getDefaultAccordionProps,
+	getDefaultAccordionState
+} from "./index";
 
 test("Test retrieval of Accordion props object", () => {
 	const props = getDefaultAccordionProps();
-
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultAccordionState();
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test the creation of a Accordion control container", () => {
@@ -19,7 +27,7 @@ test("Test the creation of a Accordion control container", () => {
 		</Accordion>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -31,7 +39,7 @@ test("Test the disabling of the Accordion control container", () => {
 		</Accordion>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -43,6 +51,6 @@ test("Test making the accordion control invisible", () => {
 		</Accordion>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });

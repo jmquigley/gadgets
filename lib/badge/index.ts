@@ -1,3 +1,7 @@
-import {Badge, BadgeProps, getDefaultBadgeProps} from "./Badge";
+import Badge, {
+	BadgeProps,
+	getDefaultBadgeProps,
+	getDefaultBadgeState
+} from "./Badge";
 
-export {Badge, BadgeProps, getDefaultBadgeProps};
+export {Badge, BadgeProps, getDefaultBadgeProps, getDefaultBadgeState};

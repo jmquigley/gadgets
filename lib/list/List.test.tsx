@@ -1,15 +1,26 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
 import {waitPromise} from "util.wait";
-import {getDefaultListProps, List, ListItem} from "./index";
+import {
+	getDefaultListProps,
+	getDefaultListState,
+	List,
+	ListItem
+} from "./index";
 
 test("Test retrieval of List props object", () => {
 	const props = getDefaultListProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultListState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test the creation of a List control container", () => {
@@ -19,7 +30,7 @@ test("Test the creation of a List control container", () => {
 		</List>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -30,7 +41,7 @@ test("Test disabling of a List control", () => {
 		</List>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -41,7 +52,7 @@ test("Test making List control invisible", () => {
 		</List>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -53,17 +64,20 @@ test("Test a list with ListItem and selection", () => {
 		</List>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 
-	expect(ctl.prop("disabled")).toBe(false);
-	expect(ctl.prop("visible")).toBe(true);
-	expect(ctl.find(".ui-list").length).toBe(3);
+	assert(ctl.prop("disabled") === false);
+	assert(ctl.prop("visible"));
+	assert(ctl.find(".ui-list").length === 3);
 
 	const li1 = ctl.find(ListItem).first();
-	const li2 = ctl.find(ListItem).last();
+	assert(li1);
 
-	expect(li1.text()).toBe("Item #1");
-	expect(li2.text()).toBe("Item #2");
+	const li2 = ctl.find(ListItem).last();
+	assert(li2);
+
+	assert(li1.text() === "Item #1");
+	assert(li2.text() === "Item #2");
 });
 
 test("Test the onSelect handler within a list", async () => {
@@ -75,7 +89,7 @@ test("Test the onSelect handler within a list", async () => {
 		</List>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	ctl.find(".ui-listitem")
 		.first()
 		.find(".ui-label")

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test creation of Tooltip location bottom 1`] = `
+exports[`Creation of Tooltip in position bottom 1`] = `
 <Tooltip
   backgroundColor={null}
   borderColor={null}
@@ -46,7 +46,7 @@ exports[`Test creation of Tooltip location bottom 1`] = `
 />
 `;
 
-exports[`Test creation of Tooltip location bottomLeft 1`] = `
+exports[`Creation of Tooltip in position bottomLeft 1`] = `
 <Tooltip
   backgroundColor={null}
   borderColor={null}
@@ -92,7 +92,7 @@ exports[`Test creation of Tooltip location bottomLeft 1`] = `
 />
 `;
 
-exports[`Test creation of Tooltip location bottomRight 1`] = `
+exports[`Creation of Tooltip in position bottomRight 1`] = `
 <Tooltip
   backgroundColor={null}
   borderColor={null}
@@ -138,7 +138,53 @@ exports[`Test creation of Tooltip location bottomRight 1`] = `
 />
 `;
 
-exports[`Test creation of Tooltip location middle 1`] = `
+exports[`Creation of Tooltip in position left 1`] = `
+<Tooltip
+  backgroundColor={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  id={null}
+  left={null}
+  location="left"
+  minHeight={null}
+  minWidth={null}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  notooltip={false}
+  obj="Tooltip"
+  padding={null}
+  parent={null}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "#708090",
+      "color": "#ffffff",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip={null}
+  top={null}
+  visible={true}
+  width={null}
+  xcss={null}
+/>
+`;
+
+exports[`Creation of Tooltip in position middle 1`] = `
 <Tooltip
   backgroundColor={null}
   borderColor={null}
@@ -184,7 +230,7 @@ exports[`Test creation of Tooltip location middle 1`] = `
 />
 `;
 
-exports[`Test creation of Tooltip location middleLeft 1`] = `
+exports[`Creation of Tooltip in position middleLeft 1`] = `
 <Tooltip
   backgroundColor={null}
   borderColor={null}
@@ -230,7 +276,7 @@ exports[`Test creation of Tooltip location middleLeft 1`] = `
 />
 `;
 
-exports[`Test creation of Tooltip location middleRight 1`] = `
+exports[`Creation of Tooltip in position middleRight 1`] = `
 <Tooltip
   backgroundColor={null}
   borderColor={null}
@@ -248,6 +294,236 @@ exports[`Test creation of Tooltip location middleRight 1`] = `
   id={null}
   left={null}
   location="middleRight"
+  minHeight={null}
+  minWidth={null}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  notooltip={false}
+  obj="Tooltip"
+  padding={null}
+  parent={null}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "#708090",
+      "color": "#ffffff",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip={null}
+  top={null}
+  visible={true}
+  width={null}
+  xcss={null}
+/>
+`;
+
+exports[`Creation of Tooltip in position none 1`] = `
+<Tooltip
+  backgroundColor={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  id={null}
+  left={null}
+  location="none"
+  minHeight={null}
+  minWidth={null}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  notooltip={false}
+  obj="Tooltip"
+  padding={null}
+  parent={null}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "#708090",
+      "color": "#ffffff",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip={null}
+  top={null}
+  visible={true}
+  width={null}
+  xcss={null}
+/>
+`;
+
+exports[`Creation of Tooltip in position right 1`] = `
+<Tooltip
+  backgroundColor={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  id={null}
+  left={null}
+  location="right"
+  minHeight={null}
+  minWidth={null}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  notooltip={false}
+  obj="Tooltip"
+  padding={null}
+  parent={null}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "#708090",
+      "color": "#ffffff",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip={null}
+  top={null}
+  visible={true}
+  width={null}
+  xcss={null}
+/>
+`;
+
+exports[`Creation of Tooltip in position top 1`] = `
+<Tooltip
+  backgroundColor={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  id={null}
+  left={null}
+  location="top"
+  minHeight={null}
+  minWidth={null}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  notooltip={false}
+  obj="Tooltip"
+  padding={null}
+  parent={null}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "#708090",
+      "color": "#ffffff",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip={null}
+  top={null}
+  visible={true}
+  width={null}
+  xcss={null}
+/>
+`;
+
+exports[`Creation of Tooltip in position topLeft 1`] = `
+<Tooltip
+  backgroundColor={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  id={null}
+  left={null}
+  location="topLeft"
+  minHeight={null}
+  minWidth={null}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  notooltip={false}
+  obj="Tooltip"
+  padding={null}
+  parent={null}
+  selected={false}
+  sizing="normal"
+  style={
+    Object {
+      "backgroundColor": "#708090",
+      "color": "#ffffff",
+    }
+  }
+  testing={true}
+  theme={null}
+  tooltip={null}
+  top={null}
+  visible={true}
+  width={null}
+  xcss={null}
+/>
+`;
+
+exports[`Creation of Tooltip in position topRight 1`] = `
+<Tooltip
+  backgroundColor={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  contentEditable={false}
+  controlled={true}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  id={null}
+  left={null}
+  location="topRight"
   minHeight={null}
   minWidth={null}
   noedit={false}
@@ -294,144 +570,6 @@ exports[`Test creation of Tooltip location none 1`] = `
   id={null}
   left={null}
   location="none"
-  minHeight={null}
-  minWidth={null}
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  notheme={false}
-  notooltip={false}
-  obj="Tooltip"
-  padding={null}
-  parent={null}
-  selected={false}
-  sizing="normal"
-  style={
-    Object {
-      "backgroundColor": "#708090",
-      "color": "#ffffff",
-    }
-  }
-  testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
-  visible={true}
-  width={null}
-  xcss={null}
-/>
-`;
-
-exports[`Test creation of Tooltip location top 1`] = `
-<Tooltip
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
-  controlled={true}
-  direction="right"
-  disabled={false}
-  err={null}
-  errorMessage={null}
-  focus={false}
-  height={null}
-  id={null}
-  left={null}
-  location="top"
-  minHeight={null}
-  minWidth={null}
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  notheme={false}
-  notooltip={false}
-  obj="Tooltip"
-  padding={null}
-  parent={null}
-  selected={false}
-  sizing="normal"
-  style={
-    Object {
-      "backgroundColor": "#708090",
-      "color": "#ffffff",
-    }
-  }
-  testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
-  visible={true}
-  width={null}
-  xcss={null}
-/>
-`;
-
-exports[`Test creation of Tooltip location topLeft 1`] = `
-<Tooltip
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
-  controlled={true}
-  direction="right"
-  disabled={false}
-  err={null}
-  errorMessage={null}
-  focus={false}
-  height={null}
-  id={null}
-  left={null}
-  location="topLeft"
-  minHeight={null}
-  minWidth={null}
-  noedit={false}
-  nohover={false}
-  noripple={false}
-  notheme={false}
-  notooltip={false}
-  obj="Tooltip"
-  padding={null}
-  parent={null}
-  selected={false}
-  sizing="normal"
-  style={
-    Object {
-      "backgroundColor": "#708090",
-      "color": "#ffffff",
-    }
-  }
-  testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
-  visible={true}
-  width={null}
-  xcss={null}
-/>
-`;
-
-exports[`Test creation of Tooltip location topRight 1`] = `
-<Tooltip
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
-  controlled={true}
-  direction="right"
-  disabled={false}
-  err={null}
-  errorMessage={null}
-  focus={false}
-  height={null}
-  id={null}
-  left={null}
-  location="topRight"
   minHeight={null}
   minWidth={null}
   noedit={false}
@@ -756,5 +894,25 @@ Object {
   "visible": true,
   "width": null,
   "xcss": null,
+}
+`;
+
+exports[`Test retrieval of Tooltip props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-tooltip" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "show": false,
+  "sizing": "normal",
+  "style": Object {},
 }
 `;

@@ -1,3 +1,7 @@
-import {Browser, BrowserProps, getDefaultBrowserProps} from "./Browser";
+import Browser, {
+	BrowserProps,
+	getDefaultBrowserProps,
+	getDefaultBrowserState
+} from "./Browser";
 
-export {Browser, BrowserProps, getDefaultBrowserProps};
+export {Browser, BrowserProps, getDefaultBrowserProps, getDefaultBrowserState};

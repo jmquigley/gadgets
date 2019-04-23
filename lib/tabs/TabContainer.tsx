@@ -70,13 +70,10 @@
  * @module TabContainer
  */
 
-"use strict";
-
 const debug = require("debug")("TabContainer");
 
 import autobind from "autobind-decorator";
 import {List} from "immutable";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
@@ -98,13 +95,13 @@ export interface TabContainerProps extends BaseProps {
 	maxTabs?: number;
 	noclose?: boolean;
 	nonavigation?: boolean;
-	onRemove?: any;
-	onSelect?: any;
+	onRemove?: (tab: Tab) => void;
+	onSelect?: (tab: Tab, previousTab: Tab) => void;
 	tabWidth?: number;
 }
 
 export function getDefaultTabContainerProps(): TabContainerProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		location: Location.top,
 		maxTabs: 5,
@@ -114,7 +111,7 @@ export function getDefaultTabContainerProps(): TabContainerProps {
 		onRemove: nilEvent,
 		onSelect: nilEvent,
 		tabWidth: 120
-	});
+	};
 }
 
 export interface TabContainerState extends BaseState {
@@ -122,41 +119,41 @@ export interface TabContainerState extends BaseState {
 }
 
 export function getDefaultTabContainerState(): TabContainerState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-tab-container"),
 		selectedTab: ""
-	});
+	};
 }
 
-export const TabBarHorizontal: any = css`
+const TabBarHorizontal: any = css`
 	display: block;
 `;
 
-export const TabBarVertical: any = css`
+const TabBarVertical: any = css`
 	display: inline-flex;
 	flex-direction: column;
 `;
 
-export const TabBarView: any = styled.div`
+const TabBarView: any = styled.div`
 	display: flex;
 	${(props: TabContainerProps) => props.xcss}
 `;
 
-export const TabContainerView: any = styled.div`
+const TabContainerView: any = styled.div`
 	${(props: TabContainerProps) =>
 		props.location === Location.top || props.location === Location.bottom
 			? ""
 			: "display: flex; flex-wrap: nowrap;"}
 `;
 
-export const TabContentHorizontal: any = css`
+const TabContentHorizontal: any = css`
 	border: solid 1px ${(props: TabContainerProps) => props.theme.borderColor};
 	box-sizing: border-box;
 	min-height: 8em;
 	padding: 0 3px;
 `;
 
-export const TabContentVertical: any = css`
+const TabContentVertical: any = css`
 	border: solid 1px ${(props: TabContainerProps) => props.theme.borderColor};
 	box-sizing: border-box;
 	display: inline-flex;
@@ -165,11 +162,11 @@ export const TabContentVertical: any = css`
 	flex-grow: 1;
 `;
 
-export const TabContentView: any = styled.div`
+const TabContentView: any = styled.div`
 	${(props: TabContainerProps) => props.xcss || ""}
 `;
 
-export const TabNavigationView: any = styled.div`
+const TabNavigationView: any = styled.div`
 	align-self: center;
 	display: flex;
 	float: right;
@@ -493,3 +490,5 @@ export class TabContainer extends BaseComponent<
 		return <Wrapper {...props}>{body}</Wrapper>;
 	}
 }
+
+export default TabContainer;

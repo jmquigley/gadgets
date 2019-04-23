@@ -52,10 +52,7 @@
  * @module Switch
  */
 
-"use strict";
-
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {ClassNames} from "util.classnames";
 import {nilEvent} from "util.toolbox";
@@ -88,7 +85,7 @@ export interface SwitchProps extends BaseProps {
 }
 
 export function getDefaultSwitchProps(): SwitchProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		initialToggle: false,
 		innyScale: 0.6,
@@ -97,7 +94,7 @@ export function getDefaultSwitchProps(): SwitchProps {
 		outyScale: 1.25,
 		sliderScale: 1.25,
 		switchType: SwitchType.outy
-	});
+	};
 }
 
 export interface SwitchState extends BaseState {
@@ -107,15 +104,15 @@ export interface SwitchState extends BaseState {
 }
 
 export function getDefaultSwitchState(): SwitchState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-switch"),
 		buttonStyles: new ClassNames("ui-switch-button"),
 		sliderStyles: new ClassNames("ui-switch-slider"),
 		toggle: false
-	});
+	};
 }
 
-export const StyledButton: any = styled.div`
+const StyledButton: any = styled.div`
 	background: white;
 	border: 1px solid silver;
 	border-radius: 96px;
@@ -130,7 +127,7 @@ export const StyledButton: any = styled.div`
 	height: ${(props: SwitchProps) => props.height || "1.0em"};
 `;
 
-export const SliderView: any = styled.div`
+const SliderView: any = styled.div`
 	border: 1px solid silver;
 	border-radius: 96px;
 	position: relative;
@@ -142,7 +139,7 @@ export const SliderView: any = styled.div`
 	overflow: unset;
 `;
 
-export const SliderContainerView: any = styled.div`
+const SliderContainerView: any = styled.div`
 	align-items: center;
 	box-sizing: border-box;
 	display: inline-flex;
@@ -240,3 +237,5 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 		);
 	}
 }
+
+export default Switch;

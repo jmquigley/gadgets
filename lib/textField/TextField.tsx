@@ -3,7 +3,7 @@
  * control allows the user to add validation routines to the input control
  * beyond the builtin routines.
  *
- * Validations are creation by creating an instance of the `Validator` class and
+ * Validations are used by creating an instance of the `Validator` class and
  * implementing a validation funtion, failure message, and success message.
  *
  * Validation is NOT used by default.  It must be declared with a prop named
@@ -90,58 +90,59 @@
  * validation message when the input contains validation code.
  *
  * #### Properties
- * - `disabled: {boolean} (false)` - When true, the control is disabled
- * - `id: {string} ('')` - The CSS id for this control
- * - `initialValue: {string} ('')` - The first value set within the control.
+ * - `disabled=false {boolean}` - When true, the control is disabled
+ * - `id='' {string}` - The CSS id for this control
+ * - `initialValue='' {string}` - The first value set within the control.
  * This is only done one time when the compoment is constructued.
- * - `max: {string} ('any')` - the maxium number for a spinner text box.  When
+ * - `max='any' {string}` - the maxium number for a spinner text box.  When
  * set to "any" there is no size.
- * - `min: {string} ('any')` - the minimum  number for a spinner text box.  When
+ * - `min='any' {string}` - the minimum  number for a spinner text box.  When
  * set to "any" there is no size.
- * - `noborder: {boolean} (false)` - Turns off the border around the component
- * - `sizing: {Sizing} (Sizing.normal)` - The font size for the control (see
+ * - `noborder=false {boolean}` - Turns off the border around the component
+ * - `sizing=Sizing.normal {Sizing}` - The font size for the control (see
  * the Sizing class in shared).
- * - `step: {string} ('any') - the increment number for a spinner text box.
+ * - `step='any' {string} - the increment number for a spinner text box.
  * When this is set to "any" the step is 1 by default.
- * - `type: {TextFieldtype} (TextFieldType.text)` - The type of input control.
+ * - `type=TextFieldType.text {TextFieldtype}` - The type of input control.
  * This is the type defined by the [HTML input tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).  The
  * value is an enum that maps to these valid types.
- * - `useclear {boolean} (false)` - When used it presents a circle "x" button
+ * - `useclear=false {boolean}` - When used it presents a circle "x" button
  * that will clear the current input from the control and set the focus to
  * the input.
- * - `usevalidation: {boolean} (false)` - If this is true then the validation
+ * - `usevalidation=false {boolean}` - If this is true then the validation
  * routines are exectued.
- * - `validators: {Validator[]} ([])` - A list of Validator classes.  Each of the
+ * - `validators=[] {Validator[]}` - A list of Validator classes.  Each of the
  * classes in this list are used against the input to check if it passes the
  * rules set in that validator function.
- * - `visible: {boolean} (true)` - If set to false this control is hidden (set
+ * - `value=undefined {any}` - This is will override whatever is currently in
+ * the control.  It should only be used if the parent is going to control the
+ * contents of the control.
+ * - `visible=true {boolean}` - If set to false this control is hidden (set
  * to a display of none).
  *
  * @module TextField
  */
 
-"use strict";
-
-// const debug = require('debug')('TextField');
+// const debug = require("debug")("TextField");
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {sp} from "util.constants";
 import {nilEvent} from "util.toolbox";
 import {ButtonCircle} from "../buttonCircle";
 import {
 	BaseComponent,
+	BaseProps,
 	BaseState,
 	Color,
 	disabled,
 	fontStyle,
+	getDefaultBaseProps,
 	getDefaultBaseState,
 	invisible,
-	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
+import styled, {css} from "../shared/themed-components";
 import {tooltip} from "../tooltip";
 import {
 	validateEmail,
@@ -166,41 +167,41 @@ export enum TextFieldType {
 	url = "url"
 }
 
-export interface TextFieldProps extends Partial<HTMLInputElement> {
-	disabled?: boolean;
-	noborder?: boolean;
-	id?: string;
-	initialValue?: string;
-	minWidth?: string;
+export interface TextFieldProps extends BaseProps {
+	initialValue?: any;
 	max?: string;
+	maxLength?: number | string;
 	min?: string;
-	onBlur?: any;
-	onClear(): void;
-	onChange?: any;
-	onKeyDown?: any;
-	onKeyPress?: any;
-	onValidation?: any;
-	sizing?: Sizing;
+	minLength?: number | string;
+	minWidth?: string;
+	noborder?: boolean;
+	nospinner?: boolean;
+	onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	onClear?: () => void;
+	onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+	onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+	onValidation?: (valid: boolean) => void;
+	size?: number;
 	step?: string;
-	style?: any;
-	tooltip?: string;
-	testing?: boolean;
-	type: string;
+	type?: string;
 	useclear?: boolean;
 	usevalidation?: boolean;
 	validators?: Validator[];
-	visible?: boolean;
+	[key: string]: any;
 }
 
 export function getDefaultTextFieldProps(): TextFieldProps {
-	return cloneDeep({
-		disabled: false,
-		id: "",
+	return {
+		...getDefaultBaseProps(),
 		initialValue: "",
-		minWidth: "1em",
-		min: "any",
 		max: "any",
+		maxLength: null,
+		min: "any",
+		minLength: null,
+		minWidth: "1em",
 		noborder: false,
+		nospinner: false,
 		obj: "TextField",
 		onBlur: nilEvent,
 		onChange: nilEvent,
@@ -208,41 +209,40 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		onKeyDown: nilEvent,
 		onKeyPress: nilEvent,
 		onValidation: nilEvent,
-		sizing: Sizing.normal,
+		size: null,
 		step: "any",
-		style: {},
 		testing: process.env.NODE_ENV !== "production",
-		tooltip: "",
 		type: TextFieldType.text,
 		useclear: false,
 		usevalidation: false,
-		validators: [],
-		visible: true
-	});
+		validators: []
+	};
 }
 
 export interface TextFieldState extends BaseState {
 	message: string;
 	messageType: MessageType;
 	minWidth: string;
-	previousText: string;
+	previousValue: string;
 	valid: boolean;
+	value: any;
 }
 
 export function getDefaultTextFieldState(): TextFieldState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-textfield"),
 		message: "",
 		messageType: MessageType.none,
 		minWidth: "",
-		previousText: "",
-		valid: true
-	});
+		previousValue: "",
+		valid: true,
+		value: ""
+	};
 }
 
 const textTypes: any[] = ["text", "email", "search", "password", "tel", "url"];
 
-export const ClearButtonView: any = styled.div`
+const ClearButtonView: any = styled.div`
 	display: inline-flex;
 	margin: 0 2px;
 	opacity: 0;
@@ -252,7 +252,7 @@ export const ClearButtonView: any = styled.div`
 	${(props) => fontStyle[props["sizing"]]}
 `;
 
-export const MessageView: any = styled.div`
+const MessageView: any = styled.div`
 	background-color: unset;
 	border-color: unset;
 	color: ${(props) =>
@@ -266,7 +266,15 @@ export const MessageView: any = styled.div`
 	${(props) => invisible(props)}
 `;
 
-export const StyledInput: any = styled.input`
+const noSpinnerCSS: any = css`
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+`;
+
+const StyledInput: any = styled.input`
 	border: none;
 	box-sizing: border-box;
 	display: inline-flex;
@@ -274,22 +282,25 @@ export const StyledInput: any = styled.input`
 	min-height: 0;
 	min-width: 0;
 	outline: none;
-	padding: 1px 5px;
+	padding: 1px 4px;
 	width: 100%;
+
+	${(props) => props["nospinner"] && noSpinnerCSS}
 
 	${(props) => disabled(props)}
 	${(props) => fontStyle[props["sizing"]]}
 	${(props) => invisible(props)}
 `;
 
-export const TextfieldContainerView: any = styled.div`
+const TextfieldContainerView: any = styled.div`
 	display: inline-flex;
 	flex-direction: column;
 	min-width: ${(props: TextFieldProps) => props.minWidth};
 	position: relative;
+	width: ${(props: TextFieldProps) => props.width || "100%"};
 `;
 
-export const TextFieldView: any = styled.div`
+const TextFieldView: any = styled.div`
 	border: ${(props) =>
 		props["noborder"]
 			? "none"
@@ -302,32 +313,30 @@ export const TextFieldView: any = styled.div`
 	}
 `;
 
-export class TextField extends BaseComponent<any, TextFieldState> {
+export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 	public static readonly defaultProps: TextFieldProps = getDefaultTextFieldProps();
-	public state: TextFieldState = getDefaultTextFieldState();
 
 	private _input: HTMLInputElement = null;
 	private _validators: Validator[] = null;
-	private _value: string;
 
 	constructor(props: TextFieldProps) {
 		super(props, TextField.defaultProps.style);
-		this._validators = cloneDeep(props.validators);
-		this._value = props.initialValue;
+		this._validators = props.validators.slice();
 
 		this.state = {
 			...getDefaultTextFieldState(),
-			previousText: this.props.initialValue
+			previousValue: this.props.initialValue,
+			value: this.props.initialValue
 		};
 
 		if (textTypes.includes(props.type) && props.usevalidation) {
-			if ("maxLength" in props) {
+			if ("maxLength" in props && props["maxLength"]) {
 				this._validators.push(
 					validateMaxLength(Number(props.maxLength))
 				);
 			}
 
-			if ("minLength" in props) {
+			if ("minLength" in props && props["minLength"]) {
 				this._validators.push(
 					validateMinLength(Number(props.minLength))
 				);
@@ -349,8 +358,12 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		return this._input;
 	}
 
-	get value(): string {
-		return this._value;
+	private commit(ele: HTMLInputElement) {
+		this.setState({previousValue: ele.value}, () => {
+			if (this.props.usevalidation) {
+				this.props.onValidation(this.validate(ele.value));
+			}
+		});
 	}
 
 	@autobind
@@ -361,33 +374,31 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 
 	@autobind
 	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-		this._value = (e.target as HTMLInputElement).value;
-		this.validate(this._value);
+		const value = (e.target as HTMLInputElement).value;
+		this.setState({value});
+		this.validate(value);
 		this.props.onChange(e);
 	}
 
 	@autobind
 	private handleClearButton() {
-		this.setState(
-			{
-				message: "",
-				previousText: ""
-			},
-			() => {
-				this.input.value = "";
-				this.handleChange({target: this.input} as any);
-				this.input.focus();
-				this.props.onClear();
-			}
-		);
+		this.setState({
+			message: "",
+			previousValue: ""
+		});
+
+		this.input.value = "";
+		this.handleChange({target: this.input} as any);
+		this.input.focus();
+		this.props.onClear();
 	}
 
 	@autobind
 	private handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === "Escape") {
-			(e.target as HTMLInputElement).value = this.state.previousText;
-			this._value = this.state.previousText;
-			this.validate(this.state.previousText);
+			const value = this.state.previousValue;
+			this.setState({value});
+			this.validate(value);
 		}
 
 		this.props.onKeyDown(e);
@@ -405,14 +416,6 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 	@autobind
 	private handleRef(ele: HTMLInputElement) {
 		this._input = ele;
-	}
-
-	private commit(ele: HTMLInputElement) {
-		this.setState({previousText: ele.value}, () => {
-			if (this.props.usevalidation) {
-				this.props.onValidation(this.validate(ele.value));
-			}
-		});
 	}
 
 	private validate(value: string): boolean {
@@ -448,30 +451,25 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		props: TextFieldProps,
 		state: TextFieldState
 	) {
-		const newState: TextFieldState = {...state};
+		if ("value" in props && props.value !== state.value) {
+			const newState = {
+				...state,
+				value: props.value
+			};
 
-		if ("size" in props) {
-			newState.minWidth = `${props.size / 2.0 + 3}rem`;
+			return super.getDerivedStateFromProps(props, newState);
 		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return null;
 	}
 
 	public render() {
 		// Strip out props that the input control cannot recognize or use
-		const {
-			minWidth,
-			noborder,
-			onClear,
-			onValidation,
-			useclear,
-			usevalidation,
-			validators,
-			visible,
-			...props
-		} = this.props;
+		const {validators, onClear, onValidation, ...props} = this.props;
 
+		const minWidth = `${this.props.size / 2.0 + 3}rem`;
 		let clearBtn: any = null;
+
 		if (this.props.useclear) {
 			clearBtn = (
 				<ClearButtonView
@@ -479,7 +477,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 					sizing={BaseComponent.prev().type}
 				>
 					<ButtonCircle
-						disabled={props.disabled}
+						disabled={this.props.disabled}
 						iconName='times'
 						onClick={this.handleClearButton}
 						sizing={BaseComponent.prev().type}
@@ -488,7 +486,7 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 							borderColor: Color.error,
 							color: Color.error
 						}}
-						visible={visible}
+						visible={this.props.visible}
 					/>
 				</ClearButtonView>
 			);
@@ -499,13 +497,14 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 				<TextfieldContainerView
 					className='ui-textfield-container'
 					id={this.id}
-					minWidth={this.state.minWidth}
+					minWidth={minWidth}
+					width={this.props.width}
 				>
 					<TextFieldView
-						disabled={props.disabled}
+						disabled={this.props.disabled}
 						className={this.state.classes.classnames}
 						noborder={this.props.noborder}
-						visible={visible}
+						visible={this.props.visible}
 					>
 						<StyledInput
 							{...props}
@@ -514,19 +513,17 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 							onChange={this.handleChange}
 							onKeyDown={this.handleKeyDown}
 							onKeyPress={this.handleKeyPress}
-							sizing={props.sizing}
-							value={this._value}
-							visible={visible}
+							value={this.state.value}
 						/>
 						{clearBtn}
 					</TextFieldView>
 					{this.props.usevalidation ? (
 						<MessageView
 							className='ui-textfield-validation-message'
-							disabled={props.disabled}
+							disabled={this.props.disabled}
 							messageType={this.state.messageType}
 							sizing={BaseComponent.prev().type}
-							visible={visible}
+							visible={this.props.visible}
 						>
 							{this.props.usevalidation ? sp : null}
 							{this.state.message}
@@ -538,3 +535,5 @@ export class TextField extends BaseComponent<any, TextFieldState> {
 		);
 	}
 }
+
+export default TextField;

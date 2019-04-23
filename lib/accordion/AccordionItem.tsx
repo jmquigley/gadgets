@@ -31,9 +31,10 @@
  * item would be expanded by default and contain a right button control.
  *
  * #### Events
- * - `onClick(toggleState)` - This callback is invoked when the header
- * portion of the AccordionItem is clicked.  It is given the current
- * state of the toggle (true if visible, otherwise false)
+ * - `onClick(e)` - Invoked when the AccordionItem is clicked.
+ * - `onUpdate(toggleState: boolean)` - This callback is invoked when the header
+ * portion of the AccordionItem is clicked.  It is given the current state of
+ * the toggle (true if visible, otherwise false)
  *
  * #### Styles
  * - `ui-accordionitem` - The top level style for the Item on the outer `<div>`
@@ -54,12 +55,9 @@
  * @module AccordionItem
  */
 
-"use strict";
-
 // const debug = require('debug')('AccordionItem');
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {getDefaultItemProps, Item, ItemProps} from "../item";
@@ -77,20 +75,22 @@ export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
 	leftButton?: any;
 	nocollapse?: boolean;
-	onClick?: any;
+	onClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
+	onUpdate?: (toggle: boolean) => void;
 	rightButton?: any;
 }
 
 export function getDefaultAccordionItemProps(): AccordionItemProps {
-	return cloneDeep({
+	return {
 		...getDefaultItemProps(),
 		initialToggle: false,
 		leftButton: null,
 		nocollapse: false,
 		obj: "AccordionItem",
 		onClick: nilEvent,
+		onUpdate: nilEvent,
 		rightButton: null
-	});
+	};
 }
 
 export interface AccordionItemState extends BaseState {
@@ -98,13 +98,13 @@ export interface AccordionItemState extends BaseState {
 }
 
 export function getDefaultAccordionItemState(): AccordionItemState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-accordionitem"),
 		toggle: false
-	});
+	};
 }
 
-export const AccordionItemView: any = styled.ul`
+const AccordionItemView: any = styled.ul`
 	> .ui-item,
 	> .ui-item-button {
 		color: ${(props: AccordionItemProps) =>
@@ -121,7 +121,7 @@ export const AccordionItemView: any = styled.ul`
 	}
 `;
 
-export const AccordionContentView: any = styled.div`
+const AccordionContentView: any = styled.div`
 	${(props: AccordionItemProps) => props.sizing && fontStyle[props.sizing]};
 `;
 
@@ -140,14 +140,19 @@ export class AccordionItem extends BaseComponent<
 	}
 
 	@autobind
-	private handleClick() {
-		if (!this.props.nocollapse) {
+	private handleClick(e: React.MouseEvent<HTMLLIElement>) {
+		if (
+			!this.props.nocollapse &&
+			!this.props.disabled &&
+			this.props.visible
+		) {
 			this.setState(
 				{
 					toggle: !this.state.toggle
 				},
 				() => {
-					this.props.onClick(this.state.toggle);
+					this.props.onClick(e);
+					this.props.onUpdate(this.state.toggle);
 				}
 			);
 		}
@@ -173,17 +178,12 @@ export class AccordionItem extends BaseComponent<
 					className={this.state.classes.classnames}
 					style={this.state.style}
 				>
-					<Item
-						{...this.props}
-						onClick={
-							!this.props.disabled && this.props.visible
-								? this.handleClick
-								: nilEvent
-						}
-					/>
+					<Item {...this.props} onClick={this.handleClick} />
 					{content}
 				</AccordionItemView>
 			</Wrapper>
 		);
 	}
 }
+
+export default AccordionItem;

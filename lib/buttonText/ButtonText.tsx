@@ -39,10 +39,7 @@
  * @module ButtonText
  */
 
-"use strict";
-
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {BaseButtonView} from "../button";
@@ -62,28 +59,28 @@ import styled from "../shared/themed-components";
 export interface ButtonTextProps extends IconProps {
 	justify?: Justify;
 	noicon?: boolean;
-	onClick?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 	text?: string;
 }
 
 export function getDefaultButtonTextProps(): ButtonTextProps {
-	return cloneDeep({
+	return {
 		...getDefaultIconProps(),
 		justify: Justify.right,
 		noicon: false,
 		obj: "ButtonText",
 		onClick: nilEvent,
 		text: ""
-	});
+	};
 }
 
 export type ButtonTextState = BaseState;
 
 export function getDefaultButtonTextState(): ButtonTextState {
-	return cloneDeep({...getDefaultBaseState("ui-button-text")});
+	return {...getDefaultBaseState("ui-button-text")};
 }
 
-export const ButtonTextContent: any = styled.div`
+const ButtonTextContent: any = styled.div`
 	flex: 1;
 	padding: 0 0.2em;
 	text-align: ${(props: ButtonTextProps) => {
@@ -103,7 +100,7 @@ export const ButtonTextContent: any = styled.div`
 	}
 `;
 
-export const ButtonTextView: any = styled.div`
+const ButtonTextView: any = styled.div`
 	${BaseButtonView}
 
 	&:not(.nohover):hover {
@@ -133,7 +130,7 @@ export class ButtonText extends BaseComponent<
 			this.props.visible &&
 			this.props.onClick != null
 		) {
-			this.props.onClick(this.props.text);
+			this.props.onClick(e);
 		}
 		e.stopPropagation();
 	}
@@ -197,3 +194,5 @@ export class ButtonText extends BaseComponent<
 		);
 	}
 }
+
+export default ButtonText;

@@ -50,6 +50,56 @@ exports[`Test a double click edit of the Label control 1`] = `
 />
 `;
 
+exports[`Test cancelling a double click edit of the Label control 1`] = `
+<Label
+  backgroundColor={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  contentEditable={false}
+  controlled={true}
+  defaultText="default"
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  id={null}
+  left={null}
+  location="none"
+  minHeight={null}
+  minWidth={null}
+  noedit={false}
+  nohover={false}
+  noripple={false}
+  notheme={false}
+  notooltip={false}
+  obj="Label"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onClick={[Function]}
+  onDoubleClick={[MockFunction]}
+  onKeyDown={[MockFunction]}
+  onKeyPress={[MockFunction]}
+  onUpdate={[Function]}
+  padding={null}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  text="A"
+  theme={null}
+  tooltip={null}
+  top={null}
+  useedit={false}
+  visible={true}
+  width={null}
+  xcss={null}
+/>
+`;
+
 exports[`Test creation of a Label control 1`] = `
 <Wrapper
   backgroundColor={null}
@@ -267,6 +317,29 @@ Object {
   "visible": true,
   "width": null,
   "xcss": null,
+}
+`;
+
+exports[`Test retrieval of default Label props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-label" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "editable": false,
+  "originalText": "",
+  "previousText": "",
+  "sizing": "normal",
+  "style": Object {},
+  "text": "",
 }
 `;
 

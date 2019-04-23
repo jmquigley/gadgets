@@ -1,14 +1,24 @@
 "use strict";
 
 import {shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {DialogWindow, getDefaultDialogWindowProps} from "./index";
+import {
+	DialogWindow,
+	getDefaultDialogWindowProps,
+	getDefaultDialogWindowState
+} from "./index";
 
 test("Test retrieval of DialogWindow props object", () => {
 	const props = getDefaultDialogWindowProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultDialogWindowState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a default DialogWindow control", () => {
@@ -25,6 +35,6 @@ test("Test creation of a default DialogWindow control", () => {
 		</DialogWindow>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });

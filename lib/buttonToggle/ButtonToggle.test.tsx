@@ -1,27 +1,36 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {ButtonToggle, getDefaultButtonToggleProps} from "./index";
+import {
+	ButtonToggle,
+	getDefaultButtonToggleProps,
+	getDefaultButtonToggleState
+} from "./index";
 
 test("Test retrieval of ButtonToggle props object", () => {
 	const props = getDefaultButtonToggleProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultButtonToggleState();
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a ButtonToggle control", () => {
 	const ctl = shallow(<ButtonToggle className='test-class' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
 test("Test creation of a ButtonToggle control with on/off icons", () => {
 	const ctl = mount(<ButtonToggle iconNameOn='star' iconNameOff='star-o' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -29,7 +38,7 @@ test("Test disabling of a ButtonToggle", () => {
 	const click = jest.fn();
 	const ctl = mount(<ButtonToggle onClick={click} disabled={true} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button-toggle")
@@ -42,7 +51,7 @@ test("Test making a ButtonToggle invisible", () => {
 	const click = jest.fn();
 	const ctl = mount(<ButtonToggle onClick={click} visible={false} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button-toggle")
@@ -53,53 +62,69 @@ test("Test making a ButtonToggle invisible", () => {
 
 test("Test ButtonToggle click event", () => {
 	const click = jest.fn();
+	const toggle = jest.fn();
+
 	const ctl = mount(
-		<ButtonToggle iconNameOn='star' iconNameOff='star-o' onClick={click} />
+		<ButtonToggle
+			iconNameOn='star'
+			iconNameOff='star-o'
+			onClick={click}
+			onToggle={toggle}
+		/>
 	);
 	const btn = ctl.instance() as ButtonToggle;
 
-	expect(ctl).toBeDefined();
-	expect(btn).toBeDefined();
+	assert(btn);
+	assert(ctl);
 
-	expect(ctl.prop("iconName")).toBe("bomb");
-	expect(ctl.prop("iconName")).toBe("bomb");
-	expect(ctl.prop("iconNameOn")).toBe("star");
-	expect(ctl.prop("iconNameOff")).toBe("star-o");
+	assert(ctl.prop("iconName") === "bomb");
+	assert(ctl.prop("iconNameOn") === "star");
+	assert(ctl.prop("iconNameOff") === "star-o");
 
-	expect(ctl.prop("disabled")).toBe(false);
-	expect(ctl.prop("visible")).toBe(true);
+	assert(ctl.prop("disabled") === false);
+	assert(ctl.prop("visible"));
 
-	expect(btn.state.toggle).toBe(false);
+	assert(btn.state.toggle === false);
 	ctl.find(".ui-button-toggle")
 		.first()
 		.simulate("click");
 	expect(click).toHaveBeenCalled();
-	expect(click).toHaveBeenCalledWith(true);
+	expect(toggle).toHaveBeenCalled();
+	expect(toggle).toHaveBeenCalledWith(true);
 
-	expect(btn.state.toggle).toBe(true);
-	expect(btn.state.toggle).toBe(ctl.state("toggle"));
+	assert(btn.state.toggle);
+	assert(btn.state.toggle === ctl.state("toggle"));
 });
 
 test("Test the icon switch in a ButtonToggle click", () => {
 	const click = jest.fn();
+	const toggle = jest.fn();
+
 	const ctl = mount(
-		<ButtonToggle iconNameOff='star-o' iconNameOn='star' onClick={click} />
+		<ButtonToggle
+			iconNameOff='star-o'
+			iconNameOn='star'
+			onClick={click}
+			onToggle={toggle}
+		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 
-	expect(ctl.prop("disabled")).toBe(false);
-	expect(ctl.prop("visible")).toBe(true);
-	expect(ctl.prop("iconName")).toBe("bomb");
-	expect(ctl.prop("iconNameOn")).toBe("star");
-	expect(ctl.prop("iconNameOff")).toBe("star-o");
+	assert(ctl.prop("disabled") === false);
+	assert(ctl.prop("visible"));
+	assert(ctl.prop("iconName") === "bomb");
+	assert(ctl.prop("iconNameOn") === "star");
+	assert(ctl.prop("iconNameOff") === "star-o");
 
-	expect(ctl.state("toggle")).toBe(false);
+	assert(ctl.state("toggle") === false);
 	ctl.find(".ui-button-toggle")
 		.first()
 		.simulate("click");
 
 	expect(click).toHaveBeenCalled();
-	expect(click).toHaveBeenCalledWith(true);
-	expect(ctl.state("toggle")).toBe(true);
+	expect(toggle).toHaveBeenCalled();
+	expect(toggle).toHaveBeenCalledWith(true);
+
+	assert(ctl.state("toggle"));
 });

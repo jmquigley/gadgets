@@ -82,12 +82,10 @@
  * @module Pager
  */
 
-"use strict";
-
-// const debug = require('debug')('Pager');
+const debug = require("debug")("Pager");
 
 import autobind from "autobind-decorator";
-import {cloneDeep, sortBy} from "lodash";
+import {sortBy} from "lodash";
 import * as React from "react";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
@@ -118,9 +116,9 @@ export const defaultPageSizes: number[] = [25, 50, 100];
 export interface PagerProps extends BaseProps {
 	initialPage?: number;
 	initialPageSize?: number;
-	onChangePageSize?: any;
-	onSelect?: any;
-	onSort?: any;
+	onChangePageSize?: (size: number) => void;
+	onSelect?: (page: number) => void;
+	onSort?: (sortOrder: SortOrder) => void;
 	pagesToDisplay?: number;
 	pageSizes?: number[];
 	totalItems?: number;
@@ -128,7 +126,7 @@ export interface PagerProps extends BaseProps {
 }
 
 export function getDefaultPagerProps(): PagerProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		initialPage: 1,
 		initialPageSize: defaultPageSize,
@@ -137,11 +135,11 @@ export function getDefaultPagerProps(): PagerProps {
 		onSelect: nilEvent,
 		onSort: null,
 		pagesToDisplay: 3,
-		pageSizes: cloneDeep(defaultPageSizes),
+		pageSizes: defaultPageSizes.slice(),
 		sizing: Sizing.normal,
 		totalItems: 0,
 		useinput: false
-	});
+	};
 }
 
 export interface PagerState extends BaseState {
@@ -151,29 +149,29 @@ export interface PagerState extends BaseState {
 }
 
 export function getDefaultPagerState(): PagerState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-pager"),
 		currentPage: 0,
 		currentSort: SortOrder.ascending,
 		pageSize: 0
-	});
+	};
 }
 
-export const ButtonCSS: any = css`
+const ButtonCSS: any = css`
 	flex: 1;
 	height: unset;
 	padding: 3px 0;
 	font-weight: 600;
 `;
 
-export const DialogListView: any = styled(List)`
+const DialogListView: any = styled(List)`
 	border: unset;
 `;
 
-export const PagerView: any = styled.div`
+const PagerView: any = styled.div`
 	display: inline-flex;
 	height: 100%;
-	width: 99%;
+	width: 100%;
 
 	.ui-textfield-container {
 		flex-direction: unset;
@@ -184,30 +182,29 @@ export const PagerView: any = styled.div`
 	}
 `;
 
-export const StyledButtonDialog: any = styled(ButtonDialog)`
+const StyledButtonDialog: any = styled(ButtonDialog)`
 	border: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 	flex: none;
 	height: unset;
 	width: 1rem;
 `;
 
-export const StyledButtonText: any = styled(ButtonText)`
+const StyledButtonText: any = styled(ButtonText)`
 	${ButtonCSS}
 	border-top: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 	border-bottom: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 	border-right: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 `;
 
-export const StyledButton: any = styled(Button)`
+const StyledButton: any = styled(Button)`
 	${ButtonCSS}
 	border-top: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 	border-bottom: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 	border-right: solid 1px ${(props: PagerProps) => props.theme.borderColor};
 `;
 
-export const StyledTextField: any = styled(TextField)`
-	flex: none;
-	width: 2.5rem;
+const StyledTextField: any = styled(TextField)`
+	flex: 1;
 `;
 
 export class Pager extends BaseComponent<PagerProps, PagerState> {
@@ -224,7 +221,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _iconBlank: any = null;
 	private _initialPage: number = 0;
 	private _initialPageSize: number = 0;
-	private _pageSizes: number[] = cloneDeep(defaultPageSizes);
+	private _inputPageField: any = null;
+	private _pageSizes: number[] = defaultPageSizes.slice();
 
 	constructor(props: PagerProps) {
 		super(props, Pager.defaultProps.style);
@@ -268,15 +266,16 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		return this.state.currentPage;
 	}
 
-	set currentPage(val: number) {
-		if (val < 1) {
-			val = 1;
-		} else if (val > this.lastPage) {
-			val = this.lastPage;
+	set currentPage(page: number) {
+		if (page < 1) {
+			page = 1;
+		} else if (page > this.lastPage) {
+			page = this.lastPage;
 		}
 
-		this.setState({currentPage: val});
-		this.props.onSelect(val);
+		this.setState({currentPage: page}, () => {
+			this.props.onSelect(page);
+		});
 	}
 
 	get dialog(): any {
@@ -340,7 +339,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	set pageSizes(val: number[]) {
 		if (val == null) {
-			this._pageSizes = cloneDeep(defaultPageSizes);
+			this._pageSizes = defaultPageSizes.slice();
 		} else {
 			if (val.length < 1) {
 				this._pageSizes = [defaultPageSize];
@@ -587,6 +586,54 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		);
 	}
 
+	private createInputPageField(nextProps: PagerProps) {
+		if (nextProps.useinput) {
+			let width: string = "4.5em";
+			switch (nextProps.sizing) {
+				case Sizing.xxsmall:
+					width = "1.5em";
+					break;
+				case Sizing.xsmall:
+					width = "2.5em";
+					break;
+				case Sizing.small:
+					width = "3.0em";
+					break;
+				case Sizing.medium:
+					width = "4.5em";
+					break;
+				case Sizing.large:
+					width = "5.0em";
+					break;
+				case Sizing.xlarge:
+					width = "5.5em";
+					break;
+				case Sizing.xxlarge:
+					width = "6.0em";
+					break;
+				case Sizing.inherit:
+					width = "inherit";
+					break;
+			}
+
+			this._inputPageField = (
+				<StyledTextField
+					disabled={nextProps.disabled}
+					min='1'
+					max={String(this._lastPage)}
+					onBlur={this.handleBlur}
+					onChange={this.handleChange}
+					onKeyPress={this.handleKeyPress}
+					placeholder={String(this.currentPage)}
+					sizing={nextProps.sizing}
+					type='number'
+					value={this.state.currentPage}
+					width={width}
+				/>
+			);
+		}
+	}
+
 	/**
 	 * Removes non-standard props.  When passing non standard props to a standard element it
 	 * will flag warnings in the test runner.  This strips off those props that it complains
@@ -606,6 +653,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	@autobind
 	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+		debug("handleChange: %O", e.target as HTMLInputElement);
 		this.currentPage = Number((e.target as HTMLInputElement).value);
 	}
 
@@ -641,18 +689,9 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	}
 
 	@autobind
-	private handleSelect(newPage: number) {
-		// This is a workaround check.  The createButtons function creates a series
-		// of ButtonText controls for each "page".  When the button is clicked this
-		// handler is invoked by that button.  It passes the number text for that
-		// button to the handler.  This is TEXT and not a number.  This appears to
-		// circumvent the type checking for this function.  If this receives a string
-		// then the logic for currentPage fails (as computing pages from this string
-		// doesn't work).  This check ensures the type for the newPage and converts
-		// when it is not a number.
-		if (typeof newPage !== "number") {
-			newPage = Number(newPage);
-		}
+	private handleSelect(e: React.MouseEvent<HTMLDivElement>) {
+		let newPage: number = Number((e.target as HTMLDivElement).innerText);
+		newPage = isNaN(newPage) ? 0 : newPage;
 
 		if (this.currentPage !== newPage) {
 			this.currentPage = newPage;
@@ -717,6 +756,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		this.createButtons(props);
 		this.createDialog(props, this.state);
+		this.createInputPageField(props);
 
 		return (
 			<Wrapper {...props}>
@@ -746,20 +786,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 						onClick={this.moveToEnd}
 					/>
 					<Divider />
-					{props.useinput ? (
-						<StyledTextField
-							disabled={props.disabled}
-							min='1'
-							max={String(this._lastPage)}
-							onBlur={this.handleBlur}
-							onChange={this.handleChange}
-							onKeyPress={this.handleKeyPress}
-							placeholder={String(this.currentPage)}
-							sizing={props.sizing}
-							type='number'
-							value={this.currentPage}
-						/>
-					) : null}
+					{this._inputPageField}
 					<Divider />
 					<StyledButtonDialog
 						{...props}
@@ -775,3 +802,5 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		);
 	}
 }
+
+export default Pager;

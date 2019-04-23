@@ -1,14 +1,20 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {getDefaultTabProps, Tab} from "./index";
+import {getDefaultTabProps, getDefaultTabState, Tab} from "./index";
 
 test("Test retrieval of Tab props object", () => {
 	const props = getDefaultTabProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultTabState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test the creation of a Tab instance", () => {
@@ -18,7 +24,7 @@ test("Test the creation of a Tab instance", () => {
 		</Tab>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -36,7 +42,7 @@ test("Test disabling of a Tab", () => {
 		</Tab>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-label")
@@ -52,7 +58,7 @@ test("Test making a Tab invisible", () => {
 		</Tab>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -69,7 +75,7 @@ test("Test the click handler in the Tab instance", () => {
 		</Tab>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-label")
@@ -93,7 +99,7 @@ test("Test the close click handler on a Tab instance", () => {
 		</Tab>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	expect(ctl.state("hidden")).toBe(false);
@@ -107,5 +113,5 @@ test("Test the close click handler on a Tab instance", () => {
 	expect(close).toHaveBeenCalled();
 	expect(close).toHaveBeenCalledWith(ctl.instance());
 
-	expect(ctl.state("hidden")).toBe(true);
+	assert(ctl.state("hidden"));
 });

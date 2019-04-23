@@ -194,6 +194,26 @@ Object {
 }
 `;
 
+exports[`Test retrieval of ListItem props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-listitem" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "style": Object {},
+  "toggleRipple": false,
+}
+`;
+
 exports[`Test the creation of a ListItem control with left & right title 1`] = `
 <Wrapper
   backgroundColor={null}

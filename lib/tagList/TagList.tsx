@@ -55,12 +55,9 @@
  * @module TagList
  */
 
-"use strict";
-
-// const debug = require('debug')('TagList');
+const debug = require("debug")("TagList");
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {List, SortedList} from "util.ds";
 import {nilEvent} from "util.toolbox";
@@ -82,18 +79,18 @@ import {Tag} from "./Tag";
 
 export interface TagListProps extends BaseProps {
 	nosort?: boolean;
-	onBlur?: any;
-	onChange?: any;
-	onDelete?: any;
-	onKeyDown?: any;
-	onKeyPress?: any;
-	onNew?: any;
+	onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	onDelete?: (tag: string) => void;
+	onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+	onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+	onNew?: (tag: string) => void;
 	tags?: string[];
 	useinput?: boolean;
 }
 
 export function getDefaultTagListProps(): TagListProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		nosort: false,
 		obj: "TagList",
@@ -105,7 +102,7 @@ export function getDefaultTagListProps(): TagListProps {
 		onNew: nilEvent,
 		tags: [],
 		useinput: false
-	});
+	};
 }
 
 export interface TagListState extends BaseState {
@@ -114,18 +111,18 @@ export interface TagListState extends BaseState {
 }
 
 export function getDefaultTagListState(): TagListState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-taglist"),
 		inputTextSize: 1,
 		tags: null
-	});
+	};
 }
 
-export const StyledIcon: any = styled(Icon)`
+const StyledIcon: any = styled(Icon)`
 	margin-right: 5px;
 `;
 
-export const StyledTextField: any = styled(TextField)`
+const StyledTextField: any = styled(TextField)`
 	margin-left: 2px;
 
 	> input {
@@ -140,8 +137,8 @@ export const StyledTextField: any = styled(TextField)`
 	${(props: TagListProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
-export const TagListView: any = styled.div`
-	display: inline;
+const TagListView: any = styled.div`
+	display: inline-flex;
 
 	${(props: TagListProps) => props.sizing && fontStyle[props.sizing]}
 	${(props: TagListProps) => disabled(props)}
@@ -169,7 +166,8 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	}
 
 	private clearInput(e: HTMLInputElement) {
-		this.setState({inputTextSize: 1});
+		debug("clearInput()");
+		this.setState({inputTextSize: 0});
 		e.value = "";
 	}
 
@@ -218,22 +216,17 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 			const target = e.target as HTMLInputElement;
 			const {tags} = this.state;
 
-			if (!tags.contains(target.value)) {
+			if (target.value && !tags.contains(target.value)) {
 				tags.insert(target.value);
-				this.setState(
-					{
-						tags: tags
-					},
-					() => {
-						this.props.onNew(target.value);
-						this.clearInput(target);
-						this.props.onKeyPress(e);
-					}
-				);
-			} else {
-				this.clearInput(target);
-				this.props.onKeyPress(e);
+				this.setState({
+					tags: tags
+				});
+
+				this.props.onNew(target.value);
 			}
+
+			this.clearInput(target);
+			this.props.onKeyPress(e);
 		}
 	}
 
@@ -252,6 +245,32 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 			);
 		});
 
+		let textInputField = null;
+		if (this.props.useinput) {
+			const textFieldProps = {
+				disabled: this.props.disabled,
+				noborder: true,
+				onBlur: this.handleBlur,
+				onChange: this.handleChange,
+				onKeyDown: this.handleKeyDown,
+				onKeyPress: this.handleKeyPress,
+				placeholder: "new",
+				size: this.state.inputTextSize,
+				sizing: this.props.sizing,
+				visible: this.props.visible
+			};
+
+			// This dynamically adds "value" to the text field input to
+			// reset it to blacnk space when the current tag is
+			// empty.
+			if (this.state.inputTextSize < 1) {
+				textFieldProps["value"] = "";
+			}
+
+			debug("textFieldProps: %O", textFieldProps);
+			textInputField = <StyledTextField {...textFieldProps} />;
+		}
+
 		return (
 			<Wrapper {...this.props}>
 				<TagListView
@@ -266,22 +285,11 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 						visible={this.props.visible}
 					/>
 					{tags}
-					{this.props.useinput && (
-						<StyledTextField
-							disabled={this.props.disabled}
-							noborder
-							onBlur={this.handleBlur}
-							onChange={this.handleChange}
-							onKeyDown={this.handleKeyDown}
-							onKeyPress={this.handleKeyPress}
-							placeholder='new'
-							size={this.state.inputTextSize}
-							sizing={this.props.sizing}
-							visible={this.props.visible}
-						/>
-					)}
+					{textInputField}
 				</TagListView>
 			</Wrapper>
 		);
 	}
 }
+
+export default TagList;

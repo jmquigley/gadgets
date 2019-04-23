@@ -47,9 +47,6 @@
  * @module Icon
  */
 
-"use strict";
-
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {
 	BaseComponent,
@@ -73,22 +70,22 @@ export interface IconProps extends BaseProps {
 }
 
 export function getDefaultIconProps(): IconProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		iconName: "bomb",
 		imageFile: "",
 		obj: "Icon",
 		sizing: Sizing.normal
-	});
+	};
 }
 
 export type IconState = BaseState;
 
 export function getDefaultIconState(): IconState {
-	return cloneDeep({...getDefaultBaseState("ui-icon")});
+	return {...getDefaultBaseState("ui-icon")};
 }
 
-export const FontAwesome: any = styled.i`
+const FontAwesome: any = styled.i`
 	text-align: center;
 	${(props: IconProps) => props.location && locationStyle[props.location]}
 	${(props: IconProps) => props.sizing && fontStyle[props.sizing]}
@@ -96,7 +93,7 @@ export const FontAwesome: any = styled.i`
 	${(props: IconProps) => invisible(props)}
 `;
 
-export const Image: any = styled.img`
+const Image: any = styled.img`
 	${(props: IconProps) => props.location && locationStyle[props.location]}
 	${(props: IconProps) => props.sizing && boxStyle[props.sizing]}
 	${(props: IconProps) => disabled(props)}
@@ -152,3 +149,5 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 		return <Wrapper {...this.props}>{icon}</Wrapper>;
 	}
 }
+
+export default Icon;

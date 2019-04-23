@@ -64,7 +64,6 @@
 
 // const debug = require('debug')('Wrapper');
 
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {BaseComponent} from "./base";
@@ -79,12 +78,12 @@ export interface WrapperProps extends BaseProps {
 }
 
 export function getDefaultWrapperProps(): WrapperProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		children: null,
 		onError: nilEvent,
 		reset: false
-	});
+	};
 }
 
 export interface WrapperState extends BaseState {
@@ -93,11 +92,11 @@ export interface WrapperState extends BaseState {
 }
 
 export function getDefaultWrapperState(): WrapperState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-error"),
 		error: "",
 		errorInfo: null
-	});
+	};
 }
 
 export const WrapperView: any = styled.div`
@@ -133,14 +132,17 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 		props: WrapperProps,
 		state: WrapperState
 	) {
-		const newState: WrapperState = {...state};
-
 		if (props.reset) {
-			newState.error = "";
-			newState.errorInfo = null;
+			const newState: WrapperState = {
+				...state,
+				error: "",
+				errorInfo: null
+			};
+
+			return super.getDerivedStateFromProps(props, newState);
 		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return null;
 	}
 
 	public render() {

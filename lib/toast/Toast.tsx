@@ -84,12 +84,9 @@
  * @module Toast
  */
 
-"use strict";
-
 // const debug = require('debug')('Toast');
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {calc} from "util.calc";
 import {nilEvent} from "util.toolbox";
@@ -121,13 +118,13 @@ export interface ToastProps extends BaseProps {
 	decay?: boolean;
 	duration?: number;
 	level?: ToastLevel;
-	onClick?: any;
-	onClose?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+	onClose?: () => void;
 	show?: boolean;
 }
 
 export function getDefaultToastProps(): ToastProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		usebottom: false,
 		decay: true,
@@ -137,7 +134,7 @@ export function getDefaultToastProps(): ToastProps {
 		onClick: nilEvent,
 		onClose: nilEvent,
 		show: false
-	});
+	};
 }
 
 export interface ToastState extends BaseState {
@@ -145,10 +142,10 @@ export interface ToastState extends BaseState {
 }
 
 export function getDefaultToastState(): ToastState {
-	return cloneDeep({...getDefaultBaseState("ui-toast"), visible: false});
+	return {...getDefaultBaseState("ui-toast"), visible: false};
 }
 
-export const ContentView: any = styled.div`
+const ContentView: any = styled.div`
 	align-items: center;
 	display: flex;
 	flex: 6;
@@ -162,39 +159,39 @@ export const ContentView: any = styled.div`
 	${(props: ToastProps) => fontStyle[props.sizing]}
 `;
 
-export const Error: any = css`
+const Error: any = css`
 	border-color: ${Color.error};
 	background-color: ${Color.error};
 `;
 
-export const Info: any = css`
+const Info: any = css`
 	border-color: ${Color.info};
 	background-color: ${Color.info};
 `;
 
-export const Warning: any = css`
+const Warning: any = css`
 	border-color: ${Color.warning};
 	background-color: ${Color.warning};
 `;
 
-export const Hide: any = css`
+const Hide: any = css`
 	animation: fadeOut
 		${(props: ToastProps) => calc(props.theme.transitionDelay, "* 2")};
 	opacity: 0;
 	z-index: -1;
 `;
 
-export const Show: any = css`
+const Show: any = css`
 	opacity: 1;
 	z-index: ${baseZIndex};
 `;
 
-export const StyledButton: any = styled(Button)`
+const StyledButton: any = styled(Button)`
 	flex: 1;
 	height: unset;
 `;
 
-export const ToastView: any = styled.div`
+const ToastView: any = styled.div`
 	bottom: ${(props: ToastProps) => (props.usebottom ? "0" : "unset")};
 	color: white;
 	display: flex;
@@ -317,3 +314,5 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		);
 	}
 }
+
+export default Toast;

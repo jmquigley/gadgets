@@ -37,6 +37,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
   obj="ButtonToggle"
   onClick={[Function]}
   onError={[Function]}
+  onToggle={[Function]}
   padding={null}
   reset={false}
   selected={false}
@@ -85,6 +86,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
     notooltip={false}
     obj="ButtonToggle"
     onClick={[Function]}
+    onToggle={[Function]}
     padding={null}
     selected={false}
     sizing="normal"
@@ -141,6 +143,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
   notooltip={false}
   obj="ButtonToggle"
   onClick={[Function]}
+  onToggle={[Function]}
   padding={null}
   selected={false}
   sizing="normal"
@@ -191,6 +194,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
   notooltip={false}
   obj="ButtonToggle"
   onClick={[MockFunction]}
+  onToggle={[Function]}
   padding={null}
   selected={false}
   sizing="normal"
@@ -241,6 +245,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
   notooltip={false}
   obj="ButtonToggle"
   onClick={[MockFunction]}
+  onToggle={[Function]}
   padding={null}
   selected={false}
   sizing="normal"
@@ -292,6 +297,7 @@ Object {
   "notooltip": false,
   "obj": "ButtonToggle",
   "onClick": [Function],
+  "onToggle": [Function],
   "padding": null,
   "selected": false,
   "sizing": "normal",
@@ -303,5 +309,25 @@ Object {
   "visible": true,
   "width": null,
   "xcss": null,
+}
+`;
+
+exports[`Test retrieval of ButtonToggle props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-button-toggle" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "style": Object {},
+  "toggle": false,
 }
 `;

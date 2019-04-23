@@ -20,8 +20,8 @@
  *
  * ## API
  * #### Events
- * - `onClick(counter: number)` - when the counter value is clicked this
- * callback is invoked.  It is given the current count value.
+ * - `onClick(event)` - when the counter value is clicked this callback is invoked.
+ * - `onUpdate(counter: number)` - Invoked when the badge count is updated/set.
  *
  * #### Styles
  * - `ui-badge` - Top level class on the `<div>` of the badge (not the
@@ -37,12 +37,9 @@
  * @module Badge
  */
 
-"use strict";
-
-const debug = require("debug")("Badge");
+// const debug = require("debug")("Badge");
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {
@@ -63,17 +60,19 @@ import styled from "../shared/themed-components";
 
 export interface BadgeProps extends BaseProps {
 	counter?: number;
-	onClick?: any;
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+	onUpdate?: (counter: number) => void;
 	suppress?: boolean;
 }
 
 export function getDefaultBadgeProps(): BadgeProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		counter: 0,
 		location: Location.topRight,
 		obj: "Badge",
 		onClick: nilEvent,
+		onUpdate: nilEvent,
 		sizing: Sizing.normal,
 		style: {
 			backgroundColor: "white",
@@ -81,16 +80,16 @@ export function getDefaultBadgeProps(): BadgeProps {
 			color: "red"
 		},
 		suppress: false
-	});
+	};
 }
 
 export type BadgeState = BaseState;
 
 export function getDefaultBadgeState(): BadgeState {
-	return cloneDeep({...getDefaultBaseState("ui-badge")});
+	return {...getDefaultBaseState("ui-badge")};
 }
 
-export const BadgeView: any = styled.div`
+const BadgeView: any = styled.div`
 	border-radius: 96px;
 	cursor: default;
 	font-weight: bold;
@@ -105,7 +104,7 @@ export const BadgeView: any = styled.div`
 	${(props: BadgeProps) => invisible(props)}
 `;
 
-export const BadgeContainerView: any = styled.div`
+const BadgeContainerView: any = styled.div`
 	box-sizing: border-box;
 	display: block;
 	position: relative;
@@ -117,14 +116,20 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 
 	constructor(props: BadgeProps) {
 		super(props, Badge.defaultProps.style);
+		this.props.onUpdate(this.props.counter);
 	}
 
 	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
-		if (!this.props.disabled && this.props.visible && this.props.onClick) {
-			debug("clicking badge");
+		if (!this.props.disabled && this.props.visible) {
 			e.preventDefault();
-			this.props.onClick(this.props.counter);
+			this.props.onClick(e);
+		}
+	}
+
+	public componentDidUpdate(prevProps: BadgeProps) {
+		if (this.props.counter !== prevProps.counter) {
+			this.props.onUpdate(this.props.counter);
 		}
 	}
 
@@ -162,3 +167,5 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 		);
 	}
 }
+
+export default Badge;

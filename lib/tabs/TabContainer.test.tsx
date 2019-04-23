@@ -1,21 +1,32 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
 import {Location} from "../shared";
-import {getDefaultTabContainerProps, Tab, TabContainer} from "./index";
+import {
+	getDefaultTabContainerProps,
+	getDefaultTabContainerState,
+	Tab,
+	TabContainer
+} from "./index";
 
 test("Test retrieval of Tabs props object", () => {
 	const props = getDefaultTabContainerProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultTabContainerState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Create an empty TabContainer instance", () => {
 	const ctl = mount(<TabContainer />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -28,7 +39,7 @@ test("Test TabContainer retrieval functions", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 	const container = ctl.instance() as TabContainer;
 	expect(container).toBeDefined();
@@ -61,7 +72,7 @@ test("Test the creation of a TabContainer instance (top)", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -74,7 +85,7 @@ test("Test the creation of a TabContainer instance (bottom)", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -87,7 +98,7 @@ test("Test the creation of a TabContainer instance (left)", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -100,7 +111,7 @@ test("Test the creation of a TabContainer instance (right)", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -113,7 +124,7 @@ test("Test disabling the TabContainer instance", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -126,7 +137,7 @@ test("Test making the TabContainer invisible", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -140,7 +151,7 @@ test("Test selecting the first tab within the TabContainer", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 	const container = ctl.instance() as TabContainer;
 	expect(container).toBeDefined();
@@ -166,7 +177,7 @@ test("Test removing the first item from the TabContainer", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 	const container = ctl.instance() as TabContainer;
 	expect(container).toBeDefined();
@@ -201,7 +212,7 @@ test("Test the TabContainer with the previous and next buttons", () => {
 		</TabContainer>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 	const container = ctl.instance() as TabContainer;
 	expect(container).toBeDefined();

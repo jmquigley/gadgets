@@ -28,9 +28,6 @@
  * @module Container
  */
 
-"use strict";
-
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {
 	BaseComponent,
@@ -49,22 +46,23 @@ export interface ContainerProps extends BaseProps {
 }
 
 export function getDefaultContainerProps(): ContainerProps {
-	return cloneDeep(
-		Object.assign({}, getDefaultBaseProps(), {
-			children: null,
-			obj: "Container",
-			title: ""
-		})
-	);
+	return {
+		...getDefaultBaseProps(),
+		children: null,
+		obj: "Container",
+		title: ""
+	};
 }
 
 export type ContainerState = BaseState;
 
 export function getDefaultContainerState(): ContainerState {
-	return cloneDeep({...getDefaultBaseState("ui-container")});
+	return {
+		...getDefaultBaseState("ui-container")
+	};
 }
 
-export const ContainerView: any = styled.div`
+const ContainerView: any = styled.div`
 	height: ${(props: ContainerProps) => props.height};
 	margin: 2px 0;
 	minheight: ${(props: ContainerProps) => props.minHeight};
@@ -105,3 +103,5 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 		);
 	}
 }
+
+export default Container;

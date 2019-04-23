@@ -1,6 +1,5 @@
-import {
+import Button, {
 	BaseButtonView,
-	Button,
 	ButtonProps,
 	ButtonState,
 	getDefaultButtonProps,

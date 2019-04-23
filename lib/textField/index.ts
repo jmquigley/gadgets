@@ -1,7 +1,6 @@
-import {
+import TextField, {
 	getDefaultTextFieldProps,
 	getDefaultTextFieldState,
-	TextField,
 	TextFieldProps,
 	TextFieldState,
 	TextFieldType

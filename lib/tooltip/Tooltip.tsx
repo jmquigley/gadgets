@@ -44,12 +44,9 @@
  * @module Tooltip
  */
 
-"use strict";
-
 // const debug = require('debug')('Tooltip');
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {
 	BaseComponent,
@@ -74,7 +71,7 @@ export interface TooltipProps extends BaseProps {
 export function getDefaultTooltipProps(): TooltipProps {
 	const theme = getTheme();
 
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		location: Location.top,
 		obj: "Tooltip",
@@ -83,7 +80,7 @@ export function getDefaultTooltipProps(): TooltipProps {
 			color: theme.tooltipForegroundColor,
 			backgroundColor: theme.tooltipBackgroundColor
 		}
-	});
+	};
 }
 
 export interface TooltipState extends BaseState {
@@ -91,125 +88,124 @@ export interface TooltipState extends BaseState {
 }
 
 export function getDefaultTooltipState(): TooltipState {
-	return cloneDeep({...getDefaultBaseState("ui-tooltip"), show: false});
+	return {...getDefaultBaseState("ui-tooltip"), show: false};
 }
 
-export const Bottom: any = css`
+const Bottom: any = css`
 	top: 100%;
 	left: 50%;
 	transform: translateX(-50%);
 `;
 
-export const BottomLeft: any = css`
+const BottomLeft: any = css`
 	top: 100%;
 	left: 25%;
 	transform: translateX(-50%);
 `;
 
-export const BottomRight: any = css`
+const BottomRight: any = css`
 	top: 100%;
 	left: 75%;
 	transform: translateX(-50%);
 `;
 
-export const MiddleLeft: any = css`
+const MiddleLeft: any = css`
 	top: 50%;
 	right: 100%;
 	transform: translateY(-50%);
 `;
 
-export const Middle: any = css`
+const Middle: any = css`
 	top: 50%;
 	left: 100%;
 	transform: translateY(-50%);
 `;
-export const MiddleRight: any = Middle;
 
-export const Top: any = css`
+const Top: any = css`
 	bottom: 100%;
 	left: 50%;
 	transform: translateX(-50%);
 `;
 
-export const TopLeft: any = css`
+const TopLeft: any = css`
 	bottom: 100%;
 	left: 25%;
 	transform: translateX(-50%);
 `;
 
-export const TopRight: any = css`
+const TopRight: any = css`
 	bottom: 100%;
 	left: 75%;
 	transform: translateX(-50%);
 `;
 
-export const TriangleBottom: any = `
+const TriangleBottom: any = `
 	position: absolute;
 	top: -0.75em;
 	left: 50%;
 	transform: translateX(-50%);
 `;
 
-export const TriangleBottomLeft: any = css`
+const TriangleBottomLeft: any = css`
 	position: absolute;
 	top: -0.75em;
 	left: 75%;
 	transform: translateX(-50%);
 `;
 
-export const TriangleBottomRight: any = css`
+const TriangleBottomRight: any = css`
 	position: absolute;
 	top: -0.75em;
 	left: 25%;
 	transform: translateX(-50%);
 `;
 
-export const TriangleMiddleLeft: any = css`
+const TriangleMiddleLeft: any = css`
 	position: absolute;
 	top: 50%;
 	right: -0.75em;
 	transform: translateY(-50%) rotate(90deg);
 `;
 
-export const TriangleMiddleRight: any = css`
+const TriangleMiddleRight: any = css`
 	position: absolute;
 	top: 50%;
 	left: -0.75em;
 	transform: translateY(-50%) rotate(270deg);
 `;
 
-export const TriangleTop: any = css`
+const TriangleTop: any = css`
 	position: absolute;
 	bottom: -0.75em;
 	left: 50%;
 	transform: translateX(-50%) rotate(180deg);
 `;
 
-export const TriangleTopLeft: any = css`
+const TriangleTopLeft: any = css`
 	position: absolute;
 	bottom: -0.75em;
 	left: 75%;
 	transform: translateX(-50%) rotate(180deg);
 `;
 
-export const TriangleTopRight: any = css`
+const TriangleTopRight: any = css`
 	position: absolute;
 	bottom: -0.75em;
 	left: 25%;
 	transform: translateX(-50%) rotate(180deg);
 `;
 
-export const Hide: any = css`
+const Hide: any = css`
 	opacity: 0;
 	z-index: calc(${baseZIndex} - 1);
 `;
 
-export const Show: any = css`
+const Show: any = css`
 	opacity: 1;
 	z-index: calc(${baseZIndex} + 1);
 `;
 
-export const StyledTriangle: any = styled(Triangle)`
+const StyledTriangle: any = styled(Triangle)`
 	${(props: TooltipProps) => {
 		switch (props.location) {
 			case Location.topLeft:
@@ -235,11 +231,11 @@ export const StyledTriangle: any = styled(Triangle)`
 	}};
 `;
 
-export const TootipContentView: any = styled.span`
+const TootipContentView: any = styled.span`
 	${(props: TooltipProps) => props.sizing && fontStyle[props.sizing]}
 `;
 
-export const TooltipView: any = styled.div`
+const TooltipView: any = styled.div`
 	border-radius: 10px;
 	flex: none;
 	line-height: initial;
@@ -392,3 +388,5 @@ export function tooltip(id: string, props: any) {
 
 	return null;
 }
+
+export default Tooltip;

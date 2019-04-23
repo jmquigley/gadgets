@@ -55,12 +55,9 @@
  * @module List
  */
 
-"use strict";
-
 // const debug = require('debug')('List');
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
@@ -79,18 +76,18 @@ export interface ListProps extends BaseProps {
 	alternating?: boolean;
 	children?: React.ReactNode;
 	noselect?: boolean;
-	onSelect?: any;
+	onSelect?: (title: string) => void;
 }
 
 export function getDefaultListProps(): ListProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		alternating: false,
 		children: null,
 		noselect: false,
 		obj: "List",
 		onSelect: nilEvent
-	});
+	};
 }
 
 export interface ListState extends BaseState {
@@ -99,14 +96,14 @@ export interface ListState extends BaseState {
 }
 
 export function getDefaultListState(className: string = "ui-list"): ListState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState(className),
 		keys: null,
 		selectedItem: null
-	});
+	};
 }
 
-export const ListView: any = styled.ul`
+const ListView: any = styled.ul`
 	border: solid 1px ${(props) => props.theme.borderColor};
 	list-style: none;
 
@@ -199,3 +196,5 @@ export class List extends BaseComponent<ListProps, ListState> {
 		);
 	}
 }
+
+export default List;

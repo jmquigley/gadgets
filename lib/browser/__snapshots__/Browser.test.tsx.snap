@@ -138,3 +138,25 @@ Object {
   "xcss": null,
 }
 `;
+
+exports[`Test retrieval of the Browser props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-browser" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "search": "",
+  "sizing": "normal",
+  "style": Object {},
+  "uri": "",
+  "uriHistory": Immutable.List [],
+}
+`;

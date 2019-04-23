@@ -57,12 +57,10 @@
  * @module Slider
  */
 
-"use strict";
-
 // const debug = require('debug')('Slider');
 
 import autobind from "autobind-decorator";
-import {cloneDeep, debounce} from "lodash";
+import {debounce} from "lodash";
 import * as React from "react";
 import {Keys} from "util.keys";
 import {closestNumber, nilEvent} from "util.toolbox";
@@ -82,7 +80,7 @@ import styled from "../shared/themed-components";
 export interface SliderProps extends BaseProps {
 	max?: number;
 	min?: number;
-	onSelect?: any;
+	onSelect?: (value: number) => void;
 	scale?: number;
 	snap?: boolean;
 	startPosition?: number;
@@ -90,7 +88,7 @@ export interface SliderProps extends BaseProps {
 }
 
 export function getDefaultSliderProps(): SliderProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		max: 100,
 		min: 0,
@@ -100,7 +98,7 @@ export function getDefaultSliderProps(): SliderProps {
 		snap: false,
 		startPosition: 0,
 		ticks: 0
-	});
+	};
 }
 
 export interface SliderState extends BaseState {
@@ -108,10 +106,10 @@ export interface SliderState extends BaseState {
 }
 
 export function getDefaultSliderState(): SliderState {
-	return cloneDeep({...getDefaultBaseState("ui-slider"), x: 0});
+	return {...getDefaultBaseState("ui-slider"), x: 0};
 }
 
-export const SliderBar: any = styled.div`
+const SliderBar: any = styled.div`
 	border: solid 1px ${(props: SliderProps) => props.theme.borderColor};
 	height: ${(props: SliderProps) => props.height}px;
 	left: 50%;
@@ -121,7 +119,7 @@ export const SliderBar: any = styled.div`
 	width: ${(props: SliderProps) => props.width}px;
 `;
 
-export const SliderContainer: any = styled.div`
+const SliderContainer: any = styled.div`
 	display: inline-block;
 	height: ${(props: SliderProps) => props.height}px;
 	position: relative;
@@ -131,7 +129,7 @@ export const SliderContainer: any = styled.div`
 	${(props: SliderProps) => invisible(props)}
 `;
 
-export const SliderElement: any = styled.div`
+const SliderElement: any = styled.div`
 	background-color: ${(props: SliderProps) => props.theme.backgroundColor};
 	border: solid 1px ${(props: SliderProps) => props.theme.borderColor};
 	left: ${(props: SliderProps) => props.left}px;
@@ -142,7 +140,7 @@ export const SliderElement: any = styled.div`
 	${(props: SliderProps) => props.sizing && boxStyle[props.sizing]}
 `;
 
-export const SliderTick: any = styled.div`
+const SliderTick: any = styled.div`
 	background-color: ${(props: SliderProps) => props.theme.borderColor};
 	height: 0.1875rem;
 	left: ${(props: SliderProps) => props.left}px;
@@ -306,3 +304,5 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		);
 	}
 }
+
+export default Slider;

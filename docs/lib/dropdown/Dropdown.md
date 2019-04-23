@@ -30,13 +30,13 @@ let options: DropdownOption[] = [
 <Dropdown iconName="cab" onClick={someFunction}
     defaultVal='val1'
     items={options}
-    onSelect{(val: string) => {// process value}}
+    onSelect{(val: DropdownDataType) => {// process value}}
 />
 ```
 
 ## API
 #### Events
-- `onSelect(val: any)` - The value (id) of the item that was selected
+- `onSelect(val: string)` - The value (id) of the item that was selected
 from the list.
 
 #### Styles

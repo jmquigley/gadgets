@@ -24,9 +24,6 @@
  * @module ListDivider
  */
 
-"use strict";
-
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {BaseComponent, Wrapper} from "../shared";
 import styled from "../shared/themed-components";
@@ -42,20 +39,20 @@ export interface ListDividerProps extends ListProps {
 }
 
 export function getDefaultListDividerProps(): ListDividerProps {
-	return cloneDeep({
+	return {
 		...getDefaultListProps(),
 		color: "lightgray",
 		obj: "ListDivider"
-	});
+	};
 }
 
 export type ListDividerState = ListState;
 
 export function getDefaultListDividerState(): ListDividerState {
-	return cloneDeep({...getDefaultListState("ui-list-divider")});
+	return {...getDefaultListState("ui-list-divider")};
 }
 
-export const ListDividerView: any = styled.li`
+const ListDividerView: any = styled.li`
 	background-color: inherit;
 
 	> hr {
@@ -80,14 +77,18 @@ export class ListDivider extends BaseComponent<
 		props: ListDividerProps,
 		state: ListDividerState
 	) {
-		const newState: ListDividerState = {
-			...state,
-			style: {
-				backgroundColor: props.color
-			}
-		};
+		if (props.color !== state.style.backgroundColor) {
+			const newState: ListDividerState = {
+				...state,
+				style: {
+					backgroundColor: props.color
+				}
+			};
 
-		return super.getDerivedStateFromProps(props, newState);
+			return super.getDerivedStateFromProps(props, newState);
+		}
+
+		return null;
 	}
 
 	public render() {
@@ -100,3 +101,5 @@ export class ListDivider extends BaseComponent<
 		);
 	}
 }
+
+export default ListDivider;

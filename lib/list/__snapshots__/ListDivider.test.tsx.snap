@@ -44,6 +44,27 @@ Object {
 }
 `;
 
+exports[`Test retrieval of ListHeader props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-list-divider" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "keys": null,
+  "selectedItem": null,
+  "sizing": "normal",
+  "style": Object {},
+}
+`;
+
 exports[`Test the creation of a ListDivider control 1`] = `
 <Wrapper
   alternating={false}

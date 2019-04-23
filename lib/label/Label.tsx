@@ -49,12 +49,9 @@
  * @module Label
  */
 
-"use strict";
-
 // const debug = require('debug')('Label');
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {sp} from "util.constants";
 import {nilEvent} from "util.toolbox";
@@ -74,19 +71,19 @@ import styled from "../shared/themed-components";
 export interface LabelProps extends BaseProps {
 	defaultText: string;
 	noedit?: boolean;
-	onBlur?: any;
-	onChange?: any;
-	onClick?: any;
-	onDoubleClick?: any;
-	onKeyDown?: any;
-	onKeyPress?: any;
-	onUpdate?: any;
+	onBlur?: (e: React.FocusEvent<HTMLSpanElement>) => void;
+	onChange?: (e: React.FormEvent<HTMLSpanElement>) => void;
+	onClick?: (e: React.MouseEvent<HTMLSpanElement>) => void;
+	onDoubleClick?: (e: React.MouseEvent<HTMLSpanElement>) => void;
+	onKeyDown?: (e: React.KeyboardEvent<HTMLSpanElement>) => void;
+	onKeyPress?: (e: React.KeyboardEvent<HTMLSpanElement>) => void;
+	onUpdate?: (previous: string, val: string) => void;
 	text?: string | number;
 	useedit?: boolean;
 }
 
 export function getDefaultLabelProps(): LabelProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		defaultText: "default",
 		noedit: false,
@@ -100,7 +97,7 @@ export function getDefaultLabelProps(): LabelProps {
 		onUpdate: nilEvent,
 		text: sp,
 		useedit: false
-	});
+	};
 }
 
 export interface LabelState extends BaseState {
@@ -111,16 +108,16 @@ export interface LabelState extends BaseState {
 }
 
 export function getDefaultLabelState(): LabelState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-label"),
 		editable: false,
 		originalText: "",
 		previousText: "",
 		text: ""
-	});
+	};
 }
 
-export const LabelView: any = styled.span`
+const LabelView: any = styled.span`
 	background-color: inherit;
 	:empty:before {
     	content: "${sp}";
@@ -187,7 +184,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 						text: val
 					},
 					() => {
-						this.props.onChange(val);
+						this.props.onChange(e);
 						this.props.onUpdate(previous, val);
 					}
 				);
@@ -301,3 +298,5 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		);
 	}
 }
+
+export default Label;

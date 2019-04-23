@@ -2,9 +2,15 @@
 
 import {EnumValues as ev} from "enum-values";
 import {mount} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
 import {Sizing} from "../shared";
-import {getDefaultTreeviewProps, TreeItem, Treeview} from "./index";
+import {
+	getDefaultTreeviewProps,
+	getDefaultTreeviewState,
+	TreeItem,
+	Treeview
+} from "./index";
 
 const treeData: TreeItem[] = [
 	{
@@ -27,8 +33,13 @@ const treeData: TreeItem[] = [
 test("Test retrieval of Treeview props object", () => {
 	const props = getDefaultTreeviewProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultTreeviewState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 for (const sizing of ev.getNames(Sizing)) {
@@ -37,7 +48,7 @@ for (const sizing of ev.getNames(Sizing)) {
 			<Treeview sizing={Sizing[sizing]} treeData={treeData} />
 		);
 
-		expect(ctl).toBeDefined();
+		assert(ctl);
 		expect(ctl).toMatchSnapshot();
 	});
 }

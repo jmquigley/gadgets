@@ -1,20 +1,28 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
-import {ButtonCircle, getDefaultButtonCircleProps} from "./index";
+import {
+	ButtonCircle,
+	getDefaultButtonCircleProps,
+	getDefaultButtonCircleState
+} from "./index";
 
 test("Test retrieval of ButtonCircle props object", () => {
 	const props = getDefaultButtonCircleProps();
-
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultButtonCircleState();
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a ButtonCircle control", () => {
 	const ctl = shallow(<ButtonCircle className='test-class' />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -22,7 +30,7 @@ test("Test disabling of a ButtonCircle control", () => {
 	const click = jest.fn();
 	const ctl = mount(<ButtonCircle onClick={click} disabled={true} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button")
@@ -35,7 +43,7 @@ test("Test making a ButtonCircle control invisible", () => {
 	const click = jest.fn();
 	const ctl = mount(<ButtonCircle onClick={click} visible={false} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button")
@@ -48,7 +56,7 @@ test("Test ButtonCircle click event", () => {
 	const click = jest.fn();
 	const ctl = mount(<ButtonCircle onClick={click} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	ctl.find(".ui-button")

@@ -367,6 +367,48 @@ Object {
 }
 `;
 
+exports[`Test retrieval of the Switch props object 2`] = `
+Object {
+  "buttonStyles": b {
+    "_classes": Map {
+      "ui-switch-button" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-switch" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "sliderStyles": b {
+    "_classes": Map {
+      "ui-switch-slider" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "style": Object {},
+  "toggle": false,
+}
+`;
+
 exports[`Test the click handler on the Switch control 1`] = `
 <Wrapper
   backgroundColor={null}

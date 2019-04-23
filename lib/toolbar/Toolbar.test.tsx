@@ -1,17 +1,23 @@
 "use strict";
 
 import {shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
 
 import {Button} from "../button";
 import {Justify, Sizing} from "../shared";
-import {getDefaultToolbarProps, Toolbar} from "./index";
+import {getDefaultToolbarProps, getDefaultToolbarState, Toolbar} from "./index";
 
 test("Test retrieval of Toolbar props object", () => {
 	const props = getDefaultToolbarProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultToolbarState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 [Justify.left, Justify.right, Justify.center].forEach((justify: Justify) => {
@@ -25,7 +31,7 @@ test("Test retrieval of Toolbar props object", () => {
 			</Toolbar>
 		);
 
-		expect(ctl).toBeDefined();
+		assert(ctl);
 		expect(ctl).toMatchSnapshot();
 	});
 });
@@ -38,7 +44,7 @@ test("Test disabling of a Toolbar instance", () => {
 		</Toolbar>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
@@ -50,6 +56,6 @@ test("Test making the Toolbar invisible", () => {
 		</Toolbar>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });

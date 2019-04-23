@@ -1,7 +1,6 @@
-import {
+import Preview, {
 	getDefaultPreviewProps,
 	getDefaultPreviewState,
-	Preview,
 	PreviewMode,
 	PreviewProps,
 	PreviewState

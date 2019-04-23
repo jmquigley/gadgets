@@ -5,7 +5,7 @@ The TextField is a wrapper component for the built in `<input>` tag.  This
 control allows the user to add validation routines to the input control
 beyond the builtin routines.
 
-Validations are creation by creating an instance of the `Validator` class and
+Validations are used by creating an instance of the `Validator` class and
 implementing a validation funtion, failure message, and success message.
 
 Validation is NOT used by default.  It must be declared with a prop named
@@ -92,30 +92,33 @@ called.  If validation passes, then true is given to the callback.
 validation message when the input contains validation code.
 
 #### Properties
-- `disabled: {boolean} (false)` - When true, the control is disabled
-- `id: {string} ('')` - The CSS id for this control
-- `initialValue: {string} ('')` - The first value set within the control.
+- `disabled=false {boolean}` - When true, the control is disabled
+- `id='' {string}` - The CSS id for this control
+- `initialValue='' {string}` - The first value set within the control.
 This is only done one time when the compoment is constructued.
-- `max: {string} ('any')` - the maxium number for a spinner text box.  When
+- `max='any' {string}` - the maxium number for a spinner text box.  When
 set to "any" there is no size.
-- `min: {string} ('any')` - the minimum  number for a spinner text box.  When
+- `min='any' {string}` - the minimum  number for a spinner text box.  When
 set to "any" there is no size.
-- `noborder: {boolean} (false)` - Turns off the border around the component
-- `sizing: {Sizing} (Sizing.normal)` - The font size for the control (see
+- `noborder=false {boolean}` - Turns off the border around the component
+- `sizing=Sizing.normal {Sizing}` - The font size for the control (see
 the Sizing class in shared).
-- `step: {string} ('any') - the increment number for a spinner text box.
+- `step='any' {string} - the increment number for a spinner text box.
 When this is set to "any" the step is 1 by default.
-- `type: {TextFieldtype} (TextFieldType.text)` - The type of input control.
+- `type=TextFieldType.text {TextFieldtype}` - The type of input control.
 This is the type defined by the [HTML input tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).  The
 value is an enum that maps to these valid types.
-- `useclear {boolean} (false)` - When used it presents a circle "x" button
+- `useclear=false {boolean}` - When used it presents a circle "x" button
 that will clear the current input from the control and set the focus to
 the input.
-- `usevalidation: {boolean} (false)` - If this is true then the validation
+- `usevalidation=false {boolean}` - If this is true then the validation
 routines are exectued.
-- `validators: {Validator[]} ([])` - A list of Validator classes.  Each of the
+- `validators=[] {Validator[]}` - A list of Validator classes.  Each of the
 classes in this list are used against the input to check if it passes the
 rules set in that validator function.
-- `visible: {boolean} (true)` - If set to false this control is hidden (set
+- `value=undefined {any}` - This is will override whatever is currently in
+the control.  It should only be used if the parent is going to control the
+contents of the control.
+- `visible=true {boolean}` - If set to false this control is hidden (set
 to a display of none).
 

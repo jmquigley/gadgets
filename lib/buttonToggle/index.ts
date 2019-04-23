@@ -1,7 +1,12 @@
-import {
-	ButtonToggle,
+import ButtonToggle, {
 	ButtonToggleProps,
-	getDefaultButtonToggleProps
+	getDefaultButtonToggleProps,
+	getDefaultButtonToggleState
 } from "./ButtonToggle";
 
-export {ButtonToggle, ButtonToggleProps, getDefaultButtonToggleProps};
+export {
+	ButtonToggle,
+	ButtonToggleProps,
+	getDefaultButtonToggleProps,
+	getDefaultButtonToggleState
+};

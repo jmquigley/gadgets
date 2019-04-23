@@ -31,11 +31,12 @@
  *
  * ## API
  * #### Events
- * - `onClip(uri: string, content: string, dom: any, history: List)` - When the user clicks
- * the "clip" button this event is invoked.  It is given the current URI, the text of the
- * page, the parsed dom for the page (if useparser is given) and the current link history
- * - `onOpen(uri: string, history: List)` - When a page is opened in the browser this
- * callback is invoked with the name of the URI that was opened.
+ * - `onClip(uri: string, content: string, dom: any, history: List<string>)` -
+ * When the user clicks the "clip" button this event is invoked.  It is
+ * given the current URI, the text of the page, the parsed dom for the page
+ * (if useparser is given) and the current link history
+ * - `onOpen(uri: string, history: List<string>)` - When a page is opened in the
+ * browser this callback is invoked with the name of the URI that was opened.
  *
  * #### Styles
  * - `ui-browser` - placed on the root `<div>` of the control.  This wraps the toolbar
@@ -58,13 +59,10 @@
  * @module Browser
  */
 
-"use strict";
-
 const debug = require("debug")("Browser");
 
 import autobind from "autobind-decorator";
 import {List} from "immutable";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
@@ -84,14 +82,19 @@ import {Toolbar} from "../toolbar";
 export interface BrowserProps extends BaseProps {
 	home?: string;
 	notooltips?: boolean;
-	onClip?: any;
-	onOpen?: any;
+	onClip?: (
+		uri: string,
+		content: string,
+		dom: Document,
+		history: List<string>
+	) => void;
+	onOpen?: (uri: string, history: List<string>) => void;
 	uri?: string;
 	useparser?: boolean;
 }
 
 export function getDefaultBrowserProps(): BrowserProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		home: "about:blank",
 		notooltips: false,
@@ -100,7 +103,7 @@ export function getDefaultBrowserProps(): BrowserProps {
 		onOpen: nilEvent,
 		uri: "about:blank",
 		useparser: false
-	});
+	};
 }
 
 export interface BrowserState extends BaseState {
@@ -110,12 +113,12 @@ export interface BrowserState extends BaseState {
 }
 
 export function getDefaultBrowserState(): BrowserState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-browser"),
 		search: "",
 		uri: "",
 		uriHistory: List()
-	});
+	};
 }
 
 const BrowserContainer: any = styled.div`
@@ -288,7 +291,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 				"document.documentElement.innerHTML",
 				false,
 				(content: string) => {
-					let dom: any = null;
+					let dom: Document = null;
 
 					// By default the webview content is not parsed into
 					// a DOM.  If the user requests it then this callback
@@ -444,3 +447,5 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		);
 	}
 }
+
+export default Browser;

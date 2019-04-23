@@ -1,28 +1,34 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import assert from "power-assert";
 import * as React from "react";
 import {SortedList} from "util.ds";
-import {getDefaultTagListProps, TagList} from "./index";
+import {getDefaultTagListProps, getDefaultTagListState, TagList} from "./index";
 
 test("Test retrieval of TagList props object", () => {
 	const props = getDefaultTagListProps();
 
-	expect(props).toBeDefined();
+	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultTagListState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 test("Test creation of a simple TagList instance", () => {
 	const ctl = shallow(<TagList />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 });
 
 test("Create a new static TagList with 3 tags (a, b, c)", () => {
 	const ctl = mount(<TagList tags={["a", "b", "c"]} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	const tags: SortedList<string> = ctl.state("tags");
@@ -33,7 +39,7 @@ test("Create a new static TagList with 3 tags (a, b, c)", () => {
 test("Create a new static TagList with 3 tags (c, b, a) with no sorting", () => {
 	const ctl = mount(<TagList nosort tags={["c", "b", "a"]} />);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	const tags: SortedList<string> = ctl.state("tags");
@@ -53,7 +59,7 @@ test("Create a new dynamic TagList by adding a new input", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	const input = ctl.find("input");
@@ -86,7 +92,7 @@ test("Try to create a duplicate entry within a dynamic TagList", () => {
 		/>
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	const input = ctl.find("input");
@@ -112,7 +118,7 @@ test("Create a new dynamic TagList item and cancel creation with escape", () => 
 		<TagList onKeyDown={keydown} tags={["a", "b", "c"]} useinput />
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	const input = ctl.find("input");
@@ -136,7 +142,7 @@ test("Remove a tag from a TagList", () => {
 		<TagList onDelete={ondelete} tags={["a", "b", "c"]} useinput />
 	);
 
-	expect(ctl).toBeDefined();
+	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
 	let tags: SortedList<string> = ctl.state("tags");

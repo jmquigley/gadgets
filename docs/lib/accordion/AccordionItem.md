@@ -33,9 +33,10 @@ This example would create an accordion control with two items.  The first
 item would be expanded by default and contain a right button control.
 
 #### Events
-- `onClick(toggleState)` - This callback is invoked when the header
-portion of the AccordionItem is clicked.  It is given the current
-state of the toggle (true if visible, otherwise false)
+- `onClick(e)` - Invoked when the AccordionItem is clicked.
+- `onUpdate(toggleState: boolean)` - This callback is invoked when the header
+portion of the AccordionItem is clicked.  It is given the current state of
+the toggle (true if visible, otherwise false)
 
 #### Styles
 - `ui-accordionitem` - The top level style for the Item on the outer `<div>`

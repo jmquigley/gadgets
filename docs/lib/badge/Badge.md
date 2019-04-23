@@ -22,8 +22,8 @@ import {Badge} from 'gadgets';
 
 ## API
 #### Events
-- `onClick(counter: number)` - when the counter value is clicked this
-callback is invoked.  It is given the current count value.
+- `onClick(event)` - when the counter value is clicked this callback is invoked.
+- `onUpdate(counter: number)` - Invoked when the badge count is updated/set.
 
 #### Styles
 - `ui-badge` - Top level class on the `<div>` of the badge (not the

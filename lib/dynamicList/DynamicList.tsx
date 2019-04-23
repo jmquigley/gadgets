@@ -122,12 +122,9 @@
  * @module DynamicList
  */
 
-"use strict";
-
 const debug = require("debug")("DynamicList");
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {sprintf} from "sprintf-js";
 import {sp} from "util.constants";
@@ -162,27 +159,28 @@ export interface DynamicListItem {
 }
 
 export interface DynamicListProps extends BaseProps {
+	collapsable?: boolean;
 	errorMessageDuration?: number;
 	items?: DynamicListItem;
 	layout?: TitleLayout;
 	nocollapse?: boolean;
 	noselect?: boolean;
-	onBlur?: any;
-	onClick?: any;
-	onDelete?: any;
-	onError?: any;
-	onFocus?: any;
-	onNew?: any;
-	onSelect?: any;
-	onSort?: any;
-	onUpdate?: any;
+	onBlur?: (e: React.FocusEvent<HTMLLIElement>) => void;
+	onClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
+	onDelete?: (title: string) => void;
+	onError?: (message: string) => void;
+	onFocus?: (e: React.FocusEvent<HTMLLIElement>) => void;
+	onNew?: (title: string, widget: any) => void;
+	onSelect?: (title: string) => void;
+	onSort?: (sortOrder: SortOrder) => void;
+	onUpdate?: (previousTitle: string, title: string) => void;
 	pageSizes?: number[];
 	sortOrder?: SortOrder;
 	title?: any;
 }
 
 export function getDefaultDynamicListProps(): DynamicListProps {
-	return cloneDeep({
+	return {
 		...getDefaultBaseProps(),
 		collapsable: false,
 		errorMessage: "",
@@ -204,7 +202,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 		pageSizes: defaultPageSizes,
 		sortOrder: SortOrder.ascending,
 		title: sp
-	});
+	};
 }
 
 export interface DynamicListState extends BaseState {
@@ -222,7 +220,7 @@ export interface DynamicListState extends BaseState {
 
 // TODO: add additional init
 export function getDefaultDynamicListState(): DynamicListState {
-	return cloneDeep({
+	return {
 		...getDefaultBaseState("ui-dynamiclist"),
 		errorMessage: "",
 		initialToggle: true,
@@ -234,10 +232,10 @@ export function getDefaultDynamicListState(): DynamicListState {
 		showNew: false,
 		sortOrder: SortOrder.ascending,
 		totalItems: 0
-	});
+	};
 }
 
-export const DynamicListContainer: any = styled.div`
+const DynamicListContainer: any = styled.div`
 	min-width: 200px;
 	position: relative;
 
@@ -245,7 +243,7 @@ export const DynamicListContainer: any = styled.div`
 	${(props: DynamicListProps) => invisible(props)}
 `;
 
-export const StyledDeleteButton: any = styled(Button)`
+const StyledDeleteButton: any = styled(Button)`
 	color: white;
 	background-color: silver;
 
@@ -254,8 +252,18 @@ export const StyledDeleteButton: any = styled(Button)`
 	}
 `;
 
-export const StyledListFooter: any = styled(ListFooter)`
+// TODO: these padding values only work on normal sizing
+const StyledListFooter: any = styled(ListFooter)`
 	padding-left: 3px;
+
+	> .ui-title-widget {
+		display: flex;
+		padding: 2px;
+	}
+
+	> .ui-title {
+		padding: 2px;
+	}
 
 	> .ui-title > .ui-textfield-container {
 		display: flex;
@@ -415,7 +423,7 @@ export class DynamicList extends BaseComponent<
 	}
 
 	@autobind
-	private handleBlur(e?: any) {
+	private handleBlur(e: React.FocusEvent<HTMLLIElement>) {
 		this.hideEdit();
 		this.props.onBlur(e);
 	}
@@ -522,8 +530,8 @@ export class DynamicList extends BaseComponent<
 	}
 
 	@autobind
-	private handleSearch(e: React.FormEvent<HTMLSelectElement>) {
-		const val: string = (e.target as HTMLSelectElement).value;
+	private handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
+		const val: string = (e.target as HTMLInputElement).value;
 
 		if (this._startSearch) {
 			this._previousPage = this.state.page;
@@ -737,7 +745,7 @@ export class DynamicList extends BaseComponent<
 							noedit
 							nohover={this.props.nocollapse}
 							noripple={this.props.nocollapse}
-							onClick={this.handleTitleClick}
+							onUpdate={this.handleTitleClick}
 							rightButton={
 								<Button
 									iconName='plus'
@@ -762,3 +770,5 @@ export class DynamicList extends BaseComponent<
 		);
 	}
 }
+
+export default DynamicList;

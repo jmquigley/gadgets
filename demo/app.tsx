@@ -97,7 +97,7 @@ class App extends React.Component<any, AppState> {
 
 				<Option
 					initialToggle={false}
-					onClick={this.handleToggleDisable}
+					onSelect={this.handleToggleDisable}
 					text='disabled'
 				/>
 				<Break sizing={this.state.sizing} />

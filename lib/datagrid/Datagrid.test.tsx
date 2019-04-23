@@ -9,7 +9,8 @@ import {
 	Datagrid,
 	DatagridColumn,
 	DatagridRow,
-	getDefaultDatagridProps
+	getDefaultDatagridProps,
+	getDefaultDatagridState
 } from "./index";
 
 const columns: DatagridColumn[] = [
@@ -30,6 +31,11 @@ test("Test retrieval of Datagrid props object", () => {
 
 	assert(props);
 	expect(props).toMatchSnapshot();
+
+	const state = getDefaultDatagridState();
+
+	assert(state);
+	expect(state).toMatchSnapshot();
 });
 
 for (const sizing of ev.getNames(Sizing)) {

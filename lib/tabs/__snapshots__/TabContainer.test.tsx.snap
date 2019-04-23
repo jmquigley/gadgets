@@ -1043,6 +1043,26 @@ Object {
 }
 `;
 
+exports[`Test retrieval of Tabs props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-tab-container" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "selectedTab": "",
+  "sizing": "normal",
+  "style": Object {},
+}
+`;
+
 exports[`Test selecting the first tab within the TabContainer 1`] = `
 <TabContainer
   backgroundColor={null}

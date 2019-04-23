@@ -1,8 +1,5 @@
 // TODO: add documenation for ListFooter
 
-"use strict";
-
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {BaseComponent, Wrapper} from "../shared";
 import styled from "../shared/themed-components";
@@ -18,12 +15,12 @@ import {
 export type ListFooterProps = TitleProps;
 
 export function getDefaultListFooterProps(): TitleProps {
-	return cloneDeep({
+	return {
 		...getDefaultTitleProps(),
 		layout: TitleLayout.even,
 		obj: "ListFooter",
 		title: ""
-	});
+	};
 }
 
 export type ListFooterState = TitleState;
@@ -32,7 +29,7 @@ export function getDefaultListFooterState(): ListFooterState {
 	return {...getDefaultTitleState("ui-list-footer")};
 }
 
-export const ListFooterView: any = styled(Title)`
+const ListFooterView: any = styled(Title)`
 	margin: -1px;
 	padding: 3px;
 	padding-left: 7px;
@@ -67,3 +64,5 @@ export class ListFooter extends BaseComponent<
 		);
 	}
 }
+
+export default ListFooter;

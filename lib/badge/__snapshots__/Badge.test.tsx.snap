@@ -29,6 +29,7 @@ exports[`Test creation of a Badge control 1`] = `
   obj="Badge"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding={null}
   reset={false}
   selected={false}
@@ -102,6 +103,7 @@ exports[`Test making the Badge control invisible 1`] = `
   obj="Badge"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding={null}
   reset={false}
   selected={false}
@@ -157,6 +159,7 @@ Object {
   "notooltip": false,
   "obj": "Badge",
   "onClick": [Function],
+  "onUpdate": [Function],
   "padding": null,
   "selected": false,
   "sizing": "normal",
@@ -173,6 +176,25 @@ Object {
   "visible": true,
   "width": null,
   "xcss": null,
+}
+`;
+
+exports[`Test retrieval of Badge props object 2`] = `
+Object {
+  "children": null,
+  "classes": b {
+    "_classes": Map {
+      "ui-badge" => true,
+    },
+    "_clstr": "",
+    "_delimiter": " ",
+    "_dirty": true,
+    "_obj": null,
+    "delete": [Function],
+    "reset": [Function],
+  },
+  "sizing": "normal",
+  "style": Object {},
 }
 `;
 
@@ -205,6 +227,7 @@ exports[`Test the disabling of a Badge control 1`] = `
   obj="Badge"
   onClick={[Function]}
   onError={[Function]}
+  onUpdate={[Function]}
   padding={null}
   reset={false}
   selected={false}

@@ -59,12 +59,9 @@
  * @module Breadcrumbs
  */
 
-"use strict";
-
 // const debug = require('debug')('Breadcrumbs');
 
 import autobind from "autobind-decorator";
-import {cloneDeep} from "lodash";
 import * as React from "react";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
@@ -94,35 +91,34 @@ export interface BreadcrumbsProps extends BaseProps {
 	icon?: string;
 	items?: Crumbs[];
 	noicon?: boolean;
-	onSelect?: any;
+	onSelect?: (name: string, uri: string) => void;
 }
 
 export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
-	return cloneDeep(
-		Object.assign({}, getDefaultBaseProps(), {
-			chevron: "chevron-right",
-			icon: "paperclip",
-			items: [],
-			obj: "Breadcrumbs",
-			onSelect: nilEvent
-		})
-	);
+	return {
+		...getDefaultBaseProps(),
+		chevron: "chevron-right",
+		icon: "paperclip",
+		items: [],
+		obj: "Breadcrumbs",
+		onSelect: nilEvent
+	};
 }
 
 export type BreadcrumbsState = BaseState;
 
 export function getDefaultBreadcrumbsState(): BreadcrumbsState {
-	return cloneDeep({...getDefaultBaseState("ui-breadcrumbs")});
+	return {...getDefaultBaseState("ui-breadcrumbs")};
 }
 
-export const BreadcrumbsView: any = styled.div`
+const BreadcrumbsView: any = styled.div`
 	display: inline-flex;
 
 	${(props: BreadcrumbsProps) => disabled(props)}
 	${(props: BreadcrumbsProps) => invisible(props)}
 `;
 
-export const IconView: any = styled(Icon)`
+const IconView: any = styled(Icon)`
 	margin-top: ${(props: BreadcrumbsProps) => {
 		switch (props.sizing) {
 			case Sizing.xxsmall:
@@ -146,7 +142,7 @@ export const IconView: any = styled(Icon)`
 	padding: 0 0.3rem;
 `;
 
-export const ChevronIconView: any = styled(IconView)`
+const ChevronIconView: any = styled(IconView)`
 	opacity: 0.33;
 `;
 
@@ -232,3 +228,5 @@ export class Breadcrumbs extends BaseComponent<
 		);
 	}
 }
+
+export default Breadcrumbs;

@@ -1,5 +1,4 @@
-import {
-	ButtonCircle,
+import ButtonCircle, {
 	ButtonCircleProps,
 	ButtonCircleState,
 	getDefaultButtonCircleProps,

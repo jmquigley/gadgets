@@ -1,4 +1,14 @@
-import {getDefaultTabProps, Tab} from "./Tab";
-import {getDefaultTabContainerProps, TabContainer} from "./TabContainer";
+import Tab, {getDefaultTabProps, getDefaultTabState} from "./Tab";
+import TabContainer, {
+	getDefaultTabContainerProps,
+	getDefaultTabContainerState
+} from "./TabContainer";
 
-export {getDefaultTabProps, getDefaultTabContainerProps, Tab, TabContainer};
+export {
+	getDefaultTabProps,
+	getDefaultTabState,
+	getDefaultTabContainerProps,
+	getDefaultTabContainerState,
+	Tab,
+	TabContainer
+};

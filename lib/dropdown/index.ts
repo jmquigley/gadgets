@@ -1,8 +1,16 @@
-import {
-	Dropdown,
+import Dropdown, {
+	DropdownDataType,
 	DropdownOption,
 	DropdownProps,
-	getDefaultDropdownProps
+	getDefaultDropdownProps,
+	getDefaultDropdownState
 } from "./Dropdown";
 
-export {Dropdown, DropdownOption, DropdownProps, getDefaultDropdownProps};
+export {
+	Dropdown,
+	DropdownDataType,
+	DropdownOption,
+	DropdownProps,
+	getDefaultDropdownProps,
+	getDefaultDropdownState
+};
