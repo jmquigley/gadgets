@@ -24,7 +24,6 @@ exports[`Test creation of an inny type Switch 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Switch"
@@ -33,6 +32,7 @@ exports[`Test creation of an inny type Switch 1`] = `
   outyScale={1.25}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   sliderScale={1.25}
@@ -74,13 +74,13 @@ exports[`Test creation of an inny type Switch 1`] = `
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="Switch"
       onClick={[Function]}
       outyScale={1.25}
       padding={null}
+      ripple={false}
       selected={false}
       sizing="normal"
       sliderScale={1.25}
@@ -99,7 +99,7 @@ exports[`Test creation of an inny type Switch 1`] = `
       xcss={null}
     >
       <Switch__StyledButton
-        className="ui-switch-button ripple"
+        className="ui-switch-button"
         height="9.6px"
         onClick={[Function]}
         style={
@@ -138,7 +138,6 @@ exports[`Test creation of an outy type Switch 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Switch"
@@ -147,6 +146,7 @@ exports[`Test creation of an outy type Switch 1`] = `
   outyScale={1.25}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   sliderScale={1.25}
@@ -188,13 +188,13 @@ exports[`Test creation of an outy type Switch 1`] = `
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="Switch"
       onClick={[Function]}
       outyScale={1.25}
       padding={null}
+      ripple={false}
       selected={false}
       sizing="normal"
       sliderScale={1.25}
@@ -213,7 +213,7 @@ exports[`Test creation of an outy type Switch 1`] = `
       xcss={null}
     >
       <Switch__StyledButton
-        className="ui-switch-button ripple"
+        className="ui-switch-button"
         height="20px"
         onClick={[Function]}
         style={
@@ -252,13 +252,13 @@ exports[`Test disabling of the Switch control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Switch"
   onClick={[Function]}
   outyScale={1.25}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   sliderScale={1.25}
@@ -298,13 +298,13 @@ exports[`Test making the Switch control invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Switch"
   onClick={[Function]}
   outyScale={1.25}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   sliderScale={1.25}
@@ -345,13 +345,13 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Switch",
   "onClick": [Function],
   "outyScale": 1.25,
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "sliderScale": 1.25,
@@ -369,41 +369,8 @@ Object {
 
 exports[`Test retrieval of the Switch props object 2`] = `
 Object {
-  "buttonStyles": b {
-    "_classes": Map {
-      "ui-switch-button" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-switch" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
-  "sliderStyles": b {
-    "_classes": Map {
-      "ui-switch-slider" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "style": Object {},
   "toggle": false,
 }
@@ -433,7 +400,6 @@ exports[`Test the click handler on the Switch control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Switch"
@@ -442,6 +408,7 @@ exports[`Test the click handler on the Switch control 1`] = `
   outyScale={1.25}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   sliderScale={1.25}
@@ -483,13 +450,13 @@ exports[`Test the click handler on the Switch control 1`] = `
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="Switch"
       onClick={[Function]}
       outyScale={1.25}
       padding={null}
+      ripple={false}
       selected={false}
       sizing="normal"
       sliderScale={1.25}
@@ -508,7 +475,7 @@ exports[`Test the click handler on the Switch control 1`] = `
       xcss={null}
     >
       <Switch__StyledButton
-        className="ui-switch-button ripple"
+        className="ui-switch-button"
         height="20px"
         onClick={[Function]}
         style={

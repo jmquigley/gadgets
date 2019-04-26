@@ -24,13 +24,13 @@ exports[`Test creation of an Icon control with icon 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Icon"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -70,11 +70,11 @@ exports[`Test creation of an Icon control with icon 1`] = `
     minWidth={null}
     noedit={false}
     nohover={false}
-    noripple={false}
     notheme={false}
     notooltip={false}
     obj="Icon"
     padding={null}
+    ripple={false}
     selected={false}
     sizing="normal"
     style={
@@ -118,13 +118,13 @@ exports[`Test creation of an Icon control with image 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Icon"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -140,7 +140,7 @@ exports[`Test creation of an Icon control with image 1`] = `
     backgroundColor={null}
     borderColor={null}
     bottom={null}
-    className="ui-icon"
+    className="ui-icon ui-image"
     color={null}
     contentEditable={false}
     controlled={true}
@@ -159,11 +159,11 @@ exports[`Test creation of an Icon control with image 1`] = `
     minWidth={null}
     noedit={false}
     nohover={false}
-    noripple={false}
     notheme={false}
     notooltip={false}
     obj="Icon"
     padding={null}
+    ripple={false}
     selected={false}
     sizing="normal"
     src="./test-icon-image.png"
@@ -203,11 +203,11 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Icon"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -246,11 +246,11 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Icon",
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -267,17 +267,6 @@ Object {
 exports[`Test retrieval of the Icon props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-icon" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }
@@ -307,11 +296,11 @@ exports[`Test the disabling of the Icon control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Icon"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}

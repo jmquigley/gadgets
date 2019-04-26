@@ -114,7 +114,7 @@ export interface BrowserState extends BaseState {
 
 export function getDefaultBrowserState(): BrowserState {
 	return {
-		...getDefaultBaseState("ui-browser"),
+		...getDefaultBaseState(),
 		search: "",
 		uri: "",
 		uriHistory: List()
@@ -190,7 +190,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	public static readonly defaultProps: BrowserProps = getDefaultBrowserProps();
 
 	constructor(props: BrowserProps) {
-		super(props, Browser.defaultProps.style);
+		super(props, "ui-browser", Browser.defaultProps.style);
 
 		const uri: string = this.props.uri || this.props.home || "";
 		this.state = {
@@ -360,9 +360,11 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
-				<BrowserContainer className={this.state.classes.classnames}>
+				<BrowserContainer className={this.className}>
 					<BrowserToolbar className='ui-browser-toolbar'>
 						<BrowserToolbarButtons>
 							<Button

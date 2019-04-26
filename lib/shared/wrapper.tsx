@@ -82,7 +82,10 @@ export function getDefaultWrapperProps(): WrapperProps {
 		...getDefaultBaseProps(),
 		children: null,
 		onError: nilEvent,
-		reset: false
+		reset: false,
+		style: {
+			whiteSpace: "pre-wrap"
+		}
 	};
 }
 
@@ -93,7 +96,7 @@ export interface WrapperState extends BaseState {
 
 export function getDefaultWrapperState(): WrapperState {
 	return {
-		...getDefaultBaseState("ui-error"),
+		...getDefaultBaseState(),
 		error: "",
 		errorInfo: null
 	};
@@ -109,7 +112,7 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 	public state: WrapperState = getDefaultWrapperState();
 
 	constructor(props: WrapperProps) {
-		super(props, Wrapper.defaultProps.style);
+		super(props, "ui-error", Wrapper.defaultProps.style);
 	}
 
 	public componentDidCatch(error: any = null, errorInfo: any = null) {
@@ -139,26 +142,28 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 				errorInfo: null
 			};
 
-			return super.getDerivedStateFromProps(props, newState);
+			return super.getDerivedStateFromProps(props, newState, true);
 		}
 
 		return null;
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let content: any = null;
 
 		if (this.state.errorInfo && !this.props.disabled) {
 			let errobj: any = this.props.err;
 			if (errobj == null) {
 				errobj = (
-					<WrapperView className={this.state.classes.classnames}>
+					<WrapperView className={this.className}>
 						<span className='ui-error-message'>
 							Error in component '{this.props.obj}'
 						</span>
 						<details
 							className='ui-error-stack'
-							style={{whiteSpace: "pre-wrap"}}
+							style={this.state.style}
 						>
 							{this.state.error}
 							<br />

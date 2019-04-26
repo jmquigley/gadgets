@@ -12,8 +12,9 @@
 
 #### Bug Fixes:
 
-- Fixed event call signature on all components for typescript checking
-- Removed unnecessary cloneDeep calls for all default prop initializers
+- Fixed event call signature on all components for typescript checking.
+- Removed unnecessary cloneDeep calls for all default prop initializers.
+- Fixed a problem where tags could not be removed from tagList.
 
 ---
 

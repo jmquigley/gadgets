@@ -1,9 +1,9 @@
 "use strict";
 
 import {mount, shallow} from "enzyme";
+import {List} from "immutable";
 import assert from "power-assert";
 import * as React from "react";
-import {SortedList} from "util.ds";
 import {getDefaultTagListProps, getDefaultTagListState, TagList} from "./index";
 
 test("Test retrieval of TagList props object", () => {
@@ -31,9 +31,9 @@ test("Create a new static TagList with 3 tags (a, b, c)", () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	const tags: SortedList<string> = ctl.state("tags");
+	const tags: List<string> = ctl.state("tags");
 	expect(tags).toBeDefined();
-	expect(tags.array).toEqual(expect.arrayContaining(["a", "b", "c"]));
+	expect(tags.toArray()).toEqual(expect.arrayContaining(["a", "b", "c"]));
 });
 
 test("Create a new static TagList with 3 tags (c, b, a) with no sorting", () => {
@@ -42,9 +42,9 @@ test("Create a new static TagList with 3 tags (c, b, a) with no sorting", () => 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	const tags: SortedList<string> = ctl.state("tags");
+	const tags: List<string> = ctl.state("tags");
 	expect(tags).toBeDefined();
-	expect(tags.array).toEqual(expect.arrayContaining(["c", "b", "a"]));
+	expect(tags.toArray()).toEqual(expect.arrayContaining(["c", "b", "a"]));
 });
 
 test("Create a new dynamic TagList by adding a new input", () => {
@@ -65,10 +65,9 @@ test("Create a new dynamic TagList by adding a new input", () => {
 	const input = ctl.find("input");
 	expect(input).toBeDefined();
 
-	let tags: SortedList<string> = ctl.state("tags");
+	let tags: List<string> = ctl.state("tags");
 	expect(tags).toBeDefined();
-
-	expect(tags.array).toEqual(expect.arrayContaining(["b", "c", "d"]));
+	expect(tags.toArray()).toEqual(expect.arrayContaining(["b", "c", "d"]));
 	input.simulate("keyPress", {key: "Enter", target: {value: "a"}});
 
 	expect(keypress).toHaveBeenCalled();
@@ -77,7 +76,9 @@ test("Create a new dynamic TagList by adding a new input", () => {
 
 	tags = ctl.state("tags");
 	expect(tags).toBeDefined();
-	expect(tags.array).toEqual(expect.arrayContaining(["a", "b", "c", "d"]));
+	expect(tags.toArray()).toEqual(
+		expect.arrayContaining(["a", "b", "c", "d"])
+	);
 });
 
 test("Try to create a duplicate entry within a dynamic TagList", () => {
@@ -98,10 +99,9 @@ test("Try to create a duplicate entry within a dynamic TagList", () => {
 	const input = ctl.find("input");
 	expect(input).toBeDefined();
 
-	let tags: SortedList<string> = ctl.state("tags");
+	let tags: List<string> = ctl.state("tags");
 	expect(tags).toBeDefined();
-
-	expect(tags.array).toEqual(expect.arrayContaining(["b", "c", "d"]));
+	expect(tags.toArray()).toEqual(expect.arrayContaining(["b", "c", "d"]));
 	input.simulate("keyPress", {key: "Enter", target: {value: "d"}});
 
 	expect(keypress).toHaveBeenCalled();
@@ -109,7 +109,7 @@ test("Try to create a duplicate entry within a dynamic TagList", () => {
 
 	tags = ctl.state("tags");
 	expect(tags).toBeDefined();
-	expect(tags.array).toEqual(expect.arrayContaining(["b", "c", "d"]));
+	expect(tags.toArray()).toEqual(expect.arrayContaining(["b", "c", "d"]));
 });
 
 test("Create a new dynamic TagList item and cancel creation with escape", () => {
@@ -124,16 +124,16 @@ test("Create a new dynamic TagList item and cancel creation with escape", () => 
 	const input = ctl.find("input");
 	expect(input).toBeDefined();
 
-	let tags: SortedList<string> = ctl.state("tags");
+	let tags: List<string> = ctl.state("tags");
 	expect(tags).toBeDefined();
 
-	expect(tags.array).toEqual(expect.arrayContaining(["a", "b", "c"]));
+	expect(tags.toArray()).toEqual(expect.arrayContaining(["a", "b", "c"]));
 	input.simulate("keyDown", {key: "Escape"});
 	expect(keydown).toHaveBeenCalled();
 
 	tags = ctl.state("tags");
 	expect(tags).toBeDefined();
-	expect(tags.array).toEqual(expect.arrayContaining(["a", "b", "c"]));
+	expect(tags.toArray()).toEqual(expect.arrayContaining(["a", "b", "c"]));
 });
 
 test("Remove a tag from a TagList", () => {
@@ -145,9 +145,9 @@ test("Remove a tag from a TagList", () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	let tags: SortedList<string> = ctl.state("tags");
+	let tags: List<string> = ctl.state("tags");
 	expect(tags).toBeDefined();
-	expect(tags.array).toEqual(expect.arrayContaining(["a", "b", "c"]));
+	expect(tags.toArray()).toEqual(expect.arrayContaining(["a", "b", "c"]));
 
 	const btns = ctl.find(".ui-button");
 
@@ -162,5 +162,5 @@ test("Remove a tag from a TagList", () => {
 
 	tags = ctl.state("tags");
 	expect(tags).toBeDefined();
-	expect(tags.array).toEqual(expect.arrayContaining(["b", "c"]));
+	expect(tags.toArray()).toEqual(expect.arrayContaining(["b", "c"]));
 });

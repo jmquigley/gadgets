@@ -23,7 +23,6 @@ exports[`Test creation of a Browser instance 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   notooltips={false}
@@ -31,6 +30,7 @@ exports[`Test creation of a Browser instance 1`] = `
   onClip={[Function]}
   onOpen={[Function]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -69,7 +69,6 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   notooltips={false}
@@ -77,6 +76,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
   onClip={[Function]}
   onOpen={[Function]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -116,7 +116,6 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "notooltips": false,
@@ -124,6 +123,7 @@ Object {
   "onClip": [Function],
   "onOpen": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -142,17 +142,6 @@ Object {
 exports[`Test retrieval of the Browser props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-browser" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "search": "",
   "sizing": "normal",
   "style": Object {},

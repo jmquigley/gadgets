@@ -7,6 +7,7 @@ const theme: ThemeProps = {
 	backgroundColor: Color.white,
 	borderColor: Color.silver,
 	buttonColor: Color.gray,
+	chevronColor: Color.gray,
 	color: Color.black,
 	fontFamily: "OpenSans, Georgia, serif",
 	headerForegroundColor: Color.white,

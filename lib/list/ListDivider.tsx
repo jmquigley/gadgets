@@ -49,7 +49,9 @@ export function getDefaultListDividerProps(): ListDividerProps {
 export type ListDividerState = ListState;
 
 export function getDefaultListDividerState(): ListDividerState {
-	return {...getDefaultListState("ui-list-divider")};
+	return {
+		...getDefaultListState()
+	};
 }
 
 const ListDividerView: any = styled.li`
@@ -70,7 +72,7 @@ export class ListDivider extends BaseComponent<
 	public state: ListState = getDefaultListDividerState();
 
 	constructor(props: ListDividerProps) {
-		super(props, ListDivider.defaultProps.style);
+		super(props, "ui-list-divider", ListDivider.defaultProps.style);
 	}
 
 	public static getDerivedStateFromProps(
@@ -85,16 +87,18 @@ export class ListDivider extends BaseComponent<
 				}
 			};
 
-			return super.getDerivedStateFromProps(props, newState);
+			return super.getDerivedStateFromProps(props, newState, true);
 		}
 
 		return null;
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
-				<ListDividerView className={this.state.classes.classnames}>
+				<ListDividerView className={this.className}>
 					<hr style={this.state.style} />
 				</ListDividerView>
 			</Wrapper>

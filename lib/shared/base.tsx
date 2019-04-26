@@ -43,10 +43,12 @@
 
 "use strict";
 
-// const debug = require('debug')('base');
+// const debug = require("debug")("base");
 
+import {isEqual} from "lodash";
 import * as React from "react";
 import {calc} from "util.calc";
+import {ClassNames} from "util.classnames";
 import {getUUID} from "util.toolbox";
 import {BaseProps, Styles} from "./props";
 import {FontStyle, Sizes, Sizing, Styling} from "./sizing";
@@ -64,11 +66,20 @@ export abstract class BaseComponent<
 > extends React.PureComponent<P, S> {
 	public static defaultStyles: any = {};
 
+	private _className: ClassNames = new ClassNames();
+	private _defaultClassName: string;
 	private _id: string;
 	private _theme: ThemeProps = null;
 
-	constructor(props: P, defaultStyles: Styles = {}) {
+	constructor(
+		props: P,
+		defaultClassName: string,
+		defaultStyles: Styles = {}
+	) {
 		super(props);
+
+		this._defaultClassName = defaultClassName;
+		this._className = new ClassNames(defaultClassName);
 
 		// If an id value is not given as a prop, then generate a unique id.  If the
 		// component is under test, then 0 is used for the UUID value (to make it
@@ -89,6 +100,14 @@ export abstract class BaseComponent<
 		}
 
 		BaseComponent.defaultStyles = defaultStyles;
+	}
+
+	get className(): string {
+		return this._className.value;
+	}
+
+	get defaultClassName(): string {
+		return this._defaultClassName;
 	}
 
 	get defaultSize(): number {
@@ -238,31 +257,25 @@ export abstract class BaseComponent<
 
 	/**
 	 * Each component has a getDerivedStateFromProps call.  This method is used
-	 * by that call to set state properties that are common to all components.
-	 * @param props {P} the set of props that will be updated
-	 * @param state {S} the current state object when called
+	 * by that call to set state properties that are common to all components.  It
+	 * is checked for changes before the update will go through (so updates can be
+	 * avoided when not needed).  The method contains a 3rd parameter flag to
+	 * force this to return a new object instead of null.
+	 * @param props {P} - the set of props that will be updated
+	 * @param state {S} - the current state object when called
+	 * @param forceUpdate=false {boolean} - force the state to return an object for
+	 * update
 	 * @return {S} a new, mutated state that will be merged into the current state
 	 */
-	public static getDerivedStateFromProps(props: any, state: any): any {
-		let newState: any = null;
+	public static getDerivedStateFromProps(
+		props: any,
+		state: any,
+		forceUpdate: boolean = false
+	): any {
+		const newState: any = {...state};
+		let dirty: boolean = forceUpdate;
 
 		if (state && props) {
-			newState = {...state};
-
-			if ("classes" in newState) {
-				if (props.className != null) {
-					newState.classes.add(props.className);
-				}
-
-				if (props.nohover) {
-					newState.classes.on("nohover");
-				}
-
-				if (props.noripple) {
-					newState.classes.off("ripple");
-				}
-			}
-
 			if ("style" in newState) {
 				newState.style = {
 					...BaseComponent.defaultStyles,
@@ -270,24 +283,60 @@ export abstract class BaseComponent<
 					...props.style
 				};
 
+				if (!isEqual(newState.style, state.style)) {
+					dirty = true;
+				}
+
 				if (props.color) {
 					newState.style["color"] = props.color;
+					dirty = true;
 				}
 
 				if (props.backgroundColor) {
 					newState.style["backgroundColor"] = props.backgroundColor;
+					dirty = true;
 				}
 
 				if (props.borderColor) {
 					newState.style["borderColor"] = props.borderColor;
+					dirty = true;
 				}
 			}
 
-			if ("sizing" in newState) {
+			if ("sizing" in newState && props.sizing !== newState.sizing) {
 				newState.sizing = props.sizing;
+				dirty = true;
 			}
 		}
 
-		return newState;
+		if (dirty) {
+			return newState;
+		} else {
+			return null;
+		}
+	}
+
+	protected updateClassName(classNames: string | string[] = null): string {
+		this._className.clear();
+		this._className.add(this._defaultClassName);
+		this._className.add(classNames);
+
+		if (
+			this.props.className &&
+			!this._className.contains(this.props.className)
+		) {
+			this._className.add(this.props.className);
+		}
+
+		this._className.onIf(this.props.ripple && !this.props.disabled)(
+			"ripple"
+		);
+		this._className.onIf(this.props.disabled)("nohover");
+
+		if ("selected" in this.props) {
+			this._className.onIf(this.props.selected)("ui-selected");
+		}
+
+		return this._className.value;
 	}
 }

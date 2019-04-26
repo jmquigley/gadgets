@@ -26,7 +26,7 @@ export function getDefaultListFooterProps(): TitleProps {
 export type ListFooterState = TitleState;
 
 export function getDefaultListFooterState(): ListFooterState {
-	return {...getDefaultTitleState("ui-list-footer")};
+	return {...getDefaultTitleState()};
 }
 
 const ListFooterView: any = styled(Title)`
@@ -47,16 +47,18 @@ export class ListFooter extends BaseComponent<
 	public state: ListFooterState = getDefaultListFooterState();
 
 	constructor(props: ListFooterProps) {
-		super(props, ListFooter.defaultProps.style);
+		super(props, "ui-list-footer", ListFooter.defaultProps.style);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<ListFooterView
 					{...this.props}
-					className={this.state.classes.classnames}
-					noripple
+					className={this.className}
+					ripple={this.props.ripple}
 					style={this.state.style}
 					title={this.props.title}
 				/>

@@ -25,7 +25,6 @@ exports[`Test creation of a default DialogBox control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="DialogBox"
@@ -35,6 +34,7 @@ exports[`Test creation of a default DialogBox control 1`] = `
   onSelection={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   show={false}
   sizing="normal"
@@ -147,7 +147,6 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="DialogBox"
@@ -157,6 +156,7 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
   onSelection={[MockFunction]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   show={true}
   sizing="normal"
@@ -270,7 +270,6 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "DialogBox",
@@ -278,6 +277,7 @@ Object {
   "onOpen": [Function],
   "onSelection": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "show": false,
   "sizing": "normal",
@@ -295,17 +295,6 @@ Object {
 exports[`Test retrieval of DialogBox props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-dialogbox" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "showModal": false,
   "sizing": "normal",
   "style": Object {},
@@ -337,7 +326,6 @@ exports[`Test the creation of an custom DialogBox 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="DialogBox"
@@ -347,6 +335,7 @@ exports[`Test the creation of an custom DialogBox 1`] = `
   onSelection={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   show={true}
   sizing="normal"
@@ -463,7 +452,6 @@ exports[`Test the creation of an error DialogBox 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="DialogBox"
@@ -473,6 +461,7 @@ exports[`Test the creation of an error DialogBox 1`] = `
   onSelection={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   show={true}
   sizing="normal"
@@ -585,7 +574,6 @@ exports[`Test the creation of an info DialogBox 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="DialogBox"
@@ -595,6 +583,7 @@ exports[`Test the creation of an info DialogBox 1`] = `
   onSelection={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   show={true}
   sizing="normal"
@@ -707,7 +696,6 @@ exports[`Test the creation of an success DialogBox 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="DialogBox"
@@ -717,6 +705,7 @@ exports[`Test the creation of an success DialogBox 1`] = `
   onSelection={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   show={true}
   sizing="normal"
@@ -829,7 +818,6 @@ exports[`Test the creation of an warning DialogBox 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="DialogBox"
@@ -839,6 +827,7 @@ exports[`Test the creation of an warning DialogBox 1`] = `
   onSelection={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   show={true}
   sizing="normal"

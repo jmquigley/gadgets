@@ -22,7 +22,6 @@ exports[`Test creation of a simple Tag instance 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tag"
@@ -32,6 +31,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
   onMouseOver={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -82,7 +82,6 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tag"
@@ -91,6 +90,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -127,7 +127,6 @@ exports[`Test making Tag invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tag"
@@ -136,6 +135,7 @@ exports[`Test making Tag invisible 1`] = `
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -173,7 +173,6 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Tag",
@@ -182,6 +181,7 @@ Object {
   "onMouseOut": [Function],
   "onMouseOver": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -199,17 +199,6 @@ Object {
 exports[`Test retrieval of Tag props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-tag" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "showDelete": false,
   "sizing": "normal",
   "style": Object {},

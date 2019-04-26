@@ -86,7 +86,7 @@ export function getDefaultBadgeProps(): BadgeProps {
 export type BadgeState = BaseState;
 
 export function getDefaultBadgeState(): BadgeState {
-	return {...getDefaultBaseState("ui-badge")};
+	return {...getDefaultBaseState()};
 }
 
 const BadgeView: any = styled.div`
@@ -115,7 +115,7 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 	public state: BadgeState = getDefaultBadgeState();
 
 	constructor(props: BadgeProps) {
-		super(props, Badge.defaultProps.style);
+		super(props, "ui-badge", Badge.defaultProps.style);
 		this.props.onUpdate(this.props.counter);
 	}
 
@@ -134,8 +134,9 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 	}
 
 	public render() {
-		let badge = null;
+		this.updateClassName();
 
+		let badge = null;
 		if (
 			(this.props.suppress && this.props.counter < 1) ||
 			!this.props.visible
@@ -144,7 +145,7 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 		} else {
 			badge = (
 				<BadgeView
-					className={this.state.classes.classnames}
+					className={this.className}
 					disabled={this.props.disabled}
 					location={this.props.location}
 					onClick={this.handleClick}

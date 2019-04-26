@@ -28,7 +28,6 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   nocollapse={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="AccordionItem"
@@ -43,6 +42,7 @@ exports[`Test clicking of the AccordionItem header 1`] = `
   onUpdate={[Function]}
   padding={null}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -88,7 +88,6 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   nocollapse={true}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="AccordionItem"
@@ -103,6 +102,7 @@ exports[`Test clicking the AccordionItem header when setting nocollapse 1`] = `
   onUpdate={[Function]}
   padding={null}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -148,7 +148,6 @@ exports[`Test making the AccordionItem invisible 1`] = `
   nocollapse={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="AccordionItem"
@@ -165,6 +164,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
   padding={null}
   reset={false}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -211,7 +211,6 @@ exports[`Test making the AccordionItem invisible 1`] = `
       nocollapse={false}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="AccordionItem"
@@ -226,6 +225,7 @@ exports[`Test making the AccordionItem invisible 1`] = `
       onUpdate={[Function]}
       padding={null}
       rightButton={null}
+      ripple={false}
       selected={false}
       sizing="normal"
       stacked={false}
@@ -274,7 +274,6 @@ Object {
   "nocollapse": false,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "AccordionItem",
@@ -289,6 +288,7 @@ Object {
   "onUpdate": [Function],
   "padding": null,
   "rightButton": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "stacked": false,
@@ -309,17 +309,6 @@ Object {
 exports[`Test retrieval of AccordionItem props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-accordionitem" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
   "toggle": false,
@@ -354,7 +343,6 @@ exports[`Test the creation of a AccordionItem control 1`] = `
   nocollapse={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="AccordionItem"
@@ -371,6 +359,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
   padding={null}
   reset={false}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -417,7 +406,6 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       nocollapse={false}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="AccordionItem"
@@ -432,6 +420,7 @@ exports[`Test the creation of a AccordionItem control 1`] = `
       onUpdate={[Function]}
       padding={null}
       rightButton={null}
+      ripple={false}
       selected={false}
       sizing="normal"
       stacked={false}
@@ -479,7 +468,6 @@ exports[`Test the disabling of the AccordionItem 1`] = `
   nocollapse={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="AccordionItem"
@@ -496,6 +484,7 @@ exports[`Test the disabling of the AccordionItem 1`] = `
   padding={null}
   reset={false}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -512,7 +501,7 @@ exports[`Test the disabling of the AccordionItem 1`] = `
   xcss={null}
 >
   <AccordionItem__AccordionItemView
-    className="ui-accordionitem"
+    className="ui-accordionitem nohover"
     style={Object {}}
   >
     <Item
@@ -542,7 +531,6 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       nocollapse={false}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="AccordionItem"
@@ -557,6 +545,7 @@ exports[`Test the disabling of the AccordionItem 1`] = `
       onUpdate={[Function]}
       padding={null}
       rightButton={null}
+      ripple={false}
       selected={false}
       sizing="normal"
       stacked={false}

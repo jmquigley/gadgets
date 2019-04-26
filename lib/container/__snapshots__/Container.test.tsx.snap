@@ -22,13 +22,13 @@ exports[`Test adding custom className to Container control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Container"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -78,13 +78,13 @@ exports[`Test creation of a Container control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Container"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -134,13 +134,13 @@ exports[`Test creation of a Container control with an id value 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Container"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -191,11 +191,11 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Container",
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -213,17 +213,6 @@ Object {
 exports[`Test retrieval of Container props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-container" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }

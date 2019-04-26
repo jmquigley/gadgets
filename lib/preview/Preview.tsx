@@ -36,7 +36,7 @@
  * @module Preview
  */
 
-const debug = require("debug")("Preview");
+// const debug = require("debug")("Preview");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -85,7 +85,7 @@ export interface PreviewState extends BaseState {
 
 export function getDefaultPreviewState(): PreviewState {
 	return {
-		...getDefaultBaseState("ui-preview"),
+		...getDefaultBaseState(),
 		content: "",
 		html: ""
 	};
@@ -119,7 +119,7 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 	private _webview: any = null;
 
 	constructor(props: PreviewProps) {
-		super(props, Preview.defaultProps.style);
+		super(props, "ui-preview", Preview.defaultProps.style);
 	}
 
 	@autobind
@@ -137,7 +137,7 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 				content: props.content
 			};
 
-			return super.getDerivedStateFromProps(props, newState);
+			return super.getDerivedStateFromProps(props, newState, true);
 		}
 
 		return null;
@@ -177,11 +177,12 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 	}
 
 	public render() {
-		debug("render -> props: %O, state: %O", this.props, this.state);
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<PreviewWrapper
-					className={this.state.classes.classnames}
+					className={this.className}
 					disabled={this.props.disabled}
 					ref={this.handleRef}
 					style={this.state.style}

@@ -101,14 +101,15 @@ export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
 		icon: "paperclip",
 		items: [],
 		obj: "Breadcrumbs",
-		onSelect: nilEvent
+		onSelect: nilEvent,
+		ripple: false
 	};
 }
 
 export type BreadcrumbsState = BaseState;
 
 export function getDefaultBreadcrumbsState(): BreadcrumbsState {
-	return {...getDefaultBaseState("ui-breadcrumbs")};
+	return {...getDefaultBaseState()};
 }
 
 const BreadcrumbsView: any = styled.div`
@@ -157,7 +158,7 @@ export class Breadcrumbs extends BaseComponent<
 	private _iconKeys: Keys;
 
 	constructor(props: BreadcrumbsProps) {
-		super(props, Breadcrumbs.defaultProps.style);
+		super(props, "ui-breadcrumbs", Breadcrumbs.defaultProps.style);
 
 		this._nameKeys = new Keys({
 			testing: this.props.testing,
@@ -179,13 +180,13 @@ export class Breadcrumbs extends BaseComponent<
 	}
 
 	public render() {
-		const components: any[] = [];
+		this.updateClassName();
 
+		const components: any[] = [];
 		if (this.props.items.length >= 1) {
 			for (const [idx, {name, uri}] of this.props.items.entries()) {
 				components.push(
 					<ButtonText
-						{...this.props}
 						className='ui-breadcrumbs-name'
 						justify={Justify.center}
 						key={this._nameKeys.at(idx)}
@@ -195,10 +196,10 @@ export class Breadcrumbs extends BaseComponent<
 				);
 				components.push(
 					<ChevronIconView
-						{...this.props}
 						className='ui-breadcrumbs-chevron'
 						iconName={this.props.chevron}
 						key={this._iconKeys.at(idx)}
+						ripple={false}
 					/>
 				);
 			}
@@ -214,13 +215,14 @@ export class Breadcrumbs extends BaseComponent<
 					{...this.props}
 					className='ui-breadcrumbs-icon'
 					iconName={this.props.icon}
+					ripple={false}
 				/>
 			);
 		}
 
 		return (
 			<Wrapper {...this.props}>
-				<BreadcrumbsView className={this.state.classes.classnames}>
+				<BreadcrumbsView className={this.className}>
 					{icon}
 					{components}
 				</BreadcrumbsView>

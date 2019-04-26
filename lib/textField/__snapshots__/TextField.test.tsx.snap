@@ -28,7 +28,7 @@ exports[`Test creation of a TextField control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  noripple={false}
+  noripple={true}
   nospinner={false}
   notheme={false}
   notooltip={false}
@@ -42,6 +42,7 @@ exports[`Test creation of a TextField control 1`] = `
   onValidation={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   size={null}
   sizing="normal"
@@ -66,7 +67,7 @@ exports[`Test creation of a TextField control 1`] = `
     width={null}
   >
     <TextField__TextFieldView
-      className="ui-textfield"
+      className="ui-textfield test-class"
       disabled={false}
       noborder={false}
       visible={true}
@@ -98,7 +99,7 @@ exports[`Test creation of a TextField control 1`] = `
         noborder={false}
         noedit={false}
         nohover={false}
-        noripple={false}
+        noripple={true}
         nospinner={false}
         notheme={false}
         notooltip={false}
@@ -108,6 +109,7 @@ exports[`Test creation of a TextField control 1`] = `
         onKeyDown={[Function]}
         onKeyPress={[Function]}
         padding={null}
+        ripple={false}
         selected={false}
         size={null}
         sizing="normal"
@@ -158,7 +160,7 @@ exports[`Test disabling of a TextField control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  noripple={false}
+  noripple={true}
   nospinner={false}
   notheme={false}
   notooltip={false}
@@ -170,6 +172,7 @@ exports[`Test disabling of a TextField control 1`] = `
   onKeyPress={[Function]}
   onValidation={[Function]}
   padding={null}
+  ripple={false}
   selected={false}
   size={null}
   sizing="normal"
@@ -218,7 +221,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
+  "noripple": true,
   "nospinner": false,
   "notheme": false,
   "notooltip": false,
@@ -230,6 +233,7 @@ Object {
   "onKeyPress": [Function],
   "onValidation": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "size": null,
   "sizing": "normal",
@@ -252,17 +256,6 @@ Object {
 exports[`Test retrieval of TextField props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-textfield" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "message": "",
   "messageType": 0,
   "minWidth": "",

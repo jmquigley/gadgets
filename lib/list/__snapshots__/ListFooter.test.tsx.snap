@@ -24,13 +24,13 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": true,
   "notheme": false,
   "notooltip": false,
   "obj": "ListFooter",
   "onClick": [Function],
   "onUpdate": [Function],
   "padding": null,
+  "ripple": true,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -50,17 +50,6 @@ Object {
 exports[`Test retrieval of ListFooter props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-list-footer" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }
@@ -89,13 +78,13 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={true}
   notheme={false}
   notooltip={false}
   obj="ListFooter"
   onClick={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={Object {}}

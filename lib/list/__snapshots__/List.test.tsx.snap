@@ -23,7 +23,6 @@ exports[`Test disabling of a List control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   noselect={false}
   notheme={false}
   notooltip={false}
@@ -32,6 +31,7 @@ exports[`Test disabling of a List control 1`] = `
   onSelect={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -45,7 +45,7 @@ exports[`Test disabling of a List control 1`] = `
 >
   <List__ListView
     alternating={false}
-    className="ui-list"
+    className="ui-list nohover"
     style={Object {}}
   >
     <li
@@ -88,7 +88,6 @@ exports[`Test making List control invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   noselect={false}
   notheme={false}
   notooltip={false}
@@ -97,6 +96,7 @@ exports[`Test making List control invisible 1`] = `
   onSelect={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -154,13 +154,13 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "noselect": false,
   "notheme": false,
   "notooltip": false,
   "obj": "List",
   "onSelect": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -177,17 +177,6 @@ Object {
 exports[`Test retrieval of List props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-list" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "keys": null,
   "selectedItem": null,
   "sizing": "normal",
@@ -218,7 +207,6 @@ exports[`Test the creation of a List control container 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   noselect={false}
   notheme={false}
   notooltip={false}
@@ -227,6 +215,7 @@ exports[`Test the creation of a List control container 1`] = `
   onSelect={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}

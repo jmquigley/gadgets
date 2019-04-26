@@ -39,11 +39,11 @@ exports[`Test creation of a simple Datagrid component (inherit) 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Datagrid"
   padding={null}
+  ripple={false}
   rows={
     Array [
       Object {
@@ -120,11 +120,11 @@ exports[`Test creation of a simple Datagrid component (large) 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Datagrid"
   padding={null}
+  ripple={false}
   rows={
     Array [
       Object {
@@ -201,11 +201,11 @@ exports[`Test creation of a simple Datagrid component (medium) 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Datagrid"
   padding={null}
+  ripple={false}
   rows={
     Array [
       Object {
@@ -282,11 +282,11 @@ exports[`Test creation of a simple Datagrid component (normal) 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Datagrid"
   padding={null}
+  ripple={false}
   rows={
     Array [
       Object {
@@ -363,11 +363,11 @@ exports[`Test creation of a simple Datagrid component (small) 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Datagrid"
   padding={null}
+  ripple={false}
   rows={
     Array [
       Object {
@@ -444,11 +444,11 @@ exports[`Test creation of a simple Datagrid component (xlarge) 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Datagrid"
   padding={null}
+  ripple={false}
   rows={
     Array [
       Object {
@@ -525,11 +525,11 @@ exports[`Test creation of a simple Datagrid component (xsmall) 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Datagrid"
   padding={null}
+  ripple={false}
   rows={
     Array [
       Object {
@@ -606,11 +606,11 @@ exports[`Test creation of a simple Datagrid component (xxlarge) 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Datagrid"
   padding={null}
+  ripple={false}
   rows={
     Array [
       Object {
@@ -687,11 +687,11 @@ exports[`Test creation of a simple Datagrid component (xxsmall) 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Datagrid"
   padding={null}
+  ripple={false}
   rows={
     Array [
       Object {
@@ -753,11 +753,11 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Datagrid",
   "padding": null,
+  "ripple": false,
   "rows": Array [],
   "selected": false,
   "sizing": "normal",
@@ -775,17 +775,6 @@ Object {
 exports[`Test retrieval of Datagrid props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-datagrid" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }

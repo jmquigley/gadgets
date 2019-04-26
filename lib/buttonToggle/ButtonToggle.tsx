@@ -117,6 +117,7 @@ export function getDefaultButtonToggleProps(): ButtonToggleProps {
 		obj: "ButtonToggle",
 		onClick: nilEvent,
 		onToggle: nilEvent,
+		ripple: false,
 		selected: false
 	};
 }
@@ -127,7 +128,7 @@ export interface ButtonToggleState extends ButtonState {
 
 export function getDefaultButtonToggleState(): ButtonToggleState {
 	return {
-		...getDefaultButtonState("ui-button-toggle"),
+		...getDefaultButtonState(),
 		toggle: false
 	};
 }
@@ -139,7 +140,7 @@ export class ButtonToggle extends BaseComponent<
 	public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
 	constructor(props: ButtonToggleProps) {
-		super(props, ButtonToggle.defaultProps.style);
+		super(props, "ui-button-toggle", ButtonToggle.defaultProps.style);
 
 		this.state = {
 			...getDefaultButtonToggleState(),
@@ -187,21 +188,22 @@ export class ButtonToggle extends BaseComponent<
 			}
 		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return super.getDerivedStateFromProps(props, newState, true);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<Button
 					{...this.props}
-					className={this.state.classes.classnames}
+					className={this.className}
 					iconName={
 						this.state.toggle
 							? this.props.iconNameOn
 							: this.props.iconNameOff
 					}
-					noripple
 					onClick={this.handleClick}
 					style={this.state.style}
 				/>

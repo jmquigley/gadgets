@@ -32,7 +32,6 @@ exports[`Test disabling of a ListItem control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="ListItem"
@@ -48,6 +47,7 @@ exports[`Test disabling of a ListItem control 1`] = `
   onUpdate={[Function]}
   padding={null}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -97,7 +97,6 @@ exports[`Test making ListItem control invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="ListItem"
@@ -113,6 +112,7 @@ exports[`Test making ListItem control invisible 1`] = `
   onUpdate={[Function]}
   padding={null}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -161,7 +161,6 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "ListItem",
@@ -177,6 +176,7 @@ Object {
   "onUpdate": [Function],
   "padding": null,
   "rightButton": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "stacked": false,
@@ -197,20 +197,9 @@ Object {
 exports[`Test retrieval of ListItem props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-listitem" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
-  "toggleRipple": false,
+  "toggleRipple": true,
 }
 `;
 
@@ -246,7 +235,6 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="ListItem"
@@ -264,6 +252,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   padding={null}
   reset={false}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -310,7 +299,6 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
     minWidth={null}
     noedit={false}
     nohover={false}
-    noripple={false}
     notheme={false}
     notooltip={false}
     obj="ListItem"
@@ -326,6 +314,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
     onUpdate={[Function]}
     padding={null}
     rightButton={null}
+    ripple={true}
     selected={false}
     sizing="normal"
     stacked={false}
@@ -376,7 +365,6 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="ListItem"
@@ -394,6 +382,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   padding={null}
   reset={false}
   rightButton={null}
+  ripple={false}
   selected={true}
   sizing="normal"
   stacked={false}
@@ -413,7 +402,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
     backgroundColor={null}
     borderColor={null}
     bottom={null}
-    className="ui-listitem"
+    className="ui-listitem ui-selected"
     color={null}
     contentEditable={false}
     controlled={true}
@@ -440,7 +429,6 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
     minWidth={null}
     noedit={false}
     nohover={false}
-    noripple={false}
     notheme={false}
     notooltip={false}
     obj="ListItem"
@@ -456,6 +444,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
     onUpdate={[Function]}
     padding={null}
     rightButton={null}
+    ripple={true}
     selected={true}
     sizing="normal"
     stacked={false}

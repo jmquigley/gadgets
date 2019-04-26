@@ -22,12 +22,12 @@ exports[`Creation of Tooltip in position bottom 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -68,12 +68,12 @@ exports[`Creation of Tooltip in position bottomLeft 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -114,12 +114,12 @@ exports[`Creation of Tooltip in position bottomRight 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -160,12 +160,12 @@ exports[`Creation of Tooltip in position left 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -206,12 +206,12 @@ exports[`Creation of Tooltip in position middle 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -252,12 +252,12 @@ exports[`Creation of Tooltip in position middleLeft 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -298,12 +298,12 @@ exports[`Creation of Tooltip in position middleRight 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -344,12 +344,12 @@ exports[`Creation of Tooltip in position none 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -390,12 +390,12 @@ exports[`Creation of Tooltip in position right 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -436,12 +436,12 @@ exports[`Creation of Tooltip in position top 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -482,12 +482,12 @@ exports[`Creation of Tooltip in position topLeft 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -528,12 +528,12 @@ exports[`Creation of Tooltip in position topRight 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -574,12 +574,12 @@ exports[`Test creation of Tooltip location none 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
   padding={null}
   parent={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -620,7 +620,6 @@ exports[`Test creation of a Tooltip control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
@@ -628,6 +627,7 @@ exports[`Test creation of a Tooltip control 1`] = `
   padding={null}
   parent={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -706,7 +706,6 @@ exports[`Test disabling of a Tooltip 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
@@ -714,6 +713,7 @@ exports[`Test disabling of a Tooltip 1`] = `
   padding={null}
   parent={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -731,7 +731,7 @@ exports[`Test disabling of a Tooltip 1`] = `
   xcss={null}
 >
   <Tooltip__TooltipView
-    className="ui-tooltip"
+    className="ui-tooltip nohover"
     location="top"
     sizing="small"
     style={
@@ -790,7 +790,6 @@ exports[`Test making a Tooltip invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tooltip"
@@ -798,6 +797,7 @@ exports[`Test making a Tooltip invisible 1`] = `
   padding={null}
   parent={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -875,12 +875,12 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Tooltip",
   "padding": null,
   "parent": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {
@@ -900,17 +900,6 @@ Object {
 exports[`Test retrieval of Tooltip props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-tooltip" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "show": false,
   "sizing": "normal",
   "style": Object {},

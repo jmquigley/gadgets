@@ -23,7 +23,6 @@ exports[`Test a double click edit of the Label control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -35,6 +34,7 @@ exports[`Test a double click edit of the Label control 1`] = `
   onKeyPress={[MockFunction]}
   onUpdate={[MockFunction]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -73,7 +73,6 @@ exports[`Test cancelling a double click edit of the Label control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -85,6 +84,7 @@ exports[`Test cancelling a double click edit of the Label control 1`] = `
   onKeyPress={[MockFunction]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -123,7 +123,6 @@ exports[`Test creation of a Label control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -137,6 +136,7 @@ exports[`Test creation of a Label control 1`] = `
   onUpdate={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -159,6 +159,7 @@ exports[`Test creation of a Label control 1`] = `
     onDoubleClick={[Function]}
     onKeyDown={[Function]}
     onKeyPress={[Function]}
+    ripple={false}
     sizing="normal"
     style={Object {}}
     suppressContentEditableWarning={true}
@@ -192,7 +193,6 @@ exports[`Test double click change to Label and blur to save 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -204,6 +204,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
   onKeyPress={[Function]}
   onUpdate={[MockFunction]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -242,7 +243,6 @@ exports[`Test making the Label control invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -254,6 +254,7 @@ exports[`Test making the Label control invisible 1`] = `
   onKeyPress={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -293,7 +294,6 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Label",
@@ -305,6 +305,7 @@ Object {
   "onKeyPress": [Function],
   "onUpdate": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -323,17 +324,6 @@ Object {
 exports[`Test retrieval of default Label props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-label" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "editable": false,
   "originalText": "",
   "previousText": "",
@@ -366,7 +356,6 @@ exports[`Test the disabling of the Label control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -378,6 +367,7 @@ exports[`Test the disabling of the Label control 1`] = `
   onKeyPress={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}

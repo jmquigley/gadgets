@@ -81,7 +81,7 @@ export function getDefaultToolbarProps(): ToolbarProps {
 export type ToolbarState = BaseState;
 
 export function getDefaultToolbarState(): ToolbarState {
-	return {...getDefaultBaseState("ui-toolbar")};
+	return {...getDefaultBaseState()};
 }
 
 const ToolbarView: any = styled.div`
@@ -144,11 +144,13 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 	]);
 
 	constructor(props: ToolbarProps) {
-		super(props, Toolbar.defaultProps.style);
+		super(props, "ui-toolbar", Toolbar.defaultProps.style);
 		this._keys = new Keys({testing: this.props.testing});
 	}
 
 	public render() {
+		this.updateClassName();
+
 		const components: any = [];
 
 		React.Children.forEach(
@@ -228,7 +230,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 
 		return (
 			<Wrapper {...this.props}>
-				<ToolbarView className={this.state.classes.classnames}>
+				<ToolbarView className={this.className}>
 					<ToolbarGroupView
 						className='ui-toolbar-group'
 						justify={this.props.justify}

@@ -109,7 +109,7 @@ export interface LabelState extends BaseState {
 
 export function getDefaultLabelState(): LabelState {
 	return {
-		...getDefaultBaseState("ui-label"),
+		...getDefaultBaseState(),
 		editable: false,
 		originalText: "",
 		previousText: "",
@@ -119,6 +119,9 @@ export function getDefaultLabelState(): LabelState {
 
 const LabelView: any = styled.span`
 	background-color: inherit;
+	display: inline-flex;
+	flex-grow: 1;
+
 	:empty:before {
     	content: "${sp}";
 	}
@@ -133,7 +136,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	private _label: any = null;
 
 	constructor(props: LabelProps) {
-		super(props, Label.defaultProps.style);
+		super(props, "ui-label", Label.defaultProps.style);
 		this.state = {
 			...getDefaultLabelState(),
 			editable: props.useedit,
@@ -265,20 +268,22 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	) {
 		const newState: LabelState = {...state};
 
-		if (String(props.text) !== newState.originalText) {
+		if (String(props.text) !== state.originalText) {
 			newState.previousText = newState.text;
 			newState.text = String(props.text);
 			newState.originalText = String(props.text);
 		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return super.getDerivedStateFromProps(props, newState, true);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<LabelView
-					className={this.state.classes.classnames}
+					className={this.className}
 					contentEditable={this.state.editable}
 					disabled={this.props.disabled}
 					ref={this.handleRef}
@@ -287,6 +292,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 					onDoubleClick={this.handleDoubleClick}
 					onKeyDown={this.handleKeyDown}
 					onKeyPress={this.handleKeyPress}
+					ripple={this.props.ripple}
 					sizing={this.props.sizing}
 					style={this.state.style}
 					suppressContentEditableWarning

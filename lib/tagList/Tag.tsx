@@ -75,7 +75,7 @@ export interface TagState extends BaseState {
 }
 
 export function getDefaultTagState(): TagState {
-	return {...getDefaultBaseState("ui-tag"), showDelete: false};
+	return {...getDefaultBaseState(), showDelete: false};
 }
 
 const DeleteButtonView: any = styled(ButtonCircle)`
@@ -116,7 +116,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	public state: TagState = getDefaultTagState();
 
 	constructor(props: TagProps) {
-		super(props, Tag.defaultProps.style);
+		super(props, "ui-tag", Tag.defaultProps.style);
 	}
 
 	@autobind
@@ -145,6 +145,8 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	}
 
 	public render() {
+		this.updateClassName();
+
 		const {onDelete, ...props} = this.props;
 
 		this.tag = React.Children.map(props.children, (child: any) => {
@@ -158,7 +160,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 					disabled={props.disabled}
 					iconName='times'
 					onClick={this.handleClick}
-					sizing={BaseComponent.prev(this.props.sizing).type}
+					sizing={BaseComponent.prev(props.sizing).type}
 					style={{
 						backgroundColor: Color.white,
 						borderColor: Color.error,
@@ -173,7 +175,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		return (
 			<Wrapper {...props}>
 				<TagView
-					className={this.state.classes.classnames}
+					className={this.className}
 					onMouseOut={this.handleMouseOut}
 					onMouseOver={this.handleMouseOver}
 					style={this.state.style}

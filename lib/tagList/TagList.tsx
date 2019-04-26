@@ -58,8 +58,8 @@
 const debug = require("debug")("TagList");
 
 import autobind from "autobind-decorator";
+import {List} from "immutable";
 import * as React from "react";
-import {List, SortedList} from "util.ds";
 import {nilEvent} from "util.toolbox";
 import {Icon} from "../icon";
 import {
@@ -107,12 +107,12 @@ export function getDefaultTagListProps(): TagListProps {
 
 export interface TagListState extends BaseState {
 	inputTextSize: number;
-	tags?: SortedList<string> | List<string>;
+	tags?: List<string>;
 }
 
 export function getDefaultTagListState(): TagListState {
 	return {
-		...getDefaultBaseState("ui-taglist"),
+		...getDefaultBaseState(),
 		inputTextSize: 1,
 		tags: null
 	};
@@ -150,19 +150,12 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	public state: TagListState = getDefaultTagListState();
 
 	constructor(props: TagListProps) {
-		super(props, TagList.defaultProps.style);
+		super(props, "ui-taglist", TagList.defaultProps.style);
 
-		if (props.nosort) {
-			this.state = {
-				...getDefaultTagListState(),
-				tags: new List<string>(props.tags)
-			};
-		} else {
-			this.state = {
-				...getDefaultTagListState(),
-				tags: new SortedList<string>(props.tags)
-			};
-		}
+		this.state = {
+			...getDefaultTagListState(),
+			tags: List<string>(props.tags)
+		};
 	}
 
 	private clearInput(e: HTMLInputElement) {
@@ -188,12 +181,13 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 
 	@autobind
 	private handleDelete(tag: string) {
-		const {tags} = this.state;
+		let {tags} = this.state;
 
-		tags.remove(tag);
+		tags = tags.remove(tags.indexOf(tag));
+
 		this.setState(
 			{
-				tags: tags
+				tags: this.props.nosort ? tags : tags.sort()
 			},
 			() => {
 				this.props.onDelete(tag);
@@ -214,12 +208,13 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
 		if (e.key === "Enter") {
 			const target = e.target as HTMLInputElement;
-			const {tags} = this.state;
+			let {tags} = this.state;
 
 			if (target.value && !tags.contains(target.value)) {
-				tags.insert(target.value);
+				tags = tags.push(target.value);
+
 				this.setState({
-					tags: tags
+					tags: this.props.nosort ? tags : tags.sort()
 				});
 
 				this.props.onNew(target.value);
@@ -231,7 +226,11 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	}
 
 	public render() {
-		const tags = this.state.tags.array.map((tag: string) => {
+		debug("render-> props: %O, state: %O", this.props, this.state);
+
+		this.updateClassName();
+
+		const tags = this.state.tags.map((tag: string) => {
 			return (
 				<Tag
 					disabled={this.props.disabled}
@@ -274,7 +273,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		return (
 			<Wrapper {...this.props}>
 				<TagListView
-					className={this.state.classes.classnames}
+					className={this.className}
 					sizing={this.props.sizing}
 					style={this.state.style}
 				>

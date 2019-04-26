@@ -49,6 +49,8 @@
  * @module Dropdown
  */
 
+// const debug = require("debug")("Dropdown");
+
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {sprintf} from "sprintf-js";
@@ -99,7 +101,7 @@ export interface DropdownState extends BaseState {
 }
 
 export function getDefaultDropdownState(): DropdownState {
-	return {...getDefaultBaseState("ui-dropdown"), currentValue: ""};
+	return {...getDefaultBaseState(), currentValue: ""};
 }
 
 const DropdownContainerView: any = styled.div`
@@ -109,17 +111,18 @@ const DropdownContainerView: any = styled.div`
 
 const DropdownView: any = styled.select`
 	-webkit-appearance: none;
-	-webkit-border-radius: 0px;
-	background-position: 100% 50%;
-	background-repeat: no-repeat;
 	font-size: inherit;
 	height: 100%;
+	background-position: right;
+	background-repeat: no-repeat;
 
 	${(props: DropdownProps) => disabled(props)}
 	${(props: DropdownProps) => invisible(props)}
 `;
 
-const chevronImage: string = `url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='%s' height='%s' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>")`;
+const chevronSVG: string = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='%s' height='%s' fill='%%23%s'><path d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'/></svg>`;
+
+const chevronImage: string = `url("data:image/svg+xml;utf8,${chevronSVG}")`;
 
 export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	private _keys: Keys;
@@ -127,7 +130,7 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	public static readonly defaultProps: DropdownProps = getDefaultDropdownProps();
 
 	constructor(props: DropdownProps) {
-		super(props, Dropdown.defaultProps.style);
+		super(props, "ui-dropdown", Dropdown.defaultProps.style);
 
 		this.state = {
 			...getDefaultDropdownState(),
@@ -139,13 +142,16 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	}
 
 	private getChevronStyle(sizing: Sizing) {
-		const size = BaseComponent.fontSizePX(sizing);
-		const chevron = sprintf(chevronImage, size);
+		const color = this.theme.chevronColor.replace("#", "");
+		const height = BaseComponent.fontSizePX(sizing);
+		const width = calc(height, "* 1.5");
+
+		const chevron = sprintf(chevronImage, width, height, color);
 
 		return {
 			backgroundImage: chevron,
-			paddingRight: size,
-			paddingLeft: calc(size, "* 0.2")
+			paddingRight: width,
+			paddingLeft: calc(width, "* 0.4")
 		};
 	}
 
@@ -173,6 +179,8 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	}
 
 	public render() {
+		this.updateClassName();
+
 		const options: any[] = this.props.items.map(({value, label}, idx) => (
 			<option key={this._keys.at(idx)} value={value}>
 				{label}
@@ -186,7 +194,7 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 					sizing={this.props.sizing}
 				>
 					<DropdownView
-						className={this.state.classes.classnames}
+						className={this.className}
 						disabled={this.props.disabled}
 						id={this.id}
 						onChange={this.handleChange}

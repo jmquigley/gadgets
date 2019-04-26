@@ -120,7 +120,7 @@ export interface TabContainerState extends BaseState {
 
 export function getDefaultTabContainerState(): TabContainerState {
 	return {
-		...getDefaultBaseState("ui-tab-container"),
+		...getDefaultBaseState(),
 		selectedTab: ""
 	};
 }
@@ -229,7 +229,7 @@ export class TabContainer extends BaseComponent<
 	public static defaultProps: TabContainerProps = getDefaultTabContainerProps();
 
 	constructor(props: TabContainerProps) {
-		super(props, TabContainer.defaultProps.style);
+		super(props, "ui-tab-container", TabContainer.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
 
@@ -390,6 +390,8 @@ export class TabContainer extends BaseComponent<
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let body = null;
 		const style = {};
 
@@ -467,7 +469,7 @@ export class TabContainer extends BaseComponent<
 			body = (
 				<TabContainerView
 					{...props}
-					className={this.state.classes.classnames}
+					className={this.className}
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
 					{this._tabs.size > 0 && tabBar}
@@ -478,7 +480,7 @@ export class TabContainer extends BaseComponent<
 			body = (
 				<TabContainerView
 					{...props}
-					className={this.state.classes.classnames}
+					className={this.className}
 					style={{minWidth: `${this._containerWidth}px`}}
 				>
 					{tabContent}

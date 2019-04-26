@@ -63,16 +63,15 @@ export function getDefaultButtonProps(): ButtonProps {
 		iconName: "bomb",
 		iconStyle: "",
 		onClick: nilEvent,
-		obj: "Button"
+		obj: "Button",
+		ripple: true
 	};
 }
 
 export type ButtonState = BaseState;
 
-export function getDefaultButtonState(
-	className: string = "ui-button"
-): ButtonState {
-	return {...getDefaultBaseState(className)};
+export function getDefaultButtonState(): ButtonState {
+	return {...getDefaultBaseState()};
 }
 
 export const BaseButtonView: any = css`
@@ -109,7 +108,7 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 	public state: ButtonState = getDefaultButtonState();
 
 	constructor(props: ButtonProps) {
-		super(props, Button.defaultProps.style);
+		super(props, "ui-button", Button.defaultProps.style);
 	}
 
 	@autobind
@@ -124,27 +123,17 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 		e.stopPropagation();
 	}
 
-	public static getDerivedStateFromProps(
-		props: ButtonProps,
-		state: ButtonState
-	) {
-		const newState: ButtonState = {...state};
-
-		newState.classes.onIfElse(!props.noripple && !props.disabled)("ripple")(
-			"nohover"
-		);
-
-		return super.getDerivedStateFromProps(props, newState);
-	}
-
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<ButtonView
-					className={this.state.classes.classnames}
+					className={this.className}
 					disabled={this.props.disabled}
 					id={this.id}
 					onClick={this.handleClick}
+					ripple={this.props.ripple}
 					sizing={this.props.sizing}
 					style={this.state.style}
 					visible={this.props.visible}

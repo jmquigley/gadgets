@@ -26,7 +26,6 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
   nodeWidth="20em"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Treeview"
@@ -39,6 +38,7 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
   onSelect={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selectNew={true}
   selected={false}
   sizing="inherit"
@@ -243,7 +243,6 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
   nodeWidth="20em"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Treeview"
@@ -256,6 +255,7 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
   onSelect={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selectNew={true}
   selected={false}
   sizing="large"
@@ -460,7 +460,6 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
   nodeWidth="20em"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Treeview"
@@ -473,6 +472,7 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
   onSelect={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selectNew={true}
   selected={false}
   sizing="medium"
@@ -677,7 +677,6 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
   nodeWidth="20em"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Treeview"
@@ -690,6 +689,7 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
   onSelect={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selectNew={true}
   selected={false}
   sizing="normal"
@@ -894,7 +894,6 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
   nodeWidth="20em"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Treeview"
@@ -907,6 +906,7 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
   onSelect={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selectNew={true}
   selected={false}
   sizing="small"
@@ -1111,7 +1111,6 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
   nodeWidth="20em"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Treeview"
@@ -1124,6 +1123,7 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
   onSelect={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selectNew={true}
   selected={false}
   sizing="xlarge"
@@ -1328,7 +1328,6 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
   nodeWidth="20em"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Treeview"
@@ -1341,6 +1340,7 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
   onSelect={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selectNew={true}
   selected={false}
   sizing="xsmall"
@@ -1545,7 +1545,6 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
   nodeWidth="20em"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Treeview"
@@ -1558,6 +1557,7 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
   onSelect={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selectNew={true}
   selected={false}
   sizing="xxlarge"
@@ -1762,7 +1762,6 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
   nodeWidth="20em"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Treeview"
@@ -1775,6 +1774,7 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
   onSelect={[Function]}
   onUpdate={[Function]}
   padding={null}
+  ripple={false}
   selectNew={true}
   selected={false}
   sizing="xxsmall"
@@ -1980,7 +1980,6 @@ Object {
   "nodeWidth": "20em",
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Treeview",
@@ -1993,6 +1992,7 @@ Object {
   "onSelect": [Function],
   "onUpdate": [Function],
   "padding": null,
+  "ripple": false,
   "selectNew": true,
   "selected": false,
   "sizing": "normal",
@@ -2012,17 +2012,6 @@ Object {
 exports[`Test retrieval of Treeview props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-treeview" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "matches": Array [],
   "search": "",
   "searchFocusIndex": 0,

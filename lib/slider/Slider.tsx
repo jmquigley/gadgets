@@ -106,7 +106,7 @@ export interface SliderState extends BaseState {
 }
 
 export function getDefaultSliderState(): SliderState {
-	return {...getDefaultBaseState("ui-slider"), x: 0};
+	return {...getDefaultBaseState(), x: 0};
 }
 
 const SliderBar: any = styled.div`
@@ -155,14 +155,14 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	private _borderSize: number = 1;
 	private _box: any;
 	private _container: any;
-	private _mouseDelay: number = 5;
+	private _mouseDelay: number = 2;
 	private _mouseMove: any = null;
 	private _sliderSize: any;
 	private _ticks: number[] = [];
 	private _tickKeys: Keys;
 
 	constructor(props: SliderProps) {
-		super(props, Slider.defaultProps.style);
+		super(props, "ui-slider", Slider.defaultProps.style);
 
 		this._tickKeys = new Keys({testing: this.props.testing});
 		this.state = {...getDefaultSliderState(), x: this.props.startPosition};
@@ -252,6 +252,8 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	}
 
 	public render() {
+		this.updateClassName();
+
 		const width: number = Math.round(
 			(this.props.max - this.props.min) * this.props.scale
 		);
@@ -274,7 +276,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		return (
 			<Wrapper {...this.props}>
 				<SliderContainer
-					className={this.state.classes.classnames}
+					className={this.className}
 					disabled={this.props.disabled}
 					height={this._sliderSize + this._borderSize * 4}
 					style={this.state.style}

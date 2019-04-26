@@ -99,7 +99,7 @@ export interface AccordionItemState extends BaseState {
 
 export function getDefaultAccordionItemState(): AccordionItemState {
 	return {
-		...getDefaultBaseState("ui-accordionitem"),
+		...getDefaultBaseState(),
 		toggle: false
 	};
 }
@@ -132,7 +132,7 @@ export class AccordionItem extends BaseComponent<
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
 	constructor(props: AccordionItemProps) {
-		super(props);
+		super(props, "ui-accordionitem", AccordionItem.defaultProps.style);
 		this.state = {
 			...getDefaultAccordionItemState(),
 			toggle: this.props.initialToggle
@@ -161,6 +161,8 @@ export class AccordionItem extends BaseComponent<
 	public render() {
 		let content = null;
 
+		this.updateClassName();
+
 		if (this.props.children != null && this.state.toggle) {
 			content = (
 				<AccordionContentView
@@ -175,7 +177,7 @@ export class AccordionItem extends BaseComponent<
 		return (
 			<Wrapper {...this.props}>
 				<AccordionItemView
-					className={this.state.classes.classnames}
+					className={this.className}
 					style={this.state.style}
 				>
 					<Item {...this.props} onClick={this.handleClick} />

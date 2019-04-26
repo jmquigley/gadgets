@@ -106,10 +106,10 @@ export function getDefaultTitleProps(): TitleProps {
 	return {
 		...getDefaultBaseProps(),
 		layout: TitleLayout.dominant,
-		noripple: true,
 		obj: "Title",
 		onClick: nilEvent,
 		onUpdate: nilEvent,
+		ripple: true,
 		widget: null,
 		useedit: false
 	};
@@ -117,10 +117,8 @@ export function getDefaultTitleProps(): TitleProps {
 
 export type TitleState = BaseState;
 
-export function getDefaultTitleState(
-	className: string = "ui-title-bar"
-): TitleState {
-	return {...getDefaultBaseState(className)};
+export function getDefaultTitleState(): TitleState {
+	return {...getDefaultBaseState()};
 }
 
 export const TitleView: any = styled.div`
@@ -234,19 +232,12 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 	public state: TitleState = getDefaultTitleState();
 
 	constructor(props: TitleProps) {
-		super(props);
-	}
-
-	public static getDerivedStateFromProps(
-		props: TitleProps,
-		state: TitleState
-	) {
-		const newState: TitleState = {...state};
-		newState.classes.onIf(!props.noripple && !props.disabled)("ripple");
-		return super.getDerivedStateFromProps(props, newState);
+		super(props, "ui-title-bar", Title.defaultProps.style);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let title: any = null;
 		let titleView: any = null;
 		let widget: any = null;
@@ -255,7 +246,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		// Remove the onUpdate handler from the main props.  This is only passed
 		// down when the title is resolved to a label.  When it's a string the onUpdate
 		// prop should not be attached.
-		const {onUpdate, ...props} = this.props;
+		const {onUpdate, ripple, ...props} = this.props;
 
 		switch (props.layout) {
 			case TitleLayout.quarter:
@@ -324,9 +315,10 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		return (
 			<Wrapper {...this.props}>
 				<TitleView
-					className={this.state.classes.classnames}
+					className={this.className}
 					disabled={this.props.disabled}
 					layout={this.props.layout}
+					ripple={this.props.ripple}
 					sizing={this.props.sizing}
 					style={this.state.style}
 					visible={this.props.visible}

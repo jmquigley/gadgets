@@ -120,7 +120,7 @@ export interface DialogBoxState extends BaseState {
 
 export function getDefaultDialogBoxState(): DialogBoxState {
 	return {
-		...getDefaultBaseState("ui-dialogbox"),
+		...getDefaultBaseState(),
 		showModal: false
 	};
 }
@@ -189,7 +189,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	private _icon: any = {};
 
 	constructor(props: DialogBoxProps) {
-		super(props, DialogBox.defaultProps.style);
+		super(props, "ui-dialogbox", DialogBox.defaultProps.style);
 
 		this._icon = {
 			error: (
@@ -278,12 +278,17 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		props: DialogBoxProps,
 		state: DialogBoxState
 	) {
-		const newState: DialogBoxState = {...state, showModal: props.show};
+		if (state.showModal !== props.show) {
+			const newState: DialogBoxState = {...state, showModal: props.show};
+			return super.getDerivedStateFromProps(props, newState, true);
+		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return null;
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<ReactModal
@@ -295,7 +300,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 					shouldCloseOnOverlayClick={false}
 					style={this._customStyle}
 				>
-					<DialogBoxView className={this.state.classes.classnames}>
+					<DialogBoxView className={this.className}>
 						<DialogBoxIconView>
 							{this._icon[this.props.dialogType]}
 						</DialogBoxIconView>

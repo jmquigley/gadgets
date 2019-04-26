@@ -29,7 +29,6 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   notriangle={false}
@@ -38,6 +37,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={
@@ -56,7 +56,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   xcss={null}
 >
   <ButtonDialog__ButtonDialogView
-    className="ui-button-dialog test-class"
+    className="ui-button-dialog test-class ripple"
     id="ButtonDialog-0"
   >
     <Button
@@ -82,12 +82,12 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="Button"
       onClick={[Function]}
       padding={null}
+      ripple={true}
       selected={false}
       sizing="normal"
       style={
@@ -166,7 +166,6 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   notriangle={false}
@@ -175,6 +174,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={
@@ -193,7 +193,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   xcss={null}
 >
   <ButtonDialog__ButtonDialogView
-    className="ui-button-dialog test-class"
+    className="ui-button-dialog test-class ripple"
     id="ButtonDialog-0"
   >
     <Button
@@ -219,12 +219,12 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="Button"
       onClick={[Function]}
       padding={null}
+      ripple={true}
       selected={false}
       sizing="normal"
       style={
@@ -299,13 +299,13 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   notriangle={false}
   obj="ButtonDialog"
   onClick={[Function]}
   padding={null}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={
@@ -351,13 +351,13 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "notriangle": false,
   "obj": "ButtonDialog",
   "onClick": [Function],
   "padding": null,
+  "ripple": true,
   "selected": false,
   "sizing": "normal",
   "style": Object {
@@ -378,41 +378,8 @@ Object {
 exports[`Test retrieval of ButtonDialog props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-button-dialog" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
-  "dialogStyles": b {
-    "_classes": Map {
-      "ui-dialog-popup" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
-  "triangleStyles": b {
-    "_classes": Map {
-      "ui-dialog-triangle" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "visible": false,
 }
 `;
@@ -442,13 +409,13 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   notriangle={false}
   obj="ButtonDialog"
   onClick={[Function]}
   padding={null}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={

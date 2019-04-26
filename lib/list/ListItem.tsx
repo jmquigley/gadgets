@@ -46,8 +46,8 @@ export interface ListItemState extends ItemState {
 
 export function getDefaultListItemState(): ListItemState {
 	return {
-		...getDefaultItemState("ui-listitem"),
-		toggleRipple: false
+		...getDefaultItemState(),
+		toggleRipple: true
 	};
 }
 
@@ -60,7 +60,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
-		super(props, ListItem.defaultProps.style);
+		super(props, "ui-listitem", ListItem.defaultProps.style);
 	}
 
 	get preventClick(): boolean {
@@ -130,12 +130,14 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<Item
 					{...this.props}
-					className={this.state.classes.classnames}
-					noripple={this.state.toggleRipple || this.props.noripple}
+					className={this.className}
+					ripple={this.state.toggleRipple}
 					onBlur={this.handleBlur}
 					onClick={this.handleClick}
 					onDoubleClick={this.handleDoubleClick}

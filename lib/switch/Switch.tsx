@@ -98,16 +98,12 @@ export function getDefaultSwitchProps(): SwitchProps {
 }
 
 export interface SwitchState extends BaseState {
-	buttonStyles: ClassNames;
-	sliderStyles: ClassNames;
 	toggle: boolean;
 }
 
 export function getDefaultSwitchState(): SwitchState {
 	return {
-		...getDefaultBaseState("ui-switch"),
-		buttonStyles: new ClassNames("ui-switch-button"),
-		sliderStyles: new ClassNames("ui-switch-slider"),
+		...getDefaultBaseState(),
 		toggle: false
 	};
 }
@@ -150,9 +146,11 @@ const SliderContainerView: any = styled.div`
 
 export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 	public static defaultProps: SwitchProps = getDefaultSwitchProps();
+	private _buttonStyles: ClassNames = new ClassNames("ui-switch-button");
+	private _sliderStyles: ClassNames = new ClassNames("ui-switch-slider");
 
 	constructor(props: SwitchProps) {
-		super(props, Switch.defaultProps.style);
+		super(props, "ui-switch", Switch.defaultProps.style);
 
 		this.state = {
 			...getDefaultSwitchState(),
@@ -169,24 +167,17 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 		}
 	}
 
-	public static getDerivedStateFromProps(
-		props: SwitchProps,
-		state: SwitchState
-	) {
-		const newState: SwitchState = {...state};
+	public render() {
+		this.updateClassName();
 
-		newState.buttonStyles.onIf(!props.noripple && !props.disabled)(
+		this._buttonStyles.onIf(this.props.ripple && !this.props.disabled)(
 			"ripple"
 		);
 
-		newState.sliderStyles.onIfElse(newState.toggle)("ui-slider-on")(
+		this._sliderStyles.onIfElse(this.state.toggle)("ui-slider-on")(
 			"ui-slider-off"
 		);
 
-		return super.getDerivedStateFromProps(props, newState);
-	}
-
-	public render() {
 		let size: string = "";
 		let left: string = "";
 
@@ -207,7 +198,7 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 		return (
 			<Wrapper {...this.props}>
 				<SliderContainerView
-					className={this.state.classes.classnames}
+					className={this.className}
 					height={BaseComponent.fontSizePX(
 						this.props.sizing,
 						this.props.sliderScale
@@ -216,7 +207,7 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 				>
 					<SliderView
 						{...this.props}
-						className={this.state.sliderStyles.classnames}
+						className={this._sliderStyles.value}
 						onClick={this.handleClick}
 						style={{
 							backgroundColor: this.state.toggle
@@ -225,7 +216,7 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 						}}
 					>
 						<StyledButton
-							className={this.state.buttonStyles.classnames}
+							className={this._buttonStyles.value}
 							height={size}
 							onClick={this.handleClick}
 							style={{left: left}}

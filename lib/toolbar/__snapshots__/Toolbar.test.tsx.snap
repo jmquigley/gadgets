@@ -23,13 +23,13 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Toolbar"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="small"
   style={Object {}}
@@ -82,12 +82,12 @@ exports[`Test creation of a Toolbar instance with center justification 1`] = `
           minWidth={null}
           noedit={false}
           nohover={false}
-          noripple={false}
           notheme={false}
           notooltip={false}
           obj="Button"
           onClick={[Function]}
           padding={null}
+          ripple={true}
           selected={false}
           sizing="small"
           style={Object {}}
@@ -128,13 +128,13 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Toolbar"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="small"
   style={Object {}}
@@ -187,12 +187,12 @@ exports[`Test creation of a Toolbar instance with left justification 1`] = `
           minWidth={null}
           noedit={false}
           nohover={false}
-          noripple={false}
           notheme={false}
           notooltip={false}
           obj="Button"
           onClick={[Function]}
           padding={null}
+          ripple={true}
           selected={false}
           sizing="small"
           style={Object {}}
@@ -233,13 +233,13 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Toolbar"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="small"
   style={Object {}}
@@ -292,12 +292,12 @@ exports[`Test creation of a Toolbar instance with right justification 1`] = `
           minWidth={null}
           noedit={false}
           nohover={false}
-          noripple={false}
           notheme={false}
           notooltip={false}
           obj="Button"
           onClick={[Function]}
           padding={null}
+          ripple={true}
           selected={false}
           sizing="small"
           style={Object {}}
@@ -338,13 +338,13 @@ exports[`Test disabling of a Toolbar instance 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Toolbar"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -357,7 +357,7 @@ exports[`Test disabling of a Toolbar instance 1`] = `
   xcss={null}
 >
   <Toolbar__ToolbarView
-    className="ui-toolbar"
+    className="ui-toolbar nohover"
   >
     <Toolbar__ToolbarGroupView
       className="ui-toolbar-group"
@@ -397,12 +397,12 @@ exports[`Test disabling of a Toolbar instance 1`] = `
           minWidth={null}
           noedit={false}
           nohover={false}
-          noripple={false}
           notheme={false}
           notooltip={false}
           obj="Button"
           onClick={[Function]}
           padding={null}
+          ripple={true}
           selected={false}
           sizing="normal"
           style={Object {}}
@@ -443,13 +443,13 @@ exports[`Test making the Toolbar invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Toolbar"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -502,12 +502,12 @@ exports[`Test making the Toolbar invisible 1`] = `
           minWidth={null}
           noedit={false}
           nohover={false}
-          noripple={false}
           notheme={false}
           notooltip={false}
           obj="Button"
           onClick={[Function]}
           padding={null}
+          ripple={true}
           selected={false}
           sizing="normal"
           style={Object {}}
@@ -549,11 +549,11 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Toolbar",
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -570,17 +570,6 @@ Object {
 exports[`Test retrieval of Toolbar props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-toolbar" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }

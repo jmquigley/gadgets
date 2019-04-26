@@ -98,7 +98,7 @@ export interface DialogWindowState extends BaseState {
 
 export function getDefaultDialogWindowState(): DialogWindowState {
 	return {
-		...getDefaultBaseState("ui-dialogwindow"),
+		...getDefaultBaseState(),
 		showModal: false,
 		icon: null
 	};
@@ -150,7 +150,7 @@ export class DialogWindow extends BaseComponent<
 	};
 
 	constructor(props: DialogWindowProps) {
-		super(props, DialogWindow.defaultProps.style);
+		super(props, "ui-dialogwindow", DialogWindow.defaultProps.style);
 	}
 
 	@autobind
@@ -175,10 +175,12 @@ export class DialogWindow extends BaseComponent<
 			showModal: props.show
 		};
 
-		return super.getDerivedStateFromProps(props, newState);
+		return super.getDerivedStateFromProps(props, newState, true);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<ReactModal
@@ -192,7 +194,7 @@ export class DialogWindow extends BaseComponent<
 				>
 					<DialogWindowView
 						{...this.props}
-						className={this.state.classes.classnames}
+						className={this.className}
 					>
 						<ItemView
 							{...this.props}

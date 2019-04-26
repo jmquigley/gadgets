@@ -112,8 +112,8 @@ export default class DemoListItem extends React.Component<any, undefined> {
 						title='List Item 9 (stacked)'
 						widget='stacked bottom widget'
 					/>
-					<ListItem noripple title='List Item 10 (noripple edit)' />
-					<ListItem noripple noedit title='List Item 11 (noedit)' />
+					<ListItem title='List Item 10 (noripple edit)' />
+					<ListItem noedit title='List Item 11 (noedit)' />
 					<ListFooter title='Demo List Footer' />
 				</List>
 			</StyledContainer>

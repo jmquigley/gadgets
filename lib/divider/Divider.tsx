@@ -72,7 +72,7 @@ export function getDefaultDividerProps(): DividerProps {
 export type DividerState = BaseState;
 
 export function getDefaultDividerState(): DividerState {
-	return {...getDefaultBaseState("ui-divider")};
+	return {...getDefaultBaseState()};
 }
 
 const DividerView: any = styled.div`
@@ -89,14 +89,14 @@ export class Divider extends BaseComponent<DividerProps, DividerState> {
 	public state: DividerState = getDefaultDividerState();
 
 	constructor(props: DividerProps) {
-		super(props, Divider.defaultProps.style);
+		super(props, "ui-divider", Divider.defaultProps.style);
 	}
 
 	public render() {
 		return (
 			<Wrapper {...this.props}>
 				<DividerView
-					className={this.state.classes.classnames}
+					className={this.className}
 					style={this.state.style}
 					width={BaseComponent.fontSizePX(this.props.sizing, 0.25)}
 				>

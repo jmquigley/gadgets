@@ -24,13 +24,13 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "noselect": false,
   "notheme": false,
   "notooltip": false,
   "obj": "ListDivider",
   "onSelect": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -47,17 +47,6 @@ Object {
 exports[`Test retrieval of ListHeader props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-list-divider" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "keys": null,
   "selectedItem": null,
   "sizing": "normal",
@@ -88,7 +77,6 @@ exports[`Test the creation of a ListDivider control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   noselect={false}
   notheme={false}
   notooltip={false}
@@ -97,6 +85,7 @@ exports[`Test the creation of a ListDivider control 1`] = `
   onSelect={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}

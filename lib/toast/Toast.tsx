@@ -142,7 +142,7 @@ export interface ToastState extends BaseState {
 }
 
 export function getDefaultToastState(): ToastState {
-	return {...getDefaultBaseState("ui-toast"), visible: false};
+	return {...getDefaultBaseState(), visible: false};
 }
 
 const ContentView: any = styled.div`
@@ -226,10 +226,8 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
-		super(props, Toast.defaultProps.style);
-
+		super(props, "ui-toast", Toast.defaultProps.style);
 		this.state = {...getDefaultToastState(), visible: props.show};
-
 		this.handleDecay();
 	}
 
@@ -278,17 +276,22 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		props: ToastProps,
 		state: ToastState
 	) {
-		const newState: ToastState = {...state, visible: props.show};
+		if (props.show !== state.visible) {
+			const newState: ToastState = {...state, visible: props.show};
+			return super.getDerivedStateFromProps(props, newState, true);
+		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return null;
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<ToastView
 					usebottom={this.props.usebottom}
-					className={this.state.classes.classnames}
+					className={this.className}
 					disabled={this.props.disabled}
 					level={this.props.level}
 					style={this.state.style}

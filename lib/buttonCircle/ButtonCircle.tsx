@@ -64,14 +64,15 @@ export function getDefaultButtonCircleProps(): ButtonProps {
 	return {
 		...getDefaultButtonProps(),
 		obj: "ButtonCircle",
-		onClick: nilEvent
+		onClick: nilEvent,
+		ripple: false
 	};
 }
 
 export type ButtonCircleState = ButtonState;
 
 export function getDefaultButtonCircleState(): ButtonCircleState {
-	return {...getDefaultButtonState("ui-button-circle")};
+	return {...getDefaultButtonState()};
 }
 
 const ButtonCircleContainerView: any = styled.div`
@@ -120,21 +121,22 @@ export class ButtonCircle extends BaseComponent<
 	public state: ButtonCircleState = getDefaultButtonCircleState();
 
 	constructor(props: ButtonCircleProps) {
-		super(props, ButtonCircle.defaultProps.style);
+		super(props, "ui-button-circle", ButtonCircle.defaultProps.style);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		const size: string = BaseComponent.fontSizePX(this.props.sizing, 1.5);
 
 		return (
 			<Wrapper {...this.props}>
-				<ButtonCircleContainerView
-					className={this.state.classes.classnames}
-				>
+				<ButtonCircleContainerView className={this.className}>
 					<ButtonCircleInnerView height={size} width={size}>
 						<ButtonCircleView
 							{...this.props}
 							iconName={this.props.iconName}
+							ripple
 							style={this.state.style}
 						/>
 					</ButtonCircleInnerView>

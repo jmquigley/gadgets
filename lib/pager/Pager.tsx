@@ -150,7 +150,7 @@ export interface PagerState extends BaseState {
 
 export function getDefaultPagerState(): PagerState {
 	return {
-		...getDefaultBaseState("ui-pager"),
+		...getDefaultBaseState(),
 		currentPage: 0,
 		currentSort: SortOrder.ascending,
 		pageSize: 0
@@ -225,7 +225,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _pageSizes: number[] = defaultPageSizes.slice();
 
 	constructor(props: PagerProps) {
-		super(props, Pager.defaultProps.style);
+		super(props, "ui-pager", Pager.defaultProps.style);
 
 		this._dialogKeys = new Keys({testing: this.props.testing});
 		this._fillerKeys = new Keys({testing: this.props.testing});
@@ -752,6 +752,8 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	}
 
 	public render() {
+		this.updateClassName();
+
 		const props = this.sanitizeProps(this.props);
 
 		this.createButtons(props);
@@ -760,10 +762,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		return (
 			<Wrapper {...props}>
-				<PagerView
-					className={this.state.classes.classnames}
-					style={this.state.style}
-				>
+				<PagerView className={this.className} style={this.state.style}>
 					<StyledButton
 						{...props}
 						iconName='angle-double-left'

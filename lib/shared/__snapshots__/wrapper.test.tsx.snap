@@ -22,7 +22,6 @@ exports[`Test creation of a default Wrapper 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Unknown"
@@ -46,9 +45,14 @@ exports[`Test creation of a default Wrapper 1`] = `
   }
   padding={null}
   reset={true}
+  ripple={false}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "whiteSpace": "pre-wrap",
+    }
+  }
   testing={true}
   theme={null}
   tooltip={null}
@@ -82,16 +86,18 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Unknown",
   "onError": [Function],
   "padding": null,
   "reset": false,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
-  "style": Object {},
+  "style": Object {
+    "whiteSpace": "pre-wrap",
+  },
   "testing": true,
   "theme": null,
   "tooltip": null,
@@ -105,17 +111,6 @@ Object {
 exports[`Test creation of the Wrapper props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-error" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "error": "",
   "errorInfo": null,
   "sizing": "normal",
@@ -145,16 +140,20 @@ exports[`Test disabling the Wrapper 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Unknown"
   onError={[MockFunction]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "whiteSpace": "pre-wrap",
+    }
+  }
   testing={true}
   theme={null}
   tooltip={null}

@@ -66,8 +66,8 @@ export function getDefaultItemProps(): ItemProps {
 
 export type ItemState = BaseState;
 
-export function getDefaultItemState(className: string = "ui-item"): ItemState {
-	return {...getDefaultBaseState(className)};
+export function getDefaultItemState(): ItemState {
+	return {...getDefaultBaseState()};
 }
 
 const HiddenButton: any = css`
@@ -146,16 +146,12 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 	public state: ItemState = getDefaultItemState();
 
 	constructor(props: ItemProps) {
-		super(props);
-	}
-
-	public static getDerivedStateFromProps(props: ItemProps, state: ItemState) {
-		const newState: ItemState = {...state};
-		newState.classes.onIf(props.selected)("ui-selected");
-		return super.getDerivedStateFromProps(props, state);
+		super(props, "ui-item", Item.defaultProps.style);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let leftButton: any = null;
 		let rightButton: any = null;
 
@@ -189,7 +185,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 			<Wrapper {...this.props}>
 				<ItemView
 					id={this.props.id}
-					className={this.state.classes.classnames}
+					className={this.className}
 					nohover={this.props.nohover}
 					onBlur={this.props.onBlur}
 					onDoubleClick={this.props.onDoubleClick}

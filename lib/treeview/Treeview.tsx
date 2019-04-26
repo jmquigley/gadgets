@@ -220,7 +220,7 @@ export interface TreeviewState extends BaseState {
 
 export function getDefaultTreeviewState(): TreeviewState {
 	return {
-		...getDefaultBaseState("ui-treeview"),
+		...getDefaultBaseState(),
 		matches: [],
 		search: "",
 		searchFocusIndex: 0,
@@ -336,7 +336,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	public state: TreeviewState = getDefaultTreeviewState();
 
 	constructor(props: TreeviewProps) {
-		super(props, Treeview.defaultProps.style);
+		super(props, "ui-treeview", Treeview.defaultProps.style);
 
 		this.state = {
 			...getDefaultTreeviewState(),
@@ -595,10 +595,12 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 			props.onAdd(node, clone(newState.td.treeData));
 		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return super.getDerivedStateFromProps(props, newState, true);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		const {searchFocusIndex, searchFoundCount} = this.state;
 
 		const buttonStyles = {
@@ -669,7 +671,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					style={this.state.style}
 				>
 					{this.props.direction === Direction.top ? toolbar : null}
-					<TreeviewWrapper className={this.state.classes.classnames}>
+					<TreeviewWrapper className={this.className}>
 						<SortableTreeView
 							generateNodeProps={this.customNodeProperties}
 							isVirtualized={this.props.isVirtualized}

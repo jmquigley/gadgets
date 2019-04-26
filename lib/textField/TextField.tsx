@@ -201,6 +201,7 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		minLength: null,
 		minWidth: "1em",
 		noborder: false,
+		noripple: true,
 		nospinner: false,
 		obj: "TextField",
 		onBlur: nilEvent,
@@ -211,7 +212,6 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		onValidation: nilEvent,
 		size: null,
 		step: "any",
-		testing: process.env.NODE_ENV !== "production",
 		type: TextFieldType.text,
 		useclear: false,
 		usevalidation: false,
@@ -230,7 +230,7 @@ export interface TextFieldState extends BaseState {
 
 export function getDefaultTextFieldState(): TextFieldState {
 	return {
-		...getDefaultBaseState("ui-textfield"),
+		...getDefaultBaseState(),
 		message: "",
 		messageType: MessageType.none,
 		minWidth: "",
@@ -320,7 +320,7 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 	private _validators: Validator[] = null;
 
 	constructor(props: TextFieldProps) {
-		super(props, TextField.defaultProps.style);
+		super(props, "ui-textfield", TextField.defaultProps.style);
 		this._validators = props.validators.slice();
 
 		this.state = {
@@ -457,13 +457,15 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 				value: props.value
 			};
 
-			return super.getDerivedStateFromProps(props, newState);
+			return super.getDerivedStateFromProps(props, newState, true);
 		}
 
 		return null;
 	}
 
 	public render() {
+		this.updateClassName();
+
 		// Strip out props that the input control cannot recognize or use
 		const {validators, onClear, onValidation, ...props} = this.props;
 
@@ -502,7 +504,7 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 				>
 					<TextFieldView
 						disabled={this.props.disabled}
-						className={this.state.classes.classnames}
+						className={this.className}
 						noborder={this.props.noborder}
 						visible={this.props.visible}
 					>

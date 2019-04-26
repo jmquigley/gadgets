@@ -27,7 +27,6 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": true,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "ListHeader",
@@ -42,6 +41,7 @@ Object {
   "onUpdate": [Function],
   "padding": null,
   "rightButton": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "stacked": false,
@@ -62,17 +62,6 @@ Object {
 exports[`Test retrieval of ListHeader props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-list-header" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }
@@ -104,7 +93,6 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   minWidth={null}
   noedit={false}
   nohover={true}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="ListHeader"
@@ -121,6 +109,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   padding={null}
   reset={false}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -140,7 +129,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     backgroundColor={null}
     borderColor={null}
     bottom={null}
-    className="ui-item nohover"
+    className="ui-list-header"
     color={null}
     contentEditable={false}
     controlled={true}
@@ -161,7 +150,6 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     minWidth={null}
     noedit={false}
     nohover={true}
-    noripple={false}
     notheme={false}
     notooltip={false}
     obj="ListHeader"
@@ -176,6 +164,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     onUpdate={[Function]}
     padding={null}
     rightButton={null}
+    ripple={false}
     selected={false}
     sizing="normal"
     stacked={false}

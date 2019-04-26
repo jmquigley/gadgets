@@ -221,7 +221,7 @@ export interface DynamicListState extends BaseState {
 // TODO: add additional init
 export function getDefaultDynamicListState(): DynamicListState {
 	return {
-		...getDefaultBaseState("ui-dynamiclist"),
+		...getDefaultBaseState(),
 		errorMessage: "",
 		initialToggle: true,
 		page: 1,
@@ -293,7 +293,7 @@ export class DynamicList extends BaseComponent<
 	private _startSearch: boolean = true;
 
 	constructor(props: DynamicListProps) {
-		super(props, DynamicList.defaultProps.style);
+		super(props, "ui-dynamiclist", DynamicList.defaultProps.style);
 
 		this._fillerKeys = new Keys({testing: this.props.testing});
 		this._footerID = this._fillerKeys.at(this._fillerIdx++);
@@ -632,7 +632,7 @@ export class DynamicList extends BaseComponent<
 			newState.sortOrder = props.sortOrder;
 		}
 
-		if (props.errorMessage !== "") {
+		if (props.errorMessage) {
 			debug(
 				"getDerivedStateFromProps -> errorMessage: %o",
 				props.errorMessage
@@ -643,7 +643,7 @@ export class DynamicList extends BaseComponent<
 
 		newState.totalItems = Object.keys(props.items).length;
 
-		return super.getDerivedStateFromProps(props, newState);
+		return super.getDerivedStateFromProps(props, newState, true);
 	}
 
 	/**
@@ -700,6 +700,7 @@ export class DynamicList extends BaseComponent<
 			<StyledListFooter
 				key={this._footerID}
 				layout={TitleLayout.third}
+				ripple={false}
 				title={
 					<TextField
 						onChange={this.handleSearch}
@@ -716,6 +717,7 @@ export class DynamicList extends BaseComponent<
 	}
 
 	public render() {
+		this.updateClassName();
 		this._updateWidgets(this.props, this.state);
 
 		for (const [title, widgets] of Object.entries(this.props.items)) {
@@ -738,13 +740,12 @@ export class DynamicList extends BaseComponent<
 					>
 						{this.state.errorMessage}
 					</Toast>
-					<Accordion className={this.state.classes.classnames}>
+					<Accordion className={this.className}>
 						<AccordionItem
 							initialToggle={this.state.initialToggle}
 							nocollapse={this.props.nocollapse}
 							noedit
 							nohover={this.props.nocollapse}
-							noripple={this.props.nocollapse}
 							onUpdate={this.handleTitleClick}
 							rightButton={
 								<Button

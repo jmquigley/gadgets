@@ -58,7 +58,7 @@ export type ContainerState = BaseState;
 
 export function getDefaultContainerState(): ContainerState {
 	return {
-		...getDefaultBaseState("ui-container")
+		...getDefaultBaseState()
 	};
 }
 
@@ -76,10 +76,12 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 	public state: ContainerState = getDefaultContainerState();
 
 	constructor(props: ContainerProps) {
-		super(props);
+		super(props, "ui-container", Container.defaultProps.style);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let title: any = null;
 		if (this.props.title) {
 			title = <h1 key={this.props.title}>{this.props.title}</h1>;
@@ -88,7 +90,7 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 		return (
 			<Wrapper {...this.props}>
 				<ContainerView
-					className={this.state.classes.classnames}
+					className={this.className}
 					key={this.props.id}
 					height={this.props.height}
 					id={this.props.id}

@@ -25,12 +25,12 @@ exports[`Create a simple Preview widget 1`] = `
   mode="markdown"
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Preview"
   onChange={[Function]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -70,12 +70,12 @@ Object {
   "mode": "markdown",
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Preview",
   "onChange": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -92,17 +92,6 @@ Object {
 exports[`Test retrieval of Preview props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-preview" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "content": "",
   "html": "",
   "sizing": "normal",

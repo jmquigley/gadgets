@@ -23,11 +23,11 @@ exports[`Create a triangle in bottom direction 1`] = `
   nobase={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Triangle"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="large"
   style={
@@ -69,11 +69,11 @@ exports[`Create a triangle in down direction 1`] = `
   nobase={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Triangle"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="large"
   style={
@@ -115,11 +115,11 @@ exports[`Create a triangle in left direction 1`] = `
   nobase={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Triangle"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="large"
   style={
@@ -161,11 +161,11 @@ exports[`Create a triangle in right direction 1`] = `
   nobase={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Triangle"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="large"
   style={
@@ -207,11 +207,11 @@ exports[`Create a triangle in top direction 1`] = `
   nobase={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Triangle"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="large"
   style={
@@ -253,11 +253,11 @@ exports[`Create a triangle in up direction 1`] = `
   nobase={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Triangle"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="large"
   style={
@@ -299,13 +299,13 @@ exports[`Test creation of a Triangle control 1`] = `
   nobase={false}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Triangle"
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
@@ -345,12 +345,12 @@ exports[`Test creation of a Triangle control 1`] = `
     nobase={false}
     noedit={false}
     nohover={false}
-    noripple={false}
     notheme={false}
     notooltip={false}
     obj="Triangle"
     padding={null}
     preserveAspectRatio="xMidYMid meet"
+    ripple={false}
     selected={false}
     sizing="normal"
     style={
@@ -402,11 +402,11 @@ Object {
   "nobase": false,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Triangle",
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {
@@ -427,17 +427,6 @@ Object {
 exports[`Test retrieval of Triangle props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-triangle" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }

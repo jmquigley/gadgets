@@ -24,12 +24,12 @@ exports[`Test ButtonCircle click event 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="ButtonCircle"
   onClick={[MockFunction]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -67,7 +67,6 @@ exports[`Test creation of a ButtonCircle control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="ButtonCircle"
@@ -75,6 +74,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -116,12 +116,12 @@ exports[`Test creation of a ButtonCircle control 1`] = `
         minWidth={null}
         noedit={false}
         nohover={false}
-        noripple={false}
         notheme={false}
         notooltip={false}
         obj="ButtonCircle"
         onClick={[Function]}
         padding={null}
+        ripple={true}
         selected={false}
         sizing="normal"
         style={Object {}}
@@ -162,12 +162,12 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="ButtonCircle"
   onClick={[MockFunction]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -205,12 +205,12 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="ButtonCircle"
   onClick={[MockFunction]}
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -249,12 +249,12 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "ButtonCircle",
   "onClick": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -271,17 +271,6 @@ Object {
 exports[`Test retrieval of ButtonCircle props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-button-circle" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }

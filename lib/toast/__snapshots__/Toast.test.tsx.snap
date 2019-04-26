@@ -25,7 +25,6 @@ exports[`Test creation of a Toast control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Toast"
@@ -34,6 +33,7 @@ exports[`Test creation of a Toast control 1`] = `
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   show={false}
   sizing="normal"
@@ -108,13 +108,13 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Toast",
   "onClick": [Function],
   "onClose": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "show": false,
   "sizing": "normal",
@@ -133,17 +133,6 @@ Object {
 exports[`Test retrieval of Toast props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-toast" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
   "visible": false,

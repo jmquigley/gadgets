@@ -47,6 +47,8 @@
  * @module Icon
  */
 
+// const debug = require("debug")("Icon");
+
 import * as React from "react";
 import {
 	BaseComponent,
@@ -82,7 +84,7 @@ export function getDefaultIconProps(): IconProps {
 export type IconState = BaseState;
 
 export function getDefaultIconState(): IconState {
-	return {...getDefaultBaseState("ui-icon")};
+	return {...getDefaultBaseState()};
 }
 
 const FontAwesome: any = styled.i`
@@ -105,31 +107,31 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 	public state: IconState = getDefaultIconState();
 
 	constructor(props: IconProps) {
-		super(props);
-	}
-
-	public static getDerivedStateFromProps(props: IconProps, state: BaseState) {
-		const newState: IconState = {...state};
-
-		newState.classes.clear();
-		newState.classes.add([
-			"ui-icon",
-			props.imageFile === "" && "fa",
-			props.imageFile === "" && "fa-fw",
-			props.imageFile === "" && `fa-${props.iconName}`
-		]);
-
-		return super.getDerivedStateFromProps(props, newState);
+		super(props, "ui-icon", Icon.defaultProps.style);
 	}
 
 	public render() {
+		let faClassList: string[] = null;
+		if (!this.props.imageFile) {
+			faClassList = [
+				"ui-icon",
+				"fa",
+				"fa-fw",
+				`fa-${this.props.iconName}`
+			];
+		} else {
+			faClassList = ["ui-image"];
+		}
+
+		this.updateClassName(faClassList);
+
 		let icon: any = null;
 
 		if (this.props.imageFile !== "") {
 			icon = (
 				<Image
 					{...this.props}
-					className={this.state.classes.classnames}
+					className={this.className}
 					sizing={this.props.sizing}
 					src={this.props.imageFile}
 					style={this.state.style}
@@ -139,7 +141,7 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 			icon = (
 				<FontAwesome
 					{...this.props}
-					className={this.state.classes.classnames}
+					className={this.className}
 					sizing={this.props.sizing}
 					style={this.state.style}
 				/>

@@ -95,9 +95,9 @@ export interface ListState extends BaseState {
 	selectedItem: ListItem;
 }
 
-export function getDefaultListState(className: string = "ui-list"): ListState {
+export function getDefaultListState(): ListState {
 	return {
-		...getDefaultBaseState(className),
+		...getDefaultBaseState(),
 		keys: null,
 		selectedItem: null
 	};
@@ -116,7 +116,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 	public state: ListState = getDefaultListState();
 
 	constructor(props: ListProps) {
-		super(props, List.defaultProps.style);
+		super(props, "ui-list", List.defaultProps.style);
 
 		this.state = {
 			...getDefaultListState(),
@@ -161,10 +161,12 @@ export class List extends BaseComponent<ListProps, ListState> {
 			);
 		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return super.getDerivedStateFromProps(props, newState, true);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let children: any = null;
 		const selectedKey =
 			(this.state.selectedItem && this.state.selectedItem.props.id) ||
@@ -187,7 +189,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 			<Wrapper {...this.props}>
 				<ListView
 					alternating={this.props.alternating}
-					className={this.state.classes.classnames}
+					className={this.className}
 					style={this.state.style}
 				>
 					{children}

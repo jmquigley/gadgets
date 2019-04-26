@@ -36,7 +36,7 @@
  * @module Accordion
  */
 
-const debug = require("debug")("Accordion");
+// const debug = require("debug")("Accordion");
 
 import * as React from "react";
 import {Keys} from "util.keys";
@@ -64,7 +64,7 @@ export type AccordionState = BaseState;
 
 export function getDefaultAccordionState(): AccordionState {
 	return {
-		...getDefaultBaseState("ui-accordion")
+		...getDefaultBaseState()
 	};
 }
 
@@ -85,12 +85,12 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 	private keys: Keys = null;
 
 	constructor(props: AccordionProps) {
-		super(props, Accordion.defaultProps.style);
+		super(props, "ui-accordion", Accordion.defaultProps.style);
 		this.keys = new Keys({testing: this.props.testing});
 	}
 
 	public render() {
-		debug("render -> state: %O, props: %O", this.state, this.props);
+		this.updateClassName();
 
 		let idx: number = 0;
 		const children = React.Children.map(
@@ -108,7 +108,7 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 		return (
 			<Wrapper {...this.props}>
 				<AccordionView
-					className={this.state.classes.classnames}
+					className={this.className}
 					sizing={this.props.sizing}
 					style={this.state.style}
 				>

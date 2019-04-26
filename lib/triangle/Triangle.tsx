@@ -73,7 +73,7 @@ export function getDefaultTriangleProps(): TriangleProps {
 export type TriangleState = BaseState;
 
 export function getDefaultTriangleState(): TriangleState {
-	return {...getDefaultBaseState("ui-triangle")};
+	return {...getDefaultBaseState()};
 }
 
 const SVGView: any = styled.svg`
@@ -99,17 +99,19 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 	public state: TriangleState = getDefaultTriangleState();
 
 	constructor(props: TriangleProps) {
-		super(props, Triangle.defaultProps.style);
+		super(props, "ui-triangle", Triangle.defaultProps.style);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let triangle: any = null;
 
 		if (this.props.nobase) {
 			triangle = (
 				<SVGView
 					{...this.props}
-					className={this.state.classes.classnames}
+					className={this.className}
 					preserveAspectRatio='xMidYMid meet'
 					style={this.state.style}
 					version='1.1'
@@ -133,7 +135,7 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 			triangle = (
 				<SVGView
 					{...this.props}
-					className={this.state.classes.classnames}
+					className={this.className}
 					preserveAspectRatio='xMidYMid meet'
 					style={this.state.style}
 					version='1.1'

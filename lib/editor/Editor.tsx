@@ -169,16 +169,11 @@ export function getDefaultEditorProps(): EditorProps {
 	};
 }
 
-export interface EditorState extends BaseState {
-	editorStyles: ClassNames;
-	toolbarStyles: ClassNames;
-}
+export type EditorState = BaseState;
 
 export function getDefaultEditorState(): EditorState {
 	return {
-		...getDefaultBaseState("ui-editor"),
-		editorStyles: new ClassNames("ui-editor-quill"),
-		toolbarStyles: new ClassNames("ui-editor-toolbar")
+		...getDefaultBaseState()
 	};
 }
 
@@ -235,12 +230,14 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	};
 	private _markup: Markup;
 	private _modes: DropdownOption[] = [];
+	private _editorStyles: ClassNames = new ClassNames("ui-editor-quill");
+	private _toolbarStyles: ClassNames = new ClassNames("ui-editor-toolbar");
 
 	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
 	public state: EditorState = getDefaultEditorState();
 
 	constructor(props: EditorProps) {
-		super(props, Editor.defaultProps.style);
+		super(props, "ui-editor", Editor.defaultProps.style);
 		debug('Editor key: "%s"', this.id);
 	}
 
@@ -279,17 +276,6 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		return () => {
 			this._markup.setHeader(level);
 		};
-	}
-
-	public static getDerivedStateFromProps(
-		props: EditorProps,
-		state: EditorState
-	) {
-		const newState: EditorState = {...state};
-		newState.editorStyles.onIf("disabled" in props && props.disabled)(
-			"nohover"
-		);
-		return super.getDerivedStateFromProps(props, newState);
 	}
 
 	public componentDidMount() {
@@ -343,6 +329,8 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	}
 
 	public render() {
+		this.updateClassName();
+
 		if (this._editor) {
 			if (this.props.disabled) {
 				this._editor.enable(false);
@@ -360,12 +348,12 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		return (
 			<Wrapper {...this.props}>
 				<EditorContainer
-					className={this.state.classes.classnames}
+					className={this.className}
 					style={this.state.style}
 				>
 					<EditorToolbar
 						{...this.props}
-						className={this.state.toolbarStyles.classnames}
+						className={this._toolbarStyles.value}
 						sizing={
 							this.props.useSmallButtons
 								? Sizing.small
@@ -462,7 +450,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 						/>
 					</EditorToolbar>
 					<EditorView
-						className={this.state.editorStyles.classnames}
+						className={this._editorStyles.value}
 						disabled={this.props.disabled}
 						id={this.id}
 						visible={this.props.visible}

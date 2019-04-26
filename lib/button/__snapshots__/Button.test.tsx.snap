@@ -24,12 +24,12 @@ exports[`Test Button click event 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Button"
   onClick={[MockFunction]}
   padding={null}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -67,7 +67,6 @@ exports[`Test creation of a Button control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Button"
@@ -75,6 +74,7 @@ exports[`Test creation of a Button control 1`] = `
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -87,10 +87,11 @@ exports[`Test creation of a Button control 1`] = `
   xcss={null}
 >
   <Button__ButtonView
-    className="ui-button ripple test-class"
+    className="ui-button test-class ripple"
     disabled={false}
     id="Button-0"
     onClick={[Function]}
+    ripple={true}
     sizing="normal"
     style={Object {}}
     visible={true}
@@ -118,11 +119,11 @@ exports[`Test creation of a Button control 1`] = `
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="Icon"
       padding={null}
+      ripple={false}
       selected={false}
       sizing="normal"
       style={Object {}}
@@ -162,7 +163,6 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Button"
@@ -170,6 +170,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
   onError={[Function]}
   padding={null}
   reset={false}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={
@@ -193,6 +194,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
     disabled={false}
     id="Button-0"
     onClick={[Function]}
+    ripple={true}
     sizing="normal"
     style={
       Object {
@@ -227,11 +229,11 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="Icon"
       padding={null}
+      ripple={false}
       selected={false}
       sizing="normal"
       style={Object {}}
@@ -271,12 +273,12 @@ exports[`Test disabling of a Button 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Button"
   onClick={[MockFunction]}
   padding={null}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -314,12 +316,12 @@ exports[`Test making a Button invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Button"
   onClick={[MockFunction]}
   padding={null}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -358,12 +360,12 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Button",
   "onClick": [Function],
   "padding": null,
+  "ripple": true,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -380,17 +382,6 @@ Object {
 exports[`Test retrieval of Button props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-button" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }

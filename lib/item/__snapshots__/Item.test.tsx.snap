@@ -27,7 +27,6 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Item",
@@ -42,6 +41,7 @@ Object {
   "onUpdate": [Function],
   "padding": null,
   "rightButton": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "stacked": false,
@@ -62,17 +62,6 @@ Object {
 exports[`Test retrieval of Item props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-item" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
 }
@@ -104,7 +93,6 @@ exports[`Test the creation of a Item control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Item"
@@ -121,6 +109,7 @@ exports[`Test the creation of a Item control 1`] = `
   padding={null}
   reset={false}
   rightButton={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   stacked={false}
@@ -174,7 +163,6 @@ exports[`Test the creation of a Item control 1`] = `
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="Item"
@@ -189,6 +177,7 @@ exports[`Test the creation of a Item control 1`] = `
       onUpdate={[Function]}
       padding={null}
       rightButton={null}
+      ripple={false}
       selected={false}
       sizing="normal"
       stacked={false}

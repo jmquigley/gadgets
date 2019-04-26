@@ -59,13 +59,15 @@ const BreakView: any = styled.p`
 
 export class Break extends BaseComponent<BreakProps, BaseState> {
 	public static defaultProps: BreakProps = getDefaultBreakProps();
-	public state: BaseState = getDefaultBaseState("ui-break");
+	public state: BaseState = getDefaultBaseState();
 
 	constructor(props: BaseProps) {
-		super(props);
+		super(props, "ui-break");
 	}
 
 	public render() {
+		this.updateClassName();
+
 		const totalBreaks: number = roundUp(
 			this.props.n > 0 ? this.props.n : 1
 		);
@@ -74,7 +76,7 @@ export class Break extends BaseComponent<BreakProps, BaseState> {
 		for (let i = 0; i < totalBreaks; i++) {
 			breaks.push(
 				<BreakView
-					className={this.state.classes.classnames}
+					className={this.className}
 					fontSize={BaseComponent.fontSizeREM(
 						this.props.sizing,
 						0.666

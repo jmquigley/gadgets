@@ -82,16 +82,12 @@ export function getDefaultButtonDialogProps(): ButtonDialogProps {
 }
 
 export interface ButtonDialogState extends ButtonState {
-	dialogStyles: ClassNames;
-	triangleStyles: ClassNames;
 	visible: boolean;
 }
 
 export function getDefaultButtonDialogState(): ButtonDialogState {
 	return {
-		...getDefaultButtonState("ui-button-dialog"),
-		dialogStyles: new ClassNames("ui-dialog-popup"),
-		triangleStyles: new ClassNames("ui-dialog-triangle"),
+		...getDefaultButtonState(),
 		visible: false
 	};
 }
@@ -166,9 +162,11 @@ export class ButtonDialog extends BaseComponent<
 > {
 	public static readonly defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
 	public state: ButtonDialogState = getDefaultButtonDialogState();
+	private _dialogClasses: ClassNames = new ClassNames("ui-dialog-popup");
+	private _triangleClasses: ClassNames = new ClassNames("ui-dialog-triangle");
 
 	constructor(props: ButtonDialogProps) {
-		super(props, ButtonDialog.defaultProps.style);
+		super(props, "ui-button-dialog", ButtonDialog.defaultProps.style);
 	}
 
 	@autobind
@@ -206,29 +204,12 @@ export class ButtonDialog extends BaseComponent<
 		window.addEventListener("click", this.handleDialogClick);
 	}
 
-	public componentWillUnmount() {
-		document.removeEventListener("keydown", this.handleKeyDown);
-		window.removeEventListener("click", this.handleDialogClick);
-	}
-
-	public static getDerivedStateFromProps(
-		props: ButtonDialogProps,
-		state: ButtonDialogState
-	) {
-		const newState: ButtonDialogState = {...state};
-
-		if (props.dialogClasses.length > 0) {
-			newState.dialogStyles.add([...props.dialogClasses.slice()]);
-		}
-
-		if (props.triangleClasses.length > 0) {
-			newState.triangleStyles.add([...props.triangleClasses.slice()]);
-		}
-
-		return super.getDerivedStateFromProps(props, newState);
-	}
-
 	public render() {
+		this.updateClassName();
+
+		this._dialogClasses.add(this.props.dialogClasses.slice());
+		this._triangleClasses.add(this.props.triangleClasses.slice());
+
 		let triangle = null;
 		if (!this.props.notriangle) {
 			const triangleStyles = {};
@@ -247,7 +228,7 @@ export class ButtonDialog extends BaseComponent<
 
 			triangle = (
 				<StyledTriangle
-					className={this.state.triangleStyles.classnames}
+					className={this._triangleClasses.value}
 					direction={
 						this.props.location === Location.top
 							? Direction.down
@@ -264,10 +245,7 @@ export class ButtonDialog extends BaseComponent<
 
 		return (
 			<Wrapper {...this.props}>
-				<ButtonDialogView
-					className={this.state.classes.classnames}
-					id={this.id}
-				>
+				<ButtonDialogView className={this.className} id={this.id}>
 					<Button
 						disabled={this.props.disabled}
 						iconName={this.props.iconName}
@@ -277,7 +255,7 @@ export class ButtonDialog extends BaseComponent<
 						visible={this.props.visible}
 					/>
 					<ButtonDialogPopup
-						className={this.state.dialogStyles.classnames}
+						className={this._dialogClasses.value}
 						location={this.props.location}
 						onClick={this.handleDialogClick}
 						visible={this.state.visible}

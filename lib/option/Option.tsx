@@ -53,7 +53,7 @@
  * @module Option
  */
 
-// const debug = require('debug')('Option');
+// const debug = require("debug")("Option");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -101,7 +101,9 @@ export function getDefaultOptionProps(): OptionProps {
 		initialToggle: false,
 		obj: "Option",
 		onClick: nilEvent,
+		onSelect: nilEvent,
 		optionType: OptionType.square,
+		ripple: false,
 		selected: false,
 		style: {
 			backgroundColor: "inherit",
@@ -116,7 +118,7 @@ export interface OptionState extends BaseState {
 }
 
 export function getDefaultOptionState(): OptionState {
-	return {...getDefaultBaseState("ui-option"), selected: false};
+	return {...getDefaultBaseState(), selected: false};
 }
 
 const OptionView: any = styled.div`
@@ -190,7 +192,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 	public static readonly defaultProps: OptionProps = getDefaultOptionProps();
 
 	constructor(props: OptionProps) {
-		super(props, Option.defaultProps.style);
+		super(props, "ui-option", Option.defaultProps.style);
 
 		this.state = {
 			...getDefaultOptionState(),
@@ -231,10 +233,12 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 			newState.selected = props.selected;
 		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return super.getDerivedStateFromProps(props, newState, true);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let title: any = null;
 		if (this.props.text) {
 			title = (
@@ -242,6 +246,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 					disabled={this.props.disabled}
 					layout={TitleLayout.none}
 					noedit
+					ripple={this.props.ripple}
 					sizing={this.props.sizing}
 					title={this.props.text}
 				/>
@@ -251,7 +256,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		return (
 			<Wrapper {...this.props}>
 				<OptionView
-					className={this.state.classes.classnames}
+					className={this.className}
 					onClick={this.handleClick}
 					sizing={this.props.sizing}
 					style={this.state.style}

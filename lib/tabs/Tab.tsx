@@ -100,7 +100,7 @@ export interface TabState extends BaseState {
 }
 
 export function getDefaultTabState(): TabState {
-	return {...getDefaultBaseState("ui-tab"), hidden: false};
+	return {...getDefaultBaseState(), hidden: false};
 }
 
 const TabBorderTop: any = css`
@@ -188,7 +188,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	public state: TabState = getDefaultTabState();
 
 	constructor(props: TabProps) {
-		super(props, Tab.defaultProps.style);
+		super(props, "ui-tab", Tab.defaultProps.style);
 	}
 
 	@autobind
@@ -210,8 +210,6 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	public static getDerivedStateFromProps(props: TabProps, state: TabState) {
 		const newState: TabState = {...state};
 
-		newState.classes.onIf(props.selected)("ui-selected");
-
 		if (newState.hidden) {
 			newState.style = {
 				display: "none",
@@ -225,10 +223,12 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 			};
 		}
 
-		return super.getDerivedStateFromProps(props, newState);
+		return super.getDerivedStateFromProps(props, newState, true);
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let xcss: any = "";
 		switch (this.props.orientation) {
 			case Location.top:
@@ -249,7 +249,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 			<Wrapper {...this.props}>
 				<TabView
 					disabled={this.props.disabled}
-					className={this.state.classes.classnames}
+					className={this.className}
 					selected={this.props.selected}
 					sizing={this.props.sizing}
 					style={this.state.style}

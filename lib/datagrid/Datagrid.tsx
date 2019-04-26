@@ -99,10 +99,8 @@ export function getDefaultDatagridProps(): DatagridProps {
 
 export type DatagridState = BaseState;
 
-export function getDefaultDatagridState(
-	className: string = "ui-datagrid"
-): DatagridState {
-	return {...getDefaultBaseState(className)};
+export function getDefaultDatagridState(): DatagridState {
+	return {...getDefaultBaseState()};
 }
 
 const DatagridWrapper: any = styled.div`
@@ -131,7 +129,7 @@ export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
 	public state: DatagridState = getDefaultDatagridState();
 
 	constructor(props: DatagridProps) {
-		super(props, Datagrid.defaultProps.style);
+		super(props, "ui-datagrid", Datagrid.defaultProps.style);
 	}
 
 	/** @return the height of the row in pixels (number) */
@@ -169,7 +167,7 @@ export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
 			<Wrapper {...props}>
 				<DatagridWrapper
 					{...props}
-					className={this.state.classes.classnames}
+					className={this.className}
 					rowHeight={this.rowHeight}
 				>
 					<ReactDataGrid

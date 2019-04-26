@@ -156,11 +156,11 @@ export interface BaseProps {
 	minWidth?: string;
 	noedit?: boolean;
 	nohover?: boolean;
-	noripple?: boolean;
 	notheme?: boolean;
 	notooltip?: boolean;
 	obj?: string;
 	padding?: string;
+	ripple?: boolean;
 	selected?: boolean;
 	sizing?: Sizing;
 	style?: Styles;
@@ -196,11 +196,11 @@ export function getDefaultBaseProps(): BaseProps {
 		minWidth: null,
 		noedit: false,
 		nohover: false,
-		noripple: false,
 		notheme: false,
 		notooltip: false,
 		obj: "Unknown",
 		padding: null,
+		ripple: false,
 		selected: false,
 		sizing: Sizing.normal,
 		style: {},

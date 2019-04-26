@@ -27,7 +27,6 @@ exports[`Test disabling of a Tab 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -35,6 +34,7 @@ exports[`Test disabling of a Tab 1`] = `
   onClose={[Function]}
   orientation="top"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -76,7 +76,6 @@ exports[`Test making a Tab invisible 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -84,6 +83,7 @@ exports[`Test making a Tab invisible 1`] = `
   onClose={[Function]}
   orientation="top"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -124,7 +124,6 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Tab",
@@ -132,6 +131,7 @@ Object {
   "onClose": [Function],
   "orientation": "top",
   "padding": null,
+  "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -149,17 +149,6 @@ Object {
 exports[`Test retrieval of Tab props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-tab" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "hidden": false,
   "sizing": "normal",
   "style": Object {},
@@ -193,7 +182,6 @@ exports[`Test the click handler in the Tab instance 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -201,6 +189,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
   onClose={[Function]}
   orientation="top"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -242,7 +231,6 @@ exports[`Test the close click handler on a Tab instance 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -250,6 +238,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
   onClose={[MockFunction]}
   orientation="top"
   padding={null}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -291,7 +280,6 @@ exports[`Test the creation of a Tab instance 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -301,6 +289,7 @@ exports[`Test the creation of a Tab instance 1`] = `
   orientation="top"
   padding={null}
   reset={false}
+  ripple={false}
   selected={true}
   sizing="normal"
   style={Object {}}
@@ -367,7 +356,6 @@ exports[`Test the creation of a Tab instance 1`] = `
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="Tab"
@@ -412,7 +400,6 @@ exports[`Test the creation of a Tab instance 1`] = `
           minWidth={null}
           noedit={false}
           nohover={false}
-          noripple={false}
           notheme={false}
           notooltip={false}
           obj="Tab"
@@ -420,6 +407,7 @@ exports[`Test the creation of a Tab instance 1`] = `
           onClose={[Function]}
           orientation="top"
           padding={null}
+          ripple={false}
           selected={true}
           sizing="normal"
           style={Object {}}
@@ -435,6 +423,7 @@ exports[`Test the creation of a Tab instance 1`] = `
           Test content
         </Button>
       }
+      ripple={false}
       selected={true}
       sizing="normal"
       stacked={false}

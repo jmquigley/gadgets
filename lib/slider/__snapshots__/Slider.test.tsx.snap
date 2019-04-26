@@ -24,12 +24,12 @@ exports[`Test creation of a simple Slider control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Slider"
   onSelect={[Function]}
   padding={null}
+  ripple={false}
   scale={2}
   selected={false}
   sizing="normal"
@@ -71,12 +71,12 @@ exports[`Test disabling a Slider control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Slider"
   onSelect={[Function]}
   padding={null}
+  ripple={false}
   scale={2}
   selected={false}
   sizing="normal"
@@ -119,12 +119,12 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Slider",
   "onSelect": [Function],
   "padding": null,
+  "ripple": false,
   "scale": 1,
   "selected": false,
   "sizing": "normal",
@@ -145,17 +145,6 @@ Object {
 exports[`Test retrieval of Slider props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-slider" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "sizing": "normal",
   "style": Object {},
   "x": 0,
@@ -186,12 +175,12 @@ exports[`Test with bad min/max values 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="Slider"
   onSelect={[Function]}
   padding={null}
+  ripple={false}
   scale={1}
   selected={false}
   sizing="normal"

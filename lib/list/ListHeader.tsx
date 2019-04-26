@@ -31,7 +31,7 @@ export function getDefaultListHeaderProps(): ListHeaderProps {
 export type ListHeaderState = ItemState;
 
 export function getDefaultListHeaderState(): ListHeaderState {
-	return {...getDefaultItemState("ui-list-header")};
+	return {...getDefaultItemState()};
 }
 
 export class ListHeader extends BaseComponent<
@@ -42,7 +42,7 @@ export class ListHeader extends BaseComponent<
 	public state: ListHeaderState = getDefaultItemState();
 
 	constructor(props: ListHeaderProps) {
-		super(props, ListHeader.defaultProps.style);
+		super(props, "ui-list-header", ListHeader.defaultProps.style);
 	}
 
 	public render() {
@@ -50,7 +50,7 @@ export class ListHeader extends BaseComponent<
 			<Wrapper {...this.props}>
 				<Item
 					{...this.props}
-					className={this.state.classes.classnames}
+					className={this.className}
 					sizing={this.props.sizing}
 					style={this.state.style}
 				/>

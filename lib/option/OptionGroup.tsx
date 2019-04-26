@@ -95,7 +95,7 @@ export interface OptionGroupState extends BaseState {
 
 export function getDefaultOptionGroupState(): OptionGroupState {
 	return {
-		...getDefaultBaseState("ui-option-group"),
+		...getDefaultBaseState(),
 		options: null
 	};
 }
@@ -166,7 +166,7 @@ export class OptionGroup extends BaseComponent<
 	private static readonly defaultProps: OptionGroupProps = getDefaultOptionGroupProps();
 
 	constructor(props: OptionGroupProps) {
-		super(props, OptionGroup.defaultProps.style);
+		super(props, "ui-option-group", OptionGroup.defaultProps.style);
 
 		this.state = {
 			...getDefaultOptionGroupState(),
@@ -222,10 +222,12 @@ export class OptionGroup extends BaseComponent<
 	}
 
 	public render() {
+		this.updateClassName();
+
 		return (
 			<Wrapper {...this.props}>
 				<StyledOptionGroup
-					className={this.state.classes.classnames}
+					className={this.className}
 					sizing={this.props.sizing}
 				>
 					<StyledTitle

@@ -70,6 +70,7 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 		noicon: false,
 		obj: "ButtonText",
 		onClick: nilEvent,
+		ripple: true,
 		text: ""
 	};
 }
@@ -77,7 +78,7 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 export type ButtonTextState = BaseState;
 
 export function getDefaultButtonTextState(): ButtonTextState {
-	return {...getDefaultBaseState("ui-button-text")};
+	return {...getDefaultBaseState()};
 }
 
 const ButtonTextContent: any = styled.div`
@@ -120,7 +121,7 @@ export class ButtonText extends BaseComponent<
 	public state: ButtonTextState = getDefaultButtonTextState();
 
 	constructor(props: ButtonTextProps) {
-		super(props, ButtonText.defaultProps.style);
+		super(props, "ui-button-text", ButtonText.defaultProps.style);
 	}
 
 	@autobind
@@ -135,20 +136,9 @@ export class ButtonText extends BaseComponent<
 		e.stopPropagation();
 	}
 
-	public static getDerivedStateFromProps(
-		props: ButtonTextProps,
-		state: ButtonTextState
-	) {
-		const newState: ButtonTextState = {...state};
-
-		newState.classes.onIfElse(!props.noripple && !props.disabled)("ripple")(
-			"nohover"
-		);
-
-		return super.getDerivedStateFromProps(props, newState);
-	}
-
 	public render() {
+		this.updateClassName();
+
 		let leftButton = null;
 		let rightButton = null;
 
@@ -181,9 +171,10 @@ export class ButtonText extends BaseComponent<
 			<Wrapper {...this.props}>
 				<ButtonTextView
 					disabled={this.props.disabled}
-					className={this.state.classes.classnames}
+					className={this.className}
 					style={this.state.style}
 					onClick={this.handleClick}
+					ripple={this.props.ripple}
 					visible={this.props.visible}
 				>
 					{leftButton}

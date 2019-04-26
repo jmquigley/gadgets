@@ -23,7 +23,6 @@ exports[`Test creation of a default DialogWindow control 1`] = `
   minWidth={null}
   noedit={false}
   nohover={false}
-  noripple={false}
   notheme={false}
   notooltip={false}
   obj="DialogWindow"
@@ -32,6 +31,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
   onOpen={[Function]}
   padding={null}
   reset={false}
+  ripple={false}
   selected={false}
   show={true}
   sizing="normal"
@@ -96,13 +96,13 @@ exports[`Test creation of a default DialogWindow control 1`] = `
       minWidth={null}
       noedit={false}
       nohover={false}
-      noripple={false}
       notheme={false}
       notooltip={false}
       obj="DialogWindow"
       onClose={[Function]}
       onOpen={[Function]}
       padding={null}
+      ripple={false}
       selected={false}
       show={true}
       sizing="normal"
@@ -157,11 +157,11 @@ exports[`Test creation of a default DialogWindow control 1`] = `
             minWidth={null}
             noedit={false}
             nohover={false}
-            noripple={false}
             notheme={false}
             notooltip={false}
             obj="Icon"
             padding={null}
+            ripple={false}
             selected={false}
             sizing="normal"
             style={Object {}}
@@ -192,6 +192,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
             onClick={[Function]}
           />
         }
+        ripple={false}
         selected={false}
         show={true}
         sizing="normal"
@@ -245,13 +246,13 @@ Object {
   "minWidth": null,
   "noedit": false,
   "nohover": false,
-  "noripple": false,
   "notheme": false,
   "notooltip": false,
   "obj": "DialogWindow",
   "onClose": [Function],
   "onOpen": [Function],
   "padding": null,
+  "ripple": false,
   "selected": false,
   "show": false,
   "sizing": "normal",
@@ -270,17 +271,6 @@ Object {
 exports[`Test retrieval of DialogWindow props object 2`] = `
 Object {
   "children": null,
-  "classes": b {
-    "_classes": Map {
-      "ui-dialogwindow" => true,
-    },
-    "_clstr": "",
-    "_delimiter": " ",
-    "_dirty": true,
-    "_obj": null,
-    "delete": [Function],
-    "reset": [Function],
-  },
   "icon": null,
   "showModal": false,
   "sizing": "normal",

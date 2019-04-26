@@ -88,7 +88,7 @@ export interface TooltipState extends BaseState {
 }
 
 export function getDefaultTooltipState(): TooltipState {
-	return {...getDefaultBaseState("ui-tooltip"), show: false};
+	return {...getDefaultBaseState(), show: false};
 }
 
 const Bottom: any = css`
@@ -279,7 +279,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 	public state: TooltipState = getDefaultTooltipState();
 
 	constructor(props: TooltipProps) {
-		super(props, Tooltip.defaultProps.style);
+		super(props, "ui-tooltip", Tooltip.defaultProps.style);
 	}
 
 	@autobind
@@ -309,6 +309,8 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 	}
 
 	public render() {
+		this.updateClassName();
+
 		let direction: Direction = Direction.left;
 
 		switch (this.props.location) {
@@ -339,7 +341,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 		return (
 			<Wrapper {...this.props}>
 				<TooltipView
-					className={this.state.classes.classnames}
+					className={this.className}
 					location={this.props.location}
 					sizing={BaseComponent.prev(this.props.sizing).type}
 					style={this.state.style}
