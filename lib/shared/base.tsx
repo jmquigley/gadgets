@@ -272,10 +272,12 @@ export abstract class BaseComponent<
 		state: any,
 		forceUpdate: boolean = false
 	): any {
-		const newState: any = {...state};
+		let newState: any = null;
 		let dirty: boolean = forceUpdate;
 
 		if (state && props) {
+			newState = {...state};
+
 			if ("style" in newState) {
 				newState.style = {
 					...BaseComponent.defaultStyles,
@@ -316,6 +318,14 @@ export abstract class BaseComponent<
 		}
 	}
 
+	/**
+	 * Used in each render() call for a component to properly setup up the
+	 * className property used in that component
+	 * @param classNames=null {string|string[]} - Allows the render method
+	 * to add additional classes when building the default className
+	 * @return a string that represents the current className string for
+	 * a component.
+	 */
 	protected updateClassName(classNames: string | string[] = null): string {
 		this._className.clear();
 		this._className.add(this._defaultClassName);
