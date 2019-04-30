@@ -2,6 +2,7 @@
 
 > Reusable React UI widgets - This is my widget library. There are many like it, but this one is mine...
 
+[![build](https://circleci.com/gh/jmquigley/gadgets/tree/master.svg?style=shield)](https://circleci.com/gh/jmquigley/gadgets/tree/master)
 [![analysis](https://img.shields.io/badge/analysis-tslint-9cf.svg)](https://palantir.github.io/tslint/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![testing](https://img.shields.io/badge/testing-jest-blue.svg)](https://facebook.github.io/jest/)
@@ -197,7 +198,7 @@ The tag list control is a basic list of strings that act as metadata for another
 A typical tab control container.  This manages `Tab` elements within it.
 
 ### [TextArea](docs/lib/textArea/TextArea.md)
-A multiline text editing component.  It is a a contenteditable div.
+A multiline text editing component.  It is a contenteditable div.
 
 ### [TextField](docs/lib/textField/TextField.md) ([Validator](docs/lib/textField/validator.md))
 The TextField is a wrapper component for the built in `<input>` tag.  This control allows the user to add validation routines to the input control beyond the builtin routines.

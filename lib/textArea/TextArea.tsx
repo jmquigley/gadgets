@@ -4,7 +4,7 @@
  * contents that have chnaged.
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/textarea.png" width="60%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/textarea.png" width="80%" />
  *
  * ## Examples:
  *
