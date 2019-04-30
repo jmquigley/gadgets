@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test creation of a Browser instance 1`] = `
-<Browser
+exports[`Create a simple TextArea widget 1`] = `
+<TextArea
   backgroundColor={null}
   borderColor={null}
   bottom={null}
@@ -15,7 +15,6 @@ exports[`Test creation of a Browser instance 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
-  home="about:blank"
   id={null}
   left={null}
   location="none"
@@ -27,12 +26,12 @@ exports[`Test creation of a Browser instance 1`] = `
   nohover={false}
   notheme={false}
   notooltip={false}
-  notooltips={false}
-  obj="Browser"
-  onClip={[Function]}
-  onOpen={[Function]}
-  padding={null}
+  obj="Unknown"
+  onChange={[Function]}
+  onUpdate={[Function]}
+  padding="4px"
   ripple={false}
+  rows={10}
   selected={false}
   sizing="normal"
   style={Object {}}
@@ -40,63 +39,15 @@ exports[`Test creation of a Browser instance 1`] = `
   theme={null}
   tooltip={null}
   top={null}
-  uri="http://example.com"
-  useparser={false}
+  updateDelay={150}
+  value="some text"
   visible={true}
   width={null}
   xcss={null}
 />
 `;
 
-exports[`Test creation of a Browser instance with empty uri values 1`] = `
-<Browser
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
-  controlled={true}
-  direction="right"
-  disabled={false}
-  err={null}
-  errorMessage={null}
-  focus={false}
-  height={null}
-  home=""
-  id={null}
-  left={null}
-  location="none"
-  maxHeight={null}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
-  noedit={false}
-  nohover={false}
-  notheme={false}
-  notooltip={false}
-  notooltips={false}
-  obj="Browser"
-  onClip={[Function]}
-  onOpen={[Function]}
-  padding={null}
-  ripple={false}
-  selected={false}
-  sizing="normal"
-  style={Object {}}
-  testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
-  uri=""
-  useparser={false}
-  visible={true}
-  width={null}
-  xcss={null}
-/>
-`;
-
-exports[`Test retrieval of the Browser props object 1`] = `
+exports[`Test retrieval of TextArea props object 1`] = `
 Object {
   "backgroundColor": null,
   "borderColor": null,
@@ -112,7 +63,6 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
-  "home": "about:blank",
   "id": null,
   "left": null,
   "location": "none",
@@ -124,12 +74,12 @@ Object {
   "nohover": false,
   "notheme": false,
   "notooltip": false,
-  "notooltips": false,
-  "obj": "Browser",
-  "onClip": [Function],
-  "onOpen": [Function],
-  "padding": null,
+  "obj": "Unknown",
+  "onChange": [Function],
+  "onUpdate": [Function],
+  "padding": "4px",
   "ripple": false,
+  "rows": 5,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
@@ -137,21 +87,19 @@ Object {
   "theme": null,
   "tooltip": null,
   "top": null,
-  "uri": "about:blank",
-  "useparser": false,
+  "updateDelay": 150,
+  "value": null,
   "visible": true,
   "width": null,
   "xcss": null,
 }
 `;
 
-exports[`Test retrieval of the Browser props object 2`] = `
+exports[`Test retrieval of TextArea props object 2`] = `
 Object {
   "children": null,
-  "search": "",
   "sizing": "normal",
   "style": Object {},
-  "uri": "",
-  "uriHistory": Immutable.List [],
+  "value": "",
 }
 `;

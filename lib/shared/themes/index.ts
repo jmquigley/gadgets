@@ -52,6 +52,7 @@ export interface ThemeProps {
 	hoverColor: string;
 	inputBorderColor: string;
 	itemHoverColor: string;
+	outlineColor: string;
 	searchFocus: string;
 	searchMatch: string;
 	selectedBackgroundColor: string;

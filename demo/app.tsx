@@ -32,6 +32,7 @@ import DemoSlider from "./src/DemoSlider";
 import DemoSwitch from "./src/DemoSwitch";
 import DemoTabs from "./src/DemoTabs";
 import DemoTagList from "./src/DemoTagList";
+import DemoTextArea from "./src/DemoTextArea";
 import DemoTextField from "./src/DemoTextField";
 import DemoTitle from "./src/DemoTitle";
 import DemoToast from "./src/DemoToast";
@@ -178,6 +179,10 @@ class App extends React.Component<any, AppState> {
 					disabled={this.state.disabled}
 				/>
 				<DemoTagList
+					sizing={this.state.sizing}
+					disabled={this.state.disabled}
+				/>
+				<DemoTextArea
 					sizing={this.state.sizing}
 					disabled={this.state.disabled}
 				/>

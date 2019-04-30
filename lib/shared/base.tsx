@@ -147,6 +147,10 @@ export abstract class BaseComponent<
 		return calc(sizes[sizing].font.sizerem, `* ${scale}`);
 	}
 
+	public static lineHeightPX(sizing: Sizing = Sizing.normal): string {
+		return sizes[sizing].font.lineHeight;
+	}
+
 	/**
 	 * Takes the given base Sizing and determines what the next size
 	 * in the list would be.  e.g. if current size is *normal*, then

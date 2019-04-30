@@ -69,7 +69,7 @@ import {
 import styled from "../shared/themed-components";
 
 export interface LabelProps extends BaseProps {
-	defaultText: string;
+	defaultText?: string;
 	noedit?: boolean;
 	onBlur?: (e: React.FocusEvent<HTMLSpanElement>) => void;
 	onChange?: (e: React.FormEvent<HTMLSpanElement>) => void;

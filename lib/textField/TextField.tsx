@@ -301,12 +301,19 @@ const TextfieldContainerView: any = styled.div`
 `;
 
 const TextFieldView: any = styled.div`
-	border: ${(props) =>
-		props["noborder"]
-			? "none"
-			: "solid 1px " + props.theme.inputBorderColor};
+	-webkit-transition: all
+		${(props: TextFieldProps) => props.theme.transitionDelay} ease-in-out;
+	border: ${(props: TextFieldProps) =>
+		props.noborder ? "none" : "solid 1px " + props.theme.inputBorderColor};
 	display: inherit;
+	outline: none;
 	padding: 1px 0;
+
+	&:focus-within {
+		border: 1px solid ${(props: TextFieldProps) => props.theme.outlineColor};
+		box-shadow: 0 0 5px
+			${(props: TextFieldProps) => props.theme.outlineColor};
+	}
 
 	&:hover .ui-textfield-clear-button {
 		opacity: ${(props) => (!props["disabled"] ? "1.0;" : "0.0")};
@@ -323,10 +330,15 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 		super(props, "ui-textfield", TextField.defaultProps.style);
 		this._validators = props.validators.slice();
 
+		let value: string = this.props.initialValue;
+		if (props.value) {
+			value = props.value;
+		}
+
 		this.state = {
 			...getDefaultTextFieldState(),
 			previousValue: this.props.initialValue,
-			value: this.props.initialValue
+			value
 		};
 
 		if (textTypes.includes(props.type) && props.usevalidation) {
@@ -468,10 +480,9 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 
 		// Strip out props that the input control cannot recognize or use
 		const {validators, onClear, onValidation, ...props} = this.props;
-
 		const minWidth = `${this.props.size / 2.0 + 3}rem`;
-		let clearBtn: any = null;
 
+		let clearBtn: any = null;
 		if (this.props.useclear) {
 			clearBtn = (
 				<ClearButtonView
@@ -491,6 +502,22 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 						visible={this.props.visible}
 					/>
 				</ClearButtonView>
+			);
+		}
+
+		let validationMessage: any = null;
+		if (this.props.usevalidation) {
+			validationMessage = (
+				<MessageView
+					className='ui-textfield-validation-message'
+					disabled={this.props.disabled}
+					messageType={this.state.messageType}
+					sizing={BaseComponent.prev().type}
+					visible={this.props.visible}
+				>
+					{this.props.usevalidation ? sp : null}
+					{this.state.message}
+				</MessageView>
 			);
 		}
 
@@ -519,18 +546,7 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 						/>
 						{clearBtn}
 					</TextFieldView>
-					{this.props.usevalidation ? (
-						<MessageView
-							className='ui-textfield-validation-message'
-							disabled={this.props.disabled}
-							messageType={this.state.messageType}
-							sizing={BaseComponent.prev().type}
-							visible={this.props.visible}
-						>
-							{this.props.usevalidation ? sp : null}
-							{this.state.message}
-						</MessageView>
-					) : null}
+					{validationMessage}
 					{tooltip(this.id, this.props)}
 				</TextfieldContainerView>
 			</Wrapper>

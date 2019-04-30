@@ -27,6 +27,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 			<StyledContainer id='textfieldExample' title='TextField'>
 				<h3>Simple TextField (width 200px)</h3>
 				<TextField
+					disabled={this.props["disabled"]}
 					initialValue='test value'
 					sizing={this.props["sizing"]}
 					width='200px'
@@ -35,6 +36,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 
 				<h3>Validation of Max (10) & Min (5) Length</h3>
 				<TextField
+					disabled={this.props["disabled"]}
 					id='tf-validation'
 					maxLength='10'
 					minLength='5'
@@ -47,6 +49,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 
 				<h3>Validation of Email</h3>
 				<TextField
+					disabled={this.props["disabled"]}
 					initialValue='foo@example.com'
 					placeholder='email validation'
 					sizing={this.props["sizing"]}
@@ -56,6 +59,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 
 				<h3>Validation of URL</h3>
 				<TextField
+					disabled={this.props["disabled"]}
 					placeholder='url validation'
 					sizing={this.props["sizing"]}
 					type={TextFieldType.url}
@@ -64,6 +68,7 @@ export default class DemoTextField extends React.Component<any, undefined> {
 
 				<h3>Validation with custom alphanumeric</h3>
 				<TextField
+					disabled={this.props["disabled"]}
 					placeholder='custom'
 					sizing={this.props["sizing"]}
 					usevalidation
@@ -72,61 +77,39 @@ export default class DemoTextField extends React.Component<any, undefined> {
 
 				<h3>Search text field</h3>
 				<TextField
+					disabled={this.props["disabled"]}
 					placeholder='search'
 					sizing={this.props["sizing"]}
-					style={{
-						width: "11em"
-					}}
 					type={TextFieldType.text}
 					useclear
+					width='200px'
 				/>
 				<Break sizing={this.props["sizing"]} />
 
 				<h3>TextField with spinner (1-20, start 5)</h3>
 				<TextField
+					disabled={this.props["disabled"]}
 					initialValue='5'
 					max='20'
 					min='1'
 					placeholder='spinner'
 					sizing={this.props["sizing"]}
-					style={{
-						width: "12.5em"
-					}}
 					type={TextFieldType.spinner}
+					width='200px'
 				/>
 				<Break sizing={this.props["sizing"]} />
 
 				<h3>TextField as number, no spinner</h3>
 				<TextField
+					disabled={this.props["disabled"]}
 					initialValue='5'
 					max='20'
 					min='1'
 					nospinner
 					placeholder='spinner'
 					sizing={this.props["sizing"]}
-					style={{
-						width: "12.5em"
-					}}
 					type={TextFieldType.spinner}
-				/>
-				<Break sizing={this.props["sizing"]} />
-
-				<h3>Disabled TextField</h3>
-				<TextField
-					disabled
-					placeholder='disabled'
-					sizing={this.props["sizing"]}
-					type={TextFieldType.text}
-				/>
-				<Break sizing={this.props["sizing"]} />
-
-				<h3>Disabled TextFiled with search</h3>
-				<TextField
-					disabled
-					placeholder='disabled'
-					sizing={this.props["sizing"]}
-					type={TextFieldType.text}
-					useclear
+					width='200px'
 				/>
 			</StyledContainer>
 		);

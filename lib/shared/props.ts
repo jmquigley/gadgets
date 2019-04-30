@@ -84,6 +84,7 @@ export enum ColorScheme {
 export enum Color {
 	black = "#000000",
 	error = "#d9534f",
+	glow = "#51cbee",
 	gray = "#666666",
 	info = "#5bc0de",
 	lightsaber = "#2ff923",
@@ -152,6 +153,8 @@ export interface BaseProps {
 	id?: string;
 	left?: string;
 	location?: Location;
+	maxHeight?: string;
+	maxWidth?: string;
 	minHeight?: string;
 	minWidth?: string;
 	noedit?: boolean;
@@ -192,6 +195,8 @@ export function getDefaultBaseProps(): BaseProps {
 		id: null,
 		left: null,
 		location: Location.none,
+		maxHeight: null,
+		maxWidth: null,
 		minHeight: null,
 		minWidth: null,
 		noedit: false,

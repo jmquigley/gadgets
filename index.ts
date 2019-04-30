@@ -105,6 +105,9 @@ import {
 	Tag,
 	TagList
 } from "./lib/tagList";
+
+import {getDefaultTextAreaProps, TextArea} from "./lib/textArea";
+
 import {
 	getDefaultTextFieldProps,
 	TextField,
@@ -215,6 +218,7 @@ export {
 	getDefaultTabProps,
 	getDefaultTagListProps,
 	getDefaultTagProps,
+	getDefaultTextAreaProps,
 	getDefaultTextFieldProps,
 	getDefaultTitleProps,
 	getDefaultToastProps,
@@ -256,6 +260,7 @@ export {
 	TabContainer,
 	Tag,
 	TagList,
+	TextArea,
 	TextField,
 	TextFieldType,
 	Theme,

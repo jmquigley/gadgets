@@ -8,7 +8,7 @@
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/preview.png" width="60%" />
  *
- * #### Examples:
+ * ## Examples:
  *
  * ```javascript
  * <Preview
@@ -19,6 +19,7 @@
  * ```
  *
  * ## API
+ * #### Events
  * - `onChange(content: string, html: string)` - invoked when the content is changed in the control.
  * It will contain the content parsed and the resulting HTML, both as strings.
  *
@@ -64,7 +65,7 @@ export interface PreviewProps extends BaseProps {
 	content?: string;
 	css?: string;
 	mode?: PreviewMode;
-	onChange(content: string, html: string): void;
+	onChange?: (content: string, html: string) => void;
 }
 
 export function getDefaultPreviewProps(): PreviewProps {

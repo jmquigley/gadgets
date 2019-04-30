@@ -78,7 +78,7 @@ export const BaseButtonView: any = css`
 	align-items: center;
 	box-sizing: border-box;
 	cursor: default;
-	display: flex;
+	display: inline-flex;
 	height: 100%;
 	justify-content: center;
 	line-height: inherit;

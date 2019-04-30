@@ -114,6 +114,8 @@ export const lineHeightStyle: any = {};
 
 export class Sizes {
 	private _sizes: any = {};
+
+	private readonly _lineHeightRatio: number = 1.5;
 	private readonly _rectWidth: number = 1.75;
 	private readonly _rectHeight: number = 0.8;
 
@@ -154,7 +156,7 @@ export class Sizes {
 			`;
 
 			lineHeightStyle[key] = css`
-				line-height: ${valSize / baseFontSize}rem;
+				line-height: ${valSize * this._lineHeightRatio}px;
 			`;
 
 			rectStyle[key] = css`
@@ -165,6 +167,7 @@ export class Sizes {
 			this._sizes[key] = {
 				type: key,
 				font: {
+					lineHeight: `${valSize * this._lineHeightRatio}px`,
 					size: valSize,
 					sizerem: `${valSize / baseFontSize}rem`,
 					sizepx: `${valSize}px`

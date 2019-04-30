@@ -19,6 +19,8 @@ exports[`Test creation of a simple Slider control 1`] = `
   left={null}
   location="none"
   max={50}
+  maxHeight={null}
+  maxWidth={null}
   min={1}
   minHeight={null}
   minWidth={null}
@@ -66,6 +68,8 @@ exports[`Test disabling a Slider control 1`] = `
   left={null}
   location="none"
   max={100}
+  maxHeight={null}
+  maxWidth={null}
   min={0}
   minHeight={null}
   minWidth={null}
@@ -114,6 +118,8 @@ Object {
   "left": null,
   "location": "none",
   "max": 100,
+  "maxHeight": null,
+  "maxWidth": null,
   "min": 0,
   "minHeight": null,
   "minWidth": null,
@@ -170,6 +176,8 @@ exports[`Test with bad min/max values 1`] = `
   left={null}
   location="none"
   max={0}
+  maxHeight={null}
+  maxWidth={null}
   min={-1}
   minHeight={null}
   minWidth={null}

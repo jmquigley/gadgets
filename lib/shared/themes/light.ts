@@ -16,13 +16,16 @@ const theme: ThemeProps = {
 	hoverColor: "#ffe11a",
 	inputBorderColor: Color.silver,
 	itemHoverColor: ColorScheme.c3,
+	outlineColor: Color.glow,
+	searchFocus: Color.glow,
+	searchMatch: ColorScheme.c5,
 	selectedBackgroundColor: "#004358",
 	selectedForegroundColor: Color.white,
 	titleBarBackgroundColor: ColorScheme.c1,
 	titleBarForegroundColor: ColorScheme.c4,
 	tooltipBackgroundColor: Color.gray,
 	tooltipForegroundColor: Color.white,
-	transitionDelay: "0.5s"
+	transitionDelay: "0.33s"
 };
 
 export default theme;

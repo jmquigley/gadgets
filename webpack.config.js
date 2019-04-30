@@ -32,7 +32,6 @@ const constants = new webpack.DefinePlugin({
 
 module.exports = {
 	mode,
-	performance: {hints: false},
 	target: "node",
 	entry: [
 		path.resolve(

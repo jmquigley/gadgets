@@ -110,11 +110,20 @@ const DropdownContainerView: any = styled.div`
 `;
 
 const DropdownView: any = styled.select`
+	-webkit-transition: all
+		${(props: DropdownProps) => props.theme.transitionDelay} ease-in-out;
 	-webkit-appearance: none;
-	font-size: inherit;
-	height: 100%;
 	background-position: right;
 	background-repeat: no-repeat;
+	font-size: inherit;
+	height: 100%;
+	outline: none;
+
+	&:focus {
+		border: 1px solid ${(props: DropdownProps) => props.theme.outlineColor};
+		box-shadow: 0 0 5px
+			${(props: DropdownProps) => props.theme.outlineColor};
+	}
 
 	${(props: DropdownProps) => disabled(props)}
 	${(props: DropdownProps) => invisible(props)}

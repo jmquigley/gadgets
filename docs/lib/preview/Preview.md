@@ -10,7 +10,7 @@ package for parsing content into a proper HTML document.
 ## Screen:
 <img src="https://github.com/jmquigley/gadgets/blob/master/images/preview.png" width="60%" />
 
-#### Examples:
+## Examples:
 
 ```javascript
 <Preview
@@ -21,6 +21,7 @@ package for parsing content into a proper HTML document.
 ```
 
 ## API
+#### Events
 - `onChange(content: string, html: string)` - invoked when the content is changed in the control.
 It will contain the content parsed and the resulting HTML, both as strings.
 

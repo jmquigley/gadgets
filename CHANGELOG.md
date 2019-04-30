@@ -6,9 +6,11 @@
 
 - Added a new property `direction` to Treeview to allow the search toolbar to be on the top or bottom of the component.
 - Added the spinner option to the [TextField](https://github.com/jmquigley/gadgets/blob/master/docs/lib/textField/TextField.md) component.
+- Input components now show a blue outline when they receive focus
 - Adds the following new components to the library:
   - [Datagrid](https://github.com/jmquigley/gadgets/blob/master/docs/lib/datagrid/Datagrid.md)
   - [Preview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/preview/Preview.md)
+  - [TextArea](https://github.com/jmquigley/gadgets/blob/master/docs/lib/textArea/TextArea.md)
 
 #### Bug Fixes:
 
