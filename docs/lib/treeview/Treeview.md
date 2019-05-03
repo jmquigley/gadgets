@@ -102,20 +102,23 @@ this is where the height of the control is handled.
 - `ui-treeview-toolbar` - applied to the search toollbar
 
 #### Properties
-- `addAsFirstChild: {boolean} (true)` - when set to true new nodes are added at
+- `addAsFirstChild=true {boolean}` - when set to true new nodes are added at
 the front of the parent.  Otherwise they are added to the end.  The default is
 to add them to the front.
-- `defaultTitle: {string} ('New Title')` - When a new node is added this title is
+- `defaultTitle='New Title' {string}` - When a new node is added this title is
 used as the placeholder label.
-- `height: {string} ('15em')` - The height of the treeview container.  This must
+- `direction=Direction.top {Direction}` - Determines the location of the search
+toolbar.  If set to Direction.top it is at the top of the component.  If set to
+Direction.bottom it is on the bottom.
+- `height="15em" {string}` - The height of the treeview container.  This must
 be set or the tree will not display anything.
-- `nodeWidth: {string} ('20em`)` - the width of the text nodes that are displayed.
-- `selectNew: {boolean} (true)` - When a new node is added it is selected by
+- `nodeWidth="20em" {string}` - the width of the text nodes that are displayed.
+- `selectNew=true {boolean}` - When a new node is added it is selected by
 default (true).  If this property is false, then the parent remains selected
 when a child node is added.
-- `treeData: {TreeItem[]}) ([])` - The data structure that describes the
+- `treeData=[] {TreeItem[]}` - The data structure that describes the
 tree hierarchy (see example above).
-- `usehidden: {boolean} (true) - by default the add/delete buttons are hidden on
+- `usehidden=true {boolean}` - by default the add/delete buttons are hidden on
 each of the nodes.  They are revealed when hovering over the node.  This behavior
 can be turned off by setting this prop to false.
 

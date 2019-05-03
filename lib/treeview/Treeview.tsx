@@ -100,20 +100,23 @@
  * - `ui-treeview-toolbar` - applied to the search toollbar
  *
  * #### Properties
- * - `addAsFirstChild: {boolean} (true)` - when set to true new nodes are added at
+ * - `addAsFirstChild=true {boolean}` - when set to true new nodes are added at
  * the front of the parent.  Otherwise they are added to the end.  The default is
  * to add them to the front.
- * - `defaultTitle: {string} ('New Title')` - When a new node is added this title is
+ * - `defaultTitle='New Title' {string}` - When a new node is added this title is
  * used as the placeholder label.
- * - `height: {string} ('15em')` - The height of the treeview container.  This must
+ * - `direction=Direction.top {Direction}` - Determines the location of the search
+ * toolbar.  If set to Direction.top it is at the top of the component.  If set to
+ * Direction.bottom it is on the bottom.
+ * - `height="15em" {string}` - The height of the treeview container.  This must
  * be set or the tree will not display anything.
- * - `nodeWidth: {string} ('20em`)` - the width of the text nodes that are displayed.
- * - `selectNew: {boolean} (true)` - When a new node is added it is selected by
+ * - `nodeWidth="20em" {string}` - the width of the text nodes that are displayed.
+ * - `selectNew=true {boolean}` - When a new node is added it is selected by
  * default (true).  If this property is false, then the parent remains selected
  * when a child node is added.
- * - `treeData: {TreeItem[]}) ([])` - The data structure that describes the
+ * - `treeData=[] {TreeItem[]}` - The data structure that describes the
  * tree hierarchy (see example above).
- * - `usehidden: {boolean} (true) - by default the add/delete buttons are hidden on
+ * - `usehidden=true {boolean}` - by default the add/delete buttons are hidden on
  * each of the nodes.  They are revealed when hovering over the node.  This behavior
  * can be turned off by setting this prop to false.
  *
@@ -167,6 +170,7 @@ export interface TreeviewProps extends BaseProps {
 	direction: Direction;
 	isVirtualized: boolean;
 	nodeWidth?: string;
+	nosearch?: boolean;
 	onAdd?: (node: TreeItem, treeData: TreeItem[]) => void;
 	onChange?: (treeData: TreeItem[]) => void;
 	onCollapse?: (treeData: TreeItem[]) => void;
@@ -194,6 +198,7 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		isVirtualized: true,
 		minHeight: "15em",
 		nodeWidth: "20em",
+		nosearch: false,
 		obj: "Treeview",
 		onAdd: nilEvent,
 		onChange: nilEvent,
@@ -316,7 +321,7 @@ const TreeviewContainer: any = styled.div`
 
 const TreeviewWrapper: any = styled(Container)`
 	display: block;
-	height: 100%;
+	flex: 1;
 	overflow: auto;
 	z-index: 0;
 `;
@@ -410,7 +415,11 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 	@autobind
 	private handleAdd() {
-		if (!this.props.disabled && this.state.selectedId != null) {
+		if (
+			!this.props.disabled &&
+			this.state.selectedId != null &&
+			!this.props.nosearch
+		) {
 			this.clearSearch();
 
 			const {td} = this.state;
@@ -461,11 +470,13 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 	@autobind
 	private handleNextMatch() {
-		const {searchFocusIndex, searchFoundCount} = this.state;
-		if (searchFoundCount > 0) {
-			this.setState({
-				searchFocusIndex: (searchFocusIndex + 1) % searchFoundCount
-			});
+		if (!this.props.nosearch) {
+			const {searchFocusIndex, searchFoundCount} = this.state;
+			if (searchFoundCount > 0) {
+				this.setState({
+					searchFocusIndex: (searchFocusIndex + 1) % searchFoundCount
+				});
+			}
 		}
 	}
 
@@ -481,23 +492,25 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 	@autobind
 	private handleNodeExpansion(expanded: boolean) {
-		this.clearSearch();
+		if (!this.props.nosearch) {
+			this.clearSearch();
 
-		const {td} = this.state;
+			const {td} = this.state;
 
-		td.walk((it: TreeItem) => {
-			it.expanded = expanded;
-		});
+			td.walk((it: TreeItem) => {
+				it.expanded = expanded;
+			});
 
-		const newTreeData = clone(td.treeData);
+			const newTreeData = clone(td.treeData);
 
-		if (expanded) {
-			this.props.onExpand(newTreeData);
-		} else {
-			this.props.onCollapse(newTreeData);
+			if (expanded) {
+				this.props.onExpand(newTreeData);
+			} else {
+				this.props.onCollapse(newTreeData);
+			}
+
+			this.handleChange(newTreeData);
 		}
-
-		this.handleChange(newTreeData);
 	}
 
 	@autobind
@@ -518,47 +531,56 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 	@autobind
 	private handlePreviousMatch() {
-		const {searchFocusIndex, searchFoundCount} = this.state;
-		if (searchFoundCount > 0) {
-			this.setState({
-				searchFocusIndex:
-					(searchFoundCount + searchFocusIndex - 1) % searchFoundCount
-			});
+		if (!this.props.nosearch) {
+			const {searchFocusIndex, searchFoundCount} = this.state;
+			if (searchFoundCount > 0) {
+				this.setState({
+					searchFocusIndex:
+						(searchFoundCount + searchFocusIndex - 1) %
+						searchFoundCount
+				});
+			}
 		}
 	}
 
 	@autobind
 	private handleSearch(e: React.FormEvent<HTMLInputElement>) {
-		const value: string = (e.target as HTMLInputElement).value;
-		this.setState({
-			search: value
-		});
+		if (!this.props.nosearch) {
+			const value: string = (e.target as HTMLInputElement).value;
+			this.setState({
+				search: value
+			});
+		}
 	}
 
 	@autobind
 	private handleSearchFinish(matches: ExtendedNodeData[]) {
-		const searchFocusIndex: number =
-			matches.length > 0
-				? this.state.searchFocusIndex % matches.length
-				: 0;
+		if (!this.props.nosearch) {
+			const searchFocusIndex: number =
+				matches.length > 0
+					? this.state.searchFocusIndex % matches.length
+					: 0;
 
-		if (matches.length > 0) {
-			this.setState(
-				{
-					selectedId: matches[searchFocusIndex].node.id,
-					matches,
-					searchFoundCount: matches.length,
-					searchFocusIndex
-				},
-				() => {
-					if (matches.length > 0) {
-						this.props.onSearch(this.state.matches[searchFocusIndex]
-							.node as TreeItem);
-						this.props.onSelect(this.state.matches[searchFocusIndex]
-							.node as TreeItem);
+			if (matches.length > 0) {
+				this.setState(
+					{
+						selectedId: matches[searchFocusIndex].node.id,
+						matches,
+						searchFoundCount: matches.length,
+						searchFocusIndex
+					},
+					() => {
+						if (matches.length > 0) {
+							this.props.onSearch(this.state.matches[
+								searchFocusIndex
+							].node as TreeItem);
+							this.props.onSelect(this.state.matches[
+								searchFocusIndex
+							].node as TreeItem);
+						}
 					}
-				}
-			);
+				);
+			}
 		}
 	}
 
@@ -609,60 +631,65 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 			color: this.theme.buttonColor
 		};
 
-		const toolbar = (
-			<StyledToolbar
-				className='ui-treeview-toolbar'
-				direction={this.props.direction}
-				sizing={this.props.sizing}
-			>
-				<Button
-					iconName='plus'
-					notooltip={this.props.notooltip}
-					onClick={this.handleAdd}
-					style={buttonStyles}
-				/>
-				<Divider />
-				<Button
-					iconName='angle-double-down'
-					notooltip={this.props.notooltip}
-					onClick={this.handleNodeExpand}
-					style={buttonStyles}
-				/>
-				<Button
-					iconName='angle-double-up'
-					notooltip={this.props.notooltip}
-					onClick={this.handleNodeCollapse}
-					style={buttonStyles}
-				/>
-				<Divider />
-				<SearchTextField
-					obj='TextField'
-					onChange={this.handleSearch}
-					onClear={this.clearSearch}
-					placeholder='search'
-					style={buttonStyles}
-					useclear
-					value={this.state.search}
-				/>
-				<Divider />
-				<Button
-					iconName='caret-left'
-					notooltip={this.props.notooltip}
-					onClick={this.handlePreviousMatch}
-					style={buttonStyles}
-				/>
-				<Button
-					iconName='caret-right'
-					notooltip={this.props.notooltip}
-					onClick={this.handleNextMatch}
-					style={buttonStyles}
-				/>
-				<Divider />
-				<Label text={searchFoundCount > 0 ? searchFocusIndex + 1 : 0} />
-				<Label text=' / ' />
-				<Label text={searchFoundCount} />
-			</StyledToolbar>
-		);
+		let toolbar: any = null;
+		if (!this.props.nosearch) {
+			toolbar = (
+				<StyledToolbar
+					className='ui-treeview-toolbar'
+					direction={this.props.direction}
+					sizing={this.props.sizing}
+				>
+					<Button
+						iconName='plus'
+						notooltip={this.props.notooltip}
+						onClick={this.handleAdd}
+						style={buttonStyles}
+					/>
+					<Divider />
+					<Button
+						iconName='angle-double-down'
+						notooltip={this.props.notooltip}
+						onClick={this.handleNodeExpand}
+						style={buttonStyles}
+					/>
+					<Button
+						iconName='angle-double-up'
+						notooltip={this.props.notooltip}
+						onClick={this.handleNodeCollapse}
+						style={buttonStyles}
+					/>
+					<Divider />
+					<SearchTextField
+						obj='TextField'
+						onChange={this.handleSearch}
+						onClear={this.clearSearch}
+						placeholder='search'
+						style={buttonStyles}
+						useclear
+						value={this.state.search}
+					/>
+					<Divider />
+					<Button
+						iconName='caret-left'
+						notooltip={this.props.notooltip}
+						onClick={this.handlePreviousMatch}
+						style={buttonStyles}
+					/>
+					<Button
+						iconName='caret-right'
+						notooltip={this.props.notooltip}
+						onClick={this.handleNextMatch}
+						style={buttonStyles}
+					/>
+					<Divider />
+					<Label
+						text={searchFoundCount > 0 ? searchFocusIndex + 1 : 0}
+					/>
+					<Label text=' / ' />
+					<Label text={searchFoundCount} />
+				</StyledToolbar>
+			);
+		}
 
 		return (
 			<Wrapper {...this.props}>
